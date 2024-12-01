@@ -232,7 +232,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00004">4</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abcff73b3c86ae3a009bb869401f8e3fd" name="abcff73b3c86ae3a009bb869401f8e3fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcff73b3c86ae3a009bb869401f8e3fd">&#9670;&#160;</a></span>GetTextProgress()</h2>
@@ -259,13 +259,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuestTask.html#ad03f302ddf56f5f5240ff0a254c4d19b">QuestTask</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00040">40</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressFlyer&quot;</span>.lang(this.<a class="code hl_variable" href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">num</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>.numRequired.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclassQuestTaskFlyer_html_a26ef0705b7b28806f9ec1d81e17df112"><div class="ttname"><a href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">QuestTaskFlyer.num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="QuestTaskFlyer_8cs_source.html#l00046">QuestTaskFlyer.cs:46</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00033">33</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressFlyer&quot;</span>.lang(<a class="code hl_variable" href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">num</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">numRequired</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassQuestTaskFlyer_html_a26ef0705b7b28806f9ec1d81e17df112"><div class="ttname"><a href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">QuestTaskFlyer.num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="QuestTaskFlyer_8cs_source.html#l00006">QuestTaskFlyer.cs:6</a></div></div>
+<div class="ttc" id="aclassQuestTaskFlyer_html_a88a6f2c10c5f356679c2528a5ac59853"><div class="ttname"><a href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">QuestTaskFlyer.numRequired</a></div><div class="ttdeci">int numRequired</div><div class="ttdef"><b>Definition:</b> <a href="QuestTaskFlyer_8cs_source.html#l00009">QuestTaskFlyer.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QuestTaskFlyer_8cs_source.html#l00046">num</a>.</p>
+<p class="reference">References <a class="el" href="QuestTaskFlyer_8cs_source.html#l00006">num</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00009">numRequired</a>.</p>
 
 </div>
 </div>
@@ -294,13 +295,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuestTask.html#a919251253f962ffcf2ea526750792fe9">QuestTask</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00022">22</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> this.num &gt;= this.<a class="code hl_variable" href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">numRequired</a>;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclassQuestTaskFlyer_html_a88a6f2c10c5f356679c2528a5ac59853"><div class="ttname"><a href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">QuestTaskFlyer.numRequired</a></div><div class="ttdeci">int numRequired</div><div class="ttdef"><b>Definition:</b> <a href="QuestTaskFlyer_8cs_source.html#l00049">QuestTaskFlyer.cs:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00015">15</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">num</a> &gt;= <a class="code hl_variable" href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">numRequired</a>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QuestTaskFlyer_8cs_source.html#l00049">numRequired</a>.</p>
+<p class="reference">References <a class="el" href="QuestTaskFlyer_8cs_source.html#l00006">num</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00009">numRequired</a>.</p>
 
 </div>
 </div>
@@ -340,19 +340,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuestTask.html#a2917cccb4fc3a1223d5da6635ce86514">QuestTask</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00027">27</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;flyer&quot;</span> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> != <span class="stringliteral">&quot;guild_merchant&quot;</span>)</div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            this.<a class="code hl_variable" href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">num</a>++;</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07292">Card.cs:7292</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
-<div class="ttc" id="aclassSpatial_html_ab20ca0db6cb6c35c70d6b7e3c91f173f"><div class="ttname"><a href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">Spatial.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00842">Spatial.cs:842</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00020">20</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;flyer&quot;</span> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> != <span class="stringliteral">&quot;guild_merchant&quot;</span>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">num</a>++;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00029">Card.cs:29</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ab20ca0db6cb6c35c70d6b7e3c91f173f"><div class="ttname"><a href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">Spatial.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00013">Spatial.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Card_8cs_source.html#l07292">Card.id</a>, <a class="el" href="Spatial_8cs_source.html#l00842">Spatial.id</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00046">num</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Card_8cs_source.html#l00029">Card.id</a>, <a class="el" href="Spatial_8cs_source.html#l00013">Spatial.id</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00006">num</a>.</p>
 
 </div>
 </div>
@@ -381,11 +381,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuestTask.html#a13176c9456567cb6f1c2b0d8a2349aac">QuestTask</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00035">35</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        this.numRequired = 30;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00028">28</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">numRequired</a> = 30;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="QuestTaskFlyer_8cs_source.html#l00009">numRequired</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -401,9 +403,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00046">46</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestTaskFlyer_8cs_source.html#l00040">GetTextProgress()</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00027">OnGiveItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestTaskFlyer_8cs_source.html#l00033">GetTextProgress()</a>, <a class="el" href="QuestTaskFlyer_8cs_source.html#l00015">IsComplete()</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00020">OnGiveItem()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +421,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00049">49</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00009">9</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestTaskFlyer_8cs_source.html#l00022">IsComplete()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestTaskFlyer_8cs_source.html#l00033">GetTextProgress()</a>, <a class="el" href="QuestTaskFlyer_8cs_source.html#l00015">IsComplete()</a>, and <a class="el" href="QuestTaskFlyer_8cs_source.html#l00028">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -446,14 +448,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112">num</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00011">11</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+
 </div>
 </div>
 <a id="a7958007d00391ae2fdd8bff423703fc2" name="a7958007d00391ae2fdd8bff423703fc2"></a>
@@ -476,14 +472,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00014">14</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853">numRequired</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="QuestTaskFlyer_8cs_source.html#l00013">13</a> of file <a class="el" href="QuestTaskFlyer_8cs_source.html">QuestTaskFlyer.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

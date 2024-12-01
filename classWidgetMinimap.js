@@ -38,7 +38,7 @@ var classWidgetMinimap =
     [ "transBound", "classWidgetMinimap.html#a8d705f767f5bb769291f91004b1ebde8", null ],
     [ "transCam", "classWidgetMinimap.html#ab66ddeefa1ca98c97031310a41dff615", null ],
     [ "AlwaysBottom", "classWidgetMinimap.html#ae87e0b93a4183a90430bf4ab212ecb6e", null ],
-    [ "extra", "classWidgetMinimap.html#ad12ca0e925c7f61f3a86b8cc92018f29", null ],
+    [ "extra", "classWidgetMinimap.html#a830205e65aa4c73dfecbf0ed1db52529", null ],
     [ "SetSiblingAfter", "classWidgetMinimap.html#a03e40ccca33b79ea0f612d4ccd5d836c", null ],
     [ "Size", "classWidgetMinimap.html#aa420d33d5c4e825f14cd9242a1660b61", null ]
 ];

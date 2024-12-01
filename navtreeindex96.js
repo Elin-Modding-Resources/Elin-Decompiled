@@ -1,5 +1,10 @@
 var NAVTREEINDEX96 =
 {
+"classTraitMerchantPlat.html":[1,0,1433],
+"classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1433,3],
+"classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1433,2],
+"classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1433,1],
+"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1433,0],
 "classTraitMerchantSeed.html":[1,0,1434],
 "classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1434,0],
 "classTraitMerchantSouvenir.html":[1,0,1435],
@@ -52,9 +57,9 @@ var NAVTREEINDEX96 =
 "classTraitMoongate.html":[1,0,1448],
 "classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388":[1,0,1448,1],
 "classTraitMoongate.html#a0b42907bbe5a84a7d0ddfd39d740d58c":[1,0,1448,0],
-"classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8":[1,0,1448,4],
 "classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984":[1,0,1448,2],
 "classTraitMoongate.html#a6197df121fca3a909195e91c032dd3f4":[1,0,1448,5],
+"classTraitMoongate.html#aba9864fda611aa8dec3924f9ed4cf402":[1,0,1448,4],
 "classTraitMoongate.html#ac4325da59139f85cb656e9e14ce3d641":[1,0,1448,3],
 "classTraitMoongateEx.html":[1,0,1449],
 "classTraitMoongateEx.html#abb1c819810acbb4a69aa3e67a450763d":[1,0,1449,0],
@@ -125,7 +130,7 @@ var NAVTREEINDEX96 =
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a967d35e40f3f95b1f538bd248640bf3b":[1,0,1460,0,1],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747ad0a662a5235ecde30739fe50cf0de830":[1,0,1460,0,2],
 "classTraitPainter.html#a8b7e5ff264f235305b816cd9012687e4":[1,0,1460,2],
-"classTraitPainter.html#ab4bf688df0ef64a73ce26f735fab2e49":[1,0,1460,4],
+"classTraitPainter.html#af8d07f3e6f48f1962871691a1a8ce1f0":[1,0,1460,4],
 "classTraitParasol.html":[1,0,1461],
 "classTraitParcel.html":[1,0,1462],
 "classTraitParcel.html#a30f6688d244f1133c11d635e572c12b4":[1,0,1462,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX96 =
 "classTraitRecipe.html#a3a09306af1b356daf7648a5c8d6422ad":[1,0,1495,9],
 "classTraitRecipe.html#a6257a9c12ae0a2b44150f40b2407f8bd":[1,0,1495,4],
 "classTraitRecipe.html#a8bc4ee4817fb8db2cd2a688c611e2337":[1,0,1495,6],
-"classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1495,7],
-"classTraitRecipe.html#aa609c89aa917d5d61b9b3b35cb3fc6c5":[1,0,1495,3],
-"classTraitRecipe.html#aaa59f50841aa5f8763647eaa24cc1dfb":[1,0,1495,5],
-"classTraitRecipe.html#aacdc95f9c38dad8b0f60400eef441b83":[1,0,1495,2],
-"classTraitRecipe.html#ae1b45d4194d49bbe1da69881d46a743d":[1,0,1495,10],
-"classTraitRecipeBook.html":[1,0,1496]
+"classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1495,7]
 };

@@ -11,6 +11,6 @@ var classLayerGachaResult =
     [ "buttonGetAll", "classLayerGachaResult.html#a6432d2229a388e344222bbb0915b57fc", null ],
     [ "items", "classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e", null ],
     [ "layout", "classLayerGachaResult.html#a3658641fb0bddc73722be4cb297962c0", null ],
-    [ "mode", "classLayerGachaResult.html#ad0624a120f01c3fd4380092081391635", null ],
+    [ "mode", "classLayerGachaResult.html#afdb2b412e3e434fc3de1ebede5c6e13b", null ],
     [ "moldItem", "classLayerGachaResult.html#ac94d090d691dae30c0b997ed3c3e4ef1", null ]
 ];

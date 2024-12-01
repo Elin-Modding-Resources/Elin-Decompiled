@@ -131,7 +131,7 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00083">83</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00005">5</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ade34e454eef147e1d2e53915a06955b1" name="ade34e454eef147e1d2e53915a06955b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade34e454eef147e1d2e53915a06955b1">&#9670;&#160;</a></span>DragInfo()</h2>
@@ -157,45 +157,50 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00085">85</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            this.button = b;</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (b &amp;&amp; b.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   89</span>            {</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (b.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   91</span>                {</div>
-<div class="line"><span class="lineno">   92</span>                    this.thing = b.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
-<div class="line"><span class="lineno">   93</span>                    this.invX = this.<a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_property" href="classCard.html#ac1b50d158e71e97e496402fb0fe51b9d">invX</a>;</div>
-<div class="line"><span class="lineno">   94</span>                    this.invY = this.<a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_property" href="classCard.html#a4ed771ab88b888f57f0c4369f2dd6b0f">invY</a>;</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_property" href="classThing.html#a1d1749db95ba575945fd81955bbcd364">isEquipped</a> &amp;&amp; <span class="keyword">this</span>.thing.GetRootCard() == <span class="keyword">this</span>.invOwner.owner)</div>
-<div class="line"><span class="lineno">   96</span>                    {</div>
-<div class="line"><span class="lineno">   97</span>                        this.equippedSlot = this.<a class="code hl_property" href="classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61">invOwner</a>.<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_variable" href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">slots</a>[this.thing.c_equippedSlot - 1];</div>
-<div class="line"><span class="lineno">   98</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   99</span>                    }</div>
-<div class="line"><span class="lineno">  100</span>                }</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  102</span>                {</div>
-<div class="line"><span class="lineno">  103</span>                    this.invX = b.<a class="code hl_variable" href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">index</a>;</div>
-<div class="line"><span class="lineno">  104</span>                    this.invY = b.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a>.<a class="code hl_property" href="classInvOwner.html#a0b42874895ec420d98d487d29947caee">destInvY</a>;</div>
-<div class="line"><span class="lineno">  105</span>                }</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="ttc" id="aclassButtonGrid_html_a1e704bdf3a08c312e607ad3bc919534d"><div class="ttname"><a href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">ButtonGrid.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00778">ButtonGrid.cs:778</a></div></div>
-<div class="ttc" id="aclassButtonGrid_html_a20afe24d5e89b755b5cc2e951895250e"><div class="ttname"><a href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">ButtonGrid.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00780">ButtonGrid.cs:780</a></div></div>
-<div class="ttc" id="aclassButtonGrid_html_a395df6219d488aabc130b70cc35028f0"><div class="ttname"><a href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">ButtonGrid.invOwner</a></div><div class="ttdeci">InvOwner invOwner</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00782">ButtonGrid.cs:782</a></div></div>
-<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02027">Card.cs:2028</a></div></div>
-<div class="ttc" id="aclassCard_html_a4ed771ab88b888f57f0c4369f2dd6b0f"><div class="ttname"><a href="classCard.html#a4ed771ab88b888f57f0c4369f2dd6b0f">Card.invY</a></div><div class="ttdeci">int invY</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01787">Card.cs:1788</a></div></div>
-<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
-<div class="ttc" id="aclassCard_html_ac1b50d158e71e97e496402fb0fe51b9d"><div class="ttname"><a href="classCard.html#ac1b50d158e71e97e496402fb0fe51b9d">Card.invX</a></div><div class="ttdeci">int invX</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01775">Card.cs:1776</a></div></div>
-<div class="ttc" id="aclassCharaBody_html_a6c3cd67d9056d79512ab74fa55bf64ba"><div class="ttname"><a href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">CharaBody.slots</a></div><div class="ttdeci">List&lt; BodySlot &gt; slots</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00521">CharaBody.cs:521</a></div></div>
-<div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09473">Chara.cs:9473</a></div></div>
-<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a143d697d791b21826bad9a2955019d54"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">DragItemCard.DragInfo.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00157">DragItemCard.cs:157</a></div></div>
-<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a6cdce183e30b3eef79c8f23e9e31fb61"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61">DragItemCard.DragInfo.invOwner</a></div><div class="ttdeci">InvOwner invOwner</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00117">DragItemCard.cs:118</a></div></div>
-<div class="ttc" id="aclassInvOwner_html_a0b42874895ec420d98d487d29947caee"><div class="ttname"><a href="classInvOwner.html#a0b42874895ec420d98d487d29947caee">InvOwner.destInvY</a></div><div class="ttdeci">virtual int destInvY</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00119">InvOwner.cs:120</a></div></div>
-<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01363">InvOwner.cs:1363</a></div></div>
-<div class="ttc" id="aclassThing_html_a1d1749db95ba575945fd81955bbcd364"><div class="ttname"><a href="classThing.html#a1d1749db95ba575945fd81955bbcd364">Thing.isEquipped</a></div><div class="ttdeci">bool isEquipped</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00010">Thing.cs:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00027">27</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a001bd0b15b1ad89e7a2c384df82ba65a">button</a> = b;</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (!b || b.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (b.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a> = b.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
+<div class="line"><span class="lineno">   37</span>                <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a41c1279def68997205745de31aee2334">invX</a> = <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_property" href="classCard.html#ac1b50d158e71e97e496402fb0fe51b9d">invX</a>;</div>
+<div class="line"><span class="lineno">   38</span>                <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a64551e48f551df065f6964beec567c82">invY</a> = <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_property" href="classCard.html#a4ed771ab88b888f57f0c4369f2dd6b0f">invY</a>;</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_property" href="classThing.html#a1d1749db95ba575945fd81955bbcd364">isEquipped</a> &amp;&amp; <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">thing</a>.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>() == <a class="code hl_property" href="classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61">invOwner</a>.<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>)</div>
+<div class="line"><span class="lineno">   40</span>                {</div>
+<div class="line"><span class="lineno">   41</span>                    <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a4401a519a3fae7e9b73b756dae74038a">equippedSlot</a> = <a class="code hl_property" href="classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61">invOwner</a>.<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_variable" href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">slots</a>[thing.c_equippedSlot - 1];</div>
+<div class="line"><span class="lineno">   42</span>                }</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a41c1279def68997205745de31aee2334">invX</a> = b.<a class="code hl_variable" href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">index</a>;</div>
+<div class="line"><span class="lineno">   47</span>                <a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a64551e48f551df065f6964beec567c82">invY</a> = b.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a>.<a class="code hl_property" href="classInvOwner.html#a0b42874895ec420d98d487d29947caee">destInvY</a>;</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="ttc" id="aclassButtonGrid_html_a1e704bdf3a08c312e607ad3bc919534d"><div class="ttname"><a href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">ButtonGrid.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.cs:24</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a20afe24d5e89b755b5cc2e951895250e"><div class="ttname"><a href="classButtonGrid.html#a20afe24d5e89b755b5cc2e951895250e">ButtonGrid.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00026">ButtonGrid.cs:26</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a395df6219d488aabc130b70cc35028f0"><div class="ttname"><a href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">ButtonGrid.invOwner</a></div><div class="ttdeci">InvOwner invOwner</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00028">ButtonGrid.cs:28</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01867">Card.cs:1868</a></div></div>
+<div class="ttc" id="aclassCard_html_a4ed771ab88b888f57f0c4369f2dd6b0f"><div class="ttname"><a href="classCard.html#a4ed771ab88b888f57f0c4369f2dd6b0f">Card.invY</a></div><div class="ttdeci">int invY</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01752">Card.cs:1753</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01855">Card.cs:1856</a></div></div>
+<div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03055">Card.cs:3055</a></div></div>
+<div class="ttc" id="aclassCard_html_ac1b50d158e71e97e496402fb0fe51b9d"><div class="ttname"><a href="classCard.html#ac1b50d158e71e97e496402fb0fe51b9d">Card.invX</a></div><div class="ttdeci">int invX</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01740">Card.cs:1741</a></div></div>
+<div class="ttc" id="aclassCharaBody_html_a6c3cd67d9056d79512ab74fa55bf64ba"><div class="ttname"><a href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">CharaBody.slots</a></div><div class="ttdeci">List&lt; BodySlot &gt; slots</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00008">CharaBody.cs:8</a></div></div>
+<div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00091">Chara.cs:91</a></div></div>
+<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a001bd0b15b1ad89e7a2c384df82ba65a"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a001bd0b15b1ad89e7a2c384df82ba65a">DragItemCard.DragInfo.button</a></div><div class="ttdeci">ButtonGrid button</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00007">DragItemCard.cs:7</a></div></div>
+<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a143d697d791b21826bad9a2955019d54"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a143d697d791b21826bad9a2955019d54">DragItemCard.DragInfo.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00015">DragItemCard.cs:15</a></div></div>
+<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a41c1279def68997205745de31aee2334"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a41c1279def68997205745de31aee2334">DragItemCard.DragInfo.invX</a></div><div class="ttdeci">int invX</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00011">DragItemCard.cs:11</a></div></div>
+<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a4401a519a3fae7e9b73b756dae74038a"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a4401a519a3fae7e9b73b756dae74038a">DragItemCard.DragInfo.equippedSlot</a></div><div class="ttdeci">BodySlot equippedSlot</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00009">DragItemCard.cs:9</a></div></div>
+<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a64551e48f551df065f6964beec567c82"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a64551e48f551df065f6964beec567c82">DragItemCard.DragInfo.invY</a></div><div class="ttdeci">int invY</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00013">DragItemCard.cs:13</a></div></div>
+<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a6cdce183e30b3eef79c8f23e9e31fb61"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61">DragItemCard.DragInfo.invOwner</a></div><div class="ttdeci">InvOwner invOwner</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00019">DragItemCard.cs:19</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a0b42874895ec420d98d487d29947caee"><div class="ttname"><a href="classInvOwner.html#a0b42874895ec420d98d487d29947caee">InvOwner.destInvY</a></div><div class="ttdeci">virtual int destInvY</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00587">InvOwner.cs:587</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00531">InvOwner.cs:531</a></div></div>
+<div class="ttc" id="aclassThing_html_a1d1749db95ba575945fd81955bbcd364"><div class="ttname"><a href="classThing.html#a1d1749db95ba575945fd81955bbcd364">Thing.isEquipped</a></div><div class="ttdeci">bool isEquipped</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00017">Thing.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09473">Chara.body</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00778">ButtonGrid.card</a>, <a class="el" href="Card_8cs_source.html#l02028">Card.Chara</a>, <a class="el" href="InvOwner_8cs_source.html#l00120">InvOwner.destInvY</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00780">ButtonGrid.index</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00782">ButtonGrid.invOwner</a>, <a class="el" href="DragItemCard_8cs_source.html#l00118">DragItemCard.DragInfo.invOwner</a>, <a class="el" href="Card_8cs_source.html#l01776">Card.invX</a>, <a class="el" href="Card_8cs_source.html#l01788">Card.invY</a>, <a class="el" href="Thing_8cs_source.html#l00011">Thing.isEquipped</a>, <a class="el" href="InvOwner_8cs_source.html#l01363">InvOwner.owner</a>, <a class="el" href="CharaBody_8cs_source.html#l00521">CharaBody.slots</a>, <a class="el" href="Card_8cs_source.html#l02016">Card.Thing</a>, and <a class="el" href="DragItemCard_8cs_source.html#l00157">DragItemCard.DragInfo.thing</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00091">Chara.body</a>, <a class="el" href="DragItemCard_8cs_source.html#l00007">DragItemCard.DragInfo.button</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="Card_8cs_source.html#l01868">Card.Chara</a>, <a class="el" href="InvOwner_8cs_source.html#l00587">InvOwner.destInvY</a>, <a class="el" href="DragItemCard_8cs_source.html#l00009">DragItemCard.DragInfo.equippedSlot</a>, <a class="el" href="Card_8cs_source.html#l03055">Card.GetRootCard()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00026">ButtonGrid.index</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00028">ButtonGrid.invOwner</a>, <a class="el" href="DragItemCard_8cs_source.html#l00019">DragItemCard.DragInfo.invOwner</a>, <a class="el" href="Card_8cs_source.html#l01741">Card.invX</a>, <a class="el" href="DragItemCard_8cs_source.html#l00011">DragItemCard.DragInfo.invX</a>, <a class="el" href="Card_8cs_source.html#l01753">Card.invY</a>, <a class="el" href="DragItemCard_8cs_source.html#l00013">DragItemCard.DragInfo.invY</a>, <a class="el" href="Thing_8cs_source.html#l00017">Thing.isEquipped</a>, <a class="el" href="InvOwner_8cs_source.html#l00531">InvOwner.owner</a>, <a class="el" href="CharaBody_8cs_source.html#l00008">CharaBody.slots</a>, <a class="el" href="Card_8cs_source.html#l01856">Card.Thing</a>, and <a class="el" href="DragItemCard_8cs_source.html#l00015">DragItemCard.DragInfo.thing</a>.</p>
 
 </div>
 </div>
@@ -212,9 +217,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00149">149</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00007">7</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00066">DragItemCard.OnDrag()</a>, and <a class="el" href="DragItemCard_8cs_source.html#l00043">DragItemCard.OnDragSpecial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00027">DragItemCard.DragInfo.DragInfo()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00112">DragItemCard.OnDrag()</a>, <a class="el" href="InvOwner_8cs_source.html#l01164">InvOwner.OnDrag()</a>, and <a class="el" href="DragItemCard_8cs_source.html#l00089">DragItemCard.OnDragSpecial()</a>.</p>
 
 </div>
 </div>
@@ -230,7 +235,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00151">151</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00009">9</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00027">DragItemCard.DragInfo.DragInfo()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>.</p>
 
 </div>
 </div>
@@ -246,9 +253,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00153">153</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00011">11</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00043">DragItemCard.OnDragSpecial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00027">DragItemCard.DragInfo.DragInfo()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00089">DragItemCard.OnDragSpecial()</a>, <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>, and <a class="el" href="Thing_8cs_source.html#l01638">Thing.ShowSplitMenu()</a>.</p>
 
 </div>
 </div>
@@ -264,9 +271,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00155">155</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00013">13</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00043">DragItemCard.OnDragSpecial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00027">DragItemCard.DragInfo.DragInfo()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00089">DragItemCard.OnDragSpecial()</a>, <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>, and <a class="el" href="Thing_8cs_source.html#l01638">Thing.ShowSplitMenu()</a>.</p>
 
 </div>
 </div>
@@ -282,9 +289,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00157">157</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00015">15</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00085">DragItemCard.DragInfo.DragInfo()</a>, and <a class="el" href="DragItemCard_8cs_source.html#l00043">DragItemCard.OnDragSpecial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00027">DragItemCard.DragInfo.DragInfo()</a>, <a class="el" href="InvOwner_8cs_source.html#l01096">InvOwner.Grab()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00112">DragItemCard.OnDrag()</a>, <a class="el" href="InvOwner_8cs_source.html#l01164">InvOwner.OnDrag()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00089">DragItemCard.OnDragSpecial()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00070">DragItemCard.OnStartDrag()</a>, <a class="el" href="InvOwner_8cs_source.html#l01140">InvOwner.OnStartDrag()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>.</p>
 
 </div>
 </div>
@@ -309,15 +316,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00125">125</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  128</span>            {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">return</span> this.<a class="code hl_property" href="classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61">invOwner</a>.<a class="code hl_variable" href="classInvOwner.html#a58977460ae601624d9d350ee9a36f97f">Container</a>;</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
-<div class="ttc" id="aclassInvOwner_html_a58977460ae601624d9d350ee9a36f97f"><div class="ttname"><a href="classInvOwner.html#a58977460ae601624d9d350ee9a36f97f">InvOwner.Container</a></div><div class="ttdeci">Card Container</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01365">InvOwner.cs:1365</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00021">21</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>.</p>
+
 </div>
 </div>
 <a id="a66ab05fdde5b3b5cce694069128e3845" name="a66ab05fdde5b3b5cce694069128e3845"></a>
@@ -340,17 +342,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00141">141</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  144</span>            {</div>
-<div class="line"><span class="lineno">  145</span>                <span class="keywordflow">return</span> this.<a class="code hl_property" href="classDragItemCard_1_1DragInfo.html#a21fb4ec1ec51263a8617cc08867b33f3">container</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#ab7eed24c4ef6e315a688883a1c2922e9">ContainerType</a>;</div>
-<div class="line"><span class="lineno">  146</span>            }</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07310">Card.cs:7310</a></div></div>
-<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a21fb4ec1ec51263a8617cc08867b33f3"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a21fb4ec1ec51263a8617cc08867b33f3">DragItemCard.DragInfo.container</a></div><div class="ttdeci">Card container</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00125">DragItemCard.cs:126</a></div></div>
-<div class="ttc" id="aclassTrait_html_ab7eed24c4ef6e315a688883a1c2922e9"><div class="ttname"><a href="classTrait.html#ab7eed24c4ef6e315a688883a1c2922e9">Trait.ContainerType</a></div><div class="ttdeci">virtual ContainerType ContainerType</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00517">Trait.cs:518</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00025">25</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+
 </div>
 </div>
 <a id="a1e6fd527fc6f51707e0e678043c44bbd" name="a1e6fd527fc6f51707e0e678043c44bbd"></a>
@@ -373,16 +366,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00109">109</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>        {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  112</span>            {</div>
-<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">return</span> this.<a class="code hl_property" href="classDragItemCard_1_1DragInfo.html#a21fb4ec1ec51263a8617cc08867b33f3">container</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a3752864600a1466b44645705c1f32445">grid</a>;</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07295">Card.cs:7295</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_a3752864600a1466b44645705c1f32445"><div class="ttname"><a href="classThingContainer.html#a3752864600a1466b44645705c1f32445">ThingContainer.grid</a></div><div class="ttdeci">List&lt; Thing &gt; grid</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00830">ThingContainer.cs:830</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00017">17</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6cdce183e30b3eef79c8f23e9e31fb61" name="a6cdce183e30b3eef79c8f23e9e31fb61"></a>
@@ -405,16 +390,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00117">117</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  120</span>            {</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a001bd0b15b1ad89e7a2c384df82ba65a">button</a>.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a>;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="ttc" id="aclassDragItemCard_1_1DragInfo_html_a001bd0b15b1ad89e7a2c384df82ba65a"><div class="ttname"><a href="classDragItemCard_1_1DragInfo.html#a001bd0b15b1ad89e7a2c384df82ba65a">DragItemCard.DragInfo.button</a></div><div class="ttdeci">ButtonGrid button</div><div class="ttdef"><b>Definition:</b> <a href="DragItemCard_8cs_source.html#l00149">DragItemCard.cs:149</a></div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00085">DragItemCard.DragInfo.DragInfo()</a>, and <a class="el" href="DragItemCard_8cs_source.html#l00043">DragItemCard.OnDragSpecial()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00019">19</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DragItemCard_8cs_source.html#l00027">DragItemCard.DragInfo.DragInfo()</a>, <a class="el" href="InvOwner_8cs_source.html#l01096">InvOwner.Grab()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00112">DragItemCard.OnDrag()</a>, <a class="el" href="InvOwner_8cs_source.html#l01164">InvOwner.OnDrag()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00089">DragItemCard.OnDragSpecial()</a>, <a class="el" href="DragItemCard_8cs_source.html#l00070">DragItemCard.OnStartDrag()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>.</p>
 
 </div>
 </div>
@@ -438,14 +416,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00133">133</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>        {</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  136</span>            {</div>
-<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classDragItemCard_1_1DragInfo.html#a001bd0b15b1ad89e7a2c384df82ba65a">button</a>.GetComponentInParent&lt;BaseList&gt;();</div>
-<div class="line"><span class="lineno">  138</span>            }</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="DragItemCard_8cs_source.html#l00023">23</a> of file <a class="el" href="DragItemCard_8cs_source.html">DragItemCard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01096">InvOwner.Grab()</a>, <a class="el" href="InvOwner_8cs_source.html#l01164">InvOwner.OnDrag()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01111">InvOwner.PutBack()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -140,7 +140,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00005">5</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00004">4</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1b430f94cf22095ee7b73eeaf98d2074" name="a1b430f94cf22095ee7b73eeaf98d2074"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b430f94cf22095ee7b73eeaf98d2074">&#9670;&#160;</a></span>OnSwitchContent()</h2>
@@ -166,108 +166,106 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00007">7</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        this.list.sortMode = UIList.SortMode.ByValue;</div>
-<div class="line"><span class="lineno">   10</span>        BaseList baseList = this.<a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>;</div>
-<div class="line"><span class="lineno">   11</span>        UIList.Callback&lt;<a class="code hl_class" href="classQuest.html">Quest</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classQuest.html">Quest</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt;();</div>
-<div class="line"><span class="lineno">   12</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classQuest.html">Quest</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            b.<a class="code hl_function" href="classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028">SetSound</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = a.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>();</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>)</div>
-<div class="line"><span class="lineno">   17</span>            {</div>
-<div class="line"><span class="lineno">   18</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;(&quot;</span> + a.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a>.ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">   19</span>            }</div>
-<div class="line"><span class="lineno">   20</span>            b.button1.mainText.SetText(a.<a class="code hl_property" href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">TitlePrefix</a> + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>);</div>
-<div class="line"><span class="lineno">   21</span>            b.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(a.<a class="code hl_property" href="classQuest.html#a3545a8531e7050e47defad5784549ede">TextDeadline</a>, 260, FontColor.Default, TextAnchor.MiddleRight);</div>
-<div class="line"><span class="lineno">   22</span>            b.button2.SetActive(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; a.<a class="code hl_property" href="classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5">CanAutoAdvance</a>);</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; a.<a class="code hl_property" href="classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5">CanAutoAdvance</a>)</div>
-<div class="line"><span class="lineno">   24</span>            {</div>
-<div class="line"><span class="lineno">   25</span>                b.button2.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   26</span>                {</div>
-<div class="line"><span class="lineno">   27</span>                    <span class="keywordflow">if</span> (a.<a class="code hl_variable" href="classQuest.html#ac0386b88dd13fba25949cece128496d4">task</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   28</span>                    {</div>
-<div class="line"><span class="lineno">   29</span>                        a.CompleteTask();</div>
-<div class="line"><span class="lineno">   30</span>                    }</div>
-<div class="line"><span class="lineno">   31</span>                    <span class="keywordflow">else</span> if (a is <a class="code hl_class" href="classQuestSequence.html">QuestSequence</a>)</div>
-<div class="line"><span class="lineno">   32</span>                    {</div>
-<div class="line"><span class="lineno">   33</span>                        a.<a class="code hl_function" href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">NextPhase</a>();</div>
-<div class="line"><span class="lineno">   34</span>                    }</div>
-<div class="line"><span class="lineno">   35</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   36</span>                    {</div>
-<div class="line"><span class="lineno">   37</span>                        a.<a class="code hl_function" href="classQuest.html#adfb2530144545afdc990ba10d276309c">Complete</a>();</div>
-<div class="line"><span class="lineno">   38</span>                    }</div>
-<div class="line"><span class="lineno">   39</span>                    this.<a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.List(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   40</span>                });</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>            b.button3.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   43</span>            {</div>
-<div class="line"><span class="lineno">   44</span>                a.track = !a.<a class="code hl_variable" href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">track</a>;</div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>)</div>
-<div class="line"><span class="lineno">   46</span>                {</div>
-<div class="line"><span class="lineno">   47</span>                    EClass.player.questTracker = true;</div>
-<div class="line"><span class="lineno">   48</span>                    EClass.ui.widgets.ActivateWidget(<span class="stringliteral">&quot;QuestTracker&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span>                    WidgetHotbar.RefreshButtons();</div>
-<div class="line"><span class="lineno">   50</span>                }</div>
-<div class="line"><span class="lineno">   51</span>                <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>.<a class="code hl_function" href="classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5">Refresh</a>();</div>
-<div class="line"><span class="lineno">   52</span>                <span class="keyword">this</span>.list.Select(a, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keyword">this</span>.SelectQuest(a);</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keyword">this</span>.RefreshTrackButtons();</div>
-<div class="line"><span class="lineno">   55</span>            });</div>
-<div class="line"><span class="lineno">   56</span>        };</div>
-<div class="line"><span class="lineno">   57</span>        callback.onClick = delegate(<a class="code hl_class" href="classQuest.html">Quest</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            this.<a class="code hl_function" href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">SelectQuest</a>(a);</div>
-<div class="line"><span class="lineno">   60</span>        };</div>
-<div class="line"><span class="lineno">   61</span>        callback.onList = delegate(UIList.SortMode m)</div>
-<div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classQuest.html">Quest</a> o <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">list</a>)</div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                this.<a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.Add(o);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        };</div>
-<div class="line"><span class="lineno">   68</span>        callback.onSort = ((<a class="code hl_class" href="classQuest.html">Quest</a> a, UIList.SortMode m) =&gt; -<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.rows.IndexOf(a.<a class="code hl_property" href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">source</a>));</div>
-<div class="line"><span class="lineno">   69</span>        baseList.callbacks = callback;</div>
-<div class="line"><span class="lineno">   70</span>        this.<a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.List(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   71</span>        this.<a class="code hl_function" href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">SelectQuest</a>(this.<a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.items[0] as <a class="code hl_class" href="classQuest.html">Quest</a>);</div>
-<div class="line"><span class="lineno">   72</span>        this.<a class="code hl_function" href="classContentQuest.html#a35a3e8f7b818737b0e12278462c70d14">RefreshTrackButtons</a>();</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a1778727651cae63b4e09903629b52df4"><div class="ttname"><a href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">ContentQuest.SelectQuest</a></div><div class="ttdeci">void SelectQuest(Quest q)</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00084">ContentQuest.cs:84</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a2268fb8e0ab693e04f230f15dfe49e88"><div class="ttname"><a href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">ContentQuest.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00139">ContentQuest.cs:139</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a35a3e8f7b818737b0e12278462c70d14"><div class="ttname"><a href="classContentQuest.html#a35a3e8f7b818737b0e12278462c70d14">ContentQuest.RefreshTrackButtons</a></div><div class="ttdeci">void RefreshTrackButtons()</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00075">ContentQuest.cs:75</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_a669319abcd748efaa6f60d5a2ad578ca"><div class="ttname"><a href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">CoreDebug.showExtra</a></div><div class="ttdeci">bool showExtra</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02182">CoreDebug.cs:2182</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02314">CoreDebug.cs:2314</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
-<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
-<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00026">26</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        list.sortMode = UIList.SortMode.ByValue;</div>
+<div class="line"><span class="lineno">   29</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classQuest.html">Quest</a>, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>&gt;</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            onInstantiate = delegate(<a class="code hl_class" href="classQuest.html">Quest</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                b.<a class="code hl_function" href="classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028">SetSound</a>();</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordtype">string</span> text = a.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>();</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>)</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    text = text + <span class="stringliteral">&quot;(&quot;</span> + a.phase + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>                }</div>
+<div class="line"><span class="lineno">   39</span>                b.button1.mainText.SetText(a.<a class="code hl_property" href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">TitlePrefix</a> + text);</div>
+<div class="line"><span class="lineno">   40</span>                b.<a class="code hl_function" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a>(a.<a class="code hl_property" href="classQuest.html#a3545a8531e7050e47defad5784549ede">TextDeadline</a>, 260, FontColor.Default, TextAnchor.MiddleRight);</div>
+<div class="line"><span class="lineno">   41</span>                b.button2.SetActive(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; a.<a class="code hl_property" href="classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5">CanAutoAdvance</a>);</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; a.<a class="code hl_property" href="classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5">CanAutoAdvance</a>)</div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    b.button2.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   45</span>                    {</div>
+<div class="line"><span class="lineno">   46</span>                        <span class="keywordflow">if</span> (a.<a class="code hl_variable" href="classQuest.html#ac0386b88dd13fba25949cece128496d4">task</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   47</span>                        {</div>
+<div class="line"><span class="lineno">   48</span>                            a.CompleteTask();</div>
+<div class="line"><span class="lineno">   49</span>                        }</div>
+<div class="line"><span class="lineno">   50</span>                        <span class="keywordflow">else</span> if (a is <a class="code hl_class" href="classQuestSequence.html">QuestSequence</a>)</div>
+<div class="line"><span class="lineno">   51</span>                        {</div>
+<div class="line"><span class="lineno">   52</span>                            a.<a class="code hl_function" href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">NextPhase</a>();</div>
+<div class="line"><span class="lineno">   53</span>                        }</div>
+<div class="line"><span class="lineno">   54</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   55</span>                        {</div>
+<div class="line"><span class="lineno">   56</span>                            a.<a class="code hl_function" href="classQuest.html#adfb2530144545afdc990ba10d276309c">Complete</a>();</div>
+<div class="line"><span class="lineno">   57</span>                        }</div>
+<div class="line"><span class="lineno">   58</span>                        <a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.List();</div>
+<div class="line"><span class="lineno">   59</span>                    });</div>
+<div class="line"><span class="lineno">   60</span>                }</div>
+<div class="line"><span class="lineno">   61</span>                b.button3.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    a.track = !a.<a class="code hl_variable" href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">track</a>;</div>
+<div class="line"><span class="lineno">   64</span>                    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>)</div>
+<div class="line"><span class="lineno">   65</span>                    {</div>
+<div class="line"><span class="lineno">   66</span>                        EClass.player.questTracker = true;</div>
+<div class="line"><span class="lineno">   67</span>                        EClass.ui.widgets.ActivateWidget(<span class="stringliteral">&quot;QuestTracker&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>                        WidgetHotbar.RefreshButtons();</div>
+<div class="line"><span class="lineno">   69</span>                    }</div>
+<div class="line"><span class="lineno">   70</span>                    <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>.<a class="code hl_variable" href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">Instance</a>.<a class="code hl_function" href="classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5">Refresh</a>();</div>
+<div class="line"><span class="lineno">   71</span>                    <a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.Select(a);</div>
+<div class="line"><span class="lineno">   72</span>                    <a class="code hl_function" href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">SelectQuest</a>(a);</div>
+<div class="line"><span class="lineno">   73</span>                    <a class="code hl_function" href="classContentQuest.html#a35a3e8f7b818737b0e12278462c70d14">RefreshTrackButtons</a>();</div>
+<div class="line"><span class="lineno">   74</span>                });</div>
+<div class="line"><span class="lineno">   75</span>            },</div>
+<div class="line"><span class="lineno">   76</span>            onClick = delegate(<a class="code hl_class" href="classQuest.html">Quest</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_function" href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">SelectQuest</a>(a);</div>
+<div class="line"><span class="lineno">   79</span>            },</div>
+<div class="line"><span class="lineno">   80</span>            onList = delegate</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classQuest.html">Quest</a> item <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">list</a>)</div>
+<div class="line"><span class="lineno">   83</span>                {</div>
+<div class="line"><span class="lineno">   84</span>                    <a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.Add(item);</div>
+<div class="line"><span class="lineno">   85</span>                }</div>
+<div class="line"><span class="lineno">   86</span>            },</div>
+<div class="line"><span class="lineno">   87</span>            onSort = (<a class="code hl_class" href="classQuest.html">Quest</a> a, UIList.SortMode m) =&gt; -<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.rows.IndexOf(a.<a class="code hl_property" href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">source</a>)</div>
+<div class="line"><span class="lineno">   88</span>        };</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.List();</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_function" href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">SelectQuest</a>(<a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.items[0] as <a class="code hl_class" href="classQuest.html">Quest</a>);</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="classContentQuest.html#a35a3e8f7b818737b0e12278462c70d14">RefreshTrackButtons</a>();</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclassContentQuest_html_a1778727651cae63b4e09903629b52df4"><div class="ttname"><a href="classContentQuest.html#a1778727651cae63b4e09903629b52df4">ContentQuest.SelectQuest</a></div><div class="ttdeci">void SelectQuest(Quest q)</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00102">ContentQuest.cs:102</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_a2268fb8e0ab693e04f230f15dfe49e88"><div class="ttname"><a href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">ContentQuest.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00006">ContentQuest.cs:6</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_a35a3e8f7b818737b0e12278462c70d14"><div class="ttname"><a href="classContentQuest.html#a35a3e8f7b818737b0e12278462c70d14">ContentQuest.RefreshTrackButtons</a></div><div class="ttdeci">void RefreshTrackButtons()</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00094">ContentQuest.cs:94</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a669319abcd748efaa6f60d5a2ad578ca"><div class="ttname"><a href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">CoreDebug.showExtra</a></div><div class="ttdeci">bool showExtra</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00167">CoreDebug.cs:167</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00176">Game.cs:176</a></div></div>
 <div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
-<div class="ttc" id="aclassItemGeneral_html_a748c7f1e5bc9cc5a1ca90419a368d028"><div class="ttname"><a href="classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028">ItemGeneral.SetSound</a></div><div class="ttdeci">void SetSound(SoundData data=null)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00136">ItemGeneral.cs:136</a></div></div>
-<div class="ttc" id="aclassItemGeneral_html_ae2b8778fd74445f36964a7224550426a"><div class="ttname"><a href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">ItemGeneral.SetSubText</a></div><div class="ttdeci">UIButton SetSubText(string lang, int x, FontColor c=FontColor.Default, TextAnchor align=TextAnchor.MiddleLeft)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.cs:113</a></div></div>
-<div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00327">QuestManager.cs:327</a></div></div>
-<div class="ttc" id="aclassQuestSequence_html"><div class="ttname"><a href="classQuestSequence.html">QuestSequence</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestSequence_8cs_source.html#l00003">QuestSequence.cs:4</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_a748c7f1e5bc9cc5a1ca90419a368d028"><div class="ttname"><a href="classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028">ItemGeneral.SetSound</a></div><div class="ttdeci">void SetSound(SoundData data=null)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00142">ItemGeneral.cs:142</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_ae2b8778fd74445f36964a7224550426a"><div class="ttname"><a href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">ItemGeneral.SetSubText</a></div><div class="ttdeci">UIButton SetSubText(string lang, int x, FontColor c=FontColor.Default, TextAnchor align=TextAnchor.MiddleLeft)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00119">ItemGeneral.cs:119</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00011">QuestManager.cs:11</a></div></div>
+<div class="ttc" id="aclassQuestSequence_html"><div class="ttname"><a href="classQuestSequence.html">QuestSequence</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestSequence_8cs_source.html#l00001">QuestSequence.cs:2</a></div></div>
 <div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
-<div class="ttc" id="aclassQuest_html_a3545a8531e7050e47defad5784549ede"><div class="ttname"><a href="classQuest.html#a3545a8531e7050e47defad5784549ede">Quest.TextDeadline</a></div><div class="ttdeci">string TextDeadline</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00108">Quest.cs:109</a></div></div>
-<div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00778">Quest.cs:778</a></div></div>
-<div class="ttc" id="aclassQuest_html_a893e87dd377c8e47b3927cb74e0f0b38"><div class="ttname"><a href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">Quest.GetTitle</a></div><div class="ttdeci">virtual string GetTitle()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00654">Quest.cs:654</a></div></div>
-<div class="ttc" id="aclassQuest_html_a8b86dbb9e1fb562b9f47167f8ecdfed5"><div class="ttname"><a href="classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5">Quest.CanAutoAdvance</a></div><div class="ttdeci">virtual bool CanAutoAdvance</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00358">Quest.cs:359</a></div></div>
-<div class="ttc" id="aclassQuest_html_ac0386b88dd13fba25949cece128496d4"><div class="ttname"><a href="classQuest.html#ac0386b88dd13fba25949cece128496d4">Quest.task</a></div><div class="ttdeci">QuestTask task</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00814">Quest.cs:814</a></div></div>
-<div class="ttc" id="aclassQuest_html_ac34a1a4c6ad6c492f7824c85d41db6ca"><div class="ttname"><a href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">Quest.NextPhase</a></div><div class="ttdeci">void NextPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00615">Quest.cs:615</a></div></div>
-<div class="ttc" id="aclassQuest_html_adfb2530144545afdc990ba10d276309c"><div class="ttname"><a href="classQuest.html#adfb2530144545afdc990ba10d276309c">Quest.Complete</a></div><div class="ttdeci">void Complete()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00516">Quest.cs:516</a></div></div>
-<div class="ttc" id="aclassQuest_html_aeaa8b4d53768b7c3ecb34c0a78f17b96"><div class="ttname"><a href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">Quest.track</a></div><div class="ttdeci">bool track</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00808">Quest.cs:808</a></div></div>
-<div class="ttc" id="aclassQuest_html_aeb3bf5e8dca000f28bf64c8ad02308e0"><div class="ttname"><a href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">Quest.source</a></div><div class="ttdeci">SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00072">Quest.cs:73</a></div></div>
-<div class="ttc" id="aclassQuest_html_af81b809e290fdbe9fbf0d218090403de"><div class="ttname"><a href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">Quest.TitlePrefix</a></div><div class="ttdeci">virtual string TitlePrefix</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00327">Quest.cs:328</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_ae13e44c82dc0772f87c1ad21b9c653f8"><div class="ttname"><a href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">SourceManager.quests</a></div><div class="ttdeci">SourceQuest quests</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00193">SourceManager.cs:193</a></div></div>
-<div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00005">WidgetQuestTracker.cs:6</a></div></div>
-<div class="ttc" id="aclassWidgetQuestTracker_html_a4342d71955ad4c1dac6c898f2e686435"><div class="ttname"><a href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">WidgetQuestTracker.Instance</a></div><div class="ttdeci">static WidgetQuestTracker Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00101">WidgetQuestTracker.cs:101</a></div></div>
-<div class="ttc" id="aclassWidgetQuestTracker_html_a8fcd018e87e7f0867b5de29bd048cea5"><div class="ttname"><a href="classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5">WidgetQuestTracker.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.cs:23</a></div></div>
+<div class="ttc" id="aclassQuest_html_a3545a8531e7050e47defad5784549ede"><div class="ttname"><a href="classQuest.html#a3545a8531e7050e47defad5784549ede">Quest.TextDeadline</a></div><div class="ttdeci">string TextDeadline</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00135">Quest.cs:136</a></div></div>
+<div class="ttc" id="aclassQuest_html_a893e87dd377c8e47b3927cb74e0f0b38"><div class="ttname"><a href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">Quest.GetTitle</a></div><div class="ttdeci">virtual string GetTitle()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00606">Quest.cs:606</a></div></div>
+<div class="ttc" id="aclassQuest_html_a8b86dbb9e1fb562b9f47167f8ecdfed5"><div class="ttname"><a href="classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5">Quest.CanAutoAdvance</a></div><div class="ttdeci">virtual bool CanAutoAdvance</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00233">Quest.cs:233</a></div></div>
+<div class="ttc" id="aclassQuest_html_ac0386b88dd13fba25949cece128496d4"><div class="ttname"><a href="classQuest.html#ac0386b88dd13fba25949cece128496d4">Quest.task</a></div><div class="ttdeci">QuestTask task</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00076">Quest.cs:76</a></div></div>
+<div class="ttc" id="aclassQuest_html_ac34a1a4c6ad6c492f7824c85d41db6ca"><div class="ttname"><a href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">Quest.NextPhase</a></div><div class="ttdeci">void NextPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00565">Quest.cs:565</a></div></div>
+<div class="ttc" id="aclassQuest_html_adfb2530144545afdc990ba10d276309c"><div class="ttname"><a href="classQuest.html#adfb2530144545afdc990ba10d276309c">Quest.Complete</a></div><div class="ttdeci">void Complete()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00466">Quest.cs:466</a></div></div>
+<div class="ttc" id="aclassQuest_html_aeaa8b4d53768b7c3ecb34c0a78f17b96"><div class="ttname"><a href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">Quest.track</a></div><div class="ttdeci">bool track</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00070">Quest.cs:70</a></div></div>
+<div class="ttc" id="aclassQuest_html_aeb3bf5e8dca000f28bf64c8ad02308e0"><div class="ttname"><a href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">Quest.source</a></div><div class="ttdeci">SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
+<div class="ttc" id="aclassQuest_html_af81b809e290fdbe9fbf0d218090403de"><div class="ttname"><a href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">Quest.TitlePrefix</a></div><div class="ttdeci">virtual string TitlePrefix</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00231">Quest.cs:231</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ae13e44c82dc0772f87c1ad21b9c653f8"><div class="ttname"><a href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">SourceManager.quests</a></div><div class="ttdeci">SourceQuest quests</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00058">SourceManager.cs:58</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00004">WidgetQuestTracker.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a4342d71955ad4c1dac6c898f2e686435"><div class="ttname"><a href="classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435">WidgetQuestTracker.Instance</a></div><div class="ttdeci">static WidgetQuestTracker Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00006">WidgetQuestTracker.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetQuestTracker_html_a8fcd018e87e7f0867b5de29bd048cea5"><div class="ttname"><a href="classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5">WidgetQuestTracker.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00030">WidgetQuestTracker.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00359">Quest.CanAutoAdvance</a>, <a class="el" href="Quest_8cs_source.html#l00516">Quest.Complete()</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02314">CoreDebug.enable</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Quest_8cs_source.html#l00654">Quest.GetTitle()</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00101">WidgetQuestTracker.Instance</a>, <a class="el" href="ContentQuest_8cs_source.html#l00139">list</a>, <a class="el" href="QuestManager_8cs_source.html#l00327">QuestManager.list</a>, <a class="el" href="Quest_8cs_source.html#l00615">Quest.NextPhase()</a>, <a class="el" href="Quest_8cs_source.html#l00778">Quest.phase</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, <a class="el" href="SourceManager_8cs_source.html#l00193">SourceManager.quests</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.Refresh()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00075">RefreshTrackButtons()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00136">ItemGeneral.SetSound()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00113">ItemGeneral.SetSubText()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02182">CoreDebug.showExtra</a>, <a class="el" href="Quest_8cs_source.html#l00073">Quest.source</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="Quest_8cs_source.html#l00814">Quest.task</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="Quest_8cs_source.html#l00109">Quest.TextDeadline</a>, <a class="el" href="Quest_8cs_source.html#l00328">Quest.TitlePrefix</a>, and <a class="el" href="Quest_8cs_source.html#l00808">Quest.track</a>.</p>
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00233">Quest.CanAutoAdvance</a>, <a class="el" href="Quest_8cs_source.html#l00466">Quest.Complete()</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Quest_8cs_source.html#l00606">Quest.GetTitle()</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00006">WidgetQuestTracker.Instance</a>, <a class="el" href="ContentQuest_8cs_source.html#l00006">list</a>, <a class="el" href="QuestManager_8cs_source.html#l00011">QuestManager.list</a>, <a class="el" href="Quest_8cs_source.html#l00565">Quest.NextPhase()</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.quests</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00030">WidgetQuestTracker.Refresh()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00094">RefreshTrackButtons()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00102">SelectQuest()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00142">ItemGeneral.SetSound()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00119">ItemGeneral.SetSubText()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, <a class="el" href="Quest_8cs_source.html#l00107">Quest.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="Quest_8cs_source.html#l00076">Quest.task</a>, <a class="el" href="Quest_8cs_source.html#l00136">Quest.TextDeadline</a>, <a class="el" href="Quest_8cs_source.html#l00231">Quest.TitlePrefix</a>, and <a class="el" href="Quest_8cs_source.html#l00070">Quest.track</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00102">SelectQuest()</a>.</p>
 
 </div>
 </div>
@@ -294,18 +292,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00075">75</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">foreach</span> (UIList.ButtonPair buttonPair in <span class="keyword">this</span>.list.buttons)</div>
-<div class="line"><span class="lineno">   78</span>        {</div>
-<div class="line"><span class="lineno">   79</span>            <a class="code hl_class" href="classQuest.html">Quest</a> quest = buttonPair.obj as <a class="code hl_class" href="classQuest.html">Quest</a>;</div>
-<div class="line"><span class="lineno">   80</span>            (buttonPair.component as <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>).button3.icon.SetActive(quest.<a class="code hl_variable" href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">track</a>);</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00094">94</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">foreach</span> (UIList.ButtonPair button in <a class="code hl_variable" href="classContentQuest.html#a2268fb8e0ab693e04f230f15dfe49e88">list</a>.buttons)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            ClassExtension.SetActive(enable: (button.obj as <a class="code hl_class" href="classQuest.html">Quest</a>).track, c: (button.component as <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a>).button3.icon);</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00808">Quest.track</a>.</p>
+<p class="reference">References <a class="el" href="ContentQuest_8cs_source.html#l00006">list</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00007">OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00026">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -333,92 +330,61 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00084">84</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
-<div class="line"><span class="lineno">   86</span>        this.<a class="code hl_variable" href="classContentQuest.html#a8e575e2ccd7a5c5eb24b2268c82abdd5">buttonAbandon</a>.SetActive(q.<a class="code hl_property" href="classQuest.html#a4473dd195f35959750ba0ff2cdea1eeb">CanAbandon</a>);</div>
-<div class="line"><span class="lineno">   87</span>        Action &lt;&gt;9__1;</div>
-<div class="line"><span class="lineno">   88</span>        this.<a class="code hl_variable" href="classContentQuest.html#a8e575e2ccd7a5c5eb24b2268c82abdd5">buttonAbandon</a>.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">string</span> langDetail = <span class="stringliteral">&quot;dialog_abandonQuest&quot;</span>;</div>
-<div class="line"><span class="lineno">   91</span>            Action actionYes;</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> ((actionYes = &lt;&gt;9__1) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   93</span>            {</div>
-<div class="line"><span class="lineno">   94</span>                actionYes = (&lt;&gt;9__1 = delegate()</div>
-<div class="line"><span class="lineno">   95</span>                {</div>
-<div class="line"><span class="lineno">   96</span>                    <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;questAbandon&quot;</span>, q.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   97</span>                    q.<a class="code hl_function" href="classQuest.html#a4bfea3e8b0eccb61d83d48bcdc3e8b84">Fail</a>();</div>
-<div class="line"><span class="lineno">   98</span>                    this.<a class="code hl_function" href="classContentQuest.html#a1b430f94cf22095ee7b73eeaf98d2074">OnSwitchContent</a>(0);</div>
-<div class="line"><span class="lineno">   99</span>                });</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(langDetail, actionYes, <span class="keyword">null</span>, <span class="stringliteral">&quot;yes&quot;</span>, <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line"><span class="lineno">  102</span>        });</div>
-<div class="line"><span class="lineno">  103</span>        this.textClient.text = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#a23ae20608065849e049d592fcea240d5">NameBraced</a>;</div>
-<div class="line"><span class="lineno">  104</span>        this.<a class="code hl_variable" href="classContentQuest.html#a57e390d7eeb255f45db331e3c4183f18">textReward</a>.SetText(q.<a class="code hl_function" href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">GetRewardText</a>());</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = q.<a class="code hl_function" href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">GetDetail</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a> &amp;&amp; q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  107</span>        {</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += Environment.NewLine;</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[7];</div>
-<div class="line"><span class="lineno">  110</span>            array[0] = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">  111</span>            array[1] = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_variable" href="classPerson.html#a271e17c57f5e8046fff8a21767a26d71">id</a>;</div>
-<div class="line"><span class="lineno">  112</span>            array[2] = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">  113</span>            array[3] = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_variable" href="classPerson.html#ac4496aaac27c5e4d54512c809e18c0ce">name</a>;</div>
-<div class="line"><span class="lineno">  114</span>            array[4] = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordtype">int</span> num = 5;</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_class" href="classChara.html">Chara</a> chara = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>;</div>
-<div class="line"><span class="lineno">  117</span>            array[num] = ((chara != <span class="keyword">null</span>) ? chara.<a class="code hl_function" href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">ToString</a>() : <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  118</span>            array[6] = Environment.NewLine;</div>
-<div class="line"><span class="lineno">  119</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="keywordtype">string</span>.Concat(array);</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_class" href="classQuestDeliver.html">QuestDeliver</a> questDeliver = q as <a class="code hl_class" href="classQuestDeliver.html">QuestDeliver</a>;</div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (questDeliver != <span class="keyword">null</span>)</div>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00102">102</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="classContentQuest.html#a8e575e2ccd7a5c5eb24b2268c82abdd5">buttonAbandon</a>.SetActive(q.<a class="code hl_property" href="classQuest.html#a4473dd195f35959750ba0ff2cdea1eeb">CanAbandon</a>);</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="classContentQuest.html#a8e575e2ccd7a5c5eb24b2268c82abdd5">buttonAbandon</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(<span class="stringliteral">&quot;dialog_abandonQuest&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;questAbandon&quot;</span>, q.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>());</div>
+<div class="line"><span class="lineno">  110</span>                q.<a class="code hl_function" href="classQuest.html#a4bfea3e8b0eccb61d83d48bcdc3e8b84">Fail</a>();</div>
+<div class="line"><span class="lineno">  111</span>                <a class="code hl_function" href="classContentQuest.html#a1b430f94cf22095ee7b73eeaf98d2074">OnSwitchContent</a>(0);</div>
+<div class="line"><span class="lineno">  112</span>            });</div>
+<div class="line"><span class="lineno">  113</span>        });</div>
+<div class="line"><span class="lineno">  114</span>        textClient.text = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#a23ae20608065849e049d592fcea240d5">NameBraced</a>;</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classContentQuest.html#a57e390d7eeb255f45db331e3c4183f18">textReward</a>.SetText(q.<a class="code hl_function" href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">GetRewardText</a>());</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">string</span> text = q.<a class="code hl_function" href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">GetDetail</a>(onJournal: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a> &amp;&amp; q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            text += Environment.NewLine;</div>
+<div class="line"><span class="lineno">  120</span>            text = text + q.person.id + <span class="stringliteral">&quot;/&quot;</span> + q.person.name + <span class="stringliteral">&quot;/&quot;</span> + q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>?.<a class="code hl_function" href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">ToString</a>() + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (q is <a class="code hl_class" href="classQuestDeliver.html">QuestDeliver</a> questDeliver)</div>
 <div class="line"><span class="lineno">  122</span>            {</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordtype">string</span> str = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">  124</span>                <span class="keywordtype">string</span> str2 = questDeliver.<a class="code hl_variable" href="classQuestDestZone.html#aa7b5277c2fe67533cfeb3b5a19be5229">uidDest</a>.ToString();</div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordtype">string</span> str3 = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">  126</span>                <a class="code hl_class" href="classChara.html">Chara</a> destChara = questDeliver.<a class="code hl_property" href="classQuestDestZone.html#a17a60231ecb26e36ee749f6274c04d8d">DestChara</a>;</div>
-<div class="line"><span class="lineno">  127</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = str + str2 + str3 + ((destChara != <span class="keyword">null</span>) ? destChara.<a class="code hl_function" href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">ToString</a>() : <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  128</span>            }</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        this.<a class="code hl_variable" href="classContentQuest.html#adf9f191112a323c0248d6aba3390788c">textDetail</a>.SetText(text);</div>
-<div class="line"><span class="lineno">  131</span>        this.textHours.text = q.<a class="code hl_property" href="classQuest.html#a3545a8531e7050e47defad5784549ede">TextDeadline</a>;</div>
-<div class="line"><span class="lineno">  132</span>        Text text2 = this.<a class="code hl_variable" href="classContentQuest.html#a2f52ad1a930e4bbbd70fafd24d089fac">textZone</a>;</div>
-<div class="line"><span class="lineno">  133</span>        <a class="code hl_class" href="classZone.html">Zone</a> clientZone = q.<a class="code hl_property" href="classQuest.html#a76a73ee0029b9e424237432d3600e125">ClientZone</a>;</div>
-<div class="line"><span class="lineno">  134</span>        text2.text = (((clientZone != <span class="keyword">null</span>) ? clientZone.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a> : <span class="keyword">null</span>) ?? <span class="stringliteral">&quot;-&quot;</span>);</div>
-<div class="line"><span class="lineno">  135</span>        this.<a class="code hl_variable" href="classContentQuest.html#a98fc651708906d0f14262b5c5c1f4b0c">portrait</a>.<a class="code hl_function" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">SetPerson</a>(q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>);</div>
-<div class="line"><span class="lineno">  136</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassChara_html_a4559e7f955b5324fcfc35429abc621fd"><div class="ttname"><a href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">Chara.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00372">Chara.cs:372</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a1b430f94cf22095ee7b73eeaf98d2074"><div class="ttname"><a href="classContentQuest.html#a1b430f94cf22095ee7b73eeaf98d2074">ContentQuest.OnSwitchContent</a></div><div class="ttdeci">override void OnSwitchContent(int idTab)</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00007">ContentQuest.cs:7</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a2f52ad1a930e4bbbd70fafd24d089fac"><div class="ttname"><a href="classContentQuest.html#a2f52ad1a930e4bbbd70fafd24d089fac">ContentQuest.textZone</a></div><div class="ttdeci">UIText textZone</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00153">ContentQuest.cs:153</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a57e390d7eeb255f45db331e3c4183f18"><div class="ttname"><a href="classContentQuest.html#a57e390d7eeb255f45db331e3c4183f18">ContentQuest.textReward</a></div><div class="ttdeci">UIText textReward</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00151">ContentQuest.cs:151</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a8e575e2ccd7a5c5eb24b2268c82abdd5"><div class="ttname"><a href="classContentQuest.html#a8e575e2ccd7a5c5eb24b2268c82abdd5">ContentQuest.buttonAbandon</a></div><div class="ttdeci">UIButton buttonAbandon</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00157">ContentQuest.cs:157</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_a98fc651708906d0f14262b5c5c1f4b0c"><div class="ttname"><a href="classContentQuest.html#a98fc651708906d0f14262b5c5c1f4b0c">ContentQuest.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00155">ContentQuest.cs:155</a></div></div>
-<div class="ttc" id="aclassContentQuest_html_adf9f191112a323c0248d6aba3390788c"><div class="ttname"><a href="classContentQuest.html#adf9f191112a323c0248d6aba3390788c">ContentQuest.textDetail</a></div><div class="ttdeci">UIText textDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00145">ContentQuest.cs:145</a></div></div>
+<div class="line"><span class="lineno">  123</span>                text = text + questDeliver.uidDest + <span class="stringliteral">&quot;/&quot;</span> + questDeliver.DestChara;</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_variable" href="classContentQuest.html#adf9f191112a323c0248d6aba3390788c">textDetail</a>.SetText(text);</div>
+<div class="line"><span class="lineno">  127</span>        textHours.text = q.<a class="code hl_property" href="classQuest.html#a3545a8531e7050e47defad5784549ede">TextDeadline</a>;</div>
+<div class="line"><span class="lineno">  128</span>        textZone.text = q.<a class="code hl_property" href="classQuest.html#a76a73ee0029b9e424237432d3600e125">ClientZone</a>?.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a> ?? <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="classContentQuest.html#a98fc651708906d0f14262b5c5c1f4b0c">portrait</a>.<a class="code hl_function" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">SetPerson</a>(q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>);</div>
+<div class="line"><span class="lineno">  130</span>        this.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="ttc" id="aclassChara_html_a4559e7f955b5324fcfc35429abc621fd"><div class="ttname"><a href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">Chara.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00945">Chara.cs:945</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_a1b430f94cf22095ee7b73eeaf98d2074"><div class="ttname"><a href="classContentQuest.html#a1b430f94cf22095ee7b73eeaf98d2074">ContentQuest.OnSwitchContent</a></div><div class="ttdeci">override void OnSwitchContent(int idTab)</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00026">ContentQuest.cs:26</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_a57e390d7eeb255f45db331e3c4183f18"><div class="ttname"><a href="classContentQuest.html#a57e390d7eeb255f45db331e3c4183f18">ContentQuest.textReward</a></div><div class="ttdeci">UIText textReward</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00018">ContentQuest.cs:18</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_a8e575e2ccd7a5c5eb24b2268c82abdd5"><div class="ttname"><a href="classContentQuest.html#a8e575e2ccd7a5c5eb24b2268c82abdd5">ContentQuest.buttonAbandon</a></div><div class="ttdeci">UIButton buttonAbandon</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00024">ContentQuest.cs:24</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_a98fc651708906d0f14262b5c5c1f4b0c"><div class="ttname"><a href="classContentQuest.html#a98fc651708906d0f14262b5c5c1f4b0c">ContentQuest.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00022">ContentQuest.cs:22</a></div></div>
+<div class="ttc" id="aclassContentQuest_html_adf9f191112a323c0248d6aba3390788c"><div class="ttname"><a href="classContentQuest.html#adf9f191112a323c0248d6aba3390788c">ContentQuest.textDetail</a></div><div class="ttdeci">UIText textDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentQuest_8cs_source.html#l00012">ContentQuest.cs:12</a></div></div>
 <div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
-<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00204">Dialog.cs:204</a></div></div>
-<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
-<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00067">Msg.cs:67</a></div></div>
-<div class="ttc" id="aclassPerson_html_a23ae20608065849e049d592fcea240d5"><div class="ttname"><a href="classPerson.html#a23ae20608065849e049d592fcea240d5">Person.NameBraced</a></div><div class="ttdeci">string NameBraced</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00057">Person.cs:58</a></div></div>
-<div class="ttc" id="aclassPerson_html_a271e17c57f5e8046fff8a21767a26d71"><div class="ttname"><a href="classPerson.html#a271e17c57f5e8046fff8a21767a26d71">Person.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00203">Person.cs:203</a></div></div>
-<div class="ttc" id="aclassPerson_html_ac4496aaac27c5e4d54512c809e18c0ce"><div class="ttname"><a href="classPerson.html#ac4496aaac27c5e4d54512c809e18c0ce">Person.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00197">Person.cs:197</a></div></div>
-<div class="ttc" id="aclassPerson_html_af1c76454a0f955a04399ee141036afae"><div class="ttname"><a href="classPerson.html#af1c76454a0f955a04399ee141036afae">Person.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00016">Person.cs:17</a></div></div>
-<div class="ttc" id="aclassPortrait_html_a268f060ca5eb021c65521c3fd12b06fc"><div class="ttname"><a href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">Portrait.SetPerson</a></div><div class="ttdeci">void SetPerson(Person p)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00081">Portrait.cs:81</a></div></div>
-<div class="ttc" id="aclassQuestDeliver_html"><div class="ttname"><a href="classQuestDeliver.html">QuestDeliver</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDeliver_8cs_source.html#l00006">QuestDeliver.cs:7</a></div></div>
-<div class="ttc" id="aclassQuestDestZone_html_a17a60231ecb26e36ee749f6274c04d8d"><div class="ttname"><a href="classQuestDestZone.html#a17a60231ecb26e36ee749f6274c04d8d">QuestDestZone.DestChara</a></div><div class="ttdeci">override Chara DestChara</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00022">QuestDestZone.cs:23</a></div></div>
-<div class="ttc" id="aclassQuestDestZone_html_aa7b5277c2fe67533cfeb3b5a19be5229"><div class="ttname"><a href="classQuestDestZone.html#aa7b5277c2fe67533cfeb3b5a19be5229">QuestDestZone.uidDest</a></div><div class="ttdeci">int uidDest</div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00078">QuestDestZone.cs:78</a></div></div>
-<div class="ttc" id="aclassQuest_html_a3a18469ccc4028a521bb770d10beaa31"><div class="ttname"><a href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">Quest.person</a></div><div class="ttdeci">Person person</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00811">Quest.cs:811</a></div></div>
-<div class="ttc" id="aclassQuest_html_a4473dd195f35959750ba0ff2cdea1eeb"><div class="ttname"><a href="classQuest.html#a4473dd195f35959750ba0ff2cdea1eeb">Quest.CanAbandon</a></div><div class="ttdeci">virtual bool CanAbandon</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00204">Quest.cs:205</a></div></div>
-<div class="ttc" id="aclassQuest_html_a4bfea3e8b0eccb61d83d48bcdc3e8b84"><div class="ttname"><a href="classQuest.html#a4bfea3e8b0eccb61d83d48bcdc3e8b84">Quest.Fail</a></div><div class="ttdeci">void Fail()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00486">Quest.cs:486</a></div></div>
-<div class="ttc" id="aclassQuest_html_a76a73ee0029b9e424237432d3600e125"><div class="ttname"><a href="classQuest.html#a76a73ee0029b9e424237432d3600e125">Quest.ClientZone</a></div><div class="ttdeci">Zone ClientZone</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00040">Quest.cs:41</a></div></div>
-<div class="ttc" id="aclassQuest_html_ab4b50284da058423b70cecc7e3b1ab29"><div class="ttname"><a href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">Quest.GetRewardText</a></div><div class="ttdeci">string GetRewardText()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00712">Quest.cs:712</a></div></div>
-<div class="ttc" id="aclassQuest_html_abcda0e8cd9add8667a20f7af53733749"><div class="ttname"><a href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">Quest.GetDetail</a></div><div class="ttdeci">virtual string GetDetail(bool onJournal=false)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00674">Quest.cs:674</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
-<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00244">Dialog.cs:244</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
+<div class="ttc" id="aclassPerson_html_a23ae20608065849e049d592fcea240d5"><div class="ttname"><a href="classPerson.html#a23ae20608065849e049d592fcea240d5">Person.NameBraced</a></div><div class="ttdeci">string NameBraced</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00058">Person.cs:58</a></div></div>
+<div class="ttc" id="aclassPerson_html_af1c76454a0f955a04399ee141036afae"><div class="ttname"><a href="classPerson.html#af1c76454a0f955a04399ee141036afae">Person.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00036">Person.cs:36</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a268f060ca5eb021c65521c3fd12b06fc"><div class="ttname"><a href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">Portrait.SetPerson</a></div><div class="ttdeci">void SetPerson(Person p)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00120">Portrait.cs:120</a></div></div>
+<div class="ttc" id="aclassQuestDeliver_html"><div class="ttname"><a href="classQuestDeliver.html">QuestDeliver</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDeliver_8cs_source.html#l00005">QuestDeliver.cs:6</a></div></div>
+<div class="ttc" id="aclassQuest_html_a3a18469ccc4028a521bb770d10beaa31"><div class="ttname"><a href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">Quest.person</a></div><div class="ttdeci">Person person</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00073">Quest.cs:73</a></div></div>
+<div class="ttc" id="aclassQuest_html_a4473dd195f35959750ba0ff2cdea1eeb"><div class="ttname"><a href="classQuest.html#a4473dd195f35959750ba0ff2cdea1eeb">Quest.CanAbandon</a></div><div class="ttdeci">virtual bool CanAbandon</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00177">Quest.cs:177</a></div></div>
+<div class="ttc" id="aclassQuest_html_a4bfea3e8b0eccb61d83d48bcdc3e8b84"><div class="ttname"><a href="classQuest.html#a4bfea3e8b0eccb61d83d48bcdc3e8b84">Quest.Fail</a></div><div class="ttdeci">void Fail()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00436">Quest.cs:436</a></div></div>
+<div class="ttc" id="aclassQuest_html_a76a73ee0029b9e424237432d3600e125"><div class="ttname"><a href="classQuest.html#a76a73ee0029b9e424237432d3600e125">Quest.ClientZone</a></div><div class="ttdeci">Zone ClientZone</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00080">Quest.cs:81</a></div></div>
+<div class="ttc" id="aclassQuest_html_ab4b50284da058423b70cecc7e3b1ab29"><div class="ttname"><a href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">Quest.GetRewardText</a></div><div class="ttdeci">string GetRewardText()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00663">Quest.cs:663</a></div></div>
+<div class="ttc" id="aclassQuest_html_abcda0e8cd9add8667a20f7af53733749"><div class="ttname"><a href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">Quest.GetDetail</a></div><div class="ttdeci">virtual string GetDetail(bool onJournal=false)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00626">Quest.cs:626</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00493">Spatial.cs:493</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ContentQuest_8cs_source.html#l00157">buttonAbandon</a>, <a class="el" href="Quest_8cs_source.html#l00205">Quest.CanAbandon</a>, <a class="el" href="Person_8cs_source.html#l00017">Person.chara</a>, <a class="el" href="Quest_8cs_source.html#l00041">Quest.ClientZone</a>, <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="QuestDestZone_8cs_source.html#l00023">QuestDestZone.DestChara</a>, <a class="el" href="Quest_8cs_source.html#l00486">Quest.Fail()</a>, <a class="el" href="Quest_8cs_source.html#l00674">Quest.GetDetail()</a>, <a class="el" href="Quest_8cs_source.html#l00712">Quest.GetRewardText()</a>, <a class="el" href="Quest_8cs_source.html#l00654">Quest.GetTitle()</a>, <a class="el" href="Person_8cs_source.html#l00203">Person.id</a>, <a class="el" href="Person_8cs_source.html#l00197">Person.name</a>, <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="Person_8cs_source.html#l00058">Person.NameBraced</a>, <a class="el" href="ContentQuest_8cs_source.html#l00007">OnSwitchContent()</a>, <a class="el" href="Quest_8cs_source.html#l00811">Quest.person</a>, <a class="el" href="ContentQuest_8cs_source.html#l00155">portrait</a>, <a class="el" href="Msg_8cs_source.html#l00067">Msg.Say()</a>, <a class="el" href="Portrait_8cs_source.html#l00081">Portrait.SetPerson()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02182">CoreDebug.showExtra</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="Quest_8cs_source.html#l00109">Quest.TextDeadline</a>, <a class="el" href="ContentQuest_8cs_source.html#l00145">textDetail</a>, <a class="el" href="ContentQuest_8cs_source.html#l00151">textReward</a>, <a class="el" href="ContentQuest_8cs_source.html#l00153">textZone</a>, <a class="el" href="Chara_8cs_source.html#l00372">Chara.ToString()</a>, <a class="el" href="QuestDestZone_8cs_source.html#l00078">QuestDestZone.uidDest</a>, and <a class="el" href="Dialog_8cs_source.html#l00204">Dialog.YesNo()</a>.</p>
+<p class="reference">References <a class="el" href="ContentQuest_8cs_source.html#l00024">buttonAbandon</a>, <a class="el" href="Quest_8cs_source.html#l00177">Quest.CanAbandon</a>, <a class="el" href="Person_8cs_source.html#l00036">Person.chara</a>, <a class="el" href="Quest_8cs_source.html#l00081">Quest.ClientZone</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="Quest_8cs_source.html#l00626">Quest.GetDetail()</a>, <a class="el" href="Quest_8cs_source.html#l00663">Quest.GetRewardText()</a>, <a class="el" href="Quest_8cs_source.html#l00606">Quest.GetTitle()</a>, <a class="el" href="Spatial_8cs_source.html#l00493">Spatial.Name</a>, <a class="el" href="Person_8cs_source.html#l00058">Person.NameBraced</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">OnSwitchContent()</a>, <a class="el" href="Quest_8cs_source.html#l00073">Quest.person</a>, <a class="el" href="ContentQuest_8cs_source.html#l00022">portrait</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Portrait_8cs_source.html#l00120">Portrait.SetPerson()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, <a class="el" href="Quest_8cs_source.html#l00136">Quest.TextDeadline</a>, <a class="el" href="ContentQuest_8cs_source.html#l00012">textDetail</a>, <a class="el" href="ContentQuest_8cs_source.html#l00018">textReward</a>, <a class="el" href="Chara_8cs_source.html#l00945">Chara.ToString()</a>, and <a class="el" href="Dialog_8cs_source.html#l00244">Dialog.YesNo()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00007">OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00026">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +401,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00157">157</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00024">24</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00102">SelectQuest()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +419,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00139">139</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00006">6</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00007">OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00026">OnSwitchContent()</a>, and <a class="el" href="ContentQuest_8cs_source.html#l00094">RefreshTrackButtons()</a>.</p>
 
 </div>
 </div>
@@ -471,9 +437,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00155">155</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00022">22</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00102">SelectQuest()</a>.</p>
 
 </div>
 </div>
@@ -489,7 +455,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00141">141</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00008">8</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
 </div>
 </div>
@@ -505,9 +471,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00145">145</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00012">12</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00102">SelectQuest()</a>.</p>
 
 </div>
 </div>
@@ -523,7 +489,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00147">147</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00014">14</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
 </div>
 </div>
@@ -539,7 +505,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00149">149</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00016">16</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
 </div>
 </div>
@@ -555,9 +521,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00151">151</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00018">18</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00102">SelectQuest()</a>.</p>
 
 </div>
 </div>
@@ -573,7 +539,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00143">143</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00010">10</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
 </div>
 </div>
@@ -589,9 +555,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00153">153</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00084">SelectQuest()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentQuest_8cs_source.html#l00020">20</a> of file <a class="el" href="ContentQuest_8cs_source.html">ContentQuest.cs</a>.</p>
 
 </div>
 </div>

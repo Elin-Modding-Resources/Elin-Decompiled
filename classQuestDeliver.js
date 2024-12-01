@@ -20,7 +20,7 @@ var classQuestDeliver =
     [ "idThing", "classQuestDeliver.html#a40b6938c4f1984a8d9e75b12a060f9d3", null ],
     [ "num", "classQuestDeliver.html#a16573e6c587dbc6ddf0e709eeb5f672e", null ],
     [ "ConsumeGoods", "classQuestDeliver.html#af0c42c56b06289aa107aa9848d77416a", null ],
-    [ "difficultyType", "classQuestDeliver.html#aa104958f979d67fc5ba185418f080986", null ],
+    [ "difficultyType", "classQuestDeliver.html#a51a3edb7e5fdd38b7c5a63375fc3d4f2", null ],
     [ "ForbidTeleport", "classQuestDeliver.html#aa68f9e390ae177b85947535bd55b0983", null ],
     [ "KarmaOnFail", "classQuestDeliver.html#aef06052bb48b595c01fd72c1702435a6", null ],
     [ "NameDeliver", "classQuestDeliver.html#a2dadc49d5e85b625aebf7ab0f9907314", null ],

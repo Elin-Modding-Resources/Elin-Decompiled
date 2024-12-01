@@ -17,7 +17,7 @@ var classWidgetFeed =
     [ "Instance", "classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76", null ],
     [ "pop", "classWidgetFeed.html#a498a84266c404980276c8509b31f14c5", null ],
     [ "AlwaysTop", "classWidgetFeed.html#a18c6d4fa874c6872529af28e51368456", null ],
-    [ "extra", "classWidgetFeed.html#af3bf97c01f38cc38ecae1d8c5dd0deb1", null ],
+    [ "extra", "classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7", null ],
     [ "IgnoreFeed", "classWidgetFeed.html#ac3cf961362e005b882285a2e758995e7", null ],
     [ "Intercept", "classWidgetFeed.html#a0d370e53816b564f533907d1a8b66f88", null ],
     [ "ShowStyleMenu", "classWidgetFeed.html#aa91fed5d96de90a87659c62778954ef9", null ]

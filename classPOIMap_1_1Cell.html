@@ -113,7 +113,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00119">119</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00005">5</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a45e9ede9b960a00adb1bc6324a83ac1f" name="a45e9ede9b960a00adb1bc6324a83ac1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45e9ede9b960a00adb1bc6324a83ac1f">&#9670;&#160;</a></span>GetCenter()</h2>
@@ -138,17 +138,19 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00121">121</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>        {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(this.<a class="code hl_variable" href="classPOIMap_1_1Cell.html#af09db278e788d8ce46737cc291df9ef0">x</a> * <a class="code hl_class" href="classPOIMap.html">POIMap</a>.<a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> + <a class="code hl_class" href="classPOIMap.html">POIMap</a>.<a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> / 2, <span class="keyword">this</span>.z * <a class="code hl_class" href="classPOIMap.html">POIMap</a>.<a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> + <a class="code hl_class" href="classPOIMap.html">POIMap</a>.<a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> / 2).<a class="code hl_function" href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Clamp</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="ttc" id="aclassPOIMap_1_1Cell_html_af09db278e788d8ce46737cc291df9ef0"><div class="ttname"><a href="classPOIMap_1_1Cell.html#af09db278e788d8ce46737cc291df9ef0">POIMap.Cell.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00126">POIMap.cs:126</a></div></div>
-<div class="ttc" id="aclassPOIMap_html"><div class="ttname"><a href="classPOIMap.html">POIMap</a></div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00003">POIMap.cs:4</a></div></div>
-<div class="ttc" id="aclassPOIMap_html_acdfbdffbca5659e6119ea02386961076"><div class="ttname"><a href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">POIMap.cellSize</a></div><div class="ttdeci">static int cellSize</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00113">POIMap.cs:113</a></div></div>
-<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
-<div class="ttc" id="aclassPoint_html_adf369f86fc7eba0d290a45cf8c8f54c5"><div class="ttname"><a href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Point.Clamp</a></div><div class="ttdeci">Point Clamp(bool useBounds=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01069">Point.cs:1069</a></div></div>
+<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00013">13</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(<a class="code hl_variable" href="classPOIMap_1_1Cell.html#af09db278e788d8ce46737cc291df9ef0">x</a> * <a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> + <a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> / 2, <a class="code hl_variable" href="classPOIMap_1_1Cell.html#abca543f79cc7b3a77a34cc2aa991fd65">z</a> * <a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> + <a class="code hl_variable" href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">cellSize</a> / 2).<a class="code hl_function" href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Clamp</a>();</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="ttc" id="aclassPOIMap_1_1Cell_html_abca543f79cc7b3a77a34cc2aa991fd65"><div class="ttname"><a href="classPOIMap_1_1Cell.html#abca543f79cc7b3a77a34cc2aa991fd65">POIMap.Cell.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00009">POIMap.cs:9</a></div></div>
+<div class="ttc" id="aclassPOIMap_1_1Cell_html_af09db278e788d8ce46737cc291df9ef0"><div class="ttname"><a href="classPOIMap_1_1Cell.html#af09db278e788d8ce46737cc291df9ef0">POIMap.Cell.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00007">POIMap.cs:7</a></div></div>
+<div class="ttc" id="aclassPOIMap_html_acdfbdffbca5659e6119ea02386961076"><div class="ttname"><a href="classPOIMap.html#acdfbdffbca5659e6119ea02386961076">POIMap.cellSize</a></div><div class="ttdeci">static int cellSize</div><div class="ttdef"><b>Definition:</b> <a href="POIMap_8cs_source.html#l00019">POIMap.cs:19</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
+<div class="ttc" id="aclassPoint_html_adf369f86fc7eba0d290a45cf8c8f54c5"><div class="ttname"><a href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Point.Clamp</a></div><div class="ttdeci">Point Clamp(bool useBounds=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00977">Point.cs:977</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="POIMap_8cs_source.html#l00113">POIMap.cellSize</a>, <a class="el" href="Point_8cs_source.html#l01069">Point.Clamp()</a>, and <a class="el" href="POIMap_8cs_source.html#l00126">POIMap.Cell.x</a>.</p>
+<p class="reference">References <a class="el" href="POIMap_8cs_source.html#l00019">POIMap.cellSize</a>, <a class="el" href="Point_8cs_source.html#l00977">Point.Clamp()</a>, <a class="el" href="POIMap_8cs_source.html#l00007">POIMap.Cell.x</a>, and <a class="el" href="POIMap_8cs_source.html#l00009">POIMap.Cell.z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="POIMap_8cs_source.html#l00050">POIMap.GetCenterOfEmptyCell()</a>, and <a class="el" href="Zone_8cs_source.html#l02264">Zone.SpawnAltar()</a>.</p>
 
 </div>
 </div>
@@ -165,7 +167,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00130">130</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00011">11</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="POIMap_8cs_source.html#l00104">POIMap.OccyupyPOI()</a>.</p>
 
 </div>
 </div>
@@ -181,9 +185,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00126">126</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00007">7</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="POIMap_8cs_source.html#l00121">POIMap.Cell.GetCenter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="POIMap_8cs_source.html#l00013">POIMap.Cell.GetCenter()</a>.</p>
 
 </div>
 </div>
@@ -199,7 +203,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00128">128</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="POIMap_8cs_source.html#l00009">9</a> of file <a class="el" href="POIMap_8cs_source.html">POIMap.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="POIMap_8cs_source.html#l00013">POIMap.Cell.GetCenter()</a>.</p>
 
 </div>
 </div>

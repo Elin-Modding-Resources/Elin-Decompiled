@@ -250,13 +250,13 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a13b1da372a2925bcc04742cd22dc6340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidgetDate_1_1Extra.html">WidgetDate.Extra</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a><code> [get]</code></td></tr>
-<tr class="separator:a13b1da372a2925bcc04742cd22dc6340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6384442f895dadaf6152df45b044c073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidgetDate_1_1Extra.html">Extra</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a><code> [get]</code></td></tr>
+<tr class="separator:a6384442f895dadaf6152df45b044c073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classWidget"><td colspan="2" onclick="javascript:toggleInherit('properties_classWidget')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a><code> [get]</code></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Widget.Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">config</a><code> [get]</code></td></tr>
-<tr class="separator:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
+<tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
@@ -366,153 +366,138 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00028">28</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#a85b865c8c3633f0c1c186fc0ef3b5401">activeZone</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_class" href="classGameDate.html">GameDate</a> date = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>;</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += (this.extra.date ? <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#ad7d298a8ccd5c2aa735b2800bb653c2c">GetText</a>(<a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Widget) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.period)</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#adb98bdb5faf495b3b5ccd09db9990d4f">periodOfDay</a>.ToString().lang() + <span class="stringliteral">&quot;) &quot;</span>;</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += (this.extra.realDate ? (<span class="stringliteral">&quot; (&quot;</span> + DateTime.Now.ToString(<span class="stringliteral">&quot;H:mm&quot;</span>) + <span class="stringliteral">&quot;) &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.loc)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ad761e4f9a5386bf686d8aaf7d60df450">NameWithLevel</a>;</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#aacd1406adc971196e607a0116c78d588">isClaimable</a> &amp;&amp; !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
-<div class="line"><span class="lineno">   46</span>            {</div>
-<div class="line"><span class="lineno">   47</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;(&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>                List&lt;Element&gt; list = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_function" href="classZone.html#ac30bd9c8feb9e1cff0c8758838ce41ab">ListLandFeats</a>();</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> element <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">   50</span>                {</div>
-<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">if</span> (element != list[0])</div>
-<div class="line"><span class="lineno">   52</span>                    {</div>
-<div class="line"><span class="lineno">   53</span>                        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>                    }</div>
-<div class="line"><span class="lineno">   55</span>                    <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += element.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>;</div>
-<div class="line"><span class="lineno">   56</span>                }</div>
-<div class="line"><span class="lineno">   57</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac">idCurrentSubset</a> != <span class="keyword">null</span>)</div>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00051">51</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#a85b865c8c3633f0c1c186fc0ef3b5401">activeZone</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classGameDate.html">GameDate</a> date = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>;</div>
+<div class="line"><span class="lineno">   59</span>        text += (extra.date ? <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#add8563063a8cb27b243414efd92edef6">GetText</a>(<a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Widget) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#acc962e9ff51f6a9b11f8c8c1e4d72bea">period</a>)</div>
 <div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += (<span class="stringliteral">&quot;(&quot;</span> + (EMono._zone.idExport + <span class="stringliteral">&quot;_&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac">idCurrentSubset</a>).lang() + <span class="stringliteral">&quot;)&quot;</span>).TagColor(this.<a class="code hl_variable" href="classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133">colorFestival</a>);</div>
+<div class="line"><span class="lineno">   62</span>            text = text + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_property" href="classDate.html#adb98bdb5faf495b3b5ccd09db9990d4f">periodOfDay</a>.ToString().lang() + <span class="stringliteral">&quot;) &quot;</span>;</div>
 <div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#adccd767d2a00daa80f0acb09d25d6ca0">isPeace</a>)</div>
-<div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;zone_peace&quot;</span>.lang().TagColor(this.<a class="code hl_variable" href="classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133">colorFestival</a>);</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>)</div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   71</span>            {</div>
-<div class="line"><span class="lineno">   72</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>,</div>
-<div class="line"><span class="lineno">   73</span>                <span class="stringliteral">&quot; (&quot;</span>,</div>
-<div class="line"><span class="lineno">   74</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#a4dfe2c58004679c77c43f1ae287138d1">biome</a>.name,</div>
-<div class="line"><span class="lineno">   75</span>                <span class="stringliteral">&quot;/Lv:&quot;</span>,</div>
-<div class="line"><span class="lineno">   76</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a>.ToString(),</div>
-<div class="line"><span class="lineno">   77</span>                <span class="stringliteral">&quot;/Danger:&quot;</span>,</div>
-<div class="line"><span class="lineno">   78</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>.ToString(),</div>
-<div class="line"><span class="lineno">   79</span>                <span class="stringliteral">&quot;/_danger:&quot;</span>,</div>
-<div class="line"><span class="lineno">   80</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#a0acfe59475a875ecfaf22c8dc2173262">_dangerLv</a>.ToString(),</div>
-<div class="line"><span class="lineno">   81</span>                <span class="stringliteral">&quot;/elec:&quot;</span>,</div>
-<div class="line"><span class="lineno">   82</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#a1d73fd6eedea6c16892639ebbae56c2c">electricity</a>.ToString(),</div>
-<div class="line"><span class="lineno">   83</span>                <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><span class="lineno">   84</span>            });</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#a8eb04cc71eac203b2f8877bd8e464d1d">IsInstance</a>)</div>
-<div class="line"><span class="lineno">   86</span>            {</div>
-<div class="line"><span class="lineno">   87</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;Instance&quot;</span>;</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.weather)</div>
-<div class="line"><span class="lineno">   91</span>        {</div>
-<div class="line"><span class="lineno">   92</span>            text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>.<a class="code hl_function" href="classWeather.html#a582b23aedead1d505d4820f2da713b19">GetName</a>();</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.room &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#ac6a7426dd322f6ff627e95e926ce0a50">IsInActiveZone</a> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
-<div class="line"><span class="lineno">   95</span>        {</div>
-<div class="line"><span class="lineno">   96</span>            <a class="code hl_class" href="classRoom.html">Room</a> room = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>;</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (room != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   98</span>            {</div>
-<div class="line"><span class="lineno">   99</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; (&quot;</span> + room.Name + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">area</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  102</span>            {</div>
-<div class="line"><span class="lineno">  103</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot; (&quot;</span> + EMono.pc.pos.area.Name + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  104</span>            }</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#a854b78baab0357b602bc7e82dedf8c65">TextWidgetDate</a>;</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classZoneEvent.html">ZoneEvent</a> zoneEvent <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.<a class="code hl_variable" href="classZoneEventManager.html#a2dca9c75a17911dffb7aee4afdf25861">list</a>)</div>
-<div class="line"><span class="lineno">  108</span>        {</div>
-<div class="line"><span class="lineno">  109</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += zoneEvent.<a class="code hl_property" href="classZoneEvent.html#a5690d7b0b7875e4bc9e5749319156920">TextWidgetDate</a>;</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>        this.textTime.text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">  112</span>        this.<a class="code hl_variable" href="classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c">rectClock</a>.SetActive(this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.clock);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.clock)</div>
-<div class="line"><span class="lineno">  114</span>        {</div>
-<div class="line"><span class="lineno">  115</span>            this.imageHour.transform.localEulerAngles = <span class="keyword">new</span> Vector3(0f, 0f, (<span class="keywordtype">float</span>)(-(<span class="keywordtype">float</span>)date.<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> * 30 + 90));</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">float</span> num = base.transform.position.x / (float)Screen.width;</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">bool</span> flag = base.config.pivot == RectPosition.BottomRIGHT || base.config.pivot == RectPosition.TopRIGHT || base.config.pivot == RectPosition.Right;</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keyword">this</span>.Rect().SetPivot((<span class="keywordtype">float</span>)(flag ? 1 : 0), 0f);</div>
-<div class="line"><span class="lineno">  120</span>        this.<a class="code hl_variable" href="classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c">rectClock</a>.SetAnchor((<span class="keywordtype">float</span>)(flag ? 1 : 0), 1f, (<span class="keywordtype">float</span>)(flag ? 1 : 0), 1f);</div>
-<div class="line"><span class="lineno">  121</span>        this.rectClock.anchoredPosition = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)(flag ? -60 : 60), -75f);</div>
-<div class="line"><span class="lineno">  122</span>        this.<a class="code hl_variable" href="classWidgetDate.html#a08fdb4fd4c523cc3e2a547bf144898eb">textTime</a>.RebuildLayout(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07316">Card.cs:7316</a></div></div>
-<div class="ttc" id="aclassCard_html_ac8177cb488f20ad46a59a35c19eb1ae2"><div class="ttname"><a href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Card.Cell</a></div><div class="ttdeci">Cell Cell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02007">Card.cs:2008</a></div></div>
-<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01884">Cell.cs:1884</a></div></div>
-<div class="ttc" id="aclassChara_html_ac6a7426dd322f6ff627e95e926ce0a50"><div class="ttname"><a href="classChara.html#ac6a7426dd322f6ff627e95e926ce0a50">Chara.IsInActiveZone</a></div><div class="ttdeci">bool IsInActiveZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00800">Chara.cs:801</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_a669319abcd748efaa6f60d5a2ad578ca"><div class="ttname"><a href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">CoreDebug.showExtra</a></div><div class="ttdeci">bool showExtra</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02182">CoreDebug.cs:2182</a></div></div>
-<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00004">Date.cs:5</a></div></div>
-<div class="ttc" id="aclassDate_html_a4fbc0c424e43ae001a65ba38f3f11dc7"><div class="ttname"><a href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">Date.hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00042">Date.cs:43</a></div></div>
-<div class="ttc" id="aclassDate_html_ad7d298a8ccd5c2aa735b2800bb653c2c"><div class="ttname"><a href="classDate.html#ad7d298a8ccd5c2aa735b2800bb653c2c">Date.GetText</a></div><div class="ttdeci">string GetText(Date.TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00219">Date.cs:219</a></div></div>
-<div class="ttc" id="aclassDate_html_adb98bdb5faf495b3b5ccd09db9990d4f"><div class="ttname"><a href="classDate.html#adb98bdb5faf495b3b5ccd09db9990d4f">Date.periodOfDay</a></div><div class="ttdeci">PeriodOfDay periodOfDay</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00107">Date.cs:108</a></div></div>
-<div class="ttc" id="aclassDate_html_aed7f72f2bd15e8402ed27fc88215c578"><div class="ttname"><a href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">Date.TextFormat</a></div><div class="ttdeci">TextFormat</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00455">Date.cs:456</a></div></div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
-<div class="ttc" id="aclassEMono_html_a3e18271d35c6625bff2e03676a3e5c61"><div class="ttname"><a href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">EMono.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00126">EMono.cs:127</a></div></div>
-<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
-<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00006">EMono.cs:7</a></div></div>
-<div class="ttc" id="aclassEMono_html_af8f655ce6663c9ac9ec7a91c56f99c85"><div class="ttname"><a href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">EMono.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00158">EMono.cs:159</a></div></div>
+<div class="line"><span class="lineno">   64</span>        text += (extra.realDate ? (<span class="stringliteral">&quot; (&quot;</span> + DateTime.Now.ToString(<span class="stringliteral">&quot;H:mm&quot;</span>) + <span class="stringliteral">&quot;) &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a96eca4daf336d215a06feaaf5b57cc08">loc</a>)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            text = text + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ad761e4f9a5386bf686d8aaf7d60df450">NameWithLevel</a>;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#aacd1406adc971196e607a0116c78d588">isClaimable</a> &amp;&amp; !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                text += <span class="stringliteral">&quot;(&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>                List&lt;Element&gt; list = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_function" href="classZone.html#ac30bd9c8feb9e1cff0c8758838ce41ab">ListLandFeats</a>();</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> item <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   73</span>                {</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keywordflow">if</span> (item != list[0])</div>
+<div class="line"><span class="lineno">   75</span>                    {</div>
+<div class="line"><span class="lineno">   76</span>                        text += <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>                    }</div>
+<div class="line"><span class="lineno">   78</span>                    text += item.<a class="code hl_property" href="classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039">Name</a>;</div>
+<div class="line"><span class="lineno">   79</span>                }</div>
+<div class="line"><span class="lineno">   80</span>                text += <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac">idCurrentSubset</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            text += (<span class="stringliteral">&quot;(&quot;</span> + (EMono._zone.idExport + <span class="stringliteral">&quot;_&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac">idCurrentSubset</a>).lang() + <span class="stringliteral">&quot;)&quot;</span>).TagColor(<a class="code hl_variable" href="classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133">colorFestival</a>);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classSpatial.html#adccd767d2a00daa80f0acb09d25d6ca0">isPeace</a>)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            text += <span class="stringliteral">&quot;zone_peace&quot;</span>.lang().TagColor(<a class="code hl_variable" href="classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133">colorFestival</a>);</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            text = text + <span class="stringliteral">&quot; (&quot;</span> + EMono._zone.biome.name + <span class="stringliteral">&quot;/Lv:&quot;</span> + EMono._zone.lv + <span class="stringliteral">&quot;/Danger:&quot;</span> + EMono._zone.DangerLv + <span class="stringliteral">&quot;/_danger:&quot;</span> + EMono._zone._dangerLv + <span class="stringliteral">&quot;/elec:&quot;</span> + EMono._zone.electricity + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#a8eb04cc71eac203b2f8877bd8e464d1d">IsInstance</a>)</div>
+<div class="line"><span class="lineno">   95</span>            {</div>
+<div class="line"><span class="lineno">   96</span>                text += <span class="stringliteral">&quot;Instance&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a10ffad24ae3883a3a80c3a46a4be0b3a">weather</a>)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            text = text + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">world</a>.<a class="code hl_variable" href="classWorld.html#abe79d49b82af83246cebd487414ba156">weather</a>.<a class="code hl_function" href="classWeather.html#a582b23aedead1d505d4820f2da713b19">GetName</a>();</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#aa3d8963e0fe926c416f3baaedf19831a">room</a> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#ac6a7426dd322f6ff627e95e926ce0a50">IsInActiveZone</a> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <a class="code hl_class" href="classRoom.html">Room</a> room = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a>;</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (room != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                text = text + <span class="stringliteral">&quot; (&quot;</span> + room.Name + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">area</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                text = text + <span class="stringliteral">&quot; (&quot;</span> + EMono.pc.pos.area.Name + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>        text += <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_property" href="classZone.html#a854b78baab0357b602bc7e82dedf8c65">TextWidgetDate</a>;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classZoneEvent.html">ZoneEvent</a> item2 <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.<a class="code hl_variable" href="classZoneEventManager.html#a2dca9c75a17911dffb7aee4afdf25861">list</a>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            text += item2.<a class="code hl_property" href="classZoneEvent.html#a5690d7b0b7875e4bc9e5749319156920">TextWidgetDate</a>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        textTime.text = text;</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c">rectClock</a>.SetActive(<a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a1ac9d134c4881596dca50b2c17409998">clock</a>);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a1ac9d134c4881596dca50b2c17409998">clock</a>)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            imageHour.transform.localEulerAngles = <span class="keyword">new</span> Vector3(0f, 0f, -date.<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> * 30 + 90);</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        _ = base.transform.position.x / (float)Screen.width;</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">bool</span> flag = base.config.pivot == RectPosition.BottomRIGHT || base.config.pivot == RectPosition.TopRIGHT || base.config.pivot == RectPosition.Right;</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keyword">this</span>.Rect().SetPivot(flag ? 1 : 0, 0f);</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c">rectClock</a>.SetAnchor(flag ? 1 : 0, 1f, flag ? 1 : 0, 1f);</div>
+<div class="line"><span class="lineno">  130</span>        rectClock.anchoredPosition = <span class="keyword">new</span> Vector2(flag ? (-60) : 60, -75f);</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="classWidgetDate.html#a08fdb4fd4c523cc3e2a547bf144898eb">textTime</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00053">Card.cs:53</a></div></div>
+<div class="ttc" id="aclassCard_html_ac8177cb488f20ad46a59a35c19eb1ae2"><div class="ttname"><a href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Card.Cell</a></div><div class="ttdeci">Cell Cell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01853">Card.cs:1853</a></div></div>
+<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00102">Cell.cs:102</a></div></div>
+<div class="ttc" id="aclassChara_html_ac6a7426dd322f6ff627e95e926ce0a50"><div class="ttname"><a href="classChara.html#ac6a7426dd322f6ff627e95e926ce0a50">Chara.IsInActiveZone</a></div><div class="ttdeci">bool IsInActiveZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00767">Chara.cs:767</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a669319abcd748efaa6f60d5a2ad578ca"><div class="ttname"><a href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">CoreDebug.showExtra</a></div><div class="ttdeci">bool showExtra</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00167">CoreDebug.cs:167</a></div></div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00003">Date.cs:4</a></div></div>
+<div class="ttc" id="aclassDate_html_a4fbc0c424e43ae001a65ba38f3f11dc7"><div class="ttname"><a href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">Date.hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00073">Date.cs:74</a></div></div>
+<div class="ttc" id="aclassDate_html_adb98bdb5faf495b3b5ccd09db9990d4f"><div class="ttname"><a href="classDate.html#adb98bdb5faf495b3b5ccd09db9990d4f">Date.periodOfDay</a></div><div class="ttdeci">PeriodOfDay periodOfDay</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00123">Date.cs:124</a></div></div>
+<div class="ttc" id="aclassDate_html_add8563063a8cb27b243414efd92edef6"><div class="ttname"><a href="classDate.html#add8563063a8cb27b243414efd92edef6">Date.GetText</a></div><div class="ttdeci">string GetText(TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00245">Date.cs:245</a></div></div>
+<div class="ttc" id="aclassDate_html_aed7f72f2bd15e8402ed27fc88215c578"><div class="ttname"><a href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">Date.TextFormat</a></div><div class="ttdeci">TextFormat</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00005">Date.cs:6</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00013">EMono.cs:13</a></div></div>
+<div class="ttc" id="aclassEMono_html_a3e18271d35c6625bff2e03676a3e5c61"><div class="ttname"><a href="classEMono.html#a3e18271d35c6625bff2e03676a3e5c61">EMono.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00037">EMono.cs:37</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00019">EMono.cs:19</a></div></div>
+<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00007">EMono.cs:7</a></div></div>
+<div class="ttc" id="aclassEMono_html_af8f655ce6663c9ac9ec7a91c56f99c85"><div class="ttname"><a href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">EMono.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00045">EMono.cs:45</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
-<div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
-<div class="ttc" id="aclassGameDate_html"><div class="ttname"><a href="classGameDate.html">GameDate</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDate_8cs_source.html#l00007">GameDate.cs:8</a></div></div>
-<div class="ttc" id="aclassGame_html_a85b865c8c3633f0c1c186fc0ef3b5401"><div class="ttname"><a href="classGame.html#a85b865c8c3633f0c1c186fc0ef3b5401">Game.activeZone</a></div><div class="ttdeci">Zone activeZone</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00875">Game.cs:875</a></div></div>
-<div class="ttc" id="aclassPoint_html_acd5999e555a324bcf6f8a17216a72d76"><div class="ttname"><a href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">Point.area</a></div><div class="ttdeci">Area area</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00114">Point.cs:115</a></div></div>
-<div class="ttc" id="aclassRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00004">Room.cs:5</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a0acfe59475a875ecfaf22c8dc2173262"><div class="ttname"><a href="classSpatial.html#a0acfe59475a875ecfaf22c8dc2173262">Spatial._dangerLv</a></div><div class="ttdeci">int _dangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00170">Spatial.cs:171</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a12267d80d357d59863cbbcf3da43a458"><div class="ttname"><a href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">Spatial.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00122">Spatial.cs:123</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a1d73fd6eedea6c16892639ebbae56c2c"><div class="ttname"><a href="classSpatial.html#a1d73fd6eedea6c16892639ebbae56c2c">Spatial.electricity</a></div><div class="ttdeci">int electricity</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00230">Spatial.cs:231</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a5265271ea102ce83fae8d126c99ee9ac"><div class="ttname"><a href="classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac">Spatial.idCurrentSubset</a></div><div class="ttdeci">string idCurrentSubset</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00857">Spatial.cs:857</a></div></div>
-<div class="ttc" id="aclassSpatial_html_aacd1406adc971196e607a0116c78d588"><div class="ttname"><a href="classSpatial.html#aacd1406adc971196e607a0116c78d588">Spatial.isClaimable</a></div><div class="ttdeci">virtual bool isClaimable</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00609">Spatial.cs:610</a></div></div>
-<div class="ttc" id="aclassSpatial_html_adccd767d2a00daa80f0acb09d25d6ca0"><div class="ttname"><a href="classSpatial.html#adccd767d2a00daa80f0acb09d25d6ca0">Spatial.isPeace</a></div><div class="ttdeci">bool isPeace</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00386">Spatial.cs:387</a></div></div>
-<div class="ttc" id="aclassWeather_html_a582b23aedead1d505d4820f2da713b19"><div class="ttname"><a href="classWeather.html#a582b23aedead1d505d4820f2da713b19">Weather.GetName</a></div><div class="ttdeci">string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00076">Weather.cs:76</a></div></div>
-<div class="ttc" id="aclassWidgetDate_html_a08fdb4fd4c523cc3e2a547bf144898eb"><div class="ttname"><a href="classWidgetDate.html#a08fdb4fd4c523cc3e2a547bf144898eb">WidgetDate.textTime</a></div><div class="ttdeci">Text textTime</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00176">WidgetDate.cs:176</a></div></div>
-<div class="ttc" id="aclassWidgetDate_html_a13b1da372a2925bcc04742cd22dc6340"><div class="ttname"><a href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">WidgetDate.extra</a></div><div class="ttdeci">WidgetDate.Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00013">WidgetDate.cs:14</a></div></div>
-<div class="ttc" id="aclassWidgetDate_html_a19a6a6950956690dc59c9c17ea37f133"><div class="ttname"><a href="classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133">WidgetDate.colorFestival</a></div><div class="ttdeci">Color colorFestival</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00184">WidgetDate.cs:184</a></div></div>
-<div class="ttc" id="aclassWidgetDate_html_a3783dbdaeed4a5a207cd9945374df64c"><div class="ttname"><a href="classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c">WidgetDate.rectClock</a></div><div class="ttdeci">RectTransform rectClock</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00180">WidgetDate.cs:180</a></div></div>
-<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00063">World.cs:63</a></div></div>
-<div class="ttc" id="aclassWorld_html_abe79d49b82af83246cebd487414ba156"><div class="ttname"><a href="classWorld.html#abe79d49b82af83246cebd487414ba156">World.weather</a></div><div class="ttdeci">Weather weather</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00069">World.cs:69</a></div></div>
-<div class="ttc" id="aclassZoneEventManager_html_a2dca9c75a17911dffb7aee4afdf25861"><div class="ttname"><a href="classZoneEventManager.html#a2dca9c75a17911dffb7aee4afdf25861">ZoneEventManager.list</a></div><div class="ttdeci">List&lt; ZoneEvent &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventManager_8cs_source.html#l00128">ZoneEventManager.cs:128</a></div></div>
-<div class="ttc" id="aclassZoneEvent_html"><div class="ttname"><a href="classZoneEvent.html">ZoneEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEvent_8cs_source.html#l00004">ZoneEvent.cs:5</a></div></div>
-<div class="ttc" id="aclassZoneEvent_html_a5690d7b0b7875e4bc9e5749319156920"><div class="ttname"><a href="classZoneEvent.html#a5690d7b0b7875e4bc9e5749319156920">ZoneEvent.TextWidgetDate</a></div><div class="ttdeci">virtual string TextWidgetDate</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEvent_8cs_source.html#l00022">ZoneEvent.cs:23</a></div></div>
-<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03861">Zone.cs:3861</a></div></div>
-<div class="ttc" id="aclassZone_html_a4dfe2c58004679c77c43f1ae287138d1"><div class="ttname"><a href="classZone.html#a4dfe2c58004679c77c43f1ae287138d1">Zone.biome</a></div><div class="ttdeci">BiomeProfile biome</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00070">Zone.cs:71</a></div></div>
-<div class="ttc" id="aclassZone_html_a854b78baab0357b602bc7e82dedf8c65"><div class="ttname"><a href="classZone.html#a854b78baab0357b602bc7e82dedf8c65">Zone.TextWidgetDate</a></div><div class="ttdeci">virtual string TextWidgetDate</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00104">Zone.cs:105</a></div></div>
-<div class="ttc" id="aclassZone_html_a8eb04cc71eac203b2f8877bd8e464d1d"><div class="ttname"><a href="classZone.html#a8eb04cc71eac203b2f8877bd8e464d1d">Zone.IsInstance</a></div><div class="ttdeci">bool IsInstance</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00780">Zone.cs:781</a></div></div>
-<div class="ttc" id="aclassZone_html_ac30bd9c8feb9e1cff0c8758838ce41ab"><div class="ttname"><a href="classZone.html#ac30bd9c8feb9e1cff0c8758838ce41ab">Zone.ListLandFeats</a></div><div class="ttdeci">List&lt; Element &gt; ListLandFeats()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03137">Zone.cs:3137</a></div></div>
-<div class="ttc" id="aclassZone_html_ac539719d05a3d41d2d23d60d2df22aff"><div class="ttname"><a href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">Zone.DangerLv</a></div><div class="ttdeci">override int DangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00026">Zone.cs:27</a></div></div>
-<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00764">Zone.cs:765</a></div></div>
-<div class="ttc" id="aclassZone_html_ad761e4f9a5386bf686d8aaf7d60df450"><div class="ttname"><a href="classZone.html#ad761e4f9a5386bf686d8aaf7d60df450">Zone.NameWithLevel</a></div><div class="ttdeci">string NameWithLevel</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00715">Zone.cs:716</a></div></div>
+<div class="ttc" id="aclassElement_html_afd9b473ffd04d2b55fc8a3a861ee5039"><div class="ttname"><a href="classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<div class="ttc" id="aclassGameDate_html"><div class="ttname"><a href="classGameDate.html">GameDate</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDate_8cs_source.html#l00005">GameDate.cs:6</a></div></div>
+<div class="ttc" id="aclassGame_html_a85b865c8c3633f0c1c186fc0ef3b5401"><div class="ttname"><a href="classGame.html#a85b865c8c3633f0c1c186fc0ef3b5401">Game.activeZone</a></div><div class="ttdeci">Zone activeZone</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00237">Game.cs:237</a></div></div>
+<div class="ttc" id="aclassPoint_html_acd5999e555a324bcf6f8a17216a72d76"><div class="ttname"><a href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">Point.area</a></div><div class="ttdeci">Area area</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00073">Point.cs:73</a></div></div>
+<div class="ttc" id="aclassRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8cs_source.html#l00003">Room.cs:4</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a5265271ea102ce83fae8d126c99ee9ac"><div class="ttname"><a href="classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac">Spatial.idCurrentSubset</a></div><div class="ttdeci">string idCurrentSubset</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00028">Spatial.cs:28</a></div></div>
+<div class="ttc" id="aclassSpatial_html_aacd1406adc971196e607a0116c78d588"><div class="ttname"><a href="classSpatial.html#aacd1406adc971196e607a0116c78d588">Spatial.isClaimable</a></div><div class="ttdeci">virtual bool isClaimable</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00546">Spatial.cs:546</a></div></div>
+<div class="ttc" id="aclassSpatial_html_adccd767d2a00daa80f0acb09d25d6ca0"><div class="ttname"><a href="classSpatial.html#adccd767d2a00daa80f0acb09d25d6ca0">Spatial.isPeace</a></div><div class="ttdeci">bool isPeace</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00405">Spatial.cs:406</a></div></div>
+<div class="ttc" id="aclassWeather_html_a582b23aedead1d505d4820f2da713b19"><div class="ttname"><a href="classWeather.html#a582b23aedead1d505d4820f2da713b19">Weather.GetName</a></div><div class="ttdeci">string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00158">Weather.cs:158</a></div></div>
+<div class="ttc" id="aclassWidgetDate_1_1Extra_html_a10ffad24ae3883a3a80c3a46a4be0b3a"><div class="ttname"><a href="classWidgetDate_1_1Extra.html#a10ffad24ae3883a3a80c3a46a4be0b3a">WidgetDate.Extra.weather</a></div><div class="ttdeci">bool weather</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00022">WidgetDate.cs:22</a></div></div>
+<div class="ttc" id="aclassWidgetDate_1_1Extra_html_a1ac9d134c4881596dca50b2c17409998"><div class="ttname"><a href="classWidgetDate_1_1Extra.html#a1ac9d134c4881596dca50b2c17409998">WidgetDate.Extra.clock</a></div><div class="ttdeci">bool clock</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00018">WidgetDate.cs:18</a></div></div>
+<div class="ttc" id="aclassWidgetDate_1_1Extra_html_a96eca4daf336d215a06feaaf5b57cc08"><div class="ttname"><a href="classWidgetDate_1_1Extra.html#a96eca4daf336d215a06feaaf5b57cc08">WidgetDate.Extra.loc</a></div><div class="ttdeci">bool loc</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00020">WidgetDate.cs:20</a></div></div>
+<div class="ttc" id="aclassWidgetDate_1_1Extra_html_aa3d8963e0fe926c416f3baaedf19831a"><div class="ttname"><a href="classWidgetDate_1_1Extra.html#aa3d8963e0fe926c416f3baaedf19831a">WidgetDate.Extra.room</a></div><div class="ttdeci">bool room</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00016">WidgetDate.cs:16</a></div></div>
+<div class="ttc" id="aclassWidgetDate_1_1Extra_html_acc962e9ff51f6a9b11f8c8c1e4d72bea"><div class="ttname"><a href="classWidgetDate_1_1Extra.html#acc962e9ff51f6a9b11f8c8c1e4d72bea">WidgetDate.Extra.period</a></div><div class="ttdeci">bool period</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00014">WidgetDate.cs:14</a></div></div>
+<div class="ttc" id="aclassWidgetDate_html_a08fdb4fd4c523cc3e2a547bf144898eb"><div class="ttname"><a href="classWidgetDate.html#a08fdb4fd4c523cc3e2a547bf144898eb">WidgetDate.textTime</a></div><div class="ttdeci">Text textTime</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00027">WidgetDate.cs:27</a></div></div>
+<div class="ttc" id="aclassWidgetDate_html_a19a6a6950956690dc59c9c17ea37f133"><div class="ttname"><a href="classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133">WidgetDate.colorFestival</a></div><div class="ttdeci">Color colorFestival</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00035">WidgetDate.cs:35</a></div></div>
+<div class="ttc" id="aclassWidgetDate_html_a3783dbdaeed4a5a207cd9945374df64c"><div class="ttname"><a href="classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c">WidgetDate.rectClock</a></div><div class="ttdeci">RectTransform rectClock</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00031">WidgetDate.cs:31</a></div></div>
+<div class="ttc" id="aclassWidgetDate_html_a6384442f895dadaf6152df45b044c073"><div class="ttname"><a href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">WidgetDate.extra</a></div><div class="ttdeci">Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00037">WidgetDate.cs:37</a></div></div>
+<div class="ttc" id="aclassWorld_html_a6b892261ab3162c68042c42ee0183984"><div class="ttname"><a href="classWorld.html#a6b892261ab3162c68042c42ee0183984">World.date</a></div><div class="ttdeci">GameDate date</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00006">World.cs:6</a></div></div>
+<div class="ttc" id="aclassWorld_html_abe79d49b82af83246cebd487414ba156"><div class="ttname"><a href="classWorld.html#abe79d49b82af83246cebd487414ba156">World.weather</a></div><div class="ttdeci">Weather weather</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00012">World.cs:12</a></div></div>
+<div class="ttc" id="aclassZoneEventManager_html_a2dca9c75a17911dffb7aee4afdf25861"><div class="ttname"><a href="classZoneEventManager.html#a2dca9c75a17911dffb7aee4afdf25861">ZoneEventManager.list</a></div><div class="ttdeci">List&lt; ZoneEvent &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventManager_8cs_source.html#l00011">ZoneEventManager.cs:11</a></div></div>
+<div class="ttc" id="aclassZoneEvent_html"><div class="ttname"><a href="classZoneEvent.html">ZoneEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEvent_8cs_source.html#l00003">ZoneEvent.cs:4</a></div></div>
+<div class="ttc" id="aclassZoneEvent_html_a5690d7b0b7875e4bc9e5749319156920"><div class="ttname"><a href="classZoneEvent.html#a5690d7b0b7875e4bc9e5749319156920">ZoneEvent.TextWidgetDate</a></div><div class="ttdeci">virtual string TextWidgetDate</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEvent_8cs_source.html#l00025">ZoneEvent.cs:25</a></div></div>
+<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00040">Zone.cs:40</a></div></div>
+<div class="ttc" id="aclassZone_html_a854b78baab0357b602bc7e82dedf8c65"><div class="ttname"><a href="classZone.html#a854b78baab0357b602bc7e82dedf8c65">Zone.TextWidgetDate</a></div><div class="ttdeci">virtual string TextWidgetDate</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00117">Zone.cs:117</a></div></div>
+<div class="ttc" id="aclassZone_html_a8eb04cc71eac203b2f8877bd8e464d1d"><div class="ttname"><a href="classZone.html#a8eb04cc71eac203b2f8877bd8e464d1d">Zone.IsInstance</a></div><div class="ttdeci">bool IsInstance</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00441">Zone.cs:441</a></div></div>
+<div class="ttc" id="aclassZone_html_ac30bd9c8feb9e1cff0c8758838ce41ab"><div class="ttname"><a href="classZone.html#ac30bd9c8feb9e1cff0c8758838ce41ab">Zone.ListLandFeats</a></div><div class="ttdeci">List&lt; Element &gt; ListLandFeats()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02729">Zone.cs:2729</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00437">Zone.cs:437</a></div></div>
+<div class="ttc" id="aclassZone_html_ad761e4f9a5386bf686d8aaf7d60df450"><div class="ttname"><a href="classZone.html#ad761e4f9a5386bf686d8aaf7d60df450">Zone.NameWithLevel</a></div><div class="ttdeci">string NameWithLevel</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00395">Zone.cs:395</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00171">Spatial._dangerLv</a>, <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="Game_8cs_source.html#l00875">Game.activeZone</a>, <a class="el" href="Point_8cs_source.html#l00115">Point.area</a>, <a class="el" href="Zone_8cs_source.html#l00071">Zone.biome</a>, <a class="el" href="Card_8cs_source.html#l02008">Card.Cell</a>, <a class="el" href="WidgetDate_8cs_source.html#l00184">colorFestival</a>, <a class="el" href="Zone_8cs_source.html#l00027">Zone.DangerLv</a>, <a class="el" href="World_8cs_source.html#l00063">World.date</a>, <a class="el" href="EMono_8cs_source.html#l00159">EMono.debug</a>, <a class="el" href="Spatial_8cs_source.html#l00231">Spatial.electricity</a>, <a class="el" href="Zone_8cs_source.html#l03861">Zone.events</a>, <a class="el" href="WidgetDate_8cs_source.html#l00014">extra</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="Weather_8cs_source.html#l00076">Weather.GetName()</a>, <a class="el" href="Date_8cs_source.html#l00219">Date.GetText()</a>, <a class="el" href="Spatial_8cs_source.html#l00857">Spatial.idCurrentSubset</a>, <a class="el" href="Spatial_8cs_source.html#l00610">Spatial.isClaimable</a>, <a class="el" href="Chara_8cs_source.html#l00801">Chara.IsInActiveZone</a>, <a class="el" href="Zone_8cs_source.html#l00781">Zone.IsInstance</a>, <a class="el" href="Zone_8cs_source.html#l00765">Zone.IsPCFaction</a>, <a class="el" href="Spatial_8cs_source.html#l00387">Spatial.isPeace</a>, <a class="el" href="ZoneEventManager_8cs_source.html#l00128">ZoneEventManager.list</a>, <a class="el" href="Zone_8cs_source.html#l03137">Zone.ListLandFeats()</a>, <a class="el" href="Spatial_8cs_source.html#l00123">Spatial.lv</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, <a class="el" href="Zone_8cs_source.html#l00716">Zone.NameWithLevel</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Date_8cs_source.html#l00108">Date.periodOfDay</a>, <a class="el" href="Card_8cs_source.html#l07316">Card.pos</a>, <a class="el" href="WidgetDate_8cs_source.html#l00180">rectClock</a>, <a class="el" href="Cell_8cs_source.html#l01884">Cell.room</a>, <a class="el" href="CoreDebug_8cs_source.html#l02182">CoreDebug.showExtra</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="WidgetDate_8cs_source.html#l00176">textTime</a>, <a class="el" href="Zone_8cs_source.html#l00105">Zone.TextWidgetDate</a>, <a class="el" href="ZoneEvent_8cs_source.html#l00023">ZoneEvent.TextWidgetDate</a>, <a class="el" href="World_8cs_source.html#l00069">World.weather</a>, and <a class="el" href="EMono_8cs_source.html#l00127">EMono.world</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00019">EMono._zone</a>, <a class="el" href="Game_8cs_source.html#l00237">Game.activeZone</a>, <a class="el" href="Point_8cs_source.html#l00073">Point.area</a>, <a class="el" href="Card_8cs_source.html#l01853">Card.Cell</a>, <a class="el" href="WidgetDate_8cs_source.html#l00018">WidgetDate.Extra.clock</a>, <a class="el" href="WidgetDate_8cs_source.html#l00035">colorFestival</a>, <a class="el" href="World_8cs_source.html#l00006">World.date</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="Zone_8cs_source.html#l00040">Zone.events</a>, <a class="el" href="WidgetDate_8cs_source.html#l00037">extra</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="Weather_8cs_source.html#l00158">Weather.GetName()</a>, <a class="el" href="Date_8cs_source.html#l00245">Date.GetText()</a>, <a class="el" href="Spatial_8cs_source.html#l00028">Spatial.idCurrentSubset</a>, <a class="el" href="Spatial_8cs_source.html#l00546">Spatial.isClaimable</a>, <a class="el" href="Chara_8cs_source.html#l00767">Chara.IsInActiveZone</a>, <a class="el" href="Zone_8cs_source.html#l00441">Zone.IsInstance</a>, <a class="el" href="Zone_8cs_source.html#l00437">Zone.IsPCFaction</a>, <a class="el" href="Spatial_8cs_source.html#l00406">Spatial.isPeace</a>, <a class="el" href="ZoneEventManager_8cs_source.html#l00011">ZoneEventManager.list</a>, <a class="el" href="Zone_8cs_source.html#l02729">Zone.ListLandFeats()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00020">WidgetDate.Extra.loc</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, <a class="el" href="Zone_8cs_source.html#l00395">Zone.NameWithLevel</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="WidgetDate_8cs_source.html#l00014">WidgetDate.Extra.period</a>, <a class="el" href="Date_8cs_source.html#l00124">Date.periodOfDay</a>, <a class="el" href="Card_8cs_source.html#l00053">Card.pos</a>, <a class="el" href="WidgetDate_8cs_source.html#l00031">rectClock</a>, <a class="el" href="Cell_8cs_source.html#l00102">Cell.room</a>, <a class="el" href="WidgetDate_8cs_source.html#l00016">WidgetDate.Extra.room</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, <a class="el" href="WidgetDate_8cs_source.html#l00027">textTime</a>, <a class="el" href="Zone_8cs_source.html#l00117">Zone.TextWidgetDate</a>, <a class="el" href="ZoneEvent_8cs_source.html#l00025">ZoneEvent.TextWidgetDate</a>, <a class="el" href="WidgetDate_8cs_source.html#l00022">WidgetDate.Extra.weather</a>, <a class="el" href="World_8cs_source.html#l00012">World.weather</a>, and <a class="el" href="EMono_8cs_source.html#l00037">EMono.world</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00021">OnActivate()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00125">OnChangePivot()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00138">OnSetContextMenu()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00130">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00044">OnActivate()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00134">OnChangePivot()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00147">OnSetContextMenu()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00139">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -541,12 +526,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00008">8</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classWidgetDate.html">WidgetDate</a>.<a class="code hl_class" href="classWidgetDate_1_1Extra.html">Extra</a>();</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-<div class="ttc" id="aclassWidgetDate_1_1Extra_html"><div class="ttname"><a href="classWidgetDate_1_1Extra.html">WidgetDate.Extra</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00186">WidgetDate.cs:187</a></div></div>
-<div class="ttc" id="aclassWidgetDate_html"><div class="ttname"><a href="classWidgetDate.html">WidgetDate</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00006">WidgetDate.cs:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00039">39</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Extra();</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -575,15 +558,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00021">21</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        WidgetDate.Instance = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">   25</span>        base.InvokeRepeating(<span class="stringliteral">&quot;_Refresh&quot;</span>, 0.1f, 0.1f);</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="aclassWidgetDate_html_a69a1322e3ded148b92a77d1bf3e61d3e"><div class="ttname"><a href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">WidgetDate._Refresh</a></div><div class="ttdeci">void _Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00028">WidgetDate.cs:28</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00044">44</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">   48</span>        InvokeRepeating(<span class="stringliteral">&quot;_Refresh&quot;</span>, 0.1f, 0.1f);</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassWidgetDate_html_a475e3510e56482b64a3ef3beebe8c683"><div class="ttname"><a href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">WidgetDate.Instance</a></div><div class="ttdeci">static WidgetDate Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00025">WidgetDate.cs:25</a></div></div>
+<div class="ttc" id="aclassWidgetDate_html_a69a1322e3ded148b92a77d1bf3e61d3e"><div class="ttname"><a href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">WidgetDate._Refresh</a></div><div class="ttdeci">void _Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00051">WidgetDate.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00025">Instance</a>.</p>
 
 </div>
 </div>
@@ -612,12 +596,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ad8fe1c734b47957816912262c78a5b38">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00125">125</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
-<div class="line"><span class="lineno">  127</span>        this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00134">134</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>.</p>
 
 </div>
 </div>
@@ -647,43 +631,45 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00138">138</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>        UIContextMenu uicontextMenu = m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>);</div>
-<div class="line"><span class="lineno">  141</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showPeriodOfDay&quot;</span>, this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.period, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            this.extra.period = a;</div>
-<div class="line"><span class="lineno">  144</span>            this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  145</span>        });</div>
-<div class="line"><span class="lineno">  146</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showRealDate&quot;</span>, this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.realDate, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  147</span>        {</div>
-<div class="line"><span class="lineno">  148</span>            this.extra.realDate = a;</div>
-<div class="line"><span class="lineno">  149</span>            this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  150</span>        });</div>
-<div class="line"><span class="lineno">  151</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showRoom&quot;</span>, this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.room, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  152</span>        {</div>
-<div class="line"><span class="lineno">  153</span>            this.extra.room = a;</div>
-<div class="line"><span class="lineno">  154</span>            this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  155</span>        });</div>
-<div class="line"><span class="lineno">  156</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showClock&quot;</span>, this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.clock, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  157</span>        {</div>
-<div class="line"><span class="lineno">  158</span>            this.extra.clock = a;</div>
-<div class="line"><span class="lineno">  159</span>            this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  160</span>        });</div>
-<div class="line"><span class="lineno">  161</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showLoc&quot;</span>, this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.loc, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  162</span>        {</div>
-<div class="line"><span class="lineno">  163</span>            this.extra.loc = a;</div>
-<div class="line"><span class="lineno">  164</span>            this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  165</span>        });</div>
-<div class="line"><span class="lineno">  166</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;showWeather&quot;</span>, this.<a class="code hl_property" href="classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340">extra</a>.weather, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  167</span>        {</div>
-<div class="line"><span class="lineno">  168</span>            this.extra.weather = a;</div>
-<div class="line"><span class="lineno">  169</span>            this.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  170</span>        });</div>
-<div class="line"><span class="lineno">  171</span>        base.SetBaseContextMenu(m);</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00147">147</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        UIContextMenu uIContextMenu = m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>);</div>
+<div class="line"><span class="lineno">  150</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showPeriodOfDay&quot;</span>, <a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#acc962e9ff51f6a9b11f8c8c1e4d72bea">period</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            extra.period = a;</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  154</span>        });</div>
+<div class="line"><span class="lineno">  155</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showRealDate&quot;</span>, <a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a46b3abff44c5ef756d75bc19f606e1a1">realDate</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            extra.realDate = a;</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  159</span>        });</div>
+<div class="line"><span class="lineno">  160</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showRoom&quot;</span>, <a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#aa3d8963e0fe926c416f3baaedf19831a">room</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            extra.room = a;</div>
+<div class="line"><span class="lineno">  163</span>            <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  164</span>        });</div>
+<div class="line"><span class="lineno">  165</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showClock&quot;</span>, <a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a1ac9d134c4881596dca50b2c17409998">clock</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            extra.clock = a;</div>
+<div class="line"><span class="lineno">  168</span>            <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  169</span>        });</div>
+<div class="line"><span class="lineno">  170</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showLoc&quot;</span>, <a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a96eca4daf336d215a06feaaf5b57cc08">loc</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            extra.loc = a;</div>
+<div class="line"><span class="lineno">  173</span>            <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  174</span>        });</div>
+<div class="line"><span class="lineno">  175</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showWeather&quot;</span>, <a class="code hl_property" href="classWidgetDate.html#a6384442f895dadaf6152df45b044c073">extra</a>.<a class="code hl_variable" href="classWidgetDate_1_1Extra.html#a10ffad24ae3883a3a80c3a46a4be0b3a">weather</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            extra.weather = a;</div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  179</span>        });</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="ttc" id="aclassWidgetDate_1_1Extra_html_a46b3abff44c5ef756d75bc19f606e1a1"><div class="ttname"><a href="classWidgetDate_1_1Extra.html#a46b3abff44c5ef756d75bc19f606e1a1">WidgetDate.Extra.realDate</a></div><div class="ttdeci">bool realDate</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00012">WidgetDate.cs:12</a></div></div>
+<div class="ttc" id="aclassWidget_html_a1566722a39d0cce11507c43b3737df1a"><div class="ttname"><a href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">Widget.SetBaseContextMenu</a></div><div class="ttdeci">void SetBaseContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00578">Widget.cs:578</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00014">extra</a>.</p>
+<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00018">WidgetDate.Extra.clock</a>, <a class="el" href="WidgetDate_8cs_source.html#l00037">extra</a>, <a class="el" href="WidgetDate_8cs_source.html#l00020">WidgetDate.Extra.loc</a>, <a class="el" href="WidgetDate_8cs_source.html#l00014">WidgetDate.Extra.period</a>, <a class="el" href="WidgetDate_8cs_source.html#l00012">WidgetDate.Extra.realDate</a>, <a class="el" href="WidgetDate_8cs_source.html#l00016">WidgetDate.Extra.room</a>, <a class="el" href="Widget_8cs_source.html#l00578">Widget.SetBaseContextMenu()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00022">WidgetDate.Extra.weather</a>.</p>
 
 </div>
 </div>
@@ -710,18 +696,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00130">130</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classWidgetDate.html">WidgetDate</a>.<a class="code hl_variable" href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">Instance</a>)</div>
-<div class="line"><span class="lineno">  133</span>        {</div>
-<div class="line"><span class="lineno">  134</span>            <a class="code hl_class" href="classWidgetDate.html">WidgetDate</a>.<a class="code hl_variable" href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">Instance</a>.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclassWidgetDate_html_a475e3510e56482b64a3ef3beebe8c683"><div class="ttname"><a href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">WidgetDate.Instance</a></div><div class="ttdeci">static WidgetDate Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetDate_8cs_source.html#l00174">WidgetDate.cs:174</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00139">139</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">Instance</a>)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <a class="code hl_variable" href="classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683">Instance</a>.<a class="code hl_function" href="classWidgetDate.html#a69a1322e3ded148b92a77d1bf3e61d3e">_Refresh</a>();</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00174">Instance</a>.</p>
+<p class="reference">References <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00025">Instance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00050">Scene.Init()</a>, and <a class="el" href="TraitCoreZone_8cs_source.html#l00046">TraitCoreZone.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00168">Scene.Init()</a>, and <a class="el" href="TraitCoreZone_8cs_source.html#l00021">TraitCoreZone.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -738,9 +723,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00184">184</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00035">35</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>.</p>
 
 </div>
 </div>
@@ -756,7 +741,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00182">182</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00033">33</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
 
 </div>
 </div>
@@ -780,9 +765,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00174">174</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00025">25</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00130">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00044">OnActivate()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00139">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -798,9 +783,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00180">180</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00031">31</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>.</p>
 
 </div>
 </div>
@@ -816,7 +801,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00178">178</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
 
 </div>
 </div>
@@ -832,15 +817,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00176">176</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00027">27</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="a13b1da372a2925bcc04742cd22dc6340" name="a13b1da372a2925bcc04742cd22dc6340"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13b1da372a2925bcc04742cd22dc6340">&#9670;&#160;</a></span>extra</h2>
+<a id="a6384442f895dadaf6152df45b044c073" name="a6384442f895dadaf6152df45b044c073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6384442f895dadaf6152df45b044c073">&#9670;&#160;</a></span>extra</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -849,7 +834,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classWidgetDate_1_1Extra.html">WidgetDate.Extra</a> WidgetDate.extra</td>
+          <td class="memname"><a class="el" href="classWidgetDate_1_1Extra.html">Extra</a> WidgetDate.extra</td>
         </tr>
       </table>
   </td>
@@ -859,15 +844,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00013">13</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> base.config.extra as <a class="code hl_class" href="classWidgetDate.html">WidgetDate</a>.<a class="code hl_class" href="classWidgetDate_1_1Extra.html">Extra</a>;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00028">_Refresh()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00138">OnSetContextMenu()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetDate_8cs_source.html#l00037">37</a> of file <a class="el" href="WidgetDate_8cs_source.html">WidgetDate.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">_Refresh()</a>, and <a class="el" href="WidgetDate_8cs_source.html#l00147">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>

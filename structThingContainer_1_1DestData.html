@@ -111,7 +111,7 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00836">836</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00008">8</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4702fc011c6ff355a2ba13e7395a5f9c" name="a4702fc011c6ff355a2ba13e7395a5f9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4702fc011c6ff355a2ba13e7395a5f9c">&#9670;&#160;</a></span>container</h2>
@@ -125,9 +125,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00846">846</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00010">10</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03781">Chara.Pick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03722">Chara.Pick()</a>.</p>
 
 </div>
 </div>
@@ -143,9 +143,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00848">848</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00012">12</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03781">Chara.Pick()</a>, and <a class="el" href="Card_8cs_source.html#l06323">Card.TryStack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03722">Chara.Pick()</a>, and <a class="el" href="Card_8cs_source.html#l05838">Card.TryStack()</a>.</p>
 
 </div>
 </div>
@@ -170,15 +170,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00838">838</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  839</span>        {</div>
-<div class="line"><span class="lineno">  840</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  841</span>            {</div>
-<div class="line"><span class="lineno">  842</span>                <span class="keywordflow">return</span> this.stack != <span class="keyword">null</span> || this.container != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  843</span>            }</div>
-<div class="line"><span class="lineno">  844</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00014">14</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="structThingContainer_1_1DestData.html#ac731ec918cccfca92cf1ad1edd3c1fae">stack</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   19</span>                {</div>
+<div class="line"><span class="lineno">   20</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="structThingContainer_1_1DestData.html#a4702fc011c6ff355a2ba13e7395a5f9c">container</a> != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   21</span>                }</div>
+<div class="line"><span class="lineno">   22</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   23</span>            }</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="ttc" id="astructThingContainer_1_1DestData_html_a4702fc011c6ff355a2ba13e7395a5f9c"><div class="ttname"><a href="structThingContainer_1_1DestData.html#a4702fc011c6ff355a2ba13e7395a5f9c">ThingContainer.DestData.container</a></div><div class="ttdeci">Card container</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00010">ThingContainer.cs:10</a></div></div>
+<div class="ttc" id="astructThingContainer_1_1DestData_html_ac731ec918cccfca92cf1ad1edd3c1fae"><div class="ttname"><a href="structThingContainer_1_1DestData.html#ac731ec918cccfca92cf1ad1edd3c1fae">ThingContainer.DestData.stack</a></div><div class="ttdeci">Thing stack</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00012">ThingContainer.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03781">Chara.Pick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00483">ThingContainer.IsFull()</a>, and <a class="el" href="Chara_8cs_source.html#l03722">Chara.Pick()</a>.</p>
 
 </div>
 </div>

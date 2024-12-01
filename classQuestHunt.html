@@ -282,8 +282,8 @@ Properties</h2></td></tr>
 <tr class="separator:aa22341e2c25faf3219e044d7e0793473 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3cf991d468757539b7030ac5e0dfaed1">RequireClientInSameZone</a><code> [get]</code></td></tr>
 <tr class="separator:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">Quest.DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a6c802d34b3fe0a66e6cd3c62aa6a6941">difficultyType</a><code> [get]</code></td></tr>
-<tr class="separator:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3a03e2e7b699388f14e2edb339568181">difficultyType</a><code> [get]</code></td></tr>
+<tr class="separator:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a4222ba9f92368ecb35f55a62ba66899a">DestChara</a><code> [get]</code></td></tr>
 <tr class="separator:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45db51626d462e4d75e4b670b467ff9e inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a45db51626d462e4d75e4b670b467ff9e">RefDrama1</a><code> [get]</code></td></tr>
@@ -436,7 +436,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00001">1</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1598cd5fd1ad88429511410f3e2fcb54" name="a1598cd5fd1ad88429511410f3e2fcb54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1598cd5fd1ad88429511410f3e2fcb54">&#9670;&#160;</a></span>OnInit()</h2>
@@ -465,12 +465,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classQuestHuntRace.html#abaaf01d783333a63a01a356f1c13bde4">QuestHuntRace</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00029">29</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
-<div class="line"><span class="lineno">   31</span>        base.SetTask(<span class="keyword">new</span> <a class="code hl_class" href="classQuestTaskHunt.html">QuestTaskHunt</a>());</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclassQuestTaskHunt_html"><div class="ttname"><a href="classQuestTaskHunt.html">QuestTaskHunt</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestTaskHunt_8cs_source.html#l00006">QuestTaskHunt.cs:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00009">9</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_function" href="classQuest.html#a2e3fc93b7022943add1385a985a09321">SetTask</a>(<span class="keyword">new</span> <a class="code hl_class" href="classQuestTaskHunt.html">QuestTaskHunt</a>());</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassQuestTaskHunt_html"><div class="ttname"><a href="classQuestTaskHunt.html">QuestTaskHunt</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestTaskHunt_8cs_source.html#l00005">QuestTaskHunt.cs:6</a></div></div>
+<div class="ttc" id="aclassQuest_html_a2e3fc93b7022943add1385a985a09321"><div class="ttname"><a href="classQuest.html#a2e3fc93b7022943add1385a985a09321">Quest.SetTask</a></div><div class="ttdeci">void SetTask(QuestTask _task)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00397">Quest.cs:397</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00397">Quest.SetTask()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -494,14 +497,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> -3;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
+
 </div>
 </div>
 <a id="ac73d4784ea8b167465940699f29dd3d0" name="ac73d4784ea8b167465940699f29dd3d0"></a>
@@ -524,14 +521,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00021">21</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> 20;</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00007">7</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
+
 </div>
 </div>
 <a id="a23667f302b208c020a21bb6e0018930a" name="a23667f302b208c020a21bb6e0018930a"></a>
@@ -554,14 +545,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00013">13</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Hunt&quot;</span>;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="QuestHunt_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestHunt_8cs_source.html">QuestHunt.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

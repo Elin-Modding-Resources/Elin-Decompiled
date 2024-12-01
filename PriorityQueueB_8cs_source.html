@@ -92,198 +92,191 @@ $(document).ready(function(){initNavTree('PriorityQueueB_8cs_source.html',''); i
   <div class="headertitle"><div class="title">PriorityQueueB.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="PriorityQueueB_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceAlgorithms.html">Algorithms</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    [Author(<span class="stringliteral">&quot;Franco, Gustavo&quot;</span>)]</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAlgorithms_1_1PriorityQueueB.html">PriorityQueueB</a>&lt;T&gt; : <a class="code hl_interface" href="interfaceAlgorithms_1_1IPriorityQueue.html">IPriorityQueue</a>&lt;T&gt;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a7765523f108d0a9415afba5752994ee3">    9</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a7765523f108d0a9415afba5752994ee3">PriorityQueueB</a>()</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            this.mComparer = Comparer&lt;T&gt;.Default;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
+<a href="PriorityQueueB_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceAlgorithms.html">Algorithms</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>[Author(<span class="stringliteral">&quot;Franco, Gustavo&quot;</span>)]</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAlgorithms_1_1PriorityQueueB.html">PriorityQueueB</a>&lt;T&gt; : <a class="code hl_interface" href="interfaceAlgorithms_1_1IPriorityQueue.html">IPriorityQueue</a>&lt;T&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">    8</a></span>    <span class="keyword">protected</span> List&lt;T&gt; <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a> = <span class="keyword">new</span> List&lt;T&gt;();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">   10</a></span>    <span class="keyword">protected</span> IComparer&lt;T&gt; <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">Count</a> =&gt; <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a25214439f4e507b8be935c589a36895d">   14</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a25214439f4e507b8be935c589a36895d">PriorityQueueB</a>(IComparer&lt;T&gt; comparer)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            this.mComparer = comparer;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a9c4cab241a64918701d099bfe080cbe4">   19</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a9c4cab241a64918701d099bfe080cbe4">PriorityQueueB</a>(IComparer&lt;T&gt; comparer, <span class="keywordtype">int</span> capacity)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            this.mComparer = comparer;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            this.InnerList.Capacity = capacity;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">   25</a></span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            T value = this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i];</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i] = this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[j];</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[j] = value;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ac7d6682ca27f8ae1e49cbf9d17798602">   14</a></span>    <span class="keyword">public</span> T <span class="keyword">this</span>[<span class="keywordtype">int</span> index]</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[index];</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">set</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[index] = value;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">Update</a>(index);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a7765523f108d0a9415afba5752994ee3">   27</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a7765523f108d0a9415afba5752994ee3">PriorityQueueB</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a> = Comparer&lt;T&gt;.Default;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">   32</a></span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a>.Compare(this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i], this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[j]);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a25214439f4e507b8be935c589a36895d">   32</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a25214439f4e507b8be935c589a36895d">PriorityQueueB</a>(IComparer&lt;T&gt; comparer)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a> = comparer;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">   37</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Push</a>(T item)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">int</span> num = this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Add(item);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">while</span> (num != 0)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordtype">int</span> num2 = (num - 1) / 2;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num2) &gt;= 0)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num2);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                num = num2;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span> num;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">   54</a></span>        <span class="keyword">public</span> T <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">Pop</a>()</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            T result = this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[0];</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[0] = this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[this.InnerList.Count - 1];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.RemoveAt(this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count - 1);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">for</span> (;;)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">int</span> num2 = num;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordtype">int</span> num3 = 2 * num + 1;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordtype">int</span> num4 = 2 * num + 2;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num3 &amp;&amp; <span class="keyword">this</span>.OnCompare(num, num3) &gt; 0)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    num = num3;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num4 &amp;&amp; <span class="keyword">this</span>.OnCompare(num, num4) &gt; 0)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    num = num4;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">if</span> (num == num2)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num2);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">   82</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">Update</a>(<span class="keywordtype">int</span> i)</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordtype">int</span> num;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordtype">int</span> num2;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">for</span> (num = i; num != 0; num = num2)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                num2 = (num - 1) / 2;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num2) &gt;= 0)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num2);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a9c4cab241a64918701d099bfe080cbe4">   37</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a9c4cab241a64918701d099bfe080cbe4">PriorityQueueB</a>(IComparer&lt;T&gt; comparer, <span class="keywordtype">int</span> capacity)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a> = comparer;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        InnerList.Capacity = capacity;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">   43</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        T value = <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i];</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i] = <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[j];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[j] = value;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">   50</a></span>    <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a>.Compare(<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i], <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[j]);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">   55</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Push</a>(T item)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Add(item);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">while</span> (num != 0)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordtype">int</span> num2 = (num - 1) / 2;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num2) &gt;= 0)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num2);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            num = num2;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">   72</a></span>    <span class="keyword">public</span> T <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">Pop</a>()</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        T result = <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[0];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[0] = <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[InnerList.Count - 1];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.RemoveAt(<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count - 1);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordtype">int</span> num2 = num;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordtype">int</span> num3 = 2 * num + 1;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordtype">int</span> num4 = 2 * num + 2;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num3 &amp;&amp; <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num3) &gt; 0)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                num = num3;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num4 &amp;&amp; <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num4) &gt; 0)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                num = num4;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">if</span> (num == num2)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">if</span> (num &lt; i)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">for</span> (;;)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                <span class="keywordtype">int</span> num3 = num;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="keywordtype">int</span> num4 = 2 * num + 1;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                num2 = 2 * num + 2;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num4 &amp;&amp; <span class="keyword">this</span>.OnCompare(num, num4) &gt; 0)</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    num = num4;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num2 &amp;&amp; <span class="keyword">this</span>.OnCompare(num, num2) &gt; 0)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    num = num2;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">if</span> (num == num3)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num3);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ae391b0fda91a0c5dab18875423abc4e6">  120</a></span>        <span class="keyword">public</span> T <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae391b0fda91a0c5dab18875423abc4e6">Peek</a>()</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; 0)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num2);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">  100</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">Update</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">int</span> num = i;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">while</span> (num != 0)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordtype">int</span> num2 = (num - 1) / 2;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num2) &gt;= 0)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num2);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            num = num2;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">if</span> (num &lt; i)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">int</span> num3 = num;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordtype">int</span> num4 = 2 * num + 1;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordtype">int</span> num2 = 2 * num + 2;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num4 &amp;&amp; <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num4) &gt; 0)</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[0];</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                num = num4;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">  129</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">Clear</a>()</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Clear();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">  134</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">Count</a></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keyword">get</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a16d8891105cda75ba7f220079cee60c3">  142</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a16d8891105cda75ba7f220079cee60c3">RemoveLocation</a>(T item)</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keywordtype">int</span> num = -1;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count; i++)</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a>.Compare(<span class="keyword">this</span>.InnerList[i], item) == 0)</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                    num = i;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                }</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="keywordflow">if</span> (num != -1)</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.RemoveAt(num);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ac7d6682ca27f8ae1e49cbf9d17798602">  158</a></span>        <span class="keyword">public</span> T <span class="keyword">this</span>[<span class="keywordtype">int</span> index]</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keyword">get</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[index];</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="keyword">set</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                this.<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[index] = value;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                this.<a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">Update</a>(index);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">  171</a></span>        <span class="keyword">protected</span> List&lt;T&gt; <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a> = <span class="keyword">new</span> List&lt;T&gt;();</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">  173</a></span>        <span class="keyword">protected</span> IComparer&lt;T&gt; <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a>;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html">Algorithms.PriorityQueueB</a></div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00007">PriorityQueueB.cs:8</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a16d8891105cda75ba7f220079cee60c3"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a16d8891105cda75ba7f220079cee60c3">Algorithms.PriorityQueueB.RemoveLocation</a></div><div class="ttdeci">void RemoveLocation(T item)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00142">PriorityQueueB.cs:142</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a225f904c4a00a2dfcad46d67ce8040f0"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">Algorithms.PriorityQueueB.mComparer</a></div><div class="ttdeci">IComparer&lt; T &gt; mComparer</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00173">PriorityQueueB.cs:173</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a25214439f4e507b8be935c589a36895d"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a25214439f4e507b8be935c589a36895d">Algorithms.PriorityQueueB.PriorityQueueB</a></div><div class="ttdeci">PriorityQueueB(IComparer&lt; T &gt; comparer)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00014">PriorityQueueB.cs:14</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4493d3d282d7d02290a26dd2c7205d30"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">Algorithms.PriorityQueueB.Pop</a></div><div class="ttdeci">T Pop()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00054">PriorityQueueB.cs:54</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4755c13592cd0d1bf491e807e86ef99e"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">Algorithms.PriorityQueueB.SwitchElements</a></div><div class="ttdeci">void SwitchElements(int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00025">PriorityQueueB.cs:25</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4f7610178e841d901420313a1b5f8f28"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">Algorithms.PriorityQueueB.Update</a></div><div class="ttdeci">void Update(int i)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00082">PriorityQueueB.cs:82</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a7765523f108d0a9415afba5752994ee3"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a7765523f108d0a9415afba5752994ee3">Algorithms.PriorityQueueB.PriorityQueueB</a></div><div class="ttdeci">PriorityQueueB()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00009">PriorityQueueB.cs:9</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a8609c9de258b03358a1e6af65c9bb59b"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Algorithms.PriorityQueueB.Push</a></div><div class="ttdeci">int Push(T item)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00037">PriorityQueueB.cs:37</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a9a7905feee12ba3f2f9a2d4f0ba3b465"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">Algorithms.PriorityQueueB.Count</a></div><div class="ttdeci">int Count</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00134">PriorityQueueB.cs:135</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a9c4cab241a64918701d099bfe080cbe4"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a9c4cab241a64918701d099bfe080cbe4">Algorithms.PriorityQueueB.PriorityQueueB</a></div><div class="ttdeci">PriorityQueueB(IComparer&lt; T &gt; comparer, int capacity)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00019">PriorityQueueB.cs:19</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_aa0c8eaf824ae6d851b4972b0c4978098"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">Algorithms.PriorityQueueB.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00129">PriorityQueueB.cs:129</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_ac8293470346f714576d39c0ea41d6fb1"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">Algorithms.PriorityQueueB.InnerList</a></div><div class="ttdeci">List&lt; T &gt; InnerList</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00171">PriorityQueueB.cs:171</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_ae391b0fda91a0c5dab18875423abc4e6"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#ae391b0fda91a0c5dab18875423abc4e6">Algorithms.PriorityQueueB.Peek</a></div><div class="ttdeci">T Peek()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00120">PriorityQueueB.cs:120</a></div></div>
-<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_ae75c6b9e71b1e80839043769c14c33fd"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">Algorithms.PriorityQueueB.OnCompare</a></div><div class="ttdeci">virtual int OnCompare(int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00032">PriorityQueueB.cs:32</a></div></div>
-<div class="ttc" id="ainterfaceAlgorithms_1_1IPriorityQueue_html"><div class="ttname"><a href="interfaceAlgorithms_1_1IPriorityQueue.html">Algorithms.IPriorityQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="IPriorityQueue_8cs_source.html#l00006">IPriorityQueue.cs:7</a></div></div>
-<div class="ttc" id="anamespaceAlgorithms_html"><div class="ttname"><a href="namespaceAlgorithms.html">Algorithms</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthorAttribute_8cs_source.html#l00003">AuthorAttribute.cs:4</a></div></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; num2 &amp;&amp; <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">OnCompare</a>(num, num2) &gt; 0)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                num = num2;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">if</span> (num != num3)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">SwitchElements</a>(num, num3);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#ae391b0fda91a0c5dab18875423abc4e6">  139</a></span>    <span class="keyword">public</span> T <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#ae391b0fda91a0c5dab18875423abc4e6">Peek</a>()</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count &gt; 0)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[0];</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">  148</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">Clear</a>()</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Clear();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1PriorityQueueB.html#a16d8891105cda75ba7f220079cee60c3">  153</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAlgorithms_1_1PriorityQueueB.html#a16d8891105cda75ba7f220079cee60c3">RemoveLocation</a>(T item)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.Count; i++)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">mComparer</a>.Compare(<a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>[i], item) == 0)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                num = i;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <a class="code hl_variable" href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">InnerList</a>.RemoveAt(num);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html">Algorithms.PriorityQueueB</a></div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00006">PriorityQueueB.cs:7</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a16d8891105cda75ba7f220079cee60c3"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a16d8891105cda75ba7f220079cee60c3">Algorithms.PriorityQueueB.RemoveLocation</a></div><div class="ttdeci">void RemoveLocation(T item)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00153">PriorityQueueB.cs:153</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a225f904c4a00a2dfcad46d67ce8040f0"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a225f904c4a00a2dfcad46d67ce8040f0">Algorithms.PriorityQueueB.mComparer</a></div><div class="ttdeci">IComparer&lt; T &gt; mComparer</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00010">PriorityQueueB.cs:10</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a25214439f4e507b8be935c589a36895d"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a25214439f4e507b8be935c589a36895d">Algorithms.PriorityQueueB.PriorityQueueB</a></div><div class="ttdeci">PriorityQueueB(IComparer&lt; T &gt; comparer)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00032">PriorityQueueB.cs:32</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4493d3d282d7d02290a26dd2c7205d30"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4493d3d282d7d02290a26dd2c7205d30">Algorithms.PriorityQueueB.Pop</a></div><div class="ttdeci">T Pop()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00072">PriorityQueueB.cs:72</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4755c13592cd0d1bf491e807e86ef99e"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4755c13592cd0d1bf491e807e86ef99e">Algorithms.PriorityQueueB.SwitchElements</a></div><div class="ttdeci">void SwitchElements(int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00043">PriorityQueueB.cs:43</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a4f7610178e841d901420313a1b5f8f28"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a4f7610178e841d901420313a1b5f8f28">Algorithms.PriorityQueueB.Update</a></div><div class="ttdeci">void Update(int i)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00100">PriorityQueueB.cs:100</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a7765523f108d0a9415afba5752994ee3"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a7765523f108d0a9415afba5752994ee3">Algorithms.PriorityQueueB.PriorityQueueB</a></div><div class="ttdeci">PriorityQueueB()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00027">PriorityQueueB.cs:27</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a8609c9de258b03358a1e6af65c9bb59b"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a8609c9de258b03358a1e6af65c9bb59b">Algorithms.PriorityQueueB.Push</a></div><div class="ttdeci">int Push(T item)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00055">PriorityQueueB.cs:55</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a9a7905feee12ba3f2f9a2d4f0ba3b465"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a9a7905feee12ba3f2f9a2d4f0ba3b465">Algorithms.PriorityQueueB.Count</a></div><div class="ttdeci">int Count</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00012">PriorityQueueB.cs:12</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_a9c4cab241a64918701d099bfe080cbe4"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#a9c4cab241a64918701d099bfe080cbe4">Algorithms.PriorityQueueB.PriorityQueueB</a></div><div class="ttdeci">PriorityQueueB(IComparer&lt; T &gt; comparer, int capacity)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00037">PriorityQueueB.cs:37</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_aa0c8eaf824ae6d851b4972b0c4978098"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#aa0c8eaf824ae6d851b4972b0c4978098">Algorithms.PriorityQueueB.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00148">PriorityQueueB.cs:148</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_ac8293470346f714576d39c0ea41d6fb1"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#ac8293470346f714576d39c0ea41d6fb1">Algorithms.PriorityQueueB.InnerList</a></div><div class="ttdeci">List&lt; T &gt; InnerList</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00008">PriorityQueueB.cs:8</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_ae391b0fda91a0c5dab18875423abc4e6"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#ae391b0fda91a0c5dab18875423abc4e6">Algorithms.PriorityQueueB.Peek</a></div><div class="ttdeci">T Peek()</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00139">PriorityQueueB.cs:139</a></div></div>
+<div class="ttc" id="aclassAlgorithms_1_1PriorityQueueB_html_ae75c6b9e71b1e80839043769c14c33fd"><div class="ttname"><a href="classAlgorithms_1_1PriorityQueueB.html#ae75c6b9e71b1e80839043769c14c33fd">Algorithms.PriorityQueueB.OnCompare</a></div><div class="ttdeci">virtual int OnCompare(int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="PriorityQueueB_8cs_source.html#l00050">PriorityQueueB.cs:50</a></div></div>
+<div class="ttc" id="ainterfaceAlgorithms_1_1IPriorityQueue_html"><div class="ttname"><a href="interfaceAlgorithms_1_1IPriorityQueue.html">Algorithms.IPriorityQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="IPriorityQueue_8cs_source.html#l00004">IPriorityQueue.cs:5</a></div></div>
+<div class="ttc" id="anamespaceAlgorithms_html"><div class="ttname"><a href="namespaceAlgorithms.html">Algorithms</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthorAttribute_8cs_source.html#l00003">AuthorAttribute.cs:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

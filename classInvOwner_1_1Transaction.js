@@ -9,7 +9,7 @@ var classInvOwner_1_1Transaction =
     [ "Process", "classInvOwner_1_1Transaction.html#ac2c8e58d33f6e8a55f85c730d43d3d0c", null ],
     [ "button", "classInvOwner_1_1Transaction.html#af6a4abac18ae4cd8c03875a027098250", null ],
     [ "destUIInv", "classInvOwner_1_1Transaction.html#acdd2c8f2a0b5e37badfc2e526a4eed89", null ],
-    [ "error", "classInvOwner_1_1Transaction.html#abfaa56b15947eebf1448e6953ea2023b", null ],
+    [ "error", "classInvOwner_1_1Transaction.html#a4b8e7de3da63be19ac567f00f2e3b9cf", null ],
     [ "from", "classInvOwner_1_1Transaction.html#ad05f627b53e3427bf9263eb6a1b9f6b9", null ],
     [ "inv", "classInvOwner_1_1Transaction.html#a45e24c0159e7f0e0288c4abcde6433eb", null ],
     [ "num", "classInvOwner_1_1Transaction.html#aa30615ab0d72f3bb8b812dcc5ef7281c", null ],

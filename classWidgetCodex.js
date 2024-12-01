@@ -18,5 +18,5 @@ var classWidgetCodex =
     [ "recipes", "classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b", null ],
     [ "search", "classWidgetCodex.html#a606fd6d85a98649c4f7d4d160946cc2c", null ],
     [ "transResult", "classWidgetCodex.html#a747a77750b4ab4cfda48cde025cf52cf", null ],
-    [ "type", "classWidgetCodex.html#ad713be8578296d6de25611cc7a610808", null ]
+    [ "type", "classWidgetCodex.html#ae48637ab079c51c375503d854342c018", null ]
 ];

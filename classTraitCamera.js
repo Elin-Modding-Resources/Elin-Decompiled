@@ -1,4 +1,4 @@
 var classTraitCamera =
 [
-    [ "PaintType", "classTraitCamera.html#ac05a3e8ad73d76e6ff4262051359ceec", null ]
+    [ "PaintType", "classTraitCamera.html#aac8b0271af431a04632d2f4828361141", null ]
 ];

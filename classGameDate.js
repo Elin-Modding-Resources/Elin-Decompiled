@@ -6,8 +6,6 @@ var classGameDate =
     [ "AdvanceMonth", "classGameDate.html#ad4f17b8c730db29a2383e27234268ba5", null ],
     [ "AdvanceSec", "classGameDate.html#ac61c9d6a6f627c7c4aa0be76bedc8fe7", null ],
     [ "AdvanceYear", "classGameDate.html#afa808c482a5ed0ccd1b8ab6bf2d6fb7f", null ],
-    [ "g__Add", "classGameDate.html#ae81009c38312472926ae7783afd9c198", null ],
-    [ "g__AddThing", "classGameDate.html#a1a396d28f06d22de4e5bb8fddd631ba9", null ],
     [ "ShipGoods", "classGameDate.html#a3e9862850a28239c5cea830c6101eeb2", null ],
     [ "ShipLetter", "classGameDate.html#ab23ab5ea00c8f8fe4fd353676208a07a", null ],
     [ "ShipPackages", "classGameDate.html#a4bead563961e259897d737e78466d8ce", null ],

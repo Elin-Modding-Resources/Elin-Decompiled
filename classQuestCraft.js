@@ -11,9 +11,9 @@ var classQuestCraft =
     [ "OnDropReward", "classQuestCraft.html#a7b35530f418b9d569fad45049d7b02ed", null ],
     [ "OnProgressComplete", "classQuestCraft.html#a253a3b28ea272548acff965616acc638", null ],
     [ "progress", "classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36", null ],
-    [ "req1", "classQuestCraft.html#abaa5fe4f0f5871b665afad5f74001207", null ],
-    [ "req2", "classQuestCraft.html#a345edd71b2ec03fe304234a4a473d41c", null ],
+    [ "req1", "classQuestCraft.html#a1aaab314c325c2d31ce2a7bcc1776887", null ],
+    [ "req2", "classQuestCraft.html#a301db165bd8e654de9876b3016923986", null ],
     [ "ConsumeGoods", "classQuestCraft.html#a307dbbf912f19717456c093b9d9474b4", null ],
-    [ "CurrentReq", "classQuestCraft.html#a73da090050f7525ee329af9eba81c520", null ],
+    [ "CurrentReq", "classQuestCraft.html#a47338f4e498b24116eb74dd0be655a3f", null ],
     [ "hasSecondReq", "classQuestCraft.html#ad07345ad6920b9ffa60372337f47c1a5", null ]
 ];

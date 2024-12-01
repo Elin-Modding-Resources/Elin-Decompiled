@@ -2,7 +2,6 @@ var classActMelee =
 [
     [ "Attack", "classActMelee.html#a2dd4e0143752bfb2806fd7d0b37d4cf9", null ],
     [ "CanPerform", "classActMelee.html#a54278893460b3f759aed4076f9b39859", null ],
-    [ "g__Attack", "classActMelee.html#adb189a94d7030ebcfa0525a5c610ad02", null ],
     [ "GetCursorIcon", "classActMelee.html#a4571f273d7184f68476ea71f4088a166", null ],
     [ "GetHintText", "classActMelee.html#a6db1bd0c673ce9427062370c0f4f6113", null ],
     [ "GetTextSmall", "classActMelee.html#a5f8ea1e1aa0b239ae845edabd2c4ac28", null ],

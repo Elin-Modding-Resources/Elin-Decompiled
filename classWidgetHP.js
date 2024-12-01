@@ -15,5 +15,5 @@ var classWidgetHP =
     [ "textHP", "classWidgetHP.html#a90e087f254faac1de6ed6fc48a9cc04f", null ],
     [ "textMP", "classWidgetHP.html#aec23b8ec6361b2272f522730afa4225f", null ],
     [ "textStamina", "classWidgetHP.html#a2323d61988355e7289a5ec5e2e93989e", null ],
-    [ "extra", "classWidgetHP.html#ae18a263eb56ac028169e1193ce5a278b", null ]
+    [ "extra", "classWidgetHP.html#adc701a0ef27155c60adca3cb84b84afa", null ]
 ];

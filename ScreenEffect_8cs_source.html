@@ -92,88 +92,93 @@ $(document).ready(function(){initNavTree('ScreenEffect_8cs_source.html',''); ini
   <div class="headertitle"><div class="title">ScreenEffect.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ScreenEffect_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classScreenEffect.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classScreenEffect.html">ScreenEffect</a> : <a class="code hl_class" href="classEMono.html">EMono</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038">    6</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038">Play</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        Util.Instantiate&lt;<a class="code hl_class" href="classScreenEffect.html">ScreenEffect</a>&gt;(<span class="stringliteral">&quot;Media/Effect/ScreenEffect/&quot;</span> + id, Camera.main.transform);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
+<a href="ScreenEffect_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classScreenEffect.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classScreenEffect.html">ScreenEffect</a> : <a class="code hl_class" href="classEMono.html">EMono</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">    5</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">worldParticle</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">    7</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">killDuration</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">    9</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">stopParticleTime</a>;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357">   11</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357">Awake</a>()</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">if</span> (base.transform.parent)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            this.goParent = base.transform.parent.gameObject;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        base.transform.SetParent(Camera.main.transform, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">worldParticle</a>)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            ParticleSystem[] componentsInChildren = base.GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                componentsInChildren[i].main.simulationSpace = ParticleSystemSimulationSpace.World;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classScreenEffect.html#ab144d946b1459698543c33232f738bb0">   28</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classScreenEffect.html#ab144d946b1459698543c33232f738bb0">Update</a>()</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">goParent</a>)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            this.time += Time.unscaledDeltaTime;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">particleStopped</a> &amp;&amp; this.<a class="code hl_variable" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">stopParticleTime</a> != 0f &amp;&amp; this.<a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a> &gt; this.<a class="code hl_variable" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">stopParticleTime</a>)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">foreach</span> (ParticleSystem particleSystem <span class="keywordflow">in</span> base.GetComponentsInChildren&lt;ParticleSystem&gt;())</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <span class="keywordflow">if</span> (particleSystem.transform.tag.Contains(<span class="stringliteral">&quot;ParticleEmitter&quot;</span>))</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                        particleSystem.main.loop = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                        particleSystem.emission.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">foreach</span> (SoundEmitter soundEmitter <span class="keywordflow">in</span> base.GetComponentsInChildren&lt;SoundEmitter&gt;())</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordflow">if</span> (soundEmitter.source)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        soundEmitter.source.Stop(2f);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        soundEmitter.source = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                this.particleStopped = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a> &gt; this.<a class="code hl_variable" href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">killDuration</a>)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                UnityEngine.Object.Destroy(base.gameObject);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">   60</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">worldParticle</a>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">   62</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">killDuration</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">   64</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">stopParticleTime</a>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">   66</a></span>    <span class="keyword">private</span> GameObject <a class="code hl_variable" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">goParent</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">   68</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">   70</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">particleStopped</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html"><div class="ttname"><a href="classScreenEffect.html">ScreenEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00004">ScreenEffect.cs:5</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_a1ff3b5338df72aef4a26d4910fff8ee1"><div class="ttname"><a href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">ScreenEffect.killDuration</a></div><div class="ttdeci">float killDuration</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00062">ScreenEffect.cs:62</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_a23025cfebb1d68e7e2f5dc2709f6d357"><div class="ttname"><a href="classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357">ScreenEffect.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00011">ScreenEffect.cs:11</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_a65534a7b6967747a6dcbc4ad86feb038"><div class="ttname"><a href="classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038">ScreenEffect.Play</a></div><div class="ttdeci">static void Play(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00006">ScreenEffect.cs:6</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_a92ddb916735490739d0a8bdebe14db17"><div class="ttname"><a href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">ScreenEffect.goParent</a></div><div class="ttdeci">GameObject goParent</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00066">ScreenEffect.cs:66</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_aabf4c1c23c44a8b1a9948c41838cc9ab"><div class="ttname"><a href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">ScreenEffect.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00068">ScreenEffect.cs:68</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_ab144d946b1459698543c33232f738bb0"><div class="ttname"><a href="classScreenEffect.html#ab144d946b1459698543c33232f738bb0">ScreenEffect.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00028">ScreenEffect.cs:28</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_abb8f89d0c208acb7612acaa4dcaea131"><div class="ttname"><a href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">ScreenEffect.stopParticleTime</a></div><div class="ttdeci">float stopParticleTime</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00064">ScreenEffect.cs:64</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_aca83400a93b77ce6f3d4b3ea13bd0d07"><div class="ttname"><a href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">ScreenEffect.worldParticle</a></div><div class="ttdeci">bool worldParticle</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00060">ScreenEffect.cs:60</a></div></div>
-<div class="ttc" id="aclassScreenEffect_html_af39001dd6113b3e240c5b372ab266c8c"><div class="ttname"><a href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">ScreenEffect.particleStopped</a></div><div class="ttdeci">bool particleStopped</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00070">ScreenEffect.cs:70</a></div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">   11</a></span>    <span class="keyword">private</span> GameObject <a class="code hl_variable" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">goParent</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">   13</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">   15</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">particleStopped</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038">   17</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038">Play</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Util.Instantiate&lt;<a class="code hl_class" href="classScreenEffect.html">ScreenEffect</a>&gt;(<span class="stringliteral">&quot;Media/Effect/ScreenEffect/&quot;</span> + id, Camera.main.transform);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357">   22</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357">Awake</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)base.transform.parent)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">goParent</a> = base.transform.parent.gameObject;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        base.transform.SetParent(Camera.main.transform, worldPositionStays: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">worldParticle</a>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            ParticleSystem[] componentsInChildren = GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                ParticleSystem.MainModule main = componentsInChildren[i].main;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                main.simulationSpace = ParticleSystemSimulationSpace.World;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classScreenEffect.html#ab144d946b1459698543c33232f738bb0">   40</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classScreenEffect.html#ab144d946b1459698543c33232f738bb0">Update</a>()</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">goParent</a>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a> += Time.unscaledDeltaTime;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">particleStopped</a> &amp;&amp; <a class="code hl_variable" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">stopParticleTime</a> != 0f &amp;&amp; <a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a> &gt; <a class="code hl_variable" href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">stopParticleTime</a>)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            ParticleSystem[] componentsInChildren = GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">foreach</span> (ParticleSystem particleSystem <span class="keywordflow">in</span> componentsInChildren)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">if</span> (particleSystem.transform.tag.Contains(<span class="stringliteral">&quot;ParticleEmitter&quot;</span>))</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    ParticleSystem.MainModule main = particleSystem.main;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    main.loop = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    ParticleSystem.EmissionModule emission = particleSystem.emission;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    emission.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            SoundEmitter[] componentsInChildren2 = GetComponentsInChildren&lt;SoundEmitter&gt;();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">foreach</span> (SoundEmitter soundEmitter <span class="keywordflow">in</span> componentsInChildren2)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)soundEmitter.source)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    soundEmitter.source.Stop(2f);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    soundEmitter.source = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">particleStopped</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">time</a> &gt; <a class="code hl_variable" href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">killDuration</a>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            Object.Destroy(base.gameObject);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html"><div class="ttname"><a href="classScreenEffect.html">ScreenEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00003">ScreenEffect.cs:4</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_a1ff3b5338df72aef4a26d4910fff8ee1"><div class="ttname"><a href="classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1">ScreenEffect.killDuration</a></div><div class="ttdeci">float killDuration</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00007">ScreenEffect.cs:7</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_a23025cfebb1d68e7e2f5dc2709f6d357"><div class="ttname"><a href="classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357">ScreenEffect.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00022">ScreenEffect.cs:22</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_a65534a7b6967747a6dcbc4ad86feb038"><div class="ttname"><a href="classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038">ScreenEffect.Play</a></div><div class="ttdeci">static void Play(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00017">ScreenEffect.cs:17</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_a92ddb916735490739d0a8bdebe14db17"><div class="ttname"><a href="classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17">ScreenEffect.goParent</a></div><div class="ttdeci">GameObject goParent</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00011">ScreenEffect.cs:11</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_aabf4c1c23c44a8b1a9948c41838cc9ab"><div class="ttname"><a href="classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab">ScreenEffect.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00013">ScreenEffect.cs:13</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_ab144d946b1459698543c33232f738bb0"><div class="ttname"><a href="classScreenEffect.html#ab144d946b1459698543c33232f738bb0">ScreenEffect.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00040">ScreenEffect.cs:40</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_abb8f89d0c208acb7612acaa4dcaea131"><div class="ttname"><a href="classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131">ScreenEffect.stopParticleTime</a></div><div class="ttdeci">float stopParticleTime</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00009">ScreenEffect.cs:9</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_aca83400a93b77ce6f3d4b3ea13bd0d07"><div class="ttname"><a href="classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07">ScreenEffect.worldParticle</a></div><div class="ttdeci">bool worldParticle</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00005">ScreenEffect.cs:5</a></div></div>
+<div class="ttc" id="aclassScreenEffect_html_af39001dd6113b3e240c5b372ab266c8c"><div class="ttname"><a href="classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c">ScreenEffect.particleStopped</a></div><div class="ttdeci">bool particleStopped</div><div class="ttdef"><b>Definition:</b> <a href="ScreenEffect_8cs_source.html#l00015">ScreenEffect.cs:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

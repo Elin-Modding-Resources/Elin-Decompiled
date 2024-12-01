@@ -1,6 +1,6 @@
 var classSourceRecipe =
 [
     [ "Row", "classSourceRecipe_1_1Row.html", "classSourceRecipe_1_1Row" ],
-    [ "CreateRow", "classSourceRecipe.html#a4b92bde7c2a1aa895588cac8531b6d9c", null ],
-    [ "SetRow", "classSourceRecipe.html#aa45efb24aa725b2b2aebe58b75dbed29", null ]
+    [ "CreateRow", "classSourceRecipe.html#ac51055c987e42206ea85ac3c50100f20", null ],
+    [ "SetRow", "classSourceRecipe.html#a93b6d65b795fc25d658c8491f563d809", null ]
 ];

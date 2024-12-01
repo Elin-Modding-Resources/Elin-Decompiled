@@ -30,7 +30,7 @@ var classAM__Copy =
     [ "CostMoney", "classAM__Copy.html#a99140f4c2592f8424c94e35b5061aa3c", null ],
     [ "IsBuildMode", "classAM__Copy.html#a35ebb453713392d9ef9aaa977b00baa2", null ],
     [ "menu", "classAM__Copy.html#aaaa3bacad39f0e3f5b0745a3e4c14732", null ],
-    [ "mode", "classAM__Copy.html#a389f4f62ab5f17cca3ce3c00d79fe535", null ],
+    [ "mode", "classAM__Copy.html#aae2bc506c3aef96a781d6ed0ddf061af", null ],
     [ "selectType", "classAM__Copy.html#a951f8d35aca506fb7dda295685991816", null ],
     [ "SubMenuAsGroup", "classAM__Copy.html#a96a080ccb0ce6197800bddcb3c1ef05c", null ],
     [ "UseSubMenu", "classAM__Copy.html#ad38dec748d0405ae0c6678f613dfce46", null ]

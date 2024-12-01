@@ -34,7 +34,7 @@ var classWidgetCurrentTool =
     [ "selectedPage", "classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f", null ],
     [ "SlotsPerPage", "classWidgetCurrentTool.html#a87243dc00b55a8c2d8d3f9cbe1259869", null ],
     [ "transHighlightSwitch", "classWidgetCurrentTool.html#a28fb63cd0ccad4be8370ba8249e6cfc7", null ],
-    [ "extra", "classWidgetCurrentTool.html#a1521f83d1f9110fbefa414b975957ad9", null ],
+    [ "extra", "classWidgetCurrentTool.html#a37a8c945090b80225c8e0f7ab62886e0", null ],
     [ "page", "classWidgetCurrentTool.html#a24b205db86aec45d764880686b1c81b0", null ],
     [ "selectedButton", "classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2", null ]
 ];

@@ -226,7 +226,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="RenderDataCard_8cs_source.html#l00004">4</a> of file <a class="el" href="RenderDataCard_8cs_source.html">RenderDataCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RenderDataCard_8cs_source.html#l00003">3</a> of file <a class="el" href="RenderDataCard_8cs_source.html">RenderDataCard.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7aebc9cf69b56e2f8ee6ae0c72b2207d" name="a7aebc9cf69b56e2f8ee6ae0c72b2207d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7aebc9cf69b56e2f8ee6ae0c72b2207d">&#9670;&#160;</a></span>CreateActor()</h2>
@@ -253,23 +253,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRenderData.html#ace18eefbdb92342c0cfdf755d1e527f5">RenderData</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RenderDataCard_8cs_source.html#l00006">6</a> of file <a class="el" href="RenderDataCard_8cs_source.html">RenderDataCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a> &amp;&amp; base.name == <span class="stringliteral">&quot;pcc&quot;</span>)</div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            this.mold = Resources.Load&lt;<a class="code hl_class" href="classCharaActorPCC.html">CharaActorPCC</a>&gt;(<span class="stringliteral">&quot;Scene/Render/Actor/CharaActorPCC&quot;</span>);</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> PoolManager.Spawn&lt;<a class="code hl_class" href="classCardActor.html">CardActor</a>&gt;(this.<a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-<div class="ttc" id="aclassCardActor_html"><div class="ttname"><a href="classCardActor.html">CardActor</a></div><div class="ttdef"><b>Definition:</b> <a href="CardActor_8cs_source.html#l00004">CardActor.cs:5</a></div></div>
-<div class="ttc" id="aclassCharaActorPCC_html"><div class="ttname"><a href="classCharaActorPCC.html">CharaActorPCC</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaActorPCC_8cs_source.html#l00004">CharaActorPCC.cs:5</a></div></div>
-<div class="ttc" id="aclassRenderDataCard_html_a6316ee400bbb512a1a5d4abff8f7a52d"><div class="ttname"><a href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">RenderDataCard.mold</a></div><div class="ttdeci">CardActor mold</div><div class="ttdef"><b>Definition:</b> <a href="RenderDataCard_8cs_source.html#l00019">RenderDataCard.cs:19</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RenderDataCard_8cs_source.html#l00007">7</a> of file <a class="el" href="RenderDataCard_8cs_source.html">RenderDataCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a> &amp;&amp; base.name == <span class="stringliteral">&quot;pcc&quot;</span>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a> = Resources.Load&lt;<a class="code hl_class" href="classCharaActorPCC.html">CharaActorPCC</a>&gt;(<span class="stringliteral">&quot;Scene/Render/Actor/CharaActorPCC&quot;</span>);</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> PoolManager.Spawn(<a class="code hl_variable" href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">mold</a>);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassCharaActorPCC_html"><div class="ttname"><a href="classCharaActorPCC.html">CharaActorPCC</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaActorPCC_8cs_source.html#l00003">CharaActorPCC.cs:4</a></div></div>
+<div class="ttc" id="aclassRenderDataCard_html_a6316ee400bbb512a1a5d4abff8f7a52d"><div class="ttname"><a href="classRenderDataCard.html#a6316ee400bbb512a1a5d4abff8f7a52d">RenderDataCard.mold</a></div><div class="ttdeci">CardActor mold</div><div class="ttdef"><b>Definition:</b> <a href="RenderDataCard_8cs_source.html#l00005">RenderDataCard.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderDataCard_8cs_source.html#l00019">mold</a>.</p>
+<p class="reference">References <a class="el" href="RenderDataCard_8cs_source.html#l00005">mold</a>.</p>
 
 </div>
 </div>
@@ -286,9 +285,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RenderDataCard_8cs_source.html#l00019">19</a> of file <a class="el" href="RenderDataCard_8cs_source.html">RenderDataCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RenderDataCard_8cs_source.html#l00005">5</a> of file <a class="el" href="RenderDataCard_8cs_source.html">RenderDataCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RenderDataCard_8cs_source.html#l00006">CreateActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RenderDataCard_8cs_source.html#l00007">CreateActor()</a>.</p>
 
 </div>
 </div>

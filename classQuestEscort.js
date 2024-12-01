@@ -7,7 +7,7 @@ var classQuestEscort =
     [ "OnStart", "classQuestEscort.html#acbc60325f77dfde637101926c1d53f4d", null ],
     [ "ReleaseEscort", "classQuestEscort.html#af490541613a4a21e4edcb975cc5b926d", null ],
     [ "uidChara", "classQuestEscort.html#a1b15c44c5825de775519686480c60c51", null ],
-    [ "difficultyType", "classQuestEscort.html#a9fc50b1a04a6ba16f30d03eef342fab8", null ],
+    [ "difficultyType", "classQuestEscort.html#ac53306b38cafbaa27fec0670c98551f4", null ],
     [ "ForbidTeleport", "classQuestEscort.html#ad3129d33f2ce289389f2caf9d78b4d7f", null ],
     [ "KarmaOnFail", "classQuestEscort.html#a70416e2b58cb2ef5d8f031e172a97688", null ],
     [ "target", "classQuestEscort.html#ae221c4d3e02bad3ddef6004f44215edc", null ]

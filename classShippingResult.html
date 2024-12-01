@@ -122,8 +122,8 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9fdcbbf473ea9e9f24cd9fb85bfd0d47"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a> = new int[10]</td></tr>
 <tr class="separator:a9fdcbbf473ea9e9f24cd9fb85bfd0d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d5579a47bcd45e6f7c73a40405fc412"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classShippingResult_1_1Item.html">ShippingResult.Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShippingResult.html#a6d5579a47bcd45e6f7c73a40405fc412">items</a> = new List&lt;<a class="el" href="classShippingResult_1_1Item.html">ShippingResult.Item</a>&gt;()</td></tr>
-<tr class="separator:a6d5579a47bcd45e6f7c73a40405fc412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64976b01ce635b3ebe60cb20463e7ef7"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classShippingResult_1_1Item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShippingResult.html#a64976b01ce635b3ebe60cb20463e7ef7">items</a> = new List&lt;<a class="el" href="classShippingResult_1_1Item.html">Item</a>&gt;()</td></tr>
+<tr class="separator:a64976b01ce635b3ebe60cb20463e7ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -212,7 +212,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00005">5</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00004">4</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="add91f6fe9a7e710f9c7e80ad7383b2c0" name="add91f6fe9a7e710f9c7e80ad7383b2c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add91f6fe9a7e710f9c7e80ad7383b2c0">&#9670;&#160;</a></span>GetIncome()</h2>
@@ -237,19 +237,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00091">91</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a> item in <span class="keyword">this</span>.items)</div>
-<div class="line"><span class="lineno">   95</span>        {</div>
-<div class="line"><span class="lineno">   96</span>            num += item.income;</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclassShippingResult_1_1Item_html"><div class="ttname"><a href="classShippingResult_1_1Item.html">ShippingResult.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00107">ShippingResult.cs:108</a></div></div>
-<div class="ttc" id="aclassShippingResult_html"><div class="ttname"><a href="classShippingResult.html">ShippingResult</a></div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00005">ShippingResult.cs:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00126">126</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> <a class="code hl_variable" href="classShippingResult.html#a64976b01ce635b3ebe60cb20463e7ef7">items</a>)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            num += item.income;</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclassShippingResult_html_a64976b01ce635b3ebe60cb20463e7ef7"><div class="ttname"><a href="classShippingResult.html#a64976b01ce635b3ebe60cb20463e7ef7">ShippingResult.items</a></div><div class="ttdeci">List&lt; Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00040">ShippingResult.cs:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="ShippingResult_8cs_source.html#l00024">ShippingResult.Item.income</a>, and <a class="el" href="ShippingResult_8cs_source.html#l00040">items</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -266,23 +267,25 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00102">102</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00037">37</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
 
 </div>
 </div>
-<a id="a6d5579a47bcd45e6f7c73a40405fc412" name="a6d5579a47bcd45e6f7c73a40405fc412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d5579a47bcd45e6f7c73a40405fc412">&#9670;&#160;</a></span>items</h2>
+<a id="a64976b01ce635b3ebe60cb20463e7ef7" name="a64976b01ce635b3ebe60cb20463e7ef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64976b01ce635b3ebe60cb20463e7ef7">&#9670;&#160;</a></span>items</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="classShippingResult_1_1Item.html">ShippingResult.Item</a>&gt; ShippingResult.items = new List&lt;<a class="el" href="classShippingResult_1_1Item.html">ShippingResult.Item</a>&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="classShippingResult_1_1Item.html">Item</a>&gt; ShippingResult.items = new List&lt;<a class="el" href="classShippingResult_1_1Item.html">Item</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00105">105</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00040">40</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ShippingResult_8cs_source.html#l00126">GetIncome()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>.</p>
 
 </div>
 </div>
@@ -307,19 +310,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00079">79</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[6];</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[6] = value;</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclassShippingResult_html_a9fdcbbf473ea9e9f24cd9fb85bfd0d47"><div class="ttname"><a href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ShippingResult.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00102">ShippingResult.cs:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00114">114</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[6];</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[6] = value;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassShippingResult_html_a9fdcbbf473ea9e9f24cd9fb85bfd0d47"><div class="ttname"><a href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ShippingResult.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00037">ShippingResult.cs:37</a></div></div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>.</p>
+
 </div>
 </div>
 <a id="ae68660a963626fbb885a0e336c833cac" name="ae68660a963626fbb885a0e336c833cac"></a>
@@ -342,17 +347,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00055">55</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[4];</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[4] = value;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00090">90</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[4];</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[4] = value;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -376,17 +381,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00067">67</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[5];</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[5] = value;</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00102">102</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[5];</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[5] = value;</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -410,19 +415,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00043">43</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[3];</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[3] = value;</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00078">78</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[3];</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[3] = value;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -446,19 +451,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00019">19</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[1];</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[1] = value;</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00054">54</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[1];</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[1] = value;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00103">LayerShippingResult.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>.</p>
 
 </div>
 </div>
@@ -482,19 +487,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00007">7</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[0];</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   14</span>        {</div>
-<div class="line"><span class="lineno">   15</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[0] = value;</div>
-<div class="line"><span class="lineno">   16</span>        }</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00042">42</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[0];</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[0] = value;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -518,19 +523,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00031">31</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[2];</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            this.<a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[2] = value;</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShippingResult_8cs_source.html#l00066">66</a> of file <a class="el" href="ShippingResult_8cs_source.html">ShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[2];</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classShippingResult.html#a9fdcbbf473ea9e9f24cd9fb85bfd0d47">ints</a>[2] = value;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00103">LayerShippingResult.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>.</p>
 
 </div>
 </div>

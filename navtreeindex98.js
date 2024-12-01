@@ -1,5 +1,10 @@
 var NAVTREEINDEX98 =
 {
+"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1543,0],
+"classTraitSpotGarbage.html":[1,0,1544],
+"classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1544,0],
+"classTraitSpotGuidePC.html":[1,0,1545],
+"classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1545,0],
 "classTraitSpotLight.html":[1,0,1546],
 "classTraitSpotLight.html#a95a0a2863a144b62664851cefa4a6cb0":[1,0,1546,0],
 "classTraitSpotLumberjack.html":[1,0,1547],
@@ -48,9 +53,8 @@ var NAVTREEINDEX98 =
 "classTraitStoneCutter.html#a965c9a1be14b65a329ece7ab2700a0e5":[1,0,1564,1],
 "classTraitStoneCutter.html#ac917262d6ce0c2e113fb0443933c49b0":[1,0,1564,2],
 "classTraitStoryBook.html":[1,0,1565],
-"classTraitStoryBook.html#a76b3a13738b1ef786647a41f954cabe3":[1,0,1565,0],
-"classTraitStoryBook.html#a82109034aff557b0537cff48cc1ade7d":[1,0,1565,2],
-"classTraitStoryBook.html#abfc271f7fc85a93c40a6f7fd646dadf8":[1,0,1565,1],
+"classTraitStoryBook.html#a82109034aff557b0537cff48cc1ade7d":[1,0,1565,1],
+"classTraitStoryBook.html#abfc271f7fc85a93c40a6f7fd646dadf8":[1,0,1565,0],
 "classTraitStove.html":[1,0,1566],
 "classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a":[1,0,1566,0],
 "classTraitStrangeGirl.html":[1,0,1567],
@@ -59,10 +63,10 @@ var NAVTREEINDEX98 =
 "classTraitSwing.html":[1,0,1568],
 "classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1568,0],
 "classTraitSwing.html#a65c5fe1d3a1255e1fd77e5e9ea58d015":[1,0,1568,1],
-"classTraitSwing.html#a940c8dbcc9e0d6d3801db7f0033e58c4":[1,0,1568,4],
 "classTraitSwing.html#aa1119fe1adc12884e7c7c2aaf6ebbb92":[1,0,1568,5],
 "classTraitSwing.html#af6cada8c4e4bb880882b43a999a50b9a":[1,0,1568,2],
 "classTraitSwing.html#af9b30b301ce085c223344c32891c88fc":[1,0,1568,3],
+"classTraitSwing.html#affe3bc4a8f03bb9e1b6546afbfb29ceb":[1,0,1568,4],
 "classTraitSwitch.html":[1,0,1569],
 "classTraitSwitch.html#a069e285e73f58fcb14dd4ce45b058a44":[1,0,1569,5],
 "classTraitSwitch.html#a38ceb3586c4921cafed4f9cdfed87d21":[1,0,1569,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX98 =
 "classTraitTrap.html#a43c3167c3b56871d6076f1873dc4acff":[1,0,1610,3],
 "classTraitTrap.html#a77e0ab0ec013b93abf741de3f7476f4a":[1,0,1610,6],
 "classTraitTrap.html#aa2212350b6211e7121f57ad9d459248d":[1,0,1610,8],
-"classTraitTrap.html#ac2b4c207ef6a934eb1a7ef344486b6b0":[1,0,1610,4],
-"classTraitTrap.html#ace9352af135951d53732a1e401aceb7f":[1,0,1610,7],
-"classTraitTrap.html#ad8e0fa8570bc1bc844178e5d15f106e0":[1,0,1610,1],
-"classTraitTrapMine.html":[1,0,1611],
-"classTraitTrapMine.html#a008839a4cc906867fab97d3746dd5c5d":[1,0,1611,0]
+"classTraitTrap.html#ac2b4c207ef6a934eb1a7ef344486b6b0":[1,0,1610,4]
 };

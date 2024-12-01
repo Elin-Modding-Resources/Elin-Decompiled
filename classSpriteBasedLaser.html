@@ -108,10 +108,10 @@ Inheritance diagram for SpriteBasedLaser:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b85fef07896acf69e515d5a239468e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteBasedLaser.html#a5b85fef07896acf69e515d5a239468e1">Play</a> (Vector3 to)</td></tr>
-<tr class="separator:a5b85fef07896acf69e515d5a239468e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af596f8c9f20dfcc05e13cfd399f13693"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteBasedLaser.html#af596f8c9f20dfcc05e13cfd399f13693">LaserHitTriggerHandler</a> (RaycastHit2D hitInfo)</td></tr>
 <tr class="separator:af596f8c9f20dfcc05e13cfd399f13693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b85fef07896acf69e515d5a239468e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteBasedLaser.html#a5b85fef07896acf69e515d5a239468e1">Play</a> (Vector3 to)</td></tr>
+<tr class="separator:a5b85fef07896acf69e515d5a239468e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -178,8 +178,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
-<tr class="memitem:adc90590e49051c06a2a248982f3644f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSpriteBasedLaser.html#af596f8c9f20dfcc05e13cfd399f13693">SpriteBasedLaser.LaserHitTriggerHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteBasedLaser.html#adc90590e49051c06a2a248982f3644f8">OnLaserHitTriggered</a></td></tr>
-<tr class="separator:adc90590e49051c06a2a248982f3644f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e9822a90fc5847b534945986c01e82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSpriteBasedLaser.html#af596f8c9f20dfcc05e13cfd399f13693">LaserHitTriggerHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteBasedLaser.html#ae8e9822a90fc5847b534945986c01e82">OnLaserHitTriggered</a></td></tr>
+<tr class="separator:ae8e9822a90fc5847b534945986c01e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -255,37 +255,37 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">38</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">laserOscillationPositionerScript</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        this.lerpYValue = Mathf.Lerp(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localPosition.y, <span class="keyword">this</span>.laserOscillationPositionerScript.randomPointInCircle.y, Time.deltaTime * <span class="keyword">this</span>.oscillationSpeed);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">startGoPiece</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            Vector2 b = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">startGoPiece</a>.transform.localPosition.x, <span class="keyword">this</span>.laserOscillationPositionerScript.randomPointInCircle.y);</div>
-<div class="line"><span class="lineno">   48</span>            Vector2 v = Vector2.Lerp(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">startGoPiece</a>.transform.localPosition, b, Time.deltaTime * <span class="keyword">this</span>.oscillationSpeed);</div>
-<div class="line"><span class="lineno">   49</span>            this.startGoPiece.transform.localPosition = v;</div>
-<div class="line"><span class="lineno">   50</span>            Vector2 v2 = <span class="keyword">new</span> Vector2(currentLaserDistance / 2f + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 4f, this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a>);</div>
-<div class="line"><span class="lineno">   51</span>            this.middleGoPiece.transform.localPosition = v2;</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a9986308c8cd1b1ff8df368d1bcb2729f">endGoPiece</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            Vector2 v3 = <span class="keyword">new</span> Vector2(currentLaserDistance + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 2f, this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a>);</div>
-<div class="line"><span class="lineno">   56</span>            this.endGoPiece.transform.localPosition = v3;</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a9986308c8cd1b1ff8df368d1bcb2729f"><div class="ttname"><a href="classSpriteBasedLaser.html#a9986308c8cd1b1ff8df368d1bcb2729f">SpriteBasedLaser.endGoPiece</a></div><div class="ttdeci">GameObject endGoPiece</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00211">SpriteBasedLaser.cs:211</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_acecba11968e71d99020698f25bdc1b22"><div class="ttname"><a href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">SpriteBasedLaser.lerpYValue</a></div><div class="ttdeci">float lerpYValue</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00201">SpriteBasedLaser.cs:201</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_acfee00c85e09316c8ad4a3bfb194f78d"><div class="ttname"><a href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">SpriteBasedLaser.startGoPiece</a></div><div class="ttdeci">GameObject startGoPiece</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00207">SpriteBasedLaser.cs:207</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_ad0df5c15f16e1713c0e25ca4aa6ee73c"><div class="ttname"><a href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">SpriteBasedLaser.startSpriteWidth</a></div><div class="ttdeci">float startSpriteWidth</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00213">SpriteBasedLaser.cs:213</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_ae547100865d56d546c2b0c6af9425727"><div class="ttname"><a href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">SpriteBasedLaser.middleGoPiece</a></div><div class="ttdeci">GameObject middleGoPiece</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00209">SpriteBasedLaser.cs:209</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_afb29aa363afaaeba1e35f6375a089036"><div class="ttname"><a href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">SpriteBasedLaser.laserOscillationPositionerScript</a></div><div class="ttdeci">RandomPositionMover laserOscillationPositionerScript</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00167">SpriteBasedLaser.cs:167</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">112</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">laserOscillationPositionerScript</a> == <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a> = Mathf.Lerp(<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localPosition.y, <a class="code hl_variable" href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">laserOscillationPositionerScript</a>.<a class="code hl_variable" href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">randomPointInCircle</a>.y, Time.deltaTime * <a class="code hl_variable" href="classSpriteBasedLaser.html#aea6500d993bd74d0aacb0601e559d13d">oscillationSpeed</a>);</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">startGoPiece</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                Vector2 vector = Vector2.Lerp(b: <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">startGoPiece</a>.transform.localPosition.x, <a class="code hl_variable" href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">laserOscillationPositionerScript</a>.<a class="code hl_variable" href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">randomPointInCircle</a>.y), a: <a class="code hl_variable" href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">startGoPiece</a>.transform.localPosition, t: Time.deltaTime * <a class="code hl_variable" href="classSpriteBasedLaser.html#aea6500d993bd74d0aacb0601e559d13d">oscillationSpeed</a>);</div>
+<div class="line"><span class="lineno">  120</span>                startGoPiece.transform.localPosition = vector;</div>
+<div class="line"><span class="lineno">  121</span>                Vector2 vector2 = <span class="keyword">new</span> Vector2(currentLaserDistance / 2f + <a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 4f, <a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a>);</div>
+<div class="line"><span class="lineno">  122</span>                middleGoPiece.transform.localPosition = vector2;</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a9986308c8cd1b1ff8df368d1bcb2729f">endGoPiece</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                Vector2 vector3 = <span class="keyword">new</span> Vector2(currentLaserDistance + <a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 2f, <a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a>);</div>
+<div class="line"><span class="lineno">  127</span>                endGoPiece.transform.localPosition = vector3;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclassRandomPositionMover_html_a24a8685cfc863fb132759f9eaa74ab0b"><div class="ttname"><a href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">RandomPositionMover.randomPointInCircle</a></div><div class="ttdeci">Vector2 randomPointInCircle</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00011">RandomPositionMover.cs:11</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a9986308c8cd1b1ff8df368d1bcb2729f"><div class="ttname"><a href="classSpriteBasedLaser.html#a9986308c8cd1b1ff8df368d1bcb2729f">SpriteBasedLaser.endGoPiece</a></div><div class="ttdeci">GameObject endGoPiece</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00075">SpriteBasedLaser.cs:75</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_acecba11968e71d99020698f25bdc1b22"><div class="ttname"><a href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">SpriteBasedLaser.lerpYValue</a></div><div class="ttdeci">float lerpYValue</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00065">SpriteBasedLaser.cs:65</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_acfee00c85e09316c8ad4a3bfb194f78d"><div class="ttname"><a href="classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d">SpriteBasedLaser.startGoPiece</a></div><div class="ttdeci">GameObject startGoPiece</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00071">SpriteBasedLaser.cs:71</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_ad0df5c15f16e1713c0e25ca4aa6ee73c"><div class="ttname"><a href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">SpriteBasedLaser.startSpriteWidth</a></div><div class="ttdeci">float startSpriteWidth</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00077">SpriteBasedLaser.cs:77</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_ae547100865d56d546c2b0c6af9425727"><div class="ttname"><a href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">SpriteBasedLaser.middleGoPiece</a></div><div class="ttdeci">GameObject middleGoPiece</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00073">SpriteBasedLaser.cs:73</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_aea6500d993bd74d0aacb0601e559d13d"><div class="ttname"><a href="classSpriteBasedLaser.html#aea6500d993bd74d0aacb0601e559d13d">SpriteBasedLaser.oscillationSpeed</a></div><div class="ttdeci">float oscillationSpeed</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00037">SpriteBasedLaser.cs:37</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_afb29aa363afaaeba1e35f6375a089036"><div class="ttname"><a href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">SpriteBasedLaser.laserOscillationPositionerScript</a></div><div class="ttdeci">RandomPositionMover laserOscillationPositionerScript</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00031">SpriteBasedLaser.cs:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00211">endGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00167">laserOscillationPositionerScript</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00201">lerpYValue</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00209">middleGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00207">startGoPiece</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00213">startSpriteWidth</a>.</p>
+<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00075">endGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00031">laserOscillationPositionerScript</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00065">lerpYValue</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00073">middleGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00037">oscillationSpeed</a>, <a class="el" href="RandomPositionMover_8cs_source.html#l00011">RandomPositionMover.randomPointInCircle</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00071">startGoPiece</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">startSpriteWidth</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -313,43 +313,47 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">9</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
-<div class="line"><span class="lineno">   11</span>        base.transform.position = base.transform.position.SetZ(0f);</div>
-<div class="line"><span class="lineno">   12</span>        Vector3 vector = to.SetZ(0f) + this.fix + <span class="keyword">new</span> Vector3(0.2f, 0.2f, 0f).Random();</div>
-<div class="line"><span class="lineno">   13</span>        this.dest = vector;</div>
-<div class="line"><span class="lineno">   14</span>        this.dest2 = vector;</div>
-<div class="line"><span class="lineno">   15</span>        this.hitSparkEmission = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68">hitSparkParticleSystem</a>.emission;</div>
-<div class="line"><span class="lineno">   16</span>        this.gameObjectCached = base.gameObject;</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetVertexCount(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">laserArcSegments</a>);</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>        this.startLaserLength = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">laserOscillationPositionerScript</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            this.laserOscillationPositionerScript.radius = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7f64a9cca2019ba35925cb2478361432">oscillationThreshold</a>;</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_function" href="classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4">Update</a>();</div>
-<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_function" href="classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4">Update</a>();</div>
-<div class="line"><span class="lineno">   28</span>        this.trail.localScale = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localScale;</div>
-<div class="line"><span class="lineno">   29</span>        this.trail.rotation = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.rotation;</div>
-<div class="line"><span class="lineno">   30</span>        this.trail.position = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.position;</div>
-<div class="line"><span class="lineno">   31</span>        DOTweenAnimation[] array = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a970452b6c7e27d5191d10a472b38126b">anime</a>;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            array[i].DOPlay();</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a43fe3534b2e581601993e09a1d80df68"><div class="ttname"><a href="classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68">SpriteBasedLaser.hitSparkParticleSystem</a></div><div class="ttdeci">ParticleSystem hitSparkParticleSystem</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00177">SpriteBasedLaser.cs:177</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a67a10e5c8cebbf89feb1774fe72b5da4"><div class="ttname"><a href="classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4">SpriteBasedLaser.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00077">SpriteBasedLaser.cs:77</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a7bd6e82e1caeede7d4fdabebc312da8a"><div class="ttname"><a href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">SpriteBasedLaser.maxLaserLength</a></div><div class="ttdeci">float maxLaserLength</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00171">SpriteBasedLaser.cs:171</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a7c2f77fb8f2415ae0f92478fc9d7b101"><div class="ttname"><a href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">SpriteBasedLaser.laserArcSegments</a></div><div class="ttdeci">int laserArcSegments</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00165">SpriteBasedLaser.cs:165</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a7f64a9cca2019ba35925cb2478361432"><div class="ttname"><a href="classSpriteBasedLaser.html#a7f64a9cca2019ba35925cb2478361432">SpriteBasedLaser.oscillationThreshold</a></div><div class="ttdeci">float oscillationThreshold</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00195">SpriteBasedLaser.cs:195</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a970452b6c7e27d5191d10a472b38126b"><div class="ttname"><a href="classSpriteBasedLaser.html#a970452b6c7e27d5191d10a472b38126b">SpriteBasedLaser.anime</a></div><div class="ttdeci">DOTweenAnimation[] anime</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00161">SpriteBasedLaser.cs:161</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_ab226a49fd02db011989f5120c08428fa"><div class="ttname"><a href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">SpriteBasedLaser.laserLineRendererArc</a></div><div class="ttdeci">LineRenderer laserLineRendererArc</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00163">SpriteBasedLaser.cs:163</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">85</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        base.transform.position = base.transform.position.SetZ(0f);</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#ad95230d56c222d94094d0295d693adb6">dest2</a> = (<a class="code hl_variable" href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">dest</a> = to.SetZ(0f) + <a class="code hl_variable" href="classSpriteBasedLaser.html#ab347fbbc427ebb0459dc9c996d546ce6">fix</a> + <span class="keyword">new</span> Vector3(0.2f, 0.2f, 0f).Random());</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#af702ecf836512057f7f209496ec3e746">hitSparkEmission</a> = <a class="code hl_variable" href="classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68">hitSparkParticleSystem</a>.emission;</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">gameObjectCached</a> = base.gameObject;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetVertexCount(<a class="code hl_variable" href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">laserArcSegments</a>);</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#a164e0d5e9bc0ef440f42203630f2b6c1">startLaserLength</a> = <a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036">laserOscillationPositionerScript</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            laserOscillationPositionerScript.radius = <a class="code hl_variable" href="classSpriteBasedLaser.html#a7f64a9cca2019ba35925cb2478361432">oscillationThreshold</a>;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_function" href="classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4">Update</a>();</div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_function" href="classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4">Update</a>();</div>
+<div class="line"><span class="lineno">  102</span>        trail.localScale = <a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localScale;</div>
+<div class="line"><span class="lineno">  103</span>        trail.rotation = <a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.rotation;</div>
+<div class="line"><span class="lineno">  104</span>        trail.position = <a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.position;</div>
+<div class="line"><span class="lineno">  105</span>        DOTweenAnimation[] array = <a class="code hl_variable" href="classSpriteBasedLaser.html#a970452b6c7e27d5191d10a472b38126b">anime</a>;</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            array[i].DOPlay();</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a164e0d5e9bc0ef440f42203630f2b6c1"><div class="ttname"><a href="classSpriteBasedLaser.html#a164e0d5e9bc0ef440f42203630f2b6c1">SpriteBasedLaser.startLaserLength</a></div><div class="ttdeci">float startLaserLength</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00067">SpriteBasedLaser.cs:67</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a43fe3534b2e581601993e09a1d80df68"><div class="ttname"><a href="classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68">SpriteBasedLaser.hitSparkParticleSystem</a></div><div class="ttdeci">ParticleSystem hitSparkParticleSystem</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00041">SpriteBasedLaser.cs:41</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a67a10e5c8cebbf89feb1774fe72b5da4"><div class="ttname"><a href="classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4">SpriteBasedLaser.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00149">SpriteBasedLaser.cs:149</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a7bd6e82e1caeede7d4fdabebc312da8a"><div class="ttname"><a href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">SpriteBasedLaser.maxLaserLength</a></div><div class="ttdeci">float maxLaserLength</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00035">SpriteBasedLaser.cs:35</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a7c2f77fb8f2415ae0f92478fc9d7b101"><div class="ttname"><a href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">SpriteBasedLaser.laserArcSegments</a></div><div class="ttdeci">int laserArcSegments</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00029">SpriteBasedLaser.cs:29</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a7f64a9cca2019ba35925cb2478361432"><div class="ttname"><a href="classSpriteBasedLaser.html#a7f64a9cca2019ba35925cb2478361432">SpriteBasedLaser.oscillationThreshold</a></div><div class="ttdeci">float oscillationThreshold</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00059">SpriteBasedLaser.cs:59</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a970452b6c7e27d5191d10a472b38126b"><div class="ttname"><a href="classSpriteBasedLaser.html#a970452b6c7e27d5191d10a472b38126b">SpriteBasedLaser.anime</a></div><div class="ttdeci">DOTweenAnimation[] anime</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00025">SpriteBasedLaser.cs:25</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_aa740498eb3760321c1829064d3d44210"><div class="ttname"><a href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">SpriteBasedLaser.dest</a></div><div class="ttdeci">Vector3 dest</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00011">SpriteBasedLaser.cs:11</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_ab226a49fd02db011989f5120c08428fa"><div class="ttname"><a href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">SpriteBasedLaser.laserLineRendererArc</a></div><div class="ttdeci">LineRenderer laserLineRendererArc</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00027">SpriteBasedLaser.cs:27</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_ab347fbbc427ebb0459dc9c996d546ce6"><div class="ttname"><a href="classSpriteBasedLaser.html#ab347fbbc427ebb0459dc9c996d546ce6">SpriteBasedLaser.fix</a></div><div class="ttdeci">Vector3 fix</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00017">SpriteBasedLaser.cs:17</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_acb583d17edf5e6112256c5306c3841c6"><div class="ttname"><a href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">SpriteBasedLaser.gameObjectCached</a></div><div class="ttdeci">GameObject gameObjectCached</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00061">SpriteBasedLaser.cs:61</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_ad95230d56c222d94094d0295d693adb6"><div class="ttname"><a href="classSpriteBasedLaser.html#ad95230d56c222d94094d0295d693adb6">SpriteBasedLaser.dest2</a></div><div class="ttdeci">Vector3 dest2</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00015">SpriteBasedLaser.cs:15</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_af702ecf836512057f7f209496ec3e746"><div class="ttname"><a href="classSpriteBasedLaser.html#af702ecf836512057f7f209496ec3e746">SpriteBasedLaser.hitSparkEmission</a></div><div class="ttdeci">ParticleSystem.EmissionModule hitSparkEmission</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00081">SpriteBasedLaser.cs:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00161">anime</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00177">hitSparkParticleSystem</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00165">laserArcSegments</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00163">laserLineRendererArc</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00167">laserOscillationPositionerScript</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00171">maxLaserLength</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00209">middleGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00195">oscillationThreshold</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00025">anime</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00011">dest</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00015">dest2</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00017">fix</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00061">gameObjectCached</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00081">hitSparkEmission</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00041">hitSparkParticleSystem</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00029">laserArcSegments</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00027">laserLineRendererArc</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00031">laserOscillationPositionerScript</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00035">maxLaserLength</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00073">middleGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00059">oscillationThreshold</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00067">startLaserLength</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -376,17 +380,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00138">138</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordtype">int</span> vertexCount = Mathf.Abs((<span class="keywordtype">int</span>)this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>) * (int)this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a69f269a912df6db2460c9cc87494be43">arcNum</a>;</div>
-<div class="line"><span class="lineno">  141</span>        this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetVertexCount(vertexCount);</div>
-<div class="line"><span class="lineno">  142</span>        this.laserArcSegments = vertexCount;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a69f269a912df6db2460c9cc87494be43"><div class="ttname"><a href="classSpriteBasedLaser.html#a69f269a912df6db2460c9cc87494be43">SpriteBasedLaser.arcNum</a></div><div class="ttdeci">float arcNum</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00157">SpriteBasedLaser.cs:157</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00210">210</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">int</span> vertexCount = Mathf.Abs((<span class="keywordtype">int</span>)<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>) * (int)<a class="code hl_variable" href="classSpriteBasedLaser.html#a69f269a912df6db2460c9cc87494be43">arcNum</a>;</div>
+<div class="line"><span class="lineno">  213</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetVertexCount(vertexCount);</div>
+<div class="line"><span class="lineno">  214</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">laserArcSegments</a> = vertexCount;</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a69f269a912df6db2460c9cc87494be43"><div class="ttname"><a href="classSpriteBasedLaser.html#a69f269a912df6db2460c9cc87494be43">SpriteBasedLaser.arcNum</a></div><div class="ttdeci">float arcNum</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00021">SpriteBasedLaser.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00157">arcNum</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00163">laserLineRendererArc</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00171">maxLaserLength</a>.</p>
+<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00021">arcNum</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00029">laserArcSegments</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00027">laserLineRendererArc</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00035">maxLaserLength</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -424,27 +428,28 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00060">60</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">laserArcSegments</a>; i++)</div>
-<div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordtype">float</span> y = Mathf.Clamp(Mathf.Sin((<span class="keywordtype">float</span>)i + Time.time * UnityEngine.Random.Range(0.5f, 1.3f)), -<span class="keyword">this</span>.laserArcMax + UnityEngine.Random.RandomRange(0f, <span class="keyword">this</span>.laserArcMax * 0.5f), <span class="keyword">this</span>.laserArcMax + UnityEngine.Random.RandomRange(0f, <span class="keyword">this</span>.laserArcMax * 0.5f));</div>
-<div class="line"><span class="lineno">   65</span>            Vector2 v = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)i * 1.2f * this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a6d5e638fd31f33e192e1431fc3a58cb0">arcNum2</a>, y);</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (useHitPoint &amp;&amp; i == this.laserArcSegments - 1)</div>
-<div class="line"><span class="lineno">   67</span>            {</div>
-<div class="line"><span class="lineno">   68</span>                this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetPosition(i, <span class="keyword">new</span> Vector2(distancePoint, 0f));</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   71</span>            {</div>
-<div class="line"><span class="lineno">   72</span>                this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetPosition(i, v);</div>
-<div class="line"><span class="lineno">   73</span>            }</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a6d5e638fd31f33e192e1431fc3a58cb0"><div class="ttname"><a href="classSpriteBasedLaser.html#a6d5e638fd31f33e192e1431fc3a58cb0">SpriteBasedLaser.arcNum2</a></div><div class="ttdeci">float arcNum2</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00159">SpriteBasedLaser.cs:159</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00132">132</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>    {</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">laserArcSegments</a>; i++)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordtype">float</span> y = Mathf.Clamp(Mathf.Sin((<span class="keywordtype">float</span>)i + Time.time * UnityEngine.Random.Range(0.5f, 1.3f)), 0f - <a class="code hl_variable" href="classSpriteBasedLaser.html#a24bcaaba5ab002c53aad1ef242e80cf2">laserArcMax</a> + UnityEngine.Random.RandomRange(0f, <a class="code hl_variable" href="classSpriteBasedLaser.html#a24bcaaba5ab002c53aad1ef242e80cf2">laserArcMax</a> * 0.5f), <a class="code hl_variable" href="classSpriteBasedLaser.html#a24bcaaba5ab002c53aad1ef242e80cf2">laserArcMax</a> + UnityEngine.Random.RandomRange(0f, <a class="code hl_variable" href="classSpriteBasedLaser.html#a24bcaaba5ab002c53aad1ef242e80cf2">laserArcMax</a> * 0.5f));</div>
+<div class="line"><span class="lineno">  137</span>            Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)i * 1.2f * <a class="code hl_variable" href="classSpriteBasedLaser.html#a6d5e638fd31f33e192e1431fc3a58cb0">arcNum2</a>, y);</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (useHitPoint &amp;&amp; i == <a class="code hl_variable" href="classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101">laserArcSegments</a> - 1)</div>
+<div class="line"><span class="lineno">  139</span>            {</div>
+<div class="line"><span class="lineno">  140</span>                <a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetPosition(i, <span class="keyword">new</span> Vector2(distancePoint, 0f));</div>
+<div class="line"><span class="lineno">  141</span>            }</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                <a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.SetPosition(i, vector);</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a24bcaaba5ab002c53aad1ef242e80cf2"><div class="ttname"><a href="classSpriteBasedLaser.html#a24bcaaba5ab002c53aad1ef242e80cf2">SpriteBasedLaser.laserArcMax</a></div><div class="ttdeci">float laserArcMax</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00043">SpriteBasedLaser.cs:43</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a6d5e638fd31f33e192e1431fc3a58cb0"><div class="ttname"><a href="classSpriteBasedLaser.html#a6d5e638fd31f33e192e1431fc3a58cb0">SpriteBasedLaser.arcNum2</a></div><div class="ttdeci">float arcNum2</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00023">SpriteBasedLaser.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00159">arcNum2</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00165">laserArcSegments</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00163">laserLineRendererArc</a>.</p>
+<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00023">arcNum2</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00043">laserArcMax</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00029">laserArcSegments</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00027">laserLineRendererArc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -471,82 +476,81 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">77</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">gameObjectCached</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   80</span>        {</div>
-<div class="line"><span class="lineno">   81</span>            this.middleGoPiece.transform.localScale = <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> - this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> + 0.2f, this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localScale.y, <span class="keyword">this</span>.middleGoPiece.transform.localScale.z);</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f">oscillateLaser</a>)</div>
-<div class="line"><span class="lineno">   83</span>            {</div>
-<div class="line"><span class="lineno">   84</span>                this.<a class="code hl_function" href="classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89">OscillateLaserParts</a>(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>);</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   87</span>            {</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   89</span>                {</div>
-<div class="line"><span class="lineno">   90</span>                    this.middleGoPiece.transform.localPosition = <span class="keyword">new</span> Vector2(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> / 2f + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 4f, this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a>);</div>
-<div class="line"><span class="lineno">   91</span>                }</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a9986308c8cd1b1ff8df368d1bcb2729f">endGoPiece</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   93</span>                {</div>
-<div class="line"><span class="lineno">   94</span>                    this.endGoPiece.transform.localPosition = <span class="keyword">new</span> Vector3(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 2f, 0f, 0f) + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#af723a6519af2ca9b810ed4f62f34c144">fixTip</a>;</div>
-<div class="line"><span class="lineno">   95</span>                }</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a89e635064cab68a21b27a583b1c14945">laserRotationEnabled</a>)</div>
-<div class="line"><span class="lineno">   98</span>            {</div>
-<div class="line"><span class="lineno">   99</span>                Vector3 vector = this.dest2 - this.<a class="code hl_variable" href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">gameObjectCached</a>.transform.position;</div>
-<div class="line"><span class="lineno">  100</span>                this.laserAngle = Mathf.Atan2(vector.y, vector.x);</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a> &lt; 0f)</div>
-<div class="line"><span class="lineno">  102</span>                {</div>
-<div class="line"><span class="lineno">  103</span>                    this.laserAngle = 6.2831855f + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a>;</div>
-<div class="line"><span class="lineno">  104</span>                }</div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordtype">float</span> angle = this.laserAngle * 57.29578f;</div>
-<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a319a5877aebbbfdaa902ef1ac5ae947c">lerpLaserRotation</a>)</div>
-<div class="line"><span class="lineno">  107</span>                {</div>
-<div class="line"><span class="lineno">  108</span>                    base.transform.rotation = Quaternion.Slerp(base.transform.rotation, Quaternion.AngleAxis(angle, base.transform.forward), Time.deltaTime * <span class="keyword">this</span>.turningRate);</div>
-<div class="line"><span class="lineno">  109</span>                }</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  111</span>                {</div>
-<div class="line"><span class="lineno">  112</span>                    base.transform.rotation = Quaternion.AngleAxis(angle, base.transform.forward);</div>
-<div class="line"><span class="lineno">  113</span>                }</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>            this.maxLaserLength = Vector2.Distance(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">dest</a>, base.transform.position) + this.startSpriteWidth / 4f + this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a3c56bad363db327232bf2f58fcc0f81f">fix2</a>.x;</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68">hitSparkParticleSystem</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  117</span>            {</div>
-<div class="line"><span class="lineno">  118</span>                this.hitSparkParticleSystem.transform.position = this.<a class="code hl_variable" href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">dest</a>;</div>
-<div class="line"><span class="lineno">  119</span>                this.hitSparkEmission.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7">useArc</a>)</div>
-<div class="line"><span class="lineno">  122</span>            {</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.enabled)</div>
-<div class="line"><span class="lineno">  124</span>                {</div>
-<div class="line"><span class="lineno">  125</span>                    this.laserLineRendererArc.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  126</span>                }</div>
-<div class="line"><span class="lineno">  127</span>                this.<a class="code hl_function" href="classSpriteBasedLaser.html#a196706a7977e5a71173315735bedc484">SetLaserArcVertices</a>(this.<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  128</span>                this.<a class="code hl_function" href="classSpriteBasedLaser.html#a6042da6b2c3b551b66772cb2f35ea694">SetLaserArcSegmentLength</a>();</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.enabled)</div>
-<div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                this.laserLineRendererArc.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a196706a7977e5a71173315735bedc484"><div class="ttname"><a href="classSpriteBasedLaser.html#a196706a7977e5a71173315735bedc484">SpriteBasedLaser.SetLaserArcVertices</a></div><div class="ttdeci">void SetLaserArcVertices(float distancePoint, bool useHitPoint)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00060">SpriteBasedLaser.cs:60</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a319a5877aebbbfdaa902ef1ac5ae947c"><div class="ttname"><a href="classSpriteBasedLaser.html#a319a5877aebbbfdaa902ef1ac5ae947c">SpriteBasedLaser.lerpLaserRotation</a></div><div class="ttdeci">bool lerpLaserRotation</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00185">SpriteBasedLaser.cs:185</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a3c56bad363db327232bf2f58fcc0f81f"><div class="ttname"><a href="classSpriteBasedLaser.html#a3c56bad363db327232bf2f58fcc0f81f">SpriteBasedLaser.fix2</a></div><div class="ttdeci">Vector3 fix2</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00155">SpriteBasedLaser.cs:155</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a40f2834c526bb4f0ac65e149ed65726f"><div class="ttname"><a href="classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f">SpriteBasedLaser.oscillateLaser</a></div><div class="ttdeci">bool oscillateLaser</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00169">SpriteBasedLaser.cs:169</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a42c13b56cb163b1d73a912c09871ad89"><div class="ttname"><a href="classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89">SpriteBasedLaser.OscillateLaserParts</a></div><div class="ttdeci">void OscillateLaserParts(float currentLaserDistance)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00038">SpriteBasedLaser.cs:38</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a5cb97b7d4aaaa17326a4ed9cf32c5a21"><div class="ttname"><a href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">SpriteBasedLaser.laserAngle</a></div><div class="ttdeci">float laserAngle</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00199">SpriteBasedLaser.cs:199</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a6042da6b2c3b551b66772cb2f35ea694"><div class="ttname"><a href="classSpriteBasedLaser.html#a6042da6b2c3b551b66772cb2f35ea694">SpriteBasedLaser.SetLaserArcSegmentLength</a></div><div class="ttdeci">void SetLaserArcSegmentLength()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00138">SpriteBasedLaser.cs:138</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a75434ba17368701fbdd9f4f89542afc7"><div class="ttname"><a href="classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7">SpriteBasedLaser.useArc</a></div><div class="ttdeci">bool useArc</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00193">SpriteBasedLaser.cs:193</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_a89e635064cab68a21b27a583b1c14945"><div class="ttname"><a href="classSpriteBasedLaser.html#a89e635064cab68a21b27a583b1c14945">SpriteBasedLaser.laserRotationEnabled</a></div><div class="ttdeci">bool laserRotationEnabled</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00183">SpriteBasedLaser.cs:183</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_aa740498eb3760321c1829064d3d44210"><div class="ttname"><a href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">SpriteBasedLaser.dest</a></div><div class="ttdeci">Vector3 dest</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00147">SpriteBasedLaser.cs:147</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_acb583d17edf5e6112256c5306c3841c6"><div class="ttname"><a href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">SpriteBasedLaser.gameObjectCached</a></div><div class="ttdeci">GameObject gameObjectCached</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00197">SpriteBasedLaser.cs:197</a></div></div>
-<div class="ttc" id="aclassSpriteBasedLaser_html_af723a6519af2ca9b810ed4f62f34c144"><div class="ttname"><a href="classSpriteBasedLaser.html#af723a6519af2ca9b810ed4f62f34c144">SpriteBasedLaser.fixTip</a></div><div class="ttdeci">Vector3 fixTip</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00149">SpriteBasedLaser.cs:149</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">149</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">gameObjectCached</a> != <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        middleGoPiece.transform.localScale = <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> - <a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> + 0.2f, <a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localScale.y, <a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a>.transform.localScale.z);</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f">oscillateLaser</a>)</div>
+<div class="line"><span class="lineno">  157</span>        {</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_function" href="classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89">OscillateLaserParts</a>(<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>);</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727">middleGoPiece</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  163</span>            {</div>
+<div class="line"><span class="lineno">  164</span>                middleGoPiece.transform.localPosition = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> / 2f + <a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 4f, <a class="code hl_variable" href="classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22">lerpYValue</a>);</div>
+<div class="line"><span class="lineno">  165</span>            }</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a9986308c8cd1b1ff8df368d1bcb2729f">endGoPiece</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  167</span>            {</div>
+<div class="line"><span class="lineno">  168</span>                endGoPiece.transform.localPosition = <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> + <a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 2f, 0f, 0f) + <a class="code hl_variable" href="classSpriteBasedLaser.html#af723a6519af2ca9b810ed4f62f34c144">fixTip</a>;</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a89e635064cab68a21b27a583b1c14945">laserRotationEnabled</a>)</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            Vector3 vector = <a class="code hl_variable" href="classSpriteBasedLaser.html#ad95230d56c222d94094d0295d693adb6">dest2</a> - <a class="code hl_variable" href="classSpriteBasedLaser.html#acb583d17edf5e6112256c5306c3841c6">gameObjectCached</a>.transform.position;</div>
+<div class="line"><span class="lineno">  174</span>            <a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a> = Mathf.Atan2(vector.y, vector.x);</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a> &lt; 0f)</div>
+<div class="line"><span class="lineno">  176</span>            {</div>
+<div class="line"><span class="lineno">  177</span>                <a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a> = MathF.PI * 2f + <a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a>;</div>
+<div class="line"><span class="lineno">  178</span>            }</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordtype">float</span> angle = <a class="code hl_variable" href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">laserAngle</a> * 57.29578f;</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a319a5877aebbbfdaa902ef1ac5ae947c">lerpLaserRotation</a>)</div>
+<div class="line"><span class="lineno">  181</span>            {</div>
+<div class="line"><span class="lineno">  182</span>                base.transform.rotation = Quaternion.Slerp(base.transform.rotation, Quaternion.AngleAxis(angle, base.transform.forward), Time.deltaTime * <a class="code hl_variable" href="classSpriteBasedLaser.html#ae8e86f50113b497a10a68cd725a37d84">turningRate</a>);</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  185</span>            {</div>
+<div class="line"><span class="lineno">  186</span>                base.transform.rotation = Quaternion.AngleAxis(angle, base.transform.forward);</div>
+<div class="line"><span class="lineno">  187</span>            }</div>
+<div class="line"><span class="lineno">  188</span>        }</div>
+<div class="line"><span class="lineno">  189</span>        <a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a> = Vector2.Distance(<a class="code hl_variable" href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">dest</a>, base.transform.position) + <a class="code hl_variable" href="classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c">startSpriteWidth</a> / 4f + <a class="code hl_variable" href="classSpriteBasedLaser.html#a3c56bad363db327232bf2f58fcc0f81f">fix2</a>.x;</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68">hitSparkParticleSystem</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            hitSparkParticleSystem.transform.position = <a class="code hl_variable" href="classSpriteBasedLaser.html#aa740498eb3760321c1829064d3d44210">dest</a>;</div>
+<div class="line"><span class="lineno">  193</span>            hitSparkEmission.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7">useArc</a>)</div>
+<div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.enabled)</div>
+<div class="line"><span class="lineno">  198</span>            {</div>
+<div class="line"><span class="lineno">  199</span>                laserLineRendererArc.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  200</span>            }</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_function" href="classSpriteBasedLaser.html#a196706a7977e5a71173315735bedc484">SetLaserArcVertices</a>(<a class="code hl_variable" href="classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a">maxLaserLength</a>, useHitPoint: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  202</span>            <a class="code hl_function" href="classSpriteBasedLaser.html#a6042da6b2c3b551b66772cb2f35ea694">SetLaserArcSegmentLength</a>();</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteBasedLaser.html#ab226a49fd02db011989f5120c08428fa">laserLineRendererArc</a>.enabled)</div>
+<div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            laserLineRendererArc.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a196706a7977e5a71173315735bedc484"><div class="ttname"><a href="classSpriteBasedLaser.html#a196706a7977e5a71173315735bedc484">SpriteBasedLaser.SetLaserArcVertices</a></div><div class="ttdeci">void SetLaserArcVertices(float distancePoint, bool useHitPoint)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00132">SpriteBasedLaser.cs:132</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a319a5877aebbbfdaa902ef1ac5ae947c"><div class="ttname"><a href="classSpriteBasedLaser.html#a319a5877aebbbfdaa902ef1ac5ae947c">SpriteBasedLaser.lerpLaserRotation</a></div><div class="ttdeci">bool lerpLaserRotation</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00049">SpriteBasedLaser.cs:49</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a3c56bad363db327232bf2f58fcc0f81f"><div class="ttname"><a href="classSpriteBasedLaser.html#a3c56bad363db327232bf2f58fcc0f81f">SpriteBasedLaser.fix2</a></div><div class="ttdeci">Vector3 fix2</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00019">SpriteBasedLaser.cs:19</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a40f2834c526bb4f0ac65e149ed65726f"><div class="ttname"><a href="classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f">SpriteBasedLaser.oscillateLaser</a></div><div class="ttdeci">bool oscillateLaser</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00033">SpriteBasedLaser.cs:33</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a42c13b56cb163b1d73a912c09871ad89"><div class="ttname"><a href="classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89">SpriteBasedLaser.OscillateLaserParts</a></div><div class="ttdeci">void OscillateLaserParts(float currentLaserDistance)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00112">SpriteBasedLaser.cs:112</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a5cb97b7d4aaaa17326a4ed9cf32c5a21"><div class="ttname"><a href="classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21">SpriteBasedLaser.laserAngle</a></div><div class="ttdeci">float laserAngle</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00063">SpriteBasedLaser.cs:63</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a6042da6b2c3b551b66772cb2f35ea694"><div class="ttname"><a href="classSpriteBasedLaser.html#a6042da6b2c3b551b66772cb2f35ea694">SpriteBasedLaser.SetLaserArcSegmentLength</a></div><div class="ttdeci">void SetLaserArcSegmentLength()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00210">SpriteBasedLaser.cs:210</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a75434ba17368701fbdd9f4f89542afc7"><div class="ttname"><a href="classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7">SpriteBasedLaser.useArc</a></div><div class="ttdeci">bool useArc</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00057">SpriteBasedLaser.cs:57</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_a89e635064cab68a21b27a583b1c14945"><div class="ttname"><a href="classSpriteBasedLaser.html#a89e635064cab68a21b27a583b1c14945">SpriteBasedLaser.laserRotationEnabled</a></div><div class="ttdeci">bool laserRotationEnabled</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00047">SpriteBasedLaser.cs:47</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_ae8e86f50113b497a10a68cd725a37d84"><div class="ttname"><a href="classSpriteBasedLaser.html#ae8e86f50113b497a10a68cd725a37d84">SpriteBasedLaser.turningRate</a></div><div class="ttdeci">float turningRate</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00051">SpriteBasedLaser.cs:51</a></div></div>
+<div class="ttc" id="aclassSpriteBasedLaser_html_af723a6519af2ca9b810ed4f62f34c144"><div class="ttname"><a href="classSpriteBasedLaser.html#af723a6519af2ca9b810ed4f62f34c144">SpriteBasedLaser.fixTip</a></div><div class="ttdeci">Vector3 fixTip</div><div class="ttdef"><b>Definition:</b> <a href="SpriteBasedLaser_8cs_source.html#l00013">SpriteBasedLaser.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00147">dest</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00211">endGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00155">fix2</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">fixTip</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00197">gameObjectCached</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00177">hitSparkParticleSystem</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00199">laserAngle</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00163">laserLineRendererArc</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00183">laserRotationEnabled</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00185">lerpLaserRotation</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00201">lerpYValue</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00171">maxLaserLength</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00209">middleGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00169">oscillateLaser</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00138">SetLaserArcSegmentLength()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00060">SetLaserArcVertices()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00213">startSpriteWidth</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00193">useArc</a>.</p>
+<p class="reference">References <a class="el" href="SpriteBasedLaser_8cs_source.html#l00011">dest</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00015">dest2</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00075">endGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00019">fix2</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00013">fixTip</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00061">gameObjectCached</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00041">hitSparkParticleSystem</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00063">laserAngle</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00027">laserLineRendererArc</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00047">laserRotationEnabled</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00049">lerpLaserRotation</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00065">lerpYValue</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00035">maxLaserLength</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00073">middleGoPiece</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00033">oscillateLaser</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00210">SetLaserArcSegmentLength()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00132">SetLaserArcVertices()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">startSpriteWidth</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00051">turningRate</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00057">useArc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -563,9 +567,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00161">161</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00025">25</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -581,9 +585,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00157">157</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00021">21</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00138">SetLaserArcSegmentLength()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00210">SetLaserArcSegmentLength()</a>.</p>
 
 </div>
 </div>
@@ -599,9 +603,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00159">159</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00023">23</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00060">SetLaserArcVertices()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00132">SetLaserArcVertices()</a>.</p>
 
 </div>
 </div>
@@ -617,7 +621,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00189">189</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00053">53</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
@@ -633,9 +637,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00147">147</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00011">11</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -651,7 +655,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00151">151</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00015">15</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -667,9 +673,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00211">211</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00075">75</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -685,7 +691,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00153">153</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00017">17</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -701,9 +709,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00155">155</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00019">19</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -719,9 +727,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">149</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00013">13</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -745,9 +753,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00197">197</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00061">61</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -771,7 +779,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00217">217</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00081">81</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -787,9 +797,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00177">177</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00041">41</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -813,9 +823,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00199">199</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00063">63</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -831,7 +841,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00179">179</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00043">43</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00132">SetLaserArcVertices()</a>.</p>
 
 </div>
 </div>
@@ -847,9 +859,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00165">165</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00029">29</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00060">SetLaserArcVertices()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00210">SetLaserArcSegmentLength()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00132">SetLaserArcVertices()</a>.</p>
 
 </div>
 </div>
@@ -865,9 +877,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00163">163</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00027">27</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00138">SetLaserArcSegmentLength()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00060">SetLaserArcVertices()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00210">SetLaserArcSegmentLength()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00132">SetLaserArcVertices()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -883,9 +895,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00167">167</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00031">31</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -901,9 +913,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00183">183</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00047">47</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -919,9 +931,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00185">185</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00049">49</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -945,9 +957,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00201">201</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00065">65</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -963,7 +975,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00191">191</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00055">55</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
@@ -979,7 +991,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00145">145</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">9</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
@@ -995,9 +1007,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00171">171</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00035">35</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00138">SetLaserArcSegmentLength()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00210">SetLaserArcSegmentLength()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -1013,7 +1025,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00181">181</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00045">45</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
@@ -1029,9 +1041,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00209">209</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00073">73</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>, <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -1047,9 +1059,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00169">169</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00033">33</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1077,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00173">173</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00037">37</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>.</p>
 
 </div>
 </div>
@@ -1081,9 +1095,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00195">195</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00059">59</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00009">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -1099,9 +1113,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00207">207</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00071">71</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>.</p>
 
 </div>
 </div>
@@ -1125,7 +1139,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00203">203</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00067">67</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00085">Play()</a>.</p>
 
 </div>
 </div>
@@ -1149,9 +1165,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00213">213</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">77</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00038">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">OscillateLaserParts()</a>, and <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -1167,7 +1183,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00175">175</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00039">39</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1199,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00205">205</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00069">69</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1215,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00187">187</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00051">51</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -1215,9 +1233,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00193">193</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00057">57</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00077">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00149">Update()</a>.</p>
 
 </div>
 </div>
@@ -1241,24 +1259,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00215">215</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00079">79</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Event Documentation</h2>
-<a id="adc90590e49051c06a2a248982f3644f8" name="adc90590e49051c06a2a248982f3644f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc90590e49051c06a2a248982f3644f8">&#9670;&#160;</a></span>OnLaserHitTriggered</h2>
+<a id="ae8e9822a90fc5847b534945986c01e82" name="ae8e9822a90fc5847b534945986c01e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e9822a90fc5847b534945986c01e82">&#9670;&#160;</a></span>OnLaserHitTriggered</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSpriteBasedLaser.html#af596f8c9f20dfcc05e13cfd399f13693">SpriteBasedLaser.LaserHitTriggerHandler</a> SpriteBasedLaser.OnLaserHitTriggered</td>
+          <td class="memname"><a class="el" href="classSpriteBasedLaser.html#af596f8c9f20dfcc05e13cfd399f13693">LaserHitTriggerHandler</a> SpriteBasedLaser.OnLaserHitTriggered</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00007">7</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpriteBasedLaser_8cs_source.html#l00083">83</a> of file <a class="el" href="SpriteBasedLaser_8cs_source.html">SpriteBasedLaser.cs</a>.</p>
 
 </div>
 </div>

@@ -194,7 +194,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00004">4</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00003">3</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4a1531922951c199dfefc68ac9ed0243" name="a4a1531922951c199dfefc68ac9ed0243"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a1531922951c199dfefc68ac9ed0243">&#9670;&#160;</a></span>Awake()</h2>
@@ -219,11 +219,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00006">6</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        this.timer = UnityEngine.Random.Range(1f, 10f);</div>
-<div class="line"><span class="lineno">    9</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00007">7</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_variable" href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">timer</a> = <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.Range(1f, 10f);</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Rarity.Random</a></div><div class="ttdeci">@ Random</div></div>
+<div class="ttc" id="aclassRigidUpdateSound_html_a6b679402a121d09e53f12c007e8b7876"><div class="ttname"><a href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">RigidUpdateSound.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdateSound_8cs_source.html#l00005">RigidUpdateSound.cs:5</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>, and <a class="el" href="RigidUpdateSound_8cs_source.html#l00005">timer</a>.</p>
+
 </div>
 </div>
 <a id="ac38465b1033183ed563d5f0f62d91c1c" name="ac38465b1033183ed563d5f0f62d91c1c"></a>
@@ -251,20 +255,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRigidUpdate.html#af5ee37daddd2f9d113a350db83afe738">RigidUpdate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00011">11</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        this.timer -= <a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>.<a class="code hl_variable" href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">delta</a>;</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">timer</a> &lt; 0f)</div>
-<div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            base.actor.PlaySound(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   17</span>            this.timer = UnityEngine.Random.Range(1f, 5f);</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="ttc" id="aclassRigidUpdateSound_html_a6b679402a121d09e53f12c007e8b7876"><div class="ttname"><a href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">RigidUpdateSound.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdateSound_8cs_source.html#l00021">RigidUpdateSound.cs:21</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00012">12</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">timer</a> -= <a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>.<a class="code hl_variable" href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">delta</a>;</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">timer</a> &lt; 0f)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            base.actor.PlaySound();</div>
+<div class="line"><span class="lineno">   18</span>            <a class="code hl_variable" href="classRigidUpdateSound.html#a6b679402a121d09e53f12c007e8b7876">timer</a> = <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.Range(1f, 5f);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
 <div class="ttc" id="aclassRigidUpdate_html"><div class="ttname"><a href="classRigidUpdate.html">RigidUpdate</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00004">RigidUpdate.cs:5</a></div></div>
-<div class="ttc" id="aclassRigidUpdate_html_a309bbc39e91e85a490136775889b08ee"><div class="ttname"><a href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">RigidUpdate.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00023">RigidUpdate.cs:23</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a309bbc39e91e85a490136775889b08ee"><div class="ttname"><a href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">RigidUpdate.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00006">RigidUpdate.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RigidUpdate_8cs_source.html#l00023">RigidUpdate.delta</a>, and <a class="el" href="RigidUpdateSound_8cs_source.html#l00021">timer</a>.</p>
+<p class="reference">References <a class="el" href="RigidUpdate_8cs_source.html#l00006">RigidUpdate.delta</a>, <a class="el" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>, and <a class="el" href="RigidUpdateSound_8cs_source.html#l00005">timer</a>.</p>
 
 </div>
 </div>
@@ -289,9 +292,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00021">21</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidUpdateSound_8cs_source.html#l00005">5</a> of file <a class="el" href="RigidUpdateSound_8cs_source.html">RigidUpdateSound.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidUpdateSound_8cs_source.html#l00011">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidUpdateSound_8cs_source.html#l00007">Awake()</a>, and <a class="el" href="RigidUpdateSound_8cs_source.html#l00012">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>

@@ -7,7 +7,7 @@ var classQuestHarvest =
     [ "destWeight", "classQuestHarvest.html#a2c661585ee315c7787252d68adfb1f25", null ],
     [ "weightDelivered", "classQuestHarvest.html#a6429f7b182933ee08852e9918d5058e4", null ],
     [ "DangerLv", "classQuestHarvest.html#afdc88600430b667c21f351b3b0115cda", null ],
-    [ "difficultyType", "classQuestHarvest.html#a98be07e45b0d59d67666f283a2d3955c", null ],
+    [ "difficultyType", "classQuestHarvest.html#ac318c6328ba76821eb6dd41483c66274", null ],
     [ "FameContent", "classQuestHarvest.html#a224c8f00f4286d2b99be71cacef1c87e", null ],
     [ "IdZone", "classQuestHarvest.html#a621512234cba5cbc6a958dcc60f9ccf7", null ],
     [ "KarmaOnFail", "classQuestHarvest.html#a05156c1d257dbf02f2db6310ca409753", null ],

@@ -125,7 +125,7 @@ Private Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00004">4</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00003">3</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a729820cdbd518fa97dd85e6fcf94e515" name="a729820cdbd518fa97dd85e6fcf94e515"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a729820cdbd518fa97dd85e6fcf94e515">&#9670;&#160;</a></span>PickRandomPointInCircle()</h2>
@@ -150,17 +150,18 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00016">16</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        base.transform.position = this.<a class="code hl_variable" href="classRandomPositionMover.html#ac1ec59e88715bd6b2c18fd6e06b6f6e3">player</a>.transform.position;</div>
-<div class="line"><span class="lineno">   19</span>        this.randomPointInCircle = base.transform.localPosition + UnityEngine.Random.insideUnitCircle * this.<a class="code hl_variable" href="classRandomPositionMover.html#a31666400294d6155c0b24428ec06f5d2">radius</a>;</div>
-<div class="line"><span class="lineno">   20</span>        base.transform.localPosition = this.<a class="code hl_variable" href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">randomPointInCircle</a>;</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclassRandomPositionMover_html_a24a8685cfc863fb132759f9eaa74ab0b"><div class="ttname"><a href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">RandomPositionMover.randomPointInCircle</a></div><div class="ttdeci">Vector2 randomPointInCircle</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00033">RandomPositionMover.cs:33</a></div></div>
-<div class="ttc" id="aclassRandomPositionMover_html_a31666400294d6155c0b24428ec06f5d2"><div class="ttname"><a href="classRandomPositionMover.html#a31666400294d6155c0b24428ec06f5d2">RandomPositionMover.radius</a></div><div class="ttdeci">float radius</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00029">RandomPositionMover.cs:29</a></div></div>
-<div class="ttc" id="aclassRandomPositionMover_html_ac1ec59e88715bd6b2c18fd6e06b6f6e3"><div class="ttname"><a href="classRandomPositionMover.html#ac1ec59e88715bd6b2c18fd6e06b6f6e3">RandomPositionMover.player</a></div><div class="ttdeci">GameObject player</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00031">RandomPositionMover.cs:31</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00023">23</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        base.transform.position = <a class="code hl_variable" href="classRandomPositionMover.html#ac1ec59e88715bd6b2c18fd6e06b6f6e3">player</a>.transform.position;</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">randomPointInCircle</a> = (Vector2)base.transform.localPosition + <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.insideUnitCircle * <a class="code hl_variable" href="classRandomPositionMover.html#a31666400294d6155c0b24428ec06f5d2">radius</a>;</div>
+<div class="line"><span class="lineno">   27</span>        base.transform.localPosition = <a class="code hl_variable" href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">randomPointInCircle</a>;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Rarity.Random</a></div><div class="ttdeci">@ Random</div></div>
+<div class="ttc" id="aclassRandomPositionMover_html_a24a8685cfc863fb132759f9eaa74ab0b"><div class="ttname"><a href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">RandomPositionMover.randomPointInCircle</a></div><div class="ttdeci">Vector2 randomPointInCircle</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00011">RandomPositionMover.cs:11</a></div></div>
+<div class="ttc" id="aclassRandomPositionMover_html_a31666400294d6155c0b24428ec06f5d2"><div class="ttname"><a href="classRandomPositionMover.html#a31666400294d6155c0b24428ec06f5d2">RandomPositionMover.radius</a></div><div class="ttdeci">float radius</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00007">RandomPositionMover.cs:7</a></div></div>
+<div class="ttc" id="aclassRandomPositionMover_html_ac1ec59e88715bd6b2c18fd6e06b6f6e3"><div class="ttname"><a href="classRandomPositionMover.html#ac1ec59e88715bd6b2c18fd6e06b6f6e3">RandomPositionMover.player</a></div><div class="ttdeci">GameObject player</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00009">RandomPositionMover.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RandomPositionMover_8cs_source.html#l00031">player</a>, <a class="el" href="RandomPositionMover_8cs_source.html#l00029">radius</a>, and <a class="el" href="RandomPositionMover_8cs_source.html#l00033">randomPointInCircle</a>.</p>
+<p class="reference">References <a class="el" href="RandomPositionMover_8cs_source.html#l00009">player</a>, <a class="el" href="RandomPositionMover_8cs_source.html#l00007">radius</a>, <a class="el" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>, and <a class="el" href="RandomPositionMover_8cs_source.html#l00011">randomPointInCircle</a>.</p>
 
 </div>
 </div>
@@ -187,18 +188,18 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00006">6</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">pickerInterval</a> == 0f)</div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            this.pickerInterval = 3f;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>        this.randomPointInCircle = Vector2.zero;</div>
-<div class="line"><span class="lineno">   13</span>        base.InvokeRepeating(<span class="stringliteral">&quot;PickRandomPointInCircle&quot;</span>, UnityEngine.Random.Range(0f, <span class="keyword">this</span>.pickerInterval), <span class="keyword">this</span>.pickerInterval);</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="ttc" id="aclassRandomPositionMover_html_a50db47197da49a7ae3c390c36ad99b62"><div class="ttname"><a href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">RandomPositionMover.pickerInterval</a></div><div class="ttdeci">float pickerInterval</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00027">RandomPositionMover.cs:27</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00013">13</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">pickerInterval</a> == 0f)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_variable" href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">pickerInterval</a> = 3f;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="classRandomPositionMover.html#a24a8685cfc863fb132759f9eaa74ab0b">randomPointInCircle</a> = Vector2.zero;</div>
+<div class="line"><span class="lineno">   20</span>        InvokeRepeating(<span class="stringliteral">&quot;PickRandomPointInCircle&quot;</span>, <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.Range(0f, <a class="code hl_variable" href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">pickerInterval</a>), <a class="code hl_variable" href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">pickerInterval</a>);</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassRandomPositionMover_html_a50db47197da49a7ae3c390c36ad99b62"><div class="ttname"><a href="classRandomPositionMover.html#a50db47197da49a7ae3c390c36ad99b62">RandomPositionMover.pickerInterval</a></div><div class="ttdeci">float pickerInterval</div><div class="ttdef"><b>Definition:</b> <a href="RandomPositionMover_8cs_source.html#l00005">RandomPositionMover.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RandomPositionMover_8cs_source.html#l00027">pickerInterval</a>.</p>
+<p class="reference">References <a class="el" href="RandomPositionMover_8cs_source.html#l00005">pickerInterval</a>, <a class="el" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>, and <a class="el" href="RandomPositionMover_8cs_source.html#l00011">randomPointInCircle</a>.</p>
 
 </div>
 </div>
@@ -225,9 +226,9 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00023">23</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00030">30</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,9 +245,9 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00027">27</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00005">5</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00006">Start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>
@@ -262,9 +263,9 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00031">31</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00009">9</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00016">PickRandomPointInCircle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00023">PickRandomPointInCircle()</a>.</p>
 
 </div>
 </div>
@@ -280,9 +281,9 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00029">29</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00007">7</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00016">PickRandomPointInCircle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00023">PickRandomPointInCircle()</a>.</p>
 
 </div>
 </div>
@@ -298,9 +299,9 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00033">33</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RandomPositionMover_8cs_source.html#l00011">11</a> of file <a class="el" href="RandomPositionMover_8cs_source.html">RandomPositionMover.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RandomPositionMover_8cs_source.html#l00016">PickRandomPointInCircle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteBasedLaser_8cs_source.html#l00112">SpriteBasedLaser.OscillateLaserParts()</a>, <a class="el" href="RandomPositionMover_8cs_source.html#l00023">PickRandomPointInCircle()</a>, and <a class="el" href="RandomPositionMover_8cs_source.html#l00013">Start()</a>.</p>
 
 </div>
 </div>

@@ -1,8 +1,5 @@
 var classMapGen =
 [
-    [ "g___MakeNeighbor", "classMapGen.html#aade81173d3bea65c5f47f64d2510be24", null ],
-    [ "g___MakeNeighbor", "classMapGen.html#aee868a7723b3b50749f312ec101ff493", null ],
-    [ "g___MakeRoad", "classMapGen.html#ae176c549f2dfc8974a85260214e337a2", null ],
     [ "GenerateTerrain", "classMapGen.html#a29241b1f181a6d42396ebd3309713e7b", null ],
     [ "MakeNeighbor", "classMapGen.html#a6df24bf2f6df77a5ac53a9221e8b3505", null ],
     [ "MakeNeighbor_old", "classMapGen.html#a1a7ab3b54e0455a21f259f21ffd3bc61", null ],

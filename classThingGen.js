@@ -24,8 +24,6 @@ var classThingGen =
     [ "CreateSpellbook", "classThingGen.html#a86d8c3002203f01152938292ca40bc31", null ],
     [ "CreateTreasure", "classThingGen.html#a1fb0aa7926f8c7896be91cedcd12878f", null ],
     [ "CreateTreasureContent", "classThingGen.html#a7b17e72b7955b9b38d78615857b3fcea", null ],
-    [ "g__ChangeSeed", "classThingGen.html#a6cacb34f8f324d7035f130710f952a58", null ],
-    [ "g__SetRarity", "classThingGen.html#ad57b92a673c1bab7b2d37738bd63dabc", null ],
     [ "TestCreate", "classThingGen.html#a65deaada13fa6230027d9c214f856e95", null ],
     [ "TryLickChest", "classThingGen.html#a19a0a950b6b236c20c13270d6f8cd7ed", null ]
 ];

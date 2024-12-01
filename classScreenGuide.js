@@ -3,7 +3,7 @@ var classScreenGuide =
     [ "DrawBlock", "classScreenGuide.html#a7b0dcad7fb7df3c8d082e447347d6852", null ],
     [ "DrawFloor", "classScreenGuide.html#a4f09b312922ae6bad21b94225d288547", null ],
     [ "DrawLine", "classScreenGuide.html#ac02b861319d073d4bc37852a116957dc", null ],
-    [ "DrawWall", "classScreenGuide.html#a9421fa3d19546fad616536ab2d96ec45", null ],
+    [ "DrawWall", "classScreenGuide.html#a2ffeda9ae68efce6c42f7e61b282ea82", null ],
     [ "OnDrawPass", "classScreenGuide.html#a7b691ad3ed84ff1b014c848ae91984fe", null ],
     [ "OnEndOfFrame", "classScreenGuide.html#a42d9143cc717c5b9886cf8c196c9915e", null ],
     [ "isActive", "classScreenGuide.html#a13359af8fc46dbf1e515dd38e95166b1", null ],

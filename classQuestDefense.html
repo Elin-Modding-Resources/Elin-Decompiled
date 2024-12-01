@@ -286,8 +286,8 @@ Properties</h2></td></tr>
 <tr class="separator:aa22341e2c25faf3219e044d7e0793473 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3cf991d468757539b7030ac5e0dfaed1">RequireClientInSameZone</a><code> [get]</code></td></tr>
 <tr class="separator:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">Quest.DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a6c802d34b3fe0a66e6cd3c62aa6a6941">difficultyType</a><code> [get]</code></td></tr>
-<tr class="separator:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3a03e2e7b699388f14e2edb339568181">difficultyType</a><code> [get]</code></td></tr>
+<tr class="separator:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a4222ba9f92368ecb35f55a62ba66899a">DestChara</a><code> [get]</code></td></tr>
 <tr class="separator:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45db51626d462e4d75e4b670b467ff9e inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a45db51626d462e4d75e4b670b467ff9e">RefDrama1</a><code> [get]</code></td></tr>
@@ -440,7 +440,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00001">1</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8df54ea51ec9403136de4056ab0b1f74" name="a8df54ea51ec9403136de4056ab0b1f74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8df54ea51ec9403136de4056ab0b1f74">&#9670;&#160;</a></span>CanUpdateOnTalk()</h2>
@@ -468,50 +468,49 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a0279f7e227ffe094a7219f78c10ec4df">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00021">21</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">switch</span> (this.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a>)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
-<div class="line"><span class="lineno">   27</span>            {</div>
-<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;punk&quot;</span> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a>)</div>
-<div class="line"><span class="lineno">   29</span>                {</div>
-<div class="line"><span class="lineno">   30</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   31</span>                }</div>
-<div class="line"><span class="lineno">   32</span>            }</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara2 <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
-<div class="line"><span class="lineno">   36</span>            {</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span> (chara2.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; chara2.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;boar&quot;</span> &amp;&amp; chara2.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> &amp;&amp; chara2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a>)</div>
-<div class="line"><span class="lineno">   38</span>                {</div>
-<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   40</span>                }</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> this.numHunted &gt;= this.<a class="code hl_property" href="classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8">numRequired</a>;</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">bool</span> result;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07292">Card.cs:7292</a></div></div>
-<div class="ttc" id="aclassCard_html_a330dfeedb08c341b8f9337fec2e3af64"><div class="ttname"><a href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">Card.isRestrained</a></div><div class="ttdeci">bool isRestrained</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00499">Card.cs:500</a></div></div>
-<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02055">Card.cs:2056</a></div></div>
-<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07316">Card.cs:7316</a></div></div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
-<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
-<div class="ttc" id="aclassPoint_html_ae5bd32e3472ef6f1f687ebed62b14a36"><div class="ttname"><a href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">Point.IsInBounds</a></div><div class="ttdeci">bool IsInBounds</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00188">Point.cs:189</a></div></div>
-<div class="ttc" id="aclassQuestDefense_html_a6b8f443acd2df5b7ecf5a3af7b58f5f8"><div class="ttname"><a href="classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8">QuestDefense.numRequired</a></div><div class="ttdeci">int numRequired</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefense_8cs_source.html#l00005">QuestDefense.cs:6</a></div></div>
-<div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00778">Quest.cs:778</a></div></div>
-<div class="ttc" id="aclassQuest_html_a7d65a4a00b2267ae5e44527dabb37643"><div class="ttname"><a href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">Quest.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00064">Quest.cs:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00007">7</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;punk&quot;</span> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> &amp;&amp; <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a>)</div>
+<div class="line"><span class="lineno">   15</span>                {</div>
+<div class="line"><span class="lineno">   16</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   17</span>                }</div>
+<div class="line"><span class="lineno">   18</span>            }</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara2 <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">if</span> (chara2.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; chara2.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;boar&quot;</span> &amp;&amp; chara2.<a class="code hl_property" href="classCard.html#a600593316390a7d873cb5ff53f269517">ExistsOnMap</a> &amp;&amp; chara2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">IsInBounds</a>)</div>
+<div class="line"><span class="lineno">   24</span>                {</div>
+<div class="line"><span class="lineno">   25</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   26</span>                }</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c">numHunted</a> &gt;= <a class="code hl_property" href="classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8">numRequired</a>;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00029">Card.cs:29</a></div></div>
+<div class="ttc" id="aclassCard_html_a330dfeedb08c341b8f9337fec2e3af64"><div class="ttname"><a href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">Card.isRestrained</a></div><div class="ttdeci">bool isRestrained</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00531">Card.cs:532</a></div></div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01883">Card.cs:1883</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00053">Card.cs:53</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00078">Map.cs:78</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae5bd32e3472ef6f1f687ebed62b14a36"><div class="ttname"><a href="classPoint.html#ae5bd32e3472ef6f1f687ebed62b14a36">Point.IsInBounds</a></div><div class="ttdeci">bool IsInBounds</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00103">Point.cs:104</a></div></div>
+<div class="ttc" id="aclassQuestDefense_html_a152ea981d76aa7feeccb8768be0fc36c"><div class="ttname"><a href="classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c">QuestDefense.numHunted</a></div><div class="ttdeci">int numHunted</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefense_8cs_source.html#l00005">QuestDefense.cs:5</a></div></div>
+<div class="ttc" id="aclassQuestDefense_html_a6b8f443acd2df5b7ecf5a3af7b58f5f8"><div class="ttname"><a href="classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8">QuestDefense.numRequired</a></div><div class="ttdeci">int numRequired</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefense_8cs_source.html#l00003">QuestDefense.cs:3</a></div></div>
+<div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00040">Quest.cs:40</a></div></div>
+<div class="ttc" id="aclassQuest_html_a7d65a4a00b2267ae5e44527dabb37643"><div class="ttname"><a href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">Quest.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00105">Quest.cs:105</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Quest_8cs_source.html#l00065">Quest.chara</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="Card_8cs_source.html#l02056">Card.ExistsOnMap</a>, <a class="el" href="Card_8cs_source.html#l07292">Card.id</a>, <a class="el" href="Point_8cs_source.html#l00189">Point.IsInBounds</a>, <a class="el" href="Card_8cs_source.html#l00500">Card.isRestrained</a>, <a class="el" href="QuestDefense_8cs_source.html#l00006">numRequired</a>, <a class="el" href="Quest_8cs_source.html#l00778">Quest.phase</a>, and <a class="el" href="Card_8cs_source.html#l07316">Card.pos</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Quest_8cs_source.html#l00105">Quest.chara</a>, <a class="el" href="Map_8cs_source.html#l00078">Map.charas</a>, <a class="el" href="Card_8cs_source.html#l01883">Card.ExistsOnMap</a>, <a class="el" href="Card_8cs_source.html#l00029">Card.id</a>, <a class="el" href="Point_8cs_source.html#l00104">Point.IsInBounds</a>, <a class="el" href="Card_8cs_source.html#l00532">Card.isRestrained</a>, <a class="el" href="QuestDefense_8cs_source.html#l00005">numHunted</a>, <a class="el" href="QuestDefense_8cs_source.html#l00003">numRequired</a>, <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.pos</a>.</p>
 
 </div>
 </div>
@@ -540,17 +539,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00060">60</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> != 2)</div>
-<div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressHunt&quot;</span>.lang(this.<a class="code hl_property" href="classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c">numHunted</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>.numRequired.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="ttc" id="aclassQuestDefense_html_a152ea981d76aa7feeccb8768be0fc36c"><div class="ttname"><a href="classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c">QuestDefense.numHunted</a></div><div class="ttdeci">int numHunted</div><div class="ttdef"><b>Definition:</b> <a href="QuestDefense_8cs_source.html#l00013">QuestDefense.cs:14</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00044">44</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> != 2)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressHunt&quot;</span>.lang(<a class="code hl_property" href="classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c">numHunted</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8">numRequired</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QuestDefense_8cs_source.html#l00014">numHunted</a>, and <a class="el" href="Quest_8cs_source.html#l00778">Quest.phase</a>.</p>
+<p class="reference">References <a class="el" href="QuestDefense_8cs_source.html#l00005">numHunted</a>, <a class="el" href="QuestDefense_8cs_source.html#l00003">numRequired</a>, and <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>.</p>
 
 </div>
 </div>
@@ -580,24 +578,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a81ed3c495f36a941291de499427a086e">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00052">52</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> == 2)</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e">globalList</a>.Add(<a class="code hl_class" href="classQuest.html">Quest</a>.<a class="code hl_function" href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Create</a>(<span class="stringliteral">&quot;puppy&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>).<a class="code hl_function" href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">SetClient</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">globalCharas</a>.<a class="code hl_function" href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">Find</a>(<span class="stringliteral">&quot;fiama&quot;</span>), <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclassCardManager_html_a3f0a4c97447028f99e19fbdd321a87d6"><div class="ttname"><a href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">CardManager.Find</a></div><div class="ttdeci">Chara Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00052">CardManager.cs:52</a></div></div>
-<div class="ttc" id="aclassCardManager_html_a6d6d588d3c038e8919951bccaa2263d6"><div class="ttname"><a href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">CardManager.globalCharas</a></div><div class="ttdeci">CardManager.GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00065">CardManager.cs:65</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
-<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
-<div class="ttc" id="aclassQuestManager_html_ad260e998ef2a4951d0a96c04741f759e"><div class="ttname"><a href="classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e">QuestManager.globalList</a></div><div class="ttdeci">List&lt; Quest &gt; globalList</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00330">QuestManager.cs:330</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00036">36</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> == 2)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e">globalList</a>.Add(<a class="code hl_class" href="classQuest.html">Quest</a>.<a class="code hl_function" href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Create</a>(<span class="stringliteral">&quot;puppy&quot;</span>).<a class="code hl_function" href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">SetClient</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.<a class="code hl_function" href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">Find</a>(<span class="stringliteral">&quot;fiama&quot;</span>), assignQuest: <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassCardManager_1_1GlobalCharaList_html_ab5eacf5c9f0cfe2fa9d1f9fdbf74f227"><div class="ttname"><a href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">CardManager.GlobalCharaList.Find</a></div><div class="ttdeci">Chara Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00020">CardManager.cs:20</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a33a9778b2b0c1018c12d90e1b572e221"><div class="ttname"><a href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">CardManager.globalCharas</a></div><div class="ttdeci">GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00046">CardManager.cs:46</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00152">Game.cs:152</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00176">Game.cs:176</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_ad260e998ef2a4951d0a96c04741f759e"><div class="ttname"><a href="classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e">QuestManager.globalList</a></div><div class="ttdeci">List&lt; Quest &gt; globalList</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00014">QuestManager.cs:14</a></div></div>
 <div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
-<div class="ttc" id="aclassQuest_html_ad045ae343fd7941a61152f2491c530e6"><div class="ttname"><a href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">Quest.SetClient</a></div><div class="ttdeci">Quest SetClient(Chara c, bool assignQuest=true)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00430">Quest.cs:430</a></div></div>
-<div class="ttc" id="aclassQuest_html_af77068e8fb1546a55b985b222ad255b4"><div class="ttname"><a href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Quest.Create</a></div><div class="ttdeci">static Quest Create(string _id, string _idPerson=null, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00008">Quest.cs:8</a></div></div>
+<div class="ttc" id="aclassQuest_html_ad045ae343fd7941a61152f2491c530e6"><div class="ttname"><a href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">Quest.SetClient</a></div><div class="ttdeci">Quest SetClient(Chara c, bool assignQuest=true)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00378">Quest.cs:378</a></div></div>
+<div class="ttc" id="aclassQuest_html_af77068e8fb1546a55b985b222ad255b4"><div class="ttname"><a href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Quest.Create</a></div><div class="ttdeci">static Quest Create(string _id, string _idPerson=null, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00239">Quest.cs:239</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="Quest_8cs_source.html#l00008">Quest.Create()</a>, <a class="el" href="CardManager_8cs_source.html#l00052">CardManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="CardManager_8cs_source.html#l00065">CardManager.globalCharas</a>, <a class="el" href="QuestManager_8cs_source.html#l00330">QuestManager.globalList</a>, <a class="el" href="Quest_8cs_source.html#l00778">Quest.phase</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, and <a class="el" href="Quest_8cs_source.html#l00430">Quest.SetClient()</a>.</p>
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00152">Game.cards</a>, <a class="el" href="Quest_8cs_source.html#l00239">Quest.Create()</a>, <a class="el" href="CardManager_8cs_source.html#l00020">CardManager.GlobalCharaList.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="CardManager_8cs_source.html#l00046">CardManager.globalCharas</a>, <a class="el" href="QuestManager_8cs_source.html#l00014">QuestManager.globalList</a>, <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.quests</a>, and <a class="el" href="Quest_8cs_source.html#l00378">Quest.SetClient()</a>.</p>
 
 </div>
 </div>
@@ -626,15 +624,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a33e9857d888452b864384d509105df73">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00069">69</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
-<div class="line"><span class="lineno">   71</span>        base.DropReward(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;plat&quot;</span>, -1, -1).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(10));</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03479">Card.cs:3479</a></div></div>
-<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00007">ThingGen.cs:8</a></div></div>
-<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00059">ThingGen.cs:59</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00053">53</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_function" href="classQuest.html#a838757ef59c19e36004864b5a9eb81d0">DropReward</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;plat&quot;</span>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(10));</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03124">Card.cs:3124</a></div></div>
+<div class="ttc" id="aclassQuest_html_a838757ef59c19e36004864b5a9eb81d0"><div class="ttname"><a href="classQuest.html#a838757ef59c19e36004864b5a9eb81d0">Quest.DropReward</a></div><div class="ttdeci">Thing DropReward(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00504">Quest.cs:504</a></div></div>
+<div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00004">ThingGen.cs:5</a></div></div>
+<div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00059">ThingGen.Create()</a>, and <a class="el" href="Card_8cs_source.html#l03479">Card.SetNum()</a>.</p>
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Quest_8cs_source.html#l00504">Quest.DropReward()</a>, and <a class="el" href="Card_8cs_source.html#l03124">Card.SetNum()</a>.</p>
 
 </div>
 </div>
@@ -659,17 +658,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00013">13</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.kills;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
-<div class="ttc" id="aclassPlayer_html_af7438d4a0a6aff5152f3122c9fc66d06"><div class="ttname"><a href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">Player.stats</a></div><div class="ttdeci">Player.Stats stats</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01455">Player.cs:1455</a></div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QuestDefense_8cs_source.html#l00060">GetTextProgress()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestDefense_8cs_source.html#l00007">CanUpdateOnTalk()</a>, and <a class="el" href="QuestDefense_8cs_source.html#l00044">GetTextProgress()</a>.</p>
 
 </div>
 </div>
@@ -693,15 +684,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 100;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QuestDefense_8cs_source.html#l00021">CanUpdateOnTalk()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestDefense_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestDefense_8cs_source.html">QuestDefense.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestDefense_8cs_source.html#l00007">CanUpdateOnTalk()</a>, and <a class="el" href="QuestDefense_8cs_source.html#l00044">GetTextProgress()</a>.</p>
 
 </div>
 </div>

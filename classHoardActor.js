@@ -4,8 +4,6 @@ var classHoardActor =
     [ "Activate", "classHoardActor.html#a84a2e530016063495ca01b8f7214f25d", null ],
     [ "Clear", "classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155", null ],
     [ "FixedUpdate", "classHoardActor.html#a3d15acd7a6814ba470bed6f96ae8302a", null ],
-    [ "g__DisableParticle", "classHoardActor.html#a30188e8ad7c2f89601f309c70dccc5e6", null ],
-    [ "g__FindPair", "classHoardActor.html#a8134bdf3e23dcaa88d59af722faa02a6", null ],
     [ "MakePair", "classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13", null ],
     [ "MakePair", "classHoardActor.html#a7419861936af882edb6f407b72b54313", null ],
     [ "MakeSteady", "classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624", null ],
@@ -17,7 +15,7 @@ var classHoardActor =
     [ "alphaFix2", "classHoardActor.html#a90a24fe22ea6949dceb4d3427d495e7f", null ],
     [ "alphaFix4", "classHoardActor.html#af7c684bf13e04097ab52a252bf8935db", null ],
     [ "angryEhe", "classHoardActor.html#adc28a9d1448cb60a98a6570e375c7a6c", null ],
-    [ "bgs", "classHoardActor.html#a5d280c658053b5268d8b1ba93e158ab7", null ],
+    [ "bgs", "classHoardActor.html#a9168a28fc91333e1eb42125b8401c699", null ],
     [ "cam", "classHoardActor.html#a7747d60974568f15b4983bc62eee46a9", null ],
     [ "curveMani", "classHoardActor.html#a3cadd37f87ef9e6685793bc64cfe3349", null ],
     [ "debug", "classHoardActor.html#a127878b6e4a747d59e9d5789ba3acc07", null ],
@@ -42,6 +40,6 @@ var classHoardActor =
     [ "srBG", "classHoardActor.html#ac64482d9c925c6a04f7fcf4123ecbb19", null ],
     [ "srReflection", "classHoardActor.html#a0afc3903c9df6c1baa23709213aaad19", null ],
     [ "updates", "classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35", null ],
-    [ "bg", "classHoardActor.html#a5902bb0ac464e80de5040439d1b4f879", null ],
+    [ "bg", "classHoardActor.html#abdee2ff2b5dff27afb70349a151f0cc1", null ],
     [ "hoard", "classHoardActor.html#a67dae3a430217b345ffdd33a467612eb", null ]
 ];

@@ -130,8 +130,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a54dc5f41115039fd65cd42c74e43025d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">SpatialManager.GlobalSpatialList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a> = new <a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">SpatialManager.GlobalSpatialList</a>()</td></tr>
-<tr class="separator:a54dc5f41115039fd65cd42c74e43025d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713f84ecf4e78c2b0150b65bbe8292c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">GlobalSpatialList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a> = new <a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">GlobalSpatialList</a>()</td></tr>
+<tr class="separator:a713f84ecf4e78c2b0150b65bbe8292c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5a9f1d1494e6d4de5af2feaea367a72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">uidNext</a> = 1</td></tr>
 <tr class="separator:ac5a9f1d1494e6d4de5af2feaea367a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6986de4b3221579f8db1c145f4c0f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRankedZoneManager.html">RankedZoneManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatialManager.html#aaa6986de4b3221579f8db1c145f4c0f7">ranks</a> = new <a class="el" href="classRankedZoneManager.html">RankedZoneManager</a>()</td></tr>
@@ -242,18 +242,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00016">16</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        s.uid = this.<a class="code hl_variable" href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">uidNext</a>;</div>
-<div class="line"><span class="lineno">   19</span>        this.<a class="code hl_variable" href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">uidNext</a>++;</div>
-<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.Add(s);</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclassSpatialManager_html_a54dc5f41115039fd65cd42c74e43025d"><div class="ttname"><a href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">SpatialManager.map</a></div><div class="ttdeci">SpatialManager.GlobalSpatialList map</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00097">SpatialManager.cs:97</a></div></div>
-<div class="ttc" id="aclassSpatialManager_html_ac5a9f1d1494e6d4de5af2feaea367a72"><div class="ttname"><a href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">SpatialManager.uidNext</a></div><div class="ttdeci">int uidNext</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00100">SpatialManager.cs:100</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00031">31</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        s.uid = <a class="code hl_variable" href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">uidNext</a>;</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">uidNext</a>++;</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.<a class="code hl_function" href="classSpatialManager_1_1GlobalSpatialList.html#a907944d2e810c7f1204aadf438ec2ee4">Add</a>(s);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassSpatialManager_1_1GlobalSpatialList_html_a907944d2e810c7f1204aadf438ec2ee4"><div class="ttname"><a href="classSpatialManager_1_1GlobalSpatialList.html#a907944d2e810c7f1204aadf438ec2ee4">SpatialManager.GlobalSpatialList.Add</a></div><div class="ttdeci">void Add(Spatial s)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00010">SpatialManager.cs:10</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a713f84ecf4e78c2b0150b65bbe8292c6"><div class="ttname"><a href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">SpatialManager.map</a></div><div class="ttdeci">GlobalSpatialList map</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00017">SpatialManager.cs:17</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_ac5a9f1d1494e6d4de5af2feaea367a72"><div class="ttname"><a href="classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72">SpatialManager.uidNext</a></div><div class="ttdeci">int uidNext</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00020">SpatialManager.cs:20</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00097">map</a>, and <a class="el" href="SpatialManager_8cs_source.html#l00100">uidNext</a>.</p>
+<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00010">SpatialManager.GlobalSpatialList.Add()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00017">map</a>, and <a class="el" href="SpatialManager_8cs_source.html#l00020">uidNext</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Spatial_8cs_source.html#l00655">Spatial.Register()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Spatial_8cs_source.html#l00614">Spatial.Register()</a>.</p>
 
 </div>
 </div>
@@ -281,13 +282,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00058">58</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.TryGetValue(uid, <span class="keyword">null</span>) as <a class="code hl_class" href="classZone.html">Zone</a>;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00072">72</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.TryGetValue(uid) as <a class="code hl_class" href="classZone.html">Zone</a>;</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00097">map</a>.</p>
+<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00017">map</a>.</p>
 
 </div>
 </div>
@@ -315,23 +316,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00046">46</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpatial.html">Spatial</a> spatial <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.Values)</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (spatial is <a class="code hl_class" href="classZone.html">Zone</a> &amp;&amp; spatial.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">   51</span>            {</div>
-<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span> spatial as <a class="code hl_class" href="classZone.html">Zone</a>;</div>
-<div class="line"><span class="lineno">   53</span>            }</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclassSpatial_html"><div class="ttname"><a href="classSpatial.html">Spatial</a></div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00008">Spatial.cs:9</a></div></div>
-<div class="ttc" id="aclassSpatial_html_ab20ca0db6cb6c35c70d6b7e3c91f173f"><div class="ttname"><a href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">Spatial.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00842">Spatial.cs:842</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00060">60</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpatial.html">Spatial</a> value <span class="keywordflow">in</span> <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.Values)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (value is <a class="code hl_class" href="classZone.html">Zone</a> &amp;&amp; value.<a class="code hl_variable" href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">return</span> value as <a class="code hl_class" href="classZone.html">Zone</a>;</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aclassSpatial_html"><div class="ttname"><a href="classSpatial.html">Spatial</a></div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00007">Spatial.cs:8</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ab20ca0db6cb6c35c70d6b7e3c91f173f"><div class="ttname"><a href="classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f">Spatial.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00013">Spatial.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00842">Spatial.id</a>, and <a class="el" href="SpatialManager_8cs_source.html#l00097">map</a>.</p>
+<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00013">Spatial.id</a>, and <a class="el" href="SpatialManager_8cs_source.html#l00017">map</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TeleportManager_8cs_source.html#l00026">TeleportManager.GetTeleportZone()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00029">TraitMoongate.LoadMap()</a>, <a class="el" href="Chara_8cs_source.html#l02892">Chara.MoveZone()</a>, <a class="el" href="Chara_8cs_source.html#l01062">Chara.OnBanish()</a>, <a class="el" href="Trait_8cs_source.html#l01955">Trait.OnBarter()</a>, <a class="el" href="Meeting_8cs_source.html#l00064">Meeting.OnEndDrama()</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00014">ZoneInstanceBout.OnLeaveZone()</a>, <a class="el" href="Game_8cs_source.html#l00153">Game.OnLoad()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00037">CoreDebug.QuickStart()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>, <a class="el" href="WindowChara_8cs_source.html#l00223">WindowChara.RefreshProfile()</a>, <a class="el" href="Meeting_8cs_source.html#l00028">Meeting.SetChara()</a>, <a class="el" href="TraitTicketFurniture_8cs_source.html#l00085">TraitTicketFurniture.SetZone()</a>, <a class="el" href="GameDate_8cs_source.html#l00236">GameDate.ShipGoods()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00103">LayerShippingResult.Show()</a>, <a class="el" href="Game_8cs_source.html#l00449">Game.StartNewGame()</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00117">GameUpdater.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TeleportManager_8cs_source.html#l00037">TeleportManager.GetTeleportZone()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00076">TraitMoongate.LoadMap()</a>, <a class="el" href="Chara_8cs_source.html#l02831">Chara.MoveZone()</a>, <a class="el" href="Chara_8cs_source.html#l01208">Chara.OnBanish()</a>, <a class="el" href="Trait_8cs_source.html#l01424">Trait.OnBarter()</a>, <a class="el" href="Meeting_8cs_source.html#l00058">Meeting.OnEndDrama()</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00016">ZoneInstanceBout.OnLeaveZone()</a>, <a class="el" href="Game_8cs_source.html#l00332">Game.OnLoad()</a>, <a class="el" href="Scene_8cs_source.html#l00349">Scene.OnUpdate()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00335">CoreDebug.QuickStart()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>, <a class="el" href="Meeting_8cs_source.html#l00022">Meeting.SetChara()</a>, <a class="el" href="TraitTicketFurniture_8cs_source.html#l00073">TraitTicketFurniture.SetZone()</a>, <a class="el" href="GameDate_8cs_source.html#l00230">GameDate.ShipGoods()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>, <a class="el" href="Game_8cs_source.html#l00625">Game.StartNewGame()</a>, <a class="el" href="GameUpdater_8cs_source.html#l00450">GameUpdater.Update()</a>, and <a class="el" href="TraitMoongate_8cs_source.html#l00027">TraitMoongate.UseMoongate()</a>.</p>
 
 </div>
 </div>
@@ -367,21 +368,20 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00033">33</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                 : <a class="code hl_class" href="classZone.html">Zone</a></div>
-<div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpatial.html">Spatial</a> spatial <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.Values)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            T t = spatial as T;</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (t != <span class="keyword">null</span> &amp;&amp; func(t))</div>
-<div class="line"><span class="lineno">   39</span>            {</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">return</span> t;</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00048">48</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                 : <a class="code hl_class" href="classZone.html">Zone</a></div>
+<div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpatial.html">Spatial</a> value <span class="keywordflow">in</span> <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.Values)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (value is T val &amp;&amp; func(val))</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">return</span> val;</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00097">map</a>.</p>
+<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00017">map</a>.</p>
 
 </div>
 </div>
@@ -408,44 +408,39 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00063">63</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a6696ca4ae997370a88adf04d5c6ebb35">returnAnywhere</a>)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            List&lt;Zone&gt; list = (from <a class="code hl_class" href="classZone.html">Zone</a> a in </div>
-<div class="line"><span class="lineno">   68</span>                from a in this.map.Values</div>
-<div class="line"><span class="lineno">   69</span>                where a is <a class="code hl_class" href="classZone.html">Zone</a></div>
-<div class="line"><span class="lineno">   70</span>                select a</div>
-<div class="line"><span class="lineno">   71</span>            where a != EClass._zone &amp;&amp; (a.IsReturnLocation || a.IsPCFaction || (!(a is <a class="code hl_class" href="classZone__Field.html">Zone_Field</a>) &amp;&amp; !a.IsInstance &amp;&amp; !a.isRandomSite)) &amp;&amp; a.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_property" href="classWorld.html#a31947e2885f2ac2ff3ff882bff4e2f60">region</a> &amp;&amp; !a.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.tag.Contains(<span class="stringliteral">&quot;closed&quot;</span>)</div>
-<div class="line"><span class="lineno">   72</span>            select a).ToList&lt;Zone&gt;();</div>
-<div class="line"><span class="lineno">   73</span>            list.Sort((<a class="code hl_class" href="classZone.html">Zone</a> a, <a class="code hl_class" href="classZone.html">Zone</a> b) =&gt; a.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>() - b.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>());</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        List&lt;Zone&gt; list2 = (from <a class="code hl_class" href="classZone.html">Zone</a> a in </div>
-<div class="line"><span class="lineno">   77</span>            from a in this.map.Values</div>
-<div class="line"><span class="lineno">   78</span>            where a is <a class="code hl_class" href="classZone.html">Zone</a></div>
-<div class="line"><span class="lineno">   79</span>            select a</div>
-<div class="line"><span class="lineno">   80</span>        where a != EClass._zone &amp;&amp; a.IsReturnLocation &amp;&amp; a.<a class="code hl_function" href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">GetTopZone</a>().<a class="code hl_property" href="classSpatial.html#af3a6980b76d39651a031473117c1ddba">visitCount</a> &gt; 0 &amp;&amp; (a.<a class="code hl_function" href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">GetTopZone</a>().<a class="code hl_function" href="classSpatial.html#ae2fbe67f202d66202ab74f8960b3efdf">FindDeepestZone</a>() == a || EClass.pc.homeZone == a)</div>
-<div class="line"><span class="lineno">   81</span>        select a).ToList&lt;<a class="code hl_class" href="classZone.html">Zone</a>&gt;();</div>
-<div class="line"><span class="lineno">   82</span>        list2.Sort((<a class="code hl_class" href="classZone.html">Zone</a> a, <a class="code hl_class" href="classZone.html">Zone</a> b) =&gt; a.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>() - b.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>());</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> list2;</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclassCoreDebug_html_a6696ca4ae997370a88adf04d5c6ebb35"><div class="ttname"><a href="classCoreDebug.html#a6696ca4ae997370a88adf04d5c6ebb35">CoreDebug.returnAnywhere</a></div><div class="ttdeci">bool returnAnywhere</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02217">CoreDebug.cs:2217</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00135">EClass.cs:136</a></div></div>
-<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00167">EClass.cs:168</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a4b9ceece95a08942c73fd641b7c7837e"><div class="ttname"><a href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">Spatial.parent</a></div><div class="ttdeci">Spatial parent</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00839">Spatial.cs:839</a></div></div>
-<div class="ttc" id="aclassSpatial_html_aa42f763f502591c824b67010aa9ecde7"><div class="ttname"><a href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">Spatial.source</a></div><div class="ttdeci">SourceZone.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00422">Spatial.cs:423</a></div></div>
-<div class="ttc" id="aclassSpatial_html_ae2fbe67f202d66202ab74f8960b3efdf"><div class="ttname"><a href="classSpatial.html#ae2fbe67f202d66202ab74f8960b3efdf">Spatial.FindDeepestZone</a></div><div class="ttdeci">Zone FindDeepestZone()</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00740">Spatial.cs:740</a></div></div>
-<div class="ttc" id="aclassSpatial_html_af3a6980b76d39651a031473117c1ddba"><div class="ttname"><a href="classSpatial.html#af3a6980b76d39651a031473117c1ddba">Spatial.visitCount</a></div><div class="ttdeci">int visitCount</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00134">Spatial.cs:135</a></div></div>
-<div class="ttc" id="aclassWorld_html_a31947e2885f2ac2ff3ff882bff4e2f60"><div class="ttname"><a href="classWorld.html#a31947e2885f2ac2ff3ff882bff4e2f60">World.region</a></div><div class="ttdeci">Region region</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00006">World.cs:7</a></div></div>
-<div class="ttc" id="aclassZone__Field_html"><div class="ttname"><a href="classZone__Field.html">Zone_Field</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Field_8cs_source.html#l00003">Zone_Field.cs:4</a></div></div>
-<div class="ttc" id="aclassZone_html_a0ad0063b9f70d315e825f40d4e02c9ce"><div class="ttname"><a href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">Zone.GetSortVal</a></div><div class="ttdeci">int GetSortVal()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03303">Zone.cs:3303</a></div></div>
-<div class="ttc" id="aclassZone_html_a4db1e848e7bff8b57cbc60873d15b87d"><div class="ttname"><a href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">Zone.GetTopZone</a></div><div class="ttdeci">Zone GetTopZone()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02226">Zone.cs:2226</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00077">77</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a6696ca4ae997370a88adf04d5c6ebb35">returnAnywhere</a>)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            List&lt;Zone&gt; list = (from <a class="code hl_class" href="classZone.html">Zone</a> a in <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.Values.Where((<a class="code hl_class" href="classSpatial.html">Spatial</a> a) =&gt; a is <a class="code hl_class" href="classZone.html">Zone</a>)</div>
+<div class="line"><span class="lineno">   82</span>                where a != EClass._zone &amp;&amp; (a.IsReturnLocation || a.IsPCFaction || (!(a is <a class="code hl_class" href="classZone__Field.html">Zone_Field</a>) &amp;&amp; !a.IsInstance &amp;&amp; !a.<a class="code hl_property" href="classSpatial.html#a24e389678e4b92ca1a8afc79b2e7e0a6">isRandomSite</a>)) &amp;&amp; a.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_property" href="classWorld.html#a31947e2885f2ac2ff3ff882bff4e2f60">region</a> &amp;&amp; !a.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.tag.Contains(<span class="stringliteral">&quot;closed&quot;</span>)</div>
+<div class="line"><span class="lineno">   83</span>                select a).ToList();</div>
+<div class="line"><span class="lineno">   84</span>            list.Sort((<a class="code hl_class" href="classZone.html">Zone</a> a, <a class="code hl_class" href="classZone.html">Zone</a> b) =&gt; a.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>() - b.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>());</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        List&lt;Zone&gt; list2 = (from <a class="code hl_class" href="classZone.html">Zone</a> a in <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.Values.Where((<a class="code hl_class" href="classSpatial.html">Spatial</a> a) =&gt; a is <a class="code hl_class" href="classZone.html">Zone</a>)</div>
+<div class="line"><span class="lineno">   88</span>            where a != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> &amp;&amp; a.IsReturnLocation &amp;&amp; a.GetTopZone().<a class="code hl_property" href="classSpatial.html#af3a6980b76d39651a031473117c1ddba">visitCount</a> &gt; 0 &amp;&amp; (a.GetTopZone().<a class="code hl_function" href="classSpatial.html#ae2fbe67f202d66202ab74f8960b3efdf">FindDeepestZone</a>() == a || EClass.pc.homeZone == a)</div>
+<div class="line"><span class="lineno">   89</span>            select a).ToList();</div>
+<div class="line"><span class="lineno">   90</span>        list2.Sort((<a class="code hl_class" href="classZone.html">Zone</a> a, <a class="code hl_class" href="classZone.html">Zone</a> b) =&gt; a.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>() - b.<a class="code hl_function" href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">GetSortVal</a>());</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> list2;</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a6696ca4ae997370a88adf04d5c6ebb35"><div class="ttname"><a href="classCoreDebug.html#a6696ca4ae997370a88adf04d5c6ebb35">CoreDebug.returnAnywhere</a></div><div class="ttdeci">bool returnAnywhere</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00202">CoreDebug.cs:202</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassEClass_html_a55cea92739455d0aa460e2a7a1503f8a"><div class="ttname"><a href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">EClass.world</a></div><div class="ttdeci">static World world</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00040">EClass.cs:40</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a24e389678e4b92ca1a8afc79b2e7e0a6"><div class="ttname"><a href="classSpatial.html#a24e389678e4b92ca1a8afc79b2e7e0a6">Spatial.isRandomSite</a></div><div class="ttdeci">bool isRandomSite</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00333">Spatial.cs:334</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a4b9ceece95a08942c73fd641b7c7837e"><div class="ttname"><a href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">Spatial.parent</a></div><div class="ttdeci">Spatial parent</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00010">Spatial.cs:10</a></div></div>
+<div class="ttc" id="aclassSpatial_html_aa42f763f502591c824b67010aa9ecde7"><div class="ttname"><a href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">Spatial.source</a></div><div class="ttdeci">SourceZone.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00441">Spatial.cs:441</a></div></div>
+<div class="ttc" id="aclassSpatial_html_ae2fbe67f202d66202ab74f8960b3efdf"><div class="ttname"><a href="classSpatial.html#ae2fbe67f202d66202ab74f8960b3efdf">Spatial.FindDeepestZone</a></div><div class="ttdeci">Zone FindDeepestZone()</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00699">Spatial.cs:699</a></div></div>
+<div class="ttc" id="aclassSpatial_html_af3a6980b76d39651a031473117c1ddba"><div class="ttname"><a href="classSpatial.html#af3a6980b76d39651a031473117c1ddba">Spatial.visitCount</a></div><div class="ttdeci">int visitCount</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00153">Spatial.cs:154</a></div></div>
+<div class="ttc" id="aclassWorld_html_a31947e2885f2ac2ff3ff882bff4e2f60"><div class="ttname"><a href="classWorld.html#a31947e2885f2ac2ff3ff882bff4e2f60">World.region</a></div><div class="ttdeci">Region region</div><div class="ttdef"><b>Definition:</b> <a href="World_8cs_source.html#l00023">World.cs:23</a></div></div>
+<div class="ttc" id="aclassZone__Field_html"><div class="ttname"><a href="classZone__Field.html">Zone_Field</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Field_8cs_source.html#l00001">Zone_Field.cs:2</a></div></div>
+<div class="ttc" id="aclassZone_html_a0ad0063b9f70d315e825f40d4e02c9ce"><div class="ttname"><a href="classZone.html#a0ad0063b9f70d315e825f40d4e02c9ce">Zone.GetSortVal</a></div><div class="ttdeci">int GetSortVal()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02893">Zone.cs:2893</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00168">EClass.debug</a>, <a class="el" href="Zone_8cs_source.html#l03303">Zone.GetSortVal()</a>, <a class="el" href="Zone_8cs_source.html#l02226">Zone.GetTopZone()</a>, <a class="el" href="Spatial_8cs_source.html#l00839">Spatial.parent</a>, <a class="el" href="World_8cs_source.html#l00007">World.region</a>, <a class="el" href="CoreDebug_8cs_source.html#l02217">CoreDebug.returnAnywhere</a>, <a class="el" href="Spatial_8cs_source.html#l00423">Spatial.source</a>, <a class="el" href="Spatial_8cs_source.html#l00135">Spatial.visitCount</a>, and <a class="el" href="EClass_8cs_source.html#l00136">EClass.world</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Spatial_8cs_source.html#l00699">Spatial.FindDeepestZone()</a>, <a class="el" href="Zone_8cs_source.html#l02893">Zone.GetSortVal()</a>, <a class="el" href="Spatial_8cs_source.html#l00334">Spatial.isRandomSite</a>, <a class="el" href="SpatialManager_8cs_source.html#l00017">map</a>, <a class="el" href="Spatial_8cs_source.html#l00010">Spatial.parent</a>, <a class="el" href="World_8cs_source.html#l00023">World.region</a>, <a class="el" href="CoreDebug_8cs_source.html#l00202">CoreDebug.returnAnywhere</a>, <a class="el" href="Spatial_8cs_source.html#l00441">Spatial.source</a>, <a class="el" href="Spatial_8cs_source.html#l00154">Spatial.visitCount</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.world</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00768">ActEffect.Proc()</a>.</p>
 
 </div>
 </div>
@@ -473,23 +468,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00023">23</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (s.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            s.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a>.<a class="code hl_variable" href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">children</a>.Remove(s);</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.<a class="code hl_function" href="classSpatialManager.html#a425a6b8b8e4a330f5ea955d5f605d881">Remove</a>(s.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>);</div>
-<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_variable" href="classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0">listDestryoed</a>.Add(s);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclassSpatialManager_html_a425a6b8b8e4a330f5ea955d5f605d881"><div class="ttname"><a href="classSpatialManager.html#a425a6b8b8e4a330f5ea955d5f605d881">SpatialManager.Remove</a></div><div class="ttdeci">void Remove(Spatial s)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00023">SpatialManager.cs:23</a></div></div>
-<div class="ttc" id="aclassSpatialManager_html_ac0eadafc4e8f266aefee812d3d0924c0"><div class="ttname"><a href="classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0">SpatialManager.listDestryoed</a></div><div class="ttdeci">List&lt; Spatial &gt; listDestryoed</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00105">SpatialManager.cs:105</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a3d32786bb1d24d70693a1a132e44b4e1"><div class="ttname"><a href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">Spatial.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00050">Spatial.cs:51</a></div></div>
-<div class="ttc" id="aclassSpatial_html_af941e4a530bb3395b3cfc663ad8be1d3"><div class="ttname"><a href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">Spatial.children</a></div><div class="ttdeci">List&lt; Spatial &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00866">Spatial.cs:866</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00038">38</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (s.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            s.<a class="code hl_variable" href="classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e">parent</a>.<a class="code hl_variable" href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">children</a>.Remove(s);</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.Remove(s.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>);</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0">listDestryoed</a>.Add(s);</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclassSpatialManager_html_ac0eadafc4e8f266aefee812d3d0924c0"><div class="ttname"><a href="classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0">SpatialManager.listDestryoed</a></div><div class="ttdeci">List&lt; Spatial &gt; listDestryoed</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00025">SpatialManager.cs:25</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a3d32786bb1d24d70693a1a132e44b4e1"><div class="ttname"><a href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">Spatial.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00069">Spatial.cs:70</a></div></div>
+<div class="ttc" id="aclassSpatial_html_af941e4a530bb3395b3cfc663ad8be1d3"><div class="ttname"><a href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">Spatial.children</a></div><div class="ttdeci">List&lt; Spatial &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00037">Spatial.cs:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00866">Spatial.children</a>, <a class="el" href="SpatialManager_8cs_source.html#l00105">listDestryoed</a>, <a class="el" href="SpatialManager_8cs_source.html#l00097">map</a>, <a class="el" href="Spatial_8cs_source.html#l00839">Spatial.parent</a>, <a class="el" href="SpatialManager_8cs_source.html#l00023">Remove()</a>, and <a class="el" href="Spatial_8cs_source.html#l00051">Spatial.uid</a>.</p>
+<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00037">Spatial.children</a>, <a class="el" href="SpatialManager_8cs_source.html#l00025">listDestryoed</a>, <a class="el" href="SpatialManager_8cs_source.html#l00017">map</a>, <a class="el" href="Spatial_8cs_source.html#l00010">Spatial.parent</a>, and <a class="el" href="Spatial_8cs_source.html#l00070">Spatial.uid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02176">Zone.Destroy()</a>, and <a class="el" href="SpatialManager_8cs_source.html#l00023">Remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l01718">Zone.Destroy()</a>.</p>
 
 </div>
 </div>
@@ -506,27 +500,27 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00105">105</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00025">25</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpatialManager_8cs_source.html#l00023">Remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00873">Game.OnBeforeSave()</a>, and <a class="el" href="SpatialManager_8cs_source.html#l00038">Remove()</a>.</p>
 
 </div>
 </div>
-<a id="a54dc5f41115039fd65cd42c74e43025d" name="a54dc5f41115039fd65cd42c74e43025d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54dc5f41115039fd65cd42c74e43025d">&#9670;&#160;</a></span>map</h2>
+<a id="a713f84ecf4e78c2b0150b65bbe8292c6" name="a713f84ecf4e78c2b0150b65bbe8292c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713f84ecf4e78c2b0150b65bbe8292c6">&#9670;&#160;</a></span>map</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">SpatialManager.GlobalSpatialList</a> SpatialManager.map = new <a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">SpatialManager.GlobalSpatialList</a>()</td>
+          <td class="memname"><a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">GlobalSpatialList</a> SpatialManager.map = new <a class="el" href="classSpatialManager_1_1GlobalSpatialList.html">GlobalSpatialList</a>()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00097">97</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00017">17</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpatialManager_8cs_source.html#l00016">AssignUID()</a>, <a class="el" href="Faction_82_8cs_source.html#l00100">Faction.CountTerritories()</a>, <a class="el" href="ThingGen_8cs_source.html#l00190">ThingGen.CreateCardboardBox()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00046">Find()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00033">Find&lt; T &gt;()</a>, <a class="el" href="RefZone_8cs_source.html#l00005">RefZone.Get()</a>, <a class="el" href="Faction_82_8cs_source.html#l00073">Faction.GetChildren()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00040">RankedZoneManager.GetList()</a>, <a class="el" href="Region_8cs_source.html#l00261">Region.ListTowns()</a>, <a class="el" href="Chara_8cs_source.html#l01062">Chara.OnBanish()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00080">ContentFaction.RefreshZones()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00065">LayerFactions.RefreshZones()</a>, <a class="el" href="LayerLocation_8cs_source.html#l00019">LayerLocation.RefreshZones()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00023">Remove()</a>, <a class="el" href="GameIO_8cs_source.html#l00087">GameIO.SaveGame()</a>, <a class="el" href="Chara_8cs_source.html#l03474">Chara.Tick()</a>, and <a class="el" href="TraitMapBoard_8cs_source.html#l00017">TraitMapBoard.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00595">Game._Create()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00031">AssignUID()</a>, <a class="el" href="Faction_82_8cs_source.html#l00100">Faction.CountTerritories()</a>, <a class="el" href="ThingGen_8cs_source.html#l00184">ThingGen.CreateCardboardBox()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">Find()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00048">Find&lt; T &gt;()</a>, <a class="el" href="RefZone_8cs_source.html#l00003">RefZone.Get()</a>, <a class="el" href="Faction_82_8cs_source.html#l00073">Faction.GetChildren()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00047">RankedZoneManager.GetList()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00077">ListReturnLocations()</a>, <a class="el" href="Region_8cs_source.html#l00227">Region.ListTowns()</a>, <a class="el" href="Chara_8cs_source.html#l01208">Chara.OnBanish()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00085">ContentFaction.RefreshZones()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00069">LayerFactions.RefreshZones()</a>, <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00038">Remove()</a>, <a class="el" href="GameIO_8cs_source.html#l00081">GameIO.SaveGame()</a>, <a class="el" href="Chara_8cs_source.html#l03394">Chara.Tick()</a>, and <a class="el" href="TraitMapBoard_8cs_source.html#l00010">TraitMapBoard.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -542,9 +536,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00103">103</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00023">23</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Faction_82_8cs_source.html#l00339">Faction.GetRankIncome()</a>, <a class="el" href="ContentHomeRanking_8cs_source.html#l00012">ContentHomeRanking.Refresh()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00032">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIFactionInfo_8cs_source.html#l00102">UIFactionInfo.SetZone()</a>, and <a class="el" href="HomeResourceWorth_8cs_source.html#l00016">HomeResourceWorth.UpdateRank()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Faction_82_8cs_source.html#l00339">Faction.GetRankIncome()</a>, <a class="el" href="ContentHomeRanking_8cs_source.html#l00015">ContentHomeRanking.Refresh()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIFactionInfo_8cs_source.html#l00121">UIFactionInfo.SetZone()</a>, and <a class="el" href="HomeResourceWorth_8cs_source.html#l00012">HomeResourceWorth.UpdateRank()</a>.</p>
 
 </div>
 </div>
@@ -560,9 +554,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00100">100</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00020">20</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpatialManager_8cs_source.html#l00016">AssignUID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpatialManager_8cs_source.html#l00031">AssignUID()</a>.</p>
 
 </div>
 </div>
@@ -587,15 +581,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00008">8</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(<span class="stringliteral">&quot;somewhere&quot;</span>);</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00046">SpatialManager.cs:46</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00027">27</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+
 </div>
 </div>
 <a id="a15075004b4748e12c876388d05c9b166" name="a15075004b4748e12c876388d05c9b166"></a>
@@ -618,17 +605,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00086">86</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> (from a in this.<a class="code hl_variable" href="classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d">map</a>.Values</div>
-<div class="line"><span class="lineno">   91</span>            where a is <a class="code hl_class" href="classZone.html">Zone</a></div>
-<div class="line"><span class="lineno">   92</span>            select a).Cast&lt;<a class="code hl_class" href="classZone.html">Zone</a>&gt;().ToList&lt;Zone&gt;();</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00027">Quest.ListDeliver()</a>, <a class="el" href="Region_8cs_source.html#l00306">Region.ListTravelZones()</a>, <a class="el" href="Region_8cs_source.html#l00293">Region.ListZonesInRadius()</a>, and <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpatialManager_8cs_source.html#l00029">29</a> of file <a class="el" href="SpatialManager_8cs_source.html">SpatialManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00257">Quest.ListDeliver()</a>, <a class="el" href="Region_8cs_source.html#l00272">Region.ListTravelZones()</a>, <a class="el" href="Region_8cs_source.html#l00259">Region.ListZonesInRadius()</a>, <a class="el" href="Game_8cs_source.html#l00873">Game.OnBeforeSave()</a>, and <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,5 @@
 var classLayerMod =
 [
-    [ "g__Move", "classLayerMod.html#a3ef24c7788045ac85ac0355c7cebafb5", null ],
     [ "OnInit", "classLayerMod.html#a760852c57410ce4012d0736dc4827ff2", null ],
     [ "OnKill", "classLayerMod.html#a76cfbb8217b7d031a4e7ad0f714997c6", null ],
     [ "Refresh", "classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b", null ],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX97 =
 {
+"classTraitRecipe.html#aa609c89aa917d5d61b9b3b35cb3fc6c5":[1,0,1495,3],
+"classTraitRecipe.html#aaa59f50841aa5f8763647eaa24cc1dfb":[1,0,1495,5],
+"classTraitRecipe.html#aacdc95f9c38dad8b0f60400eef441b83":[1,0,1495,2],
+"classTraitRecipe.html#ae1b45d4194d49bbe1da69881d46a743d":[1,0,1495,10],
+"classTraitRecipeBook.html":[1,0,1496],
 "classTraitRecipeBook.html#a3c7199d1029f0a0631a8ab0a13082f2e":[1,0,1496,3],
 "classTraitRecipeBook.html#a5cdacf7787d5988dd7905523e6c2a642":[1,0,1496,1],
 "classTraitRecipeBook.html#a89131d34ebb60cb390603934f9437ba8":[1,0,1496,0],
@@ -24,8 +29,8 @@ var NAVTREEINDEX97 =
 "classTraitRide.html":[1,0,1503],
 "classTraitRide.html#ab8c5391022ba9e816b3f399d86329bc4":[1,0,1503,0],
 "classTraitRoadSign.html":[1,0,1504],
-"classTraitRoadSign.html#a055264cd953bd773b0d0d7a0c30dcdf8":[1,0,1504,0],
 "classTraitRoadSign.html#a10cba1948948bbbf1d4de95edcadecf0":[1,0,1504,1],
+"classTraitRoadSign.html#a6be75d52a70c36f003be0beacc3cbfee":[1,0,1504,0],
 "classTraitRod.html":[1,0,1505],
 "classTraitRod.html#a2411edf6b63fa4124b28123ab0aed177":[1,0,1505,4],
 "classTraitRod.html#a3709ad6158356e4693d1a8899adc152d":[1,0,1505,1],
@@ -226,7 +231,7 @@ var NAVTREEINDEX97 =
 "classTraitSpellbook.html#a5aded0d1bb1f21da0b58a96918872408":[1,0,1535,0],
 "classTraitSpellbookRandom.html":[1,0,1536],
 "classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1536,2],
-"classTraitSpellbookRandom.html#a38f9e87b92938976ee383e83cac1f78d":[1,0,1536,1],
+"classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1536,1],
 "classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1536,0],
 "classTraitSpinner.html":[1,0,1537],
 "classTraitSpinner.html#a2e72f7c00867f08354f4eab5a4a25a69":[1,0,1537,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX97 =
 "classTraitSpotFarm.html#ae765c95cafe5778e91abdac984ead166":[1,0,1541,1],
 "classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1541,0],
 "classTraitSpotFish.html":[1,0,1542],
-"classTraitSpotFuel.html":[1,0,1543],
-"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1543,0],
-"classTraitSpotGarbage.html":[1,0,1544],
-"classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1544,0],
-"classTraitSpotGuidePC.html":[1,0,1545],
-"classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1545,0]
+"classTraitSpotFuel.html":[1,0,1543]
 };

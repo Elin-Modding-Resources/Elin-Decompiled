@@ -133,8 +133,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acd2685e9f0c4b3bf700879a3bdaa9dcc inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab2798482e05025b39c2e7e7b8ec184 inherit pub_attribs_classZoneInstance"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184">z</a></td></tr>
 <tr class="separator:aeab2798482e05025b39c2e7e7b8ec184 inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab563fb93dbca7efcdc5ce88fc3df175c inherit pub_attribs_classZoneInstance"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">ZoneInstance.Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneInstance.html#ab563fb93dbca7efcdc5ce88fc3df175c">status</a></td></tr>
-<tr class="separator:ab563fb93dbca7efcdc5ce88fc3df175c inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a3b8a9c8bd39ac8d15a87a2e7ba14f inherit pub_attribs_classZoneInstance"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneInstance.html#a30a3b8a9c8bd39ac8d15a87a2e7ba14f">status</a></td></tr>
+<tr class="separator:a30a3b8a9c8bd39ac8d15a87a2e7ba14f inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -226,7 +226,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00004">4</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00003">3</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aac9cb8cf9bc8715f7223a5dd856b9e58" name="aac9cb8cf9bc8715f7223a5dd856b9e58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac9cb8cf9bc8715f7223a5dd856b9e58">&#9670;&#160;</a></span>OnLeaveZone()</h2>
@@ -253,51 +253,53 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classZoneInstance.html#a9e7436ec037d983d3dfb37beac33d476">ZoneInstance</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00014">14</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_function" href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">Find</a>(this.<a class="code hl_variable" href="classZoneInstanceBout.html#acdda038b4930b769896d799c8c26050a">uidTarget</a>);</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (chara == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
-<div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            chara.<a class="code hl_function" href="classChara.html#aaa330a4b0637fecf2d0844939391557f">Revive</a>(<span class="keyword">null</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        chara.<a class="code hl_function" href="classChara.html#a5b6acfb55cd01e0038b38a63ee4e10a7">HealAll</a>();</div>
-<div class="line"><span class="lineno">   26</span>        chara.c_originalHostility = (chara.hostility = <a class="code hl_enumeration" href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a>.Friend);</div>
-<div class="line"><span class="lineno">   27</span>        chara.<a class="code hl_function" href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">SetEnemy</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   28</span>        chara.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNoGoal.html">NoGoal</a>());</div>
-<div class="line"><span class="lineno">   29</span>        chara.<a class="code hl_function" href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">MoveZone</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(<span class="keyword">this</span>.uidZone), <span class="keyword">new</span> <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a></div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            state = <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a>.<a class="code hl_enumeration" href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">EnterState</a>.Exact,</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="classZoneInstance.html#acd2685e9f0c4b3bf700879a3bdaa9dcc">x</a> = this.<a class="code hl_variable" href="classZoneInstanceBout.html#aca0eb8f4317bb477404f007cad6d6c77">targetX</a>,</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184">z</a> = this.targetZ</div>
-<div class="line"><span class="lineno">   34</span>        });</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aHostility_8cs_html_abf5e46daccde02afce5e19cb6a74c500"><div class="ttname"><a href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a></div><div class="ttdeci">Hostility</div><div class="ttdef"><b>Definition:</b> <a href="Hostility_8cs_source.html#l00003">Hostility.cs:4</a></div></div>
-<div class="ttc" id="aclassCardManager_html_a3f0a4c97447028f99e19fbdd321a87d6"><div class="ttname"><a href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">CardManager.Find</a></div><div class="ttdeci">Chara Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00052">CardManager.cs:52</a></div></div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07978">Chara.cs:7978</a></div></div>
-<div class="ttc" id="aclassChara_html_a5b6acfb55cd01e0038b38a63ee4e10a7"><div class="ttname"><a href="classChara.html#a5b6acfb55cd01e0038b38a63ee4e10a7">Chara.HealAll</a></div><div class="ttdeci">void HealAll()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01385">Chara.cs:1385</a></div></div>
-<div class="ttc" id="aclassChara_html_aaa330a4b0637fecf2d0844939391557f"><div class="ttname"><a href="classChara.html#aaa330a4b0637fecf2d0844939391557f">Chara.Revive</a></div><div class="ttdeci">void Revive(Point p=null, bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04649">Chara.cs:4649</a></div></div>
-<div class="ttc" id="aclassChara_html_ac876d378dc012d462a73f0d80ba4ab07"><div class="ttname"><a href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">Chara.SetEnemy</a></div><div class="ttdeci">Chara SetEnemy(Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05635">Chara.cs:5635</a></div></div>
-<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00196">Chara.cs:197</a></div></div>
-<div class="ttc" id="aclassChara_html_afd491cf74f5f62c8e67b99f9e3b0202f"><div class="ttname"><a href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">Chara.MoveZone</a></div><div class="ttdeci">void MoveZone(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02892">Chara.cs:2892</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
-<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
-<div class="ttc" id="aclassNoGoal_html"><div class="ttname"><a href="classNoGoal.html">NoGoal</a></div><div class="ttdef"><b>Definition:</b> <a href="NoGoal_8cs_source.html#l00005">NoGoal.cs:6</a></div></div>
-<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00046">SpatialManager.cs:46</a></div></div>
-<div class="ttc" id="aclassZoneInstanceBout_html_aca0eb8f4317bb477404f007cad6d6c77"><div class="ttname"><a href="classZoneInstanceBout.html#aca0eb8f4317bb477404f007cad6d6c77">ZoneInstanceBout.targetX</a></div><div class="ttdeci">int targetX</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceBout_8cs_source.html#l00041">ZoneInstanceBout.cs:41</a></div></div>
-<div class="ttc" id="aclassZoneInstanceBout_html_acdda038b4930b769896d799c8c26050a"><div class="ttname"><a href="classZoneInstanceBout.html#acdda038b4930b769896d799c8c26050a">ZoneInstanceBout.uidTarget</a></div><div class="ttdeci">int uidTarget</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceBout_8cs_source.html#l00038">ZoneInstanceBout.cs:38</a></div></div>
-<div class="ttc" id="aclassZoneInstance_html_acd2685e9f0c4b3bf700879a3bdaa9dcc"><div class="ttname"><a href="classZoneInstance.html#acd2685e9f0c4b3bf700879a3bdaa9dcc">ZoneInstance.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00050">ZoneInstance.cs:50</a></div></div>
-<div class="ttc" id="aclassZoneInstance_html_aeab2798482e05025b39c2e7e7b8ec184"><div class="ttname"><a href="classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184">ZoneInstance.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00053">ZoneInstance.cs:53</a></div></div>
-<div class="ttc" id="aclassZoneTransition_html"><div class="ttname"><a href="classZoneTransition.html">ZoneTransition</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00004">ZoneTransition.cs:5</a></div></div>
-<div class="ttc" id="aclassZoneTransition_html_a42f31e47f43496abebff8ed4c4d16d46"><div class="ttname"><a href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">ZoneTransition.EnterState</a></div><div class="ttdeci">EnterState</div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00048">ZoneTransition.cs:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00016">16</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_function" href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">Find</a>(<a class="code hl_variable" href="classZoneInstanceBout.html#acdda038b4930b769896d799c8c26050a">uidTarget</a>);</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                chara.<a class="code hl_function" href="classChara.html#aaa330a4b0637fecf2d0844939391557f">Revive</a>();</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>            chara.<a class="code hl_function" href="classChara.html#a5b6acfb55cd01e0038b38a63ee4e10a7">HealAll</a>();</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_enumeration" href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a> c_originalHostility = (chara.hostility = <a class="code hl_enumeration" href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a>.Friend);</div>
+<div class="line"><span class="lineno">   27</span>            chara.c_originalHostility = c_originalHostility;</div>
+<div class="line"><span class="lineno">   28</span>            chara.<a class="code hl_function" href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">SetEnemy</a>();</div>
+<div class="line"><span class="lineno">   29</span>            chara.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNoGoal.html">NoGoal</a>());</div>
+<div class="line"><span class="lineno">   30</span>            chara.<a class="code hl_function" href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">MoveZone</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(<a class="code hl_variable" href="classZoneInstance.html#a9ddcf636c4f0637a0afa5cbffb90d927">uidZone</a>), <span class="keyword">new</span> <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a></div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                state = <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a>.<a class="code hl_enumeration" href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">EnterState</a>.Exact,</div>
+<div class="line"><span class="lineno">   33</span>                <a class="code hl_variable" href="classZoneInstance.html#acd2685e9f0c4b3bf700879a3bdaa9dcc">x</a> = <a class="code hl_variable" href="classZoneInstanceBout.html#aca0eb8f4317bb477404f007cad6d6c77">targetX</a>,</div>
+<div class="line"><span class="lineno">   34</span>                <a class="code hl_variable" href="classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184">z</a> = <a class="code hl_variable" href="classZoneInstanceBout.html#a29a6f477b717ea4c88958776250acffe">targetZ</a></div>
+<div class="line"><span class="lineno">   35</span>            });</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aHostility_8cs_html_abf5e46daccde02afce5e19cb6a74c500"><div class="ttname"><a href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a></div><div class="ttdeci">Hostility</div><div class="ttdef"><b>Definition:</b> <a href="Hostility_8cs_source.html#l00001">Hostility.cs:2</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a3f0a4c97447028f99e19fbdd321a87d6"><div class="ttname"><a href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">CardManager.Find</a></div><div class="ttdeci">Chara Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00109">CardManager.cs:109</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07651">Chara.cs:7651</a></div></div>
+<div class="ttc" id="aclassChara_html_a5b6acfb55cd01e0038b38a63ee4e10a7"><div class="ttname"><a href="classChara.html#a5b6acfb55cd01e0038b38a63ee4e10a7">Chara.HealAll</a></div><div class="ttdeci">void HealAll()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01453">Chara.cs:1453</a></div></div>
+<div class="ttc" id="aclassChara_html_aaa330a4b0637fecf2d0844939391557f"><div class="ttname"><a href="classChara.html#aaa330a4b0637fecf2d0844939391557f">Chara.Revive</a></div><div class="ttdeci">void Revive(Point p=null, bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04415">Chara.cs:4415</a></div></div>
+<div class="ttc" id="aclassChara_html_ac876d378dc012d462a73f0d80ba4ab07"><div class="ttname"><a href="classChara.html#ac876d378dc012d462a73f0d80ba4ab07">Chara.SetEnemy</a></div><div class="ttdeci">Chara SetEnemy(Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05378">Chara.cs:5378</a></div></div>
+<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00373">Chara.cs:374</a></div></div>
+<div class="ttc" id="aclassChara_html_afd491cf74f5f62c8e67b99f9e3b0202f"><div class="ttname"><a href="classChara.html#afd491cf74f5f62c8e67b99f9e3b0202f">Chara.MoveZone</a></div><div class="ttdeci">void MoveZone(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02831">Chara.cs:2831</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00149">Game.cs:149</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00152">Game.cs:152</a></div></div>
+<div class="ttc" id="aclassNoGoal_html"><div class="ttname"><a href="classNoGoal.html">NoGoal</a></div><div class="ttdef"><b>Definition:</b> <a href="NoGoal_8cs_source.html#l00003">NoGoal.cs:4</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00060">SpatialManager.cs:60</a></div></div>
+<div class="ttc" id="aclassZoneInstanceBout_html_a29a6f477b717ea4c88958776250acffe"><div class="ttname"><a href="classZoneInstanceBout.html#a29a6f477b717ea4c88958776250acffe">ZoneInstanceBout.targetZ</a></div><div class="ttdeci">int targetZ</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceBout_8cs_source.html#l00012">ZoneInstanceBout.cs:12</a></div></div>
+<div class="ttc" id="aclassZoneInstanceBout_html_aca0eb8f4317bb477404f007cad6d6c77"><div class="ttname"><a href="classZoneInstanceBout.html#aca0eb8f4317bb477404f007cad6d6c77">ZoneInstanceBout.targetX</a></div><div class="ttdeci">int targetX</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceBout_8cs_source.html#l00009">ZoneInstanceBout.cs:9</a></div></div>
+<div class="ttc" id="aclassZoneInstanceBout_html_acdda038b4930b769896d799c8c26050a"><div class="ttname"><a href="classZoneInstanceBout.html#acdda038b4930b769896d799c8c26050a">ZoneInstanceBout.uidTarget</a></div><div class="ttdeci">int uidTarget</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceBout_8cs_source.html#l00006">ZoneInstanceBout.cs:6</a></div></div>
+<div class="ttc" id="aclassZoneInstance_html_a9ddcf636c4f0637a0afa5cbffb90d927"><div class="ttname"><a href="classZoneInstance.html#a9ddcf636c4f0637a0afa5cbffb90d927">ZoneInstance.uidZone</a></div><div class="ttdeci">int uidZone</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00013">ZoneInstance.cs:13</a></div></div>
+<div class="ttc" id="aclassZoneInstance_html_acd2685e9f0c4b3bf700879a3bdaa9dcc"><div class="ttname"><a href="classZoneInstance.html#acd2685e9f0c4b3bf700879a3bdaa9dcc">ZoneInstance.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00016">ZoneInstance.cs:16</a></div></div>
+<div class="ttc" id="aclassZoneInstance_html_aeab2798482e05025b39c2e7e7b8ec184"><div class="ttname"><a href="classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184">ZoneInstance.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00019">ZoneInstance.cs:19</a></div></div>
+<div class="ttc" id="aclassZoneTransition_html"><div class="ttname"><a href="classZoneTransition.html">ZoneTransition</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00003">ZoneTransition.cs:4</a></div></div>
+<div class="ttc" id="aclassZoneTransition_html_a42f31e47f43496abebff8ed4c4d16d46"><div class="ttname"><a href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">ZoneTransition.EnterState</a></div><div class="ttdeci">EnterState</div><div class="ttdef"><b>Definition:</b> <a href="ZoneTransition_8cs_source.html#l00005">ZoneTransition.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="CardManager_8cs_source.html#l00052">CardManager.Find()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00046">SpatialManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Chara_8cs_source.html#l01385">Chara.HealAll()</a>, <a class="el" href="Chara_8cs_source.html#l00197">Chara.isDead</a>, <a class="el" href="Chara_8cs_source.html#l02892">Chara.MoveZone()</a>, <a class="el" href="Chara_8cs_source.html#l04649">Chara.Revive()</a>, <a class="el" href="Chara_8cs_source.html#l07978">Chara.SetAI()</a>, <a class="el" href="Chara_8cs_source.html#l05635">Chara.SetEnemy()</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00041">targetX</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00038">uidTarget</a>, <a class="el" href="ZoneInstance_8cs_source.html#l00050">ZoneInstance.x</a>, and <a class="el" href="ZoneInstance_8cs_source.html#l00053">ZoneInstance.z</a>.</p>
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00152">Game.cards</a>, <a class="el" href="CardManager_8cs_source.html#l00109">CardManager.Find()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">SpatialManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Chara_8cs_source.html#l01453">Chara.HealAll()</a>, <a class="el" href="Chara_8cs_source.html#l00374">Chara.isDead</a>, <a class="el" href="Chara_8cs_source.html#l02831">Chara.MoveZone()</a>, <a class="el" href="Chara_8cs_source.html#l04415">Chara.Revive()</a>, <a class="el" href="Chara_8cs_source.html#l07651">Chara.SetAI()</a>, <a class="el" href="Chara_8cs_source.html#l05378">Chara.SetEnemy()</a>, <a class="el" href="Game_8cs_source.html#l00149">Game.spatials</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00009">targetX</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00012">targetZ</a>, <a class="el" href="ZoneInstanceBout_8cs_source.html#l00006">uidTarget</a>, <a class="el" href="ZoneInstance_8cs_source.html#l00013">ZoneInstance.uidZone</a>, <a class="el" href="ZoneInstance_8cs_source.html#l00016">ZoneInstance.x</a>, and <a class="el" href="ZoneInstance_8cs_source.html#l00019">ZoneInstance.z</a>.</p>
 
 </div>
 </div>
@@ -314,9 +316,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00041">41</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00009">9</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneInstanceBout_8cs_source.html#l00014">OnLeaveZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneInstanceBout_8cs_source.html#l00016">OnLeaveZone()</a>.</p>
 
 </div>
 </div>
@@ -332,7 +334,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00044">44</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00012">12</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ZoneInstanceBout_8cs_source.html#l00016">OnLeaveZone()</a>.</p>
 
 </div>
 </div>
@@ -348,9 +352,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00038">38</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03903">Card.DamageHP()</a>, and <a class="el" href="ZoneInstanceBout_8cs_source.html#l00014">OnLeaveZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03516">Card.DamageHP()</a>, and <a class="el" href="ZoneInstanceBout_8cs_source.html#l00016">OnLeaveZone()</a>.</p>
 
 </div>
 </div>
@@ -375,14 +379,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classZoneTransition.html">ZoneTransition</a>.<a class="code hl_enumeration" href="classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46">EnterState</a>.Exact;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceBout_8cs_source.html#l00014">14</a> of file <a class="el" href="ZoneInstanceBout_8cs_source.html">ZoneInstanceBout.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

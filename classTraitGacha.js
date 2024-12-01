@@ -10,5 +10,5 @@ var classTraitGacha =
     [ "TrySetAct", "classTraitGacha.html#a105f89d64e5997d0e6a706688b0d120b", null ],
     [ "refVal", "classTraitGacha.html#ac12e98eec74d5b2aa7e4c467d82d3c48", null ],
     [ "suffixCoin", "classTraitGacha.html#a2dc893f597a04a16f6bd9c1efb9b20e0", null ],
-    [ "type", "classTraitGacha.html#a8fd2534d8534271f280a1cdc90c7b09c", null ]
+    [ "type", "classTraitGacha.html#a4809775ed4c5c7a53bc0479ad1312e69", null ]
 ];

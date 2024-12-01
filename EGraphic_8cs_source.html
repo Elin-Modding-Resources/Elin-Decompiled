@@ -92,27 +92,20 @@ $(document).ready(function(){initNavTree('EGraphic_8cs_source.html',''); initRes
   <div class="headertitle"><div class="title">EGraphic.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="EGraphic_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.UI;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>[RequireComponent(typeof(CanvasRenderer))]</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>[RequireComponent(typeof(RectTransform))]</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classEGraphic.html">    7</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classEGraphic.html">EGraphic</a> : Graphic</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classEGraphic.html#afafedc6eee91de1be3dcda31b5f76c9f">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> Texture <a class="code hl_property" href="classEGraphic.html#afafedc6eee91de1be3dcda31b5f76c9f">mainTexture</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">texture</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">   17</a></span>    <span class="keyword">public</span> Texture2D <a class="code hl_variable" href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">texture</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
-<div class="ttc" id="aclassEGraphic_html"><div class="ttname"><a href="classEGraphic.html">EGraphic</a></div><div class="ttdef"><b>Definition:</b> <a href="EGraphic_8cs_source.html#l00007">EGraphic.cs:8</a></div></div>
-<div class="ttc" id="aclassEGraphic_html_a1e1d2c8fb3685be42f4e82fcf419857d"><div class="ttname"><a href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">EGraphic.texture</a></div><div class="ttdeci">Texture2D texture</div><div class="ttdef"><b>Definition:</b> <a href="EGraphic_8cs_source.html#l00017">EGraphic.cs:17</a></div></div>
-<div class="ttc" id="aclassEGraphic_html_afafedc6eee91de1be3dcda31b5f76c9f"><div class="ttname"><a href="classEGraphic.html#afafedc6eee91de1be3dcda31b5f76c9f">EGraphic.mainTexture</a></div><div class="ttdeci">override Texture mainTexture</div><div class="ttdef"><b>Definition:</b> <a href="EGraphic_8cs_source.html#l00009">EGraphic.cs:10</a></div></div>
+<a href="EGraphic_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>[RequireComponent(typeof(CanvasRenderer))]</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>[RequireComponent(typeof(RectTransform))]</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classEGraphic.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classEGraphic.html">EGraphic</a> : Graphic</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">    8</a></span>    <span class="keyword">public</span> Texture2D <a class="code hl_variable" href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">texture</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classEGraphic.html#afafedc6eee91de1be3dcda31b5f76c9f">   10</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> Texture <a class="code hl_property" href="classEGraphic.html#afafedc6eee91de1be3dcda31b5f76c9f">mainTexture</a> =&gt; <a class="code hl_variable" href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">texture</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aclassEGraphic_html"><div class="ttname"><a href="classEGraphic.html">EGraphic</a></div><div class="ttdef"><b>Definition:</b> <a href="EGraphic_8cs_source.html#l00006">EGraphic.cs:7</a></div></div>
+<div class="ttc" id="aclassEGraphic_html_a1e1d2c8fb3685be42f4e82fcf419857d"><div class="ttname"><a href="classEGraphic.html#a1e1d2c8fb3685be42f4e82fcf419857d">EGraphic.texture</a></div><div class="ttdeci">Texture2D texture</div><div class="ttdef"><b>Definition:</b> <a href="EGraphic_8cs_source.html#l00008">EGraphic.cs:8</a></div></div>
+<div class="ttc" id="aclassEGraphic_html_afafedc6eee91de1be3dcda31b5f76c9f"><div class="ttname"><a href="classEGraphic.html#afafedc6eee91de1be3dcda31b5f76c9f">EGraphic.mainTexture</a></div><div class="ttdeci">override Texture mainTexture</div><div class="ttdef"><b>Definition:</b> <a href="EGraphic_8cs_source.html#l00010">EGraphic.cs:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

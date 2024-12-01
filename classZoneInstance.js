@@ -7,7 +7,7 @@ var classZoneInstance =
     ] ],
     [ "OnGenerateMap", "classZoneInstance.html#adc43dd198336eaa8e91f04503663bf8b", null ],
     [ "OnLeaveZone", "classZoneInstance.html#a9e7436ec037d983d3dfb37beac33d476", null ],
-    [ "status", "classZoneInstance.html#ab563fb93dbca7efcdc5ce88fc3df175c", null ],
+    [ "status", "classZoneInstance.html#a30a3b8a9c8bd39ac8d15a87a2e7ba14f", null ],
     [ "uidZone", "classZoneInstance.html#a9ddcf636c4f0637a0afa5cbffb90d927", null ],
     [ "x", "classZoneInstance.html#acd2685e9f0c4b3bf700879a3bdaa9dcc", null ],
     [ "z", "classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184", null ],

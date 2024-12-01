@@ -200,7 +200,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="GameUpdater_8cs_source.html#l00546">546</a> of file <a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameUpdater_8cs_source.html#l00240">240</a> of file <a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0f8572e10590fe7b4efa595304f18517" name="a0f8572e10590fe7b4efa595304f18517"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f8572e10590fe7b4efa595304f18517">&#9670;&#160;</a></span>FixedUpdate()</h2>
@@ -229,52 +229,55 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classGameUpdater_1_1ConditionUpdater.html#ab95f7689cc4ce2f76bae6f977ac7df36">GameUpdater.ConditionUpdater</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="GameUpdater_8cs_source.html#l00548">548</a> of file <a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  549</span>        {</div>
-<div class="line"><span class="lineno">  550</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a11fbb8bf9fdd692140c4bf2bb603531d">isPaused</a>)</div>
-<div class="line"><span class="lineno">  551</span>            {</div>
-<div class="line"><span class="lineno">  552</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  553</span>            }</div>
-<div class="line"><span class="lineno">  554</span>            List&lt;Chara&gt; charas = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>;</div>
-<div class="line"><span class="lineno">  555</span>            base.SetUpdatesPerFrame(charas.Count, 0.05f);</div>
-<div class="line"><span class="lineno">  556</span>            <span class="keywordtype">float</span> gameDelta = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">gameDelta</a>;</div>
-<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; charas.Count; i++)</div>
-<div class="line"><span class="lineno">  558</span>            {</div>
-<div class="line"><span class="lineno">  559</span>                <a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a> = charas[i];</div>
-<div class="line"><span class="lineno">  560</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a11fbb8bf9fdd692140c4bf2bb603531d">isPaused</a> &amp;&amp; !<a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.IsPC)</div>
-<div class="line"><span class="lineno">  561</span>                {</div>
-<div class="line"><span class="lineno">  562</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  563</span>                }</div>
-<div class="line"><span class="lineno">  564</span>                chara.roundTimer += gameDelta;</div>
-<div class="line"><span class="lineno">  565</span>                <span class="keywordtype">float</span> actTime = <a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.actTime;</div>
-<div class="line"><span class="lineno">  566</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.roundTimer &gt; actTime)</div>
-<div class="line"><span class="lineno">  567</span>                {</div>
-<div class="line"><span class="lineno">  568</span>                    <a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.Tick();</div>
-<div class="line"><span class="lineno">  569</span>                    chara.roundTimer -= actTime;</div>
-<div class="line"><span class="lineno">  570</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.ai is <a class="code hl_class" href="classGoalEndTurn.html">GoalEndTurn</a>)</div>
-<div class="line"><span class="lineno">  571</span>                    {</div>
-<div class="line"><span class="lineno">  572</span>                        <a class="code hl_variable" href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">chara</a>.SetNoGoal();</div>
-<div class="line"><span class="lineno">  573</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  574</span>                    }</div>
-<div class="line"><span class="lineno">  575</span>                    <span class="keywordflow">if</span> (i &gt; charas.Count)</div>
-<div class="line"><span class="lineno">  576</span>                    {</div>
-<div class="line"><span class="lineno">  577</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  578</span>                    }</div>
-<div class="line"><span class="lineno">  579</span>                }</div>
-<div class="line"><span class="lineno">  580</span>            }</div>
-<div class="line"><span class="lineno">  581</span>        }</div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
-<div class="ttc" id="aclassCore_html_a8661ed62f17a60ae1169ed07c0b56812"><div class="ttname"><a href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">Core.gameDelta</a></div><div class="ttdeci">static float gameDelta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00697">Core.cs:697</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
-<div class="ttc" id="aclassGameUpdater_html_abe28639f17198c4c4c848b7c617fecf8"><div class="ttname"><a href="classGameUpdater.html#abe28639f17198c4c4c848b7c617fecf8">GameUpdater.chara</a></div><div class="ttdeci">GameUpdater.CharaUpdater chara</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00247">GameUpdater.cs:247</a></div></div>
-<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00008">Game.cs:9</a></div></div>
-<div class="ttc" id="aclassGame_html_a11fbb8bf9fdd692140c4bf2bb603531d"><div class="ttname"><a href="classGame.html#a11fbb8bf9fdd692140c4bf2bb603531d">Game.isPaused</a></div><div class="ttdeci">static bool isPaused</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00784">Game.cs:784</a></div></div>
-<div class="ttc" id="aclassGoalEndTurn_html"><div class="ttname"><a href="classGoalEndTurn.html">GoalEndTurn</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalEndTurn_8cs_source.html#l00003">GoalEndTurn.cs:4</a></div></div>
-<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
+<p class="definition">Definition at line <a class="el" href="GameUpdater_8cs_source.html#l00242">242</a> of file <a class="el" href="GameUpdater_8cs_source.html">GameUpdater.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a11fbb8bf9fdd692140c4bf2bb603531d">isPaused</a>)</div>
+<div class="line"><span class="lineno">  245</span>            {</div>
+<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  247</span>            }</div>
+<div class="line"><span class="lineno">  248</span>            List&lt;Chara&gt; charas = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>;</div>
+<div class="line"><span class="lineno">  249</span>            <a class="code hl_function" href="classGameUpdater_1_1Updater.html#a2c815c32cba9ae3bb91f959df4b63943">SetUpdatesPerFrame</a>(charas.Count, 0.05f);</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keywordtype">float</span> gameDelta = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">gameDelta</a>;</div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; charas.Count; i++)</div>
+<div class="line"><span class="lineno">  252</span>            {</div>
+<div class="line"><span class="lineno">  253</span>                <a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a> = charas[i];</div>
+<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a11fbb8bf9fdd692140c4bf2bb603531d">isPaused</a> &amp;&amp; !<a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a>.IsPC)</div>
+<div class="line"><span class="lineno">  255</span>                {</div>
+<div class="line"><span class="lineno">  256</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  257</span>                }</div>
+<div class="line"><span class="lineno">  258</span>                chara.roundTimer += gameDelta;</div>
+<div class="line"><span class="lineno">  259</span>                <span class="keywordtype">float</span> actTime = <a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a>.actTime;</div>
+<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a>.roundTimer &gt; actTime)</div>
+<div class="line"><span class="lineno">  261</span>                {</div>
+<div class="line"><span class="lineno">  262</span>                    <a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a>.Tick();</div>
+<div class="line"><span class="lineno">  263</span>                    chara.roundTimer -= actTime;</div>
+<div class="line"><span class="lineno">  264</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a>.ai is <a class="code hl_class" href="classGoalEndTurn.html">GoalEndTurn</a>)</div>
+<div class="line"><span class="lineno">  265</span>                    {</div>
+<div class="line"><span class="lineno">  266</span>                        <a class="code hl_variable" href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">chara</a>.SetNoGoal();</div>
+<div class="line"><span class="lineno">  267</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  268</span>                    }</div>
+<div class="line"><span class="lineno">  269</span>                    <span class="keywordflow">if</span> (i &gt; charas.Count)</div>
+<div class="line"><span class="lineno">  270</span>                    {</div>
+<div class="line"><span class="lineno">  271</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  272</span>                    }</div>
+<div class="line"><span class="lineno">  273</span>                }</div>
+<div class="line"><span class="lineno">  274</span>            }</div>
+<div class="line"><span class="lineno">  275</span>        }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
+<div class="ttc" id="aclassCore_html_a8661ed62f17a60ae1169ed07c0b56812"><div class="ttname"><a href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">Core.gameDelta</a></div><div class="ttdeci">static float gameDelta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00017">Core.cs:17</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
+<div class="ttc" id="aclassGameUpdater_1_1Updater_html_a2c815c32cba9ae3bb91f959df4b63943"><div class="ttname"><a href="classGameUpdater_1_1Updater.html#a2c815c32cba9ae3bb91f959df4b63943">GameUpdater.Updater.SetUpdatesPerFrame</a></div><div class="ttdeci">void SetUpdatesPerFrame(int _maxcount, float _duration)</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00025">GameUpdater.cs:25</a></div></div>
+<div class="ttc" id="aclassGameUpdater_html_a4f62707166f8ed4ce05525e5c9611e40"><div class="ttname"><a href="classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40">GameUpdater.chara</a></div><div class="ttdeci">CharaUpdater chara</div><div class="ttdef"><b>Definition:</b> <a href="GameUpdater_8cs_source.html#l00348">GameUpdater.cs:348</a></div></div>
+<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00007">Game.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a11fbb8bf9fdd692140c4bf2bb603531d"><div class="ttname"><a href="classGame.html#a11fbb8bf9fdd692140c4bf2bb603531d">Game.isPaused</a></div><div class="ttdeci">static bool isPaused</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00146">Game.cs:146</a></div></div>
+<div class="ttc" id="aclassGoalEndTurn_html"><div class="ttname"><a href="classGoalEndTurn.html">GoalEndTurn</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalEndTurn_8cs_source.html#l00001">GoalEndTurn.cs:2</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00078">Map.cs:78</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="GameUpdater_8cs_source.html#l00247">GameUpdater.chara</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, and <a class="el" href="Game_8cs_source.html#l00784">Game.isPaused</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="GameUpdater_8cs_source.html#l00348">GameUpdater.chara</a>, <a class="el" href="Map_8cs_source.html#l00078">Map.charas</a>, <a class="el" href="Core_8cs_source.html#l00017">Core.gameDelta</a>, <a class="el" href="Game_8cs_source.html#l00146">Game.isPaused</a>, and <a class="el" href="GameUpdater_8cs_source.html#l00025">GameUpdater.Updater.SetUpdatesPerFrame()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GameUpdater_8cs_source.html#l00429">GameUpdater.FixedUpdate()</a>.</p>
 
 </div>
 </div>

@@ -2,7 +2,7 @@ var classAM__Cinema =
 [
     [ "OnActivate", "classAM__Cinema.html#ad969334df35448dd2a177716a432de34", null ],
     [ "OnDeactivate", "classAM__Cinema.html#aceced69f71118a0d501cb7e1dbfefc14", null ],
-    [ "OnUpdateInput", "classAM__Cinema.html#aa7da2902e37bfe44310720e59179b838", null ],
+    [ "OnUpdateInput", "classAM__Cinema.html#aaae9ea0c06664eb416279e1e132be12a", null ],
     [ "center", "classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d", null ],
     [ "destPos", "classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b", null ],
     [ "profile", "classAM__Cinema.html#ac56c1ff4f82f286a5f85a0d778a494c7", null ],

@@ -187,7 +187,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TCCensored_8cs_source.html#l00004">4</a> of file <a class="el" href="TCCensored_8cs_source.html">TCCensored.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCCensored_8cs_source.html#l00003">3</a> of file <a class="el" href="TCCensored_8cs_source.html">TCCensored.cs</a>.</p>
 </div><h2 class="groupheader">Property Documentation</h2>
 <a id="ad52e94bbf3530259fbd3cc4cbadfb862" name="ad52e94bbf3530259fbd3cc4cbadfb862"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad52e94bbf3530259fbd3cc4cbadfb862">&#9670;&#160;</a></span>FixPos</h2>
@@ -209,19 +209,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCCensored_8cs_source.html#l00006">6</a> of file <a class="el" href="TCCensored_8cs_source.html">TCCensored.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">if</span> (base.owner.IsPCC)</div>
-<div class="line"><span class="lineno">   11</span>            {</div>
-<div class="line"><span class="lineno">   12</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos.PlusY(base.owner.IsDeadOrSleeping ? -0.3f : -0.05f);</div>
-<div class="line"><span class="lineno">   13</span>            }</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos;</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
-<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00004">TC.cs:5</a></div></div>
-<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00056">TC.cs:56</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TCCensored_8cs_source.html#l00005">5</a> of file <a class="el" href="TCCensored_8cs_source.html">TCCensored.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (base.owner.IsPCC)</div>
+<div class="line"><span class="lineno">   10</span>            {</div>
+<div class="line"><span class="lineno">   11</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos.PlusY(base.owner.IsDeadOrSleeping ? (-0.3f) : (-0.05f));</div>
+<div class="line"><span class="lineno">   12</span>            }</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00003">TC.cs:4</a></div></div>
+<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00005">TC.cs:5</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

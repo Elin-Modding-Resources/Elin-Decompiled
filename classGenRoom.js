@@ -8,7 +8,7 @@ var classGenRoom =
     [ "SetRandomPoint", "classGenRoom.html#a35d9d7841098481858be0e9c351ec68e", null ],
     [ "SetRandomPointCentered", "classGenRoom.html#ab16e6092dfe4091407eeea5aabcc03f4", null ],
     [ "SpawnMob", "classGenRoom.html#ab2ce5e1b0c7fef5259b10b302f152879", null ],
-    [ "_c", "classGenRoom.html#a10a4b53a8d4d50178b5dd9e1a748a8da", null ],
+    [ "_c", "classGenRoom.html#a7822a61afce18702c4f0a14a49b77bad", null ],
     [ "_p", "classGenRoom.html#a45d0225008049143a936a2393800664c", null ],
     [ "gen", "classGenRoom.html#a2f91f301d36b9b1084a25a37ded798e9", null ],
     [ "group", "classGenRoom.html#a341c9b79fa615e1b1cedd9ae2c5ec920", null ],

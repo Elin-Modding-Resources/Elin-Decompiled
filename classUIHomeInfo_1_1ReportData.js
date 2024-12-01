@@ -12,5 +12,5 @@ var classUIHomeInfo_1_1ReportData =
     [ "onClick", "classUIHomeInfo_1_1ReportData.html#a32aadba7f14b83173f8e2760c316514e", null ],
     [ "onShowTooltip", "classUIHomeInfo_1_1ReportData.html#a43902de16e8d00c6c1b88dff8a1d0c75", null ],
     [ "text", "classUIHomeInfo_1_1ReportData.html#aa0d0c07677b3ff058e8da7c6a679eae1", null ],
-    [ "type", "classUIHomeInfo_1_1ReportData.html#adccf35bae8c396e2b2e78a0a8e0e26e1", null ]
+    [ "type", "classUIHomeInfo_1_1ReportData.html#ae6acd170100321d39940de38a81cc23f", null ]
 ];

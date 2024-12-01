@@ -191,7 +191,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00003">3</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00001">1</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1182711a3aaeed1ae98cbd893697b3a6" name="a1182711a3aaeed1ae98cbd893697b3a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1182711a3aaeed1ae98cbd893697b3a6">&#9670;&#160;</a></span>OnSwitchContent()</h2>
@@ -217,24 +217,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">int</span> idTab = window.idTab;</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (idTab == 0)</div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            this.<a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>();</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (idTab != 1)</div>
-<div class="line"><span class="lineno">   14</span>        {</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   16</span>        }</div>
-<div class="line"><span class="lineno">   17</span>        this.<a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>();</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassLayerAdmin_html_a1d4df30fad18e310a632436d3d3f3ae4"><div class="ttname"><a href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">LayerAdmin.RefreshPolicy</a></div><div class="ttdeci">void RefreshPolicy()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00024">LayerAdmin.cs:24</a></div></div>
-<div class="ttc" id="aclassLayerAdmin_html_a5a20f925ea9f69a0af9efa3739b38686"><div class="ttname"><a href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">LayerAdmin.RefreshResearch</a></div><div class="ttdeci">void RefreshResearch()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00020">LayerAdmin.cs:20</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00003">3</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">switch</span> (window.idTab)</div>
+<div class="line"><span class="lineno">    6</span>        {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">    8</span>            <a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>();</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   11</span>            <a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>();</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassLayerAdmin_html_a1d4df30fad18e310a632436d3d3f3ae4"><div class="ttname"><a href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">LayerAdmin.RefreshPolicy</a></div><div class="ttdeci">void RefreshPolicy()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00020">LayerAdmin.cs:20</a></div></div>
+<div class="ttc" id="aclassLayerAdmin_html_a5a20f925ea9f69a0af9efa3739b38686"><div class="ttname"><a href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">LayerAdmin.RefreshResearch</a></div><div class="ttdeci">void RefreshResearch()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00016">LayerAdmin.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerAdmin_8cs_source.html#l00024">RefreshPolicy()</a>, and <a class="el" href="LayerAdmin_8cs_source.html#l00020">RefreshResearch()</a>.</p>
+<p class="reference">References <a class="el" href="LayerAdmin_8cs_source.html#l00020">RefreshPolicy()</a>, and <a class="el" href="LayerAdmin_8cs_source.html#l00016">RefreshResearch()</a>.</p>
 
 </div>
 </div>
@@ -261,11 +259,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00020">20</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerAdmin_8cs_source.html#l00005">OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerAdmin_8cs_source.html#l00003">OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -292,11 +290,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00020">20</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerAdmin_8cs_source.html#l00016">16</a> of file <a class="el" href="LayerAdmin_8cs_source.html">LayerAdmin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerAdmin_8cs_source.html#l00005">OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerAdmin_8cs_source.html#l00003">OnSwitchContent()</a>.</p>
 
 </div>
 </div>

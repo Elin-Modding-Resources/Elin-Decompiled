@@ -2,7 +2,6 @@ var classCharaBody =
 [
     [ "AddBodyPart", "classCharaBody.html#a3e3038aa109c21ed562d2765f846c44b", null ],
     [ "Equip", "classCharaBody.html#ad3696c212b3fbb5b8a71ceec7bd750cb", null ],
-    [ "g__CannotEquip", "classCharaBody.html#aaeaea3e81b9994d187c5e32ce0c936a6", null ],
     [ "GetAttackIndex", "classCharaBody.html#a6fa5613bbd6e1d5eb89412bd8356e676", null ],
     [ "GetAttackStyle", "classCharaBody.html#a9cfdd0d1f8a537ba091c626ef3dce421", null ],
     [ "GetAttackStyleElement", "classCharaBody.html#aa64f88c9b72bea695db0108ce9a8020e", null ],

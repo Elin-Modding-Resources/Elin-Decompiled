@@ -25,6 +25,6 @@ var classWidgetRoster =
     [ "moldDropperRight", "classWidgetRoster.html#a744775dd93a4f4c4689931258bd98dad", null ],
     [ "showName", "classWidgetRoster.html#ac71e7be0cd7c99d6467c5bc14cbdf8b1", null ],
     [ "AlwaysBottom", "classWidgetRoster.html#a67799a12c66c20702ce1e2fc839ac05d", null ],
-    [ "extra", "classWidgetRoster.html#ae13fa71778c87b5b6984238d95a7b896", null ],
+    [ "extra", "classWidgetRoster.html#aa324c553425e0d73a4ddebfd5f4e46f4", null ],
     [ "SetSiblingAfter", "classWidgetRoster.html#a86434fce98fe1ae6d799f799bbb7abd3", null ]
 ];

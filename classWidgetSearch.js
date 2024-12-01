@@ -15,6 +15,6 @@ var classWidgetSearch =
     [ "Instance", "classWidgetSearch.html#a686c7b45318a5618092249ac98448ce1", null ],
     [ "listWords", "classWidgetSearch.html#ad6026cf6b6ad02b82d9d25fdf541b376", null ],
     [ "selected", "classWidgetSearch.html#a6fffbd39f451735d25f7185387dc2285", null ],
-    [ "extra", "classWidgetSearch.html#a554c7e74f1e666d53e4a3f1bcd0e2722", null ],
-    [ "type", "classWidgetSearch.html#a5731e62cb8836423a32484e8b1531110", null ]
+    [ "extra", "classWidgetSearch.html#a5a0490e78b1070059667b7595ad4067d", null ],
+    [ "type", "classWidgetSearch.html#a2ae6a449eb638810532fd817cf937318", null ]
 ];

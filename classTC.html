@@ -203,7 +203,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00004">4</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00003">3</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab37a710fc4e162c90a9fcf8f0a680f90" name="ab37a710fc4e162c90a9fcf8f0a680f90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab37a710fc4e162c90a9fcf8f0a680f90">&#9670;&#160;</a></span>Kill()</h2>
@@ -228,15 +228,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00045">45</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_function" href="classTC.html#aa04010e72056991659175d15b4ce9f52">OnKill</a>();</div>
-<div class="line"><span class="lineno">   48</span>        PoolManager.Despawn(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   49</span>        this.render = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclassTC_html_aa04010e72056991659175d15b4ce9f52"><div class="ttname"><a href="classTC.html#aa04010e72056991659175d15b4ce9f52">TC.OnKill</a></div><div class="ttdeci">virtual void OnKill()</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00052">TC.cs:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00030">30</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_function" href="classTC.html#aa04010e72056991659175d15b4ce9f52">OnKill</a>();</div>
+<div class="line"><span class="lineno">   33</span>        PoolManager.Despawn(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">render</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassTC_html_a583972b4f4750d1207f17155a1b00ef5"><div class="ttname"><a href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">TC.render</a></div><div class="ttdeci">CardRenderer render</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00007">TC.cs:7</a></div></div>
+<div class="ttc" id="aclassTC_html_aa04010e72056991659175d15b4ce9f52"><div class="ttname"><a href="classTC.html#aa04010e72056991659175d15b4ce9f52">TC.OnKill</a></div><div class="ttdeci">virtual void OnKill()</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00037">TC.cs:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TC_8cs_source.html#l00052">OnKill()</a>.</p>
+<p class="reference">References <a class="el" href="TC_8cs_source.html#l00037">OnKill()</a>, and <a class="el" href="TC_8cs_source.html#l00007">render</a>.</p>
 
 </div>
 </div>
@@ -266,13 +267,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTCExtra.html#ac7942b42be58cbd780976b8d0b03462e">TCExtra</a>, <a class="el" href="classTCText.html#a2b09382c9b128aeabad5b03842704f2c">TCText</a>, and <a class="el" href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">TCUI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00040">40</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        base.transform.position = pos + this.<a class="code hl_property" href="classTC.html#a4c1769f2a54aa3764b467426a98e27cd">FixPos</a>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclassTC_html_a4c1769f2a54aa3764b467426a98e27cd"><div class="ttname"><a href="classTC.html#a4c1769f2a54aa3764b467426a98e27cd">TC.FixPos</a></div><div class="ttdeci">virtual Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00022">TC.cs:23</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00025">25</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        base.transform.position = pos + <a class="code hl_property" href="classTC.html#a4c1769f2a54aa3764b467426a98e27cd">FixPos</a>;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aclassTC_html_a4c1769f2a54aa3764b467426a98e27cd"><div class="ttname"><a href="classTC.html#a4c1769f2a54aa3764b467426a98e27cd">TC.FixPos</a></div><div class="ttdeci">virtual Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00013">TC.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TC_8cs_source.html#l00023">FixPos</a>.</p>
+<p class="reference">References <a class="el" href="TC_8cs_source.html#l00013">FixPos</a>.</p>
 
 </div>
 </div>
@@ -301,11 +302,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTCText.html#af9b7d546956cb237fdec2a7590bd1b57">TCText</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00052">52</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00037">37</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00045">Kill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00030">Kill()</a>.</p>
 
 </div>
 </div>
@@ -334,11 +335,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTCExtra.html#afb2f6d4cffdc55958db829020ed9f346">TCExtra</a>, <a class="el" href="classTCExtraProgress.html#ad430e6222bd25395256dd5de7174e0dc">TCExtraProgress</a>, <a class="el" href="classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8">TCOrbitChara</a>, and <a class="el" href="classTCOrbitThing.html#adf9f4b4cdf20808d42859cdc672d1a8f">TCOrbitThing</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00036">36</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00021">21</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00030">SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00015">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -366,16 +367,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00030">30</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        this.render = r;</div>
-<div class="line"><span class="lineno">   33</span>        this.<a class="code hl_function" href="classTC.html#a9aa3a15b464bde8c046510c0bc070c3e">OnSetOwner</a>();</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclassTC_html_a9aa3a15b464bde8c046510c0bc070c3e"><div class="ttname"><a href="classTC.html#a9aa3a15b464bde8c046510c0bc070c3e">TC.OnSetOwner</a></div><div class="ttdeci">virtual void OnSetOwner()</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00036">TC.cs:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00015">15</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">render</a> = r;</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_function" href="classTC.html#a9aa3a15b464bde8c046510c0bc070c3e">OnSetOwner</a>();</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassTC_html_a9aa3a15b464bde8c046510c0bc070c3e"><div class="ttname"><a href="classTC.html#a9aa3a15b464bde8c046510c0bc070c3e">TC.OnSetOwner</a></div><div class="ttdeci">virtual void OnSetOwner()</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00021">TC.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TC_8cs_source.html#l00036">OnSetOwner()</a>.</p>
+<p class="reference">References <a class="el" href="TC_8cs_source.html#l00021">OnSetOwner()</a>, and <a class="el" href="TC_8cs_source.html#l00007">render</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00590">CardRenderer.TrySpawnOrbit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00614">CardRenderer.TrySpawnOrbit()</a>.</p>
 
 </div>
 </div>
@@ -400,9 +401,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00056">56</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00005">5</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00613">CardRenderer.SpawnSimpleText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00640">CardRenderer.SpawnSimpleText()</a>.</p>
 
 </div>
 </div>
@@ -418,7 +419,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00058">58</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00007">7</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00030">Kill()</a>, and <a class="el" href="TC_8cs_source.html#l00015">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -443,15 +446,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00022">22</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> Vector3.zero;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00040">OnDraw()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00013">13</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TC_8cs_source.html#l00025">OnDraw()</a>.</p>
 
 </div>
 </div>
@@ -475,15 +472,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00014">14</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00367">CardRenderer.AddExtra()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00011">11</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00397">CardRenderer.AddExtra()</a>.</p>
 
 </div>
 </div>
@@ -507,16 +498,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00006">6</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">render</a>.<a class="code hl_variable" href="classCardRenderer.html#a1b281301d5d3ec59a4f89b6ca25fd7df">owner</a>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassCardRenderer_html_a1b281301d5d3ec59a4f89b6ca25fd7df"><div class="ttname"><a href="classCardRenderer.html#a1b281301d5d3ec59a4f89b6ca25fd7df">CardRenderer.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00704">CardRenderer.cs:704</a></div></div>
-<div class="ttc" id="aclassTC_html_a583972b4f4750d1207f17155a1b00ef5"><div class="ttname"><a href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">TC.render</a></div><div class="ttdeci">CardRenderer render</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00058">TC.cs:58</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TC_8cs_source.html#l00009">9</a> of file <a class="el" href="TC_8cs_source.html">TC.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

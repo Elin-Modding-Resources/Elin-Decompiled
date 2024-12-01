@@ -243,7 +243,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00008">8</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a98a1cc7f431367fdd87e2386482ac1b5" name="a98a1cc7f431367fdd87e2386482ac1b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98a1cc7f431367fdd87e2386482ac1b5">&#9670;&#160;</a></span>Init()</h2>
@@ -269,21 +269,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00012">12</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        this.text.text = <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>;</div>
-<div class="line"><span class="lineno">   15</span>        LayerProgress.completed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   16</span>        LayerProgress.isActive = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   17</span>        LayerProgress.progress = (this.value = 0f);</div>
-<div class="line"><span class="lineno">   18</span>        this.cg.alpha = 0f;</div>
-<div class="line"><span class="lineno">   19</span>        this.<a class="code hl_variable" href="classLayerProgress.html#aaf52d615261391dad8ec1978aec584de">cg</a>.DOFade(1f, 0.1f).SetEase(Ease.InCubic).SetDelay(0.2f);</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00042">42</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        text.text = <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>;</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">completed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="classLayerProgress.html#a606b5cca785a30eaa84258cb9aad4aca">isActive</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a> = (<a class="code hl_variable" href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">value</a> = 0f);</div>
+<div class="line"><span class="lineno">   48</span>        cg.alpha = 0f;</div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_variable" href="classLayerProgress.html#aaf52d615261391dad8ec1978aec584de">cg</a>.DOFade(1f, 0.1f).SetEase(Ease.InCubic).SetDelay(0.2f);</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 <div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">Emo2.hint</a></div><div class="ttdeci">@ hint</div></div>
-<div class="ttc" id="aclassLayerProgress_html_aaf52d615261391dad8ec1978aec584de"><div class="ttname"><a href="classLayerProgress.html#aaf52d615261391dad8ec1978aec584de">LayerProgress.cg</a></div><div class="ttdeci">CanvasGroup cg</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00124">LayerProgress.cs:124</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a606b5cca785a30eaa84258cb9aad4aca"><div class="ttname"><a href="classLayerProgress.html#a606b5cca785a30eaa84258cb9aad4aca">LayerProgress.isActive</a></div><div class="ttdeci">static bool isActive</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00012">LayerProgress.cs:12</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a81849f829c6447e5f42fcb062e24ab2d"><div class="ttname"><a href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">LayerProgress.completed</a></div><div class="ttdeci">static bool completed</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00010">LayerProgress.cs:10</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a946964fa5f63df5361f5c2ec5a40f816"><div class="ttname"><a href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">LayerProgress.progress</a></div><div class="ttdeci">static float progress</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00014">LayerProgress.cs:14</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_aaf52d615261391dad8ec1978aec584de"><div class="ttname"><a href="classLayerProgress.html#aaf52d615261391dad8ec1978aec584de">LayerProgress.cg</a></div><div class="ttdeci">CanvasGroup cg</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00038">LayerProgress.cs:38</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_afc2089a11d0bbbdadb3b20112a28a32a"><div class="ttname"><a href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">LayerProgress.value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00040">LayerProgress.cs:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00124">cg</a>, and <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>.</p>
+<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00038">cg</a>, <a class="el" href="LayerProgress_8cs_source.html#l00010">completed</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="LayerProgress_8cs_source.html#l00012">isActive</a>, <a class="el" href="LayerProgress_8cs_source.html#l00014">progress</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00040">value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00070">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00060">StartAsync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00100">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00090">StartAsync()</a>.</p>
 
 </div>
 </div>
@@ -321,23 +325,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00070">70</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a> layerProgress = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>&gt;();</div>
-<div class="line"><span class="lineno">   73</span>        layerProgress.<a class="code hl_function" href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">Init</a>(<a class="code hl_variable" href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">text</a>);</div>
-<div class="line"><span class="lineno">   74</span>        layerProgress.onComplete = <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>;</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> layerProgress;</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html"><div class="ttname"><a href="classLayerProgress.html">LayerProgress</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00010">LayerProgress.cs:11</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_a013bc2904bc3facd67406834a4332417"><div class="ttname"><a href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">LayerProgress.text</a></div><div class="ttdeci">Text text</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00112">LayerProgress.cs:112</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_a7feac98c713a7ebb87dc8b2d9a7aa8ed"><div class="ttname"><a href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">LayerProgress.onComplete</a></div><div class="ttdeci">Action onComplete</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00114">LayerProgress.cs:114</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_a98a1cc7f431367fdd87e2386482ac1b5"><div class="ttname"><a href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">LayerProgress.Init</a></div><div class="ttdeci">void Init(string hint)</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00012">LayerProgress.cs:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00100">100</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a> layerProgress = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>&gt;();</div>
+<div class="line"><span class="lineno">  103</span>        layerProgress.<a class="code hl_function" href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">Init</a>(<a class="code hl_variable" href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">text</a>);</div>
+<div class="line"><span class="lineno">  104</span>        layerProgress.onComplete = <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>;</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> layerProgress;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00021">ELayer.cs:21</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html"><div class="ttname"><a href="classLayerProgress.html">LayerProgress</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00008">LayerProgress.cs:9</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a013bc2904bc3facd67406834a4332417"><div class="ttname"><a href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">LayerProgress.text</a></div><div class="ttdeci">Text text</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00026">LayerProgress.cs:26</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a7feac98c713a7ebb87dc8b2d9a7aa8ed"><div class="ttname"><a href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">LayerProgress.onComplete</a></div><div class="ttdeci">Action onComplete</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00028">LayerProgress.cs:28</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a98a1cc7f431367fdd87e2386482ac1b5"><div class="ttname"><a href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">LayerProgress.Init</a></div><div class="ttdeci">void Init(string hint)</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00042">LayerProgress.cs:42</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00012">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00114">onComplete</a>, <a class="el" href="LayerProgress_8cs_source.html#l00112">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00028">onComplete</a>, <a class="el" href="LayerProgress_8cs_source.html#l00026">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00064">Steam.CreateUserContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00072">Steam.CreateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -381,26 +385,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00078">78</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.debug.dontUseThread)</div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            thread();</div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>();</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a> layerProgress = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>&gt;();</div>
-<div class="line"><span class="lineno">   87</span>        layerProgress.<a class="code hl_function" href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">Init</a>(<a class="code hl_variable" href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">text</a>);</div>
-<div class="line"><span class="lineno">   88</span>        layerProgress.onComplete = <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>;</div>
-<div class="line"><span class="lineno">   89</span>        ThreadPool.QueueUserWorkItem(delegate(<span class="keywordtype">object</span> a)</div>
-<div class="line"><span class="lineno">   90</span>        {</div>
-<div class="line"><span class="lineno">   91</span>            thread();</div>
-<div class="line"><span class="lineno">   92</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   93</span>        });</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00108">108</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#af463e182a25ed543159a8d2c877399d3">dontUseThread</a>)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            thread();</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>();</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a> layerProgress = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>&gt;();</div>
+<div class="line"><span class="lineno">  117</span>        layerProgress.<a class="code hl_function" href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">Init</a>(<a class="code hl_variable" href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">text</a>);</div>
+<div class="line"><span class="lineno">  118</span>        layerProgress.onComplete = <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>;</div>
+<div class="line"><span class="lineno">  119</span>        ThreadPool.QueueUserWorkItem(delegate</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            thread();</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_variable" href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">completed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  123</span>        });</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_af463e182a25ed543159a8d2c877399d3"><div class="ttname"><a href="classCoreDebug.html#af463e182a25ed543159a8d2c877399d3">CoreDebug.dontUseThread</a></div><div class="ttdeci">bool dontUseThread</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00121">CoreDebug.cs:121</a></div></div>
+<div class="ttc" id="aclassCore_html_a6e11d8c1b9f97aae05c0c72bcf490cc4"><div class="ttname"><a href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">Core.debug</a></div><div class="ttdeci">CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00025">Core.cs:25</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00007">ELayer.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerProgress_8cs_source.html#l00012">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00114">onComplete</a>, <a class="el" href="LayerProgress_8cs_source.html#l00112">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00010">completed</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="Core_8cs_source.html#l00025">Core.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00121">CoreDebug.dontUseThread</a>, <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00028">onComplete</a>, <a class="el" href="LayerProgress_8cs_source.html#l00026">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -444,20 +450,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00060">60</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a> layerProgress = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>&gt;();</div>
-<div class="line"><span class="lineno">   63</span>        layerProgress.<a class="code hl_function" href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">Init</a>(<a class="code hl_variable" href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">text</a>);</div>
-<div class="line"><span class="lineno">   64</span>        layerProgress.useUnitask = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   65</span>        layerProgress.unitask = task;</div>
-<div class="line"><span class="lineno">   66</span>        layerProgress.onCancel = <a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a>;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> layerProgress;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclassLayerProgress_html_a0b1344b3c0c9b2b18a4b2102f8126b85"><div class="ttname"><a href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">LayerProgress.onCancel</a></div><div class="ttdeci">Action onCancel</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00120">LayerProgress.cs:120</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00090">90</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a> layerProgress = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>&gt;();</div>
+<div class="line"><span class="lineno">   93</span>        layerProgress.<a class="code hl_function" href="classLayerProgress.html#a98a1cc7f431367fdd87e2386482ac1b5">Init</a>(<a class="code hl_variable" href="classLayerProgress.html#a013bc2904bc3facd67406834a4332417">text</a>);</div>
+<div class="line"><span class="lineno">   94</span>        layerProgress.useUnitask = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>        layerProgress.unitask = task;</div>
+<div class="line"><span class="lineno">   96</span>        layerProgress.onCancel = <a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a>;</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> layerProgress;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassLayerProgress_html_a0b1344b3c0c9b2b18a4b2102f8126b85"><div class="ttname"><a href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">LayerProgress.onCancel</a></div><div class="ttdeci">Action onCancel</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00034">LayerProgress.cs:34</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00012">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00120">onCancel</a>, <a class="el" href="LayerProgress_8cs_source.html#l00112">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00034">onCancel</a>, <a class="el" href="LayerProgress_8cs_source.html#l00026">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00013">TraitMoongate.OnUse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00021">TraitMoongate.OnUse()</a>.</p>
 
 </div>
 </div>
@@ -484,51 +490,51 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00022">22</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> != <span class="keyword">null</span> &amp;&amp; Input.GetKeyDown(KeyCode.Escape))</div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            LayerProgress.isActive = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   27</span>            this.Close();</div>
-<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a>();</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        this.minTime -= Time.deltaTime;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a> &lt; 0.9f)</div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            LayerProgress.progress += this.minProgress * Time.deltaTime;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        this.value = Mathf.Lerp(this.<a class="code hl_variable" href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">value</a>, <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a>, Time.deltaTime * <span class="keyword">this</span>.speed);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerProgress.html#a2bb3b9de11c4f4522510895de2c8d4fa">useUnitask</a> &amp;&amp; this.<a class="code hl_variable" href="classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832">unitask</a>.Status == UniTaskStatus.Succeeded)</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>        this.bar.value = Mathf.Clamp(this.<a class="code hl_variable" href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">value</a>, 0f, 1f);</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_variable" href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">completed</a> &amp;&amp; <span class="keyword">this</span>.minTime &lt; 0f)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            LayerProgress.progress = 1f;</div>
-<div class="line"><span class="lineno">   45</span>            this.speed *= 5f;</div>
-<div class="line"><span class="lineno">   46</span>            this.endTime -= Time.deltaTime;</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerProgress.html#a36b993f392fd01389a884bd9c624bbae">endTime</a> &gt; 0f)</div>
-<div class="line"><span class="lineno">   48</span>            {</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   50</span>            }</div>
-<div class="line"><span class="lineno">   51</span>            LayerProgress.isActive = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>            this.Close();</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   54</span>            {</div>
-<div class="line"><span class="lineno">   55</span>                this.<a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>();</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclassLayerProgress_html_a2bb3b9de11c4f4522510895de2c8d4fa"><div class="ttname"><a href="classLayerProgress.html#a2bb3b9de11c4f4522510895de2c8d4fa">LayerProgress.useUnitask</a></div><div class="ttdeci">bool useUnitask</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00122">LayerProgress.cs:122</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_a36b993f392fd01389a884bd9c624bbae"><div class="ttname"><a href="classLayerProgress.html#a36b993f392fd01389a884bd9c624bbae">LayerProgress.endTime</a></div><div class="ttdeci">float endTime</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00106">LayerProgress.cs:106</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_a81849f829c6447e5f42fcb062e24ab2d"><div class="ttname"><a href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">LayerProgress.completed</a></div><div class="ttdeci">static bool completed</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00096">LayerProgress.cs:96</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_a946964fa5f63df5361f5c2ec5a40f816"><div class="ttname"><a href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">LayerProgress.progress</a></div><div class="ttdeci">static float progress</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00100">LayerProgress.cs:100</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_af37eed653dbfdece0c0fd11b5f42b832"><div class="ttname"><a href="classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832">LayerProgress.unitask</a></div><div class="ttdeci">UniTask&lt; bool &gt; unitask</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00118">LayerProgress.cs:118</a></div></div>
-<div class="ttc" id="aclassLayerProgress_html_afc2089a11d0bbbdadb3b20112a28a32a"><div class="ttname"><a href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">LayerProgress.value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00126">LayerProgress.cs:126</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00052">52</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> != <span class="keyword">null</span> &amp;&amp; Input.GetKeyDown(KeyCode.Escape))</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="classLayerProgress.html#a606b5cca785a30eaa84258cb9aad4aca">isActive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   57</span>            Close();</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a>();</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classLayerProgress.html#a15e0783cbc529c2836e80cff3898210d">minTime</a> -= Time.deltaTime;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a> &lt; 0.9f)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a> += <a class="code hl_variable" href="classLayerProgress.html#ad5e24c39d975c7b88856110c5c86ca9e">minProgress</a> * Time.deltaTime;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">value</a> = Mathf.Lerp(<a class="code hl_variable" href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">value</a>, <a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a>, Time.deltaTime * <a class="code hl_variable" href="classLayerProgress.html#a2263859dd0cc0314db87c1dd10f94fdc">speed</a>);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerProgress.html#a2bb3b9de11c4f4522510895de2c8d4fa">useUnitask</a> &amp;&amp; <a class="code hl_variable" href="classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832">unitask</a>.Status == UniTaskStatus.Succeeded)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">completed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        bar.value = Mathf.Clamp(<a class="code hl_variable" href="classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a">value</a>, 0f, 1f);</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerProgress.html#a81849f829c6447e5f42fcb062e24ab2d">completed</a> || !(<a class="code hl_variable" href="classLayerProgress.html#a15e0783cbc529c2836e80cff3898210d">minTime</a> &lt; 0f))</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classLayerProgress.html#a946964fa5f63df5361f5c2ec5a40f816">progress</a> = 1f;</div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_variable" href="classLayerProgress.html#a2263859dd0cc0314db87c1dd10f94fdc">speed</a> *= 5f;</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_variable" href="classLayerProgress.html#a36b993f392fd01389a884bd9c624bbae">endTime</a> -= Time.deltaTime;</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classLayerProgress.html#a36b993f392fd01389a884bd9c624bbae">endTime</a> &gt; 0f))</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_variable" href="classLayerProgress.html#a606b5cca785a30eaa84258cb9aad4aca">isActive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>            Close();</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                <a class="code hl_variable" href="classLayerProgress.html#a7feac98c713a7ebb87dc8b2d9a7aa8ed">onComplete</a>();</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="ttc" id="aclassLayerProgress_html_a15e0783cbc529c2836e80cff3898210d"><div class="ttname"><a href="classLayerProgress.html#a15e0783cbc529c2836e80cff3898210d">LayerProgress.minTime</a></div><div class="ttdeci">float minTime</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00018">LayerProgress.cs:18</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a2263859dd0cc0314db87c1dd10f94fdc"><div class="ttname"><a href="classLayerProgress.html#a2263859dd0cc0314db87c1dd10f94fdc">LayerProgress.speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00016">LayerProgress.cs:16</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a2bb3b9de11c4f4522510895de2c8d4fa"><div class="ttname"><a href="classLayerProgress.html#a2bb3b9de11c4f4522510895de2c8d4fa">LayerProgress.useUnitask</a></div><div class="ttdeci">bool useUnitask</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00036">LayerProgress.cs:36</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_a36b993f392fd01389a884bd9c624bbae"><div class="ttname"><a href="classLayerProgress.html#a36b993f392fd01389a884bd9c624bbae">LayerProgress.endTime</a></div><div class="ttdeci">float endTime</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00020">LayerProgress.cs:20</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_ad5e24c39d975c7b88856110c5c86ca9e"><div class="ttname"><a href="classLayerProgress.html#ad5e24c39d975c7b88856110c5c86ca9e">LayerProgress.minProgress</a></div><div class="ttdeci">float minProgress</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00022">LayerProgress.cs:22</a></div></div>
+<div class="ttc" id="aclassLayerProgress_html_af37eed653dbfdece0c0fd11b5f42b832"><div class="ttname"><a href="classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832">LayerProgress.unitask</a></div><div class="ttdeci">UniTask&lt; bool &gt; unitask</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00032">LayerProgress.cs:32</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00096">completed</a>, <a class="el" href="LayerProgress_8cs_source.html#l00106">endTime</a>, <a class="el" href="LayerProgress_8cs_source.html#l00120">onCancel</a>, <a class="el" href="LayerProgress_8cs_source.html#l00114">onComplete</a>, <a class="el" href="LayerProgress_8cs_source.html#l00100">progress</a>, <a class="el" href="LayerProgress_8cs_source.html#l00118">unitask</a>, <a class="el" href="LayerProgress_8cs_source.html#l00122">useUnitask</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00126">value</a>.</p>
+<p class="reference">References <a class="el" href="LayerProgress_8cs_source.html#l00010">completed</a>, <a class="el" href="LayerProgress_8cs_source.html#l00020">endTime</a>, <a class="el" href="LayerProgress_8cs_source.html#l00012">isActive</a>, <a class="el" href="LayerProgress_8cs_source.html#l00022">minProgress</a>, <a class="el" href="LayerProgress_8cs_source.html#l00018">minTime</a>, <a class="el" href="LayerProgress_8cs_source.html#l00034">onCancel</a>, <a class="el" href="LayerProgress_8cs_source.html#l00028">onComplete</a>, <a class="el" href="LayerProgress_8cs_source.html#l00014">progress</a>, <a class="el" href="LayerProgress_8cs_source.html#l00016">speed</a>, <a class="el" href="LayerProgress_8cs_source.html#l00032">unitask</a>, <a class="el" href="LayerProgress_8cs_source.html#l00036">useUnitask</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00040">value</a>.</p>
 
 </div>
 </div>
@@ -545,7 +551,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00110">110</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
 </div>
 </div>
@@ -561,9 +567,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00124">124</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00038">38</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00012">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>.</p>
 
 </div>
 </div>
@@ -587,9 +593,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00096">96</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00108">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -605,9 +611,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00106">106</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00020">20</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -623,7 +629,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00116">116</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00030">30</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
 </div>
 </div>
@@ -647,7 +653,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00098">98</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00012">12</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -663,7 +671,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00108">108</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00022">22</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -679,7 +689,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00104">104</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -695,9 +707,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00120">120</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00034">34</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00064">Steam.CreateUserContent()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00060">StartAsync()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00072">Steam.CreateUserContent()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00090">StartAsync()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -713,9 +725,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00114">114</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00028">28</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00070">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00100">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -739,9 +751,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00100">100</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00014">14</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -757,7 +769,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00102">102</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00016">16</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -773,9 +787,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00112">112</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00026">26</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00070">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00060">StartAsync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00100">Start()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00090">StartAsync()</a>.</p>
 
 </div>
 </div>
@@ -791,9 +805,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00118">118</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00032">32</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -809,9 +823,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00122">122</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00036">36</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>
@@ -835,9 +849,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00126">126</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerProgress_8cs_source.html#l00040">40</a> of file <a class="el" href="LayerProgress_8cs_source.html">LayerProgress.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00022">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerProgress_8cs_source.html#l00042">Init()</a>, and <a class="el" href="LayerProgress_8cs_source.html#l00052">Update()</a>.</p>
 
 </div>
 </div>

@@ -92,38 +92,34 @@ $(document).ready(function(){initNavTree('LayerAdmin_8cs_source.html',''); initR
   <div class="headertitle"><div class="title">LayerAdmin.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="LayerAdmin_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classLayerAdmin.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classLayerAdmin.html">LayerAdmin</a> : <a class="code hl_class" href="classELayer.html">ELayer</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6">OnSwitchContent</a>(Window window)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordtype">int</span> idTab = window.idTab;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordflow">if</span> (idTab == 0)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            this.<a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">if</span> (idTab != 1)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this.<a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>();</div>
+<a href="LayerAdmin_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classLayerAdmin.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classLayerAdmin.html">LayerAdmin</a> : <a class="code hl_class" href="classELayer.html">ELayer</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6">OnSwitchContent</a>(Window window)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordflow">switch</span> (window.idTab)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            <a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">   16</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">   20</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">RefreshResearch</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">   20</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>()</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">   24</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">RefreshPolicy</a>()</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassLayerAdmin_html"><div class="ttname"><a href="classLayerAdmin.html">LayerAdmin</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00003">LayerAdmin.cs:4</a></div></div>
-<div class="ttc" id="aclassLayerAdmin_html_a1182711a3aaeed1ae98cbd893697b3a6"><div class="ttname"><a href="classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6">LayerAdmin.OnSwitchContent</a></div><div class="ttdeci">override void OnSwitchContent(Window window)</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00005">LayerAdmin.cs:5</a></div></div>
-<div class="ttc" id="aclassLayerAdmin_html_a1d4df30fad18e310a632436d3d3f3ae4"><div class="ttname"><a href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">LayerAdmin.RefreshPolicy</a></div><div class="ttdeci">void RefreshPolicy()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00024">LayerAdmin.cs:24</a></div></div>
-<div class="ttc" id="aclassLayerAdmin_html_a5a20f925ea9f69a0af9efa3739b38686"><div class="ttname"><a href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">LayerAdmin.RefreshResearch</a></div><div class="ttdeci">void RefreshResearch()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00020">LayerAdmin.cs:20</a></div></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerAdmin_html"><div class="ttname"><a href="classLayerAdmin.html">LayerAdmin</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00001">LayerAdmin.cs:2</a></div></div>
+<div class="ttc" id="aclassLayerAdmin_html_a1182711a3aaeed1ae98cbd893697b3a6"><div class="ttname"><a href="classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6">LayerAdmin.OnSwitchContent</a></div><div class="ttdeci">override void OnSwitchContent(Window window)</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00003">LayerAdmin.cs:3</a></div></div>
+<div class="ttc" id="aclassLayerAdmin_html_a1d4df30fad18e310a632436d3d3f3ae4"><div class="ttname"><a href="classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4">LayerAdmin.RefreshPolicy</a></div><div class="ttdeci">void RefreshPolicy()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00020">LayerAdmin.cs:20</a></div></div>
+<div class="ttc" id="aclassLayerAdmin_html_a5a20f925ea9f69a0af9efa3739b38686"><div class="ttname"><a href="classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686">LayerAdmin.RefreshResearch</a></div><div class="ttdeci">void RefreshResearch()</div><div class="ttdef"><b>Definition:</b> <a href="LayerAdmin_8cs_source.html#l00016">LayerAdmin.cs:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

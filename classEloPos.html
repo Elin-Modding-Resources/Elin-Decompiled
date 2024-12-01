@@ -204,8 +204,8 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a4059b0251f66a18cb56f544728796875">Info</a>
  }</td></tr>
 <tr class="separator:afe15ff5466a83e238eb5a07846684df4 inherit pub_types_interfaceIInspect"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c494d2cf78dc35a271c63678cc03189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIInspect.html#a9c494d2cf78dc35a271c63678cc03189">WriteNote</a> (UINote n, Action&lt; UINote &gt; onWriteNote=null, <a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">IInspect.NoteMode</a> mode=<a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67">IInspect.NoteMode.Default</a>, <a class="el" href="classRecipe.html">Recipe</a> recipe=null)</td></tr>
-<tr class="separator:a9c494d2cf78dc35a271c63678cc03189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53694e39c0b8ee3f771896555166a20c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c">WriteNote</a> (UINote n, Action&lt; UINote &gt; onWriteNote=null, <a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">NoteMode</a> mode=<a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67">NoteMode.Default</a>, <a class="el" href="classRecipe.html">Recipe</a> recipe=null)</td></tr>
+<tr class="separator:a53694e39c0b8ee3f771896555166a20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1a43bcf9a39d8dba914b60172c4c1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f">OnInspect</a> ()</td></tr>
 <tr class="separator:a0f1a43bcf9a39d8dba914b60172c4c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
@@ -260,9 +260,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00054">54</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00028">28</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,51 +312,51 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceIInspect.html#a9c494d2cf78dc35a271c63678cc03189">IInspect</a>.</p>
+<p>Implements <a class="el" href="interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00058">58</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        n.Clear();</div>
-<div class="line"><span class="lineno">   61</span>        UIItem uiitem = n.AddHeaderCard(this.<a class="code hl_variable" href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">zone</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   62</span>        uiitem.image2.sprite = this.<a class="code hl_variable" href="classEloPos.html#a80217efa1ea8c37aa878f703dee36b90">tile</a>.sprite;</div>
-<div class="line"><span class="lineno">   63</span>        uiitem.image2.SetNativeSize();</div>
-<div class="line"><span class="lineno">   64</span>        n.AddHeaderTopic(<span class="stringliteral">&quot;mainFaction&quot;</span>.lang(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   65</span>        n.AddText(this.<a class="code hl_variable" href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">zone</a>.<a class="code hl_property" href="classSpatial.html#a9f1dc994f35e1206e819cfa682807b8f">mainFaction</a>.<a class="code hl_variable" href="classFaction.html#a6694bb5bb34a1518821e566446ffc3e6">name</a>, FontColor.DontChange);</div>
-<div class="line"><span class="lineno">   66</span>        n.Space(0, 1);</div>
-<div class="line"><span class="lineno">   67</span>        n.AddHeaderTopic(<span class="stringliteral">&quot;listRoamers&quot;</span>.lang(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">globalCharas</a>.Values)</div>
-<div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a> == <span class="keyword">this</span>.zone)</div>
-<div class="line"><span class="lineno">   72</span>            {</div>
-<div class="line"><span class="lineno">   73</span>                n.AddText(chara.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>, FontColor.DontChange);</div>
-<div class="line"><span class="lineno">   74</span>                num++;</div>
-<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (num &gt; 5)</div>
-<div class="line"><span class="lineno">   76</span>                {</div>
-<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   78</span>                }</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            n.AddText(<span class="stringliteral">&quot;????????&quot;</span>, FontColor.DontChange);</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        n.Build();</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="ttc" id="aclassCardManager_html_a6d6d588d3c038e8919951bccaa2263d6"><div class="ttname"><a href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">CardManager.globalCharas</a></div><div class="ttdeci">CardManager.GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00065">CardManager.cs:65</a></div></div>
-<div class="ttc" id="aclassCard_html_a5a6f253b03f13d9e792836ee2ec678ec"><div class="ttname"><a href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Card.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02183">Card.cs:2184</a></div></div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00056">Chara.cs:57</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassEloPos_html_a4ed8e9c3819781ceb92eafaac65e2702"><div class="ttname"><a href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">EloPos.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00088">EloPos.cs:88</a></div></div>
-<div class="ttc" id="aclassEloPos_html_a80217efa1ea8c37aa878f703dee36b90"><div class="ttname"><a href="classEloPos.html#a80217efa1ea8c37aa878f703dee36b90">EloPos.tile</a></div><div class="ttdeci">EloMap.TileInfo tile</div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00092">EloPos.cs:92</a></div></div>
-<div class="ttc" id="aclassFaction_html_a6694bb5bb34a1518821e566446ffc3e6"><div class="ttname"><a href="classFaction.html#a6694bb5bb34a1518821e566446ffc3e6">Faction.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00436">Faction.2.cs:436</a></div></div>
-<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a9f1dc994f35e1206e819cfa682807b8f"><div class="ttname"><a href="classSpatial.html#a9f1dc994f35e1206e819cfa682807b8f">Spatial.mainFaction</a></div><div class="ttdeci">Faction mainFaction</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00410">Spatial.cs:411</a></div></div>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00032">32</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        n.Clear();</div>
+<div class="line"><span class="lineno">   35</span>        UIItem uIItem = n.AddHeaderCard(<a class="code hl_variable" href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">zone</a>.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>);</div>
+<div class="line"><span class="lineno">   36</span>        uIItem.image2.sprite = <a class="code hl_variable" href="classEloPos.html#a80217efa1ea8c37aa878f703dee36b90">tile</a>.sprite;</div>
+<div class="line"><span class="lineno">   37</span>        uIItem.image2.SetNativeSize();</div>
+<div class="line"><span class="lineno">   38</span>        n.AddHeaderTopic(<span class="stringliteral">&quot;mainFaction&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">   39</span>        n.AddText(<a class="code hl_variable" href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">zone</a>.<a class="code hl_property" href="classSpatial.html#a9f1dc994f35e1206e819cfa682807b8f">mainFaction</a>.<a class="code hl_variable" href="classFaction.html#a6e58c4e4735f47437d9bfa5bdb67f8d1">name</a>);</div>
+<div class="line"><span class="lineno">   40</span>        n.Space();</div>
+<div class="line"><span class="lineno">   41</span>        n.AddHeaderTopic(<span class="stringliteral">&quot;listRoamers&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> value <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.Values)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (value.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a> == <a class="code hl_variable" href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">zone</a>)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                n.AddText(value.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>);</div>
+<div class="line"><span class="lineno">   48</span>                num++;</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (num &gt; 5)</div>
+<div class="line"><span class="lineno">   50</span>                {</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   52</span>                }</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            n.AddText(<span class="stringliteral">&quot;????????&quot;</span>);</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        n.Build();</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassCardManager_html_a33a9778b2b0c1018c12d90e1b572e221"><div class="ttname"><a href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">CardManager.globalCharas</a></div><div class="ttdeci">GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00046">CardManager.cs:46</a></div></div>
+<div class="ttc" id="aclassCard_html_a5a6f253b03f13d9e792836ee2ec678ec"><div class="ttname"><a href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Card.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01935">Card.cs:1935</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00239">Chara.cs:240</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEloPos_html_a4ed8e9c3819781ceb92eafaac65e2702"><div class="ttname"><a href="classEloPos.html#a4ed8e9c3819781ceb92eafaac65e2702">EloPos.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00006">EloPos.cs:6</a></div></div>
+<div class="ttc" id="aclassEloPos_html_a80217efa1ea8c37aa878f703dee36b90"><div class="ttname"><a href="classEloPos.html#a80217efa1ea8c37aa878f703dee36b90">EloPos.tile</a></div><div class="ttdeci">EloMap.TileInfo tile</div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00010">EloPos.cs:10</a></div></div>
+<div class="ttc" id="aclassFaction_html_a6e58c4e4735f47437d9bfa5bdb67f8d1"><div class="ttname"><a href="classFaction.html#a6e58c4e4735f47437d9bfa5bdb67f8d1">Faction.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00436">Faction.2.cs:436</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00152">Game.cs:152</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00493">Spatial.cs:493</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a9f1dc994f35e1206e819cfa682807b8f"><div class="ttname"><a href="classSpatial.html#a9f1dc994f35e1206e819cfa682807b8f">Spatial.mainFaction</a></div><div class="ttdeci">Faction mainFaction</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00429">Spatial.cs:430</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="Chara_8cs_source.html#l00057">Chara.currentZone</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="CardManager_8cs_source.html#l00065">CardManager.globalCharas</a>, <a class="el" href="Spatial_8cs_source.html#l00411">Spatial.mainFaction</a>, <a class="el" href="Card_8cs_source.html#l02184">Card.Name</a>, <a class="el" href="Faction_82_8cs_source.html#l00436">Faction.name</a>, <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="EloPos_8cs_source.html#l00092">tile</a>, and <a class="el" href="EloPos_8cs_source.html#l00088">zone</a>.</p>
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00152">Game.cards</a>, <a class="el" href="Chara_8cs_source.html#l00240">Chara.currentZone</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="CardManager_8cs_source.html#l00046">CardManager.globalCharas</a>, <a class="el" href="Spatial_8cs_source.html#l00430">Spatial.mainFaction</a>, <a class="el" href="Card_8cs_source.html#l01935">Card.Name</a>, <a class="el" href="Faction_82_8cs_source.html#l00436">Faction.name</a>, <a class="el" href="Spatial_8cs_source.html#l00493">Spatial.Name</a>, <a class="el" href="EloPos_8cs_source.html#l00010">tile</a>, and <a class="el" href="EloPos_8cs_source.html#l00006">zone</a>.</p>
 
 </div>
 </div>
@@ -373,7 +373,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00090">90</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00008">8</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00094">94</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00012">12</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00096">96</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00014">14</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
 
 </div>
 </div>
@@ -421,9 +421,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00092">92</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00010">10</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EloPos_8cs_source.html#l00058">WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EloPos_8cs_source.html#l00032">WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -439,9 +439,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00088">88</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00006">6</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EloPos_8cs_source.html#l00058">WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EloPos_8cs_source.html#l00032">WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -466,16 +466,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00014">14</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a636c0f359588fb403c3460f84bcf45af">elomapActor</a>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
-<div class="ttc" id="aclassScene_html_a636c0f359588fb403c3460f84bcf45af"><div class="ttname"><a href="classScene.html#a636c0f359588fb403c3460f84bcf45af">Scene.elomapActor</a></div><div class="ttdeci">EloMapActor elomapActor</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01069">Scene.cs:1069</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00018">18</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+
 </div>
 </div>
 <a id="a383d2de09ce43d1c2f4e99a9cae3f3d8" name="a383d2de09ce43d1c2f4e99a9cae3f3d8"></a>
@@ -500,14 +492,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00022">22</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00020">20</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+
 </div>
 </div>
 <a id="a957f6697c809218d850ccc52b0c54445" name="a957f6697c809218d850ccc52b0c54445"></a>
@@ -530,15 +516,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00006">6</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#a636c0f359588fb403c3460f84bcf45af">elomapActor</a>.<a class="code hl_variable" href="classEloMapActor.html#aebdccd457884172c1be9c544509e57e2">elomap</a>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassEloMapActor_html_aebdccd457884172c1be9c544509e57e2"><div class="ttname"><a href="classEloMapActor.html#aebdccd457884172c1be9c544509e57e2">EloMapActor.elomap</a></div><div class="ttdeci">EloMap elomap</div><div class="ttdef"><b>Definition:</b> <a href="EloMapActor_8cs_source.html#l00097">EloMapActor.cs:97</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00016">16</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6a6ead82d73fb95c617ae700fe9c1658" name="a6a6ead82d73fb95c617ae700fe9c1658"></a>
@@ -563,16 +542,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#aae89fd529e6603011da5cc9a070fc9e3">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00030">30</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classEloPos.html#a98339b6e59fad9adf45dce289f6bdc1d">gx</a>.ToString() + <span class="stringliteral">&quot;/&quot;</span> + this.<a class="code hl_variable" href="classEloPos.html#a966fdbe82f891b5867865e0730ee89dc">gy</a>.ToString();</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclassEloPos_html_a966fdbe82f891b5867865e0730ee89dc"><div class="ttname"><a href="classEloPos.html#a966fdbe82f891b5867865e0730ee89dc">EloPos.gy</a></div><div class="ttdeci">int gy</div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00096">EloPos.cs:96</a></div></div>
-<div class="ttc" id="aclassEloPos_html_a98339b6e59fad9adf45dce289f6bdc1d"><div class="ttname"><a href="classEloPos.html#a98339b6e59fad9adf45dce289f6bdc1d">EloPos.gx</a></div><div class="ttdeci">int gx</div><div class="ttdef"><b>Definition:</b> <a href="EloPos_8cs_source.html#l00094">EloPos.cs:94</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00022">22</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+
 </div>
 </div>
 <a id="a376750f7246b60a5f902e67b25253f5e" name="a376750f7246b60a5f902e67b25253f5e"></a>
@@ -597,16 +568,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00038">38</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Invalid</a>;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
-<div class="ttc" id="aclassPoint_html_a0df46e81ce85121a6dc87a8af523c0b4"><div class="ttname"><a href="classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4">Point.Invalid</a></div><div class="ttdeci">static Point Invalid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01504">Point.cs:1504</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00024">24</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+
 </div>
 </div>
 <a id="a3db3ccac22e648bfa0f55d16d198eb85" name="a3db3ccac22e648bfa0f55d16d198eb85"></a>
@@ -631,14 +594,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#ac1ff8db98a0e48a20ab4b46bdd6e1be3">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00046">46</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> Vector3.zero;</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="EloPos_8cs_source.html#l00026">26</a> of file <a class="el" href="EloPos_8cs_source.html">EloPos.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -196,7 +196,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00255">255</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00013">13</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a861a8e186837455a11a11d2b4a9d8772" name="a861a8e186837455a11a11d2b4a9d8772"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a861a8e186837455a11a11d2b4a9d8772">&#9670;&#160;</a></span>GetItem()</h2>
@@ -222,17 +222,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00293">293</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  294</span>        {</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">if</span> (index &gt;= this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>.Count)</div>
-<div class="line"><span class="lineno">  296</span>            {</div>
-<div class="line"><span class="lineno">  297</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  298</span>            }</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index];</div>
-<div class="line"><span class="lineno">  300</span>        }</div>
-<div class="ttc" id="aclassHotbar_1_1Page_html_a32b5445b23c0b46e953e3845fe743c3b"><div class="ttname"><a href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">Hotbar.Page.items</a></div><div class="ttdeci">List&lt; HotItem &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Hotbar_8cs_source.html#l00303">Hotbar.cs:303</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00057">57</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (index &gt;= <a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>.Count)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index];</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="ttc" id="aclassHotbar_1_1Page_html_a32b5445b23c0b46e953e3845fe743c3b"><div class="ttname"><a href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">Hotbar.Page.items</a></div><div class="ttdeci">List&lt; HotItem &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Hotbar_8cs_source.html#l00016">Hotbar.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Hotbar_8cs_source.html#l00303">Hotbar.Page.items</a>.</p>
+<p class="reference">References <a class="el" href="Hotbar_8cs_source.html#l00016">Hotbar.Page.items</a>.</p>
 
 </div>
 </div>
@@ -276,33 +276,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00269">269</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>        {</div>
-<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">if</span> (index == -1)</div>
-<div class="line"><span class="lineno">  272</span>            {</div>
-<div class="line"><span class="lineno">  273</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>.Count; i++)</div>
-<div class="line"><span class="lineno">  274</span>                {</div>
-<div class="line"><span class="lineno">  275</span>                    <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[i] == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  276</span>                    {</div>
-<div class="line"><span class="lineno">  277</span>                        index = i;</div>
-<div class="line"><span class="lineno">  278</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  279</span>                    }</div>
-<div class="line"><span class="lineno">  280</span>                }</div>
-<div class="line"><span class="lineno">  281</span>                <span class="keywordflow">if</span> (index == -1)</div>
-<div class="line"><span class="lineno">  282</span>                {</div>
-<div class="line"><span class="lineno">  283</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  284</span>                }</div>
-<div class="line"><span class="lineno">  285</span>            }</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index] != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  287</span>            {</div>
-<div class="line"><span class="lineno">  288</span>                this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index].button = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  289</span>            }</div>
-<div class="line"><span class="lineno">  290</span>            this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index] = item;</div>
-<div class="line"><span class="lineno">  291</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00033">33</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (index == -1)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>.Count; i++)</div>
+<div class="line"><span class="lineno">   38</span>                {</div>
+<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[i] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   40</span>                    {</div>
+<div class="line"><span class="lineno">   41</span>                        index = i;</div>
+<div class="line"><span class="lineno">   42</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   43</span>                    }</div>
+<div class="line"><span class="lineno">   44</span>                }</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (index == -1)</div>
+<div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   48</span>                }</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index] != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index].button = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[index] = item;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Hotbar_8cs_source.html#l00303">Hotbar.Page.items</a>.</p>
+<p class="reference">References <a class="el" href="Hotbar_8cs_source.html#l00016">Hotbar.Page.items</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Hotbar_8cs_source.html#l00119">Hotbar.SetItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Hotbar_8cs_source.html#l00173">Hotbar.SetItem()</a>.</p>
 
 </div>
 </div>
@@ -319,9 +319,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00303">303</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00016">16</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Hotbar_8cs_source.html#l00293">Hotbar.Page.GetItem()</a>, and <a class="el" href="Hotbar_8cs_source.html#l00269">Hotbar.Page.SetItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Hotbar_8cs_source.html#l00057">Hotbar.Page.GetItem()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00205">WidgetHotbar.GetItem()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00137">WidgetHotbar.Rebuild()</a>, <a class="el" href="Hotbar_8cs_source.html#l00033">Hotbar.Page.SetItem()</a>, <a class="el" href="HotItem_8cs_source.html#l00050">HotItem.TextHotkey()</a>, and <a class="el" href="Hotbar_8cs_source.html#l00133">Hotbar.ValidatePage()</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00306">306</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00019">19</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
 
 </div>
 </div>
@@ -362,18 +362,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00257">257</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>        {</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  260</span>            {</div>
-<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a15a3fd2d7c77bf1842e7c23b6e75995f">selected</a> != -1)</div>
-<div class="line"><span class="lineno">  262</span>                {</div>
-<div class="line"><span class="lineno">  263</span>                    <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[this.<a class="code hl_variable" href="classHotbar_1_1Page.html#a15a3fd2d7c77bf1842e7c23b6e75995f">selected</a>];</div>
-<div class="line"><span class="lineno">  264</span>                }</div>
-<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  266</span>            }</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="ttc" id="aclassHotbar_1_1Page_html_a15a3fd2d7c77bf1842e7c23b6e75995f"><div class="ttname"><a href="classHotbar_1_1Page.html#a15a3fd2d7c77bf1842e7c23b6e75995f">Hotbar.Page.selected</a></div><div class="ttdeci">int selected</div><div class="ttdef"><b>Definition:</b> <a href="Hotbar_8cs_source.html#l00306">Hotbar.cs:306</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Hotbar_8cs_source.html#l00021">21</a> of file <a class="el" href="Hotbar_8cs_source.html">Hotbar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classHotbar_1_1Page.html#a15a3fd2d7c77bf1842e7c23b6e75995f">selected</a> != -1)</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="classHotbar_1_1Page.html#a32b5445b23c0b46e953e3845fe743c3b">items</a>[<a class="code hl_variable" href="classHotbar_1_1Page.html#a15a3fd2d7c77bf1842e7c23b6e75995f">selected</a>];</div>
+<div class="line"><span class="lineno">   28</span>                }</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="ttc" id="aclassHotbar_1_1Page_html_a15a3fd2d7c77bf1842e7c23b6e75995f"><div class="ttname"><a href="classHotbar_1_1Page.html#a15a3fd2d7c77bf1842e7c23b6e75995f">Hotbar.Page.selected</a></div><div class="ttdeci">int selected</div><div class="ttdef"><b>Definition:</b> <a href="Hotbar_8cs_source.html#l00019">Hotbar.cs:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

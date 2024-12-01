@@ -1,7 +1,5 @@
 var classContentConfigInput =
 [
-    [ "g___onInstantiate", "classContentConfigInput.html#a880f59fd25b56f390e0e39df178c3413", null ],
-    [ "g___refreshList", "classContentConfigInput.html#a9beb41dcb4df6fb751133a07a210b50f", null ],
     [ "OnInstantiate", "classContentConfigInput.html#a934014e8a43a071cce52976fe981a0ac", null ],
     [ "b_ddMiddleClick", "classContentConfigInput.html#a10f1a7a8dec85ce71bc0d889e8f2dcdb", null ],
     [ "b_ddMiddleClickLong", "classContentConfigInput.html#aaaf4789670bf46a5a9c3d250e8dafa13", null ],

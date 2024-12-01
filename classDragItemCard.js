@@ -7,7 +7,7 @@ var classDragItemCard =
     [ "OnEndDrag", "classDragItemCard.html#ac7640b14d7c49d40f6b33fd515a6f845", null ],
     [ "OnStartDrag", "classDragItemCard.html#a82ef8017ca98c1031ce6c032a6b8ead4", null ],
     [ "button", "classDragItemCard.html#a8502822fa9188bf94b7a81bed9b31d06", null ],
-    [ "from", "classDragItemCard.html#aac992c6dd29c2ac75121492603525be5", null ],
-    [ "to", "classDragItemCard.html#a353c849ac41f26dedf2ab1432ad3f851", null ],
+    [ "from", "classDragItemCard.html#a9d215f91ea46d7322c0a2bff4f2c8476", null ],
+    [ "to", "classDragItemCard.html#ac57f9fe5222cd571e81a58a5f9c910b1", null ],
     [ "Button", "classDragItemCard.html#a3836e2480a6b4b4a08fd7e8ba55e9fa8", null ]
 ];

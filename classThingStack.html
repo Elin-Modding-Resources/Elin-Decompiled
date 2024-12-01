@@ -192,7 +192,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00004">4</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00003">3</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a93683e1ac70508bb0d83480990b8a3ad" name="a93683e1ac70508bb0d83480990b8a3ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93683e1ac70508bb0d83480990b8a3ad">&#9670;&#160;</a></span>Add()</h2>
@@ -218,22 +218,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00006">6</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_variable" href="classThingStack.html#aa7d61e8c8d0f2e4707a1774363596a00">list</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(t);</div>
-<div class="line"><span class="lineno">    9</span>        this.count += t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; <span class="keyword">this</span>.max)</div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            this.max = t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="ttc" id="aclassActPlan_1_1List_html_afd0ce1c0b760d6242ed7898f5dd85d2f"><div class="ttname"><a href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">ActPlan.List.Add</a></div><div class="ttdeci">void Add(Act a, string s=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00823">ActPlan.cs:823</a></div></div>
-<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
-<div class="ttc" id="aclassThingStack_html_aa7d61e8c8d0f2e4707a1774363596a00"><div class="ttname"><a href="classThingStack.html#aa7d61e8c8d0f2e4707a1774363596a00">ThingStack.list</a></div><div class="ttdeci">List&lt; Thing &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ThingStack_8cs_source.html#l00016">ThingStack.cs:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00013">13</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_variable" href="classThingStack.html#aa7d61e8c8d0f2e4707a1774363596a00">list</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(t);</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="classThingStack.html#af4ec3cd93e91967ef9b1eb41840be0eb">count</a> += t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; <a class="code hl_variable" href="classThingStack.html#a1ffd834aff234c46914535ff69b29bf1">max</a>)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <a class="code hl_variable" href="classThingStack.html#a1ffd834aff234c46914535ff69b29bf1">max</a> = t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassActPlan_1_1List_html_afd0ce1c0b760d6242ed7898f5dd85d2f"><div class="ttname"><a href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">ActPlan.List.Add</a></div><div class="ttdeci">void Add(Act a, string s=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00011">ActPlan.cs:11</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00147">Card.cs:148</a></div></div>
+<div class="ttc" id="aclassThingStack_html_a1ffd834aff234c46914535ff69b29bf1"><div class="ttname"><a href="classThingStack.html#a1ffd834aff234c46914535ff69b29bf1">ThingStack.max</a></div><div class="ttdeci">int max</div><div class="ttdef"><b>Definition:</b> <a href="ThingStack_8cs_source.html#l00011">ThingStack.cs:11</a></div></div>
+<div class="ttc" id="aclassThingStack_html_aa7d61e8c8d0f2e4707a1774363596a00"><div class="ttname"><a href="classThingStack.html#aa7d61e8c8d0f2e4707a1774363596a00">ThingStack.list</a></div><div class="ttdeci">List&lt; Thing &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ThingStack_8cs_source.html#l00005">ThingStack.cs:5</a></div></div>
+<div class="ttc" id="aclassThingStack_html_af4ec3cd93e91967ef9b1eb41840be0eb"><div class="ttname"><a href="classThingStack.html#af4ec3cd93e91967ef9b1eb41840be0eb">ThingStack.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="ThingStack_8cs_source.html#l00007">ThingStack.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00823">ActPlan.List.Add()</a>, <a class="el" href="ThingStack_8cs_source.html#l00016">list</a>, and <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>.</p>
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00011">ActPlan.List.Add()</a>, <a class="el" href="ThingStack_8cs_source.html#l00007">count</a>, <a class="el" href="ThingStack_8cs_source.html#l00005">list</a>, <a class="el" href="ThingStack_8cs_source.html#l00011">max</a>, and <a class="el" href="Card_8cs_source.html#l00148">Card.Num</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00577">ThingContainer.GetThingStack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00693">ThingContainer.GetThingStack()</a>.</p>
 
 </div>
 </div>
@@ -250,9 +252,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00018">18</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00007">7</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ButtonGrid_8cs_source.html#l00571">ButtonGrid.RefreshCraftable()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00361">UIRecipeInfo.RefreshList()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00646">ButtonGrid.WriteReqMat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingStack_8cs_source.html#l00013">Add()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00574">ButtonGrid.RefreshCraftable()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00644">ButtonGrid.WriteReqMat()</a>.</p>
 
 </div>
 </div>
@@ -268,9 +270,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00016">16</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00005">5</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingStack_8cs_source.html#l00006">Add()</a>, <a class="el" href="QuestTrackCraft_8cs_source.html#l00030">QuestTrackCraft.GetDetail()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00050">DropdownGrid.ListIngredients()</a>, <a class="el" href="Props_8cs_source.html#l00262">Props.ListThingStacksInCategory()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00285">DropdownGrid.TrySelect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingStack_8cs_source.html#l00013">Add()</a>, <a class="el" href="QuestTrackCraft_8cs_source.html#l00028">QuestTrackCraft.GetDetail()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00083">DropdownGrid.ListIngredients()</a>, <a class="el" href="Props_8cs_source.html#l00301">Props.ListThingStacksInCategory()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00316">DropdownGrid.TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -286,9 +288,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00022">22</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00011">11</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00837">Recipe.IsCraftable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingStack_8cs_source.html#l00013">Add()</a>, and <a class="el" href="Recipe_8cs_source.html#l00856">Recipe.IsCraftable()</a>.</p>
 
 </div>
 </div>
@@ -304,7 +306,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00020">20</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ThingStack_8cs_source.html#l00009">9</a> of file <a class="el" href="ThingStack_8cs_source.html">ThingStack.cs</a>.</p>
 
 </div>
 </div>

@@ -20,5 +20,5 @@ var classLayerAbility =
     [ "idGroup", "classLayerAbility.html#ae02d0c2a293eaa6beecd9a729b800b12", null ],
     [ "Instance", "classLayerAbility.html#a6b807f2d25164920a38c19aaa7fe43e4", null ],
     [ "list", "classLayerAbility.html#a5ddcbcf983118b23fd2526c77c00878d", null ],
-    [ "config", "classLayerAbility.html#abc1361b374283e1fbe1e0ea3c85109a7", null ]
+    [ "config", "classLayerAbility.html#ae1d61d07b1b38780b8888e7ac0599f5e", null ]
 ];

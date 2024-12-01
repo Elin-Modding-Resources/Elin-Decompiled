@@ -124,12 +124,12 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a919864547c4267a1e98f8a73938c74b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">IsJapanese</a> (string <a class="el" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>)</td></tr>
+<tr class="memitem:a919864547c4267a1e98f8a73938c74b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">IsJapanese</a> (string text)</td></tr>
 <tr class="separator:a919864547c4267a1e98f8a73938c74b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00885">885</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00419">419</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a919864547c4267a1e98f8a73938c74b8" name="a919864547c4267a1e98f8a73938c74b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a919864547c4267a1e98f8a73938c74b8">&#9670;&#160;</a></span>IsJapanese()</h2>
@@ -155,15 +155,12 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00958">958</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  959</span>        {</div>
-<div class="line"><span class="lineno">  960</span>            <span class="keywordflow">return</span> Regex.IsMatch(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="stringliteral">&quot;[\\p{IsHiragana}\\p{IsKatakana}\\p{IsCJKUnifiedIdeographs}]+&quot;</span>);</div>
-<div class="line"><span class="lineno">  961</span>        }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00476">476</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  477</span>        {</div>
+<div class="line"><span class="lineno">  478</span>            <span class="keywordflow">return</span> Regex.IsMatch(text, <span class="stringliteral">&quot;[\\p{IsHiragana}\\p{IsKatakana}\\p{IsCJKUnifiedIdeographs}]+&quot;</span>);</div>
+<div class="line"><span class="lineno">  479</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00939">CoreConfig.BackerContentConfig.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00457">CoreConfig.BackerContentConfig.Show()</a>.</p>
 
 </div>
 </div>
@@ -191,18 +188,18 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00911">911</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  912</span>        {</div>
-<div class="line"><span class="lineno">  913</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classCoreConfig_1_1BackerContentConfig.html#adf16f4fe24127cf18f50c5e04de39572">Show</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">backers</a>.map.TryGetValue(<span class="keywordtype">id</span>, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">  914</span>        }</div>
-<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_adf16f4fe24127cf18f50c5e04de39572"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#adf16f4fe24127cf18f50c5e04de39572">CoreConfig.BackerContentConfig.Show</a></div><div class="ttdeci">bool Show(int id)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00911">CoreConfig.cs:911</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_ab4cf7dce730d8197f24cb4da0832b5d7"><div class="ttname"><a href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">SourceManager.backers</a></div><div class="ttdeci">SourceBacker backers</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00217">SourceManager.cs:217</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00429">429</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>        {</div>
+<div class="line"><span class="lineno">  431</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classCoreConfig_1_1BackerContentConfig.html#adf16f4fe24127cf18f50c5e04de39572">Show</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">backers</a>.map.TryGetValue(<span class="keywordtype">id</span>));</div>
+<div class="line"><span class="lineno">  432</span>        }</div>
+<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_adf16f4fe24127cf18f50c5e04de39572"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#adf16f4fe24127cf18f50c5e04de39572">CoreConfig.BackerContentConfig.Show</a></div><div class="ttdeci">bool Show(int id)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00429">CoreConfig.cs:429</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab4cf7dce730d8197f24cb4da0832b5d7"><div class="ttname"><a href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">SourceManager.backers</a></div><div class="ttdeci">SourceBacker backers</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00082">SourceManager.cs:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00217">SourceManager.backers</a>, <a class="el" href="CoreConfig_8cs_source.html#l00911">CoreConfig.BackerContentConfig.Show()</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00082">SourceManager.backers</a>, <a class="el" href="CoreConfig_8cs_source.html#l00429">CoreConfig.BackerContentConfig.Show()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00911">CoreConfig.BackerContentConfig.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Chara_8cs_source.html#l01134">Chara.GetName()</a>, <a class="el" href="Cell_8cs_source.html#l01600">Cell.GetObjName()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00429">CoreConfig.BackerContentConfig.Show()</a>.</p>
 
 </div>
 </div>
@@ -230,32 +227,32 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00916">916</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  917</span>        {</div>
-<div class="line"><span class="lineno">  918</span>            <span class="keywordflow">if</span> (row == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  919</span>            {</div>
-<div class="line"><span class="lineno">  920</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  921</span>            }</div>
-<div class="line"><span class="lineno">  922</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">FilterNone</a>)</div>
-<div class="line"><span class="lineno">  923</span>            {</div>
-<div class="line"><span class="lineno">  924</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  925</span>            }</div>
-<div class="line"><span class="lineno">  926</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">FilterAll</a>)</div>
-<div class="line"><span class="lineno">  927</span>            {</div>
-<div class="line"><span class="lineno">  928</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  929</span>            }</div>
-<div class="line"><span class="lineno">  930</span>            <span class="keywordtype">bool</span> flag = row.lang == <span class="stringliteral">&quot;JP&quot;</span> || row.lang == <span class="stringliteral">&quot;CN&quot;</span>;</div>
-<div class="line"><span class="lineno">  931</span>            <span class="keywordtype">string</span> langCode = Lang.langCode;</div>
-<div class="line"><span class="lineno">  932</span>            <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span> || langCode == <span class="stringliteral">&quot;CN&quot;</span>)</div>
-<div class="line"><span class="lineno">  933</span>            {</div>
-<div class="line"><span class="lineno">  934</span>                <span class="keywordflow">return</span> flag;</div>
-<div class="line"><span class="lineno">  935</span>            }</div>
-<div class="line"><span class="lineno">  936</span>            <span class="keywordflow">return</span> !flag;</div>
-<div class="line"><span class="lineno">  937</span>        }</div>
-<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a090c244be8008cefd203291380ba4cbc"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">CoreConfig.BackerContentConfig.FilterNone</a></div><div class="ttdeci">bool FilterNone</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00903">CoreConfig.cs:904</a></div></div>
-<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a7cf341c52b2d2c57f023672b9b3d7bbf"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">CoreConfig.BackerContentConfig.FilterAll</a></div><div class="ttdeci">bool FilterAll</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00887">CoreConfig.cs:888</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00434">434</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            <span class="keywordflow">if</span> (row == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  437</span>            {</div>
+<div class="line"><span class="lineno">  438</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  439</span>            }</div>
+<div class="line"><span class="lineno">  440</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">FilterNone</a>)</div>
+<div class="line"><span class="lineno">  441</span>            {</div>
+<div class="line"><span class="lineno">  442</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  443</span>            }</div>
+<div class="line"><span class="lineno">  444</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">FilterAll</a>)</div>
+<div class="line"><span class="lineno">  445</span>            {</div>
+<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  447</span>            }</div>
+<div class="line"><span class="lineno">  448</span>            <span class="keywordtype">bool</span> flag = row.lang == <span class="stringliteral">&quot;JP&quot;</span> || row.lang == <span class="stringliteral">&quot;CN&quot;</span>;</div>
+<div class="line"><span class="lineno">  449</span>            <span class="keywordtype">string</span> langCode = Lang.langCode;</div>
+<div class="line"><span class="lineno">  450</span>            <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span> || langCode == <span class="stringliteral">&quot;CN&quot;</span>)</div>
+<div class="line"><span class="lineno">  451</span>            {</div>
+<div class="line"><span class="lineno">  452</span>                <span class="keywordflow">return</span> flag;</div>
+<div class="line"><span class="lineno">  453</span>            }</div>
+<div class="line"><span class="lineno">  454</span>            <span class="keywordflow">return</span> !flag;</div>
+<div class="line"><span class="lineno">  455</span>        }</div>
+<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a090c244be8008cefd203291380ba4cbc"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">CoreConfig.BackerContentConfig.FilterNone</a></div><div class="ttdeci">bool FilterNone</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00427">CoreConfig.cs:427</a></div></div>
+<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a7cf341c52b2d2c57f023672b9b3d7bbf"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">CoreConfig.BackerContentConfig.FilterAll</a></div><div class="ttdeci">bool FilterAll</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00423">CoreConfig.cs:423</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00888">CoreConfig.BackerContentConfig.FilterAll</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00904">CoreConfig.BackerContentConfig.FilterNone</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00423">CoreConfig.BackerContentConfig.FilterAll</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00427">CoreConfig.BackerContentConfig.FilterNone</a>.</p>
 
 </div>
 </div>
@@ -283,27 +280,27 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00939">939</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  940</span>        {</div>
-<div class="line"><span class="lineno">  941</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">FilterNone</a>)</div>
-<div class="line"><span class="lineno">  942</span>            {</div>
-<div class="line"><span class="lineno">  943</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  944</span>            }</div>
-<div class="line"><span class="lineno">  945</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">FilterAll</a>)</div>
-<div class="line"><span class="lineno">  946</span>            {</div>
-<div class="line"><span class="lineno">  947</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  948</span>            }</div>
-<div class="line"><span class="lineno">  949</span>            <span class="keywordtype">bool</span> flag = this.<a class="code hl_function" href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">IsJapanese</a>(s);</div>
-<div class="line"><span class="lineno">  950</span>            <span class="keywordtype">string</span> langCode = Lang.langCode;</div>
-<div class="line"><span class="lineno">  951</span>            <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span> || langCode == <span class="stringliteral">&quot;CN&quot;</span>)</div>
-<div class="line"><span class="lineno">  952</span>            {</div>
-<div class="line"><span class="lineno">  953</span>                <span class="keywordflow">return</span> flag;</div>
-<div class="line"><span class="lineno">  954</span>            }</div>
-<div class="line"><span class="lineno">  955</span>            <span class="keywordflow">return</span> !flag;</div>
-<div class="line"><span class="lineno">  956</span>        }</div>
-<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a919864547c4267a1e98f8a73938c74b8"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">CoreConfig.BackerContentConfig.IsJapanese</a></div><div class="ttdeci">bool IsJapanese(string text)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00958">CoreConfig.cs:958</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00457">457</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  458</span>        {</div>
+<div class="line"><span class="lineno">  459</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">FilterNone</a>)</div>
+<div class="line"><span class="lineno">  460</span>            {</div>
+<div class="line"><span class="lineno">  461</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  462</span>            }</div>
+<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">FilterAll</a>)</div>
+<div class="line"><span class="lineno">  464</span>            {</div>
+<div class="line"><span class="lineno">  465</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  466</span>            }</div>
+<div class="line"><span class="lineno">  467</span>            <span class="keywordtype">bool</span> flag = <a class="code hl_function" href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">IsJapanese</a>(s);</div>
+<div class="line"><span class="lineno">  468</span>            <span class="keywordtype">string</span> langCode = Lang.langCode;</div>
+<div class="line"><span class="lineno">  469</span>            <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span> || langCode == <span class="stringliteral">&quot;CN&quot;</span>)</div>
+<div class="line"><span class="lineno">  470</span>            {</div>
+<div class="line"><span class="lineno">  471</span>                <span class="keywordflow">return</span> flag;</div>
+<div class="line"><span class="lineno">  472</span>            }</div>
+<div class="line"><span class="lineno">  473</span>            <span class="keywordflow">return</span> !flag;</div>
+<div class="line"><span class="lineno">  474</span>        }</div>
+<div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a919864547c4267a1e98f8a73938c74b8"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">CoreConfig.BackerContentConfig.IsJapanese</a></div><div class="ttdeci">bool IsJapanese(string text)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00476">CoreConfig.cs:476</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00888">CoreConfig.BackerContentConfig.FilterAll</a>, <a class="el" href="CoreConfig_8cs_source.html#l00904">CoreConfig.BackerContentConfig.FilterNone</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00958">CoreConfig.BackerContentConfig.IsJapanese()</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00423">CoreConfig.BackerContentConfig.FilterAll</a>, <a class="el" href="CoreConfig_8cs_source.html#l00427">CoreConfig.BackerContentConfig.FilterNone</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00476">CoreConfig.BackerContentConfig.IsJapanese()</a>.</p>
 
 </div>
 </div>
@@ -320,7 +317,9 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00963">963</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00421">421</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00027">TraitMoongate.UseMoongate()</a>.</p>
 
 </div>
 </div>
@@ -345,15 +344,9 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00887">887</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  888</span>        {</div>
-<div class="line"><span class="lineno">  889</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  890</span>            {</div>
-<div class="line"><span class="lineno">  891</span>                <span class="keywordflow">return</span> this.filter == 2;</div>
-<div class="line"><span class="lineno">  892</span>            }</div>
-<div class="line"><span class="lineno">  893</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00916">CoreConfig.BackerContentConfig.Show()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00423">423</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00434">CoreConfig.BackerContentConfig.Show()</a>.</p>
 
 </div>
 </div>
@@ -377,14 +370,8 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00895">895</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  896</span>        {</div>
-<div class="line"><span class="lineno">  897</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  898</span>            {</div>
-<div class="line"><span class="lineno">  899</span>                <span class="keywordflow">return</span> this.filter == 1;</div>
-<div class="line"><span class="lineno">  900</span>            }</div>
-<div class="line"><span class="lineno">  901</span>        }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00425">425</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
 </div>
 </div>
 <a id="a090c244be8008cefd203291380ba4cbc" name="a090c244be8008cefd203291380ba4cbc"></a>
@@ -407,15 +394,9 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00903">903</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  904</span>        {</div>
-<div class="line"><span class="lineno">  905</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  906</span>            {</div>
-<div class="line"><span class="lineno">  907</span>                <span class="keywordflow">return</span> this.filter == 0;</div>
-<div class="line"><span class="lineno">  908</span>            }</div>
-<div class="line"><span class="lineno">  909</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00916">CoreConfig.BackerContentConfig.Show()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CoreConfig_8cs_source.html#l00427">427</a> of file <a class="el" href="CoreConfig_8cs_source.html">CoreConfig.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00434">CoreConfig.BackerContentConfig.Show()</a>.</p>
 
 </div>
 </div>

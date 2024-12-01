@@ -149,7 +149,7 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ab8fefaf1553f830af4a9bb7268243717"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTCText.html#ab8fefaf1553f830af4a9bb7268243717">popIDs</a></td></tr>
+<tr class="memitem:ab8fefaf1553f830af4a9bb7268243717"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTCText.html#ab8fefaf1553f830af4a9bb7268243717">popIDs</a> = new string[2] { &quot;PopTextSys&quot;, &quot;PopTextGod&quot; }</td></tr>
 <tr class="separator:ab8fefaf1553f830af4a9bb7268243717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classTC"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classTC')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classTC.html">TC</a></td></tr>
 <tr class="memitem:a06b938da861a2eb3bd527eca924e1e52 inherit pub_static_attribs_classTC"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGameSetting_1_1RenderSetting_1_1TCSetting.html">GameSetting.RenderSetting.TCSetting</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a></td></tr>
@@ -258,20 +258,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTC.html#a402066ab4c111afc992c8ff7212d4fd8">TC</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00080">80</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.enabled)</div>
-<div class="line"><span class="lineno">   83</span>        {</div>
-<div class="line"><span class="lineno">   84</span>            this.<a class="code hl_variable" href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">render</a>.<a class="code hl_function" href="classCardRenderer.html#ae9f22353f0c112610fc132cea0c5ff45">RemoveTC</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        Vector3 vector = pos;</div>
-<div class="line"><span class="lineno">   88</span>        this.lastPos = pos;</div>
-<div class="line"><span class="lineno">   89</span>        base.OnDraw(ref vector);</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="ttc" id="aclassCardRenderer_html_ae9f22353f0c112610fc132cea0c5ff45"><div class="ttname"><a href="classCardRenderer.html#ae9f22353f0c112610fc132cea0c5ff45">CardRenderer.RemoveTC</a></div><div class="ttdeci">void RemoveTC(TC tc)</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00575">CardRenderer.cs:575</a></div></div>
-<div class="ttc" id="aclassTCText_html_a52fb1f4d631520a4182bbd23c1a62866"><div class="ttname"><a href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">TCText.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00105">TCText.cs:105</a></div></div>
-<div class="ttc" id="aclassTC_html_a583972b4f4750d1207f17155a1b00ef5"><div class="ttname"><a href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">TC.render</a></div><div class="ttdeci">CardRenderer render</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00058">TC.cs:58</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00073">73</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.enabled)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">render</a>.<a class="code hl_function" href="classCardRenderer.html#ae9f22353f0c112610fc132cea0c5ff45">RemoveTC</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        Vector3 pos2 = pos;</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">lastPos</a> = pos;</div>
+<div class="line"><span class="lineno">   82</span>        base.OnDraw(ref pos2);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aclassCardRenderer_html_ae9f22353f0c112610fc132cea0c5ff45"><div class="ttname"><a href="classCardRenderer.html#ae9f22353f0c112610fc132cea0c5ff45">CardRenderer.RemoveTC</a></div><div class="ttdeci">void RemoveTC(TC tc)</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00600">CardRenderer.cs:600</a></div></div>
+<div class="ttc" id="aclassTCText_html_a52fb1f4d631520a4182bbd23c1a62866"><div class="ttname"><a href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">TCText.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00009">TCText.cs:9</a></div></div>
+<div class="ttc" id="aclassTCUI_html_adb2903c8ee3d25995d64e98e9f5f6e3b"><div class="ttname"><a href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">TCUI.lastPos</a></div><div class="ttdeci">Vector3 lastPos</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00007">TCUI.cs:7</a></div></div>
+<div class="ttc" id="aclassTC_html_a583972b4f4750d1207f17155a1b00ef5"><div class="ttname"><a href="classTC.html#a583972b4f4750d1207f17155a1b00ef5">TC.render</a></div><div class="ttdeci">CardRenderer render</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00007">TC.cs:7</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -300,17 +301,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTC.html#aa04010e72056991659175d15b4ce9f52">TC</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00092">92</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
-<div class="line"><span class="lineno">   94</span>        base.DrawImmediate(ref this.<a class="code hl_variable" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">lastPos</a>);</div>
-<div class="line"><span class="lineno">   95</span>        this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.CopyAll(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.rectDynamic);</div>
-<div class="line"><span class="lineno">   96</span>        this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.KillAll(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00038">EMono.cs:39</a></div></div>
-<div class="ttc" id="aclassTCUI_html_adb2903c8ee3d25995d64e98e9f5f6e3b"><div class="ttname"><a href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">TCUI.lastPos</a></div><div class="ttdeci">Vector3 lastPos</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00054">TCUI.cs:54</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00085">85</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_function" href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">DrawImmediate</a>(ref <a class="code hl_variable" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">lastPos</a>);</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.CopyAll(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.rectDynamic);</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.KillAll(instant: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00015">EMono.cs:15</a></div></div>
+<div class="ttc" id="aclassTCUI_html_a533d876d9f61dc3f1d2934547e1b834a"><div class="ttname"><a href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">TCUI.DrawImmediate</a></div><div class="ttdeci">void DrawImmediate(ref Vector3 pos)</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00035">TCUI.cs:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00039">EMono.ui</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
 
 </div>
 </div>
@@ -348,66 +349,60 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00015">15</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">char</span> c = s[0];</div>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00016">16</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
 <div class="line"><span class="lineno">   18</span>        PopItem p;</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (c &lt;= <span class="charliteral">&#39;*&#39;</span>)</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">switch</span> (s[0])</div>
 <div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;(&#39;</span>)</div>
-<div class="line"><span class="lineno">   22</span>            {</div>
-<div class="line"><span class="lineno">   23</span>                p = this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s, <span class="keyword">null</span>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.config.ui.balloonBG ? <span class="stringliteral">&quot;PopText_alt&quot;</span> : <span class="stringliteral">&quot;PopTextThinking&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
-<div class="line"><span class="lineno">   24</span>                <span class="keywordflow">goto</span> IL_17F;</div>
-<div class="line"><span class="lineno">   25</span>            }</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;*&#39;</span>)</div>
-<div class="line"><span class="lineno">   27</span>            {</div>
-<div class="line"><span class="lineno">   28</span>                p = this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s, <span class="keyword">null</span>, <span class="stringliteral">&quot;PopTextOno&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
-<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">goto</span> IL_17F;</div>
-<div class="line"><span class="lineno">   30</span>            }</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;@&#39;</span>)</div>
-<div class="line"><span class="lineno">   35</span>            {</div>
-<div class="line"><span class="lineno">   36</span>                <span class="keywordtype">int</span> num = <span class="keywordtype">int</span>.Parse(s[1].ToString());</div>
-<div class="line"><span class="lineno">   37</span>                p = this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s.Substring(2), <span class="keyword">null</span>, <a class="code hl_class" href="classTCText.html">TCText</a>.<a class="code hl_variable" href="classTCText.html#ab8fefaf1553f830af4a9bb7268243717">popIDs</a>[num], <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">goto</span> IL_17F;</div>
-<div class="line"><span class="lineno">   39</span>            }</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;^&#39;</span>)</div>
-<div class="line"><span class="lineno">   41</span>            {</div>
-<div class="line"><span class="lineno">   42</span>                p = this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s.Substring(1), <span class="keyword">null</span>, <span class="stringliteral">&quot;PopTextBroadcast&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">goto</span> IL_17F;</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        p = this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s, <span class="keyword">null</span>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.config.ui.balloonBG ? <span class="stringliteral">&quot;PopText_alt&quot;</span> : <span class="stringliteral">&quot;PopText&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
-<div class="line"><span class="lineno">   47</span>        IL_17F:</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (p)</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
-<div class="line"><span class="lineno">   51</span>            {</div>
-<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span> (p != <span class="keyword">null</span> &amp;&amp; p.gameObject != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   53</span>                {</div>
-<div class="line"><span class="lineno">   54</span>                    p.RebuildLayout(true);</div>
-<div class="line"><span class="lineno">   55</span>                    ContentSizeFitter[] componentsInChildren = p.GetComponentsInChildren&lt;ContentSizeFitter&gt;();</div>
-<div class="line"><span class="lineno">   56</span>                    for (int i = 0; i &lt; componentsInChildren.Length; i++)</div>
-<div class="line"><span class="lineno">   57</span>                    {</div>
-<div class="line"><span class="lineno">   58</span>                        componentsInChildren[i].enabled = false;</div>
-<div class="line"><span class="lineno">   59</span>                    }</div>
-<div class="line"><span class="lineno">   60</span>                    LayoutGroup[] componentsInChildren2 = p.GetComponentsInChildren&lt;LayoutGroup&gt;();</div>
-<div class="line"><span class="lineno">   61</span>                    for (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren2.Length; i++)</div>
-<div class="line"><span class="lineno">   62</span>                    {</div>
-<div class="line"><span class="lineno">   63</span>                        componentsInChildren2[i].enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   64</span>                    }</div>
-<div class="line"><span class="lineno">   65</span>                }</div>
-<div class="line"><span class="lineno">   66</span>            });</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
+<div class="line"><span class="lineno">   22</span>            p = <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s, <span class="keyword">null</span>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a7a074a03aaeed8a05834c0e9e91c47c3">balloonBG</a> ? <span class="stringliteral">&quot;PopText_alt&quot;</span> : <span class="stringliteral">&quot;PopTextThinking&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:</div>
+<div class="line"><span class="lineno">   25</span>            p = <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s, <span class="keyword">null</span>, <span class="stringliteral">&quot;PopTextOno&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;@&#39;</span>:</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordtype">int</span> num = <span class="keywordtype">int</span>.Parse(s[1].ToString());</div>
+<div class="line"><span class="lineno">   30</span>            p = <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s.Substring(2), <span class="keyword">null</span>, <a class="code hl_variable" href="classTCText.html#ab8fefaf1553f830af4a9bb7268243717">popIDs</a>[num], <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;^&#39;</span>:</div>
+<div class="line"><span class="lineno">   34</span>            p = <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s.Substring(1), <span class="keyword">null</span>, <span class="stringliteral">&quot;PopTextBroadcast&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   37</span>            p = <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(s, <span class="keyword">null</span>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a7a074a03aaeed8a05834c0e9e91c47c3">balloonBG</a> ? <span class="stringliteral">&quot;PopText_alt&quot;</span> : <span class="stringliteral">&quot;PopText&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (!p)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (p != <span class="keyword">null</span> &amp;&amp; p.gameObject != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                p.RebuildLayout(recursive: true);</div>
+<div class="line"><span class="lineno">   49</span>                ContentSizeFitter[] componentsInChildren = p.GetComponentsInChildren&lt;ContentSizeFitter&gt;();</div>
+<div class="line"><span class="lineno">   50</span>                for (int i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">   51</span>                {</div>
+<div class="line"><span class="lineno">   52</span>                    componentsInChildren[i].enabled = false;</div>
+<div class="line"><span class="lineno">   53</span>                }</div>
+<div class="line"><span class="lineno">   54</span>                LayoutGroup[] componentsInChildren2 = p.GetComponentsInChildren&lt;LayoutGroup&gt;();</div>
+<div class="line"><span class="lineno">   55</span>                for (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren2.Length; i++)</div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    componentsInChildren2[i].enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        });</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
-<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
-<div class="ttc" id="aclassTCText_html"><div class="ttname"><a href="classTCText.html">TCText</a></div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00005">TCText.cs:6</a></div></div>
-<div class="ttc" id="aclassTCText_html_ab8fefaf1553f830af4a9bb7268243717"><div class="ttname"><a href="classTCText.html#ab8fefaf1553f830af4a9bb7268243717">TCText.popIDs</a></div><div class="ttdeci">static string[] popIDs</div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00099">TCText.cs:99</a></div></div>
+<div class="ttc" id="aclassCoreConfig_1_1UISetting_html_a7a074a03aaeed8a05834c0e9e91c47c3"><div class="ttname"><a href="classCoreConfig_1_1UISetting.html#a7a074a03aaeed8a05834c0e9e91c47c3">CoreConfig.UISetting.balloonBG</a></div><div class="ttdeci">bool balloonBG</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00357">CoreConfig.cs:357</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_ad6f27d4b5d228d836d386c0dc368e575"><div class="ttname"><a href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">CoreConfig.ui</a></div><div class="ttdeci">new UISetting ui</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00574">CoreConfig.cs:574</a></div></div>
+<div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00064">Core.cs:64</a></div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00005">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassTCText_html_ab8fefaf1553f830af4a9bb7268243717"><div class="ttname"><a href="classTCText.html#ab8fefaf1553f830af4a9bb7268243717">TCText.popIDs</a></div><div class="ttdeci">static string[] popIDs</div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00007">TCText.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EMono_8cs_source.html#l00171">EMono.core</a>, <a class="el" href="TCText_8cs_source.html#l00105">pop</a>, and <a class="el" href="TCText_8cs_source.html#l00099">popIDs</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00357">CoreConfig.UISetting.balloonBG</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Core_8cs_source.html#l00064">Core.config</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="TCText_8cs_source.html#l00009">pop</a>, <a class="el" href="TCText_8cs_source.html#l00007">popIDs</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00574">CoreConfig.ui</a>.</p>
 
 </div>
 </div>
@@ -445,16 +440,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00070">70</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        Sprite sprite = SpriteSheet.Get(<span class="stringliteral">&quot;Media/Graphics/Icon/icons_32&quot;</span>, <span class="stringliteral">&quot;emo_&quot;</span> + emo.ToString());</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">lastEmo</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.Kill(this.<a class="code hl_variable" href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">lastEmo</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        this.lastEmo = this.<a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(<span class="stringliteral">&quot;&quot;</span>, sprite, <span class="stringliteral">&quot;PopTextEmo&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="ttc" id="aclassTCText_html_a76cdd11ffe26321ea157bc0f6233c4b8"><div class="ttname"><a href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">TCText.lastEmo</a></div><div class="ttdeci">PopItemText lastEmo</div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00108">TCText.cs:108</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00063">63</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        Sprite sprite = SpriteSheet.Get(<span class="stringliteral">&quot;Media/Graphics/Icon/icons_32&quot;</span>, <span class="stringliteral">&quot;emo_&quot;</span> + emo);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">lastEmo</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.Kill(<a class="code hl_variable" href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">lastEmo</a>);</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">lastEmo</a> = <a class="code hl_variable" href="classTCText.html#a52fb1f4d631520a4182bbd23c1a62866">pop</a>.PopText(<span class="stringliteral">&quot;&quot;</span>, sprite, <span class="stringliteral">&quot;PopTextEmo&quot;</span>, <span class="keywordflow">default</span>(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>), <span class="keywordflow">default</span>(Vector3), duration);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassTCText_html_a76cdd11ffe26321ea157bc0f6233c4b8"><div class="ttname"><a href="classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8">TCText.lastEmo</a></div><div class="ttdeci">PopItemText lastEmo</div><div class="ttdef"><b>Definition:</b> <a href="TCText_8cs_source.html#l00012">TCText.cs:12</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.</p>
 
@@ -473,7 +468,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00108">108</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00012">12</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
 
 </div>
 </div>
@@ -489,9 +484,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00105">105</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00009">9</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>, and <a class="el" href="TCText_8cs_source.html#l00015">Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, and <a class="el" href="TCText_8cs_source.html#l00016">Say()</a>.</p>
 
 </div>
 </div>
@@ -505,7 +500,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string [] TCText.popIDs</td>
+          <td class="memname">string [] TCText.popIDs = new string[2] { &quot;PopTextSys&quot;, &quot;PopTextGod&quot; }</td>
         </tr>
       </table>
   </td>
@@ -514,15 +509,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line">    {</div>
-<div class="line">        <span class="stringliteral">&quot;PopTextSys&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;PopTextGod&quot;</span></div>
-<div class="line">    }</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00099">99</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TCText_8cs_source.html#l00015">Say()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00007">7</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TCText_8cs_source.html#l00016">Say()</a>.</p>
 
 </div>
 </div>
@@ -547,16 +537,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00007">7</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.textPos;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00004">TC.cs:5</a></div></div>
-<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00056">TC.cs:56</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TCText_8cs_source.html#l00014">14</a> of file <a class="el" href="TCText_8cs_source.html">TCText.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

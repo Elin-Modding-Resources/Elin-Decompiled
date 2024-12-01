@@ -1,6 +1,5 @@
 var classShadowData_1_1Item =
 [
-    [ "Item", "classShadowData_1_1Item.html#a1e53ed6df6b474000bb2f9ffcabddab3", null ],
     [ "ToString", "classShadowData_1_1Item.html#adb15a18deb46570f0da983e173eb5449", null ],
     [ "Validate", "classShadowData_1_1Item.html#a45cf9b7aa13a3a22b6427e993305b542", null ],
     [ "name", "classShadowData_1_1Item.html#a76847d42dd1bbbcb61f8e0d9f6642358", null ],

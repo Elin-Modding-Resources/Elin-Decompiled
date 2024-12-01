@@ -253,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a117100e71400447fc4b5711a215ead86" name="a117100e71400447fc4b5711a215ead86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a117100e71400447fc4b5711a215ead86">&#9670;&#160;</a></span>AddRandom()</h2>
@@ -278,27 +278,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00134">134</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a> row in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.rows)</div>
-<div class="line"><span class="lineno">  137</span>        {</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (!row.tag.Contains(<span class="stringliteral">&quot;noSpawn&quot;</span>))</div>
-<div class="line"><span class="lineno">  139</span>            {</div>
-<div class="line"><span class="lineno">  140</span>                <span class="keywordtype">int</span> num = (row.num == 0) ? 10 : row.num;</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keyword">this</span>.hoard.Add(row.id, <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(num + 1) + 1) + 1) + 1), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  142</span>            }</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>        this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a489314a71728e1674f20af35cc506b84"><div class="ttname"><a href="classELayer.html#a489314a71728e1674f20af35cc506b84">ELayer.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00126">ELayer.cs:127</a></div></div>
-<div class="ttc" id="aclassELayer_html_a49dc842a09537c6fd521b164384e1792"><div class="ttname"><a href="classELayer.html#a49dc842a09537c6fd521b164384e1792">ELayer.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00158">ELayer.cs:158</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_a0a75e99475813b65baceb78a840f01e1"><div class="ttname"><a href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">LayerHoard.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00045">LayerHoard.cs:45</a></div></div>
-<div class="ttc" id="aclassSourceCollectible_1_1Row_html"><div class="ttname"><a href="classSourceCollectible_1_1Row.html">SourceCollectible.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00029">SourceCollectible.cs:30</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00157">157</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a> row in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.rows)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (!row.tag.Contains(<span class="stringliteral">&quot;noSpawn&quot;</span>))</div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordtype">int</span> num = ((row.num == 0) ? 10 : row.num);</div>
+<div class="line"><span class="lineno">  164</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(row.id, <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(num + 1) + 1) + 1) + 1));</div>
+<div class="line"><span class="lineno">  165</span>            }</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a489314a71728e1674f20af35cc506b84"><div class="ttname"><a href="classELayer.html#a489314a71728e1674f20af35cc506b84">ELayer.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00037">ELayer.cs:37</a></div></div>
+<div class="ttc" id="aclassELayer_html_a49dc842a09537c6fd521b164384e1792"><div class="ttname"><a href="classELayer.html#a49dc842a09537c6fd521b164384e1792">ELayer.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00049">ELayer.cs:49</a></div></div>
+<div class="ttc" id="aclassHoard_html_a7754735994024a4a99a709025bbc2efb"><div class="ttname"><a href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Hoard.Add</a></div><div class="ttdeci">Item Add(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00161">Hoard.cs:161</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a0a75e99475813b65baceb78a840f01e1"><div class="ttname"><a href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">LayerHoard.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00068">LayerHoard.cs:68</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a386075dc10227e00e35923929828fbf7"><div class="ttname"><a href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">LayerHoard.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00037">LayerHoard.cs:37</a></div></div>
+<div class="ttc" id="aclassSourceCollectible_1_1Row_html"><div class="ttname"><a href="classSourceCollectible_1_1Row.html">SourceCollectible.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00006">SourceCollectible.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceCollectible_html"><div class="ttname"><a href="classSourceCollectible.html">SourceCollectible</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCollectible_8cs_source.html#l00003">SourceCollectible.cs:4</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_a4bf87f219cdfb7f4da20de5e3d14852b"><div class="ttname"><a href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">SourceManager.collectibles</a></div><div class="ttdeci">SourceCollectible collectibles</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00207">SourceManager.cs:207</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a4bf87f219cdfb7f4da20de5e3d14852b"><div class="ttname"><a href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">SourceManager.collectibles</a></div><div class="ttdeci">SourceCollectible collectibles</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00072">SourceManager.cs:72</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00207">SourceManager.collectibles</a>, <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>, <a class="el" href="ELayer_8cs_source.html#l00158">ELayer.rnd()</a>, and <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>.</p>
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00161">Hoard.Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00072">SourceManager.collectibles</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>, <a class="el" href="ELayer_8cs_source.html#l00049">ELayer.rnd()</a>, and <a class="el" href="ELayer_8cs_source.html#l00037">ELayer.sources</a>.</p>
 
 </div>
 </div>
@@ -325,26 +327,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00147">147</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
-<div class="line"><span class="lineno">  149</span>        this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#aad0d9fae155ce487ae102ad313eb566e">Clear</a>();</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a> row in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.rows)</div>
-<div class="line"><span class="lineno">  151</span>        {</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (!row.tag.Contains(<span class="stringliteral">&quot;noSpawn&quot;</span>))</div>
-<div class="line"><span class="lineno">  153</span>            {</div>
-<div class="line"><span class="lineno">  154</span>                this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(row.id);</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        this.hoard.mode = <a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_enumeration" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Mode</a>.lux;</div>
-<div class="line"><span class="lineno">  158</span>        this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="ttc" id="aclassHoard_html"><div class="ttname"><a href="classHoard.html">Hoard</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00008">Hoard.cs:9</a></div></div>
-<div class="ttc" id="aclassHoard_html_a4d409da45d77758904209a9a9c5ade99"><div class="ttname"><a href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Hoard.Add</a></div><div class="ttdeci">Hoard.Item Add(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00033">Hoard.cs:33</a></div></div>
-<div class="ttc" id="aclassHoard_html_aad0d9fae155ce487ae102ad313eb566e"><div class="ttname"><a href="classHoard.html#aad0d9fae155ce487ae102ad313eb566e">Hoard.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00098">Hoard.cs:98</a></div></div>
-<div class="ttc" id="aclassHoard_html_afd49d8b905c8a5fcb59b45b0e1d97d9b"><div class="ttname"><a href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Hoard.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00138">Hoard.cs:139</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_a386075dc10227e00e35923929828fbf7"><div class="ttname"><a href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">LayerHoard.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00008">LayerHoard.cs:9</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00170">170</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>    {</div>
+<div class="line"><span class="lineno">  172</span>        <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#aad0d9fae155ce487ae102ad313eb566e">Clear</a>();</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCollectible.html">SourceCollectible</a>.<a class="code hl_class" href="classSourceCollectible_1_1Row.html">Row</a> row in <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.rows)</div>
+<div class="line"><span class="lineno">  174</span>        {</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">if</span> (!row.tag.Contains(<span class="stringliteral">&quot;noSpawn&quot;</span>))</div>
+<div class="line"><span class="lineno">  176</span>            {</div>
+<div class="line"><span class="lineno">  177</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(row.id);</div>
+<div class="line"><span class="lineno">  178</span>            }</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        hoard.mode = <a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_enumeration" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Mode</a>.lux;</div>
+<div class="line"><span class="lineno">  181</span>        <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="ttc" id="aclassHoard_html"><div class="ttname"><a href="classHoard.html">Hoard</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00007">Hoard.cs:8</a></div></div>
+<div class="ttc" id="aclassHoard_html_aad0d9fae155ce487ae102ad313eb566e"><div class="ttname"><a href="classHoard.html#aad0d9fae155ce487ae102ad313eb566e">Hoard.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00226">Hoard.cs:226</a></div></div>
+<div class="ttc" id="aclassHoard_html_afd49d8b905c8a5fcb59b45b0e1d97d9b"><div class="ttname"><a href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Hoard.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00009">Hoard.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00033">Hoard.Add()</a>, <a class="el" href="Hoard_8cs_source.html#l00098">Hoard.Clear()</a>, <a class="el" href="SourceManager_8cs_source.html#l00207">SourceManager.collectibles</a>, <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>, and <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>.</p>
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00161">Hoard.Add()</a>, <a class="el" href="Hoard_8cs_source.html#l00226">Hoard.Clear()</a>, <a class="el" href="SourceManager_8cs_source.html#l00072">SourceManager.collectibles</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>, and <a class="el" href="ELayer_8cs_source.html#l00037">ELayer.sources</a>.</p>
 
 </div>
 </div>
@@ -371,49 +371,48 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00016">16</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.Init();</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a37ba124f651598df5482ab53313361f7">TalkHomeMemeber</a>(<span class="stringliteral">&quot;layerHoard&quot;</span>);</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">NoMap</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   21</span>        this.actor = Util.Instantiate&lt;<a class="code hl_class" href="classHoardActor.html">HoardActor</a>&gt;(this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a10058610034de8b461710c6df53d31b4">items</a>.Count == 0)</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            this.<a class="code hl_function" href="classLayerHoard.html#ab10d1cbcdee22149892631b024707f8c">OnClickClear</a>();</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        base.InvokeRepeating(<span class="stringliteral">&quot;UpdateMousePos&quot;</span>, 0f, 0.1f);</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#ac6a44278aa904fc2c85a48e713a4009c">debugHoard</a>)</div>
-<div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            UIButton[] array = this.<a class="code hl_variable" href="classLayerHoard.html#a564bcd71360b3d9331ff40fe7666d0c5">debugButtons</a>;</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
-<div class="line"><span class="lineno">   35</span>            {</div>
-<div class="line"><span class="lineno">   36</span>                array[i].SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        this.<a class="code hl_variable" href="classLayerHoard.html#ac1eea9eb428b01f48ab53b0154e4d8b4">layoutMenu</a>.RebuildLayout(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   40</span>        SoundManager.disableSpread = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   41</span>        ELayer.Sound.zone.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   42</span>        ELayer.scene.cam.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
-<div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00516">ActionMode.cs:516</a></div></div>
-<div class="ttc" id="aclassActionMode_html_ae5d90cff3ad7cbe237a0b149c7742386"><div class="ttname"><a href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">ActionMode.NoMap</a></div><div class="ttdeci">static AM_NoMap NoMap</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01709">ActionMode.cs:1709</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_ac6a44278aa904fc2c85a48e713a4009c"><div class="ttname"><a href="classCoreDebug.html#ac6a44278aa904fc2c85a48e713a4009c">CoreDebug.debugHoard</a></div><div class="ttdeci">bool debugHoard</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02170">CoreDebug.cs:2170</a></div></div>
-<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00150">ELayer.cs:151</a></div></div>
-<div class="ttc" id="aclassHoardActor_html"><div class="ttname"><a href="classHoardActor.html">HoardActor</a></div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00007">HoardActor.cs:8</a></div></div>
-<div class="ttc" id="aclassHoard_html_a10058610034de8b461710c6df53d31b4"><div class="ttname"><a href="classHoard.html#a10058610034de8b461710c6df53d31b4">Hoard.items</a></div><div class="ttdeci">Dictionary&lt; string, Hoard.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00104">Hoard.cs:104</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_a564bcd71360b3d9331ff40fe7666d0c5"><div class="ttname"><a href="classLayerHoard.html#a564bcd71360b3d9331ff40fe7666d0c5">LayerHoard.debugButtons</a></div><div class="ttdeci">UIButton[] debugButtons</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00231">LayerHoard.cs:231</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_ab10d1cbcdee22149892631b024707f8c"><div class="ttname"><a href="classLayerHoard.html#ab10d1cbcdee22149892631b024707f8c">LayerHoard.OnClickClear</a></div><div class="ttdeci">void OnClickClear()</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00161">LayerHoard.cs:161</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_ac1eea9eb428b01f48ab53b0154e4d8b4"><div class="ttname"><a href="classLayerHoard.html#ac1eea9eb428b01f48ab53b0154e4d8b4">LayerHoard.layoutMenu</a></div><div class="ttdeci">LayoutGroup layoutMenu</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00233">LayerHoard.cs:233</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_ae2db747fbaba327270d4f06003f843bc"><div class="ttname"><a href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">LayerHoard.actor</a></div><div class="ttdeci">HoardActor actor</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00213">LayerHoard.cs:213</a></div></div>
-<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
-<div class="ttc" id="aclassMsg_html_a37ba124f651598df5482ab53313361f7"><div class="ttname"><a href="classMsg.html#a37ba124f651598df5482ab53313361f7">Msg.TalkHomeMemeber</a></div><div class="ttdeci">static PopItem TalkHomeMemeber(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00236">Msg.cs:236</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00039">39</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b">collectibles</a>.Init();</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a37ba124f651598df5482ab53313361f7">TalkHomeMemeber</a>(<span class="stringliteral">&quot;layerHoard&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">NoMap</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>();</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a> = Util.Instantiate(<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>);</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#ae9808b12033a38303b28101c921d8c11">items</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_function" href="classLayerHoard.html#ab10d1cbcdee22149892631b024707f8c">OnClickClear</a>();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        InvokeRepeating(<span class="stringliteral">&quot;UpdateMousePos&quot;</span>, 0f, 0.1f);</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#ac6a44278aa904fc2c85a48e713a4009c">debugHoard</a>)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            UIButton[] array = <a class="code hl_variable" href="classLayerHoard.html#a564bcd71360b3d9331ff40fe7666d0c5">debugButtons</a>;</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                array[i].SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="classLayerHoard.html#ac1eea9eb428b01f48ab53b0154e4d8b4">layoutMenu</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   63</span>        SoundManager.disableSpread = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   64</span>        ELayer.Sound.zone.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   65</span>        ELayer.scene.cam.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00005">ActionMode.cs:6</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00339">ActionMode.cs:339</a></div></div>
+<div class="ttc" id="aclassActionMode_html_ae5d90cff3ad7cbe237a0b149c7742386"><div class="ttname"><a href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">ActionMode.NoMap</a></div><div class="ttdeci">static AM_NoMap NoMap</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00025">ActionMode.cs:25</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_ac6a44278aa904fc2c85a48e713a4009c"><div class="ttname"><a href="classCoreDebug.html#ac6a44278aa904fc2c85a48e713a4009c">CoreDebug.debugHoard</a></div><div class="ttdeci">bool debugHoard</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00155">CoreDebug.cs:155</a></div></div>
+<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00043">ELayer.cs:43</a></div></div>
+<div class="ttc" id="aclassHoard_html_ae9808b12033a38303b28101c921d8c11"><div class="ttname"><a href="classHoard.html#ae9808b12033a38303b28101c921d8c11">Hoard.items</a></div><div class="ttdeci">Dictionary&lt; string, Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00106">Hoard.cs:106</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a564bcd71360b3d9331ff40fe7666d0c5"><div class="ttname"><a href="classLayerHoard.html#a564bcd71360b3d9331ff40fe7666d0c5">LayerHoard.debugButtons</a></div><div class="ttdeci">UIButton[] debugButtons</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00025">LayerHoard.cs:25</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_ab10d1cbcdee22149892631b024707f8c"><div class="ttname"><a href="classLayerHoard.html#ab10d1cbcdee22149892631b024707f8c">LayerHoard.OnClickClear</a></div><div class="ttdeci">void OnClickClear()</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00184">LayerHoard.cs:184</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_ac1eea9eb428b01f48ab53b0154e4d8b4"><div class="ttname"><a href="classLayerHoard.html#ac1eea9eb428b01f48ab53b0154e4d8b4">LayerHoard.layoutMenu</a></div><div class="ttdeci">LayoutGroup layoutMenu</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00027">LayerHoard.cs:27</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_ae2db747fbaba327270d4f06003f843bc"><div class="ttname"><a href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">LayerHoard.actor</a></div><div class="ttdeci">HoardActor actor</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00007">LayerHoard.cs:7</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
+<div class="ttc" id="aclassMsg_html_a37ba124f651598df5482ab53313361f7"><div class="ttname"><a href="classMsg.html#a37ba124f651598df5482ab53313361f7">Msg.TalkHomeMemeber</a></div><div class="ttdeci">static PopItem TalkHomeMemeber(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00219">Msg.cs:219</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00516">ActionMode.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00213">actor</a>, <a class="el" href="SourceManager_8cs_source.html#l00207">SourceManager.collectibles</a>, <a class="el" href="ELayer_8cs_source.html#l00151">ELayer.debug</a>, <a class="el" href="LayerHoard_8cs_source.html#l00231">debugButtons</a>, <a class="el" href="CoreDebug_8cs_source.html#l02170">CoreDebug.debugHoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, <a class="el" href="Hoard_8cs_source.html#l00104">Hoard.items</a>, <a class="el" href="LayerHoard_8cs_source.html#l00233">layoutMenu</a>, <a class="el" href="ActionMode_8cs_source.html#l01709">ActionMode.NoMap</a>, <a class="el" href="LayerHoard_8cs_source.html#l00161">OnClickClear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>, <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>, and <a class="el" href="Msg_8cs_source.html#l00236">Msg.TalkHomeMemeber()</a>.</p>
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00339">ActionMode.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00007">actor</a>, <a class="el" href="SourceManager_8cs_source.html#l00072">SourceManager.collectibles</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="LayerHoard_8cs_source.html#l00025">debugButtons</a>, <a class="el" href="CoreDebug_8cs_source.html#l00155">CoreDebug.debugHoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, <a class="el" href="Hoard_8cs_source.html#l00106">Hoard.items</a>, <a class="el" href="LayerHoard_8cs_source.html#l00027">layoutMenu</a>, <a class="el" href="ActionMode_8cs_source.html#l00025">ActionMode.NoMap</a>, <a class="el" href="LayerHoard_8cs_source.html#l00184">OnClickClear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>, <a class="el" href="ELayer_8cs_source.html#l00037">ELayer.sources</a>, and <a class="el" href="Msg_8cs_source.html#l00219">Msg.TalkHomeMemeber()</a>.</p>
 
 </div>
 </div>
@@ -440,16 +439,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00161">161</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
-<div class="line"><span class="lineno">  163</span>        this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#aad0d9fae155ce487ae102ad313eb566e">Clear</a>();</div>
-<div class="line"><span class="lineno">  164</span>        this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="stringliteral">&quot;gold&quot;</span>, 1, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  165</span>        this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00184">184</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>    {</div>
+<div class="line"><span class="lineno">  186</span>        <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#aad0d9fae155ce487ae102ad313eb566e">Clear</a>();</div>
+<div class="line"><span class="lineno">  187</span>        <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(<span class="stringliteral">&quot;gold&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00033">Hoard.Add()</a>, <a class="el" href="Hoard_8cs_source.html#l00098">Hoard.Clear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>.</p>
+<p class="reference">References <a class="el" href="Hoard_8cs_source.html#l00161">Hoard.Add()</a>, <a class="el" href="Hoard_8cs_source.html#l00226">Hoard.Clear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00016">OnAfterInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00039">OnAfterInit()</a>.</p>
 
 </div>
 </div>
@@ -476,55 +475,56 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00175">175</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>    {</div>
-<div class="line"><span class="lineno">  177</span>        UIContextMenu uicontextMenu = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.contextMenu.Create(<span class="stringliteral">&quot;ContextHoard&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordtype">int</span> max = this.actor.bgs.Length - 1;</div>
-<div class="line"><span class="lineno">  179</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;room&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() + <span class="stringliteral">&quot; / &quot;</span> + max.ToString(), (<span class="keywordtype">float</span>)<span class="keyword">this</span>.hoard.bg, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
-<div class="line"><span class="lineno">  180</span>        {</div>
-<div class="line"><span class="lineno">  181</span>            this.hoard.bg = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
-<div class="line"><span class="lineno">  182</span>            this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">RefreshBG</a>();</div>
-<div class="line"><span class="lineno">  183</span>        }, 0f, (float)max, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  184</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;reflection&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() + <span class="stringliteral">&quot; %&quot;</span>, (float)this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2">reflection</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
-<div class="line"><span class="lineno">  185</span>        {</div>
-<div class="line"><span class="lineno">  186</span>            this.hoard.reflection = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
-<div class="line"><span class="lineno">  187</span>            this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">RefreshBG</a>();</div>
-<div class="line"><span class="lineno">  188</span>        }, 0f, 300f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  189</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;maxSounds&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">maxSounds</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
-<div class="line"><span class="lineno">  190</span>        {</div>
-<div class="line"><span class="lineno">  191</span>            this.hoard.maxSounds = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
-<div class="line"><span class="lineno">  192</span>        }, 0f, 64f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  193</span>        uicontextMenu.AddSlider(<span class="stringliteral">&quot;volume&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (float)this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">volume</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
-<div class="line"><span class="lineno">  194</span>        {</div>
-<div class="line"><span class="lineno">  195</span>            this.hoard.volume = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
-<div class="line"><span class="lineno">  196</span>        }, 0f, 200f, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  197</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;voice&quot;</span>, this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a9819e7cbe953c2e58096da7e1a1b3fd8">voice</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">  198</span>        {</div>
-<div class="line"><span class="lineno">  199</span>            this.hoard.voice = on;</div>
-<div class="line"><span class="lineno">  200</span>        });</div>
-<div class="line"><span class="lineno">  201</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;shadow&quot;</span>, this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a48ebae85bb650431db04296ee5a9a905">shadow</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">  202</span>        {</div>
-<div class="line"><span class="lineno">  203</span>            this.hoard.shadow = on;</div>
-<div class="line"><span class="lineno">  204</span>        });</div>
-<div class="line"><span class="lineno">  205</span>        uicontextMenu.AddToggle(<span class="stringliteral">&quot;pixelPerfect&quot;</span>, this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#aefbfc5625d88a1789464f6d1ab515807">pixelPerfect</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">  206</span>        {</div>
-<div class="line"><span class="lineno">  207</span>            this.hoard.pixelPerfect = on;</div>
-<div class="line"><span class="lineno">  208</span>            this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">RefreshZoom</a>();</div>
-<div class="line"><span class="lineno">  209</span>        });</div>
-<div class="line"><span class="lineno">  210</span>        uicontextMenu.Show();</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
-<div class="ttc" id="aclassHoardActor_html_a5fc3a4d50b0a973e62f195a021898fe4"><div class="ttname"><a href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">HoardActor.RefreshBG</a></div><div class="ttdeci">void RefreshBG()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00605">HoardActor.cs:605</a></div></div>
-<div class="ttc" id="aclassHoardActor_html_ab8c2fd21c5eff2be54866c3accd92e4d"><div class="ttname"><a href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">HoardActor.RefreshZoom</a></div><div class="ttdeci">void RefreshZoom()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00570">HoardActor.cs:570</a></div></div>
-<div class="ttc" id="aclassHoard_html_a14ed19f37de12dc8fac23f0517b0d2a2"><div class="ttname"><a href="classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2">Hoard.reflection</a></div><div class="ttdeci">int reflection</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00116">Hoard.cs:116</a></div></div>
-<div class="ttc" id="aclassHoard_html_a48ebae85bb650431db04296ee5a9a905"><div class="ttname"><a href="classHoard.html#a48ebae85bb650431db04296ee5a9a905">Hoard.shadow</a></div><div class="ttdeci">bool shadow</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00130">Hoard.cs:130</a></div></div>
-<div class="ttc" id="aclassHoard_html_a9819e7cbe953c2e58096da7e1a1b3fd8"><div class="ttname"><a href="classHoard.html#a9819e7cbe953c2e58096da7e1a1b3fd8">Hoard.voice</a></div><div class="ttdeci">bool voice</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00132">Hoard.cs:132</a></div></div>
-<div class="ttc" id="aclassHoard_html_aa08d6c150e1fd697323e67ab8ce9644b"><div class="ttname"><a href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">Hoard.maxSounds</a></div><div class="ttdeci">int maxSounds</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00119">Hoard.cs:119</a></div></div>
-<div class="ttc" id="aclassHoard_html_aefbfc5625d88a1789464f6d1ab515807"><div class="ttname"><a href="classHoard.html#aefbfc5625d88a1789464f6d1ab515807">Hoard.pixelPerfect</a></div><div class="ttdeci">bool pixelPerfect</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00134">Hoard.cs:134</a></div></div>
-<div class="ttc" id="aclassHoard_html_af86a25e23e0e20d6312b8d73c2d8d0f6"><div class="ttname"><a href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">Hoard.volume</a></div><div class="ttdeci">int volume</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00122">Hoard.cs:122</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_a30e21d7470d62e934e5a62e8832838dc"><div class="ttname"><a href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">LayerHoard.v</a></div><div class="ttdeci">int v</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00237">LayerHoard.cs:237</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00198">198</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>    {</div>
+<div class="line"><span class="lineno">  200</span>        UIContextMenu uIContextMenu = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.contextMenu.Create(<span class="stringliteral">&quot;ContextHoard&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordtype">int</span> max = actor.bgs.Length - 1;</div>
+<div class="line"><span class="lineno">  202</span>        uIContextMenu.AddSlider(<span class="stringliteral">&quot;room&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n + <span class="stringliteral">&quot; / &quot;</span> + max, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#ad39118bd17a9fc53d6829420e036ee0f">bg</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
+<div class="line"><span class="lineno">  203</span>        {</div>
+<div class="line"><span class="lineno">  204</span>            hoard.bg = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
+<div class="line"><span class="lineno">  205</span>            <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">  206</span>        }, 0f, max, isInt: <span class="keyword">true</span>, hideOther: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  207</span>        uIContextMenu.AddSlider(<span class="stringliteral">&quot;reflection&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n + <span class="stringliteral">&quot; %&quot;</span>, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2">reflection</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
+<div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            hoard.reflection = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
+<div class="line"><span class="lineno">  210</span>            <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">RefreshBG</a>();</div>
+<div class="line"><span class="lineno">  211</span>        }, 0f, 300f, isInt: <span class="keyword">true</span>, hideOther: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  212</span>        uIContextMenu.AddSlider(<span class="stringliteral">&quot;maxSounds&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">maxSounds</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
+<div class="line"><span class="lineno">  213</span>        {</div>
+<div class="line"><span class="lineno">  214</span>            hoard.maxSounds = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
+<div class="line"><span class="lineno">  215</span>        }, 0f, 64f, isInt: <span class="keyword">true</span>, hideOther: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  216</span>        uIContextMenu.AddSlider(<span class="stringliteral">&quot;volume&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">volume</a>, delegate(<span class="keywordtype">float</span> <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>)</div>
+<div class="line"><span class="lineno">  217</span>        {</div>
+<div class="line"><span class="lineno">  218</span>            hoard.volume = (int)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a>;</div>
+<div class="line"><span class="lineno">  219</span>        }, 0f, 200f, isInt: <span class="keyword">true</span>, hideOther: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  220</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;voice&quot;</span>, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a9819e7cbe953c2e58096da7e1a1b3fd8">voice</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            hoard.voice = on;</div>
+<div class="line"><span class="lineno">  223</span>        });</div>
+<div class="line"><span class="lineno">  224</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;shadow&quot;</span>, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a48ebae85bb650431db04296ee5a9a905">shadow</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            hoard.shadow = on;</div>
+<div class="line"><span class="lineno">  227</span>        });</div>
+<div class="line"><span class="lineno">  228</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;pixelPerfect&quot;</span>, <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#aefbfc5625d88a1789464f6d1ab515807">pixelPerfect</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  229</span>        {</div>
+<div class="line"><span class="lineno">  230</span>            hoard.pixelPerfect = on;</div>
+<div class="line"><span class="lineno">  231</span>            <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">RefreshZoom</a>();</div>
+<div class="line"><span class="lineno">  232</span>        });</div>
+<div class="line"><span class="lineno">  233</span>        uIContextMenu.Show();</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00021">ELayer.cs:21</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a5fc3a4d50b0a973e62f195a021898fe4"><div class="ttname"><a href="classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4">HoardActor.RefreshBG</a></div><div class="ttdeci">void RefreshBG()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00442">HoardActor.cs:442</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_ab8c2fd21c5eff2be54866c3accd92e4d"><div class="ttname"><a href="classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d">HoardActor.RefreshZoom</a></div><div class="ttdeci">void RefreshZoom()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00405">HoardActor.cs:405</a></div></div>
+<div class="ttc" id="aclassHoard_html_a14ed19f37de12dc8fac23f0517b0d2a2"><div class="ttname"><a href="classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2">Hoard.reflection</a></div><div class="ttdeci">int reflection</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00118">Hoard.cs:118</a></div></div>
+<div class="ttc" id="aclassHoard_html_a48ebae85bb650431db04296ee5a9a905"><div class="ttname"><a href="classHoard.html#a48ebae85bb650431db04296ee5a9a905">Hoard.shadow</a></div><div class="ttdeci">bool shadow</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00132">Hoard.cs:132</a></div></div>
+<div class="ttc" id="aclassHoard_html_a9819e7cbe953c2e58096da7e1a1b3fd8"><div class="ttname"><a href="classHoard.html#a9819e7cbe953c2e58096da7e1a1b3fd8">Hoard.voice</a></div><div class="ttdeci">bool voice</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00134">Hoard.cs:134</a></div></div>
+<div class="ttc" id="aclassHoard_html_aa08d6c150e1fd697323e67ab8ce9644b"><div class="ttname"><a href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">Hoard.maxSounds</a></div><div class="ttdeci">int maxSounds</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00121">Hoard.cs:121</a></div></div>
+<div class="ttc" id="aclassHoard_html_ad39118bd17a9fc53d6829420e036ee0f"><div class="ttname"><a href="classHoard.html#ad39118bd17a9fc53d6829420e036ee0f">Hoard.bg</a></div><div class="ttdeci">int bg</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00115">Hoard.cs:115</a></div></div>
+<div class="ttc" id="aclassHoard_html_aefbfc5625d88a1789464f6d1ab515807"><div class="ttname"><a href="classHoard.html#aefbfc5625d88a1789464f6d1ab515807">Hoard.pixelPerfect</a></div><div class="ttdeci">bool pixelPerfect</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00136">Hoard.cs:136</a></div></div>
+<div class="ttc" id="aclassHoard_html_af86a25e23e0e20d6312b8d73c2d8d0f6"><div class="ttname"><a href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">Hoard.volume</a></div><div class="ttdeci">int volume</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00124">Hoard.cs:124</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a30e21d7470d62e934e5a62e8832838dc"><div class="ttname"><a href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">LayerHoard.v</a></div><div class="ttdeci">int v</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00031">LayerHoard.cs:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00213">actor</a>, <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, <a class="el" href="Hoard_8cs_source.html#l00119">Hoard.maxSounds</a>, <a class="el" href="Hoard_8cs_source.html#l00134">Hoard.pixelPerfect</a>, <a class="el" href="Hoard_8cs_source.html#l00116">Hoard.reflection</a>, <a class="el" href="HoardActor_8cs_source.html#l00605">HoardActor.RefreshBG()</a>, <a class="el" href="HoardActor_8cs_source.html#l00570">HoardActor.RefreshZoom()</a>, <a class="el" href="Hoard_8cs_source.html#l00130">Hoard.shadow</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, <a class="el" href="LayerHoard_8cs_source.html#l00237">v</a>, <a class="el" href="Hoard_8cs_source.html#l00132">Hoard.voice</a>, and <a class="el" href="Hoard_8cs_source.html#l00122">Hoard.volume</a>.</p>
+<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00007">actor</a>, <a class="el" href="Hoard_8cs_source.html#l00115">Hoard.bg</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, <a class="el" href="Hoard_8cs_source.html#l00121">Hoard.maxSounds</a>, <a class="el" href="Hoard_8cs_source.html#l00136">Hoard.pixelPerfect</a>, <a class="el" href="Hoard_8cs_source.html#l00118">Hoard.reflection</a>, <a class="el" href="HoardActor_8cs_source.html#l00442">HoardActor.RefreshBG()</a>, <a class="el" href="HoardActor_8cs_source.html#l00405">HoardActor.RefreshZoom()</a>, <a class="el" href="Hoard_8cs_source.html#l00132">Hoard.shadow</a>, <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>, <a class="el" href="LayerHoard_8cs_source.html#l00031">v</a>, <a class="el" href="Hoard_8cs_source.html#l00134">Hoard.voice</a>, and <a class="el" href="Hoard_8cs_source.html#l00124">Hoard.volume</a>.</p>
 
 </div>
 </div>
@@ -551,16 +551,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00168">168</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>    {</div>
-<div class="line"><span class="lineno">  170</span>        this.hoard.mode = this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">mode</a>.NextEnum&lt;<a class="code hl_class" href="classHoard.html">Hoard</a>.<a class="code hl_enumeration" href="classHoard.html#afd49d8b905c8a5fcb59b45b0e1d97d9b">Mode</a>&gt;();</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Nerun</a>(<span class="stringliteral">&quot;h_filter&quot;</span>.lang((<span class="stringliteral">&quot;h_&quot;</span> + this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">mode</a>.ToString()).lang(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), <span class="stringliteral">&quot;UN_nerun&quot;</span>);</div>
-<div class="line"><span class="lineno">  172</span>        this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-<div class="ttc" id="aclassHoard_html_a96dbfa632bb1cef5c6d038035aa19d54"><div class="ttname"><a href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">Hoard.mode</a></div><div class="ttdeci">Hoard.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00110">Hoard.cs:110</a></div></div>
-<div class="ttc" id="aclassMsg_html_ae11b2b472e2b195c160f2a611701b22c"><div class="ttname"><a href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Msg.Nerun</a></div><div class="ttdeci">static void Nerun(string lang, string idPortrait=&quot;UN_nerun&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00157">Msg.cs:157</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00191">191</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        hoard.mode = <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a6a104c61eb7445b7cf3cd5aecc4ce2fb">mode</a>.NextEnum();</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Nerun</a>(<span class="stringliteral">&quot;h_filter&quot;</span>.lang((<span class="stringliteral">&quot;h_&quot;</span> + <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a6a104c61eb7445b7cf3cd5aecc4ce2fb">mode</a>).lang()));</div>
+<div class="line"><span class="lineno">  195</span>        <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+<div class="ttc" id="aclassHoard_html_a6a104c61eb7445b7cf3cd5aecc4ce2fb"><div class="ttname"><a href="classHoard.html#a6a104c61eb7445b7cf3cd5aecc4ce2fb">Hoard.mode</a></div><div class="ttdeci">Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00112">Hoard.cs:112</a></div></div>
+<div class="ttc" id="aclassMsg_html_ae11b2b472e2b195c160f2a611701b22c"><div class="ttname"><a href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Msg.Nerun</a></div><div class="ttdeci">static void Nerun(string lang, string idPortrait=&quot;UN_nerun&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00145">Msg.cs:145</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, <a class="el" href="Hoard_8cs_source.html#l00110">Hoard.mode</a>, <a class="el" href="Msg_8cs_source.html#l00157">Msg.Nerun()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>.</p>
+<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, <a class="el" href="Hoard_8cs_source.html#l00112">Hoard.mode</a>, <a class="el" href="Msg_8cs_source.html#l00145">Msg.Nerun()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>.</p>
 
 </div>
 </div>
@@ -587,22 +587,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00051">51</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155">Clear</a>();</div>
-<div class="line"><span class="lineno">   54</span>        UnityEngine.Object.DestroyImmediate(this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.gameObject);</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">DefaultMode</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   56</span>        ELayer.ui.cg.alpha = 1f;</div>
-<div class="line"><span class="lineno">   57</span>        ELayer.Sound.maxSounds = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>._maxSounds;</div>
-<div class="line"><span class="lineno">   58</span>        SoundManager.disableSpread = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   59</span>        ELayer.Sound.zone.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   60</span>        ELayer.scene.cam.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclassActionMode_html_a776e1f7a04431da5c37b476b46fe053d"><div class="ttname"><a href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">ActionMode.DefaultMode</a></div><div class="ttdeci">static ActionMode DefaultMode</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01691">ActionMode.cs:1691</a></div></div>
-<div class="ttc" id="aclassELayer_html_ab11922d6365826fec4c710a4ce358940"><div class="ttname"><a href="classELayer.html#ab11922d6365826fec4c710a4ce358940">ELayer.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00142">ELayer.cs:143</a></div></div>
-<div class="ttc" id="aclassHoardActor_html_a7b227935e9ef7b671bf01fce2c199155"><div class="ttname"><a href="classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155">HoardActor.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00612">HoardActor.cs:612</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00074">74</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155">Clear</a>();</div>
+<div class="line"><span class="lineno">   77</span>        Object.DestroyImmediate(<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.gameObject);</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">DefaultMode</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>();</div>
+<div class="line"><span class="lineno">   79</span>        ELayer.ui.cg.alpha = 1f;</div>
+<div class="line"><span class="lineno">   80</span>        ELayer.Sound.maxSounds = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>._maxSounds;</div>
+<div class="line"><span class="lineno">   81</span>        SoundManager.disableSpread = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>        ELayer.Sound.zone.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   83</span>        ELayer.scene.cam.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="ttc" id="aclassActionMode_html_a776e1f7a04431da5c37b476b46fe053d"><div class="ttname"><a href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">ActionMode.DefaultMode</a></div><div class="ttdeci">static ActionMode DefaultMode</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00007">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassELayer_html_ab11922d6365826fec4c710a4ce358940"><div class="ttname"><a href="classELayer.html#ab11922d6365826fec4c710a4ce358940">ELayer.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00041">ELayer.cs:41</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a7b227935e9ef7b671bf01fce2c199155"><div class="ttname"><a href="classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155">HoardActor.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00451">HoardActor.cs:451</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00516">ActionMode.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00213">actor</a>, <a class="el" href="HoardActor_8cs_source.html#l00612">HoardActor.Clear()</a>, <a class="el" href="ActionMode_8cs_source.html#l01691">ActionMode.DefaultMode</a>, and <a class="el" href="ELayer_8cs_source.html#l00143">ELayer.Sound</a>.</p>
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00339">ActionMode.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00007">actor</a>, <a class="el" href="HoardActor_8cs_source.html#l00451">HoardActor.Clear()</a>, <a class="el" href="ActionMode_8cs_source.html#l00007">ActionMode.DefaultMode</a>, and <a class="el" href="ELayer_8cs_source.html#l00041">ELayer.Sound</a>.</p>
 
 </div>
 </div>
@@ -629,16 +629,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00045">45</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>();</div>
-<div class="line"><span class="lineno">   48</span>        this.textMode.text = <span class="stringliteral">&quot;[&quot;</span> + (<span class="stringliteral">&quot;h_&quot;</span> + this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a96dbfa632bb1cef5c6d038035aa19d54">mode</a>.ToString()).lang() + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="aclassHoardActor_html_a84a2e530016063495ca01b8f7214f25d"><div class="ttname"><a href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">HoardActor.Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00025">HoardActor.cs:25</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00068">68</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_function" href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">Activate</a>();</div>
+<div class="line"><span class="lineno">   71</span>        textMode.text = <span class="stringliteral">&quot;[&quot;</span> + (<span class="stringliteral">&quot;h_&quot;</span> + <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a6a104c61eb7445b7cf3cd5aecc4ce2fb">mode</a>).lang() + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassHoardActor_html_a84a2e530016063495ca01b8f7214f25d"><div class="ttname"><a href="classHoardActor.html#a84a2e530016063495ca01b8f7214f25d">HoardActor.Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00082">HoardActor.cs:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00213">actor</a>, <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, and <a class="el" href="Hoard_8cs_source.html#l00110">Hoard.mode</a>.</p>
+<p class="reference">References <a class="el" href="HoardActor_8cs_source.html#l00082">HoardActor.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00007">actor</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, and <a class="el" href="Hoard_8cs_source.html#l00112">Hoard.mode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00134">AddRandom()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00147">Generate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00016">OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00161">OnClickClear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00168">OnClickNextMode()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00157">AddRandom()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00170">Generate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00039">OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00184">OnClickClear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00191">OnClickNextMode()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -665,86 +665,88 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00063">63</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerHoard.html#af324a5f1424179df2e6dbec13dc9582d">textScore</a>.gameObject.activeSelf &amp;&amp; <span class="keyword">this</span>.hoard.score != <span class="keyword">this</span>.lastScore)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            this.textScore.text = this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>.ToString() + <span class="stringliteral">&quot; / &quot;</span> + this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">hiScore</a>.ToString();</div>
-<div class="line"><span class="lineno">   68</span>            this.lastScore = this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>;</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (Input.GetMouseButtonDown(2))</div>
-<div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span>            this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.H))</div>
-<div class="line"><span class="lineno">   77</span>            {</div>
-<div class="line"><span class="lineno">   78</span>                this.hoard.hentai = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   79</span>                this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="stringliteral">&quot;lulu&quot;</span>, 2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   80</span>                this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="stringliteral">&quot;tentacle&quot;</span>, 1, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   81</span>                this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="stringliteral">&quot;tentacle2&quot;</span>, 1, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   82</span>                this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="stringliteral">&quot;tentacle3&quot;</span>, 1, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   83</span>                this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a4d409da45d77758904209a9a9c5ade99">Add</a>(<span class="stringliteral">&quot;tentacle4&quot;</span>, 2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   84</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#aa5b2c871d4d8bd9eda6ece2fbed24309">SayPic</a>(<span class="stringliteral">&quot;UN_farris&quot;</span>, <span class="stringliteral">&quot;変態だー！&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   85</span>                this.<a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.M))</div>
-<div class="line"><span class="lineno">   88</span>            {</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   90</span>                {</div>
-<div class="line"><span class="lineno">   91</span>                    <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor = this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>.FirstOrDefault((<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> a) =&gt; a.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.id == <span class="stringliteral">&quot;mani&quot;</span>);</div>
-<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">if</span> (collectibleActor &amp;&amp; collectibleActor.gameObject.activeInHierarchy)</div>
-<div class="line"><span class="lineno">   93</span>                    {</div>
-<div class="line"><span class="lineno">   94</span>                        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Nerun</a>(<span class="stringliteral">&quot;あ・・・&quot;</span>, <span class="stringliteral">&quot;UN_nerun&quot;</span>);</div>
-<div class="line"><span class="lineno">   95</span>                        <a class="code hl_class" href="classRigidExplode.html">RigidExplode</a> rigidExplode = collectibleActor.gameObject.AddComponent&lt;<a class="code hl_class" href="classRigidExplode.html">RigidExplode</a>&gt;();</div>
-<div class="line"><span class="lineno">   96</span>                        rigidExplode.particle = this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_variable" href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">psExplode</a>;</div>
-<div class="line"><span class="lineno">   97</span>                        rigidExplode.radius *= 10f;</div>
-<div class="line"><span class="lineno">   98</span>                        rigidExplode.force *= 10f;</div>
-<div class="line"><span class="lineno">   99</span>                        rigidExplode.chance = 1f;</div>
-<div class="line"><span class="lineno">  100</span>                        rigidExplode.intervalMin = (rigidExplode.intervalMax = 2f);</div>
-<div class="line"><span class="lineno">  101</span>                        rigidExplode.rb = collectibleActor.GetComponent&lt;Rigidbody2D&gt;();</div>
-<div class="line"><span class="lineno">  102</span>                        this.<a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_variable" href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">updates</a>.Add(rigidExplode);</div>
-<div class="line"><span class="lineno">  103</span>                    }</div>
-<div class="line"><span class="lineno">  104</span>                }</div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  106</span>                {</div>
-<div class="line"><span class="lineno">  107</span>                }</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        UIButton componentOf = InputModuleEX.GetComponentOf&lt;UIButton&gt;();</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetTopLayer() != <span class="keyword">this</span> || (componentOf &amp;&amp; componentOf.transform.IsChildOf(base.transform)) || this.<a class="code hl_variable" href="classLayerHoard.html#ad9b5c376dc7f743a6db8e485ba70bf29">hasMouseMoved</a>)</div>
-<div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            this.idleTimer = 0f;</div>
-<div class="line"><span class="lineno">  114</span>            this.v = 1;</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  117</span>        {</div>
-<div class="line"><span class="lineno">  118</span>            this.idleTimer += Time.deltaTime;</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerHoard.html#a6ab0af4cee4387b6efdba8c9de3f729a">idleTimer</a> &gt; 1f)</div>
-<div class="line"><span class="lineno">  120</span>            {</div>
-<div class="line"><span class="lineno">  121</span>                this.v = -1;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        (this.cg ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.cg).alpha += (<span class="keywordtype">float</span>)this.v * Time.deltaTime * this.<a class="code hl_variable" href="classLayerHoard.html#a0aa0309aa316a7137522a9a9a85c2639">fadeSpeed</a>;</div>
-<div class="line"><span class="lineno">  125</span>        ELayer.Sound.maxSounds = this.<a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">maxSounds</a>;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00086">86</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerHoard.html#af324a5f1424179df2e6dbec13dc9582d">textScore</a>.gameObject.activeSelf &amp;&amp; <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a> != <a class="code hl_variable" href="classLayerHoard.html#a10a161a2dddef9ed7de4c37d5a954ae1">lastScore</a>)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            textScore.text = hoard.score + <span class="stringliteral">&quot; / &quot;</span> + <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">hiScore</a>;</div>
+<div class="line"><span class="lineno">   91</span>            <a class="code hl_variable" href="classLayerHoard.html#a10a161a2dddef9ed7de4c37d5a954ae1">lastScore</a> = <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>;</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (Input.GetMouseButtonDown(2))</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.H))</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                hoard.hentai = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  102</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(<span class="stringliteral">&quot;lulu&quot;</span>, 2);</div>
+<div class="line"><span class="lineno">  103</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(<span class="stringliteral">&quot;tentacle&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  104</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(<span class="stringliteral">&quot;tentacle2&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  105</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(<span class="stringliteral">&quot;tentacle3&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  106</span>                <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(<span class="stringliteral">&quot;tentacle4&quot;</span>, 2);</div>
+<div class="line"><span class="lineno">  107</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#aa5b2c871d4d8bd9eda6ece2fbed24309">SayPic</a>(<span class="stringliteral">&quot;UN_farris&quot;</span>, <span class="stringliteral">&quot;変態だー！&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>                <a class="code hl_function" href="classLayerHoard.html#a0a75e99475813b65baceb78a840f01e1">Reset</a>();</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.M))</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  113</span>                {</div>
+<div class="line"><span class="lineno">  114</span>                    <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> collectibleActor = <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_variable" href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">actors</a>.FirstOrDefault((<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> a) =&gt; a.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.id == <span class="stringliteral">&quot;mani&quot;</span>);</div>
+<div class="line"><span class="lineno">  115</span>                    <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)collectibleActor &amp;&amp; collectibleActor.gameObject.activeInHierarchy)</div>
+<div class="line"><span class="lineno">  116</span>                    {</div>
+<div class="line"><span class="lineno">  117</span>                        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Nerun</a>(<span class="stringliteral">&quot;あ・・・&quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span>                        <a class="code hl_class" href="classRigidExplode.html">RigidExplode</a> rigidExplode = collectibleActor.gameObject.AddComponent&lt;<a class="code hl_class" href="classRigidExplode.html">RigidExplode</a>&gt;();</div>
+<div class="line"><span class="lineno">  119</span>                        rigidExplode.particle = <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_variable" href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">psExplode</a>;</div>
+<div class="line"><span class="lineno">  120</span>                        rigidExplode.radius *= 10f;</div>
+<div class="line"><span class="lineno">  121</span>                        rigidExplode.force *= 10f;</div>
+<div class="line"><span class="lineno">  122</span>                        rigidExplode.chance = 1f;</div>
+<div class="line"><span class="lineno">  123</span>                        rigidExplode.intervalMin = (rigidExplode.intervalMax = 2f);</div>
+<div class="line"><span class="lineno">  124</span>                        rigidExplode.rb = collectibleActor.GetComponent&lt;Rigidbody2D&gt;();</div>
+<div class="line"><span class="lineno">  125</span>                        <a class="code hl_variable" href="classLayerHoard.html#ae2db747fbaba327270d4f06003f843bc">actor</a>.<a class="code hl_variable" href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">updates</a>.Add(rigidExplode);</div>
+<div class="line"><span class="lineno">  126</span>                    }</div>
+<div class="line"><span class="lineno">  127</span>                }</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  129</span>                {</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        UIButton componentOf = InputModuleEX.GetComponentOf&lt;UIButton&gt;();</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetTopLayer() != <span class="keyword">this</span> || ((bool)componentOf &amp;&amp; componentOf.transform.IsChildOf(base.transform)) || <a class="code hl_variable" href="classLayerHoard.html#ad9b5c376dc7f743a6db8e485ba70bf29">hasMouseMoved</a>)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="classLayerHoard.html#a6ab0af4cee4387b6efdba8c9de3f729a">idleTimer</a> = 0f;</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a> = 1;</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="classLayerHoard.html#a6ab0af4cee4387b6efdba8c9de3f729a">idleTimer</a> += Time.deltaTime;</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerHoard.html#a6ab0af4cee4387b6efdba8c9de3f729a">idleTimer</a> &gt; 1f)</div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                <a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a> = -1;</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>        (<a class="code hl_variable" href="classLayerHoard.html#a2b4ac73bf4407387b06caea8431f8218">cg</a> ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.cg).alpha += (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classLayerHoard.html#a30e21d7470d62e934e5a62e8832838dc">v</a> * Time.deltaTime * <a class="code hl_variable" href="classLayerHoard.html#a0aa0309aa316a7137522a9a9a85c2639">fadeSpeed</a>;</div>
+<div class="line"><span class="lineno">  148</span>        ELayer.Sound.maxSounds = <a class="code hl_property" href="classLayerHoard.html#a386075dc10227e00e35923929828fbf7">hoard</a>.<a class="code hl_variable" href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">maxSounds</a>;</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
 <div class="ttc" id="aclassCollectibleActor_html"><div class="ttname"><a href="classCollectibleActor.html">CollectibleActor</a></div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00004">CollectibleActor.cs:5</a></div></div>
-<div class="ttc" id="aclassCollectibleActor_html_af93429ef439cd618acf6216f4530ff8a"><div class="ttname"><a href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">CollectibleActor.item</a></div><div class="ttdeci">Hoard.Item item</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.cs:44</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02314">CoreDebug.cs:2314</a></div></div>
-<div class="ttc" id="aclassHoardActor_html_a55621c901028b9c537ca931df8c94957"><div class="ttname"><a href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">HoardActor.actors</a></div><div class="ttdeci">List&lt; CollectibleActor &gt; actors</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00737">HoardActor.cs:737</a></div></div>
-<div class="ttc" id="aclassHoardActor_html_a5ec56150a93ffe8ce6e641effe4ebe35"><div class="ttname"><a href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">HoardActor.updates</a></div><div class="ttdeci">List&lt; RigidUpdate &gt; updates</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00739">HoardActor.cs:739</a></div></div>
-<div class="ttc" id="aclassHoardActor_html_afb3764d292f3305b1ec8d68b23929cec"><div class="ttname"><a href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">HoardActor.psExplode</a></div><div class="ttdeci">ParticleSystem psExplode</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00753">HoardActor.cs:753</a></div></div>
-<div class="ttc" id="aclassHoard_html_a79bcff1459c9742bb4e149d5e038c4d3"><div class="ttname"><a href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">Hoard.score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00128">Hoard.cs:128</a></div></div>
-<div class="ttc" id="aclassHoard_html_af1b627603e955249f9820f0f2fa915b1"><div class="ttname"><a href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">Hoard.hiScore</a></div><div class="ttdeci">int hiScore</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00125">Hoard.cs:125</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_a0aa0309aa316a7137522a9a9a85c2639"><div class="ttname"><a href="classLayerHoard.html#a0aa0309aa316a7137522a9a9a85c2639">LayerHoard.fadeSpeed</a></div><div class="ttdeci">float fadeSpeed</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00221">LayerHoard.cs:221</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_a6ab0af4cee4387b6efdba8c9de3f729a"><div class="ttname"><a href="classLayerHoard.html#a6ab0af4cee4387b6efdba8c9de3f729a">LayerHoard.idleTimer</a></div><div class="ttdeci">float idleTimer</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00219">LayerHoard.cs:219</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_ad9b5c376dc7f743a6db8e485ba70bf29"><div class="ttname"><a href="classLayerHoard.html#ad9b5c376dc7f743a6db8e485ba70bf29">LayerHoard.hasMouseMoved</a></div><div class="ttdeci">bool hasMouseMoved</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00241">LayerHoard.cs:241</a></div></div>
-<div class="ttc" id="aclassLayerHoard_html_af324a5f1424179df2e6dbec13dc9582d"><div class="ttname"><a href="classLayerHoard.html#af324a5f1424179df2e6dbec13dc9582d">LayerHoard.textScore</a></div><div class="ttdeci">UIText textScore</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00227">LayerHoard.cs:227</a></div></div>
-<div class="ttc" id="aclassMsg_html_aa5b2c871d4d8bd9eda6ece2fbed24309"><div class="ttname"><a href="classMsg.html#aa5b2c871d4d8bd9eda6ece2fbed24309">Msg.SayPic</a></div><div class="ttdeci">static void SayPic(Card c, string lang)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00185">Msg.cs:185</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html"><div class="ttname"><a href="classRigidExplode.html">RigidExplode</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00004">RigidExplode.cs:5</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_af93429ef439cd618acf6216f4530ff8a"><div class="ttname"><a href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">CollectibleActor.item</a></div><div class="ttdeci">Hoard.Item item</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.cs:6</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a55621c901028b9c537ca931df8c94957"><div class="ttname"><a href="classHoardActor.html#a55621c901028b9c537ca931df8c94957">HoardActor.actors</a></div><div class="ttdeci">List&lt; CollectibleActor &gt; actors</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00034">HoardActor.cs:34</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_a5ec56150a93ffe8ce6e641effe4ebe35"><div class="ttname"><a href="classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35">HoardActor.updates</a></div><div class="ttdeci">List&lt; RigidUpdate &gt; updates</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00036">HoardActor.cs:36</a></div></div>
+<div class="ttc" id="aclassHoardActor_html_afb3764d292f3305b1ec8d68b23929cec"><div class="ttname"><a href="classHoardActor.html#afb3764d292f3305b1ec8d68b23929cec">HoardActor.psExplode</a></div><div class="ttdeci">ParticleSystem psExplode</div><div class="ttdef"><b>Definition:</b> <a href="HoardActor_8cs_source.html#l00050">HoardActor.cs:50</a></div></div>
+<div class="ttc" id="aclassHoard_html_a79bcff1459c9742bb4e149d5e038c4d3"><div class="ttname"><a href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">Hoard.score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00130">Hoard.cs:130</a></div></div>
+<div class="ttc" id="aclassHoard_html_af1b627603e955249f9820f0f2fa915b1"><div class="ttname"><a href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">Hoard.hiScore</a></div><div class="ttdeci">int hiScore</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00127">Hoard.cs:127</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a0aa0309aa316a7137522a9a9a85c2639"><div class="ttname"><a href="classLayerHoard.html#a0aa0309aa316a7137522a9a9a85c2639">LayerHoard.fadeSpeed</a></div><div class="ttdeci">float fadeSpeed</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00015">LayerHoard.cs:15</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a10a161a2dddef9ed7de4c37d5a954ae1"><div class="ttname"><a href="classLayerHoard.html#a10a161a2dddef9ed7de4c37d5a954ae1">LayerHoard.lastScore</a></div><div class="ttdeci">int lastScore</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00029">LayerHoard.cs:29</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a2b4ac73bf4407387b06caea8431f8218"><div class="ttname"><a href="classLayerHoard.html#a2b4ac73bf4407387b06caea8431f8218">LayerHoard.cg</a></div><div class="ttdeci">CanvasGroup cg</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00017">LayerHoard.cs:17</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_a6ab0af4cee4387b6efdba8c9de3f729a"><div class="ttname"><a href="classLayerHoard.html#a6ab0af4cee4387b6efdba8c9de3f729a">LayerHoard.idleTimer</a></div><div class="ttdeci">float idleTimer</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00013">LayerHoard.cs:13</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_ad9b5c376dc7f743a6db8e485ba70bf29"><div class="ttname"><a href="classLayerHoard.html#ad9b5c376dc7f743a6db8e485ba70bf29">LayerHoard.hasMouseMoved</a></div><div class="ttdeci">bool hasMouseMoved</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00035">LayerHoard.cs:35</a></div></div>
+<div class="ttc" id="aclassLayerHoard_html_af324a5f1424179df2e6dbec13dc9582d"><div class="ttname"><a href="classLayerHoard.html#af324a5f1424179df2e6dbec13dc9582d">LayerHoard.textScore</a></div><div class="ttdeci">UIText textScore</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00021">LayerHoard.cs:21</a></div></div>
+<div class="ttc" id="aclassMsg_html_aa5b2c871d4d8bd9eda6ece2fbed24309"><div class="ttname"><a href="classMsg.html#aa5b2c871d4d8bd9eda6ece2fbed24309">Msg.SayPic</a></div><div class="ttdeci">static void SayPic(Card c, string lang)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00171">Msg.cs:171</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html"><div class="ttname"><a href="classRigidExplode.html">RigidExplode</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00003">RigidExplode.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00213">actor</a>, <a class="el" href="HoardActor_8cs_source.html#l00737">HoardActor.actors</a>, <a class="el" href="Hoard_8cs_source.html#l00033">Hoard.Add()</a>, <a class="el" href="ELayer_8cs_source.html#l00151">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02314">CoreDebug.enable</a>, <a class="el" href="LayerHoard_8cs_source.html#l00221">fadeSpeed</a>, <a class="el" href="LayerHoard_8cs_source.html#l00241">hasMouseMoved</a>, <a class="el" href="Hoard_8cs_source.html#l00125">Hoard.hiScore</a>, <a class="el" href="LayerHoard_8cs_source.html#l00009">hoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00219">idleTimer</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.item</a>, <a class="el" href="Hoard_8cs_source.html#l00119">Hoard.maxSounds</a>, <a class="el" href="Msg_8cs_source.html#l00157">Msg.Nerun()</a>, <a class="el" href="HoardActor_8cs_source.html#l00753">HoardActor.psExplode</a>, <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>, <a class="el" href="Msg_8cs_source.html#l00185">Msg.SayPic()</a>, <a class="el" href="Hoard_8cs_source.html#l00128">Hoard.score</a>, <a class="el" href="LayerHoard_8cs_source.html#l00227">textScore</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, and <a class="el" href="HoardActor_8cs_source.html#l00739">HoardActor.updates</a>.</p>
+<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00007">actor</a>, <a class="el" href="HoardActor_8cs_source.html#l00034">HoardActor.actors</a>, <a class="el" href="Hoard_8cs_source.html#l00161">Hoard.Add()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00017">cg</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="LayerHoard_8cs_source.html#l00015">fadeSpeed</a>, <a class="el" href="LayerHoard_8cs_source.html#l00035">hasMouseMoved</a>, <a class="el" href="Hoard_8cs_source.html#l00127">Hoard.hiScore</a>, <a class="el" href="LayerHoard_8cs_source.html#l00037">hoard</a>, <a class="el" href="LayerHoard_8cs_source.html#l00013">idleTimer</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.item</a>, <a class="el" href="LayerHoard_8cs_source.html#l00029">lastScore</a>, <a class="el" href="Hoard_8cs_source.html#l00121">Hoard.maxSounds</a>, <a class="el" href="Msg_8cs_source.html#l00145">Msg.Nerun()</a>, <a class="el" href="HoardActor_8cs_source.html#l00050">HoardActor.psExplode</a>, <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>, <a class="el" href="Msg_8cs_source.html#l00171">Msg.SayPic()</a>, <a class="el" href="Hoard_8cs_source.html#l00130">Hoard.score</a>, <a class="el" href="LayerHoard_8cs_source.html#l00021">textScore</a>, <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>, <a class="el" href="HoardActor_8cs_source.html#l00036">HoardActor.updates</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00031">v</a>.</p>
 
 </div>
 </div>
@@ -771,14 +773,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00128">128</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
-<div class="line"><span class="lineno">  130</span>        this.hasMouseMoved = ((Input.mousePosition - this.<a class="code hl_variable" href="classLayerHoard.html#a3ca86756e5246b88193ac96af6dd89ed">lastMousePos</a>).magnitude &gt; 15f);</div>
-<div class="line"><span class="lineno">  131</span>        this.lastMousePos = Input.mousePosition;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-<div class="ttc" id="aclassLayerHoard_html_a3ca86756e5246b88193ac96af6dd89ed"><div class="ttname"><a href="classLayerHoard.html#a3ca86756e5246b88193ac96af6dd89ed">LayerHoard.lastMousePos</a></div><div class="ttdeci">Vector3 lastMousePos</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00239">LayerHoard.cs:239</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00151">151</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_variable" href="classLayerHoard.html#ad9b5c376dc7f743a6db8e485ba70bf29">hasMouseMoved</a> = (Input.mousePosition - <a class="code hl_variable" href="classLayerHoard.html#a3ca86756e5246b88193ac96af6dd89ed">lastMousePos</a>).magnitude &gt; 15f;</div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_variable" href="classLayerHoard.html#a3ca86756e5246b88193ac96af6dd89ed">lastMousePos</a> = Input.mousePosition;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="ttc" id="aclassLayerHoard_html_a3ca86756e5246b88193ac96af6dd89ed"><div class="ttname"><a href="classLayerHoard.html#a3ca86756e5246b88193ac96af6dd89ed">LayerHoard.lastMousePos</a></div><div class="ttdeci">Vector3 lastMousePos</div><div class="ttdef"><b>Definition:</b> <a href="LayerHoard_8cs_source.html#l00033">LayerHoard.cs:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00239">lastMousePos</a>.</p>
+<p class="reference">References <a class="el" href="LayerHoard_8cs_source.html#l00035">hasMouseMoved</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00033">lastMousePos</a>.</p>
 
 </div>
 </div>
@@ -795,9 +797,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00213">213</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00016">OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00175">OnClickConfig()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00051">OnKill()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00039">OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00198">OnClickConfig()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00074">OnKill()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -813,7 +815,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00215">215</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
 </div>
 </div>
@@ -829,7 +831,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00217">217</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
 </div>
 </div>
@@ -845,7 +847,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00223">223</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00017">17</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -861,9 +865,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00231">231</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00025">25</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00016">OnAfterInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00039">OnAfterInit()</a>.</p>
 
 </div>
 </div>
@@ -879,9 +883,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00221">221</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -905,9 +909,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00241">241</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00035">35</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00151">UpdateMousePos()</a>.</p>
 
 </div>
 </div>
@@ -923,9 +927,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00219">219</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00013">13</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -949,9 +953,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00239">239</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00033">33</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00128">UpdateMousePos()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00151">UpdateMousePos()</a>.</p>
 
 </div>
 </div>
@@ -975,7 +979,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00235">235</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00029">29</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -991,9 +997,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00233">233</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00027">27</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00016">OnAfterInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00039">OnAfterInit()</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1015,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00225">225</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00019">19</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
 </div>
 </div>
@@ -1025,9 +1031,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00227">227</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00021">21</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1049,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00229">229</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00023">23</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
 </div>
 </div>
@@ -1059,9 +1065,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00237">237</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00031">31</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00175">OnClickConfig()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00198">OnClickConfig()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>
@@ -1086,17 +1092,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00008">8</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">hoard</a>;</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
-<div class="ttc" id="aclassPlayer_html_af911928ea2eb22d1cbaf7e86a83a2e82"><div class="ttname"><a href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">Player.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01530">Player.cs:1530</a></div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00147">Generate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00016">OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00161">OnClickClear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00175">OnClickConfig()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00168">OnClickNextMode()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00045">Reset()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">Update()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerHoard_8cs_source.html#l00037">37</a> of file <a class="el" href="LayerHoard_8cs_source.html">LayerHoard.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00157">AddRandom()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00170">Generate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00039">OnAfterInit()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00184">OnClickClear()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00198">OnClickConfig()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00191">OnClickNextMode()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00068">Reset()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00086">Update()</a>.</p>
 
 </div>
 </div>

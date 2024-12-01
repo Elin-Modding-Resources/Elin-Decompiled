@@ -6,7 +6,7 @@ var classHotItemHeld =
     [ "CanRotate", "classHotItemHeld.html#a2d778c9f22e166cd12f158ba4c8b2a79", null ],
     [ "GetAct", "classHotItemHeld.html#aa9ab57c606f79ce44cecc2635b5804a5", null ],
     [ "GetSelfAct", "classHotItemHeld.html#acd5d0fea8c97247a842cce16b9e090f7", null ],
-    [ "OnRenderTile", "classHotItemHeld.html#a2cece7db17571450d24c5c2dbbaeef2e", null ],
+    [ "OnRenderTile", "classHotItemHeld.html#abc897fb16cf14cf031d856c88a29b844", null ],
     [ "OnSetCurrentItem", "classHotItemHeld.html#afd22fc9759c62f720236cb1d1514f860", null ],
     [ "OnUnselect", "classHotItemHeld.html#a0904a4949e3aaeaef370ca4931a65040", null ],
     [ "TrySetAct", "classHotItemHeld.html#af4a4866ea793a37b2d14e9218e7e4b44", null ],

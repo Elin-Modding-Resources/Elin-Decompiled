@@ -19,5 +19,5 @@ var classTraitDoor =
     [ "IsDoor", "classTraitDoor.html#aceba9b32a32bbec0ec12806211fca9d3", null ],
     [ "IsOpenSight", "classTraitDoor.html#abaea5360af6614346d7e251fad646b03", null ],
     [ "ShouldRefreshTile", "classTraitDoor.html#aefdf075fedcd96d092297ef79a8fce98", null ],
-    [ "tileMode", "classTraitDoor.html#a7fbdb6af5806e0783c171d2db54efdb2", null ]
+    [ "tileMode", "classTraitDoor.html#ab9fd37510589029b0571162b03d8c987", null ]
 ];

@@ -5,7 +5,7 @@ var classTraitDemitas =
     [ "CanInvest", "classTraitDemitas.html#ada9f74c3ed619121e97a88f0d555a842", null ],
     [ "CanJoinParty", "classTraitDemitas.html#a6b7f513d97116cb2d65c9d549d952a99", null ],
     [ "CanSpellwrite", "classTraitDemitas.html#a8529987bfd47cabd0a015ed4e1fd2e13", null ],
-    [ "CopyShop", "classTraitDemitas.html#ab71b41ea4b06233a2f1a9e8c0fd2a282", null ],
+    [ "CopyShop", "classTraitDemitas.html#a0ff4e48fdcd360e4ac5111c1f89ac7ae", null ],
     [ "CostRerollShop", "classTraitDemitas.html#acbb6b4cc9b4dc7f2b093a84f98ab6d9f", null ],
     [ "NumCopyItem", "classTraitDemitas.html#af401e4c1f2378c214d501d5203dcfc06", null ],
     [ "RestockDay", "classTraitDemitas.html#ad6cacf0733e3e0535a604ff05ff92c62", null ],

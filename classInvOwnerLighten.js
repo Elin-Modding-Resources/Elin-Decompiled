@@ -1,6 +1,5 @@
 var classInvOwnerLighten =
 [
-    [ "InvOwnerLighten", "classInvOwnerLighten.html#adc1ef2f2bc7ffac0657bb34607b2f15b", null ],
     [ "_OnProcess", "classInvOwnerLighten.html#abc1e69d8c7e9d030d2c7aeb4f18b525f", null ],
     [ "CreateDefaultContainer", "classInvOwnerLighten.html#abf76b3d666c1997bd35f22b29880869d", null ],
     [ "ShouldShowGuide", "classInvOwnerLighten.html#a82a092830e296879b5827907ef5b59bc", null ],

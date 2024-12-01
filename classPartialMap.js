@@ -8,7 +8,7 @@ var classPartialMap =
       [ "Evaluate", "classPartialMap.html#a845a72bfb177eaaef400ee175e28b06bab086843368d1c92d0a86cbee76b20b6f", null ]
     ] ],
     [ "_Load", "classPartialMap.html#a7bfa506424de03d7a992b0c6e82aa6a8", null ],
-    [ "Apply", "classPartialMap.html#af981ebfe97ea82218680ac0e93a78ed4", null ],
+    [ "Apply", "classPartialMap.html#a6d27ea3ce8aaa2baa5820d0c505ab40d", null ],
     [ "Apply", "classPartialMap.html#aad7c61ced9f90063839ec61b438d5965", null ],
     [ "ClearMarkedCells", "classPartialMap.html#a8d3d914d0f39beb2508c9f2193b9f1aa", null ],
     [ "Delete", "classPartialMap.html#a1173e0965cd39f7a26c8fa2c9c1a1346", null ],
@@ -39,7 +39,7 @@ var classPartialMap =
     [ "path", "classPartialMap.html#a4b2fcba285a46b0549c957c14c424e1a", null ],
     [ "procedural", "classPartialMap.html#af913c6bbc4b90b16a470d4164b15e2ba", null ],
     [ "relative", "classPartialMap.html#af292a7590cb9a03c6a502719ec8d5f58", null ],
-    [ "result", "classPartialMap.html#a65979c3d2481b5705c43cc8f3b712978", null ],
+    [ "result", "classPartialMap.html#ab82dba3fbc033a45ae0c89b6a16a46fc", null ],
     [ "ruinChance", "classPartialMap.html#aa57b027cba4575c120dc5af7c16dff2f", null ],
     [ "validPoints", "classPartialMap.html#ab3b8ebf76394de92f8bec8cf645e8d1f", null ],
     [ "value", "classPartialMap.html#ac7c2244459cbdead9f927191aff84641", null ],

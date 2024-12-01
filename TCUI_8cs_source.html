@@ -92,75 +92,62 @@ $(document).ready(function(){initNavTree('TCUI_8cs_source.html',''); initResizab
   <div class="headertitle"><div class="title">TCUI.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TCUI_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classTCUI.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTCUI.html">TCUI</a> : <a class="code hl_class" href="classTC.html">TC</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTCUI.html#a4159e360479ed56a226969a30223b705">    6</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTCUI.html#a4159e360479ed56a226969a30223b705">isUI</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">   14</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> Vector3 <a class="code hl_property" href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">FixPos</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.textPos;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classTCUI.html#aca1713d175c6c391443c4de26926addb">   22</a></span>    <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTCUI.html#aca1713d175c6c391443c4de26926addb">Awake</a>()</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        this._rect = this.Rect();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">   27</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">OnDraw</a>(ref Vector3 pos)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        GameObject go = base.gameObject;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        Vector3 _pos = pos;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsLateUpdate.Add(delegate</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (go != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                this.lastPos = _pos;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                Vector3 vector = Camera.main.WorldToScreenPoint(_pos);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                vector.z = 0f;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                vector += this.FixPos * <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">Zoom</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                this._rect.position = vector;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">   44</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">DrawImmediate</a>(ref Vector3 pos)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        Vector3 vector = Camera.main.WorldToScreenPoint(pos);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        vector.z = 0f;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        vector += this.FixPos * <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">Zoom</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this._rect.position = vector;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">   52</a></span>    <span class="keyword">private</span> RectTransform <a class="code hl_variable" href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">_rect</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">   54</a></span>    <span class="keyword">protected</span> Vector3 <a class="code hl_variable" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">lastPos</a>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
-<div class="ttc" id="aclassBaseGameScreen_html_a4e8e32bd3b4aece0b4f2da253f99477e"><div class="ttname"><a href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">BaseGameScreen.Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00833">BaseGameScreen.cs:833</a></div></div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00171">EMono.cs:171</a></div></div>
-<div class="ttc" id="aclassEMono_html_a6d9695d19ece56b37cf342a28c0426e0"><div class="ttname"><a href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">EMono.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00094">EMono.cs:95</a></div></div>
-<div class="ttc" id="aclassTCUI_html"><div class="ttname"><a href="classTCUI.html">TCUI</a></div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00004">TCUI.cs:5</a></div></div>
-<div class="ttc" id="aclassTCUI_html_a02b77a321a2e971388b8c23db364fcbf"><div class="ttname"><a href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">TCUI.FixPos</a></div><div class="ttdeci">override Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00014">TCUI.cs:15</a></div></div>
-<div class="ttc" id="aclassTCUI_html_a4159e360479ed56a226969a30223b705"><div class="ttname"><a href="classTCUI.html#a4159e360479ed56a226969a30223b705">TCUI.isUI</a></div><div class="ttdeci">override bool isUI</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00006">TCUI.cs:7</a></div></div>
-<div class="ttc" id="aclassTCUI_html_a533d876d9f61dc3f1d2934547e1b834a"><div class="ttname"><a href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">TCUI.DrawImmediate</a></div><div class="ttdeci">void DrawImmediate(ref Vector3 pos)</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00044">TCUI.cs:44</a></div></div>
-<div class="ttc" id="aclassTCUI_html_a9da0eac345e63e64021ee7675e66197e"><div class="ttname"><a href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">TCUI.OnDraw</a></div><div class="ttdeci">override void OnDraw(ref Vector3 pos)</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00027">TCUI.cs:27</a></div></div>
-<div class="ttc" id="aclassTCUI_html_abc435784d4228cacb3dc3d845163b8bf"><div class="ttname"><a href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">TCUI._rect</a></div><div class="ttdeci">RectTransform _rect</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00052">TCUI.cs:52</a></div></div>
-<div class="ttc" id="aclassTCUI_html_aca1713d175c6c391443c4de26926addb"><div class="ttname"><a href="classTCUI.html#aca1713d175c6c391443c4de26926addb">TCUI.Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00022">TCUI.cs:22</a></div></div>
-<div class="ttc" id="aclassTCUI_html_adb2903c8ee3d25995d64e98e9f5f6e3b"><div class="ttname"><a href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">TCUI.lastPos</a></div><div class="ttdeci">Vector3 lastPos</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00054">TCUI.cs:54</a></div></div>
-<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00004">TC.cs:5</a></div></div>
-<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00056">TC.cs:56</a></div></div>
+<a href="TCUI_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTCUI.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTCUI.html">TCUI</a> : <a class="code hl_class" href="classTC.html">TC</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">    5</a></span>    <span class="keyword">private</span> RectTransform <a class="code hl_variable" href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">_rect</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">    7</a></span>    <span class="keyword">protected</span> Vector3 <a class="code hl_variable" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">lastPos</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTCUI.html#a4159e360479ed56a226969a30223b705">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTCUI.html#a4159e360479ed56a226969a30223b705">isUI</a> =&gt; <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">   11</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> Vector3 <a class="code hl_property" href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">FixPos</a> =&gt; <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.textPos;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTCUI.html#aca1713d175c6c391443c4de26926addb">   13</a></span>    <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTCUI.html#aca1713d175c6c391443c4de26926addb">Awake</a>()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_variable" href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">_rect</a> = this.Rect();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">   18</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">OnDraw</a>(ref Vector3 pos)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        GameObject go = base.gameObject;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        Vector3 _pos = pos;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.actionsLateUpdate.Add(delegate</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (go != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <a class="code hl_variable" href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">lastPos</a> = _pos;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                Vector3 position = Camera.main.WorldToScreenPoint(_pos);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                position.z = 0f;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                position += <a class="code hl_property" href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">FixPos</a> * <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">Zoom</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                _rect.position = position;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        });</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">   35</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">DrawImmediate</a>(ref Vector3 pos)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        Vector3 position = Camera.main.WorldToScreenPoint(pos);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        position.z = 0f;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        position += <a class="code hl_property" href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">FixPos</a> * <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">Zoom</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        _rect.position = position;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+<div class="ttc" id="aclassBaseGameScreen_html_a4e8e32bd3b4aece0b4f2da253f99477e"><div class="ttname"><a href="classBaseGameScreen.html#a4e8e32bd3b4aece0b4f2da253f99477e">BaseGameScreen.Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00090">BaseGameScreen.cs:90</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00005">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d9695d19ece56b37cf342a28c0426e0"><div class="ttname"><a href="classEMono.html#a6d9695d19ece56b37cf342a28c0426e0">EMono.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00029">EMono.cs:29</a></div></div>
+<div class="ttc" id="aclassTCUI_html"><div class="ttname"><a href="classTCUI.html">TCUI</a></div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00003">TCUI.cs:4</a></div></div>
+<div class="ttc" id="aclassTCUI_html_a02b77a321a2e971388b8c23db364fcbf"><div class="ttname"><a href="classTCUI.html#a02b77a321a2e971388b8c23db364fcbf">TCUI.FixPos</a></div><div class="ttdeci">override Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00011">TCUI.cs:11</a></div></div>
+<div class="ttc" id="aclassTCUI_html_a4159e360479ed56a226969a30223b705"><div class="ttname"><a href="classTCUI.html#a4159e360479ed56a226969a30223b705">TCUI.isUI</a></div><div class="ttdeci">override bool isUI</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00009">TCUI.cs:9</a></div></div>
+<div class="ttc" id="aclassTCUI_html_a533d876d9f61dc3f1d2934547e1b834a"><div class="ttname"><a href="classTCUI.html#a533d876d9f61dc3f1d2934547e1b834a">TCUI.DrawImmediate</a></div><div class="ttdeci">void DrawImmediate(ref Vector3 pos)</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00035">TCUI.cs:35</a></div></div>
+<div class="ttc" id="aclassTCUI_html_a9da0eac345e63e64021ee7675e66197e"><div class="ttname"><a href="classTCUI.html#a9da0eac345e63e64021ee7675e66197e">TCUI.OnDraw</a></div><div class="ttdeci">override void OnDraw(ref Vector3 pos)</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00018">TCUI.cs:18</a></div></div>
+<div class="ttc" id="aclassTCUI_html_abc435784d4228cacb3dc3d845163b8bf"><div class="ttname"><a href="classTCUI.html#abc435784d4228cacb3dc3d845163b8bf">TCUI._rect</a></div><div class="ttdeci">RectTransform _rect</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00005">TCUI.cs:5</a></div></div>
+<div class="ttc" id="aclassTCUI_html_aca1713d175c6c391443c4de26926addb"><div class="ttname"><a href="classTCUI.html#aca1713d175c6c391443c4de26926addb">TCUI.Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00013">TCUI.cs:13</a></div></div>
+<div class="ttc" id="aclassTCUI_html_adb2903c8ee3d25995d64e98e9f5f6e3b"><div class="ttname"><a href="classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b">TCUI.lastPos</a></div><div class="ttdeci">Vector3 lastPos</div><div class="ttdef"><b>Definition:</b> <a href="TCUI_8cs_source.html#l00007">TCUI.cs:7</a></div></div>
+<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00003">TC.cs:4</a></div></div>
+<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00005">TC.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

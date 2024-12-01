@@ -7,12 +7,12 @@ var classTimeTable =
       [ "Sleep", "classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158a243924bfd56a682be235638b53961e09", null ]
     ] ],
     [ "Add", "classTimeTable.html#ab216dad2525266631f2cd63eeff5f67c", null ],
-    [ "GetSpan", "classTimeTable.html#ab6f54ab7979e8ba7b45fd1c94732a077", null ],
-    [ "GetSpan", "classTimeTable.html#aaceb9d3f2384d80cdaa6fe50700ed69f", null ],
-    [ "GetSpan", "classTimeTable.html#a79fdc5b6c2df15a16c8cc9a0b725dc43", null ],
+    [ "GetSpan", "classTimeTable.html#af529c2fd0a1bf9130b57910144c4acb7", null ],
+    [ "GetSpan", "classTimeTable.html#a1ae623b98fe14156e81111b94f3ba119", null ],
+    [ "GetSpan", "classTimeTable.html#a5dd8c28515bb20af039e10adc2198fa0", null ],
     [ "GetTimeTable", "classTimeTable.html#af7c15675b78f7d0c7f0e4703bdc076b9", null ],
     [ "Init", "classTimeTable.html#a3ddc9e9d983fcfe91f683f3d0e860d80", null ],
     [ "dict", "classTimeTable.html#a7e8418538a0e2d439314d749aabf0d60", null ],
-    [ "spans", "classTimeTable.html#a840cf02a8deedfc8644c9a0992503d3a", null ],
+    [ "spans", "classTimeTable.html#a28cbf9a0ef056846f239da450c8cf1d3", null ],
     [ "unityInit", "classTimeTable.html#a03b822a09f8cbc91da2f407153c620c3", null ]
 ];

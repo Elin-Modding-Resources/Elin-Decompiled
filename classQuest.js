@@ -93,7 +93,7 @@ var classQuest =
     [ "Confetti", "classQuest.html#ab69581222e68c8f86bfbfdb9adb6c2a7", null ],
     [ "DangerLv", "classQuest.html#a2642c51aac70d220a645f13dabb6d787", null ],
     [ "DestChara", "classQuest.html#a4222ba9f92368ecb35f55a62ba66899a", null ],
-    [ "difficultyType", "classQuest.html#a6c802d34b3fe0a66e6cd3c62aa6a6941", null ],
+    [ "difficultyType", "classQuest.html#a3a03e2e7b699388f14e2edb339568181", null ],
     [ "FameContent", "classQuest.html#a301aa141a9bd7849cb7cf0d53e4cfdfa", null ],
     [ "FameOnComplete", "classQuest.html#a19141239d975333019afcc94e41e983c", null ],
     [ "ForbidTeleport", "classQuest.html#aa22341e2c25faf3219e044d7e0793473", null ],

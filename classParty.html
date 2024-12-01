@@ -222,7 +222,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00006">6</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00005">5</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac08a11cd4fc95d4c68584dfded84ed02" name="ac08a11cd4fc95d4c68584dfded84ed02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac08a11cd4fc95d4c68584dfded84ed02">&#9670;&#160;</a></span>AddMemeber()</h2>
@@ -248,56 +248,55 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00042">42</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a> == <span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">   45</span>        {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a429f64eaed4074c6971465fe582d0252">IsGlobal</a>)</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            Debug.LogError(<span class="stringliteral">&quot;exception: &quot;</span> + ((c != <span class="keyword">null</span>) ? c.<a class="code hl_function" href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">ToString</a>() : <span class="keyword">null</span>) + <span class="stringliteral">&quot; is not global chara&quot;</span>);</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>        this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Add(c);</div>
-<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Add(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
-<div class="line"><span class="lineno">   54</span>        c.party = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   55</span>        c.isSale = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   56</span>        c.<a class="code hl_function" href="classBaseCard.html#ace82e13d1c1ffa218ea48d5c3ebccf31">SetBool</a>(18, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a> != <span class="keyword">null</span>)</div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00051">51</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a> == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a429f64eaed4074c6971465fe582d0252">IsGlobal</a>)</div>
 <div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            c.<a class="code hl_function" href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">RefreshWorkElements</a>(c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_property" href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">elements</a>);</div>
-<div class="line"><span class="lineno">   60</span>            c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_function" href="classFactionBranch.html#a2831df00f46bb888fa434df9ed1bb44a">RefreshEfficiency</a>();</div>
-<div class="line"><span class="lineno">   61</span>            c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_variable" href="classFactionBranch.html#ac9fa716fbbf8854874b6ec3bfc640ec3">policies</a>.<a class="code hl_function" href="classPolicyManager.html#acb8dd718e174450a4b9d5695b12b3bf2">Validate</a>();</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_variable" href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">owner</a>.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   63</span>            {</div>
-<div class="line"><span class="lineno">   64</span>                c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_variable" href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">owner</a>.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a>.<a class="code hl_variable" href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">props</a>.<a class="code hl_variable" href="classPropsManager.html#a252eb48a13e330c55d5fea897fe10465">sales</a>.Remove(c);</div>
-<div class="line"><span class="lineno">   65</span>            }</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclassBaseCard_html_ace82e13d1c1ffa218ea48d5c3ebccf31"><div class="ttname"><a href="classBaseCard.html#ace82e13d1c1ffa218ea48d5c3ebccf31">BaseCard.SetBool</a></div><div class="ttdeci">void SetBool(int id, bool enable)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00012">BaseCard.cs:12</a></div></div>
-<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
-<div class="ttc" id="aclassChara_html_a30f7c1afe3fea2b732490af476a54b77"><div class="ttname"><a href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">Chara.RefreshWorkElements</a></div><div class="ttdeci">void RefreshWorkElements(ElementContainer parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08112">Chara.cs:8112</a></div></div>
-<div class="ttc" id="aclassChara_html_a429f64eaed4074c6971465fe582d0252"><div class="ttname"><a href="classChara.html#a429f64eaed4074c6971465fe582d0252">Chara.IsGlobal</a></div><div class="ttdeci">override bool IsGlobal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00508">Chara.cs:509</a></div></div>
-<div class="ttc" id="aclassChara_html_a4559e7f955b5324fcfc35429abc621fd"><div class="ttname"><a href="classChara.html#a4559e7f955b5324fcfc35429abc621fd">Chara.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00372">Chara.cs:372</a></div></div>
-<div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09425">Chara.cs:9425</a></div></div>
-<div class="ttc" id="aclassChara_html_ad5985ee50790374ee8bc017ffa5c3da8"><div class="ttname"><a href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">Chara.homeBranch</a></div><div class="ttdeci">FactionBranch homeBranch</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00917">Chara.cs:918</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_a2831df00f46bb888fa434df9ed1bb44a"><div class="ttname"><a href="classFactionBranch.html#a2831df00f46bb888fa434df9ed1bb44a">FactionBranch.RefreshEfficiency</a></div><div class="ttdeci">void RefreshEfficiency()</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00122">FactionBranch.cs:122</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_ab396614ec503ed152c0e039257610577"><div class="ttname"><a href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">FactionBranch.owner</a></div><div class="ttdeci">Zone owner</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01684">FactionBranch.cs:1684</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_ac9fa716fbbf8854874b6ec3bfc640ec3"><div class="ttname"><a href="classFactionBranch.html#ac9fa716fbbf8854874b6ec3bfc640ec3">FactionBranch.policies</a></div><div class="ttdeci">PolicyManager policies</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01646">FactionBranch.cs:1646</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_aed5261461375018a53ad7853e6b081c6"><div class="ttname"><a href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">FactionBranch.elements</a></div><div class="ttdeci">ElementContainerZone elements</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00177">FactionBranch.cs:178</a></div></div>
-<div class="ttc" id="aclassMap_html_a7bbfb1c119ff730ece5cb7a046449ed1"><div class="ttname"><a href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">Map.props</a></div><div class="ttdeci">PropsManager props</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02893">Map.cs:2893</a></div></div>
-<div class="ttc" id="aclassParty_html_a5df43791c52e6416784ff300b91071dd"><div class="ttname"><a href="classParty.html#a5df43791c52e6416784ff300b91071dd">Party.uidMembers</a></div><div class="ttdeci">List&lt; int &gt; uidMembers</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00183">Party.cs:183</a></div></div>
-<div class="ttc" id="aclassParty_html_ab40c9e3c6723032a277d2fd523d4ec29"><div class="ttname"><a href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">Party.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00008">Party.cs:9</a></div></div>
-<div class="ttc" id="aclassPolicyManager_html_acb8dd718e174450a4b9d5695b12b3bf2"><div class="ttname"><a href="classPolicyManager.html#acb8dd718e174450a4b9d5695b12b3bf2">PolicyManager.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="PolicyManager_8cs_source.html#l00158">PolicyManager.cs:158</a></div></div>
-<div class="ttc" id="aclassPropsManager_html_a252eb48a13e330c55d5fea897fe10465"><div class="ttname"><a href="classPropsManager.html#a252eb48a13e330c55d5fea897fe10465">PropsManager.sales</a></div><div class="ttdeci">List&lt; Card &gt; sales</div><div class="ttdef"><b>Definition:</b> <a href="PropsManager_8cs_source.html#l00140">PropsManager.cs:140</a></div></div>
+<div class="line"><span class="lineno">   59</span>            Debug.LogError(<span class="stringliteral">&quot;exception: &quot;</span> + c?.ToString() + <span class="stringliteral">&quot; is not global chara&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Add(c);</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Add(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
+<div class="line"><span class="lineno">   63</span>        c.party = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   64</span>        c.isSale = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   65</span>        c.<a class="code hl_function" href="classBaseCard.html#ace82e13d1c1ffa218ea48d5c3ebccf31">SetBool</a>(18, enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            c.<a class="code hl_function" href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">RefreshWorkElements</a>(c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_property" href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">elements</a>);</div>
+<div class="line"><span class="lineno">   69</span>            c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_function" href="classFactionBranch.html#a2831df00f46bb888fa434df9ed1bb44a">RefreshEfficiency</a>();</div>
+<div class="line"><span class="lineno">   70</span>            c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_variable" href="classFactionBranch.html#ac9fa716fbbf8854874b6ec3bfc640ec3">policies</a>.<a class="code hl_function" href="classPolicyManager.html#acb8dd718e174450a4b9d5695b12b3bf2">Validate</a>();</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_variable" href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">owner</a>.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_variable" href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">owner</a>.<a class="code hl_variable" href="classZone.html#afa0007971eaad96b106d4004690b5ed7">map</a>.<a class="code hl_variable" href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">props</a>.<a class="code hl_variable" href="classPropsManager.html#a252eb48a13e330c55d5fea897fe10465">sales</a>.Remove(c);</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_ace82e13d1c1ffa218ea48d5c3ebccf31"><div class="ttname"><a href="classBaseCard.html#ace82e13d1c1ffa218ea48d5c3ebccf31">BaseCard.SetBool</a></div><div class="ttdeci">void SetBool(int id, bool enable)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00020">BaseCard.cs:20</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00111">Card.cs:112</a></div></div>
+<div class="ttc" id="aclassChara_html_a30f7c1afe3fea2b732490af476a54b77"><div class="ttname"><a href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">Chara.RefreshWorkElements</a></div><div class="ttdeci">void RefreshWorkElements(ElementContainer parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07759">Chara.cs:7759</a></div></div>
+<div class="ttc" id="aclassChara_html_a429f64eaed4074c6971465fe582d0252"><div class="ttname"><a href="classChara.html#a429f64eaed4074c6971465fe582d0252">Chara.IsGlobal</a></div><div class="ttdeci">override bool IsGlobal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00595">Chara.cs:595</a></div></div>
+<div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00043">Chara.cs:43</a></div></div>
+<div class="ttc" id="aclassChara_html_ad5985ee50790374ee8bc017ffa5c3da8"><div class="ttname"><a href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">Chara.homeBranch</a></div><div class="ttdeci">FactionBranch homeBranch</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00865">Chara.cs:865</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a2831df00f46bb888fa434df9ed1bb44a"><div class="ttname"><a href="classFactionBranch.html#a2831df00f46bb888fa434df9ed1bb44a">FactionBranch.RefreshEfficiency</a></div><div class="ttdeci">void RefreshEfficiency()</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00180">FactionBranch.cs:180</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_ab396614ec503ed152c0e039257610577"><div class="ttname"><a href="classFactionBranch.html#ab396614ec503ed152c0e039257610577">FactionBranch.owner</a></div><div class="ttdeci">Zone owner</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00108">FactionBranch.cs:108</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_ac9fa716fbbf8854874b6ec3bfc640ec3"><div class="ttname"><a href="classFactionBranch.html#ac9fa716fbbf8854874b6ec3bfc640ec3">FactionBranch.policies</a></div><div class="ttdeci">PolicyManager policies</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00070">FactionBranch.cs:70</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_aed5261461375018a53ad7853e6b081c6"><div class="ttname"><a href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">FactionBranch.elements</a></div><div class="ttdeci">ElementContainerZone elements</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00144">FactionBranch.cs:144</a></div></div>
+<div class="ttc" id="aclassMap_html_a7bbfb1c119ff730ece5cb7a046449ed1"><div class="ttname"><a href="classMap.html#a7bbfb1c119ff730ece5cb7a046449ed1">Map.props</a></div><div class="ttdeci">PropsManager props</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00088">Map.cs:88</a></div></div>
+<div class="ttc" id="aclassParty_html_a5df43791c52e6416784ff300b91071dd"><div class="ttname"><a href="classParty.html#a5df43791c52e6416784ff300b91071dd">Party.uidMembers</a></div><div class="ttdeci">List&lt; int &gt; uidMembers</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00011">Party.cs:11</a></div></div>
+<div class="ttc" id="aclassParty_html_ab40c9e3c6723032a277d2fd523d4ec29"><div class="ttname"><a href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">Party.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00017">Party.cs:18</a></div></div>
+<div class="ttc" id="aclassPolicyManager_html_acb8dd718e174450a4b9d5695b12b3bf2"><div class="ttname"><a href="classPolicyManager.html#acb8dd718e174450a4b9d5695b12b3bf2">PolicyManager.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="PolicyManager_8cs_source.html#l00159">PolicyManager.cs:159</a></div></div>
+<div class="ttc" id="aclassPropsManager_html_a252eb48a13e330c55d5fea897fe10465"><div class="ttname"><a href="classPropsManager.html#a252eb48a13e330c55d5fea897fe10465">PropsManager.sales</a></div><div class="ttdeci">List&lt; Card &gt; sales</div><div class="ttdef"><b>Definition:</b> <a href="PropsManager_8cs_source.html#l00014">PropsManager.cs:14</a></div></div>
 <div class="ttc" id="aclassWidgetRoster_html"><div class="ttname"><a href="classWidgetRoster.html">WidgetRoster</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00007">WidgetRoster.cs:8</a></div></div>
-<div class="ttc" id="aclassWidgetRoster_html_a0c4514a6d43393de6538d206d0087d15"><div class="ttname"><a href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">WidgetRoster.SetDirty</a></div><div class="ttdeci">static void SetDirty()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00092">WidgetRoster.cs:92</a></div></div>
-<div class="ttc" id="aclassZone_html_afa0007971eaad96b106d4004690b5ed7"><div class="ttname"><a href="classZone.html#afa0007971eaad96b106d4004690b5ed7">Zone.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03878">Zone.cs:3878</a></div></div>
+<div class="ttc" id="aclassWidgetRoster_html_a0c4514a6d43393de6538d206d0087d15"><div class="ttname"><a href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">WidgetRoster.SetDirty</a></div><div class="ttdeci">static void SetDirty()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00121">WidgetRoster.cs:121</a></div></div>
+<div class="ttc" id="aclassZone_html_afa0007971eaad96b106d4004690b5ed7"><div class="ttname"><a href="classZone.html#afa0007971eaad96b106d4004690b5ed7">Zone.map</a></div><div class="ttdeci">Map map</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00057">Zone.cs:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionBranch_8cs_source.html#l00178">FactionBranch.elements</a>, <a class="el" href="Chara_8cs_source.html#l00918">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00509">Chara.IsGlobal</a>, <a class="el" href="Zone_8cs_source.html#l03878">Zone.map</a>, <a class="el" href="Party_8cs_source.html#l00009">members</a>, <a class="el" href="FactionBranch_8cs_source.html#l01684">FactionBranch.owner</a>, <a class="el" href="Chara_8cs_source.html#l09425">Chara.party</a>, <a class="el" href="FactionBranch_8cs_source.html#l01646">FactionBranch.policies</a>, <a class="el" href="Map_8cs_source.html#l02893">Map.props</a>, <a class="el" href="FactionBranch_8cs_source.html#l00122">FactionBranch.RefreshEfficiency()</a>, <a class="el" href="Chara_8cs_source.html#l08112">Chara.RefreshWorkElements()</a>, <a class="el" href="PropsManager_8cs_source.html#l00140">PropsManager.sales</a>, <a class="el" href="BaseCard_8cs_source.html#l00012">BaseCard.SetBool()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00092">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l00372">Chara.ToString()</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, <a class="el" href="Party_8cs_source.html#l00183">uidMembers</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00158">PolicyManager.Validate()</a>.</p>
+<p class="reference">References <a class="el" href="FactionBranch_8cs_source.html#l00144">FactionBranch.elements</a>, <a class="el" href="Chara_8cs_source.html#l00865">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00595">Chara.IsGlobal</a>, <a class="el" href="Zone_8cs_source.html#l00057">Zone.map</a>, <a class="el" href="Party_8cs_source.html#l00018">members</a>, <a class="el" href="FactionBranch_8cs_source.html#l00108">FactionBranch.owner</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="FactionBranch_8cs_source.html#l00070">FactionBranch.policies</a>, <a class="el" href="Map_8cs_source.html#l00088">Map.props</a>, <a class="el" href="FactionBranch_8cs_source.html#l00180">FactionBranch.RefreshEfficiency()</a>, <a class="el" href="Chara_8cs_source.html#l07759">Chara.RefreshWorkElements()</a>, <a class="el" href="PropsManager_8cs_source.html#l00014">PropsManager.sales</a>, <a class="el" href="BaseCard_8cs_source.html#l00020">BaseCard.SetBool()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00121">WidgetRoster.SetDirty()</a>, <a class="el" href="Card_8cs_source.html#l00112">Card.uid</a>, <a class="el" href="Party_8cs_source.html#l00011">uidMembers</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00159">PolicyManager.Validate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PartyManager_8cs_source.html#l00007">PartyManager.Create()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02066">CoreDebug.g__AddParty()</a>, <a class="el" href="Chara_8cs_source.html#l04627">Chara.GetRevived()</a>, <a class="el" href="TraitFoodEggFertilized_8cs_source.html#l00013">TraitFoodEggFertilized.Incubate()</a>, <a class="el" href="Chara_8cs_source.html#l01934">Chara.MakeAlly()</a>, <a class="el" href="Chara_8cs_source.html#l01928">Chara.MakePartyMemeber()</a>, <a class="el" href="QuestDebt_8cs_source.html#l00006">QuestDebt.OnStart()</a>, and <a class="el" href="ActRide_8cs_source.html#l00055">ActRide.Ride()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PartyManager_8cs_source.html#l00009">PartyManager.Create()</a>, <a class="el" href="Chara_8cs_source.html#l04394">Chara.GetRevived()</a>, <a class="el" href="TraitFoodEggFertilized_8cs_source.html#l00005">TraitFoodEggFertilized.Incubate()</a>, <a class="el" href="Chara_8cs_source.html#l01868">Chara.MakeAlly()</a>, <a class="el" href="Chara_8cs_source.html#l01862">Chara.MakePartyMemeber()</a>, <a class="el" href="QuestDebt_8cs_source.html#l00014">QuestDebt.OnStart()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00335">CoreDebug.QuickStart()</a>, and <a class="el" href="ActRide_8cs_source.html#l00047">ActRide.Ride()</a>.</p>
 
 </div>
 </div>
@@ -324,23 +323,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00163">163</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>    {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keyword">using</span> (List&lt;Chara&gt;.Enumerator enumerator = this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.GetEnumerator())</div>
-<div class="line"><span class="lineno">  167</span>        {</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  169</span>            {</div>
-<div class="line"><span class="lineno">  170</span>                <span class="keywordflow">if</span> (!enumerator.Current.isDead)</div>
-<div class="line"><span class="lineno">  171</span>                {</div>
-<div class="line"><span class="lineno">  172</span>                    num++;</div>
-<div class="line"><span class="lineno">  173</span>                }</div>
-<div class="line"><span class="lineno">  174</span>            }</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00169">169</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> member <span class="keywordflow">in</span> <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (!member.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                num++;</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00373">Chara.cs:374</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Party_8cs_source.html#l00009">members</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00374">Chara.isDead</a>, and <a class="el" href="Party_8cs_source.html#l00018">members</a>.</p>
 
 </div>
 </div>
@@ -368,22 +366,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00135">135</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
-<div class="line"><span class="lineno">  139</span>        {</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele) &gt; num)</div>
-<div class="line"><span class="lineno">  141</span>            {</div>
-<div class="line"><span class="lineno">  142</span>                num = chara.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele);</div>
-<div class="line"><span class="lineno">  143</span>            }</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01976">Card.cs:1976</a></div></div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00144">144</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> member <span class="keywordflow">in</span> <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
+<div class="line"><span class="lineno">  148</span>        {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (member.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele) &gt; num)</div>
+<div class="line"><span class="lineno">  150</span>            {</div>
+<div class="line"><span class="lineno">  151</span>                num = member.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele);</div>
+<div class="line"><span class="lineno">  152</span>            }</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02353">Card.cs:2353</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01976">Card.Evalue()</a>, and <a class="el" href="Party_8cs_source.html#l00009">members</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02353">Card.Evalue()</a>, and <a class="el" href="Party_8cs_source.html#l00018">members</a>.</p>
 
 </div>
 </div>
@@ -411,28 +408,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00110">110</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>(ele, 0);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
-<div class="line"><span class="lineno">  114</span>        {</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a> &amp;&amp; chara.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele) &gt; element.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>)</div>
-<div class="line"><span class="lineno">  116</span>            {</div>
-<div class="line"><span class="lineno">  117</span>                element = chara.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(ele);</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> element;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
-<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00451">Chara.cs:452</a></div></div>
-<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00519">ElementContainer.cs:519</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00119">119</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>(ele);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> member <span class="keywordflow">in</span> <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (member.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a> &amp;&amp; member.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele) &gt; element.<a class="code hl_property" href="classElement.html#a6ee910da0d50599d65f25277f4573aae">Value</a>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                element = member.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(ele);</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> element;</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00035">Card.cs:35</a></div></div>
+<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00545">Chara.cs:546</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00478">ElementContainer.cs:478</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
-<div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00053">Element.2.cs:54</a></div></div>
+<div class="ttc" id="aclassElement_html_a6ee910da0d50599d65f25277f4573aae"><div class="ttname"><a href="classElement.html#a6ee910da0d50599d65f25277f4573aae">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00053">Element.2.cs:54</a></div></div>
 <div class="ttc" id="aclassElement_html_a7f33c59a74a6c34a37f8eee0e0cecd1e"><div class="ttname"><a href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Element.Create</a></div><div class="ttdeci">static Element Create(int id, int v=0)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00782">Element.2.cs:782</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00782">Element.Create()</a>, <a class="el" href="Card_8cs_source.html#l07298">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l01976">Card.Evalue()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00519">ElementContainer.GetElement()</a>, <a class="el" href="Chara_8cs_source.html#l00452">Chara.IsAliveInCurrentZone</a>, and <a class="el" href="Party_8cs_source.html#l00009">members</a>.</p>
+<p class="reference">References <a class="el" href="Element_82_8cs_source.html#l00782">Element.Create()</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02353">Card.Evalue()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00478">ElementContainer.GetElement()</a>, <a class="el" href="Chara_8cs_source.html#l00546">Chara.IsAliveInCurrentZone</a>, and <a class="el" href="Party_8cs_source.html#l00018">members</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00101">GetPartySkill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00110">GetPartySkill()</a>.</p>
 
 </div>
 </div>
@@ -460,13 +457,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00101">101</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="classParty.html#a1b25b9ccc945c897859be453b38ff8ea">GetBestSkill</a>(ele);</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="ttc" id="aclassParty_html_a1b25b9ccc945c897859be453b38ff8ea"><div class="ttname"><a href="classParty.html#a1b25b9ccc945c897859be453b38ff8ea">Party.GetBestSkill</a></div><div class="ttdeci">Element GetBestSkill(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00110">Party.cs:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00110">110</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classParty.html#a1b25b9ccc945c897859be453b38ff8ea">GetBestSkill</a>(ele);</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aclassParty_html_a1b25b9ccc945c897859be453b38ff8ea"><div class="ttname"><a href="classParty.html#a1b25b9ccc945c897859be453b38ff8ea">Party.GetBestSkill</a></div><div class="ttdeci">Element GetBestSkill(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00119">Party.cs:119</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Party_8cs_source.html#l00110">GetBestSkill()</a>.</p>
+<p class="reference">References <a class="el" href="Party_8cs_source.html#l00119">GetBestSkill()</a>.</p>
 
 </div>
 </div>
@@ -494,24 +491,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00148">148</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>    {</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keyword">using</span> (List&lt;Chara&gt;.Enumerator enumerator = this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.GetEnumerator())</div>
-<div class="line"><span class="lineno">  151</span>        {</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  153</span>            {</div>
-<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">if</span> (enumerator.Current.HasElement(ele, 1))</div>
-<div class="line"><span class="lineno">  155</span>                {</div>
-<div class="line"><span class="lineno">  156</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  157</span>                }</div>
-<div class="line"><span class="lineno">  158</span>            }</div>
-<div class="line"><span class="lineno">  159</span>        }</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00157">157</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> member <span class="keywordflow">in</span> <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (member.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(ele))</div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  164</span>            }</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  167</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04912">Card.cs:4912</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Party_8cs_source.html#l00009">members</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l04912">Card.HasElement()</a>, and <a class="el" href="Party_8cs_source.html#l00018">members</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l04813">Chara.Die()</a>, and <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l04562">Chara.Die()</a>, and <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>.</p>
 
 </div>
 </div>
@@ -539,23 +534,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00123">123</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
-<div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> ((!includePc || !chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>) &amp;&amp; chara.<a class="code hl_function" href="classChara.html#a29220cf30cb528264b9d561fb194e236">IsCriticallyWounded</a>(<span class="keyword">false</span>))</div>
-<div class="line"><span class="lineno">  128</span>            {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclassChara_html_a29220cf30cb528264b9d561fb194e236"><div class="ttname"><a href="classChara.html#a29220cf30cb528264b9d561fb194e236">Chara.IsCriticallyWounded</a></div><div class="ttdeci">bool IsCriticallyWounded(bool includeRide=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00487">Chara.cs:487</a></div></div>
-<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00516">Chara.cs:517</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00132">132</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>    {</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> member <span class="keywordflow">in</span> <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> ((!includePc || !member.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>) &amp;&amp; member.<a class="code hl_function" href="classChara.html#a29220cf30cb528264b9d561fb194e236">IsCriticallyWounded</a>())</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  139</span>            }</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="ttc" id="aclassChara_html_a29220cf30cb528264b9d561fb194e236"><div class="ttname"><a href="classChara.html#a29220cf30cb528264b9d561fb194e236">Chara.IsCriticallyWounded</a></div><div class="ttdeci">bool IsCriticallyWounded(bool includeRide=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00950">Chara.cs:950</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00597">Chara.cs:597</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00487">Chara.IsCriticallyWounded()</a>, <a class="el" href="Chara_8cs_source.html#l00517">Chara.IsPC</a>, and <a class="el" href="Party_8cs_source.html#l00009">members</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00950">Chara.IsCriticallyWounded()</a>, <a class="el" href="Chara_8cs_source.html#l00597">Chara.IsPC</a>, and <a class="el" href="Party_8cs_source.html#l00018">members</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00298">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="GoalAutoCombat_8cs_source.html#l00009">GoalAutoCombat.GetActPlanColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, and <a class="el" href="GoalAutoCombat_8cs_source.html#l00018">GoalAutoCombat.GetActPlanColor()</a>.</p>
 
 </div>
 </div>
@@ -593,9 +588,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00106">106</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00115">115</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -623,32 +618,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00070">70</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_class" href="classActRide.html">ActRide</a>.<a class="code hl_function" href="classActRide.html#afbc342e4ef2436826945fa7396420233">Unride</a>(c.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a>, c.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a>.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> == c);</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Remove(c);</div>
-<div class="line"><span class="lineno">   77</span>        this.<a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Remove(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
-<div class="line"><span class="lineno">   78</span>        c.party = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   79</span>        c.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_function" href="classFactionBranch.html#a2831df00f46bb888fa434df9ed1bb44a">RefreshEfficiency</a>();</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        c.<a class="code hl_function" href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">RefreshWorkElements</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="ttc" id="aclassActRide_html"><div class="ttname"><a href="classActRide.html">ActRide</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00004">ActRide.cs:5</a></div></div>
-<div class="ttc" id="aclassActRide_html_afbc342e4ef2436826945fa7396420233"><div class="ttname"><a href="classActRide.html#afbc342e4ef2436826945fa7396420233">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, bool parasite=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00106">ActRide.cs:106</a></div></div>
-<div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01508">Chara.cs:1508</a></div></div>
-<div class="ttc" id="aclassChara_html_a3c197d8c22ab97a78707b03dcb28a12e"><div class="ttname"><a href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">Chara.host</a></div><div class="ttdeci">Chara host</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09415">Chara.cs:9415</a></div></div>
-<div class="ttc" id="aclassChara_html_aa8259f2ad32636b6813004383ed0ce32"><div class="ttname"><a href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">Chara.parasite</a></div><div class="ttdeci">Chara parasite</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09412">Chara.cs:9412</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00079">79</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <a class="code hl_class" href="classActRide.html">ActRide</a>.<a class="code hl_function" href="classActRide.html#afbc342e4ef2436826945fa7396420233">Unride</a>(c.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a>, c.<a class="code hl_variable" href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">host</a>.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> == c);</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Remove(c);</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Remove(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
+<div class="line"><span class="lineno">   87</span>        c.party = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   88</span>        c.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            c.<a class="code hl_property" href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">homeBranch</a>.<a class="code hl_function" href="classFactionBranch.html#a2831df00f46bb888fa434df9ed1bb44a">RefreshEfficiency</a>();</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>        c.<a class="code hl_function" href="classChara.html#a30f7c1afe3fea2b732490af476a54b77">RefreshWorkElements</a>();</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="ttc" id="aclassActRide_html"><div class="ttname"><a href="classActRide.html">ActRide</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00003">ActRide.cs:4</a></div></div>
+<div class="ttc" id="aclassActRide_html_afbc342e4ef2436826945fa7396420233"><div class="ttname"><a href="classActRide.html#afbc342e4ef2436826945fa7396420233">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, bool parasite=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00098">ActRide.cs:98</a></div></div>
+<div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01564">Chara.cs:1564</a></div></div>
+<div class="ttc" id="aclassChara_html_a3c197d8c22ab97a78707b03dcb28a12e"><div class="ttname"><a href="classChara.html#a3c197d8c22ab97a78707b03dcb28a12e">Chara.host</a></div><div class="ttdeci">Chara host</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00033">Chara.cs:33</a></div></div>
+<div class="ttc" id="aclassChara_html_aa8259f2ad32636b6813004383ed0ce32"><div class="ttname"><a href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">Chara.parasite</a></div><div class="ttdeci">Chara parasite</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00030">Chara.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00918">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l09415">Chara.host</a>, <a class="el" href="Party_8cs_source.html#l00009">members</a>, <a class="el" href="Chara_8cs_source.html#l09412">Chara.parasite</a>, <a class="el" href="FactionBranch_8cs_source.html#l00122">FactionBranch.RefreshEfficiency()</a>, <a class="el" href="Chara_8cs_source.html#l08112">Chara.RefreshWorkElements()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00092">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l01508">Chara.SetDirtySpeed()</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, <a class="el" href="Party_8cs_source.html#l00183">uidMembers</a>, and <a class="el" href="ActRide_8cs_source.html#l00106">ActRide.Unride()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00865">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00033">Chara.host</a>, <a class="el" href="Party_8cs_source.html#l00018">members</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="FactionBranch_8cs_source.html#l00180">FactionBranch.RefreshEfficiency()</a>, <a class="el" href="Chara_8cs_source.html#l07759">Chara.RefreshWorkElements()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00121">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l01564">Chara.SetDirtySpeed()</a>, <a class="el" href="Card_8cs_source.html#l00112">Card.uid</a>, <a class="el" href="Party_8cs_source.html#l00011">uidMembers</a>, and <a class="el" href="ActRide_8cs_source.html#l00098">ActRide.Unride()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04664">Card.Destroy()</a>, <a class="el" href="Chara_8cs_source.html#l04813">Chara.Die()</a>, <a class="el" href="Chara_8cs_source.html#l03032">Chara.MoveHome()</a>, <a class="el" href="TraitHitchingPost_8cs_source.html#l00013">TraitHitchingPost.OnActivateTrap()</a>, <a class="el" href="TraitGeneMachine_8cs_source.html#l00072">TraitGeneMachine.OnUse()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04276">Card.Destroy()</a>, <a class="el" href="Chara_8cs_source.html#l04562">Chara.Die()</a>, <a class="el" href="Chara_8cs_source.html#l02964">Chara.MoveHome()</a>, <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">TraitHitchingPost.OnActivateTrap()</a>, <a class="el" href="TraitGeneMachine_8cs_source.html#l00066">TraitGeneMachine.OnUse()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00823">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -686,15 +681,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00088">88</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
-<div class="line"><span class="lineno">   90</span>        this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Remove(c);</div>
-<div class="line"><span class="lineno">   91</span>        this.<a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Remove(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
-<div class="line"><span class="lineno">   92</span>        this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Insert(index, c);</div>
-<div class="line"><span class="lineno">   93</span>        this.<a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Insert(index, c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00097">97</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Remove(c);</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Remove(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Insert(index, c);</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>.Insert(index, c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Party_8cs_source.html#l00009">members</a>, <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>, and <a class="el" href="Party_8cs_source.html#l00183">uidMembers</a>.</p>
+<p class="reference">References <a class="el" href="Party_8cs_source.html#l00018">members</a>, <a class="el" href="Card_8cs_source.html#l00112">Card.uid</a>, and <a class="el" href="Party_8cs_source.html#l00011">uidMembers</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetRoster_8cs_source.html#l00171">WidgetRoster.OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -722,12 +719,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00096">96</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
-<div class="line"><span class="lineno">   98</span>        this.leader = c;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00105">105</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_property" href="classParty.html#a8ebf1c07f3db62597505b34f209806fe">leader</a> = c;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclassParty_html_a8ebf1c07f3db62597505b34f209806fe"><div class="ttname"><a href="classParty.html#a8ebf1c07f3db62597505b34f209806fe">Party.leader</a></div><div class="ttdeci">Chara leader</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00029">Party.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="PartyManager_8cs_source.html#l00007">PartyManager.Create()</a>.</p>
+<p class="reference">References <a class="el" href="Party_8cs_source.html#l00030">leader</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PartyManager_8cs_source.html#l00009">PartyManager.Create()</a>.</p>
 
 </div>
 </div>
@@ -754,20 +754,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00032">32</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        this._members = <span class="keyword">new</span> List&lt;Chara&gt;();</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> uid <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            this.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Add(<a class="code hl_class" href="classRefChara.html">RefChara</a>.<a class="code hl_function" href="classRefChara.html#a65bdc808d9a0235095d7086ee37ae236">Get</a>(uid));</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclassParty_html_a496d7574c12c6fcea12c04dcc09e7d66"><div class="ttname"><a href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">Party._members</a></div><div class="ttdeci">List&lt; Chara &gt; _members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00185">Party.cs:185</a></div></div>
-<div class="ttc" id="aclassRefChara_html"><div class="ttname"><a href="classRefChara.html">RefChara</a></div><div class="ttdef"><b>Definition:</b> <a href="RefChara_8cs_source.html#l00003">RefChara.cs:4</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00041">41</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a> = <span class="keyword">new</span> List&lt;Chara&gt;();</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> uidMember <span class="keywordflow">in</span> <a class="code hl_variable" href="classParty.html#a5df43791c52e6416784ff300b91071dd">uidMembers</a>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Add(<a class="code hl_class" href="classRefChara.html">RefChara</a>.<a class="code hl_function" href="classRefChara.html#a65bdc808d9a0235095d7086ee37ae236">Get</a>(uidMember));</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassParty_html_a496d7574c12c6fcea12c04dcc09e7d66"><div class="ttname"><a href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">Party._members</a></div><div class="ttdeci">List&lt; Chara &gt; _members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00013">Party.cs:13</a></div></div>
+<div class="ttc" id="aclassRefChara_html"><div class="ttname"><a href="classRefChara.html">RefChara</a></div><div class="ttdef"><b>Definition:</b> <a href="RefChara_8cs_source.html#l00001">RefChara.cs:2</a></div></div>
 <div class="ttc" id="aclassRefChara_html_a65bdc808d9a0235095d7086ee37ae236"><div class="ttname"><a href="classRefChara.html#a65bdc808d9a0235095d7086ee37ae236">RefChara.Get</a></div><div class="ttdeci">static Chara Get(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="RefChara_8cs_source.html#l00036">RefChara.cs:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Party_8cs_source.html#l00185">_members</a>, <a class="el" href="RefChara_8cs_source.html#l00036">RefChara.Get()</a>, <a class="el" href="Party_8cs_source.html#l00009">members</a>, and <a class="el" href="Party_8cs_source.html#l00183">uidMembers</a>.</p>
+<p class="reference">References <a class="el" href="Party_8cs_source.html#l00013">_members</a>, <a class="el" href="RefChara_8cs_source.html#l00036">RefChara.Get()</a>, <a class="el" href="Party_8cs_source.html#l00018">members</a>, and <a class="el" href="Party_8cs_source.html#l00011">uidMembers</a>.</p>
 
 </div>
 </div>
@@ -784,9 +784,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00185">185</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00013">13</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00032">SetMembers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00041">SetMembers()</a>.</p>
 
 </div>
 </div>
@@ -802,7 +802,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00187">187</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00015">15</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
 
 </div>
 </div>
@@ -818,7 +818,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00180">180</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00008">8</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
 
 </div>
 </div>
@@ -834,9 +834,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00183">183</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00011">11</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00042">AddMemeber()</a>, <a class="el" href="Party_8cs_source.html#l00070">RemoveMember()</a>, <a class="el" href="Party_8cs_source.html#l00088">Replace()</a>, and <a class="el" href="Party_8cs_source.html#l00032">SetMembers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Party_8cs_source.html#l00051">AddMemeber()</a>, <a class="el" href="Party_8cs_source.html#l00079">RemoveMember()</a>, <a class="el" href="Party_8cs_source.html#l00097">Replace()</a>, and <a class="el" href="Party_8cs_source.html#l00041">SetMembers()</a>.</p>
 
 </div>
 </div>
@@ -861,23 +861,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00020">20</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classParty.html#a5a8de9c2a7652a3fe78b780960adfd2b">refLeader</a>.<a class="code hl_function" href="classRefChara.html#a74adc7412a35cd956f2d7cfb52ba226b">GetAndCache</a>(this.<a class="code hl_variable" href="classParty.html#a1d67eb4c55277e8070edacc07598812c">uidLeader</a>);</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            this.<a class="code hl_variable" href="classParty.html#a5a8de9c2a7652a3fe78b780960adfd2b">refLeader</a>.<a class="code hl_function" href="classRefChara.html#a9f3c00b87d81d5e040a30daa6d014f30">Set</a>(ref this.<a class="code hl_variable" href="classParty.html#a1d67eb4c55277e8070edacc07598812c">uidLeader</a>, value);</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclassParty_html_a1d67eb4c55277e8070edacc07598812c"><div class="ttname"><a href="classParty.html#a1d67eb4c55277e8070edacc07598812c">Party.uidLeader</a></div><div class="ttdeci">int uidLeader</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00180">Party.cs:180</a></div></div>
-<div class="ttc" id="aclassParty_html_a5a8de9c2a7652a3fe78b780960adfd2b"><div class="ttname"><a href="classParty.html#a5a8de9c2a7652a3fe78b780960adfd2b">Party.refLeader</a></div><div class="ttdeci">RefChara refLeader</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00187">Party.cs:187</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00029">29</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classParty.html#a5a8de9c2a7652a3fe78b780960adfd2b">refLeader</a>.<a class="code hl_function" href="classRefChara.html#a74adc7412a35cd956f2d7cfb52ba226b">GetAndCache</a>(<a class="code hl_variable" href="classParty.html#a1d67eb4c55277e8070edacc07598812c">uidLeader</a>);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_variable" href="classParty.html#a5a8de9c2a7652a3fe78b780960adfd2b">refLeader</a>.<a class="code hl_function" href="classRefChara.html#a9f3c00b87d81d5e040a30daa6d014f30">Set</a>(ref <a class="code hl_variable" href="classParty.html#a1d67eb4c55277e8070edacc07598812c">uidLeader</a>, value);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassParty_html_a1d67eb4c55277e8070edacc07598812c"><div class="ttname"><a href="classParty.html#a1d67eb4c55277e8070edacc07598812c">Party.uidLeader</a></div><div class="ttdeci">int uidLeader</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00008">Party.cs:8</a></div></div>
+<div class="ttc" id="aclassParty_html_a5a8de9c2a7652a3fe78b780960adfd2b"><div class="ttname"><a href="classParty.html#a5a8de9c2a7652a3fe78b780960adfd2b">Party.refLeader</a></div><div class="ttdeci">RefChara refLeader</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00015">Party.cs:15</a></div></div>
 <div class="ttc" id="aclassRefChara_html_a74adc7412a35cd956f2d7cfb52ba226b"><div class="ttname"><a href="classRefChara.html#a74adc7412a35cd956f2d7cfb52ba226b">RefChara.GetAndCache</a></div><div class="ttdeci">Chara GetAndCache(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="RefChara_8cs_source.html#l00005">RefChara.cs:5</a></div></div>
 <div class="ttc" id="aclassRefChara_html_a9f3c00b87d81d5e040a30daa6d014f30"><div class="ttname"><a href="classRefChara.html#a9f3c00b87d81d5e040a30daa6d014f30">RefChara.Set</a></div><div class="ttdeci">void Set(ref int val, Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="RefChara_8cs_source.html#l00030">RefChara.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="Chara_8cs_source.html#l02844">Chara.MoveZone()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, and <a class="el" href="Party_8cs_source.html#l00105">SetLeader()</a>.</p>
 
 </div>
 </div>
@@ -901,20 +901,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00008">8</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   13</span>            {</div>
-<div class="line"><span class="lineno">   14</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a>;</div>
-<div class="line"><span class="lineno">   15</span>            }</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classParty.html#a5ceac81670addacc5acc38c72b0df50e">SetMembers</a>();</div>
-<div class="line"><span class="lineno">   17</span>        }</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassParty_html_a5ceac81670addacc5acc38c72b0df50e"><div class="ttname"><a href="classParty.html#a5ceac81670addacc5acc38c72b0df50e">Party.SetMembers</a></div><div class="ttdeci">List&lt; Chara &gt; SetMembers()</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00032">Party.cs:32</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Party_8cs_source.html#l00017">17</a> of file <a class="el" href="Party_8cs_source.html">Party.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classParty.html#a496d7574c12c6fcea12c04dcc09e7d66">_members</a>;</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classParty.html#a5ceac81670addacc5acc38c72b0df50e">SetMembers</a>();</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassParty_html_a5ceac81670addacc5acc38c72b0df50e"><div class="ttname"><a href="classParty.html#a5ceac81670addacc5acc38c72b0df50e">Party.SetMembers</a></div><div class="ttdeci">List&lt; Chara &gt; SetMembers()</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00041">Party.cs:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02357">Chara._Move()</a>, <a class="el" href="TraitShrine_8cs_source.html#l00030">TraitShrine._OnUse()</a>, <a class="el" href="ActPlan_8cs_source.html#l00281">ActPlan._Update()</a>, <a class="el" href="Party_8cs_source.html#l00042">AddMemeber()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="ZoneEventQuest_8cs_source.html#l00069">ZoneEventQuest.AggroEnemy()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00067">WidgetRoster.Build()</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00053">WidgetStatsBar.Build()</a>, <a class="el" href="Party_8cs_source.html#l00163">Count()</a>, <a class="el" href="Chara_8cs_source.html#l05690">Chara.DoHostileAction()</a>, <a class="el" href="Party_8cs_source.html#l00135">EValue()</a>, <a class="el" href="ZonePreEnterEncounter_8cs_source.html#l00007">ZonePreEnterEncounter.Execute()</a>, <a class="el" href="Party_8cs_source.html#l00110">GetBestSkill()</a>, <a class="el" href="GoalAutoCombat_8cs_source.html#l00046">GoalAutoCombat.GoalAutoCombat()</a>, <a class="el" href="Party_8cs_source.html#l00148">HasElement()</a>, <a class="el" href="Party_8cs_source.html#l00123">IsCriticallyWounded()</a>, <a class="el" href="Player_8cs_source.html#l00802">Player.MoveZone()</a>, <a class="el" href="Player_8cs_source.html#l01131">Player.OnAdvanceHour()</a>, <a class="el" href="Zone__RandomDungeon_8cs_source.html#l00076">Zone_RandomDungeon.OnGenerateMap()</a>, <a class="el" href="Zone__Void_8cs_source.html#l00069">Zone_Void.OnGenerateMap()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00104">ZoneEventHarvest.OnLeaveZone()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00082">ElementContainerCard.OnLevelUp()</a>, <a class="el" href="Game_8cs_source.html#l00153">Game.OnLoad()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00144">WidgetRoster.OnSetContextMenu()</a>, <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>, <a class="el" href="ZoneEventMusic_8cs_source.html#l00032">ZoneEventMusic.OnVisit()</a>, <a class="el" href="ActPray_8cs_source.html#l00094">ActPray.Pray()</a>, <a class="el" href="Player_8cs_source.html#l00419">Player.RefreshEmptyAlly()</a>, <a class="el" href="Party_8cs_source.html#l00070">RemoveMember()</a>, <a class="el" href="Party_8cs_source.html#l00088">Replace()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>, <a class="el" href="AI__PassTime_8cs_source.html#l00090">AI_PassTime.Run()</a>, <a class="el" href="Weather_8cs_source.html#l00227">Weather.SetCondition()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00043">LayerDragGrid.SetInv()</a>, <a class="el" href="Party_8cs_source.html#l00032">SetMembers()</a>, <a class="el" href="Chara_8cs_source.html#l03474">Chara.Tick()</a>, <a class="el" href="ConSleep_8cs_source.html#l00055">ConSleep.Tick()</a>, <a class="el" href="Chara_8cs_source.html#l09113">Chara.TryNullifyCurse()</a>, <a class="el" href="ActPray_8cs_source.html#l00029">ActPray.TryPray()</a>, <a class="el" href="GoalCombat_8cs_source.html#l00423">GoalCombat.TryUseAbility()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00517">CoreDebug.UpdateInput()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00161">ElementContainerCard.ValueBonus()</a>, and <a class="el" href="TraitBookSkill_8cs_source.html#l00143">TraitBookSkill.WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02302">Chara._Move()</a>, <a class="el" href="TraitShrine_8cs_source.html#l00030">TraitShrine._OnUse()</a>, <a class="el" href="ActPlan_8cs_source.html#l00445">ActPlan._Update()</a>, <a class="el" href="Party_8cs_source.html#l00051">AddMemeber()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="ZoneEventQuest_8cs_source.html#l00052">ZoneEventQuest.AggroEnemy()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00096">WidgetRoster.Build()</a>, <a class="el" href="WidgetStatsBar_8cs_source.html#l00113">WidgetStatsBar.Build()</a>, <a class="el" href="Party_8cs_source.html#l00169">Count()</a>, <a class="el" href="Chara_8cs_source.html#l05347">Chara.Cuddle()</a>, <a class="el" href="Chara_8cs_source.html#l05420">Chara.DoHostileAction()</a>, <a class="el" href="Party_8cs_source.html#l00144">EValue()</a>, <a class="el" href="ZonePreEnterEncounter_8cs_source.html#l00013">ZonePreEnterEncounter.Execute()</a>, <a class="el" href="Party_8cs_source.html#l00119">GetBestSkill()</a>, <a class="el" href="GoalAutoCombat_8cs_source.html#l00031">GoalAutoCombat.GoalAutoCombat()</a>, <a class="el" href="Party_8cs_source.html#l00157">HasElement()</a>, <a class="el" href="Party_8cs_source.html#l00132">IsCriticallyWounded()</a>, <a class="el" href="Player_8cs_source.html#l01764">Player.MoveZone()</a>, <a class="el" href="Chara_8cs_source.html#l02844">Chara.MoveZone()</a>, <a class="el" href="Player_8cs_source.html#l02088">Player.OnAdvanceHour()</a>, <a class="el" href="Zone__RandomDungeon_8cs_source.html#l00060">Zone_RandomDungeon.OnGenerateMap()</a>, <a class="el" href="Zone__Void_8cs_source.html#l00057">Zone_Void.OnGenerateMap()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00073">ZoneEventHarvest.OnLeaveZone()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00087">ElementContainerCard.OnLevelUp()</a>, <a class="el" href="Game_8cs_source.html#l00332">Game.OnLoad()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00171">WidgetRoster.OnSetContextMenu()</a>, <a class="el" href="Scene_8cs_source.html#l00349">Scene.OnUpdate()</a>, <a class="el" href="ZoneEventMusic_8cs_source.html#l00013">ZoneEventMusic.OnVisit()</a>, <a class="el" href="ActPray_8cs_source.html#l00075">ActPray.Pray()</a>, <a class="el" href="Player_8cs_source.html#l01353">Player.RefreshEmptyAlly()</a>, <a class="el" href="Party_8cs_source.html#l00079">RemoveMember()</a>, <a class="el" href="Party_8cs_source.html#l00097">Replace()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="AI__PassTime_8cs_source.html#l00074">AI_PassTime.Run()</a>, <a class="el" href="Weather_8cs_source.html#l00308">Weather.SetCondition()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00065">LayerDragGrid.SetInv()</a>, <a class="el" href="Party_8cs_source.html#l00041">SetMembers()</a>, <a class="el" href="Chara_8cs_source.html#l03394">Chara.Tick()</a>, <a class="el" href="ConSleep_8cs_source.html#l00058">ConSleep.Tick()</a>, <a class="el" href="Chara_8cs_source.html#l08688">Chara.TryNullifyCurse()</a>, <a class="el" href="ActPray_8cs_source.html#l00012">ActPray.TryPray()</a>, <a class="el" href="GoalCombat_8cs_source.html#l00413">GoalCombat.TryUseAbility()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00823">CoreDebug.UpdateInput()</a>, <a class="el" href="Chara_8cs_source.html#l04992">Chara.UseAbility()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00167">ElementContainerCard.ValueBonus()</a>, and <a class="el" href="TraitBookSkill_8cs_source.html#l00117">TraitBookSkill.WriteNote()</a>.</p>
 
 </div>
 </div>

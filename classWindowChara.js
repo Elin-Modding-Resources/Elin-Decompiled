@@ -2,8 +2,6 @@ var classWindowChara =
 [
     [ "AddNeeds", "classWindowChara.html#abeaea5f7d59db700be694f9bcb9e2dd9", null ],
     [ "AddStatus", "classWindowChara.html#a1cd88bb74fcbb1a8965ad09ae51f101b", null ],
-    [ "g__Add", "classWindowChara.html#a2d085d214d1b72f717baf603a2932bc6", null ],
-    [ "g__AddText", "classWindowChara.html#a9bc01a4f15c9457baaad92d050a9af01", null ],
     [ "OnApplicationFocus", "classWindowChara.html#a040e90aad321f5d7481594e54dc9b5f2", null ],
     [ "OnClickPortrait", "classWindowChara.html#a773e96d4c19be235342eb8015c0ccd9f", null ],
     [ "OnSwitchContent", "classWindowChara.html#a72de875009c7f8ae044626c669d977de", null ],

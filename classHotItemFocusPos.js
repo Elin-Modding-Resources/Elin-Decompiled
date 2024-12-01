@@ -5,6 +5,6 @@ var classHotItemFocusPos =
     [ "y", "classHotItemFocusPos.html#af84e1a18cdc8ff0b8b54e362c9e8a2e7", null ],
     [ "zone", "classHotItemFocusPos.html#a2ccf9b2dfe9bb8001c9d1796924f8528", null ],
     [ "CanChangeIconColor", "classHotItemFocusPos.html#af829e569b54dbf76b490a17751bb6986", null ],
-    [ "Name", "classHotItemFocusPos.html#ae141258fc509b9f727325c8f61eed527", null ],
+    [ "Name", "classHotItemFocusPos.html#a28e7620766b7a76fca0171e1ed0526c2", null ],
     [ "pathSprite", "classHotItemFocusPos.html#a9f0e9a2ec4bf674083fabdfc3fbdfaaa", null ]
 ];

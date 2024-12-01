@@ -119,7 +119,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00004">4</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00003">3</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2dac9538028d9f677d57001776a6de94" name="a2dac9538028d9f677d57001776a6de94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dac9538028d9f677d57001776a6de94">&#9670;&#160;</a></span>SetPlan()</h2>
@@ -167,69 +167,58 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00006">6</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordtype">bool</span> isFinished = !branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_variable" href="classResearchManager.html#acc161b56745a8def8887660b00750da4">plans</a>.Contains(p);</div>
-<div class="line"><span class="lineno">    9</span>        this.plan = p;</div>
-<div class="line"><span class="lineno">   10</span>        this.button1.mainText.text = p.<a class="code hl_property" href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">Name</a>;</div>
-<div class="line"><span class="lineno">   11</span>        this.<a class="code hl_variable" href="classItemResearch.html#aa22d5c9c26283f9b8139b43cfde5d87f">goFocus</a>.SetActive(branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_variable" href="classResearchManager.html#a01095e775766d7ac577399155800e11f">focused</a> == p);</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = p.<a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.tech.ToString(<span class="stringliteral">&quot;#,0&quot;</span>).TagColorGoodBad(() =&gt; branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_function" href="classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2">CanCompletePlan</a>(p), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   13</span>        this.button1.subText.text = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">   14</span>        this.button1.subText.SetActive(!isFinished);</div>
-<div class="line"><span class="lineno">   15</span>        this.imageExp.fillAmount = (float)branch.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad">knowledge</a>.<a class="code hl_variable" href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">value</a> / (<span class="keywordtype">float</span>)p.<a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.tech;</div>
-<div class="line"><span class="lineno">   16</span>        this.button1.tooltip.onShowTooltip = delegate(UITooltip tp)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            p.<a class="code hl_function" href="classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9">WriteNote</a>(tp.note);</div>
-<div class="line"><span class="lineno">   19</span>        };</div>
-<div class="line"><span class="lineno">   20</span>        Action &lt;&gt;9__3;</div>
-<div class="line"><span class="lineno">   21</span>        this.button1.onClick.AddListener(delegate()</div>
+<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00011">11</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">bool</span> isFinished = !branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_variable" href="classResearchManager.html#acc161b56745a8def8887660b00750da4">plans</a>.Contains(p);</div>
+<div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd">plan</a> = p;</div>
+<div class="line"><span class="lineno">   15</span>        button1.mainText.text = p.<a class="code hl_property" href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">Name</a>;</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="classItemResearch.html#aa22d5c9c26283f9b8139b43cfde5d87f">goFocus</a>.SetActive(branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_variable" href="classResearchManager.html#a01095e775766d7ac577399155800e11f">focused</a> == p);</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">string</span> text = p.<a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.tech.ToString(<span class="stringliteral">&quot;#,0&quot;</span>).TagColorGoodBad(() =&gt; branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_function" href="classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2">CanCompletePlan</a>(p));</div>
+<div class="line"><span class="lineno">   18</span>        button1.subText.text = text;</div>
+<div class="line"><span class="lineno">   19</span>        button1.subText.SetActive(!isFinished);</div>
+<div class="line"><span class="lineno">   20</span>        imageExp.fillAmount = (float)branch.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad">knowledge</a>.<a class="code hl_variable" href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">value</a> / (<span class="keywordtype">float</span>)p.<a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.tech;</div>
+<div class="line"><span class="lineno">   21</span>        button1.tooltip.onShowTooltip = delegate(UITooltip tp)</div>
 <div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (isFinished)</div>
-<div class="line"><span class="lineno">   24</span>            {</div>
-<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   26</span>            }</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (!branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_function" href="classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2">CanCompletePlan</a>(p))</div>
+<div class="line"><span class="lineno">   23</span>            p.<a class="code hl_function" href="classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9">WriteNote</a>(tp.note);</div>
+<div class="line"><span class="lineno">   24</span>        };</div>
+<div class="line"><span class="lineno">   25</span>        button1.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (!isFinished)</div>
 <div class="line"><span class="lineno">   28</span>            {</div>
-<div class="line"><span class="lineno">   29</span>                SE.Beep();</div>
-<div class="line"><span class="lineno">   30</span>                return;</div>
-<div class="line"><span class="lineno">   31</span>            }</div>
-<div class="line"><span class="lineno">   32</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.CreateContextMenuInteraction().SetHighlightTarget(<span class="keyword">this</span>.button1);</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordtype">string</span> idLang = <span class="stringliteral">&quot;buy&quot;</span>;</div>
-<div class="line"><span class="lineno">   34</span>            Action action;</div>
-<div class="line"><span class="lineno">   35</span>            if ((action = &lt;&gt;9__3) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   36</span>            {</div>
-<div class="line"><span class="lineno">   37</span>                action = (&lt;&gt;9__3 = delegate()</div>
-<div class="line"><span class="lineno">   38</span>                {</div>
-<div class="line"><span class="lineno">   39</span>                    branch.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad">knowledge</a>.<a class="code hl_function" href="classHomeResource.html#a0b2edad7194e282f5f95632d48fd75ca">Mod</a>(-p.<a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.tech, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   40</span>                    branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_function" href="classResearchManager.html#ae0566dbaa70306f7fdddd277b1e38206">CompletePlan</a>(p);</div>
-<div class="line"><span class="lineno">   41</span>                    layer.<a class="code hl_function" href="classLayerTech.html#a440176680a6eb5909b6a7aaa68bef5b6">RefreshTech</a>();</div>
-<div class="line"><span class="lineno">   42</span>                });</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            uicontextMenu.AddButton(idLang, action, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   45</span>            uicontextMenu.Show();</div>
-<div class="line"><span class="lineno">   46</span>        });</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassBaseHomeResource_html_ab597696a062aed674dccc8c4882d56be"><div class="ttname"><a href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">BaseHomeResource.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00134">BaseHomeResource.cs:134</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_a768f865e2dcaf5b4d372924fcbc52ca5"><div class="ttname"><a href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">FactionBranch.researches</a></div><div class="ttdeci">ResearchManager researches</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01643">FactionBranch.cs:1643</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_ae50927e9082d4a32af38b7340c2758a9"><div class="ttname"><a href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">FactionBranch.resources</a></div><div class="ttdeci">HomeResourceManager resources</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01640">FactionBranch.cs:1640</a></div></div>
-<div class="ttc" id="aclassHomeResourceManager_html_a8bfb2fc0337bab37107fbd7b3fd769ad"><div class="ttname"><a href="classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad">HomeResourceManager.knowledge</a></div><div class="ttdeci">HomeResource knowledge</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceManager_8cs_source.html#l00087">HomeResourceManager.cs:87</a></div></div>
-<div class="ttc" id="aclassHomeResource_html_a0b2edad7194e282f5f95632d48fd75ca"><div class="ttname"><a href="classHomeResource.html#a0b2edad7194e282f5f95632d48fd75ca">HomeResource.Mod</a></div><div class="ttdeci">override void Mod(int a, bool popText=true)</div><div class="ttdef"><b>Definition:</b> <a href="HomeResource_8cs_source.html#l00011">HomeResource.cs:11</a></div></div>
-<div class="ttc" id="aclassItemResearch_html_aa22d5c9c26283f9b8139b43cfde5d87f"><div class="ttname"><a href="classItemResearch.html#aa22d5c9c26283f9b8139b43cfde5d87f">ItemResearch.goFocus</a></div><div class="ttdeci">Image goFocus</div><div class="ttdef"><b>Definition:</b> <a href="ItemResearch_8cs_source.html#l00051">ItemResearch.cs:51</a></div></div>
-<div class="ttc" id="aclassLayerTech_html_a440176680a6eb5909b6a7aaa68bef5b6"><div class="ttname"><a href="classLayerTech.html#a440176680a6eb5909b6a7aaa68bef5b6">LayerTech.RefreshTech</a></div><div class="ttdeci">void RefreshTech()</div><div class="ttdef"><b>Definition:</b> <a href="LayerTech_8cs_source.html#l00010">LayerTech.cs:10</a></div></div>
-<div class="ttc" id="aclassResearchManager_html_a01095e775766d7ac577399155800e11f"><div class="ttname"><a href="classResearchManager.html#a01095e775766d7ac577399155800e11f">ResearchManager.focused</a></div><div class="ttdeci">ResearchPlan focused</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00162">ResearchManager.cs:162</a></div></div>
-<div class="ttc" id="aclassResearchManager_html_acac5f81b36290a775d7ae448ceb9e9c2"><div class="ttname"><a href="classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2">ResearchManager.CanCompletePlan</a></div><div class="ttdeci">bool CanCompletePlan(ResearchPlan p)</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00100">ResearchManager.cs:100</a></div></div>
-<div class="ttc" id="aclassResearchManager_html_acc161b56745a8def8887660b00750da4"><div class="ttname"><a href="classResearchManager.html#acc161b56745a8def8887660b00750da4">ResearchManager.plans</a></div><div class="ttdeci">List&lt; ResearchPlan &gt; plans</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00153">ResearchManager.cs:153</a></div></div>
-<div class="ttc" id="aclassResearchManager_html_ae0566dbaa70306f7fdddd277b1e38206"><div class="ttname"><a href="classResearchManager.html#ae0566dbaa70306f7fdddd277b1e38206">ResearchManager.CompletePlan</a></div><div class="ttdeci">void CompletePlan(ResearchPlan p)</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00105">ResearchManager.cs:105</a></div></div>
-<div class="ttc" id="aclassResearchPlan_html_a06b52c7ccb84fc5d63b7e9bb83050bb9"><div class="ttname"><a href="classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9">ResearchPlan.WriteNote</a></div><div class="ttdeci">void WriteNote(UINote n)</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00064">ResearchPlan.cs:64</a></div></div>
-<div class="ttc" id="aclassResearchPlan_html_aba4d54a4726b097a85b1896147e65260"><div class="ttname"><a href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">ResearchPlan.source</a></div><div class="ttdeci">SourceResearch.Row source</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00009">ResearchPlan.cs:10</a></div></div>
-<div class="ttc" id="aclassResearchPlan_html_aba7f3a94a7cb52306ffeb7de8ca99c5a"><div class="ttname"><a href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">ResearchPlan.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00017">ResearchPlan.cs:18</a></div></div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">if</span> (!branch.<a class="code hl_variable" href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">researches</a>.<a class="code hl_function" href="classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2">CanCompletePlan</a>(p))</div>
+<div class="line"><span class="lineno">   30</span>                {</div>
+<div class="line"><span class="lineno">   31</span>                    SE.Beep();</div>
+<div class="line"><span class="lineno">   32</span>                }</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   34</span>                {</div>
+<div class="line"><span class="lineno">   35</span>                    UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction().SetHighlightTarget(button1);</div>
+<div class="line"><span class="lineno">   36</span>                    uIContextMenu.AddButton(<span class="stringliteral">&quot;buy&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   37</span>                    {</div>
+<div class="line"><span class="lineno">   38</span>                        branch.resources.knowledge.Mod(-p.source.tech);</div>
+<div class="line"><span class="lineno">   39</span>                        branch.researches.CompletePlan(p);</div>
+<div class="line"><span class="lineno">   40</span>                        layer.RefreshTech();</div>
+<div class="line"><span class="lineno">   41</span>                    });</div>
+<div class="line"><span class="lineno">   42</span>                    uIContextMenu.Show();</div>
+<div class="line"><span class="lineno">   43</span>                }</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>        });</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclassBaseHomeResource_html_ab597696a062aed674dccc8c4882d56be"><div class="ttname"><a href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">BaseHomeResource.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00018">BaseHomeResource.cs:18</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a768f865e2dcaf5b4d372924fcbc52ca5"><div class="ttname"><a href="classFactionBranch.html#a768f865e2dcaf5b4d372924fcbc52ca5">FactionBranch.researches</a></div><div class="ttdeci">ResearchManager researches</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00067">FactionBranch.cs:67</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_ae50927e9082d4a32af38b7340c2758a9"><div class="ttname"><a href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">FactionBranch.resources</a></div><div class="ttdeci">HomeResourceManager resources</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00064">FactionBranch.cs:64</a></div></div>
+<div class="ttc" id="aclassHomeResourceManager_html_a8bfb2fc0337bab37107fbd7b3fd769ad"><div class="ttname"><a href="classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad">HomeResourceManager.knowledge</a></div><div class="ttdeci">HomeResource knowledge</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceManager_8cs_source.html#l00013">HomeResourceManager.cs:13</a></div></div>
+<div class="ttc" id="aclassItemResearch_html_a41ba72351f85cb89e6f4e59d142465bd"><div class="ttname"><a href="classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd">ItemResearch.plan</a></div><div class="ttdeci">ResearchPlan plan</div><div class="ttdef"><b>Definition:</b> <a href="ItemResearch_8cs_source.html#l00009">ItemResearch.cs:9</a></div></div>
+<div class="ttc" id="aclassItemResearch_html_aa22d5c9c26283f9b8139b43cfde5d87f"><div class="ttname"><a href="classItemResearch.html#aa22d5c9c26283f9b8139b43cfde5d87f">ItemResearch.goFocus</a></div><div class="ttdeci">Image goFocus</div><div class="ttdef"><b>Definition:</b> <a href="ItemResearch_8cs_source.html#l00007">ItemResearch.cs:7</a></div></div>
+<div class="ttc" id="aclassResearchManager_html_a01095e775766d7ac577399155800e11f"><div class="ttname"><a href="classResearchManager.html#a01095e775766d7ac577399155800e11f">ResearchManager.focused</a></div><div class="ttdeci">ResearchPlan focused</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00018">ResearchManager.cs:18</a></div></div>
+<div class="ttc" id="aclassResearchManager_html_acac5f81b36290a775d7ae448ceb9e9c2"><div class="ttname"><a href="classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2">ResearchManager.CanCompletePlan</a></div><div class="ttdeci">bool CanCompletePlan(ResearchPlan p)</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00105">ResearchManager.cs:105</a></div></div>
+<div class="ttc" id="aclassResearchManager_html_acc161b56745a8def8887660b00750da4"><div class="ttname"><a href="classResearchManager.html#acc161b56745a8def8887660b00750da4">ResearchManager.plans</a></div><div class="ttdeci">List&lt; ResearchPlan &gt; plans</div><div class="ttdef"><b>Definition:</b> <a href="ResearchManager_8cs_source.html#l00009">ResearchManager.cs:9</a></div></div>
+<div class="ttc" id="aclassResearchPlan_html_a06b52c7ccb84fc5d63b7e9bb83050bb9"><div class="ttname"><a href="classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9">ResearchPlan.WriteNote</a></div><div class="ttdeci">void WriteNote(UINote n)</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00054">ResearchPlan.cs:54</a></div></div>
+<div class="ttc" id="aclassResearchPlan_html_aba4d54a4726b097a85b1896147e65260"><div class="ttname"><a href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">ResearchPlan.source</a></div><div class="ttdeci">SourceResearch.Row source</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00023">ResearchPlan.cs:23</a></div></div>
+<div class="ttc" id="aclassResearchPlan_html_aba7f3a94a7cb52306ffeb7de8ca99c5a"><div class="ttname"><a href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">ResearchPlan.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00025">ResearchPlan.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ResearchManager_8cs_source.html#l00100">ResearchManager.CanCompletePlan()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00105">ResearchManager.CompletePlan()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00162">ResearchManager.focused</a>, <a class="el" href="ItemResearch_8cs_source.html#l00051">goFocus</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00087">HomeResourceManager.knowledge</a>, <a class="el" href="HomeResource_8cs_source.html#l00011">HomeResource.Mod()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00018">ResearchPlan.Name</a>, <a class="el" href="ResearchManager_8cs_source.html#l00153">ResearchManager.plans</a>, <a class="el" href="LayerTech_8cs_source.html#l00010">LayerTech.RefreshTech()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01643">FactionBranch.researches</a>, <a class="el" href="FactionBranch_8cs_source.html#l01640">FactionBranch.resources</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00010">ResearchPlan.source</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00134">BaseHomeResource.value</a>, and <a class="el" href="ResearchPlan_8cs_source.html#l00064">ResearchPlan.WriteNote()</a>.</p>
+<p class="reference">References <a class="el" href="ResearchManager_8cs_source.html#l00105">ResearchManager.CanCompletePlan()</a>, <a class="el" href="ResearchManager_8cs_source.html#l00018">ResearchManager.focused</a>, <a class="el" href="ItemResearch_8cs_source.html#l00007">goFocus</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00013">HomeResourceManager.knowledge</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00025">ResearchPlan.Name</a>, <a class="el" href="ItemResearch_8cs_source.html#l00009">plan</a>, <a class="el" href="ResearchManager_8cs_source.html#l00009">ResearchManager.plans</a>, <a class="el" href="FactionBranch_8cs_source.html#l00067">FactionBranch.researches</a>, <a class="el" href="FactionBranch_8cs_source.html#l00064">FactionBranch.resources</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00023">ResearchPlan.source</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00018">BaseHomeResource.value</a>, and <a class="el" href="ResearchPlan_8cs_source.html#l00054">ResearchPlan.WriteNote()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerTech_8cs_source.html#l00010">LayerTech.RefreshTech()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerTech_8cs_source.html#l00014">LayerTech.RefreshTech()</a>.</p>
 
 </div>
 </div>
@@ -246,9 +235,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00051">51</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00007">7</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00080">LayerHome.RefreshFocus()</a>, <a class="el" href="LayerTech_8cs_source.html#l00041">LayerTech.RefreshFocus()</a>, and <a class="el" href="ItemResearch_8cs_source.html#l00006">SetPlan()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00100">LayerHome.RefreshFocus()</a>, <a class="el" href="LayerTech_8cs_source.html#l00045">LayerTech.RefreshFocus()</a>, and <a class="el" href="ItemResearch_8cs_source.html#l00011">SetPlan()</a>.</p>
 
 </div>
 </div>
@@ -264,7 +253,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00049">49</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00005">5</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
 
 </div>
 </div>
@@ -280,9 +269,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00053">53</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemResearch_8cs_source.html#l00009">9</a> of file <a class="el" href="ItemResearch_8cs_source.html">ItemResearch.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00080">LayerHome.RefreshFocus()</a>, and <a class="el" href="LayerTech_8cs_source.html#l00041">LayerTech.RefreshFocus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00100">LayerHome.RefreshFocus()</a>, <a class="el" href="LayerTech_8cs_source.html#l00045">LayerTech.RefreshFocus()</a>, and <a class="el" href="ItemResearch_8cs_source.html#l00011">SetPlan()</a>.</p>
 
 </div>
 </div>

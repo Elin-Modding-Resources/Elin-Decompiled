@@ -215,23 +215,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00033">33</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        base.gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   36</span>        this.active = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>[] array = this.<a class="code hl_variable" href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">updates</a>;</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
-<div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            array[i].<a class="code hl_variable" href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">active</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="aclassCollectibleActor_html_a918aab8414397c90eee59a9e1fc23a5b"><div class="ttname"><a href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">CollectibleActor.updates</a></div><div class="ttdeci">RigidUpdate[] updates</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00046">CollectibleActor.cs:46</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00050">50</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        base.gameObject.SetActive(value: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53">active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>[] array = <a class="code hl_variable" href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">updates</a>;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            array[i].<a class="code hl_variable" href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassCollectibleActor_html_a81ab4fa3e0dbb32ab2e0ced1acaf9e53"><div class="ttname"><a href="classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53">CollectibleActor.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00020">CollectibleActor.cs:20</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_a918aab8414397c90eee59a9e1fc23a5b"><div class="ttname"><a href="classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b">CollectibleActor.updates</a></div><div class="ttdeci">RigidUpdate[] updates</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00008">CollectibleActor.cs:8</a></div></div>
 <div class="ttc" id="aclassRigidUpdate_html"><div class="ttname"><a href="classRigidUpdate.html">RigidUpdate</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00004">RigidUpdate.cs:5</a></div></div>
-<div class="ttc" id="aclassRigidUpdate_html_a6d4ca41bb6f158de8824788da6b2dfd0"><div class="ttname"><a href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">RigidUpdate.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00033">RigidUpdate.cs:33</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a6d4ca41bb6f158de8824788da6b2dfd0"><div class="ttname"><a href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">RigidUpdate.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00016">RigidUpdate.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RigidUpdate_8cs_source.html#l00033">RigidUpdate.active</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00046">updates</a>.</p>
+<p class="reference">References <a class="el" href="CollectibleActor_8cs_source.html#l00020">active</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00016">RigidUpdate.active</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00008">updates</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">RigidExplode.OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">RigidExplode.OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -259,37 +260,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00006">6</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classHoard.html">Hoard</a> hoard = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">hoard</a>;</div>
-<div class="line"><span class="lineno">    9</span>        hoard.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>++;</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (hoard.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a> &gt; hoard.<a class="code hl_variable" href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">hiScore</a>)</div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            hoard.hiScore = hoard.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>;</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classCollectibleActor.html#a2869dcda119032ddaaa2918e8668d4aa">hasSound</a> || hoard.<a class="code hl_variable" href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">maxSounds</a> == 0)</div>
-<div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   17</span>        }</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.velocity.magnitude &gt; 0.8f &amp;&amp; <span class="keyword">this</span>.rb.position.y &lt; 3f)</div>
-<div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(this.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.sound, <span class="keyword">this</span>.rb.position, 0.01f * (<span class="keywordtype">float</span>)hoard.<a class="code hl_variable" href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">volume</a>);</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclassCollectibleActor_html_a2869dcda119032ddaaa2918e8668d4aa"><div class="ttname"><a href="classCollectibleActor.html#a2869dcda119032ddaaa2918e8668d4aa">CollectibleActor.hasSound</a></div><div class="ttdeci">bool hasSound</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00061">CollectibleActor.cs:61</a></div></div>
-<div class="ttc" id="aclassCollectibleActor_html_ad678e98c65bbf5d558fdcfe82ddb2dce"><div class="ttname"><a href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">CollectibleActor.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00064">CollectibleActor.cs:64</a></div></div>
-<div class="ttc" id="aclassCollectibleActor_html_af93429ef439cd618acf6216f4530ff8a"><div class="ttname"><a href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">CollectibleActor.item</a></div><div class="ttdeci">Hoard.Item item</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00044">CollectibleActor.cs:44</a></div></div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00022">EMono.cs:23</a></div></div>
-<div class="ttc" id="aclassEMono_html_abdbb9003a5179eefc73781a814ab8059"><div class="ttname"><a href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">EMono.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00134">EMono.cs:135</a></div></div>
-<div class="ttc" id="aclassHoard_html"><div class="ttname"><a href="classHoard.html">Hoard</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00008">Hoard.cs:9</a></div></div>
-<div class="ttc" id="aclassHoard_html_a79bcff1459c9742bb4e149d5e038c4d3"><div class="ttname"><a href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">Hoard.score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00128">Hoard.cs:128</a></div></div>
-<div class="ttc" id="aclassHoard_html_aa08d6c150e1fd697323e67ab8ce9644b"><div class="ttname"><a href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">Hoard.maxSounds</a></div><div class="ttdeci">int maxSounds</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00119">Hoard.cs:119</a></div></div>
-<div class="ttc" id="aclassHoard_html_af1b627603e955249f9820f0f2fa915b1"><div class="ttname"><a href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">Hoard.hiScore</a></div><div class="ttdeci">int hiScore</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00125">Hoard.cs:125</a></div></div>
-<div class="ttc" id="aclassHoard_html_af86a25e23e0e20d6312b8d73c2d8d0f6"><div class="ttname"><a href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">Hoard.volume</a></div><div class="ttdeci">int volume</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00122">Hoard.cs:122</a></div></div>
-<div class="ttc" id="aclassPlayer_html_af911928ea2eb22d1cbaf7e86a83a2e82"><div class="ttname"><a href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">Player.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01530">Player.cs:1530</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00028">28</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classHoard.html">Hoard</a> hoard = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">hoard</a>;</div>
+<div class="line"><span class="lineno">   31</span>        hoard.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>++;</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (hoard.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a> &gt; hoard.<a class="code hl_variable" href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">hiScore</a>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            hoard.hiScore = hoard.<a class="code hl_variable" href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">score</a>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCollectibleActor.html#a2869dcda119032ddaaa2918e8668d4aa">hasSound</a> &amp;&amp; hoard.<a class="code hl_variable" href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">maxSounds</a> != 0 &amp;&amp; <a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.velocity.magnitude &gt; 0.8f &amp;&amp; <a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.position.y &lt; 3f)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.sound, <a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.position, 0.01f * (<span class="keywordtype">float</span>)hoard.<a class="code hl_variable" href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">volume</a>);</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassCollectibleActor_html_a2869dcda119032ddaaa2918e8668d4aa"><div class="ttname"><a href="classCollectibleActor.html#a2869dcda119032ddaaa2918e8668d4aa">CollectibleActor.hasSound</a></div><div class="ttdeci">bool hasSound</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00023">CollectibleActor.cs:23</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_ad678e98c65bbf5d558fdcfe82ddb2dce"><div class="ttname"><a href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">CollectibleActor.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00026">CollectibleActor.cs:26</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_af93429ef439cd618acf6216f4530ff8a"><div class="ttname"><a href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">CollectibleActor.item</a></div><div class="ttdeci">Hoard.Item item</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00006">CollectibleActor.cs:6</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00011">EMono.cs:11</a></div></div>
+<div class="ttc" id="aclassEMono_html_abdbb9003a5179eefc73781a814ab8059"><div class="ttname"><a href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">EMono.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00039">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassHoard_html"><div class="ttname"><a href="classHoard.html">Hoard</a></div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00007">Hoard.cs:8</a></div></div>
+<div class="ttc" id="aclassHoard_html_a79bcff1459c9742bb4e149d5e038c4d3"><div class="ttname"><a href="classHoard.html#a79bcff1459c9742bb4e149d5e038c4d3">Hoard.score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00130">Hoard.cs:130</a></div></div>
+<div class="ttc" id="aclassHoard_html_aa08d6c150e1fd697323e67ab8ce9644b"><div class="ttname"><a href="classHoard.html#aa08d6c150e1fd697323e67ab8ce9644b">Hoard.maxSounds</a></div><div class="ttdeci">int maxSounds</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00121">Hoard.cs:121</a></div></div>
+<div class="ttc" id="aclassHoard_html_af1b627603e955249f9820f0f2fa915b1"><div class="ttname"><a href="classHoard.html#af1b627603e955249f9820f0f2fa915b1">Hoard.hiScore</a></div><div class="ttdeci">int hiScore</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00127">Hoard.cs:127</a></div></div>
+<div class="ttc" id="aclassHoard_html_af86a25e23e0e20d6312b8d73c2d8d0f6"><div class="ttname"><a href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">Hoard.volume</a></div><div class="ttdeci">int volume</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00124">Hoard.cs:124</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af911928ea2eb22d1cbaf7e86a83a2e82"><div class="ttname"><a href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">Player.hoard</a></div><div class="ttdeci">Hoard hoard</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00843">Player.cs:843</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CollectibleActor_8cs_source.html#l00061">hasSound</a>, <a class="el" href="Hoard_8cs_source.html#l00125">Hoard.hiScore</a>, <a class="el" href="Player_8cs_source.html#l01530">Player.hoard</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00044">item</a>, <a class="el" href="Hoard_8cs_source.html#l00119">Hoard.maxSounds</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00064">rb</a>, <a class="el" href="Hoard_8cs_source.html#l00128">Hoard.score</a>, <a class="el" href="EMono_8cs_source.html#l00135">EMono.Sound</a>, and <a class="el" href="Hoard_8cs_source.html#l00122">Hoard.volume</a>.</p>
+<p class="reference">References <a class="el" href="CollectibleActor_8cs_source.html#l00023">hasSound</a>, <a class="el" href="Hoard_8cs_source.html#l00127">Hoard.hiScore</a>, <a class="el" href="Player_8cs_source.html#l00843">Player.hoard</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">item</a>, <a class="el" href="Hoard_8cs_source.html#l00121">Hoard.maxSounds</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00026">rb</a>, <a class="el" href="Hoard_8cs_source.html#l00130">Hoard.score</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.Sound</a>, and <a class="el" href="Hoard_8cs_source.html#l00124">Hoard.volume</a>.</p>
 
 </div>
 </div>
@@ -317,18 +314,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00024">24</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.position.y &lt; 10f)</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<span class="keywordtype">id</span>.IsEmpty(this.<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.sound), <span class="keyword">this</span>.rb.position, 0.01f * (<span class="keywordtype">float</span>)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">hoard</a>.<a class="code hl_variable" href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">volume</a>);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00042">42</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.position.y &lt; 10f))</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<span class="keywordtype">id</span>.IsEmpty(<a class="code hl_variable" href="classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a">item</a>.Source.sound), <a class="code hl_variable" href="classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce">rb</a>.position, 0.01f * (<span class="keywordtype">float</span>)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82">hoard</a>.<a class="code hl_variable" href="classHoard.html#af86a25e23e0e20d6312b8d73c2d8d0f6">volume</a>);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Player_8cs_source.html#l01530">Player.hoard</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00044">item</a>, <a class="el" href="EMono_8cs_source.html#l00023">EMono.player</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00064">rb</a>, <a class="el" href="EMono_8cs_source.html#l00135">EMono.Sound</a>, and <a class="el" href="Hoard_8cs_source.html#l00122">Hoard.volume</a>.</p>
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l00843">Player.hoard</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">item</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00026">rb</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.Sound</a>, and <a class="el" href="Hoard_8cs_source.html#l00124">Hoard.volume</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00662">HoardActor.FixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00502">HoardActor.FixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -345,9 +341,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00058">58</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00020">20</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">HoardActor.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CollectibleActor_8cs_source.html#l00050">Deactivate()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00464">HoardActor.Update()</a>.</p>
 
 </div>
 </div>
@@ -363,9 +359,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00061">61</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00023">23</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CollectibleActor_8cs_source.html#l00006">OnCollisionEnter2D()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CollectibleActor_8cs_source.html#l00028">OnCollisionEnter2D()</a>.</p>
 
 </div>
 </div>
@@ -381,9 +377,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00044">44</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00006">6</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00695">HoardActor.g__FindPair()</a>, <a class="el" href="HoardActor_8cs_source.html#l00585">HoardActor.MakePair()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">OnCollisionEnter2D()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00024">PlaySound()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00082">HoardActor.Activate()</a>, <a class="el" href="HoardActor_8cs_source.html#l00422">HoardActor.MakePair()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00028">OnCollisionEnter2D()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00042">PlaySound()</a>, and <a class="el" href="LayerHoard_8cs_source.html#l00086">LayerHoard.Update()</a>.</p>
 
 </div>
 </div>
@@ -399,9 +395,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00055">55</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00017">17</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, and <a class="el" href="HoardActor_8cs_source.html#l00695">HoardActor.g__FindPair()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00082">HoardActor.Activate()</a>.</p>
 
 </div>
 </div>
@@ -417,9 +413,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00064">64</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00026">26</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00662">HoardActor.FixedUpdate()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00006">OnCollisionEnter2D()</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00024">PlaySound()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00502">HoardActor.FixedUpdate()</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00028">OnCollisionEnter2D()</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00042">PlaySound()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +431,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00052">52</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00014">14</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">HoardActor.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00464">HoardActor.Update()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +449,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00049">49</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00011">11</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00625">HoardActor.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00464">HoardActor.Update()</a>.</p>
 
 </div>
 </div>
@@ -471,9 +467,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00046">46</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CollectibleActor_8cs_source.html#l00008">8</a> of file <a class="el" href="CollectibleActor_8cs_source.html">CollectibleActor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00025">HoardActor.Activate()</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00033">Deactivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HoardActor_8cs_source.html#l00082">HoardActor.Activate()</a>, and <a class="el" href="CollectibleActor_8cs_source.html#l00050">Deactivate()</a>.</p>
 
 </div>
 </div>

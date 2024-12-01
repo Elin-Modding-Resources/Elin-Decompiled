@@ -172,7 +172,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00006">6</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00005">5</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a32d486eef902f2ff5110d0d13d0d5d32" name="a32d486eef902f2ff5110d0d13d0d5d32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32d486eef902f2ff5110d0d13d0d5d32">&#9670;&#160;</a></span>OnInstantiate()</h2>
@@ -197,13 +197,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00008">8</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        this.<a class="code hl_function" href="classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a">Refresh</a>();</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-<div class="ttc" id="aclassContentTactics_html_a28ffab59ea01ac307481d7260ad7383a"><div class="ttname"><a href="classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a">ContentTactics.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00013">ContentTactics.cs:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00051">51</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a">Refresh</a>();</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassContentTactics_html_a28ffab59ea01ac307481d7260ad7383a"><div class="ttname"><a href="classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a">ContentTactics.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00056">ContentTactics.cs:56</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -230,155 +230,160 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00013">13</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_class" href="classConfigAutoCombat.html">ConfigAutoCombat</a> at = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.autoCombat;</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_class" href="classConfigPreference.html">ConfigPreference</a> pref = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.preference;</div>
-<div class="line"><span class="lineno">   17</span>        List&lt;<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a>&gt; list = (from t in EClass.sources.tactics.rows</div>
-<div class="line"><span class="lineno">   18</span>        where t.tag.Contains(<span class="stringliteral">&quot;pc&quot;</span>)</div>
-<div class="line"><span class="lineno">   19</span>        select t).ToList&lt;SourceTactics.Row&gt;();</div>
-<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classContentTactics.html#ac4e0039e8a248a5f82ed6bc1f7b92d53">toggleDetail</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">detail</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            at.detail = !at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">detail</a>;</div>
-<div class="line"><span class="lineno">   23</span>            this.<a class="code hl_function" href="classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a">Refresh</a>();</div>
-<div class="line"><span class="lineno">   24</span>        });</div>
-<div class="line"><span class="lineno">   25</span>        this.<a class="code hl_variable" href="classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3">transDetail</a>.SetActive(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">detail</a>);</div>
-<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_variable" href="classContentTactics.html#a01a22d87c82b29d92061e1841493d056">ddTactics</a>.SetList&lt;<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a>&gt;(list.FindIndex((<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> t) =&gt; t.id == at.<a class="code hl_variable" href="classConfigAutoCombat.html#abe364d7de4682ae19eddb2bf478a2d58">idType</a>), list, (<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> a, <span class="keywordtype">int</span> b) =&gt; a.GetName(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> b)</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            at.idType = b.id;</div>
-<div class="line"><span class="lineno">   29</span>            EClass.pc._tactics = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   30</span>        }, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   31</span>        this.<a class="code hl_variable" href="classContentTactics.html#aa702646e2071b1429b117014c99641c0">togglePrefKeepPlaying</a>.SetToggle(pref.<a class="code hl_variable" href="classConfigPreference.html#a8cd362445590ff4623b1ef76f882ce5b">keepPlayingMusic</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            pref.keepPlayingMusic = on;</div>
-<div class="line"><span class="lineno">   34</span>        });</div>
-<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_variable" href="classContentTactics.html#aa407bff4cf29709a2544fe7a5a709de2">togglePickFish</a>.SetToggle(pref.<a class="code hl_variable" href="classConfigPreference.html#af01013389586f3c55a43a4bdcd949432">pickFish</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            pref.pickFish = on;</div>
-<div class="line"><span class="lineno">   38</span>        });</div>
-<div class="line"><span class="lineno">   39</span>        this.<a class="code hl_variable" href="classContentTactics.html#ae519660fa77ba9f744dbeb7e8936dcf9">toggleAutoEat</a>.SetToggle(pref.<a class="code hl_variable" href="classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1">autoEat</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            pref.autoEat = on;</div>
-<div class="line"><span class="lineno">   42</span>        });</div>
-<div class="line"><span class="lineno">   43</span>        this.<a class="code hl_variable" href="classContentTactics.html#ae9c6bc6ee3e79925656e2dd939714458">toggleAbortOnKill</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a58d5c3b149db23094412e6d90cfa37de">abortOnKill</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   44</span>        {</div>
-<div class="line"><span class="lineno">   45</span>            at.abortOnKill = on;</div>
-<div class="line"><span class="lineno">   46</span>        });</div>
-<div class="line"><span class="lineno">   47</span>        this.<a class="code hl_variable" href="classContentTactics.html#abdb5bd1eb87d66b9546aa5315a7da534">toggleAbortOnItemLoss</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a632b3a204d10eeb381963da0dba046e9">abortOnItemLoss</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            at.abortOnItemLoss = on;</div>
-<div class="line"><span class="lineno">   50</span>        });</div>
-<div class="line"><span class="lineno">   51</span>        this.<a class="code hl_variable" href="classContentTactics.html#a93da35d024f714aad7b007d53a801de2">toggleAbortOnAllyDying</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3">abortOnAllyDying</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            at.abortOnAllyDying = on;</div>
-<div class="line"><span class="lineno">   54</span>        });</div>
-<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classContentTactics.html#aaa23096eeabd8b130704f3fa14efd71c">toggleAbortOnAllyDead</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a616550c4d9565d85eb845bb7951d47f4">abortOnAllyDead</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            at.abortOnAllyDead = on;</div>
-<div class="line"><span class="lineno">   58</span>        });</div>
-<div class="line"><span class="lineno">   59</span>        this.<a class="code hl_variable" href="classContentTactics.html#a1840d136e97fbbc6311278364b022523">toggleOnEnemyDead</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a5d1e05ba85560fbc1c1cbf4a93283e5c">abortOnEnemyDead</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   60</span>        {</div>
-<div class="line"><span class="lineno">   61</span>            at.abortOnEnemyDead = on;</div>
-<div class="line"><span class="lineno">   62</span>        });</div>
-<div class="line"><span class="lineno">   63</span>        this.<a class="code hl_variable" href="classContentTactics.html#a7e5761826ec6ed8e7babfc831f339d61">toggleOnHalfHP</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab253868076b3d3f5c190b499440fdb95">abortOnHalfHP</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            at.abortOnHalfHP = on;</div>
-<div class="line"><span class="lineno">   66</span>        });</div>
-<div class="line"><span class="lineno">   67</span>        this.<a class="code hl_variable" href="classContentTactics.html#aebf62c3874e72f780733ce3ffa2bc2f2">toggleBUseHotbar</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab0209cb0eba377747fe1d7e04d94e192">bUseHotBar</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00056">56</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classConfigAutoCombat.html">ConfigAutoCombat</a> at = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1">config</a>.<a class="code hl_variable" href="classGame_1_1Config.html#af8c5caed73637879c758c5cade0aa481">autoCombat</a>;</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_class" href="classConfigPreference.html">ConfigPreference</a> pref = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1">config</a>.<a class="code hl_variable" href="classGame_1_1Config.html#a4cf7f5be30a566d0b3e9a39c4a8eb09f">preference</a>;</div>
+<div class="line"><span class="lineno">   60</span>        List&lt;<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a>&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aef47f5e3413fda019c9745f849d94946">tactics</a>.rows.Where((<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> t) =&gt; t.tag.Contains(<span class="stringliteral">&quot;pc&quot;</span>)).ToList();</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classContentTactics.html#ac4e0039e8a248a5f82ed6bc1f7b92d53">toggleDetail</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">detail</a>, delegate</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            at.detail = !at.detail;</div>
+<div class="line"><span class="lineno">   64</span>            Refresh();</div>
+<div class="line"><span class="lineno">   65</span>        });</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3">transDetail</a>.SetActive(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">detail</a>);</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classContentTactics.html#a01a22d87c82b29d92061e1841493d056">ddTactics</a>.SetList(list.FindIndex((<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> t) =&gt; t.id == at.<a class="code hl_variable" href="classConfigAutoCombat.html#abe364d7de4682ae19eddb2bf478a2d58">idType</a>), list, (<a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> a, <span class="keywordtype">int</span> b) =&gt; a.GetName(), delegate(<span class="keywordtype">int</span> a, <a class="code hl_class" href="classSourceTactics.html">SourceTactics</a>.<a class="code hl_class" href="classSourceTactics_1_1Row.html">Row</a> b)</div>
 <div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            at.bUseHotBar = on;</div>
-<div class="line"><span class="lineno">   70</span>        });</div>
-<div class="line"><span class="lineno">   71</span>        this.<a class="code hl_variable" href="classContentTactics.html#a4412bb4c44ceeb248f2477c42a15cb2c">toggleBUseFav</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#aacec13d4e9b833426d968797e7de625c">bUseFav</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   72</span>        {</div>
-<div class="line"><span class="lineno">   73</span>            at.bUseFav = on;</div>
-<div class="line"><span class="lineno">   74</span>        });</div>
-<div class="line"><span class="lineno">   75</span>        this.<a class="code hl_variable" href="classContentTactics.html#afd5cbef2a05ca2ee08741f6db7ea6da5">toggleBCastParty</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a974bffd227de7674b3dd6b38b02c179c">bCastParty</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            at.bCastParty = on;</div>
-<div class="line"><span class="lineno">   78</span>        });</div>
-<div class="line"><span class="lineno">   79</span>        this.<a class="code hl_variable" href="classContentTactics.html#aa41e8582490a05a12ea72fd618768ee2">toggleBUseInventory</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a98563dc82f50ff3edb18fca59c4231be">bUseInventory</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   80</span>        {</div>
-<div class="line"><span class="lineno">   81</span>            at.bUseInventory = on;</div>
-<div class="line"><span class="lineno">   82</span>        });</div>
-<div class="line"><span class="lineno">   83</span>        this.<a class="code hl_variable" href="classContentTactics.html#ace9c69f676bf513f06111b4b3222612a">toggleBDontAutoAttackNeutral</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09">bDontAutoAttackNeutral</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   84</span>        {</div>
-<div class="line"><span class="lineno">   85</span>            at.bDontAutoAttackNeutral = on;</div>
-<div class="line"><span class="lineno">   86</span>        });</div>
-<div class="line"><span class="lineno">   87</span>        this.<a class="code hl_variable" href="classContentTactics.html#ad990e39c9e566975391085e10a05b302">toggleBTurbo</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab56fa2dd4b1caa2119ccae8c8c393038">turbo</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            at.turbo = on;</div>
-<div class="line"><span class="lineno">   90</span>        });</div>
-<div class="line"><span class="lineno">   91</span>        this.<a class="code hl_variable" href="classContentTactics.html#a2d740c033cd6ef58fb886f44dde41763">toggleBDontChangeTarget</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454">bDontChangeTarget</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   92</span>        {</div>
-<div class="line"><span class="lineno">   93</span>            at.bDontChangeTarget = on;</div>
-<div class="line"><span class="lineno">   94</span>        });</div>
-<div class="line"><span class="lineno">   95</span>        this.<a class="code hl_variable" href="classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629">toggleBDontChase</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a0b585c4634754920407b6b3be5721d4d">bDontChase</a>, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            at.bDontChase = on;</div>
-<div class="line"><span class="lineno">   98</span>        });</div>
-<div class="line"><span class="lineno">   99</span>        this.<a class="code hl_variable" href="classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137">toggleFollowDist</a>.SetToggle(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.tactics.allyKeepDistance, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">  100</span>        {</div>
-<div class="line"><span class="lineno">  101</span>            EClass.game.config.tactics.allyKeepDistance = on;</div>
-<div class="line"><span class="lineno">  102</span>        });</div>
-<div class="line"><span class="lineno">  103</span>        this.<a class="code hl_variable" href="classContentTactics.html#a03d53418f483f66d64a844f2a02814af">toggleDontWander</a>.SetToggle(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">config</a>.tactics.dontWander, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">  104</span>        {</div>
-<div class="line"><span class="lineno">  105</span>            EClass.game.config.tactics.dontWander = on;</div>
-<div class="line"><span class="lineno">  106</span>        });</div>
-<div class="line"><span class="lineno">  107</span>        base.transform.RebuildLayout(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  108</span>        base.transform.RebuildLayoutTo&lt;Layer&gt;();</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="ttc" id="aclassConfigAutoCombat_html"><div class="ttname"><a href="classConfigAutoCombat.html">ConfigAutoCombat</a></div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00004">ConfigAutoCombat.cs:5</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a0b585c4634754920407b6b3be5721d4d"><div class="ttname"><a href="classConfigAutoCombat.html#a0b585c4634754920407b6b3be5721d4d">ConfigAutoCombat.bDontChase</a></div><div class="ttdeci">bool bDontChase</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00054">ConfigAutoCombat.cs:54</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a58d5c3b149db23094412e6d90cfa37de"><div class="ttname"><a href="classConfigAutoCombat.html#a58d5c3b149db23094412e6d90cfa37de">ConfigAutoCombat.abortOnKill</a></div><div class="ttdeci">bool abortOnKill</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00030">ConfigAutoCombat.cs:30</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a5d1e05ba85560fbc1c1cbf4a93283e5c"><div class="ttname"><a href="classConfigAutoCombat.html#a5d1e05ba85560fbc1c1cbf4a93283e5c">ConfigAutoCombat.abortOnEnemyDead</a></div><div class="ttdeci">bool abortOnEnemyDead</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00024">ConfigAutoCombat.cs:24</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a616550c4d9565d85eb845bb7951d47f4"><div class="ttname"><a href="classConfigAutoCombat.html#a616550c4d9565d85eb845bb7951d47f4">ConfigAutoCombat.abortOnAllyDead</a></div><div class="ttdeci">bool abortOnAllyDead</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00021">ConfigAutoCombat.cs:21</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a632b3a204d10eeb381963da0dba046e9"><div class="ttname"><a href="classConfigAutoCombat.html#a632b3a204d10eeb381963da0dba046e9">ConfigAutoCombat.abortOnItemLoss</a></div><div class="ttdeci">bool abortOnItemLoss</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00033">ConfigAutoCombat.cs:33</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a974bffd227de7674b3dd6b38b02c179c"><div class="ttname"><a href="classConfigAutoCombat.html#a974bffd227de7674b3dd6b38b02c179c">ConfigAutoCombat.bCastParty</a></div><div class="ttdeci">bool bCastParty</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00045">ConfigAutoCombat.cs:45</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_a98563dc82f50ff3edb18fca59c4231be"><div class="ttname"><a href="classConfigAutoCombat.html#a98563dc82f50ff3edb18fca59c4231be">ConfigAutoCombat.bUseInventory</a></div><div class="ttdeci">bool bUseInventory</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00042">ConfigAutoCombat.cs:42</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_aacec13d4e9b833426d968797e7de625c"><div class="ttname"><a href="classConfigAutoCombat.html#aacec13d4e9b833426d968797e7de625c">ConfigAutoCombat.bUseFav</a></div><div class="ttdeci">bool bUseFav</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00039">ConfigAutoCombat.cs:39</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_ab0209cb0eba377747fe1d7e04d94e192"><div class="ttname"><a href="classConfigAutoCombat.html#ab0209cb0eba377747fe1d7e04d94e192">ConfigAutoCombat.bUseHotBar</a></div><div class="ttdeci">bool bUseHotBar</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00036">ConfigAutoCombat.cs:36</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_ab253868076b3d3f5c190b499440fdb95"><div class="ttname"><a href="classConfigAutoCombat.html#ab253868076b3d3f5c190b499440fdb95">ConfigAutoCombat.abortOnHalfHP</a></div><div class="ttdeci">bool abortOnHalfHP</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00027">ConfigAutoCombat.cs:27</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_ab56fa2dd4b1caa2119ccae8c8c393038"><div class="ttname"><a href="classConfigAutoCombat.html#ab56fa2dd4b1caa2119ccae8c8c393038">ConfigAutoCombat.turbo</a></div><div class="ttdeci">bool turbo</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00057">ConfigAutoCombat.cs:57</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_ab776e0a096fef7e4c928752bc41b17fb"><div class="ttname"><a href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">ConfigAutoCombat.detail</a></div><div class="ttdeci">bool detail</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00060">ConfigAutoCombat.cs:60</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_abe364d7de4682ae19eddb2bf478a2d58"><div class="ttname"><a href="classConfigAutoCombat.html#abe364d7de4682ae19eddb2bf478a2d58">ConfigAutoCombat.idType</a></div><div class="ttdeci">string idType</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00015">ConfigAutoCombat.cs:15</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_ace732e6dbe83ea222b75e99c22d55ea3"><div class="ttname"><a href="classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3">ConfigAutoCombat.abortOnAllyDying</a></div><div class="ttdeci">bool abortOnAllyDying</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00018">ConfigAutoCombat.cs:18</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_aef94da1414894a453cb58d218c821454"><div class="ttname"><a href="classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454">ConfigAutoCombat.bDontChangeTarget</a></div><div class="ttdeci">bool bDontChangeTarget</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00048">ConfigAutoCombat.cs:48</a></div></div>
-<div class="ttc" id="aclassConfigAutoCombat_html_afea261310e16d3794bf25988c252ab09"><div class="ttname"><a href="classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09">ConfigAutoCombat.bDontAutoAttackNeutral</a></div><div class="ttdeci">bool bDontAutoAttackNeutral</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00051">ConfigAutoCombat.cs:51</a></div></div>
-<div class="ttc" id="aclassConfigPreference_html"><div class="ttname"><a href="classConfigPreference.html">ConfigPreference</a></div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00004">ConfigPreference.cs:5</a></div></div>
-<div class="ttc" id="aclassConfigPreference_html_a503cb51b259fcff233c120aa85092fb1"><div class="ttname"><a href="classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1">ConfigPreference.autoEat</a></div><div class="ttdeci">bool autoEat</div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00013">ConfigPreference.cs:13</a></div></div>
-<div class="ttc" id="aclassConfigPreference_html_a8cd362445590ff4623b1ef76f882ce5b"><div class="ttname"><a href="classConfigPreference.html#a8cd362445590ff4623b1ef76f882ce5b">ConfigPreference.keepPlayingMusic</a></div><div class="ttdeci">bool keepPlayingMusic</div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00007">ConfigPreference.cs:7</a></div></div>
-<div class="ttc" id="aclassConfigPreference_html_af01013389586f3c55a43a4bdcd949432"><div class="ttname"><a href="classConfigPreference.html#af01013389586f3c55a43a4bdcd949432">ConfigPreference.pickFish</a></div><div class="ttdeci">bool pickFish</div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00010">ConfigPreference.cs:10</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a01a22d87c82b29d92061e1841493d056"><div class="ttname"><a href="classContentTactics.html#a01a22d87c82b29d92061e1841493d056">ContentTactics.ddTactics</a></div><div class="ttdeci">UIDropdown ddTactics</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00151">ContentTactics.cs:151</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a03d53418f483f66d64a844f2a02814af"><div class="ttname"><a href="classContentTactics.html#a03d53418f483f66d64a844f2a02814af">ContentTactics.toggleDontWander</a></div><div class="ttdeci">UIButton toggleDontWander</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00113">ContentTactics.cs:113</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a108e9d7c9a1f84ebb67d6322f9704629"><div class="ttname"><a href="classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629">ContentTactics.toggleBDontChase</a></div><div class="ttdeci">UIButton toggleBDontChase</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00141">ContentTactics.cs:141</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a11fca6bca66d2586e8a7dd38299ddce3"><div class="ttname"><a href="classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3">ContentTactics.transDetail</a></div><div class="ttdeci">Transform transDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00153">ContentTactics.cs:153</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a1840d136e97fbbc6311278364b022523"><div class="ttname"><a href="classContentTactics.html#a1840d136e97fbbc6311278364b022523">ContentTactics.toggleOnEnemyDead</a></div><div class="ttdeci">UIButton toggleOnEnemyDead</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00121">ContentTactics.cs:121</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a1a55b29d8baefefb744eef1c5ea99137"><div class="ttname"><a href="classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137">ContentTactics.toggleFollowDist</a></div><div class="ttdeci">UIButton toggleFollowDist</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00111">ContentTactics.cs:111</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a2d740c033cd6ef58fb886f44dde41763"><div class="ttname"><a href="classContentTactics.html#a2d740c033cd6ef58fb886f44dde41763">ContentTactics.toggleBDontChangeTarget</a></div><div class="ttdeci">UIButton toggleBDontChangeTarget</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00137">ContentTactics.cs:137</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a4412bb4c44ceeb248f2477c42a15cb2c"><div class="ttname"><a href="classContentTactics.html#a4412bb4c44ceeb248f2477c42a15cb2c">ContentTactics.toggleBUseFav</a></div><div class="ttdeci">UIButton toggleBUseFav</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00129">ContentTactics.cs:129</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a7e5761826ec6ed8e7babfc831f339d61"><div class="ttname"><a href="classContentTactics.html#a7e5761826ec6ed8e7babfc831f339d61">ContentTactics.toggleOnHalfHP</a></div><div class="ttdeci">UIButton toggleOnHalfHP</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00123">ContentTactics.cs:123</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_a93da35d024f714aad7b007d53a801de2"><div class="ttname"><a href="classContentTactics.html#a93da35d024f714aad7b007d53a801de2">ContentTactics.toggleAbortOnAllyDying</a></div><div class="ttdeci">UIButton toggleAbortOnAllyDying</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00115">ContentTactics.cs:115</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_aa407bff4cf29709a2544fe7a5a709de2"><div class="ttname"><a href="classContentTactics.html#aa407bff4cf29709a2544fe7a5a709de2">ContentTactics.togglePickFish</a></div><div class="ttdeci">UIButton togglePickFish</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00147">ContentTactics.cs:147</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_aa41e8582490a05a12ea72fd618768ee2"><div class="ttname"><a href="classContentTactics.html#aa41e8582490a05a12ea72fd618768ee2">ContentTactics.toggleBUseInventory</a></div><div class="ttdeci">UIButton toggleBUseInventory</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00131">ContentTactics.cs:131</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_aa702646e2071b1429b117014c99641c0"><div class="ttname"><a href="classContentTactics.html#aa702646e2071b1429b117014c99641c0">ContentTactics.togglePrefKeepPlaying</a></div><div class="ttdeci">UIButton togglePrefKeepPlaying</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00145">ContentTactics.cs:145</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_aaa23096eeabd8b130704f3fa14efd71c"><div class="ttname"><a href="classContentTactics.html#aaa23096eeabd8b130704f3fa14efd71c">ContentTactics.toggleAbortOnAllyDead</a></div><div class="ttdeci">UIButton toggleAbortOnAllyDead</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00117">ContentTactics.cs:117</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_abdb5bd1eb87d66b9546aa5315a7da534"><div class="ttname"><a href="classContentTactics.html#abdb5bd1eb87d66b9546aa5315a7da534">ContentTactics.toggleAbortOnItemLoss</a></div><div class="ttdeci">UIButton toggleAbortOnItemLoss</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00125">ContentTactics.cs:125</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_ac4e0039e8a248a5f82ed6bc1f7b92d53"><div class="ttname"><a href="classContentTactics.html#ac4e0039e8a248a5f82ed6bc1f7b92d53">ContentTactics.toggleDetail</a></div><div class="ttdeci">UIButton toggleDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00143">ContentTactics.cs:143</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_ace9c69f676bf513f06111b4b3222612a"><div class="ttname"><a href="classContentTactics.html#ace9c69f676bf513f06111b4b3222612a">ContentTactics.toggleBDontAutoAttackNeutral</a></div><div class="ttdeci">UIButton toggleBDontAutoAttackNeutral</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00139">ContentTactics.cs:139</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_ad990e39c9e566975391085e10a05b302"><div class="ttname"><a href="classContentTactics.html#ad990e39c9e566975391085e10a05b302">ContentTactics.toggleBTurbo</a></div><div class="ttdeci">UIButton toggleBTurbo</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00133">ContentTactics.cs:133</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_ae519660fa77ba9f744dbeb7e8936dcf9"><div class="ttname"><a href="classContentTactics.html#ae519660fa77ba9f744dbeb7e8936dcf9">ContentTactics.toggleAutoEat</a></div><div class="ttdeci">UIButton toggleAutoEat</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00149">ContentTactics.cs:149</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_ae9c6bc6ee3e79925656e2dd939714458"><div class="ttname"><a href="classContentTactics.html#ae9c6bc6ee3e79925656e2dd939714458">ContentTactics.toggleAbortOnKill</a></div><div class="ttdeci">UIButton toggleAbortOnKill</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00119">ContentTactics.cs:119</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_aebf62c3874e72f780733ce3ffa2bc2f2"><div class="ttname"><a href="classContentTactics.html#aebf62c3874e72f780733ce3ffa2bc2f2">ContentTactics.toggleBUseHotbar</a></div><div class="ttdeci">UIButton toggleBUseHotbar</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00127">ContentTactics.cs:127</a></div></div>
-<div class="ttc" id="aclassContentTactics_html_afd5cbef2a05ca2ee08741f6db7ea6da5"><div class="ttname"><a href="classContentTactics.html#afd5cbef2a05ca2ee08741f6db7ea6da5">ContentTactics.toggleBCastParty</a></div><div class="ttdeci">UIButton toggleBCastParty</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00135">ContentTactics.cs:135</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassGame_html_abc8a6c6cf00c78236e51e7f6a94407f4"><div class="ttname"><a href="classGame.html#abc8a6c6cf00c78236e51e7f6a94407f4">Game.config</a></div><div class="ttdeci">Game.Config config</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00850">Game.cs:850</a></div></div>
-<div class="ttc" id="aclassSourceTactics_1_1Row_html"><div class="ttname"><a href="classSourceTactics_1_1Row.html">SourceTactics.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceTactics_8cs_source.html#l00036">SourceTactics.cs:37</a></div></div>
+<div class="line"><span class="lineno">   69</span>            at.idType = b.id;</div>
+<div class="line"><span class="lineno">   70</span>            EClass.pc._tactics = null;</div>
+<div class="line"><span class="lineno">   71</span>        });</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="classContentTactics.html#aa702646e2071b1429b117014c99641c0">togglePrefKeepPlaying</a>.SetToggle(pref.<a class="code hl_variable" href="classConfigPreference.html#a8cd362445590ff4623b1ef76f882ce5b">keepPlayingMusic</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            pref.keepPlayingMusic = on;</div>
+<div class="line"><span class="lineno">   75</span>        });</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classContentTactics.html#aa407bff4cf29709a2544fe7a5a709de2">togglePickFish</a>.SetToggle(pref.<a class="code hl_variable" href="classConfigPreference.html#af01013389586f3c55a43a4bdcd949432">pickFish</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            pref.pickFish = on;</div>
+<div class="line"><span class="lineno">   79</span>        });</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="classContentTactics.html#ae519660fa77ba9f744dbeb7e8936dcf9">toggleAutoEat</a>.SetToggle(pref.<a class="code hl_variable" href="classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1">autoEat</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            pref.autoEat = on;</div>
+<div class="line"><span class="lineno">   83</span>        });</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="classContentTactics.html#ae9c6bc6ee3e79925656e2dd939714458">toggleAbortOnKill</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a58d5c3b149db23094412e6d90cfa37de">abortOnKill</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            at.abortOnKill = on;</div>
+<div class="line"><span class="lineno">   87</span>        });</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="classContentTactics.html#abdb5bd1eb87d66b9546aa5315a7da534">toggleAbortOnItemLoss</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a632b3a204d10eeb381963da0dba046e9">abortOnItemLoss</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            at.abortOnItemLoss = on;</div>
+<div class="line"><span class="lineno">   91</span>        });</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="classContentTactics.html#a93da35d024f714aad7b007d53a801de2">toggleAbortOnAllyDying</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3">abortOnAllyDying</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            at.abortOnAllyDying = on;</div>
+<div class="line"><span class="lineno">   95</span>        });</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_variable" href="classContentTactics.html#aaa23096eeabd8b130704f3fa14efd71c">toggleAbortOnAllyDead</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a616550c4d9565d85eb845bb7951d47f4">abortOnAllyDead</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            at.abortOnAllyDead = on;</div>
+<div class="line"><span class="lineno">   99</span>        });</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_variable" href="classContentTactics.html#a1840d136e97fbbc6311278364b022523">toggleOnEnemyDead</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a5d1e05ba85560fbc1c1cbf4a93283e5c">abortOnEnemyDead</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            at.abortOnEnemyDead = on;</div>
+<div class="line"><span class="lineno">  103</span>        });</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="classContentTactics.html#a7e5761826ec6ed8e7babfc831f339d61">toggleOnHalfHP</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab253868076b3d3f5c190b499440fdb95">abortOnHalfHP</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            at.abortOnHalfHP = on;</div>
+<div class="line"><span class="lineno">  107</span>        });</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="classContentTactics.html#aebf62c3874e72f780733ce3ffa2bc2f2">toggleBUseHotbar</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab0209cb0eba377747fe1d7e04d94e192">bUseHotBar</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            at.bUseHotBar = on;</div>
+<div class="line"><span class="lineno">  111</span>        });</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_variable" href="classContentTactics.html#a4412bb4c44ceeb248f2477c42a15cb2c">toggleBUseFav</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#aacec13d4e9b833426d968797e7de625c">bUseFav</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            at.bUseFav = on;</div>
+<div class="line"><span class="lineno">  115</span>        });</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="classContentTactics.html#afd5cbef2a05ca2ee08741f6db7ea6da5">toggleBCastParty</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a974bffd227de7674b3dd6b38b02c179c">bCastParty</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            at.bCastParty = on;</div>
+<div class="line"><span class="lineno">  119</span>        });</div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="classContentTactics.html#aa41e8582490a05a12ea72fd618768ee2">toggleBUseInventory</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a98563dc82f50ff3edb18fca59c4231be">bUseInventory</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            at.bUseInventory = on;</div>
+<div class="line"><span class="lineno">  123</span>        });</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="classContentTactics.html#ace9c69f676bf513f06111b4b3222612a">toggleBDontAutoAttackNeutral</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09">bDontAutoAttackNeutral</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            at.bDontAutoAttackNeutral = on;</div>
+<div class="line"><span class="lineno">  127</span>        });</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_variable" href="classContentTactics.html#ad990e39c9e566975391085e10a05b302">toggleBTurbo</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#ab56fa2dd4b1caa2119ccae8c8c393038">turbo</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            at.turbo = on;</div>
+<div class="line"><span class="lineno">  131</span>        });</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="classContentTactics.html#a2d740c033cd6ef58fb886f44dde41763">toggleBDontChangeTarget</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454">bDontChangeTarget</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            at.bDontChangeTarget = on;</div>
+<div class="line"><span class="lineno">  135</span>        });</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_variable" href="classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629">toggleBDontChase</a>.SetToggle(at.<a class="code hl_variable" href="classConfigAutoCombat.html#a0b585c4634754920407b6b3be5721d4d">bDontChase</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            at.bDontChase = on;</div>
+<div class="line"><span class="lineno">  139</span>        });</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137">toggleFollowDist</a>.SetToggle(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1">config</a>.<a class="code hl_variable" href="classGame_1_1Config.html#ae31179d0309b47cf2d5a10719e03fa9c">tactics</a>.<a class="code hl_variable" href="classConfigTactics.html#a47dffa4b1ca69a9226fa4054e1d6d405">allyKeepDistance</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            EClass.game.config.tactics.allyKeepDistance = on;</div>
+<div class="line"><span class="lineno">  143</span>        });</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="classContentTactics.html#a03d53418f483f66d64a844f2a02814af">toggleDontWander</a>.SetToggle(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1">config</a>.<a class="code hl_variable" href="classGame_1_1Config.html#ae31179d0309b47cf2d5a10719e03fa9c">tactics</a>.<a class="code hl_variable" href="classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d">dontWander</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            EClass.game.config.tactics.dontWander = on;</div>
+<div class="line"><span class="lineno">  147</span>        });</div>
+<div class="line"><span class="lineno">  148</span>        base.transform.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  149</span>        base.transform.RebuildLayoutTo&lt;Layer&gt;();</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="ttc" id="aclassConfigAutoCombat_html"><div class="ttname"><a href="classConfigAutoCombat.html">ConfigAutoCombat</a></div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00003">ConfigAutoCombat.cs:4</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a0b585c4634754920407b6b3be5721d4d"><div class="ttname"><a href="classConfigAutoCombat.html#a0b585c4634754920407b6b3be5721d4d">ConfigAutoCombat.bDontChase</a></div><div class="ttdeci">bool bDontChase</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00045">ConfigAutoCombat.cs:45</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a58d5c3b149db23094412e6d90cfa37de"><div class="ttname"><a href="classConfigAutoCombat.html#a58d5c3b149db23094412e6d90cfa37de">ConfigAutoCombat.abortOnKill</a></div><div class="ttdeci">bool abortOnKill</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00021">ConfigAutoCombat.cs:21</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a5d1e05ba85560fbc1c1cbf4a93283e5c"><div class="ttname"><a href="classConfigAutoCombat.html#a5d1e05ba85560fbc1c1cbf4a93283e5c">ConfigAutoCombat.abortOnEnemyDead</a></div><div class="ttdeci">bool abortOnEnemyDead</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00015">ConfigAutoCombat.cs:15</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a616550c4d9565d85eb845bb7951d47f4"><div class="ttname"><a href="classConfigAutoCombat.html#a616550c4d9565d85eb845bb7951d47f4">ConfigAutoCombat.abortOnAllyDead</a></div><div class="ttdeci">bool abortOnAllyDead</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00012">ConfigAutoCombat.cs:12</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a632b3a204d10eeb381963da0dba046e9"><div class="ttname"><a href="classConfigAutoCombat.html#a632b3a204d10eeb381963da0dba046e9">ConfigAutoCombat.abortOnItemLoss</a></div><div class="ttdeci">bool abortOnItemLoss</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00024">ConfigAutoCombat.cs:24</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a974bffd227de7674b3dd6b38b02c179c"><div class="ttname"><a href="classConfigAutoCombat.html#a974bffd227de7674b3dd6b38b02c179c">ConfigAutoCombat.bCastParty</a></div><div class="ttdeci">bool bCastParty</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00036">ConfigAutoCombat.cs:36</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_a98563dc82f50ff3edb18fca59c4231be"><div class="ttname"><a href="classConfigAutoCombat.html#a98563dc82f50ff3edb18fca59c4231be">ConfigAutoCombat.bUseInventory</a></div><div class="ttdeci">bool bUseInventory</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00033">ConfigAutoCombat.cs:33</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_aacec13d4e9b833426d968797e7de625c"><div class="ttname"><a href="classConfigAutoCombat.html#aacec13d4e9b833426d968797e7de625c">ConfigAutoCombat.bUseFav</a></div><div class="ttdeci">bool bUseFav</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00030">ConfigAutoCombat.cs:30</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_ab0209cb0eba377747fe1d7e04d94e192"><div class="ttname"><a href="classConfigAutoCombat.html#ab0209cb0eba377747fe1d7e04d94e192">ConfigAutoCombat.bUseHotBar</a></div><div class="ttdeci">bool bUseHotBar</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00027">ConfigAutoCombat.cs:27</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_ab253868076b3d3f5c190b499440fdb95"><div class="ttname"><a href="classConfigAutoCombat.html#ab253868076b3d3f5c190b499440fdb95">ConfigAutoCombat.abortOnHalfHP</a></div><div class="ttdeci">bool abortOnHalfHP</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00018">ConfigAutoCombat.cs:18</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_ab56fa2dd4b1caa2119ccae8c8c393038"><div class="ttname"><a href="classConfigAutoCombat.html#ab56fa2dd4b1caa2119ccae8c8c393038">ConfigAutoCombat.turbo</a></div><div class="ttdeci">bool turbo</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00048">ConfigAutoCombat.cs:48</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_ab776e0a096fef7e4c928752bc41b17fb"><div class="ttname"><a href="classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb">ConfigAutoCombat.detail</a></div><div class="ttdeci">bool detail</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00051">ConfigAutoCombat.cs:51</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_abe364d7de4682ae19eddb2bf478a2d58"><div class="ttname"><a href="classConfigAutoCombat.html#abe364d7de4682ae19eddb2bf478a2d58">ConfigAutoCombat.idType</a></div><div class="ttdeci">string idType</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00006">ConfigAutoCombat.cs:6</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_ace732e6dbe83ea222b75e99c22d55ea3"><div class="ttname"><a href="classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3">ConfigAutoCombat.abortOnAllyDying</a></div><div class="ttdeci">bool abortOnAllyDying</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00009">ConfigAutoCombat.cs:9</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_aef94da1414894a453cb58d218c821454"><div class="ttname"><a href="classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454">ConfigAutoCombat.bDontChangeTarget</a></div><div class="ttdeci">bool bDontChangeTarget</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00039">ConfigAutoCombat.cs:39</a></div></div>
+<div class="ttc" id="aclassConfigAutoCombat_html_afea261310e16d3794bf25988c252ab09"><div class="ttname"><a href="classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09">ConfigAutoCombat.bDontAutoAttackNeutral</a></div><div class="ttdeci">bool bDontAutoAttackNeutral</div><div class="ttdef"><b>Definition:</b> <a href="ConfigAutoCombat_8cs_source.html#l00042">ConfigAutoCombat.cs:42</a></div></div>
+<div class="ttc" id="aclassConfigPreference_html"><div class="ttname"><a href="classConfigPreference.html">ConfigPreference</a></div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00003">ConfigPreference.cs:4</a></div></div>
+<div class="ttc" id="aclassConfigPreference_html_a503cb51b259fcff233c120aa85092fb1"><div class="ttname"><a href="classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1">ConfigPreference.autoEat</a></div><div class="ttdeci">bool autoEat</div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00012">ConfigPreference.cs:12</a></div></div>
+<div class="ttc" id="aclassConfigPreference_html_a8cd362445590ff4623b1ef76f882ce5b"><div class="ttname"><a href="classConfigPreference.html#a8cd362445590ff4623b1ef76f882ce5b">ConfigPreference.keepPlayingMusic</a></div><div class="ttdeci">bool keepPlayingMusic</div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00006">ConfigPreference.cs:6</a></div></div>
+<div class="ttc" id="aclassConfigPreference_html_af01013389586f3c55a43a4bdcd949432"><div class="ttname"><a href="classConfigPreference.html#af01013389586f3c55a43a4bdcd949432">ConfigPreference.pickFish</a></div><div class="ttdeci">bool pickFish</div><div class="ttdef"><b>Definition:</b> <a href="ConfigPreference_8cs_source.html#l00009">ConfigPreference.cs:9</a></div></div>
+<div class="ttc" id="aclassConfigTactics_html_a47dffa4b1ca69a9226fa4054e1d6d405"><div class="ttname"><a href="classConfigTactics.html#a47dffa4b1ca69a9226fa4054e1d6d405">ConfigTactics.allyKeepDistance</a></div><div class="ttdeci">bool allyKeepDistance</div><div class="ttdef"><b>Definition:</b> <a href="ConfigTactics_8cs_source.html#l00006">ConfigTactics.cs:6</a></div></div>
+<div class="ttc" id="aclassConfigTactics_html_a85626c285d80af5b82be7b4997c58d4d"><div class="ttname"><a href="classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d">ConfigTactics.dontWander</a></div><div class="ttdeci">bool dontWander</div><div class="ttdef"><b>Definition:</b> <a href="ConfigTactics_8cs_source.html#l00009">ConfigTactics.cs:9</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a01a22d87c82b29d92061e1841493d056"><div class="ttname"><a href="classContentTactics.html#a01a22d87c82b29d92061e1841493d056">ContentTactics.ddTactics</a></div><div class="ttdeci">UIDropdown ddTactics</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00047">ContentTactics.cs:47</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a03d53418f483f66d64a844f2a02814af"><div class="ttname"><a href="classContentTactics.html#a03d53418f483f66d64a844f2a02814af">ContentTactics.toggleDontWander</a></div><div class="ttdeci">UIButton toggleDontWander</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00009">ContentTactics.cs:9</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a108e9d7c9a1f84ebb67d6322f9704629"><div class="ttname"><a href="classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629">ContentTactics.toggleBDontChase</a></div><div class="ttdeci">UIButton toggleBDontChase</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00037">ContentTactics.cs:37</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a11fca6bca66d2586e8a7dd38299ddce3"><div class="ttname"><a href="classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3">ContentTactics.transDetail</a></div><div class="ttdeci">Transform transDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00049">ContentTactics.cs:49</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a1840d136e97fbbc6311278364b022523"><div class="ttname"><a href="classContentTactics.html#a1840d136e97fbbc6311278364b022523">ContentTactics.toggleOnEnemyDead</a></div><div class="ttdeci">UIButton toggleOnEnemyDead</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00017">ContentTactics.cs:17</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a1a55b29d8baefefb744eef1c5ea99137"><div class="ttname"><a href="classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137">ContentTactics.toggleFollowDist</a></div><div class="ttdeci">UIButton toggleFollowDist</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00007">ContentTactics.cs:7</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a2d740c033cd6ef58fb886f44dde41763"><div class="ttname"><a href="classContentTactics.html#a2d740c033cd6ef58fb886f44dde41763">ContentTactics.toggleBDontChangeTarget</a></div><div class="ttdeci">UIButton toggleBDontChangeTarget</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00033">ContentTactics.cs:33</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a4412bb4c44ceeb248f2477c42a15cb2c"><div class="ttname"><a href="classContentTactics.html#a4412bb4c44ceeb248f2477c42a15cb2c">ContentTactics.toggleBUseFav</a></div><div class="ttdeci">UIButton toggleBUseFav</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00025">ContentTactics.cs:25</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a7e5761826ec6ed8e7babfc831f339d61"><div class="ttname"><a href="classContentTactics.html#a7e5761826ec6ed8e7babfc831f339d61">ContentTactics.toggleOnHalfHP</a></div><div class="ttdeci">UIButton toggleOnHalfHP</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00019">ContentTactics.cs:19</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_a93da35d024f714aad7b007d53a801de2"><div class="ttname"><a href="classContentTactics.html#a93da35d024f714aad7b007d53a801de2">ContentTactics.toggleAbortOnAllyDying</a></div><div class="ttdeci">UIButton toggleAbortOnAllyDying</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00011">ContentTactics.cs:11</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_aa407bff4cf29709a2544fe7a5a709de2"><div class="ttname"><a href="classContentTactics.html#aa407bff4cf29709a2544fe7a5a709de2">ContentTactics.togglePickFish</a></div><div class="ttdeci">UIButton togglePickFish</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00043">ContentTactics.cs:43</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_aa41e8582490a05a12ea72fd618768ee2"><div class="ttname"><a href="classContentTactics.html#aa41e8582490a05a12ea72fd618768ee2">ContentTactics.toggleBUseInventory</a></div><div class="ttdeci">UIButton toggleBUseInventory</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00027">ContentTactics.cs:27</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_aa702646e2071b1429b117014c99641c0"><div class="ttname"><a href="classContentTactics.html#aa702646e2071b1429b117014c99641c0">ContentTactics.togglePrefKeepPlaying</a></div><div class="ttdeci">UIButton togglePrefKeepPlaying</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00041">ContentTactics.cs:41</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_aaa23096eeabd8b130704f3fa14efd71c"><div class="ttname"><a href="classContentTactics.html#aaa23096eeabd8b130704f3fa14efd71c">ContentTactics.toggleAbortOnAllyDead</a></div><div class="ttdeci">UIButton toggleAbortOnAllyDead</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00013">ContentTactics.cs:13</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_abdb5bd1eb87d66b9546aa5315a7da534"><div class="ttname"><a href="classContentTactics.html#abdb5bd1eb87d66b9546aa5315a7da534">ContentTactics.toggleAbortOnItemLoss</a></div><div class="ttdeci">UIButton toggleAbortOnItemLoss</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00021">ContentTactics.cs:21</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_ac4e0039e8a248a5f82ed6bc1f7b92d53"><div class="ttname"><a href="classContentTactics.html#ac4e0039e8a248a5f82ed6bc1f7b92d53">ContentTactics.toggleDetail</a></div><div class="ttdeci">UIButton toggleDetail</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00039">ContentTactics.cs:39</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_ace9c69f676bf513f06111b4b3222612a"><div class="ttname"><a href="classContentTactics.html#ace9c69f676bf513f06111b4b3222612a">ContentTactics.toggleBDontAutoAttackNeutral</a></div><div class="ttdeci">UIButton toggleBDontAutoAttackNeutral</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00035">ContentTactics.cs:35</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_ad990e39c9e566975391085e10a05b302"><div class="ttname"><a href="classContentTactics.html#ad990e39c9e566975391085e10a05b302">ContentTactics.toggleBTurbo</a></div><div class="ttdeci">UIButton toggleBTurbo</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00029">ContentTactics.cs:29</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_ae519660fa77ba9f744dbeb7e8936dcf9"><div class="ttname"><a href="classContentTactics.html#ae519660fa77ba9f744dbeb7e8936dcf9">ContentTactics.toggleAutoEat</a></div><div class="ttdeci">UIButton toggleAutoEat</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00045">ContentTactics.cs:45</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_ae9c6bc6ee3e79925656e2dd939714458"><div class="ttname"><a href="classContentTactics.html#ae9c6bc6ee3e79925656e2dd939714458">ContentTactics.toggleAbortOnKill</a></div><div class="ttdeci">UIButton toggleAbortOnKill</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00015">ContentTactics.cs:15</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_aebf62c3874e72f780733ce3ffa2bc2f2"><div class="ttname"><a href="classContentTactics.html#aebf62c3874e72f780733ce3ffa2bc2f2">ContentTactics.toggleBUseHotbar</a></div><div class="ttdeci">UIButton toggleBUseHotbar</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00023">ContentTactics.cs:23</a></div></div>
+<div class="ttc" id="aclassContentTactics_html_afd5cbef2a05ca2ee08741f6db7ea6da5"><div class="ttname"><a href="classContentTactics.html#afd5cbef2a05ca2ee08741f6db7ea6da5">ContentTactics.toggleBCastParty</a></div><div class="ttdeci">UIButton toggleBCastParty</div><div class="ttdef"><b>Definition:</b> <a href="ContentTactics_8cs_source.html#l00031">ContentTactics.cs:31</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassGame_1_1Config_html_a4cf7f5be30a566d0b3e9a39c4a8eb09f"><div class="ttname"><a href="classGame_1_1Config.html#a4cf7f5be30a566d0b3e9a39c4a8eb09f">Game.Config.preference</a></div><div class="ttdeci">ConfigPreference preference</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00093">Game.cs:93</a></div></div>
+<div class="ttc" id="aclassGame_1_1Config_html_ae31179d0309b47cf2d5a10719e03fa9c"><div class="ttname"><a href="classGame_1_1Config.html#ae31179d0309b47cf2d5a10719e03fa9c">Game.Config.tactics</a></div><div class="ttdeci">ConfigTactics tactics</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00087">Game.cs:87</a></div></div>
+<div class="ttc" id="aclassGame_1_1Config_html_af8c5caed73637879c758c5cade0aa481"><div class="ttname"><a href="classGame_1_1Config.html#af8c5caed73637879c758c5cade0aa481">Game.Config.autoCombat</a></div><div class="ttdeci">ConfigAutoCombat autoCombat</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00090">Game.cs:90</a></div></div>
+<div class="ttc" id="aclassGame_html_aca7d98676e4be7cefa8eb603cbaa56a1"><div class="ttname"><a href="classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1">Game.config</a></div><div class="ttdeci">Config config</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00212">Game.cs:212</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aef47f5e3413fda019c9745f849d94946"><div class="ttname"><a href="classSourceManager.html#aef47f5e3413fda019c9745f849d94946">SourceManager.tactics</a></div><div class="ttdeci">SourceTactics tactics</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00022">SourceManager.cs:22</a></div></div>
+<div class="ttc" id="aclassSourceTactics_1_1Row_html"><div class="ttname"><a href="classSourceTactics_1_1Row.html">SourceTactics.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceTactics_8cs_source.html#l00006">SourceTactics.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceTactics_html"><div class="ttname"><a href="classSourceTactics.html">SourceTactics</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceTactics_8cs_source.html#l00003">SourceTactics.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigAutoCombat_8cs_source.html#l00021">ConfigAutoCombat.abortOnAllyDead</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00018">ConfigAutoCombat.abortOnAllyDying</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00024">ConfigAutoCombat.abortOnEnemyDead</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00027">ConfigAutoCombat.abortOnHalfHP</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00033">ConfigAutoCombat.abortOnItemLoss</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00030">ConfigAutoCombat.abortOnKill</a>, <a class="el" href="ConfigPreference_8cs_source.html#l00013">ConfigPreference.autoEat</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00045">ConfigAutoCombat.bCastParty</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00051">ConfigAutoCombat.bDontAutoAttackNeutral</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00048">ConfigAutoCombat.bDontChangeTarget</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00054">ConfigAutoCombat.bDontChase</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00039">ConfigAutoCombat.bUseFav</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00036">ConfigAutoCombat.bUseHotBar</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00042">ConfigAutoCombat.bUseInventory</a>, <a class="el" href="Game_8cs_source.html#l00850">Game.config</a>, <a class="el" href="ContentTactics_8cs_source.html#l00151">ddTactics</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00060">ConfigAutoCombat.detail</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00015">ConfigAutoCombat.idType</a>, <a class="el" href="ConfigPreference_8cs_source.html#l00007">ConfigPreference.keepPlayingMusic</a>, <a class="el" href="ConfigPreference_8cs_source.html#l00010">ConfigPreference.pickFish</a>, <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>, <a class="el" href="ContentTactics_8cs_source.html#l00117">toggleAbortOnAllyDead</a>, <a class="el" href="ContentTactics_8cs_source.html#l00115">toggleAbortOnAllyDying</a>, <a class="el" href="ContentTactics_8cs_source.html#l00125">toggleAbortOnItemLoss</a>, <a class="el" href="ContentTactics_8cs_source.html#l00119">toggleAbortOnKill</a>, <a class="el" href="ContentTactics_8cs_source.html#l00149">toggleAutoEat</a>, <a class="el" href="ContentTactics_8cs_source.html#l00135">toggleBCastParty</a>, <a class="el" href="ContentTactics_8cs_source.html#l00139">toggleBDontAutoAttackNeutral</a>, <a class="el" href="ContentTactics_8cs_source.html#l00137">toggleBDontChangeTarget</a>, <a class="el" href="ContentTactics_8cs_source.html#l00141">toggleBDontChase</a>, <a class="el" href="ContentTactics_8cs_source.html#l00133">toggleBTurbo</a>, <a class="el" href="ContentTactics_8cs_source.html#l00129">toggleBUseFav</a>, <a class="el" href="ContentTactics_8cs_source.html#l00127">toggleBUseHotbar</a>, <a class="el" href="ContentTactics_8cs_source.html#l00131">toggleBUseInventory</a>, <a class="el" href="ContentTactics_8cs_source.html#l00143">toggleDetail</a>, <a class="el" href="ContentTactics_8cs_source.html#l00113">toggleDontWander</a>, <a class="el" href="ContentTactics_8cs_source.html#l00111">toggleFollowDist</a>, <a class="el" href="ContentTactics_8cs_source.html#l00121">toggleOnEnemyDead</a>, <a class="el" href="ContentTactics_8cs_source.html#l00123">toggleOnHalfHP</a>, <a class="el" href="ContentTactics_8cs_source.html#l00147">togglePickFish</a>, <a class="el" href="ContentTactics_8cs_source.html#l00145">togglePrefKeepPlaying</a>, <a class="el" href="ContentTactics_8cs_source.html#l00153">transDetail</a>, and <a class="el" href="ConfigAutoCombat_8cs_source.html#l00057">ConfigAutoCombat.turbo</a>.</p>
+<p class="reference">References <a class="el" href="ConfigAutoCombat_8cs_source.html#l00012">ConfigAutoCombat.abortOnAllyDead</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00009">ConfigAutoCombat.abortOnAllyDying</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00015">ConfigAutoCombat.abortOnEnemyDead</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00018">ConfigAutoCombat.abortOnHalfHP</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00024">ConfigAutoCombat.abortOnItemLoss</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00021">ConfigAutoCombat.abortOnKill</a>, <a class="el" href="ConfigTactics_8cs_source.html#l00006">ConfigTactics.allyKeepDistance</a>, <a class="el" href="Game_8cs_source.html#l00090">Game.Config.autoCombat</a>, <a class="el" href="ConfigPreference_8cs_source.html#l00012">ConfigPreference.autoEat</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00036">ConfigAutoCombat.bCastParty</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00042">ConfigAutoCombat.bDontAutoAttackNeutral</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00039">ConfigAutoCombat.bDontChangeTarget</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00045">ConfigAutoCombat.bDontChase</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00030">ConfigAutoCombat.bUseFav</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00027">ConfigAutoCombat.bUseHotBar</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00033">ConfigAutoCombat.bUseInventory</a>, <a class="el" href="Game_8cs_source.html#l00212">Game.config</a>, <a class="el" href="ContentTactics_8cs_source.html#l00047">ddTactics</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00051">ConfigAutoCombat.detail</a>, <a class="el" href="ConfigTactics_8cs_source.html#l00009">ConfigTactics.dontWander</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="ConfigAutoCombat_8cs_source.html#l00006">ConfigAutoCombat.idType</a>, <a class="el" href="ConfigPreference_8cs_source.html#l00006">ConfigPreference.keepPlayingMusic</a>, <a class="el" href="ConfigPreference_8cs_source.html#l00009">ConfigPreference.pickFish</a>, <a class="el" href="Game_8cs_source.html#l00093">Game.Config.preference</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="Game_8cs_source.html#l00087">Game.Config.tactics</a>, <a class="el" href="SourceManager_8cs_source.html#l00022">SourceManager.tactics</a>, <a class="el" href="ContentTactics_8cs_source.html#l00013">toggleAbortOnAllyDead</a>, <a class="el" href="ContentTactics_8cs_source.html#l00011">toggleAbortOnAllyDying</a>, <a class="el" href="ContentTactics_8cs_source.html#l00021">toggleAbortOnItemLoss</a>, <a class="el" href="ContentTactics_8cs_source.html#l00015">toggleAbortOnKill</a>, <a class="el" href="ContentTactics_8cs_source.html#l00045">toggleAutoEat</a>, <a class="el" href="ContentTactics_8cs_source.html#l00031">toggleBCastParty</a>, <a class="el" href="ContentTactics_8cs_source.html#l00035">toggleBDontAutoAttackNeutral</a>, <a class="el" href="ContentTactics_8cs_source.html#l00033">toggleBDontChangeTarget</a>, <a class="el" href="ContentTactics_8cs_source.html#l00037">toggleBDontChase</a>, <a class="el" href="ContentTactics_8cs_source.html#l00029">toggleBTurbo</a>, <a class="el" href="ContentTactics_8cs_source.html#l00025">toggleBUseFav</a>, <a class="el" href="ContentTactics_8cs_source.html#l00023">toggleBUseHotbar</a>, <a class="el" href="ContentTactics_8cs_source.html#l00027">toggleBUseInventory</a>, <a class="el" href="ContentTactics_8cs_source.html#l00039">toggleDetail</a>, <a class="el" href="ContentTactics_8cs_source.html#l00009">toggleDontWander</a>, <a class="el" href="ContentTactics_8cs_source.html#l00007">toggleFollowDist</a>, <a class="el" href="ContentTactics_8cs_source.html#l00017">toggleOnEnemyDead</a>, <a class="el" href="ContentTactics_8cs_source.html#l00019">toggleOnHalfHP</a>, <a class="el" href="ContentTactics_8cs_source.html#l00043">togglePickFish</a>, <a class="el" href="ContentTactics_8cs_source.html#l00041">togglePrefKeepPlaying</a>, <a class="el" href="ContentTactics_8cs_source.html#l00049">transDetail</a>, and <a class="el" href="ConfigAutoCombat_8cs_source.html#l00048">ConfigAutoCombat.turbo</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00008">OnInstantiate()</a>, and <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00051">OnInstantiate()</a>.</p>
 
 </div>
 </div>
@@ -395,9 +400,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00151">151</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00047">47</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -413,9 +418,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00117">117</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00013">13</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -431,9 +436,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00115">115</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00011">11</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -449,9 +454,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00125">125</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00021">21</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -467,9 +472,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00119">119</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00015">15</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -485,9 +490,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00149">149</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00045">45</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -503,9 +508,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00135">135</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00031">31</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -521,9 +526,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00139">139</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00035">35</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -539,9 +544,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00137">137</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00033">33</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -557,9 +562,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00141">141</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00037">37</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -575,9 +580,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00133">133</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00029">29</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -593,9 +598,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00129">129</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00025">25</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -611,9 +616,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00127">127</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00023">23</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -629,9 +634,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00131">131</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00027">27</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -647,9 +652,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00143">143</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00039">39</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -665,9 +670,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00113">113</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00009">9</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -683,9 +688,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00111">111</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00007">7</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -701,9 +706,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00121">121</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00017">17</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -719,9 +724,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00123">123</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00019">19</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -737,9 +742,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00147">147</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00043">43</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -755,9 +760,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00145">145</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00041">41</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -773,9 +778,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00153">153</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentTactics_8cs_source.html#l00049">49</a> of file <a class="el" href="ContentTactics_8cs_source.html">ContentTactics.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00013">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentTactics_8cs_source.html#l00056">Refresh()</a>.</p>
 
 </div>
 </div>

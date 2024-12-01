@@ -281,100 +281,100 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00023">23</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        this.chara = (_chara.IsPCC ? _chara : <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>);</div>
-<div class="line"><span class="lineno">   26</span>        this.mode = m;</div>
-<div class="line"><span class="lineno">   27</span>        this.uiPCC.exportPath = CorePath.user + <span class="stringliteral">&quot;PCC/&quot;</span>;</div>
-<div class="line"><span class="lineno">   28</span>        this.uiPCC.onShowPalette = delegate(PCC pcc, <span class="keywordtype">string</span> <span class="keywordtype">id</span>, PCC.Part part, TestActor actor)</div>
-<div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
-<div class="line"><span class="lineno">   31</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = pcc.data.GetColor(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   32</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(color, color, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
-<div class="line"><span class="lineno">   33</span>            {</div>
-<div class="line"><span class="lineno">   34</span>                pcc.data.SetColor(<span class="keywordtype">id</span>, _c);</div>
-<div class="line"><span class="lineno">   35</span>                actor.Reset();</div>
-<div class="line"><span class="lineno">   36</span>            });</div>
-<div class="line"><span class="lineno">   37</span>        };</div>
-<div class="line"><span class="lineno">   38</span>        PCCData newData = <span class="keyword">new</span> PCCData();</div>
-<div class="line"><span class="lineno">   39</span>        newData.Set(this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>);</div>
-<div class="line"><span class="lineno">   40</span>        this.backup = IO.DeepCopy&lt;PCCData&gt;(newData);</div>
-<div class="line"><span class="lineno">   41</span>        this.backupPortrait = this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_property" href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">c_idPortrait</a>;</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(newData, idUniform, this.<a class="code hl_property" href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">IsMale</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   45</span>            this.windows[0].SetCaption(<span class="stringliteral">&quot;_uniform&quot;</span>.lang(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">jobs</a>.map[idUniform].GetName().ToTitleCase(<span class="keyword">false</span>), <span class="keyword">this</span>.IsMale ? <span class="stringliteral">&quot;male&quot;</span>.lang() : <span class="stringliteral">&quot;female&quot;</span>.lang(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(newData, PCCUniformManager.dummy);</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.Init(newData, this.<a class="code hl_variable" href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">mode</a>);</div>
-<div class="line"><span class="lineno">   52</span>        this.<a class="code hl_function" href="classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25">SetPortraitSlider</a>();</div>
-<div class="line"><span class="lineno">   53</span>        this.windows[0].AddBottomButton(<span class="stringliteral">&quot;removeAllCloth&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.RemoveAll();</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>        }, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   58</span>        this.windows[0].AddBottomButton(<span class="stringliteral">&quot;reset&quot;</span>, delegate</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00039">39</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a> = (_chara.IsPCC ? _chara : <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>);</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">mode</a> = m;</div>
+<div class="line"><span class="lineno">   43</span>        uiPCC.exportPath = CorePath.user + <span class="stringliteral">&quot;PCC/&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>        uiPCC.onShowPalette = delegate(PCC pcc, <span class="keywordtype">string</span> <span class="keywordtype">id</span>, PCC.Part part, TestActor actor)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a> layerColorPicker = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;();</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = pcc.data.GetColor(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   48</span>            layerColorPicker.<a class="code hl_function" href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">SetColor</a>(color, color, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                pcc.data.SetColor(<span class="keywordtype">id</span>, _c);</div>
+<div class="line"><span class="lineno">   51</span>                actor.Reset();</div>
+<div class="line"><span class="lineno">   52</span>            });</div>
+<div class="line"><span class="lineno">   53</span>        };</div>
+<div class="line"><span class="lineno">   54</span>        PCCData newData = <span class="keyword">new</span> PCCData();</div>
+<div class="line"><span class="lineno">   55</span>        newData.Set(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>);</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a6580db8430e096a7f963cf699469eabd">backup</a> = IO.DeepCopy(newData);</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a15079b1bebcf8c5aa312073b6fee938c">backupPortrait</a> = <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_property" href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">c_idPortrait</a>;</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>)</div>
 <div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>)</div>
-<div class="line"><span class="lineno">   61</span>            {</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.RemoveUniform(newData);</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>            this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.Reset(this.<a class="code hl_variable" href="classLayerEditPCC.html#a6580db8430e096a7f963cf699469eabd">backup</a>);</div>
-<div class="line"><span class="lineno">   65</span>            this.chara.c_idPortrait = this.<a class="code hl_variable" href="classLayerEditPCC.html#a15079b1bebcf8c5aa312073b6fee938c">backupPortrait</a>;</div>
-<div class="line"><span class="lineno">   66</span>            this.<a class="code hl_function" href="classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25">SetPortraitSlider</a>();</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
-<div class="line"><span class="lineno">   68</span>            newData.colors.Clear();</div>
-<div class="line"><span class="lineno">   69</span>        }, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>)</div>
-<div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span>            PCCData otherUni = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.GetUniform(idUniform, !this.<a class="code hl_property" href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">IsMale</a>);</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (otherUni != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   74</span>            {</div>
-<div class="line"><span class="lineno">   75</span>                this.windows[0].AddBottomButton(<span class="stringliteral">&quot;copyUniform&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   76</span>                {</div>
-<div class="line"><span class="lineno">   77</span>                    PCCData pccdata = <span class="keyword">new</span> PCCData();</div>
-<div class="line"><span class="lineno">   78</span>                    pccdata.Set(this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>);</div>
-<div class="line"><span class="lineno">   79</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(pccdata, otherUni);</div>
-<div class="line"><span class="lineno">   80</span>                    this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.Reset(pccdata);</div>
-<div class="line"><span class="lineno">   81</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>                }, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        this.windows[2].SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   86</span>        this.<a class="code hl_variable" href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">portrait</a>.SetActive(!this.<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>);</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (_onKill != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            base.SetOnKill(_onKill);</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(newData, idUniform, <a class="code hl_property" href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">IsMale</a>, canUseOtherGender: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   61</span>            windows[0].SetCaption(<span class="stringliteral">&quot;_uniform&quot;</span>.lang(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a489314a71728e1674f20af35cc506b84">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">jobs</a>.map[idUniform].GetName().ToTitleCase(), <a class="code hl_property" href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">IsMale</a> ? <span class="stringliteral">&quot;male&quot;</span>.lang() : <span class="stringliteral">&quot;female&quot;</span>.lang()));</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(newData, PCCUniformManager.dummy);</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.Init(newData, <a class="code hl_variable" href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">mode</a>);</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25">SetPortraitSlider</a>();</div>
+<div class="line"><span class="lineno">   69</span>        windows[0].AddBottomButton(<span class="stringliteral">&quot;removeAllCloth&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.RemoveAll();</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>        });</div>
+<div class="line"><span class="lineno">   74</span>        windows[0].AddBottomButton(<span class="stringliteral">&quot;reset&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.RemoveUniform(newData);</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.Reset(<a class="code hl_variable" href="classLayerEditPCC.html#a6580db8430e096a7f963cf699469eabd">backup</a>);</div>
+<div class="line"><span class="lineno">   81</span>            chara.c_idPortrait = <a class="code hl_variable" href="classLayerEditPCC.html#a15079b1bebcf8c5aa312073b6fee938c">backupPortrait</a>;</div>
+<div class="line"><span class="lineno">   82</span>            <a class="code hl_function" href="classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25">SetPortraitSlider</a>();</div>
+<div class="line"><span class="lineno">   83</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
+<div class="line"><span class="lineno">   84</span>            newData.colors.Clear();</div>
+<div class="line"><span class="lineno">   85</span>        });</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            PCCData otherUni = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.GetUniform(idUniform, !<a class="code hl_property" href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">IsMale</a>);</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (otherUni != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                windows[0].AddBottomButton(<span class="stringliteral">&quot;copyUniform&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   92</span>                {</div>
+<div class="line"><span class="lineno">   93</span>                    PCCData pCCData = <span class="keyword">new</span> PCCData();</div>
+<div class="line"><span class="lineno">   94</span>                    pCCData.Set(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>);</div>
+<div class="line"><span class="lineno">   95</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(pCCData, otherUni);</div>
+<div class="line"><span class="lineno">   96</span>                    <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.Reset(pCCData);</div>
+<div class="line"><span class="lineno">   97</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>                });</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        windows[2].SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">portrait</a>.SetActive(!<a class="code hl_property" href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">UniformMode</a>);</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (_onKill != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            SetOnKill(_onKill);</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
-<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00003">PickerState.cs:4</a></div></div>
-<div class="ttc" id="aclassCard_html_a125a12ce0be00c6009f365bb8070c0dc"><div class="ttname"><a href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">Card.c_idPortrait</a></div><div class="ttdeci">string c_idPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01339">Card.cs:1340</a></div></div>
-<div class="ttc" id="aclassChara_html_ae316a7097e7b696f2f018df973b16224"><div class="ttname"><a href="classChara.html#ae316a7097e7b696f2f018df973b16224">Chara.pccData</a></div><div class="ttdeci">PCCData pccData</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09446">Chara.cs:9446</a></div></div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
-<div class="ttc" id="aclassELayer_html_a489314a71728e1674f20af35cc506b84"><div class="ttname"><a href="classELayer.html#a489314a71728e1674f20af35cc506b84">ELayer.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00126">ELayer.cs:127</a></div></div>
-<div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00014">ELayer.cs:15</a></div></div>
-<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
-<div class="ttc" id="aclassELayer_html_ab11922d6365826fec4c710a4ce358940"><div class="ttname"><a href="classELayer.html#ab11922d6365826fec4c710a4ce358940">ELayer.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00142">ELayer.cs:143</a></div></div>
-<div class="ttc" id="aclassGame_html_a678bda9cd7e60cd719852efe7febf5fe"><div class="ttname"><a href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">Game.uniforms</a></div><div class="ttdeci">PCCUniformManager uniforms</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00826">Game.cs:826</a></div></div>
+<div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00001">PickerState.cs:2</a></div></div>
+<div class="ttc" id="aclassCard_html_a125a12ce0be00c6009f365bb8070c0dc"><div class="ttname"><a href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">Card.c_idPortrait</a></div><div class="ttdeci">string c_idPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01354">Card.cs:1355</a></div></div>
+<div class="ttc" id="aclassChara_html_ae316a7097e7b696f2f018df973b16224"><div class="ttname"><a href="classChara.html#ae316a7097e7b696f2f018df973b16224">Chara.pccData</a></div><div class="ttdeci">PCCData pccData</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00064">Chara.cs:64</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00015">ELayer.cs:15</a></div></div>
+<div class="ttc" id="aclassELayer_html_a489314a71728e1674f20af35cc506b84"><div class="ttname"><a href="classELayer.html#a489314a71728e1674f20af35cc506b84">ELayer.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00037">ELayer.cs:37</a></div></div>
+<div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00009">ELayer.cs:9</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00021">ELayer.cs:21</a></div></div>
+<div class="ttc" id="aclassELayer_html_ab11922d6365826fec4c710a4ce358940"><div class="ttname"><a href="classELayer.html#ab11922d6365826fec4c710a4ce358940">ELayer.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00041">ELayer.cs:41</a></div></div>
+<div class="ttc" id="aclassGame_html_a678bda9cd7e60cd719852efe7febf5fe"><div class="ttname"><a href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">Game.uniforms</a></div><div class="ttdeci">PCCUniformManager uniforms</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00188">Game.cs:188</a></div></div>
 <div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00006">LayerColorPicker.cs:7</a></div></div>
-<div class="ttc" id="aclassLayerColorPicker_html_a7bef92c42fdcfea302d10f6efbb34713"><div class="ttname"><a href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">LayerColorPicker.SetColor</a></div><div class="ttdeci">void SetColor(Color _startColor, Color _resetColor, Action&lt; PickerState, Color &gt; _onChangeColor)</div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.cs:8</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a15079b1bebcf8c5aa312073b6fee938c"><div class="ttname"><a href="classLayerEditPCC.html#a15079b1bebcf8c5aa312073b6fee938c">LayerEditPCC.backupPortrait</a></div><div class="ttdeci">string backupPortrait</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00164">LayerEditPCC.cs:164</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b"><div class="ttname"><a href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">LayerEditPCC.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00158">LayerEditPCC.cs:158</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a4fccab7958da6a8b81e42d007650faef"><div class="ttname"><a href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">LayerEditPCC.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00156">LayerEditPCC.cs:156</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a6580db8430e096a7f963cf699469eabd"><div class="ttname"><a href="classLayerEditPCC.html#a6580db8430e096a7f963cf699469eabd">LayerEditPCC.backup</a></div><div class="ttdeci">PCCData backup</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00162">LayerEditPCC.cs:162</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a7c8a02848cfd8d82ccc0ada261f8c891"><div class="ttname"><a href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">LayerEditPCC.uiPCC</a></div><div class="ttdeci">UIPCC uiPCC</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00154">LayerEditPCC.cs:154</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a8e1bc54faefe8e5b4de199bf2c5852e1"><div class="ttname"><a href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">LayerEditPCC.mode</a></div><div class="ttdeci">UIPCC.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00152">LayerEditPCC.cs:152</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a8f1f474ab77930217c45d0cb1531498b"><div class="ttname"><a href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">LayerEditPCC.IsMale</a></div><div class="ttdeci">bool IsMale</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00015">LayerEditPCC.cs:16</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_ac659410d6003cd2fe659238b46fa6e25"><div class="ttname"><a href="classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25">LayerEditPCC.SetPortraitSlider</a></div><div class="ttdeci">void SetPortraitSlider()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00130">LayerEditPCC.cs:130</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_afe225553f595110a16b0cfcf55f5f8a7"><div class="ttname"><a href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">LayerEditPCC.UniformMode</a></div><div class="ttdeci">bool UniformMode</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00007">LayerEditPCC.cs:8</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_ae2456daa44300db5851bb38719d9da90"><div class="ttname"><a href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">SourceManager.jobs</a></div><div class="ttdeci">SourceJob jobs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00189">SourceManager.cs:189</a></div></div>
+<div class="ttc" id="aclassLayerColorPicker_html_a7bef92c42fdcfea302d10f6efbb34713"><div class="ttname"><a href="classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713">LayerColorPicker.SetColor</a></div><div class="ttdeci">void SetColor(Color _startColor, Color _resetColor, Action&lt; PickerState, Color &gt; _onChangeColor)</div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00018">LayerColorPicker.cs:18</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a15079b1bebcf8c5aa312073b6fee938c"><div class="ttname"><a href="classLayerEditPCC.html#a15079b1bebcf8c5aa312073b6fee938c">LayerEditPCC.backupPortrait</a></div><div class="ttdeci">string backupPortrait</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00019">LayerEditPCC.cs:19</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b"><div class="ttname"><a href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">LayerEditPCC.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00013">LayerEditPCC.cs:13</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a4fccab7958da6a8b81e42d007650faef"><div class="ttname"><a href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">LayerEditPCC.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00011">LayerEditPCC.cs:11</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a6580db8430e096a7f963cf699469eabd"><div class="ttname"><a href="classLayerEditPCC.html#a6580db8430e096a7f963cf699469eabd">LayerEditPCC.backup</a></div><div class="ttdeci">PCCData backup</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00017">LayerEditPCC.cs:17</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a7c8a02848cfd8d82ccc0ada261f8c891"><div class="ttname"><a href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">LayerEditPCC.uiPCC</a></div><div class="ttdeci">UIPCC uiPCC</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00009">LayerEditPCC.cs:9</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a8e1bc54faefe8e5b4de199bf2c5852e1"><div class="ttname"><a href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">LayerEditPCC.mode</a></div><div class="ttdeci">UIPCC.Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00007">LayerEditPCC.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a8f1f474ab77930217c45d0cb1531498b"><div class="ttname"><a href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">LayerEditPCC.IsMale</a></div><div class="ttdeci">bool IsMale</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00037">LayerEditPCC.cs:37</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_ac659410d6003cd2fe659238b46fa6e25"><div class="ttname"><a href="classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25">LayerEditPCC.SetPortraitSlider</a></div><div class="ttdeci">void SetPortraitSlider()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00146">LayerEditPCC.cs:146</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_afe225553f595110a16b0cfcf55f5f8a7"><div class="ttname"><a href="classLayerEditPCC.html#afe225553f595110a16b0cfcf55f5f8a7">LayerEditPCC.UniformMode</a></div><div class="ttdeci">bool UniformMode</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00025">LayerEditPCC.cs:26</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ae2456daa44300db5851bb38719d9da90"><div class="ttname"><a href="classSourceManager.html#ae2456daa44300db5851bb38719d9da90">SourceManager.jobs</a></div><div class="ttdeci">SourceJob jobs</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00054">SourceManager.cs:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00162">backup</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00164">backupPortrait</a>, <a class="el" href="Card_8cs_source.html#l01340">Card.c_idPortrait</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00158">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00016">IsMale</a>, <a class="el" href="SourceManager_8cs_source.html#l00189">SourceManager.jobs</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00152">mode</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="Chara_8cs_source.html#l09446">Chara.pccData</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00156">portrait</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.SetColor()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00130">SetPortraitSlider()</a>, <a class="el" href="ELayer_8cs_source.html#l00143">ELayer.Sound</a>, <a class="el" href="ELayer_8cs_source.html#l00127">ELayer.sources</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00154">uiPCC</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00008">UniformMode</a>, and <a class="el" href="Game_8cs_source.html#l00826">Game.uniforms</a>.</p>
+<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00017">backup</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00019">backupPortrait</a>, <a class="el" href="Card_8cs_source.html#l01355">Card.c_idPortrait</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00013">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00037">IsMale</a>, <a class="el" href="SourceManager_8cs_source.html#l00054">SourceManager.jobs</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00007">mode</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="Chara_8cs_source.html#l00064">Chara.pccData</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00011">portrait</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00018">LayerColorPicker.SetColor()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00146">SetPortraitSlider()</a>, <a class="el" href="ELayer_8cs_source.html#l00041">ELayer.Sound</a>, <a class="el" href="ELayer_8cs_source.html#l00037">ELayer.sources</a>, <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00009">uiPCC</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00026">UniformMode</a>, and <a class="el" href="Game_8cs_source.html#l00188">Game.uniforms</a>.</p>
 
 </div>
 </div>
@@ -401,21 +401,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00093">93</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>        PCCData data = this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.pcc.data;</div>
-<div class="line"><span class="lineno">   96</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(data, this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.id, <span class="keyword">this</span>.IsMale, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   97</span>        this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>.Set(data);</div>
-<div class="line"><span class="lineno">   98</span>        PCC.Get(this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>).Build(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   99</span>        this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(105, IntColor.ToInt(<span class="keyword">this</span>.chara.pccData.GetHairColor(<span class="keyword">false</span>)));</div>
-<div class="line"><span class="lineno">  100</span>        this.applied = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00032">BaseCard.cs:32</a></div></div>
-<div class="ttc" id="aclassChara_html_a3fcffc5bb69dd24fc61adeb87ac9a282"><div class="ttname"><a href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">Chara.job</a></div><div class="ttdeci">SourceJob.Row job</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00307">Chara.cs:308</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00109">109</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        PCCData data = <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.pcc.data;</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a678bda9cd7e60cd719852efe7febf5fe">uniforms</a>.Apply(data, <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.id, <a class="code hl_property" href="classLayerEditPCC.html#a8f1f474ab77930217c45d0cb1531498b">IsMale</a>, canUseOtherGender: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>.Set(data);</div>
+<div class="line"><span class="lineno">  114</span>        PCC.Get(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>).Build();</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(105, IntColor.ToInt(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classChara.html#ae316a7097e7b696f2f018df973b16224">pccData</a>.GetHairColor()));</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="classLayerEditPCC.html#ad44a8b526a8ae56d12b5a3eed047b455">applied</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00039">BaseCard.cs:39</a></div></div>
+<div class="ttc" id="aclassChara_html_a3fcffc5bb69dd24fc61adeb87ac9a282"><div class="ttname"><a href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">Chara.job</a></div><div class="ttdeci">SourceJob.Row job</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00451">Chara.cs:451</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_ad44a8b526a8ae56d12b5a3eed047b455"><div class="ttname"><a href="classLayerEditPCC.html#ad44a8b526a8ae56d12b5a3eed047b455">LayerEditPCC.applied</a></div><div class="ttdeci">bool applied</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00021">LayerEditPCC.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00158">chara</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="Chara_8cs_source.html#l00308">Chara.job</a>, <a class="el" href="Chara_8cs_source.html#l09446">Chara.pccData</a>, <a class="el" href="BaseCard_8cs_source.html#l00032">BaseCard.SetInt()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00154">uiPCC</a>, and <a class="el" href="Game_8cs_source.html#l00826">Game.uniforms</a>.</p>
+<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00021">applied</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00013">chara</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00037">IsMale</a>, <a class="el" href="Chara_8cs_source.html#l00451">Chara.job</a>, <a class="el" href="Chara_8cs_source.html#l00064">Chara.pccData</a>, <a class="el" href="BaseCard_8cs_source.html#l00039">BaseCard.SetInt()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00009">uiPCC</a>, and <a class="el" href="Game_8cs_source.html#l00188">Game.uniforms</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00103">OnKill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00119">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -442,13 +443,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00103">103</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>    {</div>
-<div class="line"><span class="lineno">  105</span>        this.<a class="code hl_function" href="classLayerEditPCC.html#a2683ef0e4bfa7ff05130f279b4aaa608">Apply</a>();</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="ttc" id="aclassLayerEditPCC_html_a2683ef0e4bfa7ff05130f279b4aaa608"><div class="ttname"><a href="classLayerEditPCC.html#a2683ef0e4bfa7ff05130f279b4aaa608">LayerEditPCC.Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00093">LayerEditPCC.cs:93</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00119">119</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_function" href="classLayerEditPCC.html#a2683ef0e4bfa7ff05130f279b4aaa608">Apply</a>();</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="ttc" id="aclassLayerEditPCC_html_a2683ef0e4bfa7ff05130f279b4aaa608"><div class="ttname"><a href="classLayerEditPCC.html#a2683ef0e4bfa7ff05130f279b4aaa608">LayerEditPCC.Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00109">LayerEditPCC.cs:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00093">Apply()</a>.</p>
+<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00109">Apply()</a>.</p>
 
 </div>
 </div>
@@ -475,37 +476,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00130">130</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classLayerEditPCC.html#a9b3fc0b8c0e95c8952206b53d94c6d34">sliderPortrait</a>)</div>
-<div class="line"><span class="lineno">  133</span>        {</div>
-<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="line"><span class="lineno">  136</span>        List&lt;ModItem&lt;Sprite&gt;&gt; list = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c">ListPlayerPortraits</a>(this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>, <span class="keyword">this</span>.chara != <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>);</div>
-<div class="line"><span class="lineno">  137</span>        list.Sort((ModItem&lt;Sprite&gt; a, ModItem&lt;Sprite&gt; b) =&gt; Lang.comparer.Compare(a.id, b.id));</div>
-<div class="line"><span class="lineno">  138</span>        this.<a class="code hl_variable" href="classLayerEditPCC.html#a9b3fc0b8c0e95c8952206b53d94c6d34">sliderPortrait</a>.SetList&lt;ModItem&lt;Sprite&gt;&gt;(list.Find((ModItem&lt;Sprite&gt; a) =&gt; a.id == <span class="keyword">this</span>.chara.c_idPortrait), list, delegate(<span class="keywordtype">int</span> a, ModItem&lt;Sprite&gt; b)</div>
-<div class="line"><span class="lineno">  139</span>        {</div>
-<div class="line"><span class="lineno">  140</span>            this.chara.c_idPortrait = b.id;</div>
-<div class="line"><span class="lineno">  141</span>            this.<a class="code hl_variable" href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>, this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.data);</div>
-<div class="line"><span class="lineno">  142</span>        }, delegate(ModItem&lt;Sprite&gt; a)</div>
-<div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">if</span> (!a.id.IsEmpty())</div>
-<div class="line"><span class="lineno">  145</span>            {</div>
-<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">return</span> a.id;</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
-<div class="line"><span class="lineno">  149</span>        });</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="ttc" id="aclassBiography_html_ad30fca890328c9ff7ec6685b1a84b83c"><div class="ttname"><a href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">Biography.gender</a></div><div class="ttdeci">int gender</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00018">Biography.cs:19</a></div></div>
-<div class="ttc" id="aclassCard_html_a55b6cd5c5f3858985829502876c52318"><div class="ttname"><a href="classCard.html#a55b6cd5c5f3858985829502876c52318">Card.bio</a></div><div class="ttdeci">Biography bio</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07301">Card.cs:7301</a></div></div>
-<div class="ttc" id="aclassLayerEditPCC_html_a9b3fc0b8c0e95c8952206b53d94c6d34"><div class="ttname"><a href="classLayerEditPCC.html#a9b3fc0b8c0e95c8952206b53d94c6d34">LayerEditPCC.sliderPortrait</a></div><div class="ttdeci">UISlider sliderPortrait</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00160">LayerEditPCC.cs:160</a></div></div>
-<div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00008">Portrait.cs:9</a></div></div>
-<div class="ttc" id="aclassPortrait_html_a51ab554a89c7bd7ed402c494dc03516c"><div class="ttname"><a href="classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c">Portrait.ListPlayerPortraits</a></div><div class="ttdeci">static List&lt; ModItem&lt; Sprite &gt; &gt; ListPlayerPortraits(int gender, bool nullPortrait=false)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00010">Portrait.cs:10</a></div></div>
-<div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00098">Portrait.cs:98</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00146">146</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classLayerEditPCC.html#a9b3fc0b8c0e95c8952206b53d94c6d34">sliderPortrait</a>)</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            List&lt;ModItem&lt;Sprite&gt;&gt; list = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c">ListPlayerPortraits</a>(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_variable" href="classCard.html#a55b6cd5c5f3858985829502876c52318">bio</a>.<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>, <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a> != <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>);</div>
+<div class="line"><span class="lineno">  151</span>            list.Sort((ModItem&lt;Sprite&gt; a, ModItem&lt;Sprite&gt; b) =&gt; Lang.comparer.Compare(a.id, b.id));</div>
+<div class="line"><span class="lineno">  152</span>            <a class="code hl_variable" href="classLayerEditPCC.html#a9b3fc0b8c0e95c8952206b53d94c6d34">sliderPortrait</a>.SetList(list.Find((ModItem&lt;Sprite&gt; a) =&gt; a.id == <a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>.<a class="code hl_property" href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">c_idPortrait</a>), list, delegate(<span class="keywordtype">int</span> a, ModItem&lt;Sprite&gt; b)</div>
+<div class="line"><span class="lineno">  153</span>            {</div>
+<div class="line"><span class="lineno">  154</span>                chara.c_idPortrait = b.id;</div>
+<div class="line"><span class="lineno">  155</span>                <a class="code hl_variable" href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>, <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.data);</div>
+<div class="line"><span class="lineno">  156</span>            }, (ModItem&lt;Sprite&gt; a) =&gt; (!a.id.IsEmpty()) ? a.id : <span class="stringliteral">&quot;None&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="ttc" id="aclassBiography_html_ad30fca890328c9ff7ec6685b1a84b83c"><div class="ttname"><a href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">Biography.gender</a></div><div class="ttdeci">int gender</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00028">Biography.cs:29</a></div></div>
+<div class="ttc" id="aclassCard_html_a55b6cd5c5f3858985829502876c52318"><div class="ttname"><a href="classCard.html#a55b6cd5c5f3858985829502876c52318">Card.bio</a></div><div class="ttdeci">Biography bio</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00038">Card.cs:38</a></div></div>
+<div class="ttc" id="aclassLayerEditPCC_html_a9b3fc0b8c0e95c8952206b53d94c6d34"><div class="ttname"><a href="classLayerEditPCC.html#a9b3fc0b8c0e95c8952206b53d94c6d34">LayerEditPCC.sliderPortrait</a></div><div class="ttdeci">UISlider sliderPortrait</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00015">LayerEditPCC.cs:15</a></div></div>
+<div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00006">Portrait.cs:7</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a51ab554a89c7bd7ed402c494dc03516c"><div class="ttname"><a href="classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c">Portrait.ListPlayerPortraits</a></div><div class="ttdeci">static List&lt; ModItem&lt; Sprite &gt; &gt; ListPlayerPortraits(int gender, bool nullPortrait=false)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00048">Portrait.cs:48</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00138">Portrait.cs:138</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l07301">Card.bio</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00158">chara</a>, <a class="el" href="Biography_8cs_source.html#l00019">Biography.gender</a>, <a class="el" href="Portrait_8cs_source.html#l00010">Portrait.ListPlayerPortraits()</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00156">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00160">sliderPortrait</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00154">uiPCC</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00038">Card.bio</a>, <a class="el" href="Card_8cs_source.html#l01355">Card.c_idPortrait</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00013">chara</a>, <a class="el" href="Biography_8cs_source.html#l00029">Biography.gender</a>, <a class="el" href="Portrait_8cs_source.html#l00048">Portrait.ListPlayerPortraits()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00011">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00015">sliderPortrait</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00009">uiPCC</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>.</p>
 
 </div>
 </div>
@@ -532,30 +525,30 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00108">108</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> hairColor = this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.data.GetHairColor(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (hairColor != this.<a class="code hl_variable" href="classLayerEditPCC.html#a3c1f9ca92272b3fae9da7c8abe3ea05d">lastHair</a>)</div>
-<div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            this.<a class="code hl_variable" href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(this.<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>, this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.data);</div>
-<div class="line"><span class="lineno">  114</span>            this.lastHair = hairColor;</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">int</span> wheel = EInput.wheel;</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (InputModuleEX.IsPointerOver(<span class="keyword">this</span>.windows[1].transform))</div>
-<div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (wheel &lt; 0)</div>
-<div class="line"><span class="lineno">  120</span>            {</div>
-<div class="line"><span class="lineno">  121</span>                this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.provider.NextDir(15f);</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (wheel &gt; 0)</div>
-<div class="line"><span class="lineno">  124</span>            {</div>
-<div class="line"><span class="lineno">  125</span>                this.<a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.provider.PrevDir();</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-<div class="line"><span class="lineno">  127</span>        }</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aclassLayerEditPCC_html_a3c1f9ca92272b3fae9da7c8abe3ea05d"><div class="ttname"><a href="classLayerEditPCC.html#a3c1f9ca92272b3fae9da7c8abe3ea05d">LayerEditPCC.lastHair</a></div><div class="ttdeci">Color lastHair</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00168">LayerEditPCC.cs:168</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00124">124</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> hairColor = <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.data.GetHairColor();</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (hairColor != <a class="code hl_variable" href="classLayerEditPCC.html#a3c1f9ca92272b3fae9da7c8abe3ea05d">lastHair</a>)</div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_variable" href="classLayerEditPCC.html#a4fccab7958da6a8b81e42d007650faef">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPCC.html#a4f32e9dc1b7aa0dbfe38b4c2cb4acc5b">chara</a>, <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.data);</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_variable" href="classLayerEditPCC.html#a3c1f9ca92272b3fae9da7c8abe3ea05d">lastHair</a> = hairColor;</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">int</span> wheel = EInput.wheel;</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (InputModuleEX.IsPointerOver(windows[1].transform))</div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (wheel &lt; 0)</div>
+<div class="line"><span class="lineno">  136</span>            {</div>
+<div class="line"><span class="lineno">  137</span>                <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.provider.NextDir();</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (wheel &gt; 0)</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                <a class="code hl_variable" href="classLayerEditPCC.html#a7c8a02848cfd8d82ccc0ada261f8c891">uiPCC</a>.actor.provider.PrevDir();</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="ttc" id="aclassLayerEditPCC_html_a3c1f9ca92272b3fae9da7c8abe3ea05d"><div class="ttname"><a href="classLayerEditPCC.html#a3c1f9ca92272b3fae9da7c8abe3ea05d">LayerEditPCC.lastHair</a></div><div class="ttdeci">Color lastHair</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00158">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00168">lastHair</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00156">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00098">Portrait.SetChara()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00154">uiPCC</a>.</p>
+<p class="reference">References <a class="el" href="LayerEditPCC_8cs_source.html#l00013">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00023">lastHair</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00011">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00009">uiPCC</a>.</p>
 
 </div>
 </div>
@@ -572,7 +565,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00166">166</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00021">21</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00109">Apply()</a>.</p>
 
 </div>
 </div>
@@ -588,9 +583,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00162">162</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00017">17</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>.</p>
 
 </div>
 </div>
@@ -606,9 +601,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00164">164</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00019">19</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>.</p>
 
 </div>
 </div>
@@ -624,9 +619,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00158">158</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00013">13</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00093">Apply()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00130">SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00108">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00109">Apply()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00146">SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00124">Update()</a>.</p>
 
 </div>
 </div>
@@ -650,9 +645,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00168">168</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00023">23</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00108">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00124">Update()</a>.</p>
 
 </div>
 </div>
@@ -668,9 +663,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00152">152</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>.</p>
 
 </div>
 </div>
@@ -686,9 +681,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00156">156</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00130">SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00108">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00146">SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00124">Update()</a>.</p>
 
 </div>
 </div>
@@ -704,9 +699,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00160">160</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00130">SetPortraitSlider()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00146">SetPortraitSlider()</a>.</p>
 
 </div>
 </div>
@@ -722,9 +717,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00154">154</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00093">Apply()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00130">SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00108">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00109">Apply()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00146">SetPortraitSlider()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00124">Update()</a>.</p>
 
 </div>
 </div>
@@ -749,15 +744,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> this.mode == UIPCC.Mode.UniformM;</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00037">37</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00109">Apply()</a>.</p>
 
 </div>
 </div>
@@ -781,15 +770,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> this.mode == UIPCC.Mode.UniformM || this.mode == UIPCC.Mode.UniformF;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPCC_8cs_source.html#l00025">25</a> of file <a class="el" href="LayerEditPCC_8cs_source.html">LayerEditPCC.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">mode</a> != UIPCC.Mode.UniformM)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classLayerEditPCC.html#a8e1bc54faefe8e5b4de199bf2c5852e1">mode</a> == UIPCC.Mode.UniformF;</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">Activate()</a>.</p>
 
 </div>
 </div>

@@ -303,40 +303,40 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00036">36</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a> layerDrama = Layer.Create&lt;<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>&gt;();</div>
-<div class="line"><span class="lineno">   39</span>        layerDrama.setup = <span class="keyword">new</span> <a class="code hl_class" href="classDramaSetup.html">DramaSetup</a></div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            book = book,</div>
-<div class="line"><span class="lineno">   42</span>            sheet = idSheet,</div>
-<div class="line"><span class="lineno">   43</span>            step = idStep,</div>
-<div class="line"><span class="lineno">   44</span>            ref1 = ref1,</div>
-<div class="line"><span class="lineno">   45</span>            <a class="code hl_variable" href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">forceJump</a> = <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_variable" href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">forceJump</a>,</div>
-<div class="line"><span class="lineno">   46</span>            tag = tag</div>
-<div class="line"><span class="lineno">   47</span>        };</div>
-<div class="line"><span class="lineno">   48</span>        LayerDrama.forceJump = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            layerDrama.setup.person = <span class="keyword">new</span> <a class="code hl_class" href="classPerson.html">Person</a>(target);</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(layerDrama);</div>
-<div class="line"><span class="lineno">   54</span>        layerDrama.<a class="code hl_variable" href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">drama</a>.<a class="code hl_function" href="classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394">Play</a>(layerDrama.<a class="code hl_variable" href="classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0">setup</a>);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> layerDrama;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclassDramaManager_html_ac130c66da2f1bdd6f3d24a02a8444394"><div class="ttname"><a href="classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394">DramaManager.Play</a></div><div class="ttdeci">DramaSequence Play(DramaSetup setup)</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l00022">DramaManager.cs:22</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00064">64</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a> layerDrama = Layer.Create&lt;<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>&gt;();</div>
+<div class="line"><span class="lineno">   67</span>        layerDrama.setup = <span class="keyword">new</span> <a class="code hl_class" href="classDramaSetup.html">DramaSetup</a></div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            book = book,</div>
+<div class="line"><span class="lineno">   70</span>            sheet = idSheet,</div>
+<div class="line"><span class="lineno">   71</span>            step = idStep,</div>
+<div class="line"><span class="lineno">   72</span>            ref1 = ref1,</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">forceJump</a> = <a class="code hl_variable" href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">forceJump</a>,</div>
+<div class="line"><span class="lineno">   74</span>            tag = tag</div>
+<div class="line"><span class="lineno">   75</span>        };</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">forceJump</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            layerDrama.setup.person = <span class="keyword">new</span> <a class="code hl_class" href="classPerson.html">Person</a>(target);</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(layerDrama);</div>
+<div class="line"><span class="lineno">   82</span>        layerDrama.<a class="code hl_variable" href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">drama</a>.<a class="code hl_function" href="classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394">Play</a>(layerDrama.<a class="code hl_variable" href="classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0">setup</a>);</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> layerDrama;</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="ttc" id="aclassDramaManager_html_ac130c66da2f1bdd6f3d24a02a8444394"><div class="ttname"><a href="classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394">DramaManager.Play</a></div><div class="ttdeci">DramaSequence Play(DramaSetup setup)</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l00087">DramaManager.cs:87</a></div></div>
 <div class="ttc" id="aclassDramaSetup_html"><div class="ttname"><a href="classDramaSetup.html">DramaSetup</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaSetup_8cs_source.html#l00003">DramaSetup.cs:4</a></div></div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00021">ELayer.cs:21</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
-<div class="ttc" id="aclassLayerDrama_html_a142cc5ae178acbff2783c96fcca08ba2"><div class="ttname"><a href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">LayerDrama.forceJump</a></div><div class="ttdeci">static string forceJump</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00108">LayerDrama.cs:108</a></div></div>
-<div class="ttc" id="aclassLayerDrama_html_a87c9f83a7248a2e154a0f2eb97f8a00b"><div class="ttname"><a href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">LayerDrama.drama</a></div><div class="ttdeci">DramaManager drama</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00118">LayerDrama.cs:118</a></div></div>
-<div class="ttc" id="aclassLayerDrama_html_ae8b80d157910626fdaf0c784afa07aa0"><div class="ttname"><a href="classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0">LayerDrama.setup</a></div><div class="ttdeci">DramaSetup setup</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00122">LayerDrama.cs:122</a></div></div>
-<div class="ttc" id="aclassPerson_html"><div class="ttname"><a href="classPerson.html">Person</a></div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00006">Person.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_a142cc5ae178acbff2783c96fcca08ba2"><div class="ttname"><a href="classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2">LayerDrama.forceJump</a></div><div class="ttdeci">static string forceJump</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00016">LayerDrama.cs:16</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_a87c9f83a7248a2e154a0f2eb97f8a00b"><div class="ttname"><a href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">LayerDrama.drama</a></div><div class="ttdeci">DramaManager drama</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00026">LayerDrama.cs:26</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_ae8b80d157910626fdaf0c784afa07aa0"><div class="ttname"><a href="classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0">LayerDrama.setup</a></div><div class="ttdeci">DramaSetup setup</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00030">LayerDrama.cs:30</a></div></div>
+<div class="ttc" id="aclassPerson_html"><div class="ttname"><a href="classPerson.html">Person</a></div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00005">Person.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00118">drama</a>, <a class="el" href="LayerDrama_8cs_source.html#l00108">forceJump</a>, <a class="el" href="DramaManager_8cs_source.html#l00022">DramaManager.Play()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00122">setup</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00026">drama</a>, <a class="el" href="LayerDrama_8cs_source.html#l00016">forceJump</a>, <a class="el" href="DramaManager_8cs_source.html#l00087">DramaManager.Play()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00030">setup</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06538">Chara._ShowDialog()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00031">ActivateMain()</a>, <a class="el" href="MeetingManager_8cs_source.html#l00087">MeetingManager.CallNext()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00038">TraitDaggerGrave.OnUse()</a>, <a class="el" href="Player_8cs_source.html#l02215">Player.Flags.PlayStory()</a>, <a class="el" href="Chara_8cs_source.html#l05106">Chara.TryDropBossLoot()</a>, <a class="el" href="TraitAltar_8cs_source.html#l00100">TraitAltar.TrySetAct()</a>, and <a class="el" href="TraitAltarChaos_8cs_source.html#l00021">TraitAltarChaos.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06175">Chara._ShowDialog()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00059">ActivateMain()</a>, <a class="el" href="MeetingManager_8cs_source.html#l00095">MeetingManager.CallNext()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="Player_8cs_source.html#l00576">Player.Flags.PlayStory()</a>, <a class="el" href="Chara_8cs_source.html#l04844">Chara.TryDropBossLoot()</a>, <a class="el" href="TraitAltar_8cs_source.html#l00051">TraitAltar.TrySetAct()</a>, and <a class="el" href="TraitAltarChaos_8cs_source.html#l00007">TraitAltarChaos.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -392,15 +392,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00031">31</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">Activate</a>(<span class="stringliteral">&quot;_main&quot;</span>, idSheet, idStep, target, ref1, tag);</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclassLayerDrama_html_a13117d5fd681016c717b59b5bf9823a9"><div class="ttname"><a href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">LayerDrama.Activate</a></div><div class="ttdeci">static LayerDrama Activate(string book, string idSheet, string idStep, Chara target=null, Card ref1=null, string tag=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00036">LayerDrama.cs:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00059">59</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">Activate</a>(<span class="stringliteral">&quot;_main&quot;</span>, idSheet, idStep, target, ref1, tag);</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassLayerDrama_html_a13117d5fd681016c717b59b5bf9823a9"><div class="ttname"><a href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">LayerDrama.Activate</a></div><div class="ttdeci">static LayerDrama Activate(string book, string idSheet, string idStep, Chara target=null, Card ref1=null, string tag=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00064">LayerDrama.cs:64</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00036">Activate()</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00064">Activate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l01487">CoreDebug.COM_PlayStartDrama()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00054">LayerEditBio.g__Start()</a>, <a class="el" href="Zone__Nymelle_8cs_source.html#l00102">Zone_Nymelle.OnBeforeSimulate()</a>, <a class="el" href="StickyMenu_8cs_source.html#l00037">StickyMenu.OnClick()</a>, <a class="el" href="MeetingFarris_8cs_source.html#l00021">MeetingFarris.PlayDrama()</a>, and <a class="el" href="Chara_8cs_source.html#l06363">Chara.ShowDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l01709">CoreDebug.COM_PlayStartDrama()</a>, <a class="el" href="Zone__Nymelle_8cs_source.html#l00092">Zone_Nymelle.OnBeforeSimulate()</a>, <a class="el" href="StickyMenu_8cs_source.html#l00011">StickyMenu.OnClick()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00043">LayerEditBio.OnClickStart()</a>, <a class="el" href="MeetingFarris_8cs_source.html#l00007">MeetingFarris.PlayDrama()</a>, and <a class="el" href="Chara_8cs_source.html#l06016">Chara.ShowDialog()</a>.</p>
 
 </div>
 </div>
@@ -428,34 +428,34 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00058">58</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#abe88549f467c19fb1e1d999f5ee2bd9c">skipNerun</a>)</div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a> layerDrama = Layer.Create&lt;<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>&gt;();</div>
-<div class="line"><span class="lineno">   65</span>        layerDrama.setup = <span class="keyword">new</span> <a class="code hl_class" href="classDramaSetup.html">DramaSetup</a></div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            book = <span class="stringliteral">&quot;_nerun&quot;</span>,</div>
-<div class="line"><span class="lineno">   68</span>            step = <span class="stringliteral">&quot;6-1&quot;</span></div>
-<div class="line"><span class="lineno">   69</span>        };</div>
-<div class="line"><span class="lineno">   70</span>        TextAsset textAsset = Resources.Load&lt;TextAsset&gt;(CorePath.Text_DialogHelp + idText);</div>
-<div class="line"><span class="lineno">   71</span>        layerDrama.setup.textData = <a class="code hl_class" href="classGameLang.html">GameLang</a>.<a class="code hl_function" href="classGameLang.html#a5f9ec2b9809b7c775f07fa5bb4e126e0">Convert</a>(((textAsset != <span class="keyword">null</span>) ? textAsset.text : <span class="keyword">null</span>) ?? (idText + <span class="stringliteral">&quot; not found.&quot;</span>));</div>
-<div class="line"><span class="lineno">   72</span>        layerDrama.option.hideOthers = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   73</span>        layerDrama.option.screenlockType = Layer.Option.ScreenlockType.DarkLight;</div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(layerDrama);</div>
-<div class="line"><span class="lineno">   75</span>        layerDrama.<a class="code hl_variable" href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">drama</a>.<a class="code hl_function" href="classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394">Play</a>(layerDrama.<a class="code hl_variable" href="classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0">setup</a>);</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> layerDrama;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="aclassCoreDebug_html_abe88549f467c19fb1e1d999f5ee2bd9c"><div class="ttname"><a href="classCoreDebug.html#abe88549f467c19fb1e1d999f5ee2bd9c">CoreDebug.skipNerun</a></div><div class="ttdeci">bool skipNerun</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02178">CoreDebug.cs:2178</a></div></div>
-<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00150">ELayer.cs:151</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00086">86</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#abe88549f467c19fb1e1d999f5ee2bd9c">skipNerun</a>)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a> layerDrama = Layer.Create&lt;<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>&gt;();</div>
+<div class="line"><span class="lineno">   93</span>        layerDrama.setup = <span class="keyword">new</span> <a class="code hl_class" href="classDramaSetup.html">DramaSetup</a></div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            book = <span class="stringliteral">&quot;_nerun&quot;</span>,</div>
+<div class="line"><span class="lineno">   96</span>            step = <span class="stringliteral">&quot;6-1&quot;</span></div>
+<div class="line"><span class="lineno">   97</span>        };</div>
+<div class="line"><span class="lineno">   98</span>        TextAsset textAsset = Resources.Load&lt;TextAsset&gt;(CorePath.Text_DialogHelp + idText);</div>
+<div class="line"><span class="lineno">   99</span>        layerDrama.setup.textData = <a class="code hl_class" href="classGameLang.html">GameLang</a>.<a class="code hl_function" href="classGameLang.html#a5f9ec2b9809b7c775f07fa5bb4e126e0">Convert</a>(textAsset?.text ?? (idText + <span class="stringliteral">&quot; not found.&quot;</span>));</div>
+<div class="line"><span class="lineno">  100</span>        layerDrama.option.hideOthers = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  101</span>        layerDrama.option.screenlockType = Option.ScreenlockType.DarkLight;</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(layerDrama);</div>
+<div class="line"><span class="lineno">  103</span>        layerDrama.<a class="code hl_variable" href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">drama</a>.<a class="code hl_function" href="classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394">Play</a>(layerDrama.<a class="code hl_variable" href="classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0">setup</a>);</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> layerDrama;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_abe88549f467c19fb1e1d999f5ee2bd9c"><div class="ttname"><a href="classCoreDebug.html#abe88549f467c19fb1e1d999f5ee2bd9c">CoreDebug.skipNerun</a></div><div class="ttdeci">bool skipNerun</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00163">CoreDebug.cs:163</a></div></div>
+<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00043">ELayer.cs:43</a></div></div>
 <div class="ttc" id="aclassGameLang_html"><div class="ttname"><a href="classGameLang.html">GameLang</a></div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00004">GameLang.cs:5</a></div></div>
-<div class="ttc" id="aclassGameLang_html_a5f9ec2b9809b7c775f07fa5bb4e126e0"><div class="ttname"><a href="classGameLang.html#a5f9ec2b9809b7c775f07fa5bb4e126e0">GameLang.Convert</a></div><div class="ttdeci">static string Convert(string text)</div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00098">GameLang.cs:98</a></div></div>
+<div class="ttc" id="aclassGameLang_html_a5f9ec2b9809b7c775f07fa5bb4e126e0"><div class="ttname"><a href="classGameLang.html#a5f9ec2b9809b7c775f07fa5bb4e126e0">GameLang.Convert</a></div><div class="ttdeci">static string Convert(string text)</div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00106">GameLang.cs:106</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GameLang_8cs_source.html#l00098">GameLang.Convert()</a>, <a class="el" href="ELayer_8cs_source.html#l00151">ELayer.debug</a>, <a class="el" href="LayerDrama_8cs_source.html#l00118">drama</a>, <a class="el" href="DramaManager_8cs_source.html#l00022">DramaManager.Play()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00122">setup</a>, <a class="el" href="CoreDebug_8cs_source.html#l02178">CoreDebug.skipNerun</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="GameLang_8cs_source.html#l00106">GameLang.Convert()</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="LayerDrama_8cs_source.html#l00026">drama</a>, <a class="el" href="DramaManager_8cs_source.html#l00087">DramaManager.Play()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00030">setup</a>, <a class="el" href="CoreDebug_8cs_source.html#l00163">CoreDebug.skipNerun</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="StickyTutorial_8cs_source.html#l00021">StickyTutorial.OnClick()</a>, and <a class="el" href="ELayer_8cs_source.html#l00208">ELayer.TryShowHelp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="StickyTutorial_8cs_source.html#l00007">StickyTutorial.OnClick()</a>, and <a class="el" href="ELayer_8cs_source.html#l00083">ELayer.TryShowHelp()</a>.</p>
 
 </div>
 </div>
@@ -482,14 +482,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>&gt;(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">    9</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00032">32</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>&gt;();</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03903">Card.DamageHP()</a>, and <a class="el" href="Scene_8cs_source.html#l00229">Scene.OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03516">Card.DamageHP()</a>, and <a class="el" href="Scene_8cs_source.html#l00349">Scene.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -516,23 +516,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00017">17</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">drama</a>.<a class="code hl_variable" href="classDramaManager.html#a126ec4575827e234ecb66a76c4d1703f">sequence</a>.<a class="code hl_variable" href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">isExited</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetTopLayer() == <span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            this.Close();</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.TopLayer == <span class="keyword">this</span> &amp;&amp; !<span class="keyword">this</span>.isDestroyed)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            ELayer.ui.hud.hint.cg.alpha = 0f;</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>        ELayer.ui.hud.hint.cg.alpha = 1f;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclassDramaManager_html_a126ec4575827e234ecb66a76c4d1703f"><div class="ttname"><a href="classDramaManager.html#a126ec4575827e234ecb66a76c4d1703f">DramaManager.sequence</a></div><div class="ttdeci">DramaSequence sequence</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01983">DramaManager.cs:1983</a></div></div>
-<div class="ttc" id="aclassDramaSequence_html_a02871e29f822f4bf476f5bda64a2fbc6"><div class="ttname"><a href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">DramaSequence.isExited</a></div><div class="ttdeci">bool isExited</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00194">DramaSequence.cs:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00043">43</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b">drama</a>.<a class="code hl_variable" href="classDramaManager.html#a126ec4575827e234ecb66a76c4d1703f">sequence</a>.<a class="code hl_variable" href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">isExited</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetTopLayer() == <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            Close();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.TopLayer == <span class="keyword">this</span> &amp;&amp; !isDestroyed)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            ELayer.ui.hud.hint.cg.alpha = 0f;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            ELayer.ui.hud.hint.cg.alpha = 1f;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassDramaManager_html_a126ec4575827e234ecb66a76c4d1703f"><div class="ttname"><a href="classDramaManager.html#a126ec4575827e234ecb66a76c4d1703f">DramaManager.sequence</a></div><div class="ttdeci">DramaSequence sequence</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l00027">DramaManager.cs:27</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a02871e29f822f4bf476f5bda64a2fbc6"><div class="ttname"><a href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">DramaSequence.isExited</a></div><div class="ttdeci">bool isExited</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00025">DramaSequence.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00118">drama</a>, <a class="el" href="DramaSequence_8cs_source.html#l00194">DramaSequence.isExited</a>, <a class="el" href="DramaManager_8cs_source.html#l01983">DramaManager.sequence</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00026">drama</a>, <a class="el" href="DramaSequence_8cs_source.html#l00025">DramaSequence.isExited</a>, <a class="el" href="DramaManager_8cs_source.html#l00027">DramaManager.sequence</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -559,12 +561,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        LayerDrama.Instance = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   14</span>        LayerDrama.maxBGMVolume = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   15</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00037">37</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="classLayerDrama.html#a41f2a2efd728c2119701cfb474a91450">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="classLayerDrama.html#a234cf5f3f6fa4e9aaa5eeda096d11c65">maxBGMVolume</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassLayerDrama_html_a234cf5f3f6fa4e9aaa5eeda096d11c65"><div class="ttname"><a href="classLayerDrama.html#a234cf5f3f6fa4e9aaa5eeda096d11c65">LayerDrama.maxBGMVolume</a></div><div class="ttdeci">static bool maxBGMVolume</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00014">LayerDrama.cs:14</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_a41f2a2efd728c2119701cfb474a91450"><div class="ttname"><a href="classLayerDrama.html#a41f2a2efd728c2119701cfb474a91450">LayerDrama.Instance</a></div><div class="ttdeci">static LayerDrama Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00018">LayerDrama.cs:18</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00018">Instance</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00014">maxBGMVolume</a>.</p>
+
 </div>
 </div>
 <a id="ac252811c5ee1f4e233d77285473142ba" name="ac252811c5ee1f4e233d77285473142ba"></a>
@@ -590,21 +596,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00084">84</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.Show(1f);</div>
-<div class="line"><span class="lineno">   87</span>        LayerDrama.keepBGM = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   88</span>        LayerDrama.haltPlaylist = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   89</span>        SoundManager.current.haltUpdate = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   90</span>        SoundManager.forceBGM = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   91</span>        ELayer.ui.hud.hint.cg.alpha = 1f;</div>
-<div class="line"><span class="lineno">   92</span>        ELayer.scene.screenElin.focusOption = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   93</span>        LayerDrama.alwaysVisible = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   94</span>        EInput.requireConfirmReset = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   95</span>        LayerDrama.maxBGMVolume = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00112">112</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.Show();</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classLayerDrama.html#a75194987ef0384cd11416586d1e41afe">keepBGM</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="classLayerDrama.html#ada46697fddd0a2c44e96f81804721ed6">haltPlaylist</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  117</span>        SoundManager.current.haltUpdate = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  118</span>        SoundManager.forceBGM = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  119</span>        ELayer.ui.hud.hint.cg.alpha = 1f;</div>
+<div class="line"><span class="lineno">  120</span>        ELayer.scene.screenElin.focusOption = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="classLayerDrama.html#ad1a4e55648a94c30d54c2e42dce5d165">alwaysVisible</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  122</span>        EInput.requireConfirmReset = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="classLayerDrama.html#a234cf5f3f6fa4e9aaa5eeda096d11c65">maxBGMVolume</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassLayerDrama_html_a75194987ef0384cd11416586d1e41afe"><div class="ttname"><a href="classLayerDrama.html#a75194987ef0384cd11416586d1e41afe">LayerDrama.keepBGM</a></div><div class="ttdeci">static bool keepBGM</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00010">LayerDrama.cs:10</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_ad1a4e55648a94c30d54c2e42dce5d165"><div class="ttname"><a href="classLayerDrama.html#ad1a4e55648a94c30d54c2e42dce5d165">LayerDrama.alwaysVisible</a></div><div class="ttdeci">static Card alwaysVisible</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00020">LayerDrama.cs:20</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_ada46697fddd0a2c44e96f81804721ed6"><div class="ttname"><a href="classLayerDrama.html#ada46697fddd0a2c44e96f81804721ed6">LayerDrama.haltPlaylist</a></div><div class="ttdeci">static bool haltPlaylist</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00012">LayerDrama.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00020">alwaysVisible</a>, <a class="el" href="LayerDrama_8cs_source.html#l00012">haltPlaylist</a>, <a class="el" href="LayerDrama_8cs_source.html#l00010">keepBGM</a>, <a class="el" href="LayerDrama_8cs_source.html#l00014">maxBGMVolume</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -631,10 +640,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00079">79</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>        base.OnUpdateInput();</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00107">107</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        base.OnUpdateInput();</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -659,9 +668,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00112">112</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00020">20</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00422">BaseTileMap.DrawTile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00898">BaseTileMap.DrawTile()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00112">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -677,7 +686,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00120">120</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00028">28</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
 </div>
 </div>
@@ -701,9 +710,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00098">98</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00138">DramaManager.ParseLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>.</p>
 
 </div>
 </div>
@@ -727,9 +736,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00100">100</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00008">8</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00235">DramaActor.ConvertAdv()</a>, and <a class="el" href="DramaManager_8cs_source.html#l00138">DramaManager.ParseLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00233">DramaActor.ConvertAdv()</a>, and <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>.</p>
 
 </div>
 </div>
@@ -745,9 +754,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00118">118</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00026">26</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00036">Activate()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00058">ActivateNerun()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00017">LateUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00064">Activate()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00086">ActivateNerun()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00043">LateUpdate()</a>.</p>
 
 </div>
 </div>
@@ -771,9 +780,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00108">108</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00016">16</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00036">Activate()</a>, and <a class="el" href="Chara_8cs_source.html#l06363">Chara.ShowDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00064">Activate()</a>, and <a class="el" href="Chara_8cs_source.html#l06016">Chara.ShowDialog()</a>.</p>
 
 </div>
 </div>
@@ -797,9 +806,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00104">104</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00012">12</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00030">Core.Awake()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00091">Core.Awake()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00112">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -823,9 +832,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00110">110</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03903">Card.DamageHP()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00054">LayerEditBio.g__Start()</a>, <a class="el" href="DramaManager_8cs_source.html#l00138">DramaManager.ParseLine()</a>, <a class="el" href="Tutorial_8cs_source.html#l00005">Tutorial.Play()</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00023">WidgetQuestTracker.Refresh()</a>, <a class="el" href="Meeting_8cs_source.html#l00052">Meeting.Start()</a>, <a class="el" href="Tutorial_8cs_source.html#l00076">Tutorial.TryPlayReserve()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00746">ActionMode.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03516">Card.DamageHP()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00043">LayerEditBio.OnClickStart()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00037">OnInit()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="Tutorial_8cs_source.html#l00007">Tutorial.Play()</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00030">WidgetQuestTracker.Refresh()</a>, <a class="el" href="Meeting_8cs_source.html#l00046">Meeting.Start()</a>, <a class="el" href="Tutorial_8cs_source.html#l00068">Tutorial.TryPlayReserve()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -849,9 +858,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00102">102</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00030">Core.Awake()</a>, and <a class="el" href="Zone_8cs_source.html#l03042">Zone.RefreshBGM()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00091">Core.Awake()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00112">OnKill()</a>, and <a class="el" href="Zone_8cs_source.html#l02637">Zone.RefreshBGM()</a>.</p>
 
 </div>
 </div>
@@ -875,7 +884,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00106">106</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00014">14</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00037">OnInit()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00112">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -899,9 +910,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00114">114</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00022">22</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00138">DramaManager.ParseLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>.</p>
 
 </div>
 </div>
@@ -925,9 +936,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00116">116</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00138">DramaManager.ParseLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>.</p>
 
 </div>
 </div>
@@ -943,9 +954,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00122">122</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerDrama_8cs_source.html#l00030">30</a> of file <a class="el" href="LayerDrama_8cs_source.html">LayerDrama.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00036">Activate()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00058">ActivateNerun()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00064">Activate()</a>, and <a class="el" href="LayerDrama_8cs_source.html#l00086">ActivateNerun()</a>.</p>
 
 </div>
 </div>

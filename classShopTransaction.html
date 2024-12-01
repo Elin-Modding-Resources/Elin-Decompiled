@@ -132,10 +132,10 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9cb568b06bc874ca256e66fe91a87f6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInvOwner.html">InvOwner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a></td></tr>
 <tr class="separator:a9cb568b06bc874ca256e66fe91a87f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a146a415dc37b281d491fd7c5190900c5"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShopTransaction.html#a146a415dc37b281d491fd7c5190900c5">bought</a> = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a>&gt;()</td></tr>
-<tr class="separator:a146a415dc37b281d491fd7c5190900c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d6bd132bcfff15d94deeed05aa6595a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShopTransaction.html#a1d6bd132bcfff15d94deeed05aa6595a">sold</a> = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a>&gt;()</td></tr>
-<tr class="separator:a1d6bd132bcfff15d94deeed05aa6595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c8a4ca98f3d7da5cea489b9c0e8654"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classShopTransaction_1_1Item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a> = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">Item</a>&gt;()</td></tr>
+<tr class="separator:ae8c8a4ca98f3d7da5cea489b9c0e8654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c332fd9c5ab55a53c4d6217f36fc4f6"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classShopTransaction_1_1Item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">sold</a> = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">Item</a>&gt;()</td></tr>
+<tr class="separator:a7c332fd9c5ab55a53c4d6217f36fc4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -212,7 +212,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00005">5</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00004">4</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aba928fd7bb645131594be67c06d49a4d" name="aba928fd7bb645131594be67c06d49a4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba928fd7bb645131594be67c06d49a4d">&#9670;&#160;</a></span>CanSellBack()</h2>
@@ -248,28 +248,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00054">54</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (num == -1)</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            num = t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00047">47</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            num = t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (item.thing == t &amp;&amp; item.num &gt;= num)</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
 <div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item in <span class="keyword">this</span>.bought)</div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (item.thing == t &amp;&amp; item.num &gt;= num)</div>
-<div class="line"><span class="lineno">   63</span>            {</div>
-<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   65</span>            }</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
-<div class="ttc" id="aclassShopTransaction_1_1Item_html"><div class="ttname"><a href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00218">ShopTransaction.cs:219</a></div></div>
-<div class="ttc" id="aclassShopTransaction_html"><div class="ttname"><a href="classShopTransaction.html">ShopTransaction</a></div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00005">ShopTransaction.cs:6</a></div></div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00147">Card.cs:148</a></div></div>
+<div class="ttc" id="aclassShopTransaction_html_ae8c8a4ca98f3d7da5cea489b9c0e8654"><div class="ttname"><a href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">ShopTransaction.bought</a></div><div class="ttdeci">List&lt; Item &gt; bought</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00019">ShopTransaction.cs:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>.</p>
+<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00019">bought</a>, <a class="el" href="Card_8cs_source.html#l00148">Card.Num</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00010">ShopTransaction.Item.num</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00008">ShopTransaction.Item.thing</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01704">InvOwner.Transaction.IsValid()</a>, <a class="el" href="InvOwner_8cs_source.html#l00838">InvOwner.ListInteractions()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01281">InvOwner.OnWriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l00355">InvOwner.Transaction.IsValid()</a>, <a class="el" href="InvOwner_8cs_source.html#l01295">InvOwner.ListInteractions()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01729">InvOwner.OnWriteNote()</a>.</p>
 
 </div>
 </div>
@@ -313,38 +312,38 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00132">132</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>    {</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">int</span> price = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(this.<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, <span class="keyword">false</span>, <span class="keyword">this</span>.trader.priceType, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">int</span> price2 = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(this.<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, <span class="keyword">true</span>, <span class="keyword">this</span>.trader.priceType, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">int</span> num = n;</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">int</span> num2 = 0;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">int</span> num3 = sell ? price : price2;</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item in (sell ? this.<a class="code hl_variable" href="classShopTransaction.html#a146a415dc37b281d491fd7c5190900c5">bought</a> : this.<a class="code hl_variable" href="classShopTransaction.html#a1d6bd132bcfff15d94deeed05aa6595a">sold</a>))</div>
-<div class="line"><span class="lineno">  140</span>        {</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (item.thing.id == t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> &amp;&amp; item.price == num3)</div>
-<div class="line"><span class="lineno">  142</span>            {</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keywordtype">int</span> num4 = (item.num &gt;= num) ? num : item.num;</div>
-<div class="line"><span class="lineno">  144</span>                num -= num4;</div>
-<div class="line"><span class="lineno">  145</span>                num2 += num4 * num3;</div>
-<div class="line"><span class="lineno">  146</span>            }</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">  148</span>            {</div>
-<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  150</span>            }</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> num2 + num * (sell ? price2 : price);</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07292">Card.cs:7292</a></div></div>
-<div class="ttc" id="aclassCard_html_a45caf5b5c2db91ea956fd445a85d5512"><div class="ttname"><a href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">Card.GetPrice</a></div><div class="ttdeci">virtual int GetPrice(CurrencyType currency=CurrencyType.Money, bool sell=false, PriceType priceType=PriceType.Default, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06614">Card.cs:6614</a></div></div>
-<div class="ttc" id="aclassInvOwner_html_a947d136801ebfa0545976485202e13e6"><div class="ttname"><a href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">InvOwner.currency</a></div><div class="ttdeci">CurrencyType currency</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01357">InvOwner.cs:1357</a></div></div>
-<div class="ttc" id="aclassShopTransaction_html_a146a415dc37b281d491fd7c5190900c5"><div class="ttname"><a href="classShopTransaction.html#a146a415dc37b281d491fd7c5190900c5">ShopTransaction.bought</a></div><div class="ttdeci">List&lt; ShopTransaction.Item &gt; bought</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00214">ShopTransaction.cs:214</a></div></div>
-<div class="ttc" id="aclassShopTransaction_html_a1d6bd132bcfff15d94deeed05aa6595a"><div class="ttname"><a href="classShopTransaction.html#a1d6bd132bcfff15d94deeed05aa6595a">ShopTransaction.sold</a></div><div class="ttdeci">List&lt; ShopTransaction.Item &gt; sold</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00216">ShopTransaction.cs:216</a></div></div>
-<div class="ttc" id="aclassShopTransaction_html_a9cb568b06bc874ca256e66fe91a87f6d"><div class="ttname"><a href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">ShopTransaction.trader</a></div><div class="ttdeci">InvOwner trader</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00212">ShopTransaction.cs:212</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00115">115</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">int</span> price = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, sell: <span class="keyword">false</span>, <a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#ab8f0ec2deb76ecbc50c0c0d280bbc201">priceType</a>);</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span> price2 = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, sell: <span class="keyword">true</span>, <a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#ab8f0ec2deb76ecbc50c0c0d280bbc201">priceType</a>);</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">int</span> num = n;</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">int</span> num3 = (sell ? price : price2);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> sell ? <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a> : <a class="code hl_variable" href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">sold</a>)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (item.thing.id == t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> &amp;&amp; item.price == num3)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordtype">int</span> num4 = ((item.num &gt;= num) ? num : item.num);</div>
+<div class="line"><span class="lineno">  127</span>                num -= num4;</div>
+<div class="line"><span class="lineno">  128</span>                num2 += num4 * num3;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">  131</span>            {</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> num2 + num * (sell ? price2 : price);</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00029">Card.cs:29</a></div></div>
+<div class="ttc" id="aclassCard_html_a45caf5b5c2db91ea956fd445a85d5512"><div class="ttname"><a href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">Card.GetPrice</a></div><div class="ttdeci">virtual int GetPrice(CurrencyType currency=CurrencyType.Money, bool sell=false, PriceType priceType=PriceType.Default, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06111">Card.cs:6111</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a947d136801ebfa0545976485202e13e6"><div class="ttname"><a href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">InvOwner.currency</a></div><div class="ttdeci">CurrencyType currency</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00525">InvOwner.cs:525</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_ab8f0ec2deb76ecbc50c0c0d280bbc201"><div class="ttname"><a href="classInvOwner.html#ab8f0ec2deb76ecbc50c0c0d280bbc201">InvOwner.priceType</a></div><div class="ttdeci">PriceType priceType</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00527">InvOwner.cs:527</a></div></div>
+<div class="ttc" id="aclassShopTransaction_html_a7c332fd9c5ab55a53c4d6217f36fc4f6"><div class="ttname"><a href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">ShopTransaction.sold</a></div><div class="ttdeci">List&lt; Item &gt; sold</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00021">ShopTransaction.cs:21</a></div></div>
+<div class="ttc" id="aclassShopTransaction_html_a9cb568b06bc874ca256e66fe91a87f6d"><div class="ttname"><a href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">ShopTransaction.trader</a></div><div class="ttdeci">InvOwner trader</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00017">ShopTransaction.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l06614">Card.GetPrice()</a>, and <a class="el" href="Card_8cs_source.html#l07292">Card.id</a>.</p>
+<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00019">bought</a>, <a class="el" href="InvOwner_8cs_source.html#l00525">InvOwner.currency</a>, <a class="el" href="Card_8cs_source.html#l06111">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l00029">Card.id</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00010">ShopTransaction.Item.num</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00012">ShopTransaction.Item.price</a>, <a class="el" href="InvOwner_8cs_source.html#l00527">InvOwner.priceType</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00021">sold</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00008">ShopTransaction.Item.thing</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00017">trader</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01263">InvOwner.GetPrice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01711">InvOwner.GetPrice()</a>.</p>
 
 </div>
 </div>
@@ -372,24 +371,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00039">39</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keyword">using</span> (List&lt;<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a>&gt;.Enumerator enumerator = this.<a class="code hl_variable" href="classShopTransaction.html#a146a415dc37b281d491fd7c5190900c5">bought</a>.GetEnumerator())</div>
-<div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">   44</span>            {</div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (enumerator.Current.thing == t)</div>
-<div class="line"><span class="lineno">   46</span>                {</div>
-<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   48</span>                }</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00035">35</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (item.thing == t)</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00214">bought</a>.</p>
+<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00019">bought</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00008">ShopTransaction.Item.thing</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01704">InvOwner.Transaction.IsValid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l00355">InvOwner.Transaction.IsValid()</a>.</p>
 
 </div>
 </div>
@@ -416,38 +412,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00007">7</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item in <span class="keyword">this</span>.bought)</div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            Debug.Log(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   12</span>            {</div>
-<div class="line"><span class="lineno">   13</span>                <span class="stringliteral">&quot;Bought:&quot;</span>,</div>
-<div class="line"><span class="lineno">   14</span>                item.thing.Name,</div>
-<div class="line"><span class="lineno">   15</span>                <span class="stringliteral">&quot;/&quot;</span>,</div>
-<div class="line"><span class="lineno">   16</span>                item.num.ToString(),</div>
-<div class="line"><span class="lineno">   17</span>                <span class="stringliteral">&quot; x &quot;</span>,</div>
-<div class="line"><span class="lineno">   18</span>                item.price.ToString(),</div>
-<div class="line"><span class="lineno">   19</span>                <span class="stringliteral">&quot; = &quot;</span>,</div>
-<div class="line"><span class="lineno">   20</span>                (item.num * item.price).ToString()</div>
-<div class="line"><span class="lineno">   21</span>            }));</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item2 in <span class="keyword">this</span>.sold)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            Debug.Log(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   26</span>            {</div>
-<div class="line"><span class="lineno">   27</span>                <span class="stringliteral">&quot;Sold:&quot;</span>,</div>
-<div class="line"><span class="lineno">   28</span>                item2.thing.Name,</div>
-<div class="line"><span class="lineno">   29</span>                <span class="stringliteral">&quot;/&quot;</span>,</div>
-<div class="line"><span class="lineno">   30</span>                item2.num.ToString(),</div>
-<div class="line"><span class="lineno">   31</span>                <span class="stringliteral">&quot; x &quot;</span>,</div>
-<div class="line"><span class="lineno">   32</span>                item2.price.ToString(),</div>
-<div class="line"><span class="lineno">   33</span>                <span class="stringliteral">&quot; = &quot;</span>,</div>
-<div class="line"><span class="lineno">   34</span>                (item2.num * item2.price).ToString()</div>
-<div class="line"><span class="lineno">   35</span>            }));</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00023">23</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">foreach</span> (Item item3 <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a>)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            Debug.Log(<span class="stringliteral">&quot;Bought:&quot;</span> + item3.thing.Name + <span class="stringliteral">&quot;/&quot;</span> + item3.num + <span class="stringliteral">&quot; x &quot;</span> + item3.price + <span class="stringliteral">&quot; = &quot;</span> + item3.num * item3.price);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">foreach</span> (Item item4 <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">sold</a>)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            Debug.Log(<span class="stringliteral">&quot;Sold:&quot;</span> + item4.thing.Name + <span class="stringliteral">&quot;/&quot;</span> + item4.num + <span class="stringliteral">&quot; x &quot;</span> + item4.price + <span class="stringliteral">&quot; = &quot;</span> + item4.num * item4.price);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00019">bought</a>, <a class="el" href="Card_8cs_source.html#l01935">Card.Name</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00010">ShopTransaction.Item.num</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00012">ShopTransaction.Item.price</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00021">sold</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00008">ShopTransaction.Item.thing</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00063">Process()</a>.</p>
+
 </div>
 </div>
 <a id="a13d2e379b928885e62402af9b489a724" name="a13d2e379b928885e62402af9b489a724"></a>
@@ -473,77 +453,78 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00155">155</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = this.<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;chest_merchant&quot;</span>, -1, -1);</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  159</span>        {</div>
-<div class="line"><span class="lineno">  160</span>            thing.c_lockLv = 1;</div>
-<div class="line"><span class="lineno">  161</span>        }</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item in <span class="keyword">this</span>.bought)</div>
-<div class="line"><span class="lineno">  163</span>        {</div>
-<div class="line"><span class="lineno">  164</span>            Debug.Log(item.thing);</div>
-<div class="line"><span class="lineno">  165</span>            item.thing.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(101, 0);</div>
-<div class="line"><span class="lineno">  166</span>            item.thing.isStolen = <span class="keyword">false</span>;</div>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00138">138</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;chest_merchant&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            thing.c_lockLv = 1;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">foreach</span> (Item item4 <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a>)</div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            Debug.Log(item4.thing);</div>
+<div class="line"><span class="lineno">  148</span>            item4.thing.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(101);</div>
+<div class="line"><span class="lineno">  149</span>            item4.thing.isStolen = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  150</span>        }</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a> != <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <a class="code hl_variable" href="classShopTransaction.html#a92f7613712043773f2682b29f78db6ad">current</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">foreach</span> (Item item5 <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a>)</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; item5.num; i++)</div>
+<div class="line"><span class="lineno">  160</span>            {</div>
+<div class="line"><span class="lineno">  161</span>                num += (int)Mathf.Sqrt(Mathf.Abs(item5.price * 5));</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">if</span> (item5.thing.trait is <a class="code hl_class" href="classTraitDeed.html">TraitDeed</a>)</div>
+<div class="line"><span class="lineno">  164</span>            {</div>
+<div class="line"><span class="lineno">  165</span>                EClass.player.flags.landDeedBought += item5.num;</div>
+<div class="line"><span class="lineno">  166</span>            }</div>
 <div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a> != <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money)</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (num &gt;= 10)</div>
 <div class="line"><span class="lineno">  169</span>        {</div>
-<div class="line"><span class="lineno">  170</span>            ShopTransaction.current = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item2 in <span class="keyword">this</span>.bought)</div>
+<div class="line"><span class="lineno">  170</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(291, num);</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        Debug.Log(<span class="stringliteral">&quot;negotiation total:&quot;</span> + num);</div>
+<div class="line"><span class="lineno">  173</span>        num = 0;</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">foreach</span> (Item item6 <span class="keywordflow">in</span> <a class="code hl_variable" href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">sold</a>)</div>
 <div class="line"><span class="lineno">  175</span>        {</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; item2.num; i++)</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">if</span> (item6.thing.isStolen)</div>
 <div class="line"><span class="lineno">  177</span>            {</div>
-<div class="line"><span class="lineno">  178</span>                num += (int)Mathf.Sqrt((<span class="keywordtype">float</span>)Mathf.Abs(item2.price * 5));</div>
-<div class="line"><span class="lineno">  179</span>            }</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (item2.thing.trait is <a class="code hl_class" href="classTraitDeed.html">TraitDeed</a>)</div>
-<div class="line"><span class="lineno">  181</span>            {</div>
-<div class="line"><span class="lineno">  182</span>                EClass.player.flags.landDeedBought += item2.num;</div>
+<div class="line"><span class="lineno">  178</span>                item6.thing.isStolen = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  179</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; item6.num; j++)</div>
+<div class="line"><span class="lineno">  180</span>                {</div>
+<div class="line"><span class="lineno">  181</span>                    num += (int)Mathf.Sqrt(item6.price) / 2;</div>
+<div class="line"><span class="lineno">  182</span>                }</div>
 <div class="line"><span class="lineno">  183</span>            }</div>
 <div class="line"><span class="lineno">  184</span>        }</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (num &gt;= 10)</div>
-<div class="line"><span class="lineno">  186</span>        {</div>
-<div class="line"><span class="lineno">  187</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(291, num);</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span>        Debug.Log(<span class="stringliteral">&quot;negotiation total:&quot;</span> + num.ToString());</div>
-<div class="line"><span class="lineno">  190</span>        num = 0;</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item3 in <span class="keyword">this</span>.sold)</div>
-<div class="line"><span class="lineno">  192</span>        {</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (item3.thing.isStolen)</div>
-<div class="line"><span class="lineno">  194</span>            {</div>
-<div class="line"><span class="lineno">  195</span>                item3.thing.isStolen = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  196</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; item3.num; j++)</div>
-<div class="line"><span class="lineno">  197</span>                {</div>
-<div class="line"><span class="lineno">  198</span>                    num += (int)Mathf.Sqrt((<span class="keywordtype">float</span>)item3.price) / 2;</div>
-<div class="line"><span class="lineno">  199</span>                }</div>
-<div class="line"><span class="lineno">  200</span>            }</div>
-<div class="line"><span class="lineno">  201</span>        }</div>
-<div class="line"><span class="lineno">  202</span>        Debug.Log(<span class="stringliteral">&quot;stolen total:&quot;</span> + num.ToString());</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
-<div class="line"><span class="lineno">  204</span>        {</div>
-<div class="line"><span class="lineno">  205</span>            <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Thief</a>.<a class="code hl_function" href="classFaction.html#ae831d7859d26a512835b8e3d55dbe87d">AddContribution</a>(num);</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        ShopTransaction.current = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  208</span>    }</div>
-<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
-<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00032">BaseCard.cs:32</a></div></div>
-<div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07295">Card.cs:7295</a></div></div>
-<div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02658">Card.cs:2658</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
+<div class="line"><span class="lineno">  185</span>        Debug.Log(<span class="stringliteral">&quot;stolen total:&quot;</span> + num);</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Thief</a>.<a class="code hl_function" href="classFaction.html#ae831d7859d26a512835b8e3d55dbe87d">AddContribution</a>(num);</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_variable" href="classShopTransaction.html#a92f7613712043773f2682b29f78db6ad">current</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00001">CurrencyType.cs:2</a></div></div>
+<div class="ttc" id="aclassBaseCard_html_aec9bc518d017df1251b991ca321223cb"><div class="ttname"><a href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">BaseCard.SetInt</a></div><div class="ttdeci">void SetInt(int id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00039">BaseCard.cs:39</a></div></div>
+<div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00032">Card.cs:32</a></div></div>
+<div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02416">Card.cs:2416</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassFaction_html_ae831d7859d26a512835b8e3d55dbe87d"><div class="ttname"><a href="classFaction.html#ae831d7859d26a512835b8e3d55dbe87d">Faction.AddContribution</a></div><div class="ttdeci">void AddContribution(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00179">Faction.2.cs:179</a></div></div>
-<div class="ttc" id="aclassGuild_html"><div class="ttname"><a href="classGuild.html">Guild</a></div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00003">Guild.cs:4</a></div></div>
-<div class="ttc" id="aclassGuild_html_abbd12d65b6b73f64e1032cfdfe8aa2b5"><div class="ttname"><a href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Guild.Thief</a></div><div class="ttdeci">static GuildThief Thief</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00041">Guild.cs:42</a></div></div>
-<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l01363">InvOwner.cs:1363</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_a203972cb9293020b40d298d968d79a52"><div class="ttname"><a href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">ThingContainer.Find</a></div><div class="ttdeci">Thing Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00456">ThingContainer.cs:456</a></div></div>
-<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
-<div class="ttc" id="aclassTraitDeed_html"><div class="ttname"><a href="classTraitDeed.html">TraitDeed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitDeed_8cs_source.html#l00003">TraitDeed.cs:4</a></div></div>
+<div class="ttc" id="aclassGuild_html"><div class="ttname"><a href="classGuild.html">Guild</a></div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00001">Guild.cs:2</a></div></div>
+<div class="ttc" id="aclassGuild_html_abbd12d65b6b73f64e1032cfdfe8aa2b5"><div class="ttname"><a href="classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5">Guild.Thief</a></div><div class="ttdeci">static GuildThief Thief</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00027">Guild.cs:27</a></div></div>
+<div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00531">InvOwner.cs:531</a></div></div>
+<div class="ttc" id="aclassShopTransaction_html_a92f7613712043773f2682b29f78db6ad"><div class="ttname"><a href="classShopTransaction.html#a92f7613712043773f2682b29f78db6ad">ShopTransaction.current</a></div><div class="ttdeci">static ShopTransaction current</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00015">ShopTransaction.cs:15</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a203972cb9293020b40d298d968d79a52"><div class="ttname"><a href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">ThingContainer.Find</a></div><div class="ttdeci">Thing Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00548">ThingContainer.cs:548</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
+<div class="ttc" id="aclassTraitDeed_html"><div class="ttname"><a href="classTraitDeed.html">TraitDeed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitDeed_8cs_source.html#l00001">TraitDeed.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Faction_82_8cs_source.html#l00179">Faction.AddContribution()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00456">ThingContainer.Find()</a>, <a class="el" href="Card_8cs_source.html#l02658">Card.ModExp()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="BaseCard_8cs_source.html#l00032">BaseCard.SetInt()</a>, <a class="el" href="Guild_8cs_source.html#l00042">Guild.Thief</a>, and <a class="el" href="Card_8cs_source.html#l07295">Card.things</a>.</p>
+<p class="reference">References <a class="el" href="Faction_82_8cs_source.html#l00179">Faction.AddContribution()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00019">bought</a>, <a class="el" href="InvOwner_8cs_source.html#l00525">InvOwner.currency</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00015">current</a>, <a class="el" href="ThingContainer_8cs_source.html#l00548">ThingContainer.Find()</a>, <a class="el" href="Card_8cs_source.html#l00820">Card.isStolen</a>, <a class="el" href="Card_8cs_source.html#l02416">Card.ModExp()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00010">ShopTransaction.Item.num</a>, <a class="el" href="InvOwner_8cs_source.html#l00531">InvOwner.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00012">ShopTransaction.Item.price</a>, <a class="el" href="BaseCard_8cs_source.html#l00039">BaseCard.SetInt()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00021">sold</a>, <a class="el" href="Guild_8cs_source.html#l00027">Guild.Thief</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00008">ShopTransaction.Item.thing</a>, <a class="el" href="Card_8cs_source.html#l00032">Card.things</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00017">trader</a>, and <a class="el" href="Card_8cs_source.html#l00047">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00583">LayerInventory.CreateBuy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00594">LayerInventory.CreateBuy()</a>.</p>
 
 </div>
 </div>
@@ -587,92 +568,82 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00070">70</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">int</span> price = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(this.<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, <span class="keyword">false</span>, <span class="keyword">this</span>.trader.priceType, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> price2 = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(this.<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, <span class="keyword">true</span>, <span class="keyword">this</span>.trader.priceType, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> num = n;</div>
-<div class="line"><span class="lineno">   75</span>        Debug.Log(<span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            sell ? <span class="stringliteral">&quot;■Selling:&quot;</span> : <span class="stringliteral">&quot;■Buying:&quot;</span>,</div>
-<div class="line"><span class="lineno">   78</span>            t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>,</div>
-<div class="line"><span class="lineno">   79</span>            <span class="stringliteral">&quot;/&quot;</span>,</div>
-<div class="line"><span class="lineno">   80</span>            n.ToString(),</div>
-<div class="line"><span class="lineno">   81</span>            <span class="stringliteral">&quot; x &quot;</span>,</div>
-<div class="line"><span class="lineno">   82</span>            (sell ? price2 : price).ToString(),</div>
-<div class="line"><span class="lineno">   83</span>            <span class="stringliteral">&quot; = &quot;</span>,</div>
-<div class="line"><span class="lineno">   84</span>            (n * (sell ? price2 : price)).ToString()</div>
-<div class="line"><span class="lineno">   85</span>        }));</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">int</span> num2 = sell ? price : price2;</div>
-<div class="line"><span class="lineno">   87</span>        List&lt;<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a>&gt; list = sell ? this.bought : this.<a class="code hl_variable" href="classShopTransaction.html#a1d6bd132bcfff15d94deeed05aa6595a">sold</a>;</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> item in list)</div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (item.thing.id == t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> &amp;&amp; item.price == num2)</div>
-<div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordtype">int</span> num3 = (item.num &gt;= num) ? num : item.num;</div>
-<div class="line"><span class="lineno">   93</span>                num -= num3;</div>
-<div class="line"><span class="lineno">   94</span>                item.num -= num3;</div>
-<div class="line"><span class="lineno">   95</span>            }</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">   97</span>            {</div>
-<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   99</span>            }</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        list.ForeachReverse(delegate(<a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a> i)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (i.num == 0)</div>
-<div class="line"><span class="lineno">  104</span>            {</div>
-<div class="line"><span class="lineno">  105</span>                list.Remove(i);</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        });</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
-<div class="line"><span class="lineno">  109</span>        {</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (sell)</div>
-<div class="line"><span class="lineno">  111</span>            {</div>
-<div class="line"><span class="lineno">  112</span>                this.<a class="code hl_variable" href="classShopTransaction.html#a1d6bd132bcfff15d94deeed05aa6595a">sold</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a></div>
-<div class="line"><span class="lineno">  113</span>                {</div>
-<div class="line"><span class="lineno">  114</span>                    thing = t,</div>
-<div class="line"><span class="lineno">  115</span>                    num = num,</div>
-<div class="line"><span class="lineno">  116</span>                    price = price2</div>
-<div class="line"><span class="lineno">  117</span>                });</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  120</span>            {</div>
-<div class="line"><span class="lineno">  121</span>                this.<a class="code hl_variable" href="classShopTransaction.html#a146a415dc37b281d491fd7c5190900c5">bought</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classShopTransaction.html">ShopTransaction</a>.<a class="code hl_class" href="classShopTransaction_1_1Item.html">Item</a></div>
-<div class="line"><span class="lineno">  122</span>                {</div>
-<div class="line"><span class="lineno">  123</span>                    thing = t,</div>
-<div class="line"><span class="lineno">  124</span>                    num = num,</div>
-<div class="line"><span class="lineno">  125</span>                    price = price</div>
-<div class="line"><span class="lineno">  126</span>                });</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>        this.<a class="code hl_function" href="classShopTransaction.html#afe6f919401ef765fe041e0e9d3f8fb0a">Log</a>();</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-<div class="ttc" id="aclassCard_html_a5a6f253b03f13d9e792836ee2ec678ec"><div class="ttname"><a href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Card.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02183">Card.cs:2184</a></div></div>
-<div class="ttc" id="aclassShopTransaction_html_afe6f919401ef765fe041e0e9d3f8fb0a"><div class="ttname"><a href="classShopTransaction.html#afe6f919401ef765fe041e0e9d3f8fb0a">ShopTransaction.Log</a></div><div class="ttdeci">void Log()</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00007">ShopTransaction.cs:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00063">63</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">int</span> price = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, sell: <span class="keyword">false</span>, <a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#ab8f0ec2deb76ecbc50c0c0d280bbc201">priceType</a>);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">int</span> price2 = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a>, sell: <span class="keyword">true</span>, <a class="code hl_variable" href="classShopTransaction.html#a9cb568b06bc874ca256e66fe91a87f6d">trader</a>.<a class="code hl_variable" href="classInvOwner.html#ab8f0ec2deb76ecbc50c0c0d280bbc201">priceType</a>);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">int</span> num = n;</div>
+<div class="line"><span class="lineno">   68</span>        Debug.Log((sell ? <span class="stringliteral">&quot;■Selling:&quot;</span> : <span class="stringliteral">&quot;■Buying:&quot;</span>) + t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a> + <span class="stringliteral">&quot;/&quot;</span> + n + <span class="stringliteral">&quot; x &quot;</span> + (sell ? price2 : price) + <span class="stringliteral">&quot; = &quot;</span> + n * (sell ? price2 : price));</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> num2 = (sell ? price : price2);</div>
+<div class="line"><span class="lineno">   70</span>        List&lt;Item&gt; list = (sell ? <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a> : <a class="code hl_variable" href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">sold</a>);</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (item.thing.id == t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> &amp;&amp; item.price == num2)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordtype">int</span> num3 = ((item.num &gt;= num) ? num : item.num);</div>
+<div class="line"><span class="lineno">   76</span>                num -= num3;</div>
+<div class="line"><span class="lineno">   77</span>                item.num -= num3;</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">   80</span>            {</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        list.ForeachReverse(delegate(Item i)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (i.num == 0)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                list.Remove(i);</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        });</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (sell)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                <a class="code hl_variable" href="classShopTransaction.html#a7c332fd9c5ab55a53c4d6217f36fc4f6">sold</a>.Add(<span class="keyword">new</span> Item</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    thing = t,</div>
+<div class="line"><span class="lineno">   98</span>                    num = num,</div>
+<div class="line"><span class="lineno">   99</span>                    price = price2</div>
+<div class="line"><span class="lineno">  100</span>                });</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                <a class="code hl_variable" href="classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654">bought</a>.Add(<span class="keyword">new</span> Item</div>
+<div class="line"><span class="lineno">  105</span>                {</div>
+<div class="line"><span class="lineno">  106</span>                    thing = t,</div>
+<div class="line"><span class="lineno">  107</span>                    num = num,</div>
+<div class="line"><span class="lineno">  108</span>                    price = price</div>
+<div class="line"><span class="lineno">  109</span>                });</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_function" href="classShopTransaction.html#afe6f919401ef765fe041e0e9d3f8fb0a">Log</a>();</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aclassCard_html_a5a6f253b03f13d9e792836ee2ec678ec"><div class="ttname"><a href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Card.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01935">Card.cs:1935</a></div></div>
+<div class="ttc" id="aclassShopTransaction_html_afe6f919401ef765fe041e0e9d3f8fb0a"><div class="ttname"><a href="classShopTransaction.html#afe6f919401ef765fe041e0e9d3f8fb0a">ShopTransaction.Log</a></div><div class="ttdeci">void Log()</div><div class="ttdef"><b>Definition:</b> <a href="ShopTransaction_8cs_source.html#l00023">ShopTransaction.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00214">bought</a>, <a class="el" href="InvOwner_8cs_source.html#l01357">InvOwner.currency</a>, <a class="el" href="Card_8cs_source.html#l06614">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l07292">Card.id</a>, <a class="el" href="Card_8cs_source.html#l02184">Card.Name</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00216">sold</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00212">trader</a>.</p>
+<p class="reference">References <a class="el" href="ShopTransaction_8cs_source.html#l00019">bought</a>, <a class="el" href="InvOwner_8cs_source.html#l00525">InvOwner.currency</a>, <a class="el" href="Card_8cs_source.html#l06111">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l00029">Card.id</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00023">Log()</a>, <a class="el" href="Card_8cs_source.html#l01935">Card.Name</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00010">ShopTransaction.Item.num</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00012">ShopTransaction.Item.price</a>, <a class="el" href="InvOwner_8cs_source.html#l00527">InvOwner.priceType</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00021">sold</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00008">ShopTransaction.Item.thing</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00017">trader</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01477">InvOwner.Transaction.Process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l00135">InvOwner.Transaction.Process()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a146a415dc37b281d491fd7c5190900c5" name="a146a415dc37b281d491fd7c5190900c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a146a415dc37b281d491fd7c5190900c5">&#9670;&#160;</a></span>bought</h2>
+<a id="ae8c8a4ca98f3d7da5cea489b9c0e8654" name="ae8c8a4ca98f3d7da5cea489b9c0e8654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c8a4ca98f3d7da5cea489b9c0e8654">&#9670;&#160;</a></span>bought</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a>&gt; ShopTransaction.bought = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a>&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="classShopTransaction_1_1Item.html">Item</a>&gt; ShopTransaction.bought = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">Item</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00214">214</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00019">19</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00039">HasBought()</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00070">Process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00047">CanSellBack()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00115">GetPrice()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00035">HasBought()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00023">Log()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00138">OnEndTransaction()</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00063">Process()</a>.</p>
 
 </div>
 </div>
@@ -696,27 +667,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00210">210</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00015">15</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00583">LayerInventory.CreateBuy()</a>, <a class="el" href="InvOwner_8cs_source.html#l01263">InvOwner.GetPrice()</a>, <a class="el" href="InvOwner_8cs_source.html#l01704">InvOwner.Transaction.IsValid()</a>, <a class="el" href="InvOwner_8cs_source.html#l00838">InvOwner.ListInteractions()</a>, <a class="el" href="InvOwner_8cs_source.html#l01281">InvOwner.OnWriteNote()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01477">InvOwner.Transaction.Process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00594">LayerInventory.CreateBuy()</a>, <a class="el" href="InvOwner_8cs_source.html#l01711">InvOwner.GetPrice()</a>, <a class="el" href="InvOwner_8cs_source.html#l00355">InvOwner.Transaction.IsValid()</a>, <a class="el" href="InvOwner_8cs_source.html#l01295">InvOwner.ListInteractions()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00138">OnEndTransaction()</a>, <a class="el" href="InvOwner_8cs_source.html#l01729">InvOwner.OnWriteNote()</a>, and <a class="el" href="InvOwner_8cs_source.html#l00135">InvOwner.Transaction.Process()</a>.</p>
 
 </div>
 </div>
-<a id="a1d6bd132bcfff15d94deeed05aa6595a" name="a1d6bd132bcfff15d94deeed05aa6595a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d6bd132bcfff15d94deeed05aa6595a">&#9670;&#160;</a></span>sold</h2>
+<a id="a7c332fd9c5ab55a53c4d6217f36fc4f6" name="a7c332fd9c5ab55a53c4d6217f36fc4f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c332fd9c5ab55a53c4d6217f36fc4f6">&#9670;&#160;</a></span>sold</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a>&gt; ShopTransaction.sold = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">ShopTransaction.Item</a>&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="classShopTransaction_1_1Item.html">Item</a>&gt; ShopTransaction.sold = new List&lt;<a class="el" href="classShopTransaction_1_1Item.html">Item</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00216">216</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00021">21</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00070">Process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00115">GetPrice()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00023">Log()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00138">OnEndTransaction()</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00063">Process()</a>.</p>
 
 </div>
 </div>
@@ -732,9 +703,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00212">212</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ShopTransaction_8cs_source.html#l00017">17</a> of file <a class="el" href="ShopTransaction_8cs_source.html">ShopTransaction.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00070">Process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ShopTransaction_8cs_source.html#l00115">GetPrice()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00138">OnEndTransaction()</a>, and <a class="el" href="ShopTransaction_8cs_source.html#l00063">Process()</a>.</p>
 
 </div>
 </div>

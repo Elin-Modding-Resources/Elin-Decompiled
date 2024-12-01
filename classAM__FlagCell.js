@@ -12,7 +12,7 @@ var classAM__FlagCell =
     [ "OnClickSubMenu", "classAM__FlagCell.html#a9a40868c4e593668699c79fe22a0147f", null ],
     [ "OnProcessTiles", "classAM__FlagCell.html#a39380e6e88b4609f3d3f9e3943574852", null ],
     [ "OnSetSubMenuButton", "classAM__FlagCell.html#a655dea3c75cd5e27e6592b403d530bee", null ],
-    [ "mode", "classAM__FlagCell.html#ac853ba6bbe2a300fe560e8467c404d3a", null ],
+    [ "mode", "classAM__FlagCell.html#a727b92ea72fd40d425a07a2b8b887ce4", null ],
     [ "IsBuildMode", "classAM__FlagCell.html#a0eea3cc7011917781791e51fc9cede93", null ],
     [ "selectType", "classAM__FlagCell.html#a0933d7aaab16fc59911263ca8100bdac", null ],
     [ "SubMenuAsGroup", "classAM__FlagCell.html#a57638dec33931e77cee19a261559d9b2", null ],

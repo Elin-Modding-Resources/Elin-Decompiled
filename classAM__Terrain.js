@@ -9,7 +9,7 @@ var classAM__Terrain =
     [ "OnProcessTiles", "classAM__Terrain.html#a9b38fa01d61994bf7da6e38b7abd08e2", null ],
     [ "OnSetSubMenuButton", "classAM__Terrain.html#ab6db2668c2636af9c231c5d1c7b67065", null ],
     [ "TopHeight", "classAM__Terrain.html#a12833e4bb2c6d74efa8a683fa95f29c2", null ],
-    [ "mode", "classAM__Terrain.html#ab2ff1c6b3781067e5587e2669cb08e6a", null ],
+    [ "mode", "classAM__Terrain.html#aa428ca09f7dc9510ba97b5fee7875b49", null ],
     [ "FixedPointer", "classAM__Terrain.html#aeba597c1b91a778c6fd38d2237040ecd", null ],
     [ "SubMenuModeIndex", "classAM__Terrain.html#a6fde264a1391cebd5d3f13c6d35ec0da", null ]
 ];

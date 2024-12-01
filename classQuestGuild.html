@@ -297,8 +297,8 @@ Properties</h2></td></tr>
 <tr class="separator:aa22341e2c25faf3219e044d7e0793473 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3cf991d468757539b7030ac5e0dfaed1">RequireClientInSameZone</a><code> [get]</code></td></tr>
 <tr class="separator:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">Quest.DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a6c802d34b3fe0a66e6cd3c62aa6a6941">difficultyType</a><code> [get]</code></td></tr>
-<tr class="separator:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3a03e2e7b699388f14e2edb339568181">difficultyType</a><code> [get]</code></td></tr>
+<tr class="separator:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a4222ba9f92368ecb35f55a62ba66899a">DestChara</a><code> [get]</code></td></tr>
 <tr class="separator:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45db51626d462e4d75e4b670b467ff9e inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a45db51626d462e4d75e4b670b467ff9e">RefDrama1</a><code> [get]</code></td></tr>
@@ -445,7 +445,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00004">4</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa563c8cb368caf78ea879362e6ed9ae0" name="aa563c8cb368caf78ea879362e6ed9ae0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa563c8cb368caf78ea879362e6ed9ae0">&#9670;&#160;</a></span>GetDetailText()</h2>
@@ -473,53 +473,52 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a59e4bc1164356da0209cc14f98dd7237">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00037">37</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = base.GetDetailText(onJournal);</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>.<a class="code hl_variable" href="classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0">type</a> == <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member)</div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a> relation = this.<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>;</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordtype">int</span> num = relation.rank / 2;</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   45</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + this.<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_property" href="classFaction.html#a9c8e2cceae6c1c1807d23fe4c50ed40a">Name</a>.TagColor(FontColor.Topic, <span class="keyword">null</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;faction_rank&quot;</span>.lang(relation.<a class="code hl_variable" href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">rank</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, relation.<a class="code hl_property" href="classFactionRelation.html#a584972b646d98fbf03d75d3dbea570da">TextTitle</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   47</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;faction_contribution&quot;</span>.lang(Mathf.Min(relation.<a class="code hl_variable" href="classFactionRelation.html#a205fc45d402d20291c0d125b957312c5">exp</a>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;faction_salary&quot;</span>.lang(relation.<a class="code hl_function" href="classFactionRelation.html#ad55ad706b18bfc0d008c4c5beae0e455">GetSalary</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;faction_task&quot;</span>.lang().TagColor(FontColor.Topic, <span class="keyword">null</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   51</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + (this.guild.id + <span class="stringliteral">&quot;_task1&quot;</span>).lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   52</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> += <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   53</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;faction_benefit&quot;</span>.lang().TagColor(FontColor.Topic, <span class="keyword">null</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + (this.guild.id + <span class="stringliteral">&quot;_benefit1&quot;</span>).lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (num &gt;= 1)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;guild_benefit_trainer&quot;</span>.lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (num &gt;= 2)</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + (this.guild.id + <span class="stringliteral">&quot;_benefit2&quot;</span>).lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (num &gt;= 4)</div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> + <span class="stringliteral">&quot;guild_benefit_feat&quot;</span>.lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html"><div class="ttname"><a href="classFactionRelation.html">FactionRelation</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00005">FactionRelation.cs:6</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_a0d76069230ee3e8be8e6b46267e943c0"><div class="ttname"><a href="classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0">FactionRelation.type</a></div><div class="ttdeci">FactionRelation.RelationType type</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00083">FactionRelation.cs:83</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_a205fc45d402d20291c0d125b957312c5"><div class="ttname"><a href="classFactionRelation.html#a205fc45d402d20291c0d125b957312c5">FactionRelation.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00077">FactionRelation.cs:77</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_a46b7a47fd2bdebbd83010310af4cc574"><div class="ttname"><a href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">FactionRelation.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00007">FactionRelation.cs:8</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84caf"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">FactionRelation.RelationType</a></div><div class="ttdeci">RelationType</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00087">FactionRelation.cs:88</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_a584972b646d98fbf03d75d3dbea570da"><div class="ttname"><a href="classFactionRelation.html#a584972b646d98fbf03d75d3dbea570da">FactionRelation.TextTitle</a></div><div class="ttdeci">string TextTitle</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00032">FactionRelation.cs:33</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_a827af529ec3e0b535af676b52195ef52"><div class="ttname"><a href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">FactionRelation.rank</a></div><div class="ttdeci">int rank</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00080">FactionRelation.cs:80</a></div></div>
-<div class="ttc" id="aclassFactionRelation_html_ad55ad706b18bfc0d008c4c5beae0e455"><div class="ttname"><a href="classFactionRelation.html#ad55ad706b18bfc0d008c4c5beae0e455">FactionRelation.GetSalary</a></div><div class="ttdeci">int GetSalary()</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00023">FactionRelation.cs:23</a></div></div>
-<div class="ttc" id="aclassFaction_html_a9c8e2cceae6c1c1807d23fe4c50ed40a"><div class="ttname"><a href="classFaction.html#a9c8e2cceae6c1c1807d23fe4c50ed40a">Faction.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00008">Faction.2.cs:9</a></div></div>
-<div class="ttc" id="aclassFaction_html_afdbf9e47afeaa36169a0a4c467719d12"><div class="ttname"><a href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">Faction.relation</a></div><div class="ttdeci">FactionRelation relation</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00424">Faction.2.cs:424</a></div></div>
-<div class="ttc" id="aclassQuestGuild_html_a683e003c1dfd1b3a1e4530320c68b052"><div class="ttname"><a href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">QuestGuild.guild</a></div><div class="ttdeci">virtual Guild guild</div><div class="ttdef"><b>Definition:</b> <a href="QuestGuild_8cs_source.html#l00006">QuestGuild.cs:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00030">30</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">string</span> text = base.GetDetailText(onJournal);</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#aca3225480e199a1d348d92c6566bf3e0">relation</a>.<a class="code hl_variable" href="classFactionRelation.html#af1e757b78e2fd3d928975160848b5dc4">type</a> == <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a> relation = <a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#aca3225480e199a1d348d92c6566bf3e0">relation</a>;</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordtype">int</span> num = relation.rank / 2;</div>
+<div class="line"><span class="lineno">   37</span>            text += <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>            text = text + <a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_property" href="classFaction.html#a16171800af750914fb2fa59e3fdffe95">Name</a>.TagColor(FontColor.Topic) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>            text = text + <span class="stringliteral">&quot;faction_rank&quot;</span>.lang(relation.<a class="code hl_variable" href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">rank</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, relation.<a class="code hl_property" href="classFactionRelation.html#a584972b646d98fbf03d75d3dbea570da">TextTitle</a>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   40</span>            text = text + <span class="stringliteral">&quot;faction_contribution&quot;</span>.lang(Mathf.Min(relation.<a class="code hl_variable" href="classFactionRelation.html#a205fc45d402d20291c0d125b957312c5">exp</a>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   41</span>            text = text + <span class="stringliteral">&quot;faction_salary&quot;</span>.lang(relation.<a class="code hl_function" href="classFactionRelation.html#ad55ad706b18bfc0d008c4c5beae0e455">GetSalary</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   42</span>            text += <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   43</span>            text = text + <span class="stringliteral">&quot;faction_task&quot;</span>.lang().TagColor(FontColor.Topic) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>            text = text + (guild.id + <span class="stringliteral">&quot;_task1&quot;</span>).lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>            text += <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>            text = text + <span class="stringliteral">&quot;faction_benefit&quot;</span>.lang().TagColor(FontColor.Topic) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   47</span>            text = text + (guild.id + <span class="stringliteral">&quot;_benefit1&quot;</span>).lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (num &gt;= 1)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                text = text + <span class="stringliteral">&quot;guild_benefit_trainer&quot;</span>.lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (num &gt;= 2)</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                text = text + (guild.id + <span class="stringliteral">&quot;_benefit2&quot;</span>).lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (num &gt;= 4)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                text = text + <span class="stringliteral">&quot;guild_benefit_feat&quot;</span>.lang() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassFactionRelation_html"><div class="ttname"><a href="classFactionRelation.html">FactionRelation</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00004">FactionRelation.cs:5</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a205fc45d402d20291c0d125b957312c5"><div class="ttname"><a href="classFactionRelation.html#a205fc45d402d20291c0d125b957312c5">FactionRelation.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00017">FactionRelation.cs:17</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a46b7a47fd2bdebbd83010310af4cc574"><div class="ttname"><a href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">FactionRelation.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00027">FactionRelation.cs:27</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84caf"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">FactionRelation.RelationType</a></div><div class="ttdeci">RelationType</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00006">FactionRelation.cs:7</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a584972b646d98fbf03d75d3dbea570da"><div class="ttname"><a href="classFactionRelation.html#a584972b646d98fbf03d75d3dbea570da">FactionRelation.TextTitle</a></div><div class="ttdeci">string TextTitle</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00031">FactionRelation.cs:31</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a827af529ec3e0b535af676b52195ef52"><div class="ttname"><a href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">FactionRelation.rank</a></div><div class="ttdeci">int rank</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00020">FactionRelation.cs:20</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_ad55ad706b18bfc0d008c4c5beae0e455"><div class="ttname"><a href="classFactionRelation.html#ad55ad706b18bfc0d008c4c5beae0e455">FactionRelation.GetSalary</a></div><div class="ttdeci">int GetSalary()</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00033">FactionRelation.cs:33</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_af1e757b78e2fd3d928975160848b5dc4"><div class="ttname"><a href="classFactionRelation.html#af1e757b78e2fd3d928975160848b5dc4">FactionRelation.type</a></div><div class="ttdeci">RelationType type</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00023">FactionRelation.cs:23</a></div></div>
+<div class="ttc" id="aclassFaction_html_a16171800af750914fb2fa59e3fdffe95"><div class="ttname"><a href="classFaction.html#a16171800af750914fb2fa59e3fdffe95">Faction.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00008">Faction.2.cs:9</a></div></div>
+<div class="ttc" id="aclassFaction_html_aca3225480e199a1d348d92c6566bf3e0"><div class="ttname"><a href="classFaction.html#aca3225480e199a1d348d92c6566bf3e0">Faction.relation</a></div><div class="ttdeci">FactionRelation relation</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00424">Faction.2.cs:424</a></div></div>
+<div class="ttc" id="aclassQuestGuild_html_a683e003c1dfd1b3a1e4530320c68b052"><div class="ttname"><a href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">QuestGuild.guild</a></div><div class="ttdeci">virtual Guild guild</div><div class="ttdef"><b>Definition:</b> <a href="QuestGuild_8cs_source.html#l00011">QuestGuild.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00077">FactionRelation.exp</a>, <a class="el" href="FactionRelation_8cs_source.html#l00008">FactionRelation.ExpToNext</a>, <a class="el" href="FactionRelation_8cs_source.html#l00023">FactionRelation.GetSalary()</a>, <a class="el" href="QuestGuild_8cs_source.html#l00007">guild</a>, <a class="el" href="Faction_82_8cs_source.html#l00009">Faction.Name</a>, <a class="el" href="FactionRelation_8cs_source.html#l00080">FactionRelation.rank</a>, <a class="el" href="Faction_82_8cs_source.html#l00424">Faction.relation</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="FactionRelation_8cs_source.html#l00033">FactionRelation.TextTitle</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00083">FactionRelation.type</a>.</p>
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00017">FactionRelation.exp</a>, <a class="el" href="FactionRelation_8cs_source.html#l00027">FactionRelation.ExpToNext</a>, <a class="el" href="FactionRelation_8cs_source.html#l00033">FactionRelation.GetSalary()</a>, <a class="el" href="QuestGuild_8cs_source.html#l00011">guild</a>, <a class="el" href="Faction_82_8cs_source.html#l00009">Faction.Name</a>, <a class="el" href="FactionRelation_8cs_source.html#l00020">FactionRelation.rank</a>, <a class="el" href="Faction_82_8cs_source.html#l00424">Faction.relation</a>, <a class="el" href="FactionRelation_8cs_source.html#l00031">FactionRelation.TextTitle</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00023">FactionRelation.type</a>.</p>
 
 </div>
 </div>
@@ -548,17 +547,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a4c122f6e2407f2531daf9e7bd75156b3">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00027">27</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>.<a class="code hl_variable" href="classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0">type</a> == <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member)</div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a> relation = this.<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>;</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;faction_contribution&quot;</span>.lang(Mathf.Min(relation.<a class="code hl_variable" href="classFactionRelation.html#a205fc45d402d20291c0d125b957312c5">exp</a>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> base.GetTrackerText();</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00020">20</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#aca3225480e199a1d348d92c6566bf3e0">relation</a>.<a class="code hl_variable" href="classFactionRelation.html#af1e757b78e2fd3d928975160848b5dc4">type</a> == <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a> relation = <a class="code hl_property" href="classQuestGuild.html#a683e003c1dfd1b3a1e4530320c68b052">guild</a>.<a class="code hl_variable" href="classFaction.html#aca3225480e199a1d348d92c6566bf3e0">relation</a>;</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;faction_contribution&quot;</span>.lang(Mathf.Min(relation.<a class="code hl_variable" href="classFactionRelation.html#a205fc45d402d20291c0d125b957312c5">exp</a>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, relation.<a class="code hl_property" href="classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574">ExpToNext</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> base.GetTrackerText();</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00077">FactionRelation.exp</a>, <a class="el" href="FactionRelation_8cs_source.html#l00008">FactionRelation.ExpToNext</a>, <a class="el" href="QuestGuild_8cs_source.html#l00007">guild</a>, <a class="el" href="Faction_82_8cs_source.html#l00424">Faction.relation</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00083">FactionRelation.type</a>.</p>
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00017">FactionRelation.exp</a>, <a class="el" href="FactionRelation_8cs_source.html#l00027">FactionRelation.ExpToNext</a>, <a class="el" href="QuestGuild_8cs_source.html#l00011">guild</a>, <a class="el" href="Faction_82_8cs_source.html#l00424">Faction.relation</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00023">FactionRelation.type</a>.</p>
 
 </div>
 </div>
@@ -587,10 +586,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a2d86589e5a70a667ab9b261ee17233b0">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00022">22</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00015">15</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -615,7 +614,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00073">73</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00007">7</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
 
 </div>
 </div>
@@ -639,7 +638,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00075">75</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00009">9</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
 
 </div>
 </div>
@@ -663,7 +662,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00071">71</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
 
 </div>
 </div>
@@ -688,15 +687,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00006">6</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QuestGuild_8cs_source.html#l00037">GetDetailText()</a>, and <a class="el" href="QuestGuild_8cs_source.html#l00027">GetTrackerText()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00011">11</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QuestGuild_8cs_source.html#l00030">GetDetailText()</a>, and <a class="el" href="QuestGuild_8cs_source.html#l00020">GetTrackerText()</a>.</p>
 
 </div>
 </div>
@@ -720,14 +713,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00014">14</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;☆&quot;</span>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="QuestGuild_8cs_source.html#l00013">13</a> of file <a class="el" href="QuestGuild_8cs_source.html">QuestGuild.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

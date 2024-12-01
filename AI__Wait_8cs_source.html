@@ -92,29 +92,25 @@ $(document).ready(function(){initNavTree('AI__Wait_8cs_source.html',''); initRes
   <div class="headertitle"><div class="title">AI_Wait.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="AI__Wait_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classAI__Wait.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAI__Wait.html">AI_Wait</a> : <a class="code hl_class" href="classAIAct.html">AIAct</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classAI__Wait.html#a3a250a25f3f90a1c542e3584a1ccaea2">    6</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> IEnumerable&lt;<a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>&gt; <a class="code hl_function" href="classAI__Wait.html#a3a250a25f3f90a1c542e3584a1ccaea2">Run</a>()</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordtype">int</span> num;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">count</a>; i = num + 1)</div>
+<a href="AI__Wait_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classAI__Wait.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAI__Wait.html">AI_Wait</a> : <a class="code hl_class" href="classAIAct.html">AIAct</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">    5</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">count</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classAI__Wait.html#a587405b58cf453742adedcb437df1030">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> IEnumerable&lt;Status&gt; <a class="code hl_function" href="classAI__Wait.html#a587405b58cf453742adedcb437df1030">Run</a>()</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">count</a>; i++)</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            yield <span class="keywordflow">return</span> <a class="code hl_class" href="classAIAct.html">AIAct</a>.<a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            num = i;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        yield <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">   17</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">count</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            yield <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
 <div class="ttc" id="aclassAIAct_html"><div class="ttname"><a href="classAIAct.html">AIAct</a></div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00005">AIAct.cs:6</a></div></div>
-<div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00727">AIAct.cs:728</a></div></div>
-<div class="ttc" id="aclassAI__Wait_html"><div class="ttname"><a href="classAI__Wait.html">AI_Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Wait_8cs_source.html#l00004">AI_Wait.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__Wait_html_a3a250a25f3f90a1c542e3584a1ccaea2"><div class="ttname"><a href="classAI__Wait.html#a3a250a25f3f90a1c542e3584a1ccaea2">AI_Wait.Run</a></div><div class="ttdeci">override IEnumerable&lt; AIAct.Status &gt; Run()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Wait_8cs_source.html#l00006">AI_Wait.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__Wait_html_a66804204acaed935f56815c5dfe6bbbb"><div class="ttname"><a href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">AI_Wait.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="AI__Wait_8cs_source.html#l00017">AI_Wait.cs:17</a></div></div>
+<div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00007">AIAct.cs:8</a></div></div>
+<div class="ttc" id="aclassAI__Wait_html"><div class="ttname"><a href="classAI__Wait.html">AI_Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Wait_8cs_source.html#l00003">AI_Wait.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Wait_html_a587405b58cf453742adedcb437df1030"><div class="ttname"><a href="classAI__Wait.html#a587405b58cf453742adedcb437df1030">AI_Wait.Run</a></div><div class="ttdeci">override IEnumerable&lt; Status &gt; Run()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Wait_8cs_source.html#l00007">AI_Wait.cs:7</a></div></div>
+<div class="ttc" id="aclassAI__Wait_html_a66804204acaed935f56815c5dfe6bbbb"><div class="ttname"><a href="classAI__Wait.html#a66804204acaed935f56815c5dfe6bbbb">AI_Wait.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="AI__Wait_8cs_source.html#l00005">AI_Wait.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,10 +1,6 @@
 var classLayerFeedback =
 [
     [ "CollectFiles", "classLayerFeedback.html#a45c0176bd46d37dac4aea42936efd4b3", null ],
-    [ "g__Append", "classLayerFeedback.html#a2691531488048299bcac87d5b9de87ce", null ],
-    [ "g__Append", "classLayerFeedback.html#a49f7a64b9e03e6e566806cc92abd037f", null ],
-    [ "g__CountString", "classLayerFeedback.html#a4266bda31a7f43244ad2d7ff3910e307", null ],
-    [ "g__ParseLog", "classLayerFeedback.html#ab022743b8e8bc93e45c6248ec057c68f", null ],
     [ "GetSystemText", "classLayerFeedback.html#a9af847a596fcbfa1dfbc24e0352eac8d", null ],
     [ "OnCancel", "classLayerFeedback.html#a15eb3783ffd92acfed17c4b8d3b1c0a0", null ],
     [ "OnInit", "classLayerFeedback.html#a7e9582d4278a23f8c78822a3ec12d7e9", null ],

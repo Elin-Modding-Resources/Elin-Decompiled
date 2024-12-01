@@ -4,10 +4,9 @@ var classZone__Dungeon =
       [ "Mine", "classZone__Dungeon.html#adb8bd50a7445f690837777e003424b3eafedc0e3f18d0ff5df1579ad5ce33ba5d", null ],
       [ "Factoy", "classZone__Dungeon.html#adb8bd50a7445f690837777e003424b3ea3431c32a8d006bb6ecacbbd763d67d49", null ]
     ] ],
-    [ "g__TryPlaceRail", "classZone__Dungeon.html#ae001af377a15d8b297bb1c95a75181f4", null ],
     [ "GetDungenID", "classZone__Dungeon.html#acbff4fdb58b56d8d5fb4ce6060959157", null ],
     [ "OnGenerateMap", "classZone__Dungeon.html#aa330befb029e0ea57124519eb57930d4", null ],
-    [ "PlaceRail", "classZone__Dungeon.html#ae9ce15b9b7ce772646da8c824fad00ed", null ],
+    [ "PlaceRail", "classZone__Dungeon.html#a933a5e4c23a03e6862e90315b91a2035", null ],
     [ "BigDaddyChance", "classZone__Dungeon.html#ae29cadb6b2b889bcc83589f87159f19d", null ],
     [ "BlockBorderExit", "classZone__Dungeon.html#a46a98ed4b8b845af3cdda793e4c7257a", null ],
     [ "CountDeepestLevel", "classZone__Dungeon.html#aa0d00adc52d171ed02de0b30ac28f98f", null ],

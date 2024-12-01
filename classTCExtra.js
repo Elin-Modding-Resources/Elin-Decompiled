@@ -23,7 +23,7 @@ var classTCExtra =
     [ "flipFixX", "classTCExtra.html#a877d6d186c6a246451634ea2ef167e34", null ],
     [ "flipSelf", "classTCExtra.html#a4cfb4eec10e38e1c1d737b1fb653d0c6", null ],
     [ "flipSR", "classTCExtra.html#a1b257e7706b27ca66550f5e18659a2b7", null ],
-    [ "hack", "classTCExtra.html#a6b3485f8dcfee3d6378392cd03b5c911", null ],
+    [ "hack", "classTCExtra.html#acd53fc7cb96769da28d1babb50dc37d8", null ],
     [ "heldPos", "classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0", null ],
     [ "heldPosFlip", "classTCExtra.html#af1c45adf4635f9c5029d6cc623144d0a", null ],
     [ "listTrans", "classTCExtra.html#a58cb34d392b024ff9a510370b4589949", null ],
@@ -31,7 +31,7 @@ var classTCExtra =
     [ "originalAngle", "classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c", null ],
     [ "originalScale", "classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a", null ],
     [ "sr", "classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463", null ],
-    [ "type", "classTCExtra.html#ab4aef8f8d7ec933d004efd553eca657a", null ],
+    [ "type", "classTCExtra.html#a3b6f04cc2db460ad23231187ea0fa0fa", null ],
     [ "useOffsetBack", "classTCExtra.html#afa897efdbfcd97301f4b311c8ccc8e87", null ],
     [ "v", "classTCExtra.html#a4a01c41f3a7c66b8ec2fa0cc39276f12", null ],
     [ "FixPos", "classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd", null ]

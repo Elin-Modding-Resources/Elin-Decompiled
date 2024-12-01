@@ -17,13 +17,13 @@ var searchData=
   ['wil_14',['WIL',['../classCard.html#a7d187bc810464ceafc304f94259a447c',1,'Card']]],
   ['wilds_15',['Wilds',['../classEClass.html#a8837ae75780712ff2c110589063f7f7d',1,'EClass']]],
   ['willautosave_16',['WillAutoSave',['../classRegion.html#a6e0e675b6dd496f2acd636babb3cf64a',1,'Region.WillAutoSave()'],['../classZone.html#ae18ddc6d1abc82ba1263ad41307e5263',1,'Zone.WillAutoSave()'],['../classZone__DungeonPuppy.html#ae97fe7dd03f1580594412aa13c533caf',1,'Zone_DungeonPuppy.WillAutoSave()'],['../classZone__Field.html#a662c1f47e0601beb9413029715132120',1,'Zone_Field.WillAutoSave()']]],
-  ['willendturn_17',['WillEndTurn',['../classAct.html#aa273cbc8aa3f7068d871c1b4a36ec5af',1,'Act.WillEndTurn()'],['../classActPlan.html#ad35632373c102a0aa80dc7c3d0644b03',1,'ActPlan.WillEndTurn()']]],
+  ['willendturn_17',['WillEndTurn',['../classAct.html#af89bf51815282506a572c0ceb5d1d7bb',1,'Act.WillEndTurn()'],['../classActPlan.html#ad35632373c102a0aa80dc7c3d0644b03',1,'ActPlan.WillEndTurn()']]],
   ['willfade_18',['WillFade',['../classCellEffect.html#a548574827318445ac6fb9e51c09d2093',1,'CellEffect']]],
   ['willoverride_19',['WillOverride',['../classConParalyze.html#ac00d042177ea4661b0bbd36bcab711ec',1,'ConParalyze.WillOverride()'],['../classConWait.html#a9dabf691ef01a51d647f9f94bf221fbe',1,'ConWait.WillOverride()'],['../classConStrife.html#a989c9b8447e9a6d540413f5d3505ad72',1,'ConStrife.WillOverride()'],['../classConBuffStats.html#a05abf0a207f4f2a4e24d9feb16a6336d',1,'ConBuffStats.WillOverride()'],['../classBaseDebuff.html#a940e25502178fac4d6c4117549670126',1,'BaseDebuff.WillOverride()'],['../classBaseCondition.html#a0e12433f33d10e9e0903cd53fc94ae73',1,'BaseCondition.WillOverride()']]],
   ['withered_20',['Withered',['../classGrowSystemPlant.html#a2222e95fe0f67801e699b9f1ad1ea89a',1,'GrowSystemPlant.Withered()'],['../classGrowSystemTree.html#ab4503831b5d03eebd2d358075ee63157',1,'GrowSystemTree.Withered()']]],
   ['witheronlaststage_21',['WitherOnLastStage',['../classGrowSystem.html#a9b1775a530623ddea3d8d50b7b1f4cf3',1,'GrowSystem.WitherOnLastStage()'],['../classGrowSystemKinoko.html#a17ba0063fc4757d5e69ac11e78b43ac8',1,'GrowSystemKinoko.WitherOnLastStage()']]],
   ['working_22',['Working',['../classTaskDesignation.html#acf64275d30f74e27a621fe62fc888cff',1,'TaskDesignation']]],
-  ['worktype_23',['WorkType',['../classAIWork.html#a4d4ef9bee04228e1d42c83e9ee5bc7c2',1,'AIWork.WorkType()'],['../classAIWork__Explore.html#aba299fb1ff8a526e78945de99dad3b6a',1,'AIWork_Explore.WorkType()']]],
+  ['worktype_23',['WorkType',['../classAIWork.html#a8e19406fdd2fe691eef677b8132a6f96',1,'AIWork.WorkType()'],['../classAIWork__Explore.html#a2677e829229a72b77b82aed8ff34a199',1,'AIWork_Explore.WorkType()']]],
   ['world_24',['world',['../classEClass.html#a55cea92739455d0aa460e2a7a1503f8a',1,'EClass.world()'],['../classELayer.html#a02d3cd5d8d5cb20fcda917f05d7f35c7',1,'ELayer.world()'],['../classEMono.html#a3e18271d35c6625bff2e03676a3e5c61',1,'EMono.world()']]],
   ['worth_25',['Worth',['../classFactionBranch.html#ae2632831e6f50065e49f4fef1a2d0837',1,'FactionBranch']]]
 ];

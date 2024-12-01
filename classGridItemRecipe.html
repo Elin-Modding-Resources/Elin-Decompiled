@@ -196,7 +196,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="GridItemRecipe_8cs_source.html#l00003">3</a> of file <a class="el" href="GridItemRecipe_8cs_source.html">GridItemRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GridItemRecipe_8cs_source.html#l00001">1</a> of file <a class="el" href="GridItemRecipe_8cs_source.html">GridItemRecipe.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa397da91e9a2ffb43534bdeaad261276" name="aa397da91e9a2ffb43534bdeaad261276"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa397da91e9a2ffb43534bdeaad261276">&#9670;&#160;</a></span>OnClick()</h2>
@@ -259,38 +259,39 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="GridItemRecipe_8cs_source.html#l00005">5</a> of file <a class="el" href="GridItemRecipe_8cs_source.html">GridItemRecipe.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
 <div class="line"><span class="lineno">    7</span>        b.mainText.text = <span class="stringliteral">&quot;1&quot;</span>;</div>
-<div class="line"><span class="lineno">    8</span>        b.mainText.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">    9</span>        this.<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a>.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(b.icon, <span class="keyword">null</span>, <span class="keyword">this</span>.r.GetDefaultColor(), <span class="keyword">true</span>, 0, 0);</div>
+<div class="line"><span class="lineno">    8</span>        b.mainText.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a>.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(b.icon, <span class="keyword">null</span>, <a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_function" href="classRecipe.html#ad174e33ba289d781db4aef0fcc131daa">GetDefaultColor</a>());</div>
 <div class="line"><span class="lineno">   10</span>        b.SetTooltip(<span class="stringliteral">&quot;note&quot;</span>, delegate(UITooltip t)</div>
 <div class="line"><span class="lineno">   11</span>        {</div>
 <div class="line"><span class="lineno">   12</span>            UINote note = t.note;</div>
 <div class="line"><span class="lineno">   13</span>            note.Clear();</div>
-<div class="line"><span class="lineno">   14</span>            note.AddHeaderCard(this.<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_property" href="classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774">Name</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   15</span>            if (!this.<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_function" href="classRecipe.html#abf3f59ec56e017deb46e1eb5767fe763">GetDetail</a>().IsEmpty())</div>
+<div class="line"><span class="lineno">   14</span>            note.AddHeaderCard(<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_property" href="classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774">Name</a>);</div>
+<div class="line"><span class="lineno">   15</span>            if (!<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_function" href="classRecipe.html#abf3f59ec56e017deb46e1eb5767fe763">GetDetail</a>().IsEmpty())</div>
 <div class="line"><span class="lineno">   16</span>            {</div>
-<div class="line"><span class="lineno">   17</span>                note.AddText(this.r.GetDetail(), FontColor.DontChange);</div>
-<div class="line"><span class="lineno">   18</span>                note.Space(0, 1);</div>
+<div class="line"><span class="lineno">   17</span>                note.AddText(r.GetDetail());</div>
+<div class="line"><span class="lineno">   18</span>                note.Space();</div>
 <div class="line"><span class="lineno">   19</span>            }</div>
-<div class="line"><span class="lineno">   20</span>            if (this.<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_property" href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">source</a>.<a class="code hl_property" href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">NeedFactory</a>)</div>
+<div class="line"><span class="lineno">   20</span>            if (<a class="code hl_variable" href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">r</a>.<a class="code hl_property" href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">source</a>.<a class="code hl_property" href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">NeedFactory</a>)</div>
 <div class="line"><span class="lineno">   21</span>            {</div>
-<div class="line"><span class="lineno">   22</span>                note.AddText(<span class="stringliteral">&quot;reqFactory&quot;</span>.lang(this.r.source.NameFactory, null, null, null, null), FontColor.DontChange);</div>
+<div class="line"><span class="lineno">   22</span>                note.AddText(<span class="stringliteral">&quot;reqFactory&quot;</span>.lang(r.source.NameFactory));</div>
 <div class="line"><span class="lineno">   23</span>            }</div>
 <div class="line"><span class="lineno">   24</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   25</span>            {</div>
-<div class="line"><span class="lineno">   26</span>                note.AddText(<span class="stringliteral">&quot;reqNoFactory&quot;</span>.lang(), FontColor.DontChange);</div>
+<div class="line"><span class="lineno">   26</span>                note.AddText(<span class="stringliteral">&quot;reqNoFactory&quot;</span>.lang());</div>
 <div class="line"><span class="lineno">   27</span>            }</div>
 <div class="line"><span class="lineno">   28</span>            note.Build();</div>
-<div class="line"><span class="lineno">   29</span>        }, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   29</span>        });</div>
 <div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclassGridItemRecipe_html_a5bd0563cd24ed6fd87c741e4bbc54ef0"><div class="ttname"><a href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">GridItemRecipe.r</a></div><div class="ttdeci">Recipe r</div><div class="ttdef"><b>Definition:</b> <a href="GridItemRecipe_8cs_source.html#l00036">GridItemRecipe.cs:36</a></div></div>
-<div class="ttc" id="aclassRecipeSource_html_ab70f617638ee28866d9874ff8bb7293d"><div class="ttname"><a href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">RecipeSource.NeedFactory</a></div><div class="ttdeci">bool NeedFactory</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00039">RecipeSource.cs:40</a></div></div>
-<div class="ttc" id="aclassRecipe_html_a5f08d818d63873d378c3b87bd5f04934"><div class="ttname"><a href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">Recipe.renderRow</a></div><div class="ttdeci">virtual RenderRow renderRow</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00112">Recipe.cs:113</a></div></div>
-<div class="ttc" id="aclassRecipe_html_a64cba6b9b821d7650e1974b045f095b6"><div class="ttname"><a href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">Recipe.source</a></div><div class="ttdeci">RecipeSource source</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00083">Recipe.cs:84</a></div></div>
-<div class="ttc" id="aclassRecipe_html_aa7db47ecf58fbca2ce34c2250595b774"><div class="ttname"><a href="classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774">Recipe.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00120">Recipe.cs:121</a></div></div>
-<div class="ttc" id="aclassRecipe_html_abf3f59ec56e017deb46e1eb5767fe763"><div class="ttname"><a href="classRecipe.html#abf3f59ec56e017deb46e1eb5767fe763">Recipe.GetDetail</a></div><div class="ttdeci">virtual string GetDetail()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00724">Recipe.cs:724</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_a31e60d1c7ca10e9b57f695e66dfc93a6"><div class="ttname"><a href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">RenderRow.SetImage</a></div><div class="ttdeci">void SetImage(Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00345">RenderRow.cs:345</a></div></div>
+<div class="ttc" id="aclassGridItemRecipe_html_a5bd0563cd24ed6fd87c741e4bbc54ef0"><div class="ttname"><a href="classGridItemRecipe.html#a5bd0563cd24ed6fd87c741e4bbc54ef0">GridItemRecipe.r</a></div><div class="ttdeci">Recipe r</div><div class="ttdef"><b>Definition:</b> <a href="GridItemRecipe_8cs_source.html#l00003">GridItemRecipe.cs:3</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_ab70f617638ee28866d9874ff8bb7293d"><div class="ttname"><a href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">RecipeSource.NeedFactory</a></div><div class="ttdeci">bool NeedFactory</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00060">RecipeSource.cs:61</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a5f08d818d63873d378c3b87bd5f04934"><div class="ttname"><a href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">Recipe.renderRow</a></div><div class="ttdeci">virtual RenderRow renderRow</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00162">Recipe.cs:162</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a64cba6b9b821d7650e1974b045f095b6"><div class="ttname"><a href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">Recipe.source</a></div><div class="ttdeci">RecipeSource source</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00156">Recipe.cs:156</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aa7db47ecf58fbca2ce34c2250595b774"><div class="ttname"><a href="classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774">Recipe.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00164">Recipe.cs:164</a></div></div>
+<div class="ttc" id="aclassRecipe_html_abf3f59ec56e017deb46e1eb5767fe763"><div class="ttname"><a href="classRecipe.html#abf3f59ec56e017deb46e1eb5767fe763">Recipe.GetDetail</a></div><div class="ttdeci">virtual string GetDetail()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00751">Recipe.cs:751</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ad174e33ba289d781db4aef0fcc131daa"><div class="ttname"><a href="classRecipe.html#ad174e33ba289d781db4aef0fcc131daa">Recipe.GetDefaultColor</a></div><div class="ttdeci">int GetDefaultColor()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00426">Recipe.cs:426</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a31e60d1c7ca10e9b57f695e66dfc93a6"><div class="ttname"><a href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">RenderRow.SetImage</a></div><div class="ttdeci">void SetImage(Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00347">RenderRow.cs:347</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00724">Recipe.GetDetail()</a>, <a class="el" href="Recipe_8cs_source.html#l00121">Recipe.Name</a>, <a class="el" href="RecipeSource_8cs_source.html#l00040">RecipeSource.NeedFactory</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00036">r</a>, <a class="el" href="Recipe_8cs_source.html#l00113">Recipe.renderRow</a>, <a class="el" href="RenderRow_8cs_source.html#l00345">RenderRow.SetImage()</a>, and <a class="el" href="Recipe_8cs_source.html#l00084">Recipe.source</a>.</p>
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00426">Recipe.GetDefaultColor()</a>, <a class="el" href="Recipe_8cs_source.html#l00751">Recipe.GetDetail()</a>, <a class="el" href="Recipe_8cs_source.html#l00164">Recipe.Name</a>, <a class="el" href="RecipeSource_8cs_source.html#l00061">RecipeSource.NeedFactory</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00003">r</a>, <a class="el" href="Recipe_8cs_source.html#l00162">Recipe.renderRow</a>, <a class="el" href="RenderRow_8cs_source.html#l00347">RenderRow.SetImage()</a>, and <a class="el" href="Recipe_8cs_source.html#l00156">Recipe.source</a>.</p>
 
 </div>
 </div>
@@ -307,7 +308,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GridItemRecipe_8cs_source.html#l00036">36</a> of file <a class="el" href="GridItemRecipe_8cs_source.html">GridItemRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GridItemRecipe_8cs_source.html#l00003">3</a> of file <a class="el" href="GridItemRecipe_8cs_source.html">GridItemRecipe.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="GridItemRecipe_8cs_source.html#l00005">SetButton()</a>.</p>
 

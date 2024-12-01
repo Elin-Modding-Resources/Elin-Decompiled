@@ -286,8 +286,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_classWidget"><td colspan="2" onclick="javascript:toggleInherit('properties_classWidget')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a><code> [get]</code></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Widget.Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">config</a><code> [get]</code></td></tr>
-<tr class="separator:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
+<tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
@@ -352,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00004">4</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00003">3</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a644187cb9a03c4bd6c93a12e658fbb1b" name="a644187cb9a03c4bd6c93a12e658fbb1b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a644187cb9a03c4bd6c93a12e658fbb1b">&#9670;&#160;</a></span>_OnActivate()</h2>
@@ -379,45 +379,54 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseWidgetNotice.html#ad78ebc6f8637a748dd29adcc8d27f37c">BaseWidgetNotice</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00015">15</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        WidgetStats.Instance = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   19</span>        notificationStats.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a>);</div>
-<div class="line"><span class="lineno">   20</span>        base.Add(notificationStats, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats2 = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   22</span>        notificationStats2.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6">burden</a>);</div>
-<div class="line"><span class="lineno">   23</span>        base.Add(notificationStats2, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats3 = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   25</span>        notificationStats3.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">depression</a>);</div>
-<div class="line"><span class="lineno">   26</span>        base.Add(notificationStats3, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats4 = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   28</span>        notificationStats4.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a8db87f59730c8374d1692fdc04e652da">bladder</a>);</div>
-<div class="line"><span class="lineno">   29</span>        base.Add(notificationStats4, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats5 = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   31</span>        notificationStats5.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">hygiene</a>);</div>
-<div class="line"><span class="lineno">   32</span>        base.Add(notificationStats5, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats6 = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   34</span>        notificationStats6.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a1137a6af6cc4b764ba31d0bfdce053e6">sleepiness</a>);</div>
-<div class="line"><span class="lineno">   35</span>        base.Add(notificationStats6, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a> notificationStats7 = <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a>();</div>
-<div class="line"><span class="lineno">   37</span>        notificationStats7.stats = (() =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>);</div>
-<div class="line"><span class="lineno">   38</span>        base.Add(notificationStats7, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   39</span>        base.Add(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationExceedParty.html">NotificationExceedParty</a>(), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclassChara_html_a058a8927e9ea4ee8c7db048bd302905b"><div class="ttname"><a href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">Chara.depression</a></div><div class="ttdeci">Stats depression</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08319">Chara.cs:8320</a></div></div>
-<div class="ttc" id="aclassChara_html_a1137a6af6cc4b764ba31d0bfdce053e6"><div class="ttname"><a href="classChara.html#a1137a6af6cc4b764ba31d0bfdce053e6">Chara.sleepiness</a></div><div class="ttdeci">Stats sleepiness</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08351">Chara.cs:8352</a></div></div>
-<div class="ttc" id="aclassChara_html_a4a3317f33313bbcc61849fe5ef604d71"><div class="ttname"><a href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">Chara.hygiene</a></div><div class="ttdeci">Stats hygiene</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08335">Chara.cs:8336</a></div></div>
-<div class="ttc" id="aclassChara_html_a656f24c70feae5fb0f8ccf9c6d0578fe"><div class="ttname"><a href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">Chara.hunger</a></div><div class="ttdeci">Stats hunger</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08295">Chara.cs:8296</a></div></div>
-<div class="ttc" id="aclassChara_html_a8db87f59730c8374d1692fdc04e652da"><div class="ttname"><a href="classChara.html#a8db87f59730c8374d1692fdc04e652da">Chara.bladder</a></div><div class="ttdeci">Stats bladder</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08327">Chara.cs:8328</a></div></div>
-<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08311">Chara.cs:8312</a></div></div>
-<div class="ttc" id="aclassChara_html_aa093de9e35002a53b74b4fd6e0aa25e6"><div class="ttname"><a href="classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6">Chara.burden</a></div><div class="ttdeci">Stats burden</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08303">Chara.cs:8304</a></div></div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00030">EMono.cs:31</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00021">21</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a></div>
+<div class="line"><span class="lineno">   27</span>        });</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6">burden</a></div>
+<div class="line"><span class="lineno">   31</span>        });</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">depression</a></div>
+<div class="line"><span class="lineno">   35</span>        });</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a8db87f59730c8374d1692fdc04e652da">bladder</a></div>
+<div class="line"><span class="lineno">   39</span>        });</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">hygiene</a></div>
+<div class="line"><span class="lineno">   43</span>        });</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a1137a6af6cc4b764ba31d0bfdce053e6">sleepiness</a></div>
+<div class="line"><span class="lineno">   47</span>        });</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationStats.html">NotificationStats</a></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            stats = () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a></div>
+<div class="line"><span class="lineno">   51</span>        });</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classNotificationExceedParty.html">NotificationExceedParty</a>());</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_ad547559a06b1abf0ca0a3a7ced6a203c"><div class="ttname"><a href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">BaseWidgetNotice.Add</a></div><div class="ttdeci">ItemNotice Add(BaseNotification n, Transform parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00080">BaseWidgetNotice.cs:80</a></div></div>
+<div class="ttc" id="aclassChara_html_a058a8927e9ea4ee8c7db048bd302905b"><div class="ttname"><a href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">Chara.depression</a></div><div class="ttdeci">Stats depression</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00921">Chara.cs:921</a></div></div>
+<div class="ttc" id="aclassChara_html_a1137a6af6cc4b764ba31d0bfdce053e6"><div class="ttname"><a href="classChara.html#a1137a6af6cc4b764ba31d0bfdce053e6">Chara.sleepiness</a></div><div class="ttdeci">Stats sleepiness</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00929">Chara.cs:929</a></div></div>
+<div class="ttc" id="aclassChara_html_a4a3317f33313bbcc61849fe5ef604d71"><div class="ttname"><a href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">Chara.hygiene</a></div><div class="ttdeci">Stats hygiene</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00925">Chara.cs:925</a></div></div>
+<div class="ttc" id="aclassChara_html_a656f24c70feae5fb0f8ccf9c6d0578fe"><div class="ttname"><a href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">Chara.hunger</a></div><div class="ttdeci">Stats hunger</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00915">Chara.cs:915</a></div></div>
+<div class="ttc" id="aclassChara_html_a8db87f59730c8374d1692fdc04e652da"><div class="ttname"><a href="classChara.html#a8db87f59730c8374d1692fdc04e652da">Chara.bladder</a></div><div class="ttdeci">Stats bladder</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00923">Chara.cs:923</a></div></div>
+<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00919">Chara.cs:919</a></div></div>
+<div class="ttc" id="aclassChara_html_aa093de9e35002a53b74b4fd6e0aa25e6"><div class="ttname"><a href="classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6">Chara.burden</a></div><div class="ttdeci">Stats burden</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00917">Chara.cs:917</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00013">EMono.cs:13</a></div></div>
 <div class="ttc" id="aclassNotificationExceedParty_html"><div class="ttname"><a href="classNotificationExceedParty.html">NotificationExceedParty</a></div><div class="ttdef"><b>Definition:</b> <a href="NotificationExceedParty_8cs_source.html#l00003">NotificationExceedParty.cs:4</a></div></div>
 <div class="ttc" id="aclassNotificationStats_html"><div class="ttname"><a href="classNotificationStats.html">NotificationStats</a></div><div class="ttdef"><b>Definition:</b> <a href="NotificationStats_8cs_source.html#l00004">NotificationStats.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetStats_html_a0db7bb6848b44baaba76f564d0e3fa46"><div class="ttname"><a href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">WidgetStats.Instance</a></div><div class="ttdeci">static WidgetStats Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00005">WidgetStats.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08328">Chara.bladder</a>, <a class="el" href="Chara_8cs_source.html#l08304">Chara.burden</a>, <a class="el" href="Chara_8cs_source.html#l08320">Chara.depression</a>, <a class="el" href="Chara_8cs_source.html#l08296">Chara.hunger</a>, <a class="el" href="Chara_8cs_source.html#l08336">Chara.hygiene</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="Chara_8cs_source.html#l08352">Chara.sleepiness</a>, and <a class="el" href="Chara_8cs_source.html#l08312">Chara.stamina</a>.</p>
+<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">BaseWidgetNotice.Add()</a>, <a class="el" href="Chara_8cs_source.html#l00923">Chara.bladder</a>, <a class="el" href="Chara_8cs_source.html#l00917">Chara.burden</a>, <a class="el" href="Chara_8cs_source.html#l00921">Chara.depression</a>, <a class="el" href="Chara_8cs_source.html#l00915">Chara.hunger</a>, <a class="el" href="Chara_8cs_source.html#l00925">Chara.hygiene</a>, <a class="el" href="WidgetStats_8cs_source.html#l00005">Instance</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="Chara_8cs_source.html#l00929">Chara.sleepiness</a>, and <a class="el" href="Chara_8cs_source.html#l00919">Chara.stamina</a>.</p>
 
 </div>
 </div>
@@ -446,50 +455,49 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab">BaseWidgetNotice</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00042">42</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        this.<a class="code hl_variable" href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">conditions</a>.ForeachReverse(delegate(<a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a> a)</div>
-<div class="line"><span class="lineno">   45</span>        {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (a.<a class="code hl_function" href="classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26">ShouldRemove</a>())</div>
-<div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                this.conditions.Remove(a);</div>
-<div class="line"><span class="lineno">   49</span>                base.Remove(a);</div>
-<div class="line"><span class="lineno">   50</span>            }</div>
-<div class="line"><span class="lineno">   51</span>        });</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCondition.html">Condition</a> condition <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>)</div>
-<div class="line"><span class="lineno">   53</span>        {</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (condition.<a class="code hl_property" href="classBaseStats.html#a74c6775ee0f1ef718d393ff01f62395e">ShowInWidget</a>)</div>
-<div class="line"><span class="lineno">   55</span>            {</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keyword">using</span> (List&lt;NotificationCondition&gt;.Enumerator enumerator2 = this.<a class="code hl_variable" href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">conditions</a>.GetEnumerator())</div>
-<div class="line"><span class="lineno">   58</span>                {</div>
-<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">while</span> (enumerator2.MoveNext())</div>
-<div class="line"><span class="lineno">   60</span>                    {</div>
-<div class="line"><span class="lineno">   61</span>                        <span class="keywordflow">if</span> (enumerator2.Current.condition == condition)</div>
-<div class="line"><span class="lineno">   62</span>                        {</div>
-<div class="line"><span class="lineno">   63</span>                            flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   64</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   65</span>                        }</div>
-<div class="line"><span class="lineno">   66</span>                    }</div>
-<div class="line"><span class="lineno">   67</span>                }</div>
-<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">   69</span>                {</div>
-<div class="line"><span class="lineno">   70</span>                    <a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a> notificationCondition = condition.<a class="code hl_function" href="classCondition.html#a29225541e1171a9d7f7fc9efbfbf6a6d">CreateNotification</a>() as <a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a>;</div>
-<div class="line"><span class="lineno">   71</span>                    base.Add(notificationCondition, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   72</span>                    this.<a class="code hl_variable" href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">conditions</a>.Add(notificationCondition);</div>
-<div class="line"><span class="lineno">   73</span>                }</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclassBaseStats_html_a74c6775ee0f1ef718d393ff01f62395e"><div class="ttname"><a href="classBaseStats.html#a74c6775ee0f1ef718d393ff01f62395e">BaseStats.ShowInWidget</a></div><div class="ttdeci">virtual bool ShowInWidget</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00089">BaseStats.cs:90</a></div></div>
-<div class="ttc" id="aclassChara_html_a522224f15420736ea92c6acee26efd6c"><div class="ttname"><a href="classChara.html#a522224f15420736ea92c6acee26efd6c">Chara.conditions</a></div><div class="ttdeci">List&lt; Condition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09578">Chara.cs:9578</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00055">55</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">conditions</a>.ForeachReverse(delegate(<a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a> a)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (a.<a class="code hl_function" href="classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26">ShouldRemove</a>())</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                conditions.Remove(a);</div>
+<div class="line"><span class="lineno">   62</span>                Remove(a);</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        });</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCondition.html">Condition</a> condition <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (!condition.<a class="code hl_property" href="classBaseStats.html#a74c6775ee0f1ef718d393ff01f62395e">ShowInWidget</a>)</div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   70</span>            }</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a> condition2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">conditions</a>)</div>
+<div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (condition2.<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a> == condition)</div>
+<div class="line"><span class="lineno">   75</span>                {</div>
+<div class="line"><span class="lineno">   76</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   78</span>                }</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a> notificationCondition = condition.<a class="code hl_function" href="classCondition.html#a29225541e1171a9d7f7fc9efbfbf6a6d">CreateNotification</a>() as <a class="code hl_class" href="classNotificationCondition.html">NotificationCondition</a>;</div>
+<div class="line"><span class="lineno">   83</span>                <a class="code hl_function" href="classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c">Add</a>(notificationCondition);</div>
+<div class="line"><span class="lineno">   84</span>                <a class="code hl_variable" href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">conditions</a>.Add(notificationCondition);</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="ttc" id="aclassBaseStats_html_a74c6775ee0f1ef718d393ff01f62395e"><div class="ttname"><a href="classBaseStats.html#a74c6775ee0f1ef718d393ff01f62395e">BaseStats.ShowInWidget</a></div><div class="ttdeci">virtual bool ShowInWidget</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00023">BaseStats.cs:23</a></div></div>
+<div class="ttc" id="aclassChara_html_a522224f15420736ea92c6acee26efd6c"><div class="ttname"><a href="classChara.html#a522224f15420736ea92c6acee26efd6c">Chara.conditions</a></div><div class="ttdeci">List&lt; Condition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00196">Chara.cs:196</a></div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
-<div class="ttc" id="aclassCondition_html_a29225541e1171a9d7f7fc9efbfbf6a6d"><div class="ttname"><a href="classCondition.html#a29225541e1171a9d7f7fc9efbfbf6a6d">Condition.CreateNotification</a></div><div class="ttdeci">override BaseNotification CreateNotification()</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00013">Condition.cs:13</a></div></div>
+<div class="ttc" id="aclassCondition_html_a29225541e1171a9d7f7fc9efbfbf6a6d"><div class="ttname"><a href="classCondition.html#a29225541e1171a9d7f7fc9efbfbf6a6d">Condition.CreateNotification</a></div><div class="ttdeci">override BaseNotification CreateNotification()</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00030">Condition.cs:30</a></div></div>
 <div class="ttc" id="aclassNotificationCondition_html"><div class="ttname"><a href="classNotificationCondition.html">NotificationCondition</a></div><div class="ttdef"><b>Definition:</b> <a href="NotificationCondition_8cs_source.html#l00004">NotificationCondition.cs:5</a></div></div>
-<div class="ttc" id="aclassNotificationCondition_html_acbdb46bb5e7d9771b357be3e5204fa26"><div class="ttname"><a href="classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26">NotificationCondition.ShouldRemove</a></div><div class="ttdeci">override bool ShouldRemove()</div><div class="ttdef"><b>Definition:</b> <a href="NotificationCondition_8cs_source.html#l00014">NotificationCondition.cs:14</a></div></div>
-<div class="ttc" id="aclassWidgetStats_html_a49133be2c98c939d6fb1dc3b6f114a04"><div class="ttname"><a href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">WidgetStats.conditions</a></div><div class="ttdeci">List&lt; NotificationCondition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00080">WidgetStats.cs:80</a></div></div>
+<div class="ttc" id="aclassNotificationCondition_html_a3ed2abf73d4dbc9d35b19d89b1c2e999"><div class="ttname"><a href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">NotificationCondition.condition</a></div><div class="ttdeci">Condition condition</div><div class="ttdef"><b>Definition:</b> <a href="NotificationCondition_8cs_source.html#l00006">NotificationCondition.cs:6</a></div></div>
+<div class="ttc" id="aclassNotificationCondition_html_acbdb46bb5e7d9771b357be3e5204fa26"><div class="ttname"><a href="classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26">NotificationCondition.ShouldRemove</a></div><div class="ttdeci">override bool ShouldRemove()</div><div class="ttdef"><b>Definition:</b> <a href="NotificationCondition_8cs_source.html#l00019">NotificationCondition.cs:19</a></div></div>
+<div class="ttc" id="aclassWidgetStats_html_a49133be2c98c939d6fb1dc3b6f114a04"><div class="ttname"><a href="classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04">WidgetStats.conditions</a></div><div class="ttdeci">List&lt; NotificationCondition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00007">WidgetStats.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09578">Chara.conditions</a>, <a class="el" href="WidgetStats_8cs_source.html#l00080">conditions</a>, <a class="el" href="Condition_8cs_source.html#l00013">Condition.CreateNotification()</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.pc</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00014">NotificationCondition.ShouldRemove()</a>, and <a class="el" href="BaseStats_8cs_source.html#l00090">BaseStats.ShowInWidget</a>.</p>
+<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">BaseWidgetNotice.Add()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00006">NotificationCondition.condition</a>, <a class="el" href="Chara_8cs_source.html#l00196">Chara.conditions</a>, <a class="el" href="WidgetStats_8cs_source.html#l00007">conditions</a>, <a class="el" href="Condition_8cs_source.html#l00030">Condition.CreateNotification()</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00019">NotificationCondition.ShouldRemove()</a>, and <a class="el" href="BaseStats_8cs_source.html#l00023">BaseStats.ShowInWidget</a>.</p>
 
 </div>
 </div>
@@ -516,21 +524,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>)</div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>        <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>.<a class="code hl_function" href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">_RefreshAll</a>();</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclassBaseWidgetNotice_html_a540c6d843e4ff2b1834448b495d83bcc"><div class="ttname"><a href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">BaseWidgetNotice._RefreshAll</a></div><div class="ttdeci">void _RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00039">BaseWidgetNotice.cs:39</a></div></div>
-<div class="ttc" id="aclassWidgetStats_html"><div class="ttname"><a href="classWidgetStats.html">WidgetStats</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00004">WidgetStats.cs:5</a></div></div>
-<div class="ttc" id="aclassWidgetStats_html_a0db7bb6848b44baaba76f564d0e3fa46"><div class="ttname"><a href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">WidgetStats.Instance</a></div><div class="ttdeci">static WidgetStats Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00078">WidgetStats.cs:78</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00013">13</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>.<a class="code hl_function" href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">_RefreshAll</a>();</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_a540c6d843e4ff2b1834448b495d83bcc"><div class="ttname"><a href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">BaseWidgetNotice._RefreshAll</a></div><div class="ttdeci">void _RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00050">BaseWidgetNotice.cs:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00039">BaseWidgetNotice._RefreshAll()</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00078">Instance</a>.</p>
+<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">BaseWidgetNotice._RefreshAll()</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00005">Instance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationCondition_8cs_source.html#l00046">NotificationCondition.OnClick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NotificationCondition_8cs_source.html#l00032">NotificationCondition.OnClick()</a>.</p>
 
 </div>
 </div>
@@ -547,9 +552,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00080">80</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00007">7</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStats_8cs_source.html#l00042">OnRefresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStats_8cs_source.html#l00055">OnRefresh()</a>.</p>
 
 </div>
 </div>
@@ -573,9 +578,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00078">78</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00005">5</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationBuff_8cs_source.html#l00019">NotificationBuff.GetLayoutGroup()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00014">NotificationBuff.GetMold()</a>, <a class="el" href="NotificationStance_8cs_source.html#l00005">NotificationStance.GetMold()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00046">NotificationCondition.OnClick()</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00006">RefreshAll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStats_8cs_source.html#l00021">_OnActivate()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00014">NotificationBuff.GetLayoutGroup()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00009">NotificationBuff.GetMold()</a>, <a class="el" href="NotificationStance_8cs_source.html#l00005">NotificationStance.GetMold()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00032">NotificationCondition.OnClick()</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00013">RefreshAll()</a>.</p>
 
 </div>
 </div>
@@ -591,9 +596,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00082">82</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00009">9</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationBuff_8cs_source.html#l00014">NotificationBuff.GetMold()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NotificationBuff_8cs_source.html#l00009">NotificationBuff.GetMold()</a>.</p>
 
 </div>
 </div>
@@ -609,7 +614,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00084">84</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetStats_8cs_source.html#l00011">11</a> of file <a class="el" href="WidgetStats_8cs_source.html">WidgetStats.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="NotificationStance_8cs_source.html#l00005">NotificationStance.GetMold()</a>.</p>
 

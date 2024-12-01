@@ -1,6 +1,6 @@
 var classSourceCollectible =
 [
     [ "Row", "classSourceCollectible_1_1Row.html", "classSourceCollectible_1_1Row" ],
-    [ "CreateRow", "classSourceCollectible.html#a1bd9dae1eca93073d0b6a35c943e02ec", null ],
-    [ "SetRow", "classSourceCollectible.html#ac0f83cbfe1b85020cff82cbbb317b0df", null ]
+    [ "CreateRow", "classSourceCollectible.html#a960399b0fb02e34ce789a8416a76f2b9", null ],
+    [ "SetRow", "classSourceCollectible.html#a6ff4e327b03952754b8ffb294ead22f4", null ]
 ];

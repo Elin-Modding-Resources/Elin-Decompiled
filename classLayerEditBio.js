@@ -1,6 +1,5 @@
 var classLayerEditBio =
 [
-    [ "g__Start", "classLayerEditBio.html#a16e35173066a77a667ed2129e905ecff", null ],
     [ "OnAfterAddLayer", "classLayerEditBio.html#aeba3a47722a01b3aa6740bf5365ed82d", null ],
     [ "OnClickHelp", "classLayerEditBio.html#aea755738c922b390b460475d21144776", null ],
     [ "OnClickStart", "classLayerEditBio.html#a64f764cd5093dcbc53de378f2c12c641", null ],

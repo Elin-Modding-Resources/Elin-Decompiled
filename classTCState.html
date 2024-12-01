@@ -215,7 +215,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00004">4</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00003">3</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a096227484931fbee83ade7fe2fcd7ac9" name="a096227484931fbee83ade7fe2fcd7ac9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a096227484931fbee83ade7fe2fcd7ac9">&#9670;&#160;</a></span>OnDisable()</h2>
@@ -240,12 +240,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00030">30</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        base.CancelInvoke();</div>
-<div class="line"><span class="lineno">   33</span>        this.sprites = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00028">28</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        CancelInvoke();</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassTCState_html_ab8f9ea1d27ac117fc09f1d692e2f7602"><div class="ttname"><a href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">TCState.sprites</a></div><div class="ttdeci">MultiSprite sprites</div><div class="ttdef"><b>Definition:</b> <a href="TCState_8cs_source.html#l00007">TCState.cs:7</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TCState_8cs_source.html#l00007">sprites</a>.</p>
+
 </div>
 </div>
 <a id="aa634bb2c7aa235fe49d1ca4fed2e74a8" name="aa634bb2c7aa235fe49d1ca4fed2e74a8"></a>
@@ -272,28 +275,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00014">14</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a> == _sprites)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>        base.CancelInvoke();</div>
-<div class="line"><span class="lineno">   21</span>        this.sprites = _sprites;</div>
-<div class="line"><span class="lineno">   22</span>        this.sr.sprite = this.<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>[0];</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>.Length &gt; 1)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            this.index = 0;</div>
-<div class="line"><span class="lineno">   26</span>            base.InvokeRepeating(<span class="stringliteral">&quot;UpdateFrame&quot;</span>, this.<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a58f7a4dce85c7f1f6e7cb7d7dd76221a">interval</a>, <span class="keyword">this</span>.sprites.interval);</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00013">13</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a> != _sprites)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            CancelInvoke();</div>
+<div class="line"><span class="lineno">   18</span>            <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a> = _sprites;</div>
+<div class="line"><span class="lineno">   19</span>            sr.sprite = <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>[0];</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>.Length &gt; 1)</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                <a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a> = 0;</div>
+<div class="line"><span class="lineno">   23</span>                InvokeRepeating(<span class="stringliteral">&quot;UpdateFrame&quot;</span>, <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a58f7a4dce85c7f1f6e7cb7d7dd76221a">interval</a>, <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a58f7a4dce85c7f1f6e7cb7d7dd76221a">interval</a>);</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
 <div class="ttc" id="aclassMultiSprite_html_a58f7a4dce85c7f1f6e7cb7d7dd76221a"><div class="ttname"><a href="classMultiSprite.html#a58f7a4dce85c7f1f6e7cb7d7dd76221a">MultiSprite.interval</a></div><div class="ttdeci">float interval</div><div class="ttdef"><b>Definition:</b> <a href="MultiSprite_8cs_source.html#l00009">MultiSprite.cs:9</a></div></div>
 <div class="ttc" id="aclassMultiSprite_html_a5f0a913acf7835d3bb742f38ceb04789"><div class="ttname"><a href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">MultiSprite.frames</a></div><div class="ttdeci">Sprite[] frames</div><div class="ttdef"><b>Definition:</b> <a href="MultiSprite_8cs_source.html#l00007">MultiSprite.cs:7</a></div></div>
-<div class="ttc" id="aclassTCState_html_ab8f9ea1d27ac117fc09f1d692e2f7602"><div class="ttname"><a href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">TCState.sprites</a></div><div class="ttdeci">MultiSprite sprites</div><div class="ttdef"><b>Definition:</b> <a href="TCState_8cs_source.html#l00048">TCState.cs:48</a></div></div>
+<div class="ttc" id="aclassTCState_html_a6ed5c2399593835bc1d473ad32b33af2"><div class="ttname"><a href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">TCState.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="TCState_8cs_source.html#l00009">TCState.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MultiSprite_8cs_source.html#l00007">MultiSprite.frames</a>, <a class="el" href="MultiSprite_8cs_source.html#l00009">MultiSprite.interval</a>, and <a class="el" href="TCState_8cs_source.html#l00048">sprites</a>.</p>
+<p class="reference">References <a class="el" href="MultiSprite_8cs_source.html#l00007">MultiSprite.frames</a>, <a class="el" href="TCState_8cs_source.html#l00009">index</a>, <a class="el" href="MultiSprite_8cs_source.html#l00009">MultiSprite.interval</a>, and <a class="el" href="TCState_8cs_source.html#l00007">sprites</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00354">CharaRenderer.RefreshStateIcon()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00379">CharaRenderer.RefreshStateIcon()</a>.</p>
 
 </div>
 </div>
@@ -320,18 +322,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00036">36</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
-<div class="line"><span class="lineno">   38</span>        this.<a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a>++;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a> &gt;= this.<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>.Length)</div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            this.index = 0;</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        this.sr.sprite = this.<a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>[this.<a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a>];</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclassTCState_html_a6ed5c2399593835bc1d473ad32b33af2"><div class="ttname"><a href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">TCState.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="TCState_8cs_source.html#l00050">TCState.cs:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00034">34</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a>++;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a> &gt;= <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>.Length)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a> = 0;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        sr.sprite = <a class="code hl_variable" href="classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602">sprites</a>.<a class="code hl_variable" href="classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789">frames</a>[<a class="code hl_variable" href="classTCState.html#a6ed5c2399593835bc1d473ad32b33af2">index</a>];</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MultiSprite_8cs_source.html#l00007">MultiSprite.frames</a>, <a class="el" href="TCState_8cs_source.html#l00050">index</a>, and <a class="el" href="TCState_8cs_source.html#l00048">sprites</a>.</p>
+<p class="reference">References <a class="el" href="MultiSprite_8cs_source.html#l00007">MultiSprite.frames</a>, <a class="el" href="TCState_8cs_source.html#l00009">index</a>, and <a class="el" href="TCState_8cs_source.html#l00007">sprites</a>.</p>
 
 </div>
 </div>
@@ -356,9 +357,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00050">50</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00009">9</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TCState_8cs_source.html#l00036">UpdateFrame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TCState_8cs_source.html#l00013">SetSprite()</a>, and <a class="el" href="TCState_8cs_source.html#l00034">UpdateFrame()</a>.</p>
 
 </div>
 </div>
@@ -374,9 +375,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00048">48</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00007">7</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TCState_8cs_source.html#l00014">SetSprite()</a>, and <a class="el" href="TCState_8cs_source.html#l00036">UpdateFrame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TCState_8cs_source.html#l00028">OnDisable()</a>, <a class="el" href="TCState_8cs_source.html#l00013">SetSprite()</a>, and <a class="el" href="TCState_8cs_source.html#l00034">UpdateFrame()</a>.</p>
 
 </div>
 </div>
@@ -392,7 +393,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00046">46</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00005">5</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
 
 </div>
 </div>
@@ -417,16 +418,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00006">6</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.statePos;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00004">TC.cs:5</a></div></div>
-<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00056">TC.cs:56</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TCState_8cs_source.html#l00011">11</a> of file <a class="el" href="TCState_8cs_source.html">TCState.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

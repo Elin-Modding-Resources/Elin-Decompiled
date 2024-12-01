@@ -32,7 +32,7 @@ var classLayerTitle =
     [ "titleActor", "classLayerTitle.html#af04ccf4e3ee61260bda8840d54f06aa0", null ],
     [ "toggle", "classLayerTitle.html#a97a98cb92c6b1f6ddbdf9821ec0d5f5e", null ],
     [ "transBook", "classLayerTitle.html#a7bc6620ebe080bbab56dea9d95afddde", null ],
-    [ "types", "classLayerTitle.html#ad96c4c89c4ace6609e8eca7508d057f9", null ],
+    [ "types", "classLayerTitle.html#a8ddb9c7585d197f7364ea5a7e1b37559", null ],
     [ "uiLight", "classLayerTitle.html#a4b621f50cf529c9d4d91b0d7b4cdacdf", null ],
-    [ "CurrentTitle", "classLayerTitle.html#a0da2353de5f7bed6bea271e845f68d3f", null ]
+    [ "CurrentTitle", "classLayerTitle.html#ab30b4f05ae075c1c0e033488b76e74b1", null ]
 ];

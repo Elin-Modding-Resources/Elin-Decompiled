@@ -1,4 +1,4 @@
 var classTileTypeStairsHalf =
 [
-    [ "Ramp", "classTileTypeStairsHalf.html#a45984d07849a62ad8742b1199c38e052", null ]
+    [ "Ramp", "classTileTypeStairsHalf.html#a2970d7fcb6a39cfcfddd27b79131c969", null ]
 ];

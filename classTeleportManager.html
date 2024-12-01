@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5b066f3b4244e0d563a5ea9cab668715"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, <a class="el" href="classTeleportManager_1_1Item.html">TeleportManager.Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTeleportManager.html#a5b066f3b4244e0d563a5ea9cab668715">items</a> = new Dictionary&lt;int, <a class="el" href="classTeleportManager_1_1Item.html">TeleportManager.Item</a>&gt;()</td></tr>
-<tr class="separator:a5b066f3b4244e0d563a5ea9cab668715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd436227815df090885896ea400c172d"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, <a class="el" href="classTeleportManager_1_1Item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTeleportManager.html#afd436227815df090885896ea400c172d">items</a> = new Dictionary&lt;int, <a class="el" href="classTeleportManager_1_1Item.html">Item</a>&gt;()</td></tr>
+<tr class="separator:afd436227815df090885896ea400c172d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -196,7 +196,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00005">5</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00004">4</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8b09497a970041389c3c704d1e77b3ae" name="a8b09497a970041389c3c704d1e77b3ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b09497a970041389c3c704d1e77b3ae">&#9670;&#160;</a></span>GetTeleportZone()</h2>
@@ -222,42 +222,42 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00026">26</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = t.<a class="code hl_property" href="classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561">id</a>;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">int</span> uid = t.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty())</div>
-<div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        List&lt;Zone&gt; list = <span class="keyword">new</span> List&lt;Zone&gt;();</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, TeleportManager.Item&gt; keyValuePair <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classTeleportManager.html#a5b066f3b4244e0d563a5ea9cab668715">items</a>)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (keyValuePair.Key != uid &amp;&amp; keyValuePair.Value.id == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">   38</span>            {</div>
-<div class="line"><span class="lineno">   39</span>                <a class="code hl_class" href="classZone.html">Zone</a> zone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(keyValuePair.Value.uidZone);</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span> (zone != <span class="keyword">null</span> &amp;&amp; zone != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
-<div class="line"><span class="lineno">   41</span>                {</div>
-<div class="line"><span class="lineno">   42</span>                    list.Add(zone);</div>
-<div class="line"><span class="lineno">   43</span>                }</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> list.RandomItem&lt;<a class="code hl_class" href="classZone.html">Zone</a>&gt;();</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:80</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
-<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
-<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00046">SpatialManager.cs:46</a></div></div>
-<div class="ttc" id="aclassTeleportManager_html_a5b066f3b4244e0d563a5ea9cab668715"><div class="ttname"><a href="classTeleportManager.html#a5b066f3b4244e0d563a5ea9cab668715">TeleportManager.items</a></div><div class="ttdeci">Dictionary&lt; int, TeleportManager.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="TeleportManager_8cs_source.html#l00055">TeleportManager.cs:55</a></div></div>
-<div class="ttc" id="aclassTraitTeleporter_html_a6fa4e2b8c6b3de9b28945570e1924561"><div class="ttname"><a href="classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561">TraitTeleporter.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00006">TraitTeleporter.cs:7</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l02862">Trait.cs:2862</a></div></div>
-<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00037">37</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = t.<a class="code hl_property" href="classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561">id</a>;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">int</span> uid = t.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty())</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        List&lt;Zone&gt; list = <span class="keyword">new</span> List&lt;Zone&gt;();</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, Item&gt; item <span class="keywordflow">in</span> <a class="code hl_variable" href="classTeleportManager.html#afd436227815df090885896ea400c172d">items</a>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (item.Key != uid &amp;&amp; item.Value.id == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                <a class="code hl_class" href="classZone.html">Zone</a> zone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(item.Value.uidZone);</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (zone != <span class="keyword">null</span> &amp;&amp; zone != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
+<div class="line"><span class="lineno">   52</span>                {</div>
+<div class="line"><span class="lineno">   53</span>                    list.Add(zone);</div>
+<div class="line"><span class="lineno">   54</span>                }</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> list.RandomItem();</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00111">Card.cs:112</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00149">Game.cs:149</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00060">SpatialManager.cs:60</a></div></div>
+<div class="ttc" id="aclassTeleportManager_html_afd436227815df090885896ea400c172d"><div class="ttname"><a href="classTeleportManager.html#afd436227815df090885896ea400c172d">TeleportManager.items</a></div><div class="ttdeci">Dictionary&lt; int, Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="TeleportManager_8cs_source.html#l00016">TeleportManager.cs:16</a></div></div>
+<div class="ttc" id="aclassTraitTeleporter_html_a6fa4e2b8c6b3de9b28945570e1924561"><div class="ttname"><a href="classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561">TraitTeleporter.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00007">TraitTeleporter.cs:8</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00025">Trait.cs:25</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="SpatialManager_8cs_source.html#l00046">SpatialManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="TraitTeleporter_8cs_source.html#l00007">TraitTeleporter.id</a>, <a class="el" href="TeleportManager_8cs_source.html#l00055">items</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">SpatialManager.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="TraitTeleporter_8cs_source.html#l00008">TraitTeleporter.id</a>, <a class="el" href="TeleportManager_8cs_source.html#l00016">items</a>, <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>, <a class="el" href="Game_8cs_source.html#l00149">Game.spatials</a>, and <a class="el" href="Card_8cs_source.html#l00112">Card.uid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00088">TraitTeleporter.TryTeleport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00062">TraitTeleporter.TryTeleport()</a>.</p>
 
 </div>
 </div>
@@ -285,14 +285,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00049">49</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        this.<a class="code hl_variable" href="classTeleportManager.html#a5b066f3b4244e0d563a5ea9cab668715">items</a>.Remove(uidThing);</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00060">60</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="classTeleportManager.html#afd436227815df090885896ea400c172d">items</a>.Remove(uidThing);</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TeleportManager_8cs_source.html#l00055">items</a>.</p>
+<p class="reference">References <a class="el" href="TeleportManager_8cs_source.html#l00016">items</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00078">TraitTeleporter.OnChangePlaceState()</a>, and <a class="el" href="TeleportManager_8cs_source.html#l00007">SetID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00050">TraitTeleporter.OnChangePlaceState()</a>, and <a class="el" href="TeleportManager_8cs_source.html#l00018">SetID()</a>.</p>
 
 </div>
 </div>
@@ -330,50 +330,48 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00007">7</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = t.<a class="code hl_property" href="classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561">id</a>;</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordtype">int</span> uid = t.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty())</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            this.<a class="code hl_function" href="classTeleportManager.html#ab267480a378b0e24eccafec15a973141">Remove</a>(uid);</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_class" href="classTeleportManager_1_1Item.html">TeleportManager.Item</a> item = this.<a class="code hl_variable" href="classTeleportManager.html#a5b066f3b4244e0d563a5ea9cab668715">items</a>.TryGetValue(uid, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (item == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            item = <span class="keyword">new</span> <a class="code hl_class" href="classTeleportManager.html">TeleportManager</a>.<a class="code hl_class" href="classTeleportManager_1_1Item.html">Item</a>();</div>
-<div class="line"><span class="lineno">   20</span>            this.<a class="code hl_variable" href="classTeleportManager.html#a5b066f3b4244e0d563a5ea9cab668715">items</a>.Add(uid, item);</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        item.uidZone = uidZone;</div>
-<div class="line"><span class="lineno">   23</span>        item.id = id;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclassTeleportManager_1_1Item_html"><div class="ttname"><a href="classTeleportManager_1_1Item.html">TeleportManager.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="TeleportManager_8cs_source.html#l00057">TeleportManager.cs:58</a></div></div>
-<div class="ttc" id="aclassTeleportManager_html"><div class="ttname"><a href="classTeleportManager.html">TeleportManager</a></div><div class="ttdef"><b>Definition:</b> <a href="TeleportManager_8cs_source.html#l00005">TeleportManager.cs:6</a></div></div>
-<div class="ttc" id="aclassTeleportManager_html_ab267480a378b0e24eccafec15a973141"><div class="ttname"><a href="classTeleportManager.html#ab267480a378b0e24eccafec15a973141">TeleportManager.Remove</a></div><div class="ttdeci">void Remove(int uidThing)</div><div class="ttdef"><b>Definition:</b> <a href="TeleportManager_8cs_source.html#l00049">TeleportManager.cs:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00018">18</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = t.<a class="code hl_property" href="classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561">id</a>;</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">int</span> uid = t.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty())</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_function" href="classTeleportManager.html#ab267480a378b0e24eccafec15a973141">Remove</a>(uid);</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        Item item = <a class="code hl_variable" href="classTeleportManager.html#afd436227815df090885896ea400c172d">items</a>.TryGetValue(uid);</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (item == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            item = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_variable" href="classTeleportManager.html#afd436227815df090885896ea400c172d">items</a>.Add(uid, item);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        item.uidZone = uidZone;</div>
+<div class="line"><span class="lineno">   34</span>        item.id = id;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassTeleportManager_html_ab267480a378b0e24eccafec15a973141"><div class="ttname"><a href="classTeleportManager.html#ab267480a378b0e24eccafec15a973141">TeleportManager.Remove</a></div><div class="ttdeci">void Remove(int uidThing)</div><div class="ttdef"><b>Definition:</b> <a href="TeleportManager_8cs_source.html#l00060">TeleportManager.cs:60</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitTeleporter_8cs_source.html#l00007">TraitTeleporter.id</a>, <a class="el" href="TeleportManager_8cs_source.html#l00055">items</a>, <a class="el" href="Trait_8cs_source.html#l02862">Trait.owner</a>, <a class="el" href="TeleportManager_8cs_source.html#l00049">Remove()</a>, and <a class="el" href="Card_8cs_source.html#l00080">Card.uid</a>.</p>
+<p class="reference">References <a class="el" href="TraitTeleporter_8cs_source.html#l00008">TraitTeleporter.id</a>, <a class="el" href="TeleportManager_8cs_source.html#l00016">items</a>, <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>, <a class="el" href="TeleportManager_8cs_source.html#l00060">Remove()</a>, and <a class="el" href="Card_8cs_source.html#l00112">Card.uid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00078">TraitTeleporter.OnChangePlaceState()</a>, and <a class="el" href="TraitTeleporter_8cs_source.html#l00058">TraitTeleporter.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00050">TraitTeleporter.OnChangePlaceState()</a>, and <a class="el" href="TraitTeleporter_8cs_source.html#l00029">TraitTeleporter.TrySetAct()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5b066f3b4244e0d563a5ea9cab668715" name="a5b066f3b4244e0d563a5ea9cab668715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b066f3b4244e0d563a5ea9cab668715">&#9670;&#160;</a></span>items</h2>
+<a id="afd436227815df090885896ea400c172d" name="afd436227815df090885896ea400c172d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd436227815df090885896ea400c172d">&#9670;&#160;</a></span>items</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Dictionary&lt;int, <a class="el" href="classTeleportManager_1_1Item.html">TeleportManager.Item</a>&gt; TeleportManager.items = new Dictionary&lt;int, <a class="el" href="classTeleportManager_1_1Item.html">TeleportManager.Item</a>&gt;()</td>
+          <td class="memname">Dictionary&lt;int, <a class="el" href="classTeleportManager_1_1Item.html">Item</a>&gt; TeleportManager.items = new Dictionary&lt;int, <a class="el" href="classTeleportManager_1_1Item.html">Item</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00055">55</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TeleportManager_8cs_source.html#l00016">16</a> of file <a class="el" href="TeleportManager_8cs_source.html">TeleportManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TeleportManager_8cs_source.html#l00026">GetTeleportZone()</a>, <a class="el" href="TeleportManager_8cs_source.html#l00049">Remove()</a>, and <a class="el" href="TeleportManager_8cs_source.html#l00007">SetID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TeleportManager_8cs_source.html#l00037">GetTeleportZone()</a>, <a class="el" href="TeleportManager_8cs_source.html#l00060">Remove()</a>, and <a class="el" href="TeleportManager_8cs_source.html#l00018">SetID()</a>.</p>
 
 </div>
 </div>

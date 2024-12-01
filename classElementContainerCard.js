@@ -1,7 +1,6 @@
 var classElementContainerCard =
 [
     [ "CheckSkillActions", "classElementContainerCard.html#a42ffa065ca7f5347454e3be4cd0bfdec", null ],
-    [ "g__TryLearn", "classElementContainerCard.html#ae8ef0e4769bfed6d9cee67e6a7bf68a7", null ],
     [ "OnLearn", "classElementContainerCard.html#a1c7473149d1d7583df22ae84dd43e2b7", null ],
     [ "OnLevelDown", "classElementContainerCard.html#a9e4379aa965e7bbd297e5a26e42763b1", null ],
     [ "OnLevelUp", "classElementContainerCard.html#af719f781736442ca03eb1f2cafc43a88", null ],

@@ -17,7 +17,7 @@ var classAM__Build =
     [ "OnDeactivate", "classAM__Build.html#a86fd13bd62d79e7d45fc36891445082d", null ],
     [ "OnFinishProcessTiles", "classAM__Build.html#a35d57f78137870c9926d8b0721b314f7", null ],
     [ "OnProcessTiles", "classAM__Build.html#a6767365d64c27d5bf3eeb6ae738132fe", null ],
-    [ "OnRenderTile", "classAM__Build.html#a7becaee757644ee8c6742ecdf4518ace", null ],
+    [ "OnRenderTile", "classAM__Build.html#ace97ab62533bcaf10d8afcbc7997b01d", null ],
     [ "OnUpdateCursor", "classAM__Build.html#aaa8d5cf54f2c15a176dfb14abaf6215f", null ],
     [ "RotateUnderMouse", "classAM__Build.html#a23ac87752d216d5f859f59ac9bfe5433", null ],
     [ "SetAltitude", "classAM__Build.html#ae9482c01217f5df0380ca1d5903fe0e7", null ],

@@ -2,7 +2,6 @@ var classSourceMaterial_1_1Row =
 [
     [ "AddBlood", "classSourceMaterial_1_1Row.html#a623533070e598eed67711199c3242f76", null ],
     [ "CreateByProduct", "classSourceMaterial_1_1Row.html#a1bd0b27861dbf3e42f4e5a0fa4eb8612", null ],
-    [ "g__C", "classSourceMaterial_1_1Row.html#a7c78dd0d06a2d5d2c03bad19672b5099", null ],
     [ "GetColor", "classSourceMaterial_1_1Row.html#a43acca098bfe9ac49218b25ecc38ece7", null ],
     [ "GetSoundCraft", "classSourceMaterial_1_1Row.html#a54d2d7dfd72dd05ffe0797fe375b5902", null ],
     [ "GetSoundDead", "classSourceMaterial_1_1Row.html#a9fbf2c460bf8b2cee4d0709c31109774", null ],

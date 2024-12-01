@@ -9,8 +9,8 @@ var classContentPopulation =
     [ "groupQueryType", "classContentPopulation.html#a2292d70568f1eb95a98801cef82e1838", null ],
     [ "Instance", "classContentPopulation.html#a6e199cae607b358d8bc4e2d64420e979", null ],
     [ "list", "classContentPopulation.html#a3e7f7ca78c56019616d7d6ca881b2226", null ],
-    [ "onSort", "classContentPopulation.html#a3ea95f63a0a936e62a3cd6a75facbc13", null ],
+    [ "onSort", "classContentPopulation.html#ab716b9fba82f597b203ba0ecc0aabb62", null ],
     [ "queryTarget", "classContentPopulation.html#ab763f8f79e730921459263d187bce74d", null ],
     [ "queryType", "classContentPopulation.html#acd18cd17be7ae332de8bced3a41b8346", null ],
-    [ "topics", "classContentPopulation.html#a8a5b4c8d0e25440f9a19ecd45ed0a775", null ]
+    [ "topics", "classContentPopulation.html#aaebebf69ac9b04be60f645fa0c72e712", null ]
 ];

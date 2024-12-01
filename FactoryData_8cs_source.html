@@ -92,35 +92,34 @@ $(document).ready(function(){initNavTree('FactoryData_8cs_source.html',''); init
   <div class="headertitle"><div class="title">FactoryData.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="FactoryData_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Newtonsoft.Json;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classFactoryData.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classFactoryData.html">FactoryData</a> : <a class="code hl_class" href="classEClass.html">EClass</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classFactoryData.html#ac9308913e2e00dc4d532736b32b97c24">    6</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classFactoryData.html#ac9308913e2e00dc4d532736b32b97c24">OnAddedToMap</a>()</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    }</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classFactoryData.html#aa6b3fcd67ae9e54ff04126bc6b34be3e">   10</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classFactoryData.html#aa6b3fcd67ae9e54ff04126bc6b34be3e">OnRemoveFromMap</a>()</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_class" href="classTaskCraft.html">TaskCraft</a>[] array = this.<a class="code hl_variable" href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">queues</a>.items.ToArray();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            array[i].<a class="code hl_function" href="classTask.html#a19951ce1e899cafbd2eef6955ab4be4e">Destroy</a>();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    [JsonProperty]</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">   20</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classQueueList.html">QueueList&lt;TaskCraft&gt;</a> <a class="code hl_variable" href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">queues</a> = <span class="keyword">new</span> <a class="code hl_class" href="classQueueList.html">QueueList&lt;TaskCraft&gt;</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassFactoryData_html"><div class="ttname"><a href="classFactoryData.html">FactoryData</a></div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00004">FactoryData.cs:5</a></div></div>
-<div class="ttc" id="aclassFactoryData_html_a6a9235d2153a7018b7b943cb2d969f56"><div class="ttname"><a href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">FactoryData.queues</a></div><div class="ttdeci">QueueList&lt; TaskCraft &gt; queues</div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00020">FactoryData.cs:20</a></div></div>
-<div class="ttc" id="aclassFactoryData_html_aa6b3fcd67ae9e54ff04126bc6b34be3e"><div class="ttname"><a href="classFactoryData.html#aa6b3fcd67ae9e54ff04126bc6b34be3e">FactoryData.OnRemoveFromMap</a></div><div class="ttdeci">void OnRemoveFromMap()</div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00010">FactoryData.cs:10</a></div></div>
-<div class="ttc" id="aclassFactoryData_html_ac9308913e2e00dc4d532736b32b97c24"><div class="ttname"><a href="classFactoryData.html#ac9308913e2e00dc4d532736b32b97c24">FactoryData.OnAddedToMap</a></div><div class="ttdeci">void OnAddedToMap()</div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00006">FactoryData.cs:6</a></div></div>
-<div class="ttc" id="aclassQueueList_html"><div class="ttname"><a href="classQueueList.html">QueueList</a></div><div class="ttdef"><b>Definition:</b> <a href="QueueList_8cs_source.html#l00003">QueueList.cs:4</a></div></div>
-<div class="ttc" id="aclassTaskCraft_html"><div class="ttname"><a href="classTaskCraft.html">TaskCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskCraft_8cs_source.html#l00005">TaskCraft.cs:6</a></div></div>
-<div class="ttc" id="aclassTask_html_a19951ce1e899cafbd2eef6955ab4be4e"><div class="ttname"><a href="classTask.html#a19951ce1e899cafbd2eef6955ab4be4e">Task.Destroy</a></div><div class="ttdeci">AIAct.Status Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00029">Task.cs:29</a></div></div>
+<a href="FactoryData_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classFactoryData.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classFactoryData.html">FactoryData</a> : <a class="code hl_class" href="classEClass.html">EClass</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    [JsonProperty]</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">    6</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classQueueList.html">QueueList&lt;TaskCraft&gt;</a> <a class="code hl_variable" href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">queues</a> = <span class="keyword">new</span> <a class="code hl_class" href="classQueueList.html">QueueList&lt;TaskCraft&gt;</a>();</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classFactoryData.html#ac9308913e2e00dc4d532736b32b97c24">    8</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classFactoryData.html#ac9308913e2e00dc4d532736b32b97c24">OnAddedToMap</a>()</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classFactoryData.html#aa6b3fcd67ae9e54ff04126bc6b34be3e">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classFactoryData.html#aa6b3fcd67ae9e54ff04126bc6b34be3e">OnRemoveFromMap</a>()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="classTaskCraft.html">TaskCraft</a>[] array = <a class="code hl_variable" href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">queues</a>.items.ToArray();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            array[i].<a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassFactoryData_html"><div class="ttname"><a href="classFactoryData.html">FactoryData</a></div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00003">FactoryData.cs:4</a></div></div>
+<div class="ttc" id="aclassFactoryData_html_a6a9235d2153a7018b7b943cb2d969f56"><div class="ttname"><a href="classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56">FactoryData.queues</a></div><div class="ttdeci">QueueList&lt; TaskCraft &gt; queues</div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00006">FactoryData.cs:6</a></div></div>
+<div class="ttc" id="aclassFactoryData_html_aa6b3fcd67ae9e54ff04126bc6b34be3e"><div class="ttname"><a href="classFactoryData.html#aa6b3fcd67ae9e54ff04126bc6b34be3e">FactoryData.OnRemoveFromMap</a></div><div class="ttdeci">void OnRemoveFromMap()</div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00012">FactoryData.cs:12</a></div></div>
+<div class="ttc" id="aclassFactoryData_html_ac9308913e2e00dc4d532736b32b97c24"><div class="ttname"><a href="classFactoryData.html#ac9308913e2e00dc4d532736b32b97c24">FactoryData.OnAddedToMap</a></div><div class="ttdeci">void OnAddedToMap()</div><div class="ttdef"><b>Definition:</b> <a href="FactoryData_8cs_source.html#l00008">FactoryData.cs:8</a></div></div>
+<div class="ttc" id="aclassQueueList_html"><div class="ttname"><a href="classQueueList.html">QueueList</a></div><div class="ttdef"><b>Definition:</b> <a href="QueueList_8cs_source.html#l00001">QueueList.cs:2</a></div></div>
+<div class="ttc" id="aclassTaskCraft_html"><div class="ttname"><a href="classTaskCraft.html">TaskCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskCraft_8cs_source.html#l00004">TaskCraft.cs:5</a></div></div>
+<div class="ttc" id="aclassTask_html_aaed6d0dd18b3060661a230cf0abb77b9"><div class="ttname"><a href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Task.Destroy</a></div><div class="ttdeci">Status Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00031">Task.cs:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

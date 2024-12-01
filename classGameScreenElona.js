@@ -3,7 +3,7 @@ var classGameScreenElona =
     [ "OnActivate", "classGameScreenElona.html#a74404ed62d6c7d461add72044df180b6", null ],
     [ "OnChangeHour", "classGameScreenElona.html#aead7fe8000698fddac7904765dcc874b", null ],
     [ "OnDeactivate", "classGameScreenElona.html#a9c22f3b53b91a7448ac24ebf60bd0058", null ],
-    [ "RefreshPosition", "classGameScreenElona.html#aba680824ba08269e9a9e92fbf5578e52", null ],
+    [ "RefreshPosition", "classGameScreenElona.html#a7df891f73e6c06a1062ea5831fb85076", null ],
     [ "RefreshWeather", "classGameScreenElona.html#aba0125cfc7824f989400bdf0bc62d7b5", null ],
     [ "SetUnitSize", "classGameScreenElona.html#a3410a10bdc80308d1e2c43db7afb1a3f", null ],
     [ "actor", "classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18", null ],

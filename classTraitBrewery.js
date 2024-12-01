@@ -12,5 +12,5 @@ var classTraitBrewery =
     [ "DecaySpeedChild", "classTraitBrewery.html#a1f4d169767688213b54380c35d8407e1", null ],
     [ "idMsg", "classTraitBrewery.html#ad6cfde6d0eda91cfdca50e56ac36a2c8", null ],
     [ "IsFood", "classTraitBrewery.html#af6db96e2d5003643fc59104d280777c1", null ],
-    [ "type", "classTraitBrewery.html#a4955d48a50b77c78456668a45e1d3c07", null ]
+    [ "type", "classTraitBrewery.html#ad0f183c75b466f63ce9906a5ea1ada3a", null ]
 ];

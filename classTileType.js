@@ -125,7 +125,7 @@ var classTileType =
     [ "MaxAltitude", "classTileType.html#a410d43ab16b39ccfd775a8a6d34a159f", null ],
     [ "MinAltitude", "classTileType.html#ac089a03a968e551337d767ef3601a101", null ],
     [ "MountHeight", "classTileType.html#afe75b3888531e2f615334e12885f2bc4", null ],
-    [ "Ramp", "classTileType.html#a0deaf5d1d98480700f49920725b24d72", null ],
+    [ "Ramp", "classTileType.html#a69b1a754489151f938de54f93565411a", null ],
     [ "RemoveOnFloorChange", "classTileType.html#ab16b52a1cc2dddf241ab7d3ab236b944", null ],
     [ "RenderWaterBlock", "classTileType.html#ad8c331fb8f13f7fa4d312d1d21f517e2", null ],
     [ "RepeatBlock", "classTileType.html#afdc6f3baa0796e0f012bc8f3d9da2f0c", null ],

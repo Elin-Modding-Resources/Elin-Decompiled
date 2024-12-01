@@ -12,7 +12,7 @@ var classAIWork =
     [ "GetWork", "classAIWork.html#af2c8f02ecc6f98c9c06d8a23e9b42fd9", null ],
     [ "OnGetSession", "classAIWork.html#ae4fdd30e6cf2898b569b7368c73f3381", null ],
     [ "OnPerformWork", "classAIWork.html#aab86de3fdb3e8d90740b9236a0609b3e", null ],
-    [ "Run", "classAIWork.html#aed9c1ce22a337d40d5149b3e3f7de990", null ],
+    [ "Run", "classAIWork.html#a43d3863762df78c231e7ff70df9a5035", null ],
     [ "SetDestination", "classAIWork.html#a751ce6464ca3848fa1ba0219447d30db", null ],
     [ "SetDestPos", "classAIWork.html#af05e0263212a4e23ac602ba937e34b42", null ],
     [ "destArea", "classAIWork.html#ae378dd10487b1b4fb9779cbcc401fca0", null ],
@@ -22,5 +22,5 @@ var classAIWork =
     [ "destDist", "classAIWork.html#ae61bcc638bcf82cdce2bfe6d2b70ed87", null ],
     [ "MaxRestart", "classAIWork.html#a45bc2734b93e902595d007bcd474e58d", null ],
     [ "Name", "classAIWork.html#a3b976b4f8261696f0b29acc0b1159f05", null ],
-    [ "WorkType", "classAIWork.html#a4d4ef9bee04228e1d42c83e9ee5bc7c2", null ]
+    [ "WorkType", "classAIWork.html#a8e19406fdd2fe691eef677b8132a6f96", null ]
 ];

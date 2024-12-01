@@ -92,28 +92,25 @@ $(document).ready(function(){initNavTree('TimeDebuff_8cs_source.html',''); initR
   <div class="headertitle"><div class="title">TimeDebuff.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TimeDebuff_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTimeDebuff.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTimeDebuff.html">TimeDebuff</a> : <a class="code hl_class" href="classBaseDebuff.html">BaseDebuff</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca">TimeBased</a></div>
+<a href="TimeDebuff_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTimeDebuff.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTimeDebuff.html">TimeDebuff</a> : <a class="code hl_class" href="classBaseDebuff.html">BaseDebuff</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca">TimeBased</a> =&gt; <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43">CanStack</a>(<a class="code hl_class" href="classCondition.html">Condition</a> c)</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classBaseCondition.html#aaaa20d7172c3bd5b1c5f46f3b1d26248">givenByPcParty</a>)</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">return</span> c.givenByPcParty == base.givenByPcParty;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43">CanStack</a>(<a class="code hl_class" href="classCondition.html">Condition</a> c)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> !c.givenByPcParty || c.givenByPcParty == base.givenByPcParty;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
-<div class="ttc" id="aclassBaseDebuff_html"><div class="ttname"><a href="classBaseDebuff.html">BaseDebuff</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00003">BaseDebuff.cs:4</a></div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="ttc" id="aclassBaseCondition_html_aaaa20d7172c3bd5b1c5f46f3b1d26248"><div class="ttname"><a href="classBaseCondition.html#aaaa20d7172c3bd5b1c5f46f3b1d26248">BaseCondition.givenByPcParty</a></div><div class="ttdeci">bool givenByPcParty</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00065">BaseCondition.cs:66</a></div></div>
+<div class="ttc" id="aclassBaseDebuff_html"><div class="ttname"><a href="classBaseDebuff.html">BaseDebuff</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00001">BaseDebuff.cs:2</a></div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
-<div class="ttc" id="aclassTimeDebuff_html"><div class="ttname"><a href="classTimeDebuff.html">TimeDebuff</a></div><div class="ttdef"><b>Definition:</b> <a href="TimeDebuff_8cs_source.html#l00003">TimeDebuff.cs:4</a></div></div>
-<div class="ttc" id="aclassTimeDebuff_html_a56a68cce782c76a86fd3cb52551f9a43"><div class="ttname"><a href="classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43">TimeDebuff.CanStack</a></div><div class="ttdeci">override bool CanStack(Condition c)</div><div class="ttdef"><b>Definition:</b> <a href="TimeDebuff_8cs_source.html#l00013">TimeDebuff.cs:13</a></div></div>
-<div class="ttc" id="aclassTimeDebuff_html_ace6f24fb07b1f3c4db0e583f6528c0ca"><div class="ttname"><a href="classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca">TimeDebuff.TimeBased</a></div><div class="ttdeci">override bool TimeBased</div><div class="ttdef"><b>Definition:</b> <a href="TimeDebuff_8cs_source.html#l00005">TimeDebuff.cs:6</a></div></div>
+<div class="ttc" id="aclassTimeDebuff_html"><div class="ttname"><a href="classTimeDebuff.html">TimeDebuff</a></div><div class="ttdef"><b>Definition:</b> <a href="TimeDebuff_8cs_source.html#l00001">TimeDebuff.cs:2</a></div></div>
+<div class="ttc" id="aclassTimeDebuff_html_a56a68cce782c76a86fd3cb52551f9a43"><div class="ttname"><a href="classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43">TimeDebuff.CanStack</a></div><div class="ttdeci">override bool CanStack(Condition c)</div><div class="ttdef"><b>Definition:</b> <a href="TimeDebuff_8cs_source.html#l00005">TimeDebuff.cs:5</a></div></div>
+<div class="ttc" id="aclassTimeDebuff_html_ace6f24fb07b1f3c4db0e583f6528c0ca"><div class="ttname"><a href="classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca">TimeDebuff.TimeBased</a></div><div class="ttdeci">override bool TimeBased</div><div class="ttdef"><b>Definition:</b> <a href="TimeDebuff_8cs_source.html#l00003">TimeDebuff.cs:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

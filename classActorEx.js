@@ -6,7 +6,7 @@ var classActorEx =
     ] ],
     [ "GetVolume", "classActorEx.html#a737ef801f9c7207db0ce984e0cfa1394", null ],
     [ "Kill", "classActorEx.html#ab86071c915c1191bfe3dea6d6adcc2c9", null ],
-    [ "Refresh", "classActorEx.html#a2ce4b2b27fbfda5e7a5f8474b2003722", null ],
+    [ "Refresh", "classActorEx.html#a098eb9a80c94345150d480f2e712ef7b", null ],
     [ "SetOwner", "classActorEx.html#a08672f80bd657495bf0d3e12c3739c3a", null ],
     [ "alwaysOn", "classActorEx.html#a8a5d9bdef17f4801826272d253f1f555", null ],
     [ "audioSource", "classActorEx.html#a32ef77a07aff66a1be966897f9b82ea6", null ],
@@ -18,5 +18,5 @@ var classActorEx =
     [ "outsideRoomVolume", "classActorEx.html#a69a8c654028ae46ff708a89aa102c654", null ],
     [ "owner", "classActorEx.html#a49e15587e009380fd955612bdebfe3d3", null ],
     [ "randomInterval", "classActorEx.html#a407a78cdee4311686a4bfeb8c6ca3dd0", null ],
-    [ "type", "classActorEx.html#ad6edd582d6d8a739d280036d33ecdaff", null ]
+    [ "type", "classActorEx.html#af0c4a4041f2ade35b1c7b756258e2813", null ]
 ];

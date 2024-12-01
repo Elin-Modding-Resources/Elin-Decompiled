@@ -6,6 +6,6 @@ var classRenderDataLiquid =
     ] ],
     [ "Draw", "classRenderDataLiquid.html#ad622da7147042fb25f92c7ad2e88373c", null ],
     [ "OnValidate", "classRenderDataLiquid.html#a3831e6fde42e3c23b753595b40653de7", null ],
-    [ "effectType", "classRenderDataLiquid.html#af1f50f6ced6d65d26f3178fd421c43c7", null ],
+    [ "effectType", "classRenderDataLiquid.html#a933fa44bae587a8f82542ef99c8f22a3", null ],
     [ "puddleZ", "classRenderDataLiquid.html#addf6fded813cd248bbc8d38cdd02f7be", null ]
 ];

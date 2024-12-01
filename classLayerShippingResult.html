@@ -253,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acd9802822eb3f9fcd22dc9b70e33b28c" name="acd9802822eb3f9fcd22dc9b70e33b28c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd9802822eb3f9fcd22dc9b70e33b28c">&#9670;&#160;</a></span>Awake()</h2>
@@ -278,34 +278,35 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00008">8</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        Rand.SetSeed(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ae12b72a9348adf2fac318a403394f9be">seed</a> + <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.days);</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordtype">int</span> num = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(this.<a class="code hl_variable" href="classLayerShippingResult.html#a3e520474b080bee8accb93b3ba6594c9">spriteBG</a>.Length);</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (num == 1 &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">globalCharas</a>.<a class="code hl_function" href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">Find</a>(<span class="stringliteral">&quot;corgon&quot;</span>) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            num = 0;</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (num == 2 &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">globalCharas</a>.<a class="code hl_function" href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">Find</a>(<span class="stringliteral">&quot;loytel&quot;</span>) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            num = 0;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>        this.imageBG.sprite = this.<a class="code hl_variable" href="classLayerShippingResult.html#a3e520474b080bee8accb93b3ba6594c9">spriteBG</a>[num];</div>
-<div class="line"><span class="lineno">   21</span>        Rand.SetSeed(-1);</div>
-<div class="line"><span class="lineno">   22</span>        base.Awake();</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aclassCardManager_html_a3f0a4c97447028f99e19fbdd321a87d6"><div class="ttname"><a href="classCardManager.html#a3f0a4c97447028f99e19fbdd321a87d6">CardManager.Find</a></div><div class="ttdeci">Chara Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00052">CardManager.cs:52</a></div></div>
-<div class="ttc" id="aclassCardManager_html_a6d6d588d3c038e8919951bccaa2263d6"><div class="ttname"><a href="classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6">CardManager.globalCharas</a></div><div class="ttdeci">CardManager.GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00065">CardManager.cs:65</a></div></div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00030">ELayer.cs:31</a></div></div>
-<div class="ttc" id="aclassELayer_html_a49dc842a09537c6fd521b164384e1792"><div class="ttname"><a href="classELayer.html#a49dc842a09537c6fd521b164384e1792">ELayer.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00158">ELayer.cs:158</a></div></div>
-<div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00014">ELayer.cs:15</a></div></div>
-<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00790">Game.cs:790</a></div></div>
-<div class="ttc" id="aclassGame_html_ae12b72a9348adf2fac318a403394f9be"><div class="ttname"><a href="classGame.html#ae12b72a9348adf2fac318a403394f9be">Game.seed</a></div><div class="ttdeci">int seed</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00832">Game.cs:832</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a3e520474b080bee8accb93b3ba6594c9"><div class="ttname"><a href="classLayerShippingResult.html#a3e520474b080bee8accb93b3ba6594c9">LayerShippingResult.spriteBG</a></div><div class="ttdeci">Sprite[] spriteBG</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00192">LayerShippingResult.cs:192</a></div></div>
-<div class="ttc" id="aclassPlayer_html_af7438d4a0a6aff5152f3122c9fc66d06"><div class="ttname"><a href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">Player.stats</a></div><div class="ttdeci">Player.Stats stats</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01455">Player.cs:1455</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00053">53</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        Rand.SetSeed(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ae12b72a9348adf2fac318a403394f9be">seed</a> + <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4ca2d156d1ef1691367fa167d4bbadf9">stats</a>.<a class="code hl_variable" href="classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde">days</a>);</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">int</span> num = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_function" href="classELayer.html#a49dc842a09537c6fd521b164384e1792">rnd</a>(<a class="code hl_variable" href="classLayerShippingResult.html#a3e520474b080bee8accb93b3ba6594c9">spriteBG</a>.Length);</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (num == 1 &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.<a class="code hl_function" href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">Find</a>(<span class="stringliteral">&quot;corgon&quot;</span>) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            num = 0;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (num == 2 &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.<a class="code hl_function" href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">Find</a>(<span class="stringliteral">&quot;loytel&quot;</span>) == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            num = 0;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        imageBG.sprite = <a class="code hl_variable" href="classLayerShippingResult.html#a3e520474b080bee8accb93b3ba6594c9">spriteBG</a>[num];</div>
+<div class="line"><span class="lineno">   66</span>        Rand.SetSeed();</div>
+<div class="line"><span class="lineno">   67</span>        base.Awake();</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassCardManager_1_1GlobalCharaList_html_ab5eacf5c9f0cfe2fa9d1f9fdbf74f227"><div class="ttname"><a href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">CardManager.GlobalCharaList.Find</a></div><div class="ttdeci">Chara Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00020">CardManager.cs:20</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a33a9778b2b0c1018c12d90e1b572e221"><div class="ttname"><a href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">CardManager.globalCharas</a></div><div class="ttdeci">GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00046">CardManager.cs:46</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00013">ELayer.cs:13</a></div></div>
+<div class="ttc" id="aclassELayer_html_a49dc842a09537c6fd521b164384e1792"><div class="ttname"><a href="classELayer.html#a49dc842a09537c6fd521b164384e1792">ELayer.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00049">ELayer.cs:49</a></div></div>
+<div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00009">ELayer.cs:9</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00152">Game.cs:152</a></div></div>
+<div class="ttc" id="aclassGame_html_ae12b72a9348adf2fac318a403394f9be"><div class="ttname"><a href="classGame.html#ae12b72a9348adf2fac318a403394f9be">Game.seed</a></div><div class="ttdeci">int seed</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00194">Game.cs:194</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a3e520474b080bee8accb93b3ba6594c9"><div class="ttname"><a href="classLayerShippingResult.html#a3e520474b080bee8accb93b3ba6594c9">LayerShippingResult.spriteBG</a></div><div class="ttdeci">Sprite[] spriteBG</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00049">LayerShippingResult.cs:49</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Stats_html_ad7fe6db5d3ff138870b89de937470dde"><div class="ttname"><a href="classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde">Player.Stats.days</a></div><div class="ttdeci">int days</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00068">Player.cs:68</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a4ca2d156d1ef1691367fa167d4bbadf9"><div class="ttname"><a href="classPlayer.html#a4ca2d156d1ef1691367fa167d4bbadf9">Player.stats</a></div><div class="ttdeci">Stats stats</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00768">Player.cs:768</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Game_8cs_source.html#l00790">Game.cards</a>, <a class="el" href="CardManager_8cs_source.html#l00052">CardManager.Find()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="CardManager_8cs_source.html#l00065">CardManager.globalCharas</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="ELayer_8cs_source.html#l00158">ELayer.rnd()</a>, <a class="el" href="Game_8cs_source.html#l00832">Game.seed</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00192">spriteBG</a>, and <a class="el" href="Player_8cs_source.html#l01455">Player.stats</a>.</p>
+<p class="reference">References <a class="el" href="Game_8cs_source.html#l00152">Game.cards</a>, <a class="el" href="Player_8cs_source.html#l00068">Player.Stats.days</a>, <a class="el" href="CardManager_8cs_source.html#l00020">CardManager.GlobalCharaList.Find()</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="CardManager_8cs_source.html#l00046">CardManager.globalCharas</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="ELayer_8cs_source.html#l00049">ELayer.rnd()</a>, <a class="el" href="Game_8cs_source.html#l00194">Game.seed</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00049">spriteBG</a>, and <a class="el" href="Player_8cs_source.html#l00768">Player.stats</a>.</p>
 
 </div>
 </div>
@@ -332,89 +333,94 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00041">41</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> == 0)</div>
-<div class="line"><span class="lineno">   44</span>        {</div>
-<div class="line"><span class="lineno">   45</span>            this.lastBonus = 0;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a>)</div>
-<div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> != this.<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>)</div>
-<div class="line"><span class="lineno">   50</span>            {</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">foreach</span> (DOTweenAnimation dotweenAnimation <span class="keywordflow">in</span> base.GetComponentsInChildren&lt;DOTweenAnimation&gt;())</div>
-<div class="line"><span class="lineno">   52</span>                {</div>
-<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">if</span> (dotweenAnimation.tween != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   54</span>                    {</div>
-<div class="line"><span class="lineno">   55</span>                        dotweenAnimation.tween.Kill(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   56</span>                    }</div>
-<div class="line"><span class="lineno">   57</span>                }</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>            this.update = this.<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>;</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> branch = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">uidZone</a>) ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>).branch;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">float</span> num = (float)this.<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> / (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">int</span> num2 = this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_function" href="classShippingResult.html#add91f6fe9a7e710f9c7e80ad7383b2c0">GetIncome</a>();</div>
-<div class="line"><span class="lineno">   64</span>        num2 = (int)((<span class="keywordtype">float</span>)num2 * num);</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">int</span> a = this.result.total + num2;</div>
-<div class="line"><span class="lineno">   66</span>        this.textIncome.text = Lang._currency(num2, <span class="keyword">true</span>, 14);</div>
-<div class="line"><span class="lineno">   67</span>        this.textIncomeTotal.text = Lang._currency(a, <span class="keyword">true</span>, 14);</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">int</span> shippingBonus = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.GetShippingBonus(this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a9d59ac7573476926a27c4101b6abab2d">total</a>);</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> shippingBonus2 = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.GetShippingBonus(a);</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">int</span> lastShippingExp = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.lastShippingExp;</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">int</span> lastShippingExpMax = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#af7438d4a0a6aff5152f3122c9fc66d06">stats</a>.lastShippingExpMax;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordtype">int</span> hearthLv = this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#affa6c7dd98f79ab8160badb8defe0876">hearthLv</a>;</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> num3 = (int)((<span class="keywordtype">float</span>)this.result.hearthExpGained * num);</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> nextExp = branch.<a class="code hl_function" href="classFactionBranch.html#a8ee5986d0049c14300f07ca58f9931c4">GetNextExp</a>(hearthLv);</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">int</span> num4 = this.result.hearthExp + num3;</div>
-<div class="line"><span class="lineno">   76</span>        this.gaugeGold.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Mathf.Min(300, 300 * lastShippingExp / lastShippingExpMax), 50f);</div>
-<div class="line"><span class="lineno">   77</span>        this.gaugeHearth.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Mathf.Min(300, 300 * num4 / nextExp), 50f);</div>
-<div class="line"><span class="lineno">   78</span>        this.gaugeDebt.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(Mathf.Min(300f, 300f * ((<span class="keywordtype">float</span>)<span class="keyword">this</span>.result.debt / 20000000f)), 50f);</div>
-<div class="line"><span class="lineno">   79</span>        this.textGold.text = <span class="stringliteral">&quot;shipping_nextGold&quot;</span>.lang(lastShippingExp.ToFormat(), lastShippingExpMax.ToFormat(), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">int</span> num5 = shippingBonus2 - shippingBonus;</div>
-<div class="line"><span class="lineno">   81</span>        this.textGold2.text = ((num5 == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;+&quot;</span> + num5.ToString()));</div>
-<div class="line"><span class="lineno">   82</span>        this.textHearth.text = <span class="stringliteral">&quot;shipping_hearth&quot;</span>.lang(hearthLv.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (100f * (float)num4 / (<span class="keywordtype">float</span>)nextExp).ToString(<span class="stringliteral">&quot;F1&quot;</span>), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordtype">float</span> num6 = 100f * (float)num3 / (<span class="keywordtype">float</span>)nextExp;</div>
-<div class="line"><span class="lineno">   84</span>        this.textHearth2.text = ((num6 == 0f) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;+&quot;</span> + num6.ToString(<span class="stringliteral">&quot;F1&quot;</span>) + <span class="stringliteral">&quot;%&quot;</span>));</div>
-<div class="line"><span class="lineno">   85</span>        this.textDebt.text = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.IsStarted&lt;<a class="code hl_class" href="classQuestDebt.html">QuestDebt</a>&gt;() ? (Lang._currency(<span class="keyword">this</span>.result.debt, <span class="keyword">true</span>, 14) ?? <span class="stringliteral">&quot;&quot;</span>) : <span class="stringliteral">&quot;???&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#a8b840e85d8bd3c88c5e1b73b791a6dfb">gaugeDebt</a>.SetActive(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.IsStarted&lt;<a class="code hl_class" href="classQuestDebt.html">QuestDebt</a>&gt;());</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (shippingBonus2 - shippingBonus != this.<a class="code hl_variable" href="classLayerShippingResult.html#ae9b784f0a97254c3c2647f2ec0c4a242">lastBonus</a>)</div>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00085">85</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> == 0)</div>
 <div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            this.lastBonus = shippingBonus2 - shippingBonus;</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a>)</div>
-<div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                SE.Play(<span class="stringliteral">&quot;ore_drop&quot;</span>);</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a>++;</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a> &amp;&amp; this.<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> &gt; this.<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>)</div>
-<div class="line"><span class="lineno">   97</span>        {</div>
-<div class="line"><span class="lineno">   98</span>            SE.Play(<span class="stringliteral">&quot;regi&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span>            this.showEffect = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="ttc" id="aclassChara_html_aadd3929ed87179d19119d41182f92afc"><div class="ttname"><a href="classChara.html#aadd3929ed87179d19119d41182f92afc">Chara.homeZone</a></div><div class="ttdeci">Zone homeZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00068">Chara.cs:69</a></div></div>
-<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00038">ELayer.cs:39</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html"><div class="ttname"><a href="classFactionBranch.html">FactionBranch</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00008">FactionBranch.cs:9</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_a8ee5986d0049c14300f07ca58f9931c4"><div class="ttname"><a href="classFactionBranch.html#a8ee5986d0049c14300f07ca58f9931c4">FactionBranch.GetNextExp</a></div><div class="ttdeci">int GetNextExp(int _lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00010">FactionBranch.cs:10</a></div></div>
-<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00787">Game.cs:787</a></div></div>
-<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a22ed2bcf7f9edb09e90fd5e25395823a"><div class="ttname"><a href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">LayerShippingResult.showEffect</a></div><div class="ttdeci">bool showEffect</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00182">LayerShippingResult.cs:182</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a300079a3e07409cb0a2e416f2ab465ab"><div class="ttname"><a href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">LayerShippingResult.update</a></div><div class="ttdeci">int update</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00186">LayerShippingResult.cs:186</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a43d33d69c3bbde560fbeffd8ecba9899"><div class="ttname"><a href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">LayerShippingResult.result</a></div><div class="ttdeci">ShippingResult result</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00190">LayerShippingResult.cs:190</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a8b840e85d8bd3c88c5e1b73b791a6dfb"><div class="ttname"><a href="classLayerShippingResult.html#a8b840e85d8bd3c88c5e1b73b791a6dfb">LayerShippingResult.gaugeDebt</a></div><div class="ttdeci">Image gaugeDebt</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00160">LayerShippingResult.cs:160</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a9135839a57cdcf1936c3fa999e881acd"><div class="ttname"><a href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">LayerShippingResult.maxUpdate</a></div><div class="ttdeci">int maxUpdate</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00188">LayerShippingResult.cs:188</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_ae9b784f0a97254c3c2647f2ec0c4a242"><div class="ttname"><a href="classLayerShippingResult.html#ae9b784f0a97254c3c2647f2ec0c4a242">LayerShippingResult.lastBonus</a></div><div class="ttdeci">int lastBonus</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00194">LayerShippingResult.cs:194</a></div></div>
-<div class="ttc" id="aclassQuestDebt_html"><div class="ttname"><a href="classQuestDebt.html">QuestDebt</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDebt_8cs_source.html#l00004">QuestDebt.cs:5</a></div></div>
-<div class="ttc" id="aclassShippingResult_html_a532678167d95ced5bbcf28577564fc2d"><div class="ttname"><a href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">ShippingResult.uidZone</a></div><div class="ttdeci">int uidZone</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00031">ShippingResult.cs:32</a></div></div>
-<div class="ttc" id="aclassShippingResult_html_a9d59ac7573476926a27c4101b6abab2d"><div class="ttname"><a href="classShippingResult.html#a9d59ac7573476926a27c4101b6abab2d">ShippingResult.total</a></div><div class="ttdeci">int total</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00007">ShippingResult.cs:8</a></div></div>
-<div class="ttc" id="aclassShippingResult_html_add91f6fe9a7e710f9c7e80ad7383b2c0"><div class="ttname"><a href="classShippingResult.html#add91f6fe9a7e710f9c7e80ad7383b2c0">ShippingResult.GetIncome</a></div><div class="ttdeci">int GetIncome()</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00091">ShippingResult.cs:91</a></div></div>
-<div class="ttc" id="aclassShippingResult_html_affa6c7dd98f79ab8160badb8defe0876"><div class="ttname"><a href="classShippingResult.html#affa6c7dd98f79ab8160badb8defe0876">ShippingResult.hearthLv</a></div><div class="ttdeci">int hearthLv</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00043">ShippingResult.cs:44</a></div></div>
-<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00046">SpatialManager.cs:46</a></div></div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_variable" href="classLayerShippingResult.html#ae9b784f0a97254c3c2647f2ec0c4a242">lastBonus</a> = 0;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a>)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> != <a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                DOTweenAnimation[] componentsInChildren = GetComponentsInChildren&lt;DOTweenAnimation&gt;();</div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">foreach</span> (DOTweenAnimation dOTweenAnimation <span class="keywordflow">in</span> componentsInChildren)</div>
+<div class="line"><span class="lineno">   97</span>                {</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">if</span> (dOTweenAnimation.tween != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   99</span>                    {</div>
+<div class="line"><span class="lineno">  100</span>                        dOTweenAnimation.tween.Kill(complete: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  101</span>                    }</div>
+<div class="line"><span class="lineno">  102</span>                }</div>
+<div class="line"><span class="lineno">  103</span>            }</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> = <a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> branch = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">uidZone</a>) ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>).branch;</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordtype">float</span> num = (float)<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> / (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>;</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">int</span> income = <a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_function" href="classShippingResult.html#add91f6fe9a7e710f9c7e80ad7383b2c0">GetIncome</a>();</div>
+<div class="line"><span class="lineno">  109</span>        income = (int)((<span class="keywordtype">float</span>)income * num);</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">int</span> a = result.total + income;</div>
+<div class="line"><span class="lineno">  111</span>        textIncome.text = Lang._currency(income, showUnit: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  112</span>        textIncomeTotal.text = Lang._currency(a, showUnit: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">int</span> shippingBonus = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4ca2d156d1ef1691367fa167d4bbadf9">stats</a>.<a class="code hl_function" href="classPlayer_1_1Stats.html#aae3232260dc1866f38e3967f267cb9e2">GetShippingBonus</a>(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a9d59ac7573476926a27c4101b6abab2d">total</a>);</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> shippingBonus2 = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4ca2d156d1ef1691367fa167d4bbadf9">stats</a>.<a class="code hl_function" href="classPlayer_1_1Stats.html#aae3232260dc1866f38e3967f267cb9e2">GetShippingBonus</a>(a);</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">int</span> lastShippingExp = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4ca2d156d1ef1691367fa167d4bbadf9">stats</a>.<a class="code hl_variable" href="classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0">lastShippingExp</a>;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">int</span> lastShippingExpMax = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4ca2d156d1ef1691367fa167d4bbadf9">stats</a>.<a class="code hl_variable" href="classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007">lastShippingExpMax</a>;</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">int</span> hearthLv = <a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#affa6c7dd98f79ab8160badb8defe0876">hearthLv</a>;</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span> num2 = (int)((<span class="keywordtype">float</span>)result.hearthExpGained * num);</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">int</span> nextExp = branch.<a class="code hl_function" href="classFactionBranch.html#a8ee5986d0049c14300f07ca58f9931c4">GetNextExp</a>(hearthLv);</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">int</span> num3 = result.hearthExp + num2;</div>
+<div class="line"><span class="lineno">  121</span>        gaugeGold.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(Mathf.Min(300, 300 * lastShippingExp / lastShippingExpMax), 50f);</div>
+<div class="line"><span class="lineno">  122</span>        gaugeHearth.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(Mathf.Min(300, 300 * num3 / nextExp), 50f);</div>
+<div class="line"><span class="lineno">  123</span>        gaugeDebt.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(Mathf.Min(300f, 300f * ((<span class="keywordtype">float</span>)<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a0438bfea753857c49975eef6e8c514f0">debt</a> / 20000000f)), 50f);</div>
+<div class="line"><span class="lineno">  124</span>        textGold.text = <span class="stringliteral">&quot;shipping_nextGold&quot;</span>.lang(lastShippingExp.ToFormat(), lastShippingExpMax.ToFormat());</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">int</span> num4 = shippingBonus2 - shippingBonus;</div>
+<div class="line"><span class="lineno">  126</span>        textGold2.text = ((num4 == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;+&quot;</span> + num4));</div>
+<div class="line"><span class="lineno">  127</span>        textHearth.text = <span class="stringliteral">&quot;shipping_hearth&quot;</span>.lang(hearthLv.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, (100f * (float)num3 / (<span class="keywordtype">float</span>)nextExp).ToString(<span class="stringliteral">&quot;F1&quot;</span>));</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">float</span> num5 = 100f * (float)num2 / (<span class="keywordtype">float</span>)nextExp;</div>
+<div class="line"><span class="lineno">  129</span>        textHearth2.text = ((num5 == 0f) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;+&quot;</span> + num5.ToString(<span class="stringliteral">&quot;F1&quot;</span>) + <span class="stringliteral">&quot;%&quot;</span>));</div>
+<div class="line"><span class="lineno">  130</span>        textDebt.text = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.IsStarted&lt;<a class="code hl_class" href="classQuestDebt.html">QuestDebt</a>&gt;() ? (Lang._currency(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a0438bfea753857c49975eef6e8c514f0">debt</a>, showUnit: <span class="keyword">true</span>) ?? <span class="stringliteral">&quot;&quot;</span>) : <span class="stringliteral">&quot;???&quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a8b840e85d8bd3c88c5e1b73b791a6dfb">gaugeDebt</a>.SetActive(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.IsStarted&lt;<a class="code hl_class" href="classQuestDebt.html">QuestDebt</a>&gt;());</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (shippingBonus2 - shippingBonus != <a class="code hl_variable" href="classLayerShippingResult.html#ae9b784f0a97254c3c2647f2ec0c4a242">lastBonus</a>)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <a class="code hl_variable" href="classLayerShippingResult.html#ae9b784f0a97254c3c2647f2ec0c4a242">lastBonus</a> = shippingBonus2 - shippingBonus;</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a>)</div>
+<div class="line"><span class="lineno">  136</span>            {</div>
+<div class="line"><span class="lineno">  137</span>                SE.Play(<span class="stringliteral">&quot;ore_drop&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a>++;</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a> &amp;&amp; <a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> &gt; <a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            SE.Play(<span class="stringliteral">&quot;regi&quot;</span>);</div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="ttc" id="aclassChara_html_aadd3929ed87179d19119d41182f92afc"><div class="ttname"><a href="classChara.html#aadd3929ed87179d19119d41182f92afc">Chara.homeZone</a></div><div class="ttdeci">Zone homeZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00251">Chara.cs:252</a></div></div>
+<div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00015">ELayer.cs:15</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html"><div class="ttname"><a href="classFactionBranch.html">FactionBranch</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00007">FactionBranch.cs:8</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a8ee5986d0049c14300f07ca58f9931c4"><div class="ttname"><a href="classFactionBranch.html#a8ee5986d0049c14300f07ca58f9931c4">FactionBranch.GetNextExp</a></div><div class="ttdeci">int GetNextExp(int _lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00148">FactionBranch.cs:148</a></div></div>
+<div class="ttc" id="aclassGame_html_a66686ed40b2f75c85ad2a7a84f839c09"><div class="ttname"><a href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">Game.spatials</a></div><div class="ttdeci">SpatialManager spatials</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00149">Game.cs:149</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00176">Game.cs:176</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a22ed2bcf7f9edb09e90fd5e25395823a"><div class="ttname"><a href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">LayerShippingResult.showEffect</a></div><div class="ttdeci">bool showEffect</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00039">LayerShippingResult.cs:39</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a300079a3e07409cb0a2e416f2ab465ab"><div class="ttname"><a href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">LayerShippingResult.update</a></div><div class="ttdeci">int update</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00043">LayerShippingResult.cs:43</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a43d33d69c3bbde560fbeffd8ecba9899"><div class="ttname"><a href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">LayerShippingResult.result</a></div><div class="ttdeci">ShippingResult result</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00047">LayerShippingResult.cs:47</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a8b840e85d8bd3c88c5e1b73b791a6dfb"><div class="ttname"><a href="classLayerShippingResult.html#a8b840e85d8bd3c88c5e1b73b791a6dfb">LayerShippingResult.gaugeDebt</a></div><div class="ttdeci">Image gaugeDebt</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00017">LayerShippingResult.cs:17</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a9135839a57cdcf1936c3fa999e881acd"><div class="ttname"><a href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">LayerShippingResult.maxUpdate</a></div><div class="ttdeci">int maxUpdate</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00045">LayerShippingResult.cs:45</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_ae9b784f0a97254c3c2647f2ec0c4a242"><div class="ttname"><a href="classLayerShippingResult.html#ae9b784f0a97254c3c2647f2ec0c4a242">LayerShippingResult.lastBonus</a></div><div class="ttdeci">int lastBonus</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00051">LayerShippingResult.cs:51</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Stats_html_a99ddbf0bf5fe620d4c828714d494c6b0"><div class="ttname"><a href="classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0">Player.Stats.lastShippingExp</a></div><div class="ttdeci">int lastShippingExp</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00101">Player.cs:101</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Stats_html_aa2e29d370c284c2fa60ec6b9fdfcc007"><div class="ttname"><a href="classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007">Player.Stats.lastShippingExpMax</a></div><div class="ttdeci">int lastShippingExpMax</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00104">Player.cs:104</a></div></div>
+<div class="ttc" id="aclassPlayer_1_1Stats_html_aae3232260dc1866f38e3967f267cb9e2"><div class="ttname"><a href="classPlayer_1_1Stats.html#aae3232260dc1866f38e3967f267cb9e2">Player.Stats.GetShippingBonus</a></div><div class="ttdeci">int GetShippingBonus(int _a)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00106">Player.cs:106</a></div></div>
+<div class="ttc" id="aclassQuestDebt_html"><div class="ttname"><a href="classQuestDebt.html">QuestDebt</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDebt_8cs_source.html#l00003">QuestDebt.cs:4</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_a0438bfea753857c49975eef6e8c514f0"><div class="ttname"><a href="classShippingResult.html#a0438bfea753857c49975eef6e8c514f0">ShippingResult.debt</a></div><div class="ttdeci">int debt</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00114">ShippingResult.cs:115</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_a532678167d95ced5bbcf28577564fc2d"><div class="ttname"><a href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">ShippingResult.uidZone</a></div><div class="ttdeci">int uidZone</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00066">ShippingResult.cs:67</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_a9d59ac7573476926a27c4101b6abab2d"><div class="ttname"><a href="classShippingResult.html#a9d59ac7573476926a27c4101b6abab2d">ShippingResult.total</a></div><div class="ttdeci">int total</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00042">ShippingResult.cs:43</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_add91f6fe9a7e710f9c7e80ad7383b2c0"><div class="ttname"><a href="classShippingResult.html#add91f6fe9a7e710f9c7e80ad7383b2c0">ShippingResult.GetIncome</a></div><div class="ttdeci">int GetIncome()</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00126">ShippingResult.cs:126</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_affa6c7dd98f79ab8160badb8defe0876"><div class="ttname"><a href="classShippingResult.html#affa6c7dd98f79ab8160badb8defe0876">ShippingResult.hearthLv</a></div><div class="ttdeci">int hearthLv</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00078">ShippingResult.cs:79</a></div></div>
+<div class="ttc" id="aclassSpatialManager_html_a46faf4647f579d4537ef0f5610ebb519"><div class="ttname"><a href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">SpatialManager.Find</a></div><div class="ttdeci">Zone Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialManager_8cs_source.html#l00060">SpatialManager.cs:60</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpatialManager_8cs_source.html#l00046">SpatialManager.Find()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00160">gaugeDebt</a>, <a class="el" href="ShippingResult_8cs_source.html#l00091">ShippingResult.GetIncome()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00010">FactionBranch.GetNextExp()</a>, <a class="el" href="ShippingResult_8cs_source.html#l00044">ShippingResult.hearthLv</a>, <a class="el" href="Chara_8cs_source.html#l00069">Chara.homeZone</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00194">lastBonus</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00188">maxUpdate</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00190">result</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00182">showEffect</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, <a class="el" href="Player_8cs_source.html#l01455">Player.stats</a>, <a class="el" href="ShippingResult_8cs_source.html#l00008">ShippingResult.total</a>, <a class="el" href="ShippingResult_8cs_source.html#l00032">ShippingResult.uidZone</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00186">update</a>.</p>
+<p class="reference">References <a class="el" href="ShippingResult_8cs_source.html#l00115">ShippingResult.debt</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">SpatialManager.Find()</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00017">gaugeDebt</a>, <a class="el" href="ShippingResult_8cs_source.html#l00126">ShippingResult.GetIncome()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00148">FactionBranch.GetNextExp()</a>, <a class="el" href="Player_8cs_source.html#l00106">Player.Stats.GetShippingBonus()</a>, <a class="el" href="ShippingResult_8cs_source.html#l00079">ShippingResult.hearthLv</a>, <a class="el" href="Chara_8cs_source.html#l00252">Chara.homeZone</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00051">lastBonus</a>, <a class="el" href="Player_8cs_source.html#l00101">Player.Stats.lastShippingExp</a>, <a class="el" href="Player_8cs_source.html#l00104">Player.Stats.lastShippingExpMax</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00045">maxUpdate</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.quests</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00047">result</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00039">showEffect</a>, <a class="el" href="Game_8cs_source.html#l00149">Game.spatials</a>, <a class="el" href="Player_8cs_source.html#l00768">Player.stats</a>, <a class="el" href="ShippingResult_8cs_source.html#l00043">ShippingResult.total</a>, <a class="el" href="ShippingResult_8cs_source.html#l00067">ShippingResult.uidZone</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00043">update</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00103">Show()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00032">UpdateRepeating()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00148">Show()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00077">UpdateRepeating()</a>.</p>
 
 </div>
 </div>
@@ -441,20 +447,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00025">25</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
-<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_function" href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>.LastItem&lt;<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>&gt;() ?? <span class="keyword">new</span> <a class="code hl_class" href="classShippingResult.html">ShippingResult</a>());</div>
-<div class="line"><span class="lineno">   28</span>        SE.Play(<span class="stringliteral">&quot;money_shipping&quot;</span>);</div>
-<div class="line"><span class="lineno">   29</span>        base.InvokeRepeating(<span class="stringliteral">&quot;UpdateRepeating&quot;</span>, 0f, this.<a class="code hl_variable" href="classLayerShippingResult.html#a0e02d009c7549cac73d4db852baaa5ff">duration</a> / (<span class="keywordtype">float</span>)this.<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>);</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclassLayerShippingResult_html_a0e02d009c7549cac73d4db852baaa5ff"><div class="ttname"><a href="classLayerShippingResult.html#a0e02d009c7549cac73d4db852baaa5ff">LayerShippingResult.duration</a></div><div class="ttdeci">float duration</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00184">LayerShippingResult.cs:184</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a7349877582133007e9824d59a0befc3e"><div class="ttname"><a href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">LayerShippingResult.Show</a></div><div class="ttdeci">void Show()</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00025">LayerShippingResult.cs:25</a></div></div>
-<div class="ttc" id="aclassPlayer_html_aabbdef2443dbe3a3f1d4177eb6659b75"><div class="ttname"><a href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">Player.shippingResults</a></div><div class="ttdeci">List&lt; ShippingResult &gt; shippingResults</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01563">Player.cs:1563</a></div></div>
-<div class="ttc" id="aclassShippingResult_html"><div class="ttname"><a href="classShippingResult.html">ShippingResult</a></div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00005">ShippingResult.cs:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00070">70</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>.LastItem() ?? <span class="keyword">new</span> <a class="code hl_class" href="classShippingResult.html">ShippingResult</a>());</div>
+<div class="line"><span class="lineno">   73</span>        SE.Play(<span class="stringliteral">&quot;money_shipping&quot;</span>);</div>
+<div class="line"><span class="lineno">   74</span>        InvokeRepeating(<span class="stringliteral">&quot;UpdateRepeating&quot;</span>, 0f, <a class="code hl_variable" href="classLayerShippingResult.html#a0e02d009c7549cac73d4db852baaa5ff">duration</a> / (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>);</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="ttc" id="aclassLayerShippingResult_html_a0e02d009c7549cac73d4db852baaa5ff"><div class="ttname"><a href="classLayerShippingResult.html#a0e02d009c7549cac73d4db852baaa5ff">LayerShippingResult.duration</a></div><div class="ttdeci">float duration</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.cs:41</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a7349877582133007e9824d59a0befc3e"><div class="ttname"><a href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">LayerShippingResult.Show</a></div><div class="ttdeci">void Show()</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00070">LayerShippingResult.cs:70</a></div></div>
+<div class="ttc" id="aclassPlayer_html_aabbdef2443dbe3a3f1d4177eb6659b75"><div class="ttname"><a href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">Player.shippingResults</a></div><div class="ttdeci">List&lt; ShippingResult &gt; shippingResults</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00876">Player.cs:876</a></div></div>
+<div class="ttc" id="aclassShippingResult_html"><div class="ttname"><a href="classShippingResult.html">ShippingResult</a></div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00004">ShippingResult.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerShippingResult_8cs_source.html#l00184">duration</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00188">maxUpdate</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l01563">Player.shippingResults</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00025">Show()</a>.</p>
+<p class="reference">References <a class="el" href="LayerShippingResult_8cs_source.html#l00041">duration</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00045">maxUpdate</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l00876">Player.shippingResults</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00070">Show()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00025">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00070">Show()</a>.</p>
 
 </div>
 </div>
@@ -482,68 +488,60 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00103">103</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>    {</div>
-<div class="line"><span class="lineno">  105</span>        this.result = _result;</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_class" href="classZone.html">Zone</a> zone = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">uidZone</a>) ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>;</div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> branch = zone.<a class="code hl_variable" href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">branch</a>;</div>
-<div class="line"><span class="lineno">  108</span>        BaseList baseList = this.<a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>;</div>
-<div class="line"><span class="lineno">  109</span>        UIList.Callback&lt;<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a>, UIItem&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a>, UIItem&gt;();</div>
-<div class="line"><span class="lineno">  110</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a> a, UIItem b)</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            b.text1.SetText(a.text);</div>
-<div class="line"><span class="lineno">  113</span>            b.text2.SetText(a.income.ToFormat());</div>
-<div class="line"><span class="lineno">  114</span>        };</div>
-<div class="line"><span class="lineno">  115</span>        baseList.callbacks = callback;</div>
-<div class="line"><span class="lineno">  116</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>.Clear();</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a> o in <span class="keyword">this</span>.result.items)</div>
-<div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            this.<a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>.Add(o);</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>.Refresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_class" href="classDate.html">Date</a> date = <a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_function" href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">ToDate</a>(this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#ac745bf68c3086aa8bd2943623f5c113c">rawDate</a>);</div>
-<div class="line"><span class="lineno">  123</span>        this.textTitle.text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">  124</span>        {</div>
-<div class="line"><span class="lineno">  125</span>            date.<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString(),</div>
-<div class="line"><span class="lineno">  126</span>            <span class="stringliteral">&quot;/&quot;</span>,</div>
-<div class="line"><span class="lineno">  127</span>            date.<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString(),</div>
-<div class="line"><span class="lineno">  128</span>            <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><span class="lineno">  129</span>            date.<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString()</div>
-<div class="line"><span class="lineno">  130</span>        });</div>
-<div class="line"><span class="lineno">  131</span>        this.textHome.text = <span class="stringliteral">&quot;shipping_home&quot;</span>.lang(zone.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  132</span>        this.<a class="code hl_function" href="classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04">Refresh</a>();</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">int</span> count = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>.Count;</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">int</span> index = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>.IndexOf(this.<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>);</div>
-<div class="line"><span class="lineno">  135</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#ab5ddf28590476c22d0446661664f5fd1">buttonNext</a>.SetActive(index != -1 &amp;&amp; count &gt; index + 1);</div>
-<div class="line"><span class="lineno">  136</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc">buttonPrev</a>.SetActive(index &gt; 0);</div>
-<div class="line"><span class="lineno">  137</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#ab5ddf28590476c22d0446661664f5fd1">buttonNext</a>.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">  138</span>        {</div>
-<div class="line"><span class="lineno">  139</span>            this.showEffect = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  140</span>            this.<a class="code hl_function" href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>[index + 1]);</div>
-<div class="line"><span class="lineno">  141</span>        });</div>
-<div class="line"><span class="lineno">  142</span>        this.<a class="code hl_variable" href="classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc">buttonPrev</a>.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            this.showEffect = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  145</span>            this.<a class="code hl_function" href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>[index - 1]);</div>
-<div class="line"><span class="lineno">  146</span>        });</div>
-<div class="line"><span class="lineno">  147</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00004">Date.cs:5</a></div></div>
-<div class="ttc" id="aclassDate_html_a801e79ba9d915b15ddbd13aaa4b09020"><div class="ttname"><a href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">Date.month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00018">Date.cs:19</a></div></div>
-<div class="ttc" id="aclassDate_html_a853ee4cc426f96dee0a7aa61d87d6282"><div class="ttname"><a href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">Date.ToDate</a></div><div class="ttdeci">static Date ToDate(int raw)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00403">Date.cs:403</a></div></div>
-<div class="ttc" id="aclassDate_html_a88e44d6a54b8d25743f5590952e6b652"><div class="ttname"><a href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">Date.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00030">Date.cs:31</a></div></div>
-<div class="ttc" id="aclassDate_html_a8d8552788241d94c4731cb078a625a6f"><div class="ttname"><a href="classDate.html#a8d8552788241d94c4731cb078a625a6f">Date.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00006">Date.cs:7</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a7d7c913de6dc4296930fd1d4098b91fc"><div class="ttname"><a href="classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc">LayerShippingResult.buttonPrev</a></div><div class="ttdeci">UIButton buttonPrev</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00154">LayerShippingResult.cs:154</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a9aebd79a2f9e3030056d7a0e052b7491"><div class="ttname"><a href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">LayerShippingResult.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00150">LayerShippingResult.cs:150</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_a9dc9358b12cd9f4d102a1257f61baa04"><div class="ttname"><a href="classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04">LayerShippingResult.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.cs:41</a></div></div>
-<div class="ttc" id="aclassLayerShippingResult_html_ab5ddf28590476c22d0446661664f5fd1"><div class="ttname"><a href="classLayerShippingResult.html#ab5ddf28590476c22d0446661664f5fd1">LayerShippingResult.buttonNext</a></div><div class="ttdeci">UIButton buttonNext</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00152">LayerShippingResult.cs:152</a></div></div>
-<div class="ttc" id="aclassShippingResult_1_1Item_html"><div class="ttname"><a href="classShippingResult_1_1Item.html">ShippingResult.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00107">ShippingResult.cs:108</a></div></div>
-<div class="ttc" id="aclassShippingResult_html_ac745bf68c3086aa8bd2943623f5c113c"><div class="ttname"><a href="classShippingResult.html#ac745bf68c3086aa8bd2943623f5c113c">ShippingResult.rawDate</a></div><div class="ttdeci">int rawDate</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00019">ShippingResult.cs:20</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
-<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00012">Zone.cs:13</a></div></div>
-<div class="ttc" id="aclassZone_html_a5288cd6767855de9e33fd6cedd97b396"><div class="ttname"><a href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">Zone.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03855">Zone.cs:3855</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00148">148</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a> = _result;</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_class" href="classZone.html">Zone</a> zone = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">uidZone</a>) ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>;</div>
+<div class="line"><span class="lineno">  152</span>        _ = zone.<a class="code hl_variable" href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">branch</a>;</div>
+<div class="line"><span class="lineno">  153</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a>, UIItem&gt;</div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            onInstantiate = delegate(<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a> a, UIItem b)</div>
+<div class="line"><span class="lineno">  156</span>            {</div>
+<div class="line"><span class="lineno">  157</span>                b.text1.SetText(a.text);</div>
+<div class="line"><span class="lineno">  158</span>                b.text2.SetText(a.income.ToFormat());</div>
+<div class="line"><span class="lineno">  159</span>            }</div>
+<div class="line"><span class="lineno">  160</span>        };</div>
+<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>.Clear();</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classShippingResult.html">ShippingResult</a>.<a class="code hl_class" href="classShippingResult_1_1Item.html">Item</a> item in <a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_variable" href="classShippingResult.html#a64976b01ce635b3ebe60cb20463e7ef7">items</a>)</div>
+<div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>.Add(item);</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">list</a>.Refresh();</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_class" href="classDate.html">Date</a> date = <a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_function" href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">ToDate</a>(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#ac745bf68c3086aa8bd2943623f5c113c">rawDate</a>);</div>
+<div class="line"><span class="lineno">  168</span>        textTitle.text = date.month + <span class="stringliteral">&quot;/&quot;</span> + date.day + <span class="stringliteral">&quot; &quot;</span> + date.<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>;</div>
+<div class="line"><span class="lineno">  169</span>        textHome.text = <span class="stringliteral">&quot;shipping_home&quot;</span>.lang(zone.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>);</div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_function" href="classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04">Refresh</a>();</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">int</span> count = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>.Count;</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">int</span> index = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>.IndexOf(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>);</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_variable" href="classLayerShippingResult.html#ab5ddf28590476c22d0446661664f5fd1">buttonNext</a>.SetActive(index != -1 &amp;&amp; count &gt; index + 1);</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc">buttonPrev</a>.SetActive(index &gt; 0);</div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_variable" href="classLayerShippingResult.html#ab5ddf28590476c22d0446661664f5fd1">buttonNext</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_function" href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>[index + 1]);</div>
+<div class="line"><span class="lineno">  179</span>        });</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_variable" href="classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc">buttonPrev</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>            <a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  183</span>            <a class="code hl_function" href="classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e">Show</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#aabbdef2443dbe3a3f1d4177eb6659b75">shippingResults</a>[index - 1]);</div>
+<div class="line"><span class="lineno">  184</span>        });</div>
+<div class="line"><span class="lineno">  185</span>        this.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00003">Date.cs:4</a></div></div>
+<div class="ttc" id="aclassDate_html_a853ee4cc426f96dee0a7aa61d87d6282"><div class="ttname"><a href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">Date.ToDate</a></div><div class="ttdeci">static Date ToDate(int raw)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00393">Date.cs:393</a></div></div>
+<div class="ttc" id="aclassDate_html_a8d8552788241d94c4731cb078a625a6f"><div class="ttname"><a href="classDate.html#a8d8552788241d94c4731cb078a625a6f">Date.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00037">Date.cs:38</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a7d7c913de6dc4296930fd1d4098b91fc"><div class="ttname"><a href="classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc">LayerShippingResult.buttonPrev</a></div><div class="ttdeci">UIButton buttonPrev</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00011">LayerShippingResult.cs:11</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a9aebd79a2f9e3030056d7a0e052b7491"><div class="ttname"><a href="classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491">LayerShippingResult.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00007">LayerShippingResult.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_a9dc9358b12cd9f4d102a1257f61baa04"><div class="ttname"><a href="classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04">LayerShippingResult.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.cs:85</a></div></div>
+<div class="ttc" id="aclassLayerShippingResult_html_ab5ddf28590476c22d0446661664f5fd1"><div class="ttname"><a href="classLayerShippingResult.html#ab5ddf28590476c22d0446661664f5fd1">LayerShippingResult.buttonNext</a></div><div class="ttdeci">UIButton buttonNext</div><div class="ttdef"><b>Definition:</b> <a href="LayerShippingResult_8cs_source.html#l00009">LayerShippingResult.cs:9</a></div></div>
+<div class="ttc" id="aclassShippingResult_1_1Item_html"><div class="ttname"><a href="classShippingResult_1_1Item.html">ShippingResult.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00006">ShippingResult.cs:7</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_a64976b01ce635b3ebe60cb20463e7ef7"><div class="ttname"><a href="classShippingResult.html#a64976b01ce635b3ebe60cb20463e7ef7">ShippingResult.items</a></div><div class="ttdeci">List&lt; Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00040">ShippingResult.cs:40</a></div></div>
+<div class="ttc" id="aclassShippingResult_html_ac745bf68c3086aa8bd2943623f5c113c"><div class="ttname"><a href="classShippingResult.html#ac745bf68c3086aa8bd2943623f5c113c">ShippingResult.rawDate</a></div><div class="ttdeci">int rawDate</div><div class="ttdef"><b>Definition:</b> <a href="ShippingResult_8cs_source.html#l00054">ShippingResult.cs:55</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00493">Spatial.cs:493</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
+<div class="ttc" id="aclassZone_html_a5288cd6767855de9e33fd6cedd97b396"><div class="ttname"><a href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">Zone.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00034">Zone.cs:34</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Zone_8cs_source.html#l03855">Zone.branch</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00152">buttonNext</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00154">buttonPrev</a>, <a class="el" href="Date_8cs_source.html#l00031">Date.day</a>, <a class="el" href="SpatialManager_8cs_source.html#l00046">SpatialManager.Find()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.game</a>, <a class="el" href="Chara_8cs_source.html#l00069">Chara.homeZone</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00150">list</a>, <a class="el" href="Date_8cs_source.html#l00019">Date.month</a>, <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="ELayer_8cs_source.html#l00039">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.player</a>, <a class="el" href="ShippingResult_8cs_source.html#l00020">ShippingResult.rawDate</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00190">result</a>, <a class="el" href="Player_8cs_source.html#l01563">Player.shippingResults</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00025">Show()</a>, <a class="el" href="Game_8cs_source.html#l00787">Game.spatials</a>, <a class="el" href="Date_8cs_source.html#l00403">Date.ToDate()</a>, <a class="el" href="ShippingResult_8cs_source.html#l00032">ShippingResult.uidZone</a>, and <a class="el" href="Date_8cs_source.html#l00007">Date.year</a>.</p>
+<p class="reference">References <a class="el" href="Zone_8cs_source.html#l00034">Zone.branch</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00009">buttonNext</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00011">buttonPrev</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">SpatialManager.Find()</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="Chara_8cs_source.html#l00252">Chara.homeZone</a>, <a class="el" href="ShippingResult_8cs_source.html#l00040">ShippingResult.items</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00007">list</a>, <a class="el" href="Spatial_8cs_source.html#l00493">Spatial.Name</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="ShippingResult_8cs_source.html#l00055">ShippingResult.rawDate</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00047">result</a>, <a class="el" href="Player_8cs_source.html#l00876">Player.shippingResults</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00070">Show()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00039">showEffect</a>, <a class="el" href="Game_8cs_source.html#l00149">Game.spatials</a>, <a class="el" href="Date_8cs_source.html#l00393">Date.ToDate()</a>, <a class="el" href="ShippingResult_8cs_source.html#l00067">ShippingResult.uidZone</a>, and <a class="el" href="Date_8cs_source.html#l00038">Date.year</a>.</p>
 
 </div>
 </div>
@@ -570,16 +568,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00032">32</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a>)</div>
-<div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        this.<a class="code hl_function" href="classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04">Refresh</a>();</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00077">77</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerShippingResult.html#a22ed2bcf7f9edb09e90fd5e25395823a">showEffect</a>)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_function" href="classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04">Refresh</a>();</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00182">showEffect</a>.</p>
+<p class="reference">References <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00039">showEffect</a>.</p>
 
 </div>
 </div>
@@ -596,9 +593,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00152">152</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00103">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00148">Show()</a>.</p>
 
 </div>
 </div>
@@ -614,9 +611,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00154">154</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00103">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00148">Show()</a>.</p>
 
 </div>
 </div>
@@ -632,9 +629,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00184">184</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00041">41</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00025">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00070">Show()</a>.</p>
 
 </div>
 </div>
@@ -650,9 +647,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00160">160</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00017">17</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -668,7 +665,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00156">156</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00013">13</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -684,7 +681,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00158">158</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -700,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00162">162</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00019">19</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -724,9 +721,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00194">194</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00051">51</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -742,9 +739,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00150">150</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00103">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00148">Show()</a>.</p>
 
 </div>
 </div>
@@ -760,9 +757,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00188">188</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00045">45</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00025">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00070">Show()</a>.</p>
 
 </div>
 </div>
@@ -778,9 +775,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00190">190</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00047">47</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00103">Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00148">Show()</a>.</p>
 
 </div>
 </div>
@@ -796,9 +793,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00182">182</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00039">39</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00032">UpdateRepeating()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00148">Show()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00077">UpdateRepeating()</a>.</p>
 
 </div>
 </div>
@@ -814,9 +811,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00192">192</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00049">49</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00008">Awake()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00053">Awake()</a>.</p>
 
 </div>
 </div>
@@ -832,7 +829,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00180">180</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00037">37</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -848,7 +845,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00164">164</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00021">21</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -864,7 +861,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00166">166</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00023">23</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -880,7 +877,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00168">168</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00025">25</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -896,7 +893,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00170">170</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00027">27</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -912,7 +909,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00172">172</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00029">29</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -928,7 +925,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00174">174</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00031">31</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -944,7 +941,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00176">176</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00033">33</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -960,7 +957,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00178">178</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00035">35</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
 </div>
 </div>
@@ -976,9 +973,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00186">186</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerShippingResult_8cs_source.html#l00043">43</a> of file <a class="el" href="LayerShippingResult_8cs_source.html">LayerShippingResult.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00041">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerShippingResult_8cs_source.html#l00085">Refresh()</a>.</p>
 
 </div>
 </div>

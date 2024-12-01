@@ -296,8 +296,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a2092765e232ee79e9c4517a79dfaf4ba inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60ee43bbee3ec99ac75e72361f10c70f inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a60ee43bbee3ec99ac75e72361f10c70f">IsRamp</a><code> [get]</code></td></tr>
 <tr class="separator:a60ee43bbee3ec99ac75e72361f10c70f inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0deaf5d1d98480700f49920725b24d72 inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">TileType.RampType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a0deaf5d1d98480700f49920725b24d72">Ramp</a><code> [get]</code></td></tr>
-<tr class="separator:a0deaf5d1d98480700f49920725b24d72 inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b1a754489151f938de54f93565411a inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">RampType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a69b1a754489151f938de54f93565411a">Ramp</a><code> [get]</code></td></tr>
+<tr class="separator:a69b1a754489151f938de54f93565411a inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca7f2c23a9fedd510e01e20bda02f0b inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a6ca7f2c23a9fedd510e01e20bda02f0b">IsLadder</a><code> [get]</code></td></tr>
 <tr class="separator:a6ca7f2c23a9fedd510e01e20bda02f0b inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec59c84492826919fd3b9d43ea26f67 inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#adec59c84492826919fd3b9d43ea26f67">IsBlockPass</a><code> [get]</code></td></tr>
@@ -466,7 +466,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TileTypeVine_8cs_source.html#l00003">3</a> of file <a class="el" href="TileTypeVine_8cs_source.html">TileTypeVine.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileTypeVine_8cs_source.html#l00001">1</a> of file <a class="el" href="TileTypeVine_8cs_source.html">TileTypeVine.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a88fcf3c8e7504207c00f81826174e74a" name="a88fcf3c8e7504207c00f81826174e74a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88fcf3c8e7504207c00f81826174e74a">&#9670;&#160;</a></span>GetDesiredDir()</h2>
@@ -504,34 +504,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTileType.html#ab0e2d32e4be2c7410c69978e77037a86">TileType</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileTypeVine_8cs_source.html#l00005">5</a> of file <a class="el" href="TileTypeVine_8cs_source.html">TileTypeVine.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Left</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   14</span>        }</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Front</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
-<div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> 3;</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclassCell_html_a2efac99c0e9a836198558ae1a500b416"><div class="ttname"><a href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Cell.Back</a></div><div class="ttdeci">Cell Back</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00095">Cell.cs:96</a></div></div>
-<div class="ttc" id="aclassCell_html_a45b69d72e7f57fbc7116ec48f82c348d"><div class="ttname"><a href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Cell.Front</a></div><div class="ttdeci">Cell Front</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00071">Cell.cs:72</a></div></div>
-<div class="ttc" id="aclassCell_html_a9cc681d863811a9662bc86bf4d8e461b"><div class="ttname"><a href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Cell.Left</a></div><div class="ttdeci">Cell Left</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00107">Cell.cs:108</a></div></div>
-<div class="ttc" id="aclassCell_html_ace52b174bda4a28e6ab09bd3f5bca70b"><div class="ttname"><a href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Cell.Right</a></div><div class="ttdeci">Cell Right</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00083">Cell.cs:84</a></div></div>
-<div class="ttc" id="aclassCell_html_ae648840ebb47db7c2840fe398e38435b"><div class="ttname"><a href="classCell.html#ae648840ebb47db7c2840fe398e38435b">Cell.HasFullBlockOrWallOrFence</a></div><div class="ttdeci">bool HasFullBlockOrWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00777">Cell.cs:778</a></div></div>
-<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TileTypeVine_8cs_source.html#l00003">3</a> of file <a class="el" href="TileTypeVine_8cs_source.html">TileTypeVine.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
+<div class="line"><span class="lineno">    6</span>        {</div>
+<div class="line"><span class="lineno">    7</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">    8</span>        }</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Left</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Front</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> 3;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassCell_html_a2efac99c0e9a836198558ae1a500b416"><div class="ttname"><a href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Cell.Back</a></div><div class="ttdeci">Cell Back</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00152">Cell.cs:153</a></div></div>
+<div class="ttc" id="aclassCell_html_a45b69d72e7f57fbc7116ec48f82c348d"><div class="ttname"><a href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Cell.Front</a></div><div class="ttdeci">Cell Front</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00128">Cell.cs:129</a></div></div>
+<div class="ttc" id="aclassCell_html_a9cc681d863811a9662bc86bf4d8e461b"><div class="ttname"><a href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Cell.Left</a></div><div class="ttdeci">Cell Left</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00164">Cell.cs:165</a></div></div>
+<div class="ttc" id="aclassCell_html_ace52b174bda4a28e6ab09bd3f5bca70b"><div class="ttname"><a href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Cell.Right</a></div><div class="ttdeci">Cell Right</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00140">Cell.cs:141</a></div></div>
+<div class="ttc" id="aclassCell_html_ae648840ebb47db7c2840fe398e38435b"><div class="ttname"><a href="classCell.html#ae648840ebb47db7c2840fe398e38435b">Cell.HasFullBlockOrWallOrFence</a></div><div class="ttdeci">bool HasFullBlockOrWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00819">Cell.cs:820</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00096">Cell.Back</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l00072">Cell.Front</a>, <a class="el" href="Cell_8cs_source.html#l00778">Cell.HasFullBlockOrWallOrFence</a>, <a class="el" href="Cell_8cs_source.html#l00108">Cell.Left</a>, and <a class="el" href="Cell_8cs_source.html#l00084">Cell.Right</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00153">Cell.Back</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l00129">Cell.Front</a>, <a class="el" href="Cell_8cs_source.html#l00820">Cell.HasFullBlockOrWallOrFence</a>, <a class="el" href="Cell_8cs_source.html#l00165">Cell.Left</a>, and <a class="el" href="Cell_8cs_source.html#l00141">Cell.Right</a>.</p>
 
 </div>
 </div>

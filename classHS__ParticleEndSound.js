@@ -14,7 +14,7 @@ var classHS__ParticleEndSound =
     [ "explosionPitchMin", "classHS__ParticleEndSound.html#a73310c3a3112fb217346c3c5da592027", null ],
     [ "poolDictionary", "classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1", null ],
     [ "poolReturnTimer", "classHS__ParticleEndSound.html#a643a81415c679e726995d58dd0fcc16c", null ],
-    [ "pools", "classHS__ParticleEndSound.html#a2405f3c920ef5c471d0f6087583fbb6e", null ],
+    [ "pools", "classHS__ParticleEndSound.html#af8d1fdb4aff9bf65e1d0f5b8b15af71c", null ],
     [ "SharedInstance", "classHS__ParticleEndSound.html#a9bf76c824b8e9d7c4ce080493929114b", null ],
     [ "shootMaxVolume", "classHS__ParticleEndSound.html#a44ee781a6b758f616a86fb16d8d97833", null ],
     [ "shootMinVolume", "classHS__ParticleEndSound.html#af3b0f8725a0de412da4e9a7ef9339945", null ],

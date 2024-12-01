@@ -1,8 +1,7 @@
 var classUIHomeInfo =
 [
     [ "ReportData", "classUIHomeInfo_1_1ReportData.html", "classUIHomeInfo_1_1ReportData" ],
-    [ "AddReport", "classUIHomeInfo.html#a3717c0eb2b1eed87e703f57075b2b9ed", null ],
-    [ "g__Write", "classUIHomeInfo.html#a87d505daa9d0206f57bec4befb91ecdb", null ],
+    [ "AddReport", "classUIHomeInfo.html#a85a824f88ad0205ff32ec7b4b786170c", null ],
     [ "GetTextHappiness", "classUIHomeInfo.html#ab8fb25a0f4396ad36599926e6eeb3048", null ],
     [ "Refresh", "classUIHomeInfo.html#a2ca23b59dd2d70d89a583aea5c9069a9", null ],
     [ "RefreshInfo", "classUIHomeInfo.html#a477763320c1ff549ea076a512f3df46e", null ],
@@ -23,7 +22,7 @@ var classUIHomeInfo =
     [ "listReport", "classUIHomeInfo.html#ac953134c32c1199e17897ac5e7630343", null ],
     [ "listResources", "classUIHomeInfo.html#af79564bd95deec2a6a1947890c8e6402", null ],
     [ "listSkill", "classUIHomeInfo.html#a8125e5f233fa097d349fb4fbd4493815", null ],
-    [ "reports", "classUIHomeInfo.html#a38e6ad9072c965066c1c8cb961ff6e41", null ],
+    [ "reports", "classUIHomeInfo.html#afbb268d82bb90abc90f5084a4d74bb9b", null ],
     [ "textCivility", "classUIHomeInfo.html#a5ecc12e55270fd11eda6a18c31f3b21c", null ],
     [ "textContentLv", "classUIHomeInfo.html#a3973753764aaef7f70d8468aed47316b", null ],
     [ "textDateFound", "classUIHomeInfo.html#a202ca4310b2f1d8ab424246d9ce40c9f", null ],

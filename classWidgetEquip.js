@@ -19,5 +19,5 @@ var classWidgetEquip =
     [ "listEtc", "classWidgetEquip.html#a53a3c15e71b731b0887c9fbf39b61302", null ],
     [ "listMain", "classWidgetEquip.html#a54d1c21fbb9a5e66e158fcc97cc9839a", null ],
     [ "transLayer", "classWidgetEquip.html#a7a0da82514acb71e997563ef38e8b635", null ],
-    [ "extra", "classWidgetEquip.html#a2845c5a45a7404a47075364d2bb5a6d3", null ]
+    [ "extra", "classWidgetEquip.html#ad87738f73ae83616651ac13bb087c818", null ]
 ];

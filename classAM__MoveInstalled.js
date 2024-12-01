@@ -16,7 +16,7 @@ var classAM__MoveInstalled =
     [ "OnDeactivate", "classAM__MoveInstalled.html#a9b16f686b9cee5fafe4475c585f8f447", null ],
     [ "OnFinishProcessTiles", "classAM__MoveInstalled.html#abd6b1f9916a093919df93cd5e4b17bce", null ],
     [ "OnProcessTiles", "classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601", null ],
-    [ "OnRenderTile", "classAM__MoveInstalled.html#a6d7fd68b0e071079b0b17f0b0e029c9d", null ],
+    [ "OnRenderTile", "classAM__MoveInstalled.html#afa90c9a5ecb69e6f4b9ecb552e7b03b8", null ],
     [ "RotateUnderMouse", "classAM__MoveInstalled.html#a5a6521bd35b26764f5a58e8dc0c5c7a1", null ],
     [ "SetTarget", "classAM__MoveInstalled.html#a868aa03da2ec092adeb7a34246c61503", null ],
     [ "TryPutAway", "classAM__MoveInstalled.html#a7cc205596b75f55ccac0b0974fb2c09f", null ],

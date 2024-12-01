@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('classSpawnList.html',''); initResizabl
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classSpawnList-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SpawnList Class Reference</div></div>
 </div><!--header-->
@@ -165,16 +164,11 @@ Public Attributes</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a996f0031a8413a114d4a114c252dad70"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, <a class="el" href="classSpawnList.html">SpawnList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">allList</a> = new Dictionary&lt;string, <a class="el" href="classSpawnList.html">SpawnList</a>&gt;()</td></tr>
 <tr class="separator:a996f0031a8413a114d4a114c252dad70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8738e590f31a4bfe29fba0d79a6d051f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSpawnList.html">SpawnList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a> = new <a class="el" href="classSpawnList.html">SpawnList</a>(null)</td></tr>
+<tr class="memitem:a8738e590f31a4bfe29fba0d79a6d051f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSpawnList.html">SpawnList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a> = new <a class="el" href="classSpawnList.html">SpawnList</a>()</td></tr>
 <tr class="separator:a8738e590f31a4bfe29fba0d79a6d051f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCore.html">Core</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a></td></tr>
 <tr class="separator:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ade7971120b73a0e9c504309503fdbb4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCardRow.html">CardRow</a>&lt; <a class="el" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnList.html#ade7971120b73a0e9c504309503fdbb4c">g___Select</a> ()</td></tr>
-<tr class="separator:ade7971120b73a0e9c504309503fdbb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -224,7 +218,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00006">6</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00004">4</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af1d2461853390964b1bd30f39f6249ab" name="af1d2461853390964b1bd30f39f6249ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1d2461853390964b1bd30f39f6249ab">&#9670;&#160;</a></span>SpawnList()</h2>
@@ -250,41 +244,41 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00028">28</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">id</span>.IsEmpty())</div>
-<div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_class" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.map.TryGetValue(<span class="keywordtype">id</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   34</span>            {</div>
-<div class="line"><span class="lineno">   35</span>                <span class="keywordtype">bool</span> flag = row.type == <span class="stringliteral">&quot;chara&quot;</span>;</div>
-<div class="line"><span class="lineno">   36</span>                <a class="code hl_class" href="classCardFilter.html">CardFilter</a> cardFilter = flag ? <span class="keyword">new</span> <a class="code hl_class" href="classCharaFilter.html">CharaFilter</a>() : new <a class="code hl_class" href="classThingFilter.html">ThingFilter</a>();</div>
-<div class="line"><span class="lineno">   37</span>                cardFilter.isChara = flag;</div>
-<div class="line"><span class="lineno">   38</span>                cardFilter.strTag = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a1aa5e186f618f564739527d4cc4ce9eb">tag</a>;</div>
-<div class="line"><span class="lineno">   39</span>                cardFilter.strFilter = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a6fbc13c532a8af6483bae565cc86e5f7">filter</a>;</div>
-<div class="line"><span class="lineno">   40</span>                cardFilter.filterCategory = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#aa9f395dda3a5179b7bd69826e9b26dca">category</a>;</div>
-<div class="line"><span class="lineno">   41</span>                cardFilter.idCard = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a536c24c1d233fc38cbeded2cc7dd06d4">idCard</a>;</div>
-<div class="line"><span class="lineno">   42</span>                this.<a class="code hl_function" href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">CreateMaster</a>(cardFilter, row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#ad3c8183845b1bbac1a0ee375cb7ed6eb">parent</a>);</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            this.id = <a class="code hl_variable" href="classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38">id</a>;</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00038">38</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">id</span>.IsEmpty())</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">spawnLists</a>.map.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordtype">bool</span> flag = row.type == <span class="stringliteral">&quot;chara&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>                <a class="code hl_class" href="classCardFilter.html">CardFilter</a> cardFilter = (flag ? ((<a class="code hl_class" href="classCardFilter.html">CardFilter</a>)<span class="keyword">new</span> <a class="code hl_class" href="classCharaFilter.html">CharaFilter</a>()) : ((<a class="code hl_class" href="classCardFilter.html">CardFilter</a>)<span class="keyword">new</span> <a class="code hl_class" href="classThingFilter.html">ThingFilter</a>()));</div>
+<div class="line"><span class="lineno">   47</span>                cardFilter.isChara = flag;</div>
+<div class="line"><span class="lineno">   48</span>                cardFilter.strTag = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a1aa5e186f618f564739527d4cc4ce9eb">tag</a>;</div>
+<div class="line"><span class="lineno">   49</span>                cardFilter.strFilter = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a6fbc13c532a8af6483bae565cc86e5f7">filter</a>;</div>
+<div class="line"><span class="lineno">   50</span>                cardFilter.filterCategory = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#aa9f395dda3a5179b7bd69826e9b26dca">category</a>;</div>
+<div class="line"><span class="lineno">   51</span>                cardFilter.idCard = row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a536c24c1d233fc38cbeded2cc7dd06d4">idCard</a>;</div>
+<div class="line"><span class="lineno">   52</span>                <a class="code hl_function" href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">CreateMaster</a>(cardFilter, row.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#ad3c8183845b1bbac1a0ee375cb7ed6eb">parent</a>);</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>            this.id = <a class="code hl_variable" href="classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38">id</a>;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
 <div class="ttc" id="aclassCardFilter_html"><div class="ttname"><a href="classCardFilter.html">CardFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00005">CardFilter.cs:6</a></div></div>
 <div class="ttc" id="aclassCharaFilter_html"><div class="ttname"><a href="classCharaFilter.html">CharaFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaFilter_8cs_source.html#l00003">CharaFilter.cs:4</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_a56b3d59619d0a5a90bf8a31b5791a73c"><div class="ttname"><a href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">SourceManager.spawnLists</a></div><div class="ttdeci">SourceSpawnList spawnLists</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00175">SourceManager.cs:175</a></div></div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00025">SourceSpawnList.cs:26</a></div></div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a1aa5e186f618f564739527d4cc4ce9eb"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a1aa5e186f618f564739527d4cc4ce9eb">SourceSpawnList.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00058">SourceSpawnList.cs:58</a></div></div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a536c24c1d233fc38cbeded2cc7dd06d4"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a536c24c1d233fc38cbeded2cc7dd06d4">SourceSpawnList.Row.idCard</a></div><div class="ttdeci">string[] idCard</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00056">SourceSpawnList.cs:56</a></div></div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a6fbc13c532a8af6483bae565cc86e5f7"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a6fbc13c532a8af6483bae565cc86e5f7">SourceSpawnList.Row.filter</a></div><div class="ttdeci">string[] filter</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00060">SourceSpawnList.cs:60</a></div></div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_aa9f395dda3a5179b7bd69826e9b26dca"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#aa9f395dda3a5179b7bd69826e9b26dca">SourceSpawnList.Row.category</a></div><div class="ttdeci">string[] category</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00054">SourceSpawnList.cs:54</a></div></div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_ad3c8183845b1bbac1a0ee375cb7ed6eb"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#ad3c8183845b1bbac1a0ee375cb7ed6eb">SourceSpawnList.Row.parent</a></div><div class="ttdeci">string parent</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00050">SourceSpawnList.cs:50</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a41e6fcf0c2a8abd329f14cf7853056a5"><div class="ttname"><a href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">SpawnList.CreateMaster</a></div><div class="ttdeci">void CreateMaster(CardFilter _filter, string parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00054">SpawnList.cs:54</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a49eef52cc21bf519f3664f7fe5f39b38"><div class="ttname"><a href="classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38">SpawnList.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00206">SpawnList.cs:206</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a56b3d59619d0a5a90bf8a31b5791a73c"><div class="ttname"><a href="classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c">SourceManager.spawnLists</a></div><div class="ttdeci">SourceSpawnList spawnLists</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00040">SourceManager.cs:40</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00006">SourceSpawnList.cs:7</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a1aa5e186f618f564739527d4cc4ce9eb"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a1aa5e186f618f564739527d4cc4ce9eb">SourceSpawnList.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00018">SourceSpawnList.cs:18</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a536c24c1d233fc38cbeded2cc7dd06d4"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a536c24c1d233fc38cbeded2cc7dd06d4">SourceSpawnList.Row.idCard</a></div><div class="ttdeci">string[] idCard</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00016">SourceSpawnList.cs:16</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a6fbc13c532a8af6483bae565cc86e5f7"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a6fbc13c532a8af6483bae565cc86e5f7">SourceSpawnList.Row.filter</a></div><div class="ttdeci">string[] filter</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00020">SourceSpawnList.cs:20</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_aa9f395dda3a5179b7bd69826e9b26dca"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#aa9f395dda3a5179b7bd69826e9b26dca">SourceSpawnList.Row.category</a></div><div class="ttdeci">string[] category</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00014">SourceSpawnList.cs:14</a></div></div>
+<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_ad3c8183845b1bbac1a0ee375cb7ed6eb"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#ad3c8183845b1bbac1a0ee375cb7ed6eb">SourceSpawnList.Row.parent</a></div><div class="ttdeci">string parent</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00010">SourceSpawnList.cs:10</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a41e6fcf0c2a8abd329f14cf7853056a5"><div class="ttname"><a href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">SpawnList.CreateMaster</a></div><div class="ttdeci">void CreateMaster(CardFilter _filter, string parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00064">SpawnList.cs:64</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a49eef52cc21bf519f3664f7fe5f39b38"><div class="ttname"><a href="classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38">SpawnList.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00010">SpawnList.cs:10</a></div></div>
 <div class="ttc" id="aclassThingFilter_html"><div class="ttname"><a href="classThingFilter.html">ThingFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingFilter_8cs_source.html#l00003">ThingFilter.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceSpawnList_8cs_source.html#l00054">SourceSpawnList.Row.category</a>, <a class="el" href="SpawnList_8cs_source.html#l00054">CreateMaster()</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00060">SourceSpawnList.Row.filter</a>, <a class="el" href="SpawnList_8cs_source.html#l00206">id</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00056">SourceSpawnList.Row.idCard</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00050">SourceSpawnList.Row.parent</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00175">SourceManager.spawnLists</a>, and <a class="el" href="SourceSpawnList_8cs_source.html#l00058">SourceSpawnList.Row.tag</a>.</p>
+<p class="reference">References <a class="el" href="SourceSpawnList_8cs_source.html#l00014">SourceSpawnList.Row.category</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00020">SourceSpawnList.Row.filter</a>, <a class="el" href="SpawnList_8cs_source.html#l00010">id</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00016">SourceSpawnList.Row.idCard</a>, <a class="el" href="SourceSpawnList_8cs_source.html#l00010">SourceSpawnList.Row.parent</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00040">SourceManager.spawnLists</a>, and <a class="el" href="SourceSpawnList_8cs_source.html#l00018">SourceSpawnList.Row.tag</a>.</p>
 
 </div>
 </div>
@@ -313,17 +307,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00048">48</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
-<div class="line"><span class="lineno">   50</span>        this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Add(row);</div>
-<div class="line"><span class="lineno">   51</span>        this.totalChance += row.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aclassRenderRow_html_ad4632c7da29f59e46ade6c673adc5fe7"><div class="ttname"><a href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">RenderRow.chance</a></div><div class="ttdeci">int chance</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00453">RenderRow.cs:453</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_aeff18a9741191ca50781957a9a8fdfb2"><div class="ttname"><a href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">SpawnList.rows</a></div><div class="ttdeci">List&lt; CardRow &gt; rows</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00208">SpawnList.cs:208</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00058">58</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Add(row);</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76">totalChance</a> += row.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassRenderRow_html_ad4632c7da29f59e46ade6c673adc5fe7"><div class="ttname"><a href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">RenderRow.chance</a></div><div class="ttdeci">int chance</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00024">RenderRow.cs:24</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a97ee96f64efd879295c436e7e6d2ae76"><div class="ttname"><a href="classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76">SpawnList.totalChance</a></div><div class="ttdeci">int totalChance</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00016">SpawnList.cs:16</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_aeff18a9741191ca50781957a9a8fdfb2"><div class="ttname"><a href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">SpawnList.rows</a></div><div class="ttdeci">List&lt; CardRow &gt; rows</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00012">SpawnList.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00453">RenderRow.chance</a>, and <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00024">RenderRow.chance</a>, <a class="el" href="SpawnList_8cs_source.html#l00012">rows</a>, and <a class="el" href="SpawnList_8cs_source.html#l00016">totalChance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00054">CreateMaster()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>.</p>
 
 </div>
 </div>
@@ -361,41 +356,42 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00054">54</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Clear();</div>
-<div class="line"><span class="lineno">   57</span>        this.totalChance = 0;</div>
-<div class="line"><span class="lineno">   58</span>        this.filter = _filter;</div>
-<div class="line"><span class="lineno">   59</span>        List&lt;CardRow&gt; list = parent.IsEmpty() ? EClass.sources.cards.rows : <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_function" href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">Get</a>(parent, <span class="keyword">null</span>, <span class="keyword">null</span>).<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = list[i];</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (cardRow.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a> &gt; 0 &amp;&amp; <span class="keyword">this</span>.filter.Pass(cardRow))</div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                this.<a class="code hl_function" href="classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208">Add</a>(cardRow);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#a0875c2d2fdfcf5b00bf332a83e205bc9">idCard</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> key <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#a0875c2d2fdfcf5b00bf332a83e205bc9">idCard</a>)</div>
-<div class="line"><span class="lineno">   71</span>            {</div>
-<div class="line"><span class="lineno">   72</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[key];</div>
-<div class="line"><span class="lineno">   73</span>                this.<a class="code hl_function" href="classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208">Add</a>(row);</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclassCardFilter_html_a0875c2d2fdfcf5b00bf332a83e205bc9"><div class="ttname"><a href="classCardFilter.html#a0875c2d2fdfcf5b00bf332a83e205bc9">CardFilter.idCard</a></div><div class="ttdeci">string[] idCard</div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00142">CardFilter.cs:142</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00064">64</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Clear();</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76">totalChance</a> = 0;</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> = _filter;</div>
+<div class="line"><span class="lineno">   69</span>        List&lt;CardRow&gt; list = (parent.IsEmpty() ? EClass.sources.cards.rows : <a class="code hl_function" href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">Get</a>(parent).<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>);</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = list[i];</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (cardRow.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_function" href="classCardFilter.html#aeda37fe4a83d5df9611a37568fa1c7fe">Pass</a>(cardRow))</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <a class="code hl_function" href="classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208">Add</a>(cardRow);</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#a0875c2d2fdfcf5b00bf332a83e205bc9">idCard</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">string</span>[] idCard = <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#a0875c2d2fdfcf5b00bf332a83e205bc9">idCard</a>;</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> key <span class="keywordflow">in</span> idCard)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[key];</div>
+<div class="line"><span class="lineno">   84</span>                <a class="code hl_function" href="classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208">Add</a>(row);</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="ttc" id="aclassCardFilter_html_a0875c2d2fdfcf5b00bf332a83e205bc9"><div class="ttname"><a href="classCardFilter.html#a0875c2d2fdfcf5b00bf332a83e205bc9">CardFilter.idCard</a></div><div class="ttdeci">string[] idCard</div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00037">CardFilter.cs:37</a></div></div>
+<div class="ttc" id="aclassCardFilter_html_aeda37fe4a83d5df9611a37568fa1c7fe"><div class="ttname"><a href="classCardFilter.html#aeda37fe4a83d5df9611a37568fa1c7fe">CardFilter.Pass</a></div><div class="ttdeci">bool Pass(CardRow source)</div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00091">CardFilter.cs:91</a></div></div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
-<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00066">SourceCard.cs:66</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00151">SourceManager.cs:151</a></div></div>
-<div class="ttc" id="aclassSpawnList_html"><div class="ttname"><a href="classSpawnList.html">SpawnList</a></div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00006">SpawnList.cs:7</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a12952fcdea83c02e6751bcf16b0660d8"><div class="ttname"><a href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">SpawnList.Get</a></div><div class="ttdeci">static SpawnList Get(string id, string parent=null, CardFilter filter=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00008">SpawnList.cs:8</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a31989d041006b1bc3db7f14b0ff81208"><div class="ttname"><a href="classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208">SpawnList.Add</a></div><div class="ttdeci">void Add(CardRow row)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00048">SpawnList.cs:48</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a6b49e9302e9916ce174e8748a39a86b3"><div class="ttname"><a href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">SpawnList.filter</a></div><div class="ttdeci">CardFilter filter</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00210">SpawnList.cs:210</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a12952fcdea83c02e6751bcf16b0660d8"><div class="ttname"><a href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">SpawnList.Get</a></div><div class="ttdeci">static SpawnList Get(string id, string parent=null, CardFilter filter=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00018">SpawnList.cs:18</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a31989d041006b1bc3db7f14b0ff81208"><div class="ttname"><a href="classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208">SpawnList.Add</a></div><div class="ttdeci">void Add(CardRow row)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00058">SpawnList.cs:58</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a6b49e9302e9916ce174e8748a39a86b3"><div class="ttname"><a href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">SpawnList.filter</a></div><div class="ttdeci">CardFilter filter</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00014">SpawnList.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpawnList_8cs_source.html#l00048">Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00151">SourceManager.cards</a>, <a class="el" href="RenderRow_8cs_source.html#l00453">RenderRow.chance</a>, <a class="el" href="SpawnList_8cs_source.html#l00210">filter</a>, <a class="el" href="SpawnList_8cs_source.html#l00008">Get()</a>, <a class="el" href="CardFilter_8cs_source.html#l00142">CardFilter.idCard</a>, <a class="el" href="SourceCard_8cs_source.html#l00066">SourceCard.map</a>, <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SpawnList_8cs_source.html#l00058">Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="RenderRow_8cs_source.html#l00024">RenderRow.chance</a>, <a class="el" href="SpawnList_8cs_source.html#l00014">filter</a>, <a class="el" href="SpawnList_8cs_source.html#l00018">Get()</a>, <a class="el" href="CardFilter_8cs_source.html#l00037">CardFilter.idCard</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="CardFilter_8cs_source.html#l00091">CardFilter.Pass()</a>, <a class="el" href="SpawnList_8cs_source.html#l00012">rows</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="SpawnList_8cs_source.html#l00016">totalChance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00008">Get()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00028">SpawnList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00018">Get()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00038">SpawnList()</a>.</p>
 
 </div>
 </div>
@@ -433,130 +429,68 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00078">78</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Clear();</div>
-<div class="line"><span class="lineno">   81</span>        SpawnList.tempList.totalChance = 0;</div>
-<div class="line"><span class="lineno">   82</span>        SpawnList.tempList.filter = this.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>;</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">while</span> (i &lt; this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count)</div>
-<div class="line"><span class="lineno">   85</span>        {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[i];</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (levelRange != -1)</div>
-<div class="line"><span class="lineno">   88</span>            {</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">if</span> (cardRow.<a class="code hl_variable" href="classCardRow.html#a94c8f00b803f934ae3aeb3c125097ebf">isChara</a> &amp;&amp; (cardRow as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>).mainElement.Length &gt;= 2)</div>
-<div class="line"><span class="lineno">   90</span>                {</div>
-<div class="line"><span class="lineno">   91</span>                    <a class="code hl_class" href="classSourceChara_1_1Row.html">SourceChara.Row</a> row = cardRow as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>;</div>
-<div class="line"><span class="lineno">   92</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   93</span>                    <span class="keywordtype">string</span>[] mainElement = row.<a class="code hl_variable" href="classSourceChara_1_1Row.html#a827334747fbc03174bc9bbf8054ff57a">mainElement</a>;</div>
-<div class="line"><span class="lineno">   94</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; mainElement.Length; j++)</div>
-<div class="line"><span class="lineno">   95</span>                    {</div>
-<div class="line"><span class="lineno">   96</span>                        <span class="keywordtype">string</span>[] array = mainElement[j].Split(<span class="charliteral">&#39;/&#39;</span>, StringSplitOptions.None);</div>
-<div class="line"><span class="lineno">   97</span>                        <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[<span class="stringliteral">&quot;ele&quot;</span> + array[0]];</div>
-<div class="line"><span class="lineno">   98</span>                        <span class="keywordflow">if</span> (Mathf.Abs(cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> * row2.<a class="code hl_variable" href="classSourceElement_1_1Row.html#ace78db01beb2605d73ad757e6292d791">eleP</a> / 100 - lv) &lt; levelRange)</div>
-<div class="line"><span class="lineno">   99</span>                        {</div>
-<div class="line"><span class="lineno">  100</span>                            flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  101</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  102</span>                        }</div>
-<div class="line"><span class="lineno">  103</span>                    }</div>
-<div class="line"><span class="lineno">  104</span>                    <span class="keywordflow">if</span> (flag)</div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00089">89</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Clear();</div>
+<div class="line"><span class="lineno">   92</span>        tempList.totalChance = 0;</div>
+<div class="line"><span class="lineno">   93</span>        tempList.filter = <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>;</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count; i++)</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[i];</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (levelRange != -1)</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (cardRow.<a class="code hl_variable" href="classCardRow.html#a94c8f00b803f934ae3aeb3c125097ebf">isChara</a> &amp;&amp; (cardRow as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>).mainElement.Length &gt;= 2)</div>
+<div class="line"><span class="lineno">  100</span>                {</div>
+<div class="line"><span class="lineno">  101</span>                    <a class="code hl_class" href="classSourceChara_1_1Row.html">SourceChara.Row</a> obj = cardRow as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>;</div>
+<div class="line"><span class="lineno">  102</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  103</span>                    <span class="keywordtype">string</span>[] mainElement = obj.<a class="code hl_variable" href="classSourceChara_1_1Row.html#a827334747fbc03174bc9bbf8054ff57a">mainElement</a>;</div>
+<div class="line"><span class="lineno">  104</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; mainElement.Length; j++)</div>
 <div class="line"><span class="lineno">  105</span>                    {</div>
-<div class="line"><span class="lineno">  106</span>                        <span class="keywordflow">goto</span> IL_F1;</div>
-<div class="line"><span class="lineno">  107</span>                    }</div>
-<div class="line"><span class="lineno">  108</span>                }</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Mathf.Abs(cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> - lv) &lt; levelRange)</div>
-<div class="line"><span class="lineno">  110</span>                {</div>
-<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">goto</span> IL_F1;</div>
-<div class="line"><span class="lineno">  112</span>                }</div>
-<div class="line"><span class="lineno">  113</span>            }</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> &lt;= lv)</div>
-<div class="line"><span class="lineno">  115</span>            {</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">goto</span> IL_F1;</div>
-<div class="line"><span class="lineno">  117</span>            }</div>
-<div class="line"><span class="lineno">  118</span>            IL_118:</div>
-<div class="line"><span class="lineno">  119</span>            i++;</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  121</span>            IL_F1:</div>
-<div class="line"><span class="lineno">  122</span>            <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Add(cardRow);</div>
-<div class="line"><span class="lineno">  123</span>            SpawnList.tempList.totalChance += cardRow.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a>;</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">goto</span> IL_118;</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count == 0)</div>
-<div class="line"><span class="lineno">  127</span>        {</div>
-<div class="line"><span class="lineno">  128</span>            Debug.Log(<span class="stringliteral">&quot;list contains no item: &quot;</span> + this.<span class="keywordtype">id</span> + <span class="stringliteral">&quot;/&quot;</span> + lv.ToString());</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  106</span>                        <span class="keywordtype">string</span>[] array = mainElement[j].Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  107</span>                        <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[<span class="stringliteral">&quot;ele&quot;</span> + array[0]];</div>
+<div class="line"><span class="lineno">  108</span>                        <span class="keywordflow">if</span> (Mathf.Abs(cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> * row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#ace78db01beb2605d73ad757e6292d791">eleP</a> / 100 - lv) &lt; levelRange)</div>
+<div class="line"><span class="lineno">  109</span>                        {</div>
+<div class="line"><span class="lineno">  110</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  112</span>                        }</div>
+<div class="line"><span class="lineno">  113</span>                    }</div>
+<div class="line"><span class="lineno">  114</span>                    <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  115</span>                    {</div>
+<div class="line"><span class="lineno">  116</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  117</span>                    }</div>
+<div class="line"><span class="lineno">  118</span>                }</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Mathf.Abs(cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> - lv) &gt;= levelRange)</div>
+<div class="line"><span class="lineno">  120</span>                {</div>
+<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  122</span>                }</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cardRow.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> &gt; lv)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>            <a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Add(cardRow);</div>
+<div class="line"><span class="lineno">  129</span>            tempList.totalChance += cardRow.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a>;</div>
 <div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-<div class="ttc" id="aclassCardRow_html_a94c8f00b803f934ae3aeb3c125097ebf"><div class="ttname"><a href="classCardRow.html#a94c8f00b803f934ae3aeb3c125097ebf">CardRow.isChara</a></div><div class="ttdeci">bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00171">CardRow.cs:171</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_aed3ac25d06114085ec605995cd3d9171"><div class="ttname"><a href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">RenderRow.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00451">RenderRow.cs:451</a></div></div>
-<div class="ttc" id="aclassSourceChara_1_1Row_html"><div class="ttname"><a href="classSourceChara_1_1Row.html">SourceChara.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00110">SourceChara.cs:111</a></div></div>
-<div class="ttc" id="aclassSourceChara_1_1Row_html_a827334747fbc03174bc9bbf8054ff57a"><div class="ttname"><a href="classSourceChara_1_1Row.html#a827334747fbc03174bc9bbf8054ff57a">SourceChara.Row.mainElement</a></div><div class="ttdeci">string[] mainElement</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00223">SourceChara.cs:223</a></div></div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count == 0)</div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            Debug.Log(<span class="stringliteral">&quot;list contains no item: &quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;/&quot;</span> + lv);</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">tempList</a>;</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a94c8f00b803f934ae3aeb3c125097ebf"><div class="ttname"><a href="classCardRow.html#a94c8f00b803f934ae3aeb3c125097ebf">CardRow.isChara</a></div><div class="ttdeci">bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00055">CardRow.cs:55</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aed3ac25d06114085ec605995cd3d9171"><div class="ttname"><a href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">RenderRow.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00022">RenderRow.cs:22</a></div></div>
+<div class="ttc" id="aclassSourceChara_1_1Row_html"><div class="ttname"><a href="classSourceChara_1_1Row.html">SourceChara.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00007">SourceChara.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceChara_1_1Row_html_a827334747fbc03174bc9bbf8054ff57a"><div class="ttname"><a href="classSourceChara_1_1Row.html#a827334747fbc03174bc9bbf8054ff57a">SourceChara.Row.mainElement</a></div><div class="ttdeci">string[] mainElement</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00033">SourceChara.cs:33</a></div></div>
 <div class="ttc" id="aclassSourceChara_html"><div class="ttname"><a href="classSourceChara.html">SourceChara</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00004">SourceChara.cs:5</a></div></div>
-<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00159">SourceElement.cs:160</a></div></div>
-<div class="ttc" id="aclassSourceElement_1_1Row_html_ace78db01beb2605d73ad757e6292d791"><div class="ttname"><a href="classSourceElement_1_1Row.html#ace78db01beb2605d73ad757e6292d791">SourceElement.Row.eleP</a></div><div class="ttdeci">int eleP</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00319">SourceElement.cs:319</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00163">SourceManager.cs:163</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a8738e590f31a4bfe29fba0d79a6d051f"><div class="ttname"><a href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">SpawnList.tempList</a></div><div class="ttdeci">static SpawnList tempList</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00204">SpawnList.cs:204</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00010">SourceElement.cs:11</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_ace78db01beb2605d73ad757e6292d791"><div class="ttname"><a href="classSourceElement_1_1Row.html#ace78db01beb2605d73ad757e6292d791">SourceElement.Row.eleP</a></div><div class="ttdeci">int eleP</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00058">SourceElement.cs:58</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a8738e590f31a4bfe29fba0d79a6d051f"><div class="ttname"><a href="classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f">SpawnList.tempList</a></div><div class="ttdeci">static SpawnList tempList</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00008">SpawnList.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00453">RenderRow.chance</a>, <a class="el" href="SourceManager_8cs_source.html#l00163">SourceManager.elements</a>, <a class="el" href="SourceElement_8cs_source.html#l00319">SourceElement.Row.eleP</a>, <a class="el" href="SpawnList_8cs_source.html#l00210">filter</a>, <a class="el" href="CardRow_8cs_source.html#l00171">CardRow.isChara</a>, <a class="el" href="RenderRow_8cs_source.html#l00451">RenderRow.LV</a>, <a class="el" href="SourceChara_8cs_source.html#l00223">SourceChara.Row.mainElement</a>, <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>, <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>, and <a class="el" href="SpawnList_8cs_source.html#l00204">tempList</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00024">RenderRow.chance</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="SourceElement_8cs_source.html#l00058">SourceElement.Row.eleP</a>, <a class="el" href="SpawnList_8cs_source.html#l00014">filter</a>, <a class="el" href="CardRow_8cs_source.html#l00055">CardRow.isChara</a>, <a class="el" href="RenderRow_8cs_source.html#l00022">RenderRow.LV</a>, <a class="el" href="SourceChara_8cs_source.html#l00033">SourceChara.Row.mainElement</a>, <a class="el" href="SpawnList_8cs_source.html#l00012">rows</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="SpawnList_8cs_source.html#l00008">tempList</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00134">Select()</a>.</p>
-
-</div>
-</div>
-<a id="ade7971120b73a0e9c504309503fdbb4c" name="ade7971120b73a0e9c504309503fdbb4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade7971120b73a0e9c504309503fdbb4c">&#9670;&#160;</a></span>g___Select()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classCardRow.html">CardRow</a>&lt; <a class="el" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a> &gt; SpawnList.g___Select </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00178">178</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(this.<a class="code hl_variable" href="classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76">totalChance</a>);</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordtype">int</span> num2 = 0;</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>)</div>
-<div class="line"><span class="lineno">  183</span>        {</div>
-<div class="line"><span class="lineno">  184</span>            num2 += cardRow.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a>;</div>
-<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">if</span> (num &lt; num2)</div>
-<div class="line"><span class="lineno">  186</span>            {</div>
-<div class="line"><span class="lineno">  187</span>                <span class="keywordflow">return</span> cardRow;</div>
-<div class="line"><span class="lineno">  188</span>            }</div>
-<div class="line"><span class="lineno">  189</span>        }</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (this.rows.Count == 0)</div>
-<div class="line"><span class="lineno">  191</span>        {</div>
-<div class="line"><span class="lineno">  192</span>            Debug.Log(<span class="stringliteral">&quot;no item:&quot;</span> + this.<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCardFilter.html">CardFilter</a>.<a class="code hl_class" href="classCardFilter_1_1FilterItem.html">FilterItem</a> filterItem in <span class="keyword">this</span>.filter.tags)</div>
-<div class="line"><span class="lineno">  194</span>            {</div>
-<div class="line"><span class="lineno">  195</span>                Debug.Log(filterItem.name + <span class="stringliteral">&quot;/&quot;</span> + filterItem.exclude.ToString());</div>
-<div class="line"><span class="lineno">  196</span>            }</div>
-<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> this.rows[<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(this.rows.Count)];</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-<div class="ttc" id="aclassCardFilter_1_1FilterItem_html"><div class="ttname"><a href="classCardFilter_1_1FilterItem.html">CardFilter.FilterItem</a></div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00156">CardFilter.cs:157</a></div></div>
-<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a97ee96f64efd879295c436e7e6d2ae76"><div class="ttname"><a href="classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76">SpawnList.totalChance</a></div><div class="ttdeci">int totalChance</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00212">SpawnList.cs:212</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00453">RenderRow.chance</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>, and <a class="el" href="SpawnList_8cs_source.html#l00212">totalChance</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00134">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00139">Select()</a>.</p>
 
 </div>
 </div>
@@ -600,30 +534,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00008">8</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <a class="code hl_class" href="classSpawnList.html">SpawnList</a> spawnList = <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_variable" href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">allList</a>.TryGetValue(<span class="keywordtype">id</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (spawnList != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">if</span> (spawnList.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> &amp;&amp; <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   14</span>            {</div>
-<div class="line"><span class="lineno">   15</span>                spawnList.<a class="code hl_function" href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">CreateMaster</a>(<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>, parent);</div>
-<div class="line"><span class="lineno">   16</span>            }</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> spawnList;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>        spawnList = <span class="keyword">new</span> <a class="code hl_class" href="classSpawnList.html">SpawnList</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            spawnList.<a class="code hl_function" href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">CreateMaster</a>(<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>, parent);</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_variable" href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">allList</a>.Add(<span class="keywordtype">id</span>, spawnList);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> spawnList;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="aclassSpawnList_html_a996f0031a8413a114d4a114c252dad70"><div class="ttname"><a href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">SpawnList.allList</a></div><div class="ttdeci">static Dictionary&lt; string, SpawnList &gt; allList</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00202">SpawnList.cs:202</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00018">18</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="classSpawnList.html">SpawnList</a> spawnList = <a class="code hl_variable" href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">allList</a>.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (spawnList != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (spawnList.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> &amp;&amp; <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                spawnList.<a class="code hl_function" href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">CreateMaster</a>(<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>, parent);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> spawnList;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        spawnList = <span class="keyword">new</span> <a class="code hl_class" href="classSpawnList.html">SpawnList</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            spawnList.<a class="code hl_function" href="classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5">CreateMaster</a>(<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>, parent);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">allList</a>.Add(<span class="keywordtype">id</span>, spawnList);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> spawnList;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassSpawnList_html"><div class="ttname"><a href="classSpawnList.html">SpawnList</a></div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00004">SpawnList.cs:5</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a996f0031a8413a114d4a114c252dad70"><div class="ttname"><a href="classSpawnList.html#a996f0031a8413a114d4a114c252dad70">SpawnList.allList</a></div><div class="ttdeci">static Dictionary&lt; string, SpawnList &gt; allList</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00006">SpawnList.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpawnList_8cs_source.html#l00202">allList</a>, <a class="el" href="SpawnList_8cs_source.html#l00054">CreateMaster()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00210">filter</a>.</p>
+<p class="reference">References <a class="el" href="SpawnList_8cs_source.html#l00006">allList</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00014">filter</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00069">ThingGen.CreateFromFilter()</a>, <a class="el" href="CharaGen_8cs_source.html#l00026">CharaGen.CreateFromFilter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00054">CreateMaster()</a>, <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="SpawnListChara_8cs_source.html#l00005">SpawnListChara.Get()</a>, <a class="el" href="SpawnListThing_8cs_source.html#l00005">SpawnListThing.Get()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00039">TraitGodStatue.GetManiGene()</a>, <a class="el" href="Region_8cs_source.html#l00329">Region.OnAdvanceHour()</a>, <a class="el" href="GameDate_8cs_source.html#l00430">GameDate.ShipRandomPackages()</a>, <a class="el" href="Zone_8cs_source.html#l02859">Zone.SpawnMob()</a>, <a class="el" href="ThingGen_8cs_source.html#l00038">ThingGen.TestCreate()</a>, and <a class="el" href="Card_8cs_source.html#l04945">Card.TryMakeRandomItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00063">ThingGen.CreateFromFilter()</a>, <a class="el" href="CharaGen_8cs_source.html#l00026">CharaGen.CreateFromFilter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>, <a class="el" href="Trait_8cs_source.html#l01944">Trait.CreateStock()</a>, <a class="el" href="SpawnListChara_8cs_source.html#l00005">SpawnListChara.Get()</a>, <a class="el" href="SpawnListThing_8cs_source.html#l00005">SpawnListThing.Get()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00032">TraitGodStatue.GetManiGene()</a>, <a class="el" href="Region_8cs_source.html#l00295">Region.OnAdvanceHour()</a>, <a class="el" href="GameDate_8cs_source.html#l00423">GameDate.ShipRandomPackages()</a>, <a class="el" href="Zone_8cs_source.html#l02463">Zone.SpawnMob()</a>, <a class="el" href="ThingGen_8cs_source.html#l00032">ThingGen.TestCreate()</a>, and <a class="el" href="Card_8cs_source.html#l04571">Card.TryMakeRandomItem()</a>.</p>
 
 </div>
 </div>
@@ -650,12 +585,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00172">172</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>    {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[0];</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00200">200</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[0];</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>.</p>
+<p class="reference">References <a class="el" href="SpawnList_8cs_source.html#l00012">rows</a>.</p>
 
 </div>
 </div>
@@ -682,12 +617,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00167">167</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>    {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(this.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count)];</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00195">195</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count)];</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00050">EClass.cs:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00012">rows</a>.</p>
 
 </div>
 </div>
@@ -725,49 +661,72 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00134">134</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (lv != -1)</div>
-<div class="line"><span class="lineno">  137</span>        {</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (levelRange != -1)</div>
-<div class="line"><span class="lineno">  139</span>            {</div>
-<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 50; i++)</div>
-<div class="line"><span class="lineno">  141</span>                {</div>
-<div class="line"><span class="lineno">  142</span>                    <a class="code hl_class" href="classSpawnList.html">SpawnList</a> spawnList = this.<a class="code hl_function" href="classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993">Filter</a>(lv + i - i * i, levelRange + i * i);</div>
-<div class="line"><span class="lineno">  143</span>                    <span class="keywordflow">if</span> (spawnList.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count &gt; 5)</div>
-<div class="line"><span class="lineno">  144</span>                    {</div>
-<div class="line"><span class="lineno">  145</span>                        <span class="keywordflow">return</span> spawnList.<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>(-1, -1);</div>
-<div class="line"><span class="lineno">  146</span>                    }</div>
-<div class="line"><span class="lineno">  147</span>                }</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>            lv = lv + 2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(Mathf.Min(lv * 2, 20)) + 1) + 1) + 1);</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993">Filter</a>(lv, -1).<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>(-1, -1);</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <span class="keyword">null</span> &amp;&amp; this.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#acdc42bbfb78c430c7e3f23e8d5a739de">categoriesInclude</a>.Count &gt; 0)</div>
-<div class="line"><span class="lineno">  153</span>        {</div>
-<div class="line"><span class="lineno">  154</span>            <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a> r = this.<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#acdc42bbfb78c430c7e3f23e8d5a739de">categoriesInclude</a>.RandomItem&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>&gt;();</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 100; j++)</div>
-<div class="line"><span class="lineno">  156</span>            {</div>
-<div class="line"><span class="lineno">  157</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = this.&lt;<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>&gt;<a class="code hl_function" href="classSpawnList.html#ade7971120b73a0e9c504309503fdbb4c">g___Select</a>|11_0();</div>
-<div class="line"><span class="lineno">  158</span>                <span class="keywordflow">if</span> (cardRow != <span class="keyword">null</span> &amp;&amp; cardRow.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.IsChildOf(r))</div>
-<div class="line"><span class="lineno">  159</span>                {</div>
-<div class="line"><span class="lineno">  160</span>                    <span class="keywordflow">return</span> cardRow;</div>
-<div class="line"><span class="lineno">  161</span>                }</div>
-<div class="line"><span class="lineno">  162</span>            }</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> this.&lt;<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>&gt;<a class="code hl_function" href="classSpawnList.html#ade7971120b73a0e9c504309503fdbb4c">g___Select</a>|11_0();</div>
-<div class="line"><span class="lineno">  165</span>    }</div>
-<div class="ttc" id="aclassCardFilter_html_acdc42bbfb78c430c7e3f23e8d5a739de"><div class="ttname"><a href="classCardFilter.html#acdc42bbfb78c430c7e3f23e8d5a739de">CardFilter.categoriesInclude</a></div><div class="ttdeci">List&lt; SourceCategory.Row &gt; categoriesInclude</div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00150">CardFilter.cs:150</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_a40de73dfca78c824bfd191752a2cb532"><div class="ttname"><a href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">RenderRow.Category</a></div><div class="ttdeci">SourceCategory.Row Category</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00094">RenderRow.cs:95</a></div></div>
-<div class="ttc" id="aclassSourceCategory_1_1Row_html"><div class="ttname"><a href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00058">SourceCategory.cs:59</a></div></div>
-<div class="ttc" id="aclassSourceCategory_html"><div class="ttname"><a href="classSourceCategory.html">SourceCategory</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00004">SourceCategory.cs:5</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a1177d7c0ce0db04f591c6320ba035993"><div class="ttname"><a href="classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993">SpawnList.Filter</a></div><div class="ttdeci">SpawnList Filter(int lv, int levelRange=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00078">SpawnList.cs:78</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a39d702c255e5e5ab91401a6bf62a7b8b"><div class="ttname"><a href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">SpawnList.Select</a></div><div class="ttdeci">CardRow Select(int lv=-1, int levelRange=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00134">SpawnList.cs:134</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_ade7971120b73a0e9c504309503fdbb4c"><div class="ttname"><a href="classSpawnList.html#ade7971120b73a0e9c504309503fdbb4c">SpawnList.g___Select</a></div><div class="ttdeci">CardRow&lt; Select &gt; g___Select()</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00178">SpawnList.cs:178</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00139">139</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (lv != -1)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (levelRange != -1)</div>
+<div class="line"><span class="lineno">  144</span>            {</div>
+<div class="line"><span class="lineno">  145</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 50; i++)</div>
+<div class="line"><span class="lineno">  146</span>                {</div>
+<div class="line"><span class="lineno">  147</span>                    <a class="code hl_class" href="classSpawnList.html">SpawnList</a> spawnList = <a class="code hl_function" href="classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993">Filter</a>(lv + i - i * i, levelRange + i * i);</div>
+<div class="line"><span class="lineno">  148</span>                    <span class="keywordflow">if</span> (spawnList.<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count &gt; 5)</div>
+<div class="line"><span class="lineno">  149</span>                    {</div>
+<div class="line"><span class="lineno">  150</span>                        <span class="keywordflow">return</span> spawnList.<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>();</div>
+<div class="line"><span class="lineno">  151</span>                    }</div>
+<div class="line"><span class="lineno">  152</span>                }</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>            lv = lv + 2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(Mathf.Min(lv * 2, 20)) + 1) + 1) + 1);</div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993">Filter</a>(lv).<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>();</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#acdc42bbfb78c430c7e3f23e8d5a739de">categoriesInclude</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a> r = <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#acdc42bbfb78c430c7e3f23e8d5a739de">categoriesInclude</a>.RandomItem();</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 100; j++)</div>
+<div class="line"><span class="lineno">  161</span>            {</div>
+<div class="line"><span class="lineno">  162</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = _Select();</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (cardRow != <span class="keyword">null</span> &amp;&amp; cardRow.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.IsChildOf(r))</div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    <span class="keywordflow">return</span> cardRow;</div>
+<div class="line"><span class="lineno">  166</span>                }</div>
+<div class="line"><span class="lineno">  167</span>            }</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> _Select();</div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> _Select()</div>
+<div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76">totalChance</a>);</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCardRow.html">CardRow</a> row <span class="keywordflow">in</span> <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                num2 += row.<a class="code hl_variable" href="classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7">chance</a>;</div>
+<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">if</span> (num &lt; num2)</div>
+<div class="line"><span class="lineno">  178</span>                {</div>
+<div class="line"><span class="lineno">  179</span>                    <span class="keywordflow">return</span> row;</div>
+<div class="line"><span class="lineno">  180</span>                }</div>
+<div class="line"><span class="lineno">  181</span>            }</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count == 0)</div>
+<div class="line"><span class="lineno">  183</span>            {</div>
+<div class="line"><span class="lineno">  184</span>                Debug.Log(<span class="stringliteral">&quot;no item:&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  185</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCardFilter.html">CardFilter</a>.<a class="code hl_class" href="classCardFilter_1_1FilterItem.html">FilterItem</a> tag in <a class="code hl_variable" href="classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3">filter</a>.<a class="code hl_variable" href="classCardFilter.html#a8a5df85117b7458f53df16d8c979a455">tags</a>)</div>
+<div class="line"><span class="lineno">  186</span>                {</div>
+<div class="line"><span class="lineno">  187</span>                    Debug.Log(tag.name + <span class="stringliteral">&quot;/&quot;</span> + tag.exclude);</div>
+<div class="line"><span class="lineno">  188</span>                }</div>
+<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  190</span>            }</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>[<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2">rows</a>.Count)];</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+<div class="ttc" id="aclassCardFilter_1_1FilterItem_html"><div class="ttname"><a href="classCardFilter_1_1FilterItem.html">CardFilter.FilterItem</a></div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00007">CardFilter.cs:8</a></div></div>
+<div class="ttc" id="aclassCardFilter_html_a8a5df85117b7458f53df16d8c979a455"><div class="ttname"><a href="classCardFilter.html#a8a5df85117b7458f53df16d8c979a455">CardFilter.tags</a></div><div class="ttdeci">List&lt; FilterItem &gt; tags</div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00039">CardFilter.cs:39</a></div></div>
+<div class="ttc" id="aclassCardFilter_html_acdc42bbfb78c430c7e3f23e8d5a739de"><div class="ttname"><a href="classCardFilter.html#acdc42bbfb78c430c7e3f23e8d5a739de">CardFilter.categoriesInclude</a></div><div class="ttdeci">List&lt; SourceCategory.Row &gt; categoriesInclude</div><div class="ttdef"><b>Definition:</b> <a href="CardFilter_8cs_source.html#l00045">CardFilter.cs:45</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a40de73dfca78c824bfd191752a2cb532"><div class="ttname"><a href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">RenderRow.Category</a></div><div class="ttdeci">SourceCategory.Row Category</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00120">RenderRow.cs:120</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html"><div class="ttname"><a href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00007">SourceCategory.cs:8</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a1177d7c0ce0db04f591c6320ba035993"><div class="ttname"><a href="classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993">SpawnList.Filter</a></div><div class="ttdeci">SpawnList Filter(int lv, int levelRange=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00089">SpawnList.cs:89</a></div></div>
+<div class="ttc" id="aclassSpawnList_html_a39d702c255e5e5ab91401a6bf62a7b8b"><div class="ttname"><a href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">SpawnList.Select</a></div><div class="ttdeci">CardRow Select(int lv=-1, int levelRange=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00139">SpawnList.cs:139</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CardFilter_8cs_source.html#l00150">CardFilter.categoriesInclude</a>, <a class="el" href="RenderRow_8cs_source.html#l00095">RenderRow.Category</a>, <a class="el" href="SpawnList_8cs_source.html#l00078">Filter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00210">filter</a>, <a class="el" href="SpawnList_8cs_source.html#l00178">g___Select()</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, <a class="el" href="SpawnList_8cs_source.html#l00208">rows</a>, and <a class="el" href="SpawnList_8cs_source.html#l00134">Select()</a>.</p>
+<p class="reference">References <a class="el" href="CardFilter_8cs_source.html#l00045">CardFilter.categoriesInclude</a>, <a class="el" href="RenderRow_8cs_source.html#l00120">RenderRow.Category</a>, <a class="el" href="RenderRow_8cs_source.html#l00024">RenderRow.chance</a>, <a class="el" href="SpawnList_8cs_source.html#l00014">filter</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">Filter()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="SpawnList_8cs_source.html#l00012">rows</a>, <a class="el" href="SpawnList_8cs_source.html#l00139">Select()</a>, <a class="el" href="CardFilter_8cs_source.html#l00039">CardFilter.tags</a>, and <a class="el" href="SpawnList_8cs_source.html#l00016">totalChance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00009">ThingGen._Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00081">ThingGen.CreateFromCategory()</a>, <a class="el" href="CharaGen_8cs_source.html#l00031">CharaGen.CreateFromFilter()</a>, <a class="el" href="ThingGen_8cs_source.html#l00069">ThingGen.CreateFromFilter()</a>, <a class="el" href="ThingGen_8cs_source.html#l00086">ThingGen.CreateFromTag()</a>, <a class="el" href="Trait_8cs_source.html#l02516">Trait.CreateStock()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00039">TraitGodStatue.GetManiGene()</a>, <a class="el" href="SpawnList_8cs_source.html#l00134">Select()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00088">QuestDeliver.SetIdThing()</a>, <a class="el" href="GameDate_8cs_source.html#l00430">GameDate.ShipRandomPackages()</a>, <a class="el" href="Zone_8cs_source.html#l02859">Zone.SpawnMob()</a>, <a class="el" href="ThingGen_8cs_source.html#l00038">ThingGen.TestCreate()</a>, <a class="el" href="Card_8cs_source.html#l04945">Card.TryMakeRandomItem()</a>, and <a class="el" href="SlaverData_8cs_source.html#l00007">SlaverData.TryRefresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00006">ThingGen._Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00075">ThingGen.CreateFromCategory()</a>, <a class="el" href="CharaGen_8cs_source.html#l00031">CharaGen.CreateFromFilter()</a>, <a class="el" href="ThingGen_8cs_source.html#l00063">ThingGen.CreateFromFilter()</a>, <a class="el" href="ThingGen_8cs_source.html#l00080">ThingGen.CreateFromTag()</a>, <a class="el" href="Trait_8cs_source.html#l01944">Trait.CreateStock()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00032">TraitGodStatue.GetManiGene()</a>, <a class="el" href="SpawnList_8cs_source.html#l00139">Select()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00059">QuestDeliver.SetIdThing()</a>, <a class="el" href="GameDate_8cs_source.html#l00423">GameDate.ShipRandomPackages()</a>, <a class="el" href="ThingGen_8cs_source.html#l00032">ThingGen.TestCreate()</a>, <a class="el" href="Card_8cs_source.html#l04571">Card.TryMakeRandomItem()</a>, and <a class="el" href="SlaverData_8cs_source.html#l00012">SlaverData.TryRefresh()</a>.</p>
 
 </div>
 </div>
@@ -792,9 +751,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00202">202</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00006">6</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00008">Get()</a>, and <a class="el" href="Core_8cs_source.html#l00441">Core.ResetRuntime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00018">Get()</a>, and <a class="el" href="Core_8cs_source.html#l00493">Core.ResetRuntime()</a>.</p>
 
 </div>
 </div>
@@ -810,9 +769,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00210">210</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00014">14</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00054">CreateMaster()</a>, <a class="el" href="SpawnList_8cs_source.html#l00078">Filter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00008">Get()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00134">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">Filter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00018">Get()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00139">Select()</a>.</p>
 
 </div>
 </div>
@@ -828,9 +787,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00206">206</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00010">10</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00350">TraitCrafter.Craft()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00086">SerializedCards.Restore()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00028">SpawnList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00249">TraitCrafter.Craft()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00467">SerializedCards.Restore()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00038">SpawnList()</a>.</p>
 
 </div>
 </div>
@@ -846,9 +805,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00208">208</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00012">12</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00048">Add()</a>, <a class="el" href="SpawnList_8cs_source.html#l00054">CreateMaster()</a>, <a class="el" href="SpawnList_8cs_source.html#l00078">Filter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00178">g___Select()</a>, <a class="el" href="SpawnList_8cs_source.html#l00172">GetFirst()</a>, <a class="el" href="SpawnList_8cs_source.html#l00167">GetRandom()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00134">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00058">Add()</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">Filter()</a>, <a class="el" href="SpawnList_8cs_source.html#l00200">GetFirst()</a>, <a class="el" href="SpawnList_8cs_source.html#l00195">GetRandom()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00139">Select()</a>.</p>
 
 </div>
 </div>
@@ -862,7 +821,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSpawnList.html">SpawnList</a> SpawnList.tempList = new <a class="el" href="classSpawnList.html">SpawnList</a>(null)</td>
+          <td class="memname"><a class="el" href="classSpawnList.html">SpawnList</a> SpawnList.tempList = new <a class="el" href="classSpawnList.html">SpawnList</a>()</td>
         </tr>
       </table>
   </td>
@@ -872,9 +831,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00204">204</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00008">8</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00078">Filter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00089">Filter()</a>.</p>
 
 </div>
 </div>
@@ -890,9 +849,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00212">212</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SpawnList_8cs_source.html#l00016">16</a> of file <a class="el" href="SpawnList_8cs_source.html">SpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00178">g___Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpawnList_8cs_source.html#l00058">Add()</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">CreateMaster()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00139">Select()</a>.</p>
 
 </div>
 </div>

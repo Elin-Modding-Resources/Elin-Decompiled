@@ -131,7 +131,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00004">4</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00003">3</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adaf0b82bdff3c5e048cef1a322d0a046" name="adaf0b82bdff3c5e048cef1a322d0a046"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adaf0b82bdff3c5e048cef1a322d0a046">&#9670;&#160;</a></span>GetLabel()</h2>
@@ -167,52 +167,32 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00011">11</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (t == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   14</span>        {</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   16</span>            {</div>
-<div class="line"><span class="lineno">   17</span>                <span class="stringliteral">&quot; &lt;color=&quot;</span>,</div>
-<div class="line"><span class="lineno">   18</span>                <a class="code hl_class" href="classDropdownRecipe.html">DropdownRecipe</a>.<a class="code hl_variable" href="classDropdownRecipe.html#af65bf22c7794399f53b8467b40812725">colorCost</a>.ToHex(),</div>
-<div class="line"><span class="lineno">   19</span>                <span class="stringliteral">&quot;&gt;&quot;</span>,</div>
-<div class="line"><span class="lineno">   20</span>                <span class="stringliteral">&quot;noMaterial&quot;</span>.lang(),</div>
-<div class="line"><span class="lineno">   21</span>                <span class="stringliteral">&quot;&lt;/color&gt;&quot;</span></div>
-<div class="line"><span class="lineno">   22</span>            });</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_class" href="classHitSummary.html">HitSummary</a> summary = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">tileSelector</a>.<a class="code hl_variable" href="classBaseTileSelector.html#ae60e6d3a8481240ba8991cb8e2fe0ad3">summary</a>;</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">int</span> num = t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            showColor ? (<span class="stringliteral">&quot;&lt;color=&quot;</span> + t.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.matColor.ToHex() + <span class="stringliteral">&quot;&gt;■&lt;/color&gt; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><span class="lineno">   29</span>            t.NameSimple,</div>
-<div class="line"><span class="lineno">   30</span>            <span class="stringliteral">&quot; (&quot;</span>,</div>
-<div class="line"><span class="lineno">   31</span>            num.ToString(),</div>
-<div class="line"><span class="lineno">   32</span>            <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><span class="lineno">   33</span>        }) + ((summary.countValid == 0) ? <span class="stringliteral">&quot;&quot;</span> : string.Concat(new string[]</div>
-<div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="stringliteral">&quot; &lt;color=&quot;</span>,</div>
-<div class="line"><span class="lineno">   36</span>            <a class="code hl_class" href="classDropdownRecipe.html">DropdownRecipe</a>.<a class="code hl_variable" href="classDropdownRecipe.html#af65bf22c7794399f53b8467b40812725">colorCost</a>.ToHex(),</div>
-<div class="line"><span class="lineno">   37</span>            <span class="stringliteral">&quot;&gt; -&quot;</span>,</div>
-<div class="line"><span class="lineno">   38</span>            (this.ingredient.req * summary.<a class="code hl_variable" href="classHitSummary.html#a24f6150b3e5515063569fdf7c04f98b0">countValid</a>).ToString(),</div>
-<div class="line"><span class="lineno">   39</span>            <span class="stringliteral">&quot;&lt;/color&gt;&quot;</span></div>
-<div class="line"><span class="lineno">   40</span>        }));</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-<div class="ttc" id="aclassBaseGameScreen_html_ab7be591966272c30dbaf7f49dae84e8d"><div class="ttname"><a href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">BaseGameScreen.tileSelector</a></div><div class="ttdeci">BaseTileSelector tileSelector</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.cs:859</a></div></div>
-<div class="ttc" id="aclassBaseTileSelector_html_ae60e6d3a8481240ba8991cb8e2fe0ad3"><div class="ttname"><a href="classBaseTileSelector.html#ae60e6d3a8481240ba8991cb8e2fe0ad3">BaseTileSelector.summary</a></div><div class="ttdeci">HitSummary summary</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00495">BaseTileSelector.cs:495</a></div></div>
-<div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01955">Card.cs:1956</a></div></div>
-<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00115">Card.cs:116</a></div></div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
-<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00691">Core.cs:691</a></div></div>
-<div class="ttc" id="aclassCore_html_aa115bf6d048542080bc7a185949ade75"><div class="ttname"><a href="classCore.html#aa115bf6d048542080bc7a185949ade75">Core.screen</a></div><div class="ttdeci">BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00741">Core.cs:741</a></div></div>
-<div class="ttc" id="aclassDropdownRecipe_html"><div class="ttname"><a href="classDropdownRecipe.html">DropdownRecipe</a></div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00004">DropdownRecipe.cs:5</a></div></div>
-<div class="ttc" id="aclassDropdownRecipe_html_af65bf22c7794399f53b8467b40812725"><div class="ttname"><a href="classDropdownRecipe.html#af65bf22c7794399f53b8467b40812725">DropdownRecipe.colorCost</a></div><div class="ttdeci">static Color colorCost</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00043">DropdownRecipe.cs:43</a></div></div>
-<div class="ttc" id="aclassHitSummary_html"><div class="ttname"><a href="classHitSummary.html">HitSummary</a></div><div class="ttdef"><b>Definition:</b> <a href="HitSummary_8cs_source.html#l00005">HitSummary.cs:6</a></div></div>
-<div class="ttc" id="aclassHitSummary_html_a24f6150b3e5515063569fdf7c04f98b0"><div class="ttname"><a href="classHitSummary.html#a24f6150b3e5515063569fdf7c04f98b0">HitSummary.countValid</a></div><div class="ttdeci">int countValid</div><div class="ttdef"><b>Definition:</b> <a href="HitSummary_8cs_source.html#l00105">HitSummary.cs:105</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00022">22</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (t == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot; &lt;color=&quot;</span> + <a class="code hl_variable" href="classDropdownRecipe.html#af65bf22c7794399f53b8467b40812725">colorCost</a>.ToHex() + <span class="stringliteral">&quot;&gt;&quot;</span> + <span class="stringliteral">&quot;noMaterial&quot;</span>.lang() + <span class="stringliteral">&quot;&lt;/color&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_class" href="classHitSummary.html">HitSummary</a> summary = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">tileSelector</a>.<a class="code hl_variable" href="classBaseTileSelector.html#ae60e6d3a8481240ba8991cb8e2fe0ad3">summary</a>;</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">int</span> num = t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Concat((showColor ? (<span class="stringliteral">&quot;&lt;color=&quot;</span> + t.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.matColor.ToHex() + <span class="stringliteral">&quot;&gt;■&lt;/color&gt; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>) + t.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a> + <span class="stringliteral">&quot; (&quot;</span> + num + <span class="stringliteral">&quot;)&quot;</span>, (summary.<a class="code hl_variable" href="classHitSummary.html#a24f6150b3e5515063569fdf7c04f98b0">countValid</a> == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot; &lt;color=&quot;</span> + <a class="code hl_variable" href="classDropdownRecipe.html#af65bf22c7794399f53b8467b40812725">colorCost</a>.ToHex() + <span class="stringliteral">&quot;&gt; -&quot;</span> + <a class="code hl_variable" href="classDropdownRecipe.html#ad79b8301ace972100618f76902bb75c8">ingredient</a>.req * summary.<a class="code hl_variable" href="classHitSummary.html#a24f6150b3e5515063569fdf7c04f98b0">countValid</a> + <span class="stringliteral">&quot;&lt;/color&gt;&quot;</span>));</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_ab7be591966272c30dbaf7f49dae84e8d"><div class="ttname"><a href="classBaseGameScreen.html#ab7be591966272c30dbaf7f49dae84e8d">BaseGameScreen.tileSelector</a></div><div class="ttdeci">BaseTileSelector tileSelector</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00116">BaseGameScreen.cs:116</a></div></div>
+<div class="ttc" id="aclassBaseTileSelector_html_ae60e6d3a8481240ba8991cb8e2fe0ad3"><div class="ttname"><a href="classBaseTileSelector.html#ae60e6d3a8481240ba8991cb8e2fe0ad3">BaseTileSelector.summary</a></div><div class="ttdeci">HitSummary summary</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileSelector_8cs_source.html#l00039">BaseTileSelector.cs:39</a></div></div>
+<div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01849">Card.cs:1849</a></div></div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01937">Card.cs:1937</a></div></div>
+<div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00147">Card.cs:148</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
+<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00011">Core.cs:11</a></div></div>
+<div class="ttc" id="aclassCore_html_aa115bf6d048542080bc7a185949ade75"><div class="ttname"><a href="classCore.html#aa115bf6d048542080bc7a185949ade75">Core.screen</a></div><div class="ttdeci">BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00061">Core.cs:61</a></div></div>
+<div class="ttc" id="aclassDropdownRecipe_html_ad79b8301ace972100618f76902bb75c8"><div class="ttname"><a href="classDropdownRecipe.html#ad79b8301ace972100618f76902bb75c8">DropdownRecipe.ingredient</a></div><div class="ttdeci">Recipe.Ingredient ingredient</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00015">DropdownRecipe.cs:15</a></div></div>
+<div class="ttc" id="aclassDropdownRecipe_html_af65bf22c7794399f53b8467b40812725"><div class="ttname"><a href="classDropdownRecipe.html#af65bf22c7794399f53b8467b40812725">DropdownRecipe.colorCost</a></div><div class="ttdeci">static Color colorCost</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00005">DropdownRecipe.cs:5</a></div></div>
+<div class="ttc" id="aclassHitSummary_html"><div class="ttname"><a href="classHitSummary.html">HitSummary</a></div><div class="ttdef"><b>Definition:</b> <a href="HitSummary_8cs_source.html#l00004">HitSummary.cs:5</a></div></div>
+<div class="ttc" id="aclassHitSummary_html_a24f6150b3e5515063569fdf7c04f98b0"><div class="ttname"><a href="classHitSummary.html#a24f6150b3e5515063569fdf7c04f98b0">HitSummary.countValid</a></div><div class="ttdeci">int countValid</div><div class="ttdef"><b>Definition:</b> <a href="HitSummary_8cs_source.html#l00010">HitSummary.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DropdownRecipe_8cs_source.html#l00043">colorCost</a>, <a class="el" href="HitSummary_8cs_source.html#l00105">HitSummary.countValid</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00053">ingredient</a>, <a class="el" href="Card_8cs_source.html#l01956">Card.material</a>, <a class="el" href="Card_8cs_source.html#l02192">Card.NameSimple</a>, <a class="el" href="Card_8cs_source.html#l00116">Card.Num</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="BaseTileSelector_8cs_source.html#l00495">BaseTileSelector.summary</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00859">BaseGameScreen.tileSelector</a>.</p>
+<p class="reference">References <a class="el" href="DropdownRecipe_8cs_source.html#l00005">colorCost</a>, <a class="el" href="HitSummary_8cs_source.html#l00010">HitSummary.countValid</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00015">ingredient</a>, <a class="el" href="Core_8cs_source.html#l00011">Core.Instance</a>, <a class="el" href="Card_8cs_source.html#l01849">Card.material</a>, <a class="el" href="Card_8cs_source.html#l01937">Card.NameSimple</a>, <a class="el" href="Card_8cs_source.html#l00148">Card.Num</a>, <a class="el" href="Core_8cs_source.html#l00061">Core.screen</a>, <a class="el" href="BaseTileSelector_8cs_source.html#l00039">BaseTileSelector.summary</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00116">BaseGameScreen.tileSelector</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00006">RefreshLabel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00017">RefreshLabel()</a>.</p>
 
 </div>
 </div>
@@ -239,19 +219,20 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00006">6</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_variable" href="classDropdownRecipe.html#ae820e7564ae7276dd1242a541e1a4fa4">textLabel</a>.SetText(this.<a class="code hl_function" href="classDropdownRecipe.html#adaf0b82bdff3c5e048cef1a322d0a046">GetLabel</a>(this.<a class="code hl_variable" href="classDropdownRecipe.html#ad79b8301ace972100618f76902bb75c8">ingredient</a>.thing, <span class="keyword">this</span>.recipe.<a class="code hl_property" href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">source</a>.<a class="code hl_variable" href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">colorIng</a> == <span class="keyword">this</span>.recipe.ingredients.IndexOf(<span class="keyword">this</span>.ingredient)));</div>
-<div class="line"><span class="lineno">    9</span>    }</div>
-<div class="ttc" id="aclassDropdownRecipe_html_ad79b8301ace972100618f76902bb75c8"><div class="ttname"><a href="classDropdownRecipe.html#ad79b8301ace972100618f76902bb75c8">DropdownRecipe.ingredient</a></div><div class="ttdeci">Recipe.Ingredient ingredient</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00053">DropdownRecipe.cs:53</a></div></div>
-<div class="ttc" id="aclassDropdownRecipe_html_adaf0b82bdff3c5e048cef1a322d0a046"><div class="ttname"><a href="classDropdownRecipe.html#adaf0b82bdff3c5e048cef1a322d0a046">DropdownRecipe.GetLabel</a></div><div class="ttdeci">string GetLabel(Thing t, bool showColor)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00011">DropdownRecipe.cs:11</a></div></div>
-<div class="ttc" id="aclassDropdownRecipe_html_ae820e7564ae7276dd1242a541e1a4fa4"><div class="ttname"><a href="classDropdownRecipe.html#ae820e7564ae7276dd1242a541e1a4fa4">DropdownRecipe.textLabel</a></div><div class="ttdeci">UIText textLabel</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00049">DropdownRecipe.cs:49</a></div></div>
-<div class="ttc" id="aclassRecipeSource_html_ac27e98de62ebf616e976b385da4f1bf9"><div class="ttname"><a href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">RecipeSource.colorIng</a></div><div class="ttdeci">int colorIng</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00199">RecipeSource.cs:199</a></div></div>
-<div class="ttc" id="aclassRecipe_html_a64cba6b9b821d7650e1974b045f095b6"><div class="ttname"><a href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">Recipe.source</a></div><div class="ttdeci">RecipeSource source</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00083">Recipe.cs:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00017">17</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="classDropdownRecipe.html#ae820e7564ae7276dd1242a541e1a4fa4">textLabel</a>.SetText(<a class="code hl_function" href="classDropdownRecipe.html#adaf0b82bdff3c5e048cef1a322d0a046">GetLabel</a>(<a class="code hl_variable" href="classDropdownRecipe.html#ad79b8301ace972100618f76902bb75c8">ingredient</a>.thing, <a class="code hl_variable" href="classDropdownRecipe.html#ac3c5d814d6ed1b7b307fdb5d8cc1cf82">recipe</a>.<a class="code hl_property" href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">source</a>.<a class="code hl_variable" href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">colorIng</a> == <a class="code hl_variable" href="classDropdownRecipe.html#ac3c5d814d6ed1b7b307fdb5d8cc1cf82">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.IndexOf(<a class="code hl_variable" href="classDropdownRecipe.html#ad79b8301ace972100618f76902bb75c8">ingredient</a>)));</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassDropdownRecipe_html_ac3c5d814d6ed1b7b307fdb5d8cc1cf82"><div class="ttname"><a href="classDropdownRecipe.html#ac3c5d814d6ed1b7b307fdb5d8cc1cf82">DropdownRecipe.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00009">DropdownRecipe.cs:9</a></div></div>
+<div class="ttc" id="aclassDropdownRecipe_html_adaf0b82bdff3c5e048cef1a322d0a046"><div class="ttname"><a href="classDropdownRecipe.html#adaf0b82bdff3c5e048cef1a322d0a046">DropdownRecipe.GetLabel</a></div><div class="ttdeci">string GetLabel(Thing t, bool showColor)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00022">DropdownRecipe.cs:22</a></div></div>
+<div class="ttc" id="aclassDropdownRecipe_html_ae820e7564ae7276dd1242a541e1a4fa4"><div class="ttname"><a href="classDropdownRecipe.html#ae820e7564ae7276dd1242a541e1a4fa4">DropdownRecipe.textLabel</a></div><div class="ttdeci">UIText textLabel</div><div class="ttdef"><b>Definition:</b> <a href="DropdownRecipe_8cs_source.html#l00011">DropdownRecipe.cs:11</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_ac27e98de62ebf616e976b385da4f1bf9"><div class="ttname"><a href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">RecipeSource.colorIng</a></div><div class="ttdeci">int colorIng</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00011">RecipeSource.cs:11</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a64cba6b9b821d7650e1974b045f095b6"><div class="ttname"><a href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">Recipe.source</a></div><div class="ttdeci">RecipeSource source</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00156">Recipe.cs:156</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a6a5225be981549a270d4384c7ca4b5eb"><div class="ttname"><a href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">Recipe.ingredients</a></div><div class="ttdeci">List&lt; Ingredient &gt; ingredients</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00133">Recipe.cs:133</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RecipeSource_8cs_source.html#l00199">RecipeSource.colorIng</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00011">GetLabel()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00053">ingredient</a>, <a class="el" href="Recipe_8cs_source.html#l00084">Recipe.source</a>, and <a class="el" href="DropdownRecipe_8cs_source.html#l00049">textLabel</a>.</p>
+<p class="reference">References <a class="el" href="RecipeSource_8cs_source.html#l00011">RecipeSource.colorIng</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00022">GetLabel()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00015">ingredient</a>, <a class="el" href="Recipe_8cs_source.html#l00133">Recipe.ingredients</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00009">recipe</a>, <a class="el" href="Recipe_8cs_source.html#l00156">Recipe.source</a>, and <a class="el" href="DropdownRecipe_8cs_source.html#l00011">textLabel</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00118">UIRecipeInfo.RefreshBalance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00180">UIRecipeInfo.RefreshBalance()</a>.</p>
 
 </div>
 </div>
@@ -276,9 +257,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00043">43</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00005">5</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00011">GetLabel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00022">GetLabel()</a>.</p>
 
 </div>
 </div>
@@ -302,7 +283,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00045">45</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00007">7</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
 
 </div>
 </div>
@@ -318,9 +299,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00053">53</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00015">15</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00011">GetLabel()</a>, and <a class="el" href="DropdownRecipe_8cs_source.html#l00006">RefreshLabel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00022">GetLabel()</a>, and <a class="el" href="DropdownRecipe_8cs_source.html#l00017">RefreshLabel()</a>.</p>
 
 </div>
 </div>
@@ -336,9 +317,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00051">51</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00013">13</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00361">UIRecipeInfo.RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -354,7 +335,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00047">47</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00009">9</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00017">RefreshLabel()</a>.</p>
 
 </div>
 </div>
@@ -370,9 +353,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00049">49</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DropdownRecipe_8cs_source.html#l00011">11</a> of file <a class="el" href="DropdownRecipe_8cs_source.html">DropdownRecipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00006">RefreshLabel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownRecipe_8cs_source.html#l00017">RefreshLabel()</a>.</p>
 
 </div>
 </div>

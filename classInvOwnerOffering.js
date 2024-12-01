@@ -6,5 +6,5 @@ var classInvOwnerOffering =
     [ "altar", "classInvOwnerOffering.html#a0a7890abba33e42f0b37416dd41e2dd0", null ],
     [ "DenyImportant", "classInvOwnerOffering.html#a2fc6b584f5d08c84e487da94b8e44851", null ],
     [ "langTransfer", "classInvOwnerOffering.html#a64b2afa4ce2582d968a4802e8704a715", null ],
-    [ "processType", "classInvOwnerOffering.html#ad8657324a75e1294f74b5d5097fb4b1e", null ]
+    [ "processType", "classInvOwnerOffering.html#ae1cd67d09e0c85138038c7d0ff58b136", null ]
 ];

@@ -190,7 +190,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00004">4</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00003">3</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9f916bd0535c744180dfee7250b3633b" name="a9f916bd0535c744180dfee7250b3633b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f916bd0535c744180dfee7250b3633b">&#9670;&#160;</a></span>OnFixedUpdate()</h2>
@@ -217,14 +217,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRigidUpdate.html#af5ee37daddd2f9d113a350db83afe738">RigidUpdate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00006">6</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordtype">float</span> num = Mathf.Lerp(this.<a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.rotation, <span class="keyword">this</span>.angle, <span class="keyword">this</span>.force);</div>
-<div class="line"><span class="lineno">    9</span>        this.<a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.MoveRotation(num);</div>
-<div class="line"><span class="lineno">   10</span>    }</div>
-<div class="ttc" id="aclassRigidUpdate_html_a28c0e5089380e6875b10fd28525585a2"><div class="ttname"><a href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">RigidUpdate.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00030">RigidUpdate.cs:30</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00009">9</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordtype">float</span> num = Mathf.Lerp(<a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.rotation, <a class="code hl_variable" href="classRigidAngle.html#ae3e7f2c7b68882e1fffe5bbc9cb0effa">angle</a>, <a class="code hl_variable" href="classRigidAngle.html#a32966a714c7bf492fea5e090a9c86b11">force</a>);</div>
+<div class="line"><span class="lineno">   12</span>        <a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.MoveRotation(num);</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassRigidAngle_html_a32966a714c7bf492fea5e090a9c86b11"><div class="ttname"><a href="classRigidAngle.html#a32966a714c7bf492fea5e090a9c86b11">RigidAngle.force</a></div><div class="ttdeci">float force</div><div class="ttdef"><b>Definition:</b> <a href="RigidAngle_8cs_source.html#l00007">RigidAngle.cs:7</a></div></div>
+<div class="ttc" id="aclassRigidAngle_html_ae3e7f2c7b68882e1fffe5bbc9cb0effa"><div class="ttname"><a href="classRigidAngle.html#ae3e7f2c7b68882e1fffe5bbc9cb0effa">RigidAngle.angle</a></div><div class="ttdeci">float angle</div><div class="ttdef"><b>Definition:</b> <a href="RigidAngle_8cs_source.html#l00005">RigidAngle.cs:5</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a28c0e5089380e6875b10fd28525585a2"><div class="ttname"><a href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">RigidUpdate.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00013">RigidUpdate.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RigidUpdate_8cs_source.html#l00030">RigidUpdate.rb</a>.</p>
+<p class="reference">References <a class="el" href="RigidAngle_8cs_source.html#l00005">angle</a>, <a class="el" href="RigidAngle_8cs_source.html#l00007">force</a>, and <a class="el" href="RigidUpdate_8cs_source.html#l00013">RigidUpdate.rb</a>.</p>
 
 </div>
 </div>
@@ -241,7 +243,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00012">12</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00005">5</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RigidAngle_8cs_source.html#l00009">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -257,7 +261,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00014">14</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidAngle_8cs_source.html#l00007">7</a> of file <a class="el" href="RigidAngle_8cs_source.html">RigidAngle.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RigidAngle_8cs_source.html#l00009">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>

@@ -30,6 +30,6 @@ var classWidgetInspector =
     [ "target", "classWidgetInspector.html#a49fa644d988258e919edf987b449d5e9", null ],
     [ "texts", "classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc", null ],
     [ "textTitle", "classWidgetInspector.html#aaaade40b06b1e32b167277dfe62c0428", null ],
-    [ "extra", "classWidgetInspector.html#a4dcb6eec4415a69a1492e14e1e55ee5c", null ],
+    [ "extra", "classWidgetInspector.html#a62a0bd7c9f7d3e37e6d5bf7f755d85ae", null ],
     [ "mouseTarget", "classWidgetInspector.html#a8b1d07336a492568eea81b089726a433", null ]
 ];

@@ -8,7 +8,7 @@ var classDayData =
       [ "Bad", "classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a7ff3e75ce6aca348bc513ed3d5882946", null ],
       [ "Awful", "classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a38c8201af2d71215dda2ca7bd21e481b", null ]
     ] ],
-    [ "luck", "classDayData.html#a84269609cc56a1cf9be421b7a096aed7", null ],
+    [ "luck", "classDayData.html#a0e9b605c31006052c8aea6c44b533505", null ],
     [ "LuckRange", "classDayData.html#ace4443356d6c8c966b711be045727c62", null ],
     [ "seed", "classDayData.html#ab09dba873b94e9acf9cef538404f4ebb", null ]
 ];

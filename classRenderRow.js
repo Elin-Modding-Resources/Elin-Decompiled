@@ -4,7 +4,7 @@ var classRenderRow =
     [ "ConvertTile", "classRenderRow.html#a980e9b9d0999093da9f00fb7fb02dd8a", null ],
     [ "GetColorInt", "classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071", null ],
     [ "GetPref", "classRenderRow.html#a05af08650883a1b1a12451e393f98bb5", null ],
-    [ "GetRenderParam", "classRenderRow.html#a241cb197c6e275c82e754dce019929d5", null ],
+    [ "GetRenderParam", "classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4", null ],
     [ "GetSearchName", "classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a", null ],
     [ "GetSprite", "classRenderRow.html#acc4325d305863606f002e014de0e5bd1", null ],
     [ "GetTile", "classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce", null ],

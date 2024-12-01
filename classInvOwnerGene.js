@@ -6,5 +6,5 @@ var classInvOwnerGene =
     [ "ShouldShowGuide", "classInvOwnerGene.html#af10b9dbf4a804c7b61e0429c368de6a0", null ],
     [ "tg", "classInvOwnerGene.html#aed12a70e220a15cebc04f90e16f45676", null ],
     [ "langTransfer", "classInvOwnerGene.html#a0ba8687c8cadb41aef0cba1d52c8b99c", null ],
-    [ "processType", "classInvOwnerGene.html#a891d211f0aefa1b6eb7fb71e0adab37e", null ]
+    [ "processType", "classInvOwnerGene.html#a658043ed408f878b1f59d2b8555dc935", null ]
 ];

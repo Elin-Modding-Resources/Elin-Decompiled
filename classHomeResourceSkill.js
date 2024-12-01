@@ -7,5 +7,5 @@ var classHomeResourceSkill =
     [ "lastValue", "classHomeResourceSkill.html#a391a7d541e8bb7b7e8167a680ae2f338", null ],
     [ "next", "classHomeResourceSkill.html#af4b4cd0cf6f23c9a2fffab4a6f1b888d", null ],
     [ "ExpRatio", "classHomeResourceSkill.html#af5165193af5dc75edd887a0703ea58ff", null ],
-    [ "Group", "classHomeResourceSkill.html#a87ed06e9867423759ff6b52b8004d0b0", null ]
+    [ "Group", "classHomeResourceSkill.html#ad4be4a8c38d606066a60f05251d2db58", null ]
 ];

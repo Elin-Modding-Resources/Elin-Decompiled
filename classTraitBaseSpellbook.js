@@ -8,7 +8,6 @@ var classTraitBaseSpellbook =
       [ "Dojin", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb", null ]
     ] ],
     [ "CanRead", "classTraitBaseSpellbook.html#a0b97be9a164b766e6256c23aab2afa1c", null ],
-    [ "g__ReadCheck", "classTraitBaseSpellbook.html#aabdd56454d4759e1077e4d6b82dbe1c3", null ],
     [ "GetActDuration", "classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551", null ],
     [ "ModCharge", "classTraitBaseSpellbook.html#a4b1b6489c9ded1fa63c59d6f51cd6fac", null ],
     [ "OnCreate", "classTraitBaseSpellbook.html#a68ad147a394d09b062f9d4fc042816d9", null ],
@@ -17,7 +16,7 @@ var classTraitBaseSpellbook =
     [ "SetName", "classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e", null ],
     [ "TryProgress", "classTraitBaseSpellbook.html#ab88e783f03c314e47d4d029af226a6d6", null ],
     [ "selecter", "classTraitBaseSpellbook.html#a361c2bf31c4146bc6e1b58d5d1afd5a3", null ],
-    [ "BookType", "classTraitBaseSpellbook.html#a793c52c5b4dfc9e506a4fe0e08c1092c", null ],
+    [ "BookType", "classTraitBaseSpellbook.html#a6751607c6ecd9ad50bafe58d9d96428a", null ],
     [ "CanStack", "classTraitBaseSpellbook.html#a4d64058d240d2f7efd88628a447ef1af", null ],
     [ "Difficulty", "classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5", null ],
     [ "HasCharges", "classTraitBaseSpellbook.html#a7e832f3c41aa28e23551946e5fd9334c", null ],

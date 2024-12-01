@@ -1,7 +1,7 @@
 var classTileTypeWallHang =
 [
     [ "GetDesiredDir", "classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0", null ],
-    [ "GetMountHeight", "classTileTypeWallHang.html#a15d0ca16f3db5f4645fb149e842c3c7e", null ],
+    [ "GetMountHeight", "classTileTypeWallHang.html#a0b82650b3237bef5768db8e52481c126", null ],
     [ "HitTest", "classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66", null ],
     [ "DIRS", "classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702", null ],
     [ "CanStack", "classTileTypeWallHang.html#a0564e7bf30a034302bb92bfd47b3154e", null ],

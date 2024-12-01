@@ -1,4 +1,4 @@
 var classSpell =
 [
-    [ "PotentialAsStock", "classSpell.html#adbf001daf000ff9ece9007121d3d0985", null ]
+    [ "PotentialAsStock", "classSpell.html#a3de05554b62d9c22b019153994c9f432", null ]
 ];

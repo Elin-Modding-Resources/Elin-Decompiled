@@ -1,7 +1,6 @@
 var classRecipe_1_1Ingredient =
 [
     [ "CanSetThing", "classRecipe_1_1Ingredient.html#a940bd08fae5a97096755fcd1d7cc8dfc", null ],
-    [ "g__CatName", "classRecipe_1_1Ingredient.html#aec983262e9199dea149e943c4a16952f", null ],
     [ "GetName", "classRecipe_1_1Ingredient.html#a5fa997f2cddce444fed01ac22ef6d9c1", null ],
     [ "RefreshThing", "classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16", null ],
     [ "SetThing", "classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e", null ],

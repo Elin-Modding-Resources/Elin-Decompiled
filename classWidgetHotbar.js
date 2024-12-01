@@ -43,7 +43,7 @@ var classWidgetHotbar =
     [ "type", "classWidgetHotbar.html#a8414ffd2f6f275b4e6263e0112603797", null ],
     [ "useMask", "classWidgetHotbar.html#a136464114e690ceb66d6bb8ca07e1f8b", null ],
     [ "CanRegisterItem", "classWidgetHotbar.html#a9aecc2578b7c5fd4946fdd02add7f347", null ],
-    [ "extra", "classWidgetHotbar.html#a320b58cb7827ff9ee49a753fbf2a0457", null ],
+    [ "extra", "classWidgetHotbar.html#a968f093cd100c8a2d24efc56b61ebb8e", null ],
     [ "hotbar", "classWidgetHotbar.html#a811b7f93c70045ca2b40b579f2f9acaa", null ],
     [ "IsHotbarSpeed", "classWidgetHotbar.html#ac812c73e4b719a8a5d88dd8ac6c3eb0c", null ],
     [ "ShowInBuildMode", "classWidgetHotbar.html#acad83a1fec07a9b82a13f2ff6c2a0aae", null ],

@@ -27,6 +27,6 @@ var classWidgetMainText =
     [ "spriteEther", "classWidgetMainText.html#ac8c3090554b1d3495a987c1e44b40320", null ],
     [ "visibleLines", "classWidgetMainText.html#a69a1aea5d6c124e2d9eada51f902f968", null ],
     [ "AlwaysTop", "classWidgetMainText.html#a6718b9366ea68007caa814c53032e1d0", null ],
-    [ "extra", "classWidgetMainText.html#a3ae57191a915a14be636cd490020394d", null ],
+    [ "extra", "classWidgetMainText.html#ad3a97559a1bbfa05aed55eb6b6e78498", null ],
     [ "ShowStyleMenu", "classWidgetMainText.html#af59d359bbfc76050eaedf7bc9c8280dc", null ]
 ];

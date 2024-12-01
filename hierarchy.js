@@ -41,23 +41,7 @@ var hierarchy =
     [ "BaseModPackage", null, [
       [ "ModPackage", "classModPackage.html", null ]
     ] ],
-    [ "SourceData.BaseRow", null, [
-      [ "RenderRow", "classRenderRow.html", [
-        [ "CardRow", "classCardRow.html", [
-          [ "SourceChara.Row", "classSourceChara_1_1Row.html", null ],
-          [ "SourceThing.Row", "classSourceThing_1_1Row.html", [
-            [ "SourceThingV.Row", "classSourceThingV_1_1Row.html", [
-              [ "SourceFood.Row2", "classSourceFood_1_1Row2.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "TileRow", "classTileRow.html", [
-          [ "SourceBlock.Row", "classSourceBlock_1_1Row.html", null ],
-          [ "SourceCellEffect.Row", "classSourceCellEffect_1_1Row.html", null ],
-          [ "SourceFloor.Row", "classSourceFloor_1_1Row.html", null ],
-          [ "SourceObj.Row", "classSourceObj_1_1Row.html", null ]
-        ] ]
-      ] ],
+    [ "BaseRow", null, [
       [ "SourceArea.Row", "classSourceArea_1_1Row.html", null ],
       [ "SourceBacker.Row", "classSourceBacker_1_1Row.html", null ],
       [ "SourceCalc.Row", "classSourceCalc_1_1Row.html", null ],
@@ -84,6 +68,24 @@ var hierarchy =
       [ "SourceTactics.Row", "classSourceTactics_1_1Row.html", null ],
       [ "SourceZone.Row", "classSourceZone_1_1Row.html", null ],
       [ "SourceZoneAffix.Row", "classSourceZoneAffix_1_1Row.html", null ]
+    ] ],
+    [ "SourceData.BaseRow", null, [
+      [ "RenderRow", "classRenderRow.html", [
+        [ "CardRow", "classCardRow.html", [
+          [ "SourceChara.Row", "classSourceChara_1_1Row.html", null ],
+          [ "SourceThing.Row", "classSourceThing_1_1Row.html", [
+            [ "SourceThingV.Row", "classSourceThingV_1_1Row.html", [
+              [ "SourceFood.Row2", "classSourceFood_1_1Row2.html", null ]
+            ] ]
+          ] ]
+        ] ],
+        [ "TileRow", "classTileRow.html", [
+          [ "SourceBlock.Row", "classSourceBlock_1_1Row.html", null ],
+          [ "SourceCellEffect.Row", "classSourceCellEffect_1_1Row.html", null ],
+          [ "SourceFloor.Row", "classSourceFloor_1_1Row.html", null ],
+          [ "SourceObj.Row", "classSourceObj_1_1Row.html", null ]
+        ] ]
+      ] ]
     ] ],
     [ "BiomeProfile.BaseTile", "classBiomeProfile_1_1BaseTile.html", [
       [ "BiomeProfile.Cluster.BaseItem", "classBiomeProfile_1_1Cluster_1_1BaseItem.html", [

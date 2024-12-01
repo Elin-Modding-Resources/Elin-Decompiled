@@ -1,5 +1,5 @@
 var classAIWork__Explore =
 [
-    [ "Run", "classAIWork__Explore.html#a36281486a55a0f571e1d9b52fd20949a", null ],
-    [ "WorkType", "classAIWork__Explore.html#aba299fb1ff8a526e78945de99dad3b6a", null ]
+    [ "Run", "classAIWork__Explore.html#ab610006a0b58f9d49de8fbaf450bf9d3", null ],
+    [ "WorkType", "classAIWork__Explore.html#a2677e829229a72b77b82aed8ff34a199", null ]
 ];

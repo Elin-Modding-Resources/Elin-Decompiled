@@ -112,10 +112,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a396de52507b96d0d71892683d5df1012"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#a396de52507b96d0d71892683d5df1012">CreateRow</a> ()</td></tr>
-<tr class="separator:a396de52507b96d0d71892683d5df1012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d8ea29a18a091bab87a89bdbdd7c47"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#a45d8ea29a18a091bab87a89bdbdd7c47">SetRow</a> (<a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a> r)</td></tr>
-<tr class="separator:a45d8ea29a18a091bab87a89bdbdd7c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac406466529b818cb268aa7f400cff7e2"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourceThing_1_1Row.html">Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#ac406466529b818cb268aa7f400cff7e2">CreateRow</a> ()</td></tr>
+<tr class="separator:ac406466529b818cb268aa7f400cff7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53af9e83a562957b53d366b91afd87ba"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#a53af9e83a562957b53d366b91afd87ba">SetRow</a> (<a class="el" href="classSourceThing_1_1Row.html">Row</a> r)</td></tr>
+<tr class="separator:a53af9e83a562957b53d366b91afd87ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86055a026555b69b93b3fcf88cca28e7"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#a86055a026555b69b93b3fcf88cca28e7">BackupPref</a> ()</td></tr>
 <tr class="separator:a86055a026555b69b93b3fcf88cca28e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47ddfd634748359993511ab00d22f660"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#a47ddfd634748359993511ab00d22f660">RestorePref</a> ()</td></tr>
@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad6119b5882c151d0ec2127fd8ea8141e"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">_rows</a> = new Dictionary&lt;string, <a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a>&gt;()</td></tr>
-<tr class="separator:ad6119b5882c151d0ec2127fd8ea8141e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe6ba72c1ed321bffe4b877b20dd835"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classSourceThing_1_1Row.html">Row</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceThing.html#affe6ba72c1ed321bffe4b877b20dd835">_rows</a> = new Dictionary&lt;string, <a class="el" href="classSourceThing_1_1Row.html">Row</a>&gt;()</td></tr>
+<tr class="separator:affe6ba72c1ed321bffe4b877b20dd835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -158,24 +158,22 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00069">69</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
-<div class="line"><span class="lineno">   71</span>        this.<a class="code hl_variable" href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">_rows</a>.Clear();</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <span class="keyword">this</span>.rows)</div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            this.<a class="code hl_variable" href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">_rows</a>[row.id] = row;</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00099">SourceThing.cs:100</a></div></div>
-<div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
-<div class="ttc" id="aclassSourceThing_html_ad6119b5882c151d0ec2127fd8ea8141e"><div class="ttname"><a href="classSourceThing.html#ad6119b5882c151d0ec2127fd8ea8141e">SourceThing._rows</a></div><div class="ttdeci">Dictionary&lt; string, SourceThing.Row &gt; _rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00096">SourceThing.cs:96</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00205">205</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>        <a class="code hl_variable" href="classSourceThing.html#affe6ba72c1ed321bffe4b877b20dd835">_rows</a>.Clear();</div>
+<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  209</span>        {</div>
+<div class="line"><span class="lineno">  210</span>            <a class="code hl_variable" href="classSourceThing.html#affe6ba72c1ed321bffe4b877b20dd835">_rows</a>[row.id] = row;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="ttc" id="aclassSourceThing_html_affe6ba72c1ed321bffe4b877b20dd835"><div class="ttname"><a href="classSourceThing.html#affe6ba72c1ed321bffe4b877b20dd835">SourceThing._rows</a></div><div class="ttdeci">Dictionary&lt; string, Row &gt; _rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00138">SourceThing.cs:138</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00096">_rows</a>.</p>
+<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00138">_rows</a>, and <a class="el" href="CardRow_8cs_source.html#l00007">CardRow.id</a>.</p>
 
 </div>
 </div>
-<a id="a396de52507b96d0d71892683d5df1012" name="a396de52507b96d0d71892683d5df1012"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a396de52507b96d0d71892683d5df1012">&#9670;&#160;</a></span>CreateRow()</h2>
+<a id="ac406466529b818cb268aa7f400cff7e2" name="ac406466529b818cb268aa7f400cff7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac406466529b818cb268aa7f400cff7e2">&#9670;&#160;</a></span>CreateRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +182,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override <a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a> SourceThing.CreateRow </td>
+          <td class="memname">override <a class="el" href="classSourceThing_1_1Row.html">Row</a> SourceThing.CreateRow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -197,66 +195,68 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00006">6</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
-<div class="line"><span class="lineno">   11</span>            name_JP = SourceData.GetString(1),</div>
-<div class="line"><span class="lineno">   12</span>            unknown_JP = SourceData.GetString(2),</div>
-<div class="line"><span class="lineno">   13</span>            unit_JP = SourceData.GetString(3),</div>
-<div class="line"><span class="lineno">   14</span>            naming = SourceData.GetString(4),</div>
-<div class="line"><span class="lineno">   15</span>            name = SourceData.GetString(5),</div>
-<div class="line"><span class="lineno">   16</span>            unit = SourceData.GetString(6),</div>
-<div class="line"><span class="lineno">   17</span>            unknown = SourceData.GetString(7),</div>
-<div class="line"><span class="lineno">   18</span>            category = SourceData.GetString(8),</div>
-<div class="line"><span class="lineno">   19</span>            sort = SourceData.GetInt(10),</div>
-<div class="line"><span class="lineno">   20</span>            _tileType = SourceData.GetString(11),</div>
-<div class="line"><span class="lineno">   21</span>            _idRenderData = SourceData.GetString(12),</div>
-<div class="line"><span class="lineno">   22</span>            tiles = SourceData.GetIntArray(13),</div>
-<div class="line"><span class="lineno">   23</span>            altTiles = SourceData.GetIntArray(14),</div>
-<div class="line"><span class="lineno">   24</span>            anime = SourceData.GetIntArray(15),</div>
-<div class="line"><span class="lineno">   25</span>            skins = SourceData.GetIntArray(16),</div>
-<div class="line"><span class="lineno">   26</span>            size = SourceData.GetIntArray(17),</div>
-<div class="line"><span class="lineno">   27</span>            colorMod = SourceData.GetInt(18),</div>
-<div class="line"><span class="lineno">   28</span>            colorType = SourceData.GetString(19),</div>
-<div class="line"><span class="lineno">   29</span>            recipeKey = SourceData.GetStringArray(20),</div>
-<div class="line"><span class="lineno">   30</span>            factory = SourceData.GetStringArray(21),</div>
-<div class="line"><span class="lineno">   31</span>            components = SourceData.GetStringArray(22),</div>
-<div class="line"><span class="lineno">   32</span>            disassemble = SourceData.GetStringArray(23),</div>
-<div class="line"><span class="lineno">   33</span>            defMat = SourceData.GetString(24),</div>
-<div class="line"><span class="lineno">   34</span>            tierGroup = SourceData.GetString(25),</div>
-<div class="line"><span class="lineno">   35</span>            value = SourceData.GetInt(26),</div>
-<div class="line"><span class="lineno">   36</span>            LV = SourceData.GetInt(27),</div>
-<div class="line"><span class="lineno">   37</span>            chance = SourceData.GetInt(28),</div>
-<div class="line"><span class="lineno">   38</span>            quality = SourceData.GetInt(29),</div>
-<div class="line"><span class="lineno">   39</span>            HP = SourceData.GetInt(30),</div>
-<div class="line"><span class="lineno">   40</span>            weight = SourceData.GetInt(31),</div>
-<div class="line"><span class="lineno">   41</span>            electricity = SourceData.GetInt(32),</div>
-<div class="line"><span class="lineno">   42</span>            trait = SourceData.GetStringArray(33),</div>
-<div class="line"><span class="lineno">   43</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(SourceData.GetStr(34, <span class="keyword">false</span>)),</div>
-<div class="line"><span class="lineno">   44</span>            range = SourceData.GetInt(35),</div>
-<div class="line"><span class="lineno">   45</span>            attackType = SourceData.GetString(36),</div>
-<div class="line"><span class="lineno">   46</span>            offense = SourceData.GetIntArray(37),</div>
-<div class="line"><span class="lineno">   47</span>            substats = SourceData.GetIntArray(38),</div>
-<div class="line"><span class="lineno">   48</span>            defense = SourceData.GetIntArray(39),</div>
-<div class="line"><span class="lineno">   49</span>            lightData = SourceData.GetString(40),</div>
-<div class="line"><span class="lineno">   50</span>            idExtra = SourceData.GetString(41),</div>
-<div class="line"><span class="lineno">   51</span>            idToggleExtra = SourceData.GetString(42),</div>
-<div class="line"><span class="lineno">   52</span>            idActorEx = SourceData.GetString(43),</div>
-<div class="line"><span class="lineno">   53</span>            idSound = SourceData.GetString(44),</div>
-<div class="line"><span class="lineno">   54</span>            tag = SourceData.GetStringArray(45),</div>
-<div class="line"><span class="lineno">   55</span>            workTag = SourceData.GetString(46),</div>
-<div class="line"><span class="lineno">   56</span>            filter = SourceData.GetStringArray(47),</div>
-<div class="line"><span class="lineno">   57</span>            roomName_JP = SourceData.GetStringArray(48),</div>
-<div class="line"><span class="lineno">   58</span>            roomName = SourceData.GetStringArray(49),</div>
-<div class="line"><span class="lineno">   59</span>            detail_JP = SourceData.GetString(50),</div>
-<div class="line"><span class="lineno">   60</span>            detail = SourceData.GetString(51)</div>
-<div class="line"><span class="lineno">   61</span>        };</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
-<div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00645">Core.cs:645</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00142">142</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>    {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
+<div class="line"><span class="lineno">  147</span>            name_JP = SourceData.GetString(1),</div>
+<div class="line"><span class="lineno">  148</span>            unknown_JP = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">  149</span>            unit_JP = SourceData.GetString(3),</div>
+<div class="line"><span class="lineno">  150</span>            naming = SourceData.GetString(4),</div>
+<div class="line"><span class="lineno">  151</span>            name = SourceData.GetString(5),</div>
+<div class="line"><span class="lineno">  152</span>            unit = SourceData.GetString(6),</div>
+<div class="line"><span class="lineno">  153</span>            unknown = SourceData.GetString(7),</div>
+<div class="line"><span class="lineno">  154</span>            category = SourceData.GetString(8),</div>
+<div class="line"><span class="lineno">  155</span>            sort = SourceData.GetInt(10),</div>
+<div class="line"><span class="lineno">  156</span>            _tileType = SourceData.GetString(11),</div>
+<div class="line"><span class="lineno">  157</span>            _idRenderData = SourceData.GetString(12),</div>
+<div class="line"><span class="lineno">  158</span>            tiles = SourceData.GetIntArray(13),</div>
+<div class="line"><span class="lineno">  159</span>            altTiles = SourceData.GetIntArray(14),</div>
+<div class="line"><span class="lineno">  160</span>            anime = SourceData.GetIntArray(15),</div>
+<div class="line"><span class="lineno">  161</span>            skins = SourceData.GetIntArray(16),</div>
+<div class="line"><span class="lineno">  162</span>            size = SourceData.GetIntArray(17),</div>
+<div class="line"><span class="lineno">  163</span>            colorMod = SourceData.GetInt(18),</div>
+<div class="line"><span class="lineno">  164</span>            colorType = SourceData.GetString(19),</div>
+<div class="line"><span class="lineno">  165</span>            recipeKey = SourceData.GetStringArray(20),</div>
+<div class="line"><span class="lineno">  166</span>            factory = SourceData.GetStringArray(21),</div>
+<div class="line"><span class="lineno">  167</span>            components = SourceData.GetStringArray(22),</div>
+<div class="line"><span class="lineno">  168</span>            disassemble = SourceData.GetStringArray(23),</div>
+<div class="line"><span class="lineno">  169</span>            defMat = SourceData.GetString(24),</div>
+<div class="line"><span class="lineno">  170</span>            tierGroup = SourceData.GetString(25),</div>
+<div class="line"><span class="lineno">  171</span>            value = SourceData.GetInt(26),</div>
+<div class="line"><span class="lineno">  172</span>            LV = SourceData.GetInt(27),</div>
+<div class="line"><span class="lineno">  173</span>            chance = SourceData.GetInt(28),</div>
+<div class="line"><span class="lineno">  174</span>            quality = SourceData.GetInt(29),</div>
+<div class="line"><span class="lineno">  175</span>            HP = SourceData.GetInt(30),</div>
+<div class="line"><span class="lineno">  176</span>            weight = SourceData.GetInt(31),</div>
+<div class="line"><span class="lineno">  177</span>            electricity = SourceData.GetInt(32),</div>
+<div class="line"><span class="lineno">  178</span>            trait = SourceData.GetStringArray(33),</div>
+<div class="line"><span class="lineno">  179</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(SourceData.GetStr(34)),</div>
+<div class="line"><span class="lineno">  180</span>            range = SourceData.GetInt(35),</div>
+<div class="line"><span class="lineno">  181</span>            attackType = SourceData.GetString(36),</div>
+<div class="line"><span class="lineno">  182</span>            offense = SourceData.GetIntArray(37),</div>
+<div class="line"><span class="lineno">  183</span>            substats = SourceData.GetIntArray(38),</div>
+<div class="line"><span class="lineno">  184</span>            defense = SourceData.GetIntArray(39),</div>
+<div class="line"><span class="lineno">  185</span>            lightData = SourceData.GetString(40),</div>
+<div class="line"><span class="lineno">  186</span>            idExtra = SourceData.GetString(41),</div>
+<div class="line"><span class="lineno">  187</span>            idToggleExtra = SourceData.GetString(42),</div>
+<div class="line"><span class="lineno">  188</span>            idActorEx = SourceData.GetString(43),</div>
+<div class="line"><span class="lineno">  189</span>            idSound = SourceData.GetString(44),</div>
+<div class="line"><span class="lineno">  190</span>            tag = SourceData.GetStringArray(45),</div>
+<div class="line"><span class="lineno">  191</span>            workTag = SourceData.GetString(46),</div>
+<div class="line"><span class="lineno">  192</span>            filter = SourceData.GetStringArray(47),</div>
+<div class="line"><span class="lineno">  193</span>            roomName_JP = SourceData.GetStringArray(48),</div>
+<div class="line"><span class="lineno">  194</span>            roomName = SourceData.GetStringArray(49),</div>
+<div class="line"><span class="lineno">  195</span>            detail_JP = SourceData.GetString(50),</div>
+<div class="line"><span class="lineno">  196</span>            detail = SourceData.GetString(51)</div>
+<div class="line"><span class="lineno">  197</span>        };</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
+<div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00692">Core.cs:692</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Core_8cs_source.html#l00692">Core.ParseElements()</a>.</p>
+
 </div>
 </div>
 <a id="a47ddfd634748359993511ab00d22f660" name="a47ddfd634748359993511ab00d22f660"></a>
@@ -282,14 +282,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00078">78</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00214">214</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>    {</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a45d8ea29a18a091bab87a89bdbdd7c47" name="a45d8ea29a18a091bab87a89bdbdd7c47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45d8ea29a18a091bab87a89bdbdd7c47">&#9670;&#160;</a></span>SetRow()</h2>
+<a id="a53af9e83a562957b53d366b91afd87ba" name="a53af9e83a562957b53d366b91afd87ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53af9e83a562957b53d366b91afd87ba">&#9670;&#160;</a></span>SetRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,7 +300,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="memname">override void SourceThing.SetRow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSourceThing_1_1Row.html">SourceThing::Row</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classSourceThing_1_1Row.html">Row</a>&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
           <td></td>
         </tr>
@@ -312,30 +312,31 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00064">64</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
-<div class="line"><span class="lineno">   66</span>        this.map[r.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>] = r;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00123">CardRow.cs:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00200">200</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
+<div class="line"><span class="lineno">  202</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="CardRow_8cs_source.html#l00007">CardRow.id</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad6119b5882c151d0ec2127fd8ea8141e" name="ad6119b5882c151d0ec2127fd8ea8141e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6119b5882c151d0ec2127fd8ea8141e">&#9670;&#160;</a></span>_rows</h2>
+<a id="affe6ba72c1ed321bffe4b877b20dd835" name="affe6ba72c1ed321bffe4b877b20dd835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe6ba72c1ed321bffe4b877b20dd835">&#9670;&#160;</a></span>_rows</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Dictionary&lt;string, <a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a>&gt; SourceThing._rows = new Dictionary&lt;string, <a class="el" href="classSourceThing_1_1Row.html">SourceThing.Row</a>&gt;()</td>
+          <td class="memname">Dictionary&lt;string, <a class="el" href="classSourceThing_1_1Row.html">Row</a>&gt; SourceThing._rows = new Dictionary&lt;string, <a class="el" href="classSourceThing_1_1Row.html">Row</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00096">96</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00138">138</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00069">BackupPref()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00043">SourceThingV.RestorePref()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00205">BackupPref()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00055">SourceThingV.RestorePref()</a>.</p>
 
 </div>
 </div>
@@ -360,20 +361,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00082">82</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   85</span>        {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   87</span>            {</div>
-<div class="line"><span class="lineno">   88</span>                <span class="stringliteral">&quot;unit&quot;</span>,</div>
-<div class="line"><span class="lineno">   89</span>                <span class="stringliteral">&quot;unknown&quot;</span>,</div>
-<div class="line"><span class="lineno">   90</span>                <span class="stringliteral">&quot;roomName&quot;</span>,</div>
-<div class="line"><span class="lineno">   91</span>                <span class="stringliteral">&quot;name2&quot;</span></div>
-<div class="line"><span class="lineno">   92</span>            };</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00140">140</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

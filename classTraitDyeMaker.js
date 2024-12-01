@@ -1,7 +1,7 @@
 var classTraitDyeMaker =
 [
     [ "IDReqEle", "classTraitDyeMaker.html#a8f1c8a8510376215242a105f7a53982c", null ],
-    [ "animeType", "classTraitDyeMaker.html#a68d52f4996a5acb3593c1a8fce2ee274", null ],
+    [ "animeType", "classTraitDyeMaker.html#a7c135acc1974d6adccbc799c4a185533", null ],
     [ "CrafterTitle", "classTraitDyeMaker.html#a7edd2bc306762c4cb7a352858d19e20d", null ],
     [ "IdAnimeProgress", "classTraitDyeMaker.html#a6ed9bfb581432eb63b2e1512f18c94b7", null ],
     [ "idSoundBG", "classTraitDyeMaker.html#adac22b23782ac77519f4269965f3280d", null ],

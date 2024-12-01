@@ -8,7 +8,7 @@ var searchData=
   ['conditiontype_5',['ConditionType',['../ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446',1,'ConditionType.cs']]],
   ['containertype_6',['ContainerType',['../ContainerType_8cs.html#a82a2d0604ce62fef1c6393fc7e99b086',1,'ContainerType.cs']]],
   ['copyshoptype_7',['CopyShopType',['../classTrait.html#a8471909c042646f522c65a8333832253',1,'Trait']]],
-  ['costtype_8',['CostType',['../classAct.html#a0756316fcd4405ff0d88cde345a290c1',1,'Act']]],
+  ['costtype_8',['CostType',['../classAct.html#a0756316fcd4405ff0d88cde345a290c1',1,'Act.CostType()'],['../classAct.html#a0756316fcd4405ff0d88cde345a290c1',1,'Act.CostType()']]],
   ['ctag_9',['CTAG',['../CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07',1,'CTAG.cs']]],
   ['curetype_10',['CureType',['../CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875b',1,'CureType.cs']]],
   ['currencytype_11',['CurrencyType',['../CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e',1,'CurrencyType.cs']]]

@@ -103,7 +103,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Currency_8cs_source.html#l00003">3</a> of file <a class="el" href="Currency_8cs_source.html">Currency.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Currency_8cs_source.html#l00001">1</a> of file <a class="el" href="Currency_8cs_source.html">Currency.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2eaa29e45ed9339b13f687be2450c6ae" name="a2eaa29e45ed9339b13f687be2450c6ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2eaa29e45ed9339b13f687be2450c6ae">&#9670;&#160;</a></span>ToID()</h2>
@@ -129,31 +129,24 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Currency_8cs_source.html#l00005">5</a> of file <a class="el" href="Currency_8cs_source.html">Currency.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">switch</span> (<a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962">currency</a>)</div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Medal:</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;medal&quot;</span>;</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Plat:</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;plat&quot;</span>;</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Ecopo:</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ecopo&quot;</span>;</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money2:</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;money2&quot;</span>;</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Influence:</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;influence&quot;</span>;</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Casino_coin:</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;casino_coin&quot;</span>;</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;money&quot;</span>;</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Currency_8cs_source.html#l00003">3</a> of file <a class="el" href="Currency_8cs_source.html">Currency.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962">currency</a> <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">    6</span>        {</div>
+<div class="line"><span class="lineno">    7</span>            CurrencyType.Medal =&gt; <span class="stringliteral">&quot;medal&quot;</span>, </div>
+<div class="line"><span class="lineno">    8</span>            CurrencyType.Money2 =&gt; <span class="stringliteral">&quot;money2&quot;</span>, </div>
+<div class="line"><span class="lineno">    9</span>            CurrencyType.Influence =&gt; <span class="stringliteral">&quot;influence&quot;</span>, </div>
+<div class="line"><span class="lineno">   10</span>            CurrencyType.Casino_coin =&gt; <span class="stringliteral">&quot;casino_coin&quot;</span>, </div>
+<div class="line"><span class="lineno">   11</span>            CurrencyType.Ecopo =&gt; <span class="stringliteral">&quot;ecopo&quot;</span>, </div>
+<div class="line"><span class="lineno">   12</span>            CurrencyType.Plat =&gt; <span class="stringliteral">&quot;plat&quot;</span>, </div>
+<div class="line"><span class="lineno">   13</span>            _ =&gt; <span class="stringliteral">&quot;money&quot;</span>, </div>
+<div class="line"><span class="lineno">   14</span>        };</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962">CTAG.currency</a></div><div class="ttdeci">@ currency</div></div>
-<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1af0389838508d7016a9841eb6273962">currency</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01268">InvOwner.GetTextDetail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01716">InvOwner.GetTextDetail()</a>.</p>
 
 </div>
 </div>

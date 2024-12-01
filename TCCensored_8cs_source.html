@@ -92,27 +92,26 @@ $(document).ready(function(){initNavTree('TCCensored_8cs_source.html',''); initR
   <div class="headertitle"><div class="title">TCCensored.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TCCensored_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classTCCensored.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTCCensored.html">TCCensored</a> : <a class="code hl_class" href="classTC.html">TC</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTCCensored.html#ad52e94bbf3530259fbd3cc4cbadfb862">    6</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> Vector3 <a class="code hl_property" href="classTCCensored.html#ad52e94bbf3530259fbd3cc4cbadfb862">FixPos</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <span class="keywordflow">if</span> (base.owner.IsPCC)</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos.PlusY(base.owner.IsDeadOrSleeping ? -0.3f : -0.05f);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
-<div class="ttc" id="aclassTCCensored_html"><div class="ttname"><a href="classTCCensored.html">TCCensored</a></div><div class="ttdef"><b>Definition:</b> <a href="TCCensored_8cs_source.html#l00004">TCCensored.cs:5</a></div></div>
-<div class="ttc" id="aclassTCCensored_html_ad52e94bbf3530259fbd3cc4cbadfb862"><div class="ttname"><a href="classTCCensored.html#ad52e94bbf3530259fbd3cc4cbadfb862">TCCensored.FixPos</a></div><div class="ttdeci">override Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TCCensored_8cs_source.html#l00006">TCCensored.cs:7</a></div></div>
-<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00004">TC.cs:5</a></div></div>
-<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00056">TC.cs:56</a></div></div>
+<a href="TCCensored_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTCCensored.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTCCensored.html">TCCensored</a> : <a class="code hl_class" href="classTC.html">TC</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTCCensored.html#ad52e94bbf3530259fbd3cc4cbadfb862">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> Vector3 <a class="code hl_property" href="classTCCensored.html#ad52e94bbf3530259fbd3cc4cbadfb862">FixPos</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">if</span> (base.owner.IsPCC)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos.PlusY(base.owner.IsDeadOrSleeping ? (-0.3f) : (-0.05f));</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classTC.html">TC</a>.<a class="code hl_variable" href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">_setting</a>.censorPos;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aclassTCCensored_html"><div class="ttname"><a href="classTCCensored.html">TCCensored</a></div><div class="ttdef"><b>Definition:</b> <a href="TCCensored_8cs_source.html#l00003">TCCensored.cs:4</a></div></div>
+<div class="ttc" id="aclassTCCensored_html_ad52e94bbf3530259fbd3cc4cbadfb862"><div class="ttname"><a href="classTCCensored.html#ad52e94bbf3530259fbd3cc4cbadfb862">TCCensored.FixPos</a></div><div class="ttdeci">override Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TCCensored_8cs_source.html#l00005">TCCensored.cs:6</a></div></div>
+<div class="ttc" id="aclassTC_html"><div class="ttname"><a href="classTC.html">TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00003">TC.cs:4</a></div></div>
+<div class="ttc" id="aclassTC_html_a06b938da861a2eb3bd527eca924e1e52"><div class="ttname"><a href="classTC.html#a06b938da861a2eb3bd527eca924e1e52">TC._setting</a></div><div class="ttdeci">static GameSetting.RenderSetting.TCSetting _setting</div><div class="ttdef"><b>Definition:</b> <a href="TC_8cs_source.html#l00005">TC.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

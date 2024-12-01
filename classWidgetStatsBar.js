@@ -23,11 +23,11 @@ var classWidgetStatsBar =
     [ "iconTourismValue", "classWidgetStatsBar.html#aa35c999bf727a9dd482ac9938fea0945", null ],
     [ "iconWeight", "classWidgetStatsBar.html#a647b502331d7104cb78fb1c02de49c8b", null ],
     [ "Instance", "classWidgetStatsBar.html#ab0779fd2ffd82c82d70a83fdd57e92b5", null ],
-    [ "items", "classWidgetStatsBar.html#aa297618848ad573ffadbee1c30f4a4ed", null ],
+    [ "items", "classWidgetStatsBar.html#a73a63c66ff93a90b43354a3007a43678", null ],
     [ "layout", "classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e", null ],
     [ "mold", "classWidgetStatsBar.html#a624fd58f16daa2c6d2c140a720ecbfc5", null ],
     [ "colorBad", "classWidgetStatsBar.html#a6755845b1df7178f32407224e01e6c09", null ],
     [ "colorDefault", "classWidgetStatsBar.html#ad7e10d98abf27cf55839a2663d2861cd", null ],
     [ "colorVeryBad", "classWidgetStatsBar.html#a73401d84f1f401129ef349eead6de95f", null ],
-    [ "extra", "classWidgetStatsBar.html#aa26e76ed4eb0b85cbaa62efc58cc5807", null ]
+    [ "extra", "classWidgetStatsBar.html#a0d40ac8665274ce1739faccc346bf8c5", null ]
 ];

@@ -14,7 +14,7 @@ var classFactionRelation =
     [ "exp", "classFactionRelation.html#a205fc45d402d20291c0d125b957312c5", null ],
     [ "faction", "classFactionRelation.html#aa5b4fb73c5118ba4e7937e0b52d17815", null ],
     [ "rank", "classFactionRelation.html#a827af529ec3e0b535af676b52195ef52", null ],
-    [ "type", "classFactionRelation.html#a0d76069230ee3e8be8e6b46267e943c0", null ],
+    [ "type", "classFactionRelation.html#af1e757b78e2fd3d928975160848b5dc4", null ],
     [ "ExpToNext", "classFactionRelation.html#a46b7a47fd2bdebbd83010310af4cc574", null ],
     [ "MaxRank", "classFactionRelation.html#af18fd94f03159c450455804de1381955", null ],
     [ "TextTitle", "classFactionRelation.html#a584972b646d98fbf03d75d3dbea570da", null ]

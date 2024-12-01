@@ -7,7 +7,7 @@ var classButtonChara =
       [ "Embark", "classButtonChara.html#a910f9c2897788e2034c98b3a04396ecbad4d66ac330a675a775c268c5ac77af30", null ],
       [ "Ranking", "classButtonChara.html#a910f9c2897788e2034c98b3a04396ecba37ae66f03261bd62844188f7e28092ff", null ]
     ] ],
-    [ "SetChara", "classButtonChara.html#a4321c68d0c70558fb326384456041a37", null ],
+    [ "SetChara", "classButtonChara.html#a6ce28c533429364b5e4c59f058867378", null ],
     [ "item", "classButtonChara.html#a640570b1bbb06ce8c1e4b24aa0bb9998", null ],
     [ "layoutTag", "classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a", null ],
     [ "portrait", "classButtonChara.html#a706197cae193aa46c3ccf58d66782c5e", null ],

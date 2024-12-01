@@ -184,7 +184,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00004">4</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00003">3</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a81e4e36c936beb2f7687c499b6d0c485" name="a81e4e36c936beb2f7687c499b6d0c485"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81e4e36c936beb2f7687c499b6d0c485">&#9670;&#160;</a></span>OnDisable()</h2>
@@ -209,10 +209,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00012">12</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        base.CancelInvoke();</div>
-<div class="line"><span class="lineno">   15</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00019">19</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        CancelInvoke();</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -239,14 +239,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00006">6</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_function" href="classESoundSource.html#a042d162b5bfa9262c298ddcfc1490dc3">Play</a>();</div>
-<div class="line"><span class="lineno">    9</span>        base.InvokeRepeating(<span class="stringliteral">&quot;Refresh&quot;</span>, 0f, 0.1f);</div>
-<div class="line"><span class="lineno">   10</span>    }</div>
-<div class="ttc" id="aclassESoundSource_html_a042d162b5bfa9262c298ddcfc1490dc3"><div class="ttname"><a href="classESoundSource.html#a042d162b5bfa9262c298ddcfc1490dc3">ESoundSource.Play</a></div><div class="ttdeci">void Play()</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00017">ESoundSource.cs:17</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00013">13</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_function" href="classESoundSource.html#a042d162b5bfa9262c298ddcfc1490dc3">Play</a>();</div>
+<div class="line"><span class="lineno">   16</span>        InvokeRepeating(<span class="stringliteral">&quot;Refresh&quot;</span>, 0f, 0.1f);</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassESoundSource_html_a042d162b5bfa9262c298ddcfc1490dc3"><div class="ttname"><a href="classESoundSource.html#a042d162b5bfa9262c298ddcfc1490dc3">ESoundSource.Play</a></div><div class="ttdeci">void Play()</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00024">ESoundSource.cs:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ESoundSource_8cs_source.html#l00017">Play()</a>.</p>
+<p class="reference">References <a class="el" href="ESoundSource_8cs_source.html#l00024">Play()</a>.</p>
 
 </div>
 </div>
@@ -273,23 +273,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00017">17</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        this.source.clip = this.<a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.clip;</div>
-<div class="line"><span class="lineno">   20</span>        this.source.loop = (this.data.loop != 0);</div>
-<div class="line"><span class="lineno">   21</span>        this.source.volume = this.<a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.volume;</div>
-<div class="line"><span class="lineno">   22</span>        this.source.pitch = this.data.pitch * (1f + ((this.data.randomPitch == 0f) ? 0f : Rand.Range(-<span class="keyword">this</span>.data.randomPitch, <span class="keyword">this</span>.data.randomPitch)));</div>
-<div class="line"><span class="lineno">   23</span>        this.source.time = this.<a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.startAt;</div>
-<div class="line"><span class="lineno">   24</span>        this.source.name = this.<a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.name;</div>
-<div class="line"><span class="lineno">   25</span>        this.source.spatialBlend = 0f;</div>
-<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_variable" href="classESoundSource.html#a7b8ac9ade1d0a70fe2f5ef3c782a7682">source</a>.Play();</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclassESoundSource_html_a1d53dfe98c7dadeff8959242dd6a893e"><div class="ttname"><a href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">ESoundSource.data</a></div><div class="ttdeci">SoundData data</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00042">ESoundSource.cs:42</a></div></div>
-<div class="ttc" id="aclassESoundSource_html_a7b8ac9ade1d0a70fe2f5ef3c782a7682"><div class="ttname"><a href="classESoundSource.html#a7b8ac9ade1d0a70fe2f5ef3c782a7682">ESoundSource.source</a></div><div class="ttdeci">AudioSource source</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00040">ESoundSource.cs:40</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00024">24</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        source.clip = <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.clip;</div>
+<div class="line"><span class="lineno">   27</span>        source.loop = data.loop != 0;</div>
+<div class="line"><span class="lineno">   28</span>        source.volume = <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.volume;</div>
+<div class="line"><span class="lineno">   29</span>        source.pitch = data.pitch * (1f + ((data.randomPitch == 0f) ? 0f : Rand.Range(0f - <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.randomPitch, <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.randomPitch)));</div>
+<div class="line"><span class="lineno">   30</span>        source.time = <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.startAt;</div>
+<div class="line"><span class="lineno">   31</span>        source.name = <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.name;</div>
+<div class="line"><span class="lineno">   32</span>        source.spatialBlend = 0f;</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="classESoundSource.html#a7b8ac9ade1d0a70fe2f5ef3c782a7682">source</a>.Play();</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassESoundSource_html_a1d53dfe98c7dadeff8959242dd6a893e"><div class="ttname"><a href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">ESoundSource.data</a></div><div class="ttdeci">SoundData data</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00009">ESoundSource.cs:9</a></div></div>
+<div class="ttc" id="aclassESoundSource_html_a7b8ac9ade1d0a70fe2f5ef3c782a7682"><div class="ttname"><a href="classESoundSource.html#a7b8ac9ade1d0a70fe2f5ef3c782a7682">ESoundSource.source</a></div><div class="ttdeci">AudioSource source</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00007">ESoundSource.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ESoundSource_8cs_source.html#l00042">data</a>, and <a class="el" href="ESoundSource_8cs_source.html#l00040">source</a>.</p>
+<p class="reference">References <a class="el" href="ESoundSource_8cs_source.html#l00009">data</a>, and <a class="el" href="ESoundSource_8cs_source.html#l00007">source</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00006">OnEnable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00013">OnEnable()</a>.</p>
 
 </div>
 </div>
@@ -316,20 +316,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00029">29</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
-<div class="line"><span class="lineno">   31</span>        Vector3 vector = base.transform.position - <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a1d7931879a2ca5473e4ab5904de4382b">transAudio</a>.position;</div>
-<div class="line"><span class="lineno">   32</span>        vector.z = 0f;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">float</span> magnitude = vector.magnitude;</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">float</span> num = Mathf.Clamp01(1f - magnitude / this.<a class="code hl_variable" href="classESoundSource.html#aa25511115f610d0ff3df154814d96111">maxDistance</a>);</div>
-<div class="line"><span class="lineno">   35</span>        this.source.volume = this.data.volume * num * this.data.spatial + this.data.volume * (1f - this.<a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.spatial);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a9916c61944ad1e7568a4ad90832675a3"><div class="ttname"><a href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">EMono.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00086">EMono.cs:87</a></div></div>
-<div class="ttc" id="aclassESoundSource_html_aa25511115f610d0ff3df154814d96111"><div class="ttname"><a href="classESoundSource.html#aa25511115f610d0ff3df154814d96111">ESoundSource.maxDistance</a></div><div class="ttdeci">float maxDistance</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00044">ESoundSource.cs:44</a></div></div>
-<div class="ttc" id="aclassScene_html_a1d7931879a2ca5473e4ab5904de4382b"><div class="ttname"><a href="classScene.html#a1d7931879a2ca5473e4ab5904de4382b">Scene.transAudio</a></div><div class="ttdeci">Transform transAudio</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01003">Scene.cs:1003</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00036">36</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        Vector3 vector = base.transform.position - <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#a1d7931879a2ca5473e4ab5904de4382b">transAudio</a>.position;</div>
+<div class="line"><span class="lineno">   39</span>        vector.z = 0f;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">float</span> magnitude = vector.magnitude;</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">float</span> num = Mathf.Clamp01(1f - magnitude / <a class="code hl_variable" href="classESoundSource.html#aa25511115f610d0ff3df154814d96111">maxDistance</a>);</div>
+<div class="line"><span class="lineno">   42</span>        source.volume = data.volume * num * data.spatial + data.volume * (1f - <a class="code hl_variable" href="classESoundSource.html#a1d53dfe98c7dadeff8959242dd6a893e">data</a>.spatial);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a9916c61944ad1e7568a4ad90832675a3"><div class="ttname"><a href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">EMono.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00027">EMono.cs:27</a></div></div>
+<div class="ttc" id="aclassESoundSource_html_aa25511115f610d0ff3df154814d96111"><div class="ttname"><a href="classESoundSource.html#aa25511115f610d0ff3df154814d96111">ESoundSource.maxDistance</a></div><div class="ttdeci">float maxDistance</div><div class="ttdef"><b>Definition:</b> <a href="ESoundSource_8cs_source.html#l00011">ESoundSource.cs:11</a></div></div>
+<div class="ttc" id="aclassScene_html_a1d7931879a2ca5473e4ab5904de4382b"><div class="ttname"><a href="classScene.html#a1d7931879a2ca5473e4ab5904de4382b">Scene.transAudio</a></div><div class="ttdeci">Transform transAudio</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00031">Scene.cs:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ESoundSource_8cs_source.html#l00042">data</a>, <a class="el" href="ESoundSource_8cs_source.html#l00044">maxDistance</a>, <a class="el" href="EMono_8cs_source.html#l00087">EMono.scene</a>, and <a class="el" href="Scene_8cs_source.html#l01003">Scene.transAudio</a>.</p>
+<p class="reference">References <a class="el" href="ESoundSource_8cs_source.html#l00009">data</a>, <a class="el" href="ESoundSource_8cs_source.html#l00011">maxDistance</a>, <a class="el" href="EMono_8cs_source.html#l00027">EMono.scene</a>, and <a class="el" href="Scene_8cs_source.html#l00031">Scene.transAudio</a>.</p>
 
 </div>
 </div>
@@ -346,9 +346,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00042">42</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00009">9</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00017">Play()</a>, and <a class="el" href="ESoundSource_8cs_source.html#l00029">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00024">Play()</a>, and <a class="el" href="ESoundSource_8cs_source.html#l00036">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -364,9 +364,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00044">44</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00011">11</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00029">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00036">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00038">38</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00005">5</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
 
 </div>
 </div>
@@ -398,9 +398,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00040">40</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESoundSource_8cs_source.html#l00007">7</a> of file <a class="el" href="ESoundSource_8cs_source.html">ESoundSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00017">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ESoundSource_8cs_source.html#l00024">Play()</a>.</p>
 
 </div>
 </div>

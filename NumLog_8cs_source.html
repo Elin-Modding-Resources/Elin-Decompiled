@@ -92,106 +92,87 @@ $(document).ready(function(){initNavTree('NumLog_8cs_source.html',''); initResiz
   <div class="headertitle"><div class="title">NumLog.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="NumLog_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Newtonsoft.Json;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classNumLog.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classNumLog.html">NumLog</a> : <a class="code hl_class" href="classEClass.html">EClass</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classNumLog.html#abc6b670da0962a99587bf871f559e722">    7</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#abc6b670da0962a99587bf871f559e722">maxMonth</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">return</span> 8;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">   15</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classGross.html">Gross</a> <a class="code hl_property" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">gross</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8">   23</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8">Name</a></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">   31</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">Value</a></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">gross</a> == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">return</span> this.<a class="code hl_property" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">gross</a>.<a class="code hl_function" href="classGross.html#a83e75bf4914156b2c79918af7a94cb26">Refresh</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classNumLog.html#a8dad8e40337954bd906d52b127ecaa16">   43</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#a8dad8e40337954bd906d52b127ecaa16">lastMonth</a></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count &lt;= 0)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>[0];</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5">   55</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5">lastYear</a></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count &lt;= 3)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>[3];</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classNumLog.html#aa150c93beb52f763480946814f75ac0a">   67</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNumLog.html#aa150c93beb52f763480946814f75ac0a">LogDay</a>()</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        this.lastDay = this.<a class="code hl_property" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">Value</a>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classNumLog.html#a7584701b867be0b9c5c59b6cefc7ad97">   72</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNumLog.html#a7584701b867be0b9c5c59b6cefc7ad97">LogMonth</a>()</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Insert(0, this.<a class="code hl_property" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">Value</a>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count &gt;= <span class="keyword">this</span>.maxMonth)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.RemoveAt(this.<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count - 1);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    [JsonProperty]</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">   82</a></span>    <span class="keyword">public</span> List&lt;int&gt; <a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a> = <span class="keyword">new</span> List&lt;int&gt;();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    [JsonProperty]</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">   85</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">lastDay</a>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<a href="NumLog_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classNumLog.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classNumLog.html">NumLog</a> : <a class="code hl_class" href="classEClass.html">EClass</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    [JsonProperty]</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">    7</a></span>    <span class="keyword">public</span> List&lt;int&gt; <a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a> = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    [JsonProperty]</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">   10</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">lastDay</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classNumLog.html#abc6b670da0962a99587bf871f559e722">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#abc6b670da0962a99587bf871f559e722">maxMonth</a> =&gt; 8;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">   14</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classGross.html">Gross</a> <a class="code hl_property" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">gross</a> =&gt; <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8">   16</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8">Name</a> =&gt; <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">   18</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">Value</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">gross</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">gross</a>.<a class="code hl_function" href="classGross.html#a83e75bf4914156b2c79918af7a94cb26">Refresh</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classNumLog.html#a8dad8e40337954bd906d52b127ecaa16">   30</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#a8dad8e40337954bd906d52b127ecaa16">lastMonth</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count &lt;= 0)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>[0];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5">   42</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5">lastYear</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count &lt;= 3)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>[3];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classNumLog.html#aa150c93beb52f763480946814f75ac0a">   54</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNumLog.html#aa150c93beb52f763480946814f75ac0a">LogDay</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">lastDay</a> = <a class="code hl_property" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">Value</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classNumLog.html#a7584701b867be0b9c5c59b6cefc7ad97">   59</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNumLog.html#a7584701b867be0b9c5c59b6cefc7ad97">LogMonth</a>()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Insert(0, <a class="code hl_property" href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">Value</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count &gt;= <a class="code hl_property" href="classNumLog.html#abc6b670da0962a99587bf871f559e722">maxMonth</a>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.RemoveAt(<a class="code hl_variable" href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">list</a>.Count - 1);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassGross_html"><div class="ttname"><a href="classGross.html">Gross</a></div><div class="ttdef"><b>Definition:</b> <a href="Gross_8cs_source.html#l00005">Gross.cs:6</a></div></div>
-<div class="ttc" id="aclassGross_html_a83e75bf4914156b2c79918af7a94cb26"><div class="ttname"><a href="classGross.html#a83e75bf4914156b2c79918af7a94cb26">Gross.Refresh</a></div><div class="ttdeci">virtual int Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="Gross_8cs_source.html#l00007">Gross.cs:7</a></div></div>
-<div class="ttc" id="aclassNumLog_html"><div class="ttname"><a href="classNumLog.html">NumLog</a></div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00005">NumLog.cs:6</a></div></div>
-<div class="ttc" id="aclassNumLog_html_a13bcc23bd682feb70fb0d70f60ad086b"><div class="ttname"><a href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">NumLog.lastDay</a></div><div class="ttdeci">int lastDay</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00085">NumLog.cs:85</a></div></div>
-<div class="ttc" id="aclassNumLog_html_a2d112e4fde180dbdca75688c45b05ef9"><div class="ttname"><a href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">NumLog.Value</a></div><div class="ttdeci">virtual int Value</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00031">NumLog.cs:32</a></div></div>
-<div class="ttc" id="aclassNumLog_html_a3c55bd90fe559f33c2137650b48aefe8"><div class="ttname"><a href="classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8">NumLog.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00023">NumLog.cs:24</a></div></div>
-<div class="ttc" id="aclassNumLog_html_a7584701b867be0b9c5c59b6cefc7ad97"><div class="ttname"><a href="classNumLog.html#a7584701b867be0b9c5c59b6cefc7ad97">NumLog.LogMonth</a></div><div class="ttdeci">void LogMonth()</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00072">NumLog.cs:72</a></div></div>
-<div class="ttc" id="aclassNumLog_html_a7d88499c5ce0c3f4d94a2c7c6dfaf593"><div class="ttname"><a href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">NumLog.list</a></div><div class="ttdeci">List&lt; int &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00082">NumLog.cs:82</a></div></div>
-<div class="ttc" id="aclassNumLog_html_a8dad8e40337954bd906d52b127ecaa16"><div class="ttname"><a href="classNumLog.html#a8dad8e40337954bd906d52b127ecaa16">NumLog.lastMonth</a></div><div class="ttdeci">int lastMonth</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00043">NumLog.cs:44</a></div></div>
-<div class="ttc" id="aclassNumLog_html_aa150c93beb52f763480946814f75ac0a"><div class="ttname"><a href="classNumLog.html#aa150c93beb52f763480946814f75ac0a">NumLog.LogDay</a></div><div class="ttdeci">void LogDay()</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00067">NumLog.cs:67</a></div></div>
-<div class="ttc" id="aclassNumLog_html_abc6b670da0962a99587bf871f559e722"><div class="ttname"><a href="classNumLog.html#abc6b670da0962a99587bf871f559e722">NumLog.maxMonth</a></div><div class="ttdeci">int maxMonth</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00007">NumLog.cs:8</a></div></div>
-<div class="ttc" id="aclassNumLog_html_ac3908abebcfa7f2d386a00c8de134296"><div class="ttname"><a href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">NumLog.gross</a></div><div class="ttdeci">virtual Gross gross</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00015">NumLog.cs:16</a></div></div>
-<div class="ttc" id="aclassNumLog_html_afa9497e66d47c7553bd0043bc8784ab5"><div class="ttname"><a href="classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5">NumLog.lastYear</a></div><div class="ttdeci">int lastYear</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00055">NumLog.cs:56</a></div></div>
+<div class="ttc" id="aclassGross_html_a83e75bf4914156b2c79918af7a94cb26"><div class="ttname"><a href="classGross.html#a83e75bf4914156b2c79918af7a94cb26">Gross.Refresh</a></div><div class="ttdeci">virtual int Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="Gross_8cs_source.html#l00015">Gross.cs:15</a></div></div>
+<div class="ttc" id="aclassNumLog_html"><div class="ttname"><a href="classNumLog.html">NumLog</a></div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00004">NumLog.cs:5</a></div></div>
+<div class="ttc" id="aclassNumLog_html_a13bcc23bd682feb70fb0d70f60ad086b"><div class="ttname"><a href="classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b">NumLog.lastDay</a></div><div class="ttdeci">int lastDay</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00010">NumLog.cs:10</a></div></div>
+<div class="ttc" id="aclassNumLog_html_a2d112e4fde180dbdca75688c45b05ef9"><div class="ttname"><a href="classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9">NumLog.Value</a></div><div class="ttdeci">virtual int Value</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00018">NumLog.cs:19</a></div></div>
+<div class="ttc" id="aclassNumLog_html_a3c55bd90fe559f33c2137650b48aefe8"><div class="ttname"><a href="classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8">NumLog.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00016">NumLog.cs:16</a></div></div>
+<div class="ttc" id="aclassNumLog_html_a7584701b867be0b9c5c59b6cefc7ad97"><div class="ttname"><a href="classNumLog.html#a7584701b867be0b9c5c59b6cefc7ad97">NumLog.LogMonth</a></div><div class="ttdeci">void LogMonth()</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00059">NumLog.cs:59</a></div></div>
+<div class="ttc" id="aclassNumLog_html_a7d88499c5ce0c3f4d94a2c7c6dfaf593"><div class="ttname"><a href="classNumLog.html#a7d88499c5ce0c3f4d94a2c7c6dfaf593">NumLog.list</a></div><div class="ttdeci">List&lt; int &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00007">NumLog.cs:7</a></div></div>
+<div class="ttc" id="aclassNumLog_html_a8dad8e40337954bd906d52b127ecaa16"><div class="ttname"><a href="classNumLog.html#a8dad8e40337954bd906d52b127ecaa16">NumLog.lastMonth</a></div><div class="ttdeci">int lastMonth</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00030">NumLog.cs:31</a></div></div>
+<div class="ttc" id="aclassNumLog_html_aa150c93beb52f763480946814f75ac0a"><div class="ttname"><a href="classNumLog.html#aa150c93beb52f763480946814f75ac0a">NumLog.LogDay</a></div><div class="ttdeci">void LogDay()</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00054">NumLog.cs:54</a></div></div>
+<div class="ttc" id="aclassNumLog_html_abc6b670da0962a99587bf871f559e722"><div class="ttname"><a href="classNumLog.html#abc6b670da0962a99587bf871f559e722">NumLog.maxMonth</a></div><div class="ttdeci">int maxMonth</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00012">NumLog.cs:12</a></div></div>
+<div class="ttc" id="aclassNumLog_html_ac3908abebcfa7f2d386a00c8de134296"><div class="ttname"><a href="classNumLog.html#ac3908abebcfa7f2d386a00c8de134296">NumLog.gross</a></div><div class="ttdeci">virtual Gross gross</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00014">NumLog.cs:14</a></div></div>
+<div class="ttc" id="aclassNumLog_html_afa9497e66d47c7553bd0043bc8784ab5"><div class="ttname"><a href="classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5">NumLog.lastYear</a></div><div class="ttdeci">int lastYear</div><div class="ttdef"><b>Definition:</b> <a href="NumLog_8cs_source.html#l00042">NumLog.cs:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -134,8 +134,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acd2685e9f0c4b3bf700879a3bdaa9dcc inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab2798482e05025b39c2e7e7b8ec184 inherit pub_attribs_classZoneInstance"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneInstance.html#aeab2798482e05025b39c2e7e7b8ec184">z</a></td></tr>
 <tr class="separator:aeab2798482e05025b39c2e7e7b8ec184 inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab563fb93dbca7efcdc5ce88fc3df175c inherit pub_attribs_classZoneInstance"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">ZoneInstance.Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneInstance.html#ab563fb93dbca7efcdc5ce88fc3df175c">status</a></td></tr>
-<tr class="separator:ab563fb93dbca7efcdc5ce88fc3df175c inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a3b8a9c8bd39ac8d15a87a2e7ba14f inherit pub_attribs_classZoneInstance"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneInstance.html#a30a3b8a9c8bd39ac8d15a87a2e7ba14f">status</a></td></tr>
+<tr class="separator:a30a3b8a9c8bd39ac8d15a87a2e7ba14f inherit pub_attribs_classZoneInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -227,7 +227,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00004">4</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00003">3</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa5c462aa9496eeba997a130bf0786ad1" name="aa5c462aa9496eeba997a130bf0786ad1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5c462aa9496eeba997a130bf0786ad1">&#9670;&#160;</a></span>OnLeaveZone()</h2>
@@ -254,37 +254,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classZoneInstance.html#a9e7436ec037d983d3dfb37beac33d476">ZoneInstance</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00014">14</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a66914ec8271cc214ffcf6076e62ed02c">IsMinion</a> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
-<div class="line"><span class="lineno">   19</span>            {</div>
-<div class="line"><span class="lineno">   20</span>                chara.c_uidMaster = 0;</div>
-<div class="line"><span class="lineno">   21</span>                chara.master = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   22</span>            }</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        base.ReturnZone.events.AddPreEnter(<span class="keyword">new</span> <a class="code hl_class" href="classZonePreEnterOnCompleteQuestInstance.html">ZonePreEnterOnCompleteQuestInstance</a></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="classZoneInstanceRandomQuest.html#a8f0f07661cedad693c4334d0fd7d40ff">uidClient</a> = this.<a class="code hl_variable" href="classZoneInstanceRandomQuest.html#a8f0f07661cedad693c4334d0fd7d40ff">uidClient</a>,</div>
-<div class="line"><span class="lineno">   27</span>            <a class="code hl_variable" href="classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59">uidQuest</a> = this.<a class="code hl_variable" href="classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59">uidQuest</a>,</div>
-<div class="line"><span class="lineno">   28</span>            fail = (this.status != <a class="code hl_class" href="classZoneInstance.html">ZoneInstance</a>.<a class="code hl_enumeration" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>.Success)</div>
-<div class="line"><span class="lineno">   29</span>        }, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassChara_html_a66914ec8271cc214ffcf6076e62ed02c"><div class="ttname"><a href="classChara.html#a66914ec8271cc214ffcf6076e62ed02c">Chara.IsMinion</a></div><div class="ttdeci">override bool IsMinion</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00532">Chara.cs:533</a></div></div>
-<div class="ttc" id="aclassChara_html_aadd3929ed87179d19119d41182f92afc"><div class="ttname"><a href="classChara.html#aadd3929ed87179d19119d41182f92afc">Chara.homeZone</a></div><div class="ttdeci">Zone homeZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00068">Chara.cs:69</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
-<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
-<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02883">Map.cs:2883</a></div></div>
-<div class="ttc" id="aclassZoneInstanceRandomQuest_html_a8f0f07661cedad693c4334d0fd7d40ff"><div class="ttname"><a href="classZoneInstanceRandomQuest.html#a8f0f07661cedad693c4334d0fd7d40ff">ZoneInstanceRandomQuest.uidClient</a></div><div class="ttdeci">int uidClient</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceRandomQuest_8cs_source.html#l00033">ZoneInstanceRandomQuest.cs:33</a></div></div>
-<div class="ttc" id="aclassZoneInstanceRandomQuest_html_adea1ed8649a3dbdb54461de055a80a59"><div class="ttname"><a href="classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59">ZoneInstanceRandomQuest.uidQuest</a></div><div class="ttdeci">int uidQuest</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceRandomQuest_8cs_source.html#l00036">ZoneInstanceRandomQuest.cs:36</a></div></div>
-<div class="ttc" id="aclassZoneInstance_html"><div class="ttname"><a href="classZoneInstance.html">ZoneInstance</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00004">ZoneInstance.cs:5</a></div></div>
-<div class="ttc" id="aclassZoneInstance_html_ab55119f115145b5956d23df71915df3e"><div class="ttname"><a href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">ZoneInstance.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00058">ZoneInstance.cs:59</a></div></div>
-<div class="ttc" id="aclassZonePreEnterOnCompleteQuestInstance_html"><div class="ttname"><a href="classZonePreEnterOnCompleteQuestInstance.html">ZonePreEnterOnCompleteQuestInstance</a></div><div class="ttdef"><b>Definition:</b> <a href="ZonePreEnterOnCompleteQuestInstance_8cs_source.html#l00004">ZonePreEnterOnCompleteQuestInstance.cs:5</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00013">13</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">charas</a>)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a66914ec8271cc214ffcf6076e62ed02c">IsMinion</a> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>)</div>
+<div class="line"><span class="lineno">   18</span>            {</div>
+<div class="line"><span class="lineno">   19</span>                chara.c_uidMaster = 0;</div>
+<div class="line"><span class="lineno">   20</span>                chara.master = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   21</span>            }</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>        base.ReturnZone.events.AddPreEnter(<span class="keyword">new</span> <a class="code hl_class" href="classZonePreEnterOnCompleteQuestInstance.html">ZonePreEnterOnCompleteQuestInstance</a></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="classZoneInstanceRandomQuest.html#a8f0f07661cedad693c4334d0fd7d40ff">uidClient</a> = <a class="code hl_variable" href="classZoneInstanceRandomQuest.html#a8f0f07661cedad693c4334d0fd7d40ff">uidClient</a>,</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59">uidQuest</a> = <a class="code hl_variable" href="classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59">uidQuest</a>,</div>
+<div class="line"><span class="lineno">   27</span>            fail = (<a class="code hl_variable" href="classZoneInstance.html#a30a3b8a9c8bd39ac8d15a87a2e7ba14f">status</a> != <a class="code hl_enumeration" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>.Success)</div>
+<div class="line"><span class="lineno">   28</span>        });</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassChara_html_a66914ec8271cc214ffcf6076e62ed02c"><div class="ttname"><a href="classChara.html#a66914ec8271cc214ffcf6076e62ed02c">Chara.IsMinion</a></div><div class="ttdeci">override bool IsMinion</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00611">Chara.cs:612</a></div></div>
+<div class="ttc" id="aclassChara_html_aadd3929ed87179d19119d41182f92afc"><div class="ttname"><a href="classChara.html#aadd3929ed87179d19119d41182f92afc">Chara.homeZone</a></div><div class="ttdeci">Zone homeZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00251">Chara.cs:252</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
+<div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00078">Map.cs:78</a></div></div>
+<div class="ttc" id="aclassZoneInstanceRandomQuest_html_a8f0f07661cedad693c4334d0fd7d40ff"><div class="ttname"><a href="classZoneInstanceRandomQuest.html#a8f0f07661cedad693c4334d0fd7d40ff">ZoneInstanceRandomQuest.uidClient</a></div><div class="ttdeci">int uidClient</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceRandomQuest_8cs_source.html#l00006">ZoneInstanceRandomQuest.cs:6</a></div></div>
+<div class="ttc" id="aclassZoneInstanceRandomQuest_html_adea1ed8649a3dbdb54461de055a80a59"><div class="ttname"><a href="classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59">ZoneInstanceRandomQuest.uidQuest</a></div><div class="ttdeci">int uidQuest</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstanceRandomQuest_8cs_source.html#l00009">ZoneInstanceRandomQuest.cs:9</a></div></div>
+<div class="ttc" id="aclassZoneInstance_html_a30a3b8a9c8bd39ac8d15a87a2e7ba14f"><div class="ttname"><a href="classZoneInstance.html#a30a3b8a9c8bd39ac8d15a87a2e7ba14f">ZoneInstance.status</a></div><div class="ttdeci">Status status</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00022">ZoneInstance.cs:22</a></div></div>
+<div class="ttc" id="aclassZoneInstance_html_ab55119f115145b5956d23df71915df3e"><div class="ttname"><a href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">ZoneInstance.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00005">ZoneInstance.cs:6</a></div></div>
+<div class="ttc" id="aclassZonePreEnterOnCompleteQuestInstance_html"><div class="ttname"><a href="classZonePreEnterOnCompleteQuestInstance.html">ZonePreEnterOnCompleteQuestInstance</a></div><div class="ttdef"><b>Definition:</b> <a href="ZonePreEnterOnCompleteQuestInstance_8cs_source.html#l00003">ZonePreEnterOnCompleteQuestInstance.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00056">EClass._zone</a>, <a class="el" href="Map_8cs_source.html#l02883">Map.charas</a>, <a class="el" href="Chara_8cs_source.html#l00069">Chara.homeZone</a>, <a class="el" href="Chara_8cs_source.html#l00533">Chara.IsMinion</a>, <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00033">uidClient</a>, and <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00036">uidQuest</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Map_8cs_source.html#l00078">Map.charas</a>, <a class="el" href="Chara_8cs_source.html#l00252">Chara.homeZone</a>, <a class="el" href="Chara_8cs_source.html#l00612">Chara.IsMinion</a>, <a class="el" href="ZoneInstance_8cs_source.html#l00022">ZoneInstance.status</a>, <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00006">uidClient</a>, and <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00009">uidQuest</a>.</p>
 
 </div>
 </div>
@@ -301,9 +301,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00033">33</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00014">OnLeaveZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00013">OnLeaveZone()</a>.</p>
 
 </div>
 </div>
@@ -319,9 +319,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00036">36</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00009">9</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00014">OnLeaveZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00013">OnLeaveZone()</a>.</p>
 
 </div>
 </div>
@@ -346,14 +346,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00006">6</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> this.status != <a class="code hl_class" href="classZoneInstance.html">ZoneInstance</a>.<a class="code hl_enumeration" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>.Success;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html#l00011">11</a> of file <a class="el" href="ZoneInstanceRandomQuest_8cs_source.html">ZoneInstanceRandomQuest.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

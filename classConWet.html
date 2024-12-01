@@ -398,7 +398,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00003">3</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00001">1</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aeee74cc0eef973f46565fed93e932c8d" name="aeee74cc0eef973f46565fed93e932c8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeee74cc0eef973f46565fed93e932c8d">&#9670;&#160;</a></span>GetPhase()</h2>
@@ -425,10 +425,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af424fbf8c5f20a671768732269a12794">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00013">13</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00005">5</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -457,10 +457,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a8e4c9027cee1e821d2ec5cfbace3c781">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00018">18</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
-<div class="line"><span class="lineno">   20</span>        this.owner.isWet = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00010">10</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        owner.isWet = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -489,22 +489,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCondition.html#ac050c6fff565bb312f93c00371a35e83">Condition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00023">23</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (base.value &gt; 100)</div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            base.value = 100;</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> ((!this.<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_property" href="classCell.html#a4322883653a907833926f8d4e5db08c9">IsTopWaterAndNoSnow</a> &amp;&amp; !<span class="keyword">this</span>.owner.Cell.HasLiquid) || <span class="keyword">this</span>.owner.IsLevitating)</div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            base.Mod(-1, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00557">BaseCondition.cs:557</a></div></div>
-<div class="ttc" id="aclassCard_html_ac8177cb488f20ad46a59a35c19eb1ae2"><div class="ttname"><a href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Card.Cell</a></div><div class="ttdeci">Cell Cell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02007">Card.cs:2008</a></div></div>
-<div class="ttc" id="aclassCell_html_a4322883653a907833926f8d4e5db08c9"><div class="ttname"><a href="classCell.html#a4322883653a907833926f8d4e5db08c9">Cell.IsTopWaterAndNoSnow</a></div><div class="ttdeci">bool IsTopWaterAndNoSnow</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00669">Cell.cs:670</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00015">15</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (base.value &gt; 100)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            base.value = 100;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> ((!<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_property" href="classCell.html#a4322883653a907833926f8d4e5db08c9">IsTopWaterAndNoSnow</a> &amp;&amp; !<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_property" href="classCell.html#a8e4777712a3cfb75549d437c51c4edc7">HasLiquid</a>) || <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a1d9c5fcd3d044ace375267a6a0673a4e">IsLevitating</a>)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_function" href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">Mod</a>(-1);</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_aba9c7904f2e608799748dbb7947d48ea"><div class="ttname"><a href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">BaseCondition.Mod</a></div><div class="ttdeci">void Mod(int a, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00362">BaseCondition.cs:362</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
+<div class="ttc" id="aclassCard_html_ac8177cb488f20ad46a59a35c19eb1ae2"><div class="ttname"><a href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Card.Cell</a></div><div class="ttdeci">Cell Cell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01853">Card.cs:1853</a></div></div>
+<div class="ttc" id="aclassCell_html_a4322883653a907833926f8d4e5db08c9"><div class="ttname"><a href="classCell.html#a4322883653a907833926f8d4e5db08c9">Cell.IsTopWaterAndNoSnow</a></div><div class="ttdeci">bool IsTopWaterAndNoSnow</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00711">Cell.cs:712</a></div></div>
+<div class="ttc" id="aclassCell_html_a8e4777712a3cfb75549d437c51c4edc7"><div class="ttname"><a href="classCell.html#a8e4777712a3cfb75549d437c51c4edc7">Cell.HasLiquid</a></div><div class="ttdeci">bool HasLiquid</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00673">Cell.cs:673</a></div></div>
+<div class="ttc" id="aclassChara_html_a1d9c5fcd3d044ace375267a6a0673a4e"><div class="ttname"><a href="classChara.html#a1d9c5fcd3d044ace375267a6a0673a4e">Chara.IsLevitating</a></div><div class="ttdeci">bool IsLevitating</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00581">Chara.cs:582</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02008">Card.Cell</a>, <a class="el" href="Cell_8cs_source.html#l00670">Cell.IsTopWaterAndNoSnow</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00557">BaseCondition.owner</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01853">Card.Cell</a>, <a class="el" href="Cell_8cs_source.html#l00673">Cell.HasLiquid</a>, <a class="el" href="Chara_8cs_source.html#l00582">Chara.IsLevitating</a>, <a class="el" href="Cell_8cs_source.html#l00712">Cell.IsTopWaterAndNoSnow</a>, <a class="el" href="BaseCondition_8cs_source.html#l00362">BaseCondition.Mod()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>.</p>
 
 </div>
 </div>
@@ -529,14 +532,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00005">5</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ConWet_8cs_source.html#l00003">3</a> of file <a class="el" href="ConWet_8cs_source.html">ConWet.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

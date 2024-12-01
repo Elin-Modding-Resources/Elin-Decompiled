@@ -10,7 +10,7 @@ var classCardManager =
     [ "container_deliver", "classCardManager.html#a72bc23265c8e8a9b7bf5e0d2d9d48a5d", null ],
     [ "container_deposit", "classCardManager.html#acb6b7762ab5cfcbc70f8b813bd271df3", null ],
     [ "container_shipping", "classCardManager.html#a06c0219cf44e73bfa2e9a56a0f1dd2a2", null ],
-    [ "globalCharas", "classCardManager.html#a6d6d588d3c038e8919951bccaa2263d6", null ],
+    [ "globalCharas", "classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221", null ],
     [ "listAdv", "classCardManager.html#a28acf582cfc41086813835dc3bdd7076", null ],
     [ "listPackage", "classCardManager.html#a40056cd45ef4725a21ef309c1a622b36", null ],
     [ "uidNext", "classCardManager.html#a10084b1059eed3027c558c4cbf0afd70", null ]

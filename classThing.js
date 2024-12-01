@@ -8,7 +8,6 @@ var classThing =
     [ "CanStackTo", "classThing.html#aee1df4abe2d7c40bbf16c94850628b08", null ],
     [ "Disassemble", "classThing.html#a44c1c1761f7d3e9aced67f45eeed68ad", null ],
     [ "DoAct", "classThing.html#afb778d298b1fe406e190c3226fdcd8e7", null ],
-    [ "g__SetBase", "classThing.html#a549fa966c3a0e84bfe93c81458c87c93", null ],
     [ "GetDisassembles", "classThing.html#a02b0e4389f31232db0196d3b132c567a", null ],
     [ "GetEfficiency", "classThing.html#a9aa66c47f35ea862eb02615f6c6dcb98", null ],
     [ "GetEnchant", "classThing.html#a9cdf95472d3f6e9d960a0b6b82c109a9", null ],

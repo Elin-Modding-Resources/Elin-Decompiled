@@ -10,7 +10,7 @@ var classTaskCraft =
     [ "OnProgressComplete", "classTaskCraft.html#a607918eff9586d11a4de8bd20c2fea02", null ],
     [ "PutOutResources", "classTaskCraft.html#a6072100d0eb8162cc64199df7d7be537", null ],
     [ "ResetReq", "classTaskCraft.html#a00292a3bbb3aa611476f851eb2cb2ccb", null ],
-    [ "Run", "classTaskCraft.html#a7d636645b53ba77248821f826180f73c", null ],
+    [ "Run", "classTaskCraft.html#ab44db506ceecd06b6c18a843c267fc7f", null ],
     [ "blessed", "classTaskCraft.html#a0d717bd179ab810f667da4bfe6e0f401", null ],
     [ "costSP", "classTaskCraft.html#a987b8ccc58e15e194ae9619f9e2a156c", null ],
     [ "factory", "classTaskCraft.html#a79339b48f3823f058399ea2e67b8623e", null ],

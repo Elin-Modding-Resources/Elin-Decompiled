@@ -1,6 +1,6 @@
 var classTraitAdventurer =
 [
-    [ "AdvType", "classTraitAdventurer.html#a97d5c403343411383512268e14ab4ea9", null ],
+    [ "AdvType", "classTraitAdventurer.html#a5ff16597ba43376729f4881cdbc67ae5", null ],
     [ "CanBout", "classTraitAdventurer.html#af42bdcb317f09bada78c4c93af5c1069", null ],
     [ "HaveNews", "classTraitAdventurer.html#a36f5421ec07338a6569e7895a458e0c0", null ],
     [ "ShowAdvRank", "classTraitAdventurer.html#a3496d12378b02a40e9328ac5130cc414", null ],

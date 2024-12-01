@@ -7,7 +7,7 @@ var interfaceIInspect =
       [ "Info", "interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a4059b0251f66a18cb56f544728796875", null ]
     ] ],
     [ "OnInspect", "interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f", null ],
-    [ "WriteNote", "interfaceIInspect.html#a9c494d2cf78dc35a271c63678cc03189", null ],
+    [ "WriteNote", "interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c", null ],
     [ "CanInspect", "interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f", null ],
     [ "InspectName", "interfaceIInspect.html#aae89fd529e6603011da5cc9a070fc9e3", null ],
     [ "InspectPoint", "interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e", null ],

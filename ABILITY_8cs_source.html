@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('ABILITY_8cs_source.html',''); initResi
   <div class="headertitle"><div class="title">ABILITY.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ABILITY_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="ABILITY_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classABILITY.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classABILITY.html">ABILITY</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
@@ -318,121 +318,75 @@ $(document).ready(function(){initNavTree('ABILITY_8cs_source.html',''); initResi
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classABILITY.html#aeb818e2a3d2405a2344cde18d6ede810">  225</a></span>    <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classABILITY.html#aeb818e2a3d2405a2344cde18d6ede810">ActDrainBlood</a> = 6626;</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classABILITY.html#a19542673e95a6b70f47760eb537f6cad">  227</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> readonly <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classABILITY.html#a19542673e95a6b70f47760eb537f6cad">IDS</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[]</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classABILITY.html#a19542673e95a6b70f47760eb537f6cad">  227</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> readonly <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classABILITY.html#a19542673e95a6b70f47760eb537f6cad">IDS</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[111]</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        5042,</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        5036,</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        5037,</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        5038,</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        5039,</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        5040,</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        5041,</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        5043,</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        5044,</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        5045,</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        5046,</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        5047,</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        5048,</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        5049,</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        5050,</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        5051,</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        5052,</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        5053,</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        5054,</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        5055,</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        6001,</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        6003,</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        6011,</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        6012,</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        6013,</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        6015,</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        6018,</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        6019,</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        6020,</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        6050,</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        5035,</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        5034,</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        5033,</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        5032,</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        5002,</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        5003,</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        5004,</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        5005,</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        5006,</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        5007,</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        5008,</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        5009,</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        5010,</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        5011,</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        5012,</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        5013,</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        5014,</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        5015,</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        6400,</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        5016,</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        5018,</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        5019,</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        5020,</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        5021,</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        5022,</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        5023,</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        5024,</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        5025,</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        5026,</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        5027,</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        5028,</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        5029,</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        5030,</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        5031,</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        5017,</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        5001,</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        6410,</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        6450,</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        6902,</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        6903,</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        6904,</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        7000,</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        50200,</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        50201,</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        50202,</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        50203,</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        6420,</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        50205,</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        50206,</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        50207,</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        50208,</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        50209,</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        50210,</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        50211,</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        50212,</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        50213,</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        50214,</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        6901,</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        6900,</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        50204,</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        6700,</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        6720,</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        6500,</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        6600,</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        6601,</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        6602,</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        6610,</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        6611,</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        6620,</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        6621,</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        6622,</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        5000,</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        6630,</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        6631,</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        6640,</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        6641,</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        6642,</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        6650,</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        6660,</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        6661,</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        6626</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    };</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>}</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        5042, 5036, 5037, 5038, 5039, 5040, 5041, 5043, 5044, 5045,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        5046, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        6001, 6003, 6011, 6012, 6013, 6015, 6018, 6019, 6020, 6050,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        5035, 5034, 5033, 5032, 5002, 5003, 5004, 5005, 5006, 5007,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        5008, 5009, 5010, 5011, 5012, 5013, 5014, 5015, 6400, 5016,</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        5018, 5019, 5020, 5021, 5022, 5023, 5024, 5025, 5026, 5027,</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        5028, 5029, 5030, 5031, 5017, 5001, 6410, 6450, 6902, 6903,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        6904, 7000, 50200, 50201, 50202, 50203, 6420, 50205, 50206, 50207,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        50208, 50209, 50210, 50211, 50212, 50213, 50214, 6901, 6900, 50204,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        6700, 6720, 6500, 6600, 6601, 6602, 6610, 6611, 6620, 6621,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        6622, 5000, 6630, 6631, 6640, 6641, 6642, 6650, 6660, 6661,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        6626</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    };</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>}</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAbility.html">Ability</a> : <a class="code hl_class" href="classAct.html">Act</a></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>{</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classAbility.html#a74ea0a77f52791ae5af7014e5882cf64">ShowBonuses</a> =&gt; <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classAbility.html#a5b554efff571d9dc7164134f3e4ce285">CanPressRepeat</a> =&gt; base.source.tag.Contains(<span class="stringliteral">&quot;repeat&quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classAbility.html#adc0411882ca5c5a75719528a66cbe16e">  249</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classAbility.html#adc0411882ca5c5a75719528a66cbe16e">CanLink</a>(<a class="code hl_class" href="classElementContainer.html">ElementContainer</a> <a class="code hl_variable" href="classElement.html#ae431c3bb51231afe2c2f2f490aaa9318">owner</a>)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classElement.html#ae431c3bb51231afe2c2f2f490aaa9318">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <span class="keywordflow">return</span> !base.IsGlobalElement;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3">  258</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3">GetSourceValue</a>(<span class="keywordtype">int</span> v, <span class="keywordtype">int</span> lv, <a class="code hl_enumeration" href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a> type)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">if</span> (type != 0)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordflow">return</span> base.GetSourceValue(v, lv, type);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">return</span> 10 * (100 + (lv - 1) * base.source.lvFactor / 10) / 100;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classAbility.html#ae21977e06fa4d9ca2d5c44aa2adecee4">  267</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAbility.html#ae21977e06fa4d9ca2d5c44aa2adecee4">GetPower</a>(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordtype">int</span> a = base.Value * 8 + 50;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            a = Mathf.Max(a, c.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> * 6 + 30);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; !base.source.aliasParent.IsEmpty())</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                a = Mathf.Max(a, c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(base.source.aliasParent) * 4 + 30);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        a = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a160545685c1ede8a286de567dc56f5ca">curve</a>(a, 400, 100);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classSpell.html">Spell</a>)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            a = a * (100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411)) / 100;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="classAbility.html#a3a131c464b975844416a8ed95fe6947a">  286</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAbility.html#a3a131c464b975844416a8ed95fe6947a">OnChangeValue</a>()</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <a class="code hl_class" href="classCard.html">Card</a> card = <a class="code hl_variable" href="classElement.html#ae431c3bb51231afe2c2f2f490aaa9318">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        <span class="keywordflow">if</span> (card != <span class="keyword">null</span> &amp;&amp; card.<a class="code hl_property" href="classCard.html#af138a86fd8646629d8adfcee78c77081">_IsPC</a>)</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_function" href="classLayerAbility.html#a8e373b2c45f472eca51146d9e191155a">SetDirty</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>}</div>
+<div class="ttc" id="aSourceValueType_8cs_html_a35f4cafd6783c747f55b3b7ff42d7d27"><div class="ttname"><a href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a></div><div class="ttdeci">SourceValueType</div><div class="ttdef"><b>Definition:</b> <a href="SourceValueType_8cs_source.html#l00001">SourceValueType.cs:2</a></div></div>
 <div class="ttc" id="aclassABILITY_html"><div class="ttname"><a href="classABILITY.html">ABILITY</a></div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00003">ABILITY.cs:4</a></div></div>
 <div class="ttc" id="aclassABILITY_html_a045614514412a5bfd4324d98c0de1184"><div class="ttname"><a href="classABILITY.html#a045614514412a5bfd4324d98c0de1184">ABILITY.Ranged</a></div><div class="ttdeci">const int Ranged</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00075">ABILITY.cs:75</a></div></div>
 <div class="ttc" id="aclassABILITY_html_a062bc8adf7ed06a6ed0d4105359a6af6"><div class="ttname"><a href="classABILITY.html#a062bc8adf7ed06a6ed0d4105359a6af6">ABILITY.breathe_Holy</a></div><div class="ttdeci">const int breathe_Holy</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00167">ABILITY.cs:167</a></div></div>
@@ -498,54 +452,76 @@ $(document).ready(function(){initNavTree('ABILITY_8cs_source.html',''); initResi
 <div class="ttc" id="aclassABILITY_html_af86e3d06d85f1416980e16d8d967e71e"><div class="ttname"><a href="classABILITY.html#af86e3d06d85f1416980e16d8d967e71e">ABILITY.TaskTrain</a></div><div class="ttdeci">const int TaskTrain</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00111">ABILITY.cs:111</a></div></div>
 <div class="ttc" id="aclassABILITY_html_af8bd2be6670fe3dde20919c493907878"><div class="ttname"><a href="classABILITY.html#af8bd2be6670fe3dde20919c493907878">ABILITY.ActWeaken</a></div><div class="ttdeci">const int ActWeaken</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00197">ABILITY.cs:197</a></div></div>
 <div class="ttc" id="aclassABILITY_html_affa3fa943efdadc3c3a65804f869e2f7"><div class="ttname"><a href="classABILITY.html#affa3fa943efdadc3c3a65804f869e2f7">ABILITY.breathe_Chaos</a></div><div class="ttdeci">const int breathe_Chaos</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00169">ABILITY.cs:169</a></div></div>
-<div class="ttc" id="aclassAI__Bladder_html"><div class="ttname"><a href="classAI__Bladder.html">AI_Bladder</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Bladder_8cs_source.html#l00005">AI_Bladder.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__Deconstruct_html"><div class="ttname"><a href="classAI__Deconstruct.html">AI_Deconstruct</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Deconstruct_8cs_source.html#l00005">AI_Deconstruct.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__Drink_html"><div class="ttname"><a href="classAI__Drink.html">AI_Drink</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Drink_8cs_source.html#l00004">AI_Drink.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__Eat_html"><div class="ttname"><a href="classAI__Eat.html">AI_Eat</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Eat_8cs_source.html#l00005">AI_Eat.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__Equip_html"><div class="ttname"><a href="classAI__Equip.html">AI_Equip</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Equip_8cs_source.html#l00004">AI_Equip.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__Fish_html"><div class="ttname"><a href="classAI__Fish.html">AI_Fish</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Fish_8cs_source.html#l00005">AI_Fish.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__Goto_html"><div class="ttname"><a href="classAI__Goto.html">AI_Goto</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Goto_8cs_source.html#l00005">AI_Goto.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__Grab_html"><div class="ttname"><a href="classAI__Grab.html">AI_Grab</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Grab_82_8cs_source.html#l00003">AI_Grab.2.cs:4</a></div></div>
-<div class="ttc" id="aclassAI__Haul_html"><div class="ttname"><a href="classAI__Haul.html">AI_Haul</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Haul_8cs_source.html#l00004">AI_Haul.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__Meditate_html"><div class="ttname"><a href="classAI__Meditate.html">AI_Meditate</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Meditate_8cs_source.html#l00003">AI_Meditate.cs:4</a></div></div>
-<div class="ttc" id="aclassAI__Offer_html"><div class="ttname"><a href="classAI__Offer.html">AI_Offer</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Offer_8cs_source.html#l00005">AI_Offer.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__OpenLock_html"><div class="ttname"><a href="classAI__OpenLock.html">AI_OpenLock</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__OpenLock_8cs_source.html#l00003">AI_OpenLock.cs:4</a></div></div>
-<div class="ttc" id="aclassAI__PassTime_html"><div class="ttname"><a href="classAI__PassTime.html">AI_PassTime</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__PassTime_8cs_source.html#l00004">AI_PassTime.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__Bladder_html"><div class="ttname"><a href="classAI__Bladder.html">AI_Bladder</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Bladder_8cs_source.html#l00003">AI_Bladder.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Deconstruct_html"><div class="ttname"><a href="classAI__Deconstruct.html">AI_Deconstruct</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Deconstruct_8cs_source.html#l00003">AI_Deconstruct.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Drink_html"><div class="ttname"><a href="classAI__Drink.html">AI_Drink</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Drink_8cs_source.html#l00003">AI_Drink.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Eat_html"><div class="ttname"><a href="classAI__Eat.html">AI_Eat</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Eat_8cs_source.html#l00004">AI_Eat.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__Equip_html"><div class="ttname"><a href="classAI__Equip.html">AI_Equip</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Equip_8cs_source.html#l00003">AI_Equip.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Fish_html"><div class="ttname"><a href="classAI__Fish.html">AI_Fish</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Fish_8cs_source.html#l00004">AI_Fish.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__Goto_html"><div class="ttname"><a href="classAI__Goto.html">AI_Goto</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Goto_8cs_source.html#l00004">AI_Goto.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__Grab_html"><div class="ttname"><a href="classAI__Grab.html">AI_Grab</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Grab_8cs_source.html#l00048">AI_Grab.cs:49</a></div></div>
+<div class="ttc" id="aclassAI__Haul_html"><div class="ttname"><a href="classAI__Haul.html">AI_Haul</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Haul_8cs_source.html#l00003">AI_Haul.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Meditate_html"><div class="ttname"><a href="classAI__Meditate.html">AI_Meditate</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Meditate_8cs_source.html#l00001">AI_Meditate.cs:2</a></div></div>
+<div class="ttc" id="aclassAI__Offer_html"><div class="ttname"><a href="classAI__Offer.html">AI_Offer</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Offer_8cs_source.html#l00004">AI_Offer.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__OpenLock_html"><div class="ttname"><a href="classAI__OpenLock.html">AI_OpenLock</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__OpenLock_8cs_source.html#l00001">AI_OpenLock.cs:2</a></div></div>
+<div class="ttc" id="aclassAI__PassTime_html"><div class="ttname"><a href="classAI__PassTime.html">AI_PassTime</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__PassTime_8cs_source.html#l00003">AI_PassTime.cs:4</a></div></div>
 <div class="ttc" id="aclassAI__PlayMusic_html"><div class="ttname"><a href="classAI__PlayMusic.html">AI_PlayMusic</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__PlayMusic_8cs_source.html#l00006">AI_PlayMusic.cs:7</a></div></div>
-<div class="ttc" id="aclassAI__Read_html"><div class="ttname"><a href="classAI__Read.html">AI_Read</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Read_8cs_source.html#l00004">AI_Read.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__ReleaseHeld_html"><div class="ttname"><a href="classAI__ReleaseHeld.html">AI_ReleaseHeld</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__ReleaseHeld_8cs_source.html#l00004">AI_ReleaseHeld.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__SelfHarm_html"><div class="ttname"><a href="classAI__SelfHarm.html">AI_SelfHarm</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00003">AI_SelfHarm.cs:4</a></div></div>
-<div class="ttc" id="aclassAI__Sleep_html"><div class="ttname"><a href="classAI__Sleep.html">AI_Sleep</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Sleep_8cs_source.html#l00003">AI_Sleep.cs:4</a></div></div>
-<div class="ttc" id="aclassAI__Steal_html"><div class="ttname"><a href="classAI__Steal.html">AI_Steal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Steal_8cs_source.html#l00005">AI_Steal.cs:6</a></div></div>
-<div class="ttc" id="aclassAI__TendAnimal_html"><div class="ttname"><a href="classAI__TendAnimal.html">AI_TendAnimal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00003">AI_TendAnimal.cs:4</a></div></div>
-<div class="ttc" id="aclassActBash_html"><div class="ttname"><a href="classActBash.html">ActBash</a></div><div class="ttdef"><b>Definition:</b> <a href="ActBash_8cs_source.html#l00003">ActBash.cs:4</a></div></div>
-<div class="ttc" id="aclassActChat_html"><div class="ttname"><a href="classActChat.html">ActChat</a></div><div class="ttdef"><b>Definition:</b> <a href="ActChat_8cs_source.html#l00003">ActChat.cs:4</a></div></div>
-<div class="ttc" id="aclassActDreamBug_html"><div class="ttname"><a href="classActDreamBug.html">ActDreamBug</a></div><div class="ttdef"><b>Definition:</b> <a href="ActDreamBug_8cs_source.html#l00003">ActDreamBug.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__Read_html"><div class="ttname"><a href="classAI__Read.html">AI_Read</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Read_8cs_source.html#l00003">AI_Read.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__ReleaseHeld_html"><div class="ttname"><a href="classAI__ReleaseHeld.html">AI_ReleaseHeld</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__ReleaseHeld_8cs_source.html#l00003">AI_ReleaseHeld.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__SelfHarm_html"><div class="ttname"><a href="classAI__SelfHarm.html">AI_SelfHarm</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00001">AI_SelfHarm.cs:2</a></div></div>
+<div class="ttc" id="aclassAI__Sleep_html"><div class="ttname"><a href="classAI__Sleep.html">AI_Sleep</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Sleep_8cs_source.html#l00001">AI_Sleep.cs:2</a></div></div>
+<div class="ttc" id="aclassAI__Steal_html"><div class="ttname"><a href="classAI__Steal.html">AI_Steal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Steal_8cs_source.html#l00004">AI_Steal.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__TendAnimal_html"><div class="ttname"><a href="classAI__TendAnimal.html">AI_TendAnimal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00001">AI_TendAnimal.cs:2</a></div></div>
+<div class="ttc" id="aclassAbility_html"><div class="ttname"><a href="classAbility.html">Ability</a></div><div class="ttdef"><b>Definition:</b> <a href="Ability_82_8cs_source.html#l00004">Ability.2.cs:5</a></div></div>
+<div class="ttc" id="aclassAbility_html_a3a131c464b975844416a8ed95fe6947a"><div class="ttname"><a href="classAbility.html#a3a131c464b975844416a8ed95fe6947a">Ability.OnChangeValue</a></div><div class="ttdeci">override void OnChangeValue()</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00286">ABILITY.cs:286</a></div></div>
+<div class="ttc" id="aclassAbility_html_a4d1577acd36ae40bccf8f1ec33ccebc3"><div class="ttname"><a href="classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3">Ability.GetSourceValue</a></div><div class="ttdeci">override int GetSourceValue(int v, int lv, SourceValueType type)</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00258">ABILITY.cs:258</a></div></div>
+<div class="ttc" id="aclassAbility_html_a5b554efff571d9dc7164134f3e4ce285"><div class="ttname"><a href="classAbility.html#a5b554efff571d9dc7164134f3e4ce285">Ability.CanPressRepeat</a></div><div class="ttdeci">override bool CanPressRepeat</div><div class="ttdef"><b>Definition:</b> <a href="Ability_82_8cs_source.html#l00028">Ability.2.cs:29</a></div></div>
+<div class="ttc" id="aclassAbility_html_a74ea0a77f52791ae5af7014e5882cf64"><div class="ttname"><a href="classAbility.html#a74ea0a77f52791ae5af7014e5882cf64">Ability.ShowBonuses</a></div><div class="ttdeci">override bool ShowBonuses</div><div class="ttdef"><b>Definition:</b> <a href="Ability_82_8cs_source.html#l00006">Ability.2.cs:7</a></div></div>
+<div class="ttc" id="aclassAbility_html_adc0411882ca5c5a75719528a66cbe16e"><div class="ttname"><a href="classAbility.html#adc0411882ca5c5a75719528a66cbe16e">Ability.CanLink</a></div><div class="ttdeci">override bool CanLink(ElementContainer owner)</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00249">ABILITY.cs:249</a></div></div>
+<div class="ttc" id="aclassAbility_html_ae21977e06fa4d9ca2d5c44aa2adecee4"><div class="ttname"><a href="classAbility.html#ae21977e06fa4d9ca2d5c44aa2adecee4">Ability.GetPower</a></div><div class="ttdeci">override int GetPower(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00267">ABILITY.cs:267</a></div></div>
+<div class="ttc" id="aclassActBash_html"><div class="ttname"><a href="classActBash.html">ActBash</a></div><div class="ttdef"><b>Definition:</b> <a href="ActBash_8cs_source.html#l00001">ActBash.cs:2</a></div></div>
+<div class="ttc" id="aclassActChat_html"><div class="ttname"><a href="classActChat.html">ActChat</a></div><div class="ttdef"><b>Definition:</b> <a href="ActChat_8cs_source.html#l00001">ActChat.cs:2</a></div></div>
+<div class="ttc" id="aclassActDreamBug_html"><div class="ttname"><a href="classActDreamBug.html">ActDreamBug</a></div><div class="ttdef"><b>Definition:</b> <a href="ActDreamBug_8cs_source.html#l00001">ActDreamBug.cs:2</a></div></div>
 <div class="ttc" id="aclassActItem_html"><div class="ttname"><a href="classActItem.html">ActItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ActItem_8cs_source.html#l00003">ActItem.cs:4</a></div></div>
-<div class="ttc" id="aclassActKick_html"><div class="ttname"><a href="classActKick.html">ActKick</a></div><div class="ttdef"><b>Definition:</b> <a href="ActKick_8cs_source.html#l00003">ActKick.cs:4</a></div></div>
-<div class="ttc" id="aclassActMelee_html"><div class="ttname"><a href="classActMelee.html">ActMelee</a></div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00005">ActMelee.cs:6</a></div></div>
-<div class="ttc" id="aclassActNoItem_html"><div class="ttname"><a href="classActNoItem.html">ActNoItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ActNoItem_8cs_source.html#l00003">ActNoItem.cs:4</a></div></div>
-<div class="ttc" id="aclassActParasite_html"><div class="ttname"><a href="classActParasite.html">ActParasite</a></div><div class="ttdef"><b>Definition:</b> <a href="ActParasite_8cs_source.html#l00003">ActParasite.cs:4</a></div></div>
-<div class="ttc" id="aclassActPick_html"><div class="ttname"><a href="classActPick.html">ActPick</a></div><div class="ttdef"><b>Definition:</b> <a href="ActPick_8cs_source.html#l00003">ActPick.cs:4</a></div></div>
-<div class="ttc" id="aclassActPray_html"><div class="ttname"><a href="classActPray.html">ActPray</a></div><div class="ttdef"><b>Definition:</b> <a href="ActPray_8cs_source.html#l00006">ActPray.cs:7</a></div></div>
-<div class="ttc" id="aclassActQuickCraft_html"><div class="ttname"><a href="classActQuickCraft.html">ActQuickCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="ActQuickCraft_8cs_source.html#l00003">ActQuickCraft.cs:4</a></div></div>
-<div class="ttc" id="aclassActRanged_html"><div class="ttname"><a href="classActRanged.html">ActRanged</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRanged_8cs_source.html#l00006">ActRanged.cs:7</a></div></div>
-<div class="ttc" id="aclassActRestrain_html"><div class="ttname"><a href="classActRestrain.html">ActRestrain</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRestrain_8cs_source.html#l00003">ActRestrain.cs:4</a></div></div>
-<div class="ttc" id="aclassActRide_html"><div class="ttname"><a href="classActRide.html">ActRide</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00004">ActRide.cs:5</a></div></div>
-<div class="ttc" id="aclassActRush_html"><div class="ttname"><a href="classActRush.html">ActRush</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRush_8cs_source.html#l00003">ActRush.cs:4</a></div></div>
-<div class="ttc" id="aclassActThrow_html"><div class="ttname"><a href="classActThrow.html">ActThrow</a></div><div class="ttdef"><b>Definition:</b> <a href="ActThrow_8cs_source.html#l00004">ActThrow.cs:5</a></div></div>
-<div class="ttc" id="aclassActWait_html"><div class="ttname"><a href="classActWait.html">ActWait</a></div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00003">ActWait.cs:4</a></div></div>
-<div class="ttc" id="aclassActZap_html"><div class="ttname"><a href="classActZap.html">ActZap</a></div><div class="ttdef"><b>Definition:</b> <a href="ActZap_8cs_source.html#l00004">ActZap.cs:5</a></div></div>
-<div class="ttc" id="aclassGoalIdle_html"><div class="ttname"><a href="classGoalIdle.html">GoalIdle</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalIdle_8cs_source.html#l00004">GoalIdle.cs:5</a></div></div>
-<div class="ttc" id="aclassGoalSleep_html"><div class="ttname"><a href="classGoalSleep.html">GoalSleep</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalSleep_8cs_source.html#l00004">GoalSleep.cs:5</a></div></div>
-<div class="ttc" id="aclassTaskBuild_html"><div class="ttname"><a href="classTaskBuild.html">TaskBuild</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskBuild_8cs_source.html#l00006">TaskBuild.cs:7</a></div></div>
-<div class="ttc" id="aclassTaskCut_html"><div class="ttname"><a href="classTaskCut.html">TaskCut</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskCut_8cs_source.html#l00003">TaskCut.cs:4</a></div></div>
-<div class="ttc" id="aclassTaskDig_html"><div class="ttname"><a href="classTaskDig.html">TaskDig</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskDig_8cs_source.html#l00003">TaskDig.cs:4</a></div></div>
-<div class="ttc" id="aclassTaskHarvest_html"><div class="ttname"><a href="classTaskHarvest.html">TaskHarvest</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskHarvest_8cs_source.html#l00005">TaskHarvest.cs:6</a></div></div>
-<div class="ttc" id="aclassTaskMine_html"><div class="ttname"><a href="classTaskMine.html">TaskMine</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskMine_8cs_source.html#l00003">TaskMine.cs:4</a></div></div>
-<div class="ttc" id="aclassTaskMoveInstalled_html"><div class="ttname"><a href="classTaskMoveInstalled.html">TaskMoveInstalled</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskMoveInstalled_8cs_source.html#l00006">TaskMoveInstalled.cs:7</a></div></div>
-<div class="ttc" id="aclassTaskPlow_html"><div class="ttname"><a href="classTaskPlow.html">TaskPlow</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskPlow_8cs_source.html#l00004">TaskPlow.cs:5</a></div></div>
-<div class="ttc" id="aclassWait_html"><div class="ttname"><a href="classWait.html">Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="Wait_8cs_source.html#l00003">Wait.cs:4</a></div></div>
+<div class="ttc" id="aclassActKick_html"><div class="ttname"><a href="classActKick.html">ActKick</a></div><div class="ttdef"><b>Definition:</b> <a href="ActKick_8cs_source.html#l00001">ActKick.cs:2</a></div></div>
+<div class="ttc" id="aclassActMelee_html"><div class="ttname"><a href="classActMelee.html">ActMelee</a></div><div class="ttdef"><b>Definition:</b> <a href="ActMelee_8cs_source.html#l00003">ActMelee.cs:4</a></div></div>
+<div class="ttc" id="aclassActNoItem_html"><div class="ttname"><a href="classActNoItem.html">ActNoItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ActNoItem_8cs_source.html#l00001">ActNoItem.cs:2</a></div></div>
+<div class="ttc" id="aclassActParasite_html"><div class="ttname"><a href="classActParasite.html">ActParasite</a></div><div class="ttdef"><b>Definition:</b> <a href="ActParasite_8cs_source.html#l00001">ActParasite.cs:2</a></div></div>
+<div class="ttc" id="aclassActPick_html"><div class="ttname"><a href="classActPick.html">ActPick</a></div><div class="ttdef"><b>Definition:</b> <a href="ActPick_8cs_source.html#l00001">ActPick.cs:2</a></div></div>
+<div class="ttc" id="aclassActPray_html"><div class="ttname"><a href="classActPray.html">ActPray</a></div><div class="ttdef"><b>Definition:</b> <a href="ActPray_8cs_source.html#l00001">ActPray.cs:2</a></div></div>
+<div class="ttc" id="aclassActQuickCraft_html"><div class="ttname"><a href="classActQuickCraft.html">ActQuickCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="ActQuickCraft_8cs_source.html#l00001">ActQuickCraft.cs:2</a></div></div>
+<div class="ttc" id="aclassActRanged_html"><div class="ttname"><a href="classActRanged.html">ActRanged</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRanged_8cs_source.html#l00005">ActRanged.cs:6</a></div></div>
+<div class="ttc" id="aclassActRestrain_html"><div class="ttname"><a href="classActRestrain.html">ActRestrain</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRestrain_8cs_source.html#l00001">ActRestrain.cs:2</a></div></div>
+<div class="ttc" id="aclassActRide_html"><div class="ttname"><a href="classActRide.html">ActRide</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00003">ActRide.cs:4</a></div></div>
+<div class="ttc" id="aclassActRush_html"><div class="ttname"><a href="classActRush.html">ActRush</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRush_8cs_source.html#l00001">ActRush.cs:2</a></div></div>
+<div class="ttc" id="aclassActThrow_html"><div class="ttname"><a href="classActThrow.html">ActThrow</a></div><div class="ttdef"><b>Definition:</b> <a href="ActThrow_8cs_source.html#l00003">ActThrow.cs:4</a></div></div>
+<div class="ttc" id="aclassActWait_html"><div class="ttname"><a href="classActWait.html">ActWait</a></div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00001">ActWait.cs:2</a></div></div>
+<div class="ttc" id="aclassActZap_html"><div class="ttname"><a href="classActZap.html">ActZap</a></div><div class="ttdef"><b>Definition:</b> <a href="ActZap_8cs_source.html#l00001">ActZap.cs:2</a></div></div>
+<div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
+<div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02041">Card.cs:2042</a></div></div>
+<div class="ttc" id="aclassCard_html_aafbb34c9bea4b056ef8c3e8981604870"><div class="ttname"><a href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">Card.IsPC</a></div><div class="ttdeci">virtual bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01941">Card.cs:1941</a></div></div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02353">Card.cs:2353</a></div></div>
+<div class="ttc" id="aclassCard_html_af138a86fd8646629d8adfcee78c77081"><div class="ttname"><a href="classCard.html#af138a86fd8646629d8adfcee78c77081">Card._IsPC</a></div><div class="ttdeci">bool _IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01943">Card.cs:1943</a></div></div>
+<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00363">Card.cs:364</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a160545685c1ede8a286de567dc56f5ca"><div class="ttname"><a href="classEClass.html#a160545685c1ede8a286de567dc56f5ca">EClass.curve</a></div><div class="ttdeci">static int curve(int a, int start, int step, int rate=75)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:55</a></div></div>
+<div class="ttc" id="aclassElementContainer_html"><div class="ttname"><a href="classElementContainer.html">ElementContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00009">ElementContainer.cs:10</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a3dcd9f6f33a93cb894639d25c9c955e5"><div class="ttname"><a href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">ElementContainer.Card</a></div><div class="ttdeci">virtual Card Card</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00029">ElementContainer.cs:29</a></div></div>
+<div class="ttc" id="aclassElement_html_ae431c3bb51231afe2c2f2f490aaa9318"><div class="ttname"><a href="classElement.html#ae431c3bb51231afe2c2f2f490aaa9318">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00913">Element.2.cs:913</a></div></div>
+<div class="ttc" id="aclassGoalIdle_html"><div class="ttname"><a href="classGoalIdle.html">GoalIdle</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalIdle_8cs_source.html#l00003">GoalIdle.cs:4</a></div></div>
+<div class="ttc" id="aclassGoalSleep_html"><div class="ttname"><a href="classGoalSleep.html">GoalSleep</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalSleep_8cs_source.html#l00003">GoalSleep.cs:4</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html"><div class="ttname"><a href="classLayerAbility.html">LayerAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00005">LayerAbility.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerAbility_html_a8e373b2c45f472eca51146d9e191155a"><div class="ttname"><a href="classLayerAbility.html#a8e373b2c45f472eca51146d9e191155a">LayerAbility.SetDirty</a></div><div class="ttdeci">static void SetDirty(Element a)</div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00099">LayerAbility.cs:99</a></div></div>
+<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="classSpell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> <a href="Spell_82_8cs_source.html#l00003">Spell.2.cs:4</a></div></div>
+<div class="ttc" id="aclassTaskBuild_html"><div class="ttname"><a href="classTaskBuild.html">TaskBuild</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskBuild_8cs_source.html#l00005">TaskBuild.cs:6</a></div></div>
+<div class="ttc" id="aclassTaskCut_html"><div class="ttname"><a href="classTaskCut.html">TaskCut</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskCut_8cs_source.html#l00001">TaskCut.cs:2</a></div></div>
+<div class="ttc" id="aclassTaskDig_html"><div class="ttname"><a href="classTaskDig.html">TaskDig</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskDig_8cs_source.html#l00001">TaskDig.cs:2</a></div></div>
+<div class="ttc" id="aclassTaskHarvest_html"><div class="ttname"><a href="classTaskHarvest.html">TaskHarvest</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskHarvest_8cs_source.html#l00003">TaskHarvest.cs:4</a></div></div>
+<div class="ttc" id="aclassTaskMine_html"><div class="ttname"><a href="classTaskMine.html">TaskMine</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskMine_8cs_source.html#l00001">TaskMine.cs:2</a></div></div>
+<div class="ttc" id="aclassTaskMoveInstalled_html"><div class="ttname"><a href="classTaskMoveInstalled.html">TaskMoveInstalled</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskMoveInstalled_8cs_source.html#l00005">TaskMoveInstalled.cs:6</a></div></div>
+<div class="ttc" id="aclassTaskPlow_html"><div class="ttname"><a href="classTaskPlow.html">TaskPlow</a></div><div class="ttdef"><b>Definition:</b> <a href="TaskPlow_8cs_source.html#l00003">TaskPlow.cs:4</a></div></div>
+<div class="ttc" id="aclassWait_html"><div class="ttname"><a href="classWait.html">Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="Wait_8cs_source.html#l00001">Wait.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

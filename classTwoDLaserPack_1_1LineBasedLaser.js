@@ -38,5 +38,5 @@ var classTwoDLaserPack_1_1LineBasedLaser =
     [ "turningRate", "classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470", null ],
     [ "useArc", "classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d", null ],
     [ "waitingForTriggerTime", "classTwoDLaserPack_1_1LineBasedLaser.html#ae51187baa12c8470029eaa9d6e476bcb", null ],
-    [ "OnLaserHitTriggered", "classTwoDLaserPack_1_1LineBasedLaser.html#a4ce72d62db9d505aa988bdeb8a326eb6", null ]
+    [ "OnLaserHitTriggered", "classTwoDLaserPack_1_1LineBasedLaser.html#ab25926c7a29110d9f0a7f2e7dffb1903", null ]
 ];

@@ -12,7 +12,7 @@ var classAlgorithms_1_1PathFinder =
     [ "grid", "classAlgorithms_1_1PathFinder.html#a1b3bc3e2777a697a15d9fae36868b1e0", null ],
     [ "HeavyDiagonals", "classAlgorithms_1_1PathFinder.html#ad167cc84033c30e3a997595c69fc58bf", null ],
     [ "index", "classAlgorithms_1_1PathFinder.html#aed5a2b7a86c63e07b183063f6e72e1f4", null ],
-    [ "mCalcGrid", "classAlgorithms_1_1PathFinder.html#a9d875da9aa88a40436afa1af5e77ba93", null ],
+    [ "mCalcGrid", "classAlgorithms_1_1PathFinder.html#a56269f6e61c897ded257b68221085c2d", null ],
     [ "mCloseNodeCounter", "classAlgorithms_1_1PathFinder.html#a31c7ef8ad2efa1bbe70e43f6960f3e4e", null ],
     [ "mCloseNodeValue", "classAlgorithms_1_1PathFinder.html#ab0ec587c703a128133dece6c7684364d", null ],
     [ "mDirection", "classAlgorithms_1_1PathFinder.html#a85525918e0416ef29cf351bd6af816e6", null ],

@@ -138,7 +138,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00003">3</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00001">1</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae0fa0553049b67cc8ff3ba104dae2ef7" name="ae0fa0553049b67cc8ff3ba104dae2ef7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0fa0553049b67cc8ff3ba104dae2ef7">&#9670;&#160;</a></span>ModNum()</h2>
@@ -166,14 +166,15 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classPropSet.html#a4fad886e79839fe81b037c0c25f28b2d">PropSet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00005">5</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        this.num += a;</div>
-<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_function" href="classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666">ModSum</a>(a);</div>
-<div class="line"><span class="lineno">    9</span>    }</div>
-<div class="ttc" id="aclassPropSetCategory_html_a60c156a3c9bbd87e6da7cec90fc3f666"><div class="ttname"><a href="classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666">PropSetCategory.ModSum</a></div><div class="ttdeci">void ModSum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="PropSetCategory_8cs_source.html#l00011">PropSetCategory.cs:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00009">9</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_variable" href="classPropSet.html#a2444244460db0fceadb88a389df9af57">num</a> += a;</div>
+<div class="line"><span class="lineno">   12</span>        <a class="code hl_function" href="classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666">ModSum</a>(a);</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassPropSetCategory_html_a60c156a3c9bbd87e6da7cec90fc3f666"><div class="ttname"><a href="classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666">PropSetCategory.ModSum</a></div><div class="ttdeci">void ModSum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="PropSetCategory_8cs_source.html#l00015">PropSetCategory.cs:15</a></div></div>
+<div class="ttc" id="aclassPropSet_html_a2444244460db0fceadb88a389df9af57"><div class="ttname"><a href="classPropSet.html#a2444244460db0fceadb88a389df9af57">PropSet.num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="PropSet_8cs_source.html#l00005">PropSet.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PropSetCategory_8cs_source.html#l00011">ModSum()</a>.</p>
+<p class="reference">References <a class="el" href="PropSetCategory_8cs_source.html#l00015">ModSum()</a>, and <a class="el" href="PropSet_8cs_source.html#l00005">PropSet.num</a>.</p>
 
 </div>
 </div>
@@ -201,19 +202,20 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00011">11</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236">parent</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   14</span>        {</div>
-<div class="line"><span class="lineno">   15</span>            this.<a class="code hl_variable" href="classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236">parent</a>.<a class="code hl_function" href="classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666">ModSum</a>(a);</div>
-<div class="line"><span class="lineno">   16</span>        }</div>
-<div class="line"><span class="lineno">   17</span>        this.sum += a;</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassPropSetCategory_html_a3265f627fd74fdd6095dd5b93c19a236"><div class="ttname"><a href="classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236">PropSetCategory.parent</a></div><div class="ttdeci">PropSetCategory parent</div><div class="ttdef"><b>Definition:</b> <a href="PropSetCategory_8cs_source.html#l00022">PropSetCategory.cs:22</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00015">15</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236">parent</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <a class="code hl_variable" href="classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236">parent</a>.<a class="code hl_function" href="classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666">ModSum</a>(a);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="classPropSetCategory.html#ac9c054af1545f999297649ffa5402db6">sum</a> += a;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclassPropSetCategory_html_a3265f627fd74fdd6095dd5b93c19a236"><div class="ttname"><a href="classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236">PropSetCategory.parent</a></div><div class="ttdeci">PropSetCategory parent</div><div class="ttdef"><b>Definition:</b> <a href="PropSetCategory_8cs_source.html#l00005">PropSetCategory.cs:5</a></div></div>
+<div class="ttc" id="aclassPropSetCategory_html_ac9c054af1545f999297649ffa5402db6"><div class="ttname"><a href="classPropSetCategory.html#ac9c054af1545f999297649ffa5402db6">PropSetCategory.sum</a></div><div class="ttdeci">int sum</div><div class="ttdef"><b>Definition:</b> <a href="PropSetCategory_8cs_source.html#l00007">PropSetCategory.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PropSetCategory_8cs_source.html#l00011">ModSum()</a>, and <a class="el" href="PropSetCategory_8cs_source.html#l00022">parent</a>.</p>
+<p class="reference">References <a class="el" href="PropSetCategory_8cs_source.html#l00015">ModSum()</a>, <a class="el" href="PropSetCategory_8cs_source.html#l00005">parent</a>, and <a class="el" href="PropSetCategory_8cs_source.html#l00007">sum</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropSetCategory_8cs_source.html#l00005">ModNum()</a>, and <a class="el" href="PropSetCategory_8cs_source.html#l00011">ModSum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PropSetCategory_8cs_source.html#l00009">ModNum()</a>, and <a class="el" href="PropSetCategory_8cs_source.html#l00015">ModSum()</a>.</p>
 
 </div>
 </div>
@@ -230,9 +232,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00022">22</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00005">5</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PropSetCategory_8cs_source.html#l00011">ModSum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PropSetCategory_8cs_source.html#l00015">ModSum()</a>.</p>
 
 </div>
 </div>
@@ -248,9 +250,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00020">20</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00003">3</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStockTracker_8cs_source.html#l00020">WidgetStockTracker._Refresh()</a>, <a class="el" href="Props_8cs_source.html#l00056">Props.Init()</a>, and <a class="el" href="ButtonResourceTrack_8cs_source.html#l00031">ButtonResourceTrack.SetCat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStockTracker_8cs_source.html#l00033">WidgetStockTracker._Refresh()</a>, <a class="el" href="Props_8cs_source.html#l00040">Props.Init()</a>, and <a class="el" href="ButtonResourceTrack_8cs_source.html#l00028">ButtonResourceTrack.SetCat()</a>.</p>
 
 </div>
 </div>
@@ -266,9 +268,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00024">24</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PropSetCategory_8cs_source.html#l00007">7</a> of file <a class="el" href="PropSetCategory_8cs_source.html">PropSetCategory.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStockTracker_8cs_source.html#l00020">WidgetStockTracker._Refresh()</a>, and <a class="el" href="ButtonResourceTrack_8cs_source.html#l00045">ButtonResourceTrack.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStockTracker_8cs_source.html#l00033">WidgetStockTracker._Refresh()</a>, <a class="el" href="PropSetCategory_8cs_source.html#l00015">ModSum()</a>, and <a class="el" href="ButtonResourceTrack_8cs_source.html#l00042">ButtonResourceTrack.Refresh()</a>.</p>
 
 </div>
 </div>

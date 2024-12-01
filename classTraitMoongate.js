@@ -4,6 +4,6 @@ var classTraitMoongate =
     [ "LoadMap", "classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388", null ],
     [ "MoveZone", "classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984", null ],
     [ "OnUse", "classTraitMoongate.html#ac4325da59139f85cb656e9e14ce3d641", null ],
-    [ "UseMoongate", "classTraitMoongate.html#a3a6d98083758ac9f1b5f77aa9a0ef1a8", null ],
+    [ "UseMoongate", "classTraitMoongate.html#aba9864fda611aa8dec3924f9ed4cf402", null ],
     [ "test", "classTraitMoongate.html#a6197df121fca3a909195e91c032dd3f4", null ]
 ];

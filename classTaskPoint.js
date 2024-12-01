@@ -4,7 +4,7 @@ var classTaskPoint =
     [ "CanManualCancel", "classTaskPoint.html#ae88a3b820e677050f149af5bfcd9fbad", null ],
     [ "CanPerform", "classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041", null ],
     [ "OnInspect", "classTaskPoint.html#aa3ad45aec255df8e98da8269eaeb0e79", null ],
-    [ "Run", "classTaskPoint.html#a2db2a423a86ab1fa338e37f0d443cf2d", null ],
+    [ "Run", "classTaskPoint.html#a8523a93880914121b962fb0e7812b1dc", null ],
     [ "WriteNote", "classTaskPoint.html#aa6bfa873d4eb8e53933180703d034166", null ],
     [ "isRepeated", "classTaskPoint.html#a5c8d961e8178db5b5511153edc17504c", null ],
     [ "pos", "classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa", null ],
@@ -15,7 +15,7 @@ var classTaskPoint =
     [ "HasProgress", "classTaskPoint.html#ae5f1ddf6bd9c6c4b53906872ae996d89", null ],
     [ "InspectName", "classTaskPoint.html#adf46d04b4356019f501238e94ae3eb39", null ],
     [ "InspectPoint", "classTaskPoint.html#ae05c0f2d5627eab9bc37c9b9747cdb94", null ],
-    [ "InspectPosition", "classTaskPoint.html#a5235eeda2dc7f2dde58f8b0bb0789a84", null ],
+    [ "InspectPosition", "classTaskPoint.html#a997319d1d0712c94651594d5bf995a18", null ],
     [ "isBlock", "classTaskPoint.html#a2207414c5e35ec958b6214a1c82e09ef", null ],
     [ "Loop", "classTaskPoint.html#a1712e21e59c42d684e3c06bd53786a4a", null ]
 ];

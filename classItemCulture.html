@@ -123,7 +123,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00004">4</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00003">3</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae50527fc8f39d3cf2f7da21245a10d24" name="ae50527fc8f39d3cf2f7da21245a10d24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae50527fc8f39d3cf2f7da21245a10d24">&#9670;&#160;</a></span>Refresh()</h2>
@@ -148,68 +148,61 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00006">6</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> branch = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">game</a>.<a class="code hl_variable" href="classGame.html#a2c3d7514a2db1030fb90f7f0626a299e">player</a>.<a class="code hl_variable" href="classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee">chara</a>.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a>.<a class="code hl_variable" href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">branch</a>;</div>
-<div class="line"><span class="lineno">    9</span>        <a class="code hl_class" href="classElementContainerZone.html">ElementContainerZone</a> elements = branch.<a class="code hl_property" href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">elements</a>;</div>
-<div class="line"><span class="lineno">   10</span>        <a class="code hl_class" href="classElement.html">Element</a> e = elements.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(this.<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   11</span>        this.button1.SetTooltip(delegate(UITooltip t)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            e.<a class="code hl_function" href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">WriteNote</a>(t.note, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   14</span>        }, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   15</span>        Action &lt;&gt;9__2;</div>
-<div class="line"><span class="lineno">   16</span>        this.button1.onClick.SetListener(delegate</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            UIContextMenu uicontextMenu = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.CreateContextMenuInteraction();</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordtype">string</span> idLang = <span class="stringliteral">&quot;detail&quot;</span>;</div>
-<div class="line"><span class="lineno">   20</span>            Action action;</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> ((action = &lt;&gt;9__2) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   22</span>            {</div>
-<div class="line"><span class="lineno">   23</span>                action = (&lt;&gt;9__2 = delegate()</div>
-<div class="line"><span class="lineno">   24</span>                {</div>
-<div class="line"><span class="lineno">   25</span>                    <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerInfo.html">LayerInfo</a>&gt;().Set(e, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   26</span>                });</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>            uicontextMenu.AddButton(idLang, action, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   29</span>            uicontextMenu.Show();</div>
-<div class="line"><span class="lineno">   30</span>        });</div>
-<div class="line"><span class="lineno">   31</span>        this.text1.SetText(e.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>);</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, Element&gt; keyValuePair <span class="keywordflow">in</span> elements.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>)</div>
-<div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (keyValuePair.Value.source.aliasParent == <span class="keyword">this</span>.id)</div>
-<div class="line"><span class="lineno">   36</span>            {</div>
-<div class="line"><span class="lineno">   37</span>                num++;</div>
-<div class="line"><span class="lineno">   38</span>            }</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_variable" href="classItemCulture.html#a24da0c0e5ca7c16e90e4a347c7cd0482">textSkills</a>.SetText(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>        this.<a class="code hl_variable" href="classItemCulture.html#ae236a0acda4054cc7185429851a4e1dc">textLv</a>.SetText(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classItemCulture.html#a918daa4b2bff4454ec670d63abf5b14a">textHearth</a>.SetText(<span class="stringliteral">&quot;_hearth&quot;</span>.lang(branch.<a class="code hl_function" href="classFactionBranch.html#a7fd9b4bc0f73d872cffb781d452b70c5">GetHearthIncome</a>(e.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias).ToString(<span class="stringliteral">&quot;F1&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00056">Chara.cs:57</a></div></div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
-<div class="ttc" id="aclassCore_html_a23f118d951da98e4d7fcb3f1691c59c5"><div class="ttname"><a href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">Core.game</a></div><div class="ttdeci">Game game</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00746">Core.cs:746</a></div></div>
-<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00691">Core.cs:691</a></div></div>
-<div class="ttc" id="aclassCore_html_acfcdec21b8065bc6731db8ac33904feb"><div class="ttname"><a href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">Core.ui</a></div><div class="ttdeci">UI ui</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00737">Core.cs:737</a></div></div>
-<div class="ttc" id="aclassElementContainerZone_html"><div class="ttname"><a href="classElementContainerZone.html">ElementContainerZone</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainerZone_8cs_source.html#l00003">ElementContainerZone.cs:4</a></div></div>
-<div class="ttc" id="aclassElementContainer_html_a0d1183d1c663248e22bfee5d6884d018"><div class="ttname"><a href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">ElementContainer.dict</a></div><div class="ttdeci">Dictionary&lt; int, Element &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00897">ElementContainer.cs:897</a></div></div>
-<div class="ttc" id="aclassElementContainer_html_ad913c083fdb7f408381e27eb59835267"><div class="ttname"><a href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">ElementContainer.GetOrCreateElement</a></div><div class="ttdeci">Element GetOrCreateElement(Element ele)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00542">ElementContainer.cs:542</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00015">15</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> branch = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">game</a>.<a class="code hl_variable" href="classGame.html#a2c3d7514a2db1030fb90f7f0626a299e">player</a>.<a class="code hl_variable" href="classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee">chara</a>.<a class="code hl_property" href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">currentZone</a>.<a class="code hl_variable" href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">branch</a>;</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classElementContainerZone.html">ElementContainerZone</a> elements = branch.<a class="code hl_property" href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">elements</a>;</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classElement.html">Element</a> e = elements.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   20</span>        button1.SetTooltip(delegate(UITooltip t)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            e.<a class="code hl_function" href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">WriteNote</a>(t.note);</div>
+<div class="line"><span class="lineno">   23</span>        });</div>
+<div class="line"><span class="lineno">   24</span>        button1.onClick.SetListener(delegate</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            UIContextMenu uIContextMenu = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   27</span>            uIContextMenu.AddButton(<span class="stringliteral">&quot;detail&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerInfo.html">LayerInfo</a>&gt;().Set(e);</div>
+<div class="line"><span class="lineno">   30</span>            });</div>
+<div class="line"><span class="lineno">   31</span>            uIContextMenu.Show();</div>
+<div class="line"><span class="lineno">   32</span>        });</div>
+<div class="line"><span class="lineno">   33</span>        text1.SetText(e.<a class="code hl_property" href="classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039">Name</a>);</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, Element&gt; item <span class="keywordflow">in</span> elements.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (item.Value.source.aliasParent == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                num++;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classItemCulture.html#a24da0c0e5ca7c16e90e4a347c7cd0482">textSkills</a>.SetText(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classItemCulture.html#ae236a0acda4054cc7185429851a4e1dc">textLv</a>.SetText(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="classItemCulture.html#a918daa4b2bff4454ec670d63abf5b14a">textHearth</a>.SetText(<span class="stringliteral">&quot;_hearth&quot;</span>.lang(branch.<a class="code hl_function" href="classFactionBranch.html#a7fd9b4bc0f73d872cffb781d452b70c5">GetHearthIncome</a>(e.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.alias).ToString(<span class="stringliteral">&quot;F1&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00239">Chara.cs:240</a></div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
+<div class="ttc" id="aclassCore_html_a23f118d951da98e4d7fcb3f1691c59c5"><div class="ttname"><a href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">Core.game</a></div><div class="ttdeci">Game game</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00066">Core.cs:66</a></div></div>
+<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00011">Core.cs:11</a></div></div>
+<div class="ttc" id="aclassCore_html_acfcdec21b8065bc6731db8ac33904feb"><div class="ttname"><a href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">Core.ui</a></div><div class="ttdeci">UI ui</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00057">Core.cs:57</a></div></div>
+<div class="ttc" id="aclassElementContainerZone_html"><div class="ttname"><a href="classElementContainerZone.html">ElementContainerZone</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainerZone_8cs_source.html#l00001">ElementContainerZone.cs:2</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_a0d1183d1c663248e22bfee5d6884d018"><div class="ttname"><a href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">ElementContainer.dict</a></div><div class="ttdeci">Dictionary&lt; int, Element &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00020">ElementContainer.cs:20</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_ad913c083fdb7f408381e27eb59835267"><div class="ttname"><a href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">ElementContainer.GetOrCreateElement</a></div><div class="ttdeci">Element GetOrCreateElement(Element ele)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00500">ElementContainer.cs:500</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
-<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
-<div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<div class="ttc" id="aclassElement_html_a1b7d20a592bf10cf629f7fe418bcff30"><div class="ttname"><a href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
 <div class="ttc" id="aclassElement_html_aa4bf612a89ba65848dfa1cb60df72a3c"><div class="ttname"><a href="classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c">Element.WriteNote</a></div><div class="ttdeci">void WriteNote(UINote n, ElementContainer owner=null, Action&lt; UINote &gt; onWriteNote=null)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00461">Element.2.cs:461</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html"><div class="ttname"><a href="classFactionBranch.html">FactionBranch</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00008">FactionBranch.cs:9</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_a7fd9b4bc0f73d872cffb781d452b70c5"><div class="ttname"><a href="classFactionBranch.html#a7fd9b4bc0f73d872cffb781d452b70c5">FactionBranch.GetHearthIncome</a></div><div class="ttdeci">float GetHearthIncome()</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01442">FactionBranch.cs:1442</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_aed5261461375018a53ad7853e6b081c6"><div class="ttname"><a href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">FactionBranch.elements</a></div><div class="ttdeci">ElementContainerZone elements</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00177">FactionBranch.cs:178</a></div></div>
-<div class="ttc" id="aclassGame_html_a2c3d7514a2db1030fb90f7f0626a299e"><div class="ttname"><a href="classGame.html#a2c3d7514a2db1030fb90f7f0626a299e">Game.player</a></div><div class="ttdeci">new Player player</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00811">Game.cs:811</a></div></div>
-<div class="ttc" id="aclassItemCulture_html_a24da0c0e5ca7c16e90e4a347c7cd0482"><div class="ttname"><a href="classItemCulture.html#a24da0c0e5ca7c16e90e4a347c7cd0482">ItemCulture.textSkills</a></div><div class="ttdeci">UIText textSkills</div><div class="ttdef"><b>Definition:</b> <a href="ItemCulture_8cs_source.html#l00049">ItemCulture.cs:49</a></div></div>
-<div class="ttc" id="aclassItemCulture_html_a918daa4b2bff4454ec670d63abf5b14a"><div class="ttname"><a href="classItemCulture.html#a918daa4b2bff4454ec670d63abf5b14a">ItemCulture.textHearth</a></div><div class="ttdeci">UIText textHearth</div><div class="ttdef"><b>Definition:</b> <a href="ItemCulture_8cs_source.html#l00053">ItemCulture.cs:53</a></div></div>
-<div class="ttc" id="aclassItemCulture_html_ae236a0acda4054cc7185429851a4e1dc"><div class="ttname"><a href="classItemCulture.html#ae236a0acda4054cc7185429851a4e1dc">ItemCulture.textLv</a></div><div class="ttdeci">UIText textLv</div><div class="ttdef"><b>Definition:</b> <a href="ItemCulture_8cs_source.html#l00047">ItemCulture.cs:47</a></div></div>
-<div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00004">LayerInfo.cs:5</a></div></div>
-<div class="ttc" id="aclassPlayer_html_ad3cd52c1adaa2d738f19f6f259298eee"><div class="ttname"><a href="classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee">Player.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01635">Player.cs:1635</a></div></div>
-<div class="ttc" id="aclassZone_html_a5288cd6767855de9e33fd6cedd97b396"><div class="ttname"><a href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">Zone.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03855">Zone.cs:3855</a></div></div>
+<div class="ttc" id="aclassElement_html_afd9b473ffd04d2b55fc8a3a861ee5039"><div class="ttname"><a href="classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html"><div class="ttname"><a href="classFactionBranch.html">FactionBranch</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00007">FactionBranch.cs:8</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a7fd9b4bc0f73d872cffb781d452b70c5"><div class="ttname"><a href="classFactionBranch.html#a7fd9b4bc0f73d872cffb781d452b70c5">FactionBranch.GetHearthIncome</a></div><div class="ttdeci">float GetHearthIncome()</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01597">FactionBranch.cs:1597</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_aed5261461375018a53ad7853e6b081c6"><div class="ttname"><a href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">FactionBranch.elements</a></div><div class="ttdeci">ElementContainerZone elements</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00144">FactionBranch.cs:144</a></div></div>
+<div class="ttc" id="aclassGame_html_a2c3d7514a2db1030fb90f7f0626a299e"><div class="ttname"><a href="classGame.html#a2c3d7514a2db1030fb90f7f0626a299e">Game.player</a></div><div class="ttdeci">new Player player</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00173">Game.cs:173</a></div></div>
+<div class="ttc" id="aclassItemCulture_html_a24da0c0e5ca7c16e90e4a347c7cd0482"><div class="ttname"><a href="classItemCulture.html#a24da0c0e5ca7c16e90e4a347c7cd0482">ItemCulture.textSkills</a></div><div class="ttdeci">UIText textSkills</div><div class="ttdef"><b>Definition:</b> <a href="ItemCulture_8cs_source.html#l00009">ItemCulture.cs:9</a></div></div>
+<div class="ttc" id="aclassItemCulture_html_a918daa4b2bff4454ec670d63abf5b14a"><div class="ttname"><a href="classItemCulture.html#a918daa4b2bff4454ec670d63abf5b14a">ItemCulture.textHearth</a></div><div class="ttdeci">UIText textHearth</div><div class="ttdef"><b>Definition:</b> <a href="ItemCulture_8cs_source.html#l00013">ItemCulture.cs:13</a></div></div>
+<div class="ttc" id="aclassItemCulture_html_ae236a0acda4054cc7185429851a4e1dc"><div class="ttname"><a href="classItemCulture.html#ae236a0acda4054cc7185429851a4e1dc">ItemCulture.textLv</a></div><div class="ttdeci">UIText textLv</div><div class="ttdef"><b>Definition:</b> <a href="ItemCulture_8cs_source.html#l00007">ItemCulture.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00003">LayerInfo.cs:4</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ad3cd52c1adaa2d738f19f6f259298eee"><div class="ttname"><a href="classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee">Player.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00948">Player.cs:948</a></div></div>
+<div class="ttc" id="aclassZone_html_a5288cd6767855de9e33fd6cedd97b396"><div class="ttname"><a href="classZone.html#a5288cd6767855de9e33fd6cedd97b396">Zone.branch</a></div><div class="ttdeci">FactionBranch branch</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00034">Zone.cs:34</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Zone_8cs_source.html#l03855">Zone.branch</a>, <a class="el" href="Player_8cs_source.html#l01635">Player.chara</a>, <a class="el" href="Chara_8cs_source.html#l00057">Chara.currentZone</a>, <a class="el" href="FactionBranch_8cs_source.html#l00178">FactionBranch.elements</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="ElementContainer_8cs_source.html#l00542">ElementContainer.GetOrCreateElement()</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, <a class="el" href="Game_8cs_source.html#l00811">Game.player</a>, <a class="el" href="ItemCulture_8cs_source.html#l00053">textHearth</a>, <a class="el" href="ItemCulture_8cs_source.html#l00047">textLv</a>, <a class="el" href="ItemCulture_8cs_source.html#l00049">textSkills</a>, and <a class="el" href="Element_82_8cs_source.html#l00461">Element.WriteNote()</a>.</p>
+<p class="reference">References <a class="el" href="Zone_8cs_source.html#l00034">Zone.branch</a>, <a class="el" href="Player_8cs_source.html#l00948">Player.chara</a>, <a class="el" href="Chara_8cs_source.html#l00240">Chara.currentZone</a>, <a class="el" href="FactionBranch_8cs_source.html#l00144">FactionBranch.elements</a>, <a class="el" href="Core_8cs_source.html#l00066">Core.game</a>, <a class="el" href="ElementContainer_8cs_source.html#l00500">ElementContainer.GetOrCreateElement()</a>, <a class="el" href="Core_8cs_source.html#l00011">Core.Instance</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, <a class="el" href="Game_8cs_source.html#l00173">Game.player</a>, <a class="el" href="ItemCulture_8cs_source.html#l00013">textHearth</a>, <a class="el" href="ItemCulture_8cs_source.html#l00007">textLv</a>, <a class="el" href="ItemCulture_8cs_source.html#l00009">textSkills</a>, <a class="el" href="Core_8cs_source.html#l00057">Core.ui</a>, and <a class="el" href="Element_82_8cs_source.html#l00461">Element.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -226,7 +219,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00045">45</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00005">5</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
 
 </div>
 </div>
@@ -242,9 +235,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00053">53</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00013">13</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemCulture_8cs_source.html#l00006">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemCulture_8cs_source.html#l00015">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -260,7 +253,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00051">51</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00011">11</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
 
 </div>
 </div>
@@ -276,9 +269,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00047">47</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00007">7</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemCulture_8cs_source.html#l00006">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemCulture_8cs_source.html#l00015">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -294,9 +287,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00049">49</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemCulture_8cs_source.html#l00009">9</a> of file <a class="el" href="ItemCulture_8cs_source.html">ItemCulture.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemCulture_8cs_source.html#l00006">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemCulture_8cs_source.html#l00015">Refresh()</a>.</p>
 
 </div>
 </div>

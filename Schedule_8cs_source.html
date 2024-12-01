@@ -92,29 +92,28 @@ $(document).ready(function(){initNavTree('Schedule_8cs_source.html',''); initRes
   <div class="headertitle"><div class="title">Schedule.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Schedule_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Newtonsoft.Json;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classSchedule.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classSchedule.html">Schedule</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    [JsonProperty]</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classSchedule.html#ae74dd201923f69b6bbc393324a5f5252">    8</a></span>    <span class="keyword">public</span> List&lt;<a class="code hl_class" href="classSchedule.html">Schedule</a>.<a class="code hl_class" href="classSchedule_1_1Item.html">Item</a>&gt; <a class="code hl_variable" href="classSchedule.html#ae74dd201923f69b6bbc393324a5f5252">list</a> = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classSchedule.html">Schedule</a>.<a class="code hl_class" href="classSchedule_1_1Item.html">Item</a>&gt;();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classSchedule_1_1Item.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classSchedule_1_1Item.html">Item</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [JsonProperty]</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead">   13</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="classDate.html">Date</a> <a class="code hl_variable" href="classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead">date</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d">   15</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d">Name</a> = <span class="stringliteral">&quot;tempSchedule&quot;</span>.lang();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
-<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00004">Date.cs:5</a></div></div>
-<div class="ttc" id="aclassSchedule_1_1Item_html"><div class="ttname"><a href="classSchedule_1_1Item.html">Schedule.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00010">Schedule.cs:11</a></div></div>
-<div class="ttc" id="aclassSchedule_1_1Item_html_a5788da855884d3ee1ba0e062e405d24d"><div class="ttname"><a href="classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d">Schedule.Item.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00015">Schedule.cs:15</a></div></div>
-<div class="ttc" id="aclassSchedule_1_1Item_html_a84faee7317c29e09297d3d869851fead"><div class="ttname"><a href="classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead">Schedule.Item.date</a></div><div class="ttdeci">Date date</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00013">Schedule.cs:13</a></div></div>
-<div class="ttc" id="aclassSchedule_html"><div class="ttname"><a href="classSchedule.html">Schedule</a></div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00005">Schedule.cs:6</a></div></div>
-<div class="ttc" id="aclassSchedule_html_ae74dd201923f69b6bbc393324a5f5252"><div class="ttname"><a href="classSchedule.html#ae74dd201923f69b6bbc393324a5f5252">Schedule.list</a></div><div class="ttdeci">List&lt; Schedule.Item &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00008">Schedule.cs:8</a></div></div>
+<a href="Schedule_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classSchedule.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classSchedule.html">Schedule</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classSchedule_1_1Item.html">    6</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classSchedule_1_1Item.html">Item</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        [JsonProperty]</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead">    9</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="classDate.html">Date</a> <a class="code hl_variable" href="classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead">date</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d">   11</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d">Name</a> = <span class="stringliteral">&quot;tempSchedule&quot;</span>.lang();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    [JsonProperty]</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classSchedule.html#ae0a4a4df663b9423ddc6359613dce3f9">   15</a></span>    <span class="keyword">public</span> List&lt;Item&gt; <a class="code hl_variable" href="classSchedule.html#ae0a4a4df663b9423ddc6359613dce3f9">list</a> = <span class="keyword">new</span> List&lt;Item&gt;();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00003">Date.cs:4</a></div></div>
+<div class="ttc" id="aclassSchedule_1_1Item_html"><div class="ttname"><a href="classSchedule_1_1Item.html">Schedule.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00006">Schedule.cs:7</a></div></div>
+<div class="ttc" id="aclassSchedule_1_1Item_html_a5788da855884d3ee1ba0e062e405d24d"><div class="ttname"><a href="classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d">Schedule.Item.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00011">Schedule.cs:11</a></div></div>
+<div class="ttc" id="aclassSchedule_1_1Item_html_a84faee7317c29e09297d3d869851fead"><div class="ttname"><a href="classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead">Schedule.Item.date</a></div><div class="ttdeci">Date date</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00009">Schedule.cs:9</a></div></div>
+<div class="ttc" id="aclassSchedule_html"><div class="ttname"><a href="classSchedule.html">Schedule</a></div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00004">Schedule.cs:5</a></div></div>
+<div class="ttc" id="aclassSchedule_html_ae0a4a4df663b9423ddc6359613dce3f9"><div class="ttname"><a href="classSchedule.html#ae0a4a4df663b9423ddc6359613dce3f9">Schedule.list</a></div><div class="ttdeci">List&lt; Item &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="Schedule_8cs_source.html#l00015">Schedule.cs:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

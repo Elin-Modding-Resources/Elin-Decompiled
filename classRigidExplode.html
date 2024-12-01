@@ -222,7 +222,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00004">4</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00003">3</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1259717698a2df22b32520a81d489200" name="a1259717698a2df22b32520a81d489200"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1259717698a2df22b32520a81d489200">&#9670;&#160;</a></span>Explode()</h2>
@@ -247,45 +247,48 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00011">11</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        Vector2 position = this.<a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.position;</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidExplode.html#adcf7d6f643d6e7e0502b2fac613adb17">particle</a>)</div>
-<div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            ParticleSystem p = UnityEngine.Object.Instantiate&lt;ParticleSystem&gt;(this.<a class="code hl_variable" href="classRigidExplode.html#adcf7d6f643d6e7e0502b2fac613adb17">particle</a>);</div>
-<div class="line"><span class="lineno">   17</span>            p.transform.position = position;</div>
-<div class="line"><span class="lineno">   18</span>            TweenUtil.Delay(5f, delegate</div>
-<div class="line"><span class="lineno">   19</span>            {</div>
-<div class="line"><span class="lineno">   20</span>                <span class="keywordflow">if</span> (p &amp;&amp; p.gameObject)</div>
-<div class="line"><span class="lineno">   21</span>                {</div>
-<div class="line"><span class="lineno">   22</span>                    UnityEngine.Object.DestroyImmediate(p.gameObject);</div>
-<div class="line"><span class="lineno">   23</span>                }</div>
-<div class="line"><span class="lineno">   24</span>            });</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">foreach</span> (RaycastHit2D raycastHit2D <span class="keywordflow">in</span> Physics2D.CircleCastAll(position, <span class="keyword">this</span>.radius, Vector3.forward))</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            Rigidbody2D component = raycastHit2D.collider.GetComponent&lt;Rigidbody2D&gt;();</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (component)</div>
-<div class="line"><span class="lineno">   30</span>            {</div>
-<div class="line"><span class="lineno">   31</span>                Vector2 a = component.position - position;</div>
-<div class="line"><span class="lineno">   32</span>                component.AddForce(a * this.<a class="code hl_variable" href="classRigidExplode.html#a10303bc14eeb5b02e457abf9902d5670">force</a> * (1f + component.mass * <span class="keyword">this</span>.massPower), ForceMode2D.Impulse);</div>
-<div class="line"><span class="lineno">   33</span>            }</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classRigidExplode.html#a818099438e17345f21fb4da4a9a10316">sound</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(this.<a class="code hl_variable" href="classRigidExplode.html#a818099438e17345f21fb4da4a9a10316">sound</a>, this.<a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.position, 1f);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_abdbb9003a5179eefc73781a814ab8059"><div class="ttname"><a href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">EMono.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00134">EMono.cs:135</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a10303bc14eeb5b02e457abf9902d5670"><div class="ttname"><a href="classRigidExplode.html#a10303bc14eeb5b02e457abf9902d5670">RigidExplode.force</a></div><div class="ttdeci">float force</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00073">RigidExplode.cs:73</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a818099438e17345f21fb4da4a9a10316"><div class="ttname"><a href="classRigidExplode.html#a818099438e17345f21fb4da4a9a10316">RigidExplode.sound</a></div><div class="ttdeci">string sound</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00089">RigidExplode.cs:89</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_adcf7d6f643d6e7e0502b2fac613adb17"><div class="ttname"><a href="classRigidExplode.html#adcf7d6f643d6e7e0502b2fac613adb17">RigidExplode.particle</a></div><div class="ttdeci">ParticleSystem particle</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00071">RigidExplode.cs:71</a></div></div>
-<div class="ttc" id="aclassRigidUpdate_html_a28c0e5089380e6875b10fd28525585a2"><div class="ttname"><a href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">RigidUpdate.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00030">RigidUpdate.cs:30</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00034">34</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        Vector2 position = <a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.position;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classRigidExplode.html#adcf7d6f643d6e7e0502b2fac613adb17">particle</a>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            ParticleSystem p = Object.Instantiate(<a class="code hl_variable" href="classRigidExplode.html#adcf7d6f643d6e7e0502b2fac613adb17">particle</a>);</div>
+<div class="line"><span class="lineno">   40</span>            p.transform.position = position;</div>
+<div class="line"><span class="lineno">   41</span>            TweenUtil.Delay(5f, delegate</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)p &amp;&amp; (<span class="keywordtype">bool</span>)p.gameObject)</div>
+<div class="line"><span class="lineno">   44</span>                {</div>
+<div class="line"><span class="lineno">   45</span>                    Object.DestroyImmediate(p.gameObject);</div>
+<div class="line"><span class="lineno">   46</span>                }</div>
+<div class="line"><span class="lineno">   47</span>            });</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        RaycastHit2D[] array = Physics2D.CircleCastAll(position, <a class="code hl_variable" href="classRigidExplode.html#ae326b494f9b3a3a6e773fdcb157efc55">radius</a>, Vector3.forward);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">foreach</span> (RaycastHit2D raycastHit2D <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            Rigidbody2D component = raycastHit2D.collider.GetComponent&lt;Rigidbody2D&gt;();</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)component)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                Vector2 vector = component.position - position;</div>
+<div class="line"><span class="lineno">   56</span>                component.AddForce(vector * <a class="code hl_variable" href="classRigidExplode.html#a10303bc14eeb5b02e457abf9902d5670">force</a> * (1f + component.mass * <a class="code hl_variable" href="classRigidExplode.html#a62c409ac3ea074f924c11b96e3ab5249">massPower</a>), ForceMode2D.Impulse);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRigidExplode.html#a818099438e17345f21fb4da4a9a10316">sound</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<a class="code hl_variable" href="classRigidExplode.html#a818099438e17345f21fb4da4a9a10316">sound</a>, <a class="code hl_variable" href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">rb</a>.position);</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_abdbb9003a5179eefc73781a814ab8059"><div class="ttname"><a href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">EMono.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00039">EMono.cs:39</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a10303bc14eeb5b02e457abf9902d5670"><div class="ttname"><a href="classRigidExplode.html#a10303bc14eeb5b02e457abf9902d5670">RigidExplode.force</a></div><div class="ttdeci">float force</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00007">RigidExplode.cs:7</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a62c409ac3ea074f924c11b96e3ab5249"><div class="ttname"><a href="classRigidExplode.html#a62c409ac3ea074f924c11b96e3ab5249">RigidExplode.massPower</a></div><div class="ttdeci">float massPower</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00015">RigidExplode.cs:15</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a818099438e17345f21fb4da4a9a10316"><div class="ttname"><a href="classRigidExplode.html#a818099438e17345f21fb4da4a9a10316">RigidExplode.sound</a></div><div class="ttdeci">string sound</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00023">RigidExplode.cs:23</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_adcf7d6f643d6e7e0502b2fac613adb17"><div class="ttname"><a href="classRigidExplode.html#adcf7d6f643d6e7e0502b2fac613adb17">RigidExplode.particle</a></div><div class="ttdeci">ParticleSystem particle</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00005">RigidExplode.cs:5</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_ae326b494f9b3a3a6e773fdcb157efc55"><div class="ttname"><a href="classRigidExplode.html#ae326b494f9b3a3a6e773fdcb157efc55">RigidExplode.radius</a></div><div class="ttdeci">float radius</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00009">RigidExplode.cs:9</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a28c0e5089380e6875b10fd28525585a2"><div class="ttname"><a href="classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2">RigidUpdate.rb</a></div><div class="ttdeci">Rigidbody2D rb</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00013">RigidUpdate.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RigidExplode_8cs_source.html#l00073">force</a>, <a class="el" href="RigidExplode_8cs_source.html#l00071">particle</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00030">RigidUpdate.rb</a>, <a class="el" href="EMono_8cs_source.html#l00135">EMono.Sound</a>, and <a class="el" href="RigidExplode_8cs_source.html#l00089">sound</a>.</p>
+<p class="reference">References <a class="el" href="RigidExplode_8cs_source.html#l00007">force</a>, <a class="el" href="RigidExplode_8cs_source.html#l00015">massPower</a>, <a class="el" href="RigidExplode_8cs_source.html#l00005">particle</a>, <a class="el" href="RigidExplode_8cs_source.html#l00009">radius</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00013">RigidUpdate.rb</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.Sound</a>, and <a class="el" href="RigidExplode_8cs_source.html#l00023">sound</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -314,47 +317,54 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRigidUpdate.html#af5ee37daddd2f9d113a350db83afe738">RigidUpdate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00041">41</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
-<div class="line"><span class="lineno">   43</span>        this.time += <a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>.<a class="code hl_variable" href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">delta</a>;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidExplode.html#a84a92289ece85df9dad9907ee9b251b9">time</a> &gt; this.<a class="code hl_variable" href="classRigidExplode.html#a3db8f77c022480f5271786ec2a108872">interval</a>)</div>
-<div class="line"><span class="lineno">   45</span>        {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidExplode.html#a6d9deeefca1ff743a13ad46f00354b38">chance</a> &gt;= UnityEngine.Random.Range(0f, 1f))</div>
-<div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                this.<a class="code hl_function" href="classRigidExplode.html#a1259717698a2df22b32520a81d489200">Explode</a>();</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidExplode.html#ace757e4f09cad5528272ccc1e2b4fca6">destroy</a>)</div>
-<div class="line"><span class="lineno">   50</span>                {</div>
-<div class="line"><span class="lineno">   51</span>                    this.active = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>                    <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> component = base.gameObject.GetComponent&lt;<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a>&gt;();</div>
-<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">if</span> (component)</div>
-<div class="line"><span class="lineno">   54</span>                    {</div>
-<div class="line"><span class="lineno">   55</span>                        component.<a class="code hl_function" href="classCollectibleActor.html#a00572c2696d82dd5f5406e316a291dcf">Deactivate</a>();</div>
-<div class="line"><span class="lineno">   56</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   57</span>                    }</div>
-<div class="line"><span class="lineno">   58</span>                    base.gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRigidExplode.html#a3b1f95418ce9f77ee947396e0bb11b31">repeat</a>)</div>
-<div class="line"><span class="lineno">   63</span>            {</div>
-<div class="line"><span class="lineno">   64</span>                this.time = 0f;</div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>            this.active = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00065">65</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classRigidExplode.html#a84a92289ece85df9dad9907ee9b251b9">time</a> += <a class="code hl_class" href="classRigidUpdate.html">RigidUpdate</a>.<a class="code hl_variable" href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">delta</a>;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classRigidExplode.html#a84a92289ece85df9dad9907ee9b251b9">time</a> &gt; <a class="code hl_variable" href="classRigidExplode.html#a3db8f77c022480f5271786ec2a108872">interval</a>))</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRigidExplode.html#a6d9deeefca1ff743a13ad46f00354b38">chance</a> &gt;= <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.Range(0f, 1f))</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_function" href="classRigidExplode.html#a1259717698a2df22b32520a81d489200">Explode</a>();</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRigidExplode.html#ace757e4f09cad5528272ccc1e2b4fca6">destroy</a>)</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                <a class="code hl_variable" href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a> component = base.gameObject.GetComponent&lt;<a class="code hl_class" href="classCollectibleActor.html">CollectibleActor</a>&gt;();</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)component)</div>
+<div class="line"><span class="lineno">   80</span>                {</div>
+<div class="line"><span class="lineno">   81</span>                    component.<a class="code hl_function" href="classCollectibleActor.html#a00572c2696d82dd5f5406e316a291dcf">Deactivate</a>();</div>
+<div class="line"><span class="lineno">   82</span>                }</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   84</span>                {</div>
+<div class="line"><span class="lineno">   85</span>                    base.gameObject.SetActive(value: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   86</span>                }</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRigidExplode.html#a3b1f95418ce9f77ee947396e0bb11b31">repeat</a>)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_variable" href="classRigidExplode.html#a84a92289ece85df9dad9907ee9b251b9">time</a> = 0f;</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_variable" href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Rarity.Random</a></div><div class="ttdeci">@ Random</div></div>
 <div class="ttc" id="aclassCollectibleActor_html"><div class="ttname"><a href="classCollectibleActor.html">CollectibleActor</a></div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00004">CollectibleActor.cs:5</a></div></div>
-<div class="ttc" id="aclassCollectibleActor_html_a00572c2696d82dd5f5406e316a291dcf"><div class="ttname"><a href="classCollectibleActor.html#a00572c2696d82dd5f5406e316a291dcf">CollectibleActor.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00033">CollectibleActor.cs:33</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a1259717698a2df22b32520a81d489200"><div class="ttname"><a href="classRigidExplode.html#a1259717698a2df22b32520a81d489200">RigidExplode.Explode</a></div><div class="ttdeci">void Explode()</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00011">RigidExplode.cs:11</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a3b1f95418ce9f77ee947396e0bb11b31"><div class="ttname"><a href="classRigidExplode.html#a3b1f95418ce9f77ee947396e0bb11b31">RigidExplode.repeat</a></div><div class="ttdeci">bool repeat</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00085">RigidExplode.cs:85</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a3db8f77c022480f5271786ec2a108872"><div class="ttname"><a href="classRigidExplode.html#a3db8f77c022480f5271786ec2a108872">RigidExplode.interval</a></div><div class="ttdeci">float interval</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00093">RigidExplode.cs:93</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a6d9deeefca1ff743a13ad46f00354b38"><div class="ttname"><a href="classRigidExplode.html#a6d9deeefca1ff743a13ad46f00354b38">RigidExplode.chance</a></div><div class="ttdeci">float chance</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00083">RigidExplode.cs:83</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_a84a92289ece85df9dad9907ee9b251b9"><div class="ttname"><a href="classRigidExplode.html#a84a92289ece85df9dad9907ee9b251b9">RigidExplode.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00091">RigidExplode.cs:91</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_ace757e4f09cad5528272ccc1e2b4fca6"><div class="ttname"><a href="classRigidExplode.html#ace757e4f09cad5528272ccc1e2b4fca6">RigidExplode.destroy</a></div><div class="ttdeci">bool destroy</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00087">RigidExplode.cs:87</a></div></div>
+<div class="ttc" id="aclassCollectibleActor_html_a00572c2696d82dd5f5406e316a291dcf"><div class="ttname"><a href="classCollectibleActor.html#a00572c2696d82dd5f5406e316a291dcf">CollectibleActor.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="CollectibleActor_8cs_source.html#l00050">CollectibleActor.cs:50</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a1259717698a2df22b32520a81d489200"><div class="ttname"><a href="classRigidExplode.html#a1259717698a2df22b32520a81d489200">RigidExplode.Explode</a></div><div class="ttdeci">void Explode()</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00034">RigidExplode.cs:34</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a3b1f95418ce9f77ee947396e0bb11b31"><div class="ttname"><a href="classRigidExplode.html#a3b1f95418ce9f77ee947396e0bb11b31">RigidExplode.repeat</a></div><div class="ttdeci">bool repeat</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00019">RigidExplode.cs:19</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a3db8f77c022480f5271786ec2a108872"><div class="ttname"><a href="classRigidExplode.html#a3db8f77c022480f5271786ec2a108872">RigidExplode.interval</a></div><div class="ttdeci">float interval</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00027">RigidExplode.cs:27</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a6d9deeefca1ff743a13ad46f00354b38"><div class="ttname"><a href="classRigidExplode.html#a6d9deeefca1ff743a13ad46f00354b38">RigidExplode.chance</a></div><div class="ttdeci">float chance</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00017">RigidExplode.cs:17</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_a84a92289ece85df9dad9907ee9b251b9"><div class="ttname"><a href="classRigidExplode.html#a84a92289ece85df9dad9907ee9b251b9">RigidExplode.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00025">RigidExplode.cs:25</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_ace757e4f09cad5528272ccc1e2b4fca6"><div class="ttname"><a href="classRigidExplode.html#ace757e4f09cad5528272ccc1e2b4fca6">RigidExplode.destroy</a></div><div class="ttdeci">bool destroy</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00021">RigidExplode.cs:21</a></div></div>
 <div class="ttc" id="aclassRigidUpdate_html"><div class="ttname"><a href="classRigidUpdate.html">RigidUpdate</a></div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00004">RigidUpdate.cs:5</a></div></div>
-<div class="ttc" id="aclassRigidUpdate_html_a309bbc39e91e85a490136775889b08ee"><div class="ttname"><a href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">RigidUpdate.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00023">RigidUpdate.cs:23</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a309bbc39e91e85a490136775889b08ee"><div class="ttname"><a href="classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee">RigidUpdate.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00006">RigidUpdate.cs:6</a></div></div>
+<div class="ttc" id="aclassRigidUpdate_html_a6d4ca41bb6f158de8824788da6b2dfd0"><div class="ttname"><a href="classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0">RigidUpdate.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="RigidUpdate_8cs_source.html#l00016">RigidUpdate.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RigidExplode_8cs_source.html#l00083">chance</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00033">CollectibleActor.Deactivate()</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00023">RigidUpdate.delta</a>, <a class="el" href="RigidExplode_8cs_source.html#l00087">destroy</a>, <a class="el" href="RigidExplode_8cs_source.html#l00011">Explode()</a>, <a class="el" href="RigidExplode_8cs_source.html#l00093">interval</a>, <a class="el" href="RigidExplode_8cs_source.html#l00085">repeat</a>, and <a class="el" href="RigidExplode_8cs_source.html#l00091">time</a>.</p>
+<p class="reference">References <a class="el" href="RigidUpdate_8cs_source.html#l00016">RigidUpdate.active</a>, <a class="el" href="RigidExplode_8cs_source.html#l00017">chance</a>, <a class="el" href="CollectibleActor_8cs_source.html#l00050">CollectibleActor.Deactivate()</a>, <a class="el" href="RigidUpdate_8cs_source.html#l00006">RigidUpdate.delta</a>, <a class="el" href="RigidExplode_8cs_source.html#l00021">destroy</a>, <a class="el" href="RigidExplode_8cs_source.html#l00034">Explode()</a>, <a class="el" href="RigidExplode_8cs_source.html#l00027">interval</a>, <a class="el" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>, <a class="el" href="RigidExplode_8cs_source.html#l00019">repeat</a>, and <a class="el" href="RigidExplode_8cs_source.html#l00025">time</a>.</p>
 
 </div>
 </div>
@@ -381,14 +391,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00006">6</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        this.interval = UnityEngine.Random.Range(this.<a class="code hl_variable" href="classRigidExplode.html#a897fc0912beb6be154ba40b104559c9f">intervalMin</a>, this.<a class="code hl_variable" href="classRigidExplode.html#abe70018fe0fa7e6c31ca5b4f63f9b55c">intervalMax</a>);</div>
-<div class="line"><span class="lineno">    9</span>    }</div>
-<div class="ttc" id="aclassRigidExplode_html_a897fc0912beb6be154ba40b104559c9f"><div class="ttname"><a href="classRigidExplode.html#a897fc0912beb6be154ba40b104559c9f">RigidExplode.intervalMin</a></div><div class="ttdeci">float intervalMin</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00077">RigidExplode.cs:77</a></div></div>
-<div class="ttc" id="aclassRigidExplode_html_abe70018fe0fa7e6c31ca5b4f63f9b55c"><div class="ttname"><a href="classRigidExplode.html#abe70018fe0fa7e6c31ca5b4f63f9b55c">RigidExplode.intervalMax</a></div><div class="ttdeci">float intervalMax</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00079">RigidExplode.cs:79</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00029">29</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="classRigidExplode.html#a3db8f77c022480f5271786ec2a108872">interval</a> = <a class="code hl_enumvalue" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.Range(<a class="code hl_variable" href="classRigidExplode.html#a897fc0912beb6be154ba40b104559c9f">intervalMin</a>, <a class="code hl_variable" href="classRigidExplode.html#abe70018fe0fa7e6c31ca5b4f63f9b55c">intervalMax</a>);</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aclassRigidExplode_html_a897fc0912beb6be154ba40b104559c9f"><div class="ttname"><a href="classRigidExplode.html#a897fc0912beb6be154ba40b104559c9f">RigidExplode.intervalMin</a></div><div class="ttdeci">float intervalMin</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00011">RigidExplode.cs:11</a></div></div>
+<div class="ttc" id="aclassRigidExplode_html_abe70018fe0fa7e6c31ca5b4f63f9b55c"><div class="ttname"><a href="classRigidExplode.html#abe70018fe0fa7e6c31ca5b4f63f9b55c">RigidExplode.intervalMax</a></div><div class="ttdeci">float intervalMax</div><div class="ttdef"><b>Definition:</b> <a href="RigidExplode_8cs_source.html#l00013">RigidExplode.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RigidExplode_8cs_source.html#l00079">intervalMax</a>, and <a class="el" href="RigidExplode_8cs_source.html#l00077">intervalMin</a>.</p>
+<p class="reference">References <a class="el" href="RigidExplode_8cs_source.html#l00027">interval</a>, <a class="el" href="RigidExplode_8cs_source.html#l00013">intervalMax</a>, <a class="el" href="RigidExplode_8cs_source.html#l00011">intervalMin</a>, and <a class="el" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23">Random</a>.</p>
 
 </div>
 </div>
@@ -405,9 +415,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00083">83</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00017">17</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -423,9 +433,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00087">87</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00021">21</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -441,9 +451,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00073">73</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00007">7</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00011">Explode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00034">Explode()</a>.</p>
 
 </div>
 </div>
@@ -467,9 +477,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00093">93</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00027">27</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">OnFixedUpdate()</a>, and <a class="el" href="RigidExplode_8cs_source.html#l00029">Start()</a>.</p>
 
 </div>
 </div>
@@ -485,9 +495,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00079">79</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00013">13</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00006">Start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00029">Start()</a>.</p>
 
 </div>
 </div>
@@ -503,9 +513,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00077">77</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00011">11</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00006">Start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00029">Start()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +531,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00081">81</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00015">15</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00034">Explode()</a>.</p>
 
 </div>
 </div>
@@ -537,9 +549,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00071">71</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00005">5</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00011">Explode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00034">Explode()</a>.</p>
 
 </div>
 </div>
@@ -555,7 +567,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00075">75</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00009">9</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00034">Explode()</a>.</p>
 
 </div>
 </div>
@@ -571,9 +585,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00085">85</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00019">19</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>
@@ -589,9 +603,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00089">89</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00023">23</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00011">Explode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00034">Explode()</a>.</p>
 
 </div>
 </div>
@@ -615,9 +629,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00091">91</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RigidExplode_8cs_source.html#l00025">25</a> of file <a class="el" href="RigidExplode_8cs_source.html">RigidExplode.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00041">OnFixedUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RigidExplode_8cs_source.html#l00065">OnFixedUpdate()</a>.</p>
 
 </div>
 </div>

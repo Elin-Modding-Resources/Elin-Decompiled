@@ -8,5 +8,5 @@ var classTraitPainter =
     [ "CanUse", "classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea", null ],
     [ "GetCanvas", "classTraitPainter.html#a8b7e5ff264f235305b816cd9012687e4", null ],
     [ "OnUse", "classTraitPainter.html#a676298524aad36fa4b67bfd137c69a12", null ],
-    [ "PaintType", "classTraitPainter.html#ab4bf688df0ef64a73ce26f735fab2e49", null ]
+    [ "PaintType", "classTraitPainter.html#af8d07f3e6f48f1962871691a1a8ce1f0", null ]
 ];

@@ -194,7 +194,7 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00004">4</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00003">3</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a79ebdb847fee5f5b7d879ad4337e6460" name="a79ebdb847fee5f5b7d879ad4337e6460"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79ebdb847fee5f5b7d879ad4337e6460">&#9670;&#160;</a></span>GetSprite()</h2>
@@ -220,15 +220,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00043">43</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!highlight)</div>
-<div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> base.GetSprite();</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> SpriteSheet.Get(<span class="stringliteral">&quot;icon_visible_highlight&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00020">20</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (!highlight)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classHotItemIcon.html#a4acb840ba5cc86b7db9671967ffe0d99">GetSprite</a>();</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> SpriteSheet.Get(<span class="stringliteral">&quot;icon_visible_highlight&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassHotItemIcon_html_a4acb840ba5cc86b7db9671967ffe0d99"><div class="ttname"><a href="classHotItemIcon.html#a4acb840ba5cc86b7db9671967ffe0d99">HotItemIcon.GetSprite</a></div><div class="ttdeci">override Sprite GetSprite()</div><div class="ttdef"><b>Definition:</b> <a href="HotItemIcon_8cs_source.html#l00007">HotItemIcon.cs:7</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="HotItemIcon_8cs_source.html#l00007">HotItemIcon.GetSprite()</a>.</p>
+
 </div>
 </div>
 <a id="a45829ff62184dd5aa9e32eb684d50808" name="a45829ff62184dd5aa9e32eb684d50808"></a>
@@ -267,34 +270,34 @@ Properties</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classHotItem.html#a70fde84034309bd884c98d694fc58444">HotItem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00061">61</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!b)</div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            SE.Beep();</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_property" href="classWidgetHotbar.html#a442eb272be2d2e3d857319422bc6b989">Visible</a>)</div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            SE.ClickGeneral();</div>
-<div class="line"><span class="lineno">   71</span>            this.sticky = !this.<a class="code hl_variable" href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">sticky</a>;</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            SE.Play(<span class="stringliteral">&quot;pop_context&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>            b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a8b5c6bd7d4572114016201bc5e321764">ToggleVisible</a>();</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">RefreshHighlight</a>();</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="aclassButtonHotItem_html_a0a9f69e1f6138f2b98430160c036148e"><div class="ttname"><a href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">ButtonHotItem.widget</a></div><div class="ttdeci">WidgetHotbar widget</div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.cs:128</a></div></div>
-<div class="ttc" id="aclassHotItemToggleVisible_html_a5562e75081be8a5dabd6362f0c8e2948"><div class="ttname"><a href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">HotItemToggleVisible.sticky</a></div><div class="ttdeci">bool sticky</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggleVisible_8cs_source.html#l00081">HotItemToggleVisible.cs:81</a></div></div>
-<div class="ttc" id="aclassWidgetHotbar_html_a442eb272be2d2e3d857319422bc6b989"><div class="ttname"><a href="classWidgetHotbar.html#a442eb272be2d2e3d857319422bc6b989">WidgetHotbar.Visible</a></div><div class="ttdeci">bool Visible</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00032">WidgetHotbar.cs:33</a></div></div>
-<div class="ttc" id="aclassWidgetHotbar_html_a63c30bdbc5e23f621d6c0ae69294a033"><div class="ttname"><a href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">WidgetHotbar.RefreshHighlight</a></div><div class="ttdeci">bool RefreshHighlight()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00463">WidgetHotbar.cs:463</a></div></div>
-<div class="ttc" id="aclassWidgetHotbar_html_a8b5c6bd7d4572114016201bc5e321764"><div class="ttname"><a href="classWidgetHotbar.html#a8b5c6bd7d4572114016201bc5e321764">WidgetHotbar.ToggleVisible</a></div><div class="ttdeci">void ToggleVisible()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00551">WidgetHotbar.cs:551</a></div></div>
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00038">38</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (!b)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_property" href="classWidgetHotbar.html#a442eb272be2d2e3d857319422bc6b989">Visible</a>)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">sticky</a> = !<a class="code hl_variable" href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">sticky</a>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            SE.Play(<span class="stringliteral">&quot;pop_context&quot;</span>);</div>
+<div class="line"><span class="lineno">   53</span>            b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a8b5c6bd7d4572114016201bc5e321764">ToggleVisible</a>();</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        b.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_function" href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">RefreshHighlight</a>();</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassButtonHotItem_html_a0a9f69e1f6138f2b98430160c036148e"><div class="ttname"><a href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">ButtonHotItem.widget</a></div><div class="ttdeci">WidgetHotbar widget</div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00010">ButtonHotItem.cs:10</a></div></div>
+<div class="ttc" id="aclassHotItemToggleVisible_html_a5562e75081be8a5dabd6362f0c8e2948"><div class="ttname"><a href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">HotItemToggleVisible.sticky</a></div><div class="ttdeci">bool sticky</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggleVisible_8cs_source.html#l00005">HotItemToggleVisible.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a442eb272be2d2e3d857319422bc6b989"><div class="ttname"><a href="classWidgetHotbar.html#a442eb272be2d2e3d857319422bc6b989">WidgetHotbar.Visible</a></div><div class="ttdeci">bool Visible</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00067">WidgetHotbar.cs:68</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a63c30bdbc5e23f621d6c0ae69294a033"><div class="ttname"><a href="classWidgetHotbar.html#a63c30bdbc5e23f621d6c0ae69294a033">WidgetHotbar.RefreshHighlight</a></div><div class="ttdeci">bool RefreshHighlight()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00470">WidgetHotbar.cs:470</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a8b5c6bd7d4572114016201bc5e321764"><div class="ttname"><a href="classWidgetHotbar.html#a8b5c6bd7d4572114016201bc5e321764">WidgetHotbar.ToggleVisible</a></div><div class="ttdeci">void ToggleVisible()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00561">WidgetHotbar.cs:561</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetHotbar_8cs_source.html#l00463">WidgetHotbar.RefreshHighlight()</a>, <a class="el" href="HotItemToggleVisible_8cs_source.html#l00081">sticky</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00551">WidgetHotbar.ToggleVisible()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00033">WidgetHotbar.Visible</a>, and <a class="el" href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.widget</a>.</p>
+<p class="reference">References <a class="el" href="WidgetHotbar_8cs_source.html#l00470">WidgetHotbar.RefreshHighlight()</a>, <a class="el" href="HotItemToggleVisible_8cs_source.html#l00005">sticky</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00561">WidgetHotbar.ToggleVisible()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00068">WidgetHotbar.Visible</a>, and <a class="el" href="ButtonHotItem_8cs_source.html#l00010">ButtonHotItem.widget</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HotItemToggleVisible_8cs_source.html#l00052">OnHover()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HotItemToggleVisible_8cs_source.html#l00029">OnHover()</a>.</p>
 
 </div>
 </div>
@@ -322,19 +325,19 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00052">52</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_class" href="classButtonHotItem.html">ButtonHotItem</a> buttonHotItem = b as <a class="code hl_class" href="classButtonHotItem.html">ButtonHotItem</a>;</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (!buttonHotItem.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_property" href="classWidgetHotbar.html#a442eb272be2d2e3d857319422bc6b989">Visible</a>)</div>
-<div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            this.<a class="code hl_function" href="classHotItemToggleVisible.html#a45829ff62184dd5aa9e32eb684d50808">OnClick</a>(buttonHotItem, buttonHotItem.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_property" href="classWidgetHotbar.html#a811b7f93c70045ca2b40b579f2f9acaa">hotbar</a>);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00029">29</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classButtonHotItem.html">ButtonHotItem</a> buttonHotItem = b as <a class="code hl_class" href="classButtonHotItem.html">ButtonHotItem</a>;</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (!buttonHotItem.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_property" href="classWidgetHotbar.html#a442eb272be2d2e3d857319422bc6b989">Visible</a>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_function" href="classHotItemToggleVisible.html#a45829ff62184dd5aa9e32eb684d50808">OnClick</a>(buttonHotItem, buttonHotItem.<a class="code hl_variable" href="classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e">widget</a>.<a class="code hl_property" href="classWidgetHotbar.html#a811b7f93c70045ca2b40b579f2f9acaa">hotbar</a>);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
 <div class="ttc" id="aclassButtonHotItem_html"><div class="ttname"><a href="classButtonHotItem.html">ButtonHotItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00005">ButtonHotItem.cs:6</a></div></div>
-<div class="ttc" id="aclassHotItemToggleVisible_html_a45829ff62184dd5aa9e32eb684d50808"><div class="ttname"><a href="classHotItemToggleVisible.html#a45829ff62184dd5aa9e32eb684d50808">HotItemToggleVisible.OnClick</a></div><div class="ttdeci">override void OnClick(ButtonHotItem b, Hotbar h)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggleVisible_8cs_source.html#l00061">HotItemToggleVisible.cs:61</a></div></div>
-<div class="ttc" id="aclassWidgetHotbar_html_a811b7f93c70045ca2b40b579f2f9acaa"><div class="ttname"><a href="classWidgetHotbar.html#a811b7f93c70045ca2b40b579f2f9acaa">WidgetHotbar.hotbar</a></div><div class="ttdeci">Hotbar hotbar</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00024">WidgetHotbar.cs:25</a></div></div>
+<div class="ttc" id="aclassHotItemToggleVisible_html_a45829ff62184dd5aa9e32eb684d50808"><div class="ttname"><a href="classHotItemToggleVisible.html#a45829ff62184dd5aa9e32eb684d50808">HotItemToggleVisible.OnClick</a></div><div class="ttdeci">override void OnClick(ButtonHotItem b, Hotbar h)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemToggleVisible_8cs_source.html#l00038">HotItemToggleVisible.cs:38</a></div></div>
+<div class="ttc" id="aclassWidgetHotbar_html_a811b7f93c70045ca2b40b579f2f9acaa"><div class="ttname"><a href="classWidgetHotbar.html#a811b7f93c70045ca2b40b579f2f9acaa">WidgetHotbar.hotbar</a></div><div class="ttdeci">Hotbar hotbar</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00065">WidgetHotbar.cs:65</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetHotbar_8cs_source.html#l00025">WidgetHotbar.hotbar</a>, <a class="el" href="HotItemToggleVisible_8cs_source.html#l00061">OnClick()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00033">WidgetHotbar.Visible</a>, and <a class="el" href="ButtonHotItem_8cs_source.html#l00128">ButtonHotItem.widget</a>.</p>
+<p class="reference">References <a class="el" href="WidgetHotbar_8cs_source.html#l00065">WidgetHotbar.hotbar</a>, <a class="el" href="HotItemToggleVisible_8cs_source.html#l00038">OnClick()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00068">WidgetHotbar.Visible</a>, and <a class="el" href="ButtonHotItem_8cs_source.html#l00010">ButtonHotItem.widget</a>.</p>
 
 </div>
 </div>
@@ -361,12 +364,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00030">30</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">sticky</a>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00015">15</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948">sticky</a>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="HotItemToggleVisible_8cs_source.html#l00081">sticky</a>.</p>
+<p class="reference">References <a class="el" href="HotItemToggleVisible_8cs_source.html#l00005">sticky</a>.</p>
 
 </div>
 </div>
@@ -383,9 +386,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00081">81</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00005">5</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HotItemToggleVisible_8cs_source.html#l00061">OnClick()</a>, and <a class="el" href="HotItemToggleVisible_8cs_source.html#l00030">ShouldHighlight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HotItemToggleVisible_8cs_source.html#l00038">OnClick()</a>, and <a class="el" href="HotItemToggleVisible_8cs_source.html#l00015">ShouldHighlight()</a>.</p>
 
 </div>
 </div>
@@ -410,14 +413,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00022">22</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00011">11</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+
 </div>
 </div>
 <a id="a13eadd07f8698d8b526395993954715e" name="a13eadd07f8698d8b526395993954715e"></a>
@@ -440,14 +437,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00006">6</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;s_visible&quot;</span>.lang();</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00007">7</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6c0f21928324e6e139db15bcd1fa0dbd" name="a6c0f21928324e6e139db15bcd1fa0dbd"></a>
@@ -470,14 +461,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00014">14</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00009">9</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+
 </div>
 </div>
 <a id="a80371792310529b05c9dca77ce496a35" name="a80371792310529b05c9dca77ce496a35"></a>
@@ -500,14 +485,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00035">35</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="HotItemToggleVisible_8cs_source.html#l00013">13</a> of file <a class="el" href="HotItemToggleVisible_8cs_source.html">HotItemToggleVisible.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

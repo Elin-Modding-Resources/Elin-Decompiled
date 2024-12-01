@@ -9,7 +9,7 @@ var classDramaManager =
     [ "GetActor", "classDramaManager.html#aea015631a5369fd277a84c4488566bfa", null ],
     [ "Hide", "classDramaManager.html#a1f945a734f73f4ba1128f7f904b46b1a", null ],
     [ "Load", "classDramaManager.html#a57b30e8d7f4fceb0752947281b0f82cf", null ],
-    [ "ParseLine", "classDramaManager.html#a2468e9ced1091e9bc5d6e3773becd6a8", null ],
+    [ "ParseLine", "classDramaManager.html#a6eae472f587ababee3b630a1b58f9207", null ],
     [ "Play", "classDramaManager.html#ac130c66da2f1bdd6f3d24a02a8444394", null ],
     [ "SetDialog", "classDramaManager.html#a8306de98a8c5410b7f20a836992dd637", null ],
     [ "Show", "classDramaManager.html#a61a6aca0f0b6bcf16f5273fa8131eb16", null ],

@@ -7,6 +7,6 @@ var classUndoManager =
     [ "Perform", "classUndoManager.html#a4535c592ab5123e80867cd4ebafb08a1", null ],
     [ "Validate", "classUndoManager.html#a434df48c1bf9cdbdb30830d33f632c6a", null ],
     [ "WriteNote", "classUndoManager.html#a0afa43b69a43c19d6989be0dfd6d2c07", null ],
-    [ "items", "classUndoManager.html#a95132eb7f86c6c23d1c62f2e540ade91", null ],
-    [ "lastItem", "classUndoManager.html#a27687eb0ad20598bbea4edeeef44ef17", null ]
+    [ "items", "classUndoManager.html#a2ab7e948d250cae2e6356b7687281c00", null ],
+    [ "lastItem", "classUndoManager.html#a25e113eda00c61c1f00871fc42bb4f75", null ]
 ];

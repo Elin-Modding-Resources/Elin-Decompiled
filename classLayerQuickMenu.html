@@ -199,7 +199,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00004">4</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00003">3</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae7c3e171b808dbd5bece355920e3d8d6" name="ae7c3e171b808dbd5bece355920e3d8d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7c3e171b808dbd5bece355920e3d8d6">&#9670;&#160;</a></span>OnInit()</h2>
@@ -224,47 +224,48 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classQuickMenu.html">QuickMenu</a> quickMenu = <span class="keyword">new</span> <a class="code hl_class" href="classQuickMenu.html">QuickMenu</a>();</div>
-<div class="line"><span class="lineno">    9</span>        quickMenu.<a class="code hl_function" href="classQuickMenu.html#aaeac1739d274c505f0ee8e274f4590fa">Build</a>();</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; quickMenu.<a class="code hl_variable" href="classQuickMenu.html#abaa45570b69deb622a4a94ca7e7709fe">items</a>.Count; i++)</div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <a class="code hl_class" href="classQuickMenu_1_1Item.html">QuickMenu.Item</a> item = quickMenu.<a class="code hl_variable" href="classQuickMenu.html#abaa45570b69deb622a4a94ca7e7709fe">items</a>[i];</div>
-<div class="line"><span class="lineno">   13</span>            UIButton uibutton = this.<a class="code hl_variable" href="classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25">radial</a>.AddOption(SpriteSheet.Get(<span class="stringliteral">&quot;icon_&quot;</span> + item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>), delegate</div>
-<div class="line"><span class="lineno">   14</span>            {</div>
-<div class="line"><span class="lineno">   15</span>                if (item.action != null)</div>
-<div class="line"><span class="lineno">   16</span>                {</div>
-<div class="line"><span class="lineno">   17</span>                    item.action();</div>
-<div class="line"><span class="lineno">   18</span>                    this.Close();</div>
-<div class="line"><span class="lineno">   19</span>                    return;</div>
-<div class="line"><span class="lineno">   20</span>                }</div>
-<div class="line"><span class="lineno">   21</span>                <a class="code hl_class" href="classHotItemActionMode.html">HotItemActionMode</a>.<a class="code hl_function" href="classHotItemActionMode.html#aded8e91dc9720709f8064641532efda5">Execute</a>(item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>);</div>
-<div class="line"><span class="lineno">   22</span>            });</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   24</span>            {</div>
-<div class="line"><span class="lineno">   25</span>                uibutton.icon.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   26</span>                uibutton.image.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   29</span>            {</div>
-<div class="line"><span class="lineno">   30</span>                uibutton.icon.enabled = uibutton.icon.sprite;</div>
-<div class="line"><span class="lineno">   31</span>                uibutton.tooltip.text = item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>.lang();</div>
-<div class="line"><span class="lineno">   32</span>            }</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        this.radial.transform.position = (this.oriPos = EInput.mpos);</div>
-<div class="line"><span class="lineno">   35</span>        this.<a class="code hl_variable" href="classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25">radial</a>.Init();</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclassHotItemActionMode_html"><div class="ttname"><a href="classHotItemActionMode.html">HotItemActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemActionMode_8cs_source.html#l00004">HotItemActionMode.cs:5</a></div></div>
-<div class="ttc" id="aclassHotItemActionMode_html_aded8e91dc9720709f8064641532efda5"><div class="ttname"><a href="classHotItemActionMode.html#aded8e91dc9720709f8064641532efda5">HotItemActionMode.Execute</a></div><div class="ttdeci">static void Execute(string id)</div><div class="ttdef"><b>Definition:</b> <a href="HotItemActionMode_8cs_source.html#l00030">HotItemActionMode.cs:30</a></div></div>
-<div class="ttc" id="aclassLayerQuickMenu_html_a0e38f6f7f74ce98faca47e7c4d83bc25"><div class="ttname"><a href="classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25">LayerQuickMenu.radial</a></div><div class="ttdeci">CircularRadialButton radial</div><div class="ttdef"><b>Definition:</b> <a href="LayerQuickMenu_8cs_source.html#l00061">LayerQuickMenu.cs:61</a></div></div>
-<div class="ttc" id="aclassQuickMenu_1_1Item_html"><div class="ttname"><a href="classQuickMenu_1_1Item.html">QuickMenu.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00034">QuickMenu.cs:35</a></div></div>
-<div class="ttc" id="aclassQuickMenu_1_1Item_html_a6945a95ecabc7db22f831eaa83ba6568"><div class="ttname"><a href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">QuickMenu.Item.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00036">QuickMenu.cs:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_class" href="classQuickMenu.html">QuickMenu</a> quickMenu = <span class="keyword">new</span> <a class="code hl_class" href="classQuickMenu.html">QuickMenu</a>();</div>
+<div class="line"><span class="lineno">   14</span>        quickMenu.<a class="code hl_function" href="classQuickMenu.html#aaeac1739d274c505f0ee8e274f4590fa">Build</a>();</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; quickMenu.<a class="code hl_variable" href="classQuickMenu.html#a5a6cffcc2266e4f5502b9a308959ea3a">items</a>.Count; i++)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_class" href="classQuickMenu_1_1Item.html">QuickMenu.Item</a> item = quickMenu.<a class="code hl_variable" href="classQuickMenu.html#a5a6cffcc2266e4f5502b9a308959ea3a">items</a>[i];</div>
+<div class="line"><span class="lineno">   18</span>            UIButton uIButton = <a class="code hl_variable" href="classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25">radial</a>.AddOption(SpriteSheet.Get(<span class="stringliteral">&quot;icon_&quot;</span> + item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>), delegate</div>
+<div class="line"><span class="lineno">   19</span>            {</div>
+<div class="line"><span class="lineno">   20</span>                if (item.action != null)</div>
+<div class="line"><span class="lineno">   21</span>                {</div>
+<div class="line"><span class="lineno">   22</span>                    item.action();</div>
+<div class="line"><span class="lineno">   23</span>                    Close();</div>
+<div class="line"><span class="lineno">   24</span>                }</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    HotItemActionMode.Execute(item.id);</div>
+<div class="line"><span class="lineno">   28</span>                }</div>
+<div class="line"><span class="lineno">   29</span>            });</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                uIButton.icon.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   33</span>                uIButton.image.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                uIButton.icon.enabled = uIButton.icon.sprite;</div>
+<div class="line"><span class="lineno">   38</span>                uIButton.tooltip.text = item.<a class="code hl_variable" href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">id</a>.lang();</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        radial.transform.position = (<a class="code hl_variable" href="classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89">oriPos</a> = EInput.mpos);</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25">radial</a>.Init();</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassLayerQuickMenu_html_a0e38f6f7f74ce98faca47e7c4d83bc25"><div class="ttname"><a href="classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25">LayerQuickMenu.radial</a></div><div class="ttdeci">CircularRadialButton radial</div><div class="ttdef"><b>Definition:</b> <a href="LayerQuickMenu_8cs_source.html#l00005">LayerQuickMenu.cs:5</a></div></div>
+<div class="ttc" id="aclassLayerQuickMenu_html_a0f688d2c4dfe520bc94ec6d3b6a88e89"><div class="ttname"><a href="classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89">LayerQuickMenu.oriPos</a></div><div class="ttdeci">Vector2 oriPos</div><div class="ttdef"><b>Definition:</b> <a href="LayerQuickMenu_8cs_source.html#l00007">LayerQuickMenu.cs:7</a></div></div>
+<div class="ttc" id="aclassQuickMenu_1_1Item_html"><div class="ttname"><a href="classQuickMenu_1_1Item.html">QuickMenu.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00007">QuickMenu.cs:8</a></div></div>
+<div class="ttc" id="aclassQuickMenu_1_1Item_html_a6945a95ecabc7db22f831eaa83ba6568"><div class="ttname"><a href="classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568">QuickMenu.Item.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00009">QuickMenu.cs:9</a></div></div>
 <div class="ttc" id="aclassQuickMenu_html"><div class="ttname"><a href="classQuickMenu.html">QuickMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00005">QuickMenu.cs:6</a></div></div>
-<div class="ttc" id="aclassQuickMenu_html_aaeac1739d274c505f0ee8e274f4590fa"><div class="ttname"><a href="classQuickMenu.html#aaeac1739d274c505f0ee8e274f4590fa">QuickMenu.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00007">QuickMenu.cs:7</a></div></div>
-<div class="ttc" id="aclassQuickMenu_html_abaa45570b69deb622a4a94ca7e7709fe"><div class="ttname"><a href="classQuickMenu.html#abaa45570b69deb622a4a94ca7e7709fe">QuickMenu.items</a></div><div class="ttdeci">List&lt; QuickMenu.Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00032">QuickMenu.cs:32</a></div></div>
+<div class="ttc" id="aclassQuickMenu_html_a5a6cffcc2266e4f5502b9a308959ea3a"><div class="ttname"><a href="classQuickMenu.html#a5a6cffcc2266e4f5502b9a308959ea3a">QuickMenu.items</a></div><div class="ttdeci">List&lt; Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00020">QuickMenu.cs:20</a></div></div>
+<div class="ttc" id="aclassQuickMenu_html_aaeac1739d274c505f0ee8e274f4590fa"><div class="ttname"><a href="classQuickMenu.html#aaeac1739d274c505f0ee8e274f4590fa">QuickMenu.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="QuickMenu_8cs_source.html#l00022">QuickMenu.cs:22</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QuickMenu_8cs_source.html#l00007">QuickMenu.Build()</a>, <a class="el" href="HotItemActionMode_8cs_source.html#l00030">HotItemActionMode.Execute()</a>, <a class="el" href="QuickMenu_8cs_source.html#l00036">QuickMenu.Item.id</a>, <a class="el" href="QuickMenu_8cs_source.html#l00032">QuickMenu.items</a>, and <a class="el" href="LayerQuickMenu_8cs_source.html#l00061">radial</a>.</p>
+<p class="reference">References <a class="el" href="QuickMenu_8cs_source.html#l00022">QuickMenu.Build()</a>, <a class="el" href="QuickMenu_8cs_source.html#l00009">QuickMenu.Item.id</a>, <a class="el" href="QuickMenu_8cs_source.html#l00020">QuickMenu.items</a>, and <a class="el" href="LayerQuickMenu_8cs_source.html#l00005">radial</a>.</p>
 
 </div>
 </div>
@@ -291,28 +292,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00038">38</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (Vector2.Distance(EInput.mpos, <span class="keyword">this</span>.oriPos) &gt; <span class="keyword">this</span>.closeDist)</div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            this.Close();</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (Input.GetMouseButtonDown(0))</div>
-<div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!InputModuleEX.IsPointerOver(base.transform))</div>
-<div class="line"><span class="lineno">   48</span>            {</div>
-<div class="line"><span class="lineno">   49</span>                this.Close();</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   51</span>            }</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; Input.anyKeyDown)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            this.Close();</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        EInput.ConsumeWheel();</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00045">45</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (Vector2.Distance(EInput.mpos, <a class="code hl_variable" href="classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89">oriPos</a>) &gt; <a class="code hl_variable" href="classLayerQuickMenu.html#a59b2a450322b2407acb198b940b0079d">closeDist</a>)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            Close();</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (Input.GetMouseButtonDown(0))</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (!InputModuleEX.IsPointerOver(base.transform))</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                Close();</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; Input.anyKeyDown)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            Close();</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        EInput.ConsumeWheel();</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassLayerQuickMenu_html_a59b2a450322b2407acb198b940b0079d"><div class="ttname"><a href="classLayerQuickMenu.html#a59b2a450322b2407acb198b940b0079d">LayerQuickMenu.closeDist</a></div><div class="ttdeci">float closeDist</div><div class="ttdef"><b>Definition:</b> <a href="LayerQuickMenu_8cs_source.html#l00009">LayerQuickMenu.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00065">65</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
 
 </div>
 </div>
@@ -345,7 +347,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00063">63</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
 
 </div>
 </div>
@@ -361,9 +363,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00061">61</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerQuickMenu_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerQuickMenu_8cs_source.html">LayerQuickMenu.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerQuickMenu_8cs_source.html#l00006">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerQuickMenu_8cs_source.html#l00011">OnInit()</a>.</p>
 
 </div>
 </div>

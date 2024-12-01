@@ -163,8 +163,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a31e60d1c7ca10e9b57f695e66dfc93a6 inherit pub_methods_classRenderRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107056ec89fe5d7b157fec0a35d16030 inherit pub_methods_classRenderRow"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a107056ec89fe5d7b157fec0a35d16030">SetRenderParam</a> (<a class="el" href="classRenderParam.html">RenderParam</a> p, <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat, int dir)</td></tr>
 <tr class="separator:a107056ec89fe5d7b157fec0a35d16030 inherit pub_methods_classRenderRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a241cb197c6e275c82e754dce019929d5 inherit pub_methods_classRenderRow"><td class="memItemLeft" align="right" valign="top">virtual unsafe <a class="el" href="classRenderParam.html">RenderParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a241cb197c6e275c82e754dce019929d5">GetRenderParam</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat, int dir, <a class="el" href="classPoint.html">Point</a> point=null, int bridgeHeight=-1)</td></tr>
-<tr class="separator:a241cb197c6e275c82e754dce019929d5 inherit pub_methods_classRenderRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20b0c2156133bf41691d46496cfa6f4 inherit pub_methods_classRenderRow"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRenderParam.html">RenderParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4">GetRenderParam</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat, int dir, <a class="el" href="classPoint.html">Point</a> point=null, int bridgeHeight=-1)</td></tr>
+<tr class="separator:ae20b0c2156133bf41691d46496cfa6f4 inherit pub_methods_classRenderRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adce2993750fa8bfc77d6de91231e1fce inherit pub_methods_classRenderRow"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">GetTile</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat, int dir=0)</td></tr>
 <tr class="separator:adce2993750fa8bfc77d6de91231e1fce inherit pub_methods_classRenderRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e21e8fd472ec7cb4b810bbb94532071 inherit pub_methods_classRenderRow"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat)</td></tr>
@@ -410,7 +410,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00099">99</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00007">7</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f95c90698639f26a04f0f9ce76601e4" name="a8f95c90698639f26a04f0f9ce76601e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f95c90698639f26a04f0f9ce76601e4">&#9670;&#160;</a></span>GetName() <span class="overload">[1/2]</span></h2>
@@ -435,25 +435,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00166">166</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>        {</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = base.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (Lang.setting.nameStyle == 0)</div>
-<div class="line"><span class="lineno">  170</span>            {</div>
-<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">  172</span>            }</div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">  174</span>            {</div>
-<div class="line"><span class="lineno">  175</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;_of&quot;</span>.lang(text, this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  176</span>            }</div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html_aab3e1fd995da3a60cfd4b8b4b3de4b8a"><div class="ttname"><a href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">SourceThing.Row.unit</a></div><div class="ttdeci">string unit</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00205">SourceThing.cs:205</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00114">114</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordtype">string</span> text = GetText();</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (Lang.setting.nameStyle == 0)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;_of&quot;</span>.lang(text, <a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a>);</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_aab3e1fd995da3a60cfd4b8b4b3de4b8a"><div class="ttname"><a href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">SourceThing.Row.unit</a></div><div class="ttdeci">string unit</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00015">SourceThing.cs:15</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="SourceThing_8cs_source.html#l00205">SourceThing.Row.unit</a>.</p>
+<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00015">SourceThing.Row.unit</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00153">SourceThing.Row.GetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00101">SourceThing.Row.GetName()</a>.</p>
 
 </div>
 </div>
@@ -493,22 +492,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCardRow.html#a84ded185fb4e99ec9e8202fabf5a0f05">CardRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00153">153</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>        {</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a5c0255179e22b16d1833751fa772c6b4">naming</a> == <span class="stringliteral">&quot;m&quot;</span>)</div>
-<div class="line"><span class="lineno">  156</span>            {</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">return</span> base.GetName(mat, sum);</div>
-<div class="line"><span class="lineno">  158</span>            }</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a5c0255179e22b16d1833751fa772c6b4">naming</a> == <span class="stringliteral">&quot;ma&quot;</span>)</div>
-<div class="line"><span class="lineno">  160</span>            {</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">return</span> mat.GetName() + <span class="stringliteral">&quot; (&quot;</span> + sum.ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  162</span>            }</div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">return</span> this.<a class="code hl_function" href="classSourceThing_1_1Row.html#a8f95c90698639f26a04f0f9ce76601e4">GetName</a>() + <span class="stringliteral">&quot; (&quot;</span> + sum.ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html_a5c0255179e22b16d1833751fa772c6b4"><div class="ttname"><a href="classSourceThing_1_1Row.html#a5c0255179e22b16d1833751fa772c6b4">SourceThing.Row.naming</a></div><div class="ttdeci">string naming</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00203">SourceThing.cs:203</a></div></div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html_a8f95c90698639f26a04f0f9ce76601e4"><div class="ttname"><a href="classSourceThing_1_1Row.html#a8f95c90698639f26a04f0f9ce76601e4">SourceThing.Row.GetName</a></div><div class="ttdeci">override string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00166">SourceThing.cs:166</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00101">101</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceThing_1_1Row.html#a5c0255179e22b16d1833751fa772c6b4">naming</a> == <span class="stringliteral">&quot;m&quot;</span>)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">return</span> base.GetName(mat, sum);</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceThing_1_1Row.html#a5c0255179e22b16d1833751fa772c6b4">naming</a> == <span class="stringliteral">&quot;ma&quot;</span>)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">return</span> mat.GetName() + <span class="stringliteral">&quot; (&quot;</span> + sum + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classSourceThing_1_1Row.html#a8f95c90698639f26a04f0f9ce76601e4">GetName</a>() + <span class="stringliteral">&quot; (&quot;</span> + sum + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_a5c0255179e22b16d1833751fa772c6b4"><div class="ttname"><a href="classSourceThing_1_1Row.html#a5c0255179e22b16d1833751fa772c6b4">SourceThing.Row.naming</a></div><div class="ttdeci">string naming</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00013">SourceThing.cs:13</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_a8f95c90698639f26a04f0f9ce76601e4"><div class="ttname"><a href="classSourceThing_1_1Row.html#a8f95c90698639f26a04f0f9ce76601e4">SourceThing.Row.GetName</a></div><div class="ttdeci">override string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00114">SourceThing.cs:114</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00166">SourceThing.Row.GetName()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00203">SourceThing.Row.naming</a>.</p>
+<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00114">SourceThing.Row.GetName()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00013">SourceThing.Row.naming</a>.</p>
 
 </div>
 </div>
@@ -538,29 +537,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a">RenderRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00180">180</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>        {</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (jp)</div>
-<div class="line"><span class="lineno">  183</span>            {</div>
-<div class="line"><span class="lineno">  184</span>                <span class="keywordtype">string</span> result;</div>
-<div class="line"><span class="lineno">  185</span>                <span class="keywordflow">if</span> ((result = this.<a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a>) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  186</span>                {</div>
-<div class="line"><span class="lineno">  187</span>                    result = (this._nameSearchJP = base.GetText(<span class="stringliteral">&quot;name&quot;</span>, <span class="keyword">false</span>).ToLower());</div>
-<div class="line"><span class="lineno">  188</span>                }</div>
-<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  190</span>            }</div>
-<div class="line"><span class="lineno">  191</span>            <span class="keywordtype">string</span> result2;</div>
-<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">if</span> ((result2 = this.<a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a>) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  193</span>            {</div>
-<div class="line"><span class="lineno">  194</span>                result2 = (this._nameSearch = (this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a>.IsEmpty() ? this.name : (this.unit + <span class="stringliteral">&quot; of &quot;</span> + this.<a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a>)).ToLower());</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">return</span> result2;</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="ttc" id="aclassRenderRow_html_a756eb9dabeef0b2dab6819bd83f91ba0"><div class="ttname"><a href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">RenderRow._nameSearch</a></div><div class="ttdeci">string _nameSearch</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00522">RenderRow.cs:522</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_a85103e4c2e585d0cea563def6cfc42c7"><div class="ttname"><a href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">RenderRow.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00459">RenderRow.cs:459</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_acbad842b2a43c3f64ccaa573b7327682"><div class="ttname"><a href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">RenderRow._nameSearchJP</a></div><div class="ttdeci">string _nameSearchJP</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00525">RenderRow.cs:525</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00128">128</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (jp)</div>
+<div class="line"><span class="lineno">  131</span>            {</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> ?? (<a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> = GetText().ToLower());</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a> ?? (<a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a> = (<a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a>.IsEmpty() ? <a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a> : (<a class="code hl_variable" href="classSourceThing_1_1Row.html#aab3e1fd995da3a60cfd4b8b4b3de4b8a">unit</a> + <span class="stringliteral">&quot; of &quot;</span> + <a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a>)).ToLower());</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="ttc" id="aclassRenderRow_html_a756eb9dabeef0b2dab6819bd83f91ba0"><div class="ttname"><a href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">RenderRow._nameSearch</a></div><div class="ttdeci">string _nameSearch</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00093">RenderRow.cs:93</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a85103e4c2e585d0cea563def6cfc42c7"><div class="ttname"><a href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">RenderRow.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00030">RenderRow.cs:30</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_acbad842b2a43c3f64ccaa573b7327682"><div class="ttname"><a href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">RenderRow._nameSearchJP</a></div><div class="ttdeci">string _nameSearchJP</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00096">RenderRow.cs:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00522">RenderRow._nameSearch</a>, <a class="el" href="RenderRow_8cs_source.html#l00525">RenderRow._nameSearchJP</a>, <a class="el" href="RenderRow_8cs_source.html#l00459">RenderRow.name</a>, and <a class="el" href="SourceThing_8cs_source.html#l00205">SourceThing.Row.unit</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00093">RenderRow._nameSearch</a>, <a class="el" href="RenderRow_8cs_source.html#l00096">RenderRow._nameSearchJP</a>, <a class="el" href="RenderRow_8cs_source.html#l00030">RenderRow.name</a>, and <a class="el" href="SourceThing_8cs_source.html#l00015">SourceThing.Row.unit</a>.</p>
 
 </div>
 </div>
@@ -588,13 +577,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00125">125</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            base.OnImportData(data);</div>
-<div class="line"><span class="lineno">  128</span>            this._altTiles = <span class="keyword">new</span> <span class="keywordtype">int</span>[0];</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00073">73</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            base.OnImportData(data);</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">_altTiles</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[0];</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_a7ae001e99b531e01a672fbce05ec73fc"><div class="ttname"><a href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">SourceThing.Row._altTiles</a></div><div class="ttdeci">int[] _altTiles</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00051">SourceThing.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00080">SourceThingV.OnAfterImportData()</a>.</p>
+<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00051">SourceThing.Row._altTiles</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>.</p>
 
 </div>
 </div>
@@ -623,38 +615,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRenderRow.html#adddb275abf4b84cdecfd290be6489365">RenderRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00131">131</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>        {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> || !this.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>)</div>
-<div class="line"><span class="lineno">  134</span>            {</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  136</span>            }</div>
-<div class="line"><span class="lineno">  137</span>            base.SetTiles();</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">_altTiles</a>.Length != <span class="keyword">this</span>.altTiles.Length)</div>
-<div class="line"><span class="lineno">  139</span>            {</div>
-<div class="line"><span class="lineno">  140</span>                this._altTiles = <span class="keyword">new</span> <span class="keywordtype">int</span>[this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>.Length];</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classCardRow.html#a5a308e57a571ed437dbb4e61c468d6fe">origin</a> != <span class="keyword">null</span> &amp;&amp; !this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a914089f41c98e7b74d3208791aa4de5d">ignoreAltFix</a>)</div>
-<div class="line"><span class="lineno">  143</span>                {</div>
-<div class="line"><span class="lineno">  144</span>                    num = this.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0] - this.<a class="code hl_variable" href="classCardRow.html#a5a308e57a571ed437dbb4e61c468d6fe">origin</a>.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0];</div>
-<div class="line"><span class="lineno">  145</span>                }</div>
-<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>.Length; i++)</div>
-<div class="line"><span class="lineno">  147</span>                {</div>
-<div class="line"><span class="lineno">  148</span>                    this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">_altTiles</a>[i] = this.<a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>[i] / 100 * (int)this.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">pmesh</a>.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + <span class="keyword">this</span>.altTiles[i] % 100 + num;</div>
-<div class="line"><span class="lineno">  149</span>                }</div>
-<div class="line"><span class="lineno">  150</span>            }</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="ttc" id="aclassCardRow_html_a5a308e57a571ed437dbb4e61c468d6fe"><div class="ttname"><a href="classCardRow.html#a5a308e57a571ed437dbb4e61c468d6fe">CardRow.origin</a></div><div class="ttdeci">CardRow origin</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00165">CardRow.cs:165</a></div></div>
-<div class="ttc" id="aclassMeshPass_html_a409c185361b62f271f198d999a8ed4ae"><div class="ttname"><a href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">MeshPass.pmesh</a></div><div class="ttdeci">ProceduralMesh pmesh</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00435">MeshPass.cs:435</a></div></div>
-<div class="ttc" id="aclassProceduralMesh_html_aedaad433ecb7daf2d7e8518ca6710840"><div class="ttname"><a href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">ProceduralMesh.tiling</a></div><div class="ttdeci">Vector2 tiling</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00084">ProceduralMesh.cs:84</a></div></div>
-<div class="ttc" id="aclassRenderData_html_af031b3f320b3afc746c88242b7269b70"><div class="ttname"><a href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">RenderData.pass</a></div><div class="ttdeci">MeshPass pass</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00266">RenderData.cs:266</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_a2a871b97e038c6b15e02a011aa4d27b4"><div class="ttname"><a href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">RenderRow.renderData</a></div><div class="ttdeci">RenderData renderData</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00498">RenderRow.cs:498</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00441">RenderRow.cs:441</a></div></div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html_a7ae001e99b531e01a672fbce05ec73fc"><div class="ttname"><a href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">SourceThing.Row._altTiles</a></div><div class="ttdeci">int[] _altTiles</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00241">SourceThing.cs:241</a></div></div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html_a914089f41c98e7b74d3208791aa4de5d"><div class="ttname"><a href="classSourceThing_1_1Row.html#a914089f41c98e7b74d3208791aa4de5d">SourceThing.Row.ignoreAltFix</a></div><div class="ttdeci">bool ignoreAltFix</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00243">SourceThing.cs:243</a></div></div>
-<div class="ttc" id="aclassSourceThing_1_1Row_html_af4e89eb0693d1a3236279e2f3458a288"><div class="ttname"><a href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">SourceThing.Row.altTiles</a></div><div class="ttdeci">int[] altTiles</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00209">SourceThing.cs:209</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00079">79</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> || !<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            base.SetTiles();</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">_altTiles</a>.Length != <a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>.Length)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <a class="code hl_variable" href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">_altTiles</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>.Length];</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCardRow.html#a5a308e57a571ed437dbb4e61c468d6fe">origin</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="classSourceThing_1_1Row.html#a914089f41c98e7b74d3208791aa4de5d">ignoreAltFix</a>)</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    num = <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0] - <a class="code hl_variable" href="classCardRow.html#a5a308e57a571ed437dbb4e61c468d6fe">origin</a>.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0];</div>
+<div class="line"><span class="lineno">   93</span>                }</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>.Length; i++)</div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    <a class="code hl_variable" href="classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc">_altTiles</a>[i] = <a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>[i] / 100 * (int)<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">pmesh</a>.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + <a class="code hl_variable" href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">altTiles</a>[i] % 100 + num;</div>
+<div class="line"><span class="lineno">   97</span>                }</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="ttc" id="aclassCardRow_html_a5a308e57a571ed437dbb4e61c468d6fe"><div class="ttname"><a href="classCardRow.html#a5a308e57a571ed437dbb4e61c468d6fe">CardRow.origin</a></div><div class="ttdeci">CardRow origin</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00049">CardRow.cs:49</a></div></div>
+<div class="ttc" id="aclassMeshPass_html_a409c185361b62f271f198d999a8ed4ae"><div class="ttname"><a href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">MeshPass.pmesh</a></div><div class="ttdeci">ProceduralMesh pmesh</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00025">MeshPass.cs:25</a></div></div>
+<div class="ttc" id="aclassProceduralMesh_html_aedaad433ecb7daf2d7e8518ca6710840"><div class="ttname"><a href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">ProceduralMesh.tiling</a></div><div class="ttdeci">Vector2 tiling</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.cs:6</a></div></div>
+<div class="ttc" id="aclassRenderData_html_af031b3f320b3afc746c88242b7269b70"><div class="ttname"><a href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">RenderData.pass</a></div><div class="ttdeci">MeshPass pass</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00016">RenderData.cs:16</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a2a871b97e038c6b15e02a011aa4d27b4"><div class="ttname"><a href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">RenderRow.renderData</a></div><div class="ttdeci">RenderData renderData</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00069">RenderRow.cs:69</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00012">RenderRow.cs:12</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_a914089f41c98e7b74d3208791aa4de5d"><div class="ttname"><a href="classSourceThing_1_1Row.html#a914089f41c98e7b74d3208791aa4de5d">SourceThing.Row.ignoreAltFix</a></div><div class="ttdeci">bool ignoreAltFix</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00053">SourceThing.cs:53</a></div></div>
+<div class="ttc" id="aclassSourceThing_1_1Row_html_af4e89eb0693d1a3236279e2f3458a288"><div class="ttname"><a href="classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288">SourceThing.Row.altTiles</a></div><div class="ttdeci">int[] altTiles</div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00019">SourceThing.cs:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00241">SourceThing.Row._altTiles</a>, <a class="el" href="RenderRow_8cs_source.html#l00441">RenderRow._tiles</a>, <a class="el" href="SourceThing_8cs_source.html#l00209">SourceThing.Row.altTiles</a>, <a class="el" href="SourceThing_8cs_source.html#l00243">SourceThing.Row.ignoreAltFix</a>, <a class="el" href="CardRow_8cs_source.html#l00165">CardRow.origin</a>, <a class="el" href="RenderData_8cs_source.html#l00266">RenderData.pass</a>, <a class="el" href="MeshPass_8cs_source.html#l00435">MeshPass.pmesh</a>, <a class="el" href="RenderRow_8cs_source.html#l00498">RenderRow.renderData</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00084">ProceduralMesh.tiling</a>.</p>
+<p class="reference">References <a class="el" href="SourceThing_8cs_source.html#l00051">SourceThing.Row._altTiles</a>, <a class="el" href="RenderRow_8cs_source.html#l00012">RenderRow._tiles</a>, <a class="el" href="SourceThing_8cs_source.html#l00019">SourceThing.Row.altTiles</a>, <a class="el" href="SourceThing_8cs_source.html#l00053">SourceThing.Row.ignoreAltFix</a>, <a class="el" href="CardRow_8cs_source.html#l00049">CardRow.origin</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="RenderRow_8cs_source.html#l00069">RenderRow.renderData</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.tiling</a>.</p>
 
 </div>
 </div>
@@ -671,9 +662,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00241">241</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00051">51</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00131">SourceThing.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00073">SourceThing.Row.OnImportData()</a>, <a class="el" href="Thing_8cs_source.html#l01371">Thing.SetRenderParam()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00079">SourceThing.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -689,9 +680,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00209">209</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00019">19</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00131">SourceThing.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00079">SourceThing.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -707,7 +698,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00211">211</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00021">21</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l01371">Thing.SetRenderParam()</a>.</p>
 
 </div>
 </div>
@@ -723,7 +716,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00223">223</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00033">33</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -739,7 +732,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00229">229</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00039">39</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -755,7 +748,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00247">247</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00057">57</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -771,7 +764,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00213">213</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00023">23</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -787,7 +780,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00219">219</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00029">29</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -803,7 +796,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00215">215</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00025">25</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -819,7 +812,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00233">233</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00043">43</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -835,7 +828,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00231">231</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00041">41</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -851,9 +844,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00243">243</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00053">53</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00131">SourceThing.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00079">SourceThing.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -869,7 +862,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00253">253</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00063">63</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -885,7 +878,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00245">245</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00055">55</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -901,9 +894,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00203">203</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00013">13</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00153">SourceThing.Row.GetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00101">SourceThing.Row.GetName()</a>.</p>
 
 </div>
 </div>
@@ -919,7 +912,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00225">225</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00035">35</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -935,7 +928,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00221">221</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00031">31</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -951,7 +944,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00239">239</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00049">49</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -967,7 +960,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00237">237</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00047">47</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -983,7 +976,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00255">255</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00065">65</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -999,7 +992,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00227">227</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00037">37</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -1015,9 +1008,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00205">205</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00015">15</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00166">SourceThing.Row.GetName()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00180">SourceThing.Row.GetSearchName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThing_8cs_source.html#l00114">SourceThing.Row.GetName()</a>, <a class="el" href="SourceThing_8cs_source.html#l00128">SourceThing.Row.GetSearchName()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>.</p>
 
 </div>
 </div>
@@ -1033,9 +1026,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00201">201</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00011">11</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceFood_8cs_source.html#l00063">SourceFood.OnImportRow()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="SourceFood_8cs_source.html#l00108">SourceFood.OnImportRow()</a>.</p>
 
 </div>
 </div>
@@ -1051,7 +1044,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00249">249</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00059">59</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1060,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00207">207</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00017">17</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1076,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00199">199</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00009">9</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1092,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00251">251</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00061">61</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1108,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00217">217</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00027">27</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1126,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00235">235</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00045">45</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
 
 </div>
 </div>
@@ -1156,14 +1151,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00109">109</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>        {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  112</span>            {</div>
-<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;n&quot;</span>;</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00069">69</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
 </div>
 </div>
 <a id="aa2f474fc121d1ed14f4c2788a9f8c0f1" name="aa2f474fc121d1ed14f4c2788a9f8c0f1"></a>
@@ -1186,15 +1175,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00117">117</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  120</span>            {</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00123">CardRow.cs:123</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00071">71</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
 </div>
 </div>
 <a id="a26c0c6abf7e331b0625d3dfe517304d4" name="a26c0c6abf7e331b0625d3dfe517304d4"></a>
@@ -1217,14 +1199,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00101">101</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  104</span>            {</div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceThing_8cs_source.html#l00067">67</a> of file <a class="el" href="SourceThing_8cs_source.html">SourceThing.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

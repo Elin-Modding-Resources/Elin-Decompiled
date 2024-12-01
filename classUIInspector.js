@@ -1,6 +1,6 @@
 var classUIInspector =
 [
-    [ "DrawHighlight", "classUIInspector.html#a69d64ba05eb9e54ce18ea0ffadd51529", null ],
+    [ "DrawHighlight", "classUIInspector.html#a8cc3efc44e244f121a29c8c8210b9362", null ],
     [ "Hide", "classUIInspector.html#ac7d4003ee1350edfd349f44e216f545e", null ],
     [ "Inspect", "classUIInspector.html#a9108b16b3b62e21c5a5dfcb9a856681f", null ],
     [ "Inspect", "classUIInspector.html#a7cb206408bf7b734f1483385a06e1051", null ],

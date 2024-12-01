@@ -6,8 +6,7 @@ var classAI__Fuck =
     ] ],
     [ "CanTame", "classAI__Fuck.html#a3ea545b46befe7f014f28f4f45243c1d", null ],
     [ "Finish", "classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449", null ],
-    [ "g__SuccubusExp", "classAI__Fuck.html#a608c6e13053f741eb2e5ec5703199626", null ],
-    [ "Run", "classAI__Fuck.html#ad1e7a9d11c2d959ce12793e2d0576c96", null ],
+    [ "Run", "classAI__Fuck.html#a2c79902b65680ac0345ea3d263905678", null ],
     [ "bitch", "classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81", null ],
     [ "maxProgress", "classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d", null ],
     [ "progress", "classAI__Fuck.html#a522e11c5668254f1829cce8fdf594e02", null ],
@@ -19,5 +18,5 @@ var classAI__Fuck =
     [ "MaxProgress", "classAI__Fuck.html#a507d4a10c59c1a6b0a04babbf5b3549b", null ],
     [ "PushChara", "classAI__Fuck.html#a412857eedd747e9ba9f850063907f17b", null ],
     [ "TargetType", "classAI__Fuck.html#aa1e381a6dd59ba7946486f6c7e220059", null ],
-    [ "Type", "classAI__Fuck.html#ac38f1fe8663c81668c934359051b79f1", null ]
+    [ "Type", "classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c", null ]
 ];

@@ -92,40 +92,44 @@ $(document).ready(function(){initNavTree('TraitCauldron_8cs_source.html',''); in
   <div class="headertitle"><div class="title">TraitCauldron.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitCauldron_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitCauldron.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitCauldron.html">TraitCauldron</a> : <a class="code hl_class" href="classTraitCookingPot.html">TraitCookingPot</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">IDReqEle</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = r.row as <a class="code hl_class" href="classCardRow.html">CardRow</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordtype">string</span> result;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!(((cardRow != <span class="keyword">null</span>) ? cardRow.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a> : <span class="keyword">null</span>) == <span class="stringliteral">&quot;dish&quot;</span>))</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">if</span> ((result = base.GetParam(1, <span class="keyword">null</span>)) == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;handicraft&quot;</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            result = <span class="stringliteral">&quot;cooking&quot;</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b">   23</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b">Contains</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> r.idFactory == <span class="stringliteral">&quot;cauldron&quot;</span> || r.idFactory == <span class="stringliteral">&quot;camppot&quot;</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<a href="TraitCauldron_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitCauldron.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitCauldron.html">TraitCauldron</a> : <a class="code hl_class" href="classTraitCookingPot.html">TraitCookingPot</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">IDReqEle</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordtype">object</span> obj;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        <span class="keywordflow">if</span> (!((r.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a> as <a class="code hl_class" href="classCardRow.html">CardRow</a>)?._origin == <span class="stringliteral">&quot;dish&quot;</span>))</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            obj = <a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;handicraft&quot;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            obj = <span class="stringliteral">&quot;cooking&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b">   21</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b">Contains</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!(r.<a class="code hl_property" href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">idFactory</a> == <span class="stringliteral">&quot;cauldron&quot;</span>))</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> r.idFactory == <span class="stringliteral">&quot;camppot&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
-<div class="ttc" id="aclassCardRow_html_a898f4f59778bd1120e31aa5768ec4f3d"><div class="ttname"><a href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">CardRow._origin</a></div><div class="ttdeci">string _origin</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00131">CardRow.cs:131</a></div></div>
-<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00004">RecipeSource.cs:5</a></div></div>
-<div class="ttc" id="aclassTraitCauldron_html"><div class="ttname"><a href="classTraitCauldron.html">TraitCauldron</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCauldron_8cs_source.html#l00003">TraitCauldron.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitCauldron_html_a46d3d071f3390b12f0ed9a35f0d0afb9"><div class="ttname"><a href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">TraitCauldron.IDReqEle</a></div><div class="ttdeci">override string IDReqEle(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCauldron_8cs_source.html#l00005">TraitCauldron.cs:5</a></div></div>
-<div class="ttc" id="aclassTraitCauldron_html_ac1aa4eb95e423c37c7bd6ce2f1e44b3b"><div class="ttname"><a href="classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b">TraitCauldron.Contains</a></div><div class="ttdeci">override bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCauldron_8cs_source.html#l00023">TraitCauldron.cs:23</a></div></div>
-<div class="ttc" id="aclassTraitCookingPot_html"><div class="ttname"><a href="classTraitCookingPot.html">TraitCookingPot</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCookingPot_8cs_source.html#l00003">TraitCookingPot.cs:4</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00003">RecipeSource.cs:4</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a2b57efc5ee24c77c9c4ee3d3b578a37d"><div class="ttname"><a href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">RecipeSource.row</a></div><div class="ttdeci">RenderRow row</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00005">RecipeSource.cs:5</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a3eae8739c68c89266fb328c94ff76fd7"><div class="ttname"><a href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">RecipeSource.idFactory</a></div><div class="ttdeci">string idFactory</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00074">RecipeSource.cs:75</a></div></div>
+<div class="ttc" id="aclassTraitCauldron_html"><div class="ttname"><a href="classTraitCauldron.html">TraitCauldron</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCauldron_8cs_source.html#l00001">TraitCauldron.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitCauldron_html_a46d3d071f3390b12f0ed9a35f0d0afb9"><div class="ttname"><a href="classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9">TraitCauldron.IDReqEle</a></div><div class="ttdeci">override string IDReqEle(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCauldron_8cs_source.html#l00003">TraitCauldron.cs:3</a></div></div>
+<div class="ttc" id="aclassTraitCauldron_html_ac1aa4eb95e423c37c7bd6ce2f1e44b3b"><div class="ttname"><a href="classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b">TraitCauldron.Contains</a></div><div class="ttdeci">override bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitCauldron_8cs_source.html#l00021">TraitCauldron.cs:21</a></div></div>
+<div class="ttc" id="aclassTraitCookingPot_html"><div class="ttname"><a href="classTraitCookingPot.html">TraitCookingPot</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCookingPot_8cs_source.html#l00001">TraitCookingPot.cs:2</a></div></div>
+<div class="ttc" id="aclassTrait_html_a7db8c514710fbb74b2f471cf9e6fe0af"><div class="ttname"><a href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">Trait.GetParam</a></div><div class="ttdeci">string GetParam(int i, string def=null)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00494">Trait.cs:494</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

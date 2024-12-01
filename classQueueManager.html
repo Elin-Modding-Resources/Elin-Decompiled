@@ -208,7 +208,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00004">4</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00003">3</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ace749391db1700d90f31fbddb7e14110" name="ace749391db1700d90f31fbddb7e14110"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace749391db1700d90f31fbddb7e14110">&#9670;&#160;</a></span>Add()</h2>
@@ -244,32 +244,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00040">40</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classQueue.html">Queue</a> queue = <span class="keyword">new</span> <a class="code hl_class" href="classQueue.html">Queue</a></div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            interaction = interaction</div>
-<div class="line"><span class="lineno">   45</span>        };</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (insert)</div>
-<div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Insert(0, queue);</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   51</span>        {</div>
-<div class="line"><span class="lineno">   52</span>            this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Add(queue);</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>)</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            this.<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>.<a class="code hl_function" href="classUIQueue.html#a6d6ba46ad115c48c7d5e68c10e22bce7">OnAdd</a>(queue, insert);</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> queue;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-<div class="ttc" id="aclassQueueManager_html_a5b0d2087347e33edf12e53b997639f22"><div class="ttname"><a href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">QueueManager.list</a></div><div class="ttdeci">List&lt; Queue &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00093">QueueManager.cs:93</a></div></div>
-<div class="ttc" id="aclassQueueManager_html_a72e1b8dbd2f2c83a82eab62da7eb1bc5"><div class="ttname"><a href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">QueueManager.uiq</a></div><div class="ttdeci">UIQueue uiq</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00006">QueueManager.cs:7</a></div></div>
-<div class="ttc" id="aclassQueue_html"><div class="ttname"><a href="classQueue.html">Queue</a></div><div class="ttdef"><b>Definition:</b> <a href="Queue_8cs_source.html#l00003">Queue.cs:4</a></div></div>
-<div class="ttc" id="aclassUIQueue_html_a6d6ba46ad115c48c7d5e68c10e22bce7"><div class="ttname"><a href="classUIQueue.html#a6d6ba46ad115c48c7d5e68c10e22bce7">UIQueue.OnAdd</a></div><div class="ttdeci">void OnAdd(Queue q, bool insert=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00028">UIQueue.cs:28</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00037">37</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_class" href="classQueue.html">Queue</a> queue = <span class="keyword">new</span> <a class="code hl_class" href="classQueue.html">Queue</a></div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            interaction = interaction</div>
+<div class="line"><span class="lineno">   42</span>        };</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (insert)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Insert(0, queue);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Add(queue);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>.<a class="code hl_function" href="classUIQueue.html#a6d6ba46ad115c48c7d5e68c10e22bce7">OnAdd</a>(queue, insert);</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> queue;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassQueueManager_html_a5b0d2087347e33edf12e53b997639f22"><div class="ttname"><a href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">QueueManager.list</a></div><div class="ttdeci">List&lt; Queue &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00007">QueueManager.cs:7</a></div></div>
+<div class="ttc" id="aclassQueueManager_html_a72e1b8dbd2f2c83a82eab62da7eb1bc5"><div class="ttname"><a href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">QueueManager.uiq</a></div><div class="ttdeci">UIQueue uiq</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00009">QueueManager.cs:9</a></div></div>
+<div class="ttc" id="aclassQueue_html"><div class="ttname"><a href="classQueue.html">Queue</a></div><div class="ttdef"><b>Definition:</b> <a href="Queue_8cs_source.html#l00001">Queue.cs:2</a></div></div>
+<div class="ttc" id="aclassUIQueue_html_a6d6ba46ad115c48c7d5e68c10e22bce7"><div class="ttname"><a href="classUIQueue.html#a6d6ba46ad115c48c7d5e68c10e22bce7">UIQueue.OnAdd</a></div><div class="ttdeci">void OnAdd(Queue q, bool insert=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00025">UIQueue.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QueueManager_8cs_source.html#l00093">list</a>, <a class="el" href="UIQueue_8cs_source.html#l00028">UIQueue.OnAdd()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00007">uiq</a>.</p>
+<p class="reference">References <a class="el" href="QueueManager_8cs_source.html#l00007">list</a>, <a class="el" href="UIQueue_8cs_source.html#l00025">UIQueue.OnAdd()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00009">uiq</a>.</p>
 
 </div>
 </div>
@@ -297,22 +297,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00071">71</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>[0] == q)</div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            q.<a class="code hl_variable" href="classQueue.html#a98ff6d6db53787f69d2c7e2b60a12e35">interaction</a>.<a class="code hl_function" href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">Cancel</a>();</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span>;</div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00068">68</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>[0] == q)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            q.<a class="code hl_variable" href="classQueue.html#a98ff6d6db53787f69d2c7e2b60a12e35">interaction</a>.<a class="code hl_function" href="classAIAct.html#a777d866b1a82a1f50b42af428c33887f">Cancel</a>();</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_function" href="classQueueManager.html#ae63e69a1bc6069cb6f4b2c9f95c29ae6">Remove</a>(q);</div>
 <div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>        this.<a class="code hl_function" href="classQueueManager.html#ae63e69a1bc6069cb6f4b2c9f95c29ae6">Remove</a>(q);</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="aclassAIAct_html_afcdb6ab3dd40fb719f2caf8baf0207f9"><div class="ttname"><a href="classAIAct.html#afcdb6ab3dd40fb719f2caf8baf0207f9">AIAct.Cancel</a></div><div class="ttdeci">virtual AIAct.Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00376">AIAct.cs:376</a></div></div>
-<div class="ttc" id="aclassQueueManager_html_ae63e69a1bc6069cb6f4b2c9f95c29ae6"><div class="ttname"><a href="classQueueManager.html#ae63e69a1bc6069cb6f4b2c9f95c29ae6">QueueManager.Remove</a></div><div class="ttdeci">void Remove(Queue q)</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00061">QueueManager.cs:61</a></div></div>
-<div class="ttc" id="aclassQueue_html_a98ff6d6db53787f69d2c7e2b60a12e35"><div class="ttname"><a href="classQueue.html#a98ff6d6db53787f69d2c7e2b60a12e35">Queue.interaction</a></div><div class="ttdeci">AIAct interaction</div><div class="ttdef"><b>Definition:</b> <a href="Queue_8cs_source.html#l00013">Queue.cs:13</a></div></div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassAIAct_html_a777d866b1a82a1f50b42af428c33887f"><div class="ttname"><a href="classAIAct.html#a777d866b1a82a1f50b42af428c33887f">AIAct.Cancel</a></div><div class="ttdeci">virtual Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00284">AIAct.cs:284</a></div></div>
+<div class="ttc" id="aclassQueueManager_html_ae63e69a1bc6069cb6f4b2c9f95c29ae6"><div class="ttname"><a href="classQueueManager.html#ae63e69a1bc6069cb6f4b2c9f95c29ae6">QueueManager.Remove</a></div><div class="ttdeci">void Remove(Queue q)</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00058">QueueManager.cs:58</a></div></div>
+<div class="ttc" id="aclassQueue_html_a98ff6d6db53787f69d2c7e2b60a12e35"><div class="ttname"><a href="classQueue.html#a98ff6d6db53787f69d2c7e2b60a12e35">Queue.interaction</a></div><div class="ttdeci">AIAct interaction</div><div class="ttdef"><b>Definition:</b> <a href="Queue_8cs_source.html#l00003">Queue.cs:3</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AIAct_8cs_source.html#l00376">AIAct.Cancel()</a>, <a class="el" href="Queue_8cs_source.html#l00013">Queue.interaction</a>, <a class="el" href="QueueManager_8cs_source.html#l00093">list</a>, and <a class="el" href="QueueManager_8cs_source.html#l00061">Remove()</a>.</p>
+<p class="reference">References <a class="el" href="AIAct_8cs_source.html#l00284">AIAct.Cancel()</a>, <a class="el" href="Queue_8cs_source.html#l00003">Queue.interaction</a>, <a class="el" href="QueueManager_8cs_source.html#l00007">list</a>, and <a class="el" href="QueueManager_8cs_source.html#l00058">Remove()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIQueue_8cs_source.html#l00028">UIQueue.OnAdd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIQueue_8cs_source.html#l00025">UIQueue.OnAdd()</a>.</p>
 
 </div>
 </div>
@@ -340,10 +342,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00035">35</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00032">32</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -371,11 +373,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00026">26</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00023">23</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07978">Chara.SetAI()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07651">Chara.SetAI()</a>.</p>
 
 </div>
 </div>
@@ -402,10 +404,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00030">30</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00027">27</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -433,20 +435,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00061">61</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>        q.removed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>        this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Remove(q);</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            this.<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>.<a class="code hl_function" href="classUIQueue.html#a3d76957de0dad50ced7e9789b38690e5">OnRemove</a>(q);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aclassUIQueue_html_a3d76957de0dad50ced7e9789b38690e5"><div class="ttname"><a href="classUIQueue.html#a3d76957de0dad50ced7e9789b38690e5">UIQueue.OnRemove</a></div><div class="ttdeci">void OnRemove(Queue q)</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00051">UIQueue.cs:51</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00058">58</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        q.removed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Remove(q);</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>.<a class="code hl_function" href="classUIQueue.html#a3d76957de0dad50ced7e9789b38690e5">OnRemove</a>(q);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassUIQueue_html_a3d76957de0dad50ced7e9789b38690e5"><div class="ttname"><a href="classUIQueue.html#a3d76957de0dad50ced7e9789b38690e5">UIQueue.OnRemove</a></div><div class="ttdeci">void OnRemove(Queue q)</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00048">UIQueue.cs:48</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QueueManager_8cs_source.html#l00093">list</a>, <a class="el" href="UIQueue_8cs_source.html#l00051">UIQueue.OnRemove()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00007">uiq</a>.</p>
+<p class="reference">References <a class="el" href="QueueManager_8cs_source.html#l00007">list</a>, <a class="el" href="UIQueue_8cs_source.html#l00048">UIQueue.OnRemove()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00009">uiq</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00071">Cancel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00068">Cancel()</a>.</p>
 
 </div>
 </div>
@@ -474,20 +476,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00081">81</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
-<div class="line"><span class="lineno">   83</span>        this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Clear();</div>
-<div class="line"><span class="lineno">   84</span>        this.owner = _owner;</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>)</div>
-<div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            this.<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>.<a class="code hl_function" href="classUIQueue.html#a2868c5c25ae8926588960eafb402c84c">OnSetOwner</a>();</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclassUIQueue_html_a2868c5c25ae8926588960eafb402c84c"><div class="ttname"><a href="classUIQueue.html#a2868c5c25ae8926588960eafb402c84c">UIQueue.OnSetOwner</a></div><div class="ttdeci">void OnSetOwner()</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00067">UIQueue.cs:67</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00080">80</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Clear();</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="classQueueManager.html#a5315ec5ee2b123a1ebf660f8921bf919">owner</a> = _owner;</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_property" href="classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5">uiq</a>.<a class="code hl_function" href="classUIQueue.html#a2868c5c25ae8926588960eafb402c84c">OnSetOwner</a>();</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="ttc" id="aclassQueueManager_html_a5315ec5ee2b123a1ebf660f8921bf919"><div class="ttname"><a href="classQueueManager.html#a5315ec5ee2b123a1ebf660f8921bf919">QueueManager.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00005">QueueManager.cs:5</a></div></div>
+<div class="ttc" id="aclassUIQueue_html_a2868c5c25ae8926588960eafb402c84c"><div class="ttname"><a href="classUIQueue.html#a2868c5c25ae8926588960eafb402c84c">UIQueue.OnSetOwner</a></div><div class="ttdeci">void OnSetOwner()</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00064">UIQueue.cs:64</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="QueueManager_8cs_source.html#l00093">list</a>, <a class="el" href="UIQueue_8cs_source.html#l00067">UIQueue.OnSetOwner()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00007">uiq</a>.</p>
+<p class="reference">References <a class="el" href="QueueManager_8cs_source.html#l00007">list</a>, <a class="el" href="UIQueue_8cs_source.html#l00064">UIQueue.OnSetOwner()</a>, <a class="el" href="QueueManager_8cs_source.html#l00005">owner</a>, and <a class="el" href="QueueManager_8cs_source.html#l00009">uiq</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00120">UI.OnActivateZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00174">UI.OnActivateZone()</a>.</p>
 
 </div>
 </div>
@@ -504,9 +507,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00093">93</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00007">7</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00040">Add()</a>, <a class="el" href="QueueManager_8cs_source.html#l00071">Cancel()</a>, <a class="el" href="QueueManager_8cs_source.html#l00061">Remove()</a>, <a class="el" href="QueueManager_8cs_source.html#l00081">SetOwner()</a>, and <a class="el" href="UIQueue_8cs_source.html#l00076">UIQueue.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00037">Add()</a>, <a class="el" href="QueueManager_8cs_source.html#l00068">Cancel()</a>, <a class="el" href="QueueManager_8cs_source.html#l00058">Remove()</a>, <a class="el" href="QueueManager_8cs_source.html#l00080">SetOwner()</a>, and <a class="el" href="UIQueue_8cs_source.html#l00073">UIQueue.Update()</a>.</p>
 
 </div>
 </div>
@@ -522,7 +525,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00091">91</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00005">5</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00080">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -547,19 +552,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00014">14</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Count &lt;= 0)</div>
-<div class="line"><span class="lineno">   19</span>            {</div>
-<div class="line"><span class="lineno">   20</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   21</span>            }</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>[0];</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00011">11</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   18</span>            }</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classQueueManager.html#a5b0d2087347e33edf12e53b997639f22">list</a>[0];</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="UIQueue_8cs_source.html#l00076">UIQueue.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIQueue_8cs_source.html#l00073">UIQueue.Update()</a>.</p>
 
 </div>
 </div>
@@ -583,17 +588,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00006">6</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classUIQueue.html">UIQueue</a>.<a class="code hl_variable" href="classUIQueue.html#a2cdab2f237a286019d7e4c8851f6d0f4">Instance</a>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassUIQueue_html"><div class="ttname"><a href="classUIQueue.html">UIQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00008">UIQueue.cs:9</a></div></div>
-<div class="ttc" id="aclassUIQueue_html_a2cdab2f237a286019d7e4c8851f6d0f4"><div class="ttname"><a href="classUIQueue.html#a2cdab2f237a286019d7e4c8851f6d0f4">UIQueue.Instance</a></div><div class="ttdeci">static UIQueue Instance</div><div class="ttdef"><b>Definition:</b> <a href="UIQueue_8cs_source.html#l00084">UIQueue.cs:84</a></div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00040">Add()</a>, <a class="el" href="QueueManager_8cs_source.html#l00061">Remove()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00081">SetOwner()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QueueManager_8cs_source.html#l00009">9</a> of file <a class="el" href="QueueManager_8cs_source.html">QueueManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="QueueManager_8cs_source.html#l00037">Add()</a>, <a class="el" href="QueueManager_8cs_source.html#l00058">Remove()</a>, and <a class="el" href="QueueManager_8cs_source.html#l00080">SetOwner()</a>.</p>
 
 </div>
 </div>

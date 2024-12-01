@@ -239,8 +239,8 @@ Properties</h2></td></tr>
 <tr class="inherit_header properties_classWidget"><td colspan="2" onclick="javascript:toggleInherit('properties_classWidget')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a><code> [get]</code></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Widget.Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">config</a><code> [get]</code></td></tr>
-<tr class="separator:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
+<tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
@@ -347,7 +347,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00005">5</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ada760ce50cbea99c0f3565c066ffba23" name="ada760ce50cbea99c0f3565c066ffba23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada760ce50cbea99c0f3565c066ffba23">&#9670;&#160;</a></span>_Update()</h2>
@@ -372,43 +372,46 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00054">54</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">nextSay</a> &gt; 0)</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            this.<a class="code hl_variable" href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">nextSay</a>--;</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>)</div>
-<div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        this.isSiege = (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.GetEvent&lt;<a class="code hl_class" href="classZoneEventSiege.html">ZoneEventSiege</a>&gt;() != <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">string</span>[] array = this.isSiege ? this.linesSiege : this.<a class="code hl_variable" href="classWidgetMascot.html#a7581fa5001b8ad31e192658d7e90ceba">linesDefault</a>;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (array == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordtype">string</span> str = (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0) ? <span class="stringliteral">&quot;&quot;</span> : array.RandomItem&lt;<span class="keywordtype">string</span>&gt;();</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMascot.html#a3bd86301bccddcfe003dad46a2d18cae">first</a>)</div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            str = array[0];</div>
-<div class="line"><span class="lineno">   75</span>            this.first = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        this.<a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(str);</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00054">EMono.cs:55</a></div></div>
-<div class="ttc" id="aclassEMono_html_a790dff7e193a284b2be7a187110677bf"><div class="ttname"><a href="classEMono.html#a790dff7e193a284b2be7a187110677bf">EMono.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00166">EMono.cs:166</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_a3bd86301bccddcfe003dad46a2d18cae"><div class="ttname"><a href="classWidgetMascot.html#a3bd86301bccddcfe003dad46a2d18cae">WidgetMascot.first</a></div><div class="ttdeci">bool first</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00140">WidgetMascot.cs:140</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_a56f135da0f117a0533ec0b4cbf2cd091"><div class="ttname"><a href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">WidgetMascot.isShut</a></div><div class="ttdeci">bool isShut</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00144">WidgetMascot.cs:144</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_a7581fa5001b8ad31e192658d7e90ceba"><div class="ttname"><a href="classWidgetMascot.html#a7581fa5001b8ad31e192658d7e90ceba">WidgetMascot.linesDefault</a></div><div class="ttdeci">string[] linesDefault</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00130">WidgetMascot.cs:130</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_ab3d92c39ee0e9842ad398cede3c5bb4d"><div class="ttname"><a href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">WidgetMascot.Say</a></div><div class="ttdeci">void Say(string[] lines)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00085">WidgetMascot.cs:85</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_abe51577e3a3140f336e94eb862caf48a"><div class="ttname"><a href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">WidgetMascot.nextSay</a></div><div class="ttdeci">int nextSay</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00138">WidgetMascot.cs:138</a></div></div>
-<div class="ttc" id="aclassZoneEventSiege_html"><div class="ttname"><a href="classZoneEventSiege.html">ZoneEventSiege</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventSiege_8cs_source.html#l00005">ZoneEventSiege.cs:6</a></div></div>
-<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03861">Zone.cs:3861</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00069">69</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">nextSay</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">nextSay</a>--;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_variable" href="classWidgetMascot.html#a0793bc84f8bf472d3b81c5b32ed4bcc3">isSiege</a> = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">_zone</a>.<a class="code hl_variable" href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">events</a>.GetEvent&lt;<a class="code hl_class" href="classZoneEventSiege.html">ZoneEventSiege</a>&gt;() != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">string</span>[] array = (<a class="code hl_variable" href="classWidgetMascot.html#a0793bc84f8bf472d3b81c5b32ed4bcc3">isSiege</a> ? <a class="code hl_variable" href="classWidgetMascot.html#ad747dffee60822722b1ac41c51ac0348">linesSiege</a> : <a class="code hl_variable" href="classWidgetMascot.html#a7581fa5001b8ad31e192658d7e90ceba">linesDefault</a>);</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (array != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordtype">string</span> str = ((<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(2) == 0) ? <span class="stringliteral">&quot;&quot;</span> : array.RandomItem());</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetMascot.html#a3bd86301bccddcfe003dad46a2d18cae">first</a>)</div>
+<div class="line"><span class="lineno">   87</span>                {</div>
+<div class="line"><span class="lineno">   88</span>                    str = array[0];</div>
+<div class="line"><span class="lineno">   89</span>                    <a class="code hl_variable" href="classWidgetMascot.html#a3bd86301bccddcfe003dad46a2d18cae">first</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   90</span>                }</div>
+<div class="line"><span class="lineno">   91</span>                <a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(str);</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a6d6b8b098b4f4866cc21ff22bf25aff1"><div class="ttname"><a href="classEMono.html#a6d6b8b098b4f4866cc21ff22bf25aff1">EMono._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00019">EMono.cs:19</a></div></div>
+<div class="ttc" id="aclassEMono_html_a790dff7e193a284b2be7a187110677bf"><div class="ttname"><a href="classEMono.html#a790dff7e193a284b2be7a187110677bf">EMono.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00047">EMono.cs:47</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_a0793bc84f8bf472d3b81c5b32ed4bcc3"><div class="ttname"><a href="classWidgetMascot.html#a0793bc84f8bf472d3b81c5b32ed4bcc3">WidgetMascot.isSiege</a></div><div class="ttdeci">bool isSiege</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00025">WidgetMascot.cs:25</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_a3bd86301bccddcfe003dad46a2d18cae"><div class="ttname"><a href="classWidgetMascot.html#a3bd86301bccddcfe003dad46a2d18cae">WidgetMascot.first</a></div><div class="ttdeci">bool first</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00023">WidgetMascot.cs:23</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_a56f135da0f117a0533ec0b4cbf2cd091"><div class="ttname"><a href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">WidgetMascot.isShut</a></div><div class="ttdeci">bool isShut</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00027">WidgetMascot.cs:27</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_a7581fa5001b8ad31e192658d7e90ceba"><div class="ttname"><a href="classWidgetMascot.html#a7581fa5001b8ad31e192658d7e90ceba">WidgetMascot.linesDefault</a></div><div class="ttdeci">string[] linesDefault</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00013">WidgetMascot.cs:13</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_ab3d92c39ee0e9842ad398cede3c5bb4d"><div class="ttname"><a href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">WidgetMascot.Say</a></div><div class="ttdeci">void Say(string[] lines)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00101">WidgetMascot.cs:101</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_abe51577e3a3140f336e94eb862caf48a"><div class="ttname"><a href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">WidgetMascot.nextSay</a></div><div class="ttdeci">int nextSay</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00021">WidgetMascot.cs:21</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_ad747dffee60822722b1ac41c51ac0348"><div class="ttname"><a href="classWidgetMascot.html#ad747dffee60822722b1ac41c51ac0348">WidgetMascot.linesSiege</a></div><div class="ttdeci">string[] linesSiege</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00015">WidgetMascot.cs:15</a></div></div>
+<div class="ttc" id="aclassZoneEventSiege_html"><div class="ttname"><a href="classZoneEventSiege.html">ZoneEventSiege</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventSiege_8cs_source.html#l00004">ZoneEventSiege.cs:5</a></div></div>
+<div class="ttc" id="aclassZone_html_a1f466c494b6c19fa1a79ab01b52ad73c"><div class="ttname"><a href="classZone.html#a1f466c494b6c19fa1a79ab01b52ad73c">Zone.events</a></div><div class="ttdeci">ZoneEventManager events</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00040">Zone.cs:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00055">EMono._zone</a>, <a class="el" href="Zone_8cs_source.html#l03861">Zone.events</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00140">first</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00144">isShut</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00130">linesDefault</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00138">nextSay</a>, <a class="el" href="EMono_8cs_source.html#l00166">EMono.rnd()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00085">Say()</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00019">EMono._zone</a>, <a class="el" href="Zone_8cs_source.html#l00040">Zone.events</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00023">first</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00027">isShut</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00025">isSiege</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00013">linesDefault</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00015">linesSiege</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00021">nextSay</a>, <a class="el" href="EMono_8cs_source.html#l00047">EMono.rnd()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00101">Say()</a>.</p>
 
 </div>
 </div>
@@ -437,34 +440,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00016">16</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">string</span> path = CorePath.coreWidget + base.config.id + <span class="stringliteral">&quot;/&quot;</span> + <span class="stringliteral">&quot;default.png&quot;</span>;</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">string</span> str = Lang.setting.dir + <span class="stringliteral">&quot;Widget/&quot;</span> + base.config.id + <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">string</span> path2 = str + <span class="stringliteral">&quot;default.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">string</span> path3 = str + <span class="stringliteral">&quot;siege.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">string</span> path4 = str + <span class="stringliteral">&quot;shutup.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (File.Exists(path2))</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            this.linesDefault = IO.LoadTextArray(path2);</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (File.Exists(path3))</div>
-<div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            this.linesSiege = IO.LoadTextArray(path3);</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (File.Exists(path4))</div>
-<div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            this.linesShutup = IO.LoadTextArray(path4);</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            this.image.texture = IO.LoadPNG(path, FilterMode.Point);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        this.<a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span>        base.InvokeRepeating(<span class="stringliteral">&quot;_Update&quot;</span>, 1f, 1f);</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00031">31</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">string</span> path = <span class="keywordtype">string</span>.Concat(CorePath.coreWidget + base.config.id + <span class="stringliteral">&quot;/&quot;</span>, <span class="stringliteral">&quot;default.png&quot;</span>);</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">string</span> obj = Lang.setting.dir + <span class="stringliteral">&quot;Widget/&quot;</span> + base.config.id + <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">string</span> path2 = obj + <span class="stringliteral">&quot;default.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">string</span> path3 = obj + <span class="stringliteral">&quot;siege.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">string</span> path4 = obj + <span class="stringliteral">&quot;shutup.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (File.Exists(path2))</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <a class="code hl_variable" href="classWidgetMascot.html#a7581fa5001b8ad31e192658d7e90ceba">linesDefault</a> = IO.LoadTextArray(path2);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (File.Exists(path3))</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="classWidgetMascot.html#ad747dffee60822722b1ac41c51ac0348">linesSiege</a> = IO.LoadTextArray(path3);</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (File.Exists(path4))</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="classWidgetMascot.html#a7eb9a491246df8e38e439f0249676073">linesShutup</a> = IO.LoadTextArray(path4);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            image.texture = IO.LoadPNG(path);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span>        InvokeRepeating(<span class="stringliteral">&quot;_Update&quot;</span>, 1f, 1f);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassWidgetMascot_html_a7eb9a491246df8e38e439f0249676073"><div class="ttname"><a href="classWidgetMascot.html#a7eb9a491246df8e38e439f0249676073">WidgetMascot.linesShutup</a></div><div class="ttdeci">string[] linesShutup</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00017">WidgetMascot.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00085">Say()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00013">linesDefault</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00017">linesShutup</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00015">linesSiege</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00101">Say()</a>.</p>
 
 </div>
 </div>
@@ -493,13 +497,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#afabface3017c9537ea076b0fb0fdf9d3">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00080">80</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
-<div class="line"><span class="lineno">   82</span>        this.image.transform.localScale = <span class="keyword">new</span> Vector3((<span class="keywordtype">float</span>)(this.<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> ? 1 : -1), 1f, 1f);</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aclassWidget_html_a5e6d7a7341b7010f6b7d0a1717ae3365"><div class="ttname"><a href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">Widget.flip</a></div><div class="ttdeci">bool flip</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00652">Widget.cs:652</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00096">96</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        image.transform.localScale = <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> ? 1 : (-1), 1f, 1f);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassWidget_html_a5e6d7a7341b7010f6b7d0a1717ae3365"><div class="ttname"><a href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">Widget.flip</a></div><div class="ttdeci">bool flip</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00164">Widget.cs:164</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00652">Widget.flip</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00164">Widget.flip</a>.</p>
 
 </div>
 </div>
@@ -529,22 +533,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00110">110</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
-<div class="line"><span class="lineno">  112</span>        m.AddToggle(<span class="stringliteral">&quot;shutup&quot;</span>, this.<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  113</span>        {</div>
-<div class="line"><span class="lineno">  114</span>            this.isShut = a;</div>
-<div class="line"><span class="lineno">  115</span>            base.config.annoyPlayer = this.<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>;</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>)</div>
-<div class="line"><span class="lineno">  117</span>            {</div>
-<div class="line"><span class="lineno">  118</span>                this.<a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(this.<a class="code hl_variable" href="classWidgetMascot.html#a7eb9a491246df8e38e439f0249676073">linesShutup</a>);</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>        });</div>
-<div class="line"><span class="lineno">  121</span>        base.SetBaseContextMenu(m);</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-<div class="ttc" id="aclassWidgetMascot_html_a7eb9a491246df8e38e439f0249676073"><div class="ttname"><a href="classWidgetMascot.html#a7eb9a491246df8e38e439f0249676073">WidgetMascot.linesShutup</a></div><div class="ttdeci">string[] linesShutup</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00134">WidgetMascot.cs:134</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00126">126</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        m.AddToggle(<span class="stringliteral">&quot;shutup&quot;</span>, <a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a> = a;</div>
+<div class="line"><span class="lineno">  131</span>            base.config.annoyPlayer = <a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>;</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a>)</div>
+<div class="line"><span class="lineno">  133</span>            {</div>
+<div class="line"><span class="lineno">  134</span>                <a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(<a class="code hl_variable" href="classWidgetMascot.html#a7eb9a491246df8e38e439f0249676073">linesShutup</a>);</div>
+<div class="line"><span class="lineno">  135</span>            }</div>
+<div class="line"><span class="lineno">  136</span>        });</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aclassWidget_html_a1566722a39d0cce11507c43b3737df1a"><div class="ttname"><a href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">Widget.SetBaseContextMenu</a></div><div class="ttdeci">void SetBaseContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00578">Widget.cs:578</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00144">isShut</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00134">linesShutup</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00085">Say()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00027">isShut</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00017">linesShutup</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00101">Say()</a>, and <a class="el" href="Widget_8cs_source.html#l00578">Widget.SetBaseContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -572,31 +576,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00090">90</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
-<div class="line"><span class="lineno">   92</span>        Transform parent = this.<a class="code hl_variable" href="classWidgetMascot.html#a4dc67fe3e284ef4af5538b0934c79db2">text</a>.transform.parent;</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
-<div class="line"><span class="lineno">   94</span>        {</div>
-<div class="line"><span class="lineno">   95</span>            parent.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   98</span>        {</div>
-<div class="line"><span class="lineno">   99</span>            parent.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  100</span>            this.text.text = str;</div>
-<div class="line"><span class="lineno">  101</span>            base.ClampToScreenEnsured(parent, this.<a class="code hl_variable" href="classWidgetMascot.html#a4e2edd3c4eff71db7e1468b8de3745a9">textPos</a>);</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        this.nextSay = this.intervalSay + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(this.<a class="code hl_variable" href="classWidgetMascot.html#ac423a775e6f278274ad2211471fa5a30">intervalSay</a>);</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMascot.html#a0793bc84f8bf472d3b81c5b32ed4bcc3">isSiege</a>)</div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            this.nextSay /= 2;</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclassWidgetMascot_html_a0793bc84f8bf472d3b81c5b32ed4bcc3"><div class="ttname"><a href="classWidgetMascot.html#a0793bc84f8bf472d3b81c5b32ed4bcc3">WidgetMascot.isSiege</a></div><div class="ttdeci">bool isSiege</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00142">WidgetMascot.cs:142</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_a4dc67fe3e284ef4af5538b0934c79db2"><div class="ttname"><a href="classWidgetMascot.html#a4dc67fe3e284ef4af5538b0934c79db2">WidgetMascot.text</a></div><div class="ttdeci">UIText text</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00126">WidgetMascot.cs:126</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_a4e2edd3c4eff71db7e1468b8de3745a9"><div class="ttname"><a href="classWidgetMascot.html#a4e2edd3c4eff71db7e1468b8de3745a9">WidgetMascot.textPos</a></div><div class="ttdeci">Vector2 textPos</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00136">WidgetMascot.cs:136</a></div></div>
-<div class="ttc" id="aclassWidgetMascot_html_ac423a775e6f278274ad2211471fa5a30"><div class="ttname"><a href="classWidgetMascot.html#ac423a775e6f278274ad2211471fa5a30">WidgetMascot.intervalSay</a></div><div class="ttdeci">int intervalSay</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00128">WidgetMascot.cs:128</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00106">106</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>        Transform parent = <a class="code hl_variable" href="classWidgetMascot.html#a4dc67fe3e284ef4af5538b0934c79db2">text</a>.transform.parent;</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            parent.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            parent.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  116</span>            text.text = str;</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_function" href="classWidget.html#a6cc36f1dcf9b6b370884ca1ae864cdfd">ClampToScreenEnsured</a>(parent, <a class="code hl_variable" href="classWidgetMascot.html#a4e2edd3c4eff71db7e1468b8de3745a9">textPos</a>);</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">nextSay</a> = <a class="code hl_variable" href="classWidgetMascot.html#ac423a775e6f278274ad2211471fa5a30">intervalSay</a> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(<a class="code hl_variable" href="classWidgetMascot.html#ac423a775e6f278274ad2211471fa5a30">intervalSay</a>);</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetMascot.html#a0793bc84f8bf472d3b81c5b32ed4bcc3">isSiege</a>)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_variable" href="classWidgetMascot.html#abe51577e3a3140f336e94eb862caf48a">nextSay</a> /= 2;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aclassWidgetMascot_html_a4dc67fe3e284ef4af5538b0934c79db2"><div class="ttname"><a href="classWidgetMascot.html#a4dc67fe3e284ef4af5538b0934c79db2">WidgetMascot.text</a></div><div class="ttdeci">UIText text</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00009">WidgetMascot.cs:9</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_a4e2edd3c4eff71db7e1468b8de3745a9"><div class="ttname"><a href="classWidgetMascot.html#a4e2edd3c4eff71db7e1468b8de3745a9">WidgetMascot.textPos</a></div><div class="ttdeci">Vector2 textPos</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00019">WidgetMascot.cs:19</a></div></div>
+<div class="ttc" id="aclassWidgetMascot_html_ac423a775e6f278274ad2211471fa5a30"><div class="ttname"><a href="classWidgetMascot.html#ac423a775e6f278274ad2211471fa5a30">WidgetMascot.intervalSay</a></div><div class="ttdeci">int intervalSay</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMascot_8cs_source.html#l00011">WidgetMascot.cs:11</a></div></div>
+<div class="ttc" id="aclassWidget_html_a6cc36f1dcf9b6b370884ca1ae864cdfd"><div class="ttname"><a href="classWidget.html#a6cc36f1dcf9b6b370884ca1ae864cdfd">Widget.ClampToScreenEnsured</a></div><div class="ttdeci">void ClampToScreenEnsured(Component c, Vector2 anchoredPos)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00394">Widget.cs:394</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00128">intervalSay</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00142">isSiege</a>, <a class="el" href="EMono_8cs_source.html#l00166">EMono.rnd()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00126">text</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00136">textPos</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00394">Widget.ClampToScreenEnsured()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00011">intervalSay</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00025">isSiege</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00021">nextSay</a>, <a class="el" href="EMono_8cs_source.html#l00047">EMono.rnd()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00009">text</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00019">textPos</a>.</p>
 
 </div>
 </div>
@@ -624,14 +628,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00085">85</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>        this.<a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(lines.RandomItem&lt;<span class="keywordtype">string</span>&gt;());</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00101">101</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_function" href="classWidgetMascot.html#ab3d92c39ee0e9842ad398cede3c5bb4d">Say</a>(lines.RandomItem());</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00085">Say()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00101">Say()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00054">_Update()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00016">OnActivate()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00110">OnSetContextMenu()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00085">Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00031">OnActivate()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00126">OnSetContextMenu()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00101">Say()</a>.</p>
 
 </div>
 </div>
@@ -658,18 +662,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00043">43</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a> &amp;&amp; InputModuleEX.IsPointerOver(base.transform))</div>
-<div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            SE.Play(<span class="stringliteral">&quot;teleport&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>            base.transform.position = <span class="keyword">new</span> Vector3((<span class="keywordtype">float</span>)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(Screen.width), (<span class="keywordtype">float</span>)<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(Screen.height), 0f);</div>
-<div class="line"><span class="lineno">   49</span>            base.OnChangePosition();</div>
-<div class="line"><span class="lineno">   50</span>            base.ClampToScreen();</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00058">58</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetMascot.html#a56f135da0f117a0533ec0b4cbf2cd091">isShut</a> &amp;&amp; InputModuleEX.IsPointerOver(base.transform))</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            SE.Play(<span class="stringliteral">&quot;teleport&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span>            base.transform.position = <span class="keyword">new</span> Vector3(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(Screen.width), <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_function" href="classEMono.html#a790dff7e193a284b2be7a187110677bf">rnd</a>(Screen.height), 0f);</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_function" href="classWidget.html#a5e1fe26459166e4a8423656a7e5ce48b">OnChangePosition</a>();</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_function" href="classWidget.html#ad079af82fc1bf8225c36fc277e93c926">ClampToScreen</a>();</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassWidget_html_a5e1fe26459166e4a8423656a7e5ce48b"><div class="ttname"><a href="classWidget.html#a5e1fe26459166e4a8423656a7e5ce48b">Widget.OnChangePosition</a></div><div class="ttdeci">void OnChangePosition()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00432">Widget.cs:432</a></div></div>
+<div class="ttc" id="aclassWidget_html_ad079af82fc1bf8225c36fc277e93c926"><div class="ttname"><a href="classWidget.html#ad079af82fc1bf8225c36fc277e93c926">Widget.ClampToScreen</a></div><div class="ttdeci">void ClampToScreen()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00407">Widget.cs:407</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMascot_8cs_source.html#l00144">isShut</a>, and <a class="el" href="EMono_8cs_source.html#l00166">EMono.rnd()</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00407">Widget.ClampToScreen()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00027">isShut</a>, <a class="el" href="Widget_8cs_source.html#l00432">Widget.OnChangePosition()</a>, and <a class="el" href="EMono_8cs_source.html#l00047">EMono.rnd()</a>.</p>
 
 </div>
 </div>
@@ -694,9 +700,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00140">140</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00023">23</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00054">_Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>.</p>
 
 </div>
 </div>
@@ -712,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00124">124</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00007">7</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
 </div>
 </div>
@@ -728,9 +734,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00128">128</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00011">11</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00090">Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00106">Say()</a>.</p>
 
 </div>
 </div>
@@ -754,9 +760,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00144">144</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00027">27</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00054">_Update()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00110">OnSetContextMenu()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00043">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00126">OnSetContextMenu()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00058">Update()</a>.</p>
 
 </div>
 </div>
@@ -780,9 +786,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00142">142</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00025">25</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00090">Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00106">Say()</a>.</p>
 
 </div>
 </div>
@@ -798,9 +804,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00130">130</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00013">13</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00054">_Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00031">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -816,9 +822,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00134">134</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00017">17</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00110">OnSetContextMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00031">OnActivate()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00126">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -834,7 +840,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00132">132</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00015">15</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00031">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -858,9 +866,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00138">138</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00021">21</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00054">_Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00069">_Update()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00106">Say()</a>.</p>
 
 </div>
 </div>
@@ -876,9 +884,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00126">126</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00009">9</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00090">Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00106">Say()</a>.</p>
 
 </div>
 </div>
@@ -894,9 +902,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00136">136</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00019">19</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00090">Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetMascot_8cs_source.html#l00106">Say()</a>.</p>
 
 </div>
 </div>
@@ -921,14 +929,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00008">8</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="WidgetMascot_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetMascot_8cs_source.html">WidgetMascot.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

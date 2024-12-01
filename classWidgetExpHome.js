@@ -11,5 +11,5 @@ var classWidgetExpHome =
     [ "itemInfluence", "classWidgetExpHome.html#a5644bf5efb2b467635c5d8a485dccb70", null ],
     [ "itemKnowledge", "classWidgetExpHome.html#a7e0b5753fb7f70a023c4d6c15ed29cec", null ],
     [ "textLv", "classWidgetExpHome.html#aed388a70e11be95c4424a6e1c75e7d41", null ],
-    [ "extra", "classWidgetExpHome.html#aa5c36c431e43e0d246dad382959e6a99", null ]
+    [ "extra", "classWidgetExpHome.html#a1e3e5684e91e734bbbe94f18c1ca1144", null ]
 ];

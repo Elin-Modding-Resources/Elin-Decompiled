@@ -13,7 +13,7 @@ var classLayerPeople =
     ] ],
     [ "Confirm", "classLayerPeople.html#aed39dc0c8955645db88df9bfe45cb54a", null ],
     [ "Create", "classLayerPeople.html#ad338758348e6ebb60447092b80b9b728", null ],
-    [ "Create", "classLayerPeople.html#a5c194a500ef36b330e3f734f79269601", null ],
+    [ "Create", "classLayerPeople.html#a753657f069ff6d0af0a0917668a51671", null ],
     [ "Create< T >", "classLayerPeople.html#ac8439b77a0e860194b4eeda69a077928", null ],
     [ "CreateBed", "classLayerPeople.html#ade3a731ccea30fbebfec827a2711aea5", null ],
     [ "CreateReserve", "classLayerPeople.html#aa90fc478e0919104f69d233db059d8fe", null ],
@@ -27,6 +27,6 @@ var classLayerPeople =
     [ "layoutMenu", "classLayerPeople.html#af8d422551ab5219ee28b4e15a583e696", null ],
     [ "multi", "classLayerPeople.html#a84a873fc5f4fdf17b664469fb5e58631", null ],
     [ "onConfirm", "classLayerPeople.html#ada84c63d5d5f3171d0ba0d00c61f2c74", null ],
-    [ "showMode", "classLayerPeople.html#a0bed27a81d0484480cbf88413009c0e8", null ],
+    [ "showMode", "classLayerPeople.html#a35bd50a143264defe52efd8d4a771821", null ],
     [ "slaveToBuy", "classLayerPeople.html#acf355bb07895d31aeffae531423379c0", null ]
 ];

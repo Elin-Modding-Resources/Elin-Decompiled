@@ -155,7 +155,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00127">127</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00023">23</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f1d01f1b9c929e4a788360ab59b292e" name="a8f1d01f1b9c929e4a788360ab59b292e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f1d01f1b9c929e4a788360ab59b292e">&#9670;&#160;</a></span>GetColor()</h2>
@@ -181,12 +181,12 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00141">141</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> -((int)(c.a * 10f) * 262144 + (int)(c.r * 64f) * 4096 + (int)(c.g * 64f) * 64 + (int)(c.b * 64f));</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00079">79</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">return</span> -((int)(c.a * 10f) * 262144 + (int)(c.r * 64f) * 4096 + (int)(c.g * 64f) * 64 + (int)(c.b * 64f));</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -213,28 +213,38 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00129">129</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>        {</div>
-<div class="line"><span class="lineno">  131</span>            this.Valid = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a113b642dabf7337cd10a3e50e79551e4">_valid</a>);</div>
-<div class="line"><span class="lineno">  132</span>            this.Warning = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#aa710acb8084309e184293e6997d411e6">_warning</a>);</div>
-<div class="line"><span class="lineno">  133</span>            this.Inactive = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a142a087aa86ec2db59a9366786513e9d">_inactive</a>);</div>
-<div class="line"><span class="lineno">  134</span>            this.Active = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea">_active</a>);</div>
-<div class="line"><span class="lineno">  135</span>            this.InactiveOpacity = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a4ee7cc4fab4868c88bc3d203d3957eb5">_inactiveOpacity</a>);</div>
-<div class="line"><span class="lineno">  136</span>            this.ActiveOpacity = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2">_activeOpacity</a>);</div>
-<div class="line"><span class="lineno">  137</span>            this.Passive = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a922c1abed4b5e24ced0fcc7f7c96a093">_passive</a>);</div>
-<div class="line"><span class="lineno">  138</span>            this.MapHighlight = this.<a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref this.<a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#aab6c06bf1f6a95e80bc7588081f4b51f">_mapHighlight</a>);</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a113b642dabf7337cd10a3e50e79551e4"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a113b642dabf7337cd10a3e50e79551e4">ColorProfile.BlockColors._valid</a></div><div class="ttdeci">Color _valid</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00156">ColorProfile.cs:156</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a142a087aa86ec2db59a9366786513e9d"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a142a087aa86ec2db59a9366786513e9d">ColorProfile.BlockColors._inactive</a></div><div class="ttdeci">Color _inactive</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00162">ColorProfile.cs:162</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a4ee7cc4fab4868c88bc3d203d3957eb5"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a4ee7cc4fab4868c88bc3d203d3957eb5">ColorProfile.BlockColors._inactiveOpacity</a></div><div class="ttdeci">Color _inactiveOpacity</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00166">ColorProfile.cs:166</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a8f1d01f1b9c929e4a788360ab59b292e"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">ColorProfile.BlockColors.GetColor</a></div><div class="ttdeci">int GetColor(ref Color c)</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00141">ColorProfile.cs:141</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a8f466ea406218b6f80982703427f0ba2"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2">ColorProfile.BlockColors._activeOpacity</a></div><div class="ttdeci">Color _activeOpacity</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00164">ColorProfile.cs:164</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a922c1abed4b5e24ced0fcc7f7c96a093"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a922c1abed4b5e24ced0fcc7f7c96a093">ColorProfile.BlockColors._passive</a></div><div class="ttdeci">Color _passive</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00168">ColorProfile.cs:168</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_aa710acb8084309e184293e6997d411e6"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#aa710acb8084309e184293e6997d411e6">ColorProfile.BlockColors._warning</a></div><div class="ttdeci">Color _warning</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00158">ColorProfile.cs:158</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_aab6c06bf1f6a95e80bc7588081f4b51f"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#aab6c06bf1f6a95e80bc7588081f4b51f">ColorProfile.BlockColors._mapHighlight</a></div><div class="ttdeci">Color _mapHighlight</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00170">ColorProfile.cs:170</a></div></div>
-<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_ad428f9dc5c1eaf63af61739acb3dfaea"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea">ColorProfile.BlockColors._active</a></div><div class="ttdeci">Color _active</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00160">ColorProfile.cs:160</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00067">67</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#ac9f8f58151733deda57b8a24a4a80a3f">Valid</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a113b642dabf7337cd10a3e50e79551e4">_valid</a>);</div>
+<div class="line"><span class="lineno">   70</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a572c4f7424ddfb30881648a7d5afcc38">Warning</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#aa710acb8084309e184293e6997d411e6">_warning</a>);</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#ac04b9d95d2b0d7d23d5330d30a8b117f">Inactive</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a142a087aa86ec2db59a9366786513e9d">_inactive</a>);</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#ad3ad2430d2a9d22f6c39d61d349218bd">Active</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea">_active</a>);</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a72768cbeded5c86e63a69f6369b48e06">InactiveOpacity</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a4ee7cc4fab4868c88bc3d203d3957eb5">_inactiveOpacity</a>);</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a4013c718888a0be9bb28b197404703c7">ActiveOpacity</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2">_activeOpacity</a>);</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#ae4c84e79217e038daa119cd914ede991">Passive</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a922c1abed4b5e24ced0fcc7f7c96a093">_passive</a>);</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#a5b3ab5daf9d5646056382286089fec96">MapHighlight</a> = <a class="code hl_function" href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">GetColor</a>(ref <a class="code hl_variable" href="classColorProfile_1_1BlockColors.html#aab6c06bf1f6a95e80bc7588081f4b51f">_mapHighlight</a>);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a113b642dabf7337cd10a3e50e79551e4"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a113b642dabf7337cd10a3e50e79551e4">ColorProfile.BlockColors._valid</a></div><div class="ttdeci">Color _valid</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00035">ColorProfile.cs:35</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a142a087aa86ec2db59a9366786513e9d"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a142a087aa86ec2db59a9366786513e9d">ColorProfile.BlockColors._inactive</a></div><div class="ttdeci">Color _inactive</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00041">ColorProfile.cs:41</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a4013c718888a0be9bb28b197404703c7"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a4013c718888a0be9bb28b197404703c7">ColorProfile.BlockColors.ActiveOpacity</a></div><div class="ttdeci">int ActiveOpacity</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00059">ColorProfile.cs:59</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a4ee7cc4fab4868c88bc3d203d3957eb5"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a4ee7cc4fab4868c88bc3d203d3957eb5">ColorProfile.BlockColors._inactiveOpacity</a></div><div class="ttdeci">Color _inactiveOpacity</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00045">ColorProfile.cs:45</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a572c4f7424ddfb30881648a7d5afcc38"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a572c4f7424ddfb30881648a7d5afcc38">ColorProfile.BlockColors.Warning</a></div><div class="ttdeci">int Warning</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00053">ColorProfile.cs:53</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a5b3ab5daf9d5646056382286089fec96"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a5b3ab5daf9d5646056382286089fec96">ColorProfile.BlockColors.MapHighlight</a></div><div class="ttdeci">int MapHighlight</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00065">ColorProfile.cs:65</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a72768cbeded5c86e63a69f6369b48e06"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a72768cbeded5c86e63a69f6369b48e06">ColorProfile.BlockColors.InactiveOpacity</a></div><div class="ttdeci">int InactiveOpacity</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00061">ColorProfile.cs:61</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a8f1d01f1b9c929e4a788360ab59b292e"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e">ColorProfile.BlockColors.GetColor</a></div><div class="ttdeci">int GetColor(ref Color c)</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00079">ColorProfile.cs:79</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a8f466ea406218b6f80982703427f0ba2"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2">ColorProfile.BlockColors._activeOpacity</a></div><div class="ttdeci">Color _activeOpacity</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00043">ColorProfile.cs:43</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_a922c1abed4b5e24ced0fcc7f7c96a093"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#a922c1abed4b5e24ced0fcc7f7c96a093">ColorProfile.BlockColors._passive</a></div><div class="ttdeci">Color _passive</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00047">ColorProfile.cs:47</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_aa710acb8084309e184293e6997d411e6"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#aa710acb8084309e184293e6997d411e6">ColorProfile.BlockColors._warning</a></div><div class="ttdeci">Color _warning</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00037">ColorProfile.cs:37</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_aab6c06bf1f6a95e80bc7588081f4b51f"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#aab6c06bf1f6a95e80bc7588081f4b51f">ColorProfile.BlockColors._mapHighlight</a></div><div class="ttdeci">Color _mapHighlight</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00049">ColorProfile.cs:49</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_ac04b9d95d2b0d7d23d5330d30a8b117f"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#ac04b9d95d2b0d7d23d5330d30a8b117f">ColorProfile.BlockColors.Inactive</a></div><div class="ttdeci">int Inactive</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00055">ColorProfile.cs:55</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_ac9f8f58151733deda57b8a24a4a80a3f"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#ac9f8f58151733deda57b8a24a4a80a3f">ColorProfile.BlockColors.Valid</a></div><div class="ttdeci">int Valid</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00051">ColorProfile.cs:51</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_ad3ad2430d2a9d22f6c39d61d349218bd"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#ad3ad2430d2a9d22f6c39d61d349218bd">ColorProfile.BlockColors.Active</a></div><div class="ttdeci">int Active</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00057">ColorProfile.cs:57</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_ad428f9dc5c1eaf63af61739acb3dfaea"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea">ColorProfile.BlockColors._active</a></div><div class="ttdeci">Color _active</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00039">ColorProfile.cs:39</a></div></div>
+<div class="ttc" id="aclassColorProfile_1_1BlockColors_html_ae4c84e79217e038daa119cd914ede991"><div class="ttname"><a href="classColorProfile_1_1BlockColors.html#ae4c84e79217e038daa119cd914ede991">ColorProfile.BlockColors.Passive</a></div><div class="ttdeci">int Passive</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00063">ColorProfile.cs:63</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ColorProfile_8cs_source.html#l00160">ColorProfile.BlockColors._active</a>, <a class="el" href="ColorProfile_8cs_source.html#l00164">ColorProfile.BlockColors._activeOpacity</a>, <a class="el" href="ColorProfile_8cs_source.html#l00162">ColorProfile.BlockColors._inactive</a>, <a class="el" href="ColorProfile_8cs_source.html#l00166">ColorProfile.BlockColors._inactiveOpacity</a>, <a class="el" href="ColorProfile_8cs_source.html#l00170">ColorProfile.BlockColors._mapHighlight</a>, <a class="el" href="ColorProfile_8cs_source.html#l00168">ColorProfile.BlockColors._passive</a>, <a class="el" href="ColorProfile_8cs_source.html#l00156">ColorProfile.BlockColors._valid</a>, <a class="el" href="ColorProfile_8cs_source.html#l00158">ColorProfile.BlockColors._warning</a>, and <a class="el" href="ColorProfile_8cs_source.html#l00141">ColorProfile.BlockColors.GetColor()</a>.</p>
+<p class="reference">References <a class="el" href="ColorProfile_8cs_source.html#l00039">ColorProfile.BlockColors._active</a>, <a class="el" href="ColorProfile_8cs_source.html#l00043">ColorProfile.BlockColors._activeOpacity</a>, <a class="el" href="ColorProfile_8cs_source.html#l00041">ColorProfile.BlockColors._inactive</a>, <a class="el" href="ColorProfile_8cs_source.html#l00045">ColorProfile.BlockColors._inactiveOpacity</a>, <a class="el" href="ColorProfile_8cs_source.html#l00049">ColorProfile.BlockColors._mapHighlight</a>, <a class="el" href="ColorProfile_8cs_source.html#l00047">ColorProfile.BlockColors._passive</a>, <a class="el" href="ColorProfile_8cs_source.html#l00035">ColorProfile.BlockColors._valid</a>, <a class="el" href="ColorProfile_8cs_source.html#l00037">ColorProfile.BlockColors._warning</a>, <a class="el" href="ColorProfile_8cs_source.html#l00057">ColorProfile.BlockColors.Active</a>, <a class="el" href="ColorProfile_8cs_source.html#l00059">ColorProfile.BlockColors.ActiveOpacity</a>, <a class="el" href="ColorProfile_8cs_source.html#l00079">ColorProfile.BlockColors.GetColor()</a>, <a class="el" href="ColorProfile_8cs_source.html#l00055">ColorProfile.BlockColors.Inactive</a>, <a class="el" href="ColorProfile_8cs_source.html#l00061">ColorProfile.BlockColors.InactiveOpacity</a>, <a class="el" href="ColorProfile_8cs_source.html#l00065">ColorProfile.BlockColors.MapHighlight</a>, <a class="el" href="ColorProfile_8cs_source.html#l00063">ColorProfile.BlockColors.Passive</a>, <a class="el" href="ColorProfile_8cs_source.html#l00051">ColorProfile.BlockColors.Valid</a>, and <a class="el" href="ColorProfile_8cs_source.html#l00053">ColorProfile.BlockColors.Warning</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00153">ColorProfile.Init()</a>.</p>
 
 </div>
 </div>
@@ -251,9 +261,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00160">160</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00039">39</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -269,9 +279,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00164">164</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00043">43</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -287,9 +297,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00162">162</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00041">41</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -305,9 +315,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00166">166</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00045">45</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -323,9 +333,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00170">170</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00049">49</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -341,9 +351,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00168">168</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00047">47</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -359,9 +369,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00156">156</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00035">35</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -377,9 +387,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00158">158</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00037">37</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00129">ColorProfile.BlockColors.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -395,7 +405,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00178">178</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00057">57</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -411,7 +423,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00180">180</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00059">59</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskMine_8cs_source.html#l00093">TaskMine.DrawMarker()</a>, and <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -435,7 +449,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00146">146</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00025">25</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
 </div>
 </div>
@@ -459,7 +473,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00150">150</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00029">29</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
 </div>
 </div>
@@ -483,7 +497,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00148">148</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00027">27</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
 </div>
 </div>
@@ -507,7 +521,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00152">152</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00031">31</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
 </div>
 </div>
@@ -531,7 +545,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00154">154</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00033">33</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
 
 </div>
 </div>
@@ -547,7 +561,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00176">176</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00055">55</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>, <a class="el" href="Recipe_8cs_source.html#l00657">Recipe.OnRenderMarker()</a>, and <a class="el" href="Card_8cs_source.html#l05234">Card.RenderMarker()</a>.</p>
 
 </div>
 </div>
@@ -563,7 +579,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00182">182</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00061">61</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TaskMine_8cs_source.html#l00093">TaskMine.DrawMarker()</a>, and <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -579,7 +597,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00186">186</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00065">65</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00898">BaseTileMap.DrawTile()</a>, and <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>.</p>
 
 </div>
 </div>
@@ -595,7 +615,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00184">184</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00063">63</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>, and <a class="el" href="ActionMode_8cs_source.html#l01262">ActionMode.OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -611,7 +633,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00172">172</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00051">51</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00072">AM_Mine.OnRenderTile()</a>, and <a class="el" href="AM__Picker_8cs_source.html#l00071">AM_Picker.OnRenderTile()</a>.</p>
 
 </div>
 </div>
@@ -627,7 +651,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00174">174</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ColorProfile_8cs_source.html#l00053">53</a> of file <a class="el" href="ColorProfile_8cs_source.html">ColorProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ColorProfile_8cs_source.html#l00067">ColorProfile.BlockColors.Init()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00072">AM_Mine.OnRenderTile()</a>, and <a class="el" href="AM__Picker_8cs_source.html#l00071">AM_Picker.OnRenderTile()</a>.</p>
 
 </div>
 </div>

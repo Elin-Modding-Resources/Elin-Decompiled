@@ -116,8 +116,8 @@ Inheritance diagram for TileTypeWallHang:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa464f4de355f4ca3a564dabd28f355e0"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">GetDesiredDir</a> (<a class="el" href="classPoint.html">Point</a> p, int d)</td></tr>
 <tr class="separator:aa464f4de355f4ca3a564dabd28f355e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d0ca16f3db5f4645fb149e842c3c7e"><td class="memItemLeft" align="right" valign="top">unsafe override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileTypeWallHang.html#a15d0ca16f3db5f4645fb149e842c3c7e">GetMountHeight</a> (ref Vector3 v, <a class="el" href="classPoint.html">Point</a> p, int d, <a class="el" href="classCard.html">Card</a> target=null)</td></tr>
-<tr class="separator:a15d0ca16f3db5f4645fb149e842c3c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b82650b3237bef5768db8e52481c126"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileTypeWallHang.html#a0b82650b3237bef5768db8e52481c126">GetMountHeight</a> (ref Vector3 v, <a class="el" href="classPoint.html">Point</a> p, int d, <a class="el" href="classCard.html">Card</a> target=null)</td></tr>
+<tr class="separator:a0b82650b3237bef5768db8e52481c126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTileType"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTileType')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTileType.html">TileType</a></td></tr>
 <tr class="memitem:ab8b4a408f2be7dc7c50095db0ef714f7 inherit pub_methods_classTileType"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#ab8b4a408f2be7dc7c50095db0ef714f7">CanRotate</a> (bool buildMode)</td></tr>
 <tr class="separator:ab8b4a408f2be7dc7c50095db0ef714f7 inherit pub_methods_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,8 +296,8 @@ Properties</h2></td></tr>
 <tr class="separator:a2092765e232ee79e9c4517a79dfaf4ba inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60ee43bbee3ec99ac75e72361f10c70f inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a60ee43bbee3ec99ac75e72361f10c70f">IsRamp</a><code> [get]</code></td></tr>
 <tr class="separator:a60ee43bbee3ec99ac75e72361f10c70f inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0deaf5d1d98480700f49920725b24d72 inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">TileType.RampType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a0deaf5d1d98480700f49920725b24d72">Ramp</a><code> [get]</code></td></tr>
-<tr class="separator:a0deaf5d1d98480700f49920725b24d72 inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b1a754489151f938de54f93565411a inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">RampType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a69b1a754489151f938de54f93565411a">Ramp</a><code> [get]</code></td></tr>
+<tr class="separator:a69b1a754489151f938de54f93565411a inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca7f2c23a9fedd510e01e20bda02f0b inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a6ca7f2c23a9fedd510e01e20bda02f0b">IsLadder</a><code> [get]</code></td></tr>
 <tr class="separator:a6ca7f2c23a9fedd510e01e20bda02f0b inherit properties_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec59c84492826919fd3b9d43ea26f67 inherit properties_classTileType"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#adec59c84492826919fd3b9d43ea26f67">IsBlockPass</a><code> [get]</code></td></tr>
@@ -497,7 +497,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00004">4</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00003">3</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa464f4de355f4ca3a564dabd28f355e0" name="aa464f4de355f4ca3a564dabd28f355e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa464f4de355f4ca3a564dabd28f355e0">&#9670;&#160;</a></span>GetDesiredDir()</h2>
@@ -535,63 +535,62 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTileType.html#ab0e2d32e4be2c7410c69978e77037a86">TileType</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00054">54</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a>.<a class="code hl_function" href="classActionMode.html#a26abacdc282f62e9bef7da716469f9cf">IsRoofEditMode</a>(<span class="keyword">null</span>))</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[0] = (cell.Back.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Back.sourceBlock.tileType.IsWallOrFence || cell.Back.blockDir != 1));</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[1] = (cell.Left.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Left.sourceBlock.tileType.IsWallOrFence || cell.Left.blockDir != 0));</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classTileTypeWallHang.html#a30c4f75d260f9fc63c5b18261d9f3c7d">NoBackSide</a>)</div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[2] = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[3] = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            <a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[2] = (cell.Front.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Front.sourceBlock.tileType.IsWallOrFence || cell.Front.blockDir != 1));</div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[3] = (cell.Right.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Right.sourceBlock.tileType.IsWallOrFence || cell.Right.blockDir != 0));</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (d == -1 || !<a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[d])</div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (d == -1)</div>
-<div class="line"><span class="lineno">   76</span>            {</div>
-<div class="line"><span class="lineno">   77</span>                d = 0;</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
-<div class="line"><span class="lineno">   80</span>            {</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[(i + d) % 4])</div>
-<div class="line"><span class="lineno">   82</span>                {</div>
-<div class="line"><span class="lineno">   83</span>                    <span class="keywordflow">return</span> (i + d) % 4;</div>
-<div class="line"><span class="lineno">   84</span>                }</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classTileTypeWallHang.html">TileTypeWallHang</a>.<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[d])</div>
-<div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> d;</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclassActionMode_html_a26abacdc282f62e9bef7da716469f9cf"><div class="ttname"><a href="classActionMode.html#a26abacdc282f62e9bef7da716469f9cf">ActionMode.IsRoofEditMode</a></div><div class="ttdeci">virtual bool IsRoofEditMode(Card c=null)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00472">ActionMode.cs:472</a></div></div>
-<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
-<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00026">Point.cs:27</a></div></div>
-<div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01049">Scene.cs:1049</a></div></div>
-<div class="ttc" id="aclassTileTypeWallHang_html"><div class="ttname"><a href="classTileTypeWallHang.html">TileTypeWallHang</a></div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00004">TileTypeWallHang.cs:5</a></div></div>
-<div class="ttc" id="aclassTileTypeWallHang_html_a30c4f75d260f9fc63c5b18261d9f3c7d"><div class="ttname"><a href="classTileTypeWallHang.html#a30c4f75d260f9fc63c5b18261d9f3c7d">TileTypeWallHang.NoBackSide</a></div><div class="ttdeci">virtual bool NoBackSide</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00046">TileTypeWallHang.cs:47</a></div></div>
-<div class="ttc" id="aclassTileTypeWallHang_html_acae30fc3bc8adc41448e2ca53cc91702"><div class="ttname"><a href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">TileTypeWallHang.DIRS</a></div><div class="ttdeci">static bool[] DIRS</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00164">TileTypeWallHang.cs:164</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00019">19</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a>.<a class="code hl_function" href="classActionMode.html#a26abacdc282f62e9bef7da716469f9cf">IsRoofEditMode</a>())</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[0] = cell.Back.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Back.sourceBlock.tileType.IsWallOrFence || cell.Back.blockDir != 1);</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[1] = cell.Left.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Left.sourceBlock.tileType.IsWallOrFence || cell.Left.blockDir != 0);</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classTileTypeWallHang.html#a30c4f75d260f9fc63c5b18261d9f3c7d">NoBackSide</a>)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[2] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[3] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[2] = cell.Front.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Front.sourceBlock.tileType.IsWallOrFence || cell.Front.blockDir != 1);</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[3] = cell.Right.sourceBlock.tileType.IsMountBlock &amp;&amp; (!cell.Right.sourceBlock.tileType.IsWallOrFence || cell.Right.blockDir != 0);</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (d == -1 || !<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[d])</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (d == -1)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                d = 0;</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[(i + d) % 4])</div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">return</span> (i + d) % 4;</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">DIRS</a>[d])</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> d;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="ttc" id="aclassActionMode_html_a26abacdc282f62e9bef7da716469f9cf"><div class="ttname"><a href="classActionMode.html#a26abacdc282f62e9bef7da716469f9cf">ActionMode.IsRoofEditMode</a></div><div class="ttdeci">virtual bool IsRoofEditMode(Card c=null)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00311">ActionMode.cs:311</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00030">EClass.cs:30</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
+<div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00077">Scene.cs:77</a></div></div>
+<div class="ttc" id="aclassTileTypeWallHang_html_a30c4f75d260f9fc63c5b18261d9f3c7d"><div class="ttname"><a href="classTileTypeWallHang.html#a30c4f75d260f9fc63c5b18261d9f3c7d">TileTypeWallHang.NoBackSide</a></div><div class="ttdeci">virtual bool NoBackSide</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00017">TileTypeWallHang.cs:17</a></div></div>
+<div class="ttc" id="aclassTileTypeWallHang_html_acae30fc3bc8adc41448e2ca53cc91702"><div class="ttname"><a href="classTileTypeWallHang.html#acae30fc3bc8adc41448e2ca53cc91702">TileTypeWallHang.DIRS</a></div><div class="ttdeci">static bool[] DIRS</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00005">TileTypeWallHang.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Scene_8cs_source.html#l01049">Scene.actionMode</a>, <a class="el" href="Point_8cs_source.html#l00027">Point.cell</a>, <a class="el" href="TileTypeWallHang_8cs_source.html#l00164">DIRS</a>, <a class="el" href="ActionMode_8cs_source.html#l00472">ActionMode.IsRoofEditMode()</a>, <a class="el" href="TileTypeWallHang_8cs_source.html#l00047">NoBackSide</a>, and <a class="el" href="EClass_8cs_source.html#l00096">EClass.scene</a>.</p>
+<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00077">Scene.actionMode</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="TileTypeWallHang_8cs_source.html#l00005">DIRS</a>, <a class="el" href="ActionMode_8cs_source.html#l00311">ActionMode.IsRoofEditMode()</a>, <a class="el" href="TileTypeWallHang_8cs_source.html#l00017">NoBackSide</a>, and <a class="el" href="EClass_8cs_source.html#l00030">EClass.scene</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileTypeWallHang_8cs_source.html#l00155">HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileTypeWallHang_8cs_source.html#l00119">HitTest()</a>.</p>
 
 </div>
 </div>
-<a id="a15d0ca16f3db5f4645fb149e842c3c7e" name="a15d0ca16f3db5f4645fb149e842c3c7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15d0ca16f3db5f4645fb149e842c3c7e">&#9670;&#160;</a></span>GetMountHeight()</h2>
+<a id="a0b82650b3237bef5768db8e52481c126" name="a0b82650b3237bef5768db8e52481c126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b82650b3237bef5768db8e52481c126">&#9670;&#160;</a></span>GetMountHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,7 +599,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsafe override void TileTypeWallHang.GetMountHeight </td>
+          <td class="memname">override void TileTypeWallHang.GetMountHeight </td>
           <td>(</td>
           <td class="paramtype">ref Vector3&#160;</td>
           <td class="paramname"><em>v</em>, </td>
@@ -638,82 +637,81 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTileType.html#a2d59899a5c47cc73a46751f75152f164">TileType</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00094">94</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (d == 0 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> - 1)</div>
-<div class="line"><span class="lineno">   97</span>        {</div>
-<div class="line"><span class="lineno">   98</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> + 1);</div>
-<div class="line"><span class="lineno">   99</span>            Vector3 vector = *<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
-<div class="line"><span class="lineno">  100</span>            v.x = vector.x;</div>
-<div class="line"><span class="lineno">  101</span>            v.y = vector.y + <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
-<div class="line"><span class="lineno">  102</span>            v.z = vector.z;</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  104</span>            {</div>
-<div class="line"><span class="lineno">  105</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[0];</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>            v += EClass.screen.tileMap.altitudeFix * (float)target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (d == 1 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> - 1, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
-<div class="line"><span class="lineno">  113</span>            Vector3 vector2 = *<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
-<div class="line"><span class="lineno">  114</span>            v.x = vector2.x;</div>
-<div class="line"><span class="lineno">  115</span>            v.y = vector2.y + <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
-<div class="line"><span class="lineno">  116</span>            v.z = vector2.z;</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  118</span>            {</div>
-<div class="line"><span class="lineno">  119</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[1];</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>            v += EClass.screen.tileMap.altitudeFix * (float)target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (d == 2 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  125</span>        {</div>
-<div class="line"><span class="lineno">  126</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> - 1);</div>
-<div class="line"><span class="lineno">  127</span>            Vector3 vector3 = *p.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
-<div class="line"><span class="lineno">  128</span>            v.x = vector3.x;</div>
-<div class="line"><span class="lineno">  129</span>            v.y = vector3.y + p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
-<div class="line"><span class="lineno">  130</span>            v.z = vector3.z;</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[2];</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>            v += EClass.screen.tileMap.altitudeFix * (float)target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (d == 3 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> - 1)</div>
-<div class="line"><span class="lineno">  139</span>        {</div>
-<div class="line"><span class="lineno">  140</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + 1, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
-<div class="line"><span class="lineno">  141</span>            Vector3 vector4 = *p.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
-<div class="line"><span class="lineno">  142</span>            v.x = vector4.x;</div>
-<div class="line"><span class="lineno">  143</span>            v.y = vector4.y + p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
-<div class="line"><span class="lineno">  144</span>            v.z = vector4.z;</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  146</span>            {</div>
-<div class="line"><span class="lineno">  147</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[3];</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>            v += EClass.screen.tileMap.altitudeFix * (float)target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        v.y += p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.cs:857</a></div></div>
-<div class="ttc" id="aclassBaseTileMap_html_a12974e3396f6ba464bf53ddd2d83a3c1"><div class="ttname"><a href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">BaseTileMap.wallHangFix</a></div><div class="ttdeci">Vector3[] wallHangFix</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03471">BaseTileMap.cs:3471</a></div></div>
-<div class="ttc" id="aclassCard_html_a9cdd346f116c9c5d277ce3dbe2faffc2"><div class="ttname"><a href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">Card.altitude</a></div><div class="ttdeci">int altitude</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00175">Card.cs:176</a></div></div>
-<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
-<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00103">EClass.cs:104</a></div></div>
-<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00328">MapBounds.cs:328</a></div></div>
-<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00009">Point.cs:10</a></div></div>
-<div class="ttc" id="aclassPoint_html_a165696883baa9d38143b4e5dce302b1d"><div class="ttname"><a href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">Point.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00074">Point.cs:75</a></div></div>
-<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00629">Point.cs:629</a></div></div>
-<div class="ttc" id="aclassPoint_html_a2db9fb5ae54d834b2f148bb803072a3e"><div class="ttname"><a href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">Point.shared2</a></div><div class="ttdeci">static Point shared2</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01498">Point.cs:1498</a></div></div>
-<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00577">Point.cs:577</a></div></div>
-<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01512">Point.cs:1512</a></div></div>
-<div class="ttc" id="aclassPoint_html_a6b2acc02dc9b1c00963431c6c13f0903"><div class="ttname"><a href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">Point.HasWallOrFence</a></div><div class="ttdeci">bool HasWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00281">Point.cs:282</a></div></div>
-<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01515">Point.cs:1515</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00059">59</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (d == 0 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> - 1)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> + 1);</div>
+<div class="line"><span class="lineno">   64</span>            Vector3 vector = <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">   65</span>            v.x = vector.x;</div>
+<div class="line"><span class="lineno">   66</span>            v.y = vector.y + <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
+<div class="line"><span class="lineno">   67</span>            v.z = vector.z;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[0];</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            v += EClass.screen.tileMap.altitudeFix * target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 1 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> - 1, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">   77</span>            Vector3 vector2 = <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">   78</span>            v.x = vector2.x;</div>
+<div class="line"><span class="lineno">   79</span>            v.y = vector2.y + <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
+<div class="line"><span class="lineno">   80</span>            v.z = vector2.z;</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[1];</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            v += EClass.screen.tileMap.altitudeFix * target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 2 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> - 1);</div>
+<div class="line"><span class="lineno">   90</span>            Vector3 vector3 = p.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">   91</span>            v.x = vector3.x;</div>
+<div class="line"><span class="lineno">   92</span>            v.y = vector3.y + p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
+<div class="line"><span class="lineno">   93</span>            v.z = vector3.z;</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
+<div class="line"><span class="lineno">   95</span>            {</div>
+<div class="line"><span class="lineno">   96</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[2];</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>            v += EClass.screen.tileMap.altitudeFix * target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 3 &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">Size</a> - 1)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> + 1, p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">  103</span>            Vector3 vector4 = p.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>();</div>
+<div class="line"><span class="lineno">  104</span>            v.x = vector4.x;</div>
+<div class="line"><span class="lineno">  105</span>            v.y = vector4.y + p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
+<div class="line"><span class="lineno">  106</span>            v.z = vector4.z;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">shared2</a>.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                v += <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">wallHangFix</a>[3];</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            v += EClass.screen.tileMap.altitudeFix * target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            v.y += p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.cs:114</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a12974e3396f6ba464bf53ddd2d83a3c1"><div class="ttname"><a href="classBaseTileMap.html#a12974e3396f6ba464bf53ddd2d83a3c1">BaseTileMap.wallHangFix</a></div><div class="ttdeci">Vector3[] wallHangFix</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00116">BaseTileMap.cs:116</a></div></div>
+<div class="ttc" id="aclassCard_html_a9cdd346f116c9c5d277ce3dbe2faffc2"><div class="ttname"><a href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">Card.altitude</a></div><div class="ttdeci">int altitude</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00207">Card.cs:208</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
+<div class="ttc" id="aclassEClass_html_a9ef545539642e6b9a5e9fcb4092abce9"><div class="ttname"><a href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">EClass.screen</a></div><div class="ttdeci">static BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00032">EClass.cs:32</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a1cd154f3a0f419a31a4759717d26748b"><div class="ttname"><a href="classMapBounds.html#a1cd154f3a0f419a31a4759717d26748b">MapBounds.Size</a></div><div class="ttdeci">int Size</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00020">MapBounds.cs:20</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
+<div class="ttc" id="aclassPoint_html_a165696883baa9d38143b4e5dce302b1d"><div class="ttname"><a href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">Point.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00063">Point.cs:63</a></div></div>
+<div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00524">Point.cs:524</a></div></div>
+<div class="ttc" id="aclassPoint_html_a2db9fb5ae54d834b2f148bb803072a3e"><div class="ttname"><a href="classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e">Point.shared2</a></div><div class="ttdeci">static Point shared2</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00022">Point.cs:22</a></div></div>
+<div class="ttc" id="aclassPoint_html_a42c8f268b9be2807c858060618025031"><div class="ttname"><a href="classPoint.html#a42c8f268b9be2807c858060618025031">Point.Set</a></div><div class="ttdeci">Point Set(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00479">Point.cs:479</a></div></div>
+<div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00036">Point.cs:36</a></div></div>
+<div class="ttc" id="aclassPoint_html_a6b2acc02dc9b1c00963431c6c13f0903"><div class="ttname"><a href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">Point.HasWallOrFence</a></div><div class="ttdeci">bool HasWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00155">Point.cs:155</a></div></div>
+<div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00039">Point.cs:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00048">EClass._map</a>, <a class="el" href="Point_8cs_source.html#l00282">Point.HasWallOrFence</a>, <a class="el" href="Point_8cs_source.html#l00629">Point.Position()</a>, <a class="el" href="EClass_8cs_source.html#l00104">EClass.screen</a>, <a class="el" href="Point_8cs_source.html#l00577">Point.Set()</a>, <a class="el" href="Point_8cs_source.html#l01498">Point.shared2</a>, <a class="el" href="MapBounds_8cs_source.html#l00328">MapBounds.Size</a>, <a class="el" href="Point_8cs_source.html#l00075">Point.sourceBlock</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00857">BaseGameScreen.tileMap</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03471">BaseTileMap.wallHangFix</a>, <a class="el" href="Point_8cs_source.html#l01512">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l01515">Point.z</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Point_8cs_source.html#l00155">Point.HasWallOrFence</a>, <a class="el" href="Point_8cs_source.html#l00524">Point.Position()</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.screen</a>, <a class="el" href="Point_8cs_source.html#l00479">Point.Set()</a>, <a class="el" href="Point_8cs_source.html#l00022">Point.shared2</a>, <a class="el" href="MapBounds_8cs_source.html#l00020">MapBounds.Size</a>, <a class="el" href="Point_8cs_source.html#l00063">Point.sourceBlock</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00116">BaseTileMap.wallHangFix</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
 
 </div>
 </div>
@@ -743,18 +741,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d">TileType</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00155">155</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (this.<a class="code hl_function" href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">GetDesiredDir</a>(pos, -1) == -1)</div>
-<div class="line"><span class="lineno">  158</span>        {</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  160</span>        }</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> base.HitTest(pos);</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00003">HitResult.cs:4</a></div></div>
-<div class="ttc" id="aclassTileTypeWallHang_html_aa464f4de355f4ca3a564dabd28f355e0"><div class="ttname"><a href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">TileTypeWallHang.GetDesiredDir</a></div><div class="ttdeci">override int GetDesiredDir(Point p, int d)</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00054">TileTypeWallHang.cs:54</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00119">119</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">GetDesiredDir</a>(pos, -1) == -1)</div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> base.HitTest(pos);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00001">HitResult.cs:2</a></div></div>
+<div class="ttc" id="aclassTileTypeWallHang_html_aa464f4de355f4ca3a564dabd28f355e0"><div class="ttname"><a href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">TileTypeWallHang.GetDesiredDir</a></div><div class="ttdeci">override int GetDesiredDir(Point p, int d)</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00019">TileTypeWallHang.cs:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TileTypeWallHang_8cs_source.html#l00054">GetDesiredDir()</a>.</p>
+<p class="reference">References <a class="el" href="TileTypeWallHang_8cs_source.html#l00019">GetDesiredDir()</a>.</p>
 
 </div>
 </div>
@@ -779,9 +777,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00164">164</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00005">5</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileTypeWallHang_8cs_source.html#l00054">GetDesiredDir()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileTypeWallHang_8cs_source.html#l00019">GetDesiredDir()</a>.</p>
 
 </div>
 </div>
@@ -806,14 +804,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00014">14</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00009">9</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+
 </div>
 </div>
 <a id="a63ce922569de68338d08c1bf1140f9fb" name="a63ce922569de68338d08c1bf1140f9fb"></a>
@@ -836,14 +828,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00022">22</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00011">11</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+
 </div>
 </div>
 <a id="a95d8c7d63d74fa960b61b63c0cdfb000" name="a95d8c7d63d74fa960b61b63c0cdfb000"></a>
@@ -866,14 +852,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00006">6</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;place_WallMount&quot;</span>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00007">7</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+
 </div>
 </div>
 <a id="a30c4f75d260f9fc63c5b18261d9f3c7d" name="a30c4f75d260f9fc63c5b18261d9f3c7d"></a>
@@ -896,15 +876,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00046">46</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TileTypeWallHang_8cs_source.html#l00054">GetDesiredDir()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00017">17</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TileTypeWallHang_8cs_source.html#l00019">GetDesiredDir()</a>.</p>
 
 </div>
 </div>
@@ -928,14 +902,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00038">38</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00015">15</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+
 </div>
 </div>
 <a id="afea3c1c6ed53b93d8f5688e8ee680aa1" name="afea3c1c6ed53b93d8f5688e8ee680aa1"></a>
@@ -958,14 +926,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00030">30</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TileTypeWallHang_8cs_source.html#l00013">13</a> of file <a class="el" href="TileTypeWallHang_8cs_source.html">TileTypeWallHang.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

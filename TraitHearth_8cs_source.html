@@ -92,37 +92,23 @@ $(document).ready(function(){initNavTree('TraitHearth_8cs_source.html',''); init
   <div class="headertitle"><div class="title">TraitHearth.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitHearth_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitHearth.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitHearth.html">TraitHearth</a> : <a class="code hl_class" href="classTraitCooker.html">TraitCooker</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitHearth.html#ae390e9218f4228a90c2febeff22da592">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a>.Fire;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTraitHearth.html#a98ef3c00e4414553af53e28571547a5c">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitHearth.html#a98ef3c00e4414553af53e28571547a5c">IsRestSpot</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classTraitHearth.html#a270a1d7d3d1a0256071b12fa2df2e335">   21</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitHearth.html#a270a1d7d3d1a0256071b12fa2df2e335">Contains</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> r.idFactory == <span class="stringliteral">&quot;bonfire&quot;</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="ttc" id="aToggleType_8cs_html_aecee16d60b8bc0be86b35c9932813db8"><div class="ttname"><a href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a></div><div class="ttdeci">ToggleType</div><div class="ttdef"><b>Definition:</b> <a href="ToggleType_8cs_source.html#l00003">ToggleType.cs:4</a></div></div>
-<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00004">RecipeSource.cs:5</a></div></div>
-<div class="ttc" id="aclassTraitCooker_html"><div class="ttname"><a href="classTraitCooker.html">TraitCooker</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCooker_8cs_source.html#l00003">TraitCooker.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitHearth_html"><div class="ttname"><a href="classTraitHearth.html">TraitHearth</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00003">TraitHearth.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitHearth_html_a270a1d7d3d1a0256071b12fa2df2e335"><div class="ttname"><a href="classTraitHearth.html#a270a1d7d3d1a0256071b12fa2df2e335">TraitHearth.Contains</a></div><div class="ttdeci">override bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00021">TraitHearth.cs:21</a></div></div>
-<div class="ttc" id="aclassTraitHearth_html_a98ef3c00e4414553af53e28571547a5c"><div class="ttname"><a href="classTraitHearth.html#a98ef3c00e4414553af53e28571547a5c">TraitHearth.IsRestSpot</a></div><div class="ttdeci">override bool IsRestSpot</div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00013">TraitHearth.cs:14</a></div></div>
+<a href="TraitHearth_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitHearth.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitHearth.html">TraitHearth</a> : <a class="code hl_class" href="classTraitCooker.html">TraitCooker</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitHearth.html#ae390e9218f4228a90c2febeff22da592">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a> =&gt; <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a>.Fire;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitHearth.html#a98ef3c00e4414553af53e28571547a5c">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitHearth.html#a98ef3c00e4414553af53e28571547a5c">IsRestSpot</a> =&gt; <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTraitHearth.html#a270a1d7d3d1a0256071b12fa2df2e335">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitHearth.html#a270a1d7d3d1a0256071b12fa2df2e335">Contains</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">return</span> r.idFactory == <span class="stringliteral">&quot;bonfire&quot;</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aToggleType_8cs_html_aecee16d60b8bc0be86b35c9932813db8"><div class="ttname"><a href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a></div><div class="ttdeci">ToggleType</div><div class="ttdef"><b>Definition:</b> <a href="ToggleType_8cs_source.html#l00001">ToggleType.cs:2</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00003">RecipeSource.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitCooker_html"><div class="ttname"><a href="classTraitCooker.html">TraitCooker</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCooker_8cs_source.html#l00001">TraitCooker.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitHearth_html"><div class="ttname"><a href="classTraitHearth.html">TraitHearth</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00001">TraitHearth.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitHearth_html_a270a1d7d3d1a0256071b12fa2df2e335"><div class="ttname"><a href="classTraitHearth.html#a270a1d7d3d1a0256071b12fa2df2e335">TraitHearth.Contains</a></div><div class="ttdeci">override bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00007">TraitHearth.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitHearth_html_a98ef3c00e4414553af53e28571547a5c"><div class="ttname"><a href="classTraitHearth.html#a98ef3c00e4414553af53e28571547a5c">TraitHearth.IsRestSpot</a></div><div class="ttdeci">override bool IsRestSpot</div><div class="ttdef"><b>Definition:</b> <a href="TraitHearth_8cs_source.html#l00005">TraitHearth.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

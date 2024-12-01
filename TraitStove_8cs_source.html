@@ -92,19 +92,21 @@ $(document).ready(function(){initNavTree('TraitStove_8cs_source.html',''); initR
   <div class="headertitle"><div class="title">TraitStove.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitStove_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitStove.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitStove.html">TraitStove</a> : <a class="code hl_class" href="classTraitOven.html">TraitOven</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a">Contains</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">return</span> base.Contains(r) || r.idFactory == <span class="stringliteral">&quot;camppot&quot;</span>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    }</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
-<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00004">RecipeSource.cs:5</a></div></div>
-<div class="ttc" id="aclassTraitOven_html"><div class="ttname"><a href="classTraitOven.html">TraitOven</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitOven_8cs_source.html#l00003">TraitOven.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitStove_html"><div class="ttname"><a href="classTraitStove.html">TraitStove</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitStove_8cs_source.html#l00003">TraitStove.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitStove_html_ac88747a2273b8fda4dcd70701f9d671a"><div class="ttname"><a href="classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a">TraitStove.Contains</a></div><div class="ttdeci">override bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitStove_8cs_source.html#l00005">TraitStove.cs:5</a></div></div>
+<a href="TraitStove_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitStove.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitStove.html">TraitStove</a> : <a class="code hl_class" href="classTraitOven.html">TraitOven</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a">Contains</a>(<a class="code hl_class" href="classRecipeSource.html">RecipeSource</a> r)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordflow">if</span> (!base.Contains(r))</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>            <span class="keywordflow">return</span> r.idFactory == <span class="stringliteral">&quot;camppot&quot;</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aclassRecipeSource_html"><div class="ttname"><a href="classRecipeSource.html">RecipeSource</a></div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00003">RecipeSource.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitOven_html"><div class="ttname"><a href="classTraitOven.html">TraitOven</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitOven_8cs_source.html#l00001">TraitOven.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitStove_html"><div class="ttname"><a href="classTraitStove.html">TraitStove</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitStove_8cs_source.html#l00001">TraitStove.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitStove_html_ac88747a2273b8fda4dcd70701f9d671a"><div class="ttname"><a href="classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a">TraitStove.Contains</a></div><div class="ttdeci">override bool Contains(RecipeSource r)</div><div class="ttdef"><b>Definition:</b> <a href="TraitStove_8cs_source.html#l00003">TraitStove.cs:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

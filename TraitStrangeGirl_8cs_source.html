@@ -92,37 +92,29 @@ $(document).ready(function(){initNavTree('TraitStrangeGirl_8cs_source.html','');
   <div class="headertitle"><div class="title">TraitStrangeGirl.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitStrangeGirl_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitStrangeGirl.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitStrangeGirl.html">TraitStrangeGirl</a> : <a class="code hl_class" href="classTraitUniqueChara.html">TraitUniqueChara</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classZone__LittleGarden.html">Zone_LittleGarden</a>))</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a>.None;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a>.StrangeGirl;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8">   17</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Influence;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
-<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00003">CurrencyType.cs:4</a></div></div>
-<div class="ttc" id="aShopType_8cs_html_ab5af427a86c75bad7882f32f0b262bbb"><div class="ttname"><a href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a></div><div class="ttdeci">ShopType</div><div class="ttdef"><b>Definition:</b> <a href="ShopType_8cs_source.html#l00003">ShopType.cs:4</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00055">EClass.cs:56</a></div></div>
-<div class="ttc" id="aclassTraitStrangeGirl_html"><div class="ttname"><a href="classTraitStrangeGirl.html">TraitStrangeGirl</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitStrangeGirl_8cs_source.html#l00003">TraitStrangeGirl.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitUniqueChara_html"><div class="ttname"><a href="classTraitUniqueChara.html">TraitUniqueChara</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitUniqueChara_8cs_source.html#l00003">TraitUniqueChara.cs:4</a></div></div>
-<div class="ttc" id="aclassZone__LittleGarden_html"><div class="ttname"><a href="classZone__LittleGarden.html">Zone_LittleGarden</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__LittleGarden_8cs_source.html#l00003">Zone_LittleGarden.cs:4</a></div></div>
+<a href="TraitStrangeGirl_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitStrangeGirl.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitStrangeGirl.html">TraitStrangeGirl</a> : <a class="code hl_class" href="classTraitUniqueChara.html">TraitUniqueChara</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>            <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classZone__LittleGarden.html">Zone_LittleGarden</a>))</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a>.None;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a>.StrangeGirl;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8">   15</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a> <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a> =&gt; <a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Influence;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00001">CurrencyType.cs:2</a></div></div>
+<div class="ttc" id="aShopType_8cs_html_ab5af427a86c75bad7882f32f0b262bbb"><div class="ttname"><a href="ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb">ShopType</a></div><div class="ttdeci">ShopType</div><div class="ttdef"><b>Definition:</b> <a href="ShopType_8cs_source.html#l00001">ShopType.cs:2</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassTraitStrangeGirl_html"><div class="ttname"><a href="classTraitStrangeGirl.html">TraitStrangeGirl</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitStrangeGirl_8cs_source.html#l00001">TraitStrangeGirl.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitUniqueChara_html"><div class="ttname"><a href="classTraitUniqueChara.html">TraitUniqueChara</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitUniqueChara_8cs_source.html#l00001">TraitUniqueChara.cs:2</a></div></div>
+<div class="ttc" id="aclassZone__LittleGarden_html"><div class="ttname"><a href="classZone__LittleGarden.html">Zone_LittleGarden</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__LittleGarden_8cs_source.html#l00001">Zone_LittleGarden.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

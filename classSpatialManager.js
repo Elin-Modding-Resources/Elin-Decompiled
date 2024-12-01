@@ -8,7 +8,7 @@ var classSpatialManager =
     [ "ListReturnLocations", "classSpatialManager.html#a85f0f74f9ac6c9ed7f18c75f673f732d", null ],
     [ "Remove", "classSpatialManager.html#a425a6b8b8e4a330f5ea955d5f605d881", null ],
     [ "listDestryoed", "classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0", null ],
-    [ "map", "classSpatialManager.html#a54dc5f41115039fd65cd42c74e43025d", null ],
+    [ "map", "classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6", null ],
     [ "ranks", "classSpatialManager.html#aaa6986de4b3221579f8db1c145f4c0f7", null ],
     [ "uidNext", "classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72", null ],
     [ "Somewhere", "classSpatialManager.html#af24c0aa5ca66a0b1d17f8607ce848b9a", null ],

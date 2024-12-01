@@ -28,7 +28,7 @@ var classCardActor =
     [ "srAnime", "classCardActor.html#a30d78237c9a8f75fe953f03c4ea4b4e2", null ],
     [ "tempV", "classCardActor.html#a87ffecdbeaa1f18a11f221ef4f891f09", null ],
     [ "tempV2", "classCardActor.html#a02f722a87ded43c97c1d6f526a3970a2", null ],
-    [ "type", "classCardActor.html#a5db6a7b7e32388418538ab8e74e5ac13", null ],
+    [ "type", "classCardActor.html#a6ec05445061598e0130b0614ff66b55b", null ],
     [ "currentDir", "classCardActor.html#a4051d5751cbcccd1b303d4f365b62032", null ],
     [ "isPCC", "classCardActor.html#a1458612f3f3824faafd3878a5bf4d15a", null ]
 ];

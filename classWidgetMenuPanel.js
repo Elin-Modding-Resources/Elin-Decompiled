@@ -23,5 +23,5 @@ var classWidgetMenuPanel =
     [ "maxWidth", "classWidgetMenuPanel.html#a2ec7effb8e08c3ee6e0e087c37a2b39b", null ],
     [ "mold", "classWidgetMenuPanel.html#a91dc46d684b3a6a1651270bcc75ea5af", null ],
     [ "allMenu", "classWidgetMenuPanel.html#ac5993bd3fa875dd669b46f5a3accb9b8", null ],
-    [ "extra", "classWidgetMenuPanel.html#a1606c374e85a74138c3af7a3e31f5b01", null ]
+    [ "extra", "classWidgetMenuPanel.html#a36811640f7f62ab8b677888650158446", null ]
 ];

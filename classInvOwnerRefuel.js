@@ -6,5 +6,5 @@ var classInvOwnerRefuel =
     [ "AllowStockIngredients", "classInvOwnerRefuel.html#a197f8493f505180c61d51c58e0753f80", null ],
     [ "DenyImportant", "classInvOwnerRefuel.html#a7d2cbed2bb8066ebb499b4b2ac34f8b9", null ],
     [ "langTransfer", "classInvOwnerRefuel.html#a7ff1df68e70e142b32ee1b2fe38fbe87", null ],
-    [ "processType", "classInvOwnerRefuel.html#a7c91f3d64a898629a1d0728b87339ec9", null ]
+    [ "processType", "classInvOwnerRefuel.html#a9e696ee445f417a580d3fff2d861b33e", null ]
 ];

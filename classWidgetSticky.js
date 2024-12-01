@@ -15,5 +15,5 @@ var classWidgetSticky =
     [ "layout", "classWidgetSticky.html#a43364cd20ab2a27f06ba3a63186bff30", null ],
     [ "list", "classWidgetSticky.html#a167f01aca89d3c2b4a1700e7c4a33248", null ],
     [ "mold", "classWidgetSticky.html#a0f111bb6314c8e77b744ed6f21e9740d", null ],
-    [ "extra", "classWidgetSticky.html#a7f7afdb5af46f18b67e9d5da4a1bc64a", null ]
+    [ "extra", "classWidgetSticky.html#a0f2ad427b0008ad4d6c68e871e3d0aca", null ]
 ];

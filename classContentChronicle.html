@@ -118,7 +118,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ContentChronicle_8cs_source.html#l00003">3</a> of file <a class="el" href="ContentChronicle_8cs_source.html">ContentChronicle.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentChronicle_8cs_source.html#l00001">1</a> of file <a class="el" href="ContentChronicle_8cs_source.html">ContentChronicle.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af35eec2b514361d7050bae67d6e1a686" name="af35eec2b514361d7050bae67d6e1a686"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af35eec2b514361d7050bae67d6e1a686">&#9670;&#160;</a></span>OnSwitchContent()</h2>
@@ -146,35 +146,35 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ContentChronicle_8cs_source.html#l00005">5</a> of file <a class="el" href="ContentChronicle_8cs_source.html">ContentChronicle.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        BaseList baseList = this.<a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>;</div>
-<div class="line"><span class="lineno">    8</span>        UIList.Callback&lt;<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a>, UIItem&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a>, UIItem&gt;();</div>
-<div class="line"><span class="lineno">    9</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a> a, UIItem b)</div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            b.text1.text = a.<a class="code hl_variable" href="classMsgLog_1_1Data.html#a690c2cd25934f2f71003c57d61821414">text</a>;</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> (!a.col.IsEmpty())</div>
-<div class="line"><span class="lineno">   13</span>            {</div>
-<div class="line"><span class="lineno">   14</span>                b.text1.SetColor(a.col.ToEnum(<span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">   15</span>            }</div>
-<div class="line"><span class="lineno">   16</span>        };</div>
-<div class="line"><span class="lineno">   17</span>        baseList.callbacks = callback;</div>
-<div class="line"><span class="lineno">   18</span>        this.<a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>.Clear();</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a> o in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a48bf477fdcd145508a9ba7dbdf09ee43">log</a>.<a class="code hl_function" href="classMsgLog.html#ae940727535aaf52d23f39fd2f798511a">GetList</a>(<span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">    7</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a>, UIItem&gt;</div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            onInstantiate = delegate(<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a> a, UIItem b)</div>
+<div class="line"><span class="lineno">   10</span>            {</div>
+<div class="line"><span class="lineno">   11</span>                b.text1.text = a.<a class="code hl_variable" href="classMsgLog_1_1Data.html#a690c2cd25934f2f71003c57d61821414">text</a>;</div>
+<div class="line"><span class="lineno">   12</span>                <span class="keywordflow">if</span> (!a.col.IsEmpty())</div>
+<div class="line"><span class="lineno">   13</span>                {</div>
+<div class="line"><span class="lineno">   14</span>                    b.text1.SetColor(a.col.ToEnum&lt;FontColor&gt;());</div>
+<div class="line"><span class="lineno">   15</span>                }</div>
+<div class="line"><span class="lineno">   16</span>            }</div>
+<div class="line"><span class="lineno">   17</span>        };</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>.Clear();</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classMsgLog.html">MsgLog</a>.<a class="code hl_class" href="classMsgLog_1_1Data.html">Data</a> item in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a48bf477fdcd145508a9ba7dbdf09ee43">log</a>.<a class="code hl_function" href="classMsgLog.html#a15027325104da7f190ec05e5729d587d">GetList</a>())</div>
 <div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            this.<a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>.Add(o);</div>
+<div class="line"><span class="lineno">   21</span>            <a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>.Add(item);</div>
 <div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        this.<a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>.Refresh(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   24</span>        this.RebuildLayout(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">list</a>.Refresh();</div>
+<div class="line"><span class="lineno">   24</span>        this.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclassContentChronicle_html_a88c00e919f0778489da3a0cec871bf4a"><div class="ttname"><a href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">ContentChronicle.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ContentChronicle_8cs_source.html#l00027">ContentChronicle.cs:27</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:8</a></div></div>
-<div class="ttc" id="aclassGame_html_a48bf477fdcd145508a9ba7dbdf09ee43"><div class="ttname"><a href="classGame.html#a48bf477fdcd145508a9ba7dbdf09ee43">Game.log</a></div><div class="ttdeci">MsgLog log</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00820">Game.cs:820</a></div></div>
-<div class="ttc" id="aclassMsgLog_1_1Data_html"><div class="ttname"><a href="classMsgLog_1_1Data.html">MsgLog.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00070">MsgLog.cs:71</a></div></div>
-<div class="ttc" id="aclassMsgLog_1_1Data_html_a690c2cd25934f2f71003c57d61821414"><div class="ttname"><a href="classMsgLog_1_1Data.html#a690c2cd25934f2f71003c57d61821414">MsgLog.Data.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00073">MsgLog.cs:73</a></div></div>
-<div class="ttc" id="aclassMsgLog_html"><div class="ttname"><a href="classMsgLog.html">MsgLog</a></div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00005">MsgLog.cs:6</a></div></div>
-<div class="ttc" id="aclassMsgLog_html_ae940727535aaf52d23f39fd2f798511a"><div class="ttname"><a href="classMsgLog.html#ae940727535aaf52d23f39fd2f798511a">MsgLog.GetList</a></div><div class="ttdeci">List&lt; MsgLog.Data &gt; GetList(bool reverse=false)</div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00046">MsgLog.cs:46</a></div></div>
+<div class="ttc" id="aclassContentChronicle_html_a88c00e919f0778489da3a0cec871bf4a"><div class="ttname"><a href="classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a">ContentChronicle.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="ContentChronicle_8cs_source.html#l00003">ContentChronicle.cs:3</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a48bf477fdcd145508a9ba7dbdf09ee43"><div class="ttname"><a href="classGame.html#a48bf477fdcd145508a9ba7dbdf09ee43">Game.log</a></div><div class="ttdeci">MsgLog log</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00182">Game.cs:182</a></div></div>
+<div class="ttc" id="aclassMsgLog_1_1Data_html"><div class="ttname"><a href="classMsgLog_1_1Data.html">MsgLog.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00006">MsgLog.cs:7</a></div></div>
+<div class="ttc" id="aclassMsgLog_1_1Data_html_a690c2cd25934f2f71003c57d61821414"><div class="ttname"><a href="classMsgLog_1_1Data.html#a690c2cd25934f2f71003c57d61821414">MsgLog.Data.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00009">MsgLog.cs:9</a></div></div>
+<div class="ttc" id="aclassMsgLog_html"><div class="ttname"><a href="classMsgLog.html">MsgLog</a></div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00004">MsgLog.cs:5</a></div></div>
+<div class="ttc" id="aclassMsgLog_html_a15027325104da7f190ec05e5729d587d"><div class="ttname"><a href="classMsgLog.html#a15027325104da7f190ec05e5729d587d">MsgLog.GetList</a></div><div class="ttdeci">List&lt; Data &gt; GetList(bool reverse=false)</div><div class="ttdef"><b>Definition:</b> <a href="MsgLog_8cs_source.html#l00066">MsgLog.cs:66</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="MsgLog_8cs_source.html#l00046">MsgLog.GetList()</a>, <a class="el" href="ContentChronicle_8cs_source.html#l00027">list</a>, <a class="el" href="Game_8cs_source.html#l00820">Game.log</a>, and <a class="el" href="MsgLog_8cs_source.html#l00073">MsgLog.Data.text</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="MsgLog_8cs_source.html#l00066">MsgLog.GetList()</a>, <a class="el" href="ContentChronicle_8cs_source.html#l00003">list</a>, <a class="el" href="Game_8cs_source.html#l00182">Game.log</a>, and <a class="el" href="MsgLog_8cs_source.html#l00009">MsgLog.Data.text</a>.</p>
 
 </div>
 </div>
@@ -191,7 +191,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentChronicle_8cs_source.html#l00027">27</a> of file <a class="el" href="ContentChronicle_8cs_source.html">ContentChronicle.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentChronicle_8cs_source.html#l00003">3</a> of file <a class="el" href="ContentChronicle_8cs_source.html">ContentChronicle.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ContentChronicle_8cs_source.html#l00005">OnSwitchContent()</a>.</p>
 

@@ -15,7 +15,7 @@ var classTextureData =
     [ "RefreshAll", "classTextureData.html#a619d81124697799d9e231c5939e435e9", null ],
     [ "RemoveDeletedReplace", "classTextureData.html#af3def33233af7e6ff313d4291d53cde3", null ],
     [ "TryRefresh", "classTextureData.html#a6ed69e629f50b4e6c4410ad3ead3a652", null ],
-    [ "date", "classTextureData.html#abbc6d9d10764a86d4150c45c057bdfd3", null ],
+    [ "date", "classTextureData.html#ae511b937674c62341c30ae9bba7f9b45", null ],
     [ "dictReplace", "classTextureData.html#a382068a67bab438e50859afddf1b9ef2", null ],
     [ "forceRefresh", "classTextureData.html#a367330cc973a0d930ed564f6450a2bb1", null ],
     [ "id", "classTextureData.html#ad7c5c1b70872141d95ead516d0549c69", null ],
@@ -26,5 +26,5 @@ var classTextureData =
     [ "texName", "classTextureData.html#a908cb8010839ae1b8bcaef910ac7f575", null ],
     [ "tileH", "classTextureData.html#abcd6f451246000a3d8fca19aab968ea8", null ],
     [ "tileW", "classTextureData.html#a67c0c5f69a5112b90bed9ecfaace7267", null ],
-    [ "type", "classTextureData.html#aaf239929a1564a0d59a80cddae2a3a0e", null ]
+    [ "type", "classTextureData.html#aeb4aa3810bbbd55b2a7bee1db411ae03", null ]
 ];

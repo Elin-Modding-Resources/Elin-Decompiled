@@ -92,67 +92,42 @@ $(document).ready(function(){initNavTree('TileTypeDoor_8cs_source.html',''); ini
   <div class="headertitle"><div class="title">TileTypeDoor.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TileTypeDoor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTileTypeDoor.html">TileTypeDoor</a> : <a class="code hl_class" href="classTileTypeObj.html">TileTypeObj</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7">LangPlaceType</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;place_Door&quot;</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
+<a href="TileTypeDoor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTileTypeDoor.html">TileTypeDoor</a> : <a class="code hl_class" href="classTileTypeObj.html">TileTypeObj</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7">LangPlaceType</a> =&gt; <span class="stringliteral">&quot;place_Door&quot;</span>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0">FreeStyle</a> =&gt; <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe">CanStack</a> =&gt; <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc">CanBuiltOnBlock</a> =&gt; <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5">   11</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5">IsDoor</a> =&gt; <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0">FreeStyle</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b">CanBeHeld</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">get</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe">   21</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe">CanStack</a></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc">   29</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc">CanBuiltOnBlock</a></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5">   37</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5">IsDoor</a></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b">   45</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b">CanBeHeld</a></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> EClass._zone.IsPCFaction || EClass._zone is <a class="code hl_class" href="classZone__Tent.html">Zone_Tent</a>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
-<div class="ttc" id="aclassTileTypeDoor_html"><div class="ttname"><a href="classTileTypeDoor.html">TileTypeDoor</a></div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00003">TileTypeDoor.cs:4</a></div></div>
-<div class="ttc" id="aclassTileTypeDoor_html_a002d5724178dab4807dd0aa7d5628fd7"><div class="ttname"><a href="classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7">TileTypeDoor.LangPlaceType</a></div><div class="ttdeci">override string LangPlaceType</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00005">TileTypeDoor.cs:6</a></div></div>
-<div class="ttc" id="aclassTileTypeDoor_html_a55d2184e167167eefc8b280162a425fe"><div class="ttname"><a href="classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe">TileTypeDoor.CanStack</a></div><div class="ttdeci">override bool CanStack</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00021">TileTypeDoor.cs:22</a></div></div>
-<div class="ttc" id="aclassTileTypeDoor_html_a77062ed4b4c4ae7035834a94690c29b0"><div class="ttname"><a href="classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0">TileTypeDoor.FreeStyle</a></div><div class="ttdeci">override bool FreeStyle</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00013">TileTypeDoor.cs:14</a></div></div>
-<div class="ttc" id="aclassTileTypeDoor_html_a8de81492b03e44fe5715b34a5a28bc1b"><div class="ttname"><a href="classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b">TileTypeDoor.CanBeHeld</a></div><div class="ttdeci">override bool CanBeHeld</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00045">TileTypeDoor.cs:46</a></div></div>
-<div class="ttc" id="aclassTileTypeDoor_html_ac4b93f5339d0bb2f63065dcfa3c8dfdc"><div class="ttname"><a href="classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc">TileTypeDoor.CanBuiltOnBlock</a></div><div class="ttdeci">override bool CanBuiltOnBlock</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00029">TileTypeDoor.cs:30</a></div></div>
-<div class="ttc" id="aclassTileTypeDoor_html_ac670c8ddfcf8db76f3575422ea4a70d5"><div class="ttname"><a href="classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5">TileTypeDoor.IsDoor</a></div><div class="ttdeci">override bool IsDoor</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00037">TileTypeDoor.cs:38</a></div></div>
-<div class="ttc" id="aclassTileTypeObj_html"><div class="ttname"><a href="classTileTypeObj.html">TileTypeObj</a></div><div class="ttdef"><b>Definition:</b> <a href="TileTypeObj_8cs_source.html#l00003">TileTypeObj.cs:4</a></div></div>
-<div class="ttc" id="aclassZone__Tent_html"><div class="ttname"><a href="classZone__Tent.html">Zone_Tent</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Tent_8cs_source.html#l00003">Zone_Tent.cs:4</a></div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keywordflow">return</span> EClass._zone is <a class="code hl_class" href="classZone__Tent.html">Zone_Tent</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html"><div class="ttname"><a href="classTileTypeDoor.html">TileTypeDoor</a></div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00001">TileTypeDoor.cs:2</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html_a002d5724178dab4807dd0aa7d5628fd7"><div class="ttname"><a href="classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7">TileTypeDoor.LangPlaceType</a></div><div class="ttdeci">override string LangPlaceType</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00003">TileTypeDoor.cs:3</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html_a55d2184e167167eefc8b280162a425fe"><div class="ttname"><a href="classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe">TileTypeDoor.CanStack</a></div><div class="ttdeci">override bool CanStack</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00007">TileTypeDoor.cs:7</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html_a77062ed4b4c4ae7035834a94690c29b0"><div class="ttname"><a href="classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0">TileTypeDoor.FreeStyle</a></div><div class="ttdeci">override bool FreeStyle</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00005">TileTypeDoor.cs:5</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html_a8de81492b03e44fe5715b34a5a28bc1b"><div class="ttname"><a href="classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b">TileTypeDoor.CanBeHeld</a></div><div class="ttdeci">override bool CanBeHeld</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00013">TileTypeDoor.cs:14</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html_ac4b93f5339d0bb2f63065dcfa3c8dfdc"><div class="ttname"><a href="classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc">TileTypeDoor.CanBuiltOnBlock</a></div><div class="ttdeci">override bool CanBuiltOnBlock</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00009">TileTypeDoor.cs:9</a></div></div>
+<div class="ttc" id="aclassTileTypeDoor_html_ac670c8ddfcf8db76f3575422ea4a70d5"><div class="ttname"><a href="classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5">TileTypeDoor.IsDoor</a></div><div class="ttdeci">override bool IsDoor</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeDoor_8cs_source.html#l00011">TileTypeDoor.cs:11</a></div></div>
+<div class="ttc" id="aclassTileTypeObj_html"><div class="ttname"><a href="classTileTypeObj.html">TileTypeObj</a></div><div class="ttdef"><b>Definition:</b> <a href="TileTypeObj_8cs_source.html#l00001">TileTypeObj.cs:2</a></div></div>
+<div class="ttc" id="aclassZone__Tent_html"><div class="ttname"><a href="classZone__Tent.html">Zone_Tent</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Tent_8cs_source.html#l00001">Zone_Tent.cs:2</a></div></div>
+<div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00437">Zone.cs:437</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

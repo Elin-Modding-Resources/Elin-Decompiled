@@ -8,5 +8,5 @@ var classInvOwnerRecycle =
     [ "DenyImportant", "classInvOwnerRecycle.html#a34fdc032333dcb60d47bc2be35420d5c", null ],
     [ "InvertSell", "classInvOwnerRecycle.html#a298226c05e65d7b026b366d0aa3acbf5", null ],
     [ "langTransfer", "classInvOwnerRecycle.html#aba37b20cc5a41aadd43ac8de08d64645", null ],
-    [ "processType", "classInvOwnerRecycle.html#ac29cc852993d0dd081346b164a4e3ebf", null ]
+    [ "processType", "classInvOwnerRecycle.html#ad31f04296deef2c6edc0af4160fd22a3", null ]
 ];

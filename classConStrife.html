@@ -432,7 +432,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00006">6</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00005">5</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af1003bbf54993bc57e028e3ba8e62586" name="af1003bbf54993bc57e028e3ba8e62586"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1003bbf54993bc57e028e3ba8e62586">&#9670;&#160;</a></span>AddKill()</h2>
@@ -457,24 +457,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00032">32</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        this.<a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a>++;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> &gt;= this.<a class="code hl_property" href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ExpToNext</a>)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            this.exp = 0;</div>
-<div class="line"><span class="lineno">   38</span>            this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>++;</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        this.<a class="code hl_function" href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">SetTurn</a>();</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
-<div class="ttc" id="aclassConStrife_html_a60912300dfc3352f3ff76405302d505d"><div class="ttname"><a href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">ConStrife.SetTurn</a></div><div class="ttdeci">void SetTurn()</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00048">ConStrife.cs:48</a></div></div>
-<div class="ttc" id="aclassConStrife_html_a71cd2425655059e841c7637990211202"><div class="ttname"><a href="classConStrife.html#a71cd2425655059e841c7637990211202">ConStrife.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00075">ConStrife.cs:75</a></div></div>
-<div class="ttc" id="aclassConStrife_html_ae805c1f0d6f0c9a395852acf1830d06f"><div class="ttname"><a href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">ConStrife.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00078">ConStrife.cs:78</a></div></div>
-<div class="ttc" id="aclassConStrife_html_af091639ae8ccbfb31b4090b57b9814e1"><div class="ttname"><a href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ConStrife.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00024">ConStrife.cs:25</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00022">22</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a>++;</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> &gt;= <a class="code hl_property" href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ExpToNext</a>)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> = 0;</div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>++;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">SetTurn</a>();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassConStrife_html_a60912300dfc3352f3ff76405302d505d"><div class="ttname"><a href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">ConStrife.SetTurn</a></div><div class="ttdeci">void SetTurn()</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00038">ConStrife.cs:38</a></div></div>
+<div class="ttc" id="aclassConStrife_html_a71cd2425655059e841c7637990211202"><div class="ttname"><a href="classConStrife.html#a71cd2425655059e841c7637990211202">ConStrife.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00008">ConStrife.cs:8</a></div></div>
+<div class="ttc" id="aclassConStrife_html_ae805c1f0d6f0c9a395852acf1830d06f"><div class="ttname"><a href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">ConStrife.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00011">ConStrife.cs:11</a></div></div>
+<div class="ttc" id="aclassConStrife_html_af091639ae8ccbfb31b4090b57b9814e1"><div class="ttname"><a href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ConStrife.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00020">ConStrife.cs:20</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00075">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00025">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00078">lv</a>, and <a class="el" href="ConStrife_8cs_source.html#l00048">SetTurn()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03903">Card.DamageHP()</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00020">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="ConStrife_8cs_source.html#l00038">SetTurn()</a>.</p>
 
 </div>
 </div>
@@ -501,15 +499,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00043">43</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(1, 1 + this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> * 2, 0, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="aclassDice_html"><div class="ttname"><a href="classDice.html">Dice</a></div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00005">Dice.cs:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00033">33</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(1, 1 + <a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> * 2);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassDice_html"><div class="ttname"><a href="classDice.html">Dice</a></div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00003">Dice.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00078">lv</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AttackProcess_8cs_source.html#l00341">AttackProcess.Perform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00061">OnWriteNote()</a>, and <a class="el" href="AttackProcess_8cs_source.html#l00393">AttackProcess.Perform()</a>.</p>
 
 </div>
 </div>
@@ -539,12 +537,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a03adf0ba13c3fb24ce688e9efd41eaab">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00069">69</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
-<div class="line"><span class="lineno">   71</span>        list.Add(<span class="stringliteral">&quot;hintStrife&quot;</span>.lang(this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>.exp.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <span class="keyword">this</span>.ExpToNext.ToString(), <span class="keyword">this</span>.GetDice().ToString(), <span class="keyword">null</span>, <span class="keyword">null</span>));</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00061">61</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        list.Add(<span class="stringliteral">&quot;hintStrife&quot;</span>.lang(<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ExpToNext</a>, <a class="code hl_function" href="classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8">GetDice</a>().<a class="code hl_function" href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">ToString</a>()));</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00163">BaseCondition.cs:163</a></div></div>
+<div class="ttc" id="aclassConStrife_html_a0bd3313d4b821926528d4d4e9a0447d8"><div class="ttname"><a href="classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8">ConStrife.GetDice</a></div><div class="ttdeci">Dice GetDice()</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00033">ConStrife.cs:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00078">lv</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00020">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00033">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00163">BaseCondition.ToString()</a>.</p>
 
 </div>
 </div>
@@ -571,14 +571,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00048">48</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
-<div class="line"><span class="lineno">   50</span>        this.turn = Mathf.Max(100 - this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> * 10, 10);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00038">38</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">turn</a> = Mathf.Max(100 - <a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> * 10, 10);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassConStrife_html_a2458bab4d5ecdd62ef77a6a9be6f59e4"><div class="ttname"><a href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">ConStrife.turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00014">ConStrife.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00078">lv</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="ConStrife_8cs_source.html#l00014">turn</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00032">AddKill()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00053">Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00022">AddKill()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00043">Tick()</a>.</p>
 
 </div>
 </div>
@@ -607,24 +608,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCondition.html#ac050c6fff565bb312f93c00371a35e83">Condition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00053">53</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
-<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">turn</a>--;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">turn</a> &lt; 0)</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>--;</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> &gt;= 1)</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                this.<a class="code hl_function" href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">SetTurn</a>();</div>
-<div class="line"><span class="lineno">   62</span>                this.exp = this.ExpToNext / 2;</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>            base.Kill(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="ttc" id="aclassConStrife_html_a2458bab4d5ecdd62ef77a6a9be6f59e4"><div class="ttname"><a href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">ConStrife.turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00081">ConStrife.cs:81</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00043">43</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">turn</a>--;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classConStrife.html#a2458bab4d5ecdd62ef77a6a9be6f59e4">turn</a> &lt; 0)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>--;</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> &gt;= 1)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <a class="code hl_function" href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">SetTurn</a>();</div>
+<div class="line"><span class="lineno">   52</span>                <a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> = <a class="code hl_property" href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ExpToNext</a> / 2;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                <a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassCondition_html_a9441709e24ca102eed7a41b3ccaa4cee"><div class="ttname"><a href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Condition.Kill</a></div><div class="ttdeci">void Kill(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00091">Condition.cs:91</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00078">lv</a>, <a class="el" href="ConStrife_8cs_source.html#l00048">SetTurn()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00081">turn</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00020">ExpToNext</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, <a class="el" href="ConStrife_8cs_source.html#l00038">SetTurn()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00014">turn</a>.</p>
 
 </div>
 </div>
@@ -641,9 +644,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00075">75</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00008">8</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00032">AddKill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00022">AddKill()</a>, <a class="el" href="ConStrife_8cs_source.html#l00061">OnWriteNote()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00043">Tick()</a>.</p>
 
 </div>
 </div>
@@ -659,9 +662,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00078">78</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00011">11</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00032">AddKill()</a>, <a class="el" href="ConStrife_8cs_source.html#l00043">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00069">OnWriteNote()</a>, <a class="el" href="ConStrife_8cs_source.html#l00048">SetTurn()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00053">Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00022">AddKill()</a>, <a class="el" href="ConStrife_8cs_source.html#l00033">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00061">OnWriteNote()</a>, <a class="el" href="ConStrife_8cs_source.html#l00038">SetTurn()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00043">Tick()</a>.</p>
 
 </div>
 </div>
@@ -677,9 +680,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00081">81</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00014">14</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00053">Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00038">SetTurn()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00043">Tick()</a>.</p>
 
 </div>
 </div>
@@ -704,15 +707,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00024">24</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> (this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a> + 1) * (this.lv + 1);</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00032">AddKill()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00020">20</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ConStrife_8cs_source.html#l00022">AddKill()</a>, <a class="el" href="ConStrife_8cs_source.html#l00061">OnWriteNote()</a>, and <a class="el" href="ConStrife_8cs_source.html#l00043">Tick()</a>.</p>
 
 </div>
 </div>
@@ -736,14 +733,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00008">8</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Lv.&quot;</span> + this.<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>.ToString();</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00016">16</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+
 </div>
 </div>
 <a id="a989c9b8447e9a6d540413f5d3505ad72" name="a989c9b8447e9a6d540413f5d3505ad72"></a>
@@ -766,14 +757,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00016">16</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ConStrife_8cs_source.html#l00018">18</a> of file <a class="el" href="ConStrife_8cs_source.html">ConStrife.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

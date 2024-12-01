@@ -92,114 +92,170 @@ $(document).ready(function(){initNavTree('UIDistribution_8cs_source.html',''); i
   <div class="headertitle"><div class="title">UIDistribution.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="UIDistribution_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="UIDistribution_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classUIDistribution.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classUIDistribution.html">UIDistribution</a> : <a class="code hl_class" href="classEMono.html">EMono</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a5fac089f82fe393f36e658912aea22a2">    5</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUIDistribution.html#a5fac089f82fe393f36e658912aea22a2">OnEnable</a>()</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">needRefresh</a>)</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            this.needRefresh = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            this.<a class="code hl_function" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">Refresh</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a2e4eedcafea6cce3e6bbc6ce343658c5">   14</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUIDistribution.html#a2e4eedcafea6cce3e6bbc6ce343658c5">SetContainer</a>(<a class="code hl_class" href="classCard.html">Card</a> t, Window.SaveData d)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        this.container = t;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this.data = d;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        this.needRefresh = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        this.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">    5</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_variable" href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">container</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">    7</a></span>    <span class="keyword">public</span> UIList <a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">    9</a></span>    <span class="keyword">public</span> Window.SaveData <a class="code hl_variable" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">data</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">   11</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">needRefresh</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a5fac089f82fe393f36e658912aea22a2">   13</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUIDistribution.html#a5fac089f82fe393f36e658912aea22a2">OnEnable</a>()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">needRefresh</a>)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_variable" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">needRefresh</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_function" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">Refresh</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">Refresh</a>()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a2e4eedcafea6cce3e6bbc6ce343658c5">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUIDistribution.html#a2e4eedcafea6cce3e6bbc6ce343658c5">SetContainer</a>(<a class="code hl_class" href="classCard.html">Card</a> t, Window.SaveData d)</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="classUIDistribution.html">UIDistribution</a>.&lt;&gt;c__DisplayClass6_0 CS$&lt;&gt;8__locals1 = <span class="keyword">new</span> <a class="code hl_class" href="classUIDistribution.html">UIDistribution</a>.&lt;&gt;c__DisplayClass6_0();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        CS$&lt;&gt;8__locals1.&lt;&gt;4__this = <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        CS$&lt;&gt;8__locals1.cats = this.<a class="code hl_variable" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">data</a>.cats;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        BaseList baseList = this.<a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        UIList.Callback&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>, ButtonCategory&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>, ButtonCategory&gt;();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        callback.onClick = delegate(<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> a, ButtonCategory b)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">if</span> (a.children.Count &gt; 0)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                b.buttonFold.onClick.Invoke();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        };</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        callback.onInstantiate = delegate(<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> a, ButtonCategory b)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            b.uid = a.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a25f446b9b201dfdcf5ea063e4a7e423f">uid</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            b.mainText.text = a.GetName().ToTitleCase(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> uid <span class="keywordflow">in</span> CS$&lt;&gt;8__locals1.cats)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">if</span> (a.Contatin(uid))</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            b.SetFold(a.children.Count &gt; 0, !flag, delegate(UIList l)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> o in a.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a00630fe772db09e815df3e3c15dc1f36">children</a>)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    l.Add(o);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_variable" href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">container</a> = t;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">data</a> = d;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">needRefresh</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        this.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">   30</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">Refresh</a>()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        HashSet&lt;int&gt; cats = <a class="code hl_variable" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">data</a>.cats;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>, ButtonCategory&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            onClick = delegate(<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> a, ButtonCategory b)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">if</span> (a.children.Count &gt; 0)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    b.buttonFold.onClick.Invoke();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            },</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            onInstantiate = delegate(<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> a, ButtonCategory b)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                b.uid = a.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a25f446b9b201dfdcf5ea063e4a7e423f">uid</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                b.mainText.text = a.GetName().ToTitleCase();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> item <span class="keywordflow">in</span> cats)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    <span class="keywordflow">if</span> (a.Contatin(item))</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            });</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            b.buttonToggle.icon.SetActive(CS$&lt;&gt;8__locals1.cats.Contains(a.uid));</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            b.buttonToggle.SetOnClick(delegate</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="keywordtype">bool</span> flag2 = !CS$&lt;&gt;8__locals1.cats.Contains(a.uid);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                b.buttonToggle.icon.SetActive(flag2);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                if (flag2)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    CS$&lt;&gt;8__locals1.cats.Add(a.uid);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    CS$&lt;&gt;8__locals1.cats.Remove(a.uid);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                CS$&lt;&gt;8__locals1.&lt;<a class="code hl_function" href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">Refresh</a>&gt;g__SetAll|0(a.uid, flag2);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                SE.Click();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            });</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        };</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        callback.onRefresh = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        baseList.callbacks = callback;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.rows)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (row.parent == <span class="keyword">null</span> &amp;&amp; row.id != <span class="stringliteral">&quot;new&quot;</span> &amp;&amp; row.id != <span class="stringliteral">&quot;none&quot;</span>)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                this.<a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>.Add(row);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        this.<a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>.Refresh(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">   85</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_variable" href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">container</a>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">   87</a></span>    <span class="keyword">public</span> UIList <a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">   89</a></span>    <span class="keyword">public</span> Window.SaveData <a class="code hl_variable" href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">data</a>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">   91</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">needRefresh</a>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
-<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_afaf9020addda94e6bab3a114be10e563"><div class="ttname"><a href="classEMono.html#afaf9020addda94e6bab3a114be10e563">EMono.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00142">EMono.cs:143</a></div></div>
-<div class="ttc" id="aclassSourceCategory_1_1Row_html"><div class="ttname"><a href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00058">SourceCategory.cs:59</a></div></div>
-<div class="ttc" id="aclassSourceCategory_1_1Row_html_a00630fe772db09e815df3e3c15dc1f36"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a00630fe772db09e815df3e3c15dc1f36">SourceCategory.Row.children</a></div><div class="ttdeci">List&lt; SourceCategory.Row &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00185">SourceCategory.cs:185</a></div></div>
-<div class="ttc" id="aclassSourceCategory_1_1Row_html_a25f446b9b201dfdcf5ea063e4a7e423f"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a25f446b9b201dfdcf5ea063e4a7e423f">SourceCategory.Row.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00139">SourceCategory.cs:139</a></div></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                b.SetFold(a.children.Count &gt; 0, !flag, delegate(UIList l)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> child in a.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7f2a098e1a6a8d2e84b32e42efccfd67">children</a>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                        l.Add(child);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                });</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                b.buttonToggle.icon.SetActive(cats.Contains(a.uid));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                b.buttonToggle.SetOnClick(delegate</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    <span class="keywordtype">bool</span> flag2 = !cats.Contains(a.uid);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    b.buttonToggle.icon.SetActive(flag2);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    if (flag2)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        cats.Add(a.uid);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        cats.Remove(a.uid);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    SetAll(a.uid, flag2);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    SE.Click();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                });</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            },</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            onRefresh = <span class="keyword">null</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        };</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.rows)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">if</span> (row2.parent == <span class="keyword">null</span> &amp;&amp; row2.id != <span class="stringliteral">&quot;new&quot;</span> &amp;&amp; row2.id != <span class="stringliteral">&quot;none&quot;</span>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>.Add(row2);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>.Refresh();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">void</span> SetAll(<span class="keywordtype">int</span> uid, <span class="keywordtype">bool</span> enable)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a> row = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.rows.Find((<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> a) =&gt; a.uid == uid);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (row != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> row3 in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.rows)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    <span class="keywordflow">if</span> (row.<a class="code hl_function" href="classSourceCategory_1_1Row.html#a63b46b57bd134c4274c433f8f7592770">Contatin</a>(row3.uid))</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        <span class="keywordflow">if</span> (enable)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                            cats.Add(row3.uid);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                            cats.Remove(row3.uid);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                        }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row.<a class="code hl_function" href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">IsChildOf</a>(row3.uid) &amp;&amp; enable)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                    {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                        cats.Add(row3.uid);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordtype">bool</span> flag3;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    flag3 = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a> row4 in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.rows)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                        <span class="keywordflow">if</span> (row4.children.Count != 0 &amp;&amp; cats.Contains(row4.uid))</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                            <span class="keywordtype">bool</span> flag4 = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> item2 <span class="keywordflow">in</span> cats)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                            {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                                <span class="keywordflow">if</span> (item2 != row4.uid &amp;&amp; row4.Contatin(item2))</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                                {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                    flag4 = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                            }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                            <span class="keywordflow">if</span> (!flag4)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                            {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                cats.Remove(row4.uid);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                                flag3 = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                            }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="keywordflow">while</span> (!flag3);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                ButtonCategory[] componentsInChildren = <a class="code hl_variable" href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">list</a>.GetComponentsInChildren&lt;ButtonCategory&gt;();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                <span class="keywordflow">foreach</span> (ButtonCategory buttonCategory <span class="keywordflow">in</span> componentsInChildren)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    buttonCategory.buttonToggle.icon.SetActive(cats.Contains(buttonCategory.uid));</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_afaf9020addda94e6bab3a114be10e563"><div class="ttname"><a href="classEMono.html#afaf9020addda94e6bab3a114be10e563">EMono.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00041">EMono.cs:41</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html"><div class="ttname"><a href="classSourceCategory_1_1Row.html">SourceCategory.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00007">SourceCategory.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a25f446b9b201dfdcf5ea063e4a7e423f"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a25f446b9b201dfdcf5ea063e4a7e423f">SourceCategory.Row.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00011">SourceCategory.cs:11</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a63b46b57bd134c4274c433f8f7592770"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a63b46b57bd134c4274c433f8f7592770">SourceCategory.Row.Contatin</a></div><div class="ttdeci">bool Contatin(int _uid)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00096">SourceCategory.cs:96</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a7f2a098e1a6a8d2e84b32e42efccfd67"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a7f2a098e1a6a8d2e84b32e42efccfd67">SourceCategory.Row.children</a></div><div class="ttdeci">List&lt; Row &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00057">SourceCategory.cs:57</a></div></div>
+<div class="ttc" id="aclassSourceCategory_1_1Row_html_a9fa12e7fd725535437b9fdc34f375ee0"><div class="ttname"><a href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">SourceCategory.Row.IsChildOf</a></div><div class="ttdeci">bool IsChildOf(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00065">SourceCategory.cs:65</a></div></div>
 <div class="ttc" id="aclassSourceCategory_html"><div class="ttname"><a href="classSourceCategory.html">SourceCategory</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCategory_8cs_source.html#l00004">SourceCategory.cs:5</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_ab7c0f6922403dd73dbe0c9d967c1514b"><div class="ttname"><a href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">SourceManager.categories</a></div><div class="ttdeci">SourceCategory categories</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00171">SourceManager.cs:171</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_ab7c0f6922403dd73dbe0c9d967c1514b"><div class="ttname"><a href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">SourceManager.categories</a></div><div class="ttdeci">SourceCategory categories</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00036">SourceManager.cs:36</a></div></div>
 <div class="ttc" id="aclassUIDistribution_html"><div class="ttname"><a href="classUIDistribution.html">UIDistribution</a></div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00003">UIDistribution.cs:4</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a0141d609912a0ab2dce8a1aee58fd6bf"><div class="ttname"><a href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">UIDistribution.container</a></div><div class="ttdeci">Card container</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00085">UIDistribution.cs:85</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a2e4eedcafea6cce3e6bbc6ce343658c5"><div class="ttname"><a href="classUIDistribution.html#a2e4eedcafea6cce3e6bbc6ce343658c5">UIDistribution.SetContainer</a></div><div class="ttdeci">void SetContainer(Card t, Window.SaveData d)</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00014">UIDistribution.cs:14</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a4d0991e2ad4cc9b60658dc5bca39828f"><div class="ttname"><a href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">UIDistribution.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00022">UIDistribution.cs:22</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a5668a70e11b515ee32bef66c45a682fe"><div class="ttname"><a href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">UIDistribution.needRefresh</a></div><div class="ttdeci">bool needRefresh</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00091">UIDistribution.cs:91</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a58ee3abaf996cdee3c89b7de125af0dc"><div class="ttname"><a href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">UIDistribution.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00087">UIDistribution.cs:87</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a5ce2db3cd10c6c1b3fa87e100c28c19b"><div class="ttname"><a href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">UIDistribution.data</a></div><div class="ttdeci">Window.SaveData data</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00089">UIDistribution.cs:89</a></div></div>
-<div class="ttc" id="aclassUIDistribution_html_a5fac089f82fe393f36e658912aea22a2"><div class="ttname"><a href="classUIDistribution.html#a5fac089f82fe393f36e658912aea22a2">UIDistribution.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00005">UIDistribution.cs:5</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a0141d609912a0ab2dce8a1aee58fd6bf"><div class="ttname"><a href="classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf">UIDistribution.container</a></div><div class="ttdeci">Card container</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00005">UIDistribution.cs:5</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a2e4eedcafea6cce3e6bbc6ce343658c5"><div class="ttname"><a href="classUIDistribution.html#a2e4eedcafea6cce3e6bbc6ce343658c5">UIDistribution.SetContainer</a></div><div class="ttdeci">void SetContainer(Card t, Window.SaveData d)</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00022">UIDistribution.cs:22</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a4d0991e2ad4cc9b60658dc5bca39828f"><div class="ttname"><a href="classUIDistribution.html#a4d0991e2ad4cc9b60658dc5bca39828f">UIDistribution.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00030">UIDistribution.cs:30</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a5668a70e11b515ee32bef66c45a682fe"><div class="ttname"><a href="classUIDistribution.html#a5668a70e11b515ee32bef66c45a682fe">UIDistribution.needRefresh</a></div><div class="ttdeci">bool needRefresh</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00011">UIDistribution.cs:11</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a58ee3abaf996cdee3c89b7de125af0dc"><div class="ttname"><a href="classUIDistribution.html#a58ee3abaf996cdee3c89b7de125af0dc">UIDistribution.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00007">UIDistribution.cs:7</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a5ce2db3cd10c6c1b3fa87e100c28c19b"><div class="ttname"><a href="classUIDistribution.html#a5ce2db3cd10c6c1b3fa87e100c28c19b">UIDistribution.data</a></div><div class="ttdeci">Window.SaveData data</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00009">UIDistribution.cs:9</a></div></div>
+<div class="ttc" id="aclassUIDistribution_html_a5fac089f82fe393f36e658912aea22a2"><div class="ttname"><a href="classUIDistribution.html#a5fac089f82fe393f36e658912aea22a2">UIDistribution.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="UIDistribution_8cs_source.html#l00013">UIDistribution.cs:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

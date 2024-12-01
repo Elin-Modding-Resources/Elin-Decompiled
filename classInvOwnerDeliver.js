@@ -10,8 +10,8 @@ var classInvOwnerDeliver =
     [ "_OnProcess", "classInvOwnerDeliver.html#a07c80e378c8b8bfd13aa7b51c50610ad", null ],
     [ "PayBill", "classInvOwnerDeliver.html#aee3cb483457de88284feefa34be513c7", null ],
     [ "ShouldShowGuide", "classInvOwnerDeliver.html#a4850384e793d72b32cbcd61e4f088d1c", null ],
-    [ "mode", "classInvOwnerDeliver.html#a1cffa699aedad1d344644e876da6135a", null ],
+    [ "mode", "classInvOwnerDeliver.html#af4ac55affebd13b9ebf635fb416d2cc1", null ],
     [ "langTransfer", "classInvOwnerDeliver.html#a9ef2626557d6269c718ad08fea6cecfa", null ],
-    [ "processType", "classInvOwnerDeliver.html#a1c5c1d0fd41d27f18f46b0a460fda08b", null ],
+    [ "processType", "classInvOwnerDeliver.html#af68dc939211520c7d05c2396d975c156", null ],
     [ "SingleTarget", "classInvOwnerDeliver.html#aea0d6276046f5aebc07d82cb33f552a2", null ]
 ];

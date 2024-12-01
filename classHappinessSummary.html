@@ -198,7 +198,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00004">4</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00003">3</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0c6c86c394acef11efbfb3051e12ccfb" name="a0c6c86c394acef11efbfb3051e12ccfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c6c86c394acef11efbfb3051e12ccfb">&#9670;&#160;</a></span>HappinessSummary()</h2>
@@ -224,37 +224,43 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00006">6</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        List&lt;Chara&gt; members = b.<a class="code hl_variable" href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">members</a>;</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> members)</div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            this.happiness += chara.<a class="code hl_variable" href="classChara.html#a6433a09ef7bd84c7b5649502a94eeded">happiness</a>;</div>
-<div class="line"><span class="lineno">   12</span>            this.hunger += chara.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
-<div class="line"><span class="lineno">   13</span>            this.fatigue += chara.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
-<div class="line"><span class="lineno">   14</span>            this.depression += chara.<a class="code hl_property" href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">depression</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
-<div class="line"><span class="lineno">   15</span>            this.bladder += chara.<a class="code hl_property" href="classChara.html#a8db87f59730c8374d1692fdc04e652da">bladder</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
-<div class="line"><span class="lineno">   16</span>            this.hygine += chara.<a class="code hl_property" href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">hygiene</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
-<div class="line"><span class="lineno">   17</span>        }</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">int</span> count = members.Count;</div>
-<div class="line"><span class="lineno">   19</span>        this.happiness /= count;</div>
-<div class="line"><span class="lineno">   20</span>        this.hunger /= count;</div>
-<div class="line"><span class="lineno">   21</span>        this.fatigue /= count;</div>
-<div class="line"><span class="lineno">   22</span>        this.depression /= count;</div>
-<div class="line"><span class="lineno">   23</span>        this.bladder /= count;</div>
-<div class="line"><span class="lineno">   24</span>        this.hygine /= count;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00010">Chara.cs:11</a></div></div>
-<div class="ttc" id="aclassChara_html_a058a8927e9ea4ee8c7db048bd302905b"><div class="ttname"><a href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">Chara.depression</a></div><div class="ttdeci">Stats depression</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08319">Chara.cs:8320</a></div></div>
-<div class="ttc" id="aclassChara_html_a4a3317f33313bbcc61849fe5ef604d71"><div class="ttname"><a href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">Chara.hygiene</a></div><div class="ttdeci">Stats hygiene</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08335">Chara.cs:8336</a></div></div>
-<div class="ttc" id="aclassChara_html_a6433a09ef7bd84c7b5649502a94eeded"><div class="ttname"><a href="classChara.html#a6433a09ef7bd84c7b5649502a94eeded">Chara.happiness</a></div><div class="ttdeci">int happiness</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09487">Chara.cs:9487</a></div></div>
-<div class="ttc" id="aclassChara_html_a656f24c70feae5fb0f8ccf9c6d0578fe"><div class="ttname"><a href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">Chara.hunger</a></div><div class="ttdeci">Stats hunger</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08295">Chara.cs:8296</a></div></div>
-<div class="ttc" id="aclassChara_html_a8db87f59730c8374d1692fdc04e652da"><div class="ttname"><a href="classChara.html#a8db87f59730c8374d1692fdc04e652da">Chara.bladder</a></div><div class="ttdeci">Stats bladder</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08327">Chara.cs:8328</a></div></div>
-<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08311">Chara.cs:8312</a></div></div>
-<div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l01692">FactionBranch.cs:1692</a></div></div>
-<div class="ttc" id="aclassStats_html_ac5ab607149d0e76d6f1692e5f05c622f"><div class="ttname"><a href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">Stats.value</a></div><div class="ttdeci">virtual int value</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00011">Stats.cs:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00017">17</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        List&lt;Chara&gt; members = b.<a class="code hl_variable" href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">members</a>;</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> item <span class="keywordflow">in</span> members)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296">happiness</a> += item.<a class="code hl_variable" href="classChara.html#a6433a09ef7bd84c7b5649502a94eeded">happiness</a>;</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_variable" href="classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2">hunger</a> += item.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6">fatigue</a> += item.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="classHappinessSummary.html#a13ca6564c1269e6687694069d6b8446c">depression</a> += item.<a class="code hl_property" href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">depression</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="classHappinessSummary.html#a89911d606ce4573352068608cbc11a26">bladder</a> += item.<a class="code hl_property" href="classChara.html#a8db87f59730c8374d1692fdc04e652da">bladder</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_variable" href="classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437">hygine</a> += item.<a class="code hl_property" href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">hygiene</a>.<a class="code hl_property" href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">value</a>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">int</span> count = members.Count;</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296">happiness</a> /= count;</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2">hunger</a> /= count;</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_variable" href="classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6">fatigue</a> /= count;</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="classHappinessSummary.html#a13ca6564c1269e6687694069d6b8446c">depression</a> /= count;</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classHappinessSummary.html#a89911d606ce4573352068608cbc11a26">bladder</a> /= count;</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437">hygine</a> /= count;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassChara_html_a058a8927e9ea4ee8c7db048bd302905b"><div class="ttname"><a href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">Chara.depression</a></div><div class="ttdeci">Stats depression</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00921">Chara.cs:921</a></div></div>
+<div class="ttc" id="aclassChara_html_a4a3317f33313bbcc61849fe5ef604d71"><div class="ttname"><a href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">Chara.hygiene</a></div><div class="ttdeci">Stats hygiene</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00925">Chara.cs:925</a></div></div>
+<div class="ttc" id="aclassChara_html_a6433a09ef7bd84c7b5649502a94eeded"><div class="ttname"><a href="classChara.html#a6433a09ef7bd84c7b5649502a94eeded">Chara.happiness</a></div><div class="ttdeci">int happiness</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00105">Chara.cs:105</a></div></div>
+<div class="ttc" id="aclassChara_html_a656f24c70feae5fb0f8ccf9c6d0578fe"><div class="ttname"><a href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">Chara.hunger</a></div><div class="ttdeci">Stats hunger</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00915">Chara.cs:915</a></div></div>
+<div class="ttc" id="aclassChara_html_a8db87f59730c8374d1692fdc04e652da"><div class="ttname"><a href="classChara.html#a8db87f59730c8374d1692fdc04e652da">Chara.bladder</a></div><div class="ttdeci">Stats bladder</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00923">Chara.cs:923</a></div></div>
+<div class="ttc" id="aclassChara_html_a9bccf140db2350e950b81890925868a9"><div class="ttname"><a href="classChara.html#a9bccf140db2350e950b81890925868a9">Chara.stamina</a></div><div class="ttdeci">Stats stamina</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00919">Chara.cs:919</a></div></div>
+<div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00116">FactionBranch.cs:116</a></div></div>
+<div class="ttc" id="aclassHappinessSummary_html_a13ca6564c1269e6687694069d6b8446c"><div class="ttname"><a href="classHappinessSummary.html#a13ca6564c1269e6687694069d6b8446c">HappinessSummary.depression</a></div><div class="ttdeci">int depression</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00011">HappinessSummary.cs:11</a></div></div>
+<div class="ttc" id="aclassHappinessSummary_html_a4720bf3158ccb9bc51fec0776591ccb2"><div class="ttname"><a href="classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2">HappinessSummary.hunger</a></div><div class="ttdeci">int hunger</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00007">HappinessSummary.cs:7</a></div></div>
+<div class="ttc" id="aclassHappinessSummary_html_a89911d606ce4573352068608cbc11a26"><div class="ttname"><a href="classHappinessSummary.html#a89911d606ce4573352068608cbc11a26">HappinessSummary.bladder</a></div><div class="ttdeci">int bladder</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00013">HappinessSummary.cs:13</a></div></div>
+<div class="ttc" id="aclassHappinessSummary_html_a9083a8ef91d69b69cb5d97dcd4a20437"><div class="ttname"><a href="classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437">HappinessSummary.hygine</a></div><div class="ttdeci">int hygine</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00015">HappinessSummary.cs:15</a></div></div>
+<div class="ttc" id="aclassHappinessSummary_html_ae890f4b318c7a18b60a0206a00077296"><div class="ttname"><a href="classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296">HappinessSummary.happiness</a></div><div class="ttdeci">int happiness</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00005">HappinessSummary.cs:5</a></div></div>
+<div class="ttc" id="aclassHappinessSummary_html_af51c68fb6c0ef7030ea3f85110f816e6"><div class="ttname"><a href="classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6">HappinessSummary.fatigue</a></div><div class="ttdeci">int fatigue</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00009">HappinessSummary.cs:9</a></div></div>
+<div class="ttc" id="aclassStats_html_ac5ab607149d0e76d6f1692e5f05c622f"><div class="ttname"><a href="classStats.html#ac5ab607149d0e76d6f1692e5f05c622f">Stats.value</a></div><div class="ttdeci">virtual int value</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00055">Stats.cs:56</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08328">Chara.bladder</a>, <a class="el" href="Chara_8cs_source.html#l08320">Chara.depression</a>, <a class="el" href="Chara_8cs_source.html#l09487">Chara.happiness</a>, <a class="el" href="Chara_8cs_source.html#l08296">Chara.hunger</a>, <a class="el" href="Chara_8cs_source.html#l08336">Chara.hygiene</a>, <a class="el" href="FactionBranch_8cs_source.html#l01692">FactionBranch.members</a>, <a class="el" href="Chara_8cs_source.html#l08312">Chara.stamina</a>, and <a class="el" href="Stats_8cs_source.html#l00012">Stats.value</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00923">Chara.bladder</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00013">bladder</a>, <a class="el" href="Chara_8cs_source.html#l00921">Chara.depression</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00011">depression</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00009">fatigue</a>, <a class="el" href="Chara_8cs_source.html#l00105">Chara.happiness</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00005">happiness</a>, <a class="el" href="Chara_8cs_source.html#l00915">Chara.hunger</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00007">hunger</a>, <a class="el" href="Chara_8cs_source.html#l00925">Chara.hygiene</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00015">hygine</a>, <a class="el" href="FactionBranch_8cs_source.html#l00116">FactionBranch.members</a>, <a class="el" href="Chara_8cs_source.html#l00919">Chara.stamina</a>, and <a class="el" href="Stats_8cs_source.html#l00056">Stats.value</a>.</p>
 
 </div>
 </div>
@@ -282,63 +288,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00027">27</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>,</div>
-<div class="line"><span class="lineno">   33</span>            <span class="stringliteral">&quot;happiness&quot;</span>.lang(),</div>
-<div class="line"><span class="lineno">   34</span>            <span class="stringliteral">&quot;: &quot;</span>,</div>
-<div class="line"><span class="lineno">   35</span>            this.<a class="code hl_variable" href="classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296">happiness</a>.ToString(),</div>
-<div class="line"><span class="lineno">   36</span>            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   37</span>        });</div>
-<div class="line"><span class="lineno">   38</span>        text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>,</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a>.<a class="code hl_property" href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">name</a>,</div>
-<div class="line"><span class="lineno">   42</span>            <span class="stringliteral">&quot;: &quot;</span>,</div>
-<div class="line"><span class="lineno">   43</span>            this.<a class="code hl_variable" href="classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2">hunger</a>.ToString(),</div>
-<div class="line"><span class="lineno">   44</span>            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   45</span>        });</div>
-<div class="line"><span class="lineno">   46</span>        text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>,</div>
-<div class="line"><span class="lineno">   49</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_property" href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">name</a>,</div>
-<div class="line"><span class="lineno">   50</span>            <span class="stringliteral">&quot;: &quot;</span>,</div>
-<div class="line"><span class="lineno">   51</span>            this.<a class="code hl_variable" href="classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6">fatigue</a>.ToString(),</div>
-<div class="line"><span class="lineno">   52</span>            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   53</span>        });</div>
-<div class="line"><span class="lineno">   54</span>        text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>,</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a058a8927e9ea4ee8c7db048bd302905b">depression</a>.<a class="code hl_property" href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">name</a>,</div>
-<div class="line"><span class="lineno">   58</span>            <span class="stringliteral">&quot;: &quot;</span>,</div>
-<div class="line"><span class="lineno">   59</span>            this.<a class="code hl_variable" href="classHappinessSummary.html#a13ca6564c1269e6687694069d6b8446c">depression</a>.ToString(),</div>
-<div class="line"><span class="lineno">   60</span>            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   61</span>        });</div>
-<div class="line"><span class="lineno">   62</span>        text = <span class="keywordtype">string</span>.Concat(<span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>,</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a8db87f59730c8374d1692fdc04e652da">bladder</a>.<a class="code hl_property" href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">name</a>,</div>
-<div class="line"><span class="lineno">   66</span>            <span class="stringliteral">&quot;: &quot;</span>,</div>
-<div class="line"><span class="lineno">   67</span>            this.<a class="code hl_variable" href="classHappinessSummary.html#a89911d606ce4573352068608cbc11a26">bladder</a>.ToString(),</div>
-<div class="line"><span class="lineno">   68</span>            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   69</span>        });</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> text + EClass.pc.hygiene.name + <span class="stringliteral">&quot;: &quot;</span> + this.<a class="code hl_variable" href="classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437">hygine</a>.ToString();</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
-<div class="ttc" id="aclassHappinessSummary_html_a13ca6564c1269e6687694069d6b8446c"><div class="ttname"><a href="classHappinessSummary.html#a13ca6564c1269e6687694069d6b8446c">HappinessSummary.depression</a></div><div class="ttdeci">int depression</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00079">HappinessSummary.cs:79</a></div></div>
-<div class="ttc" id="aclassHappinessSummary_html_a4720bf3158ccb9bc51fec0776591ccb2"><div class="ttname"><a href="classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2">HappinessSummary.hunger</a></div><div class="ttdeci">int hunger</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00075">HappinessSummary.cs:75</a></div></div>
-<div class="ttc" id="aclassHappinessSummary_html_a89911d606ce4573352068608cbc11a26"><div class="ttname"><a href="classHappinessSummary.html#a89911d606ce4573352068608cbc11a26">HappinessSummary.bladder</a></div><div class="ttdeci">int bladder</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00081">HappinessSummary.cs:81</a></div></div>
-<div class="ttc" id="aclassHappinessSummary_html_a9083a8ef91d69b69cb5d97dcd4a20437"><div class="ttname"><a href="classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437">HappinessSummary.hygine</a></div><div class="ttdeci">int hygine</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00083">HappinessSummary.cs:83</a></div></div>
-<div class="ttc" id="aclassHappinessSummary_html_ae890f4b318c7a18b60a0206a00077296"><div class="ttname"><a href="classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296">HappinessSummary.happiness</a></div><div class="ttdeci">int happiness</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00073">HappinessSummary.cs:73</a></div></div>
-<div class="ttc" id="aclassHappinessSummary_html_af51c68fb6c0ef7030ea3f85110f816e6"><div class="ttname"><a href="classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6">HappinessSummary.fatigue</a></div><div class="ttdeci">int fatigue</div><div class="ttdef"><b>Definition:</b> <a href="HappinessSummary_8cs_source.html#l00077">HappinessSummary.cs:77</a></div></div>
-<div class="ttc" id="aclassStats_html_a713e709fb391ac176cac0b9d77b743b8"><div class="ttname"><a href="classStats.html#a713e709fb391ac176cac0b9d77b743b8">Stats.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00034">Stats.cs:35</a></div></div>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00038">38</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   41</span>        text = text + <span class="stringliteral">&quot;happiness&quot;</span>.lang() + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296">happiness</a> + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   42</span>        text = text + EClass.pc.hunger.name + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2">hunger</a> + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   43</span>        text = text + EClass.pc.stamina.name + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6">fatigue</a> + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>        text = text + EClass.pc.depression.name + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="classHappinessSummary.html#a13ca6564c1269e6687694069d6b8446c">depression</a> + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>        text = text + EClass.pc.bladder.name + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="classHappinessSummary.html#a89911d606ce4573352068608cbc11a26">bladder</a> + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> text + EClass.pc.hygiene.name + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437">hygine</a>;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08328">Chara.bladder</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00081">bladder</a>, <a class="el" href="Chara_8cs_source.html#l08320">Chara.depression</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00079">depression</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00077">fatigue</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00073">happiness</a>, <a class="el" href="Chara_8cs_source.html#l08296">Chara.hunger</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00075">hunger</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00083">hygine</a>, <a class="el" href="Stats_8cs_source.html#l00035">Stats.name</a>, <a class="el" href="EClass_8cs_source.html#l00032">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l08312">Chara.stamina</a>, and <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>.</p>
+<p class="reference">References <a class="el" href="HappinessSummary_8cs_source.html#l00013">bladder</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00011">depression</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00009">fatigue</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00005">happiness</a>, <a class="el" href="HappinessSummary_8cs_source.html#l00007">hunger</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00015">hygine</a>.</p>
 
 </div>
 </div>
@@ -355,9 +316,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00081">81</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00013">13</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00038">GetText()</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00017">HappinessSummary()</a>.</p>
 
 </div>
 </div>
@@ -373,9 +334,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00079">79</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00011">11</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00038">GetText()</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00017">HappinessSummary()</a>.</p>
 
 </div>
 </div>
@@ -391,9 +352,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00077">77</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00009">9</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00038">GetText()</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00017">HappinessSummary()</a>.</p>
 
 </div>
 </div>
@@ -409,9 +370,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00073">73</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00005">5</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00038">GetText()</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00017">HappinessSummary()</a>.</p>
 
 </div>
 </div>
@@ -427,9 +388,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00075">75</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00007">7</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00038">GetText()</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00017">HappinessSummary()</a>.</p>
 
 </div>
 </div>
@@ -445,9 +406,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00083">83</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HappinessSummary_8cs_source.html#l00015">15</a> of file <a class="el" href="HappinessSummary_8cs_source.html">HappinessSummary.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00027">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HappinessSummary_8cs_source.html#l00038">GetText()</a>, and <a class="el" href="HappinessSummary_8cs_source.html#l00017">HappinessSummary()</a>.</p>
 
 </div>
 </div>

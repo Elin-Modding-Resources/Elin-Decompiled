@@ -1,6 +1,6 @@
 var classSourceSpawnList =
 [
     [ "Row", "classSourceSpawnList_1_1Row.html", "classSourceSpawnList_1_1Row" ],
-    [ "CreateRow", "classSourceSpawnList.html#a705f19b5dc2cd0b304a0a06b2b04dd59", null ],
-    [ "SetRow", "classSourceSpawnList.html#ad6f2e9342ef67758ed37e043894a25ff", null ]
+    [ "CreateRow", "classSourceSpawnList.html#a015c663b9f9977af43ec4d147d9ec5b8", null ],
+    [ "SetRow", "classSourceSpawnList.html#a0110ac4d23084d62c9a7f6c4cd7993a3", null ]
 ];

@@ -1,7 +1,8 @@
 var dir_4ebf4838943f22de71ca1372348cb95b =
 [
     [ "Algorithms", "dir_cd23900d07b8b1e69b979450ea9f15c5.html", "dir_cd23900d07b8b1e69b979450ea9f15c5" ],
-    [ "Assets", "dir_55284aae4a4f1b01d5af1423fa438bef.html", "dir_55284aae4a4f1b01d5af1423fa438bef" ],
+    [ "Assets.Resources.Scene.Profile.Global", "dir_e288ca0aeaeb99ed54626a36cd6ea346.html", "dir_e288ca0aeaeb99ed54626a36cd6ea346" ],
+    [ "Assets.Resources.Scene.Render", "dir_fa0e38f6188af741fff21f50dd8c01e1.html", "dir_fa0e38f6188af741fff21f50dd8c01e1" ],
     [ "Properties", "dir_306e96a4dc5b43e01f3c081320bd1010.html", "dir_306e96a4dc5b43e01f3c081320bd1010" ],
     [ "TwoDLaserPack", "dir_6b09264ad8f51f6a28577ac0d4500fd6.html", "dir_6b09264ad8f51f6a28577ac0d4500fd6" ],
     [ "Ability.2.cs", "Ability_82_8cs.html", "Ability_82_8cs" ],

@@ -92,40 +92,20 @@ $(document).ready(function(){initNavTree('AI__SelfHarm_8cs_source.html',''); ini
   <div class="headertitle"><div class="title">AI_SelfHarm.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="AI__SelfHarm_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAI__SelfHarm.html">AI_SelfHarm</a> : <a class="code hl_class" href="classAI__PassTime.html">AI_PassTime</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html#ada1837f1a97beeec03fa473fc1df86e5">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958e">AI_PassTime.Type</a> <a class="code hl_property" href="classAI__SelfHarm.html#ada1837f1a97beeec03fa473fc1df86e5">type</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classAI__PassTime.html">AI_PassTime</a>.<a class="code hl_enumeration" href="classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958e">Type</a>.selfHarm;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f">CancelWhenDamaged</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912">   21</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912">exp</a></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> 50;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="ttc" id="aclassAI__PassTime_html"><div class="ttname"><a href="classAI__PassTime.html">AI_PassTime</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__PassTime_8cs_source.html#l00004">AI_PassTime.cs:5</a></div></div>
-<div class="ttc" id="aclassAI__PassTime_html_a9e8f7e41abd4555fc3b3ca802fa0958e"><div class="ttname"><a href="classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958e">AI_PassTime.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="AI__PassTime_8cs_source.html#l00188">AI_PassTime.cs:189</a></div></div>
-<div class="ttc" id="aclassAI__SelfHarm_html"><div class="ttname"><a href="classAI__SelfHarm.html">AI_SelfHarm</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00003">AI_SelfHarm.cs:4</a></div></div>
-<div class="ttc" id="aclassAI__SelfHarm_html_a08b6ab5eaf83d160f1b3b37175d2070f"><div class="ttname"><a href="classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f">AI_SelfHarm.CancelWhenDamaged</a></div><div class="ttdeci">override bool CancelWhenDamaged</div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00013">AI_SelfHarm.cs:14</a></div></div>
-<div class="ttc" id="aclassAI__SelfHarm_html_a4e871d95b403358b0affbc8c80137912"><div class="ttname"><a href="classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912">AI_SelfHarm.exp</a></div><div class="ttdeci">override int exp</div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00021">AI_SelfHarm.cs:22</a></div></div>
-<div class="ttc" id="aclassAI__SelfHarm_html_ada1837f1a97beeec03fa473fc1df86e5"><div class="ttname"><a href="classAI__SelfHarm.html#ada1837f1a97beeec03fa473fc1df86e5">AI_SelfHarm.type</a></div><div class="ttdeci">override AI_PassTime.Type type</div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00005">AI_SelfHarm.cs:6</a></div></div>
+<a href="AI__SelfHarm_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classAI__SelfHarm.html">AI_SelfHarm</a> : <a class="code hl_class" href="classAI__PassTime.html">AI_PassTime</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958e">Type</a> <a class="code hl_property" href="classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d">type</a> =&gt; <a class="code hl_enumeration" href="classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958e">Type</a>.selfHarm;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f">CancelWhenDamaged</a> =&gt; <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912">exp</a> =&gt; 50;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+<div class="ttc" id="aclassAI__PassTime_html"><div class="ttname"><a href="classAI__PassTime.html">AI_PassTime</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__PassTime_8cs_source.html#l00003">AI_PassTime.cs:4</a></div></div>
+<div class="ttc" id="aclassAI__PassTime_html_a9e8f7e41abd4555fc3b3ca802fa0958e"><div class="ttname"><a href="classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958e">AI_PassTime.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="AI__PassTime_8cs_source.html#l00005">AI_PassTime.cs:6</a></div></div>
+<div class="ttc" id="aclassAI__SelfHarm_html"><div class="ttname"><a href="classAI__SelfHarm.html">AI_SelfHarm</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00001">AI_SelfHarm.cs:2</a></div></div>
+<div class="ttc" id="aclassAI__SelfHarm_html_a08b6ab5eaf83d160f1b3b37175d2070f"><div class="ttname"><a href="classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f">AI_SelfHarm.CancelWhenDamaged</a></div><div class="ttdeci">override bool CancelWhenDamaged</div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00005">AI_SelfHarm.cs:5</a></div></div>
+<div class="ttc" id="aclassAI__SelfHarm_html_a4e871d95b403358b0affbc8c80137912"><div class="ttname"><a href="classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912">AI_SelfHarm.exp</a></div><div class="ttdeci">override int exp</div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00007">AI_SelfHarm.cs:7</a></div></div>
+<div class="ttc" id="aclassAI__SelfHarm_html_a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d"><div class="ttname"><a href="classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d">AI_SelfHarm.type</a></div><div class="ttdeci">override Type type</div><div class="ttdef"><b>Definition:</b> <a href="AI__SelfHarm_8cs_source.html#l00003">AI_SelfHarm.cs:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

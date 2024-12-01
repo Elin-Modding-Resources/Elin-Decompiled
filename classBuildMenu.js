@@ -60,5 +60,5 @@ var classBuildMenu =
     [ "timerSearch", "classBuildMenu.html#aeaa6f30064346b08cdb41f45af1913a6", null ],
     [ "transMain", "classBuildMenu.html#a07720a9cca02a71640d1414e51250bca", null ],
     [ "transOption", "classBuildMenu.html#a1d6ee2b5ea45977b04b1957da9ee5635", null ],
-    [ "mode", "classBuildMenu.html#a4e2ddb62a12787a72ae74426eb34ef25", null ]
+    [ "mode", "classBuildMenu.html#a269f3ede8b4059bce755999b5b2b66af", null ]
 ];

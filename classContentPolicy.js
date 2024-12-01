@@ -1,6 +1,5 @@
 var classContentPolicy =
 [
-    [ "g__CanActivate", "classContentPolicy.html#a76c7d9e74ffae5bc53812f61762906d0", null ],
     [ "OnSwitchContent", "classContentPolicy.html#ae1105b2e8a93e61cc77d85b7d481d642", null ],
     [ "RefreshPolicy", "classContentPolicy.html#a1f29ed58ee3764af5c339101428f29d7", null ],
     [ "RefreshPolicyIcons", "classContentPolicy.html#a4d8ff1d7819e1946424c9d2b896cba70", null ],

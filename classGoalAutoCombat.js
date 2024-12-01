@@ -2,7 +2,6 @@ var classGoalAutoCombat =
 [
     [ "GoalAutoCombat", "classGoalAutoCombat.html#a842047c2fad0cba1aa676b031589b041", null ],
     [ "BuildAbilityList", "classGoalAutoCombat.html#ae51840de017f80ab0847030c2362ff93", null ],
-    [ "g__FindRanged", "classGoalAutoCombat.html#a47c49e72e2253d27694f5cd1cbcc17dd", null ],
     [ "GetAbilities", "classGoalAutoCombat.html#ae5413e3e8278f85b8bc6c57263c5bc6f", null ],
     [ "GetActPlanColor", "classGoalAutoCombat.html#aa4109fac2e0133d69bba55b6f6b8ce83", null ],
     [ "TryAbortCombat", "classGoalAutoCombat.html#a6fe0b7188e63d419d31e6ddae9a5c43c", null ],

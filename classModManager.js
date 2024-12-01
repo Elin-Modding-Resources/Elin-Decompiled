@@ -3,8 +3,6 @@ var classModManager =
     [ "SheetIndex", "structModManager_1_1SheetIndex.html", "structModManager_1_1SheetIndex" ],
     [ "AddPackage", "classModManager.html#ad2cdba89ab473a05d1b5b5cd95c42a20", null ],
     [ "AddWorkshopPackage", "classModManager.html#a80fd4b86d141d807723e33bfcef61576", null ],
-    [ "g__FindField", "classModManager.html#a06047b153881d257ea25ef784fa38374", null ],
-    [ "g__TryAddLang", "classModManager.html#aa5f0121d863e9fe7d2cff2fda1a59328", null ],
     [ "GetElinIni", "classModManager.html#a58d3bf1f033610647b3dd0113c2e9e44", null ],
     [ "HandleResults", "classModManager.html#a16e3b1e41ee836a44e4e0501cb92e1ea", null ],
     [ "Init", "classModManager.html#a9219aa9f35decd9d524b93f5f4263d66", null ],

@@ -184,7 +184,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00004">4</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00003">3</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac14f8061b10cd17606de835a50f64f0a" name="ac14f8061b10cd17606de835a50f64f0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac14f8061b10cd17606de835a50f64f0a">&#9670;&#160;</a></span>SetQuest()</h2>
@@ -210,66 +210,64 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00006">6</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        this.<a class="code hl_variable" href="classItemQuest.html#ad19fa9ebb865a743bc1cac75e5738d73">portrait</a>.<a class="code hl_function" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">SetPerson</a>(q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>);</div>
-<div class="line"><span class="lineno">    9</span>        this.button.mainText.text = (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">list</a>.Contains(q) ? <span class="stringliteral">&quot;questInProgress&quot;</span>.lang().TagColor(FontColor.Good, <span class="keyword">null</span>) : <span class="stringliteral">&quot;&quot;</span>) + q.<a class="code hl_property" href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">TitlePrefix</a> + q.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>();</div>
-<div class="line"><span class="lineno">   10</span>        this.button.subText.text = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#a23ae20608065849e049d592fcea240d5">NameBraced</a>;</div>
-<div class="line"><span class="lineno">   11</span>        this.<a class="code hl_variable" href="classItemQuest.html#a34eec44e26febc04422d3aceda52c3ab">textDate</a>.SetText(<a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_function" href="classDate.html#ad7d298a8ccd5c2aa735b2800bb653c2c">GetText</a>(q.<a class="code hl_property" href="classQuest.html#a23e75d6149d1fed5ed51d749c6fccace">Hours</a>));</div>
-<div class="line"><span class="lineno">   12</span>        this.<a class="code hl_variable" href="classItemQuest.html#a34eec44e26febc04422d3aceda52c3ab">textDate</a>.transform.parent.RebuildLayout(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   13</span>        this.<a class="code hl_variable" href="classItemQuest.html#a6fd14ff7178767d7e2f35abcb40dcc78">textReward</a>.SetText(q.<a class="code hl_function" href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">GetRewardText</a>());</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = q.<a class="code hl_function" href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">GetDetail</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_class" href="classQuestSupply.html">QuestSupply</a> questSupply = q as <a class="code hl_class" href="classQuestSupply.html">QuestSupply</a>;</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (questSupply != <span class="keyword">null</span> &amp;&amp; questSupply.<a class="code hl_function" href="classQuestDeliver.html#af99803b227571b483dbc323db4ae834e">GetDestThing</a>() != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;questSupplyOwned&quot;</span>.lang().TagColor(FontColor.Good, <span class="keyword">null</span>) + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>        this.<a class="code hl_variable" href="classItemQuest.html#ade45d610cb9e78ba1a20645566f50270">textDetail</a>.SetText(text);</div>
-<div class="line"><span class="lineno">   21</span>        this.<a class="code hl_variable" href="classItemQuest.html#a82a0dd778cdb40d249838efc515ba4b7">imageNew</a>.SetActive(q.<a class="code hl_variable" href="classQuest.html#aa1269d9a9d9a1a09abb72c823baff5b5">isNew</a>);</div>
-<div class="line"><span class="lineno">   22</span>        q.isNew = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   23</span>        this.<a class="code hl_variable" href="classItemQuest.html#a7812ee6463b32256300989fb7053a7c6">textDifficulty</a>.SetText(<span class="stringliteral">&quot;★&quot;</span>.Repeat(q.<a class="code hl_variable" href="classQuest.html#adb6939deeabb61dc1e3af7d236ee0b4a">difficulty</a>));</div>
-<div class="line"><span class="lineno">   24</span>        this.<a class="code hl_variable" href="classItemQuest.html#a7812ee6463b32256300989fb7053a7c6">textDifficulty</a>.SetActive(q.<a class="code hl_property" href="classQuest.html#a15e15a319d34b5ee653b8462ff7fd0b3">IsRandomQuest</a>);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">string</span> text2 = q.<a class="code hl_property" href="classQuest.html#ae676a9d88015f1c7ce4c563346c52d46">TextExtra</a>;</div>
-<div class="line"><span class="lineno">   26</span>        this.<a class="code hl_variable" href="classItemQuest.html#aa1b0a76780af6765d399f14ed6e5a508">textExtra</a>.SetActive(!text2.IsEmpty());</div>
-<div class="line"><span class="lineno">   27</span>        this.<a class="code hl_variable" href="classItemQuest.html#aa1b0a76780af6765d399f14ed6e5a508">textExtra</a>.SetText(text2);</div>
-<div class="line"><span class="lineno">   28</span>        text2 = q.<a class="code hl_property" href="classQuest.html#ab1f68720435784b3b1f7ee81d6784a40">TextExtra2</a>;</div>
-<div class="line"><span class="lineno">   29</span>        this.<a class="code hl_variable" href="classItemQuest.html#af24e13e20a901e84ce8084b169d6da75">textExtra2</a>.SetActive(!text2.IsEmpty());</div>
-<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_variable" href="classItemQuest.html#af24e13e20a901e84ce8084b169d6da75">textExtra2</a>.SetText(text2);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00004">Date.cs:5</a></div></div>
-<div class="ttc" id="aclassDate_html_ad7d298a8ccd5c2aa735b2800bb653c2c"><div class="ttname"><a href="classDate.html#ad7d298a8ccd5c2aa735b2800bb653c2c">Date.GetText</a></div><div class="ttdeci">string GetText(Date.TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00219">Date.cs:219</a></div></div>
-<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00004">EMono.cs:5</a></div></div>
-<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00006">EMono.cs:7</a></div></div>
-<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00814">Game.cs:814</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_a34eec44e26febc04422d3aceda52c3ab"><div class="ttname"><a href="classItemQuest.html#a34eec44e26febc04422d3aceda52c3ab">ItemQuest.textDate</a></div><div class="ttdeci">UIText textDate</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00041">ItemQuest.cs:41</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_a6fd14ff7178767d7e2f35abcb40dcc78"><div class="ttname"><a href="classItemQuest.html#a6fd14ff7178767d7e2f35abcb40dcc78">ItemQuest.textReward</a></div><div class="ttdeci">UIText textReward</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00039">ItemQuest.cs:39</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_a7812ee6463b32256300989fb7053a7c6"><div class="ttname"><a href="classItemQuest.html#a7812ee6463b32256300989fb7053a7c6">ItemQuest.textDifficulty</a></div><div class="ttdeci">UIText textDifficulty</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00043">ItemQuest.cs:43</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_a82a0dd778cdb40d249838efc515ba4b7"><div class="ttname"><a href="classItemQuest.html#a82a0dd778cdb40d249838efc515ba4b7">ItemQuest.imageNew</a></div><div class="ttdeci">Image imageNew</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00049">ItemQuest.cs:49</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_aa1b0a76780af6765d399f14ed6e5a508"><div class="ttname"><a href="classItemQuest.html#aa1b0a76780af6765d399f14ed6e5a508">ItemQuest.textExtra</a></div><div class="ttdeci">UIText textExtra</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00045">ItemQuest.cs:45</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_ad19fa9ebb865a743bc1cac75e5738d73"><div class="ttname"><a href="classItemQuest.html#ad19fa9ebb865a743bc1cac75e5738d73">ItemQuest.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00033">ItemQuest.cs:33</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_ade45d610cb9e78ba1a20645566f50270"><div class="ttname"><a href="classItemQuest.html#ade45d610cb9e78ba1a20645566f50270">ItemQuest.textDetail</a></div><div class="ttdeci">UIText textDetail</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00037">ItemQuest.cs:37</a></div></div>
-<div class="ttc" id="aclassItemQuest_html_af24e13e20a901e84ce8084b169d6da75"><div class="ttname"><a href="classItemQuest.html#af24e13e20a901e84ce8084b169d6da75">ItemQuest.textExtra2</a></div><div class="ttdeci">UIText textExtra2</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00047">ItemQuest.cs:47</a></div></div>
-<div class="ttc" id="aclassPerson_html_a23ae20608065849e049d592fcea240d5"><div class="ttname"><a href="classPerson.html#a23ae20608065849e049d592fcea240d5">Person.NameBraced</a></div><div class="ttdeci">string NameBraced</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00057">Person.cs:58</a></div></div>
-<div class="ttc" id="aclassPortrait_html_a268f060ca5eb021c65521c3fd12b06fc"><div class="ttname"><a href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">Portrait.SetPerson</a></div><div class="ttdeci">void SetPerson(Person p)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00081">Portrait.cs:81</a></div></div>
-<div class="ttc" id="aclassQuestDeliver_html_af99803b227571b483dbc323db4ae834e"><div class="ttname"><a href="classQuestDeliver.html#af99803b227571b483dbc323db4ae834e">QuestDeliver.GetDestThing</a></div><div class="ttdeci">override Thing GetDestThing()</div><div class="ttdef"><b>Definition:</b> <a href="QuestDeliver_8cs_source.html#l00175">QuestDeliver.cs:175</a></div></div>
-<div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00327">QuestManager.cs:327</a></div></div>
-<div class="ttc" id="aclassQuestSupply_html"><div class="ttname"><a href="classQuestSupply.html">QuestSupply</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestSupply_8cs_source.html#l00003">QuestSupply.cs:4</a></div></div>
-<div class="ttc" id="aclassQuest_html_a15e15a319d34b5ee653b8462ff7fd0b3"><div class="ttname"><a href="classQuest.html#a15e15a319d34b5ee653b8462ff7fd0b3">Quest.IsRandomQuest</a></div><div class="ttdeci">virtual bool IsRandomQuest</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00366">Quest.cs:367</a></div></div>
-<div class="ttc" id="aclassQuest_html_a23e75d6149d1fed5ed51d749c6fccace"><div class="ttname"><a href="classQuest.html#a23e75d6149d1fed5ed51d749c6fccace">Quest.Hours</a></div><div class="ttdeci">int Hours</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00096">Quest.cs:97</a></div></div>
-<div class="ttc" id="aclassQuest_html_a3a18469ccc4028a521bb770d10beaa31"><div class="ttname"><a href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">Quest.person</a></div><div class="ttdeci">Person person</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00811">Quest.cs:811</a></div></div>
-<div class="ttc" id="aclassQuest_html_a893e87dd377c8e47b3927cb74e0f0b38"><div class="ttname"><a href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">Quest.GetTitle</a></div><div class="ttdeci">virtual string GetTitle()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00654">Quest.cs:654</a></div></div>
-<div class="ttc" id="aclassQuest_html_aa1269d9a9d9a1a09abb72c823baff5b5"><div class="ttname"><a href="classQuest.html#aa1269d9a9d9a1a09abb72c823baff5b5">Quest.isNew</a></div><div class="ttdeci">bool isNew</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00802">Quest.cs:802</a></div></div>
-<div class="ttc" id="aclassQuest_html_ab1f68720435784b3b1f7ee81d6784a40"><div class="ttname"><a href="classQuest.html#ab1f68720435784b3b1f7ee81d6784a40">Quest.TextExtra2</a></div><div class="ttdeci">virtual string TextExtra2</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00160">Quest.cs:161</a></div></div>
-<div class="ttc" id="aclassQuest_html_ab4b50284da058423b70cecc7e3b1ab29"><div class="ttname"><a href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">Quest.GetRewardText</a></div><div class="ttdeci">string GetRewardText()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00712">Quest.cs:712</a></div></div>
-<div class="ttc" id="aclassQuest_html_abcda0e8cd9add8667a20f7af53733749"><div class="ttname"><a href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">Quest.GetDetail</a></div><div class="ttdeci">virtual string GetDetail(bool onJournal=false)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00674">Quest.cs:674</a></div></div>
-<div class="ttc" id="aclassQuest_html_adb6939deeabb61dc1e3af7d236ee0b4a"><div class="ttname"><a href="classQuest.html#adb6939deeabb61dc1e3af7d236ee0b4a">Quest.difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00787">Quest.cs:787</a></div></div>
-<div class="ttc" id="aclassQuest_html_ae676a9d88015f1c7ce4c563346c52d46"><div class="ttname"><a href="classQuest.html#ae676a9d88015f1c7ce4c563346c52d46">Quest.TextExtra</a></div><div class="ttdeci">virtual string TextExtra</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00152">Quest.cs:153</a></div></div>
-<div class="ttc" id="aclassQuest_html_af81b809e290fdbe9fbf0d218090403de"><div class="ttname"><a href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">Quest.TitlePrefix</a></div><div class="ttdeci">virtual string TitlePrefix</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00327">Quest.cs:328</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00023">23</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="classItemQuest.html#ad19fa9ebb865a743bc1cac75e5738d73">portrait</a>.<a class="code hl_function" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">SetPerson</a>(q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>);</div>
+<div class="line"><span class="lineno">   26</span>        button.mainText.text = (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">list</a>.Contains(q) ? <span class="stringliteral">&quot;questInProgress&quot;</span>.lang().TagColor(FontColor.Good) : <span class="stringliteral">&quot;&quot;</span>) + q.<a class="code hl_property" href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">TitlePrefix</a> + q.<a class="code hl_function" href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">GetTitle</a>();</div>
+<div class="line"><span class="lineno">   27</span>        button.subText.text = q.<a class="code hl_variable" href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">person</a>.<a class="code hl_property" href="classPerson.html#a23ae20608065849e049d592fcea240d5">NameBraced</a>;</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_variable" href="classItemQuest.html#a34eec44e26febc04422d3aceda52c3ab">textDate</a>.SetText(<a class="code hl_class" href="classDate.html">Date</a>.<a class="code hl_function" href="classDate.html#add8563063a8cb27b243414efd92edef6">GetText</a>(q.<a class="code hl_property" href="classQuest.html#a23e75d6149d1fed5ed51d749c6fccace">Hours</a>));</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="classItemQuest.html#a34eec44e26febc04422d3aceda52c3ab">textDate</a>.transform.parent.RebuildLayout();</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="classItemQuest.html#a6fd14ff7178767d7e2f35abcb40dcc78">textReward</a>.SetText(q.<a class="code hl_function" href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">GetRewardText</a>());</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">string</span> text = q.<a class="code hl_function" href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">GetDetail</a>();</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (q is <a class="code hl_class" href="classQuestSupply.html">QuestSupply</a> questSupply &amp;&amp; questSupply.<a class="code hl_function" href="classQuestDeliver.html#af99803b227571b483dbc323db4ae834e">GetDestThing</a>() != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            text = <span class="stringliteral">&quot;questSupplyOwned&quot;</span>.lang().TagColor(FontColor.Good) + text;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="classItemQuest.html#ade45d610cb9e78ba1a20645566f50270">textDetail</a>.SetText(text);</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="classItemQuest.html#a82a0dd778cdb40d249838efc515ba4b7">imageNew</a>.SetActive(q.<a class="code hl_variable" href="classQuest.html#aa1269d9a9d9a1a09abb72c823baff5b5">isNew</a>);</div>
+<div class="line"><span class="lineno">   38</span>        q.isNew = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="classItemQuest.html#a7812ee6463b32256300989fb7053a7c6">textDifficulty</a>.SetText(<span class="stringliteral">&quot;★&quot;</span>.Repeat(q.<a class="code hl_variable" href="classQuest.html#adb6939deeabb61dc1e3af7d236ee0b4a">difficulty</a>));</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="classItemQuest.html#a7812ee6463b32256300989fb7053a7c6">textDifficulty</a>.SetActive(q.<a class="code hl_property" href="classQuest.html#a15e15a319d34b5ee653b8462ff7fd0b3">IsRandomQuest</a>);</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">string</span> text2 = q.<a class="code hl_property" href="classQuest.html#ae676a9d88015f1c7ce4c563346c52d46">TextExtra</a>;</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classItemQuest.html#aa1b0a76780af6765d399f14ed6e5a508">textExtra</a>.SetActive(!text2.IsEmpty());</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classItemQuest.html#aa1b0a76780af6765d399f14ed6e5a508">textExtra</a>.SetText(text2);</div>
+<div class="line"><span class="lineno">   44</span>        text2 = q.<a class="code hl_property" href="classQuest.html#ab1f68720435784b3b1f7ee81d6784a40">TextExtra2</a>;</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classItemQuest.html#af24e13e20a901e84ce8084b169d6da75">textExtra2</a>.SetActive(!text2.IsEmpty());</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="classItemQuest.html#af24e13e20a901e84ce8084b169d6da75">textExtra2</a>.SetText(text2);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00003">Date.cs:4</a></div></div>
+<div class="ttc" id="aclassDate_html_add8563063a8cb27b243414efd92edef6"><div class="ttname"><a href="classDate.html#add8563063a8cb27b243414efd92edef6">Date.GetText</a></div><div class="ttdeci">string GetText(TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00245">Date.cs:245</a></div></div>
+<div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
+<div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00007">EMono.cs:7</a></div></div>
+<div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00176">Game.cs:176</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_a34eec44e26febc04422d3aceda52c3ab"><div class="ttname"><a href="classItemQuest.html#a34eec44e26febc04422d3aceda52c3ab">ItemQuest.textDate</a></div><div class="ttdeci">UIText textDate</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00013">ItemQuest.cs:13</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_a6fd14ff7178767d7e2f35abcb40dcc78"><div class="ttname"><a href="classItemQuest.html#a6fd14ff7178767d7e2f35abcb40dcc78">ItemQuest.textReward</a></div><div class="ttdeci">UIText textReward</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00011">ItemQuest.cs:11</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_a7812ee6463b32256300989fb7053a7c6"><div class="ttname"><a href="classItemQuest.html#a7812ee6463b32256300989fb7053a7c6">ItemQuest.textDifficulty</a></div><div class="ttdeci">UIText textDifficulty</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00015">ItemQuest.cs:15</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_a82a0dd778cdb40d249838efc515ba4b7"><div class="ttname"><a href="classItemQuest.html#a82a0dd778cdb40d249838efc515ba4b7">ItemQuest.imageNew</a></div><div class="ttdeci">Image imageNew</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00021">ItemQuest.cs:21</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_aa1b0a76780af6765d399f14ed6e5a508"><div class="ttname"><a href="classItemQuest.html#aa1b0a76780af6765d399f14ed6e5a508">ItemQuest.textExtra</a></div><div class="ttdeci">UIText textExtra</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00017">ItemQuest.cs:17</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_ad19fa9ebb865a743bc1cac75e5738d73"><div class="ttname"><a href="classItemQuest.html#ad19fa9ebb865a743bc1cac75e5738d73">ItemQuest.portrait</a></div><div class="ttdeci">Portrait portrait</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00005">ItemQuest.cs:5</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_ade45d610cb9e78ba1a20645566f50270"><div class="ttname"><a href="classItemQuest.html#ade45d610cb9e78ba1a20645566f50270">ItemQuest.textDetail</a></div><div class="ttdeci">UIText textDetail</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00009">ItemQuest.cs:9</a></div></div>
+<div class="ttc" id="aclassItemQuest_html_af24e13e20a901e84ce8084b169d6da75"><div class="ttname"><a href="classItemQuest.html#af24e13e20a901e84ce8084b169d6da75">ItemQuest.textExtra2</a></div><div class="ttdeci">UIText textExtra2</div><div class="ttdef"><b>Definition:</b> <a href="ItemQuest_8cs_source.html#l00019">ItemQuest.cs:19</a></div></div>
+<div class="ttc" id="aclassPerson_html_a23ae20608065849e049d592fcea240d5"><div class="ttname"><a href="classPerson.html#a23ae20608065849e049d592fcea240d5">Person.NameBraced</a></div><div class="ttdeci">string NameBraced</div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00058">Person.cs:58</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a268f060ca5eb021c65521c3fd12b06fc"><div class="ttname"><a href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">Portrait.SetPerson</a></div><div class="ttdeci">void SetPerson(Person p)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00120">Portrait.cs:120</a></div></div>
+<div class="ttc" id="aclassQuestDeliver_html_af99803b227571b483dbc323db4ae834e"><div class="ttname"><a href="classQuestDeliver.html#af99803b227571b483dbc323db4ae834e">QuestDeliver.GetDestThing</a></div><div class="ttdeci">override Thing GetDestThing()</div><div class="ttdef"><b>Definition:</b> <a href="QuestDeliver_8cs_source.html#l00145">QuestDeliver.cs:145</a></div></div>
+<div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00011">QuestManager.cs:11</a></div></div>
+<div class="ttc" id="aclassQuestSupply_html"><div class="ttname"><a href="classQuestSupply.html">QuestSupply</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestSupply_8cs_source.html#l00001">QuestSupply.cs:2</a></div></div>
+<div class="ttc" id="aclassQuest_html_a15e15a319d34b5ee653b8462ff7fd0b3"><div class="ttname"><a href="classQuest.html#a15e15a319d34b5ee653b8462ff7fd0b3">Quest.IsRandomQuest</a></div><div class="ttdeci">virtual bool IsRandomQuest</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00235">Quest.cs:235</a></div></div>
+<div class="ttc" id="aclassQuest_html_a23e75d6149d1fed5ed51d749c6fccace"><div class="ttname"><a href="classQuest.html#a23e75d6149d1fed5ed51d749c6fccace">Quest.Hours</a></div><div class="ttdeci">int Hours</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00123">Quest.cs:124</a></div></div>
+<div class="ttc" id="aclassQuest_html_a3a18469ccc4028a521bb770d10beaa31"><div class="ttname"><a href="classQuest.html#a3a18469ccc4028a521bb770d10beaa31">Quest.person</a></div><div class="ttdeci">Person person</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00073">Quest.cs:73</a></div></div>
+<div class="ttc" id="aclassQuest_html_a893e87dd377c8e47b3927cb74e0f0b38"><div class="ttname"><a href="classQuest.html#a893e87dd377c8e47b3927cb74e0f0b38">Quest.GetTitle</a></div><div class="ttdeci">virtual string GetTitle()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00606">Quest.cs:606</a></div></div>
+<div class="ttc" id="aclassQuest_html_aa1269d9a9d9a1a09abb72c823baff5b5"><div class="ttname"><a href="classQuest.html#aa1269d9a9d9a1a09abb72c823baff5b5">Quest.isNew</a></div><div class="ttdeci">bool isNew</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00064">Quest.cs:64</a></div></div>
+<div class="ttc" id="aclassQuest_html_ab1f68720435784b3b1f7ee81d6784a40"><div class="ttname"><a href="classQuest.html#ab1f68720435784b3b1f7ee81d6784a40">Quest.TextExtra2</a></div><div class="ttdeci">virtual string TextExtra2</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00157">Quest.cs:158</a></div></div>
+<div class="ttc" id="aclassQuest_html_ab4b50284da058423b70cecc7e3b1ab29"><div class="ttname"><a href="classQuest.html#ab4b50284da058423b70cecc7e3b1ab29">Quest.GetRewardText</a></div><div class="ttdeci">string GetRewardText()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00663">Quest.cs:663</a></div></div>
+<div class="ttc" id="aclassQuest_html_abcda0e8cd9add8667a20f7af53733749"><div class="ttname"><a href="classQuest.html#abcda0e8cd9add8667a20f7af53733749">Quest.GetDetail</a></div><div class="ttdeci">virtual string GetDetail(bool onJournal=false)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00626">Quest.cs:626</a></div></div>
+<div class="ttc" id="aclassQuest_html_adb6939deeabb61dc1e3af7d236ee0b4a"><div class="ttname"><a href="classQuest.html#adb6939deeabb61dc1e3af7d236ee0b4a">Quest.difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00049">Quest.cs:49</a></div></div>
+<div class="ttc" id="aclassQuest_html_ae676a9d88015f1c7ce4c563346c52d46"><div class="ttname"><a href="classQuest.html#ae676a9d88015f1c7ce4c563346c52d46">Quest.TextExtra</a></div><div class="ttdeci">virtual string TextExtra</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00155">Quest.cs:155</a></div></div>
+<div class="ttc" id="aclassQuest_html_af81b809e290fdbe9fbf0d218090403de"><div class="ttname"><a href="classQuest.html#af81b809e290fdbe9fbf0d218090403de">Quest.TitlePrefix</a></div><div class="ttdeci">virtual string TitlePrefix</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00231">Quest.cs:231</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00787">Quest.difficulty</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00175">QuestDeliver.GetDestThing()</a>, <a class="el" href="Quest_8cs_source.html#l00674">Quest.GetDetail()</a>, <a class="el" href="Quest_8cs_source.html#l00712">Quest.GetRewardText()</a>, <a class="el" href="Date_8cs_source.html#l00219">Date.GetText()</a>, <a class="el" href="Quest_8cs_source.html#l00654">Quest.GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00097">Quest.Hours</a>, <a class="el" href="ItemQuest_8cs_source.html#l00049">imageNew</a>, <a class="el" href="Quest_8cs_source.html#l00802">Quest.isNew</a>, <a class="el" href="Quest_8cs_source.html#l00367">Quest.IsRandomQuest</a>, <a class="el" href="QuestManager_8cs_source.html#l00327">QuestManager.list</a>, <a class="el" href="Person_8cs_source.html#l00058">Person.NameBraced</a>, <a class="el" href="Quest_8cs_source.html#l00811">Quest.person</a>, <a class="el" href="ItemQuest_8cs_source.html#l00033">portrait</a>, <a class="el" href="Game_8cs_source.html#l00814">Game.quests</a>, <a class="el" href="Portrait_8cs_source.html#l00081">Portrait.SetPerson()</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, <a class="el" href="ItemQuest_8cs_source.html#l00041">textDate</a>, <a class="el" href="ItemQuest_8cs_source.html#l00037">textDetail</a>, <a class="el" href="ItemQuest_8cs_source.html#l00043">textDifficulty</a>, <a class="el" href="ItemQuest_8cs_source.html#l00045">textExtra</a>, <a class="el" href="Quest_8cs_source.html#l00153">Quest.TextExtra</a>, <a class="el" href="ItemQuest_8cs_source.html#l00047">textExtra2</a>, <a class="el" href="Quest_8cs_source.html#l00161">Quest.TextExtra2</a>, <a class="el" href="ItemQuest_8cs_source.html#l00039">textReward</a>, and <a class="el" href="Quest_8cs_source.html#l00328">Quest.TitlePrefix</a>.</p>
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00049">Quest.difficulty</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00145">QuestDeliver.GetDestThing()</a>, <a class="el" href="Quest_8cs_source.html#l00626">Quest.GetDetail()</a>, <a class="el" href="Quest_8cs_source.html#l00663">Quest.GetRewardText()</a>, <a class="el" href="Date_8cs_source.html#l00245">Date.GetText()</a>, <a class="el" href="Quest_8cs_source.html#l00606">Quest.GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00124">Quest.Hours</a>, <a class="el" href="ItemQuest_8cs_source.html#l00021">imageNew</a>, <a class="el" href="Quest_8cs_source.html#l00064">Quest.isNew</a>, <a class="el" href="Quest_8cs_source.html#l00235">Quest.IsRandomQuest</a>, <a class="el" href="QuestManager_8cs_source.html#l00011">QuestManager.list</a>, <a class="el" href="Person_8cs_source.html#l00058">Person.NameBraced</a>, <a class="el" href="Quest_8cs_source.html#l00073">Quest.person</a>, <a class="el" href="ItemQuest_8cs_source.html#l00005">portrait</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.quests</a>, <a class="el" href="Portrait_8cs_source.html#l00120">Portrait.SetPerson()</a>, <a class="el" href="ItemQuest_8cs_source.html#l00013">textDate</a>, <a class="el" href="ItemQuest_8cs_source.html#l00009">textDetail</a>, <a class="el" href="ItemQuest_8cs_source.html#l00015">textDifficulty</a>, <a class="el" href="ItemQuest_8cs_source.html#l00017">textExtra</a>, <a class="el" href="Quest_8cs_source.html#l00155">Quest.TextExtra</a>, <a class="el" href="ItemQuest_8cs_source.html#l00019">textExtra2</a>, <a class="el" href="Quest_8cs_source.html#l00158">Quest.TextExtra2</a>, <a class="el" href="ItemQuest_8cs_source.html#l00011">textReward</a>, and <a class="el" href="Quest_8cs_source.html#l00231">Quest.TitlePrefix</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerQuestBoard_8cs_source.html#l00053">LayerQuestBoard.RefreshQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerQuestBoard_8cs_source.html#l00079">LayerQuestBoard.RefreshQuest()</a>.</p>
 
 </div>
 </div>
@@ -286,9 +284,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00035">35</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00007">7</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerQuestBoard_8cs_source.html#l00053">LayerQuestBoard.RefreshQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerQuestBoard_8cs_source.html#l00079">LayerQuestBoard.RefreshQuest()</a>.</p>
 
 </div>
 </div>
@@ -304,9 +302,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00049">49</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00021">21</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -322,9 +320,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00033">33</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00005">5</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -340,9 +338,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00041">41</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00013">13</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -358,9 +356,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00037">37</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00009">9</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -376,9 +374,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00043">43</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00015">15</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -394,9 +392,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00045">45</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00017">17</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -412,9 +410,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00047">47</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00019">19</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -430,9 +428,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00039">39</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ItemQuest_8cs_source.html#l00011">11</a> of file <a class="el" href="ItemQuest_8cs_source.html">ItemQuest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00006">SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemQuest_8cs_source.html#l00023">SetQuest()</a>.</p>
 
 </div>
 </div>

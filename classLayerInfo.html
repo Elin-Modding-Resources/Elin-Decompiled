@@ -217,7 +217,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00004">4</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00003">3</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a897de3de58145f0382869c94a4530e0d" name="a897de3de58145f0382869c94a4530e0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a897de3de58145f0382869c94a4530e0d">&#9670;&#160;</a></span>OnAfterInit()</h2>
@@ -242,11 +242,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00006">6</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        base.OnAfterInit();</div>
-<div class="line"><span class="lineno">    9</span>        TooltipManager.Instance.HideTooltips(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   10</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        base.OnAfterInit();</div>
+<div class="line"><span class="lineno">   14</span>        TooltipManager.Instance.HideTooltips(immediate: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -273,14 +273,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00065">65</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        base.OnKill();</div>
-<div class="line"><span class="lineno">   68</span>        TweenUtil.Tween(0.2f, delegate()</div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            UIButton.TryShowTip&lt;UIButton&gt;(<span class="keyword">null</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   71</span>        }, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00070">70</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        base.OnKill();</div>
+<div class="line"><span class="lineno">   73</span>        TweenUtil.Tween(0.2f, delegate</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            UIButton.TryShowTip&lt;UIButton&gt;(<span class="keyword">null</span>, highlight: <span class="keyword">true</span>, ignoreWhenRightClick: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   76</span>        });</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -307,27 +307,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00074">74</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        base.OnUpdateInput();</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classLayerInfo.html#a9089ddc39382fc699b76cf581f1a81e2">examine</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.config.input.altExamine)</div>
-<div class="line"><span class="lineno">   78</span>        {</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (!Input.GetKey(EInput.keys.examine.key))</div>
-<div class="line"><span class="lineno">   80</span>            {</div>
-<div class="line"><span class="lineno">   81</span>                this.Close();</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetKeyDown(EInput.keys.examine.key))</div>
-<div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            this.Close();</div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00079">79</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        base.OnUpdateInput();</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerInfo.html#a9089ddc39382fc699b76cf581f1a81e2">examine</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#aec1ec248e326dd3e194a7fd6717993d2">input</a>.<a class="code hl_variable" href="classCoreConfig_1_1InputSetting.html#a347760f9d084d34959a3296991232693">altExamine</a>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (!Input.GetKey(EInput.keys.examine.key))</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                Close();</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
 <div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
-<div class="ttc" id="aclassLayerInfo_html_a9089ddc39382fc699b76cf581f1a81e2"><div class="ttname"><a href="classLayerInfo.html#a9089ddc39382fc699b76cf581f1a81e2">LayerInfo.examine</a></div><div class="ttdeci">bool examine</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00095">LayerInfo.cs:95</a></div></div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetKeyDown(EInput.keys.examine.key))</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            Close();</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_1_1InputSetting_html_a347760f9d084d34959a3296991232693"><div class="ttname"><a href="classCoreConfig_1_1InputSetting.html#a347760f9d084d34959a3296991232693">CoreConfig.InputSetting.altExamine</a></div><div class="ttdeci">bool altExamine</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00223">CoreConfig.cs:223</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_aec1ec248e326dd3e194a7fd6717993d2"><div class="ttname"><a href="classCoreConfig.html#aec1ec248e326dd3e194a7fd6717993d2">CoreConfig.input</a></div><div class="ttdeci">InputSetting input</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00588">CoreConfig.cs:588</a></div></div>
+<div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00064">Core.cs:64</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00007">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerInfo_html_a9089ddc39382fc699b76cf581f1a81e2"><div class="ttname"><a href="classLayerInfo.html#a9089ddc39382fc699b76cf581f1a81e2">LayerInfo.examine</a></div><div class="ttdeci">bool examine</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00009">LayerInfo.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, and <a class="el" href="LayerInfo_8cs_source.html#l00095">examine</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00223">CoreConfig.InputSetting.altExamine</a>, <a class="el" href="Core_8cs_source.html#l00064">Core.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerInfo_8cs_source.html#l00009">examine</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00588">CoreConfig.input</a>.</p>
 
 </div>
 </div>
@@ -365,17 +367,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (o is <a class="code hl_class" href="classThing.html">Thing</a>)</div>
-<div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            this.<a class="code hl_function" href="classLayerInfo.html#aeb57cf90703103e8a9e63c97f24e3ca5">SetThing</a>(o as <a class="code hl_class" href="classThing.html">Thing</a>, _examine);</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclassLayerInfo_html_aeb57cf90703103e8a9e63c97f24e3ca5"><div class="ttname"><a href="classLayerInfo.html#aeb57cf90703103e8a9e63c97f24e3ca5">LayerInfo.SetThing</a></div><div class="ttdeci">void SetThing(Thing t, bool _examine=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00026">LayerInfo.cs:26</a></div></div>
-<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00008">Thing.cs:9</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00023">23</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (o is <a class="code hl_class" href="classThing.html">Thing</a>)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_function" href="classLayerInfo.html#aeb57cf90703103e8a9e63c97f24e3ca5">SetThing</a>(o as <a class="code hl_class" href="classThing.html">Thing</a>, _examine);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassLayerInfo_html_aeb57cf90703103e8a9e63c97f24e3ca5"><div class="ttname"><a href="classLayerInfo.html#aeb57cf90703103e8a9e63c97f24e3ca5">LayerInfo.SetThing</a></div><div class="ttdeci">void SetThing(Thing t, bool _examine=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00031">LayerInfo.cs:31</a></div></div>
+<div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerInfo_8cs_source.html#l00026">SetThing()</a>.</p>
+<p class="reference">References <a class="el" href="LayerInfo_8cs_source.html#l00031">SetThing()</a>.</p>
 
 </div>
 </div>
@@ -403,16 +405,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00033">33</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        this.windows[0].SetCaption(cell.<a class="code hl_function" href="classCell.html#ab99724d1f578f57e18c2d3466c742ad5">GetBlockName</a>());</div>
-<div class="line"><span class="lineno">   36</span>        this.<a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#ac0ad86690cd2ba9992cfe93b7b62fbf4">SetBlock</a>(cell);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="aclassCell_html_ab99724d1f578f57e18c2d3466c742ad5"><div class="ttname"><a href="classCell.html#ab99724d1f578f57e18c2d3466c742ad5">Cell.GetBlockName</a></div><div class="ttdeci">string GetBlockName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01616">Cell.cs:1616</a></div></div>
-<div class="ttc" id="aclassLayerInfo_html_a454567b010fe2a6e68a8e6ae1538830d"><div class="ttname"><a href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">LayerInfo.info</a></div><div class="ttdeci">UICardInfo info</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00091">LayerInfo.cs:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00038">38</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        windows[0].SetCaption(cell.<a class="code hl_function" href="classCell.html#ab99724d1f578f57e18c2d3466c742ad5">GetBlockName</a>());</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#ac0ad86690cd2ba9992cfe93b7b62fbf4">SetBlock</a>(cell);</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassCell_html_ab99724d1f578f57e18c2d3466c742ad5"><div class="ttname"><a href="classCell.html#ab99724d1f578f57e18c2d3466c742ad5">Cell.GetBlockName</a></div><div class="ttdeci">string GetBlockName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01585">Cell.cs:1585</a></div></div>
+<div class="ttc" id="aclassLayerInfo_html_a454567b010fe2a6e68a8e6ae1538830d"><div class="ttname"><a href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">LayerInfo.info</a></div><div class="ttdeci">UICardInfo info</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00005">LayerInfo.cs:5</a></div></div>
 <div class="ttc" id="aclassUICardInfo_html_ac0ad86690cd2ba9992cfe93b7b62fbf4"><div class="ttname"><a href="classUICardInfo.html#ac0ad86690cd2ba9992cfe93b7b62fbf4">UICardInfo.SetBlock</a></div><div class="ttdeci">void SetBlock(Cell cell)</div><div class="ttdef"><b>Definition:</b> <a href="UICardInfo_8cs_source.html#l00064">UICardInfo.cs:64</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01616">Cell.GetBlockName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00091">info</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00064">UICardInfo.SetBlock()</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01585">Cell.GetBlockName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00005">info</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00064">UICardInfo.SetBlock()</a>.</p>
 
 </div>
 </div>
@@ -440,15 +442,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00012">12</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        this.windows[0].SetCaption(e.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>);</div>
-<div class="line"><span class="lineno">   15</span>        this.<a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#ab95e012c393e65367e9316aa51abe870">SetElement</a>(e);</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
-<div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00017">17</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        windows[0].SetCaption(e.<a class="code hl_property" href="classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039">Name</a>);</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#ab95e012c393e65367e9316aa51abe870">SetElement</a>(e);</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassElement_html_afd9b473ffd04d2b55fc8a3a861ee5039"><div class="ttname"><a href="classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00141">Element.2.cs:142</a></div></div>
 <div class="ttc" id="aclassUICardInfo_html_ab95e012c393e65367e9316aa51abe870"><div class="ttname"><a href="classUICardInfo.html#ab95e012c393e65367e9316aa51abe870">UICardInfo.SetElement</a></div><div class="ttdeci">void SetElement(Element e)</div><div class="ttdef"><b>Definition:</b> <a href="UICardInfo_8cs_source.html#l00034">UICardInfo.cs:34</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerInfo_8cs_source.html#l00091">info</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00034">UICardInfo.SetElement()</a>.</p>
+<p class="reference">References <a class="el" href="LayerInfo_8cs_source.html#l00005">info</a>, <a class="el" href="Element_82_8cs_source.html#l00142">Element.Name</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00034">UICardInfo.SetElement()</a>.</p>
 
 </div>
 </div>
@@ -476,15 +478,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00039">39</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
-<div class="line"><span class="lineno">   41</span>        this.windows[0].SetCaption(cell.<a class="code hl_function" href="classCell.html#a9d426016ed41725165ee710931fe30a7">GetFloorName</a>());</div>
-<div class="line"><span class="lineno">   42</span>        this.<a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a451b09e26a47662bd16c573900a6eb33">SetFloor</a>(cell);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclassCell_html_a9d426016ed41725165ee710931fe30a7"><div class="ttname"><a href="classCell.html#a9d426016ed41725165ee710931fe30a7">Cell.GetFloorName</a></div><div class="ttdeci">string GetFloorName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01621">Cell.cs:1621</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00044">44</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        windows[0].SetCaption(cell.<a class="code hl_function" href="classCell.html#a9d426016ed41725165ee710931fe30a7">GetFloorName</a>());</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a451b09e26a47662bd16c573900a6eb33">SetFloor</a>(cell);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassCell_html_a9d426016ed41725165ee710931fe30a7"><div class="ttname"><a href="classCell.html#a9d426016ed41725165ee710931fe30a7">Cell.GetFloorName</a></div><div class="ttdeci">string GetFloorName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01590">Cell.cs:1590</a></div></div>
 <div class="ttc" id="aclassUICardInfo_html_a451b09e26a47662bd16c573900a6eb33"><div class="ttname"><a href="classUICardInfo.html#a451b09e26a47662bd16c573900a6eb33">UICardInfo.SetFloor</a></div><div class="ttdeci">void SetFloor(Cell cell)</div><div class="ttdef"><b>Definition:</b> <a href="UICardInfo_8cs_source.html#l00074">UICardInfo.cs:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01621">Cell.GetFloorName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00091">info</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00074">UICardInfo.SetFloor()</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01590">Cell.GetFloorName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00005">info</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00074">UICardInfo.SetFloor()</a>.</p>
 
 </div>
 </div>
@@ -512,15 +514,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00045">45</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        this.windows[0].SetCaption(cell.<a class="code hl_function" href="classCell.html#ae124c6ef8ceff03f710c951466babc26">GetLiquidName</a>());</div>
-<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a34be8c84e4a4555ceeaf98bad9fb45d9">SetLiquid</a>(cell);</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="aclassCell_html_ae124c6ef8ceff03f710c951466babc26"><div class="ttname"><a href="classCell.html#ae124c6ef8ceff03f710c951466babc26">Cell.GetLiquidName</a></div><div class="ttdeci">string GetLiquidName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01675">Cell.cs:1675</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00050">50</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        windows[0].SetCaption(cell.<a class="code hl_function" href="classCell.html#ae124c6ef8ceff03f710c951466babc26">GetLiquidName</a>());</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a34be8c84e4a4555ceeaf98bad9fb45d9">SetLiquid</a>(cell);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassCell_html_ae124c6ef8ceff03f710c951466babc26"><div class="ttname"><a href="classCell.html#ae124c6ef8ceff03f710c951466babc26">Cell.GetLiquidName</a></div><div class="ttdeci">string GetLiquidName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01644">Cell.cs:1644</a></div></div>
 <div class="ttc" id="aclassUICardInfo_html_a34be8c84e4a4555ceeaf98bad9fb45d9"><div class="ttname"><a href="classUICardInfo.html#a34be8c84e4a4555ceeaf98bad9fb45d9">UICardInfo.SetLiquid</a></div><div class="ttdeci">void SetLiquid(Cell cell)</div><div class="ttdef"><b>Definition:</b> <a href="UICardInfo_8cs_source.html#l00084">UICardInfo.cs:84</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01675">Cell.GetLiquidName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00091">info</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00084">UICardInfo.SetLiquid()</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01644">Cell.GetLiquidName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00005">info</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00084">UICardInfo.SetLiquid()</a>.</p>
 
 </div>
 </div>
@@ -548,16 +550,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00059">59</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>        this.windows[0].SetCaption(cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.<a class="code hl_function" href="classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131">GetName</a>());</div>
-<div class="line"><span class="lineno">   62</span>        this.<a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a3a562719a2c782ba0e34b1885be380d8">SetObj</a>(cell);</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclassCell_html_aacc3d9e8c8c2f80f53de63b8ef1c6d03"><div class="ttname"><a href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">Cell.sourceObj</a></div><div class="ttdeci">SourceObj.Row sourceObj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01182">Cell.cs:1183</a></div></div>
-<div class="ttc" id="aclassSourceObj_html_a48f86c2b89c8a9337102b8ee64560131"><div class="ttname"><a href="classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131">SourceObj.GetName</a></div><div class="ttdeci">string GetName(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00076">SourceObj.cs:76</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00064">64</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        windows[0].SetCaption(cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.<a class="code hl_function" href="classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131">GetName</a>());</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a3a562719a2c782ba0e34b1885be380d8">SetObj</a>(cell);</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassCell_html_aacc3d9e8c8c2f80f53de63b8ef1c6d03"><div class="ttname"><a href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">Cell.sourceObj</a></div><div class="ttdeci">SourceObj.Row sourceObj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01072">Cell.cs:1072</a></div></div>
+<div class="ttc" id="aclassSourceObj_html_a48f86c2b89c8a9337102b8ee64560131"><div class="ttname"><a href="classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131">SourceObj.GetName</a></div><div class="ttdeci">string GetName(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00147">SourceObj.cs:147</a></div></div>
 <div class="ttc" id="aclassUICardInfo_html_a3a562719a2c782ba0e34b1885be380d8"><div class="ttname"><a href="classUICardInfo.html#a3a562719a2c782ba0e34b1885be380d8">UICardInfo.SetObj</a></div><div class="ttdeci">void SetObj(Cell cell)</div><div class="ttdef"><b>Definition:</b> <a href="UICardInfo_8cs_source.html#l00094">UICardInfo.cs:94</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceObj_8cs_source.html#l00076">SourceObj.GetName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00091">info</a>, <a class="el" href="UICardInfo_8cs_source.html#l00094">UICardInfo.SetObj()</a>, and <a class="el" href="Cell_8cs_source.html#l01183">Cell.sourceObj</a>.</p>
+<p class="reference">References <a class="el" href="SourceObj_8cs_source.html#l00147">SourceObj.GetName()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00005">info</a>, <a class="el" href="UICardInfo_8cs_source.html#l00094">UICardInfo.SetObj()</a>, and <a class="el" href="Cell_8cs_source.html#l01072">Cell.sourceObj</a>.</p>
 
 </div>
 </div>
@@ -595,18 +597,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00026">26</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        this.examine = _examine;</div>
-<div class="line"><span class="lineno">   29</span>        this.windows[0].SetCaption(t.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>.ToTitleCase(<span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">   30</span>        this.<a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a86b07963af552101c13fdeaa05355010">SetThing</a>(t);</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02191">Card.cs:2192</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00031">31</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="classLayerInfo.html#a9089ddc39382fc699b76cf581f1a81e2">examine</a> = _examine;</div>
+<div class="line"><span class="lineno">   34</span>        windows[0].SetCaption(t.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>.ToTitleCase());</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="classLayerInfo.html#a454567b010fe2a6e68a8e6ae1538830d">info</a>.<a class="code hl_function" href="classUICardInfo.html#a86b07963af552101c13fdeaa05355010">SetThing</a>(t);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01937">Card.cs:1937</a></div></div>
 <div class="ttc" id="aclassUICardInfo_html_a86b07963af552101c13fdeaa05355010"><div class="ttname"><a href="classUICardInfo.html#a86b07963af552101c13fdeaa05355010">UICardInfo.SetThing</a></div><div class="ttdeci">void SetThing(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="UICardInfo_8cs_source.html#l00039">UICardInfo.cs:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerInfo_8cs_source.html#l00091">info</a>, <a class="el" href="Card_8cs_source.html#l02192">Card.NameSimple</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00039">UICardInfo.SetThing()</a>.</p>
+<p class="reference">References <a class="el" href="LayerInfo_8cs_source.html#l00009">examine</a>, <a class="el" href="LayerInfo_8cs_source.html#l00005">info</a>, <a class="el" href="Card_8cs_source.html#l01937">Card.NameSimple</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00039">UICardInfo.SetThing()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00018">Set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00023">Set()</a>.</p>
 
 </div>
 </div>
@@ -634,18 +636,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00051">51</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.Clear();</div>
-<div class="line"><span class="lineno">   54</span>        this.<a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.AddHeader(z.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.AddText(z.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.GetDetail(), FontColor.DontChange);</div>
-<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.Build();</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclassLayerInfo_html_aec53a48bc76955a26997e7fb46c2144d"><div class="ttname"><a href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">LayerInfo.note</a></div><div class="ttdeci">UINote note</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00093">LayerInfo.cs:93</a></div></div>
-<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00527">Spatial.cs:528</a></div></div>
-<div class="ttc" id="aclassSpatial_html_aa42f763f502591c824b67010aa9ecde7"><div class="ttname"><a href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">Spatial.source</a></div><div class="ttdeci">SourceZone.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00422">Spatial.cs:423</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00056">56</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.Clear();</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.AddHeader(z.<a class="code hl_property" href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Name</a>);</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.AddText(z.<a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.GetDetail());</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">note</a>.Build();</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassLayerInfo_html_aec53a48bc76955a26997e7fb46c2144d"><div class="ttname"><a href="classLayerInfo.html#aec53a48bc76955a26997e7fb46c2144d">LayerInfo.note</a></div><div class="ttdeci">UINote note</div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00007">LayerInfo.cs:7</a></div></div>
+<div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00493">Spatial.cs:493</a></div></div>
+<div class="ttc" id="aclassSpatial_html_aa42f763f502591c824b67010aa9ecde7"><div class="ttname"><a href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">Spatial.source</a></div><div class="ttdeci">SourceZone.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00441">Spatial.cs:441</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00528">Spatial.Name</a>, <a class="el" href="LayerInfo_8cs_source.html#l00093">note</a>, and <a class="el" href="Spatial_8cs_source.html#l00423">Spatial.source</a>.</p>
+<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00493">Spatial.Name</a>, <a class="el" href="LayerInfo_8cs_source.html#l00007">note</a>, and <a class="el" href="Spatial_8cs_source.html#l00441">Spatial.source</a>.</p>
 
 </div>
 </div>
@@ -662,9 +664,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00095">95</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00074">OnUpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00079">OnUpdateInput()</a>, and <a class="el" href="LayerInfo_8cs_source.html#l00031">SetThing()</a>.</p>
 
 </div>
 </div>
@@ -680,9 +682,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00091">91</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00033">SetBlock()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00012">SetElement()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00039">SetFloor()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00045">SetLiquid()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00059">SetObj()</a>, and <a class="el" href="LayerInfo_8cs_source.html#l00026">SetThing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00038">SetBlock()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00017">SetElement()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00044">SetFloor()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00050">SetLiquid()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00064">SetObj()</a>, and <a class="el" href="LayerInfo_8cs_source.html#l00031">SetThing()</a>.</p>
 
 </div>
 </div>
@@ -698,9 +700,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00093">93</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerInfo_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerInfo_8cs_source.html">LayerInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00051">SetZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00056">SetZone()</a>.</p>
 
 </div>
 </div>

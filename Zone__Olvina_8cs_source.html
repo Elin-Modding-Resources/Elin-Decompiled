@@ -92,43 +92,45 @@ $(document).ready(function(){initNavTree('Zone__Olvina_8cs_source.html',''); ini
   <div class="headertitle"><div class="title">Zone_Olvina.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Zone__Olvina_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classZone__Olvina.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classZone__Olvina.html">Zone_Olvina</a> : <a class="code hl_class" href="classZone__Town.html">Zone_Town</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0">IDPlaylistOverwrite</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_property" href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">IsFestival</a>)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Festival_Olvina&quot;</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">   17</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">IsFestival</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">return</span> base.lv == 0 &amp;&amp; EClass.world.date.month == 3;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b">   25</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b">OnActivate</a>()</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a89c88828616c141af5f02112746b1893">LoadPrefab</a>(<span class="stringliteral">&quot;MoonOlvina&quot;</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00095">EClass.cs:96</a></div></div>
-<div class="ttc" id="aclassScene_html_a89c88828616c141af5f02112746b1893"><div class="ttname"><a href="classScene.html#a89c88828616c141af5f02112746b1893">Scene.LoadPrefab</a></div><div class="ttdeci">Transform LoadPrefab(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00943">Scene.cs:943</a></div></div>
-<div class="ttc" id="aclassZone__Olvina_html"><div class="ttname"><a href="classZone__Olvina.html">Zone_Olvina</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00003">Zone_Olvina.cs:4</a></div></div>
-<div class="ttc" id="aclassZone__Olvina_html_a0c5db580b493a72e2d83ad315b82a717"><div class="ttname"><a href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">Zone_Olvina.IsFestival</a></div><div class="ttdeci">override bool IsFestival</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00017">Zone_Olvina.cs:18</a></div></div>
-<div class="ttc" id="aclassZone__Olvina_html_a37fc2a934d2f84e231171ee1ed2d0db0"><div class="ttname"><a href="classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0">Zone_Olvina.IDPlaylistOverwrite</a></div><div class="ttdeci">override string IDPlaylistOverwrite</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00005">Zone_Olvina.cs:6</a></div></div>
-<div class="ttc" id="aclassZone__Olvina_html_ac8b4736a565f467f805b3870b41c892b"><div class="ttname"><a href="classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b">Zone_Olvina.OnActivate</a></div><div class="ttdeci">override void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00025">Zone_Olvina.cs:25</a></div></div>
-<div class="ttc" id="aclassZone__Town_html"><div class="ttname"><a href="classZone__Town.html">Zone_Town</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Town_8cs_source.html#l00003">Zone_Town.cs:4</a></div></div>
+<a href="Zone__Olvina_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classZone__Olvina.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classZone__Olvina.html">Zone_Olvina</a> : <a class="code hl_class" href="classZone__Town.html">Zone_Town</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0">IDPlaylistOverwrite</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">IsFestival</a>)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Festival_Olvina&quot;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">   15</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">IsFestival</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">if</span> (base.lv == 0)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                <span class="keywordflow">return</span> EClass.world.date.month == 3;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b">   27</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b">OnActivate</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#a89c88828616c141af5f02112746b1893">LoadPrefab</a>(<span class="stringliteral">&quot;MoonOlvina&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00030">EClass.cs:30</a></div></div>
+<div class="ttc" id="aclassScene_html_a89c88828616c141af5f02112746b1893"><div class="ttname"><a href="classScene.html#a89c88828616c141af5f02112746b1893">Scene.LoadPrefab</a></div><div class="ttdeci">Transform LoadPrefab(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01075">Scene.cs:1075</a></div></div>
+<div class="ttc" id="aclassZone__Olvina_html"><div class="ttname"><a href="classZone__Olvina.html">Zone_Olvina</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00001">Zone_Olvina.cs:2</a></div></div>
+<div class="ttc" id="aclassZone__Olvina_html_a0c5db580b493a72e2d83ad315b82a717"><div class="ttname"><a href="classZone__Olvina.html#a0c5db580b493a72e2d83ad315b82a717">Zone_Olvina.IsFestival</a></div><div class="ttdeci">override bool IsFestival</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00015">Zone_Olvina.cs:16</a></div></div>
+<div class="ttc" id="aclassZone__Olvina_html_a37fc2a934d2f84e231171ee1ed2d0db0"><div class="ttname"><a href="classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0">Zone_Olvina.IDPlaylistOverwrite</a></div><div class="ttdeci">override string IDPlaylistOverwrite</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00003">Zone_Olvina.cs:4</a></div></div>
+<div class="ttc" id="aclassZone__Olvina_html_ac8b4736a565f467f805b3870b41c892b"><div class="ttname"><a href="classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b">Zone_Olvina.OnActivate</a></div><div class="ttdeci">override void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Olvina_8cs_source.html#l00027">Zone_Olvina.cs:27</a></div></div>
+<div class="ttc" id="aclassZone__Town_html"><div class="ttname"><a href="classZone__Town.html">Zone_Town</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Town_8cs_source.html#l00001">Zone_Town.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

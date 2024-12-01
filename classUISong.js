@@ -2,7 +2,7 @@ var classUISong =
 [
     [ "Awake", "classUISong.html#a110f780eb645ac8c30446ae09c86c2fa", null ],
     [ "Kill", "classUISong.html#a0690226507c8135286f4d2c54621ba79", null ],
-    [ "SetSong", "classUISong.html#ab95a4869d20cd4c2746fcc03835202e6", null ],
+    [ "SetSong", "classUISong.html#a1fa9d3d9e18cdabb63dca77eb86bfc1b", null ],
     [ "Update", "classUISong.html#ac20d663437f4002d26673c766c3e8540", null ],
     [ "bar", "classUISong.html#a41ed310b376d21c6137b048e82c02515", null ],
     [ "bgm", "classUISong.html#a1e050344867bf7b4a176c4dc81831b7d", null ],

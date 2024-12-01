@@ -267,7 +267,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00004">4</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00003">3</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae83e6dce5916d9f35d87324173b21e4c" name="ae83e6dce5916d9f35d87324173b21e4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae83e6dce5916d9f35d87324173b21e4c">&#9670;&#160;</a></span>_Close()</h2>
@@ -292,16 +292,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00234">234</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>    {</div>
-<div class="line"><span class="lineno">  236</span>        base._Close();</div>
-<div class="line"><span class="lineno">  237</span>        EInput.Consume(<span class="keyword">false</span>, 1);</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> (!this.option.consumeInput)</div>
-<div class="line"><span class="lineno">  239</span>        {</div>
-<div class="line"><span class="lineno">  240</span>            EInput.rightMouse.consumed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  241</span>            EInput.rightMouse.ignoreClick = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  242</span>        }</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00110">110</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        base._Close();</div>
+<div class="line"><span class="lineno">  113</span>        EInput.Consume();</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!option.consumeInput)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            EInput.rightMouse.consumed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  117</span>            EInput.rightMouse.ignoreClick = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,14 +329,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00229">229</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  230</span>    {</div>
-<div class="line"><span class="lineno">  231</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  232</span>    }</div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00105">105</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00021">ELayer.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ui</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00021">ui</a>.</p>
 
 </div>
 </div>
@@ -363,19 +362,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00192">192</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  193</span>    {</div>
-<div class="line"><span class="lineno">  194</span>        EInput.Consume(0);</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (this.closeOthers)</div>
-<div class="line"><span class="lineno">  196</span>        {</div>
-<div class="line"><span class="lineno">  197</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayers(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
-<div class="line"><span class="lineno">  199</span>        base.Init();</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00067">67</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        EInput.Consume(0);</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (closeOthers)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayers();</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        base.Init();</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00063">ui</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00021">ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00049">LayerTitle.OnClickContinue()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00090">LayerTitle.OnClickContinue()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00124">LayerLoadGame.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -402,11 +401,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00187">187</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>    {</div>
-<div class="line"><span class="lineno">  189</span>        base.Init();</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00062">62</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        base.Init();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00077">UIInspector.Inspect()</a>.</p>
+
 </div>
 </div>
 <a id="af6ee616c5fdb2b9678346f5a1b5958e2" name="af6ee616c5fdb2b9678346f5a1b5958e2"></a>
@@ -432,48 +433,48 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00245">245</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (this.isDestroyed || base.gameObject == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classELayer.html#ac309a6b682f3bf6030541eb406c0785b">itemTalk</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  252</span>        {</div>
-<div class="line"><span class="lineno">  253</span>            this.itemTalk.important = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  254</span>            <a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>.<a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.Kill(this.<a class="code hl_variable" href="classELayer.html#ac309a6b682f3bf6030541eb406c0785b">itemTalk</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        BaseCore.Instance.eventSystem.SetSelectedGameObject(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  257</span>        EInput.DisableIME();</div>
-<div class="line"><span class="lineno">  258</span>        base.Kill();</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (this.option.playlist &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.IsGameStarted)</div>
-<div class="line"><span class="lineno">  260</span>        {</div>
-<div class="line"><span class="lineno">  261</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">RefreshBGM</a>();</div>
-<div class="line"><span class="lineno">  262</span>        }</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a3236e48f598717810b6dcb9fc4f66643">alwaysResetWindow</a>)</div>
-<div class="line"><span class="lineno">  264</span>        {</div>
-<div class="line"><span class="lineno">  265</span>            Window.dictData.Clear();</div>
-<div class="line"><span class="lineno">  266</span>        }</div>
-<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">if</span> (this.option.hideFloatUI)</div>
-<div class="line"><span class="lineno">  268</span>        {</div>
-<div class="line"><span class="lineno">  269</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ShowFloats();</div>
-<div class="line"><span class="lineno">  270</span>        }</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">if</span> (this.option.hideWidgets)</div>
-<div class="line"><span class="lineno">  272</span>        {</div>
-<div class="line"><span class="lineno">  273</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Show();</div>
-<div class="line"><span class="lineno">  274</span>        }</div>
-<div class="line"><span class="lineno">  275</span>    }</div>
-<div class="ttc" id="aclassCoreDebug_html_a3236e48f598717810b6dcb9fc4f66643"><div class="ttname"><a href="classCoreDebug.html#a3236e48f598717810b6dcb9fc4f66643">CoreDebug.alwaysResetWindow</a></div><div class="ttdeci">bool alwaysResetWindow</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02142">CoreDebug.cs:2142</a></div></div>
-<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
-<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00150">ELayer.cs:151</a></div></div>
-<div class="ttc" id="aclassELayer_html_ac309a6b682f3bf6030541eb406c0785b"><div class="ttname"><a href="classELayer.html#ac309a6b682f3bf6030541eb406c0785b">ELayer.itemTalk</a></div><div class="ttdeci">PopItem itemTalk</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00320">ELayer.cs:320</a></div></div>
-<div class="ttc" id="aclassELayer_html_afc9fa03a5b05d1a1a05ffbd867feb3be"><div class="ttname"><a href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">ELayer._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00078">ELayer.cs:79</a></div></div>
-<div class="ttc" id="aclassWidgetFeed_html"><div class="ttname"><a href="classWidgetFeed.html">WidgetFeed</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00004">WidgetFeed.cs:5</a></div></div>
-<div class="ttc" id="aclassWidgetFeed_html_a498a84266c404980276c8509b31f14c5"><div class="ttname"><a href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">WidgetFeed.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00110">WidgetFeed.cs:110</a></div></div>
-<div class="ttc" id="aclassWidgetFeed_html_ac1b5284142e34a0206ab4061e95c7a76"><div class="ttname"><a href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">WidgetFeed.Instance</a></div><div class="ttdeci">static WidgetFeed Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00106">WidgetFeed.cs:106</a></div></div>
-<div class="ttc" id="aclassZone_html_a5ffc60aaaf210f368a9b2d30c01ad4b0"><div class="ttname"><a href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">Zone.RefreshBGM</a></div><div class="ttdeci">void RefreshBGM()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03042">Zone.cs:3042</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00121">121</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (!isDestroyed &amp;&amp; !(base.gameObject == <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classELayer.html#ac309a6b682f3bf6030541eb406c0785b">itemTalk</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                itemTalk.important = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  128</span>                <a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>.<a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.Kill(<a class="code hl_variable" href="classELayer.html#ac309a6b682f3bf6030541eb406c0785b">itemTalk</a>);</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>            BaseCore.Instance.eventSystem.SetSelectedGameObject(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  131</span>            EInput.DisableIME();</div>
+<div class="line"><span class="lineno">  132</span>            base.Kill();</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)option.playlist &amp;&amp; <a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a>)</div>
+<div class="line"><span class="lineno">  134</span>            {</div>
+<div class="line"><span class="lineno">  135</span>                <a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">RefreshBGM</a>();</div>
+<div class="line"><span class="lineno">  136</span>            }</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a3236e48f598717810b6dcb9fc4f66643">alwaysResetWindow</a>)</div>
+<div class="line"><span class="lineno">  138</span>            {</div>
+<div class="line"><span class="lineno">  139</span>                Window.dictData.Clear();</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (option.hideFloatUI)</div>
+<div class="line"><span class="lineno">  142</span>            {</div>
+<div class="line"><span class="lineno">  143</span>                <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ShowFloats();</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (option.hideWidgets)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Show();</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_html_a3236e48f598717810b6dcb9fc4f66643"><div class="ttname"><a href="classCoreDebug.html#a3236e48f598717810b6dcb9fc4f66643">CoreDebug.alwaysResetWindow</a></div><div class="ttdeci">bool alwaysResetWindow</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00127">CoreDebug.cs:127</a></div></div>
+<div class="ttc" id="aclassCore_html_ac31f5b0fe98a25c00ca5700c328ae460"><div class="ttname"><a href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">Core.IsGameStarted</a></div><div class="ttdeci">bool IsGameStarted</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00077">Core.cs:78</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00007">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00043">ELayer.cs:43</a></div></div>
+<div class="ttc" id="aclassELayer_html_ac309a6b682f3bf6030541eb406c0785b"><div class="ttname"><a href="classELayer.html#ac309a6b682f3bf6030541eb406c0785b">ELayer.itemTalk</a></div><div class="ttdeci">PopItem itemTalk</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00005">ELayer.cs:5</a></div></div>
+<div class="ttc" id="aclassELayer_html_afc9fa03a5b05d1a1a05ffbd867feb3be"><div class="ttname"><a href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">ELayer._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00025">ELayer.cs:25</a></div></div>
+<div class="ttc" id="aclassWidgetFeed_html"><div class="ttname"><a href="classWidgetFeed.html">WidgetFeed</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00003">WidgetFeed.cs:4</a></div></div>
+<div class="ttc" id="aclassWidgetFeed_html_a498a84266c404980276c8509b31f14c5"><div class="ttname"><a href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">WidgetFeed.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00018">WidgetFeed.cs:18</a></div></div>
+<div class="ttc" id="aclassWidgetFeed_html_ac1b5284142e34a0206ab4061e95c7a76"><div class="ttname"><a href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">WidgetFeed.Instance</a></div><div class="ttdeci">static WidgetFeed Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00014">WidgetFeed.cs:14</a></div></div>
+<div class="ttc" id="aclassZone_html_a5ffc60aaaf210f368a9b2d30c01ad4b0"><div class="ttname"><a href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">Zone.RefreshBGM</a></div><div class="ttdeci">void RefreshBGM()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02637">Zone.cs:2637</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00079">_zone</a>, <a class="el" href="CoreDebug_8cs_source.html#l02142">CoreDebug.alwaysResetWindow</a>, <a class="el" href="ELayer_8cs_source.html#l00007">core</a>, <a class="el" href="ELayer_8cs_source.html#l00151">debug</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00106">WidgetFeed.Instance</a>, <a class="el" href="ELayer_8cs_source.html#l00320">itemTalk</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00110">WidgetFeed.pop</a>, <a class="el" href="Zone_8cs_source.html#l03042">Zone.RefreshBGM()</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ui</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00025">_zone</a>, <a class="el" href="CoreDebug_8cs_source.html#l00127">CoreDebug.alwaysResetWindow</a>, <a class="el" href="ELayer_8cs_source.html#l00007">core</a>, <a class="el" href="ELayer_8cs_source.html#l00043">debug</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00014">WidgetFeed.Instance</a>, <a class="el" href="Core_8cs_source.html#l00078">Core.IsGameStarted</a>, <a class="el" href="ELayer_8cs_source.html#l00005">itemTalk</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00018">WidgetFeed.pop</a>, <a class="el" href="Zone_8cs_source.html#l02637">Zone.RefreshBGM()</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ui</a>.</p>
 
 </div>
 </div>
@@ -500,16 +501,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00202">202</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>    {</div>
-<div class="line"><span class="lineno">  204</span>        this.<a class="code hl_function" href="classELayer.html#a3f7cd1367b4c92a565a52b7f9c1b28d6">TryShowHelp</a>();</div>
-<div class="line"><span class="lineno">  205</span>        <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_function" href="classWidgetMainText.html#ad88a1e6cea7c2da3d883b5ac8024bed6">HideLog</a>();</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
-<div class="ttc" id="aclassELayer_html_a3f7cd1367b4c92a565a52b7f9c1b28d6"><div class="ttname"><a href="classELayer.html#a3f7cd1367b4c92a565a52b7f9c1b28d6">ELayer.TryShowHelp</a></div><div class="ttdeci">void TryShowHelp()</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00208">ELayer.cs:208</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00077">77</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_function" href="classELayer.html#a3f7cd1367b4c92a565a52b7f9c1b28d6">TryShowHelp</a>();</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_function" href="classWidgetMainText.html#ad88a1e6cea7c2da3d883b5ac8024bed6">HideLog</a>();</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassELayer_html_a3f7cd1367b4c92a565a52b7f9c1b28d6"><div class="ttname"><a href="classELayer.html#a3f7cd1367b4c92a565a52b7f9c1b28d6">ELayer.TryShowHelp</a></div><div class="ttdeci">void TryShowHelp()</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00083">ELayer.cs:83</a></div></div>
 <div class="ttc" id="aclassWidgetMainText_html"><div class="ttname"><a href="classWidgetMainText.html">WidgetMainText</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00004">WidgetMainText.cs:5</a></div></div>
-<div class="ttc" id="aclassWidgetMainText_html_ad88a1e6cea7c2da3d883b5ac8024bed6"><div class="ttname"><a href="classWidgetMainText.html#ad88a1e6cea7c2da3d883b5ac8024bed6">WidgetMainText.HideLog</a></div><div class="ttdeci">static void HideLog()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00140">WidgetMainText.cs:140</a></div></div>
+<div class="ttc" id="aclassWidgetMainText_html_ad88a1e6cea7c2da3d883b5ac8024bed6"><div class="ttname"><a href="classWidgetMainText.html#ad88a1e6cea7c2da3d883b5ac8024bed6">WidgetMainText.HideLog</a></div><div class="ttdeci">static void HideLog()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00156">WidgetMainText.cs:156</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00140">WidgetMainText.HideLog()</a>, and <a class="el" href="ELayer_8cs_source.html#l00208">TryShowHelp()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetMainText_8cs_source.html#l00156">WidgetMainText.HideLog()</a>, and <a class="el" href="ELayer_8cs_source.html#l00083">TryShowHelp()</a>.</p>
 
 </div>
 </div>
@@ -536,18 +537,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00179">179</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>    {</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.IsGameStarted &amp;&amp; <span class="keyword">this</span>.defaultActionMode)</div>
-<div class="line"><span class="lineno">  182</span>        {</div>
-<div class="line"><span class="lineno">  183</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">DefaultMode</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>(<span class="keyword">true</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  184</span>        }</div>
-<div class="line"><span class="lineno">  185</span>    }</div>
-<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00006">ActionMode.cs:7</a></div></div>
-<div class="ttc" id="aclassActionMode_html_a776e1f7a04431da5c37b476b46fe053d"><div class="ttname"><a href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">ActionMode.DefaultMode</a></div><div class="ttdeci">static ActionMode DefaultMode</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01691">ActionMode.cs:1691</a></div></div>
-<div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00516">ActionMode.cs:516</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00054">54</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; defaultActionMode)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">DefaultMode</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>();</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00005">ActionMode.cs:6</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a776e1f7a04431da5c37b476b46fe053d"><div class="ttname"><a href="classActionMode.html#a776e1f7a04431da5c37b476b46fe053d">ActionMode.DefaultMode</a></div><div class="ttdeci">static ActionMode DefaultMode</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00007">ActionMode.cs:7</a></div></div>
+<div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00339">ActionMode.cs:339</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00516">ActionMode.Activate()</a>, <a class="el" href="ELayer_8cs_source.html#l00007">core</a>, and <a class="el" href="ActionMode_8cs_source.html#l01691">ActionMode.DefaultMode</a>.</p>
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00339">ActionMode.Activate()</a>, <a class="el" href="ELayer_8cs_source.html#l00007">core</a>, <a class="el" href="ActionMode_8cs_source.html#l00007">ActionMode.DefaultMode</a>, and <a class="el" href="Core_8cs_source.html#l00078">Core.IsGameStarted</a>.</p>
 
 </div>
 </div>
@@ -574,19 +575,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00310">310</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>    {</div>
-<div class="line"><span class="lineno">  312</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> componentOf = InputModuleEX.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">if</span> (componentOf &amp;&amp; componentOf.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  314</span>        {</div>
-<div class="line"><span class="lineno">  315</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  316</span>        }</div>
-<div class="line"><span class="lineno">  317</span>        base.OnRightClick();</div>
-<div class="line"><span class="lineno">  318</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00183">183</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>    {</div>
+<div class="line"><span class="lineno">  185</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> componentOf = InputModuleEX.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (!componentOf || componentOf.<a class="code hl_variable" href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">invOwner</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            base.OnRightClick();</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
-<div class="ttc" id="aclassButtonGrid_html_a395df6219d488aabc130b70cc35028f0"><div class="ttname"><a href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">ButtonGrid.invOwner</a></div><div class="ttdeci">InvOwner invOwner</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00782">ButtonGrid.cs:782</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_a395df6219d488aabc130b70cc35028f0"><div class="ttname"><a href="classButtonGrid.html#a395df6219d488aabc130b70cc35028f0">ButtonGrid.invOwner</a></div><div class="ttdeci">InvOwner invOwner</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00028">ButtonGrid.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00782">ButtonGrid.invOwner</a>.</p>
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00028">ButtonGrid.invOwner</a>.</p>
 
 </div>
 </div>
@@ -614,12 +614,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00158">158</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> Rand.Range(0, a);</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00049">49</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> Rand.Range(0, a);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00134">LayerHoard.AddRandom()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00008">LayerShippingResult.Awake()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00203">LayerEmbark.GetAlias()</a>, and <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerHoard_8cs_source.html#l00157">LayerHoard.AddRandom()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00053">LayerShippingResult.Awake()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00062">LayerGachaResult.Draw()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00256">LayerEmbark.GetAlias()</a>, and <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -647,14 +647,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00300">300</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  301</span>    {</div>
-<div class="line"><span class="lineno">  302</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a37ba124f651598df5482ab53313361f7">TalkHomeMemeber</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  303</span>    }</div>
-<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00005">Msg.cs:6</a></div></div>
-<div class="ttc" id="aclassMsg_html_a37ba124f651598df5482ab53313361f7"><div class="ttname"><a href="classMsg.html#a37ba124f651598df5482ab53313361f7">Msg.TalkHomeMemeber</a></div><div class="ttdeci">static PopItem TalkHomeMemeber(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00236">Msg.cs:236</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00173">173</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>    {</div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a37ba124f651598df5482ab53313361f7">TalkHomeMemeber</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
+<div class="ttc" id="aclassMsg_html_a37ba124f651598df5482ab53313361f7"><div class="ttname"><a href="classMsg.html#a37ba124f651598df5482ab53313361f7">Msg.TalkHomeMemeber</a></div><div class="ttdeci">static PopItem TalkHomeMemeber(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00219">Msg.cs:219</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00236">Msg.TalkHomeMemeber()</a>.</p>
+<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00219">Msg.TalkHomeMemeber()</a>.</p>
 
 </div>
 </div>
@@ -682,13 +682,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00305">305</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  306</span>    {</div>
-<div class="line"><span class="lineno">  307</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a75232f5638106c893372cbcb161b1c84">TalkMaid</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  308</span>    }</div>
-<div class="ttc" id="aclassMsg_html_a75232f5638106c893372cbcb161b1c84"><div class="ttname"><a href="classMsg.html#a75232f5638106c893372cbcb161b1c84">Msg.TalkMaid</a></div><div class="ttdeci">static PopItem TalkMaid(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00257">Msg.cs:257</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00178">178</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#a75232f5638106c893372cbcb161b1c84">TalkMaid</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="ttc" id="aclassMsg_html_a75232f5638106c893372cbcb161b1c84"><div class="ttname"><a href="classMsg.html#a75232f5638106c893372cbcb161b1c84">Msg.TalkMaid</a></div><div class="ttdeci">static PopItem TalkMaid(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00240">Msg.cs:240</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00257">Msg.TalkMaid()</a>.</p>
+<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00240">Msg.TalkMaid()</a>.</p>
 
 </div>
 </div>
@@ -715,33 +715,36 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00208">208</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>    {</div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordtype">bool</span> flag = Resources.Load&lt;TextAsset&gt;(CorePath.Text_DialogHelp + this.<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span> (flag &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.config.helpFlags.Contains(<span class="keyword">this</span>.IdHelp))</div>
-<div class="line"><span class="lineno">  212</span>        {</div>
-<div class="line"><span class="lineno">  213</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a7991457cc2af2ef37ad82b8b9016326e">ActivateNerun</a>(this.<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
-<div class="line"><span class="lineno">  214</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.config.helpFlags.Add(this.<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (this.windows.Count &gt; 0 &amp;&amp; <span class="keyword">this</span>.windows[0].buttonHelp)</div>
-<div class="line"><span class="lineno">  217</span>        {</div>
-<div class="line"><span class="lineno">  218</span>            this.windows[0].buttonHelp.SetActive(flag);</div>
-<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  220</span>            {</div>
-<div class="line"><span class="lineno">  221</span>                this.windows[0].buttonHelp.onClick.AddListener(delegate()</div>
-<div class="line"><span class="lineno">  222</span>                {</div>
-<div class="line"><span class="lineno">  223</span>                    <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a7991457cc2af2ef37ad82b8b9016326e">ActivateNerun</a>(this.<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
-<div class="line"><span class="lineno">  224</span>                });</div>
-<div class="line"><span class="lineno">  225</span>            }</div>
-<div class="line"><span class="lineno">  226</span>        }</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
-<div class="ttc" id="aclassELayer_html_ad2483dd69cf2938baf2dda71138b3a6c"><div class="ttname"><a href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">ELayer.IdHelp</a></div><div class="ttdeci">virtual string IdHelp</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00171">ELayer.cs:172</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00083">83</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">bool</span> flag = Resources.Load&lt;TextAsset&gt;(CorePath.Text_DialogHelp + <a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (flag &amp;&amp; !<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a4489b0645eda831f9892c9d329a7bbf9">helpFlags</a>.Contains(<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>))</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a7991457cc2af2ef37ad82b8b9016326e">ActivateNerun</a>(<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a4489b0645eda831f9892c9d329a7bbf9">helpFlags</a>.Add(<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (windows.Count &lt;= 0 || !windows[0].buttonHelp)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        windows[0].buttonHelp.SetActive(flag);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            windows[0].buttonHelp.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a7991457cc2af2ef37ad82b8b9016326e">ActivateNerun</a>(<a class="code hl_property" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a>);</div>
+<div class="line"><span class="lineno">  101</span>            });</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_html_a4489b0645eda831f9892c9d329a7bbf9"><div class="ttname"><a href="classCoreConfig.html#a4489b0645eda831f9892c9d329a7bbf9">CoreConfig.helpFlags</a></div><div class="ttdeci">HashSet&lt; string &gt; helpFlags</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00600">CoreConfig.cs:600</a></div></div>
+<div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00064">Core.cs:64</a></div></div>
+<div class="ttc" id="aclassELayer_html_ad2483dd69cf2938baf2dda71138b3a6c"><div class="ttname"><a href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">ELayer.IdHelp</a></div><div class="ttdeci">virtual string IdHelp</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00047">ELayer.cs:47</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
-<div class="ttc" id="aclassLayerDrama_html_a7991457cc2af2ef37ad82b8b9016326e"><div class="ttname"><a href="classLayerDrama.html#a7991457cc2af2ef37ad82b8b9016326e">LayerDrama.ActivateNerun</a></div><div class="ttdeci">static LayerDrama ActivateNerun(string idText)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00058">LayerDrama.cs:58</a></div></div>
+<div class="ttc" id="aclassLayerDrama_html_a7991457cc2af2ef37ad82b8b9016326e"><div class="ttname"><a href="classLayerDrama.html#a7991457cc2af2ef37ad82b8b9016326e">LayerDrama.ActivateNerun</a></div><div class="ttdeci">static LayerDrama ActivateNerun(string idText)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00086">LayerDrama.cs:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00058">LayerDrama.ActivateNerun()</a>, <a class="el" href="ELayer_8cs_source.html#l00007">core</a>, and <a class="el" href="ELayer_8cs_source.html#l00172">IdHelp</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00086">LayerDrama.ActivateNerun()</a>, <a class="el" href="Core_8cs_source.html#l00064">Core.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00600">CoreConfig.helpFlags</a>, and <a class="el" href="ELayer_8cs_source.html#l00047">IdHelp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00202">OnAfterAddLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00077">OnAfterAddLayer()</a>.</p>
 
 </div>
 </div>
@@ -769,33 +772,30 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00277">277</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>    {</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">if</span> (!_langHint.IsEmpty() &amp;&amp; Lang.Has(_langHint))</div>
-<div class="line"><span class="lineno">  280</span>        {</div>
-<div class="line"><span class="lineno">  281</span>            this.langHint = _langHint;</div>
-<div class="line"><span class="lineno">  282</span>        }</div>
-<div class="line"><span class="lineno">  283</span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> = <span class="stringliteral">&quot;h_&quot;</span> + base.GetType().Name;</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">if</span> (!this.langHint.IsEmpty())</div>
-<div class="line"><span class="lineno">  285</span>        {</div>
-<div class="line"><span class="lineno">  286</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.hint.Show(this.langHint.lang(), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  288</span>        }</div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> (Lang.Has(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>))</div>
-<div class="line"><span class="lineno">  290</span>        {</div>
-<div class="line"><span class="lineno">  291</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.hint.Show(<a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  293</span>        }</div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">if</span> (!this.option.dontRefreshHint)</div>
-<div class="line"><span class="lineno">  295</span>        {</div>
-<div class="line"><span class="lineno">  296</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.hint.Refresh();</div>
-<div class="line"><span class="lineno">  297</span>        }</div>
-<div class="line"><span class="lineno">  298</span>    }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00152">152</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (!_langHint.IsEmpty() &amp;&amp; Lang.Has(_langHint))</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            langHint = _langHint;</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;h_&quot;</span> + GetType().Name;</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (!langHint.IsEmpty())</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.hint.Show(langHint.lang());</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Lang.Has(text))</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.hint.Show(text);</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option.dontRefreshHint)</div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.hud.hint.Refresh();</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="ELayer_8cs_source.html#l00063">ui</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00021">ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00172">UI.OnChangeLayer()</a>, and <a class="el" href="UIInventory_8cs_source.html#l00255">UIInventory.SwitchTab()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00226">UI.OnChangeLayer()</a>.</p>
 
 </div>
 </div>
@@ -820,9 +820,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00320">320</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00005">5</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00245">Kill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00121">Kill()</a>.</p>
 
 </div>
 </div>
@@ -847,15 +847,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00070">70</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.activeZone.map;</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00034">LayerEditPlaylist.Activate()</a>, <a class="el" href="LayerResource_8cs_source.html#l00006">LayerResource.OnInit()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00018">LayerUploader.OnInit()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00142">LayerEditPlaylist.OnKill()</a>, <a class="el" href="LayerHome_8cs_source.html#l00187">LayerHome.RefreshAreas()</a>, <a class="el" href="LayerResource_8cs_source.html#l00032">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00053">LayerQuestBoard.RefreshQuest()</a>, <a class="el" href="LayerHome_8cs_source.html#l00217">LayerHome.RefreshSpots()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00059">LayerUploader.SaveID()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00118">LayerCraftFloat.ShowContextMenu()</a>, and <a class="el" href="LayerResource_8cs_source.html#l00085">LayerResource.ShowThings()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00023">23</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00130">LayerEditPlaylist.Activate()</a>, <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00047">LayerUploader.OnInit()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00231">LayerEditPlaylist.OnKill()</a>, <a class="el" href="LayerHome_8cs_source.html#l00204">LayerHome.RefreshAreas()</a>, <a class="el" href="LayerResource_8cs_source.html#l00041">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00079">LayerQuestBoard.RefreshQuest()</a>, <a class="el" href="LayerHome_8cs_source.html#l00234">LayerHome.RefreshSpots()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00086">LayerUploader.SaveID()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00136">LayerCraftFloat.ShowContextMenu()</a>, and <a class="el" href="LayerResource_8cs_source.html#l00094">LayerResource.ShowThings()</a>.</p>
 
 </div>
 </div>
@@ -879,15 +873,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00078">78</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.activeZone;</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00516">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00028">LayerNewZone.Embark()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00069">LayerUploader.ExportMap()</a>, <a class="el" href="ELayer_8cs_source.html#l00245">Kill()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00006">LayerNewZone.OnInit()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00008">LayerQuestBoard.OnInit()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00142">LayerEditPlaylist.OnKill()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00017">LayerQuestBoard.OnSwitchContent()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00053">LayerQuestBoard.RefreshQuest()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00007">LayerTreasureMap.SetMap()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00118">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>, and <a class="el" href="LayerUploader_8cs_source.html#l00076">LayerUploader.Upload()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00025">25</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00532">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00033">LayerNewZone.Embark()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00096">LayerUploader.ExportMap()</a>, <a class="el" href="ELayer_8cs_source.html#l00121">Kill()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00011">LayerNewZone.OnInit()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00033">LayerQuestBoard.OnInit()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00231">LayerEditPlaylist.OnKill()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00042">LayerQuestBoard.OnSwitchContent()</a>, <a class="el" href="LayerHome_8cs_source.html#l00109">LayerHome.RefreshFeat()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00079">LayerQuestBoard.RefreshQuest()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00010">LayerTreasureMap.SetMap()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00136">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00118">LayerTextureViewer.Update()</a>, and <a class="el" href="LayerUploader_8cs_source.html#l00103">LayerUploader.Upload()</a>.</p>
 
 </div>
 </div>
@@ -911,15 +899,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00022">22</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> ELayer.scene.actionMode == <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>;</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aclassActionMode_html_af841b34c3b252c5ed036eb2adb505bc1"><div class="ttname"><a href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">ActionMode.Adv</a></div><div class="ttdeci">static AM_Adv Adv</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l01699">ActionMode.cs:1699</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00011">11</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae4d07dc2ec6589ddf58869a75860426c" name="ae4d07dc2ec6589ddf58869a75860426c"></a>
@@ -942,15 +923,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00046">46</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.activeZone.branch;</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00012">LayerHome.OnInit()</a>, <a class="el" href="LayerHire_8cs_source.html#l00051">LayerHire.OnKill()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00188">LayerQuestBoard.OnKill()</a>, <a class="el" href="LayerHome_8cs_source.html#l00088">LayerHome.RefreshFeat()</a>, <a class="el" href="LayerTech_8cs_source.html#l00041">LayerTech.RefreshFocus()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00087">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00070">LayerPolicy.RefreshPolicyIcons()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00021">LayerPolicy.RefreshPolicyList()</a>, and <a class="el" href="LayerTech_8cs_source.html#l00010">LayerTech.RefreshTech()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00017">17</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00037">LayerHome.OnInit()</a>, <a class="el" href="LayerHire_8cs_source.html#l00050">LayerHire.OnKill()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00205">LayerQuestBoard.OnKill()</a>, <a class="el" href="LayerHome_8cs_source.html#l00109">LayerHome.RefreshFeat()</a>, <a class="el" href="LayerTech_8cs_source.html#l00045">LayerTech.RefreshFocus()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00113">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00071">LayerPolicy.RefreshPolicyIcons()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00027">LayerPolicy.RefreshPolicyList()</a>, and <a class="el" href="LayerTech_8cs_source.html#l00014">LayerTech.RefreshTech()</a>.</p>
 
 </div>
 </div>
@@ -974,15 +949,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00118">118</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.Colors;</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00035">35</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -1006,15 +975,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00102">102</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.config;</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00433">LayerConfig.ApplyFont()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">LayerMod.OnInit()</a>, <a class="el" href="UI_8cs_source.html#l00293">UI.OnUpdate()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, and <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00031">31</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerConfig_8cs_source.html#l00523">LayerConfig.ApplyFont()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00126">LayerConfig.OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00065">LayerFeedback.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00017">LayerMod.OnInit()</a>, <a class="el" href="UI_8cs_source.html#l00336">UI.OnUpdate()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00222">LayerConfig.Refresh()</a>, and <a class="el" href="UI_8cs_source.html#l00657">UI.ToggleFeedback()</a>.</p>
 
 </div>
 </div>
@@ -1038,17 +1001,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00006">6</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00012">Core.cs:13</a></div></div>
-<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00691">Core.cs:691</a></div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00362">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00410">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerMod_8cs_source.html#l00159">LayerMod.g__Move()</a>, <a class="el" href="ELayer_8cs_source.html#l00245">Kill()</a>, <a class="el" href="LayerHelp_8cs_source.html#l00013">LayerHelp.OnAfterInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00232">LayerInventory.OnAfterInit()</a>, <a class="el" href="ELayer_8cs_source.html#l00179">OnBeforeAddLayer()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00015">LayerConfig.OnBeforeAddLayer()</a>, <a class="el" href="UI_8cs_source.html#l00172">UI.OnChangeLayer()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00088">LayerTitle.OnClickExit()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00018">LayerEditHouse.OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">LayerMod.OnInit()</a>, <a class="el" href="LayerPixelPaint_8cs_source.html#l00008">LayerPixelPaint.OnInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00015">LayerTitle.OnInit()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00018">LayerUploader.OnInit()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00108">LayerConfig.OnKill()</a>, <a class="el" href="LayerList_8cs_source.html#l00280">LayerList.OnKill()</a>, <a class="el" href="LayerMod_8cs_source.html#l00153">LayerMod.OnKill()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00013">LayerCraftFloat.OnSwitchContent()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00023">LayerTextureViewer.OnSwitchContent()</a>, <a class="el" href="Dialog_8cs_source.html#l00080">Dialog.OnUpdateInput()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00074">LayerInfo.OnUpdateInput()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, <a class="el" href="UIInspector_8cs_source.html#l00093">UIInspector.Refresh()</a>, <a class="el" href="LayerHome_8cs_source.html#l00187">LayerHome.RefreshAreas()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00043">LayerLoadGame.RefreshList()</a>, <a class="el" href="LayerHome_8cs_source.html#l00217">LayerHome.RefreshSpots()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00110">LayerNewspaper.RefreshWeather()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00008">LayerColorPicker.SetColor()</a>, <a class="el" href="LayerImage_8cs_source.html#l00007">LayerImage.SetImage()</a>, <a class="el" href="UI_8cs_source.html#l00452">UI.ShowLang()</a>, <a class="el" href="UI_8cs_source.html#l00429">UI.ShowSceneSelector()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00078">LayerProgress.Start()</a>, <a class="el" href="UI_8cs_source.html#l00695">UI.StartDrag()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00244">LayerFeedback.Submit()</a>, <a class="el" href="UI_8cs_source.html#l00526">UI.ToggleAbility()</a>, <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>, <a class="el" href="ELayer_8cs_source.html#l00208">TryShowHelp()</a>, <a class="el" href="Dialog_8cs_source.html#l00254">Dialog.TryWarn()</a>, <a class="el" href="Dialog_8cs_source.html#l00323">Dialog.TryWarnCrime()</a>, <a class="el" href="Dialog_8cs_source.html#l00349">Dialog.TryWarnDisassemble()</a>, and <a class="el" href="Dialog_8cs_source.html#l00336">Dialog.TryWarnMana()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00007">7</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00381">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00426">LayerInventory.CreateContainerPC()</a>, <a class="el" href="ELayer_8cs_source.html#l00121">Kill()</a>, <a class="el" href="LayerHelp_8cs_source.html#l00011">LayerHelp.OnAfterInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00251">LayerInventory.OnAfterInit()</a>, <a class="el" href="ELayer_8cs_source.html#l00054">OnBeforeAddLayer()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00121">LayerConfig.OnBeforeAddLayer()</a>, <a class="el" href="UI_8cs_source.html#l00226">UI.OnChangeLayer()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00128">LayerTitle.OnClickExit()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00053">LayerEditHouse.OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00065">LayerFeedback.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00017">LayerMod.OnInit()</a>, <a class="el" href="LayerPixelPaint_8cs_source.html#l00016">LayerPixelPaint.OnInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00057">LayerTitle.OnInit()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00047">LayerUploader.OnInit()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00214">LayerConfig.OnKill()</a>, <a class="el" href="LayerList_8cs_source.html#l00316">LayerList.OnKill()</a>, <a class="el" href="LayerMod_8cs_source.html#l00143">LayerMod.OnKill()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00027">LayerCraftFloat.OnSwitchContent()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00066">LayerTextureViewer.OnSwitchContent()</a>, <a class="el" href="Dialog_8cs_source.html#l00123">Dialog.OnUpdateInput()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00079">LayerInfo.OnUpdateInput()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00222">LayerConfig.Refresh()</a>, <a class="el" href="LayerHome_8cs_source.html#l00204">LayerHome.RefreshAreas()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00124">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00086">LayerLoadGame.RefreshList()</a>, <a class="el" href="LayerHome_8cs_source.html#l00234">LayerHome.RefreshSpots()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00258">LayerNewspaper.RefreshWeather()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00018">LayerColorPicker.SetColor()</a>, <a class="el" href="LayerImage_8cs_source.html#l00012">LayerImage.SetImage()</a>, <a class="el" href="UI_8cs_source.html#l00495">UI.ShowLang()</a>, <a class="el" href="UI_8cs_source.html#l00472">UI.ShowSceneSelector()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00108">LayerProgress.Start()</a>, <a class="el" href="UI_8cs_source.html#l00743">UI.StartDrag()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00291">LayerFeedback.Submit()</a>, <a class="el" href="UI_8cs_source.html#l00571">UI.ToggleAbility()</a>, <a class="el" href="UI_8cs_source.html#l00657">UI.ToggleFeedback()</a>, <a class="el" href="ELayer_8cs_source.html#l00083">TryShowHelp()</a>, <a class="el" href="Dialog_8cs_source.html#l00290">Dialog.TryWarn()</a>, <a class="el" href="Dialog_8cs_source.html#l00358">Dialog.TryWarnCrime()</a>, <a class="el" href="Dialog_8cs_source.html#l00388">Dialog.TryWarnDisassemble()</a>, and <a class="el" href="Dialog_8cs_source.html#l00373">Dialog.TryWarnMana()</a>.</p>
 
 </div>
 </div>
@@ -1072,15 +1027,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00150">150</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>    {</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  153</span>        {</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.debug;</div>
-<div class="line"><span class="lineno">  155</span>        }</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00058">LayerDrama.ActivateNerun()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00148">LayerFeedback.CollectFiles()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00054">LayerEditBio.g__Start()</a>, <a class="el" href="ELayer_8cs_source.html#l00245">Kill()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00016">LayerHoard.OnAfterInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">LayerMod.OnInit()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00018">LayerNewspaper.OnInit()</a>, <a class="el" href="LayerDebug_8cs_source.html#l00006">LayerDebug.OnSwitchContent()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00075">LayerEditPlaylist.Refresh()</a>, <a class="el" href="UI_8cs_source.html#l00452">UI.ShowLang()</a>, <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>, and <a class="el" href="LayerUploader_8cs_source.html#l00028">LayerUploader.Update()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00043">43</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerDrama_8cs_source.html#l00086">LayerDrama.ActivateNerun()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00190">LayerFeedback.CollectFiles()</a>, <a class="el" href="ELayer_8cs_source.html#l00121">Kill()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00039">LayerHoard.OnAfterInit()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00043">LayerEditBio.OnClickStart()</a>, <a class="el" href="LayerMod_8cs_source.html#l00017">LayerMod.OnInit()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="LayerDebug_8cs_source.html#l00005">LayerDebug.OnSwitchContent()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00168">LayerEditPlaylist.Refresh()</a>, <a class="el" href="UI_8cs_source.html#l00495">UI.ShowLang()</a>, <a class="el" href="UI_8cs_source.html#l00657">UI.ToggleFeedback()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00086">LayerHoard.Update()</a>, and <a class="el" href="LayerUploader_8cs_source.html#l00055">LayerUploader.Update()</a>.</p>
 
 </div>
 </div>
@@ -1104,15 +1053,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00014">14</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game;</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00316">LayerInventory._Create()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.Activate()</a>, <a class="el" href="LayerFaith_8cs_source.html#l00011">LayerFaith.Activate()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00093">LayerEditPCC.Apply()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00008">LayerShippingResult.Awake()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00516">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00119">LayerPeople.CreateSelectEmbarkMembers()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00028">LayerNewZone.Embark()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00054">LayerEditBio.g__Start()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00009">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00024">LayerEmbark.OnAfterAddLayer()</a>, <a class="el" href="LayerPauseMenu_8cs_source.html#l00010">LayerPauseMenu.OnClickExit()</a>, <a class="el" href="LayerPauseMenu_8cs_source.html#l00015">LayerPauseMenu.OnClickSave()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00035">LayerEditBio.OnClickStart()</a>, <a class="el" href="LayerPauseMenu_8cs_source.html#l00005">LayerPauseMenu.OnClickTitle()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00015">LayerAbility.OnInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00269">LayerInventory.OnKill()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00013">LayerCraftFloat.OnSwitchContent()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00055">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00026">LayerFactions.RefreshFactions()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00053">LayerQuestBoard.RefreshQuest()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00146">LayerQuestBoard.RefreshRanking()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00373">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00065">LayerFactions.RefreshZones()</a>, <a class="el" href="LayerLocation_8cs_source.html#l00019">LayerLocation.RefreshZones()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00066">LayerInventory.SetDirty()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00103">LayerShippingResult.Show()</a>, and <a class="el" href="UI_8cs_source.html#l00526">UI.ToggleAbility()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00009">9</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00335">LayerInventory._Create()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00039">LayerEditPCC.Activate()</a>, <a class="el" href="LayerFaith_8cs_source.html#l00051">LayerFaith.Activate()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00109">LayerEditPCC.Apply()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00053">LayerShippingResult.Awake()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00532">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00148">LayerPeople.CreateSelectEmbarkMembers()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00033">LayerNewZone.Embark()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00017">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00077">LayerEmbark.OnAfterAddLayer()</a>, <a class="el" href="LayerPauseMenu_8cs_source.html#l00008">LayerPauseMenu.OnClickExit()</a>, <a class="el" href="LayerPauseMenu_8cs_source.html#l00013">LayerPauseMenu.OnClickSave()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00043">LayerEditBio.OnClickStart()</a>, <a class="el" href="LayerPauseMenu_8cs_source.html#l00003">LayerPauseMenu.OnClickTitle()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00032">LayerAbility.OnInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00288">LayerInventory.OnKill()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00027">LayerCraftFloat.OnSwitchContent()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00124">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00079">LayerQuestBoard.RefreshQuest()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00159">LayerQuestBoard.RefreshRanking()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00416">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00069">LayerFactions.RefreshZones()</a>, <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00082">LayerInventory.SetDirty()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>, and <a class="el" href="UI_8cs_source.html#l00571">UI.ToggleAbility()</a>.</p>
 
 </div>
 </div>
@@ -1136,15 +1079,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00054">54</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.factions.Home;</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerHire_8cs_source.html#l00011">LayerHire.Refresh()</a>, and <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">LayerGlobalMap.RefreshSummary()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00019">19</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerHire_8cs_source.html#l00010">LayerHire.Refresh()</a>, and <a class="el" href="LayerGlobalMap_8cs_source.html#l00024">LayerGlobalMap.RefreshSummary()</a>.</p>
 
 </div>
 </div>
@@ -1168,15 +1105,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00171">171</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  174</span>        {</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span> base.GetType().Name;</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00208">TryShowHelp()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00047">47</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ELayer_8cs_source.html#l00083">TryShowHelp()</a>.</p>
 
 </div>
 </div>
@@ -1200,15 +1131,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00163">163</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>    {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  166</span>        {</div>
-<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.layers.Contains(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  168</span>        }</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00410">LayerInventory.CreateContainerPC()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00045">45</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00426">LayerInventory.CreateContainerPC()</a>.</p>
 
 </div>
 </div>
@@ -1232,15 +1157,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00038">38</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.player.chara;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.Activate()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00583">LayerInventory.CreateBuy()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00516">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00560">LayerInventory.CreateContainer&lt; T &gt;()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00410">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00325">LayerInventory.CreatePCBackpack()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00068">LayerTravel.GetSortVal()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00063">LayerTravel.GetTravelHours()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00190">LayerInventory.IsPlayerContainer()</a>, <a class="el" href="UI_8cs_source.html#l00120">UI.OnActivateZone()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00009">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00006">LayerMiniGame.OnAfterInit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00083">LayerCraft.OnClickCraft()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00015">LayerNewZone.OnClickExit()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00015">LayerAbility.OnInit()</a>, <a class="el" href="LayerEquip_8cs_source.html#l00011">LayerEquip.OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00016">LayerFeedback.OnInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00210">LayerInventory.OnInit()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00299">LayerDragGrid.OnKill()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00269">LayerInventory.OnKill()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00013">LayerCraftFloat.OnSwitchContent()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00022">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="UI_8cs_source.html#l00587">UI.OpenFloatInv()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00007">LayerGachaResult.PlayGacha()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00194">LayerDragGrid.RefreshCost()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00055">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerHome_8cs_source.html#l00088">LayerHome.RefreshFeat()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00087">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00146">LayerQuestBoard.RefreshRanking()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00065">LayerFactions.RefreshZones()</a>, <a class="el" href="LayerLocation_8cs_source.html#l00019">LayerLocation.RefreshZones()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00053">LayerMiniGame.Run()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00146">LayerAbility.SelectGroup()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00066">LayerInventory.SetDirty()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00043">LayerDragGrid.SetInv()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00130">LayerEditPCC.SetPortraitSlider()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00103">LayerShippingResult.Show()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00118">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00023">LayerSleep.Sleep()</a>, <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00128">LayerInventory.TryShowGuide()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00076">LayerUploader.Upload()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00186">LayerCraft.WaitUntilIdle()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00015">15</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">LayerEditPCC.Activate()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00594">LayerInventory.CreateBuy()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00532">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00576">LayerInventory.CreateContainer&lt; T &gt;()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00426">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00344">LayerInventory.CreatePCBackpack()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00087">LayerTravel.GetSortVal()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00082">LayerTravel.GetTravelHours()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00201">LayerInventory.IsPlayerContainer()</a>, <a class="el" href="UI_8cs_source.html#l00174">UI.OnActivateZone()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00017">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00011">LayerMiniGame.OnAfterInit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00138">LayerCraft.OnClickCraft()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00020">LayerNewZone.OnClickExit()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00032">LayerAbility.OnInit()</a>, <a class="el" href="LayerEquip_8cs_source.html#l00020">LayerEquip.OnInit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00065">LayerFeedback.OnInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00229">LayerInventory.OnInit()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00313">LayerDragGrid.OnKill()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00288">LayerInventory.OnKill()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00027">LayerCraftFloat.OnSwitchContent()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00027">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="UI_8cs_source.html#l00635">UI.OpenFloatInv()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00030">LayerGachaResult.PlayGacha()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00210">LayerDragGrid.RefreshCost()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerHome_8cs_source.html#l00109">LayerHome.RefreshFeat()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00113">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00159">LayerQuestBoard.RefreshRanking()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00024">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00069">LayerFactions.RefreshZones()</a>, <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00055">LayerMiniGame.Run()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00165">LayerAbility.SelectGroup()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00082">LayerInventory.SetDirty()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00065">LayerDragGrid.SetInv()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00146">LayerEditPCC.SetPortraitSlider()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00136">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00040">LayerSleep.Sleep()</a>, <a class="el" href="UI_8cs_source.html#l00657">UI.ToggleFeedback()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00144">LayerInventory.TryShowGuide()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00103">LayerUploader.Upload()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00237">LayerCraft.WaitUntilIdle()</a>.</p>
 
 </div>
 </div>
@@ -1264,15 +1183,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00030">30</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.player;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00008">LayerShippingResult.Awake()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00362">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00410">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00348">LayerDragGrid.CreateDeliver()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00203">LayerEmbark.GetAlias()</a>, <a class="el" href="UI_8cs_source.html#l00120">UI.OnActivateZone()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00015">LayerNewZone.OnClickExit()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00015">LayerAbility.OnInit()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00012">LayerPeople.OnInit()</a>, <a class="el" href="LayerResource_8cs_source.html#l00006">LayerResource.OnInit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00031">LayerCraft.OnKill()</a>, <a class="el" href="LayerHome_8cs_source.html#l00018">LayerHome.OnSwitchContent()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00118">LayerAbility.OnUpdateInput()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00022">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00075">LayerEditPlaylist.Refresh()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00041">LayerShippingResult.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="LayerResource_8cs_source.html#l00032">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00142">LayerGacha.RefreshCoin()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00055">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00198">LayerCraftFloat.RefreshDisassemble()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00160">LayerEmbark.RefreshMembers()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="LayerTech_8cs_source.html#l00010">LayerTech.RefreshTech()</a>, <a class="el" href="LayerHome_8cs_source.html#l00058">LayerHome.RefreshTech()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00190">LayerEmbark.RerollPC()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00146">LayerAbility.SelectGroup()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00025">LayerEditBio.SetChara()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00025">LayerShippingResult.Show()</a>, <a class="el" href="LayerResource_8cs_source.html#l00085">LayerResource.ShowThings()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00023">LayerSleep.Sleep()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00058">LayerEmbark.SwitchMode()</a>, and <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00013">13</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00053">LayerShippingResult.Awake()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00381">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00426">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00364">LayerDragGrid.CreateDeliver()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00256">LayerEmbark.GetAlias()</a>, <a class="el" href="UI_8cs_source.html#l00174">UI.OnActivateZone()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00020">LayerNewZone.OnClickExit()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00032">LayerAbility.OnInit()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00037">LayerPeople.OnInit()</a>, <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00092">LayerCraft.OnKill()</a>, <a class="el" href="LayerHome_8cs_source.html#l00043">LayerHome.OnSwitchContent()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00137">LayerAbility.OnUpdateInput()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00027">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00168">LayerEditPlaylist.Refresh()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="LayerResource_8cs_source.html#l00041">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00154">LayerGacha.RefreshCoin()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00189">LayerCraftFloat.RefreshDisassemble()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00213">LayerEmbark.RefreshMembers()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00024">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="LayerTech_8cs_source.html#l00014">LayerTech.RefreshTech()</a>, <a class="el" href="LayerHome_8cs_source.html#l00078">LayerHome.RefreshTech()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00243">LayerEmbark.RerollPC()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00165">LayerAbility.SelectGroup()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00033">LayerEditBio.SetChara()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00070">LayerShippingResult.Show()</a>, <a class="el" href="LayerResource_8cs_source.html#l00094">LayerResource.ShowThings()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00040">LayerSleep.Sleep()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00111">LayerEmbark.SwitchMode()</a>, and <a class="el" href="UI_8cs_source.html#l00657">UI.ToggleFeedback()</a>.</p>
 
 </div>
 </div>
@@ -1296,15 +1209,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00086">86</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.scene;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00282">UI.Hide()</a>, <a class="el" href="UIInspector_8cs_source.html#l00032">UIInspector.InspectUnderMouse()</a>, <a class="el" href="UI_8cs_source.html#l00172">UI.OnChangeLayer()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00020">LayerTravel.OnInit()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00022">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00007">LayerTreasureMap.SetMap()</a>, <a class="el" href="UI_8cs_source.html#l00270">UI.Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00046">LayerInteraction.TryShow()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00027">27</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00323">UI.Hide()</a>, <a class="el" href="UIInspector_8cs_source.html#l00057">UIInspector.InspectUnderMouse()</a>, <a class="el" href="UI_8cs_source.html#l00226">UI.OnChangeLayer()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00039">LayerTravel.OnInit()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00027">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00010">LayerTreasureMap.SetMap()</a>, <a class="el" href="UI_8cs_source.html#l00309">UI.Show()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00132">LayerInteraction.TryShow()</a>.</p>
 
 </div>
 </div>
@@ -1328,15 +1235,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00094">94</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   97</span>        {</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.screen;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00174">UIInspector.DrawHighlight()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00028">LayerNewZone.Embark()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00020">LayerTravel.OnInit()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00037">LayerTravel.OnKill()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00139">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00034">LayerEditHouse.SetBoard()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00007">LayerTreasureMap.SetMap()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00018">LayerInteraction.Update()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00029">29</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00194">UIInspector.DrawHighlight()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00033">LayerNewZone.Embark()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00039">LayerTravel.OnInit()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00056">LayerTravel.OnKill()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00175">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00069">LayerEditHouse.SetBoard()</a>, <a class="el" href="LayerTreasureMap_8cs_source.html#l00010">LayerTreasureMap.SetMap()</a>, and <a class="el" href="LayerInteraction_8cs_source.html#l00106">LayerInteraction.Update()</a>.</p>
 
 </div>
 </div>
@@ -1360,15 +1261,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00110">110</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  113</span>        {</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.gameSetting;</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00112">LayerAbility.OnSwitchContent()</a>, and <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00033">33</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerAbility_8cs_source.html#l00131">LayerAbility.OnSwitchContent()</a>, and <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>.</p>
 
 </div>
 </div>
@@ -1392,15 +1287,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00142">142</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>    {</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  145</span>        {</div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">return</span> SoundManager.current;</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.Activate()</a>, <a class="el" href="Dialog_8cs_source.html#l00435">Dialog.Confetti()</a>, <a class="el" href="Dialog_8cs_source.html#l00441">Dialog.ConfettiSimple()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00028">LayerNewZone.Embark()</a>, <a class="el" href="Dialog_8cs_source.html#l00379">Dialog.Gift()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00142">LayerEditPlaylist.OnKill()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00051">LayerHoard.OnKill()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00007">LayerGachaResult.PlayGacha()</a>, <a class="el" href="Dialog_8cs_source.html#l00403">Dialog.Recipe()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00023">LayerSleep.Sleep()</a>, and <a class="el" href="LayerSleep_8cs_source.html#l00011">LayerSleep.Wait()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00041">41</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">LayerEditPCC.Activate()</a>, <a class="el" href="Dialog_8cs_source.html#l00476">Dialog.Confetti()</a>, <a class="el" href="Dialog_8cs_source.html#l00482">Dialog.ConfettiSimple()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00033">LayerNewZone.Embark()</a>, <a class="el" href="Dialog_8cs_source.html#l00420">Dialog.Gift()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00231">LayerEditPlaylist.OnKill()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00074">LayerHoard.OnKill()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00030">LayerGachaResult.PlayGacha()</a>, <a class="el" href="Dialog_8cs_source.html#l00444">Dialog.Recipe()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00040">LayerSleep.Sleep()</a>, and <a class="el" href="LayerSleep_8cs_source.html#l00028">LayerSleep.Wait()</a>.</p>
 
 </div>
 </div>
@@ -1424,15 +1313,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00126">126</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  129</span>        {</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.sources;</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00134">LayerHoard.AddRandom()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00040">LayerGachaResult.Draw()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00147">LayerHoard.Generate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00016">LayerHoard.OnAfterInit()</a>, <a class="el" href="Dialog_8cs_source.html#l00403">Dialog.Recipe()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00024">LayerCollectible.Refresh()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00139">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="LayerResource_8cs_source.html#l00032">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00229">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00034">LayerEditHouse.SetBoard()</a>, and <a class="el" href="LayerDistribution_8cs_source.html#l00005">LayerDistribution.SetContainer()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00037">37</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerEditPCC_8cs_source.html#l00039">LayerEditPCC.Activate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00157">LayerHoard.AddRandom()</a>, <a class="el" href="LayerGachaResult_8cs_source.html#l00062">LayerGachaResult.Draw()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00170">LayerHoard.Generate()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00039">LayerHoard.OnAfterInit()</a>, <a class="el" href="Dialog_8cs_source.html#l00444">Dialog.Recipe()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00034">LayerCollectible.Refresh()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00175">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="LayerResource_8cs_source.html#l00041">LayerResource.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00124">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00069">LayerEditHouse.SetBoard()</a>, and <a class="el" href="LayerDistribution_8cs_source.html#l00009">LayerDistribution.SetContainer()</a>.</p>
 
 </div>
 </div>
@@ -1456,15 +1339,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00062">62</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.ui;</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Dialog_8cs_source.html#l00447">Dialog._Confetti()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00023">LayerEditPCC.Activate()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00036">LayerDrama.Activate()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00058">LayerDrama.ActivateNerun()</a>, <a class="el" href="ELayer_8cs_source.html#l00229">AddLayerToUI()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="Dialog_8cs_source.html#l00195">Dialog.Choice()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00133">LayerAbility.ClearHotElement()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00338">LayerInventory.CloseAllyInv()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00334">LayerDragGrid.Create()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00102">LayerPeople.CreateBed()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00536">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00560">LayerInventory.CreateContainer&lt; T &gt;()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00362">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00410">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00090">LayerPeople.CreateReserve()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00150">LayerPeople.CreateSelect()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00028">LayerNewZone.Embark()</a>, <a class="el" href="UI_8cs_source.html#l00734">UI.EndDrag()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00074">LayerInspect.GetItem()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00056">LayerInteraction.GetPage()</a>, <a class="el" href="Dialog_8cs_source.html#l00379">Dialog.Gift()</a>, <a class="el" href="ELayer_8cs_source.html#l00192">Init()</a>, <a class="el" href="Dialog_8cs_source.html#l00469">Dialog.InputName()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00006">LayerDrama.IsActive()</a>, <a class="el" href="Dialog_8cs_source.html#l00460">Dialog.Keymap()</a>, <a class="el" href="ELayer_8cs_source.html#l00245">Kill()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00017">LayerDrama.LateUpdate()</a>, <a class="el" href="Dialog_8cs_source.html#l00228">Dialog.List&lt; TValue &gt;()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00227">LayerEmbark.ListPlayerAlias()</a>, <a class="el" href="Dialog_8cs_source.html#l00182">Dialog.Ok()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00009">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00024">LayerEmbark.OnAfterAddLayer()</a>, <a class="el" href="Dialog_8cs_source.html#l00008">Dialog.OnAfterInit()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00006">LayerMiniGame.OnAfterInit()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00006">LayerSleep.OnAfterInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00078">LayerTitle.OnClickAbout()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00073">LayerTitle.OnClickAnnounce()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00056">LayerNewspaper.OnClickComic()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00175">LayerHoard.OnClickConfig()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00058">LayerTitle.OnClickConfig()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00049">LayerTitle.OnClickContinue()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00068">LayerTitle.OnClickCredit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00473">LayerCraft.OnClickExamine()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00088">LayerTitle.OnClickExit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00083">LayerTitle.OnClickFeedback()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00063">LayerTitle.OnClickMod()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00022">LayerNewZone.OnClickSelectMembers()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00034">LayerTitle.OnClickStart()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00244">LayerAbility.OnDisable()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00215">LayerAbility.OnDrag()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00231">LayerAbility.OnEndDrag()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00015">LayerAbility.OnInit()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00020">LayerConfig.OnInit()</a>, <a class="el" href="LayerEquip_8cs_source.html#l00011">LayerEquip.OnInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00210">LayerInventory.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">LayerMod.OnInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00015">LayerTitle.OnInit()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00020">LayerTravel.OnInit()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00006">LayerWidget.OnInit()</a>, <a class="el" href="Dialog_8cs_source.html#l00158">Dialog.OnKill()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00299">LayerDragGrid.OnKill()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00084">LayerDrama.OnKill()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00269">LayerInventory.OnKill()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00068">LayerMiniGame.OnKill()</a>, <a class="el" href="LayerRegisterHotbar_8cs_source.html#l00080">LayerRegisterHotbar.OnKill()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00157">LayerSkinDeco.OnKill()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00103">LayerTitle.OnKill()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00037">LayerTravel.OnKill()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00148">LayerWidget.OnKill()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00032">LayerDragGrid.OnOpen()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00210">LayerAbility.OnStartDrag()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00267">LayerFeedback.OnSubmit()</a>, <a class="el" href="LayerHome_8cs_source.html#l00018">LayerHome.OnSwitchContent()</a>, <a class="el" href="LayerCover_8cs_source.html#l00019">LayerCover.OnUpdateInput()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00024">LayerInspect.OnUpdateInput()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00022">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00038">LayerSkinDeco.OnUpdateInput()</a>, <a class="el" href="UI_8cs_source.html#l00587">UI.OpenFloatInv()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00033">LayerGacha.PlayGacha()</a>, <a class="el" href="Dialog_8cs_source.html#l00403">Dialog.Recipe()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00024">LayerCollectible.Refresh()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00116">LayerConfig.Refresh()</a>, <a class="el" href="LayerHire_8cs_source.html#l00011">LayerHire.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00139">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00142">LayerGacha.RefreshCoin()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00055">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00088">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00160">LayerEmbark.RefreshMembers()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00031">LayerTextureViewer.RefreshPage()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00373">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00146">LayerAbility.SelectGroup()</a>, <a class="el" href="LayerCover_8cs_source.html#l00005">LayerCover.SetDuration()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00392">LayerConfig.SetFont()</a>, <a class="el" href="LayerRegisterHotbar_8cs_source.html#l00036">LayerRegisterHotbar.Show()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00035">LayerInteraction.Show()</a>, <a class="el" href="UI_8cs_source.html#l00264">UI.ShowBalloon()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00118">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00070">LayerProgress.Start()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00060">LayerProgress.StartAsync()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00058">LayerEmbark.SwitchMode()</a>, <a class="el" href="LayerHelp_8cs_source.html#l00028">LayerHelp.Toggle()</a>, <a class="el" href="UI_8cs_source.html#l00526">UI.ToggleAbility()</a>, <a class="el" href="UI_8cs_source.html#l00609">UI.ToggleFeedback()</a>, <a class="el" href="UI_8cs_source.html#l00552">UI.ToggleInventory()</a>, <a class="el" href="ELayer_8cs_source.html#l00277">TryShowHint()</a>, <a class="el" href="Dialog_8cs_source.html#l00254">Dialog.TryWarn()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00063">LayerHoard.Update()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00071">LayerTextureViewer.Update()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00114">LayerTitle.Update()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00011">LayerSleep.Wait()</a>, and <a class="el" href="Dialog_8cs_source.html#l00204">Dialog.YesNo()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00021">21</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Dialog_8cs_source.html#l00488">Dialog._Confetti()</a>, <a class="el" href="LayerEditPCC_8cs_source.html#l00039">LayerEditPCC.Activate()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00064">LayerDrama.Activate()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00086">LayerDrama.ActivateNerun()</a>, <a class="el" href="ELayer_8cs_source.html#l00105">AddLayerToUI()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="Dialog_8cs_source.html#l00235">Dialog.Choice()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00152">LayerAbility.ClearHotElement()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00357">LayerInventory.CloseAllyInv()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00350">LayerDragGrid.Create()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00131">LayerPeople.CreateBed()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00552">LayerInventory.CreateContainer()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00576">LayerInventory.CreateContainer&lt; T &gt;()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00381">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00426">LayerInventory.CreateContainerPC()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00119">LayerPeople.CreateReserve()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00179">LayerPeople.CreateSelect()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00033">LayerNewZone.Embark()</a>, <a class="el" href="UI_8cs_source.html#l00778">UI.EndDrag()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00093">LayerInspect.GetItem()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00113">LayerInspect.GetMenuItems()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00142">LayerInteraction.GetPage()</a>, <a class="el" href="Dialog_8cs_source.html#l00420">Dialog.Gift()</a>, <a class="el" href="ELayer_8cs_source.html#l00067">Init()</a>, <a class="el" href="Dialog_8cs_source.html#l00510">Dialog.InputName()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00032">LayerDrama.IsActive()</a>, <a class="el" href="Dialog_8cs_source.html#l00501">Dialog.Keymap()</a>, <a class="el" href="ELayer_8cs_source.html#l00121">Kill()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00043">LayerDrama.LateUpdate()</a>, <a class="el" href="Dialog_8cs_source.html#l00268">Dialog.List&lt; TValue &gt;()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00280">LayerEmbark.ListPlayerAlias()</a>, <a class="el" href="Dialog_8cs_source.html#l00222">Dialog.Ok()</a>, <a class="el" href="LayerEditBio_8cs_source.html#l00017">LayerEditBio.OnAfterAddLayer()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00077">LayerEmbark.OnAfterAddLayer()</a>, <a class="el" href="Dialog_8cs_source.html#l00051">Dialog.OnAfterInit()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00011">LayerMiniGame.OnAfterInit()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00023">LayerSleep.OnAfterInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00118">LayerTitle.OnClickAbout()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00113">LayerTitle.OnClickAnnounce()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00097">LayerNewspaper.OnClickComic()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00198">LayerHoard.OnClickConfig()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00098">LayerTitle.OnClickConfig()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00090">LayerTitle.OnClickContinue()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00108">LayerTitle.OnClickCredit()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00516">LayerCraft.OnClickExamine()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00128">LayerTitle.OnClickExit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00123">LayerTitle.OnClickFeedback()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00103">LayerTitle.OnClickMod()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00027">LayerNewZone.OnClickSelectMembers()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00076">LayerTitle.OnClickStart()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00264">LayerAbility.OnDisable()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00236">LayerAbility.OnDrag()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00252">LayerAbility.OnEndDrag()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00032">LayerAbility.OnInit()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00126">LayerConfig.OnInit()</a>, <a class="el" href="LayerEquip_8cs_source.html#l00020">LayerEquip.OnInit()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00229">LayerInventory.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00017">LayerMod.OnInit()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00057">LayerTitle.OnInit()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00039">LayerTravel.OnInit()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00011">LayerWidget.OnInit()</a>, <a class="el" href="Dialog_8cs_source.html#l00198">Dialog.OnKill()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00313">LayerDragGrid.OnKill()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00112">LayerDrama.OnKill()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00288">LayerInventory.OnKill()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00069">LayerMiniGame.OnKill()</a>, <a class="el" href="LayerRegisterHotbar_8cs_source.html#l00085">LayerRegisterHotbar.OnKill()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00142">LayerSkinDeco.OnKill()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00145">LayerTitle.OnKill()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00056">LayerTravel.OnKill()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00135">LayerWidget.OnKill()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00054">LayerDragGrid.OnOpen()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00231">LayerAbility.OnStartDrag()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00316">LayerFeedback.OnSubmit()</a>, <a class="el" href="LayerHome_8cs_source.html#l00043">LayerHome.OnSwitchContent()</a>, <a class="el" href="LayerCover_8cs_source.html#l00021">LayerCover.OnUpdateInput()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00042">LayerInspect.OnUpdateInput()</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00027">LayerMiniGame.OnUpdateInput()</a>, <a class="el" href="LayerSkinDeco_8cs_source.html#l00031">LayerSkinDeco.OnUpdateInput()</a>, <a class="el" href="UI_8cs_source.html#l00635">UI.OpenFloatInv()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>, <a class="el" href="Dialog_8cs_source.html#l00444">Dialog.Recipe()</a>, <a class="el" href="LayerCollectible_8cs_source.html#l00034">LayerCollectible.Refresh()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00222">LayerConfig.Refresh()</a>, <a class="el" href="LayerHire_8cs_source.html#l00010">LayerHire.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="LayerEditHouse_8cs_source.html#l00175">LayerEditHouse.RefreshBlockList()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00154">LayerGacha.RefreshCoin()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00124">LayerLoadGame.RefreshInfo()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00213">LayerEmbark.RefreshMembers()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00074">LayerTextureViewer.RefreshPage()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00165">LayerAbility.SelectGroup()</a>, <a class="el" href="LayerCover_8cs_source.html#l00007">LayerCover.SetDuration()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00490">LayerConfig.SetFont()</a>, <a class="el" href="LayerRegisterHotbar_8cs_source.html#l00041">LayerRegisterHotbar.Show()</a>, <a class="el" href="LayerInteraction_8cs_source.html#l00122">LayerInteraction.Show()</a>, <a class="el" href="UI_8cs_source.html#l00303">UI.ShowBalloon()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00136">LayerCraftFloat.ShowContextMenu()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00100">LayerProgress.Start()</a>, <a class="el" href="LayerProgress_8cs_source.html#l00090">LayerProgress.StartAsync()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00111">LayerEmbark.SwitchMode()</a>, <a class="el" href="LayerHelp_8cs_source.html#l00024">LayerHelp.Toggle()</a>, <a class="el" href="UI_8cs_source.html#l00571">UI.ToggleAbility()</a>, <a class="el" href="UI_8cs_source.html#l00657">UI.ToggleFeedback()</a>, <a class="el" href="UI_8cs_source.html#l00598">UI.ToggleInventory()</a>, <a class="el" href="ELayer_8cs_source.html#l00152">TryShowHint()</a>, <a class="el" href="Dialog_8cs_source.html#l00290">Dialog.TryWarn()</a>, <a class="el" href="LayerHoard_8cs_source.html#l00086">LayerHoard.Update()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00118">LayerTextureViewer.Update()</a>, <a class="el" href="LayerTitle_8cs_source.html#l00156">LayerTitle.Update()</a>, <a class="el" href="LayerSleep_8cs_source.html#l00028">LayerSleep.Wait()</a>, and <a class="el" href="Dialog_8cs_source.html#l00244">Dialog.YesNo()</a>.</p>
 
 </div>
 </div>
@@ -1488,15 +1365,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00134">134</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  137</span>        {</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.game.world;</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00035">LayerSleep.Advance()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00018">LayerNewspaper.OnInit()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00077">LayerTravel.Refresh()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00010">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00110">LayerNewspaper.RefreshWeather()</a>, and <a class="el" href="LayerTreasureMap_8cs_source.html#l00007">LayerTreasureMap.SetMap()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ELayer_8cs_source.html#l00039">39</a> of file <a class="el" href="ELayer_8cs_source.html">ELayer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00086">LayerLoadGame.RefreshList()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00024">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00258">LayerNewspaper.RefreshWeather()</a>, and <a class="el" href="LayerTreasureMap_8cs_source.html#l00010">LayerTreasureMap.SetMap()</a>.</p>
 
 </div>
 </div>

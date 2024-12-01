@@ -23,10 +23,10 @@ var classZoneTransition =
       [ "Moongate", "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46af4483b6e061bbe2d1cbab51c4bca68c4", null ],
       [ "Fall", "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a58fa788345ab5ac21c2cef38907d4580", null ]
     ] ],
-    [ "DirToState", "classZoneTransition.html#a1f87d02966353e4ec48150a869e1173d", null ],
+    [ "DirToState", "classZoneTransition.html#a9a9b35d964be80c61f3f9c2574dca9b0", null ],
     [ "idTele", "classZoneTransition.html#a7ed5f08ed5b9b5a164a151feebaec68a", null ],
     [ "ratePos", "classZoneTransition.html#aacf916740a82e8431d3b0145a18f3876", null ],
-    [ "state", "classZoneTransition.html#a8b2f93892f3f341fe293e04f90d8a72d", null ],
+    [ "state", "classZoneTransition.html#a50ae8a6460ee19b929c23d691686a252", null ],
     [ "uidLastZone", "classZoneTransition.html#abd388ee1aa206bee4e99b009110162cd", null ],
     [ "x", "classZoneTransition.html#a166e23900b2e77f6b4f9a22eeb4b770d", null ],
     [ "z", "classZoneTransition.html#ac0e2f506fdd8a439a7809841f8c1704a", null ],

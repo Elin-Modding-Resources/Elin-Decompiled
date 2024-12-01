@@ -3,7 +3,6 @@ var classDice =
     [ "Dice", "classDice.html#aeb5025592e24ab8800e064e32755cfa4", null ],
     [ "Create", "classDice.html#a961a7e0677e38be90f15a2c233ab4236", null ],
     [ "Create", "classDice.html#aade62408b05419fb5c0c3d9608d73461", null ],
-    [ "g__Roll", "classDice.html#a1ae66568063e61812cbba6586ec6e1d8", null ],
     [ "Parse", "classDice.html#a688ebce39a0cf9ec6ec35c755c708008", null ],
     [ "rnd", "classDice.html#abb71f28b7a36ecf8683a858dac37daa5", null ],
     [ "Roll", "classDice.html#a68e3451284a714cfcb18b58aae96095c", null ],

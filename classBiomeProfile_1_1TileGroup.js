@@ -1,5 +1,5 @@
 var classBiomeProfile_1_1TileGroup =
 [
-    [ "block", "classBiomeProfile_1_1TileGroup.html#af4496b3d47dfd858933cd80778a172e0", null ],
-    [ "floor", "classBiomeProfile_1_1TileGroup.html#ac8c28bb15237c3168a51f73699057b61", null ]
+    [ "block", "classBiomeProfile_1_1TileGroup.html#a48d0d6b61fc0f70a847e1b68fa61aba2", null ],
+    [ "floor", "classBiomeProfile_1_1TileGroup.html#ad4935ee6dc32f06f6b7976fa83cffe31", null ]
 ];

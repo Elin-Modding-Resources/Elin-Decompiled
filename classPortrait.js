@@ -1,7 +1,6 @@
 var classPortrait =
 [
     [ "Exists", "classPortrait.html#a4e0d4940afb891e94a15c52622470837", null ],
-    [ "g__FixTexture", "classPortrait.html#a9fd36e32fb86d6fb2a7b446d4f475e24", null ],
     [ "GetRandomPortrait", "classPortrait.html#a35df3fcdb2a5fd92bf4f0f82a9e3c6db", null ],
     [ "GetRandomPortrait", "classPortrait.html#a424351a84e09594607b223055f9c9101", null ],
     [ "ListPlayerPortraits", "classPortrait.html#a51ab554a89c7bd7ed402c494dc03516c", null ],

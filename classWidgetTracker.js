@@ -12,5 +12,5 @@ var classWidgetTracker =
     [ "lastSb", "classWidgetTracker.html#a9761443ed0920efbf61fe1ef18cf3337", null ],
     [ "sb", "classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e", null ],
     [ "text", "classWidgetTracker.html#aa73ce6825a49f4342854d3ff422ab8fd", null ],
-    [ "extra", "classWidgetTracker.html#ae4a4d4304c5191351873992fa858cb76", null ]
+    [ "extra", "classWidgetTracker.html#a3616753be4180c315d0b44c584da4985", null ]
 ];

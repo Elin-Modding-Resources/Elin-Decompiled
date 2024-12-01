@@ -13,5 +13,5 @@ var classWidgetDate =
     [ "rectClock", "classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c", null ],
     [ "textLevel", "classWidgetDate.html#af78f880df03c149430cc073db1749d8b", null ],
     [ "textTime", "classWidgetDate.html#a08fdb4fd4c523cc3e2a547bf144898eb", null ],
-    [ "extra", "classWidgetDate.html#a13b1da372a2925bcc04742cd22dc6340", null ]
+    [ "extra", "classWidgetDate.html#a6384442f895dadaf6152df45b044c073", null ]
 ];

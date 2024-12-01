@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('classLayerMod.html',''); initResizable
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classLayerMod-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LayerMod Class Reference</div></div>
 </div><!--header-->
@@ -203,11 +202,6 @@ Properties</h2></td></tr>
 <tr class="memitem:ad2483dd69cf2938baf2dda71138b3a6c inherit properties_classELayer"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classELayer.html#ad2483dd69cf2938baf2dda71138b3a6c">IdHelp</a><code> [get]</code></td></tr>
 <tr class="separator:ad2483dd69cf2938baf2dda71138b3a6c inherit properties_classELayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a3ef24c7788045ac85ac0355c7cebafb5"><td class="memItemLeft" align="right" valign="top">void&lt; <a class="el" href="classLayerMod.html#a760852c57410ce4012d0736dc4827ff2">OnInit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayerMod.html#a3ef24c7788045ac85ac0355c7cebafb5">g__Move</a> (BaseModPackage p, <a class="el" href="classItemMod.html">ItemMod</a> b, int a)</td></tr>
-<tr class="separator:a3ef24c7788045ac85ac0355c7cebafb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classELayer"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classELayer')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classELayer.html">ELayer</a></td></tr>
@@ -221,74 +215,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00003">3</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3ef24c7788045ac85ac0355c7cebafb5" name="a3ef24c7788045ac85ac0355c7cebafb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ef24c7788045ac85ac0355c7cebafb5">&#9670;&#160;</a></span>g__Move()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void&lt; <a class="el" href="classLayerMod.html#a760852c57410ce4012d0736dc4827ff2">OnInit</a> &gt; LayerMod.g__Move </td>
-          <td>(</td>
-          <td class="paramtype">BaseModPackage&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classItemMod.html">ItemMod</a>&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00159">159</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
-<div class="line"><span class="lineno">  161</span>        List&lt;BaseModPackage&gt; packages = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.packages;</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordtype">int</span> num = packages.IndexOf(p);</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (num + a &lt; 0 || num + a &gt;= packages.Count || packages[num + a].builtin)</div>
-<div class="line"><span class="lineno">  164</span>        {</div>
-<div class="line"><span class="lineno">  165</span>            SE.BeepSmall();</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>        packages.Move(p, a);</div>
-<div class="line"><span class="lineno">  169</span>        SE.Tab();</div>
-<div class="line"><span class="lineno">  170</span>        this.<a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.SaveLoadOrder();</div>
-<div class="line"><span class="lineno">  172</span>        this.<a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.List(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00004">ELayer.cs:5</a></div></div>
-<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00006">ELayer.cs:7</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_a4b6303c09b2ee562f224c53ef87b9e91"><div class="ttname"><a href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">LayerMod.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00177">LayerMod.cs:177</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_aa8c35a933c697f01de22bfbe1b66cf6a"><div class="ttname"><a href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">LayerMod.textRestart</a></div><div class="ttdeci">UIText textRestart</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00181">LayerMod.cs:181</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerMod_8cs_source.html#l00177">list</a>, and <a class="el" href="LayerMod_8cs_source.html#l00181">textRestart</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
-
-</div>
-</div>
 <a id="a760852c57410ce4012d0736dc4827ff2" name="a760852c57410ce4012d0736dc4827ff2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a760852c57410ce4012d0736dc4827ff2">&#9670;&#160;</a></span>OnInit()</h2>
 
@@ -312,163 +240,155 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        this.<a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   18</span>        this.<a class="code hl_variable" href="classLayerMod.html#a75d0282f6faf3dfe3c02881a364ae697">toggleDisableMods</a>.SetToggle(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#aba40d0adec93042a0e69f3d3a074f840">other</a>.disableMods, delegate(<span class="keywordtype">bool</span> on)</div>
-<div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            ELayer.config.other.disableMods = on;</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_function" href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">Save</a>();</div>
-<div class="line"><span class="lineno">   22</span>            this.<a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   23</span>        });</div>
-<div class="line"><span class="lineno">   24</span>        LayerMod.Instance = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   25</span>        BaseList baseList = this.<a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>;</div>
-<div class="line"><span class="lineno">   26</span>        BaseList baseList2 = this.<a class="code hl_variable" href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">list2</a>;</div>
-<div class="line"><span class="lineno">   27</span>        UIList.Callback&lt;BaseModPackage, <a class="code hl_class" href="classItemMod.html">ItemMod</a>&gt; callback = <span class="keyword">new</span> UIList.Callback&lt;BaseModPackage, <a class="code hl_class" href="classItemMod.html">ItemMod</a>&gt;();</div>
-<div class="line"><span class="lineno">   28</span>        callback.onClick = delegate(BaseModPackage a, <a class="code hl_class" href="classItemMod.html">ItemMod</a> b)</div>
-<div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>        };</div>
-<div class="line"><span class="lineno">   31</span>        callback.onInstantiate = delegate(BaseModPackage a, <a class="code hl_class" href="classItemMod.html">ItemMod</a> b)</div>
-<div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            a.UpdateMeta(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   34</span>            b.package = a;</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordtype">string</span> s = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.packages.IndexOf(a) + 1).ToString() + <span class="stringliteral">&quot;. &quot;</span> + (a.isInPackages ? <span class="stringliteral">&quot;[Private] &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + a.title;</div>
-<div class="line"><span class="lineno">   36</span>            b.<a class="code hl_variable" href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">buttonActivate</a>.mainText.SetText(s, (!a.IsValidVersion()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));</div>
-<div class="line"><span class="lineno">   37</span>            b.buttonActivate.subText.text = a.version;</div>
-<div class="line"><span class="lineno">   38</span>            b.buttonLock.mainText.text = a.author;</div>
-<div class="line"><span class="lineno">   39</span>            b.<a class="code hl_variable" href="classItemMod.html#a884b84942e6d884d38202c086d61d686">buttonUp</a>.SetActive(!a.builtin);</div>
-<div class="line"><span class="lineno">   40</span>            b.<a class="code hl_variable" href="classItemMod.html#ad047ed292c472c6204efee5eaafb6f64">buttonDown</a>.SetActive(!a.builtin);</div>
-<div class="line"><span class="lineno">   41</span>            b.<a class="code hl_variable" href="classItemMod.html#ab8e65551b7fb6f3e996a943ea9f8a6db">buttonToggle</a>.SetToggle(a.willActivate, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   42</span>            b.<a class="code hl_variable" href="classItemMod.html#a884b84942e6d884d38202c086d61d686">buttonUp</a>.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   43</span>            {</div>
-<div class="line"><span class="lineno">   44</span>                this.&lt;<a class="code hl_function" href="classLayerMod.html#a760852c57410ce4012d0736dc4827ff2">OnInit</a>&gt;<a class="code hl_function" href="classLayerMod.html#a3ef24c7788045ac85ac0355c7cebafb5">g__Move</a>|7_1(a, b, -1);</div>
-<div class="line"><span class="lineno">   45</span>            });</div>
-<div class="line"><span class="lineno">   46</span>            b.<a class="code hl_variable" href="classItemMod.html#ad047ed292c472c6204efee5eaafb6f64">buttonDown</a>.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                this.&lt;<a class="code hl_function" href="classLayerMod.html#a760852c57410ce4012d0736dc4827ff2">OnInit</a>&gt;<a class="code hl_function" href="classLayerMod.html#a3ef24c7788045ac85ac0355c7cebafb5">g__Move</a>|7_1(a, b, 1);</div>
-<div class="line"><span class="lineno">   49</span>            });</div>
-<div class="line"><span class="lineno">   50</span>            UIButton bt = b.<a class="code hl_variable" href="classItemMod.html#ab8e65551b7fb6f3e996a943ea9f8a6db">buttonToggle</a>;</div>
-<div class="line"><span class="lineno">   51</span>            bt.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                a.willActivate = !a.willActivate;</div>
-<div class="line"><span class="lineno">   54</span>                bt.SetToggle(a.willActivate, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   55</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.SaveLoadOrder();</div>
-<div class="line"><span class="lineno">   56</span>                this.<a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   57</span>            });</div>
-<div class="line"><span class="lineno">   58</span>            bt.interactable = !a.builtin;</div>
-<div class="line"><span class="lineno">   59</span>            Action &lt;&gt;9__13;</div>
-<div class="line"><span class="lineno">   60</span>            Action &lt;&gt;9__10;</div>
-<div class="line"><span class="lineno">   61</span>            Action &lt;&gt;9__11;</div>
-<div class="line"><span class="lineno">   62</span>            Action &lt;&gt;9__12;</div>
-<div class="line"><span class="lineno">   63</span>            b.<a class="code hl_variable" href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">buttonActivate</a>.onClick.AddListener(delegate()</div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                this.<a class="code hl_function" href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">Refresh</a>();</div>
-<div class="line"><span class="lineno">   66</span>                UIContextMenu uicontextMenu = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenuInteraction();</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || (!BaseCore.IsOffline &amp;&amp; a.isInPackages &amp;&amp; !a.builtin))</div>
-<div class="line"><span class="lineno">   68</span>                {</div>
-<div class="line"><span class="lineno">   69</span>                    UIContextMenu uicontextMenu2 = uicontextMenu;</div>
-<div class="line"><span class="lineno">   70</span>                    <span class="keywordtype">string</span> idLang = <span class="stringliteral">&quot;mod_publish&quot;</span>;</div>
-<div class="line"><span class="lineno">   71</span>                    Action action;</div>
-<div class="line"><span class="lineno">   72</span>                    <span class="keywordflow">if</span> ((action = &lt;&gt;9__10) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   73</span>                    {</div>
-<div class="line"><span class="lineno">   74</span>                        action = (&lt;&gt;9__10 = delegate()</div>
-<div class="line"><span class="lineno">   75</span>                        {</div>
-<div class="line"><span class="lineno">   76</span>                            <span class="keywordtype">string</span> langDetail = <span class="stringliteral">&quot;mod_publish_warn&quot;</span>.lang(a.title, a.id, a.author, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   77</span>                            Action actionYes;</div>
-<div class="line"><span class="lineno">   78</span>                            <span class="keywordflow">if</span> ((actionYes = &lt;&gt;9__13) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   79</span>                            {</div>
-<div class="line"><span class="lineno">   80</span>                                actionYes = (&lt;&gt;9__13 = delegate()</div>
-<div class="line"><span class="lineno">   81</span>                                {</div>
-<div class="line"><span class="lineno">   82</span>                                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.steam.CreateUserContent(a);</div>
-<div class="line"><span class="lineno">   83</span>                                });</div>
-<div class="line"><span class="lineno">   84</span>                            }</div>
-<div class="line"><span class="lineno">   85</span>                            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(langDetail, actionYes, <span class="keyword">null</span>, <span class="stringliteral">&quot;yes&quot;</span>, <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>                        });</div>
-<div class="line"><span class="lineno">   87</span>                    }</div>
-<div class="line"><span class="lineno">   88</span>                    uicontextMenu2.AddButton(idLang, action, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (!a.builtin)</div>
-<div class="line"><span class="lineno">   91</span>                {</div>
-<div class="line"><span class="lineno">   92</span>                    UIContextMenu uicontextMenu3 = uicontextMenu;</div>
-<div class="line"><span class="lineno">   93</span>                    <span class="keywordtype">string</span> idLang2 = a.willActivate ? <span class="stringliteral">&quot;mod_deactivate&quot;</span> : <span class="stringliteral">&quot;mod_activate&quot;</span>;</div>
-<div class="line"><span class="lineno">   94</span>                    Action action2;</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">if</span> ((action2 = &lt;&gt;9__11) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   96</span>                    {</div>
-<div class="line"><span class="lineno">   97</span>                        action2 = (&lt;&gt;9__11 = delegate()</div>
-<div class="line"><span class="lineno">   98</span>                        {</div>
-<div class="line"><span class="lineno">   99</span>                            SE.Click();</div>
-<div class="line"><span class="lineno">  100</span>                            a.willActivate = !a.willActivate;</div>
-<div class="line"><span class="lineno">  101</span>                            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.SaveLoadOrder();</div>
-<div class="line"><span class="lineno">  102</span>                            this.<a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.List(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  103</span>                            this.<a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  104</span>                        });</div>
-<div class="line"><span class="lineno">  105</span>                    }</div>
-<div class="line"><span class="lineno">  106</span>                    uicontextMenu3.AddButton(idLang2, action2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  107</span>                }</div>
-<div class="line"><span class="lineno">  108</span>                UIContextMenu uicontextMenu4 = uicontextMenu;</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordtype">string</span> idLang3 = <span class="stringliteral">&quot;mod_info&quot;</span>;</div>
-<div class="line"><span class="lineno">  110</span>                Action action3;</div>
-<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">if</span> ((action3 = &lt;&gt;9__12) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  112</span>                {</div>
-<div class="line"><span class="lineno">  113</span>                    action3 = (&lt;&gt;9__12 = delegate()</div>
-<div class="line"><span class="lineno">  114</span>                    {</div>
-<div class="line"><span class="lineno">  115</span>                        SE.Click();</div>
-<div class="line"><span class="lineno">  116</span>                        Util.ShowExplorer(a.dirInfo.FullName + <span class="stringliteral">&quot;/package.xml&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  117</span>                    });</div>
-<div class="line"><span class="lineno">  118</span>                }</div>
-<div class="line"><span class="lineno">  119</span>                uicontextMenu4.AddButton(idLang3, action3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  120</span>                uicontextMenu.Show();</div>
-<div class="line"><span class="lineno">  121</span>            });</div>
-<div class="line"><span class="lineno">  122</span>            b.<a class="code hl_variable" href="classItemMod.html#ae4e644ef1ec06311d29c0a866ea7fb3b">buttonLock</a>.onClick.AddListener(delegate()</div>
-<div class="line"><span class="lineno">  123</span>            {</div>
-<div class="line"><span class="lineno">  124</span>                this.<a class="code hl_function" href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">Refresh</a>();</div>
-<div class="line"><span class="lineno">  125</span>            });</div>
-<div class="line"><span class="lineno">  126</span>        };</div>
-<div class="line"><span class="lineno">  127</span>        callback.onList = delegate(UIList.SortMode a)</div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">foreach</span> (BaseModPackage baseModPackage <span class="keywordflow">in</span> this.<a class="code hl_property" href="classLayerMod.html#a4bca6bd0b0053210469753d9a16b36ed">manager</a>.packages)</div>
-<div class="line"><span class="lineno">  130</span>            {</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (baseModPackage.builtin)</div>
-<div class="line"><span class="lineno">  132</span>                {</div>
-<div class="line"><span class="lineno">  133</span>                    this.<a class="code hl_variable" href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">list2</a>.Add(baseModPackage);</div>
-<div class="line"><span class="lineno">  134</span>                }</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  136</span>                {</div>
-<div class="line"><span class="lineno">  137</span>                    this.<a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.Add(baseModPackage);</div>
-<div class="line"><span class="lineno">  138</span>                }</div>
-<div class="line"><span class="lineno">  139</span>            }</div>
-<div class="line"><span class="lineno">  140</span>        };</div>
-<div class="line"><span class="lineno">  141</span>        callback.onRefresh = <span class="keyword">new</span> Action(this.<a class="code hl_function" href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">Refresh</a>);</div>
-<div class="line"><span class="lineno">  142</span>        UIList.ICallback callbacks = callback;</div>
-<div class="line"><span class="lineno">  143</span>        baseList2.callbacks = callback;</div>
-<div class="line"><span class="lineno">  144</span>        baseList.callbacks = callbacks;</div>
-<div class="line"><span class="lineno">  145</span>        this.<a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.List(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  146</span>        this.<a class="code hl_variable" href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">list2</a>.List(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="ttc" id="aclassCoreConfig_html_a4b50f57e52e3de009b937b871de5ea68"><div class="ttname"><a href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">CoreConfig.Save</a></div><div class="ttdeci">void Save()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00209">CoreConfig.cs:209</a></div></div>
-<div class="ttc" id="aclassCoreConfig_html_aba40d0adec93042a0e69f3d3a074f840"><div class="ttname"><a href="classCoreConfig.html#aba40d0adec93042a0e69f3d3a074f840">CoreConfig.other</a></div><div class="ttdeci">CoreConfig.OtherSetting other</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00450">CoreConfig.cs:450</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l02314">CoreDebug.cs:2314</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00017">17</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="classLayerMod.html#a75d0282f6faf3dfe3c02881a364ae697">toggleDisableMods</a>.SetToggle(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">other</a>.<a class="code hl_variable" href="classCoreConfig_1_1OtherSetting.html#a00d3938f18861cc71407f455846e227b">disableMods</a>, delegate(<span class="keywordtype">bool</span> on)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            ELayer.config.other.disableMods = on;</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_function" href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">Save</a>();</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   25</span>        });</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="classLayerMod.html#af8c386023bd69c5c81c181cb664797c2">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   27</span>        UIList uIList = <a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>;</div>
+<div class="line"><span class="lineno">   28</span>        UIList uIList2 = <a class="code hl_variable" href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">list2</a>;</div>
+<div class="line"><span class="lineno">   29</span>        UIList.Callback&lt;BaseModPackage, <a class="code hl_class" href="classItemMod.html">ItemMod</a>&gt; obj = <span class="keyword">new</span> UIList.Callback&lt;BaseModPackage, <a class="code hl_class" href="classItemMod.html">ItemMod</a>&gt;</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            onClick = delegate</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>            },</div>
+<div class="line"><span class="lineno">   34</span>            onInstantiate = delegate(BaseModPackage a, <a class="code hl_class" href="classItemMod.html">ItemMod</a> b)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                a.UpdateMeta(updateOnly: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   37</span>                b.package = a;</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordtype">string</span> s = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.packages.IndexOf(a) + 1 + <span class="stringliteral">&quot;. &quot;</span> + (a.isInPackages ? <span class="stringliteral">&quot;[Private] &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + a.title;</div>
+<div class="line"><span class="lineno">   39</span>                b.<a class="code hl_variable" href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">buttonActivate</a>.mainText.SetText(s, (!a.IsValidVersion()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));</div>
+<div class="line"><span class="lineno">   40</span>                b.buttonActivate.subText.text = a.version;</div>
+<div class="line"><span class="lineno">   41</span>                b.buttonLock.mainText.text = a.author;</div>
+<div class="line"><span class="lineno">   42</span>                b.<a class="code hl_variable" href="classItemMod.html#a884b84942e6d884d38202c086d61d686">buttonUp</a>.SetActive(!a.builtin);</div>
+<div class="line"><span class="lineno">   43</span>                b.<a class="code hl_variable" href="classItemMod.html#ad047ed292c472c6204efee5eaafb6f64">buttonDown</a>.SetActive(!a.builtin);</div>
+<div class="line"><span class="lineno">   44</span>                b.<a class="code hl_variable" href="classItemMod.html#ab8e65551b7fb6f3e996a943ea9f8a6db">buttonToggle</a>.SetToggle(a.willActivate);</div>
+<div class="line"><span class="lineno">   45</span>                b.<a class="code hl_variable" href="classItemMod.html#a884b84942e6d884d38202c086d61d686">buttonUp</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>                    Move(a, b, -1);</div>
+<div class="line"><span class="lineno">   48</span>                });</div>
+<div class="line"><span class="lineno">   49</span>                b.<a class="code hl_variable" href="classItemMod.html#ad047ed292c472c6204efee5eaafb6f64">buttonDown</a>.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   50</span>                {</div>
+<div class="line"><span class="lineno">   51</span>                    Move(a, b, 1);</div>
+<div class="line"><span class="lineno">   52</span>                });</div>
+<div class="line"><span class="lineno">   53</span>                UIButton bt = b.<a class="code hl_variable" href="classItemMod.html#ab8e65551b7fb6f3e996a943ea9f8a6db">buttonToggle</a>;</div>
+<div class="line"><span class="lineno">   54</span>                bt.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   55</span>                {</div>
+<div class="line"><span class="lineno">   56</span>                    a.willActivate = !a.willActivate;</div>
+<div class="line"><span class="lineno">   57</span>                    bt.SetToggle(a.willActivate);</div>
+<div class="line"><span class="lineno">   58</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classModManager.html#ae485a154e157074143526566cab1f088">SaveLoadOrder</a>();</div>
+<div class="line"><span class="lineno">   59</span>                    <a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   60</span>                });</div>
+<div class="line"><span class="lineno">   61</span>                bt.interactable = !a.builtin;</div>
+<div class="line"><span class="lineno">   62</span>                b.<a class="code hl_variable" href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">buttonActivate</a>.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    <a class="code hl_function" href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">Refresh</a>();</div>
+<div class="line"><span class="lineno">   65</span>                    UIContextMenu uIContextMenu = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenuInteraction();</div>
+<div class="line"><span class="lineno">   66</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || (!BaseCore.IsOffline &amp;&amp; a.isInPackages &amp;&amp; !a.builtin))</div>
+<div class="line"><span class="lineno">   67</span>                    {</div>
+<div class="line"><span class="lineno">   68</span>                        uIContextMenu.AddButton(<span class="stringliteral">&quot;mod_publish&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   69</span>                        {</div>
+<div class="line"><span class="lineno">   70</span>                            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a43dffec293c2834cd969332a080c1133">YesNo</a>(<span class="stringliteral">&quot;mod_publish_warn&quot;</span>.lang(a.title, a.id, a.author), delegate</div>
+<div class="line"><span class="lineno">   71</span>                            {</div>
+<div class="line"><span class="lineno">   72</span>                                ELayer.core.steam.CreateUserContent(a);</div>
+<div class="line"><span class="lineno">   73</span>                            });</div>
+<div class="line"><span class="lineno">   74</span>                        });</div>
+<div class="line"><span class="lineno">   75</span>                    }</div>
+<div class="line"><span class="lineno">   76</span>                    <span class="keywordflow">if</span> (!a.builtin)</div>
+<div class="line"><span class="lineno">   77</span>                    {</div>
+<div class="line"><span class="lineno">   78</span>                        uIContextMenu.AddButton(a.willActivate ? <span class="stringliteral">&quot;mod_deactivate&quot;</span> : <span class="stringliteral">&quot;mod_activate&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   79</span>                        {</div>
+<div class="line"><span class="lineno">   80</span>                            SE.Click();</div>
+<div class="line"><span class="lineno">   81</span>                            a.willActivate = !a.willActivate;</div>
+<div class="line"><span class="lineno">   82</span>                            ELayer.core.mods.SaveLoadOrder();</div>
+<div class="line"><span class="lineno">   83</span>                            list.List();</div>
+<div class="line"><span class="lineno">   84</span>                            textRestart.SetActive(enable: true);</div>
+<div class="line"><span class="lineno">   85</span>                        });</div>
+<div class="line"><span class="lineno">   86</span>                    }</div>
+<div class="line"><span class="lineno">   87</span>                    uIContextMenu.AddButton(<span class="stringliteral">&quot;mod_info&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   88</span>                    {</div>
+<div class="line"><span class="lineno">   89</span>                        SE.Click();</div>
+<div class="line"><span class="lineno">   90</span>                        Util.ShowExplorer(a.dirInfo.FullName + <span class="stringliteral">&quot;/package.xml&quot;</span>);</div>
+<div class="line"><span class="lineno">   91</span>                    });</div>
+<div class="line"><span class="lineno">   92</span>                    uIContextMenu.Show();</div>
+<div class="line"><span class="lineno">   93</span>                });</div>
+<div class="line"><span class="lineno">   94</span>                b.<a class="code hl_variable" href="classItemMod.html#ae4e644ef1ec06311d29c0a866ea7fb3b">buttonLock</a>.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    <a class="code hl_function" href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">Refresh</a>();</div>
+<div class="line"><span class="lineno">   97</span>                });</div>
+<div class="line"><span class="lineno">   98</span>            },</div>
+<div class="line"><span class="lineno">   99</span>            onList = delegate</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">foreach</span> (BaseModPackage package <span class="keywordflow">in</span> <a class="code hl_property" href="classLayerMod.html#a4bca6bd0b0053210469753d9a16b36ed">manager</a>.packages)</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    <span class="keywordflow">if</span> (package.builtin)</div>
+<div class="line"><span class="lineno">  104</span>                    {</div>
+<div class="line"><span class="lineno">  105</span>                        <a class="code hl_variable" href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">list2</a>.Add(package);</div>
+<div class="line"><span class="lineno">  106</span>                    }</div>
+<div class="line"><span class="lineno">  107</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  108</span>                    {</div>
+<div class="line"><span class="lineno">  109</span>                        <a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.Add(package);</div>
+<div class="line"><span class="lineno">  110</span>                    }</div>
+<div class="line"><span class="lineno">  111</span>                }</div>
+<div class="line"><span class="lineno">  112</span>            },</div>
+<div class="line"><span class="lineno">  113</span>            onRefresh = <a class="code hl_function" href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">Refresh</a></div>
+<div class="line"><span class="lineno">  114</span>        };</div>
+<div class="line"><span class="lineno">  115</span>        UIList.ICallback callbacks = obj;</div>
+<div class="line"><span class="lineno">  116</span>        uIList2.callbacks = obj;</div>
+<div class="line"><span class="lineno">  117</span>        uIList.callbacks = callbacks;</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.List();</div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">list2</a>.List();</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">void</span> Move(BaseModPackage p, <a class="code hl_class" href="classItemMod.html">ItemMod</a> b, <span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            List&lt;BaseModPackage&gt; packages = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.packages;</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordtype">int</span> num = packages.IndexOf(p);</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (num + a &lt; 0 || num + a &gt;= packages.Count || packages[num + a].builtin)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                SE.BeepSmall();</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  129</span>            {</div>
+<div class="line"><span class="lineno">  130</span>                packages.Move(p, a);</div>
+<div class="line"><span class="lineno">  131</span>                SE.Tab();</div>
+<div class="line"><span class="lineno">  132</span>                <a class="code hl_variable" href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">textRestart</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  133</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classModManager.html#ae485a154e157074143526566cab1f088">SaveLoadOrder</a>();</div>
+<div class="line"><span class="lineno">  134</span>                <a class="code hl_variable" href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">list</a>.List();</div>
+<div class="line"><span class="lineno">  135</span>            }</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="aclassCoreConfig_1_1OtherSetting_html_a00d3938f18861cc71407f455846e227b"><div class="ttname"><a href="classCoreConfig_1_1OtherSetting.html#a00d3938f18861cc71407f455846e227b">CoreConfig.OtherSetting.disableMods</a></div><div class="ttdeci">bool disableMods</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00499">CoreConfig.cs:499</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_a4b50f57e52e3de009b937b871de5ea68"><div class="ttname"><a href="classCoreConfig.html#a4b50f57e52e3de009b937b871de5ea68">CoreConfig.Save</a></div><div class="ttdeci">void Save()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00797">CoreConfig.cs:797</a></div></div>
+<div class="ttc" id="aclassCoreConfig_html_ace7c91a480e766e3e6aea9d50079c5e5"><div class="ttname"><a href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">CoreConfig.other</a></div><div class="ttdeci">OtherSetting other</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00592">CoreConfig.cs:592</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
+<div class="ttc" id="aclassCore_html_a177018324b0a8085746d77c8fafb40d5"><div class="ttname"><a href="classCore.html#a177018324b0a8085746d77c8fafb40d5">Core.mods</a></div><div class="ttdeci">ModManager mods</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00033">Core.cs:33</a></div></div>
 <div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
-<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00204">Dialog.cs:204</a></div></div>
-<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00150">ELayer.cs:151</a></div></div>
-<div class="ttc" id="aclassELayer_html_a6ce5e3c8bbab020ab68e9fa4c2d63683"><div class="ttname"><a href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">ELayer.config</a></div><div class="ttdeci">static CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00102">ELayer.cs:103</a></div></div>
-<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00062">ELayer.cs:63</a></div></div>
-<div class="ttc" id="aclassItemMod_html"><div class="ttname"><a href="classItemMod.html">ItemMod</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00004">ItemMod.cs:5</a></div></div>
-<div class="ttc" id="aclassItemMod_html_a768c5c32d2ceddda91b023a4d082e008"><div class="ttname"><a href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">ItemMod.buttonActivate</a></div><div class="ttdeci">UIButton buttonActivate</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00006">ItemMod.cs:6</a></div></div>
-<div class="ttc" id="aclassItemMod_html_a884b84942e6d884d38202c086d61d686"><div class="ttname"><a href="classItemMod.html#a884b84942e6d884d38202c086d61d686">ItemMod.buttonUp</a></div><div class="ttdeci">UIButton buttonUp</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00012">ItemMod.cs:12</a></div></div>
-<div class="ttc" id="aclassItemMod_html_ab8e65551b7fb6f3e996a943ea9f8a6db"><div class="ttname"><a href="classItemMod.html#ab8e65551b7fb6f3e996a943ea9f8a6db">ItemMod.buttonToggle</a></div><div class="ttdeci">UIButton buttonToggle</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00016">ItemMod.cs:16</a></div></div>
-<div class="ttc" id="aclassItemMod_html_ad047ed292c472c6204efee5eaafb6f64"><div class="ttname"><a href="classItemMod.html#ad047ed292c472c6204efee5eaafb6f64">ItemMod.buttonDown</a></div><div class="ttdeci">UIButton buttonDown</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00014">ItemMod.cs:14</a></div></div>
-<div class="ttc" id="aclassItemMod_html_ae4e644ef1ec06311d29c0a866ea7fb3b"><div class="ttname"><a href="classItemMod.html#ae4e644ef1ec06311d29c0a866ea7fb3b">ItemMod.buttonLock</a></div><div class="ttdeci">UIButton buttonLock</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00010">ItemMod.cs:10</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_a3ef24c7788045ac85ac0355c7cebafb5"><div class="ttname"><a href="classLayerMod.html#a3ef24c7788045ac85ac0355c7cebafb5">LayerMod.g__Move</a></div><div class="ttdeci">void&lt; OnInit &gt; g__Move(BaseModPackage p, ItemMod b, int a)</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00159">LayerMod.cs:159</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_a4bca6bd0b0053210469753d9a16b36ed"><div class="ttname"><a href="classLayerMod.html#a4bca6bd0b0053210469753d9a16b36ed">LayerMod.manager</a></div><div class="ttdeci">ModManager manager</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00007">LayerMod.cs:8</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_a75d0282f6faf3dfe3c02881a364ae697"><div class="ttname"><a href="classLayerMod.html#a75d0282f6faf3dfe3c02881a364ae697">LayerMod.toggleDisableMods</a></div><div class="ttdeci">UIButton toggleDisableMods</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00183">LayerMod.cs:183</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_a760852c57410ce4012d0736dc4827ff2"><div class="ttname"><a href="classLayerMod.html#a760852c57410ce4012d0736dc4827ff2">LayerMod.OnInit</a></div><div class="ttdeci">override void OnInit()</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00015">LayerMod.cs:15</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_a97620f68c20388b11ce72a85907dc7e1"><div class="ttname"><a href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">LayerMod.list2</a></div><div class="ttdeci">UIList list2</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00179">LayerMod.cs:179</a></div></div>
-<div class="ttc" id="aclassLayerMod_html_ac8001e26ec3748110c199b72ffaa723b"><div class="ttname"><a href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">LayerMod.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00149">LayerMod.cs:149</a></div></div>
+<div class="ttc" id="aclassDialog_html_a43dffec293c2834cd969332a080c1133"><div class="ttname"><a href="classDialog.html#a43dffec293c2834cd969332a080c1133">Dialog.YesNo</a></div><div class="ttdeci">static Dialog YesNo(string langDetail, Action actionYes, Action actionNo=null, string langYes=&quot;yes&quot;, string langNo=&quot;no&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00244">Dialog.cs:244</a></div></div>
+<div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
+<div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00007">ELayer.cs:7</a></div></div>
+<div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00043">ELayer.cs:43</a></div></div>
+<div class="ttc" id="aclassELayer_html_a6ce5e3c8bbab020ab68e9fa4c2d63683"><div class="ttname"><a href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">ELayer.config</a></div><div class="ttdeci">static CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00031">ELayer.cs:31</a></div></div>
+<div class="ttc" id="aclassELayer_html_a99d0945154169617341cedf8f1f07677"><div class="ttname"><a href="classELayer.html#a99d0945154169617341cedf8f1f07677">ELayer.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00021">ELayer.cs:21</a></div></div>
+<div class="ttc" id="aclassItemMod_html"><div class="ttname"><a href="classItemMod.html">ItemMod</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00003">ItemMod.cs:4</a></div></div>
+<div class="ttc" id="aclassItemMod_html_a768c5c32d2ceddda91b023a4d082e008"><div class="ttname"><a href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">ItemMod.buttonActivate</a></div><div class="ttdeci">UIButton buttonActivate</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00005">ItemMod.cs:5</a></div></div>
+<div class="ttc" id="aclassItemMod_html_a884b84942e6d884d38202c086d61d686"><div class="ttname"><a href="classItemMod.html#a884b84942e6d884d38202c086d61d686">ItemMod.buttonUp</a></div><div class="ttdeci">UIButton buttonUp</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00011">ItemMod.cs:11</a></div></div>
+<div class="ttc" id="aclassItemMod_html_ab8e65551b7fb6f3e996a943ea9f8a6db"><div class="ttname"><a href="classItemMod.html#ab8e65551b7fb6f3e996a943ea9f8a6db">ItemMod.buttonToggle</a></div><div class="ttdeci">UIButton buttonToggle</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00015">ItemMod.cs:15</a></div></div>
+<div class="ttc" id="aclassItemMod_html_ad047ed292c472c6204efee5eaafb6f64"><div class="ttname"><a href="classItemMod.html#ad047ed292c472c6204efee5eaafb6f64">ItemMod.buttonDown</a></div><div class="ttdeci">UIButton buttonDown</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00013">ItemMod.cs:13</a></div></div>
+<div class="ttc" id="aclassItemMod_html_ae4e644ef1ec06311d29c0a866ea7fb3b"><div class="ttname"><a href="classItemMod.html#ae4e644ef1ec06311d29c0a866ea7fb3b">ItemMod.buttonLock</a></div><div class="ttdeci">UIButton buttonLock</div><div class="ttdef"><b>Definition:</b> <a href="ItemMod_8cs_source.html#l00009">ItemMod.cs:9</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_a4b6303c09b2ee562f224c53ef87b9e91"><div class="ttname"><a href="classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91">LayerMod.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00007">LayerMod.cs:7</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_a4bca6bd0b0053210469753d9a16b36ed"><div class="ttname"><a href="classLayerMod.html#a4bca6bd0b0053210469753d9a16b36ed">LayerMod.manager</a></div><div class="ttdeci">ModManager manager</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00015">LayerMod.cs:15</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_a75d0282f6faf3dfe3c02881a364ae697"><div class="ttname"><a href="classLayerMod.html#a75d0282f6faf3dfe3c02881a364ae697">LayerMod.toggleDisableMods</a></div><div class="ttdeci">UIButton toggleDisableMods</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00013">LayerMod.cs:13</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_a97620f68c20388b11ce72a85907dc7e1"><div class="ttname"><a href="classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1">LayerMod.list2</a></div><div class="ttdeci">UIList list2</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00009">LayerMod.cs:9</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_aa8c35a933c697f01de22bfbe1b66cf6a"><div class="ttname"><a href="classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a">LayerMod.textRestart</a></div><div class="ttdeci">UIText textRestart</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00011">LayerMod.cs:11</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_ac8001e26ec3748110c199b72ffaa723b"><div class="ttname"><a href="classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b">LayerMod.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00139">LayerMod.cs:139</a></div></div>
+<div class="ttc" id="aclassLayerMod_html_af8c386023bd69c5c81c181cb664797c2"><div class="ttname"><a href="classLayerMod.html#af8c386023bd69c5c81c181cb664797c2">LayerMod.Instance</a></div><div class="ttdeci">static LayerMod Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerMod_8cs_source.html#l00005">LayerMod.cs:5</a></div></div>
+<div class="ttc" id="aclassModManager_html_ae485a154e157074143526566cab1f088"><div class="ttname"><a href="classModManager.html#ae485a154e157074143526566cab1f088">ModManager.SaveLoadOrder</a></div><div class="ttdeci">void SaveLoadOrder()</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00245">ModManager.cs:245</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemMod_8cs_source.html#l00006">ItemMod.buttonActivate</a>, <a class="el" href="ItemMod_8cs_source.html#l00014">ItemMod.buttonDown</a>, <a class="el" href="ItemMod_8cs_source.html#l00010">ItemMod.buttonLock</a>, <a class="el" href="ItemMod_8cs_source.html#l00016">ItemMod.buttonToggle</a>, <a class="el" href="ItemMod_8cs_source.html#l00012">ItemMod.buttonUp</a>, <a class="el" href="ELayer_8cs_source.html#l00103">ELayer.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00151">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l02314">CoreDebug.enable</a>, <a class="el" href="LayerMod_8cs_source.html#l00159">g__Move()</a>, <a class="el" href="LayerMod_8cs_source.html#l00177">list</a>, <a class="el" href="LayerMod_8cs_source.html#l00179">list2</a>, <a class="el" href="LayerMod_8cs_source.html#l00008">manager</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00450">CoreConfig.other</a>, <a class="el" href="LayerMod_8cs_source.html#l00149">Refresh()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00209">CoreConfig.Save()</a>, <a class="el" href="LayerMod_8cs_source.html#l00181">textRestart</a>, <a class="el" href="LayerMod_8cs_source.html#l00183">toggleDisableMods</a>, <a class="el" href="ELayer_8cs_source.html#l00063">ELayer.ui</a>, and <a class="el" href="Dialog_8cs_source.html#l00204">Dialog.YesNo()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="reference">References <a class="el" href="ItemMod_8cs_source.html#l00005">ItemMod.buttonActivate</a>, <a class="el" href="ItemMod_8cs_source.html#l00013">ItemMod.buttonDown</a>, <a class="el" href="ItemMod_8cs_source.html#l00009">ItemMod.buttonLock</a>, <a class="el" href="ItemMod_8cs_source.html#l00015">ItemMod.buttonToggle</a>, <a class="el" href="ItemMod_8cs_source.html#l00011">ItemMod.buttonUp</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="CoreConfig_8cs_source.html#l00499">CoreConfig.OtherSetting.disableMods</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="LayerMod_8cs_source.html#l00005">Instance</a>, <a class="el" href="LayerMod_8cs_source.html#l00007">list</a>, <a class="el" href="LayerMod_8cs_source.html#l00009">list2</a>, <a class="el" href="LayerMod_8cs_source.html#l00015">manager</a>, <a class="el" href="Core_8cs_source.html#l00033">Core.mods</a>, <a class="el" href="CoreConfig_8cs_source.html#l00592">CoreConfig.other</a>, <a class="el" href="LayerMod_8cs_source.html#l00139">Refresh()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00797">CoreConfig.Save()</a>, <a class="el" href="ModManager_8cs_source.html#l00245">ModManager.SaveLoadOrder()</a>, <a class="el" href="LayerMod_8cs_source.html#l00011">textRestart</a>, <a class="el" href="LayerMod_8cs_source.html#l00013">toggleDisableMods</a>, <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>, and <a class="el" href="Dialog_8cs_source.html#l00244">Dialog.YesNo()</a>.</p>
 
 </div>
 </div>
@@ -495,12 +415,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00153">153</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods.SaveLoadOrder();</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00143">143</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classModManager.html#ae485a154e157074143526566cab1f088">SaveLoadOrder</a>();</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="Core_8cs_source.html#l00033">Core.mods</a>, and <a class="el" href="ModManager_8cs_source.html#l00245">ModManager.SaveLoadOrder()</a>.</p>
 
 </div>
 </div>
@@ -527,11 +447,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00149">149</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00139">139</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -556,7 +476,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00175">175</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00005">5</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +494,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00177">177</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00159">g__Move()</a>, and <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -590,9 +512,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00179">179</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00009">9</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -608,9 +530,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00181">181</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00011">11</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00159">g__Move()</a>, and <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -626,9 +548,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00183">183</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00013">13</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -653,15 +575,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00007">7</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.mods;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00015">OnInit()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerMod_8cs_source.html#l00015">15</a> of file <a class="el" href="LayerMod_8cs_source.html">LayerMod.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerMod_8cs_source.html#l00017">OnInit()</a>.</p>
 
 </div>
 </div>

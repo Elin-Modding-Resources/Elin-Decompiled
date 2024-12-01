@@ -15,7 +15,7 @@ var classHotItemToggle =
     ] ],
     [ "OnClick", "classHotItemToggle.html#a7c9fcbfcabe77a6198fa27b168219afd", null ],
     [ "ShouldHighlight", "classHotItemToggle.html#a1b38b1f7ed2d3d5e31ea2f64c60e6c53", null ],
-    [ "type", "classHotItemToggle.html#a9d2ae891e224456cd162807d5229cced", null ],
+    [ "type", "classHotItemToggle.html#a3f8606957d85f298ad64f29d91bd0509", null ],
     [ "Hidden", "classHotItemToggle.html#a3969d7eeb430e2297ae8bd2f79773f26", null ],
     [ "Name", "classHotItemToggle.html#aaec5f3f0ea1c3cce9dbe7b7afd3d9ae8", null ],
     [ "pathSprite", "classHotItemToggle.html#a9f863e0b2f13ef2fccc4042feddf8953", null ],

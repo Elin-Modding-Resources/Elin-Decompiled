@@ -1,6 +1,5 @@
 var classPlayer_1_1Stats =
 [
-    [ "g__SetBonus", "classPlayer_1_1Stats.html#a75656b90a664ace1c99e8040f54c6452", null ],
     [ "GetShippingBonus", "classPlayer_1_1Stats.html#aae3232260dc1866f38e3967f267cb9e2", null ],
     [ "allyDeath", "classPlayer_1_1Stats.html#ab85ff926e445e3a4aea392a745684295", null ],
     [ "days", "classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde", null ],

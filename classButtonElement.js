@@ -13,14 +13,14 @@ var classButtonElement =
       [ "FeatMini", "classButtonElement.html#abd927b6f0829947840998bb86d1b5279a9c03b876acc8504e939f4660315bca89", null ]
     ] ],
     [ "Refresh", "classButtonElement.html#a0dd23ca636afe093ba794a64b129b059", null ],
-    [ "SetElement", "classButtonElement.html#a01dbb4eb3692105aa3287da3ebf43223", null ],
+    [ "SetElement", "classButtonElement.html#a5707249eaf2066461bb96d585f2953dc", null ],
     [ "SetGrid", "classButtonElement.html#ac2813d0605e9ace78b2187c55bdff8a8", null ],
     [ "buttonUpgrade", "classButtonElement.html#a155e5159050b9240c050b5cad6d02edb", null ],
     [ "e", "classButtonElement.html#a88306716c769ce2c195c77e8599500cd", null ],
     [ "goExp", "classButtonElement.html#aeee047c4a46826522426f9bab5569ea2", null ],
     [ "imagePotential", "classButtonElement.html#a2f163e2277395c1fec730b54c244d763", null ],
     [ "layout", "classButtonElement.html#aea84d4decbfabe4a868d982f516e7b27", null ],
-    [ "mode", "classButtonElement.html#a90e938a9fbf76ef8c04ea6e25b86387b", null ],
+    [ "mode", "classButtonElement.html#a60d890b2df0a26919ec5adbb6e639aed", null ],
     [ "moldItemResist", "classButtonElement.html#a6846604979fef3faad165404071d2cdb", null ],
     [ "owner", "classButtonElement.html#a9af5fa51fea2d3b59da1f673e3db3206", null ]
 ];

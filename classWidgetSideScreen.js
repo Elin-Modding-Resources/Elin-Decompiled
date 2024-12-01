@@ -14,5 +14,5 @@ var classWidgetSideScreen =
     [ "sprites", "classWidgetSideScreen.html#a7b6ccb6f00d8fab652127929764f33c0", null ],
     [ "AlwaysBottom", "classWidgetSideScreen.html#ade489234bc59543e5eac461867eb6fd3", null ],
     [ "bgColor", "classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834", null ],
-    [ "extra", "classWidgetSideScreen.html#ab00c611acfff7b0dc1c14074eb181c7a", null ]
+    [ "extra", "classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af", null ]
 ];

@@ -6,7 +6,7 @@ var classTraitHouseBoard =
     [ "TrySetAct", "classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65", null ],
     [ "CanBeMasked", "classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955", null ],
     [ "CanBeUsed", "classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd", null ],
-    [ "data", "classTraitHouseBoard.html#af97bc19c391a6f04987a5474dc899ea2", null ],
+    [ "data", "classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef", null ],
     [ "IsHomeItem", "classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64", null ],
     [ "MaskOnBuild", "classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931", null ],
     [ "ShouldTryRefreshRoom", "classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945", null ],

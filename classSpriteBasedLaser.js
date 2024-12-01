@@ -43,5 +43,5 @@ var classSpriteBasedLaser =
     [ "turningRate", "classSpriteBasedLaser.html#ae8e86f50113b497a10a68cd725a37d84", null ],
     [ "useArc", "classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7", null ],
     [ "waitingForTriggerTime", "classSpriteBasedLaser.html#a41998771267522776d775b91175c1c31", null ],
-    [ "OnLaserHitTriggered", "classSpriteBasedLaser.html#adc90590e49051c06a2a248982f3644f8", null ]
+    [ "OnLaserHitTriggered", "classSpriteBasedLaser.html#ae8e9822a90fc5847b534945986c01e82", null ]
 ];

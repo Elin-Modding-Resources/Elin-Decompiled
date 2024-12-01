@@ -237,22 +237,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00050">50</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                             : <a class="code hl_class" href="classTrait.html">Trait</a></div>
-<div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_class" href="classCard.html">Card</a> card = this.<a class="code hl_function" href="classTraitManager.html#a067d996cb2fecff60760aac97a0b837e">GetTraitSet&lt;T&gt;</a>().RandomItem&lt;int, <a class="code hl_class" href="classCard.html">Card</a>&gt;();</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (card == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> card.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00011">Card.cs:12</a></div></div>
-<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02015">Card.cs:2016</a></div></div>
-<div class="ttc" id="aclassTraitManager_html_a067d996cb2fecff60760aac97a0b837e"><div class="ttname"><a href="classTraitManager.html#a067d996cb2fecff60760aac97a0b837e">TraitManager.GetTraitSet&lt; T &gt;</a></div><div class="ttdeci">TraitSet GetTraitSet&lt; T &gt;()</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00086">TraitManager.cs:86</a></div></div>
-<div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00007">Trait.cs:8</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00060">60</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                             : <a class="code hl_class" href="classTrait.html">Trait</a></div>
+<div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classTraitManager.html#a067d996cb2fecff60760aac97a0b837e">GetTraitSet&lt;T&gt;</a>().RandomItem()?.Thing;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aclassTraitManager_html_a067d996cb2fecff60760aac97a0b837e"><div class="ttname"><a href="classTraitManager.html#a067d996cb2fecff60760aac97a0b837e">TraitManager.GetTraitSet&lt; T &gt;</a></div><div class="ttdeci">TraitSet GetTraitSet&lt; T &gt;()</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00089">TraitManager.cs:89</a></div></div>
+<div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00006">Trait.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00086">GetTraitSet&lt; T &gt;()</a>, and <a class="el" href="Card_8cs_source.html#l02016">Card.Thing</a>.</p>
+<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00089">GetTraitSet&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -280,15 +273,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00091">91</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(t, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclassTraitManager_html_af88d814dfd0f7667d7d3c5746a78c70e"><div class="ttname"><a href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">TraitManager.typeMap</a></div><div class="ttdeci">Dictionary&lt; Type, TraitSet &gt; typeMap</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00096">TraitManager.cs:96</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00094">94</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(t);</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassTraitManager_html_af88d814dfd0f7667d7d3c5746a78c70e"><div class="ttname"><a href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">TraitManager.typeMap</a></div><div class="ttdeci">Dictionary&lt; Type, TraitSet &gt; typeMap</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00006">TraitManager.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00096">typeMap</a>.</p>
+<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00006">typeMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AIAct_8cs_source.html#l00580">AIAct.DoGoto&lt; T &gt;()</a>, <a class="el" href="AIAct_8cs_source.html#l00586">AIAct.DoGotoSpot&lt; T &gt;()</a>, <a class="el" href="AI__Grab_82_8cs_source.html#l00005">AI_Grab&lt; T &gt;.GetTarget()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00056">DramaOutcome.PutOutFire()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01220">FactionBranch.Recruit()</a>, <a class="el" href="AI__Bladder_8cs_source.html#l00007">AI_Bladder.Run()</a>, <a class="el" href="AI__GotoHearth_8cs_source.html#l00006">AI_GotoHearth.Run()</a>, <a class="el" href="AI__LeaveMap_8cs_source.html#l00006">AI_LeaveMap.Run()</a>, and <a class="el" href="GoalSpot_8cs_source.html#l00006">GoalSpot.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02906">Zone.AddRandomVisitor()</a>, <a class="el" href="AIAct_8cs_source.html#l00470">AIAct.DoGoto&lt; T &gt;()</a>, <a class="el" href="AIAct_8cs_source.html#l00475">AIAct.DoGotoSpot&lt; T &gt;()</a>, <a class="el" href="AI__Grab_82_8cs_source.html#l00005">AI_Grab&lt; T &gt;.GetTarget()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00039">DramaOutcome.PutOutFire()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01385">FactionBranch.Recruit()</a>, <a class="el" href="AI__Bladder_8cs_source.html#l00007">AI_Bladder.Run()</a>, <a class="el" href="AI__GotoHearth_8cs_source.html#l00005">AI_GotoHearth.Run()</a>, <a class="el" href="AI__LeaveMap_8cs_source.html#l00005">AI_LeaveMap.Run()</a>, and <a class="el" href="GoalSpot_8cs_source.html#l00005">GoalSpot.Run()</a>.</p>
 
 </div>
 </div>
@@ -323,15 +316,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00086">86</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                             : <a class="code hl_class" href="classTrait.html">Trait</a></div>
-<div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(typeof(T), <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00089">89</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                             : <a class="code hl_class" href="classTrait.html">Trait</a></div>
+<div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(typeof(T));</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00096">typeMap</a>.</p>
+<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00006">typeMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00050">GetRandomThing&lt; T &gt;()</a>, and <a class="el" href="TraitManager_8cs_source.html#l00060">List&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00060">GetRandomThing&lt; T &gt;()</a>, and <a class="el" href="TraitManager_8cs_source.html#l00065">List&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -367,40 +360,38 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00060">60</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                              : <a class="code hl_class" href="classTrait.html">Trait</a></div>
-<div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classTraitSet.html">TraitSet</a> traitSet = this.<a class="code hl_function" href="classTraitManager.html#a067d996cb2fecff60760aac97a0b837e">GetTraitSet&lt;T&gt;</a>();</div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">List&lt;T&gt;</a> list = <span class="keyword">new</span> <a class="code hl_function" href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">List&lt;T&gt;</a>();</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (func == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keyword">using</span> (Dictionary&lt;int, Card&gt;.ValueCollection.Enumerator enumerator = traitSet.Values.GetEnumerator())</div>
-<div class="line"><span class="lineno">   67</span>            {</div>
-<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">   69</span>                {</div>
-<div class="line"><span class="lineno">   70</span>                    <a class="code hl_class" href="classCard.html">Card</a> card = enumerator.Current;</div>
-<div class="line"><span class="lineno">   71</span>                    list.<a class="code hl_function" href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Add</a>(card.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
-<div class="line"><span class="lineno">   72</span>                }</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">return</span> list;</div>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00065">65</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                              : <a class="code hl_class" href="classTrait.html">Trait</a></div>
+<div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_class" href="classTraitSet.html">TraitSet</a> traitSet = <a class="code hl_function" href="classTraitManager.html#a067d996cb2fecff60760aac97a0b837e">GetTraitSet&lt;T&gt;</a>();</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">List&lt;T&gt;</a> list = <span class="keyword">new</span> <a class="code hl_function" href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">List&lt;T&gt;</a>();</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (func == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> value <span class="keywordflow">in</span> traitSet.Values)</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                list.Add(value.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
 <div class="line"><span class="lineno">   74</span>            }</div>
 <div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> card2 <span class="keywordflow">in</span> traitSet.Values)</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (func(card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T))</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> value2 <span class="keywordflow">in</span> traitSet.Values)</div>
 <div class="line"><span class="lineno">   79</span>            {</div>
-<div class="line"><span class="lineno">   80</span>                list.<a class="code hl_function" href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Add</a>(card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07310">Card.cs:7310</a></div></div>
-<div class="ttc" id="aclassCard_html_ae037e2e92487e8c96fafc247c1761974"><div class="ttname"><a href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Card.Add</a></div><div class="ttdeci">Thing Add(string id, int num=1, int lv=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03138">Card.cs:3138</a></div></div>
-<div class="ttc" id="aclassTraitManager_html_aa9d61d33373ce6b2116240f5edb75606"><div class="ttname"><a href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">TraitManager.List&lt; T &gt;</a></div><div class="ttdeci">List&lt; T &gt; List&lt; T &gt;(Func&lt; T, bool &gt; func=null)</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00060">TraitManager.cs:60</a></div></div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (func(value2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T))</div>
+<div class="line"><span class="lineno">   81</span>                {</div>
+<div class="line"><span class="lineno">   82</span>                    list.Add(value2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
+<div class="line"><span class="lineno">   83</span>                }</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00047">Card.cs:47</a></div></div>
+<div class="ttc" id="aclassTraitManager_html_aa9d61d33373ce6b2116240f5edb75606"><div class="ttname"><a href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">TraitManager.List&lt; T &gt;</a></div><div class="ttdeci">List&lt; T &gt; List&lt; T &gt;(Func&lt; T, bool &gt; func=null)</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00065">TraitManager.cs:65</a></div></div>
 <div class="ttc" id="aclassTraitSet_html"><div class="ttname"><a href="classTraitSet.html">TraitSet</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSet_8cs_source.html#l00005">TraitSet.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l03138">Card.Add()</a>, <a class="el" href="TraitManager_8cs_source.html#l00086">GetTraitSet&lt; T &gt;()</a>, <a class="el" href="TraitManager_8cs_source.html#l00060">List&lt; T &gt;()</a>, and <a class="el" href="Card_8cs_source.html#l07310">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00089">GetTraitSet&lt; T &gt;()</a>, <a class="el" href="TraitManager_8cs_source.html#l00065">List&lt; T &gt;()</a>, and <a class="el" href="Card_8cs_source.html#l00047">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00060">List&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00065">List&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -428,40 +419,40 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="classTrait.html">Trait</a> trait = c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>;</div>
-<div class="line"><span class="lineno">    9</span>        this.<a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(trait.GetType(), <span class="keyword">null</span>).Add(c);</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">IsAltar</a>)</div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            this.<a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
-<div class="line"><span class="lineno">   13</span>        }</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">IsRestSpot</a>)</div>
-<div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            this.<a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
-<div class="line"><span class="lineno">   17</span>        }</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitChair.html">TraitChair</a>)</div>
-<div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            this.<a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitLightSun.html">TraitLightSun</a>)</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            this.<a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="aclassTraitChair_html"><div class="ttname"><a href="classTraitChair.html">TraitChair</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitChair_8cs_source.html#l00003">TraitChair.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitLightSun_html"><div class="ttname"><a href="classTraitLightSun.html">TraitLightSun</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitLightSun_8cs_source.html#l00004">TraitLightSun.cs:5</a></div></div>
-<div class="ttc" id="aclassTraitManager_html_a5c7be3389262c6008368f88f346b7761"><div class="ttname"><a href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">TraitManager.chairs</a></div><div class="ttdeci">TraitMap chairs</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00102">TraitManager.cs:102</a></div></div>
-<div class="ttc" id="aclassTraitManager_html_a93cb95b65c99b90891d43f3e855d6273"><div class="ttname"><a href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">TraitManager.altars</a></div><div class="ttdeci">TraitMap altars</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00098">TraitManager.cs:98</a></div></div>
-<div class="ttc" id="aclassTraitManager_html_a94e333560c29365f1158f52e7a370ae5"><div class="ttname"><a href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">TraitManager.restSpots</a></div><div class="ttdeci">TraitMap restSpots</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00100">TraitManager.cs:100</a></div></div>
-<div class="ttc" id="aclassTraitManager_html_ad6340f0bc4e247da25cb0e2a1ddc965f"><div class="ttname"><a href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">TraitManager.suns</a></div><div class="ttdeci">TraitMap suns</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00104">TraitManager.cs:104</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00016">16</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classTrait.html">Trait</a> trait = c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>;</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(trait.GetType()).Add(c);</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">IsAltar</a>)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">IsRestSpot</a>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitChair.html">TraitChair</a>)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitLightSun.html">TraitLightSun</a>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassTraitChair_html"><div class="ttname"><a href="classTraitChair.html">TraitChair</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitChair_8cs_source.html#l00001">TraitChair.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitLightSun_html"><div class="ttname"><a href="classTraitLightSun.html">TraitLightSun</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitLightSun_8cs_source.html#l00003">TraitLightSun.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitManager_html_a5c7be3389262c6008368f88f346b7761"><div class="ttname"><a href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">TraitManager.chairs</a></div><div class="ttdeci">TraitMap chairs</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00012">TraitManager.cs:12</a></div></div>
+<div class="ttc" id="aclassTraitManager_html_a93cb95b65c99b90891d43f3e855d6273"><div class="ttname"><a href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">TraitManager.altars</a></div><div class="ttdeci">TraitMap altars</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00008">TraitManager.cs:8</a></div></div>
+<div class="ttc" id="aclassTraitManager_html_a94e333560c29365f1158f52e7a370ae5"><div class="ttname"><a href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">TraitManager.restSpots</a></div><div class="ttdeci">TraitMap restSpots</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00010">TraitManager.cs:10</a></div></div>
+<div class="ttc" id="aclassTraitManager_html_ad6340f0bc4e247da25cb0e2a1ddc965f"><div class="ttname"><a href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">TraitManager.suns</a></div><div class="ttdeci">TraitMap suns</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00014">TraitManager.cs:14</a></div></div>
 <div class="ttc" id="aclassTraitMap_html_a3038779754ff517b7034eecbfdf13b4e"><div class="ttname"><a href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">TraitMap.Add</a></div><div class="ttdeci">void Add(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00007">TraitMap.cs:7</a></div></div>
-<div class="ttc" id="aclassTrait_html_a07686b64eaa110a7fa893adb571251ea"><div class="ttname"><a href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">Trait.IsRestSpot</a></div><div class="ttdeci">virtual bool IsRestSpot</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00557">Trait.cs:558</a></div></div>
-<div class="ttc" id="aclassTrait_html_a4207b40678d774015cf532e1fbfa11f6"><div class="ttname"><a href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">Trait.IsAltar</a></div><div class="ttdeci">virtual bool IsAltar</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00549">Trait.cs:550</a></div></div>
+<div class="ttc" id="aclassTrait_html_a07686b64eaa110a7fa893adb571251ea"><div class="ttname"><a href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">Trait.IsRestSpot</a></div><div class="ttdeci">virtual bool IsRestSpot</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00226">Trait.cs:226</a></div></div>
+<div class="ttc" id="aclassTrait_html_a4207b40678d774015cf532e1fbfa11f6"><div class="ttname"><a href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">Trait.IsAltar</a></div><div class="ttdeci">virtual bool IsAltar</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00224">Trait.cs:224</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitMap_8cs_source.html#l00007">TraitMap.Add()</a>, <a class="el" href="TraitManager_8cs_source.html#l00098">altars</a>, <a class="el" href="TraitManager_8cs_source.html#l00102">chairs</a>, <a class="el" href="Trait_8cs_source.html#l00550">Trait.IsAltar</a>, <a class="el" href="Trait_8cs_source.html#l00558">Trait.IsRestSpot</a>, <a class="el" href="TraitManager_8cs_source.html#l00100">restSpots</a>, <a class="el" href="TraitManager_8cs_source.html#l00104">suns</a>, <a class="el" href="Card_8cs_source.html#l07310">Card.trait</a>, and <a class="el" href="TraitManager_8cs_source.html#l00096">typeMap</a>.</p>
+<p class="reference">References <a class="el" href="TraitMap_8cs_source.html#l00007">TraitMap.Add()</a>, <a class="el" href="TraitManager_8cs_source.html#l00008">altars</a>, <a class="el" href="TraitManager_8cs_source.html#l00012">chairs</a>, <a class="el" href="Trait_8cs_source.html#l00224">Trait.IsAltar</a>, <a class="el" href="Trait_8cs_source.html#l00226">Trait.IsRestSpot</a>, <a class="el" href="TraitManager_8cs_source.html#l00010">restSpots</a>, <a class="el" href="TraitManager_8cs_source.html#l00014">suns</a>, <a class="el" href="Card_8cs_source.html#l00047">Card.trait</a>, and <a class="el" href="TraitManager_8cs_source.html#l00006">typeMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Props_8cs_source.html#l00078">Props.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Props_8cs_source.html#l00062">Props.Add()</a>.</p>
 
 </div>
 </div>
@@ -489,32 +480,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00028">28</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classTrait.html">Trait</a> trait = c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>;</div>
-<div class="line"><span class="lineno">   31</span>        this.<a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>[trait.GetType()].Remove(c);</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">IsAltar</a>)</div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            this.<a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">IsRestSpot</a>)</div>
-<div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            this.<a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitChair.html">TraitChair</a>)</div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            this.<a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitLightSun.html">TraitLightSun</a>)</div>
-<div class="line"><span class="lineno">   45</span>        {</div>
-<div class="line"><span class="lineno">   46</span>            this.<a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00038">38</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_class" href="classTrait.html">Trait</a> trait = c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>;</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>[trait.GetType()].Remove(c);</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">IsAltar</a>)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">IsRestSpot</a>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitChair.html">TraitChair</a>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitLightSun.html">TraitLightSun</a>)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
 <div class="ttc" id="aclassTraitMap_html_a0983bfdf5bc39aa857d46fe33c7e1faa"><div class="ttname"><a href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">TraitMap.Remove</a></div><div class="ttdeci">void Remove(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00012">TraitMap.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00098">altars</a>, <a class="el" href="TraitManager_8cs_source.html#l00102">chairs</a>, <a class="el" href="Trait_8cs_source.html#l00550">Trait.IsAltar</a>, <a class="el" href="Trait_8cs_source.html#l00558">Trait.IsRestSpot</a>, <a class="el" href="TraitMap_8cs_source.html#l00012">TraitMap.Remove()</a>, <a class="el" href="TraitManager_8cs_source.html#l00100">restSpots</a>, <a class="el" href="TraitManager_8cs_source.html#l00104">suns</a>, <a class="el" href="Card_8cs_source.html#l07310">Card.trait</a>, and <a class="el" href="TraitManager_8cs_source.html#l00096">typeMap</a>.</p>
+<p class="reference">References <a class="el" href="TraitManager_8cs_source.html#l00008">altars</a>, <a class="el" href="TraitManager_8cs_source.html#l00012">chairs</a>, <a class="el" href="Trait_8cs_source.html#l00224">Trait.IsAltar</a>, <a class="el" href="Trait_8cs_source.html#l00226">Trait.IsRestSpot</a>, <a class="el" href="TraitMap_8cs_source.html#l00012">TraitMap.Remove()</a>, <a class="el" href="TraitManager_8cs_source.html#l00010">restSpots</a>, <a class="el" href="TraitManager_8cs_source.html#l00014">suns</a>, <a class="el" href="Card_8cs_source.html#l00047">Card.trait</a>, and <a class="el" href="TraitManager_8cs_source.html#l00006">typeMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Props_8cs_source.html#l00127">Props.Remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Props_8cs_source.html#l00111">Props.Remove()</a>.</p>
 
 </div>
 </div>
@@ -531,9 +522,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00098">98</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00008">8</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00006">OnAddCard()</a>, <a class="el" href="TraitManager_8cs_source.html#l00028">OnRemoveCard()</a>, and <a class="el" href="AI__Offer_8cs_source.html#l00012">AI_Offer.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00016">OnAddCard()</a>, <a class="el" href="TraitManager_8cs_source.html#l00038">OnRemoveCard()</a>, and <a class="el" href="AI__Offer_8cs_source.html#l00019">AI_Offer.Run()</a>.</p>
 
 </div>
 </div>
@@ -549,9 +540,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00102">102</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00012">12</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00006">OnAddCard()</a>, and <a class="el" href="TraitManager_8cs_source.html#l00028">OnRemoveCard()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00016">OnAddCard()</a>, and <a class="el" href="TraitManager_8cs_source.html#l00038">OnRemoveCard()</a>.</p>
 
 </div>
 </div>
@@ -567,9 +558,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00100">100</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00010">10</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00006">OnAddCard()</a>, <a class="el" href="TraitManager_8cs_source.html#l00028">OnRemoveCard()</a>, and <a class="el" href="AI__Idle_8cs_source.html#l00039">AI_Idle.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00016">OnAddCard()</a>, <a class="el" href="TraitManager_8cs_source.html#l00038">OnRemoveCard()</a>, and <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>.</p>
 
 </div>
 </div>
@@ -585,9 +576,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00104">104</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00058">VirtualDate.BuildSunMap()</a>, <a class="el" href="TraitManager_8cs_source.html#l00006">OnAddCard()</a>, <a class="el" href="TraitManager_8cs_source.html#l00028">OnRemoveCard()</a>, and <a class="el" href="Map_8cs_source.html#l02768">Map.RefreshSunMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VirtualDate_8cs_source.html#l00055">VirtualDate.BuildSunMap()</a>, <a class="el" href="TraitManager_8cs_source.html#l00016">OnAddCard()</a>, <a class="el" href="TraitManager_8cs_source.html#l00038">OnRemoveCard()</a>, and <a class="el" href="Map_8cs_source.html#l02666">Map.RefreshSunMap()</a>.</p>
 
 </div>
 </div>
@@ -603,9 +594,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00096">96</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitManager_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitManager_8cs_source.html">TraitManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00091">GetTraitSet()</a>, <a class="el" href="TraitManager_8cs_source.html#l00086">GetTraitSet&lt; T &gt;()</a>, <a class="el" href="TraitManager_8cs_source.html#l00006">OnAddCard()</a>, and <a class="el" href="TraitManager_8cs_source.html#l00028">OnRemoveCard()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitManager_8cs_source.html#l00094">GetTraitSet()</a>, <a class="el" href="TraitManager_8cs_source.html#l00089">GetTraitSet&lt; T &gt;()</a>, <a class="el" href="TraitManager_8cs_source.html#l00016">OnAddCard()</a>, and <a class="el" href="TraitManager_8cs_source.html#l00038">OnRemoveCard()</a>.</p>
 
 </div>
 </div>

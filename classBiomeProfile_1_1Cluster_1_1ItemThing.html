@@ -129,10 +129,10 @@ Properties</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classBiomeProfile_1_1BaseTile"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classBiomeProfile_1_1BaseTile')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classBiomeProfile_1_1BaseTile.html">BiomeProfile.BaseTile</a></td></tr>
 <tr class="memitem:a6daec7355470f7f891b5da77172de69b inherit pub_types_classBiomeProfile_1_1BaseTile"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69b">SubType</a> { <br />
-&#160;&#160;<a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba6adf97f83acf6453d4a6a4b1070f3754">None</a>
+&#160;&#160;<a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
 , <a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69bad734cb933615f57b49107d1eb7b78414">Rnd5</a> = 10
-, <a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba9f7c75dad32efbda7f641c5751b9f0ab">Rnd10</a>
-, <a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69baa238cc0aa3616f3eff3b548b626b5985">Rnd20</a>
+, <a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba9f7c75dad32efbda7f641c5751b9f0ab">Rnd10</a> = 11
+, <a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69baa238cc0aa3616f3eff3b548b626b5985">Rnd20</a> = 12
 , <br />
 &#160;&#160;<a class="el" href="classBiomeProfile_1_1BaseTile.html#a6daec7355470f7f891b5da77172de69ba57391192dfa1f247ad015a0fe2eca48e">Pattern</a> = 20
 <br />
@@ -183,7 +183,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00737">737</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00510">510</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ac5d9160080fa7fd9f3c299cd9e7f1555" name="ac5d9160080fa7fd9f3c299cd9e7f1555"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5d9160080fa7fd9f3c299cd9e7f1555">&#9670;&#160;</a></span>id</h2>
@@ -197,9 +197,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00751">751</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00512">512</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00792">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00576">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
 
 </div>
 </div>
@@ -224,17 +224,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00739">739</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  740</span>            {</div>
-<div class="line"><span class="lineno">  741</span>                <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  742</span>                {</div>
-<div class="line"><span class="lineno">  743</span>                    <span class="keywordflow">return</span> base._GetThing(this.<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  744</span>                }</div>
-<div class="line"><span class="lineno">  745</span>                <span class="keyword">set</span></div>
-<div class="line"><span class="lineno">  746</span>                {</div>
-<div class="line"><span class="lineno">  747</span>                    base._SetThing(ref this.<span class="keywordtype">id</span>, value);</div>
-<div class="line"><span class="lineno">  748</span>                }</div>
-<div class="line"><span class="lineno">  749</span>            }</div>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00514">514</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  515</span>            {</div>
+<div class="line"><span class="lineno">  516</span>                <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  517</span>                {</div>
+<div class="line"><span class="lineno">  518</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="classBiomeProfile_1_1BaseTile.html#a81c6a0a575e7bdd2ef4d1f2688331c27">_GetThing</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  519</span>                }</div>
+<div class="line"><span class="lineno">  520</span>                <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  521</span>                {</div>
+<div class="line"><span class="lineno">  522</span>                    <a class="code hl_function" href="classBiomeProfile_1_1BaseTile.html#ab21e388cbfd5727179d5df212f323dea">_SetThing</a>(ref <span class="keywordtype">id</span>, value);</div>
+<div class="line"><span class="lineno">  523</span>                }</div>
+<div class="line"><span class="lineno">  524</span>            }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_a81c6a0a575e7bdd2ef4d1f2688331c27"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#a81c6a0a575e7bdd2ef4d1f2688331c27">BiomeProfile.BaseTile._GetThing</a></div><div class="ttdeci">string _GetThing(string id)</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00044">BiomeProfile.cs:44</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1BaseTile_html_ab21e388cbfd5727179d5df212f323dea"><div class="ttname"><a href="classBiomeProfile_1_1BaseTile.html#ab21e388cbfd5727179d5df212f323dea">BiomeProfile.BaseTile._SetThing</a></div><div class="ttdeci">void _SetThing(ref string id, string value)</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00058">BiomeProfile.cs:58</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

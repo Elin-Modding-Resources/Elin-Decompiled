@@ -5,7 +5,7 @@ var searchData=
   ['validatehobby_2',['ValidateHobby',['../classGoalWork.html#a49e754ef61e57926724933f90ed13d2e',1,'GoalWork']]],
   ['validateinstalled_3',['ValidateInstalled',['../classMap.html#abb12713ae209185780c6561135b21a86',1,'Map']]],
   ['validatelang_4',['ValidateLang',['../classSourceManager.html#a23abb970eaf823a7ca14209fb1f37434',1,'SourceManager']]],
-  ['validatepage_5',['ValidatePage',['../classHotbar.html#af4dc5756a8f9bd504c32c20717610752',1,'Hotbar']]],
+  ['validatepage_5',['ValidatePage',['../classHotbar.html#a3c69329af84cbabf018a45d3b5dba9a5',1,'Hotbar']]],
   ['validatepref_6',['ValidatePref',['../classSourceObj.html#ae5e311075cb9810094c2ad191e909126',1,'SourceObj.ValidatePref()'],['../classSourceThingV.html#aff0111b19538e5afe462ddacdba21c9c',1,'SourceThingV.ValidatePref()'],['../classSourceFloor.html#a3bee5d812022857c105fcf07d66a222e',1,'SourceFloor.ValidatePref()'],['../classSourceChara.html#a794d6ca819020f2cd9545ed95d850ff4',1,'SourceChara.ValidatePref()'],['../classSourceBlock.html#a0c6e85fa829627efbe22831f2c1933cc',1,'SourceBlock.ValidatePref()']]],
   ['validateprefs_7',['ValidatePrefs',['../classSourcePrefInspector.html#aceba88b57dcd66031c42fb9f0c5e1740',1,'SourcePrefInspector']]],
   ['validateresolution_8',['ValidateResolution',['../classLayerConfig.html#aae67d89c8445b4e0324d185edadda6bc',1,'LayerConfig']]],

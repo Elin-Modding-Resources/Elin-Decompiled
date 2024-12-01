@@ -9,7 +9,7 @@ var classCoreRef_1_1Icons =
     [ "go", "classCoreRef_1_1Icons.html#a5c8295a7830b12a4a0882a2c2df175d7", null ],
     [ "home", "classCoreRef_1_1Icons.html#a311725d213bd13523c613c37fafc3da8", null ],
     [ "inspect", "classCoreRef_1_1Icons.html#ac0cd7f1b9f2604298cc5dc7b95ff8a33", null ],
-    [ "invTab", "classCoreRef_1_1Icons.html#af514d59778c5bccb404cfc4744fbad0a", null ],
+    [ "invTab", "classCoreRef_1_1Icons.html#a932f4102364f1a2af73a7e4c8422daee", null ],
     [ "mana", "classCoreRef_1_1Icons.html#a6ca2f24f966e857e84bb85b8d24fac13", null ],
     [ "noHotItem", "classCoreRef_1_1Icons.html#a72b8475b72cbdd7966298502f91e1be9", null ],
     [ "personal", "classCoreRef_1_1Icons.html#ad5e3b3d563e0dbb7342f7607f232c378", null ],
@@ -26,6 +26,6 @@ var classCoreRef_1_1Icons =
     [ "uniformF", "classCoreRef_1_1Icons.html#a884d9e50d89f0279445e3aa7ef97612b", null ],
     [ "uniformM", "classCoreRef_1_1Icons.html#a8fac28e20b02e7ec5255bf9b22424f4f", null ],
     [ "up", "classCoreRef_1_1Icons.html#adc8170bdb9f490bd0efc4481762ea46c", null ],
-    [ "weather", "classCoreRef_1_1Icons.html#a44cd468fcb64c9398b9eed431deb7f9b", null ],
+    [ "weather", "classCoreRef_1_1Icons.html#a84d75e19095cddd126b32c48b8400f3e", null ],
     [ "work", "classCoreRef_1_1Icons.html#a9be181e4e705b397b5ccd69fddc3efcb", null ]
 ];

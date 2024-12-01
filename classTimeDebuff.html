@@ -404,7 +404,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TimeDebuff_8cs_source.html#l00003">3</a> of file <a class="el" href="TimeDebuff_8cs_source.html">TimeDebuff.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TimeDebuff_8cs_source.html#l00001">1</a> of file <a class="el" href="TimeDebuff_8cs_source.html">TimeDebuff.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a56a68cce782c76a86fd3cb52551f9a43" name="a56a68cce782c76a86fd3cb52551f9a43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56a68cce782c76a86fd3cb52551f9a43">&#9670;&#160;</a></span>CanStack()</h2>
@@ -432,11 +432,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a15631ed2272e1ae304dd7e173ef6dfcc">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TimeDebuff_8cs_source.html#l00013">13</a> of file <a class="el" href="TimeDebuff_8cs_source.html">TimeDebuff.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> !c.givenByPcParty || c.givenByPcParty == base.givenByPcParty;</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TimeDebuff_8cs_source.html#l00005">5</a> of file <a class="el" href="TimeDebuff_8cs_source.html">TimeDebuff.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classBaseCondition.html#aaaa20d7172c3bd5b1c5f46f3b1d26248">givenByPcParty</a>)</div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> c.givenByPcParty == base.givenByPcParty;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_aaaa20d7172c3bd5b1c5f46f3b1d26248"><div class="ttname"><a href="classBaseCondition.html#aaaa20d7172c3bd5b1c5f46f3b1d26248">BaseCondition.givenByPcParty</a></div><div class="ttdeci">bool givenByPcParty</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00065">BaseCondition.cs:66</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00066">BaseCondition.givenByPcParty</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -460,14 +467,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TimeDebuff_8cs_source.html#l00005">5</a> of file <a class="el" href="TimeDebuff_8cs_source.html">TimeDebuff.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="TimeDebuff_8cs_source.html#l00003">3</a> of file <a class="el" href="TimeDebuff_8cs_source.html">TimeDebuff.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

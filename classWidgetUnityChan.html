@@ -259,8 +259,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_classWidget"><td colspan="2" onclick="javascript:toggleInherit('properties_classWidget')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a><code> [get]</code></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Widget.Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#afcf78dd50f18f1569e1c2c64e2a7d935">config</a><code> [get]</code></td></tr>
-<tr class="separator:afcf78dd50f18f1569e1c2c64e2a7d935 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
+<tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
@@ -325,7 +325,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00004">4</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00003">3</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2338dab2c9fe4ff4f5caa7e8204341f3" name="a2338dab2c9fe4ff4f5caa7e8204341f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2338dab2c9fe4ff4f5caa7e8204341f3">&#9670;&#160;</a></span>OnActivate()</h2>
@@ -352,17 +352,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00006">6</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
-<div class="line"><span class="lineno">    8</span>        WidgetUnityChan.Instance = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">    9</span>        this.goWorld = UnityEngine.Object.Instantiate&lt;GameObject&gt;(this.<a class="code hl_variable" href="classWidgetUnityChan.html#a76187f12e80212eca1a5f86be4dc4c23">prefabWorld</a>);</div>
-<div class="line"><span class="lineno">   10</span>        this.animator = this.<a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a>.GetComponentInChildren&lt;Animator&gt;();</div>
-<div class="line"><span class="lineno">   11</span>        this.cam = this.<a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a>.GetComponentInChildren&lt;Camera&gt;();</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassWidgetUnityChan_html_a76187f12e80212eca1a5f86be4dc4c23"><div class="ttname"><a href="classWidgetUnityChan.html#a76187f12e80212eca1a5f86be4dc4c23">WidgetUnityChan.prefabWorld</a></div><div class="ttdeci">GameObject prefabWorld</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00042">WidgetUnityChan.cs:42</a></div></div>
-<div class="ttc" id="aclassWidgetUnityChan_html_a9f6d6f10c514507b794497afbe37c4c4"><div class="ttname"><a href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">WidgetUnityChan.goWorld</a></div><div class="ttdeci">GameObject goWorld</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00040">WidgetUnityChan.cs:40</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00021">21</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="classWidgetUnityChan.html#ad1d4ed1f00b75371be393d7b32d1f250">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a> = Object.Instantiate(<a class="code hl_variable" href="classWidgetUnityChan.html#a76187f12e80212eca1a5f86be4dc4c23">prefabWorld</a>);</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="classWidgetUnityChan.html#a2d357243197b99df9ca9301a966bfac7">animator</a> = <a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a>.GetComponentInChildren&lt;Animator&gt;();</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="classWidgetUnityChan.html#ac4577c800b8c4947c0d3af2bc23ae9e4">cam</a> = <a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a>.GetComponentInChildren&lt;Camera&gt;();</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassWidgetUnityChan_html_a2d357243197b99df9ca9301a966bfac7"><div class="ttname"><a href="classWidgetUnityChan.html#a2d357243197b99df9ca9301a966bfac7">WidgetUnityChan.animator</a></div><div class="ttdeci">Animator animator</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00015">WidgetUnityChan.cs:15</a></div></div>
+<div class="ttc" id="aclassWidgetUnityChan_html_a76187f12e80212eca1a5f86be4dc4c23"><div class="ttname"><a href="classWidgetUnityChan.html#a76187f12e80212eca1a5f86be4dc4c23">WidgetUnityChan.prefabWorld</a></div><div class="ttdeci">GameObject prefabWorld</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00013">WidgetUnityChan.cs:13</a></div></div>
+<div class="ttc" id="aclassWidgetUnityChan_html_a9f6d6f10c514507b794497afbe37c4c4"><div class="ttname"><a href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">WidgetUnityChan.goWorld</a></div><div class="ttdeci">GameObject goWorld</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00011">WidgetUnityChan.cs:11</a></div></div>
+<div class="ttc" id="aclassWidgetUnityChan_html_ac4577c800b8c4947c0d3af2bc23ae9e4"><div class="ttname"><a href="classWidgetUnityChan.html#ac4577c800b8c4947c0d3af2bc23ae9e4">WidgetUnityChan.cam</a></div><div class="ttdeci">Camera cam</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00017">WidgetUnityChan.cs:17</a></div></div>
+<div class="ttc" id="aclassWidgetUnityChan_html_ad1d4ed1f00b75371be393d7b32d1f250"><div class="ttname"><a href="classWidgetUnityChan.html#ad1d4ed1f00b75371be393d7b32d1f250">WidgetUnityChan.Instance</a></div><div class="ttdeci">static WidgetUnityChan Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00005">WidgetUnityChan.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00040">goWorld</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00042">prefabWorld</a>.</p>
+<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00015">animator</a>, <a class="el" href="WidgetUnityChan_8cs_source.html#l00017">cam</a>, <a class="el" href="WidgetUnityChan_8cs_source.html#l00011">goWorld</a>, <a class="el" href="WidgetUnityChan_8cs_source.html#l00005">Instance</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00013">prefabWorld</a>.</p>
 
 </div>
 </div>
@@ -389,12 +392,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00014">14</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        UnityEngine.Object.DestroyImmediate(this.<a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a>);</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        Object.DestroyImmediate(<a class="code hl_variable" href="classWidgetUnityChan.html#a9f6d6f10c514507b794497afbe37c4c4">goWorld</a>);</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00040">goWorld</a>.</p>
+<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00011">goWorld</a>.</p>
 
 </div>
 </div>
@@ -424,17 +427,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00025">25</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
-<div class="line"><span class="lineno">   27</span>        m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>).AddToggle(<span class="stringliteral">&quot;Up&quot;</span>, this.<a class="code hl_variable" href="classWidgetUnityChan.html#a4656586c84f688f0f0130ae17931561f">up</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            this.up = a;</div>
-<div class="line"><span class="lineno">   30</span>        });</div>
-<div class="line"><span class="lineno">   31</span>        base.SetBaseContextMenu(m);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclassWidgetUnityChan_html_a4656586c84f688f0f0130ae17931561f"><div class="ttname"><a href="classWidgetUnityChan.html#a4656586c84f688f0f0130ae17931561f">WidgetUnityChan.up</a></div><div class="ttdeci">bool up</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00038">WidgetUnityChan.cs:38</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00040">40</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>).AddToggle(<span class="stringliteral">&quot;Up&quot;</span>, <a class="code hl_variable" href="classWidgetUnityChan.html#a4656586c84f688f0f0130ae17931561f">up</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="classWidgetUnityChan.html#a4656586c84f688f0f0130ae17931561f">up</a> = a;</div>
+<div class="line"><span class="lineno">   45</span>        });</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassWidgetUnityChan_html_a4656586c84f688f0f0130ae17931561f"><div class="ttname"><a href="classWidgetUnityChan.html#a4656586c84f688f0f0130ae17931561f">WidgetUnityChan.up</a></div><div class="ttdeci">bool up</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00009">WidgetUnityChan.cs:9</a></div></div>
+<div class="ttc" id="aclassWidget_html_a1566722a39d0cce11507c43b3737df1a"><div class="ttname"><a href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">Widget.SetBaseContextMenu</a></div><div class="ttdeci">void SetBaseContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00578">Widget.cs:578</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00038">up</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00578">Widget.SetBaseContextMenu()</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00009">up</a>.</p>
 
 </div>
 </div>
@@ -462,16 +466,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00019">19</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        this.animator.transform.localEulerAngles = <span class="keyword">new</span> Vector3(0f, angle + this.<a class="code hl_variable" href="classWidgetUnityChan.html#a74a813eb5e9b4dcac12be90fd2fb8b15">angleFix</a>, 0f);</div>
-<div class="line"><span class="lineno">   22</span>        this.cam.fieldOfView = (this.up ? 6f : 12f);</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aclassWidgetUnityChan_html_a74a813eb5e9b4dcac12be90fd2fb8b15"><div class="ttname"><a href="classWidgetUnityChan.html#a74a813eb5e9b4dcac12be90fd2fb8b15">WidgetUnityChan.angleFix</a></div><div class="ttdeci">float angleFix</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00036">WidgetUnityChan.cs:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00034">34</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        animator.transform.localEulerAngles = <span class="keyword">new</span> Vector3(0f, angle + <a class="code hl_variable" href="classWidgetUnityChan.html#a74a813eb5e9b4dcac12be90fd2fb8b15">angleFix</a>, 0f);</div>
+<div class="line"><span class="lineno">   37</span>        cam.fieldOfView = (<a class="code hl_variable" href="classWidgetUnityChan.html#a4656586c84f688f0f0130ae17931561f">up</a> ? 6f : 12f);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassWidgetUnityChan_html_a74a813eb5e9b4dcac12be90fd2fb8b15"><div class="ttname"><a href="classWidgetUnityChan.html#a74a813eb5e9b4dcac12be90fd2fb8b15">WidgetUnityChan.angleFix</a></div><div class="ttdeci">float angleFix</div><div class="ttdef"><b>Definition:</b> <a href="WidgetUnityChan_8cs_source.html#l00007">WidgetUnityChan.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00036">angleFix</a>.</p>
+<p class="reference">References <a class="el" href="WidgetUnityChan_8cs_source.html#l00007">angleFix</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00009">up</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l01163">AM_Adv.RefreshArrow()</a>, and <a class="el" href="AM__Region_8cs_source.html#l00019">AM_Region.RefreshArrow()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l01300">AM_Adv.RefreshArrow()</a>, and <a class="el" href="AM__Region_8cs_source.html#l00015">AM_Region.RefreshArrow()</a>.</p>
 
 </div>
 </div>
@@ -488,9 +492,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00036">36</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00007">7</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00019">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00034">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -506,7 +510,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00044">44</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00015">15</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -522,7 +528,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00046">46</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00017">17</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -538,9 +546,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00040">40</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00011">11</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00006">OnActivate()</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00014">OnDestroy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00021">OnActivate()</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00029">OnDestroy()</a>.</p>
 
 </div>
 </div>
@@ -564,9 +572,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00034">34</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00005">5</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l01163">AM_Adv.RefreshArrow()</a>, and <a class="el" href="AM__Region_8cs_source.html#l00019">AM_Region.RefreshArrow()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00021">OnActivate()</a>, <a class="el" href="AM__Adv_8cs_source.html#l01300">AM_Adv.RefreshArrow()</a>, and <a class="el" href="AM__Region_8cs_source.html#l00015">AM_Region.RefreshArrow()</a>.</p>
 
 </div>
 </div>
@@ -582,9 +590,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00042">42</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00013">13</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00006">OnActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -600,7 +608,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00048">48</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00019">19</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 
 </div>
 </div>
@@ -616,9 +624,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00038">38</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WidgetUnityChan_8cs_source.html#l00009">9</a> of file <a class="el" href="WidgetUnityChan_8cs_source.html">WidgetUnityChan.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00025">OnSetContextMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetUnityChan_8cs_source.html#l00040">OnSetContextMenu()</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00034">Refresh()</a>.</p>
 
 </div>
 </div>

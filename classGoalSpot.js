@@ -1,4 +1,4 @@
 var classGoalSpot =
 [
-    [ "Run", "classGoalSpot.html#aac815556323eed0157aab86ab1a2c3d5", null ]
+    [ "Run", "classGoalSpot.html#a303713cf647d8b644b40d9b2f9de6bf6", null ]
 ];

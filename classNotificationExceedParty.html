@@ -249,11 +249,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">BaseNotification</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="NotificationExceedParty_8cs_source.html#l00027">27</a> of file <a class="el" href="NotificationExceedParty_8cs_source.html">NotificationExceedParty.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        this.text = <span class="stringliteral">&quot;exceedParty&quot;</span>.lang();</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NotificationExceedParty_8cs_source.html#l00015">15</a> of file <a class="el" href="NotificationExceedParty_8cs_source.html">NotificationExceedParty.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = <span class="stringliteral">&quot;exceedParty&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclassBaseNotification_html_af66eccd33a7fa678c344a71f6612939a"><div class="ttname"><a href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">BaseNotification.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00009">BaseNotification.cs:9</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseNotification_8cs_source.html#l00009">BaseNotification.text</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -277,26 +280,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="NotificationExceedParty_8cs_source.html#l00013">13</a> of file <a class="el" href="NotificationExceedParty_8cs_source.html">NotificationExceedParty.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> delegate(UITooltip a)</div>
-<div class="line"><span class="lineno">   18</span>            {</div>
-<div class="line"><span class="lineno">   19</span>                a.note.Clear();</div>
-<div class="line"><span class="lineno">   20</span>                a.note.AddHeader(<span class="stringliteral">&quot;exceedParty&quot;</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   21</span>                a.note.AddText(<span class="stringliteral">&quot;exceedParty_tip&quot;</span>.lang((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Count - 1).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_property" href="classPlayer.html#a84887076fe7e500b149a0c9b54b6ee47">MaxAlly</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>), FontColor.DontChange);</div>
-<div class="line"><span class="lineno">   22</span>                a.note.Build();</div>
-<div class="line"><span class="lineno">   23</span>            };</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09425">Chara.cs:9425</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:24</a></div></div>
-<div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:32</a></div></div>
-<div class="ttc" id="aclassParty_html_ab40c9e3c6723032a277d2fd523d4ec29"><div class="ttname"><a href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">Party.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00008">Party.cs:9</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a84887076fe7e500b149a0c9b54b6ee47"><div class="ttname"><a href="classPlayer.html#a84887076fe7e500b149a0c9b54b6ee47">Player.MaxAlly</a></div><div class="ttdeci">int MaxAlly</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00086">Player.cs:87</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="NotificationExceedParty_8cs_source.html#l00007">7</a> of file <a class="el" href="NotificationExceedParty_8cs_source.html">NotificationExceedParty.cs</a>.</p>
+
 </div>
 </div>
 <a id="a597f55f20e9b61c47ba375d0b534af65" name="a597f55f20e9b61c47ba375d0b534af65"></a>
@@ -320,13 +305,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="NotificationExceedParty_8cs_source.html#l00005">5</a> of file <a class="el" href="NotificationExceedParty_8cs_source.html">NotificationExceedParty.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> EClass.pc.party.members.Count - 1 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_property" href="classPlayer.html#a84887076fe7e500b149a0c9b54b6ee47">MaxAlly</a>;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

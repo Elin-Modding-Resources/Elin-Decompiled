@@ -17,7 +17,7 @@ var classGameIndex =
     [ "path", "classGameIndex.html#ad1a11a204404a1bcfe8536e69866e701", null ],
     [ "pcName", "classGameIndex.html#a290288aa32ce6d95924d9a599f013824", null ],
     [ "real", "classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc", null ],
-    [ "version", "classGameIndex.html#afb5663e5e61411075ee7e74a0eaae010", null ],
+    [ "version", "classGameIndex.html#a93682f83b697719f941799d25617998b", null ],
     [ "zoneName", "classGameIndex.html#adc16f3bb080248d5c3e361d1035d342f", null ],
     [ "FormTitle", "classGameIndex.html#a7814512f978c761739aabb9245029850", null ],
     [ "GameData", "classGameIndex.html#aeeb8881417fbc072913e7470116d496e", null ],

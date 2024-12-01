@@ -19,7 +19,7 @@ var classRoofStyle =
     [ "reverse", "classRoofStyle.html#a1d97a8d278352845d97b09fa52124768", null ],
     [ "snowFix", "classRoofStyle.html#ad588106afed64d2add2937df50275830", null ],
     [ "snowZ", "classRoofStyle.html#a77e3abc3fccd62ff2dc7570e7e4b7921", null ],
-    [ "type", "classRoofStyle.html#af714c435f5318217c7f29f97fb89bae3", null ],
+    [ "type", "classRoofStyle.html#ae907717737500f7406b7a34281df645e", null ],
     [ "useDefBlock", "classRoofStyle.html#a8c1c127b9c469e30cb02709e7350ad88", null ],
     [ "w", "classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a", null ],
     [ "wing", "classRoofStyle.html#a913d5377fdabc65c03f5a316fa7d880d", null ]

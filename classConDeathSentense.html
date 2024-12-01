@@ -397,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ConDeathSentense_8cs_source.html#l00003">3</a> of file <a class="el" href="ConDeathSentense_8cs_source.html">ConDeathSentense.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConDeathSentense_8cs_source.html#l00001">1</a> of file <a class="el" href="ConDeathSentense_8cs_source.html">ConDeathSentense.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a43aab9b03d820744108fc9d28c720f62" name="a43aab9b03d820744108fc9d28c720f62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43aab9b03d820744108fc9d28c720f62">&#9670;&#160;</a></span>Tick()</h2>
@@ -424,19 +424,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af0c6ea92ca1cc59ce6dec886a38868b5">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConDeathSentense_8cs_source.html#l00005">5</a> of file <a class="el" href="ConDeathSentense_8cs_source.html">ConDeathSentense.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        base.Mod(-1, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (base.value &lt;= 0 &amp;&amp; <span class="keyword">this</span>.owner.IsAliveInCurrentZone)</div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            this.<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a5900f1eac59603c108558aaf4a47e065">Die</a>(<span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_enumeration" href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4">AttackSource</a>.DeathSentense);</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aAttackSource_8cs_html_a94a286604244a15021d28571897475a4"><div class="ttname"><a href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4">AttackSource</a></div><div class="ttdeci">AttackSource</div><div class="ttdef"><b>Definition:</b> <a href="AttackSource_8cs_source.html#l00003">AttackSource.cs:4</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00557">BaseCondition.cs:557</a></div></div>
-<div class="ttc" id="aclassChara_html_a5900f1eac59603c108558aaf4a47e065"><div class="ttname"><a href="classChara.html#a5900f1eac59603c108558aaf4a47e065">Chara.Die</a></div><div class="ttdeci">override void Die(Element e=null, Card origin=null, AttackSource attackSource=AttackSource.None)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04813">Chara.cs:4813</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConDeathSentense_8cs_source.html#l00003">3</a> of file <a class="el" href="ConDeathSentense_8cs_source.html">ConDeathSentense.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <a class="code hl_function" href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">Mod</a>(-1);</div>
+<div class="line"><span class="lineno">    6</span>        <span class="keywordflow">if</span> (base.value &lt;= 0 &amp;&amp; <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a>)</div>
+<div class="line"><span class="lineno">    7</span>        {</div>
+<div class="line"><span class="lineno">    8</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a5900f1eac59603c108558aaf4a47e065">Die</a>(<span class="keyword">null</span>, <span class="keyword">null</span>, <a class="code hl_enumeration" href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4">AttackSource</a>.DeathSentense);</div>
+<div class="line"><span class="lineno">    9</span>        }</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+<div class="ttc" id="aAttackSource_8cs_html_a94a286604244a15021d28571897475a4"><div class="ttname"><a href="AttackSource_8cs.html#a94a286604244a15021d28571897475a4">AttackSource</a></div><div class="ttdeci">AttackSource</div><div class="ttdef"><b>Definition:</b> <a href="AttackSource_8cs_source.html#l00001">AttackSource.cs:2</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_aba9c7904f2e608799748dbb7947d48ea"><div class="ttname"><a href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">BaseCondition.Mod</a></div><div class="ttdeci">void Mod(int a, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00362">BaseCondition.cs:362</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
+<div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00545">Chara.cs:546</a></div></div>
+<div class="ttc" id="aclassChara_html_a5900f1eac59603c108558aaf4a47e065"><div class="ttname"><a href="classChara.html#a5900f1eac59603c108558aaf4a47e065">Chara.Die</a></div><div class="ttdeci">override void Die(Element e=null, Card origin=null, AttackSource attackSource=AttackSource.None)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04562">Chara.cs:4562</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l04813">Chara.Die()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00557">BaseCondition.owner</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l04562">Chara.Die()</a>, <a class="el" href="Chara_8cs_source.html#l00546">Chara.IsAliveInCurrentZone</a>, <a class="el" href="BaseCondition_8cs_source.html#l00362">BaseCondition.Mod()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>.</p>
 
 </div>
 </div>

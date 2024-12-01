@@ -121,7 +121,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ContentGallery_8cs_source.html#l00092">92</a> of file <a class="el" href="ContentGallery_8cs_source.html">ContentGallery.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentGallery_8cs_source.html#l00008">8</a> of file <a class="el" href="ContentGallery_8cs_source.html">ContentGallery.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae627f35bfdd04a62198040a7aa513264" name="ae627f35bfdd04a62198040a7aa513264"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae627f35bfdd04a62198040a7aa513264">&#9670;&#160;</a></span>BuildNote()</h2>
@@ -157,32 +157,33 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentGallery_8cs_source.html#l00094">94</a> of file <a class="el" href="ContentGallery_8cs_source.html">ContentGallery.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>        {</div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a> <span class="keywordflow">in</span> this.<a class="code hl_variable" href="classContentGallery_1_1Page.html#acb17c55ab31e16d4dbd90111298951f3">ids</a>)</div>
-<div class="line"><span class="lineno">   97</span>            {</div>
-<div class="line"><span class="lineno">   98</span>                UIItem uiitem = n.AddItem(<span class="stringliteral">&quot;ItemGallery&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordtype">int</span> num = <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>.ToInt();</div>
-<div class="line"><span class="lineno">  100</span>                Sprite sprite = Resources.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Gallery/&quot;</span> + <a class="code hl_class" href="classCoreRef.html">CoreRef</a>.<a class="code hl_function" href="classCoreRef.html#a844cde80f7fcea19ddd48dc2853ef867">GetArtDir</a>(num) + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.refs.dictSketches[num]);</div>
-<div class="line"><span class="lineno">  101</span>                uiitem.image1.sprite = sprite;</div>
-<div class="line"><span class="lineno">  102</span>                uiitem.text1.text = <span class="stringliteral">&quot;#&quot;</span> + <a class="code hl_variable" href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a>;</div>
-<div class="line"><span class="lineno">  103</span>                uiitem.button1.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">  104</span>                {</div>
-<div class="line"><span class="lineno">  105</span>                    SE.Play(<span class="stringliteral">&quot;click_recipe&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerImage.html">LayerImage</a>&gt;().SetImage(sprite);</div>
-<div class="line"><span class="lineno">  107</span>                });</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="ttc" id="aDramaManager_8cs_html_a842cfe9889b0b5558d1725b0c3388c21"><div class="ttname"><a href="DramaManager_8cs.html#a842cfe9889b0b5558d1725b0c3388c21">text</a></div><div class="ttdeci">CS$. text</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l01637">DramaManager.cs:1637</a></div></div>
-<div class="ttc" id="aclassContentGallery_1_1Page_html_acb17c55ab31e16d4dbd90111298951f3"><div class="ttname"><a href="classContentGallery_1_1Page.html#acb17c55ab31e16d4dbd90111298951f3">ContentGallery.Page.ids</a></div><div class="ttdeci">List&lt; string &gt; ids</div><div class="ttdef"><b>Definition:</b> <a href="ContentGallery_8cs_source.html#l00111">ContentGallery.cs:111</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ContentGallery_8cs_source.html#l00019">19</a> of file <a class="el" href="ContentGallery_8cs_source.html">ContentGallery.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <span class="keywordtype">id</span> <span class="keywordflow">in</span> <a class="code hl_variable" href="classContentGallery_1_1Page.html#acb17c55ab31e16d4dbd90111298951f3">ids</a>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                UIItem uIItem = n.AddItem(<span class="stringliteral">&quot;ItemGallery&quot;</span>);</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordtype">int</span> num = <span class="keywordtype">id</span>.ToInt();</div>
+<div class="line"><span class="lineno">   25</span>                Sprite sprite = Resources.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Gallery/&quot;</span> + <a class="code hl_class" href="classCoreRef.html">CoreRef</a>.<a class="code hl_function" href="classCoreRef.html#a844cde80f7fcea19ddd48dc2853ef867">GetArtDir</a>(num) + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a5782301b1b9e96942b51672f9520f707">dictSketches</a>[num]);</div>
+<div class="line"><span class="lineno">   26</span>                uIItem.image1.sprite = sprite;</div>
+<div class="line"><span class="lineno">   27</span>                uIItem.text1.text = <span class="stringliteral">&quot;#&quot;</span> + id;</div>
+<div class="line"><span class="lineno">   28</span>                uIItem.button1.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">   29</span>                {</div>
+<div class="line"><span class="lineno">   30</span>                    SE.Play(<span class="stringliteral">&quot;click_recipe&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerImage.html">LayerImage</a>&gt;().SetImage(sprite);</div>
+<div class="line"><span class="lineno">   32</span>                });</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="ttc" id="aclassContentGallery_1_1Page_html_acb17c55ab31e16d4dbd90111298951f3"><div class="ttname"><a href="classContentGallery_1_1Page.html#acb17c55ab31e16d4dbd90111298951f3">ContentGallery.Page.ids</a></div><div class="ttdeci">List&lt; string &gt; ids</div><div class="ttdef"><b>Definition:</b> <a href="ContentGallery_8cs_source.html#l00017">ContentGallery.cs:17</a></div></div>
 <div class="ttc" id="aclassCoreRef_html"><div class="ttname"><a href="classCoreRef.html">CoreRef</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00006">CoreRef.cs:7</a></div></div>
-<div class="ttc" id="aclassCoreRef_html_a844cde80f7fcea19ddd48dc2853ef867"><div class="ttname"><a href="classCoreRef.html#a844cde80f7fcea19ddd48dc2853ef867">CoreRef.GetArtDir</a></div><div class="ttdeci">static string GetArtDir(int a)</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00071">CoreRef.cs:71</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00241">EClass.cs:241</a></div></div>
-<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00039">EClass.cs:40</a></div></div>
-<div class="ttc" id="aclassLayerImage_html"><div class="ttname"><a href="classLayerImage.html">LayerImage</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerImage_8cs_source.html#l00005">LayerImage.cs:6</a></div></div>
+<div class="ttc" id="aclassCoreRef_html_a5782301b1b9e96942b51672f9520f707"><div class="ttname"><a href="classCoreRef.html#a5782301b1b9e96942b51672f9520f707">CoreRef.dictSketches</a></div><div class="ttdeci">UD_Int_String dictSketches</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00349">CoreRef.cs:349</a></div></div>
+<div class="ttc" id="aclassCoreRef_html_a844cde80f7fcea19ddd48dc2853ef867"><div class="ttname"><a href="classCoreRef.html#a844cde80f7fcea19ddd48dc2853ef867">CoreRef.GetArtDir</a></div><div class="ttdeci">static string GetArtDir(int a)</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00423">CoreRef.cs:423</a></div></div>
+<div class="ttc" id="aclassCore_html_a174ab976ba96dbcd610d5219de4a85cb"><div class="ttname"><a href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">Core.refs</a></div><div class="ttdeci">CoreRef refs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00045">Core.cs:45</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00006">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
+<div class="ttc" id="aclassLayerImage_html"><div class="ttname"><a href="classLayerImage.html">LayerImage</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerImage_8cs_source.html#l00004">LayerImage.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00241">EClass.core</a>, <a class="el" href="CoreRef_8cs_source.html#l00071">CoreRef.GetArtDir()</a>, <a class="el" href="ContentGallery_8cs_source.html#l00111">ContentGallery.Page.ids</a>, <a class="el" href="DramaManager_8cs_source.html#l01637">text</a>, and <a class="el" href="EClass_8cs_source.html#l00040">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="CoreRef_8cs_source.html#l00349">CoreRef.dictSketches</a>, <a class="el" href="CoreRef_8cs_source.html#l00423">CoreRef.GetArtDir()</a>, <a class="el" href="ContentGallery_8cs_source.html#l00017">ContentGallery.Page.ids</a>, <a class="el" href="Core_8cs_source.html#l00045">Core.refs</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -199,9 +200,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ContentGallery_8cs_source.html#l00111">111</a> of file <a class="el" href="ContentGallery_8cs_source.html">ContentGallery.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ContentGallery_8cs_source.html#l00017">17</a> of file <a class="el" href="ContentGallery_8cs_source.html">ContentGallery.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentGallery_8cs_source.html#l00094">ContentGallery.Page.BuildNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentGallery_8cs_source.html#l00019">ContentGallery.Page.BuildNote()</a>.</p>
 
 </div>
 </div>

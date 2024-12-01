@@ -12,7 +12,7 @@ var classTraitChara =
     [ "GetValue", "classTraitChara.html#a082aebc8ded8a214962006a21717b046", null ],
     [ "IdleAct", "classTraitChara.html#ad5c4df45be3036b5b5b6279fdf9edc64", null ],
     [ "ListRank", "classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2", null ],
-    [ "AdvType", "classTraitChara.html#a7143a7ee884d4777870c824fc6889d06", null ],
+    [ "AdvType", "classTraitChara.html#a6a3934cb4a11d57398b6fb7117ebe58e", null ],
     [ "CanAutoRevive", "classTraitChara.html#a9b232d96239ea131a2cdfcd93447dd1f", null ],
     [ "CanBeBanished", "classTraitChara.html#a3943c976ac2114e14e1f972306d9f2f8", null ],
     [ "CanBePushed", "classTraitChara.html#ace611e0fe5d161c8864fb87ed0235174", null ],

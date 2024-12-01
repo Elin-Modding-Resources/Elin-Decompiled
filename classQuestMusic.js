@@ -8,7 +8,7 @@ var classQuestMusic =
     [ "destScore", "classQuestMusic.html#a68bb72a23363a78173af3a3fb74e985d", null ],
     [ "score", "classQuestMusic.html#a5d05005cae29724d32b3df40a39d5628", null ],
     [ "sumMoney", "classQuestMusic.html#af0c8e7a2f533e99f1eec42b3fd98b63e", null ],
-    [ "difficultyType", "classQuestMusic.html#a9e3db7782d7aa3a9d574497c128a50c7", null ],
+    [ "difficultyType", "classQuestMusic.html#af36c6da51fff84856e7d2d6dca395298", null ],
     [ "IdZone", "classQuestMusic.html#a0e6931fc5d609019254177fbd0f268ef", null ],
     [ "KarmaOnFail", "classQuestMusic.html#a5346273b2303856836bf30fcac919b56", null ],
     [ "RefDrama2", "classQuestMusic.html#a7370eb46576791cf118780f5f88302bf", null ],

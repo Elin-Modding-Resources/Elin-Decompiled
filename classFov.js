@@ -18,7 +18,7 @@ var classFov =
     [ "map", "classFov.html#aa1fb236a8c08d5ab64acd67f7a4a7e27", null ],
     [ "newPoints", "classFov.html#a041de366960e1b53848784e3c0c74a5c", null ],
     [ "nonGradientMod", "classFov.html#a45bf44c8a1067f8b2ec4f4612c8e4459", null ],
-    [ "origin", "classFov.html#a1ec3db2b77c03adf1069dc4c42973459", null ],
+    [ "origin", "classFov.html#a35d526c602190d1ceea279caa4398fbf", null ],
     [ "r", "classFov.html#acf56909b1dad367885911e63a669d058", null ],
     [ "range", "classFov.html#ab3020eea48d4c9f57089156e42d10346", null ],
     [ "x", "classFov.html#aec29277b16468f0d30faeea187811e84", null ],

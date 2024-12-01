@@ -25,7 +25,7 @@ var classLayerList =
     [ "autoX", "classLayerList.html#abe17ff583d873b82230d5eae96071840", null ],
     [ "autoY", "classLayerList.html#aa17ee3d7b3816c2bf5b574b9bdce5dd4", null ],
     [ "buttonReroll", "classLayerList.html#a212cc4b0b9d186034c77b9cd0d208e42", null ],
-    [ "customItems", "classLayerList.html#a7d9be2c54bc6b0d6352e6242bde1cadf", null ],
+    [ "customItems", "classLayerList.html#a0077af7b3c6157719ab60d99debeed4e", null ],
     [ "highlightTarget", "classLayerList.html#a74aa8673ca6880a2a727e22abb3463a2", null ],
     [ "initialized", "classLayerList.html#a1bf28e9b2adec1cc166d37aaccfbf643", null ],
     [ "list", "classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e", null ],

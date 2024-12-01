@@ -9,7 +9,7 @@ var classTCExtraProgress =
     [ "bar", "classTCExtraProgress.html#a89adce211cee03321fb4114a86057b41", null ],
     [ "bgBar", "classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae", null ],
     [ "goBar", "classTCExtraProgress.html#a9e9efdc1f1e87b2b137e946fecb82859", null ],
-    [ "progressType", "classTCExtraProgress.html#a07556097e146a23ef174f0df6f73bfc9", null ],
+    [ "progressType", "classTCExtraProgress.html#a60c53ebac7c6fbc7bf01f03908a5e7bb", null ],
     [ "refreshInterval", "classTCExtraProgress.html#a545cf4d793ee254ba5c850aa4ee0f2ee", null ],
     [ "textProgress", "classTCExtraProgress.html#a6ffa7596412cd4dbe0907057f6ad6b0a", null ],
     [ "timer", "classTCExtraProgress.html#a9611ec331c7cef6441bcfc24d3d335e0", null ]

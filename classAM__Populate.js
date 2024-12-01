@@ -8,6 +8,6 @@ var classAM__Populate =
     [ "OnClickSubMenu", "classAM__Populate.html#ae968ddd676d232303f7bdd1042f39d7a", null ],
     [ "OnProcessTiles", "classAM__Populate.html#a260158ca7a11528ef8a4b25098ae4646", null ],
     [ "OnSetSubMenuButton", "classAM__Populate.html#a80b54999aecaba0fe274b7f970d6cc9d", null ],
-    [ "mode", "classAM__Populate.html#a40ef689bca9a3cbeccc6447c34cf5b1f", null ],
+    [ "mode", "classAM__Populate.html#ab0909ae75586e6e68e1a985b33354872", null ],
     [ "SubMenuModeIndex", "classAM__Populate.html#a16cdac8df3e5ec98efd202098bbe72ea", null ]
 ];

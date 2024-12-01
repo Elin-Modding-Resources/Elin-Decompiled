@@ -1,6 +1,6 @@
 var classTraitIncubator =
 [
-    [ "animeType", "classTraitIncubator.html#a385e13e6d0a62861f0f806112a08af81", null ],
+    [ "animeType", "classTraitIncubator.html#a6119c378e5c66da625b8eba6ba9c4361", null ],
     [ "AutoToggle", "classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688", null ],
     [ "AutoTurnOff", "classTraitIncubator.html#a18699f14d54bfb2326f762d86291817d", null ],
     [ "CanUseFromInventory", "classTraitIncubator.html#a08b08410e9e46115a2b6d236b22429df", null ],

@@ -1,6 +1,5 @@
 var classInvOwnerChangeMaterial =
 [
-    [ "InvOwnerChangeMaterial", "classInvOwnerChangeMaterial.html#afe797ed0e5cfc6799acc849d22a1df2a", null ],
     [ "_OnProcess", "classInvOwnerChangeMaterial.html#a458e4c8a2114b61ece2396b27a11ed41", null ],
     [ "CreateDefaultContainer", "classInvOwnerChangeMaterial.html#ae79ad9f8f9057d1f8f3a2f2209b26f49", null ],
     [ "ShouldShowGuide", "classInvOwnerChangeMaterial.html#a010513864a377a2ab0a1ff54ae05c4ad", null ],

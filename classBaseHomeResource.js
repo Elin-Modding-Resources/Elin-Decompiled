@@ -18,7 +18,7 @@ var classBaseHomeResource =
     [ "type", "classBaseHomeResource.html#ae3b0c76f5dfea21be9d3436d38e11994", null ],
     [ "value", "classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be", null ],
     [ "ExpRatio", "classBaseHomeResource.html#ade0c4fe02b083eed5b7b85639f0d3a40", null ],
-    [ "Group", "classBaseHomeResource.html#a181c25b7dab7b9d75850bcd270fbdcc9", null ],
+    [ "Group", "classBaseHomeResource.html#a83dda9ccb69d31d226a9d26858e85817", null ],
     [ "IsAvailable", "classBaseHomeResource.html#af87e7f092f8dafd8e52bd2db72396bd5", null ],
     [ "IsCurrency", "classBaseHomeResource.html#ad0fcb5fd21d2649941890abbbc239d0a", null ],
     [ "IsRate", "classBaseHomeResource.html#aae9a04a6939419e2fb53a15c28dfddc7", null ],

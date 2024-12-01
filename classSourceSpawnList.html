@@ -110,17 +110,17 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a705f19b5dc2cd0b304a0a06b2b04dd59"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#a705f19b5dc2cd0b304a0a06b2b04dd59">CreateRow</a> ()</td></tr>
-<tr class="separator:a705f19b5dc2cd0b304a0a06b2b04dd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f2e9342ef67758ed37e043894a25ff"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#ad6f2e9342ef67758ed37e043894a25ff">SetRow</a> (<a class="el" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a> r)</td></tr>
-<tr class="separator:ad6f2e9342ef67758ed37e043894a25ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015c663b9f9977af43ec4d147d9ec5b8"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourceSpawnList_1_1Row.html">Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#a015c663b9f9977af43ec4d147d9ec5b8">CreateRow</a> ()</td></tr>
+<tr class="separator:a015c663b9f9977af43ec4d147d9ec5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0110ac4d23084d62c9a7f6c4cd7993a3"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#a0110ac4d23084d62c9a7f6c4cd7993a3">SetRow</a> (<a class="el" href="classSourceSpawnList_1_1Row.html">Row</a> r)</td></tr>
+<tr class="separator:a0110ac4d23084d62c9a7f6c4cd7993a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00003">3</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a705f19b5dc2cd0b304a0a06b2b04dd59" name="a705f19b5dc2cd0b304a0a06b2b04dd59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a705f19b5dc2cd0b304a0a06b2b04dd59">&#9670;&#160;</a></span>CreateRow()</h2>
+<a id="a015c663b9f9977af43ec4d147d9ec5b8" name="a015c663b9f9977af43ec4d147d9ec5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015c663b9f9977af43ec4d147d9ec5b8">&#9670;&#160;</a></span>CreateRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override <a class="el" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a> SourceSpawnList.CreateRow </td>
+          <td class="memname">override <a class="el" href="classSourceSpawnList_1_1Row.html">Row</a> SourceSpawnList.CreateRow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -142,25 +142,24 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00005">5</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a></div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
-<div class="line"><span class="lineno">   10</span>            parent = SourceData.GetString(2),</div>
-<div class="line"><span class="lineno">   11</span>            type = SourceData.GetString(3),</div>
-<div class="line"><span class="lineno">   12</span>            category = SourceData.GetStringArray(4),</div>
-<div class="line"><span class="lineno">   13</span>            idCard = SourceData.GetStringArray(5),</div>
-<div class="line"><span class="lineno">   14</span>            tag = SourceData.GetStringArray(6),</div>
-<div class="line"><span class="lineno">   15</span>            filter = SourceData.GetStringArray(7)</div>
-<div class="line"><span class="lineno">   16</span>        };</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html">SourceSpawnList.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00025">SourceSpawnList.cs:26</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00032">32</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordtype">id</span> = SourceData.GetString(0),</div>
+<div class="line"><span class="lineno">   37</span>            parent = SourceData.GetString(2),</div>
+<div class="line"><span class="lineno">   38</span>            type = SourceData.GetString(3),</div>
+<div class="line"><span class="lineno">   39</span>            category = SourceData.GetStringArray(4),</div>
+<div class="line"><span class="lineno">   40</span>            idCard = SourceData.GetStringArray(5),</div>
+<div class="line"><span class="lineno">   41</span>            tag = SourceData.GetStringArray(6),</div>
+<div class="line"><span class="lineno">   42</span>            filter = SourceData.GetStringArray(7)</div>
+<div class="line"><span class="lineno">   43</span>        };</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ad6f2e9342ef67758ed37e043894a25ff" name="ad6f2e9342ef67758ed37e043894a25ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6f2e9342ef67758ed37e043894a25ff">&#9670;&#160;</a></span>SetRow()</h2>
+<a id="a0110ac4d23084d62c9a7f6c4cd7993a3" name="a0110ac4d23084d62c9a7f6c4cd7993a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0110ac4d23084d62c9a7f6c4cd7993a3">&#9670;&#160;</a></span>SetRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +170,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">override void SourceSpawnList.SetRow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSourceSpawnList_1_1Row.html">SourceSpawnList::Row</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classSourceSpawnList_1_1Row.html">Row</a>&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
           <td></td>
         </tr>
@@ -183,12 +182,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00019">19</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        this.map[r.<a class="code hl_variable" href="classSourceSpawnList_1_1Row.html#a883c531afff37f4d1ec5e9841e85912f">id</a>] = r;</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclassSourceSpawnList_1_1Row_html_a883c531afff37f4d1ec5e9841e85912f"><div class="ttname"><a href="classSourceSpawnList_1_1Row.html#a883c531afff37f4d1ec5e9841e85912f">SourceSpawnList.Row.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00048">SourceSpawnList.cs:48</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00046">46</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceSpawnList_8cs_source.html#l00008">SourceSpawnList.Row.id</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

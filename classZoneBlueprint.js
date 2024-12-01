@@ -7,7 +7,7 @@ var classZoneBlueprint =
     [ "charas", "classZoneBlueprint.html#a433db83047311f8cc3ad8c1adfd06c24", null ],
     [ "customMap", "classZoneBlueprint.html#ab0b033e7a4b971f342169c353406073e", null ],
     [ "debugCount", "classZoneBlueprint.html#ac30093ee25d155cb9c7edb54cc23389c", null ],
-    [ "genSetting", "classZoneBlueprint.html#ac3dc8d5b6a318868945cc4f96b699e59", null ],
+    [ "genSetting", "classZoneBlueprint.html#ae47a0171aa6de64a82cf38b3850fc124", null ],
     [ "idDebug", "classZoneBlueprint.html#a4d9e71bb3153cf14bbaaa32b512c51a0", null ],
     [ "ignoreRoad", "classZoneBlueprint.html#a5605d7286668e7f026be883231a7a922", null ],
     [ "map", "classZoneBlueprint.html#a0fce92a63ff6b9da8da955beead72cbe", null ],

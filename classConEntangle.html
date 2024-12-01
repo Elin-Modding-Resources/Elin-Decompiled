@@ -393,7 +393,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00003">3</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00001">1</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8c8d64f17685a69383f5c90acbc18b00" name="a8c8d64f17685a69383f5c90acbc18b00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c8d64f17685a69383f5c90acbc18b00">&#9670;&#160;</a></span>GetPhase()</h2>
@@ -420,10 +420,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af424fbf8c5f20a671768732269a12794">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00005">5</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">    8</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00003">3</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">    6</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -452,20 +452,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCondition.html#ac050c6fff565bb312f93c00371a35e83">Condition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00015">15</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10) == 0 &amp;&amp; <span class="keyword">this</span>.owner.IsHumanSpeak)</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            this.<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? <span class="stringliteral">&quot;scold&quot;</span> : ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? <span class="stringliteral">&quot;pervert&quot;</span> : ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? <span class="stringliteral">&quot;labor&quot;</span> : <span class="stringliteral">&quot;restrained&quot;</span>)), <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>        base.Tick();</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00557">BaseCondition.cs:557</a></div></div>
-<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06072">Card.cs:6072</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00175">EClass.cs:175</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00013">13</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(10) == 0 &amp;&amp; <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">IsHumanSpeak</a>)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? <span class="stringliteral">&quot;scold&quot;</span> : ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? <span class="stringliteral">&quot;pervert&quot;</span> : ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? <span class="stringliteral">&quot;labor&quot;</span> : <span class="stringliteral">&quot;restrained&quot;</span>)));</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        base.Tick();</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05618">Card.cs:5618</a></div></div>
+<div class="ttc" id="aclassChara_html_a04481f3eec7c112a96ee7db1b87e92d5"><div class="ttname"><a href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">Chara.IsHumanSpeak</a></div><div class="ttdeci">bool IsHumanSpeak</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00813">Chara.cs:814</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00050">EClass.cs:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00557">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00175">EClass.rnd()</a>, and <a class="el" href="Card_8cs_source.html#l06072">Card.Talk()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00814">Chara.IsHumanSpeak</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, and <a class="el" href="Card_8cs_source.html#l05618">Card.Talk()</a>.</p>
 
 </div>
 </div>
@@ -495,10 +496,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a6688dd33cf3e2acc1215f3448aa241b1">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00010">10</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConEntangle_8cs_source.html#l00008">8</a> of file <a class="el" href="ConEntangle_8cs_source.html">ConEntangle.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

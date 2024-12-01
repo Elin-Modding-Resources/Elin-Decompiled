@@ -364,8 +364,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa22341e2c25faf3219e044d7e0793473 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3cf991d468757539b7030ac5e0dfaed1">RequireClientInSameZone</a><code> [get]</code></td></tr>
 <tr class="separator:a3cf991d468757539b7030ac5e0dfaed1 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">Quest.DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a6c802d34b3fe0a66e6cd3c62aa6a6941">difficultyType</a><code> [get]</code></td></tr>
-<tr class="separator:a6c802d34b3fe0a66e6cd3c62aa6a6941 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQuest.html#ae59aa23495624702ceda9305dd62f16f">DifficultyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a3a03e2e7b699388f14e2edb339568181">difficultyType</a><code> [get]</code></td></tr>
+<tr class="separator:a3a03e2e7b699388f14e2edb339568181 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a4222ba9f92368ecb35f55a62ba66899a">DestChara</a><code> [get]</code></td></tr>
 <tr class="separator:a4222ba9f92368ecb35f55a62ba66899a inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45db51626d462e4d75e4b670b467ff9e inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a45db51626d462e4d75e4b670b467ff9e">RefDrama1</a><code> [get]</code></td></tr>
@@ -430,7 +430,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00001">1</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a599b682d2bdcb090143f65ba8714d518" name="a599b682d2bdcb090143f65ba8714d518"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a599b682d2bdcb090143f65ba8714d518">&#9670;&#160;</a></span>CanUpdateOnTalk()</h2>
@@ -458,18 +458,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a0279f7e227ffe094a7219f78c10ec4df">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> = this.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a>;</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (phase != 0)</div>
-<div class="line"><span class="lineno">    9</span>        {</div>
-<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> == 1 &amp;&amp; EClass.player.stats.taxBillsPaid &gt; 0;</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> EClass.player.stats.taxBills &gt; 0;</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00778">Quest.cs:778</a></div></div>
+<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00003">3</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">    6</span>        {</div>
+<div class="line"><span class="lineno">    7</span>            0 =&gt; EClass.player.stats.taxBills &gt; 0, </div>
+<div class="line"><span class="lineno">    8</span>            1 =&gt; EClass.player.stats.taxBillsPaid &gt; 0, </div>
+<div class="line"><span class="lineno">    9</span>            _ =&gt; <span class="keyword">false</span>, </div>
+<div class="line"><span class="lineno">   10</span>        };</div>
+<div class="line"><span class="lineno">   11</span>    }</div>
+<div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00040">Quest.cs:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00778">Quest.phase</a>.</p>
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>.</p>
 
 </div>
 </div>
@@ -498,9 +498,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#ae1b6c5aeec3f30ecf93f80bf12f139d9">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00020">20</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00018">18</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -529,11 +529,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classQuest.html#a33e9857d888452b864384d509105df73">Quest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00015">15</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        base.DropReward(<span class="stringliteral">&quot;mailpost&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="QuestTax_8cs_source.html#l00013">13</a> of file <a class="el" href="QuestTax_8cs_source.html">QuestTax.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_function" href="classQuest.html#a838757ef59c19e36004864b5a9eb81d0">DropReward</a>(<span class="stringliteral">&quot;mailpost&quot;</span>);</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="ttc" id="aclassQuest_html_a838757ef59c19e36004864b5a9eb81d0"><div class="ttname"><a href="classQuest.html#a838757ef59c19e36004864b5a9eb81d0">Quest.DropReward</a></div><div class="ttdeci">Thing DropReward(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00504">Quest.cs:504</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00504">Quest.DropReward()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

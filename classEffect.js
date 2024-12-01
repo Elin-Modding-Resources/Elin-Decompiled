@@ -4,7 +4,7 @@ var classEffect =
       [ "Default", "classEffect.html#afafcc2c4741cce66e7f71f0afb8d6578a7a1920d61156abc05a60135aefe8bc67", null ],
       [ "Firework", "classEffect.html#afafcc2c4741cce66e7f71f0afb8d6578ab9f2059db40bead80949ea2728f4a720", null ]
     ] ],
-    [ "_Play", "classEffect.html#ac5c438c3c3c9302519b3969481e7a593", null ],
+    [ "_Play", "classEffect.html#a191314c04bbd48d736c0c959615c27f4", null ],
     [ "Activate", "classEffect.html#af43dadbc9c9e4a3a3920cd911273ede7", null ],
     [ "Emit", "classEffect.html#a499a38341fc5ede5b69cd3ebe7db361e", null ],
     [ "Flip", "classEffect.html#a80d60cf494486fe69d461097f6fdc86f", null ],
@@ -17,7 +17,7 @@ var classEffect =
     [ "OnPlay", "classEffect.html#a3f6c8742317b14c5ac4dc815ef528d6f", null ],
     [ "OnUpdate", "classEffect.html#a1c9a0aa3aa7c33ac7b1ec8a96acbf301", null ],
     [ "Play", "classEffect.html#a7fc23b7447649119c0b7497c4218d792", null ],
-    [ "Play", "classEffect.html#aefaa9dcc02e691e3cfe02a35bb0e10a1", null ],
+    [ "Play", "classEffect.html#a1f1d5545cc43b0e37c96cad07baaed29", null ],
     [ "Play", "classEffect.html#a9be1028103adab9700295e2c8759cf86", null ],
     [ "SetParticleColor", "classEffect.html#aba9f6f61c95b4378dc3c9fd5804c74a0", null ],
     [ "SetParticleColor", "classEffect.html#acc54f5927af83849a12027e9e6bc2d41", null ],
@@ -52,6 +52,6 @@ var classEffect =
     [ "systems", "classEffect.html#a35c4a15f39858c75f7dc48c614b768e1", null ],
     [ "test", "classEffect.html#a2eb72e775f36bf0e168fb66617be7fb6", null ],
     [ "timer", "classEffect.html#a9f7cb75d1aadfa921b0443ebf98d1d39", null ],
-    [ "type", "classEffect.html#abda62638d50bd27e643efe8b3b226fb4", null ],
+    [ "type", "classEffect.html#ae4350134d2ce4cbf006e55f7159c15d7", null ],
     [ "manager", "classEffect.html#a195decf97fee46fc0f4a0b18afb3d056", null ]
 ];

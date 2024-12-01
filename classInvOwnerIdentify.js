@@ -1,6 +1,5 @@
 var classInvOwnerIdentify =
 [
-    [ "InvOwnerIdentify", "classInvOwnerIdentify.html#a1807a3d3fc4135a3b42250c7f9b18233", null ],
     [ "_OnProcess", "classInvOwnerIdentify.html#aab74d23eae4cd10c0fc27f7864e84b97", null ],
     [ "CreateDefaultContainer", "classInvOwnerIdentify.html#acb1f450584838392e3b899717aec8c91", null ],
     [ "ShouldShowGuide", "classInvOwnerIdentify.html#ac5e4fe5673b194159ccae0469ea9fe07", null ],

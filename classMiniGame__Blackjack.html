@@ -138,7 +138,7 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00005">5</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00004">4</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad3afa057dd04100a5164b9b36cc6e347" name="ad3afa057dd04100a5164b9b36cc6e347"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3afa057dd04100a5164b9b36cc6e347">&#9670;&#160;</a></span>CanExit()</h2>
@@ -163,13 +163,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00015">15</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> this.game == <span class="keyword">null</span> || this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.btnExit.gameObject.activeSelf;</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassModMinigame_html_a0c2512181f347ccc48e966d285225aac"><div class="ttname"><a href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">ModMinigame&lt; Blackjack &gt;::game</a></div><div class="ttdeci">T game</div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00032">ModMinigame.cs:32</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00010">10</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a> == <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.btnExit.gameObject.activeSelf;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassModMinigame_html_a0c2512181f347ccc48e966d285225aac"><div class="ttname"><a href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">ModMinigame&lt; Blackjack &gt;::game</a></div><div class="ttdeci">T game</div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00005">ModMinigame.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModMinigame_8cs_source.html#l00032">ModMinigame&lt; Blackjack &gt;.game</a>.</p>
+<p class="reference">References <a class="el" href="ModMinigame_8cs_source.html#l00005">ModMinigame&lt; Blackjack &gt;.game</a>.</p>
 
 </div>
 </div>
@@ -196,40 +200,40 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00020">20</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>)</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>)</div>
-<div class="line"><span class="lineno">   25</span>            {</div>
-<div class="line"><span class="lineno">   26</span>                this.prefab = Resources.Load&lt;Blackjack&gt;(<span class="stringliteral">&quot;BlackJack&quot;</span>);</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>            Debug.Log(this.<a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>);</div>
-<div class="line"><span class="lineno">   29</span>            this.go = UnityEngine.Object.Instantiate&lt;GameObject&gt;(this.<a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>.gameObject);</div>
-<div class="line"><span class="lineno">   30</span>            Debug.Log(this.go);</div>
-<div class="line"><span class="lineno">   31</span>            this.game = this.go.GetComponentInChildren&lt;Blackjack&gt;();</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>        base.SetAudioMixer(this.go);</div>
-<div class="line"><span class="lineno">   34</span>        Blackjack.game = <span class="keyword">new</span> Game_Blackjack</div>
-<div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            Deactivate = <span class="keyword">new</span> Action(base.Deactivate),</div>
-<div class="line"><span class="lineno">   37</span>            OnPlay = <span class="keyword">new</span> Func&lt;int, bool&gt;(base.OnPlay),</div>
-<div class="line"><span class="lineno">   38</span>            ModChangeCoin = delegate(<span class="keywordtype">int</span> a)</div>
-<div class="line"><span class="lineno">   39</span>            {</div>
-<div class="line"><span class="lineno">   40</span>                this.balance.changeCoin += a;</div>
-<div class="line"><span class="lineno">   41</span>            },</div>
-<div class="line"><span class="lineno">   42</span>            ModLastCoin = delegate(<span class="keywordtype">int</span> a)</div>
-<div class="line"><span class="lineno">   43</span>            {</div>
-<div class="line"><span class="lineno">   44</span>                this.balance.lastCoin += a;</div>
-<div class="line"><span class="lineno">   45</span>            },</div>
-<div class="line"><span class="lineno">   46</span>            LastCoin = (() =&gt; this.balance.lastCoin)</div>
-<div class="line"><span class="lineno">   47</span>        };</div>
-<div class="line"><span class="lineno">   48</span>        this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.btnExit.SetOnClick(<span class="keyword">new</span> Action(base.Exit));</div>
-<div class="line"><span class="lineno">   49</span>        this.game.Money = this.balance.lastCoin;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclassMiniGame__Blackjack_html_a09c339f0f4ba29c91a60fcec7dd47b5e"><div class="ttname"><a href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">MiniGame_Blackjack.prefab</a></div><div class="ttdeci">Blackjack prefab</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00067">MiniGame_Blackjack.cs:67</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00019">19</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a> = Resources.Load&lt;Blackjack&gt;(<span class="stringliteral">&quot;BlackJack&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>            Debug.Log(<a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>);</div>
+<div class="line"><span class="lineno">   28</span>            go = Object.Instantiate(<a class="code hl_variable" href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">prefab</a>.gameObject);</div>
+<div class="line"><span class="lineno">   29</span>            Debug.Log(go);</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a> = go.GetComponentInChildren&lt;Blackjack&gt;();</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>        SetAudioMixer(go);</div>
+<div class="line"><span class="lineno">   33</span>        Blackjack.game = <span class="keyword">new</span> Game_Blackjack</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            Deactivate = base.Deactivate,</div>
+<div class="line"><span class="lineno">   36</span>            OnPlay = base.OnPlay,</div>
+<div class="line"><span class="lineno">   37</span>            ModChangeCoin = delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                balance.changeCoin += a;</div>
+<div class="line"><span class="lineno">   40</span>            },</div>
+<div class="line"><span class="lineno">   41</span>            ModLastCoin = delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                balance.lastCoin += a;</div>
+<div class="line"><span class="lineno">   44</span>            },</div>
+<div class="line"><span class="lineno">   45</span>            LastCoin = () =&gt; balance.lastCoin</div>
+<div class="line"><span class="lineno">   46</span>        };</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.btnExit.SetOnClick(base.Exit);</div>
+<div class="line"><span class="lineno">   48</span>        game.Money = balance.lastCoin;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassMiniGame__Blackjack_html_a09c339f0f4ba29c91a60fcec7dd47b5e"><div class="ttname"><a href="classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e">MiniGame_Blackjack.prefab</a></div><div class="ttdeci">Blackjack prefab</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame__Blackjack_8cs_source.html#l00006">MiniGame_Blackjack.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModMinigame_8cs_source.html#l00032">ModMinigame&lt; Blackjack &gt;.game</a>, and <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00067">prefab</a>.</p>
+<p class="reference">References <a class="el" href="ModMinigame_8cs_source.html#l00005">ModMinigame&lt; Blackjack &gt;.game</a>, and <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00006">prefab</a>.</p>
 
 </div>
 </div>
@@ -256,17 +260,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00057">57</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        this.balance.changeCoin = this.game.Money - this.balance.lastCoin;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (!this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.isGameStarted)</div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            this.balance.changeCoin += this.<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.chips;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        base.Kill();</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00056">56</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        balance.changeCoin = game.Money - balance.lastCoin;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.isGameStarted)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            balance.changeCoin += <a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>.chips;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="classModMinigame.html#a9c3490af9ff6afe017a922f17871073b">Kill</a>();</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassModMinigame_html_a9c3490af9ff6afe017a922f17871073b"><div class="ttname"><a href="classModMinigame.html#a9c3490af9ff6afe017a922f17871073b">ModMinigame&lt; Blackjack &gt;::Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition:</b> <a href="ModMinigame_8cs_source.html#l00023">ModMinigame.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModMinigame_8cs_source.html#l00032">ModMinigame&lt; Blackjack &gt;.game</a>.</p>
+<p class="reference">References <a class="el" href="ModMinigame_8cs_source.html#l00005">ModMinigame&lt; Blackjack &gt;.game</a>, and <a class="el" href="ModMinigame_8cs_source.html#l00023">ModMinigame&lt; Blackjack &gt;.Kill()</a>.</p>
 
 </div>
 </div>
@@ -294,10 +299,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00052">52</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        this.game.transCanvas.anchoredPosition = <span class="keyword">new</span> Vector2(w / 2f, 75f);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00051">51</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        game.transCanvas.anchoredPosition = <span class="keyword">new</span> Vector2(w / 2f, 75f);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -314,9 +319,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00067">67</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00006">6</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00020">OnActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00019">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -341,14 +346,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00007">7</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Blackjack&quot;</span>;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="MiniGame__Blackjack_8cs_source.html#l00008">8</a> of file <a class="el" href="MiniGame__Blackjack_8cs_source.html">MiniGame_Blackjack.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

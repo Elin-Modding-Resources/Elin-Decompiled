@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('classDice.html',''); initResizable(); 
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#pac-static-methods">Static Package Functions</a> &#124;
 <a href="classDice-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Dice Class Reference</div></div>
 </div><!--header-->
@@ -139,17 +138,12 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa8a1dab5d27c4efbed3bbee483918b98"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDice.html">Dice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDice.html#aa8a1dab5d27c4efbed3bbee483918b98">Null</a> = new <a class="el" href="classDice.html">Dice</a>(0, 0, 0, null)</td></tr>
+<tr class="memitem:aa8a1dab5d27c4efbed3bbee483918b98"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDice.html">Dice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDice.html#aa8a1dab5d27c4efbed3bbee483918b98">Null</a> = new <a class="el" href="classDice.html">Dice</a>()</td></tr>
 <tr class="separator:aa8a1dab5d27c4efbed3bbee483918b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-static-methods" name="pac-static-methods"></a>
-Static Package Functions</h2></td></tr>
-<tr class="memitem:a1ae66568063e61812cbba6586ec6e1d8"><td class="memItemLeft" align="right" valign="top">static int&lt; <a class="el" href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Roll</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDice.html#a1ae66568063e61812cbba6586ec6e1d8">g__Roll</a> (ref Dice.&lt;&gt;c__DisplayClass1_0 A_0)</td></tr>
-<tr class="separator:a1ae66568063e61812cbba6586ec6e1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00005">5</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00003">3</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aeb5025592e24ab8800e064e32755cfa4" name="aeb5025592e24ab8800e064e32755cfa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb5025592e24ab8800e064e32755cfa4">&#9670;&#160;</a></span>Dice()</h2>
@@ -197,14 +191,20 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00043">43</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        this.num = _num;</div>
-<div class="line"><span class="lineno">   46</span>        this.sides = _sides;</div>
-<div class="line"><span class="lineno">   47</span>        this.bonus = _bonus;</div>
-<div class="line"><span class="lineno">   48</span>        this.card = _card;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00056">56</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> = _num;</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a> = _sides;</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a> = _bonus;</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a> = _card;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclassDice_html_a14f9bc3b46c5df08322e1cce4ec357d1"><div class="ttname"><a href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">Dice.bonus</a></div><div class="ttdeci">int bonus</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00011">Dice.cs:11</a></div></div>
+<div class="ttc" id="aclassDice_html_a24642e26e06e5eb0d5f953eefff94357"><div class="ttname"><a href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">Dice.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00013">Dice.cs:13</a></div></div>
+<div class="ttc" id="aclassDice_html_a4b9e90500421a1143633da2a44ae7804"><div class="ttname"><a href="classDice.html#a4b9e90500421a1143633da2a44ae7804">Dice.num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00007">Dice.cs:7</a></div></div>
+<div class="ttc" id="aclassDice_html_a7cf126ff6fadde1647253181bad02a2c"><div class="ttname"><a href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">Dice.sides</a></div><div class="ttdeci">int sides</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00009">Dice.cs:9</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00011">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00013">card</a>, <a class="el" href="Dice_8cs_source.html#l00007">num</a>, and <a class="el" href="Dice_8cs_source.html#l00009">sides</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -242,48 +242,46 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00083">83</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">string</span> key = ele.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias;</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map.ContainsKey(key) &amp;&amp; !ele.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasRef.IsEmpty())</div>
-<div class="line"><span class="lineno">   87</span>        {</div>
-<div class="line"><span class="lineno">   88</span>            key = ele.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.alias.Split(<span class="charliteral">&#39;_&#39;</span>, StringSplitOptions.None)[0] + <span class="stringliteral">&quot;_&quot;</span>;</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map.ContainsKey(key))</div>
-<div class="line"><span class="lineno">   91</span>        {</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_class" href="classSourceCalc_1_1Row.html">SourceCalc.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map[key];</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">int</span> power = ele.<a class="code hl_function" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a>(c);</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">int</span> ele2 = ele.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent.IsEmpty() ? 0 : c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent);</div>
-<div class="line"><span class="lineno">   97</span>        <a class="code hl_class" href="classDice.html">Dice</a> result;</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   99</span>        {</div>
-<div class="line"><span class="lineno">  100</span>            result = <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a2409c9f6430438bf3f2658a733f23732">num</a>.Calc(power, ele2, 0)), Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#aefa4390c11c94b73c8ecbd460826dccd">sides</a>.Calc(power, ele2, 0)), row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a731127b52825a1b8aa626f45392bf4ed">bonus</a>.Calc(power, ele2, 0), c);</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  103</span>        {</div>
-<div class="line"><span class="lineno">  104</span>            Debug.Log(ele.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
-<div class="line"><span class="lineno">  105</span>            result = <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(0, 0, 0, <span class="keyword">null</span>);</div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00096">96</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">string</span> key = ele.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.alias;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map.ContainsKey(key) &amp;&amp; !ele.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.aliasRef.IsEmpty())</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            key = ele.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.alias.Split(<span class="charliteral">&#39;_&#39;</span>)[0] + <span class="stringliteral">&quot;_&quot;</span>;</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map.ContainsKey(key))</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01976">Card.cs:1976</a></div></div>
-<div class="ttc" id="aclassDice_html"><div class="ttname"><a href="classDice.html">Dice</a></div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00005">Dice.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00143">EClass.cs:144</a></div></div>
-<div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00897">Element.2.cs:897</a></div></div>
-<div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_class" href="classSourceCalc_1_1Row.html">SourceCalc.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map[key];</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">int</span> power = ele.<a class="code hl_function" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a>(c);</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">int</span> ele2 = ((!ele.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.aliasParent.IsEmpty()) ? c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(ele.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.aliasParent) : 0);</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a2409c9f6430438bf3f2658a733f23732">num</a>.Calc(power, ele2)), Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#aefa4390c11c94b73c8ecbd460826dccd">sides</a>.Calc(power, ele2)), row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a731127b52825a1b8aa626f45392bf4ed">bonus</a>.Calc(power, ele2), c);</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            Debug.Log(ele.<a class="code hl_variable" href="classElement.html#a3bd136c994cd7b24a62cb464f78990ad">id</a>);</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>();</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02353">Card.cs:2353</a></div></div>
+<div class="ttc" id="aclassDice_html"><div class="ttname"><a href="classDice.html">Dice</a></div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00003">Dice.cs:4</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassElement_html_a1b7d20a592bf10cf629f7fe418bcff30"><div class="ttname"><a href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00024">Element.2.cs:25</a></div></div>
+<div class="ttc" id="aclassElement_html_a3bd136c994cd7b24a62cb464f78990ad"><div class="ttname"><a href="classElement.html#a3bd136c994cd7b24a62cb464f78990ad">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00897">Element.2.cs:897</a></div></div>
 <div class="ttc" id="aclassElement_html_a68cfe23ce1ce41da21b7ce89d260ea73"><div class="ttname"><a href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">Element.GetPower</a></div><div class="ttdeci">virtual int GetPower(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00754">Element.2.cs:754</a></div></div>
-<div class="ttc" id="aclassSourceCalc_1_1Row_html"><div class="ttname"><a href="classSourceCalc_1_1Row.html">SourceCalc.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00022">SourceCalc.cs:23</a></div></div>
-<div class="ttc" id="aclassSourceCalc_1_1Row_html_a2409c9f6430438bf3f2658a733f23732"><div class="ttname"><a href="classSourceCalc_1_1Row.html#a2409c9f6430438bf3f2658a733f23732">SourceCalc.Row.num</a></div><div class="ttdeci">string num</div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00042">SourceCalc.cs:42</a></div></div>
-<div class="ttc" id="aclassSourceCalc_1_1Row_html_a731127b52825a1b8aa626f45392bf4ed"><div class="ttname"><a href="classSourceCalc_1_1Row.html#a731127b52825a1b8aa626f45392bf4ed">SourceCalc.Row.bonus</a></div><div class="ttdeci">string bonus</div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00046">SourceCalc.cs:46</a></div></div>
-<div class="ttc" id="aclassSourceCalc_1_1Row_html_aefa4390c11c94b73c8ecbd460826dccd"><div class="ttname"><a href="classSourceCalc_1_1Row.html#aefa4390c11c94b73c8ecbd460826dccd">SourceCalc.Row.sides</a></div><div class="ttdeci">string sides</div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00044">SourceCalc.cs:44</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_a28d0f359cdf732a837ca40fb36fd5b1e"><div class="ttname"><a href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">SourceManager.calc</a></div><div class="ttdeci">SourceCalc calc</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00165">SourceManager.cs:165</a></div></div>
+<div class="ttc" id="aclassSourceCalc_1_1Row_html"><div class="ttname"><a href="classSourceCalc_1_1Row.html">SourceCalc.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00006">SourceCalc.cs:7</a></div></div>
+<div class="ttc" id="aclassSourceCalc_1_1Row_html_a2409c9f6430438bf3f2658a733f23732"><div class="ttname"><a href="classSourceCalc_1_1Row.html#a2409c9f6430438bf3f2658a733f23732">SourceCalc.Row.num</a></div><div class="ttdeci">string num</div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00010">SourceCalc.cs:10</a></div></div>
+<div class="ttc" id="aclassSourceCalc_1_1Row_html_a731127b52825a1b8aa626f45392bf4ed"><div class="ttname"><a href="classSourceCalc_1_1Row.html#a731127b52825a1b8aa626f45392bf4ed">SourceCalc.Row.bonus</a></div><div class="ttdeci">string bonus</div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00014">SourceCalc.cs:14</a></div></div>
+<div class="ttc" id="aclassSourceCalc_1_1Row_html_aefa4390c11c94b73c8ecbd460826dccd"><div class="ttname"><a href="classSourceCalc_1_1Row.html#aefa4390c11c94b73c8ecbd460826dccd">SourceCalc.Row.sides</a></div><div class="ttdeci">string sides</div><div class="ttdef"><b>Definition:</b> <a href="SourceCalc_8cs_source.html#l00012">SourceCalc.cs:12</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a28d0f359cdf732a837ca40fb36fd5b1e"><div class="ttname"><a href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">SourceManager.calc</a></div><div class="ttdeci">SourceCalc calc</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00030">SourceManager.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceCalc_8cs_source.html#l00046">SourceCalc.Row.bonus</a>, <a class="el" href="SourceManager_8cs_source.html#l00165">SourceManager.calc</a>, <a class="el" href="Card_8cs_source.html#l01976">Card.Evalue()</a>, <a class="el" href="Element_82_8cs_source.html#l00754">Element.GetPower()</a>, <a class="el" href="Element_82_8cs_source.html#l00897">Element.id</a>, <a class="el" href="SourceCalc_8cs_source.html#l00042">SourceCalc.Row.num</a>, <a class="el" href="SourceCalc_8cs_source.html#l00044">SourceCalc.Row.sides</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceCalc_8cs_source.html#l00014">SourceCalc.Row.bonus</a>, <a class="el" href="SourceManager_8cs_source.html#l00030">SourceManager.calc</a>, <a class="el" href="Card_8cs_source.html#l02353">Card.Evalue()</a>, <a class="el" href="Element_82_8cs_source.html#l00754">Element.GetPower()</a>, <a class="el" href="Element_82_8cs_source.html#l00897">Element.id</a>, <a class="el" href="SourceCalc_8cs_source.html#l00010">SourceCalc.Row.num</a>, <a class="el" href="SourceCalc_8cs_source.html#l00012">SourceCalc.Row.sides</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00021">ActEffect.DamageEle()</a>, <a class="el" href="Element_82_8cs_source.html#l00840">Element.g__Calc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00013">ConHOT.OnWriteNote()</a>, <a class="el" href="ConMiasma_8cs_source.html#l00056">ConMiasma.OnWriteNote()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00006">ConHOT.Tick()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00015">ConMiasma.Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00554">Element._WriteNote()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Element_82_8cs_source.html#l00840">Element.g__Calc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00012">ConHOT.OnWriteNote()</a>, <a class="el" href="ConMiasma_8cs_source.html#l00050">ConMiasma.OnWriteNote()</a>, <a class="el" href="ActEffect_8cs_source.html#l00768">ActEffect.Proc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00005">ConHOT.Tick()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00009">ConMiasma.Tick()</a>.</p>
 
 </div>
 </div>
@@ -333,80 +331,36 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00110">110</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map.ContainsKey(<span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">  113</span>        {</div>
-<div class="line"><span class="lineno">  114</span>            Debug.Log(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_class" href="classSourceCalc_1_1Row.html">SourceCalc.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map[id];</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span> power2 = power;</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">int</span> ele = power / 10;</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (act != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            <a class="code hl_class" href="classElement.html">Element</a> orCreateElement = c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(act.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.id);</div>
-<div class="line"><span class="lineno">  123</span>            power2 = orCreateElement.<a class="code hl_function" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a>(c);</div>
-<div class="line"><span class="lineno">  124</span>            ele = (orCreateElement.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent.IsEmpty() ? 0 : c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(orCreateElement.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent));</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_class" href="classDice.html">Dice</a> result;</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            result = <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a2409c9f6430438bf3f2658a733f23732">num</a>.Calc(power2, ele, 0)), Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#aefa4390c11c94b73c8ecbd460826dccd">sides</a>.Calc(power2, ele, 0)), row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a731127b52825a1b8aa626f45392bf4ed">bonus</a>.Calc(power2, ele, 0), c);</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">catch</span></div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00121">121</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            Debug.Log(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_class" href="classSourceCalc_1_1Row.html">SourceCalc.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a28d0f359cdf732a837ca40fb36fd5b1e">calc</a>.map[id];</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">int</span> power2 = power;</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">int</span> ele = power / 10;</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (act != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  132</span>        {</div>
-<div class="line"><span class="lineno">  133</span>            result = <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(0, 0, 0, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07298">Card.cs:7298</a></div></div>
-<div class="ttc" id="aclassElementContainer_html_ad913c083fdb7f408381e27eb59835267"><div class="ttname"><a href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">ElementContainer.GetOrCreateElement</a></div><div class="ttdeci">Element GetOrCreateElement(Element ele)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00542">ElementContainer.cs:542</a></div></div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_class" href="classElement.html">Element</a> orCreateElement = c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(act.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.id);</div>
+<div class="line"><span class="lineno">  134</span>            power2 = orCreateElement.<a class="code hl_function" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a>(c);</div>
+<div class="line"><span class="lineno">  135</span>            ele = ((!orCreateElement.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.aliasParent.IsEmpty()) ? c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(orCreateElement.<a class="code hl_property" href="classElement.html#a1b7d20a592bf10cf629f7fe418bcff30">source</a>.aliasParent) : 0);</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a2409c9f6430438bf3f2658a733f23732">num</a>.Calc(power2, ele)), Mathf.Max(1, row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#aefa4390c11c94b73c8ecbd460826dccd">sides</a>.Calc(power2, ele)), row.<a class="code hl_variable" href="classSourceCalc_1_1Row.html#a731127b52825a1b8aa626f45392bf4ed">bonus</a>.Calc(power2, ele), c);</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>();</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00035">Card.cs:35</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_ad913c083fdb7f408381e27eb59835267"><div class="ttname"><a href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">ElementContainer.GetOrCreateElement</a></div><div class="ttdeci">Element GetOrCreateElement(Element ele)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00500">ElementContainer.cs:500</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00007">Element.2.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceCalc_8cs_source.html#l00046">SourceCalc.Row.bonus</a>, <a class="el" href="SourceManager_8cs_source.html#l00165">SourceManager.calc</a>, <a class="el" href="Element_82_8cs_source.html#l00754">Element.GetPower()</a>, <a class="el" href="SourceCalc_8cs_source.html#l00042">SourceCalc.Row.num</a>, <a class="el" href="SourceCalc_8cs_source.html#l00044">SourceCalc.Row.sides</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, and <a class="el" href="EClass_8cs_source.html#l00144">EClass.sources</a>.</p>
-
-</div>
-</div>
-<a id="a1ae66568063e61812cbba6586ec6e1d8" name="a1ae66568063e61812cbba6586ec6e1d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ae66568063e61812cbba6586ec6e1d8">&#9670;&#160;</a></span>g__Roll()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int&lt; <a class="el" href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Roll</a> &gt; Dice.g__Roll </td>
-          <td>(</td>
-          <td class="paramtype">ref Dice::&lt;&gt;c__DisplayClass1_0&#160;</td>
-          <td class="paramname"><em>A_0</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00139">139</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> = 0;</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; A_0.num; i++)</div>
-<div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> += <a class="code hl_class" href="classDice.html">Dice</a>.<a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(A_0.sides) + 1;</div>
-<div class="line"><span class="lineno">  145</span>        }</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> + A_0.bonus;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="ttc" id="aclassDice_html_a4b9e90500421a1143633da2a44ae7804"><div class="ttname"><a href="classDice.html#a4b9e90500421a1143633da2a44ae7804">Dice.num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00151">Dice.cs:151</a></div></div>
-<div class="ttc" id="aclassDice_html_abb71f28b7a36ecf8683a858dac37daa5"><div class="ttname"><a href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">Dice.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00038">Dice.cs:38</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00151">num</a>, and <a class="el" href="Dice_8cs_source.html#l00038">rnd()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>.</p>
+<p class="reference">References <a class="el" href="SourceCalc_8cs_source.html#l00014">SourceCalc.Row.bonus</a>, <a class="el" href="SourceManager_8cs_source.html#l00030">SourceManager.calc</a>, <a class="el" href="Element_82_8cs_source.html#l00754">Element.GetPower()</a>, <a class="el" href="SourceCalc_8cs_source.html#l00010">SourceCalc.Row.num</a>, <a class="el" href="SourceCalc_8cs_source.html#l00012">SourceCalc.Row.sides</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -434,22 +388,22 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00051">51</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_class" href="classDice.html">Dice</a> dice = <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>(0, 0, 0, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">string</span>[] array = raw.Split(<span class="charliteral">&#39;,&#39;</span>, StringSplitOptions.None);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (array.Length != 0)</div>
-<div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordtype">string</span>[] array2 = array[0].Split(<span class="charliteral">&#39;d&#39;</span>, StringSplitOptions.None);</div>
-<div class="line"><span class="lineno">   58</span>            dice.num = <span class="keywordtype">int</span>.Parse(array2[0]);</div>
-<div class="line"><span class="lineno">   59</span>            dice.sides = <span class="keywordtype">int</span>.Parse(array2[1]);</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
-<div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            dice.bonus = <span class="keywordtype">int</span>.Parse(array[1]);</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> dice;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00064">64</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_class" href="classDice.html">Dice</a> dice = <span class="keyword">new</span> <a class="code hl_class" href="classDice.html">Dice</a>();</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">string</span>[] array = raw.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (array.Length != 0)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">string</span>[] array2 = array[0].Split(<span class="charliteral">&#39;d&#39;</span>);</div>
+<div class="line"><span class="lineno">   71</span>            dice.num = <span class="keywordtype">int</span>.Parse(array2[0]);</div>
+<div class="line"><span class="lineno">   72</span>            dice.sides = <span class="keywordtype">int</span>.Parse(array2[1]);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            dice.bonus = <span class="keywordtype">int</span>.Parse(array[1]);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> dice;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -477,12 +431,12 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00038">38</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> Rand.Range(0, a);</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00051">51</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> Rand.Range(0, a);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00139">g__Roll()</a>, and <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00015">Roll()</a>.</p>
 
 </div>
 </div>
@@ -509,18 +463,15 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00068">68</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classDice.html">Dice</a>.<a class="code hl_function" href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Roll</a>(this.<a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>, this.<a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>, this.<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>, this.<a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a>);</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aclassDice_html_a14f9bc3b46c5df08322e1cce4ec357d1"><div class="ttname"><a href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">Dice.bonus</a></div><div class="ttdeci">int bonus</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00155">Dice.cs:155</a></div></div>
-<div class="ttc" id="aclassDice_html_a24642e26e06e5eb0d5f953eefff94357"><div class="ttname"><a href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">Dice.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00157">Dice.cs:157</a></div></div>
-<div class="ttc" id="aclassDice_html_a7cf126ff6fadde1647253181bad02a2c"><div class="ttname"><a href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">Dice.sides</a></div><div class="ttdeci">int sides</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00153">Dice.cs:153</a></div></div>
-<div class="ttc" id="aclassDice_html_a895887ab11a960b850dcd37ed82c00f6"><div class="ttname"><a href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Dice.Roll</a></div><div class="ttdeci">static int Roll(int num, int sides, int bonus=0, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00007">Dice.cs:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00081">81</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>(<a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>, <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>, <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>, <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a>);</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="ttc" id="aclassDice_html_a68e3451284a714cfcb18b58aae96095c"><div class="ttname"><a href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Dice.Roll</a></div><div class="ttdeci">int Roll()</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00081">Dice.cs:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00155">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00157">card</a>, <a class="el" href="Dice_8cs_source.html#l00151">num</a>, <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>, and <a class="el" href="Dice_8cs_source.html#l00153">sides</a>.</p>
+<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00011">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00013">card</a>, <a class="el" href="Dice_8cs_source.html#l00007">num</a>, <a class="el" href="Dice_8cs_source.html#l00081">Roll()</a>, and <a class="el" href="Dice_8cs_source.html#l00009">sides</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00015">Roll()</a>.</p>
 
 </div>
 </div>
@@ -570,37 +521,41 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00007">7</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <a class="code hl_class" href="classDice.html">Dice</a>.&lt;&gt;c__DisplayClass1_0 CS$&lt;&gt;8__locals1;</div>
-<div class="line"><span class="lineno">   10</span>        CS$&lt;&gt;8__locals1.sides = <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>;</div>
-<div class="line"><span class="lineno">   11</span>        CS$&lt;&gt;8__locals1.num = <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>;</div>
-<div class="line"><span class="lineno">   12</span>        CS$&lt;&gt;8__locals1.bonus = <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>;</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">int</span> num2 = 1;</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">int</span> num3 = 0;</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordtype">int</span> num4 = <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(78);</div>
-<div class="line"><span class="lineno">   19</span>            flag = (num4 &gt;= 0);</div>
-<div class="line"><span class="lineno">   20</span>            num2 = 1 + Mathf.Abs(num4 / 100) + ((Mathf.Abs(num4 % 100) &gt; <a class="code hl_class" href="classDice.html">Dice</a>.<a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(100)) ? 1 : 0);</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordtype">int</span> num5 = <a class="code hl_class" href="classDice.html">Dice</a>.&lt;<a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>&gt;<a class="code hl_function" href="classDice.html#a1ae66568063e61812cbba6586ec6e1d8">g__Roll</a>|1_0(ref CS$&lt;&gt;8__locals1);</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (i == 0 || (flag &amp;&amp; num5 &gt; num3) || (!flag &amp;&amp; num5 &lt; num3))</div>
-<div class="line"><span class="lineno">   26</span>            {</div>
-<div class="line"><span class="lineno">   27</span>                num3 = num5;</div>
-<div class="line"><span class="lineno">   28</span>            }</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> num3;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclassDice_html_a1ae66568063e61812cbba6586ec6e1d8"><div class="ttname"><a href="classDice.html#a1ae66568063e61812cbba6586ec6e1d8">Dice.g__Roll</a></div><div class="ttdeci">static int&lt; Roll &gt; g__Roll(ref Dice.&lt;&gt;c__DisplayClass1_0 A_0)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00139">Dice.cs:139</a></div></div>
-<div class="ttc" id="aclassDice_html_a68e3451284a714cfcb18b58aae96095c"><div class="ttname"><a href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Dice.Roll</a></div><div class="ttdeci">int Roll()</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00068">Dice.cs:68</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00015">15</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">int</span> num2 = 1;</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordtype">int</span> num4 = <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(78);</div>
+<div class="line"><span class="lineno">   23</span>            flag = num4 &gt;= 0;</div>
+<div class="line"><span class="lineno">   24</span>            num2 = 1 + Mathf.Abs(num4 / 100) + ((Mathf.Abs(num4 % 100) &gt; <a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(100)) ? 1 : 0);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordtype">int</span> num5 = <a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>();</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (i == 0 || (flag &amp;&amp; num5 &gt; num3) || (!flag &amp;&amp; num5 &lt; num3))</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                num3 = num5;</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> num3;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>()</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordtype">int</span> num6 = 0;</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>; j++)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                num6 += <a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(<a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>) + 1;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> num6 + <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclassDice_html_abb71f28b7a36ecf8683a858dac37daa5"><div class="ttname"><a href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">Dice.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00051">Dice.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00155">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00157">card</a>, <a class="el" href="Card_8cs_source.html#l01976">Card.Evalue()</a>, <a class="el" href="Dice_8cs_source.html#l00139">g__Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00151">num</a>, <a class="el" href="Dice_8cs_source.html#l00038">rnd()</a>, <a class="el" href="Dice_8cs_source.html#l00068">Roll()</a>, and <a class="el" href="Dice_8cs_source.html#l00153">sides</a>.</p>
+<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00011">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00013">card</a>, <a class="el" href="Card_8cs_source.html#l02353">Card.Evalue()</a>, <a class="el" href="Dice_8cs_source.html#l00007">num</a>, <a class="el" href="Dice_8cs_source.html#l00051">rnd()</a>, <a class="el" href="Dice_8cs_source.html#l00081">Roll()</a>, and <a class="el" href="Dice_8cs_source.html#l00009">sides</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03873">Card.ApplyProtection()</a>, <a class="el" href="ActEffect_8cs_source.html#l00021">ActEffect.DamageEle()</a>, <a class="el" href="Check_8cs_source.html#l00129">Check.Perform()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00341">AttackProcess.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l00821">ActEffect.Proc()</a>, <a class="el" href="Dice_8cs_source.html#l00068">Roll()</a>, <a class="el" href="ConHOT_8cs_source.html#l00006">ConHOT.Tick()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00015">ConMiasma.Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03486">Card.ApplyProtection()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Check_8cs_source.html#l00111">Check.Perform()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00393">AttackProcess.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l00768">ActEffect.Proc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00005">ConHOT.Tick()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00009">ConMiasma.Tick()</a>.</p>
 
 </div>
 </div>
@@ -627,13 +582,15 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00073">73</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classDice.html">Dice</a>.<a class="code hl_function" href="classDice.html#a0489f898486e720b73a2e97cee457da9">RollMax</a>(this.<a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>, this.<a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>, this.<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>);</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclassDice_html_a0489f898486e720b73a2e97cee457da9"><div class="ttname"><a href="classDice.html#a0489f898486e720b73a2e97cee457da9">Dice.RollMax</a></div><div class="ttdeci">static int RollMax(int num, int sides, int bonus=0)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00033">Dice.cs:33</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00086">86</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDice.html#a1fc53f6747bddf1d87c3344c3e069236">RollMax</a>(<a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>, <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>, <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>);</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="ttc" id="aclassDice_html_a1fc53f6747bddf1d87c3344c3e069236"><div class="ttname"><a href="classDice.html#a1fc53f6747bddf1d87c3344c3e069236">Dice.RollMax</a></div><div class="ttdeci">int RollMax()</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00086">Dice.cs:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00155">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00151">num</a>, <a class="el" href="Dice_8cs_source.html#l00033">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00153">sides</a>.</p>
+<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00011">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00007">num</a>, <a class="el" href="Dice_8cs_source.html#l00086">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00009">sides</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00086">RollMax()</a>.</p>
 
 </div>
 </div>
@@ -677,14 +634,14 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00033">33</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> * <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a> + <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00046">46</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> * <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a> + <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00155">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00151">num</a>, and <a class="el" href="Dice_8cs_source.html#l00153">sides</a>.</p>
+<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00011">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00007">num</a>, and <a class="el" href="Dice_8cs_source.html#l00009">sides</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00021">ActEffect.DamageEle()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00341">AttackProcess.Perform()</a>, and <a class="el" href="Dice_8cs_source.html#l00073">RollMax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, and <a class="el" href="AttackProcess_8cs_source.html#l00393">AttackProcess.Perform()</a>.</p>
 
 </div>
 </div>
@@ -711,14 +668,15 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00078">78</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> this.<a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>.ToString() + <span class="stringliteral">&quot;d&quot;</span> + this.<a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>.ToString() + ((this.bonus &gt; 0) ? (<span class="stringliteral">&quot;+&quot;</span> + this.<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>.ToString()) : ((this.<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a> &lt; 0) ? (this.<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>));</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00091">91</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a> + <span class="stringliteral">&quot;d&quot;</span> + <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a> + ((<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a> &gt; 0) ? (<span class="stringliteral">&quot;+&quot;</span> + <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>) : ((<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a> &lt; 0) ? (<a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>.<a class="code hl_function" href="classDice.html#a8e748d03444107c2428d15fc9cbd9330">ToString</a>() ?? <span class="stringliteral">&quot;&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclassDice_html_a8e748d03444107c2428d15fc9cbd9330"><div class="ttname"><a href="classDice.html#a8e748d03444107c2428d15fc9cbd9330">Dice.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00091">Dice.cs:91</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00155">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00151">num</a>, and <a class="el" href="Dice_8cs_source.html#l00153">sides</a>.</p>
+<p class="reference">References <a class="el" href="Dice_8cs_source.html#l00011">bonus</a>, <a class="el" href="Dice_8cs_source.html#l00007">num</a>, and <a class="el" href="Dice_8cs_source.html#l00009">sides</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Element_82_8cs_source.html#l00840">Element.g__Calc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00013">ConHOT.OnWriteNote()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00056">ConMiasma.OnWriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00554">Element._WriteNote()</a>, <a class="el" href="Element_82_8cs_source.html#l00840">Element.g__Calc()</a>, <a class="el" href="ConHOT_8cs_source.html#l00012">ConHOT.OnWriteNote()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00050">ConMiasma.OnWriteNote()</a>.</p>
 
 </div>
 </div>
@@ -735,9 +693,9 @@ Static Package Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00155">155</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00011">11</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00033">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00078">ToString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00056">Dice()</a>, <a class="el" href="Dice_8cs_source.html#l00015">Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00046">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00091">ToString()</a>.</p>
 
 </div>
 </div>
@@ -753,9 +711,9 @@ Static Package Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00157">157</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00013">13</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00056">Dice()</a>, and <a class="el" href="Dice_8cs_source.html#l00015">Roll()</a>.</p>
 
 </div>
 </div>
@@ -769,7 +727,7 @@ Static Package Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classDice.html">Dice</a> Dice.Null = new <a class="el" href="classDice.html">Dice</a>(0, 0, 0, null)</td>
+          <td class="memname"><a class="el" href="classDice.html">Dice</a> Dice.Null = new <a class="el" href="classDice.html">Dice</a>()</td>
         </tr>
       </table>
   </td>
@@ -779,7 +737,7 @@ Static Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00149">149</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00005">5</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
 
 </div>
 </div>
@@ -795,9 +753,9 @@ Static Package Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00151">151</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00007">7</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00139">g__Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00033">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00078">ToString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00056">Dice()</a>, <a class="el" href="Dice_8cs_source.html#l00015">Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00046">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00091">ToString()</a>.</p>
 
 </div>
 </div>
@@ -813,9 +771,9 @@ Static Package Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00153">153</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Dice_8cs_source.html#l00009">9</a> of file <a class="el" href="Dice_8cs_source.html">Dice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00007">Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00033">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00078">ToString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dice_8cs_source.html#l00056">Dice()</a>, <a class="el" href="Dice_8cs_source.html#l00015">Roll()</a>, <a class="el" href="Dice_8cs_source.html#l00046">RollMax()</a>, and <a class="el" href="Dice_8cs_source.html#l00091">ToString()</a>.</p>
 
 </div>
 </div>

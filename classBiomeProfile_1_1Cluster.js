@@ -12,5 +12,5 @@ var classBiomeProfile_1_1Cluster =
     ] ],
     [ "TryCreate", "classBiomeProfile_1_1Cluster.html#aaf7a2358af9eb319c1cd0c9b7a89d15b", null ],
     [ "density", "classBiomeProfile_1_1Cluster.html#aeba27bca7b86974bb321881f790a5ebb", null ],
-    [ "type", "classBiomeProfile_1_1Cluster.html#a56e0b4b13f3b93c957ea51f98a5560a6", null ]
+    [ "type", "classBiomeProfile_1_1Cluster.html#acbd5629263d1b4e9c52682be7ffb4a1e", null ]
 ];

@@ -1,6 +1,5 @@
 var classLayerQuestBoard =
 [
-    [ "g__GetSortVal", "classLayerQuestBoard.html#a64d7d828400fc6a3d93e73ee4861ea0a", null ],
     [ "OnInit", "classLayerQuestBoard.html#aba1697b4d6a0ee24342ff9037acaaa61", null ],
     [ "OnKill", "classLayerQuestBoard.html#aad10f0e5c50919833cec5652fa16ba4f", null ],
     [ "OnSwitchContent", "classLayerQuestBoard.html#ad9c37992ff9186550bdea7a61f72a225", null ],

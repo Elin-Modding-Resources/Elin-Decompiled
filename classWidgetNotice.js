@@ -15,5 +15,5 @@ var classWidgetNotice =
     [ "Instance", "classWidgetNotice.html#a55b3084a783fd5cb861f384cc3c30330", null ],
     [ "itemBattle", "classWidgetNotice.html#af9045eb98a442fc1019588e7956f3b5a", null ],
     [ "itemGuest", "classWidgetNotice.html#af6f3c06d015635cf5749614cf54cca2e", null ],
-    [ "extra", "classWidgetNotice.html#a52d143d3bd0fbe6f557db11ed4567d4d", null ]
+    [ "extra", "classWidgetNotice.html#a92b763afed3474aa1edcad467e07c36d", null ]
 ];

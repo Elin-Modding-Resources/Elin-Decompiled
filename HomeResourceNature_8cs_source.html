@@ -92,42 +92,40 @@ $(document).ready(function(){initNavTree('HomeResourceNature_8cs_source.html',''
   <div class="headertitle"><div class="title">HomeResourceNature.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="HomeResourceNature_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classHomeResourceNature.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classHomeResourceNature.html">HomeResourceNature</a> : <a class="code hl_class" href="classHomeResourceRate.html">HomeResourceRate</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d">GetDestValue</a>()</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordtype">int</span> p = 0;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">ForeachCell</a>(delegate(<a class="code hl_class" href="classCell.html">Cell</a> c)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">sourceFloor</a>.value == 0)</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                p++;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            if (c.<a class="code hl_property" href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">sourceBlock</a>.value == 0)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                p += 2;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            if (c.<a class="code hl_property" href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">sourceBridge</a>.value == 0)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                p++;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        });</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> p / 10;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00008">Cell.cs:9</a></div></div>
-<div class="ttc" id="aclassCell_html_a0eb7a933fea2fd077f321a2d5bdbce1a"><div class="ttname"><a href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">Cell.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01137">Cell.cs:1138</a></div></div>
-<div class="ttc" id="aclassCell_html_a2211b3bdcf9f2ccf06b3aa8917dc7c4d"><div class="ttname"><a href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">Cell.sourceFloor</a></div><div class="ttdeci">SourceFloor.Row sourceFloor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01145">Cell.cs:1146</a></div></div>
-<div class="ttc" id="aclassCell_html_a87ad2a0882511641cd15a40dda9512e5"><div class="ttname"><a href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">Cell.sourceBridge</a></div><div class="ttdeci">SourceFloor.Row sourceBridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01153">Cell.cs:1154</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:48</a></div></div>
-<div class="ttc" id="aclassHomeResourceNature_html"><div class="ttname"><a href="classHomeResourceNature.html">HomeResourceNature</a></div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceNature_8cs_source.html#l00003">HomeResourceNature.cs:4</a></div></div>
-<div class="ttc" id="aclassHomeResourceNature_html_a5b428229da7ee11a783a0e5cbed6ac7d"><div class="ttname"><a href="classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d">HomeResourceNature.GetDestValue</a></div><div class="ttdeci">override int GetDestValue()</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceNature_8cs_source.html#l00005">HomeResourceNature.cs:5</a></div></div>
-<div class="ttc" id="aclassHomeResourceRate_html"><div class="ttname"><a href="classHomeResourceRate.html">HomeResourceRate</a></div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceRate_8cs_source.html#l00003">HomeResourceRate.cs:4</a></div></div>
-<div class="ttc" id="aclassMapBounds_html_a4be40482392f6c473453345fdfa4ce8a"><div class="ttname"><a href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">MapBounds.ForeachCell</a></div><div class="ttdeci">void ForeachCell(Action&lt; Cell &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00280">MapBounds.cs:280</a></div></div>
-<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02857">Map.cs:2857</a></div></div>
+<a href="HomeResourceNature_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classHomeResourceNature.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classHomeResourceNature.html">HomeResourceNature</a> : <a class="code hl_class" href="classHomeResourceRate.html">HomeResourceRate</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d">GetDestValue</a>()</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordtype">int</span> p = 0;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">ForeachCell</a>(delegate(<a class="code hl_class" href="classCell.html">Cell</a> c)</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">sourceFloor</a>.value == 0)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                p++;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            if (c.<a class="code hl_property" href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">sourceBlock</a>.value == 0)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                p += 2;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            if (c.<a class="code hl_property" href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">sourceBridge</a>.value == 0)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                p++;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        });</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> p / 10;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
+<div class="ttc" id="aclassCell_html_a0eb7a933fea2fd077f321a2d5bdbce1a"><div class="ttname"><a href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">Cell.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01052">Cell.cs:1052</a></div></div>
+<div class="ttc" id="aclassCell_html_a2211b3bdcf9f2ccf06b3aa8917dc7c4d"><div class="ttname"><a href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">Cell.sourceFloor</a></div><div class="ttdeci">SourceFloor.Row sourceFloor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01054">Cell.cs:1054</a></div></div>
+<div class="ttc" id="aclassCell_html_a87ad2a0882511641cd15a40dda9512e5"><div class="ttname"><a href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">Cell.sourceBridge</a></div><div class="ttdeci">SourceFloor.Row sourceBridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01056">Cell.cs:1056</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
+<div class="ttc" id="aclassHomeResourceNature_html"><div class="ttname"><a href="classHomeResourceNature.html">HomeResourceNature</a></div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceNature_8cs_source.html#l00001">HomeResourceNature.cs:2</a></div></div>
+<div class="ttc" id="aclassHomeResourceNature_html_a5b428229da7ee11a783a0e5cbed6ac7d"><div class="ttname"><a href="classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d">HomeResourceNature.GetDestValue</a></div><div class="ttdeci">override int GetDestValue()</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceNature_8cs_source.html#l00003">HomeResourceNature.cs:3</a></div></div>
+<div class="ttc" id="aclassHomeResourceRate_html"><div class="ttname"><a href="classHomeResourceRate.html">HomeResourceRate</a></div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceRate_8cs_source.html#l00001">HomeResourceRate.cs:2</a></div></div>
+<div class="ttc" id="aclassMapBounds_html_a4be40482392f6c473453345fdfa4ce8a"><div class="ttname"><a href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">MapBounds.ForeachCell</a></div><div class="ttdeci">void ForeachCell(Action&lt; Cell &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00279">MapBounds.cs:279</a></div></div>
+<div class="ttc" id="aclassMap_html_aff2f4e11291592dddbe18306e5edaf86"><div class="ttname"><a href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">Map.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00052">Map.cs:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

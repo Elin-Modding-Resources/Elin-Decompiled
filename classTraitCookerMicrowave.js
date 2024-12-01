@@ -1,6 +1,6 @@
 var classTraitCookerMicrowave =
 [
-    [ "animeType", "classTraitCookerMicrowave.html#a9b37cde43841d93d04a54a1fe9c577aa", null ],
+    [ "animeType", "classTraitCookerMicrowave.html#a0ca3fbeffff6406e6f040cb1b8635364", null ],
     [ "AutoToggle", "classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd", null ],
     [ "AutoTurnOff", "classTraitCookerMicrowave.html#acbaac805d0c276d5c3e8dbf531c57391", null ],
     [ "CanTriggerFire", "classTraitCookerMicrowave.html#a1da4d1f54e491074e8b347b15383c420", null ],

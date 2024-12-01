@@ -1,6 +1,5 @@
 var classItemStatistics =
 [
-    [ "g__F", "classItemStatistics.html#a4918d70ad2cefea2c12947303def917d", null ],
     [ "Refresh", "classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247", null ],
     [ "textInn", "classItemStatistics.html#abdf05ff2ae599dd03ea4f99a9f018cbe", null ],
     [ "textShip", "classItemStatistics.html#a83b6995ea39658cc473f99b69501f9f8", null ],
