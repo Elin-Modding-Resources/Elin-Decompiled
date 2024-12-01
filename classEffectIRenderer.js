@@ -2,7 +2,7 @@ var classEffectIRenderer =
 [
     [ "OnUpdate", "classEffectIRenderer.html#a028ff3b142d4e15d7e81b9284eb3385d", null ],
     [ "Play", "classEffectIRenderer.html#ad581f929fbc2ce2564b05881344cc46e", null ],
-    [ "Play", "classEffectIRenderer.html#abab0743e1bee5e6b6909559d20f1d23c", null ],
+    [ "Play", "classEffectIRenderer.html#aca45e94486f165f495628016ff3de839", null ],
     [ "anime", "classEffectIRenderer.html#a7137bee90f7b1140b4ab5cdda57f11d7", null ],
     [ "animeData", "classEffectIRenderer.html#a644be802b60362c4f512fbbbf5f0a9e4", null ],
     [ "card", "classEffectIRenderer.html#a2393d86079679c10976a9202c2586ea3", null ],

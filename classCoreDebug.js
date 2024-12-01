@@ -84,7 +84,7 @@ var classCoreDebug =
     [ "Test_Grow", "classCoreDebug.html#a5182cf8fe24ab25249439bf1387d933b", null ],
     [ "Test_Siege", "classCoreDebug.html#a1fef647a1aadf3cfbd6c545a2e1123dc", null ],
     [ "Test_SiegeGuard", "classCoreDebug.html#a81e243d9738affd24226b6e1185eb2d2", null ],
-    [ "TestSpawn", "classCoreDebug.html#a46c4bf72bf2ecef6df5bd37d05f63dcd", null ],
+    [ "TestSpawn", "classCoreDebug.html#ae29989e7771f4e21ef0b1a7205db9f28", null ],
     [ "ToggleRevealMap", "classCoreDebug.html#a31de3e997347e8d96979a90439cebfe0", null ],
     [ "UpdateAlways", "classCoreDebug.html#aa3a824767b1f2c867be8550601133915", null ],
     [ "UpdateInput", "classCoreDebug.html#a82548318843d600bec3feb53a6990cfe", null ],
