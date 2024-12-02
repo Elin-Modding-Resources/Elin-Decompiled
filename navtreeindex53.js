@@ -1,5 +1,15 @@
 var NAVTREEINDEX53 =
 {
+"classGlobalGoalVisitTown.html#aae4b5493cc8fb73c6767d901b6ae916b":[1,0,453,0],
+"classGoal.html":[1,0,454],
+"classGoal.html#ac9b79ca4cf9a4be75f310c0b1aca7ac1":[1,0,454,0],
+"classGoal.html#af817e3d757898d516364f0181a8a5c12":[1,0,454,1],
+"classGoalAutoCombat.html":[1,0,455],
+"classGoalAutoCombat.html#a2711a8eb65331426c2b440ffc36e510c":[1,0,455,7],
+"classGoalAutoCombat.html#a2b9a4b73aed255f1da723ee8d2bc0e80":[1,0,455,9],
+"classGoalAutoCombat.html#a4744261694a4441c7cac1daa825cc542":[1,0,455,8],
+"classGoalAutoCombat.html#a6fe0b7188e63d419d31e6ddae9a5c43c":[1,0,455,4],
+"classGoalAutoCombat.html#a842047c2fad0cba1aa676b031589b041":[1,0,455,0],
 "classGoalAutoCombat.html#a8670de62624c60f547ca7d4bc9cf0641":[1,0,455,5],
 "classGoalAutoCombat.html#aa4109fac2e0133d69bba55b6f6b8ce83":[1,0,455,3],
 "classGoalAutoCombat.html#aa84b98fedcd099d84a8c2ef1947223c3":[1,0,455,6],
@@ -239,15 +249,5 @@ var NAVTREEINDEX53 =
 "classGrowSystemPasture.html#aaf32cb7bd0ab19dcc26487b2c7d6a922":[1,0,486,1],
 "classGrowSystemPlant.html":[1,0,487],
 "classGrowSystemPlant.html#a2222e95fe0f67801e699b9f1ad1ea89a":[1,0,487,4],
-"classGrowSystemPlant.html#a23a8931572815c0e8aca64c28f0d65b4":[1,0,487,0],
-"classGrowSystemPlant.html#a2c6f077b84018b926db7299b1b02ee3b":[1,0,487,2],
-"classGrowSystemPlant.html#a4ed771a83dea0c80bf43e60cb367557f":[1,0,487,3],
-"classGrowSystemPlant.html#a7c777760959f72c8e1bcc14a318181e6":[1,0,487,5],
-"classGrowSystemPlant.html#aeb37e9156db530e88279a52d7c508823":[1,0,487,1],
-"classGrowSystemRice.html":[1,0,488],
-"classGrowSystemTree.html":[1,0,489],
-"classGrowSystemTree.html#a00fe00e3c473485a89908c212b2e66a5":[1,0,489,21],
-"classGrowSystemTree.html#a0499983ed1e955d190dee5b2dbf91b7e":[1,0,489,18],
-"classGrowSystemTree.html#a068aa18f6ea85a7967f9874ec63f7c73":[1,0,489,11],
-"classGrowSystemTree.html#a104b2527b69bc9adea8763770d570ae7":[1,0,489,22]
+"classGrowSystemPlant.html#a23a8931572815c0e8aca64c28f0d65b4":[1,0,487,0]
 };

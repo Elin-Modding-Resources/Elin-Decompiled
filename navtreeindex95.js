@@ -1,5 +1,16 @@
 var NAVTREEINDEX95 =
 {
+"classTraitHomeBoard.html#af351723487e9b9d3bc546ace643e45f0":[1,0,1370,0],
+"classTraitHouseBoard.html":[1,0,1371],
+"classTraitHouseBoard.html#a34e85147354c0d16b776df906b0cd689":[1,0,1371,2],
+"classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada":[1,0,1371,1],
+"classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64":[1,0,1371,7],
+"classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945":[1,0,1371,9],
+"classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1371,3],
+"classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1371,6],
+"classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1371,4],
+"classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd":[1,0,1371,5],
+"classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931":[1,0,1371,8],
 "classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1371,10],
 "classTraitHouseBoard_1_1Data.html":[1,0,1371,0],
 "classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7":[1,0,1371,0,16],
@@ -238,16 +249,5 @@ var NAVTREEINDEX95 =
 "classTraitMerchantLamp.html#a46f5cef42a3727aa84dac84ecd84cd74":[1,0,1427,0],
 "classTraitMerchantLamp.html#aa394c90f3e0cecdaedc87ec80690f7da":[1,0,1427,1],
 "classTraitMerchantMagic.html":[1,0,1428],
-"classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1428,0],
-"classTraitMerchantMap.html":[1,0,1429],
-"classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1429,1],
-"classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1429,0],
-"classTraitMerchantMeat.html":[1,0,1430],
-"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1430,0],
-"classTraitMerchantMilk.html":[1,0,1431],
-"classTraitMerchantMilk.html#a1425f96b7285390b82e48446a25f6e49":[1,0,1431,0],
-"classTraitMerchantPlan.html":[1,0,1432],
-"classTraitMerchantPlan.html#a8ab4c39f9b9050c042d2dddcffb8c2d0":[1,0,1432,1],
-"classTraitMerchantPlan.html#a98a140c37901a065443c3f99ad755beb":[1,0,1432,2],
-"classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1432,0]
+"classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1428,0]
 };

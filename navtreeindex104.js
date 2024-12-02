@@ -1,5 +1,16 @@
 var NAVTREEINDEX104 =
 {
+"classWidgetHP.html":[1,0,1688],
+"classWidgetHP.html#a0d6a950b3b067f704e2a6a24c4721282":[1,0,1688,7],
+"classWidgetHP.html#a17324a910b3b301b844c0233958aa786":[1,0,1688,3],
+"classWidgetHP.html#a2323d61988355e7289a5ec5e2e93989e":[1,0,1688,14],
+"classWidgetHP.html#a3c99befe7c62ea5abb13ec09e1134def":[1,0,1688,1],
+"classWidgetHP.html#a4f5a01b86b19e19568be232c14dfd92e":[1,0,1688,2],
+"classWidgetHP.html#a4ff19afe824626abd55108e455f6eb8a":[1,0,1688,9],
+"classWidgetHP.html#a90e087f254faac1de6ed6fc48a9cc04f":[1,0,1688,12],
+"classWidgetHP.html#a9a1c9a403784ec3a6ef4d94adf413e0e":[1,0,1688,8],
+"classWidgetHP.html#ab7693ebef61558ef34b763c4c5c6f10c":[1,0,1688,4],
+"classWidgetHP.html#abf0169aea1aae108452d5fdc5bace8e1":[1,0,1688,5],
 "classWidgetHP.html#ac75d6d1075d2d5abceb786fda2ae46c0":[1,0,1688,11],
 "classWidgetHP.html#accb4c1c02361eb2a1cc8d5f53a4e1d40":[1,0,1688,10],
 "classWidgetHP.html#adc701a0ef27155c60adca3cb84b84afa":[1,0,1688,15],
@@ -238,16 +249,5 @@ var NAVTREEINDEX104 =
 "classWidgetMinimap.html#a23b670dfbe436a6359c5412301502de9":[1,0,1695,28],
 "classWidgetMinimap.html#a252c771fd0bada1dcdf30b9c7781f013":[1,0,1695,3],
 "classWidgetMinimap.html#a2c47333c252ba7c27fdc1a151fe88ce8":[1,0,1695,33],
-"classWidgetMinimap.html#a2eacbcb33d93a6e36c460e1911a47ea0":[1,0,1695,4],
-"classWidgetMinimap.html#a32c1156023ddfa6b3f5e38674a211e20":[1,0,1695,15],
-"classWidgetMinimap.html#a399ee0e19efba8c1deb83d70d73ea6c5":[1,0,1695,2],
-"classWidgetMinimap.html#a435b5da87e5879540474be6224733722":[1,0,1695,24],
-"classWidgetMinimap.html#a470b1699b98451285ff7a0587822278a":[1,0,1695,8],
-"classWidgetMinimap.html#a48f8c5c8edd186a6168b565894996cb9":[1,0,1695,18],
-"classWidgetMinimap.html#a568bc844c87f082386fb43c279e296c3":[1,0,1695,11],
-"classWidgetMinimap.html#a5dd90d4a6d97a5eb588bdc4f3648a1fd":[1,0,1695,29],
-"classWidgetMinimap.html#a5f115b2a7fa6832c1e84348728b83713":[1,0,1695,20],
-"classWidgetMinimap.html#a68a6b03e7e50da8cae1bb5c89245f1d3":[1,0,1695,9],
-"classWidgetMinimap.html#a68fd5ffce4669e7900a204d584be94dd":[1,0,1695,19],
-"classWidgetMinimap.html#a6ded86000cc5a9188aa3f8075d47b43a":[1,0,1695,1]
+"classWidgetMinimap.html#a2eacbcb33d93a6e36c460e1911a47ea0":[1,0,1695,4]
 };

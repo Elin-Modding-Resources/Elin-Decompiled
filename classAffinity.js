@@ -3,6 +3,7 @@ var classAffinity =
     [ "CanForceTradeEquip", "classAffinity.html#aa96f600c75595d5f0192acdd47f68652", null ],
     [ "CanInvite", "classAffinity.html#a14c112230e1d7c7a0d75ef4c020b40f6", null ],
     [ "CanMarry", "classAffinity.html#a533cb348ce85f47aee44e84b29ded024", null ],
+    [ "CanSleepBeside", "classAffinity.html#a5f97a015c302041be4cb6140b2f92b89", null ],
     [ "Get", "classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a", null ],
     [ "Mod", "classAffinity.html#a1cc035137bc7dddcfca8b9afbeba4ac3", null ],
     [ "OnGift", "classAffinity.html#aeebc41560bd44b3d5f57bd617bb8ce33", null ],

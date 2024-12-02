@@ -38,6 +38,7 @@ var classCINT =
     [ "isImportant", "classCINT.html#a9eb7e07bd8b0065662428037f58a4811", null ],
     [ "IsPC", "classCINT.html#ae9a4b61c748bd25883e191c551a235c7", null ],
     [ "isPrayed", "classCINT.html#aa32d355d466359304c3539a08ed6c0bc", null ],
+    [ "isSleepBeside", "classCINT.html#a67bcdeee2e8e208ea1459de67dbb12df", null ],
     [ "isStolenFromPC", "classCINT.html#ae653809d26880c1e5cfb7d03c8ec8091", null ],
     [ "isTrained", "classCINT.html#a1aba8891d8885f93352d700b6f3d6740", null ],
     [ "lightColor", "classCINT.html#ab055a2239ed009e83468c2d5fbe709c5", null ],

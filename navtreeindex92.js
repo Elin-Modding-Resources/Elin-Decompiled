@@ -1,5 +1,16 @@
 var NAVTREEINDEX92 =
 {
+"classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb":[1,0,1210,0],
+"classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1210,2],
+"classTraitBoat.html#ac63976c5747b30504ceb563902e8f276":[1,0,1210,3],
+"classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6":[1,0,1210,1],
+"classTraitBook.html":[1,0,1211],
+"classTraitBook.html#a069d61059a15437119bb0bc6058f1a40":[1,0,1211,1],
+"classTraitBook.html#a0a1171837e959a3a759bc04126b5fec6":[1,0,1211,5],
+"classTraitBook.html#a14152139a086fc23103c02f79adef951":[1,0,1211,8],
+"classTraitBook.html#a18586bbf8c3c844aa673755a8a5bc8fd":[1,0,1211,4],
+"classTraitBook.html#a30eb6a8e3739b5085e7c7ea66a5016c8":[1,0,1211,2],
+"classTraitBook.html#a5221e67f4814bb1aecd73c548e83d43d":[1,0,1211,3],
 "classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e":[1,0,1211,7],
 "classTraitBook.html#ab8f2a6b72ddd8dde717f425e076ca20c":[1,0,1211,6],
 "classTraitBook.html#aea450206978dd2aca9fd6a4ce36ab468":[1,0,1211,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitCrafter.html#a1dce63c1a7164229467ea19e49e69db6":[1,0,1261,27],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb":[1,0,1261,1],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67":[1,0,1261,1,1],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8":[1,0,1261,1,5],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39":[1,0,1261,1,3],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b":[1,0,1261,1,7],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754":[1,0,1261,1,0],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0":[1,0,1261,1,6],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5":[1,0,1261,1,4],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba":[1,0,1261,1,8],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a":[1,0,1261,1,2],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7":[1,0,1261,1,9],
-"classTraitCrafter.html#a1fbe73f7969a5a7616846de2c329bdca":[1,0,1261,28],
-"classTraitCrafter.html#a2775523ce44d0ea98e4a6f2f4f2b9e8b":[1,0,1261,25],
-"classTraitCrafter.html#a2bfa7dc079102a56add5f4cbb0116d4d":[1,0,1261,21]
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8":[1,0,1261,1,5]
 };

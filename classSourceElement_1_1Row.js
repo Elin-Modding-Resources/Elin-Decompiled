@@ -31,6 +31,7 @@ var classSourceElement_1_1Row =
     [ "encFactor", "classSourceElement_1_1Row.html#a4a0631f3ef109714e05f7d3105a54449", null ],
     [ "encSlot", "classSourceElement_1_1Row.html#a039db66bd13f8a88fc0b81f8297e2b85", null ],
     [ "foodEffect", "classSourceElement_1_1Row.html#a264a4f5384f5099243c0171442349222", null ],
+    [ "geneSlot", "classSourceElement_1_1Row.html#ace8c135c67f9b963b19e639f121b3e85", null ],
     [ "group", "classSourceElement_1_1Row.html#ab79f3f98b31986b388aa8e09fecebc26", null ],
     [ "id", "classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef", null ],
     [ "idMold", "classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a", null ],

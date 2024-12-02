@@ -1,5 +1,16 @@
 var NAVTREEINDEX96 =
 {
+"classTraitMerchantMap.html":[1,0,1429],
+"classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1429,1],
+"classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1429,0],
+"classTraitMerchantMeat.html":[1,0,1430],
+"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1430,0],
+"classTraitMerchantMilk.html":[1,0,1431],
+"classTraitMerchantMilk.html#a1425f96b7285390b82e48446a25f6e49":[1,0,1431,0],
+"classTraitMerchantPlan.html":[1,0,1432],
+"classTraitMerchantPlan.html#a8ab4c39f9b9050c042d2dddcffb8c2d0":[1,0,1432,1],
+"classTraitMerchantPlan.html#a98a140c37901a065443c3f99ad755beb":[1,0,1432,2],
+"classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1432,0],
 "classTraitMerchantPlat.html":[1,0,1433],
 "classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1433,3],
 "classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1433,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX96 =
 "classTraitRadio.html#a9f1699069161a60811ffa207b4dc8985":[1,0,1493,1],
 "classTraitRationMaker.html":[1,0,1494],
 "classTraitRationMaker.html#a464ddd243e805657d694b5e9eb3bd5bc":[1,0,1494,2],
-"classTraitRationMaker.html#a4c37eee05c91debfcc5102d01ba508b4":[1,0,1494,1],
-"classTraitRationMaker.html#aa11c85fe97aeada68e8a3dbd78c97cfb":[1,0,1494,0],
-"classTraitRationMaker.html#ac7104cf3c4badb749bfd0bf84d17bb23":[1,0,1494,3],
-"classTraitRationMaker.html#ad6742930d82377b349b1d82f82215bb9":[1,0,1494,4],
-"classTraitRecipe.html":[1,0,1495],
-"classTraitRecipe.html#a00fac5d4b75557ba50d7c52893e3da5f":[1,0,1495,8],
-"classTraitRecipe.html#a041a843f492448a73dc3c4f6966205be":[1,0,1495,1],
-"classTraitRecipe.html#a0df3785eee77cbd0457e3b26291e60c4":[1,0,1495,0],
-"classTraitRecipe.html#a3a09306af1b356daf7648a5c8d6422ad":[1,0,1495,9],
-"classTraitRecipe.html#a6257a9c12ae0a2b44150f40b2407f8bd":[1,0,1495,4],
-"classTraitRecipe.html#a8bc4ee4817fb8db2cd2a688c611e2337":[1,0,1495,6],
-"classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1495,7]
+"classTraitRationMaker.html#a4c37eee05c91debfcc5102d01ba508b4":[1,0,1494,1]
 };

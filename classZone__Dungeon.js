@@ -12,8 +12,6 @@ var classZone__Dungeon =
     [ "CountDeepestLevel", "classZone__Dungeon.html#aa0d00adc52d171ed02de0b30ac28f98f", null ],
     [ "DisableRooms", "classZone__Dungeon.html#adf51b34c8ea833c5ece0c269ed447a5c", null ],
     [ "EvolvedChance", "classZone__Dungeon.html#a53c7458033c3025a1941a405719a2381", null ],
-    [ "GrowPlant", "classZone__Dungeon.html#a3c8ca7daad5346162996a3afeed51d07", null ],
-    [ "GrowWeed", "classZone__Dungeon.html#ace24c0d8ed73e840800bba286c9c0d55", null ],
     [ "IDGenerator", "classZone__Dungeon.html#a9d9253ae151dc8d4d49efee6ab2ccb73", null ],
     [ "IsReturnLocation", "classZone__Dungeon.html#a1866eecd3a3eebe039a903b990651ff8", null ],
     [ "IsSnowCovered", "classZone__Dungeon.html#aa271a217b8dc4598f901ecb6f79db118", null ],

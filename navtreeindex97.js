@@ -1,5 +1,16 @@
 var NAVTREEINDEX97 =
 {
+"classTraitRationMaker.html#aa11c85fe97aeada68e8a3dbd78c97cfb":[1,0,1494,0],
+"classTraitRationMaker.html#ac7104cf3c4badb749bfd0bf84d17bb23":[1,0,1494,3],
+"classTraitRationMaker.html#ad6742930d82377b349b1d82f82215bb9":[1,0,1494,4],
+"classTraitRecipe.html":[1,0,1495],
+"classTraitRecipe.html#a00fac5d4b75557ba50d7c52893e3da5f":[1,0,1495,8],
+"classTraitRecipe.html#a041a843f492448a73dc3c4f6966205be":[1,0,1495,1],
+"classTraitRecipe.html#a0df3785eee77cbd0457e3b26291e60c4":[1,0,1495,0],
+"classTraitRecipe.html#a3a09306af1b356daf7648a5c8d6422ad":[1,0,1495,9],
+"classTraitRecipe.html#a6257a9c12ae0a2b44150f40b2407f8bd":[1,0,1495,4],
+"classTraitRecipe.html#a8bc4ee4817fb8db2cd2a688c611e2337":[1,0,1495,6],
+"classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1495,7],
 "classTraitRecipe.html#aa609c89aa917d5d61b9b3b35cb3fc6c5":[1,0,1495,3],
 "classTraitRecipe.html#aaa59f50841aa5f8763647eaa24cc1dfb":[1,0,1495,5],
 "classTraitRecipe.html#aacdc95f9c38dad8b0f60400eef441b83":[1,0,1495,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX97 =
 "classTraitSpinner.html#a6fcfd08ab2adec32c51025c3cb0edd52":[1,0,1537,3],
 "classTraitSpinner.html#ac2c70fe7adf2c3a358e7384e118b443a":[1,0,1537,2],
 "classTraitSpinner.html#afbc1dc3e00cb953c3cb0995c48010c2d":[1,0,1537,0],
-"classTraitSpot.html":[1,0,1538],
-"classTraitSpot.html#a1990503145dd01cad1ca1e2d71656499":[1,0,1538,0],
-"classTraitSpot.html#a54744d73b57e0c1880e07fac54454e50":[1,0,1538,1],
-"classTraitSpotDining.html":[1,0,1539],
-"classTraitSpotExit.html":[1,0,1540],
-"classTraitSpotExit.html#a0bb165e83e5008468261c5a0a16d60a0":[1,0,1540,0],
-"classTraitSpotExit.html#a72b988c1d472fae5444c2920a3ca06b5":[1,0,1540,1],
-"classTraitSpotFarm.html":[1,0,1541],
-"classTraitSpotFarm.html#ae765c95cafe5778e91abdac984ead166":[1,0,1541,1],
-"classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1541,0],
-"classTraitSpotFish.html":[1,0,1542],
-"classTraitSpotFuel.html":[1,0,1543]
+"classTraitSpot.html":[1,0,1538]
 };

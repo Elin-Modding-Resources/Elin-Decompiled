@@ -1,5 +1,15 @@
 var NAVTREEINDEX72 =
 {
+"classQuestCraft_1_1Req.html#af769acbc82faf22ef62213d979d53612":[1,0,805,0,2],
+"classQuestCraft_1_1Req.html#afcb4d5eebbb33b29e77b3b4c96ab5db4":[1,0,805,0,1],
+"classQuestCrafter.html":[1,0,806],
+"classQuestCrafter.html#a27e7ccdd053b70ef96915ca712eedb02":[1,0,806,1],
+"classQuestCrafter.html#aa698c4059f13ba031888324e6e6bcb8d":[1,0,806,0],
+"classQuestCursedManor.html":[1,0,807],
+"classQuestCursedManor.html#acd173b4aaa88555c56d4331893485e94":[1,0,807,0],
+"classQuestCursedManor.html#ad474b52b0cb4fceee391e459a77c3a47":[1,0,807,1],
+"classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,807,2],
+"classQuestDebt.html":[1,0,808],
 "classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,808,2],
 "classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,808,10],
 "classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,808,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX72 =
 "classQuestMeal__fish.html#a694c9487de1da0957025a56324e2fac3":[1,0,846,0],
 "classQuestMeal__fruit.html":[1,0,847],
 "classQuestMeal__fruit.html#a5c8a51598aae6c96335ad33879976be7":[1,0,847,0],
-"classQuestMeal__meat.html":[1,0,848],
-"classQuestMeal__meat.html#a35404e9faea0dcaaca47c4a0e75b4b04":[1,0,848,0],
-"classQuestMeal__noodle.html":[1,0,849],
-"classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,849,0],
-"classQuestMeal__rice.html":[1,0,850],
-"classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,850,0],
-"classQuestMeal__soup.html":[1,0,851],
-"classQuestMeal__soup.html#aa386e62112c0a240762e780650fdeee6":[1,0,851,0],
-"classQuestMeal__vegi.html":[1,0,852],
-"classQuestMeal__vegi.html#a7d25a63c94b9906488f96bd1362edc72":[1,0,852,0],
-"classQuestMusic.html":[1,0,853]
+"classQuestMeal__meat.html":[1,0,848]
 };

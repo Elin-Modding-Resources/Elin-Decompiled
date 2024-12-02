@@ -1,5 +1,16 @@
 var NAVTREEINDEX86 =
 {
+"classTCOrbitTask.html#acad24d37c6aa8e407a69477b3be57cc2":[1,0,1087,5],
+"classTCOrbitTask.html#af3fd86e7fd1c7ce663b350e9763f0178":[1,0,1087,2],
+"classTCOrbitTask.html#af5b8d1edeafe3bd971a4eb83cf24693f":[1,0,1087,4],
+"classTCOrbitTask.html#af882c4b90fa624857157a01978aec95e":[1,0,1087,0],
+"classTCOrbitThing.html":[1,0,1088],
+"classTCOrbitThing.html#a09db9c82143f25ef187c895ccb9a8960":[1,0,1088,1],
+"classTCOrbitThing.html#a5d61c722ab1b325edd0d007828d27d2b":[1,0,1088,6],
+"classTCOrbitThing.html#adc68b64606eb981121519c07e5ed23be":[1,0,1088,4],
+"classTCOrbitThing.html#adf9f4b4cdf20808d42859cdc672d1a8f":[1,0,1088,0],
+"classTCOrbitThing.html#ae1081e609598c1bbe87d71d1b1e0f7bf":[1,0,1088,3],
+"classTCOrbitThing.html#aed99d41db31fbe3ecc41f4e57d782f46":[1,0,1088,5],
 "classTCOrbitThing.html#af21764617c08f1c4aaf33024e64fd414":[1,0,1088,2],
 "classTCSimpleText.html":[1,0,1089],
 "classTCSimpleText.html#a83fd66b466603b36be1e1a899fb2115e":[1,0,1089,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX86 =
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a99b4c3afc6aaa3ab4de17c90455a55eb":[1,0,1067,0,1],
 "classTaskDig.html#ab932e4175ec1ceefcd63e5d67b756eb1":[1,0,1067,2],
 "classTaskDig.html#abffd8fc5396ed9fa14971cd6093cd372":[1,0,1067,6],
-"classTaskDig.html#ac8628e934cfd5e03160bfa4bb687f8f1":[1,0,1067,8],
-"classTaskDig.html#acf636a8164dbb1ae3d08d0eb1c98d6b6":[1,0,1067,12],
-"classTaskDig.html#ad61bd828e515300f02d9ebad31bcc001":[1,0,1067,9],
-"classTaskDig.html#ad9a8bca5f8ab351547c2735f3b0befa5":[1,0,1067,1],
-"classTaskDig.html#ae26a0ec2878e9c350be68702521830b7":[1,0,1067,14],
-"classTaskDrawWater.html":[1,0,1068],
-"classTaskDrawWater.html#a0dd8cdca0caae2bb8f96537c6e1e97ce":[1,0,1068,6],
-"classTaskDrawWater.html#a1d162415f1fb9685f02bcaccd3419def":[1,0,1068,0],
-"classTaskDrawWater.html#a24f1af0c21eb5bd771fea651a1659b2b":[1,0,1068,5],
-"classTaskDrawWater.html#a302d8c4163106040af0c580ec342e79d":[1,0,1068,8],
-"classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f":[1,0,1068,3],
-"classTaskDrawWater.html#a797788de93c5cbeabf1db1b365a3f442":[1,0,1068,4]
+"classTaskDig.html#ac8628e934cfd5e03160bfa4bb687f8f1":[1,0,1067,8]
 };

@@ -1,5 +1,15 @@
 var NAVTREEINDEX52 =
 {
+"classGameSetting_1_1RenderSetting.html#a3ac111a8067a63e300d15732a4efd145":[1,0,441,6,17],
+"classGameSetting_1_1RenderSetting.html#a3bebce8fd64a95c0096bd4ed9c59c489":[1,0,441,6,24],
+"classGameSetting_1_1RenderSetting.html#a3c01deda3421eadbc1fcbdf15a275a71":[1,0,441,6,39],
+"classGameSetting_1_1RenderSetting.html#a42f89db4180b00cb7f16d8741d30817e":[1,0,441,6,9],
+"classGameSetting_1_1RenderSetting.html#a45f6ebe317f503a9ab368010437c40f9":[1,0,441,6,18],
+"classGameSetting_1_1RenderSetting.html#a4bdbfd4571370bd8257f59dfe690d34c":[1,0,441,6,46],
+"classGameSetting_1_1RenderSetting.html#a524bde3cb08aa82353fd54f6e5a46d80":[1,0,441,6,27],
+"classGameSetting_1_1RenderSetting.html#a55ed4bdaa4f5ca30325278ff17e28bae":[1,0,441,6,35],
+"classGameSetting_1_1RenderSetting.html#a59a993c39fa2211745cabc04ace204a1":[1,0,441,6,12],
+"classGameSetting_1_1RenderSetting.html#a67a662d7364f6d980c1922f231ae81e6":[1,0,441,6,43],
 "classGameSetting_1_1RenderSetting.html#a79975fcfd56af7a47cdbee9909b2467a":[1,0,441,6,41],
 "classGameSetting_1_1RenderSetting.html#a82f492719e4f108dc60a71c6f3c0420c":[1,0,441,6,22],
 "classGameSetting_1_1RenderSetting.html#a8ac8de9786944f77a3994abfb79a26a5":[1,0,441,6,29],
@@ -239,15 +249,5 @@ var NAVTREEINDEX52 =
 "classGlobalGoalVisitAndStay.html#a44cc6c81e0ef2b7d462699431cf29784":[1,0,452,1],
 "classGlobalGoalVisitAndStay.html#a6d4e93730627b7612f5788395ca23f10":[1,0,452,5],
 "classGlobalGoalVisitAndStay.html#a94a7140860225158c37d3677bc064115":[1,0,452,0],
-"classGlobalGoalVisitTown.html":[1,0,453],
-"classGlobalGoalVisitTown.html#aae4b5493cc8fb73c6767d901b6ae916b":[1,0,453,0],
-"classGoal.html":[1,0,454],
-"classGoal.html#ac9b79ca4cf9a4be75f310c0b1aca7ac1":[1,0,454,0],
-"classGoal.html#af817e3d757898d516364f0181a8a5c12":[1,0,454,1],
-"classGoalAutoCombat.html":[1,0,455],
-"classGoalAutoCombat.html#a2711a8eb65331426c2b440ffc36e510c":[1,0,455,7],
-"classGoalAutoCombat.html#a2b9a4b73aed255f1da723ee8d2bc0e80":[1,0,455,9],
-"classGoalAutoCombat.html#a4744261694a4441c7cac1daa825cc542":[1,0,455,8],
-"classGoalAutoCombat.html#a6fe0b7188e63d419d31e6ddae9a5c43c":[1,0,455,4],
-"classGoalAutoCombat.html#a842047c2fad0cba1aa676b031589b041":[1,0,455,0]
+"classGlobalGoalVisitTown.html":[1,0,453]
 };

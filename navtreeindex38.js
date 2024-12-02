@@ -1,5 +1,9 @@
 var NAVTREEINDEX38 =
 {
+"classColorProfile_1_1TextColors.html#ac2752ca3670d4965f01c6ceac9993931":[1,0,240,3,3],
+"classConAnorexia.html":[1,0,241],
+"classConAnorexia.html#a12086e080cb18bfd2607ae154903652a":[1,0,241,1],
+"classConAnorexia.html#ab9271a5136648739d53ae89baa3946e8":[1,0,241,0],
 "classConBandage.html":[1,0,242],
 "classConBandage.html#a2976f295ec4b3f15fb08516cf0592396":[1,0,242,0],
 "classConBane.html":[1,0,243],
@@ -245,9 +249,5 @@ var NAVTREEINDEX38 =
 "classCondition.html#ac050c6fff565bb312f93c00371a35e83":[1,0,254,9],
 "classCondition.html#acaa28c249dc7b57e86d513355393e85f":[1,0,254,7],
 "classCondition.html#ad2294357df750e67e4ce565c22f4196d":[1,0,254,12],
-"classCondition.html#ae7c191812d0bdea935181dfe736e6db1":[1,0,254,0],
-"classCondition.html#af8cb90dd6a953a82fe961d90ac7dfc7d":[1,0,254,10],
-"classCondition.html#afe55eb394db259338efdc42a087a6c46":[1,0,254,1],
-"classConfigAutoCombat.html":[1,0,265],
-"classConfigAutoCombat.html#a0b585c4634754920407b6b3be5721d4d":[1,0,265,9]
+"classCondition.html#ae7c191812d0bdea935181dfe736e6db1":[1,0,254,0]
 };

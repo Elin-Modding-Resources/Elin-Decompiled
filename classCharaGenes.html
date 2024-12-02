@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.45</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.46 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd505cb716977051543d01f62bbaad9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab713318600866c3c801445026737d288"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharaGenes.html#ab713318600866c3c801445026737d288">GetTotalCost</a> ()</td></tr>
 <tr class="separator:ab713318600866c3c801445026737d288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6ad597e760c3c364503cf67a135675"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharaGenes.html#a6f6ad597e760c3c364503cf67a135675">GetGeneSlot</a> ()</td></tr>
+<tr class="separator:a6f6ad597e760c3c364503cf67a135675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -192,6 +194,46 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="CharaGenes_8cs_source.html#l00004">4</a> of file <a class="el" href="CharaGenes_8cs_source.html">CharaGenes.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6f6ad597e760c3c364503cf67a135675" name="a6f6ad597e760c3c364503cf67a135675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6ad597e760c3c364503cf67a135675">&#9670;&#160;</a></span>GetGeneSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CharaGenes.GetGeneSlot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CharaGenes_8cs_source.html#l00030">30</a> of file <a class="el" href="CharaGenes_8cs_source.html">CharaGenes.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classDNA.html">DNA</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classCharaGenes.html#af445bcca2559e486add700acd4645353">items</a>)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            num += item.<a class="code hl_property" href="classDNA.html#a8181373a1c6fa69902c2a9da918029cc">slot</a>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassCharaGenes_html_af445bcca2559e486add700acd4645353"><div class="ttname"><a href="classCharaGenes.html#af445bcca2559e486add700acd4645353">CharaGenes.items</a></div><div class="ttdeci">List&lt; DNA &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00007">CharaGenes.cs:7</a></div></div>
+<div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00007">DNA.cs:8</a></div></div>
+<div class="ttc" id="aclassDNA_html_a8181373a1c6fa69902c2a9da918029cc"><div class="ttname"><a href="classDNA.html#a8181373a1c6fa69902c2a9da918029cc">DNA.slot</a></div><div class="ttdeci">int slot</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00076">DNA.cs:77</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="CharaGenes_8cs_source.html#l00007">items</a>, and <a class="el" href="DNA_8cs_source.html#l00077">DNA.slot</a>.</p>
+
+</div>
+</div>
 <a id="ab713318600866c3c801445026737d288" name="ab713318600866c3c801445026737d288"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab713318600866c3c801445026737d288">&#9670;&#160;</a></span>GetTotalCost()</h2>
 
@@ -224,11 +266,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   26</span>        }</div>
 <div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> num;</div>
 <div class="line"><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aclassCharaGenes_html_af445bcca2559e486add700acd4645353"><div class="ttname"><a href="classCharaGenes.html#af445bcca2559e486add700acd4645353">CharaGenes.items</a></div><div class="ttdeci">List&lt; DNA &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00007">CharaGenes.cs:7</a></div></div>
-<div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00006">DNA.cs:7</a></div></div>
-<div class="ttc" id="aclassDNA_html_a283f5abff7ec3fcf6d7494dc8c954e4d"><div class="ttname"><a href="classDNA.html#a283f5abff7ec3fcf6d7494dc8c954e4d">DNA.cost</a></div><div class="ttdeci">int cost</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00037">DNA.cs:38</a></div></div>
+<div class="ttc" id="aclassDNA_html_a283f5abff7ec3fcf6d7494dc8c954e4d"><div class="ttname"><a href="classDNA.html#a283f5abff7ec3fcf6d7494dc8c954e4d">DNA.cost</a></div><div class="ttdeci">int cost</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00040">DNA.cs:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00038">DNA.cost</a>, and <a class="el" href="CharaGenes_8cs_source.html#l00007">items</a>.</p>
+<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00041">DNA.cost</a>, and <a class="el" href="CharaGenes_8cs_source.html#l00007">items</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>.</p>
 
@@ -275,10 +315,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>        item.<a class="code hl_function" href="classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9">Apply</a>(c, reverse: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   17</span>        c.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01462">Chara.cs:1462</a></div></div>
-<div class="ttc" id="aclassDNA_html_ac8a91e1cbe7832dfde77744c4a73b8c9"><div class="ttname"><a href="classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9">DNA.Apply</a></div><div class="ttdeci">void Apply(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00099">DNA.cs:99</a></div></div>
+<div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01470">Chara.cs:1470</a></div></div>
+<div class="ttc" id="aclassDNA_html_ac8a91e1cbe7832dfde77744c4a73b8c9"><div class="ttname"><a href="classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9">DNA.Apply</a></div><div class="ttdeci">void Apply(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00130">DNA.cs:130</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00099">DNA.Apply()</a>, <a class="el" href="DNA_8cs_source.html#l00038">DNA.cost</a>, <a class="el" href="CharaGenes_8cs_source.html#l00007">items</a>, and <a class="el" href="Chara_8cs_source.html#l01462">Chara.Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00130">DNA.Apply()</a>, <a class="el" href="DNA_8cs_source.html#l00041">DNA.cost</a>, <a class="el" href="CharaGenes_8cs_source.html#l00007">items</a>, and <a class="el" href="Chara_8cs_source.html#l01470">Chara.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaGenes_8cs_source.html#l00010">10</a> of file <a class="el" href="CharaGenes_8cs_source.html">CharaGenes.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00099">DNA.Apply()</a>, and <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00130">DNA.Apply()</a>, and <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -315,7 +355,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CharaGenes_8cs_source.html#l00007">7</a> of file <a class="el" href="CharaGenes_8cs_source.html">CharaGenes.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="DNA_8cs_source.html#l00099">DNA.Apply()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00020">GetTotalCost()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00076">InvOwnerGene.OnWriteNote()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00012">Remove()</a>, and <a class="el" href="Tactics_8cs_source.html#l00161">Tactics.Tactics()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="DNA_8cs_source.html#l00130">DNA.Apply()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00030">GetGeneSlot()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00020">GetTotalCost()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00012">Remove()</a>, and <a class="el" href="Tactics_8cs_source.html#l00161">Tactics.Tactics()</a>.</p>
 
 </div>
 </div>

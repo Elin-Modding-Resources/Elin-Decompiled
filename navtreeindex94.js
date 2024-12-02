@@ -1,5 +1,16 @@
 var NAVTREEINDEX94 =
 {
+"classTraitElevator.html#a76be5d65a652a723cf990124e375fc5f":[1,0,1303,4],
+"classTraitElevator.html#a92dcd328d5551465272aa7f1fd2cd9f2":[1,0,1303,1],
+"classTraitElevator.html#aaa9bf5d3d883dc9187e983e59cd0e571":[1,0,1303,5],
+"classTraitElevator.html#ab0e9634ffd686f0bf9662bfb18f567f2":[1,0,1303,2],
+"classTraitElevator.html#ae1be1942dfb0d2d5db1c4b96b9740488":[1,0,1303,3],
+"classTraitElevator.html#af62894b698bcc696ce498a4885eaa974":[1,0,1303,0],
+"classTraitEquipItem.html":[1,0,1304],
+"classTraitEquipItem.html#a82397e9b89cff4b7ac2072d96e473a1c":[1,0,1304,1],
+"classTraitEquipItem.html#af53edaf7b40c1ca5c97d977de8e475e6":[1,0,1304,2],
+"classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1304,0],
+"classTraitErohon.html":[1,0,1305],
 "classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1305,0],
 "classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1305,2],
 "classTraitErohon.html#a6c1465509a734979f77294dc47c71369":[1,0,1305,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX94 =
 "classTraitHoard.html#a44fcda1ec7d9502d611ef87112a7211d":[1,0,1369,1],
 "classTraitHoard.html#aba78e96b3f7fc52240d81450b2341f93":[1,0,1369,0],
 "classTraitHomeBoard.html":[1,0,1370],
-"classTraitHomeBoard.html#a93cb4036720951d950a46899f4bccfc5":[1,0,1370,1],
-"classTraitHomeBoard.html#af351723487e9b9d3bc546ace643e45f0":[1,0,1370,0],
-"classTraitHouseBoard.html":[1,0,1371],
-"classTraitHouseBoard.html#a34e85147354c0d16b776df906b0cd689":[1,0,1371,2],
-"classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada":[1,0,1371,1],
-"classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64":[1,0,1371,7],
-"classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945":[1,0,1371,9],
-"classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1371,3],
-"classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1371,6],
-"classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1371,4],
-"classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd":[1,0,1371,5],
-"classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931":[1,0,1371,8]
+"classTraitHomeBoard.html#a93cb4036720951d950a46899f4bccfc5":[1,0,1370,1]
 };

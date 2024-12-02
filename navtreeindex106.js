@@ -1,5 +1,16 @@
 var NAVTREEINDEX106 =
 {
+"classWidgetStatsBar.html#a73a63c66ff93a90b43354a3007a43678":[1,0,1708,23],
+"classWidgetStatsBar.html#a7664475857e378f71e834c9353e85e44":[1,0,1708,7],
+"classWidgetStatsBar.html#a92ba4311a465c33b2c51ba25810bc9fb":[1,0,1708,9],
+"classWidgetStatsBar.html#aa35c999bf727a9dd482ac9938fea0945":[1,0,1708,20],
+"classWidgetStatsBar.html#ab0779fd2ffd82c82d70a83fdd57e92b5":[1,0,1708,22],
+"classWidgetStatsBar.html#abdec7e21f71943280cdb9523f2052e73":[1,0,1708,5],
+"classWidgetStatsBar.html#ad7e10d98abf27cf55839a2663d2861cd":[1,0,1708,27],
+"classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400":[1,0,1708,2],
+"classWidgetStatsBar.html#ae30da4f3d3202403b3c0fed9a93ac8ae":[1,0,1708,4],
+"classWidgetStatsBar.html#af1c6b9caffd73dd19ad271a9152c48d3":[1,0,1708,19],
+"classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e":[1,0,1708,24],
 "classWidgetStatsBar_1_1Extra.html":[1,0,1708,0],
 "classWidgetStatsBar_1_1Extra.html#a048ff6dee7d746c4a458f9eab983a8ba":[1,0,1708,0,12],
 "classWidgetStatsBar_1_1Extra.html#a193d3ee286418fa8b23fee0a9bc6758c":[1,0,1708,0,6],
@@ -238,16 +249,5 @@ var NAVTREEINDEX106 =
 "classWindowCharaMini.html#a894c16f9ea4b1bb3bc00aadfeda4a5cc":[1,0,1716,5],
 "classWindowCharaMini.html#a9dccccb2b5084d4fa0564669d06702c2":[1,0,1716,11],
 "classWindowCharaMini.html#ab14f6bd3ae834413d4a1ccbaf280b9d4":[1,0,1716,10],
-"classWindowCharaMini.html#ac119c1bfdefd253f6679269e469e2bd9":[1,0,1716,3],
-"classWindowCharaMini.html#afe61f266c61e9d661b7c9723a841128d":[1,0,1716,1],
-"classWordSearch.html":[1,0,1717],
-"classWordSearch.html#a0c4492b4a6f670615ec9a07674ea9cd0":[1,0,1717,2],
-"classWordSearch.html#a255e761059b207939d9a4d4f4917d5d2":[1,0,1717,0],
-"classWordSearch.html#a615018e073556f650a731e6625cd86c0":[1,0,1717,1],
-"classWordSearchRecipe.html":[1,0,1718],
-"classWorkOutcome.html":[1,0,1719],
-"classWorkSession.html":[1,0,1720],
-"classWorkSession.html#a0abca05b4cb2eaacc8382ad3af7c3121":[1,0,1720,1],
-"classWorkSession.html#a173f8837c3d5f426371ae521a8ad51ba":[1,0,1720,6],
-"classWorkSession.html#a33862c51feb7df7792976fef4a08c836":[1,0,1720,3]
+"classWindowCharaMini.html#ac119c1bfdefd253f6679269e469e2bd9":[1,0,1716,3]
 };

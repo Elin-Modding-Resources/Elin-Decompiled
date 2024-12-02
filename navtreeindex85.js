@@ -1,5 +1,16 @@
 var NAVTREEINDEX85 =
 {
+"classSpriteBasedLaser.html#a3c56bad363db327232bf2f58fcc0f81f":[1,0,1027,14],
+"classSpriteBasedLaser.html#a3d39daca9e998038a45f766d5f84a913":[1,0,1027,38],
+"classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f":[1,0,1027,32],
+"classSpriteBasedLaser.html#a41998771267522776d775b91175c1c31":[1,0,1027,42],
+"classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89":[1,0,1027,1],
+"classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68":[1,0,1027,18],
+"classSpriteBasedLaser.html#a5b85fef07896acf69e515d5a239468e1":[1,0,1027,2],
+"classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21":[1,0,1027,19],
+"classSpriteBasedLaser.html#a6042da6b2c3b551b66772cb2f35ea694":[1,0,1027,3],
+"classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4":[1,0,1027,5],
+"classSpriteBasedLaser.html#a69f269a912df6db2460c9cc87494be43":[1,0,1027,7],
 "classSpriteBasedLaser.html#a6cf9a67d0ac2857eaa2a27c8823d77a4":[1,0,1027,9],
 "classSpriteBasedLaser.html#a6d5e638fd31f33e192e1431fc3a58cb0":[1,0,1027,8],
 "classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7":[1,0,1027,41],
@@ -238,16 +249,5 @@ var NAVTREEINDEX85 =
 "classTCOrbitChara.html#ada37c4ed77cb850ac2235b10e83101cf":[1,0,1086,8],
 "classTCOrbitTask.html":[1,0,1087],
 "classTCOrbitTask.html#a18d4b927fa246e20c01900f95add6ced":[1,0,1087,3],
-"classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1087,1],
-"classTCOrbitTask.html#acad24d37c6aa8e407a69477b3be57cc2":[1,0,1087,5],
-"classTCOrbitTask.html#af3fd86e7fd1c7ce663b350e9763f0178":[1,0,1087,2],
-"classTCOrbitTask.html#af5b8d1edeafe3bd971a4eb83cf24693f":[1,0,1087,4],
-"classTCOrbitTask.html#af882c4b90fa624857157a01978aec95e":[1,0,1087,0],
-"classTCOrbitThing.html":[1,0,1088],
-"classTCOrbitThing.html#a09db9c82143f25ef187c895ccb9a8960":[1,0,1088,1],
-"classTCOrbitThing.html#a5d61c722ab1b325edd0d007828d27d2b":[1,0,1088,6],
-"classTCOrbitThing.html#adc68b64606eb981121519c07e5ed23be":[1,0,1088,4],
-"classTCOrbitThing.html#adf9f4b4cdf20808d42859cdc672d1a8f":[1,0,1088,0],
-"classTCOrbitThing.html#ae1081e609598c1bbe87d71d1b1e0f7bf":[1,0,1088,3],
-"classTCOrbitThing.html#aed99d41db31fbe3ecc41f4e57d782f46":[1,0,1088,5]
+"classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1087,1]
 };

@@ -6,9 +6,12 @@ var classDNA =
       [ "Superior", "classDNA.html#a6c24861a5030f44db8c5093699cbbf35a64dbb87794fbe7f587582b27d08ace2b", null ],
       [ "Brain", "classDNA.html#a6c24861a5030f44db8c5093699cbbf35a71bb21a64807546d7f3107b32dc49afc", null ]
     ] ],
+    [ "_OnDeserialized", "classDNA.html#a4c57eed1f5cbabb168cd58003ea4d2c3", null ],
+    [ "_OnSerializing", "classDNA.html#a6b460b5a4ecde57106b2c83ed2772237", null ],
     [ "Apply", "classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9", null ],
     [ "Apply", "classDNA.html#a017472f07058971c6275c5baa69d839c", null ],
     [ "CalcCost", "classDNA.html#ad8f8df21f5bb4bba184433d24cc60ae7", null ],
+    [ "CalcSlot", "classDNA.html#ab7fae840137a248774d4da8a3d4f9b0f", null ],
     [ "CanRemove", "classDNA.html#adf064516ae661e2fe0a29467457ffce8", null ],
     [ "Generate", "classDNA.html#ac4ccc343e3934157071be3433a7fe135", null ],
     [ "GenerateGene", "classDNA.html#a62c5c4f4026e3b6526e957366668bc18", null ],
@@ -22,11 +25,13 @@ var classDNA =
     [ "GetText", "classDNA.html#ae29fc11fc9ad9d17f219bae082d6f00b", null ],
     [ "GetType", "classDNA.html#a8971b32e6116f452319e919f954154b4", null ],
     [ "WriteNote", "classDNA.html#af0736d0fab53a7f55a3ea84a8f17ef5a", null ],
+    [ "bits", "classDNA.html#a9ddd01e83b7ca731a900ba3300a706be", null ],
     [ "id", "classDNA.html#a0806a6e1c4622f8db7dfcffeac0dfe87", null ],
     [ "ints", "classDNA.html#a8e2aa2e76b7a1c49808f1181677ce4b5", null ],
     [ "vals", "classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20", null ],
     [ "cost", "classDNA.html#a283f5abff7ec3fcf6d7494dc8c954e4d", null ],
     [ "lv", "classDNA.html#adfb34f03aed4136bc55310323f67d792", null ],
     [ "seed", "classDNA.html#a5a70a19a5e267f56c03141173cfa0213", null ],
+    [ "slot", "classDNA.html#a8181373a1c6fa69902c2a9da918029cc", null ],
     [ "type", "classDNA.html#a1a70e7426ec87aeadc9dcb344aef99be", null ]
 ];

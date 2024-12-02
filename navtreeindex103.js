@@ -1,5 +1,16 @@
 var NAVTREEINDEX103 =
 {
+"classWidget.html#a66a8ea5a5a73fc0f61dc526b9b4dc46a":[1,0,1675,3],
+"classWidget.html#a66a8ea5a5a73fc0f61dc526b9b4dc46aa4b63196c71466597f97938c5732192e7":[1,0,1675,3,1],
+"classWidget.html#a66a8ea5a5a73fc0f61dc526b9b4dc46aa7a1920d61156abc05a60135aefe8bc67":[1,0,1675,3,0],
+"classWidget.html#a68ce9e662d9247f18353bf38f9a47aa0":[1,0,1675,4],
+"classWidget.html#a6cc36f1dcf9b6b370884ca1ae864cdfd":[1,0,1675,11],
+"classWidget.html#a6f9bd9c1778330918d9ca31abda28283":[1,0,1675,49],
+"classWidget.html#a72c6965e3a1f89b635ccd1c2a0d6e9d3":[1,0,1675,58],
+"classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32":[1,0,1675,53],
+"classWidget.html#a779dce634f408c6ab3777d39fb2f7723":[1,0,1675,48],
+"classWidget.html#a7b718091e56a015556f0a3acdf02ad50":[1,0,1675,62],
+"classWidget.html#a82d181e100a013722ca36a1765865a6f":[1,0,1675,38],
 "classWidget.html#a859d878bb55cdd39be31201621502f27":[1,0,1675,32],
 "classWidget.html#a90866936639903f9162c758626b1e9fe":[1,0,1675,43],
 "classWidget.html#a91f2490f483c6d1d492380af8825023b":[1,0,1675,57],
@@ -238,16 +249,5 @@ var NAVTREEINDEX103 =
 "classWidgetFeed_1_1Extra.html":[1,0,1686,0],
 "classWidgetFeed_1_1Extra.html#a2bd171cc977caa9ce3fed3e4c2d6f0c2":[1,0,1686,0,1],
 "classWidgetFeed_1_1Extra.html#a3572aa8c8001554665f294c0a3c10e5c":[1,0,1686,0,0],
-"classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0":[1,0,1686,0,2],
-"classWidgetHP.html":[1,0,1688],
-"classWidgetHP.html#a0d6a950b3b067f704e2a6a24c4721282":[1,0,1688,7],
-"classWidgetHP.html#a17324a910b3b301b844c0233958aa786":[1,0,1688,3],
-"classWidgetHP.html#a2323d61988355e7289a5ec5e2e93989e":[1,0,1688,14],
-"classWidgetHP.html#a3c99befe7c62ea5abb13ec09e1134def":[1,0,1688,1],
-"classWidgetHP.html#a4f5a01b86b19e19568be232c14dfd92e":[1,0,1688,2],
-"classWidgetHP.html#a4ff19afe824626abd55108e455f6eb8a":[1,0,1688,9],
-"classWidgetHP.html#a90e087f254faac1de6ed6fc48a9cc04f":[1,0,1688,12],
-"classWidgetHP.html#a9a1c9a403784ec3a6ef4d94adf413e0e":[1,0,1688,8],
-"classWidgetHP.html#ab7693ebef61558ef34b763c4c5c6f10c":[1,0,1688,4],
-"classWidgetHP.html#abf0169aea1aae108452d5fdc5bace8e1":[1,0,1688,5]
+"classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0":[1,0,1686,0,2]
 };

@@ -1,5 +1,16 @@
 var NAVTREEINDEX105 =
 {
+"classWidgetMinimap.html#a32c1156023ddfa6b3f5e38674a211e20":[1,0,1695,15],
+"classWidgetMinimap.html#a399ee0e19efba8c1deb83d70d73ea6c5":[1,0,1695,2],
+"classWidgetMinimap.html#a435b5da87e5879540474be6224733722":[1,0,1695,24],
+"classWidgetMinimap.html#a470b1699b98451285ff7a0587822278a":[1,0,1695,8],
+"classWidgetMinimap.html#a48f8c5c8edd186a6168b565894996cb9":[1,0,1695,18],
+"classWidgetMinimap.html#a568bc844c87f082386fb43c279e296c3":[1,0,1695,11],
+"classWidgetMinimap.html#a5dd90d4a6d97a5eb588bdc4f3648a1fd":[1,0,1695,29],
+"classWidgetMinimap.html#a5f115b2a7fa6832c1e84348728b83713":[1,0,1695,20],
+"classWidgetMinimap.html#a68a6b03e7e50da8cae1bb5c89245f1d3":[1,0,1695,9],
+"classWidgetMinimap.html#a68fd5ffce4669e7900a204d584be94dd":[1,0,1695,19],
+"classWidgetMinimap.html#a6ded86000cc5a9188aa3f8075d47b43a":[1,0,1695,1],
 "classWidgetMinimap.html#a830205e65aa4c73dfecbf0ed1db52529":[1,0,1695,38],
 "classWidgetMinimap.html#a867bceff530bdb47b07e0d18e164519f":[1,0,1695,23],
 "classWidgetMinimap.html#a8d705f767f5bb769291f91004b1ebde8":[1,0,1695,35],
@@ -238,16 +249,5 @@ var NAVTREEINDEX105 =
 "classWidgetStatsBar.html#a647b502331d7104cb78fb1c02de49c8b":[1,0,1708,21],
 "classWidgetStatsBar.html#a655d6b34a3d6397f6e236a44f14961d3":[1,0,1708,10],
 "classWidgetStatsBar.html#a6755845b1df7178f32407224e01e6c09":[1,0,1708,26],
-"classWidgetStatsBar.html#a73401d84f1f401129ef349eead6de95f":[1,0,1708,28],
-"classWidgetStatsBar.html#a73a63c66ff93a90b43354a3007a43678":[1,0,1708,23],
-"classWidgetStatsBar.html#a7664475857e378f71e834c9353e85e44":[1,0,1708,7],
-"classWidgetStatsBar.html#a92ba4311a465c33b2c51ba25810bc9fb":[1,0,1708,9],
-"classWidgetStatsBar.html#aa35c999bf727a9dd482ac9938fea0945":[1,0,1708,20],
-"classWidgetStatsBar.html#ab0779fd2ffd82c82d70a83fdd57e92b5":[1,0,1708,22],
-"classWidgetStatsBar.html#abdec7e21f71943280cdb9523f2052e73":[1,0,1708,5],
-"classWidgetStatsBar.html#ad7e10d98abf27cf55839a2663d2861cd":[1,0,1708,27],
-"classWidgetStatsBar.html#ada0afcfbe36ab98d9140e80dc30ad400":[1,0,1708,2],
-"classWidgetStatsBar.html#ae30da4f3d3202403b3c0fed9a93ac8ae":[1,0,1708,4],
-"classWidgetStatsBar.html#af1c6b9caffd73dd19ad271a9152c48d3":[1,0,1708,19],
-"classWidgetStatsBar.html#af364830d98024f2330635032ba956e8e":[1,0,1708,24]
+"classWidgetStatsBar.html#a73401d84f1f401129ef349eead6de95f":[1,0,1708,28]
 };
