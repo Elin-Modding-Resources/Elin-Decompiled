@@ -16,6 +16,8 @@ var classUIMapPreview =
     [ "colorSky", "classUIMapPreview.html#a8f47ac324300ff1f1365b9a5831de53f", null ],
     [ "colorStairs", "classUIMapPreview.html#a7db78c2ad173dec3fe695e7e639bdd4a", null ],
     [ "colorSurround", "classUIMapPreview.html#a19f3813cf2df96ad10ef3ef85f7abfd6", null ],
+    [ "colorVoid", "classUIMapPreview.html#ae26fe0952d18b4ea580444b8018085e1", null ],
+    [ "colorVoidWorld", "classUIMapPreview.html#aa7c45dc0a534162b9c580c2dd209e92b", null ],
     [ "colorWater", "classUIMapPreview.html#ace81626dcc8fe2f23429a89975ddbb98", null ],
     [ "createNewMaterial", "classUIMapPreview.html#a7903a3352f55c812afa095c9eb6e8b57", null ],
     [ "filter", "classUIMapPreview.html#a1b4fb243f75eee19cfafe60bd0e5fcc2", null ],

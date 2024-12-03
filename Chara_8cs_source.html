@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.46 Hotfix 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.47 Nightly</span>
    </div>
   </td>
  </tr>
@@ -3401,7 +3401,7 @@ $(document).ready(function(){initNavTree('Chara_8cs_source.html',''); initResiza
 <div class="line"><a id="l03307" name="l03307"></a><span class="lineno"> 3307</span>                        AddCondition&lt;ConBlind&gt;(200);</div>
 <div class="line"><a id="l03308" name="l03308"></a><span class="lineno"> 3308</span>                    }</div>
 <div class="line"><a id="l03309" name="l03309"></a><span class="lineno"> 3309</span>                }</div>
-<div class="line"><a id="l03310" name="l03310"></a><span class="lineno"> 3310</span>                <span class="keywordflow">if</span> (turn % (2000 * (100 + Evalue(412) * 2) / (100 + Evalue(409) * 10)) == 0)</div>
+<div class="line"><a id="l03310" name="l03310"></a><span class="lineno"> 3310</span>                <span class="keywordflow">if</span> (turn % (2000 * (100 + Evalue(412) * 2) / Mathf.Max(100 + Evalue(409) * 10, 100)) == 0)</div>
 <div class="line"><a id="l03311" name="l03311"></a><span class="lineno"> 3311</span>                {</div>
 <div class="line"><a id="l03312" name="l03312"></a><span class="lineno"> 3312</span>                    ModCorruption(1);</div>
 <div class="line"><a id="l03313" name="l03313"></a><span class="lineno"> 3313</span>                }</div>

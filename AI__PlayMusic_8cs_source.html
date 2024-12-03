@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.46 Hotfix 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.47 Nightly</span>
    </div>
   </td>
  </tr>
@@ -599,11 +599,11 @@ $(document).ready(function(){initNavTree('AI__PlayMusic_8cs_source.html',''); in
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>        owner.Pick(thing);</div>
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>        <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;money&quot;</span> &amp;&amp; !owner.IsPCParty)</div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>        {</div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>() != owner)</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>() != owner &amp;&amp; !thing.<a class="code hl_variable" href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">isDestroyed</a>)</div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>            {</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>                thing.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>            }</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (owner.GetCurrency() &gt;= (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction &amp;&amp; owner.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default) ? 1 : 10))</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>            <span class="keywordflow">if</span> (owner.GetCurrency() &gt;= (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction &amp;&amp; owner.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default) ? 1 : 10))</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>            {</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>                owner.c_allowance += num;</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>                owner.ModCurrency(-num);</div>

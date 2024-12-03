@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.46 Hotfix 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.47 Nightly</span>
    </div>
   </td>
  </tr>
@@ -103,8 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab07d8cc51061c1b138ecea57c5bccfa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9a57eeb6c61a5377518973f0b06103c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__Adv_1_1PressedAction.html#ae9a57eeb6c61a5377518973f0b06103c">Init</a> (ButtonState _button=null)</td></tr>
 <tr class="separator:ae9a57eeb6c61a5377518973f0b06103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d2c95ff39102ecb0076a80e663329f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__Adv_1_1PressedAction.html#a0d2c95ff39102ecb0076a80e663329f0">SetAction</a> (Func&lt; bool &gt; _action=null, bool _canTurbo=true, bool _willEndTurn=true, bool _waitForTurn=true)</td></tr>
-<tr class="separator:a0d2c95ff39102ecb0076a80e663329f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343e6f92f37d9af3cc8fb70cb5d1f7ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__Adv_1_1PressedAction.html#a343e6f92f37d9af3cc8fb70cb5d1f7ea">SetAction</a> (Func&lt; bool &gt; _action=null, bool _canTurbo=true, bool _willEndTurn=true, bool _waitForTurn=true, bool _canRepeat=false)</td></tr>
+<tr class="separator:a343e6f92f37d9af3cc8fb70cb5d1f7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94eb61b2a6a9bea0d243597e313fddda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__Adv_1_1PressedAction.html#a94eb61b2a6a9bea0d243597e313fddda">SetPlan</a> (<a class="el" href="classActPlan.html">ActPlan</a> _plan)</td></tr>
 <tr class="separator:a94eb61b2a6a9bea0d243597e313fddda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1eebc79ad9a18a5501eaf7208ef4e2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__Adv_1_1PressedAction.html#ab1eebc79ad9a18a5501eaf7208ef4e2d">IsPressing</a> ()</td></tr>
@@ -272,8 +272,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0d2c95ff39102ecb0076a80e663329f0" name="a0d2c95ff39102ecb0076a80e663329f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d2c95ff39102ecb0076a80e663329f0">&#9670;&#160;</a></span>SetAction()</h2>
+<a id="a343e6f92f37d9af3cc8fb70cb5d1f7ea" name="a343e6f92f37d9af3cc8fb70cb5d1f7ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343e6f92f37d9af3cc8fb70cb5d1f7ea">&#9670;&#160;</a></span>SetAction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +303,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_waitForTurn</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>_waitForTurn</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_canRepeat</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -326,7 +332,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   60</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#afcb50c7f03684c74daacb51fb4106649">willEndTurn</a> = _willEndTurn;</div>
 <div class="line"><span class="lineno">   61</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#ac765ec022f002419a2763a1b8b547619">waitForTurn</a> = _waitForTurn;</div>
 <div class="line"><span class="lineno">   62</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#ade5d1d6f4c2b2c2012bd521f4949f36c">hideRightInfo</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#aa0c682269364d32bfc7f1fd7c5d416ea">repeat</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#aa0c682269364d32bfc7f1fd7c5d416ea">repeat</a> = _canRepeat;</div>
 <div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a7cf09740334b4c856e0435f4aaadef2d">ignoreCount</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="classAM__Adv_1_1PressedAction.html#a34832b43dbe3fa2590b06b07186bcba7">act</a> = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   66</span>        }</div>

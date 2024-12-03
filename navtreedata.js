@@ -163,16 +163,16 @@ var NAVTREEINDEX =
 "classTraitTrainingDummyArmor.html#a1943884ccec196581f39fd3f20f40134",
 "classUI.html#a53fa54b315eafbee9077a41a040be2d5",
 "classUIHomeInfo.html#a2c9b3bd5492e71e150a7dfc54d0d7d29",
-"classUIMapPreview.html#ae487a0c3735c4865b5d7ab60137cd88d",
-"classWidget.html#a66a8ea5a5a73fc0f61dc526b9b4dc46a",
-"classWidgetHP.html",
-"classWidgetMinimap.html#a32c1156023ddfa6b3f5e38674a211e20",
-"classWidgetStatsBar.html#a73a63c66ff93a90b43354a3007a43678",
-"classWindowCharaMini.html#afe61f266c61e9d661b7c9723a841128d",
-"classZone.html#aed8b8deb0094fd7609ff9a2e3e5d72dc",
-"classZoneProfile.html#a093d1f51df1d01ef4136944868af4404",
-"classZone__SnowGrave.html#a62473583ca3b3f9f5d7c9ab07d988c7a",
-"interfaceIMouseHint.html#a70ca89a963dacc7a327a3bc1768b2d5c"
+"classUIMapPreview.html#ace81626dcc8fe2f23429a89975ddbb98",
+"classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365",
+"classWidgetFeed_1_1Extra.html#a3572aa8c8001554665f294c0a3c10e5c",
+"classWidgetMinimap.html#a2c47333c252ba7c27fdc1a151fe88ce8",
+"classWidgetStatsBar.html#a6755845b1df7178f32407224e01e6c09",
+"classWindowCharaMini.html#ab14f6bd3ae834413d4a1ccbaf280b9d4",
+"classZone.html#aea5e9ee4a39d295c4b86be353ca64799",
+"classZoneProfile.html",
+"classZone__SnowGrave.html",
+"interfaceIMouseHint.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
