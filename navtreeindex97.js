@@ -1,5 +1,8 @@
 var NAVTREEINDEX97 =
 {
+"classTraitRationMaker.html":[1,0,1494],
+"classTraitRationMaker.html#a464ddd243e805657d694b5e9eb3bd5bc":[1,0,1494,2],
+"classTraitRationMaker.html#a4c37eee05c91debfcc5102d01ba508b4":[1,0,1494,1],
 "classTraitRationMaker.html#aa11c85fe97aeada68e8a3dbd78c97cfb":[1,0,1494,0],
 "classTraitRationMaker.html#ac7104cf3c4badb749bfd0bf84d17bb23":[1,0,1494,3],
 "classTraitRationMaker.html#ad6742930d82377b349b1d82f82215bb9":[1,0,1494,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX97 =
 "classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1536,0],
 "classTraitSpinner.html":[1,0,1537],
 "classTraitSpinner.html#a2e72f7c00867f08354f4eab5a4a25a69":[1,0,1537,1],
-"classTraitSpinner.html#a6fcfd08ab2adec32c51025c3cb0edd52":[1,0,1537,3],
-"classTraitSpinner.html#ac2c70fe7adf2c3a358e7384e118b443a":[1,0,1537,2],
-"classTraitSpinner.html#afbc1dc3e00cb953c3cb0995c48010c2d":[1,0,1537,0],
-"classTraitSpot.html":[1,0,1538]
+"classTraitSpinner.html#a6fcfd08ab2adec32c51025c3cb0edd52":[1,0,1537,3]
 };

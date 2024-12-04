@@ -1,5 +1,8 @@
 var NAVTREEINDEX111 =
 {
+"interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67":[1,0,554,0,0],
+"interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4aaef6ec2224f7ef3c74b4942b0e7f2969":[1,0,554,0,1],
+"interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4adeb10517653c255364175796ace3553f":[1,0,554,0,2],
 "interfaceIMouseHint.html":[1,0,555],
 "interfaceIMouseHint.html#a099e28bf822465cb8781af155f2c4853":[1,0,555,2],
 "interfaceIMouseHint.html#a70ca89a963dacc7a327a3bc1768b2d5c":[1,0,555,0],

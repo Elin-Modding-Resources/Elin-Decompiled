@@ -1,6 +1,6 @@
 var classLayerLoadGame =
 [
-    [ "Init", "classLayerLoadGame.html#ad5ab8768425660fcd380e17aa9bd3abb", null ],
+    [ "Init", "classLayerLoadGame.html#a675e4a96d86ee4a6c3681cc79742adb4", null ],
     [ "RefreshInfo", "classLayerLoadGame.html#a1a61b274ca682b0dbf1647500b9e7700", null ],
     [ "RefreshList", "classLayerLoadGame.html#ae00cf29155d76477888fc5ed79edb464", null ],
     [ "backup", "classLayerLoadGame.html#a11154e547372b6d1dfd259efa75e6e97", null ],
@@ -8,12 +8,14 @@ var classLayerLoadGame =
     [ "buttonDelete", "classLayerLoadGame.html#a89dfdbd63b01c00861afa4a121da768a", null ],
     [ "buttonListBackup", "classLayerLoadGame.html#a8d4c798c619b9af6c4760c2dcf63166c", null ],
     [ "buttonLoad", "classLayerLoadGame.html#a6209504d29ecf13031c4a2abe70de217", null ],
+    [ "buttonMove", "classLayerLoadGame.html#ae34c79d6297a270b5b33ae183f5bac99", null ],
     [ "buttonOpen", "classLayerLoadGame.html#a2b2d822fad64cbf38bc019d5493b39b9", null ],
     [ "goInfo", "classLayerLoadGame.html#abdbbf09273fdf172a836aeee6ab9e499", null ],
     [ "goNoInfo", "classLayerLoadGame.html#a05c729b92d38363eb8327cc93de318e8", null ],
     [ "idDest", "classLayerLoadGame.html#aa5bc8344034724a573d13533db429ba7", null ],
     [ "list", "classLayerLoadGame.html#a221fc68e319573ad9a468a5602f36fb0", null ],
     [ "note", "classLayerLoadGame.html#acba52206431ee3501e143ae529c3e6a9", null ],
+    [ "pathBackup", "classLayerLoadGame.html#a3ccfcc3a7c799b77bfdbe6885c2313a7", null ],
     [ "pathRoot", "classLayerLoadGame.html#a71a9bf8295b10187a6d2b9697131c43a", null ],
     [ "portrait", "classLayerLoadGame.html#abd6a7f03150aac13eb192475c6eee26f", null ],
     [ "textAka", "classLayerLoadGame.html#af5aaf9c13859bcb3c55007a1a9ac14ac", null ],
@@ -23,5 +25,6 @@ var classLayerLoadGame =
     [ "textJob", "classLayerLoadGame.html#a27da1222a70affb084da4225427b1630", null ],
     [ "textName", "classLayerLoadGame.html#a5d2342020030abc4349084760422976b", null ],
     [ "textRace", "classLayerLoadGame.html#a7b2565e95df00a3e3db1f6c792b61ec8", null ],
-    [ "worlds", "classLayerLoadGame.html#ad470e22c59c5a17fc25fbaea61ab7f19", null ]
+    [ "worlds", "classLayerLoadGame.html#ad470e22c59c5a17fc25fbaea61ab7f19", null ],
+    [ "cloud", "classLayerLoadGame.html#a4c92ce4b5736db70bb4757e5004d4771", null ]
 ];

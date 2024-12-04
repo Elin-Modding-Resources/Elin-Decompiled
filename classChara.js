@@ -143,7 +143,7 @@ var classChara =
     [ "IsNeutral", "classChara.html#afae9adbf64d60c7a4074da9153570971", null ],
     [ "IsNeutralOrAbove", "classChara.html#a5f837117662f26d03fe7ee097e5d7a58", null ],
     [ "IsValidGiftWeight", "classChara.html#a3f9eccce65b06ea9378391fbd0005469", null ],
-    [ "Kick", "classChara.html#a9f5a94efe71b673af32ae3e934e4d3b5", null ],
+    [ "Kick", "classChara.html#a4043c616351560ccf5912d9b2ff5112f", null ],
     [ "Kick", "classChara.html#a759bf0595497763d3bf733a977d22575", null ],
     [ "ListAvailabeFeats", "classChara.html#ae3c2d6156f19206da33cb23e60ab41df", null ],
     [ "ListHobbies", "classChara.html#a8eeb3d71a9ef2293dd43a8025082d29e", null ],

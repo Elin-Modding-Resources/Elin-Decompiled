@@ -1,5 +1,8 @@
 var NAVTREEINDEX92 =
 {
+"classTraitBoat.html":[1,0,1210],
+"classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1210,5],
+"classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1210,4],
 "classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb":[1,0,1210,0],
 "classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1210,2],
 "classTraitBoat.html#ac63976c5747b30504ceb563902e8f276":[1,0,1210,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitCrafter.html#a083bc856ce80c79e18c912e99d1a40ca":[1,0,1261,33],
 "classTraitCrafter.html#a0cfef072d447d5f9a07041212b9cc92b":[1,0,1261,23],
 "classTraitCrafter.html#a1a84b8dee033decea221e05d7cbc5d5c":[1,0,1261,19],
-"classTraitCrafter.html#a1dce63c1a7164229467ea19e49e69db6":[1,0,1261,27],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb":[1,0,1261,1],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67":[1,0,1261,1,1],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8":[1,0,1261,1,5]
+"classTraitCrafter.html#a1dce63c1a7164229467ea19e49e69db6":[1,0,1261,27]
 };

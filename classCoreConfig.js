@@ -94,6 +94,7 @@ var classCoreConfig =
     [ "_framerates", "classCoreConfig.html#aacfb79ec5c6e9fa278ec39e047ad79f2", null ],
     [ "backer", "classCoreConfig.html#ada7abae55ba7414707e3bdf40383a4f9", null ],
     [ "camera", "classCoreConfig.html#aa29be1b17ab71b16a4a8b5d143c3d8e0", null ],
+    [ "cloud", "classCoreConfig.html#a8861dc607410efe72d4ea301f2fea648", null ],
     [ "colors", "classCoreConfig.html#adcd7bdbdd1c671e22d221583dc2a2a7c", null ],
     [ "compressSave", "classCoreConfig.html#abfd9377bdb48a0b9a902df0e00b88cc9", null ],
     [ "customFonts", "classCoreConfig.html#a333c3df77c4fa7ff0ecfa7a35f4ba2fc", null ],

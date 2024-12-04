@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['h_0',['h',['../classEloMap.html#ad5d495ad943d57754dfcdadd1a11838a',1,'EloMap.h()'],['../classCoreConfig_1_1GraphicSetting.html#a82a66877e92d21c4782754f2b5c862dd',1,'CoreConfig.GraphicSetting.h()']]],
+  ['h_0',['h',['../classCoreConfig_1_1GraphicSetting.html#a82a66877e92d21c4782754f2b5c862dd',1,'CoreConfig::GraphicSetting']]],
   ['h_1',['H',['../classRenderRow.html#ad57ed01141ba99b76edb07d907510bc6',1,'RenderRow']]],
-  ['h_2',['h',['../classTextureReplace.html#a110dc31a64b2314a0f71361661721b73',1,'TextureReplace.h()'],['../classPartialMap.html#a794dadead7535bb0dedfa03076813a4a',1,'PartialMap.h()'],['../classRoofStyle.html#a8a1524b032348cfd781041c35207e394',1,'RoofStyle.h()']]],
+  ['h_2',['h',['../classTextureReplace.html#a110dc31a64b2314a0f71361661721b73',1,'TextureReplace.h()'],['../classRoofStyle.html#a8a1524b032348cfd781041c35207e394',1,'RoofStyle.h()'],['../classEloMap.html#ad5d495ad943d57754dfcdadd1a11838a',1,'EloMap.h()'],['../classPartialMap.html#a794dadead7535bb0dedfa03076813a4a',1,'PartialMap.h()']]],
   ['h1_3',['H1',['../classWidgetNotice.html#a405bee62b657824dc72f9059b58b89c4',1,'WidgetNotice']]],
   ['h2_4',['H2',['../classWidgetNotice.html#a53399e19770d36c6d5ee82d3abfc72a1',1,'WidgetNotice']]],
   ['h3_5',['H3',['../classWidgetNotice.html#ab257b524d07df6d931e6504d431ab8b0',1,'WidgetNotice']]],
@@ -145,8 +145,8 @@ var searchData=
   ['hobbies_142',['hobbies',['../classSourceElement.html#a3f6b76730df6ffd7a597b0e2183d9173',1,'SourceElement.hobbies()'],['../classSourceManager.html#a4d03dd51ea52717f38ec27f0b434336a',1,'SourceManager.hobbies()'],['../classWorkSummary.html#aff247e90fa2bcaa7b93158645b3e15c7',1,'WorkSummary.hobbies()'],['../classSourceChara_1_1Row.html#a5d001cb455b3f3cfde1d55491c5a7ba2',1,'SourceChara.Row.hobbies()']]],
   ['holdmiddlebuttontohold_143',['holdMiddleButtonToHold',['../classCoreConfig_1_1GameConfig.html#a6914e9a94b4eb54698dc270892048872',1,'CoreConfig::GameConfig']]],
   ['holywell_144',['holyWell',['../classPlayer.html#a7fbb0663c8d16f4e683ab28efb978ae0',1,'Player']]],
-  ['home_145',['Home',['../classFactionManager.html#a267ca3ea0700639617e62b901eb0ff11',1,'FactionManager']]],
-  ['home_146',['home',['../classCoreRef_1_1Icons.html#a311725d213bd13523c613c37fafc3da8',1,'CoreRef::Icons']]],
+  ['home_145',['home',['../classCoreRef_1_1Icons.html#a311725d213bd13523c613c37fafc3da8',1,'CoreRef::Icons']]],
+  ['home_146',['Home',['../classFactionManager.html#a267ca3ea0700639617e62b901eb0ff11',1,'FactionManager']]],
   ['home_5fdiscount_147',['home_discount',['../classPOLICY.html#a64a9ce8c23ac84b7fab11853870f4d9b',1,'POLICY']]],
   ['homeresource_148',['homeResource',['../classInvOwner.html#aedc756b1e0f5b92de40324dde90dc147',1,'InvOwner']]],
   ['homeresources_149',['homeResources',['../classSourceManager.html#a2a219abc46f1e6f4c9cf4e7824140419',1,'SourceManager']]],

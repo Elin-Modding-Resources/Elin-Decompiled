@@ -2,6 +2,7 @@ var classGameIndex =
 [
     [ "Create", "classGameIndex.html#a0a22e276afebd3a87b76d32e66e863d3", null ],
     [ "aka", "classGameIndex.html#a693b5fc7e7507113b325b3af06de6599", null ],
+    [ "cloud", "classGameIndex.html#a5d1bb752ea73b5c3fac8c584c654ef5b", null ],
     [ "color", "classGameIndex.html#a93d2c7ae84a06f54f78f0e37067446e9", null ],
     [ "date", "classGameIndex.html#aac40546c11d34e233b83d43ed6bc4b1c", null ],
     [ "days", "classGameIndex.html#a7982b108e2b18c67270d7f5d748b056f", null ],

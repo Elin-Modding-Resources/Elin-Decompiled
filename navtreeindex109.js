@@ -1,5 +1,8 @@
 var NAVTREEINDEX109 =
 {
+"classZonePreEnterOnCompleteQuestInstance.html#a3de4fd8131223ac8f6e3cabeb84d563f":[1,0,1818,2],
+"classZonePreEnterOnCompleteQuestInstance.html#ad23c26add2ece5303ade0767886f9696":[1,0,1818,0],
+"classZonePreEnterOnCompleteQuestInstance.html#af5b0d71add27ca920f45ca78ed92119a":[1,0,1818,3],
 "classZoneProfile.html":[1,0,1819],
 "classZoneProfile.html#a076f750e6d3e34d7b296349e440b8b40":[1,0,1819,29],
 "classZoneProfile.html#a093d1f51df1d01ef4136944868af4404":[1,0,1819,18],
@@ -246,8 +249,5 @@ var NAVTREEINDEX109 =
 "classZone__RandomDungeonFactory.html#a95c72c38ae14923abe1b88066452e7ae":[1,0,1767,1],
 "classZone__RandomDungeonFactory.html#aa88accff4d113803d3179e0e9d09b72b":[1,0,1767,0],
 "classZone__Seeker.html":[1,0,1768],
-"classZone__Shelter.html":[1,0,1769],
-"classZone__SisterHouse.html":[1,0,1770],
-"classZone__SisterHouse.html#a5d0fc5c3dd908253821f96d2c9244b43":[1,0,1770,1],
-"classZone__SisterHouse.html#af45daf26c459a9e7de55b1d301dfce4d":[1,0,1770,0]
+"classZone__Shelter.html":[1,0,1769]
 };

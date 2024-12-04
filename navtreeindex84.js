@@ -1,5 +1,8 @@
 var NAVTREEINDEX84 =
 {
+"classSourceThing_1_1Row.html#a7c0a1686923bf1f9fff6f5c808db3d30":[1,0,1012,0,28],
+"classSourceThing_1_1Row.html#a831cc142f7a4e71406b5b169fea1aab0":[1,0,1012,0,4],
+"classSourceThing_1_1Row.html#a860825f37b36e08524ad369177a0624f":[1,0,1012,0,29],
 "classSourceThing_1_1Row.html#a8a4bcd39324cab4155e205fec4f08eb3":[1,0,1012,0,33],
 "classSourceThing_1_1Row.html#a8f95c90698639f26a04f0f9ce76601e4":[1,0,1012,0,0],
 "classSourceThing_1_1Row.html#a90064271648e520d35ffca5bc4895d97":[1,0,1012,0,22],
@@ -246,8 +249,5 @@ var NAVTREEINDEX84 =
 "classSpriteBasedLaser.html#a164e0d5e9bc0ef440f42203630f2b6c1":[1,0,1027,36],
 "classSpriteBasedLaser.html#a196706a7977e5a71173315735bedc484":[1,0,1027,4],
 "classSpriteBasedLaser.html#a1aeb9e6a9f14c4b37fa67f37a8d9ba95":[1,0,1027,30],
-"classSpriteBasedLaser.html#a1fc8a2ca29bcf970e13fff305f2e9b19":[1,0,1027,28],
-"classSpriteBasedLaser.html#a244f0b99371725793882af28173902ab":[1,0,1027,27],
-"classSpriteBasedLaser.html#a24bcaaba5ab002c53aad1ef242e80cf2":[1,0,1027,20],
-"classSpriteBasedLaser.html#a319a5877aebbbfdaa902ef1ac5ae947c":[1,0,1027,25]
+"classSpriteBasedLaser.html#a1fc8a2ca29bcf970e13fff305f2e9b19":[1,0,1027,28]
 };

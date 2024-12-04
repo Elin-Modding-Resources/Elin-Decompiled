@@ -1,5 +1,8 @@
 var NAVTREEINDEX98 =
 {
+"classTraitSpinner.html#ac2c70fe7adf2c3a358e7384e118b443a":[1,0,1537,2],
+"classTraitSpinner.html#afbc1dc3e00cb953c3cb0995c48010c2d":[1,0,1537,0],
+"classTraitSpot.html":[1,0,1538],
 "classTraitSpot.html#a1990503145dd01cad1ca1e2d71656499":[1,0,1538,0],
 "classTraitSpot.html#a54744d73b57e0c1880e07fac54454e50":[1,0,1538,1],
 "classTraitSpotDining.html":[1,0,1539],
@@ -246,8 +249,5 @@ var NAVTREEINDEX98 =
 "classTraitTrainer.html#abc012cd71e222c14080302c8a60d1003":[1,0,1607,1],
 "classTraitTrainer.html#aec8937bf3f03094c513dce6760306126":[1,0,1607,2],
 "classTraitTrainingDummy.html":[1,0,1608],
-"classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,1608,0],
-"classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1608,1],
-"classTraitTrainingDummy.html#a6b66cf5d030f6577f9317b14db659234":[1,0,1608,2],
-"classTraitTrainingDummyArmor.html":[1,0,1609]
+"classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,1608,0]
 };

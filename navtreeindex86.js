@@ -1,5 +1,8 @@
 var NAVTREEINDEX86 =
 {
+"classTCOrbitTask.html":[1,0,1087],
+"classTCOrbitTask.html#a18d4b927fa246e20c01900f95add6ced":[1,0,1087,3],
+"classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1087,1],
 "classTCOrbitTask.html#acad24d37c6aa8e407a69477b3be57cc2":[1,0,1087,5],
 "classTCOrbitTask.html#af3fd86e7fd1c7ce663b350e9763f0178":[1,0,1087,2],
 "classTCOrbitTask.html#af5b8d1edeafe3bd971a4eb83cf24693f":[1,0,1087,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX86 =
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481":[1,0,1067,0],
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a66ac5f82f03ebad0bc7e60d47e6a7317":[1,0,1067,0,2],
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a7a1920d61156abc05a60135aefe8bc67":[1,0,1067,0,0],
-"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a99b4c3afc6aaa3ab4de17c90455a55eb":[1,0,1067,0,1],
-"classTaskDig.html#ab932e4175ec1ceefcd63e5d67b756eb1":[1,0,1067,2],
-"classTaskDig.html#abffd8fc5396ed9fa14971cd6093cd372":[1,0,1067,6],
-"classTaskDig.html#ac8628e934cfd5e03160bfa4bb687f8f1":[1,0,1067,8]
+"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a99b4c3afc6aaa3ab4de17c90455a55eb":[1,0,1067,0,1]
 };
