@@ -1,5 +1,10 @@
 var NAVTREEINDEX37 =
 {
+"classCharaActor.html":[1,0,222],
+"classCharaActor.html#a2fbd3db65a54845c18c7972be246ccb8":[1,0,222,3],
+"classCharaActor.html#ad09021b9b657eef4060dfb01f48e1236":[1,0,222,2],
+"classCharaActor.html#adc55d0c18ec8ff5e7d683270685f8deb":[1,0,222,4],
+"classCharaActor.html#ae4d4055956fadc01f2329b3f0df4782b":[1,0,222,0],
 "classCharaActor.html#af378bf2f1e2379fdfef374277db2ac52":[1,0,222,1],
 "classCharaActorPCC.html":[1,0,223],
 "classCharaActorPCC.html#a17064f6edf5aceddbd9a987880f8d250":[1,0,223,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX37 =
 "classColorProfile_1_1RarityColors.html#a4d5f11be82d0051ad40e8793eb9f5a0e":[1,0,240,2,4],
 "classColorProfile_1_1RarityColors.html#a5bd7eb53338b63dcee159a20a3d56479":[1,0,240,2,2],
 "classColorProfile_1_1RarityColors.html#afe6cb39b3473dd4325e2aa4aacdfdd29":[1,0,240,2,3],
-"classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,240,2,5],
-"classColorProfile_1_1TextColors.html":[1,0,240,3],
-"classColorProfile_1_1TextColors.html#a6c99dcd62a4673e64a14b2324a2e7337":[1,0,240,3,0],
-"classColorProfile_1_1TextColors.html#a7d0ef1dadafbcd19a9da15cbef54ff09":[1,0,240,3,4],
-"classColorProfile_1_1TextColors.html#a9ce7a72666a8eddfc927d30e89c6bc9c":[1,0,240,3,2],
-"classColorProfile_1_1TextColors.html#aa14831daa3137d4b7adda2546b979c2d":[1,0,240,3,1]
+"classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,240,2,5]
 };

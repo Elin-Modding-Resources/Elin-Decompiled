@@ -20,7 +20,7 @@ var classPoint =
     [ "FindThing< T >", "classPoint.html#a51f7d56ff10030b0f62710f63404f3d7", null ],
     [ "FirstVisibleChara", "classPoint.html#ab3352e823f52d359f5161149f332a60b", null ],
     [ "ForeachMultiSize", "classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894", null ],
-    [ "ForeachNearestPoint", "classPoint.html#af1e123049e710da81ecff364ec4b4ebf", null ],
+    [ "ForeachNearestPoint", "classPoint.html#ad5a7d7678d0810222c5fce03ec8a3e26", null ],
     [ "ForeachNeighbor", "classPoint.html#a560e61313723030ac4c0eb88e8a8c064", null ],
     [ "GetAngle", "classPoint.html#a2913df1aee1205dbc00de89d4fe149e5", null ],
     [ "GetAngle2", "classPoint.html#ae8e5aa2a9a75d32ffebb1d7ac0f85f76", null ],

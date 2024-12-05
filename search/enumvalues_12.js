@@ -73,8 +73,8 @@ var searchData=
   ['straw_70',['straw',['../Emo_8cs.html#a3a776133b1ce94bdc19666187232d047a1933600a817d0c85790f2f2427517ef1',1,'Emo.cs']]],
   ['strong_71',['Strong',['../Resist_8cs.html#a8387139be855f5585d9e1580321896e5ac43e0fd449c758dab8f891d8e19eb1a9',1,'Resist.cs']]],
   ['success_72',['Success',['../classAIAct.html#aae7586662bd9772ff368785a26ab260aa505a83f220c02df2f85c3810cd9ceb38',1,'AIAct.Success()'],['../classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63a505a83f220c02df2f85c3810cd9ceb38',1,'Card.Success()'],['../classZoneInstance.html#ab55119f115145b5956d23df71915df3ea505a83f220c02df2f85c3810cd9ceb38',1,'ZoneInstance.Success()'],['../LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85a505a83f220c02df2f85c3810cd9ceb38',1,'Success():&#160;LockOpenState.cs']]],
-  ['suicide_73',['Suicide',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa704d9c4ae610c2bb954eeadd66da3b1',1,'EffectId.cs']]],
-  ['suicide_74',['suicide',['../CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0',1,'CTAG.cs']]],
+  ['suicide_73',['suicide',['../CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0',1,'CTAG.cs']]],
+  ['suicide_74',['Suicide',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa704d9c4ae610c2bb954eeadd66da3b1',1,'EffectId.cs']]],
   ['summary_75',['Summary',['../classBaseTileSelector.html#a807af12c90fdeb0562286aa0ea9a4a2ba290612199861c31d1036b185b4e69b75',1,'BaseTileSelector']]],
   ['summon_76',['Summon',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aefde9837421a1454da9ca1d72146c552',1,'EffectId.cs']]],
   ['sunmap_77',['SunMap',['../classBaseTileMap.html#a4b1c8d463304dfb697156ac2bb9fe90bafa76671c6c54337e841a727976430fb7',1,'BaseTileMap']]],
@@ -82,6 +82,7 @@ var searchData=
   ['superioridentify_79',['SuperiorIdentify',['../IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88aa7bcfe161475420ff72ebd7cb10cd8951',1,'IDTSource.cs']]],
   ['supply_80',['Supply',['../classQuest.html#ae59aa23495624702ceda9305dd62f16fa4288e091a848e12c896ef09f489affec',1,'Quest']]],
   ['surface_81',['Surface',['../PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3aaa0d528ba11ea1485d466dfe1ea40819',1,'Surface():&#160;PrefFlag.cs'],['../classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689aaa0d528ba11ea1485d466dfe1ea40819',1,'Crawler.Surface()'],['../classCrawler.html#a1d70e0fe8698956c23946e01196254ceaaa0d528ba11ea1485d466dfe1ea40819',1,'Crawler.Surface()']]],
-  ['switchhotbar_82',['SwitchHotbar',['../classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaa2021db39e45652ac57f56a4a6c22e0c',1,'CoreConfig']]],
-  ['sys_83',['Sys',['../MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a40085574ffe68d3214bf81845239eefc',1,'MsgCat.cs']]]
+  ['sweet_82',['Sweet',['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0c13f53c2b84e2431bcd0194fc4a69f9',1,'ShopType.cs']]],
+  ['switchhotbar_83',['SwitchHotbar',['../classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaa2021db39e45652ac57f56a4a6c22e0c',1,'CoreConfig']]],
+  ['sys_84',['Sys',['../MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a40085574ffe68d3214bf81845239eefc',1,'MsgCat.cs']]]
 ];

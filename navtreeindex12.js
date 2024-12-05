@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"ThrowType_8cs_source.html":[2,0,0,1176],
 "TileMapElona_8cs.html":[2,0,0,1178],
 "TileMapElona_8cs_source.html":[2,0,0,1178],
 "TileMap_8cs.html":[2,0,0,1177],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "TraitCanvas_8cs_source.html":[2,0,0,1296],
 "TraitCard_8cs.html":[2,0,0,1297],
 "TraitCard_8cs_source.html":[2,0,0,1297],
-"TraitCasinoGuard_8cs.html":[2,0,0,1298],
-"TraitCasinoGuard_8cs_source.html":[2,0,0,1298]
+"TraitCasinoGuard_8cs.html":[2,0,0,1298]
 };

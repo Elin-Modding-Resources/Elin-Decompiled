@@ -1,5 +1,12 @@
 var NAVTREEINDEX86 =
 {
+"classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1086,4],
+"classTCOrbitChara.html#ab81202f1b685bc12aab5d3dac00ecac8":[1,0,1086,14],
+"classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1086,0],
+"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1086,6],
+"classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1086,5],
+"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1086,7],
+"classTCOrbitChara.html#ada37c4ed77cb850ac2235b10e83101cf":[1,0,1086,8],
 "classTCOrbitTask.html":[1,0,1087],
 "classTCOrbitTask.html#a18d4b927fa246e20c01900f95add6ced":[1,0,1087,3],
 "classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1087,1],
@@ -46,8 +53,8 @@ var NAVTREEINDEX86 =
 "classTCUI.html#abc435784d4228cacb3dc3d845163b8bf":[1,0,1092,3],
 "classTCUI.html#aca1713d175c6c391443c4de26926addb":[1,0,1092,0],
 "classTCUI.html#adb2903c8ee3d25995d64e98e9f5f6e3b":[1,0,1092,4],
-"classTHING.html":[1,0,1099],
-"classTHING.html#a7c48df2a3f2f19bab66d97a594d020fe":[1,0,1099,0],
+"classTHING.html":[1,0,1098],
+"classTHING.html#a7c48df2a3f2f19bab66d97a594d020fe":[1,0,1098,0],
 "classTactics.html":[1,0,1047],
 "classTactics.html#a069dc2818e00392d1b7515e3f3a5dd3b":[1,0,1047,8],
 "classTactics.html#a0cdc56dac52fbcabcc8678fffbd985cb":[1,0,1047,18],
@@ -242,12 +249,5 @@ var NAVTREEINDEX86 =
 "classTaskDig.html#a18907497fc4bab355ff36c49a5d0d9aa":[1,0,1067,4],
 "classTaskDig.html#a195ea88e793ebfddde56963bf6372731":[1,0,1067,5],
 "classTaskDig.html#a54f5549484a349fc55efc611f7f80a21":[1,0,1067,3],
-"classTaskDig.html#a713b3e0b4f64245fa0e5daa08a5f211a":[1,0,1067,10],
-"classTaskDig.html#a7acf519170e56785ba09315439658679":[1,0,1067,7],
-"classTaskDig.html#a89639e69790c0ffce1e14cb97641dd50":[1,0,1067,13],
-"classTaskDig.html#aa8a02ef3cd4a9cff71d4c1121fa89e79":[1,0,1067,11],
-"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481":[1,0,1067,0],
-"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a66ac5f82f03ebad0bc7e60d47e6a7317":[1,0,1067,0,2],
-"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a7a1920d61156abc05a60135aefe8bc67":[1,0,1067,0,0],
-"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a99b4c3afc6aaa3ab4de17c90455a55eb":[1,0,1067,0,1]
+"classTaskDig.html#a713b3e0b4f64245fa0e5daa08a5f211a":[1,0,1067,10]
 };

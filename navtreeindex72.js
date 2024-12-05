@@ -1,5 +1,11 @@
 var NAVTREEINDEX72 =
 {
+"classQuestCraft.html#aa435f3dff176d19d4d2450ab2592225b":[1,0,805,4],
+"classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408":[1,0,805,5],
+"classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021":[1,0,805,3],
+"classQuestCraft.html#ad07345ad6920b9ffa60372337f47c1a5":[1,0,805,15],
+"classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36":[1,0,805,10],
+"classQuestCraft.html#aed22b02c64a9fe3a818f51a7049e6ae5":[1,0,805,6],
 "classQuestCraft_1_1Req.html":[1,0,805,0],
 "classQuestCraft_1_1Req.html#a30f0b1eab88459120f5693dd1955bb19":[1,0,805,0,0],
 "classQuestCraft_1_1Req.html#a5f575d57e195558ec2e4928258c7ae22":[1,0,805,0,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX72 =
 "classQuestMeal__bread.html#a65954dc12fe7455c04cf4a0c61b47ab8":[1,0,841,0],
 "classQuestMeal__cake.html":[1,0,842],
 "classQuestMeal__cake.html#a6dbd8a4ccd83395bf852d7fe1d05e045":[1,0,842,0],
-"classQuestMeal__cat.html":[1,0,843],
-"classQuestMeal__cookie.html":[1,0,844],
-"classQuestMeal__cookie.html#a89f487145426f41917105c7a53ede742":[1,0,844,0],
-"classQuestMeal__egg.html":[1,0,845],
-"classQuestMeal__egg.html#a3eb2f86af5427a26a39a8988597d46a8":[1,0,845,0],
-"classQuestMeal__fish.html":[1,0,846],
-"classQuestMeal__fish.html#a694c9487de1da0957025a56324e2fac3":[1,0,846,0]
+"classQuestMeal__cat.html":[1,0,843]
 };

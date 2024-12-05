@@ -48,6 +48,7 @@ var ShopType_8cs =
       [ "Copy", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5fb63579fc981698f97d55bfecb213ea", null ],
       [ "Plat", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbab7beed125a75ff65d74424407f05e8b1", null ],
       [ "LoytelMart", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba291d369b25229bc8ea7ab00d83e15910", null ],
-      [ "StrangeGirl", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9aa969112e78614681f82bfa2c717532", null ]
+      [ "StrangeGirl", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9aa969112e78614681f82bfa2c717532", null ],
+      [ "Sweet", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0c13f53c2b84e2431bcd0194fc4a69f9", null ]
     ] ]
 ];

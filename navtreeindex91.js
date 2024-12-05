@@ -1,5 +1,12 @@
 var NAVTREEINDEX91 =
 {
+"classTrait.html#acd9a84b047c27051d35b96073d35c92d":[1,0,1164,102],
+"classTrait.html#aceab6db1d1509b1a079539e56fc72439":[1,0,1164,171],
+"classTrait.html#acebd3a3c43b4806bd7cab6c97dab25ad":[1,0,1164,54],
+"classTrait.html#aceeacc69a335a21da1cc0f9c3befde86":[1,0,1164,143],
+"classTrait.html#acff2c19d1e4b56b34da358f7cd90849c":[1,0,1164,221],
+"classTrait.html#ad027fbfb568ff382828f91be479cbd72":[1,0,1164,186],
+"classTrait.html#ad244050256aa49676de7a8270de802d2":[1,0,1164,134],
 "classTrait.html#ad263937d8c3e9afc1d523cf5241a198e":[1,0,1164,62],
 "classTrait.html#ad26650d0511331a631199bde2c56ba2a":[1,0,1164,73],
 "classTrait.html#ad3a2395462bdb3aa3f70fba7155a66d1":[1,0,1164,204],
@@ -242,12 +249,5 @@ var NAVTREEINDEX91 =
 "classTraitBlanketFireproof.html":[1,0,1206],
 "classTraitBlock.html":[1,0,1207],
 "classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1207,0],
-"classTraitBlueprint.html":[1,0,1208],
-"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1208,1],
-"classTraitBlueprint.html#a5869a67e01e4a14c1ed8377ebc66171c":[1,0,1208,0],
-"classTraitBlueprint.html#ae167e9f3b6ec667b7c0ebee490542bae":[1,0,1208,2],
-"classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1208,3],
-"classTraitBoard.html":[1,0,1209],
-"classTraitBoard.html#a407b7284961e1471d7c5bbbd3e7f31e1":[1,0,1209,1],
-"classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1209,0]
+"classTraitBlueprint.html":[1,0,1208]
 };

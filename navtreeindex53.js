@@ -1,5 +1,11 @@
 var NAVTREEINDEX53 =
 {
+"classGlobalGoalVisitAndStay.html#a1a7f83b3029294dbf8a9f9eb8922c53b":[1,0,452,4],
+"classGlobalGoalVisitAndStay.html#a42b2206ba3190670a7f53796a1d2dc2d":[1,0,452,2],
+"classGlobalGoalVisitAndStay.html#a44cc6c81e0ef2b7d462699431cf29784":[1,0,452,1],
+"classGlobalGoalVisitAndStay.html#a6d4e93730627b7612f5788395ca23f10":[1,0,452,5],
+"classGlobalGoalVisitAndStay.html#a94a7140860225158c37d3677bc064115":[1,0,452,0],
+"classGlobalGoalVisitTown.html":[1,0,453],
 "classGlobalGoalVisitTown.html#aae4b5493cc8fb73c6767d901b6ae916b":[1,0,453,0],
 "classGoal.html":[1,0,454],
 "classGoal.html#ac9b79ca4cf9a4be75f310c0b1aca7ac1":[1,0,454,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX53 =
 "classGrowSystemKinoko.html#ac3ff4c25f4969ab353f963d0a2477dc9":[1,0,485,2],
 "classGrowSystemKinoko.html#ad3ecf944a2fabd71d75a486330ac08e2":[1,0,485,4],
 "classGrowSystemKinoko.html#af49878e5da59a94790ccac57ffa1ed78":[1,0,485,0],
-"classGrowSystemPasture.html":[1,0,486],
-"classGrowSystemPasture.html#a567f0396da1882361493fdfdd46f78b0":[1,0,486,0],
-"classGrowSystemPasture.html#a78f17aecc3256ffebcec52cb971ae05d":[1,0,486,2],
-"classGrowSystemPasture.html#aaf32cb7bd0ab19dcc26487b2c7d6a922":[1,0,486,1],
-"classGrowSystemPlant.html":[1,0,487],
-"classGrowSystemPlant.html#a2222e95fe0f67801e699b9f1ad1ea89a":[1,0,487,4],
-"classGrowSystemPlant.html#a23a8931572815c0e8aca64c28f0d65b4":[1,0,487,0]
+"classGrowSystemPasture.html":[1,0,486]
 };

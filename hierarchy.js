@@ -1317,6 +1317,7 @@ var hierarchy =
               [ "TraitMerchantFireworks", "classTraitMerchantFireworks.html", null ],
               [ "TraitMerchantFish", "classTraitMerchantFish.html", null ],
               [ "TraitMerchantFood", "classTraitMerchantFood.html", [
+                [ "TraitChef", "classTraitChef.html", null ],
                 [ "TraitInnkeeper", "classTraitInnkeeper.html", null ]
               ] ],
               [ "TraitMerchantFruit", "classTraitMerchantFruit.html", null ],
@@ -1601,7 +1602,8 @@ var hierarchy =
             [ "TraitPillowLulwy", "classTraitPillowLulwy.html", null ],
             [ "TraitPillowMani", "classTraitPillowMani.html", null ],
             [ "TraitPillowOpatos", "classTraitPillowOpatos.html", null ]
-          ] ]
+          ] ],
+          [ "TraitPillowStrange", "classTraitPillowStrange.html", null ]
         ] ],
         [ "TraitPlamo", "classTraitPlamo.html", null ],
         [ "TraitPunishBall", "classTraitPunishBall.html", null ],

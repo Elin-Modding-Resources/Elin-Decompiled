@@ -65,7 +65,7 @@ var searchData=
   ['foreachdeck_62',['ForeachDeck',['../classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb',1,'TraitBoat']]],
   ['foreachfov_63',['ForeachFOV',['../classCard.html#af8e3d0f29f54ec00e93ebd9f8d59fb63',1,'Card']]],
   ['foreachmultisize_64',['ForeachMultiSize',['../classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894',1,'Point']]],
-  ['foreachnearestpoint_65',['ForeachNearestPoint',['../classPoint.html#af1e123049e710da81ecff364ec4b4ebf',1,'Point']]],
+  ['foreachnearestpoint_65',['ForeachNearestPoint',['../classPoint.html#ad5a7d7678d0810222c5fce03ec8a3e26',1,'Point']]],
   ['foreachneighbor_66',['ForeachNeighbor',['../classMap.html#acb721f5ae85f5a7a5a586a5ffe36f18b',1,'Map.ForeachNeighbor()'],['../classPoint.html#a560e61313723030ac4c0eb88e8a8c064',1,'Point.ForeachNeighbor()']]],
   ['foreachpoint_67',['ForeachPoint',['../classCard.html#a6c22bc720e969bf7b5160a2b5280951e',1,'Card.ForeachPoint()'],['../classMap.html#a94cfcd57cf51ec82ca2390c93067a907',1,'Map.ForeachPoint()'],['../classMapBounds.html#a564c0140fa92afc06984600614bf2b7c',1,'MapBounds.ForeachPoint()']]],
   ['foreachsphere_68',['ForeachSphere',['../classMap.html#a09c1df49e3d0b39ff98627b436211ab1',1,'Map']]],
