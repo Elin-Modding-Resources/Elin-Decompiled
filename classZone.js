@@ -129,6 +129,7 @@ var classZone =
     [ "tempDist", "classZone.html#a48b7e4ff71b315abd30b51df369b60ff", null ],
     [ "AddPrefix", "classZone.html#a86ff09916668f265669de516bf0753b0", null ],
     [ "AllowCriminal", "classZone.html#aabf10fa3abd3873bd023ede3404f3f57", null ],
+    [ "AllowInvest", "classZone.html#a97e75a40ff01767bd235fd524120bcab", null ],
     [ "AllowNewZone", "classZone.html#ab4c23de7d512745cda1acd646b8136eb", null ],
     [ "AlwaysLowblock", "classZone.html#aabfad362a74597a022a1f9c70c588d35", null ],
     [ "BaseElectricity", "classZone.html#a0d4c018adf2fb2a30740f7250b27e19b", null ],

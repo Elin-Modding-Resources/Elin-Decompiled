@@ -1,5 +1,17 @@
 var NAVTREEINDEX72 =
 {
+"classQuestCouncil.html":[1,0,804],
+"classQuestCouncil.html#a535037316220f4da0d56f0f417e0bbf5":[1,0,804,0],
+"classQuestCraft.html":[1,0,805],
+"classQuestCraft.html#a1728c066dcb9f4bfcbb1d8c1b0cab352":[1,0,805,2],
+"classQuestCraft.html#a1aaab314c325c2d31ce2a7bcc1776887":[1,0,805,11],
+"classQuestCraft.html#a253a3b28ea272548acff965616acc638":[1,0,805,9],
+"classQuestCraft.html#a301db165bd8e654de9876b3016923986":[1,0,805,12],
+"classQuestCraft.html#a307dbbf912f19717456c093b9d9474b4":[1,0,805,13],
+"classQuestCraft.html#a47338f4e498b24116eb74dd0be655a3f":[1,0,805,14],
+"classQuestCraft.html#a4bbe2d3b4862e0b71ae6a233b9b47f12":[1,0,805,1],
+"classQuestCraft.html#a7b35530f418b9d569fad45049d7b02ed":[1,0,805,8],
+"classQuestCraft.html#a98d5d3580aa628ac16d5de23bc8b7ebf":[1,0,805,7],
 "classQuestCraft.html#aa435f3dff176d19d4d2450ab2592225b":[1,0,805,4],
 "classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408":[1,0,805,5],
 "classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021":[1,0,805,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX72 =
 "classQuestManager.html#ac87fcf8fa65b2eb1b59a24a3f5666efd":[1,0,839,16],
 "classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e":[1,0,839,27],
 "classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f":[1,0,839,11],
-"classQuestManager.html#ae66c5dda98498edcb42971241ec929d0":[1,0,839,26],
-"classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12":[1,0,839,7],
-"classQuestManager.html#aec5882cb61c245f609ece8a62fa9a946":[1,0,839,13],
-"classQuestManager.html#aee656082e2037dfef69293944f3fc838":[1,0,839,9],
-"classQuestManager.html#afa05d353fe6e1fdb70e3a0dc85ef4574":[1,0,839,19],
-"classQuestMeal.html":[1,0,840],
-"classQuestMeal.html#a1cb325d315e6173b2d22971a97c16304":[1,0,840,1],
-"classQuestMeal.html#a548cf48a590cb042a246fb46170cdb93":[1,0,840,0],
-"classQuestMeal__bread.html":[1,0,841],
-"classQuestMeal__bread.html#a65954dc12fe7455c04cf4a0c61b47ab8":[1,0,841,0],
-"classQuestMeal__cake.html":[1,0,842],
-"classQuestMeal__cake.html#a6dbd8a4ccd83395bf852d7fe1d05e045":[1,0,842,0],
-"classQuestMeal__cat.html":[1,0,843]
+"classQuestManager.html#ae66c5dda98498edcb42971241ec929d0":[1,0,839,26]
 };

@@ -4,6 +4,8 @@ var classElement_1_1BonusInfo =
     [ "AddFix", "classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3", null ],
     [ "AddText", "classElement_1_1BonusInfo.html#afb22c7460d436371da1188bad1b1bf4c", null ],
     [ "AddText", "classElement_1_1BonusInfo.html#afb22c7460d436371da1188bad1b1bf4c", null ],
+    [ "AddText", "classElement_1_1BonusInfo.html#a5d2c5781e5302cbcb6cd68c3f9b95a22", null ],
+    [ "CheckFirst", "classElement_1_1BonusInfo.html#ad4d65d92fdcceb9d51f2c9ea10849864", null ],
     [ "WriteNote", "classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813", null ],
     [ "WriteNote", "classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813", null ],
     [ "c", "classElement_1_1BonusInfo.html#abfaa40ff704e7ba8a58b316ef8157c28", null ],

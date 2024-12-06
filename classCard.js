@@ -222,6 +222,7 @@ var classCard =
     [ "dirtyWeight", "classCard.html#a604e3ffd8abe67624276d393f733aab5", null ],
     [ "elements", "classCard.html#a21183d2839c6e8b51fcb7e1f08461138", null ],
     [ "fov", "classCard.html#a4d16138dbafaa8f0babdef76606c6efd", null ],
+    [ "hat", "classCard.html#a9fde9b2fd558fe872b2e34366e357ff9", null ],
     [ "id", "classCard.html#a2460fdceeef9382e2fccf227a568cf58", null ],
     [ "isDestroyed", "classCard.html#a05dffd4f600c4a61fcabec797f77b221", null ],
     [ "lastEmo", "classCard.html#ad85e1617f82e1ef914a244c8442d2efb", null ],

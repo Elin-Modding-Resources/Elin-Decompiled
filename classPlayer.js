@@ -25,6 +25,7 @@ var classPlayer =
     [ "GenerateBackgroundText", "classPlayer.html#aa44b3a76f7ae2a69907a3d5f64d20fe3", null ],
     [ "GetBackgroundText", "classPlayer.html#af2b0e4bad07e8068b7a087def39c0b7c", null ],
     [ "GetDomains", "classPlayer.html#a707e690596ce94aa73f6c8f3713ceaf8", null ],
+    [ "HasKeyItem", "classPlayer.html#a57197702bbb58bfe905af44eb814deca", null ],
     [ "HasValidRangedTarget", "classPlayer.html#a57831cd85ec4a7946aa793f806d3f5f2", null ],
     [ "IsPriorityAction", "classPlayer.html#a2d9ebad9ffd03c5c048be0bf60bb33fa", null ],
     [ "MarkMapHighlights", "classPlayer.html#ad95b1f727e9b1f60e114de9690888686", null ],

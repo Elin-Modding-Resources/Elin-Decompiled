@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.49 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.50 Nightly</span>
    </div>
   </td>
  </tr>
@@ -176,6 +176,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
+<tr class="separator:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7332cf2bc6178df28726da507977057e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7332cf2bc6178df28726da507977057e">OnUnequip</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
+<tr class="separator:a7332cf2bc6178df28726da507977057e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bcc89016758ef51b5722da792d53f41 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a1bcc89016758ef51b5722da792d53f41">OnChangePlaceState</a> (<a class="el" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a> state)</td></tr>
 <tr class="separator:a1bcc89016758ef51b5722da792d53f41 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a3637e38ace8063cd066648552195cc inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7a3637e38ace8063cd066648552195cc">OnAddedToZone</a> ()</td></tr>
@@ -741,12 +745,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">    7</span>        <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#a7b17e72b7955b9b38d78615857b3fcea">CreateTreasureContent</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>, lv, <a class="code hl_enumeration" href="TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fc">TreasureType</a>.RandomChest, clearContent: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">    8</span>    }</div>
 <div class="ttc" id="aTreasureType_8cs_html_adc99aa804b10c6b27aecda75d74067fc"><div class="ttname"><a href="TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fc">TreasureType</a></div><div class="ttdeci">TreasureType</div><div class="ttdef"><b>Definition:</b> <a href="TreasureType_8cs_source.html#l00001">TreasureType.cs:2</a></div></div>
-<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01855">Card.cs:1856</a></div></div>
+<div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01857">Card.cs:1858</a></div></div>
 <div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00004">ThingGen.cs:5</a></div></div>
 <div class="ttc" id="aclassThingGen_html_a7b17e72b7955b9b38d78615857b3fcea"><div class="ttname"><a href="classThingGen.html#a7b17e72b7955b9b38d78615857b3fcea">ThingGen.CreateTreasureContent</a></div><div class="ttdeci">static void CreateTreasureContent(Thing t, int lv, TreasureType type, bool clearContent)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00203">ThingGen.cs:203</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00025">Trait.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00203">ThingGen.CreateTreasureContent()</a>, <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l01856">Card.Thing</a>.</p>
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00203">ThingGen.CreateTreasureContent()</a>, <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l01858">Card.Thing</a>.</p>
 
 </div>
 </div>

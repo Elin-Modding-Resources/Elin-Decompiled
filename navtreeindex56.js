@@ -1,5 +1,16 @@
 var NAVTREEINDEX56 =
 {
+"classHotItemGameAction.html#a9bbc11691a6cdd1e8aed75e7ce4b42e0":[1,0,536,2],
+"classHotItemGameAction.html#ace8cf4da21b79dd307033e1c8ded90ee":[1,0,536,0],
+"classHotItemGameAction.html#af0a14cff53e34e638b943564e4fc612d":[1,0,536,1],
+"classHotItemHeld.html":[1,0,537],
+"classHotItemHeld.html#a07cfd0e4ffbdbb2969689f1c7d9589f3":[1,0,537,12],
+"classHotItemHeld.html#a0904a4949e3aaeaef370ca4931a65040":[1,0,537,8],
+"classHotItemHeld.html#a2d0c0d80626de15141e0892d0b1b50e9":[1,0,537,1],
+"classHotItemHeld.html#a2d778c9f22e166cd12f158ba4c8b2a79":[1,0,537,3],
+"classHotItemHeld.html#a646f0042adda312bf43353b31a430eeb":[1,0,537,13],
+"classHotItemHeld.html#a9b017eb578fc098fef30eb97a6ae0ece":[1,0,537,10],
+"classHotItemHeld.html#aa32a631bfd13f1ce2db3250c7c29c1c6":[1,0,537,2],
 "classHotItemHeld.html#aa9ab57c606f79ce44cecc2635b5804a5":[1,0,537,4],
 "classHotItemHeld.html#abc897fb16cf14cf031d856c88a29b844":[1,0,537,6],
 "classHotItemHeld.html#ac366366967a975870f9db7f08ef3a53f":[1,0,537,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX56 =
 "classInvOwner.html#a298f5f9938948377de584dacd88dc309":[1,0,567,10],
 "classInvOwner.html#a29cbb99a980735a30c31a9c346e7e14d":[1,0,567,39],
 "classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9":[1,0,567,54],
-"classInvOwner.html#a2cd059b9e89a713ec836d49bbe287226":[1,0,567,81],
-"classInvOwner.html#a2d0da3e5604f6942de6ab49a04480123":[1,0,567,67],
-"classInvOwner.html#a2d69f24c588afee258db5391e3255614":[1,0,567,66],
-"classInvOwner.html#a2e2a65b691213f0be1deef628ef2608e":[1,0,567,18],
-"classInvOwner.html#a308d416ebae8a3ff0d3d172927dc91b1":[1,0,567,36],
-"classInvOwner.html#a35b8f9989db23d3b5534e160b8337f55":[1,0,567,47],
-"classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64":[1,0,567,70],
-"classInvOwner.html#a3fab5e18224ce9ead14e5d478e1bc183":[1,0,567,44],
-"classInvOwner.html#a40edb0874524dff9d01574bfc9a506e1":[1,0,567,21],
-"classInvOwner.html#a4938728714a3108df2c781ba56122937":[1,0,567,79],
-"classInvOwner.html#a5014bd17168004464d28efe84cbe7cab":[1,0,567,7],
-"classInvOwner.html#a519b1478269eb9cf21e2fa5bf059711a":[1,0,567,62]
+"classInvOwner.html#a2cd059b9e89a713ec836d49bbe287226":[1,0,567,81]
 };

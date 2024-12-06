@@ -1,5 +1,12 @@
 var NAVTREEINDEX37 =
 {
+"classCharaAbility.html#a22d81c4f23177d3772df0b1c64574f7c":[1,0,221,4],
+"classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa":[1,0,221,6],
+"classCharaAbility.html#a885ca8bfe313c327cf5c20c9d8b84ea9":[1,0,221,1],
+"classCharaAbility.html#a91c8d720dcc3b4b4409361e695fc3233":[1,0,221,5],
+"classCharaAbility.html#aa7eca6bfbe7ae45afae816c8feeb93fd":[1,0,221,0],
+"classCharaAbility.html#aaca98d7913e0d48dca22d4938877d924":[1,0,221,3],
+"classCharaAbility.html#ab6700b71776d339a548021bd14e5c739":[1,0,221,2],
 "classCharaActor.html":[1,0,222],
 "classCharaActor.html#a2fbd3db65a54845c18c7972be246ccb8":[1,0,222,3],
 "classCharaActor.html#ad09021b9b657eef4060dfb01f48e1236":[1,0,222,2],
@@ -65,10 +72,10 @@ var NAVTREEINDEX37 =
 "classCharaGen.html#afb0b548308406a4b3309b1958723cc6e":[1,0,226,0],
 "classCharaGenes.html":[1,0,227],
 "classCharaGenes.html#a698512e86665271bb7aa79e2800f0d31":[1,0,227,3],
-"classCharaGenes.html#a6f6ad597e760c3c364503cf67a135675":[1,0,227,0],
 "classCharaGenes.html#ab713318600866c3c801445026737d288":[1,0,227,1],
 "classCharaGenes.html#acd505cb716977051543d01f62bbaad9a":[1,0,227,2],
 "classCharaGenes.html#af445bcca2559e486add700acd4645353":[1,0,227,4],
+"classCharaGenes.html#af7fe457103e5f19a8ae0992f887afdfc":[1,0,227,0],
 "classCharaList.html":[1,0,228],
 "classCharaList.html#a187df1a9115f94036decfb5d1ad51f1e":[1,0,228,2],
 "classCharaList.html#a1b3b36015cb4fdcb5d10184570fc966f":[1,0,228,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX37 =
 "classColorProfile_1_1BlockColors.html#ae4c84e79217e038daa119cd914ede991":[1,0,240,0,20],
 "classColorProfile_1_1PCLights.html":[1,0,240,1],
 "classColorProfile_1_1PCLights.html#a30528f180df46b944db528c60af05ad5":[1,0,240,1,1],
-"classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,240,1,0],
-"classColorProfile_1_1RarityColors.html":[1,0,240,2],
-"classColorProfile_1_1RarityColors.html#a26ac41b8dbadb4e9d41b9498e24c4d4b":[1,0,240,2,0],
-"classColorProfile_1_1RarityColors.html#a4a84930afe50735e9a4f9be1e84b7772":[1,0,240,2,1],
-"classColorProfile_1_1RarityColors.html#a4d5f11be82d0051ad40e8793eb9f5a0e":[1,0,240,2,4],
-"classColorProfile_1_1RarityColors.html#a5bd7eb53338b63dcee159a20a3d56479":[1,0,240,2,2],
-"classColorProfile_1_1RarityColors.html#afe6cb39b3473dd4325e2aa4aacdfdd29":[1,0,240,2,3],
-"classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,240,2,5]
+"classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,240,1,0]
 };

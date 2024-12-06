@@ -1,5 +1,16 @@
 var NAVTREEINDEX55 =
 {
+"classHoardActor.html#a3cadd37f87ef9e6685793bc64cfe3349":[1,0,507,17],
+"classHoardActor.html#a3d15acd7a6814ba470bed6f96ae8302a":[1,0,507,3],
+"classHoardActor.html#a44d620b0cad8dd3a260cf00b2cf864e6":[1,0,507,24],
+"classHoardActor.html#a4fac413724d6b44bcbfd93b16556e624":[1,0,507,6],
+"classHoardActor.html#a55621c901028b9c537ca931df8c94957":[1,0,507,10],
+"classHoardActor.html#a5ec31f09edea5dc75a8d0b93c166575b":[1,0,507,19],
+"classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35":[1,0,507,39],
+"classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4":[1,0,507,7],
+"classHoardActor.html#a630fe0fa98bd0f37776f697b0ea64efb":[1,0,507,31],
+"classHoardActor.html#a67dae3a430217b345ffdd33a467612eb":[1,0,507,41],
+"classHoardActor.html#a69847789557da45e516e275273059bff":[1,0,507,22],
 "classHoardActor.html#a7419861936af882edb6f407b72b54313":[1,0,507,5],
 "classHoardActor.html#a7747d60974568f15b4983bc62eee46a9":[1,0,507,16],
 "classHoardActor.html#a7b227935e9ef7b671bf01fce2c199155":[1,0,507,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX55 =
 "classHotItemFocusPos.html#afab578ff132fd625a0061ec17dfd3838":[1,0,535,1],
 "classHotItemGameAction.html":[1,0,536],
 "classHotItemGameAction.html#a53bdbc7305f11f24bd8b2451690732f3":[1,0,536,3],
-"classHotItemGameAction.html#a76fcc1add8d0ea9ad3c538ab8e040921":[1,0,536,4],
-"classHotItemGameAction.html#a9bbc11691a6cdd1e8aed75e7ce4b42e0":[1,0,536,2],
-"classHotItemGameAction.html#ace8cf4da21b79dd307033e1c8ded90ee":[1,0,536,0],
-"classHotItemGameAction.html#af0a14cff53e34e638b943564e4fc612d":[1,0,536,1],
-"classHotItemHeld.html":[1,0,537],
-"classHotItemHeld.html#a07cfd0e4ffbdbb2969689f1c7d9589f3":[1,0,537,12],
-"classHotItemHeld.html#a0904a4949e3aaeaef370ca4931a65040":[1,0,537,8],
-"classHotItemHeld.html#a2d0c0d80626de15141e0892d0b1b50e9":[1,0,537,1],
-"classHotItemHeld.html#a2d778c9f22e166cd12f158ba4c8b2a79":[1,0,537,3],
-"classHotItemHeld.html#a646f0042adda312bf43353b31a430eeb":[1,0,537,13],
-"classHotItemHeld.html#a9b017eb578fc098fef30eb97a6ae0ece":[1,0,537,10],
-"classHotItemHeld.html#aa32a631bfd13f1ce2db3250c7c29c1c6":[1,0,537,2]
+"classHotItemGameAction.html#a76fcc1add8d0ea9ad3c538ab8e040921":[1,0,536,4]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.49 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.50 Nightly</span>
    </div>
   </td>
  </tr>
@@ -180,6 +180,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
+<tr class="separator:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7332cf2bc6178df28726da507977057e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7332cf2bc6178df28726da507977057e">OnUnequip</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
+<tr class="separator:a7332cf2bc6178df28726da507977057e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bcc89016758ef51b5722da792d53f41 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a1bcc89016758ef51b5722da792d53f41">OnChangePlaceState</a> (<a class="el" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a> state)</td></tr>
 <tr class="separator:a1bcc89016758ef51b5722da792d53f41 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a3637e38ace8063cd066648552195cc inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7a3637e38ace8063cd066648552195cc">OnAddedToZone</a> ()</td></tr>
@@ -747,10 +751,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   13</span>        owner.LV = 1;</div>
 <div class="line"><span class="lineno">   14</span>        owner.c_lockLv = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>;</div>
 <div class="line"><span class="lineno">   15</span>    }</div>
-<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00363">Card.cs:364</a></div></div>
+<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00365">Card.cs:366</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00025">Trait.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l00364">Card.LV</a>, and <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00366">Card.LV</a>, and <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -802,10 +806,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   36</span>        }</div>
 <div class="line"><span class="lineno">   37</span>        owner.c_lockLv = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>;</div>
 <div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="aclassCard_html_a47bf1787110a3285ebb050be305c315e"><div class="ttname"><a href="classCard.html#a47bf1787110a3285ebb050be305c315e">Card.c_lockLv</a></div><div class="ttdeci">int c_lockLv</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00905">Card.cs:906</a></div></div>
-<div class="ttc" id="aclassCard_html_abae254127a569593cc928b22c316259e"><div class="ttname"><a href="classCard.html#abae254127a569593cc928b22c316259e">Card.turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00057">Card.cs:57</a></div></div>
+<div class="ttc" id="aclassCard_html_a47bf1787110a3285ebb050be305c315e"><div class="ttname"><a href="classCard.html#a47bf1787110a3285ebb050be305c315e">Card.c_lockLv</a></div><div class="ttdeci">int c_lockLv</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00907">Card.cs:908</a></div></div>
+<div class="ttc" id="aclassCard_html_abae254127a569593cc928b22c316259e"><div class="ttname"><a href="classCard.html#abae254127a569593cc928b22c316259e">Card.turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00059">Card.cs:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l00906">Card.c_lockLv</a>, <a class="el" href="Card_8cs_source.html#l00364">Card.LV</a>, <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l00057">Card.turn</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00908">Card.c_lockLv</a>, <a class="el" href="Card_8cs_source.html#l00366">Card.LV</a>, <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l00059">Card.turn</a>.</p>
 
 </div>
 </div>

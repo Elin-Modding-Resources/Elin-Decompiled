@@ -1,5 +1,16 @@
 var NAVTREEINDEX52 =
 {
+"classGameSetting_1_1PassSetting.html":[1,0,441,5],
+"classGameSetting_1_1PassSetting.html#a7ad9f1bbef598f43ef1f1a1b36f650e6":[1,0,441,5,1],
+"classGameSetting_1_1PassSetting.html#ab938cf6dba4731e405449d682af803da":[1,0,441,5,3],
+"classGameSetting_1_1PassSetting.html#ac814b0b0fcb53ff11a7ccb70372d0fa3":[1,0,441,5,0],
+"classGameSetting_1_1PassSetting.html#af0c4b88fce51de8efb4d147f8eb4b8fa":[1,0,441,5,2],
+"classGameSetting_1_1RenderSetting.html":[1,0,441,6],
+"classGameSetting_1_1RenderSetting.html#a023c5412236fa1a7ebaf04cb1536336d":[1,0,441,6,23],
+"classGameSetting_1_1RenderSetting.html#a030ccc125a4479871f617be782edd09d":[1,0,441,6,21],
+"classGameSetting_1_1RenderSetting.html#a05651e8aa4fa29c97c3ce0355aa4e3cf":[1,0,441,6,7],
+"classGameSetting_1_1RenderSetting.html#a079b88f914f5a085a90562b16a723016":[1,0,441,6,37],
+"classGameSetting_1_1RenderSetting.html#a13e17b3c9f111830b65dcfffce70c4ce":[1,0,441,6,40],
 "classGameSetting_1_1RenderSetting.html#a14b5229ac1c9a21328b5246e2dc9175b":[1,0,441,6,19],
 "classGameSetting_1_1RenderSetting.html#a1aa001319b607780fe69619a9971da23":[1,0,441,6,13],
 "classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740":[1,0,441,6,33],
@@ -238,16 +249,5 @@ var NAVTREEINDEX52 =
 "classGlobalGoal.html#a42fff510e744d3de87825e7713d4b735":[1,0,449,3],
 "classGlobalGoal.html#a5291f5bf8d264177135bc1cffe4e541f":[1,0,449,1],
 "classGlobalGoal.html#a5c2048b56e976d1e86601a6fd0299ada":[1,0,449,2],
-"classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0":[1,0,449,4],
-"classGlobalGoal.html#a9ac4b8ed5f324bc100e6dd06f4b51e71":[1,0,449,9],
-"classGlobalGoal.html#aa9264f11678dea51f4dbd69390f59c29":[1,0,449,8],
-"classGlobalGoal.html#adddd8a0f1a96851f123e72e4728a77bf":[1,0,449,5],
-"classGlobalGoal.html#ade51c0ca2782e364d8cb48bf66b2a542":[1,0,449,6],
-"classGlobalGoal.html#afeaafaf50c4aa90c1bf01fdc681f9b37":[1,0,449,0],
-"classGlobalGoalAdv.html":[1,0,450],
-"classGlobalGoalAdv.html#a4b10fb5369a0b97b50f052d91fcf845e":[1,0,450,0],
-"classGlobalGoalExplore.html":[1,0,451],
-"classGlobalGoalExplore.html#a689769ea5b7cf54a36d8bfd8cefca1ca":[1,0,451,0],
-"classGlobalGoalVisitAndStay.html":[1,0,452],
-"classGlobalGoalVisitAndStay.html#a162170fc0af8541f55bfc026cd3e29d4":[1,0,452,3]
+"classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0":[1,0,449,4]
 };

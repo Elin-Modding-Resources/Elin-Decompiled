@@ -1,5 +1,17 @@
 var NAVTREEINDEX73 =
 {
+"classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12":[1,0,839,7],
+"classQuestManager.html#aec5882cb61c245f609ece8a62fa9a946":[1,0,839,13],
+"classQuestManager.html#aee656082e2037dfef69293944f3fc838":[1,0,839,9],
+"classQuestManager.html#afa05d353fe6e1fdb70e3a0dc85ef4574":[1,0,839,19],
+"classQuestMeal.html":[1,0,840],
+"classQuestMeal.html#a1cb325d315e6173b2d22971a97c16304":[1,0,840,1],
+"classQuestMeal.html#a548cf48a590cb042a246fb46170cdb93":[1,0,840,0],
+"classQuestMeal__bread.html":[1,0,841],
+"classQuestMeal__bread.html#a65954dc12fe7455c04cf4a0c61b47ab8":[1,0,841,0],
+"classQuestMeal__cake.html":[1,0,842],
+"classQuestMeal__cake.html#a6dbd8a4ccd83395bf852d7fe1d05e045":[1,0,842,0],
+"classQuestMeal__cat.html":[1,0,843],
 "classQuestMeal__cookie.html":[1,0,844],
 "classQuestMeal__cookie.html#a89f487145426f41917105c7a53ede742":[1,0,844,0],
 "classQuestMeal__egg.html":[1,0,845],
@@ -237,17 +249,5 @@ var NAVTREEINDEX73 =
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6":[1,0,883,1],
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d":[1,0,883,1,0],
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b":[1,0,883,1,1],
-"classRecipe.html#a123d8acc734e50c7c492c141eddf2680":[1,0,883,34],
-"classRecipe.html#a16d6e7a1f3e7ec064260d975ece515ec":[1,0,883,36],
-"classRecipe.html#a17b522883cf23372db4f4228baf9bc7a":[1,0,883,38],
-"classRecipe.html#a1d2ab89173f5d72ede008cc6eccefc3c":[1,0,883,37],
-"classRecipe.html#a21877e57c53fd1150ce766b0e31373f3":[1,0,883,8],
-"classRecipe.html#a21dd69360b93de59b5308d7db36b9559":[1,0,883,47],
-"classRecipe.html#a26d659bbb40ad8f2b48a337c6a56e60e":[1,0,883,29],
-"classRecipe.html#a279d730fc3c5a87840cecbfd3f8aabb1":[1,0,883,68],
-"classRecipe.html#a28da28557b2edc52979be0b8f061bcfb":[1,0,883,17],
-"classRecipe.html#a2d8a4c729f584be34db82fd54d858fa0":[1,0,883,15],
-"classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29":[1,0,883,24],
-"classRecipe.html#a2f06ae614a1b3efab9a86a3bd4cfe4ce":[1,0,883,22],
-"classRecipe.html#a32ea83feab1dd425947e10577121c615":[1,0,883,63]
+"classRecipe.html#a123d8acc734e50c7c492c141eddf2680":[1,0,883,34]
 };

@@ -1,5 +1,17 @@
 var NAVTREEINDEX78 =
 {
+"classSPELL.html#a810d551376cbc15d4fdce23cb70dbe22":[1,0,1025,146],
+"classSPELL.html#a833f8fd4b6f6ea8d6a7e22a3eed15824":[1,0,1025,182],
+"classSPELL.html#a857cbbbe64e9c1a01275bb3a3d3e63cc":[1,0,1025,56],
+"classSPELL.html#a87757bfd3e5c7c3bc994183bcc8356c6":[1,0,1025,66],
+"classSPELL.html#a891ff6b7e4dc11258adc232dccc87035":[1,0,1025,147],
+"classSPELL.html#a892c016fb98036dfb739b3e2b97d84d2":[1,0,1025,112],
+"classSPELL.html#a8a9d36c7163d0ade9c74fbfe3da28335":[1,0,1025,108],
+"classSPELL.html#a8eefee5e9c23d1af8bea7d952ae6e452":[1,0,1025,58],
+"classSPELL.html#a8fa36fbb8029a76f317c19cd45047c1e":[1,0,1025,41],
+"classSPELL.html#a90f1db9ddddb6ffb49449941eee88490":[1,0,1025,21],
+"classSPELL.html#a92c5a5e3c25f840b229593e8dd6eda18":[1,0,1025,90],
+"classSPELL.html#a94c3fa413433a54c285b73f578ba6954":[1,0,1025,133],
 "classSPELL.html#a95bb1243733779b0ecd0e36651eee766":[1,0,1025,178],
 "classSPELL.html#a9699bd3bc4af29c74032d56391fe1147":[1,0,1025,102],
 "classSPELL.html#a97ecb012316374e017953d7679377d61":[1,0,1025,111],
@@ -237,17 +249,5 @@ var NAVTREEINDEX78 =
 "classSceneTemplate.html":[1,0,953],
 "classSceneTemplate.html#a1e46f0d7190713741f8c8ab795add40f":[1,0,953,1],
 "classSceneTemplate.html#a852b39e49d364431d974177908465d2b":[1,0,953,2],
-"classSceneTemplate.html#ada8e69ce3f23212cb5fed61101074f4b":[1,0,953,0],
-"classSchedule.html":[1,0,954],
-"classSchedule.html#ae0a4a4df663b9423ddc6359613dce3f9":[1,0,954,1],
-"classSchedule_1_1Item.html":[1,0,954,0],
-"classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d":[1,0,954,0,1],
-"classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead":[1,0,954,0,0],
-"classScreenEffect.html":[1,0,955],
-"classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1":[1,0,955,4],
-"classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357":[1,0,955,0],
-"classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038":[1,0,955,1],
-"classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17":[1,0,955,3],
-"classScreenEffect.html#aabf4c1c23c44a8b1a9948c41838cc9ab":[1,0,955,7],
-"classScreenEffect.html#ab144d946b1459698543c33232f738bb0":[1,0,955,2]
+"classSceneTemplate.html#ada8e69ce3f23212cb5fed61101074f4b":[1,0,953,0]
 };

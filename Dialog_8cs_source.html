@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.49 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.50 Nightly</span>
    </div>
   </td>
  </tr>
@@ -216,7 +216,7 @@ $(document).ready(function(){initNavTree('Dialog_8cs_source.html',''); initResiz
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classDialog.html#a9e0bd57ec07c2b95f5df6e51ac2e0d92">  123</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classDialog.html#a9e0bd57ec07c2b95f5df6e51ac2e0d92">OnUpdateInput</a>()</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDialog.html#a8e74aa0f9ae4b058bf8bd58164176ff4">input</a> &amp;&amp; option.canClose &amp;&amp; Input.GetKeyDown(KeyCode.Return))</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDialog.html#a8e74aa0f9ae4b058bf8bd58164176ff4">input</a> &amp;&amp; option.canClose &amp;&amp; (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        {</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_variable" href="classDialog.html#ae58d2a9c1510c3a8a94df89f5df2630a">isInputEnter</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            Close();</div>

@@ -1,5 +1,17 @@
 var NAVTREEINDEX85 =
 {
+"classSpawnSetting.html#add15efe890d670829aef42c70aee6bcf":[1,0,1023,18],
+"classSpawnSetting.html#ae27e7a07baf5bf5816fe611e0e5adfcd":[1,0,1023,16],
+"classSpawnSetting.html#af0eaf354ef07f73cfad029ec9884cd88":[1,0,1023,19],
+"classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e":[1,0,1023,10],
+"classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1023,5],
+"classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1023,3],
+"classSpell.html":[1,0,1024],
+"classSpell.html#a3de05554b62d9c22b019153994c9f432":[1,0,1024,0],
+"classSplashText.html":[1,0,1026],
+"classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1026,3],
+"classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1026,2],
+"classSplashText.html#a50b946f2fe09bf0ccda1a04a965a11a0":[1,0,1026,0],
 "classSplashText.html#a8af65e7206038f64b2c05f004da8ce1c":[1,0,1026,1],
 "classSpriteBasedLaser.html":[1,0,1027],
 "classSpriteBasedLaser.html#a164e0d5e9bc0ef440f42203630f2b6c1":[1,0,1027,36],
@@ -237,17 +249,5 @@ var NAVTREEINDEX85 =
 "classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6":[1,0,1083,0],
 "classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6a624aa1a206e09836e3c81ea95502f459":[1,0,1083,0,0],
 "classTCExtraProgress.html#ad430e6222bd25395256dd5de7174e0dc":[1,0,1083,1],
-"classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae":[1,0,1083,5],
-"classTCExtraUI.html":[1,0,1084],
-"classTCOrbit.html":[1,0,1085],
-"classTCOrbit.html#a31d1630788c38e82d1004040c15ffa0a":[1,0,1085,0],
-"classTCOrbitChara.html":[1,0,1086],
-"classTCOrbitChara.html#a07328f0dedbf3fea135eee217dfe16be":[1,0,1086,9],
-"classTCOrbitChara.html#a1842d0bf68c64882ec730d68ace4839f":[1,0,1086,13],
-"classTCOrbitChara.html#a34c1fc086a84fc890aa0e8dee5352ea7":[1,0,1086,1],
-"classTCOrbitChara.html#a351d4801a88cbb1a134a4cc7e4988d17":[1,0,1086,10],
-"classTCOrbitChara.html#a4209d81b33a346db553b33732f1de679":[1,0,1086,2],
-"classTCOrbitChara.html#a5d15423ac081ebce2421a736ab86dc5f":[1,0,1086,12],
-"classTCOrbitChara.html#a652b278ffdef9c2294c68d5b737756a7":[1,0,1086,11],
-"classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69":[1,0,1086,3]
+"classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae":[1,0,1083,5]
 };

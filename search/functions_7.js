@@ -173,7 +173,7 @@ var searchData=
   ['getfuelvalue_170',['GetFuelValue',['../classTrait.html#ab5e59a6f16edf9cc37011dfb1dba83f3',1,'Trait.GetFuelValue(string id)'],['../classTrait.html#a899baa906ee621e6883f05f8cc43c12f',1,'Trait.GetFuelValue(Thing t)']]],
   ['getgamelist_171',['GetGameList',['../classGameIO.html#ae74458c2df2444d74127d927a4af828f',1,'GameIO']]],
   ['getgametext_172',['GetGameText',['../classMsg.html#a659b5ace053812ca07f66b59c0993030',1,'Msg']]],
-  ['getgeneslot_173',['GetGeneSlot',['../classCharaGenes.html#a6f6ad597e760c3c364503cf67a135675',1,'CharaGenes']]],
+  ['getgeneslot_173',['GetGeneSlot',['../classCharaGenes.html#af7fe457103e5f19a8ae0992f887afdfc',1,'CharaGenes']]],
   ['getglobal_174',['GetGlobal',['../classQuestManager.html#aee656082e2037dfef69293944f3fc838',1,'QuestManager']]],
   ['getgoalfromtimetable_175',['GetGoalFromTimeTable',['../classChara.html#a31b673edef751042e93aeeab83f02520',1,'Chara']]],
   ['getgoalhobby_176',['GetGoalHobby',['../classChara.html#a9182ae80a87ba220cdf6a88fc5486e99',1,'Chara']]],

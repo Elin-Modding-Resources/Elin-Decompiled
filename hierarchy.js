@@ -1271,6 +1271,7 @@ var hierarchy =
             [ "TraitBanker", "classTraitBanker.html", null ],
             [ "TraitBard", "classTraitBard.html", null ],
             [ "TraitBitch", "classTraitBitch.html", null ],
+            [ "TraitBitchDancer", "classTraitBitchDancer.html", null ],
             [ "TraitGuard", "classTraitGuard.html", [
               [ "TraitCasinoGuard", "classTraitCasinoGuard.html", null ]
             ] ],
@@ -1454,6 +1455,9 @@ var hierarchy =
           [ "TraitPotionEmpty", "classTraitPotionEmpty.html", null ]
         ] ],
         [ "TraitDye", "classTraitDye.html", null ],
+        [ "TraitEQ", "classTraitEQ.html", [
+          [ "TraitEQFlower", "classTraitEQFlower.html", null ]
+        ] ],
         [ "TraitEcoMark", "classTraitEcoMark.html", null ],
         [ "TraitEditorSign", "classTraitEditorSign.html", null ],
         [ "TraitFertilizer", "classTraitFertilizer.html", [

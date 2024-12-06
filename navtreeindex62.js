@@ -1,5 +1,16 @@
 var NAVTREEINDEX62 =
 {
+"classLayerInventory.html#afa89e25d5e47599934e64b8a442534bf":[1,0,665,27],
+"classLayerJournal.html":[1,0,666],
+"classLayerJournal.html#a3c310d1043c10e8c7881b52eb1d3cb07":[1,0,666,4],
+"classLayerJournal.html#a4e462ae6e0cbffc6c34f531b365fb875":[1,0,666,1],
+"classLayerJournal.html#a9de89428ad5def5936a9b5d8ca79cd89":[1,0,666,0],
+"classLayerJournal.html#abc245d752abd342a9d06893660528d91":[1,0,666,5],
+"classLayerJournal.html#adf956ee85b924d587c2bd806ce4a629d":[1,0,666,3],
+"classLayerJournal.html#aebc08b3c015a165fc95928469c64538f":[1,0,666,2],
+"classLayerList.html":[1,0,667],
+"classLayerList.html#a0077af7b3c6157719ab60d99debeed4e":[1,0,667,25],
+"classLayerList.html#a07b1cd51f98ac9265d5d756cc0e4083e":[1,0,667,12],
 "classLayerList.html#a0843d9541b0f6118f328f987e30cb3ef":[1,0,667,18],
 "classLayerList.html#a1bf28e9b2adec1cc166d37aaccfbf643":[1,0,667,27],
 "classLayerList.html#a20ff68c0878d8a3889254a70bf492c96":[1,0,667,5],
@@ -238,16 +249,5 @@ var NAVTREEINDEX62 =
 "classLayerQuestBoard.html#af32129b645529338a0f6d71b7ed6d3cc":[1,0,681,11],
 "classLayerQuickMenu.html":[1,0,682],
 "classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25":[1,0,682,4],
-"classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89":[1,0,682,3],
-"classLayerQuickMenu.html#a59b2a450322b2407acb198b940b0079d":[1,0,682,2],
-"classLayerQuickMenu.html#ac14ccb967e640d0a90e53229e4b6a339":[1,0,682,1],
-"classLayerQuickMenu.html#ae7c3e171b808dbd5bece355920e3d8d6":[1,0,682,0],
-"classLayerRegisterHotbar.html":[1,0,683],
-"classLayerRegisterHotbar.html#a4305507b4771debd711fb1dcbafaae53":[1,0,683,8],
-"classLayerRegisterHotbar.html#a55bba61c764765ea70a60252066c50fe":[1,0,683,1],
-"classLayerRegisterHotbar.html#a5ad0bfb4ce8249f2ee53e14c5c78535f":[1,0,683,10],
-"classLayerRegisterHotbar.html#a6815e6048478483ed048ea8bdfd2734a":[1,0,683,9],
-"classLayerRegisterHotbar.html#a7860e70b08f60db791ec69cd26db0afc":[1,0,683,4],
-"classLayerRegisterHotbar.html#a9a0ec87fcc2d8074448b91b45d839cd1":[1,0,683,7],
-"classLayerRegisterHotbar.html#aa2b3ad8b1fb0a2113076aea943cd1c14":[1,0,683,3]
+"classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89":[1,0,682,3]
 };

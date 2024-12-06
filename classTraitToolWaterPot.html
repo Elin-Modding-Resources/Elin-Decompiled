@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.49 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.50 Nightly</span>
    </div>
   </td>
  </tr>
@@ -160,6 +160,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
+<tr class="separator:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7332cf2bc6178df28726da507977057e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7332cf2bc6178df28726da507977057e">OnUnequip</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
+<tr class="separator:a7332cf2bc6178df28726da507977057e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bcc89016758ef51b5722da792d53f41 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a1bcc89016758ef51b5722da792d53f41">OnChangePlaceState</a> (<a class="el" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a> state)</td></tr>
 <tr class="separator:a1bcc89016758ef51b5722da792d53f41 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a3637e38ace8063cd066648552195cc inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7a3637e38ace8063cd066648552195cc">OnAddedToZone</a> ()</td></tr>
@@ -695,10 +699,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
 <div class="line"><span class="lineno">    9</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Dye</a>(<span class="stringliteral">&quot;void&quot;</span>);</div>
 <div class="line"><span class="lineno">   10</span>    }</div>
-<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04964">Card.cs:4964</a></div></div>
+<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04978">Card.cs:4978</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00025">Trait.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l04964">Card.Dye()</a>, and <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l04978">Card.Dye()</a>, and <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -735,10 +739,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>            s = <span class="stringliteral">&quot;_of&quot;</span>.lang(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a3ac3391a64b0a37408b1cbebc16e71df">DyeMat</a>.GetName(), s);</div>
 <div class="line"><span class="lineno">   17</span>        }</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassCard_html_a3ac3391a64b0a37408b1cbebc16e71df"><div class="ttname"><a href="classCard.html#a3ac3391a64b0a37408b1cbebc16e71df">Card.DyeMat</a></div><div class="ttdeci">SourceMaterial.Row DyeMat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01738">Card.cs:1738</a></div></div>
-<div class="ttc" id="aclassCard_html_a4ddecad46d2106bafaf9fb132b7ab73f"><div class="ttname"><a href="classCard.html#a4ddecad46d2106bafaf9fb132b7ab73f">Card.c_dyeMat</a></div><div class="ttdeci">int c_dyeMat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01090">Card.cs:1091</a></div></div>
+<div class="ttc" id="aclassCard_html_a3ac3391a64b0a37408b1cbebc16e71df"><div class="ttname"><a href="classCard.html#a3ac3391a64b0a37408b1cbebc16e71df">Card.DyeMat</a></div><div class="ttdeci">SourceMaterial.Row DyeMat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01740">Card.cs:1740</a></div></div>
+<div class="ttc" id="aclassCard_html_a4ddecad46d2106bafaf9fb132b7ab73f"><div class="ttname"><a href="classCard.html#a4ddecad46d2106bafaf9fb132b7ab73f">Card.c_dyeMat</a></div><div class="ttdeci">int c_dyeMat</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01092">Card.cs:1093</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01091">Card.c_dyeMat</a>, <a class="el" href="Card_8cs_source.html#l01738">Card.DyeMat</a>, and <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01093">Card.c_dyeMat</a>, <a class="el" href="Card_8cs_source.html#l01740">Card.DyeMat</a>, and <a class="el" href="Trait_8cs_source.html#l00025">Trait.owner</a>.</p>
 
 </div>
 </div>

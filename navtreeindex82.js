@@ -1,5 +1,17 @@
 var NAVTREEINDEX82 =
 {
+"classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe":[1,0,995,50],
+"classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b":[1,0,995,19],
+"classSourceManager.html#a4d03dd51ea52717f38ec27f0b434336a":[1,0,995,25],
+"classSourceManager.html#a5016191eaf33a8f147b32e5d22f35c95":[1,0,995,23],
+"classSourceManager.html#a56b3d59619d0a5a90bf8a31b5791a73c":[1,0,995,44],
+"classSourceManager.html#a57a471351f436e88ecc0ec51a07e0e1f":[1,0,995,5],
+"classSourceManager.html#a5b0c350b8156f7c462a0648584cd25b2":[1,0,995,24],
+"classSourceManager.html#a6abf3ffa99e1dc0f729165644f814c8d":[1,0,995,18],
+"classSourceManager.html#a6ac0f0432ebde26d5ee9941580db6f1d":[1,0,995,15],
+"classSourceManager.html#a6bbe3e57f372109d0661eb0872cf590e":[1,0,995,11],
+"classSourceManager.html#a6cf700648175051766a0a9526320f771":[1,0,995,38],
+"classSourceManager.html#a6d01d4e3041469e444b5e244fa9873f8":[1,0,995,1],
 "classSourceManager.html#a6f17f2f7f78304c12502f34044d2c80a":[1,0,995,30],
 "classSourceManager.html#a73edd2d15d9dcaae027163dba5a87be9":[1,0,995,9],
 "classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362":[1,0,995,2],
@@ -237,17 +249,5 @@ var NAVTREEINDEX82 =
 "classSourceQuest_1_1Row.html#ac367b1b5e2177bf4e7e5d98e7a35fe8f":[1,0,1003,0,12],
 "classSourceQuest_1_1Row.html#ac992afb003b990cb862cfc1a29419931":[1,0,1003,0,8],
 "classSourceQuest_1_1Row.html#ad59e29f6f631a426e6188f896a4ff2e3":[1,0,1003,0,16],
-"classSourceQuest_1_1Row.html#ada3bb64b84dea26da90fb87e45b3933b":[1,0,1003,0,13],
-"classSourceQuest_1_1Row.html#af2271723f007031a07d417f050ca063e":[1,0,1003,0,1],
-"classSourceQuest_1_1Row.html#af2415f8fed8eb0e180f4a1f55653e4cc":[1,0,1003,0,3],
-"classSourceQuest_1_1Row.html#af95fd0e7c87dd9616e3e6f8820e698d2":[1,0,1003,0,0],
-"classSourceQuest_1_1Row.html#afb758caf4a1c326afde0711d20a74e0b":[1,0,1003,0,22],
-"classSourceQuest_1_1Row.html#aff8264e3d8dbdd0422885a8e2c8c1e5e":[1,0,1003,0,6],
-"classSourceRace.html":[1,0,1004],
-"classSourceRace.html#a593b4ad218f30e5a4a0deece1c39d0f6":[1,0,1004,1],
-"classSourceRace.html#ad9858c1b24131440224fef4eed32660c":[1,0,1004,2],
-"classSourceRace.html#aef0f0a72190d7f3890279e7a6ec0a594":[1,0,1004,3],
-"classSourceRace_1_1Row.html":[1,0,1004,0],
-"classSourceRace_1_1Row.html#a0236b697f457bc2c3191648f368222d9":[1,0,1004,0,5],
-"classSourceRace_1_1Row.html#a0486a4480525a73548bc88cb4f0b4f54":[1,0,1004,0,2]
+"classSourceQuest_1_1Row.html#ada3bb64b84dea26da90fb87e45b3933b":[1,0,1003,0,13]
 };
