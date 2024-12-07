@@ -1,5 +1,9 @@
 var NAVTREEINDEX56 =
 {
+"classHotItemFocusPos.html#afab578ff132fd625a0061ec17dfd3838":[1,0,535,1],
+"classHotItemGameAction.html":[1,0,536],
+"classHotItemGameAction.html#a53bdbc7305f11f24bd8b2451690732f3":[1,0,536,3],
+"classHotItemGameAction.html#a76fcc1add8d0ea9ad3c538ab8e040921":[1,0,536,4],
 "classHotItemGameAction.html#a9bbc11691a6cdd1e8aed75e7ce4b42e0":[1,0,536,2],
 "classHotItemGameAction.html#ace8cf4da21b79dd307033e1c8ded90ee":[1,0,536,0],
 "classHotItemGameAction.html#af0a14cff53e34e638b943564e4fc612d":[1,0,536,1],
@@ -167,8 +171,8 @@ var NAVTREEINDEX56 =
 "classIngredientAndRecipe.html#aff251c139803d4168e200317c3afa9d6":[1,0,556,1],
 "classInspectGroup.html":[1,0,557],
 "classInspectGroup.html#a02aceaa2fd654155af75e40d4db30e76":[1,0,557,3],
-"classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264":[1,0,557,13],
 "classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264":[1,0,557,11],
+"classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264":[1,0,557,13],
 "classInspectGroup.html#a154621f748f34ab3f52b2952b9adf448":[1,0,557,1],
 "classInspectGroup.html#a15f846bb8593699aadf8afc408765117":[1,0,557,20],
 "classInspectGroup.html#a2bb5f8bb305510884ae22010e8f444a0":[1,0,557,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX56 =
 "classInvOwner.html#a16bd035c8aba178051d13a87008cd3cd":[1,0,567,64],
 "classInvOwner.html#a2378c44bbbffc7e9478cd5379dce0b66":[1,0,567,52],
 "classInvOwner.html#a26b04af8bf5c801622c1342a225f5787":[1,0,567,31],
-"classInvOwner.html#a27aaf2a557a797c285a3e2f6ca0c2992":[1,0,567,12],
-"classInvOwner.html#a298f5f9938948377de584dacd88dc309":[1,0,567,10],
-"classInvOwner.html#a29cbb99a980735a30c31a9c346e7e14d":[1,0,567,39],
-"classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9":[1,0,567,54],
-"classInvOwner.html#a2cd059b9e89a713ec836d49bbe287226":[1,0,567,81]
+"classInvOwner.html#a27aaf2a557a797c285a3e2f6ca0c2992":[1,0,567,12]
 };

@@ -8,6 +8,6 @@ var searchData=
   ['originalhostility_5',['OriginalHostility',['../classChara.html#a16a8614d744fb716390159b086dc6da4',1,'Chara']]],
   ['originalsource_6',['originalSource',['../classQuestSequence.html#a6bd1da0ee4941e2e988100ceae3213e3',1,'QuestSequence']]],
   ['outofbounds_7',['outOfBounds',['../classCell.html#ac627e18c885b5b224b205bfd945dea09',1,'Cell']]],
-  ['owner_8',['owner',['../classTC.html#ab25b328fe38941cc5548522f7176de44',1,'TC.owner()'],['../classTraitChara.html#acd41bf1785e6918b297a392c75f7befc',1,'TraitChara.owner()'],['../classUIInventory.html#a29b1e9bd88e19073f6636bd83e1610fb',1,'UIInventory.owner()']]],
-  ['owner_9',['Owner',['../classBaseCondition.html#a289b434221238da225dd256cdcdd52d5',1,'BaseCondition.Owner()'],['../classBaseStats.html#ae093e1477ed8e467bfca936d3543a7a9',1,'BaseStats.Owner()']]]
+  ['owner_8',['Owner',['../classBaseCondition.html#a289b434221238da225dd256cdcdd52d5',1,'BaseCondition.Owner()'],['../classBaseStats.html#ae093e1477ed8e467bfca936d3543a7a9',1,'BaseStats.Owner()']]],
+  ['owner_9',['owner',['../classTC.html#ab25b328fe38941cc5548522f7176de44',1,'TC.owner()'],['../classTraitChara.html#acd41bf1785e6918b297a392c75f7befc',1,'TraitChara.owner()'],['../classUIInventory.html#a29b1e9bd88e19073f6636bd83e1610fb',1,'UIInventory.owner()']]]
 ];

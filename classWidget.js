@@ -39,6 +39,7 @@ var classWidget =
     [ "OnSetContextMenu", "classWidget.html#ad2732b674b864ef872b939069ac321bc", null ],
     [ "OnUpdateConfig", "classWidget.html#aa18f1b3409fa2df4d7e7075fe7641bd0", null ],
     [ "Reactivate", "classWidget.html#a859d878bb55cdd39be31201621502f27", null ],
+    [ "RefreshOrder", "classWidget.html#ae9ece0be9b4ac277401b430d7f7b9f92", null ],
     [ "RefreshTipPivotPosition", "classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1", null ],
     [ "RemoveDeco", "classWidget.html#a0469638a88c98fa33fbc8e9d2713d404", null ],
     [ "SetAnchor", "classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406", null ],

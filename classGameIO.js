@@ -1,5 +1,6 @@
 var classGameIO =
 [
+    [ "CanLoad", "classGameIO.html#a41128f17f082ef1ab651945f44fb461b", null ],
     [ "ClearTemp", "classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5", null ],
     [ "DeleteEmptyGameFolders", "classGameIO.html#a3641078c1136f225277874c099b60179", null ],
     [ "DeleteGame", "classGameIO.html#a038c8c9ec58cd95871110de3e0afb483", null ],

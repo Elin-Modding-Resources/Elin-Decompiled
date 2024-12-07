@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"classAttbSpecial.html#a1553029bfb76d620489d93d9247c3807":[1,0,162,1],
+"classAttbSpecial.html#abef48495e60db9e24565ba200ec3b1bc":[1,0,162,0],
 "classAttbWeapon.html":[1,0,163],
 "classAttbWeapon.html#a019355b9ff311b97363d2bad816e2e4e":[1,0,163,0],
 "classBLOCK.html":[1,0,187],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "classBaseGameScreen.html#ac899f9894fc0945e90c6ba2580ca2934":[1,0,172,45],
 "classBaseGameScreen.html#ac901fba9fe0db73ef3735af1d6325a70":[1,0,172,38],
 "classBaseGameScreen.html#acc1c58209aa7203f241ba23ae0c3cbba":[1,0,172,30],
-"classBaseGameScreen.html#acdbbb6a2c7a0a7866a3973ef1baec7cc":[1,0,172,64],
-"classBaseGameScreen.html#ace7e04df042a675049e0b1a3ffad955f":[1,0,172,21],
-"classBaseGameScreen.html#ad2bb7197eca837be47a45df5394940f7":[1,0,172,23]
+"classBaseGameScreen.html#acdbbb6a2c7a0a7866a3973ef1baec7cc":[1,0,172,64]
 };

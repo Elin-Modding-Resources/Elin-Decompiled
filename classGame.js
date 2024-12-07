@@ -19,6 +19,7 @@ var classGame =
     [ "Quit", "classGame.html#ad8df470c569d4ed80aa973fd08e6efac", null ],
     [ "Save", "classGame.html#adddd2df9e4f107f00e9b7b380ff6ef42", null ],
     [ "StartNewGame", "classGame.html#ae7423b49e135bc598a7aabc1e0fc3da6", null ],
+    [ "TryLoad", "classGame.html#a510195b4944121851c862985745d8ee8", null ],
     [ "Wait", "classGame.html#ae4b1668508e5b5b8854bd1fb309a2562", null ],
     [ "Wait", "classGame.html#a9dccaf6fb486511d5ad1b3fd01c6c113", null ],
     [ "Wait", "classGame.html#aabe7e6472b92da43673526dca5d41bd9", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"classGameSetting_1_1EffectSetting.html":[1,0,441,3],
+"classGameSetting_1_1EffectSetting.html#a47ec64f0cb7a3baedd83a02be7c1cdc4":[1,0,441,3,0],
+"classGameSetting_1_1GenSetting.html":[1,0,441,4],
+"classGameSetting_1_1GenSetting.html#ae629c72c80fa6f159d2065cc9a2aca74":[1,0,441,4,0],
 "classGameSetting_1_1PassSetting.html":[1,0,441,5],
 "classGameSetting_1_1PassSetting.html#a7ad9f1bbef598f43ef1f1a1b36f650e6":[1,0,441,5,1],
 "classGameSetting_1_1PassSetting.html#ab938cf6dba4731e405449d682af803da":[1,0,441,5,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX52 =
 "classGlobalData.html#a242d899c028f3d1898099f275ac7dd3d":[1,0,448,0],
 "classGlobalData.html#abc84da135a04acf4ce7076d70692cec0":[1,0,448,1],
 "classGlobalGoal.html":[1,0,449],
-"classGlobalGoal.html#a067e369e656c2c2f2590e7cd49502586":[1,0,449,7],
-"classGlobalGoal.html#a42fff510e744d3de87825e7713d4b735":[1,0,449,3],
-"classGlobalGoal.html#a5291f5bf8d264177135bc1cffe4e541f":[1,0,449,1],
-"classGlobalGoal.html#a5c2048b56e976d1e86601a6fd0299ada":[1,0,449,2],
-"classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0":[1,0,449,4]
+"classGlobalGoal.html#a067e369e656c2c2f2590e7cd49502586":[1,0,449,7]
 };

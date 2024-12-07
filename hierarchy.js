@@ -1352,6 +1352,7 @@ var hierarchy =
             [ "TraitDemitas", "classTraitDemitas.html", null ],
             [ "TraitEureka", "classTraitEureka.html", null ],
             [ "TraitGarokk", "classTraitGarokk.html", null ],
+            [ "TraitGriffin", "classTraitGriffin.html", null ],
             [ "TraitKettle", "classTraitKettle.html", null ],
             [ "TraitMiko_Mifu", "classTraitMiko__Mifu.html", null ],
             [ "TraitMiko_Nefu", "classTraitMiko__Nefu.html", null ],

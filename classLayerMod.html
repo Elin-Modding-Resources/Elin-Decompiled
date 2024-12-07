@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.50 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.51 Nightly</span>
    </div>
   </td>
  </tr>
@@ -261,7 +261,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   35</span>            {</div>
 <div class="line"><span class="lineno">   36</span>                a.UpdateMeta(updateOnly: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   37</span>                b.package = a;</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keywordtype">string</span> s = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.packages.IndexOf(a) + 1 + <span class="stringliteral">&quot;. &quot;</span> + (a.isInPackages ? <span class="stringliteral">&quot;[Private] &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + a.title;</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordtype">string</span> s = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.packages.IndexOf(a) + 1 + <span class="stringliteral">&quot;. &quot;</span> + (a.isInPackages ? <span class="stringliteral">&quot;[Local] &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + a.title;</div>
 <div class="line"><span class="lineno">   39</span>                b.<a class="code hl_variable" href="classItemMod.html#a768c5c32d2ceddda91b023a4d082e008">buttonActivate</a>.mainText.SetText(s, (!a.IsValidVersion()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));</div>
 <div class="line"><span class="lineno">   40</span>                b.buttonActivate.subText.text = a.version;</div>
 <div class="line"><span class="lineno">   41</span>                b.buttonLock.mainText.text = a.author;</div>

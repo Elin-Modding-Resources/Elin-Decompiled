@@ -1,5 +1,9 @@
 var NAVTREEINDEX94 =
 {
+"classTraitDyeMaker.html#a7c135acc1974d6adccbc799c4a185533":[1,0,1299,1],
+"classTraitDyeMaker.html#a7edd2bc306762c4cb7a352858d19e20d":[1,0,1299,2],
+"classTraitDyeMaker.html#a88229a7b49a09f265ae0781508f0eb20":[1,0,1299,6],
+"classTraitDyeMaker.html#a8f1c8a8510376215242a105f7a53982c":[1,0,1299,0],
 "classTraitDyeMaker.html#ac458ac1c27d04a528cc46219fda877a7":[1,0,1299,7],
 "classTraitDyeMaker.html#adac22b23782ac77519f4269965f3280d":[1,0,1299,4],
 "classTraitEQ.html":[1,0,1306],
@@ -240,14 +244,10 @@ var NAVTREEINDEX94 =
 "classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1360,4],
 "classTraitGodStatue.html#abc0ce01bea37d901ff1893ea8576377d":[1,0,1360,5],
 "classTraitGrave.html":[1,0,1361],
-"classTraitGrimoire.html":[1,0,1362],
-"classTraitGrindstone.html":[1,0,1363],
-"classTraitGrindstone.html#a0825341a9432d91e675cfc4b8f9d39a3":[1,0,1363,3],
-"classTraitGrindstone.html#a09a44dac87424a91646516deb6d4cca3":[1,0,1363,4],
-"classTraitGrindstone.html#a427730a2544e57bd0df379c3c6f356ce":[1,0,1363,1],
-"classTraitGrindstone.html#a5248c1e5c050484d5d90ac92b9bef274":[1,0,1363,5],
-"classTraitGrindstone.html#a7e6e197ab6ef77c88f6cc004b5ab5c33":[1,0,1363,2],
-"classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1363,0],
-"classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1363,6],
-"classTraitGuard.html":[1,0,1364]
+"classTraitGriffin.html":[1,0,1362],
+"classTraitGriffin.html#aa511931a3f7b64490c5775e2c69af7da":[1,0,1362,0],
+"classTraitGrimoire.html":[1,0,1363],
+"classTraitGrindstone.html":[1,0,1364],
+"classTraitGrindstone.html#a0825341a9432d91e675cfc4b8f9d39a3":[1,0,1364,3],
+"classTraitGrindstone.html#a09a44dac87424a91646516deb6d4cca3":[1,0,1364,4]
 };

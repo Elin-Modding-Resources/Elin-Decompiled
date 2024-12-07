@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"classAM__Blueprint.html#a97d1302696ed237e5cc191f6cd748895":[1,0,109,3],
+"classAM__Blueprint.html#afceae73eda50f5eac1ef2958fd8278b2":[1,0,109,4],
 "classAM__Build.html":[1,0,110],
 "classAM__Build.html#a007d83e3f6738839cfca45e887ee6fad":[1,0,110,2],
 "classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf":[1,0,110,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "classAM__MoveInstalled.html#a043f889264546b830927e58cf7c82c12":[1,0,127,20],
 "classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601":[1,0,127,15],
 "classAM__MoveInstalled.html#a1ca7794b65e63e3ed4a5314dcff402fa":[1,0,127,27],
-"classAM__MoveInstalled.html#a257cdf514813c2c497d432e834465583":[1,0,127,30],
-"classAM__MoveInstalled.html#a2fb7b082dc7ec43763a64e667f56de63":[1,0,127,22],
-"classAM__MoveInstalled.html#a3a577f5de923532fcf02643320874c17":[1,0,127,28]
+"classAM__MoveInstalled.html#a257cdf514813c2c497d432e834465583":[1,0,127,30]
 };

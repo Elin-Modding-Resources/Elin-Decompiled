@@ -1,5 +1,9 @@
 var NAVTREEINDEX85 =
 {
+"classSpawnSetting.html#ab05b7a4cf8640a000889af414880dab0":[1,0,1023,20],
+"classSpawnSetting.html#ac8f954151ce73f00eb8592f9d1d83237":[1,0,1023,7],
+"classSpawnSetting.html#ac9967d2ba69dd3c0b0ed2b6855b121eb":[1,0,1023,15],
+"classSpawnSetting.html#ad0b09c0647d774fc82deace7d2932f6b":[1,0,1023,1],
 "classSpawnSetting.html#add15efe890d670829aef42c70aee6bcf":[1,0,1023,18],
 "classSpawnSetting.html#ae27e7a07baf5bf5816fe611e0e5adfcd":[1,0,1023,16],
 "classSpawnSetting.html#af0eaf354ef07f73cfad029ec9884cd88":[1,0,1023,19],
@@ -245,9 +249,5 @@ var NAVTREEINDEX85 =
 "classTCExtraProgress.html#a89adce211cee03321fb4114a86057b41":[1,0,1083,4],
 "classTCExtraProgress.html#a9611ec331c7cef6441bcfc24d3d335e0":[1,0,1083,10],
 "classTCExtraProgress.html#a9c703cc6564819e8e1bab1923dc5bfbe":[1,0,1083,2],
-"classTCExtraProgress.html#a9e9efdc1f1e87b2b137e946fecb82859":[1,0,1083,6],
-"classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6":[1,0,1083,0],
-"classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6a624aa1a206e09836e3c81ea95502f459":[1,0,1083,0,0],
-"classTCExtraProgress.html#ad430e6222bd25395256dd5de7174e0dc":[1,0,1083,1],
-"classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae":[1,0,1083,5]
+"classTCExtraProgress.html#a9e9efdc1f1e87b2b137e946fecb82859":[1,0,1083,6]
 };

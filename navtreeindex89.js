@@ -1,5 +1,9 @@
 var NAVTREEINDEX89 =
 {
+"classTileType.html#a7dc15f6afd390a3cfb2e4a2274070b23":[1,0,1110,92],
+"classTileType.html#a7dcb9d6b672b94ac3188eb0f0a7dccf9":[1,0,1110,103],
+"classTileType.html#a858b494afbf1c2c04c63d592b14e9691":[1,0,1110,62],
+"classTileType.html#a867dd3a8762e940581e91f98c3f5a790":[1,0,1110,32],
 "classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d":[1,0,1110,6],
 "classTileType.html#a875f2611562c44a88318d9d42d5ee335":[1,0,1110,130],
 "classTileType.html#a876c32b78e8f5cd867d965aac0396d69":[1,0,1110,94],
@@ -245,9 +249,5 @@ var NAVTREEINDEX89 =
 "classTileTypeStairs.html#a9a7230dc5827e5c7940eb560b45a2868":[1,0,1147,2],
 "classTileTypeStairs.html#ac1d80ea8151c946f5cc5dcb8dec8d433":[1,0,1147,0],
 "classTileTypeStairsHalf.html":[1,0,1148],
-"classTileTypeStairsHalf.html#a2970d7fcb6a39cfcfddd27b79131c969":[1,0,1148,0],
-"classTileTypeTree.html":[1,0,1149],
-"classTileTypeVine.html":[1,0,1150],
-"classTileTypeVine.html#a88fcf3c8e7504207c00f81826174e74a":[1,0,1150,0],
-"classTileTypeWall.html":[1,0,1151]
+"classTileTypeStairsHalf.html#a2970d7fcb6a39cfcfddd27b79131c969":[1,0,1148,0]
 };

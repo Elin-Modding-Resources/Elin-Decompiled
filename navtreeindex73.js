@@ -1,5 +1,9 @@
 var NAVTREEINDEX73 =
 {
+"classQuestManager.html#ac87fcf8fa65b2eb1b59a24a3f5666efd":[1,0,839,16],
+"classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e":[1,0,839,27],
+"classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f":[1,0,839,11],
+"classQuestManager.html#ae66c5dda98498edcb42971241ec929d0":[1,0,839,26],
 "classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12":[1,0,839,7],
 "classQuestManager.html#aec5882cb61c245f609ece8a62fa9a946":[1,0,839,13],
 "classQuestManager.html#aee656082e2037dfef69293944f3fc838":[1,0,839,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX73 =
 "classRecipe.html#a040c3f5e15fef1caad347e061707d507":[1,0,883,41],
 "classRecipe.html#a083683c4d4736902ce4ce7243afc4321":[1,0,883,21],
 "classRecipe.html#a0c371359762bb5b5fc58c8451e813950":[1,0,883,53],
-"classRecipe.html#a0eeec5c402d1fa61555dd05aa18bbaca":[1,0,883,66],
-"classRecipe.html#a11bd1633807997a593db370fa17c96b6":[1,0,883,1],
-"classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d":[1,0,883,1,0],
-"classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b":[1,0,883,1,1],
-"classRecipe.html#a123d8acc734e50c7c492c141eddf2680":[1,0,883,34]
+"classRecipe.html#a0eeec5c402d1fa61555dd05aa18bbaca":[1,0,883,66]
 };

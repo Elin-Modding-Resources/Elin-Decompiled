@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.50 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.51 Nightly</span>
    </div>
   </td>
  </tr>
@@ -241,7 +241,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   71</span>        }</div>
 <div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="classMapSubset.html#a05f61d7beea4240507b2b99830d4f594">serializedCards</a>.<a class="code hl_function" href="classSerializedCards.html#ab6013c8b094ab0b5db3e83967bf0f86e">Restore</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>, <span class="keyword">null</span>, addToZone: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04290">Card.cs:4290</a></div></div>
+<div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04286">Card.cs:4286</a></div></div>
 <div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
 <div class="ttc" id="aclassCell_html_a47c45aef27362943da4b90dd1310c0dd"><div class="ttname"><a href="classCell.html#a47c45aef27362943da4b90dd1310c0dd">Cell.Things</a></div><div class="ttdeci">List&lt; Thing &gt; Things</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00986">Cell.cs:986</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
@@ -252,7 +252,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSerializedCards_html_ab6013c8b094ab0b5db3e83967bf0f86e"><div class="ttname"><a href="classSerializedCards.html#ab6013c8b094ab0b5db3e83967bf0f86e">SerializedCards.Restore</a></div><div class="ttdeci">void Restore(Map map, Map orgMap, bool addToZone, PartialMap partial=null)</div><div class="ttdef"><b>Definition:</b> <a href="SerializedCards_8cs_source.html#l00467">SerializedCards.cs:467</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Card_8cs_source.html#l04290">Card.Destroy()</a>, <a class="el" href="Map_8cs_source.html#l00864">Map.GetCell()</a>, <a class="el" href="MapSubset_8cs_source.html#l00012">listClear</a>, <a class="el" href="SerializedCards_8cs_source.html#l00467">SerializedCards.Restore()</a>, <a class="el" href="MapSubset_8cs_source.html#l00015">serializedCards</a>, and <a class="el" href="Cell_8cs_source.html#l00986">Cell.Things</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Card_8cs_source.html#l04286">Card.Destroy()</a>, <a class="el" href="Map_8cs_source.html#l00864">Map.GetCell()</a>, <a class="el" href="MapSubset_8cs_source.html#l00012">listClear</a>, <a class="el" href="SerializedCards_8cs_source.html#l00467">SerializedCards.Restore()</a>, <a class="el" href="MapSubset_8cs_source.html#l00015">serializedCards</a>, and <a class="el" href="Cell_8cs_source.html#l00986">Cell.Things</a>.</p>
 
 </div>
 </div>
@@ -419,12 +419,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   29</span>        EClass._zone.idCurrentSubset = <a class="code hl_variable" href="classMapSubset.html#a8807bcd4e68917c0a87ff29da4772217">id</a>;</div>
 <div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#a01833daf0214d812ec629467fa441202">SaveFile</a>(CorePath.ZoneSave + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a317357b241607c3081a72a0f5a9372fa">idExport</a> + <span class="stringliteral">&quot;_&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;.s&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classZone.html#a489d599ec83aff67a5f7a48c5296c63d">subset</a>);</div>
 <div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclassGameIO_html_a01833daf0214d812ec629467fa441202"><div class="ttname"><a href="classGameIO.html#a01833daf0214d812ec629467fa441202">GameIO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00240">GameIO.cs:240</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a01833daf0214d812ec629467fa441202"><div class="ttname"><a href="classGameIO.html#a01833daf0214d812ec629467fa441202">GameIO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00246">GameIO.cs:246</a></div></div>
 <div class="ttc" id="aclassMapSubset_html_a8807bcd4e68917c0a87ff29da4772217"><div class="ttname"><a href="classMapSubset.html#a8807bcd4e68917c0a87ff29da4772217">MapSubset.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="MapSubset_8cs_source.html#l00009">MapSubset.cs:9</a></div></div>
 <div class="ttc" id="aclassMapSubset_html_afbea5bfdb27d1a59c65d79f97664991e"><div class="ttname"><a href="classMapSubset.html#afbea5bfdb27d1a59c65d79f97664991e">MapSubset.OnSave</a></div><div class="ttdeci">void OnSave(string _id)</div><div class="ttdef"><b>Definition:</b> <a href="MapSubset_8cs_source.html#l00038">MapSubset.cs:38</a></div></div>
 <div class="ttc" id="aclassZone_html_a489d599ec83aff67a5f7a48c5296c63d"><div class="ttname"><a href="classZone.html#a489d599ec83aff67a5f7a48c5296c63d">Zone.subset</a></div><div class="ttdeci">MapSubset subset</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00059">Zone.cs:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="MapSubset_8cs_source.html#l00009">id</a>, <a class="el" href="Zone_8cs_source.html#l00132">Zone.idExport</a>, <a class="el" href="MapSubset_8cs_source.html#l00038">OnSave()</a>, <a class="el" href="GameIO_8cs_source.html#l00240">GameIO.SaveFile()</a>, and <a class="el" href="Zone_8cs_source.html#l00059">Zone.subset</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="MapSubset_8cs_source.html#l00009">id</a>, <a class="el" href="Zone_8cs_source.html#l00132">Zone.idExport</a>, <a class="el" href="MapSubset_8cs_source.html#l00038">OnSave()</a>, <a class="el" href="GameIO_8cs_source.html#l00246">GameIO.SaveFile()</a>, and <a class="el" href="Zone_8cs_source.html#l00059">Zone.subset</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00823">CoreDebug.UpdateInput()</a>.</p>
 

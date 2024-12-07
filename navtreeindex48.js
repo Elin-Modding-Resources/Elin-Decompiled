@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"classElement.html#aeb4a05b29b40edb5e9e235012ce69b0f":[1,0,392,103],
+"classElement.html#afd9b473ffd04d2b55fc8a3a861ee5039":[1,0,392,105],
 "classElement.html#afe592fea495e1927c93e9abfc6f9d963":[1,0,392,70],
 "classElement.html#aff3eb71f147171d357ad77c34b0cf709":[1,0,392,64],
 "classElement.html#aff3eb71f147171d357ad77c34b0cf709":[1,0,392,65],
@@ -118,17 +120,17 @@ var NAVTREEINDEX48 =
 "classElement_1_1BonusInfo.html":[1,0,392,0],
 "classElement_1_1BonusInfo.html#a2fa2c34fac1e11e5783e1356cfadee1e":[1,0,392,0,11],
 "classElement_1_1BonusInfo.html#a43eb53a49a6c65df5cb443f16c7871ff":[1,0,392,0,12],
-"classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813":[1,0,392,0,7],
 "classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813":[1,0,392,0,6],
-"classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3":[1,0,392,0,1],
+"classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813":[1,0,392,0,7],
 "classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3":[1,0,392,0,0],
+"classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3":[1,0,392,0,1],
 "classElement_1_1BonusInfo.html#a5d2c5781e5302cbcb6cd68c3f9b95a22":[1,0,392,0,4],
 "classElement_1_1BonusInfo.html#a9add3c71420eb08cd80426e4a68b6c95":[1,0,392,0,10],
 "classElement_1_1BonusInfo.html#aac4ab5ac7677b68ee99bed26ce758a8b":[1,0,392,0,9],
 "classElement_1_1BonusInfo.html#abfaa40ff704e7ba8a58b316ef8157c28":[1,0,392,0,8],
 "classElement_1_1BonusInfo.html#ad4d65d92fdcceb9d51f2c9ea10849864":[1,0,392,0,5],
-"classElement_1_1BonusInfo.html#afb22c7460d436371da1188bad1b1bf4c":[1,0,392,0,2],
 "classElement_1_1BonusInfo.html#afb22c7460d436371da1188bad1b1bf4c":[1,0,392,0,3],
+"classElement_1_1BonusInfo.html#afb22c7460d436371da1188bad1b1bf4c":[1,0,392,0,2],
 "classEloMap.html":[1,0,401],
 "classEloMap.html#a005eb26c5c0f9be68eece6fe9238ace8":[1,0,401,21],
 "classEloMap.html#a0797d69e85c0817f04a75280fec113d7":[1,0,401,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "classEmbarkActor.html#a9d017aef7af74ec4f4534f33cf6bb32c":[1,0,406,0],
 "classEmbarkActor.html#ab37f4e2f4404e7535ffdb4b8409060c2":[1,0,406,11],
 "classEmbarkActor.html#acd57acbd1b0fdc47630ab2c92fdb07e6":[1,0,406,2],
-"classEmbarkActor.html#ae3a729a25b35bc51bb7815c60243dd1f":[1,0,406,9],
-"classEmbarkActor.html#ae3c7e98a147e39fb9dcaa8cddee7cb9a":[1,0,406,10],
-"classEmbarkActor.html#ae4ed4818a6c187f74a71f8fc8a37e556":[1,0,406,1]
+"classEmbarkActor.html#ae3a729a25b35bc51bb7815c60243dd1f":[1,0,406,9]
 };

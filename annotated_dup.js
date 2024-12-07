@@ -1384,6 +1384,7 @@ var annotated_dup =
     [ "TraitGM_Thief", "classTraitGM__Thief.html", null ],
     [ "TraitGodStatue", "classTraitGodStatue.html", "classTraitGodStatue" ],
     [ "TraitGrave", "classTraitGrave.html", null ],
+    [ "TraitGriffin", "classTraitGriffin.html", "classTraitGriffin" ],
     [ "TraitGrimoire", "classTraitGrimoire.html", null ],
     [ "TraitGrindstone", "classTraitGrindstone.html", "classTraitGrindstone" ],
     [ "TraitGuard", "classTraitGuard.html", "classTraitGuard" ],

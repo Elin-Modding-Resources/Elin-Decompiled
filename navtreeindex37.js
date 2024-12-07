@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classCharaAbility.html#a00b0205367206ad515802036a4e8c24e":[1,0,221,8],
+"classCharaAbility.html#a1447c2476bd31b14ffb45414bedb6bb2":[1,0,221,7],
 "classCharaAbility.html#a22d81c4f23177d3772df0b1c64574f7c":[1,0,221,4],
 "classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa":[1,0,221,6],
 "classCharaAbility.html#a885ca8bfe313c327cf5c20c9d8b84ea9":[1,0,221,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "classColorProfile_1_1BlockColors.html#ad3ad2430d2a9d22f6c39d61d349218bd":[1,0,240,0,10],
 "classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea":[1,0,240,0,2],
 "classColorProfile_1_1BlockColors.html#ae4c84e79217e038daa119cd914ede991":[1,0,240,0,20],
-"classColorProfile_1_1PCLights.html":[1,0,240,1],
-"classColorProfile_1_1PCLights.html#a30528f180df46b944db528c60af05ad5":[1,0,240,1,1],
-"classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,240,1,0]
+"classColorProfile_1_1PCLights.html":[1,0,240,1]
 };

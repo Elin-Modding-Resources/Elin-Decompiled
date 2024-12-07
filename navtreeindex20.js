@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"classAI__PracticeDummy.html#a43a0f46559087698ffbc468e4e3d6963":[1,0,74,6],
+"classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,74,3],
 "classAI__PracticeDummy.html#a68ceb43d8ca521a27b813b5e6a6bbfb5":[1,0,74,7],
 "classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,74,1],
 "classAI__PracticeDummy.html#af992b999215cf0f6d948d6c44a226946":[1,0,74,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX20 =
 "classAM__Blueprint.html#a23b7c9373eba7f93ba9e1c88a60bb5aa":[1,0,109,2],
 "classAM__Blueprint.html#a2852fdf4cefb2c694620a7091b670fd7":[1,0,109,1],
 "classAM__Blueprint.html#a411fb78b6a4d8eee5c174591cc0806dc":[1,0,109,5],
-"classAM__Blueprint.html#a96aae9fe2358c69bf634dc54fee9fb56":[1,0,109,0],
-"classAM__Blueprint.html#a97d1302696ed237e5cc191f6cd748895":[1,0,109,3],
-"classAM__Blueprint.html#afceae73eda50f5eac1ef2958fd8278b2":[1,0,109,4]
+"classAM__Blueprint.html#a96aae9fe2358c69bf634dc54fee9fb56":[1,0,109,0]
 };
