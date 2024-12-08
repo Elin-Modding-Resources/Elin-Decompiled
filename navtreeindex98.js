@@ -1,5 +1,13 @@
 var NAVTREEINDEX98 =
 {
+"classTraitShippingChest.html#ab367483a11271403fa645d8ccc69eadd":[1,0,1532,4],
+"classTraitShippingChest.html#abd7d3c579c62eabbabf8d1962e05a667":[1,0,1532,2],
+"classTraitShippingChest.html#ae385a2abc96d5a5275d0b2c60c7722d3":[1,0,1532,6],
+"classTraitShippingChest.html#afe3fbe1fa561e2aeab8caa8f233e2482":[1,0,1532,7],
+"classTraitShowcase.html":[1,0,1533],
+"classTraitShowcase.html#abc66a7e09a8aec9cd0ca1946a4d36f89":[1,0,1533,0],
+"classTraitShrine.html":[1,0,1534],
+"classTraitShrine.html#a6891362e6d10f8d01362413563f2e4e4":[1,0,1534,7],
 "classTraitShrine.html#a77a49ecdcb3a7c1cd27732447611da72":[1,0,1534,2],
 "classTraitShrine.html#a90a228069db59009e1b7abba07388664":[1,0,1534,4],
 "classTraitShrine.html#a9c13a4e8f7f4e7429f415e4c45dfa5e4":[1,0,1534,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX98 =
 "classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1601,0],
 "classTraitToolRangeGunEnergy.html":[1,0,1602],
 "classTraitToolRangeGunEnergy.html#adfefa6f64285332e885186f31a543f8f":[1,0,1602,0],
-"classTraitToolSculpture.html":[1,0,1603],
-"classTraitToolSculpture.html#a4838304872af3ec97dff211d4965216c":[1,0,1603,0],
-"classTraitToolShears.html":[1,0,1604],
-"classTraitToolShears.html#a06d4cdf9b914ea63e7a701f0ca3645e9":[1,0,1604,1],
-"classTraitToolShears.html#a3ee171e6c9fa1529dd76603ac02b4f6a":[1,0,1604,0],
-"classTraitToolShears.html#af647d7ff31cf1df7683bdb84cb5b3fea":[1,0,1604,2],
-"classTraitToolSickle.html":[1,0,1605],
-"classTraitToolSickle.html#aaf396ca14be0760703717610954d89b6":[1,0,1605,0],
-"classTraitToolTalisman.html":[1,0,1606]
+"classTraitToolSculpture.html":[1,0,1603]
 };

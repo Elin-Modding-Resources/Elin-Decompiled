@@ -1,5 +1,13 @@
 var NAVTREEINDEX93 =
 {
+"classTraitCookerMicrowave.html#a09995ff5750a6aafd9db13aaf8649805":[1,0,1257,5],
+"classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd":[1,0,1257,1],
+"classTraitCookerMicrowave.html#a0ca3fbeffff6406e6f040cb1b8635364":[1,0,1257,0],
+"classTraitCookerMicrowave.html#a1da4d1f54e491074e8b347b15383c420":[1,0,1257,3],
+"classTraitCookerMicrowave.html#a35999b4086077023692f89dc99d72f8b":[1,0,1257,6],
+"classTraitCookerMicrowave.html#a939ab44480c2378293feeb7cf4ee7c58":[1,0,1257,4],
+"classTraitCookerMicrowave.html#a9a2886773a4d86f7f980c798ac022133":[1,0,1257,7],
+"classTraitCookerMicrowave.html#acbaac805d0c276d5c3e8dbf531c57391":[1,0,1257,2],
 "classTraitCookingPot.html":[1,0,1258],
 "classTraitCookingPot.html#a06eefe52d00e7052f29909e85255e6c8":[1,0,1258,3],
 "classTraitCookingPot.html#a17c2359f3abf72e61414c5ba4bdeb01a":[1,0,1258,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX93 =
 "classTraitDye.html":[1,0,1298],
 "classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1298,1],
 "classTraitDye.html#a0fed784d147a98ed68e0c97b6f3b15fa":[1,0,1298,3],
-"classTraitDye.html#a7b048cccd0c4e95a05e81833b65a0973":[1,0,1298,4],
-"classTraitDye.html#ae12263f7d8b9f94f05d3714d52e0df24":[1,0,1298,6],
-"classTraitDye.html#ae3444543e1d4eba66bbb4a3c323497bb":[1,0,1298,2],
-"classTraitDye.html#ae38c9bfcac5d2427c6e931ebe8ea42ec":[1,0,1298,0],
-"classTraitDye.html#ae7ff1087f1342e5054280725cd8829d0":[1,0,1298,5],
-"classTraitDyeMaker.html":[1,0,1299],
-"classTraitDyeMaker.html#a042fa7dcb7f2511922650036ef02ed9e":[1,0,1299,8],
-"classTraitDyeMaker.html#a6ed9bfb581432eb63b2e1512f18c94b7":[1,0,1299,3],
-"classTraitDyeMaker.html#a78712d06530b5ae7a73bf2add6276119":[1,0,1299,5]
+"classTraitDye.html#a7b048cccd0c4e95a05e81833b65a0973":[1,0,1298,4]
 };

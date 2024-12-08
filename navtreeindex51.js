@@ -1,5 +1,11 @@
 var NAVTREEINDEX51 =
 {
+"classFoodEffect.html#ac9e168b0f422757e969e8e23aaac16de":[1,0,426,3],
+"classFoodEffect.html#aeb5359261ce5eb0480f91c3d01467536":[1,0,426,1],
+"classFootmark.html":[1,0,427],
+"classFootmark.html#a046967b8ceccd3e42d36ec594136c552":[1,0,427,1],
+"classFootmark.html#a404f6ab25809b84b2174e40d3c42ba24":[1,0,427,2],
+"classFootmark.html#a67511ba7dafbc8828a0dc622aadcf34e":[1,0,427,0],
 "classFov.html":[1,0,428],
 "classFov.html#a041de366960e1b53848784e3c0c74a5c":[1,0,428,16],
 "classFov.html#a112f8d56b579eb9811a247ed7bf46b45":[1,0,428,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX51 =
 "classGameSetting_1_1BalanceSetting.html#a2acd0a2b929ff80bc0d68a0b14bf8d24":[1,0,441,1,1],
 "classGameSetting_1_1BalanceSetting.html#abaa686b0b266bbe9d033789897031abc":[1,0,441,1,3],
 "classGameSetting_1_1EffectData.html":[1,0,441,2],
-"classGameSetting_1_1EffectData.html#a1449e0260c06f5f85ba8c3b661f5602e":[1,0,441,2,3],
-"classGameSetting_1_1EffectData.html#a47fd91b6edf86e92bf2b2dc7c38e5bd2":[1,0,441,2,5],
-"classGameSetting_1_1EffectData.html#a5d80e3fe862b3a2b1c0426f72ecdf2a4":[1,0,441,2,4],
-"classGameSetting_1_1EffectData.html#a8d85d72c251acae0381c75e90cb06c64":[1,0,441,2,2],
-"classGameSetting_1_1EffectData.html#ac3ff20f25980877516d87c785aa07456":[1,0,441,2,6],
-"classGameSetting_1_1EffectData.html#acfe135ff0773bad7f60beb2c175fa15e":[1,0,441,2,0],
-"classGameSetting_1_1EffectData.html#ae890c7263b1d04b1a4005bfbe800769d":[1,0,441,2,1]
+"classGameSetting_1_1EffectData.html#a1449e0260c06f5f85ba8c3b661f5602e":[1,0,441,2,3]
 };

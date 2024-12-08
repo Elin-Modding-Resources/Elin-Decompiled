@@ -49,6 +49,7 @@ var classPlayer_1_1Flags =
     [ "start", "classPlayer_1_1Flags.html#a56be341f71376da615f18635efc20be1", null ],
     [ "statueShipped", "classPlayer_1_1Flags.html#ac752e751c68fed05d32dc9432c0f8486", null ],
     [ "storyFiama", "classPlayer_1_1Flags.html#a84f6a6d4937597697626388aa307243c", null ],
+    [ "toggleHotbarHighlightActivated", "classPlayer_1_1Flags.html#aa1975c83cb89b53e76c0811ed575d776", null ],
     [ "toggleHotbarHighlightDisabled", "classPlayer_1_1Flags.html#a1ddf8b634e2bf98b569e26d98d6e1143", null ],
     [ "welcome", "classPlayer_1_1Flags.html#ae528e64957ae5b285b7ae15b043e322e", null ]
 ];

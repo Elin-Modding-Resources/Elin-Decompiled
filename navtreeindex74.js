@@ -1,5 +1,12 @@
 var NAVTREEINDEX74 =
 {
+"classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289":[1,0,882,0],
+"classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d":[1,0,882,1],
+"classRecipe.html":[1,0,883],
+"classRecipe.html#a040c3f5e15fef1caad347e061707d507":[1,0,883,41],
+"classRecipe.html#a083683c4d4736902ce4ce7243afc4321":[1,0,883,21],
+"classRecipe.html#a0c371359762bb5b5fc58c8451e813950":[1,0,883,53],
+"classRecipe.html#a0eeec5c402d1fa61555dd05aa18bbaca":[1,0,883,66],
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6":[1,0,883,1],
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d":[1,0,883,1,0],
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b":[1,0,883,1,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX74 =
 "classRegion.html#a53422c9687def5c867554339f6dd6e5b":[1,0,896,24],
 "classRegion.html#a633fff301fccb673ce47530b471125e0":[1,0,896,14],
 "classRegion.html#a69a1412cc68e055773f3926053d4f29f":[1,0,896,20],
-"classRegion.html#a6e0e675b6dd496f2acd636babb3cf64a":[1,0,896,27],
-"classRegion.html#a7bef4f8308621ac0fd3e6f5b1535b794":[1,0,896,26],
-"classRegion.html#a836bf0e0d03daf979cbce4326cf78ca6":[1,0,896,5],
-"classRegion.html#a9023e35311d29a396f758bb2751a62da":[1,0,896,23],
-"classRegion.html#a98b2cc1888130954a1b264a0747373dc":[1,0,896,4],
-"classRegion.html#a9cfa981a028c4775c8e81bae421da41e":[1,0,896,12],
-"classRegion.html#aa68093fe293fea6902df698a521c204b":[1,0,896,9],
-"classRegion.html#addd277cb0c221ce4e6f9e78e93501806":[1,0,896,3]
+"classRegion.html#a6e0e675b6dd496f2acd636babb3cf64a":[1,0,896,27]
 };

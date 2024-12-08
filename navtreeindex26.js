@@ -1,5 +1,9 @@
 var NAVTREEINDEX26 =
 {
+"classAttbMain.html#a821624e4c43b6671d53b803eb927889e":[1,0,161,3],
+"classAttbMain.html#a90c7834f8c3ba03b517abc4108099776":[1,0,161,4],
+"classAttbMain.html#ae4132e6b82b2ed49f60fcb37eab940fe":[1,0,161,2],
+"classAttbSpecial.html":[1,0,162],
 "classAttbSpecial.html#a1553029bfb76d620489d93d9247c3807":[1,0,162,1],
 "classAttbSpecial.html#abef48495e60db9e24565ba200ec3b1bc":[1,0,162,0],
 "classAttbWeapon.html":[1,0,163],
@@ -245,9 +249,5 @@ var NAVTREEINDEX26 =
 "classBaseGameScreen.html#abf1d6bcfc2e596bda0f8716f08037483":[1,0,172,18],
 "classBaseGameScreen.html#ac4da37e731c225567dfdcacb9d60337d":[1,0,172,97],
 "classBaseGameScreen.html#ac6fcc04520dab4a06cfef19a8edbce11":[1,0,172,33],
-"classBaseGameScreen.html#ac7c08946a23749e9dd2a7348f78c7dfe":[1,0,172,44],
-"classBaseGameScreen.html#ac899f9894fc0945e90c6ba2580ca2934":[1,0,172,45],
-"classBaseGameScreen.html#ac901fba9fe0db73ef3735af1d6325a70":[1,0,172,38],
-"classBaseGameScreen.html#acc1c58209aa7203f241ba23ae0c3cbba":[1,0,172,30],
-"classBaseGameScreen.html#acdbbb6a2c7a0a7866a3973ef1baec7cc":[1,0,172,64]
+"classBaseGameScreen.html#ac7c08946a23749e9dd2a7348f78c7dfe":[1,0,172,44]
 };

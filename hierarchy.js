@@ -1064,7 +1064,10 @@ var hierarchy =
           ] ],
           [ "Zone_Dungeon", "classZone__Dungeon.html", [
             [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
-            [ "Zone_DungeonPuppy", "classZone__DungeonPuppy.html", null ],
+            [ "Zone_DungeonUnfixed", "classZone__DungeonUnfixed.html", [
+              [ "Zone_DungeonPuppy", "classZone__DungeonPuppy.html", null ],
+              [ "Zone_DungeonYeek", "classZone__DungeonYeek.html", null ]
+            ] ],
             [ "Zone_Lesimas", "classZone__Lesimas.html", null ],
             [ "Zone_Lysanas", "classZone__Lysanas.html", null ],
             [ "Zone_Nymelle", "classZone__Nymelle.html", null ],

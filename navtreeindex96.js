@@ -1,5 +1,13 @@
 var NAVTREEINDEX96 =
 {
+"classTraitMerchantBread.html":[1,0,1416],
+"classTraitMerchantBread.html#ad8d3e750f17db5fba4fffa2b85f95d8e":[1,0,1416,0],
+"classTraitMerchantDeed.html":[1,0,1417],
+"classTraitMerchantDeed.html#a50502273446dd725a00ed46880c16331":[1,0,1417,0],
+"classTraitMerchantDeed.html#ab20a849dfcf88145ebdc19fbbe31edb6":[1,0,1417,1],
+"classTraitMerchantDrug.html":[1,0,1418],
+"classTraitMerchantDrug.html#a446f3eea6485b5fc795d887c6daa6d5a":[1,0,1418,1],
+"classTraitMerchantDrug.html#a6047d4aa438e0445fa8e87faeb1a92f0":[1,0,1418,2],
 "classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1418,0],
 "classTraitMerchantDye.html":[1,0,1419],
 "classTraitMerchantDye.html#ae2ce393bd47ac202ccff4640e88eed5d":[1,0,1419,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX96 =
 "classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1488,0],
 "classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1488,1],
 "classTraitPotion.html":[1,0,1489],
-"classTraitPotionEmpty.html":[1,0,1490],
-"classTraitPotionEmpty.html#a479119429f1aad7dc8d43f3a7870aeb8":[1,0,1490,3],
-"classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1490,0],
-"classTraitPotionEmpty.html#a827023eb995b6e874b6c13f1ec9dabbb":[1,0,1490,4],
-"classTraitPotionEmpty.html#aca8c5b343e5ee07e3f37bc4c937dcc06":[1,0,1490,2],
-"classTraitPotionEmpty.html#acf75a07b204c6897c1318f5068aefd27":[1,0,1490,5],
-"classTraitPotionEmpty.html#ae2b5d3e8d70472d582ab0bd42d9b966f":[1,0,1490,1],
-"classTraitPotionLove.html":[1,0,1491],
-"classTraitPotionRandom.html":[1,0,1492]
+"classTraitPotionEmpty.html":[1,0,1490]
 };

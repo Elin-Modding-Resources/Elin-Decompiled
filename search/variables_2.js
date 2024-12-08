@@ -252,15 +252,15 @@ var searchData=
   ['bridgedeco_249',['BridgeDeco',['../classTileType.html#a441ef115b8df86bcdb1f372da885fad8',1,'TileType']]],
   ['bridgefix_250',['bridgeFix',['../classBaseTileMap.html#a8ef5b9661004cdd5caa74300779e4d02',1,'BaseTileMap']]],
   ['bridgeheight_251',['bridgeHeight',['../classAM__Build.html#a4b113bb72fa32d65fb95a0a22d46483f',1,'AM_Build.bridgeHeight()'],['../classCell.html#ad9e440b850957018738788fd3d259877',1,'Cell.bridgeHeight()'],['../classTaskBuild.html#a695598f34a4ec32b0d55a832b7207e02',1,'TaskBuild.bridgeHeight()']]],
-  ['bridgepillar_252',['bridgePillar',['../classCell.html#afcd03d3f5664eb645c9b55e474a5aadb',1,'Cell']]],
-  ['bridgepillar_253',['BridgePillar',['../classTileType.html#a391dabd2e4c487b416ab1a4a7c45016d',1,'TileType']]],
+  ['bridgepillar_252',['BridgePillar',['../classTileType.html#a391dabd2e4c487b416ab1a4a7c45016d',1,'TileType']]],
+  ['bridgepillar_253',['bridgePillar',['../classCell.html#afcd03d3f5664eb645c9b55e474a5aadb',1,'Cell']]],
   ['brightness_254',['brightness',['../classCinemaConfig.html#ad2b6e4992c57f16ca4c041ad1343f3ef',1,'CinemaConfig.brightness()'],['../classCoreConfig_1_1GraphicSetting.html#ae9858d398f4a81bee81066c4de1a0219',1,'CoreConfig.GraphicSetting.brightness()'],['../classCoreConfig_1_1UISetting.html#a31f5cc07d64d5859fcb869d2c801d4ac',1,'CoreConfig.UISetting.brightness()']]],
   ['brightness_255',['Brightness',['../classPostEffectProfile.html#a0ff3354689f0a6e3eec7e5f63e477865',1,'PostEffectProfile']]],
   ['brightnessnight_256',['brightnessNight',['../classCoreConfig_1_1Test.html#a941d76751fd76ccbb2ba8016612b8d51',1,'CoreConfig::Test']]],
   ['brushradius_257',['brushRadius',['../classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3',1,'ActionMode']]],
   ['buff_258',['buff',['../classSourceTactics_1_1Row.html#a6c633789aa7e3bb65967dd1c2e48c12c',1,'SourceTactics::Row']]],
-  ['build_259',['Build',['../classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180',1,'ActionMode']]],
-  ['build_260',['build',['../classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb',1,'TaskManager::Designations']]],
+  ['build_259',['build',['../classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb',1,'TaskManager::Designations']]],
+  ['build_260',['Build',['../classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180',1,'ActionMode']]],
   ['building_261',['building',['../classSKILL.html#a9986122883c1618538de216f3933bb2f',1,'SKILL']]],
   ['buildlight_262',['buildLight',['../classGame_1_1Config.html#a12f4e08f88a7cdb69f4f78c89b0c3cfb',1,'Game::Config']]],
   ['buildmode_263',['buildMode',['../classBaseTileMap.html#aa742fea09f1f49f35e4f8c0e1831f3bb',1,'BaseTileMap']]],
@@ -364,5 +364,6 @@ var searchData=
   ['buttonupload_361',['buttonUpload',['../classLayerUploader.html#acc168bb932f804dd36a06352f24f40f1',1,'LayerUploader']]],
   ['buttonvigor_362',['buttonVigor',['../classWindowChara.html#a21b17ce282c902f5df77763dd73fd2cc',1,'WindowChara']]],
   ['buttonvisit_363',['buttonVisit',['../classUIFactionInfo.html#ac23c0f56cf54537728281ecf41b115b0',1,'UIFactionInfo.buttonVisit()'],['../classUIZoneInfo.html#adbcece2e67888d9a2987ca503ab8a6b4',1,'UIZoneInfo.buttonVisit()']]],
-  ['buttonworth_364',['buttonWorth',['../classUIHomeInfo.html#a2144f6d8a1b1a9fa0022a7f7175a221b',1,'UIHomeInfo']]]
+  ['buttonwallpaper_364',['buttonWallPaper',['../classContentConfigOther.html#a0f2d3af98b2845dc224726a5a06914a3',1,'ContentConfigOther']]],
+  ['buttonworth_365',['buttonWorth',['../classUIHomeInfo.html#a2144f6d8a1b1a9fa0022a7f7175a221b',1,'UIHomeInfo']]]
 ];

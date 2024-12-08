@@ -1,5 +1,6 @@
 var classContentConfigOther =
 [
+    [ "OnClickDownloadWallpaper", "classContentConfigOther.html#a9328b23fdea64a49af9640e0ebefbe89", null ],
     [ "OnInstantiate", "classContentConfigOther.html#a1ce94aeb167980631929dbc1800a7d57", null ],
     [ "OoenConfigFolder", "classContentConfigOther.html#a2b584fad5eb87e0daac3604d3ac97c80", null ],
     [ "OpenBackerCodeInput", "classContentConfigOther.html#a1aaeffba945d89ae752eb21f77c51b30", null ],
@@ -9,6 +10,7 @@ var classContentConfigOther =
     [ "RefreshRewardCode", "classContentConfigOther.html#a71cee4557b943d73d32a1565995ebc11", null ],
     [ "ResetWindows", "classContentConfigOther.html#ac88580ad3269b70fb034503dcac227c2", null ],
     [ "buttonBackerCode", "classContentConfigOther.html#af747bd69637e25278fe87d20fb89e444", null ],
+    [ "buttonWallPaper", "classContentConfigOther.html#a0f2d3af98b2845dc224726a5a06914a3", null ],
     [ "ddDivider", "classContentConfigOther.html#ac18633f8f5d728296a3b523b96fc3af1", null ],
     [ "ddSnap", "classContentConfigOther.html#aea016405521b7d426f9c3e44f3f54ee1", null ],
     [ "sliderBGMInterval", "classContentConfigOther.html#ac5d0624a0b45c0c343925cce4a92863c", null ],
