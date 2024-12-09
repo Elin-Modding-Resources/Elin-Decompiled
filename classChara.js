@@ -244,6 +244,7 @@ var classChara =
     [ "TryAbsorbRod", "classChara.html#ae8a0df90c4da8c791fcaba2742f5972e", null ],
     [ "TryAssignBed", "classChara.html#a50576031d73193ba1431c018038e90f5", null ],
     [ "TryDropBossLoot", "classChara.html#a9b4f7f5fe9f6f6c109e9a39ccdeb9460", null ],
+    [ "TryDropCarryOnly", "classChara.html#adb3376f218277edc807266771152d2bb", null ],
     [ "TryEquip", "classChara.html#ace86ded2c8e703df587e6e0c6a456ad0", null ],
     [ "TryEquipRanged", "classChara.html#ae130733b82773b9a99fef7c341b32e5c", null ],
     [ "TryGetThrowable", "classChara.html#a74526fcd2224cec55adb3e847b7f9be5", null ],

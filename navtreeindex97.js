@@ -1,5 +1,14 @@
 var NAVTREEINDEX97 =
 {
+"classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1486,1],
+"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1486,0],
+"classTraitPoolTable.html":[1,0,1487],
+"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1487,0],
+"classTraitPoop.html":[1,0,1488],
+"classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1488,0],
+"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1488,1],
+"classTraitPotion.html":[1,0,1489],
+"classTraitPotionEmpty.html":[1,0,1490],
 "classTraitPotionEmpty.html#a479119429f1aad7dc8d43f3a7870aeb8":[1,0,1490,3],
 "classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1490,0],
 "classTraitPotionEmpty.html#a827023eb995b6e874b6c13f1ec9dabbb":[1,0,1490,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX97 =
 "classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3":[1,0,1531,6],
 "classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1531,9],
 "classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1531,0],
-"classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1531,3],
-"classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1531,2],
-"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1531,7],
-"classTraitShackle.html#ab5a93c54ff3fb2a6abcf850cb02eb3b4":[1,0,1531,4],
-"classTraitShackle.html#ae2f48b61df0b7b07d44db68f247d22d1":[1,0,1531,5],
-"classTraitShippingChest.html":[1,0,1532],
-"classTraitShippingChest.html#a09b3ee148e905787ba8af1bcecab6733":[1,0,1532,3],
-"classTraitShippingChest.html#a2ed1f077356bb246077d2ac6e95abfb3":[1,0,1532,0],
-"classTraitShippingChest.html#a6abb9e30a12c19af7c56991a502bf646":[1,0,1532,1],
-"classTraitShippingChest.html#a817267edd75c49ec3143fe4ff58f67c7":[1,0,1532,5]
+"classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1531,3]
 };

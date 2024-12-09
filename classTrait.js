@@ -9,7 +9,8 @@ var classTrait =
       [ "Default", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a7a1920d61156abc05a60135aefe8bc67", null ],
       [ "Door", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af44e14d49cd011d1e873d9fe0c4624f1", null ],
       [ "Illumination", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f", null ],
-      [ "DefaultNoAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1", null ]
+      [ "DefaultNoAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1", null ],
+      [ "SignalAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90", null ]
     ] ],
     [ "CanBlend", "classTrait.html#ad545a68adbba6e0deffc3ceef163ceb9", null ],
     [ "CanBuiltAt", "classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff", null ],

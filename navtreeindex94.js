@@ -1,5 +1,14 @@
 var NAVTREEINDEX94 =
 {
+"classTraitDryBrick.html":[1,0,1297],
+"classTraitDryBrick.html#a4ab474cc3db6a71b31d41a0dd38da4f6":[1,0,1297,2],
+"classTraitDryBrick.html#a8091dd0c833bc8e5d2df14f7ec9deb1a":[1,0,1297,3],
+"classTraitDryBrick.html#aad88cfbd9d6750a4cede8b44c8732451":[1,0,1297,1],
+"classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1297,0],
+"classTraitDye.html":[1,0,1298],
+"classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1298,1],
+"classTraitDye.html#a0fed784d147a98ed68e0c97b6f3b15fa":[1,0,1298,3],
+"classTraitDye.html#a7b048cccd0c4e95a05e81833b65a0973":[1,0,1298,4],
 "classTraitDye.html#ae12263f7d8b9f94f05d3714d52e0df24":[1,0,1298,6],
 "classTraitDye.html#ae3444543e1d4eba66bbb4a3c323497bb":[1,0,1298,2],
 "classTraitDye.html#ae38c9bfcac5d2427c6e931ebe8ea42ec":[1,0,1298,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX94 =
 "classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e":[1,0,1351,5],
 "classTraitGeyser.html":[1,0,1352],
 "classTraitGiftNewYear.html":[1,0,1353],
-"classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1353,0],
-"classTraitGiftPack.html":[1,0,1354],
-"classTraitGiftPack.html#a19bd599f4e584182043d07226d6a0ffe":[1,0,1354,1],
-"classTraitGiftPack.html#a943b6a12c7bce4185459b2645a1f1c34":[1,0,1354,0],
-"classTraitGodStatue.html":[1,0,1360],
-"classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e":[1,0,1360,0],
-"classTraitGodStatue.html#a4704751ae5f2412a3ec147ee9d1520fc":[1,0,1360,1],
-"classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33":[1,0,1360,2],
-"classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836":[1,0,1360,3],
-"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1360,4]
+"classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1353,0]
 };

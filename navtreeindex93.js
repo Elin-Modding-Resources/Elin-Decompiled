@@ -1,5 +1,13 @@
 var NAVTREEINDEX93 =
 {
+"classTraitContainerUnburnable.html":[1,0,1255],
+"classTraitCooker.html":[1,0,1256],
+"classTraitCooker.html#a407d967ec67ff0423d8a96c772772f3f":[1,0,1256,1],
+"classTraitCooker.html#a67e9ed5046f389a1c664d41ed6193c51":[1,0,1256,3],
+"classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1256,0],
+"classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1256,2],
+"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1256,4],
+"classTraitCookerMicrowave.html":[1,0,1257],
 "classTraitCookerMicrowave.html#a09995ff5750a6aafd9db13aaf8649805":[1,0,1257,5],
 "classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd":[1,0,1257,1],
 "classTraitCookerMicrowave.html#a0ca3fbeffff6406e6f040cb1b8635364":[1,0,1257,0],
@@ -172,6 +180,7 @@ var NAVTREEINDEX93 =
 "classTraitDoorAutoShoji.html#a6e3209cbb2b148f8073cfaccd5980424":[1,0,1279,1],
 "classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129":[1,0,1279,0],
 "classTraitDoorBell.html":[1,0,1280],
+"classTraitDoorBell.html#a60355c6c79902899dab8139d7b7dffad":[1,0,1280,1],
 "classTraitDoorBell.html#a66facc2f3eb6cdb5c0370fa66cb27bcd":[1,0,1280,0],
 "classTraitDoorBoat.html":[1,0,1281],
 "classTraitDoorBoat.html#a64f9181c8d5d8f8fc36f488cccc0ac0b":[1,0,1281,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX93 =
 "classTraitDrinkMilkMother.html#a16a30fdc27db3435a19878321aa8f6cd":[1,0,1295,1],
 "classTraitDrinkMilkMother.html#a65c076dde2e98216a7c036e08d90e167":[1,0,1295,0],
 "classTraitDrinkMilkMother.html#ab9e55698aaa3407f02bdd751d8364fcf":[1,0,1295,2],
-"classTraitDrug.html":[1,0,1296],
-"classTraitDryBrick.html":[1,0,1297],
-"classTraitDryBrick.html#a4ab474cc3db6a71b31d41a0dd38da4f6":[1,0,1297,2],
-"classTraitDryBrick.html#a8091dd0c833bc8e5d2df14f7ec9deb1a":[1,0,1297,3],
-"classTraitDryBrick.html#aad88cfbd9d6750a4cede8b44c8732451":[1,0,1297,1],
-"classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1297,0],
-"classTraitDye.html":[1,0,1298],
-"classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1298,1],
-"classTraitDye.html#a0fed784d147a98ed68e0c97b6f3b15fa":[1,0,1298,3],
-"classTraitDye.html#a7b048cccd0c4e95a05e81833b65a0973":[1,0,1298,4]
+"classTraitDrug.html":[1,0,1296]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX98 =
 {
+"classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1531,2],
+"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1531,7],
+"classTraitShackle.html#ab5a93c54ff3fb2a6abcf850cb02eb3b4":[1,0,1531,4],
+"classTraitShackle.html#ae2f48b61df0b7b07d44db68f247d22d1":[1,0,1531,5],
+"classTraitShippingChest.html":[1,0,1532],
+"classTraitShippingChest.html#a09b3ee148e905787ba8af1bcecab6733":[1,0,1532,3],
+"classTraitShippingChest.html#a2ed1f077356bb246077d2ac6e95abfb3":[1,0,1532,0],
+"classTraitShippingChest.html#a6abb9e30a12c19af7c56991a502bf646":[1,0,1532,1],
+"classTraitShippingChest.html#a817267edd75c49ec3143fe4ff58f67c7":[1,0,1532,5],
 "classTraitShippingChest.html#ab367483a11271403fa645d8ccc69eadd":[1,0,1532,4],
 "classTraitShippingChest.html#abd7d3c579c62eabbabf8d1962e05a667":[1,0,1532,2],
 "classTraitShippingChest.html#ae385a2abc96d5a5275d0b2c60c7722d3":[1,0,1532,6],
@@ -240,14 +249,5 @@ var NAVTREEINDEX98 =
 "classTraitToolRangeCane.html#a4d943ee689f23cf863acfe4f19554162":[1,0,1599,2],
 "classTraitToolRangeCane.html#a7b757ba61df2d3441f3699dfeedb4012":[1,0,1599,3],
 "classTraitToolRangeCane.html#abbd804478bfa5892305e96947fdab944":[1,0,1599,0],
-"classTraitToolRangeCrossbow.html":[1,0,1600],
-"classTraitToolRangeCrossbow.html#a1009ad63c3585427accd989f953d3f9c":[1,0,1600,0],
-"classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1600,1],
-"classTraitToolRangeGun.html":[1,0,1601],
-"classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1601,1],
-"classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1601,2],
-"classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1601,0],
-"classTraitToolRangeGunEnergy.html":[1,0,1602],
-"classTraitToolRangeGunEnergy.html#adfefa6f64285332e885186f31a543f8f":[1,0,1602,0],
-"classTraitToolSculpture.html":[1,0,1603]
+"classTraitToolRangeCrossbow.html":[1,0,1600]
 };

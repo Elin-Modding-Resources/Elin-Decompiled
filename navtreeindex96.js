@@ -1,5 +1,14 @@
 var NAVTREEINDEX96 =
 {
+"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1413,3],
+"classTraitMerchantBlack.html#a426b63b31cfd38c4f2abfcdcf43f8a89":[1,0,1413,0],
+"classTraitMerchantBlack.html#aaaee57988bd078678deba34c5ba43121":[1,0,1413,1],
+"classTraitMerchantBlack.html#ab7b5016580ce7553776144b5b0eb64e6":[1,0,1413,2],
+"classTraitMerchantBook.html":[1,0,1414],
+"classTraitMerchantBook.html#a115cbd0d0309a7724e22ad4fdb6386f7":[1,0,1414,1],
+"classTraitMerchantBook.html#ad722ebe739a5592e8ca6c1ec91d9463e":[1,0,1414,0],
+"classTraitMerchantBooze.html":[1,0,1415],
+"classTraitMerchantBooze.html#a8421907c2aa603915ee4f9e73ffcf0c0":[1,0,1415,0],
 "classTraitMerchantBread.html":[1,0,1416],
 "classTraitMerchantBread.html#ad8d3e750f17db5fba4fffa2b85f95d8e":[1,0,1416,0],
 "classTraitMerchantDeed.html":[1,0,1417],
@@ -240,14 +249,5 @@ var NAVTREEINDEX96 =
 "classTraitPlatform.html#a3deb37840dcdc3fce46118fbf5468d6c":[1,0,1485,0],
 "classTraitPlatform.html#a761bc5daab23761ed77e4d766fe73c1c":[1,0,1485,1],
 "classTraitPlatform.html#ac84c80f09f56c79e194ff076ce0f3f44":[1,0,1485,2],
-"classTraitPolicyBoard.html":[1,0,1486],
-"classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1486,1],
-"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1486,0],
-"classTraitPoolTable.html":[1,0,1487],
-"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1487,0],
-"classTraitPoop.html":[1,0,1488],
-"classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1488,0],
-"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1488,1],
-"classTraitPotion.html":[1,0,1489],
-"classTraitPotionEmpty.html":[1,0,1490]
+"classTraitPolicyBoard.html":[1,0,1486]
 };

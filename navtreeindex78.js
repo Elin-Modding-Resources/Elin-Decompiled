@@ -1,5 +1,10 @@
 var NAVTREEINDEX78 =
 {
+"classSPELL.html#a627f62697ab765909bc81d76194c4f21":[1,0,1025,114],
+"classSPELL.html#a63a4d359935d0084710a7f3bdb38fa60":[1,0,1025,185],
+"classSPELL.html#a6920d467844f030a1352ae3676567269":[1,0,1025,178],
+"classSPELL.html#a6ad1360e7a7f1e865188a31afb6564c7":[1,0,1025,109],
+"classSPELL.html#a6b73b3ca009ffebb2c4b717b8f940260":[1,0,1025,51],
 "classSPELL.html#a6e1c6f85d8fd655d12e4e5b134538a07":[1,0,1025,54],
 "classSPELL.html#a6e923138cbf078f9458f1517e4b93058":[1,0,1025,2],
 "classSPELL.html#a70b119f952f806e31867fb02f4227083":[1,0,1025,198],
@@ -244,10 +249,5 @@ var NAVTREEINDEX78 =
 "classSceneLightProfile.html#a9be1a94a27510a268710e4949a8a689b":[1,0,950,14],
 "classSceneLightProfile.html#abcff3c7bfa79bd5e2d3af47912ba6fc2":[1,0,950,17],
 "classSceneLightProfile.html#aca0486c748a88d01d950d462826c6e8e":[1,0,950,0],
-"classSceneLightProfile.html#acd27a85683ea128cf10f4ddc1991833c":[1,0,950,21],
-"classSceneLightProfile.html#ad679f0d9fa2883cbe58361d22bc2b6ae":[1,0,950,18],
-"classSceneLightProfile.html#ad69fd9935d743056acc2882e3aa941be":[1,0,950,15],
-"classSceneLightProfile.html#ae2ea77c5bef22dbfa5938a5821737cae":[1,0,950,12],
-"classSceneLightProfile.html#af56828ad1153048ed7023e4957fb2e9c":[1,0,950,22],
-"classSceneObject.html":[1,0,951]
+"classSceneLightProfile.html#acd27a85683ea128cf10f4ddc1991833c":[1,0,950,21]
 };

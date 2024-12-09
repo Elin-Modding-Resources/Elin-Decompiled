@@ -1,5 +1,10 @@
 var NAVTREEINDEX52 =
 {
+"classGameSetting_1_1BalanceSetting.html#a2746d8212ceafd6401ac17fcf6f4a2fc":[1,0,441,1,2],
+"classGameSetting_1_1BalanceSetting.html#a2acd0a2b929ff80bc0d68a0b14bf8d24":[1,0,441,1,1],
+"classGameSetting_1_1BalanceSetting.html#abaa686b0b266bbe9d033789897031abc":[1,0,441,1,3],
+"classGameSetting_1_1EffectData.html":[1,0,441,2],
+"classGameSetting_1_1EffectData.html#a1449e0260c06f5f85ba8c3b661f5602e":[1,0,441,2,3],
 "classGameSetting_1_1EffectData.html#a47fd91b6edf86e92bf2b2dc7c38e5bd2":[1,0,441,2,5],
 "classGameSetting_1_1EffectData.html#a5d80e3fe862b3a2b1c0426f72ecdf2a4":[1,0,441,2,4],
 "classGameSetting_1_1EffectData.html#a8d85d72c251acae0381c75e90cb06c64":[1,0,441,2,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "classGenRoom.html#a5e222caa7076e07b5833914ede15ebf6":[1,0,445,12],
 "classGenRoom.html#a69694505518ac9b47b51ae504addc2a7":[1,0,445,3],
 "classGenRoom.html#a7822a61afce18702c4f0a14a49b77bad":[1,0,445,8],
-"classGenRoom.html#ab16e6092dfe4091407eeea5aabcc03f4":[1,0,445,6],
-"classGenRoom.html#ab2ce5e1b0c7fef5259b10b302f152879":[1,0,445,7],
-"classGenRoomBig.html":[1,0,446],
-"classGenRoomBig.html#ac068322065cf11bab9e9bdc65b1b8f49":[1,0,446,0],
-"classGenRoomMonsterHouse.html":[1,0,447],
-"classGenRoomMonsterHouse.html#a93d6224c369b776cc2f69e1a18076db1":[1,0,447,0]
+"classGenRoom.html#ab16e6092dfe4091407eeea5aabcc03f4":[1,0,445,6]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX99 =
 {
+"classTraitToolRangeCrossbow.html#a1009ad63c3585427accd989f953d3f9c":[1,0,1600,0],
+"classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1600,1],
+"classTraitToolRangeGun.html":[1,0,1601],
+"classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1601,1],
+"classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1601,2],
+"classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1601,0],
+"classTraitToolRangeGunEnergy.html":[1,0,1602],
+"classTraitToolRangeGunEnergy.html#adfefa6f64285332e885186f31a543f8f":[1,0,1602,0],
+"classTraitToolSculpture.html":[1,0,1603],
 "classTraitToolSculpture.html#a4838304872af3ec97dff211d4965216c":[1,0,1603,0],
 "classTraitToolShears.html":[1,0,1604],
 "classTraitToolShears.html#a06d4cdf9b914ea63e7a701f0ca3645e9":[1,0,1604,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX99 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#a844909125da7c530c430b9c2c808f021":[1,0,2,0,22],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a869582b17beec5eb97204914da3ad6a4":[1,0,2,0,33],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a869582b17beec5eb97204914da3ad6a4":[0,4,2,0,33],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a8ca8e25b35adfb7d46e65e2c3afc7a55":[1,0,2,0,27],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a8ca8e25b35adfb7d46e65e2c3afc7a55":[0,4,2,0,27],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a8d176050c08c5635142bcb6349b24b11":[1,0,2,0,4],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a8d176050c08c5635142bcb6349b24b11":[0,4,2,0,4],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[0,4,2,0,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[1,0,2,0,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[1,0,2,0,35],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[0,4,2,0,35],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[0,4,2,0,24],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[1,0,2,0,24]
+"classTwoDLaserPack_1_1LineBasedLaser.html#a8ca8e25b35adfb7d46e65e2c3afc7a55":[1,0,2,0,27]
 };

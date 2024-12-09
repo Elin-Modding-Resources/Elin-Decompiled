@@ -1,5 +1,14 @@
 var NAVTREEINDEX106 =
 {
+"classWidgetSearch_1_1Extra.html#a456a2e48f1c8a5243665b185df3978ff":[1,0,1710,0,0],
+"classWidgetSearch_1_1Word.html":[1,0,1710,1],
+"classWidgetSearch_1_1Word.html#a4113df1c1303b43bb08f6e9e15c5f4af":[1,0,1710,1,0],
+"classWidgetSearch_1_1Word.html#a85c9dbbcb652de4e267834dc9d67d49d":[1,0,1710,1,1],
+"classWidgetSideMenu.html":[1,0,1711],
+"classWidgetSideMenu.html#a2337cbadcc5e45ebd1e969cbba812f4b":[1,0,1711,4],
+"classWidgetSideMenu.html#a2e66ca622049c605ffb858d84d249c2a":[1,0,1711,1],
+"classWidgetSideMenu.html#a3aed5f6b0a2c119aaf5016715b2bc39f":[1,0,1711,3],
+"classWidgetSideMenu.html#a40d2ec11a358b2e0cfc98a44604c4b10":[1,0,1711,2],
 "classWidgetSideMenu.html#a60c07f34c65c3a8a579aad9ed4103a07":[1,0,1711,0],
 "classWidgetSideMenu.html#a60c07f34c65c3a8a579aad9ed4103a07a27ce7f8b5623b2e2df568d64cf051607":[1,0,1711,0,0],
 "classWidgetSideMenu.html#a60c07f34c65c3a8a579aad9ed4103a07a3acbc0615d8073a495640e96b329971e":[1,0,1711,0,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX106 =
 "classWindowChara.html#a9c87a5a1abeac1c62a55ce8ca4e5fb81":[1,0,1721,67],
 "classWindowChara.html#aa16ec478c869d736636511dd47db2548":[1,0,1721,18],
 "classWindowChara.html#aa271edcdfb9260425f01613edf0271e9":[1,0,1721,37],
-"classWindowChara.html#aa2b1b5d00cf8933689b39635acfc41e5":[1,0,1721,30],
-"classWindowChara.html#aa388b6fc201dd1ae1b7c4d47f494eaeb":[1,0,1721,85],
-"classWindowChara.html#aa3b66fa331c0bd1147df9fac6965036b":[1,0,1721,59],
-"classWindowChara.html#aa9aeef97202bbaf644aa002207c09067":[1,0,1721,74],
-"classWindowChara.html#aab4e27c15f564083eae7b3224fdd9c3e":[1,0,1721,39],
-"classWindowChara.html#aae736b0900d8058f9f0f50ac588a0654":[1,0,1721,45],
-"classWindowChara.html#aaf36ff20c108ccf30badb225c0138c3a":[1,0,1721,75],
-"classWindowChara.html#ab134734f096161c6dd18b58c96515df8":[1,0,1721,49],
-"classWindowChara.html#ab1632038be2db9ce3f762725c2e9b092":[1,0,1721,16],
-"classWindowChara.html#ab370c8a0a32a46d91eee49f45d6f1ca7":[1,0,1721,12]
+"classWindowChara.html#aa2b1b5d00cf8933689b39635acfc41e5":[1,0,1721,30]
 };

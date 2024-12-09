@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.52 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.53 Nightly</span>
    </div>
   </td>
  </tr>
@@ -301,10 +301,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aea9d0db4a0e9f80fe554186e6cc490b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActRide.html#aea9d0db4a0e9f80fe554186e6cc490b9">Ride</a> (<a class="el" href="classChara.html">Chara</a> host, <a class="el" href="classChara.html">Chara</a> t, bool parasite=false)</td></tr>
-<tr class="separator:aea9d0db4a0e9f80fe554186e6cc490b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc342e4ef2436826945fa7396420233"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActRide.html#afbc342e4ef2436826945fa7396420233">Unride</a> (<a class="el" href="classChara.html">Chara</a> host, bool parasite=false)</td></tr>
-<tr class="separator:afbc342e4ef2436826945fa7396420233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a214b50fc04b16a8de7dbe30a69705ede"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActRide.html#a214b50fc04b16a8de7dbe30a69705ede">Ride</a> (<a class="el" href="classChara.html">Chara</a> host, <a class="el" href="classChara.html">Chara</a> t, bool parasite=false, bool talk=true)</td></tr>
+<tr class="separator:a214b50fc04b16a8de7dbe30a69705ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6121a89052bf66950444cf344143258c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActRide.html#a6121a89052bf66950444cf344143258c">Unride</a> (<a class="el" href="classChara.html">Chara</a> host, bool parasite=false, bool talk=true)</td></tr>
+<tr class="separator:a6121a89052bf66950444cf344143258c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classAct"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classAct')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classAct.html">Act</a></td></tr>
 <tr class="memitem:afceae99696a2dfbac36e1239edcc0739 inherit pub_static_methods_classAct"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#afceae99696a2dfbac36e1239edcc0739">SetReference</a> (<a class="el" href="classChara.html">Chara</a> _cc, <a class="el" href="classCard.html">Card</a> _tc=null, <a class="el" href="classPoint.html">Point</a> _tp=null)</td></tr>
 <tr class="separator:afceae99696a2dfbac36e1239edcc0739 inherit pub_static_methods_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -685,7 +685,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   19</span>            {</div>
 <div class="line"><span class="lineno">   20</span>                <span class="keywordflow">if</span> ((<a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a26122d696b365dce5220238507e4ec8f">CC</a>.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> != <span class="keyword">null</span>) || (!<a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a26122d696b365dce5220238507e4ec8f">CC</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> != <span class="keyword">null</span>))</div>
 <div class="line"><span class="lineno">   21</span>                {</div>
-<div class="line"><span class="lineno">   22</span>                    <a class="code hl_function" href="classActRide.html#afbc342e4ef2436826945fa7396420233">Unride</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a26122d696b365dce5220238507e4ec8f">CC</a>, <a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a>);</div>
+<div class="line"><span class="lineno">   22</span>                    <a class="code hl_function" href="classActRide.html#a6121a89052bf66950444cf344143258c">Unride</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a26122d696b365dce5220238507e4ec8f">CC</a>, <a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a>);</div>
 <div class="line"><span class="lineno">   23</span>                    flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   24</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   25</span>                }</div>
@@ -712,7 +712,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">AnimeID.Ride</a></div><div class="ttdeci">@ Ride</div></div>
 <div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00001">FactionMemberType.cs:2</a></div></div>
 <div class="ttc" id="aclassActRide_html_a1df7eb3390d05cb7e58286a5fefac5b2"><div class="ttname"><a href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">ActRide.IsParasite</a></div><div class="ttdeci">virtual bool IsParasite</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00005">ActRide.cs:5</a></div></div>
-<div class="ttc" id="aclassActRide_html_afbc342e4ef2436826945fa7396420233"><div class="ttname"><a href="classActRide.html#afbc342e4ef2436826945fa7396420233">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, bool parasite=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00098">ActRide.cs:98</a></div></div>
+<div class="ttc" id="aclassActRide_html_a6121a89052bf66950444cf344143258c"><div class="ttname"><a href="classActRide.html#a6121a89052bf66950444cf344143258c">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, bool parasite=false, bool talk=true)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00101">ActRide.cs:101</a></div></div>
 <div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00005">Act.2.cs:6</a></div></div>
 <div class="ttc" id="aclassAct_html_a26122d696b365dce5220238507e4ec8f"><div class="ttname"><a href="classAct.html#a26122d696b365dce5220238507e4ec8f">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00556">Act.2.cs:556</a></div></div>
 <div class="ttc" id="aclassAct_html_ad8d5d5f6ae3ab66ccfb174a587658e54"><div class="ttname"><a href="classAct.html#ad8d5d5f6ae3ab66ccfb174a587658e54">Act.TP</a></div><div class="ttdeci">static Point TP</div><div class="ttdef"><b>Definition:</b> <a href="Act_82_8cs_source.html#l00560">Act.2.cs:560</a></div></div>
@@ -733,12 +733,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTraitChara_html_a50bc2590459e3f4162d92cd0fedecbc8"><div class="ttname"><a href="classTraitChara.html#a50bc2590459e3f4162d92cd0fedecbc8">TraitChara.CanJoinParty</a></div><div class="ttdeci">virtual bool CanJoinParty</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00037">TraitChara.cs:37</a></div></div>
 <div class="ttc" id="aclassTraitChara_html_ae84e295693c53aa97004b25b9a872d69"><div class="ttname"><a href="classTraitChara.html#ae84e295693c53aa97004b25b9a872d69">TraitChara.CanJoinPartyResident</a></div><div class="ttdeci">virtual bool CanJoinPartyResident</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00039">TraitChara.cs:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitChara_8cs_source.html#l00037">TraitChara.CanJoinParty</a>, <a class="el" href="TraitChara_8cs_source.html#l00040">TraitChara.CanJoinPartyResident</a>, <a class="el" href="Act_82_8cs_source.html#l00556">Act.CC</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Chara_8cs_source.html#l00033">Chara.host</a>, <a class="el" href="Chara_8cs_source.html#l00691">Chara.IsMultisize</a>, <a class="el" href="ActRide_8cs_source.html#l00005">IsParasite</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Point_8cs_source.html#l01125">Point.ListCharas()</a>, <a class="el" href="Chara_8cs_source.html#l00046">Chara.memberType</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Act_82_8cs_source.html#l00560">Act.TP</a>, <a class="el" href="Chara_8cs_source.html#l00488">Chara.trait</a>, and <a class="el" href="ActRide_8cs_source.html#l00098">Unride()</a>.</p>
+<p class="reference">References <a class="el" href="TraitChara_8cs_source.html#l00037">TraitChara.CanJoinParty</a>, <a class="el" href="TraitChara_8cs_source.html#l00040">TraitChara.CanJoinPartyResident</a>, <a class="el" href="Act_82_8cs_source.html#l00556">Act.CC</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Chara_8cs_source.html#l00033">Chara.host</a>, <a class="el" href="Chara_8cs_source.html#l00691">Chara.IsMultisize</a>, <a class="el" href="ActRide_8cs_source.html#l00005">IsParasite</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Point_8cs_source.html#l01125">Point.ListCharas()</a>, <a class="el" href="Chara_8cs_source.html#l00046">Chara.memberType</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Act_82_8cs_source.html#l00560">Act.TP</a>, <a class="el" href="Chara_8cs_source.html#l00488">Chara.trait</a>, and <a class="el" href="ActRide_8cs_source.html#l00101">Unride()</a>.</p>
 
 </div>
 </div>
-<a id="aea9d0db4a0e9f80fe554186e6cc490b9" name="aea9d0db4a0e9f80fe554186e6cc490b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea9d0db4a0e9f80fe554186e6cc490b9">&#9670;&#160;</a></span>Ride()</h2>
+<a id="a214b50fc04b16a8de7dbe30a69705ede" name="a214b50fc04b16a8de7dbe30a69705ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a214b50fc04b16a8de7dbe30a69705ede">&#9670;&#160;</a></span>Ride()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -762,7 +762,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parasite</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>parasite</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>talk</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -783,7 +789,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   50</span>        {</div>
 <div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                <a class="code hl_function" href="classActRide.html#afbc342e4ef2436826945fa7396420233">Unride</a>(host, parasite: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   53</span>                <a class="code hl_function" href="classActRide.html#a6121a89052bf66950444cf344143258c">Unride</a>(host, parasite: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   54</span>            }</div>
 <div class="line"><span class="lineno">   55</span>            host.parasite = t;</div>
 <div class="line"><span class="lineno">   56</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite&quot;</span>, host, t);</div>
@@ -792,7 +798,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   59</span>        {</div>
 <div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   61</span>            {</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_function" href="classActRide.html#afbc342e4ef2436826945fa7396420233">Unride</a>(host);</div>
+<div class="line"><span class="lineno">   62</span>                <a class="code hl_function" href="classActRide.html#a6121a89052bf66950444cf344143258c">Unride</a>(host);</div>
 <div class="line"><span class="lineno">   63</span>            }</div>
 <div class="line"><span class="lineno">   64</span>            host.ride = t;</div>
 <div class="line"><span class="lineno">   65</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride&quot;</span>, host, t);</div>
@@ -819,38 +825,41 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   86</span>        }</div>
 <div class="line"><span class="lineno">   87</span>        t.host = host;</div>
 <div class="line"><span class="lineno">   88</span>        t.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
-<div class="line"><span class="lineno">   89</span>        host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
-<div class="line"><span class="lineno">   90</span>        t.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite&quot;</span> : <span class="stringliteral">&quot;ride&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">   92</span>        t.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">   93</span>        host.<a class="code hl_function" href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">SyncRide</a>();</div>
-<div class="line"><span class="lineno">   94</span>        t.noMove = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   95</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04926">Card.cs:4926</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05101">Card.cs:5101</a></div></div>
-<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05632">Card.cs:5632</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05722">Card.cs:5722</a></div></div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (talk)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>            t.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite&quot;</span> : <span class="stringliteral">&quot;ride&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">   95</span>        t.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">   96</span>        host.<a class="code hl_function" href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">SyncRide</a>();</div>
+<div class="line"><span class="lineno">   97</span>        t.noMove = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   98</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04930">Card.cs:4930</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05105">Card.cs:5105</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05636">Card.cs:5636</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05726">Card.cs:5726</a></div></div>
 <div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01470">Chara.cs:1470</a></div></div>
 <div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01572">Chara.cs:1572</a></div></div>
 <div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00043">Chara.cs:43</a></div></div>
-<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08187">Chara.cs:8187</a></div></div>
-<div class="ttc" id="aclassChara_html_a6fb5cf442c222746306ffc3f86030d0f"><div class="ttname"><a href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">Chara._CreateRenderer</a></div><div class="ttdeci">override CardRenderer _CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05714">Chara.cs:5714</a></div></div>
+<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08204">Chara.cs:8204</a></div></div>
+<div class="ttc" id="aclassChara_html_a6fb5cf442c222746306ffc3f86030d0f"><div class="ttname"><a href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">Chara._CreateRenderer</a></div><div class="ttdeci">override CardRenderer _CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05731">Chara.cs:5731</a></div></div>
 <div class="ttc" id="aclassChara_html_a90c17ce565460d91da2803db50747f2d"><div class="ttname"><a href="classChara.html#a90c17ce565460d91da2803db50747f2d">Chara.MakeAlly</a></div><div class="ttdeci">void MakeAlly(bool msg=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01887">Chara.cs:1887</a></div></div>
-<div class="ttc" id="aclassChara_html_ac8f54a5f626357bf7d7fca198a2b44b4"><div class="ttname"><a href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">Chara.SyncRide</a></div><div class="ttdeci">void SyncRide()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03384">Chara.cs:3384</a></div></div>
+<div class="ttc" id="aclassChara_html_ac8f54a5f626357bf7d7fca198a2b44b4"><div class="ttname"><a href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">Chara.SyncRide</a></div><div class="ttdeci">void SyncRide()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03388">Chara.cs:3388</a></div></div>
 <div class="ttc" id="aclassChara_html_aff51c1a00af6403830b9d32980033a66"><div class="ttname"><a href="classChara.html#aff51c1a00af6403830b9d32980033a66">Chara.race</a></div><div class="ttdeci">SourceRace.Row race</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00449">Chara.cs:449</a></div></div>
 <div class="ttc" id="aclassConTransmuteBroom_html"><div class="ttname"><a href="classConTransmuteBroom.html">ConTransmuteBroom</a></div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteBroom_8cs_source.html#l00001">ConTransmuteBroom.cs:2</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassParty_html_ac08a11cd4fc95d4c68584dfded84ed02"><div class="ttname"><a href="classParty.html#ac08a11cd4fc95d4c68584dfded84ed02">Party.AddMemeber</a></div><div class="ttdeci">void AddMemeber(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00051">Party.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05714">Chara._CreateRenderer()</a>, <a class="el" href="Party_8cs_source.html#l00051">Party.AddMemeber()</a>, <a class="el" href="Chara_8cs_source.html#l08187">Chara.HasCondition()</a>, <a class="el" href="Card_8cs_source.html#l04926">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l01887">Chara.MakeAlly()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05101">Card.PlaySound()</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Chara_8cs_source.html#l01470">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l05722">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01572">Chara.SetDirtySpeed()</a>, <a class="el" href="Chara_8cs_source.html#l03384">Chara.SyncRide()</a>, <a class="el" href="Card_8cs_source.html#l05632">Card.Talk()</a>, and <a class="el" href="ActRide_8cs_source.html#l00098">Unride()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05731">Chara._CreateRenderer()</a>, <a class="el" href="Party_8cs_source.html#l00051">Party.AddMemeber()</a>, <a class="el" href="Chara_8cs_source.html#l08204">Chara.HasCondition()</a>, <a class="el" href="Card_8cs_source.html#l04930">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l01887">Chara.MakeAlly()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05105">Card.PlaySound()</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Chara_8cs_source.html#l01470">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l05726">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01572">Chara.SetDirtySpeed()</a>, <a class="el" href="Chara_8cs_source.html#l03388">Chara.SyncRide()</a>, <a class="el" href="Card_8cs_source.html#l05636">Card.Talk()</a>, and <a class="el" href="ActRide_8cs_source.html#l00101">Unride()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">TraitHitchingPost.OnActivateTrap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">TraitHitchingPost.OnActivateTrap()</a>, and <a class="el" href="ConSleep_8cs_source.html#l00227">ConSleep.OnRemoved()</a>.</p>
 
 </div>
 </div>
-<a id="afbc342e4ef2436826945fa7396420233" name="afbc342e4ef2436826945fa7396420233"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbc342e4ef2436826945fa7396420233">&#9670;&#160;</a></span>Unride()</h2>
+<a id="a6121a89052bf66950444cf344143258c" name="a6121a89052bf66950444cf344143258c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6121a89052bf66950444cf344143258c">&#9670;&#160;</a></span>Unride()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -868,7 +877,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parasite</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>parasite</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>talk</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -883,33 +898,42 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00098">98</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (parasite)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            chara = host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a>;</div>
-<div class="line"><span class="lineno">  104</span>            host.parasite = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  105</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite_unride&quot;</span>, host, chara);</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  108</span>        {</div>
-<div class="line"><span class="lineno">  109</span>            chara = host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>;</div>
-<div class="line"><span class="lineno">  110</span>            host.ride = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  111</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride_unride&quot;</span>, host, chara);</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        chara.host = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  114</span>        chara.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
-<div class="line"><span class="lineno">  115</span>        chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite_unride&quot;</span> : <span class="stringliteral">&quot;ride_unride&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, forceSync: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  116</span>        host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
-<div class="line"><span class="lineno">  117</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">  118</span>        chara.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">  119</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00101">101</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (parasite)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            chara = host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a>;</div>
+<div class="line"><span class="lineno">  107</span>            host.parasite = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  108</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite_unride&quot;</span>, host, chara);</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            chara = host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>;</div>
+<div class="line"><span class="lineno">  113</span>            host.ride = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  114</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride_unride&quot;</span>, host, chara);</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>        chara.host = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  117</span>        chara.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (talk)</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite_unride&quot;</span> : <span class="stringliteral">&quot;ride_unride&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, forceSync: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
+<div class="line"><span class="lineno">  123</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  124</span>        chara.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  125</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_class" href="classPoint.html">Point</a> randomNeighbor = host.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#aec57635cca8aded3817492044375b098">GetRandomNeighbor</a>();</div>
+<div class="line"><span class="lineno">  127</span>        chara.<a class="code hl_function" href="classCard.html#ac26839ce1faec3c1226002eb5303606d">MoveImmediate</a>(randomNeighbor);</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00055">Card.cs:55</a></div></div>
+<div class="ttc" id="aclassCard_html_ac26839ce1faec3c1226002eb5303606d"><div class="ttname"><a href="classCard.html#ac26839ce1faec3c1226002eb5303606d">Card.MoveImmediate</a></div><div class="ttdeci">void MoveImmediate(Point p, bool focus=true, bool cancelAI=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04843">Card.cs:4843</a></div></div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
+<div class="ttc" id="aclassPoint_html_aec57635cca8aded3817492044375b098"><div class="ttname"><a href="classPoint.html#aec57635cca8aded3817492044375b098">Point.GetRandomNeighbor</a></div><div class="ttdeci">Point GetRandomNeighbor()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00731">Point.cs:731</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05714">Chara._CreateRenderer()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Card_8cs_source.html#l05101">Card.PlaySound()</a>, <a class="el" href="Chara_8cs_source.html#l01470">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Card_8cs_source.html#l05722">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01572">Chara.SetDirtySpeed()</a>, and <a class="el" href="Card_8cs_source.html#l05632">Card.Talk()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05731">Chara._CreateRenderer()</a>, <a class="el" href="Point_8cs_source.html#l00731">Point.GetRandomNeighbor()</a>, <a class="el" href="Card_8cs_source.html#l04843">Card.MoveImmediate()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Card_8cs_source.html#l05105">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Chara_8cs_source.html#l01470">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Card_8cs_source.html#l05726">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01572">Chara.SetDirtySpeed()</a>, and <a class="el" href="Card_8cs_source.html#l05636">Card.Talk()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">TraitHitchingPost.OnActivateTrap()</a>, <a class="el" href="ActRide_8cs_source.html#l00007">Perform()</a>, <a class="el" href="Party_8cs_source.html#l00079">Party.RemoveMember()</a>, and <a class="el" href="ActRide_8cs_source.html#l00047">Ride()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">TraitHitchingPost.OnActivateTrap()</a>, <a class="el" href="ActRide_8cs_source.html#l00007">Perform()</a>, <a class="el" href="Party_8cs_source.html#l00079">Party.RemoveMember()</a>, <a class="el" href="ActRide_8cs_source.html#l00047">Ride()</a>, and <a class="el" href="ConSleep_8cs_source.html#l00064">ConSleep.Tick()</a>.</p>
 
 </div>
 </div>

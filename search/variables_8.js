@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['h_0',['h',['../classCoreConfig_1_1GraphicSetting.html#a82a66877e92d21c4782754f2b5c862dd',1,'CoreConfig::GraphicSetting']]],
+  ['h_0',['h',['../classEloMap.html#ad5d495ad943d57754dfcdadd1a11838a',1,'EloMap.h()'],['../classCoreConfig_1_1GraphicSetting.html#a82a66877e92d21c4782754f2b5c862dd',1,'CoreConfig.GraphicSetting.h()']]],
   ['h_1',['H',['../classRenderRow.html#ad57ed01141ba99b76edb07d907510bc6',1,'RenderRow']]],
-  ['h_2',['h',['../classTextureReplace.html#a110dc31a64b2314a0f71361661721b73',1,'TextureReplace.h()'],['../classRoofStyle.html#a8a1524b032348cfd781041c35207e394',1,'RoofStyle.h()'],['../classEloMap.html#ad5d495ad943d57754dfcdadd1a11838a',1,'EloMap.h()'],['../classPartialMap.html#a794dadead7535bb0dedfa03076813a4a',1,'PartialMap.h()']]],
+  ['h_2',['h',['../classTextureReplace.html#a110dc31a64b2314a0f71361661721b73',1,'TextureReplace.h()'],['../classPartialMap.html#a794dadead7535bb0dedfa03076813a4a',1,'PartialMap.h()'],['../classRoofStyle.html#a8a1524b032348cfd781041c35207e394',1,'RoofStyle.h()']]],
   ['h1_3',['H1',['../classWidgetNotice.html#a405bee62b657824dc72f9059b58b89c4',1,'WidgetNotice']]],
   ['h2_4',['H2',['../classWidgetNotice.html#a53399e19770d36c6d5ee82d3abfc72a1',1,'WidgetNotice']]],
   ['h3_5',['H3',['../classWidgetNotice.html#ab257b524d07df6d931e6504d431ab8b0',1,'WidgetNotice']]],
@@ -185,8 +185,8 @@ var searchData=
   ['hsetting_182',['hSetting',['../classBaseMapGen.html#aa802066b8bc5147c8dfda90c0ababa68',1,'BaseMapGen']]],
   ['hud_183',['hud',['../classUI.html#a375c743fb76841297505107d233f7ef5',1,'UI']]],
   ['human_5fright_184',['human_right',['../classPOLICY.html#a325475163e2e86960f0a73f2945d762f',1,'POLICY']]],
-  ['hunger_185',['hunger',['../classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2',1,'HappinessSummary']]],
-  ['hunger_186',['Hunger',['../classStats.html#aebdc96e3a2ce1408d6164cca6b443785',1,'Stats']]],
+  ['hunger_185',['Hunger',['../classStats.html#aebdc96e3a2ce1408d6164cca6b443785',1,'Stats']]],
+  ['hunger_186',['hunger',['../classHappinessSummary.html#a4720bf3158ccb9bc51fec0776591ccb2',1,'HappinessSummary']]],
   ['hungry_187',['Hungry',['../classStatsHunger.html#aa2d6fa33c0a7894055ea8ed2ea4005f0',1,'StatsHunger']]],
   ['hygiene_188',['Hygiene',['../classStats.html#a4fa58c0d35ce6e38a14f6d81ba171fb2',1,'Stats']]],
   ['hygine_189',['hygine',['../classHappinessSummary.html#a9083a8ef91d69b69cb5d97dcd4a20437',1,'HappinessSummary.hygine()'],['../classSKILL.html#a74d2449d04c112fb9463f06c4f2eefa8',1,'SKILL.hygine()']]],

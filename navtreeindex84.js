@@ -1,5 +1,10 @@
 var NAVTREEINDEX84 =
 {
+"classSourceTactics_1_1Row.html#ad3693635dcd9fafbe6500ec741130e1c":[1,0,1011,0,18],
+"classSourceTactics_1_1Row.html#af32d6a5f71dcc5f354f744474dd59ada":[1,0,1011,0,17],
+"classSourceThing.html":[1,0,1012],
+"classSourceThing.html#a47ddfd634748359993511ab00d22f660":[1,0,1012,3],
+"classSourceThing.html#a537c08f59f95d557ed6e8070a86e9e92":[1,0,1012,6],
 "classSourceThing.html#a53af9e83a562957b53d366b91afd87ba":[1,0,1012,4],
 "classSourceThing.html#a86055a026555b69b93b3fcf88cca28e7":[1,0,1012,1],
 "classSourceThing.html#ac406466529b818cb268aa7f400cff7e2":[1,0,1012,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX84 =
 "classSpawnListChara.html":[1,0,1021],
 "classSpawnListChara.html#a826ca3be552dcd20e4cf9276c0d0ab6f":[1,0,1021,0],
 "classSpawnListThing.html":[1,0,1022],
-"classSpawnListThing.html#acd56126d7e0516394006424ae69cfad8":[1,0,1022,0],
-"classSpawnSetting.html":[1,0,1023],
-"classSpawnSetting.html#a0cb6358dbdc2a78e6b0d794701da5b0e":[1,0,1023,2],
-"classSpawnSetting.html#a16dffa2fa82e6d8e79407d4ef04f7d46":[1,0,1023,17],
-"classSpawnSetting.html#a173add994ee5df417322be39c52aea79":[1,0,1023,13],
-"classSpawnSetting.html#a17b584515ae72d8471f7b41a5c915588":[1,0,1023,8]
+"classSpawnListThing.html#acd56126d7e0516394006424ae69cfad8":[1,0,1022,0]
 };

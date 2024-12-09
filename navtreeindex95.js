@@ -1,5 +1,14 @@
 var NAVTREEINDEX95 =
 {
+"classTraitGiftPack.html":[1,0,1354],
+"classTraitGiftPack.html#a19bd599f4e584182043d07226d6a0ffe":[1,0,1354,1],
+"classTraitGiftPack.html#a943b6a12c7bce4185459b2645a1f1c34":[1,0,1354,0],
+"classTraitGodStatue.html":[1,0,1360],
+"classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e":[1,0,1360,0],
+"classTraitGodStatue.html#a4704751ae5f2412a3ec147ee9d1520fc":[1,0,1360,1],
+"classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33":[1,0,1360,2],
+"classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836":[1,0,1360,3],
+"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1360,4],
 "classTraitGodStatue.html#abc0ce01bea37d901ff1893ea8576377d":[1,0,1360,5],
 "classTraitGrave.html":[1,0,1361],
 "classTraitGriffin.html":[1,0,1362],
@@ -240,14 +249,5 @@ var NAVTREEINDEX95 =
 "classTraitMerchant.html#abfb294a520a3b4f6fa0dc806e776344c":[1,0,1412,0],
 "classTraitMerchant.html#ac785b13ae49732f62e5c6494e0bd2d96":[1,0,1412,2],
 "classTraitMerchant.html#af444fd651a60a11d125a7094e132707a":[1,0,1412,4],
-"classTraitMerchantBlack.html":[1,0,1413],
-"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1413,3],
-"classTraitMerchantBlack.html#a426b63b31cfd38c4f2abfcdcf43f8a89":[1,0,1413,0],
-"classTraitMerchantBlack.html#aaaee57988bd078678deba34c5ba43121":[1,0,1413,1],
-"classTraitMerchantBlack.html#ab7b5016580ce7553776144b5b0eb64e6":[1,0,1413,2],
-"classTraitMerchantBook.html":[1,0,1414],
-"classTraitMerchantBook.html#a115cbd0d0309a7724e22ad4fdb6386f7":[1,0,1414,1],
-"classTraitMerchantBook.html#ad722ebe739a5592e8ca6c1ec91d9463e":[1,0,1414,0],
-"classTraitMerchantBooze.html":[1,0,1415],
-"classTraitMerchantBooze.html#a8421907c2aa603915ee4f9e73ffcf0c0":[1,0,1415,0]
+"classTraitMerchantBlack.html":[1,0,1413]
 };

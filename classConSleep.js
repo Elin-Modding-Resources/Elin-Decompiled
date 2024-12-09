@@ -15,6 +15,8 @@ var classConSleep =
     [ "posPillow", "classConSleep.html#aa0e7fdc7fb436f4e67dbd7a661e61756", null ],
     [ "slept", "classConSleep.html#a45b6c919e420f043fe53b01cbc48648d", null ],
     [ "succubusChecked", "classConSleep.html#a1b94af2fb364eb593a428995986ff69c", null ],
+    [ "uidParasite", "classConSleep.html#a1011217a75c445c99de20c66b90a3ec3", null ],
+    [ "uidRide", "classConSleep.html#adeebdd07dc6e0625de3773f8cf3881fc", null ],
     [ "CancelAI", "classConSleep.html#a457d0965bf92c06b64920b2daa449889", null ],
     [ "ConsumeTurn", "classConSleep.html#a79c8d8b3ce6c3860e9ebdc3dd5faab55", null ],
     [ "EmoIcon", "classConSleep.html#a1472e72989207c1d894377cb19bd4381", null ]
