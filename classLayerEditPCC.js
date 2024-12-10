@@ -2,6 +2,7 @@ var classLayerEditPCC =
 [
     [ "Activate", "classLayerEditPCC.html#a8e6dae4ebb02cace5b07243a9016e177", null ],
     [ "Apply", "classLayerEditPCC.html#a2683ef0e4bfa7ff05130f279b4aaa608", null ],
+    [ "OnClickChangePortrait", "classLayerEditPCC.html#a20ed35286b62baa7f72f1dd7cb3343ff", null ],
     [ "OnKill", "classLayerEditPCC.html#aaeb325ec02827e86603d827a9ef7deef", null ],
     [ "SetPortraitSlider", "classLayerEditPCC.html#ac659410d6003cd2fe659238b46fa6e25", null ],
     [ "Update", "classLayerEditPCC.html#a0b90446eb1894be26e4218b1a4007c4e", null ],

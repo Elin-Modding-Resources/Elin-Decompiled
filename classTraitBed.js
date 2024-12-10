@@ -11,6 +11,7 @@ var classTraitBed =
     [ "SetBedType", "classTraitBed.html#a4435f2f8b8997c03cbea0f7c37824f1d", null ],
     [ "SetName", "classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80", null ],
     [ "TrySetAct", "classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768", null ],
+    [ "ValidateOwners", "classTraitBed.html#a333714ba3ee1c05449866a65d5191c96", null ],
     [ "CanStack", "classTraitBed.html#a28ec384a8d046d5c6da999820f89c57b", null ],
     [ "IsChangeFloorHeight", "classTraitBed.html#a34a3cbb665f0f0e11346eb701079bde7", null ],
     [ "MaxHolders", "classTraitBed.html#a4a0a38bf3561473e8951dc8d64f1a8b8", null ]

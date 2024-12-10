@@ -1,5 +1,9 @@
 var NAVTREEINDEX38 =
 {
+"classColorProfile_1_1BlockColors.html#aa710acb8084309e184293e6997d411e6":[1,0,240,0,9],
+"classColorProfile_1_1BlockColors.html#aab6c06bf1f6a95e80bc7588081f4b51f":[1,0,240,0,6],
+"classColorProfile_1_1BlockColors.html#ab24bcda1e49aae1aa11c9ae235ba1079":[1,0,240,0,12],
+"classColorProfile_1_1BlockColors.html#ab81096756c4ad08282f44d7e4c14f034":[1,0,240,0,13],
 "classColorProfile_1_1BlockColors.html#ac04b9d95d2b0d7d23d5330d30a8b117f":[1,0,240,0,17],
 "classColorProfile_1_1BlockColors.html#ac9f8f58151733deda57b8a24a4a80a3f":[1,0,240,0,21],
 "classColorProfile_1_1BlockColors.html#ace5cf90f51ea489585e1ecda7ad53424":[1,0,240,0,14],
@@ -245,9 +249,5 @@ var NAVTREEINDEX38 =
 "classConWait.html#a8a9e67c8523c0598cb17e0fafcaaa885":[1,0,322,0],
 "classConWait.html#a9dabf691ef01a51d647f9f94bf221fbe":[1,0,322,3],
 "classConWardMonster.html":[1,0,323],
-"classConWeakResEle.html":[1,0,325],
-"classConWeakness.html":[1,0,324],
-"classConWeapon.html":[1,0,326],
-"classConWeapon.html#a67f041b4924a9b7714b9f6c23f5f71df":[1,0,326,2],
-"classConWeapon.html#a83c2446cdf2064c5a5024bff09a8bfea":[1,0,326,1]
+"classConWeakResEle.html":[1,0,325]
 };

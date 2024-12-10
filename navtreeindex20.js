@@ -1,5 +1,9 @@
 var NAVTREEINDEX20 =
 {
+"classAI__PlayMusic.html#accf2ba0f0af523cd265b8c0543cfaaea":[1,0,73,1],
+"classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188":[1,0,73,8],
+"classAI__PlayMusic.html#ae3a51a9cdf907a8b71758f85c64fa900":[1,0,73,6],
+"classAI__PlayMusic.html#af3ddb1180da01215545e2ebca91a6483":[1,0,73,5],
 "classAI__PracticeDummy.html":[1,0,74],
 "classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,74,4],
 "classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,74,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX20 =
 "classAM__BaseTileSelect.html#ad9b2a73c1064205a0eacacd313b8bbb7":[1,0,107,7],
 "classAM__BaseTileSelect.html#aeb061014d8d582c7ced087ac2a27cf06":[1,0,107,5],
 "classAM__BaseTileSelect.html#af64c6585f4514e55609a401866f65cd7":[1,0,107,3],
-"classAM__Bird.html":[1,0,108],
-"classAM__Bird.html#a03b49dd20b9a39cd1481d6626a034cac":[1,0,108,2],
-"classAM__Bird.html#a3fe205a551067676de164ab92faa3412":[1,0,108,0],
-"classAM__Bird.html#a4b776cc8d26396e265d98c64e513bb9e":[1,0,108,1],
-"classAM__Blueprint.html":[1,0,109]
+"classAM__Bird.html":[1,0,108]
 };

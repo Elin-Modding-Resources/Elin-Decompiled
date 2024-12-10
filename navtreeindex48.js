@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"classElement.html#ac3aae5718b0149440a67667ea51dec2b":[1,0,393,59],
+"classElement.html#ac5cae304f4459e17b25fc9e87ebd958b":[1,0,393,19],
+"classElement.html#ac5cae304f4459e17b25fc9e87ebd958b":[1,0,393,18],
+"classElement.html#ac60d26e4f4bd9e76b14b3fd41bde5507":[1,0,393,32],
 "classElement.html#ac60d26e4f4bd9e76b14b3fd41bde5507":[1,0,393,33],
 "classElement.html#aca71d05b37a8cf95eeecc8ff2ccb67f1":[1,0,393,85],
 "classElement.html#acf73f20f6e2a04c3e3415678c7a72918":[1,0,393,88],
@@ -131,10 +135,10 @@ var NAVTREEINDEX48 =
 "classElement_1_1BonusInfo.html":[1,0,393,0],
 "classElement_1_1BonusInfo.html#a2fa2c34fac1e11e5783e1356cfadee1e":[1,0,393,0,11],
 "classElement_1_1BonusInfo.html#a43eb53a49a6c65df5cb443f16c7871ff":[1,0,393,0,12],
-"classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813":[1,0,393,0,6],
 "classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813":[1,0,393,0,7],
-"classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3":[1,0,393,0,0],
+"classElement_1_1BonusInfo.html#a447a766e2fc43a322ea3a55baaaee813":[1,0,393,0,6],
 "classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3":[1,0,393,0,1],
+"classElement_1_1BonusInfo.html#a479d77afb11dc042a25109cd05226be3":[1,0,393,0,0],
 "classElement_1_1BonusInfo.html#a5d2c5781e5302cbcb6cd68c3f9b95a22":[1,0,393,0,4],
 "classElement_1_1BonusInfo.html#a9add3c71420eb08cd80426e4a68b6c95":[1,0,393,0,10],
 "classElement_1_1BonusInfo.html#aac4ab5ac7677b68ee99bed26ce758a8b":[1,0,393,0,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "classEloPos.html#a966fdbe82f891b5867865e0730ee89dc":[1,0,405,4],
 "classEloPos.html#a98339b6e59fad9adf45dce289f6bdc1d":[1,0,405,3],
 "classEloPos.html#a9a79a23aea3663bc19009a6aa37920de":[1,0,405,2],
-"classEloPos.html#adb3471dc2af64541029b842447079a83":[1,0,405,1],
-"classEmbarkActor.html":[1,0,406],
-"classEmbarkActor.html#a10b21634784e43d484d3cc42b04930ab":[1,0,406,14],
-"classEmbarkActor.html#a2ab3573c002bffa91624511b4c281685":[1,0,406,6],
-"classEmbarkActor.html#a38588fdb355d0e82508a92ded700e1e8":[1,0,406,7]
+"classEloPos.html#adb3471dc2af64541029b842447079a83":[1,0,405,1]
 };

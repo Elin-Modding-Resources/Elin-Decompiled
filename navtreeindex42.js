@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"classCoreConfig_1_1UISetting.html#abf7c51941d4db0fc9eeaecd7558ca8d2":[1,0,330,12,9],
+"classCoreConfig_1_1UISetting.html#ad513b374f43b6e4dbaf1f542ac1ae998":[1,0,330,12,10],
+"classCoreConfig_1_1UISetting.html#ad82d50a86dd3c0d93e904f41ddf25169":[1,0,330,12,8],
+"classCoreConfig_1_1UISetting.html#ad8932634a630c94c46f526d206303b49":[1,0,330,12,12],
 "classCoreDebug.html":[1,0,331],
 "classCoreDebug.html#a007672d7029ff62698f715fd3f722d24":[1,0,331,101],
 "classCoreDebug.html#a00b1dd37eefb9a29153cb7c3a2da048a":[1,0,331,147],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "classCoreRef.html#afb1f3cdc02fb15cc2138061d141211db":[1,0,333,61],
 "classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,333,39],
 "classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,333,40],
-"classCoreRef_1_1Biomes.html":[1,0,333,0],
-"classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a":[1,0,333,0,0],
-"classCoreRef_1_1Biomes.html#a4277df483fb1c7778a23d940f84c73e6":[1,0,333,0,3],
-"classCoreRef_1_1Biomes.html#aca559167d7a556680efbce71ba52bbf4":[1,0,333,0,1],
-"classCoreRef_1_1Biomes.html#acc770985d1ab4ae10cdc194d09da7c16":[1,0,333,0,2]
+"classCoreRef_1_1Biomes.html":[1,0,333,0]
 };

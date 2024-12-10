@@ -11,6 +11,7 @@ var classUICharaMaker =
     [ "ListJob", "classUICharaMaker.html#ab41775a20cbfa6997fe86823e307ba86", null ],
     [ "ListModes", "classUICharaMaker.html#a7f2cb8e1f59cb7f22df9863256efc0be", null ],
     [ "ListRace", "classUICharaMaker.html#a8841d46a1b76216532513d2496336ccc", null ],
+    [ "OnClickChangePortrait", "classUICharaMaker.html#ab133f3abebcd53b8994e5c5799596c52", null ],
     [ "OnEndEditName", "classUICharaMaker.html#add3c1d5613b8242f3f42a391fa45e90d", null ],
     [ "Refresh", "classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad", null ],
     [ "RefreshPortraitZoom", "classUICharaMaker.html#a02ea96bae6f62365da9c2be7b86a2888", null ],

@@ -6,7 +6,7 @@ var classLayerColorPicker =
     [ "OnClickReset", "classLayerColorPicker.html#a7428f7de243c1336ce0ecd0fe598626d", null ],
     [ "OnKill", "classLayerColorPicker.html#a7df720def100cee805658690d6b23ccf", null ],
     [ "SetColor", "classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713", null ],
-    [ "layoutColors", "classLayerColorPicker.html#a4381f825590323dc517ac76da9b2c2b6", null ],
+    [ "uiPicker", "classLayerColorPicker.html#a68c4c75ae1b84d24e0a4162d5e0c7a49", null ],
     [ "onChangeColor", "classLayerColorPicker.html#aebc0933e0af1b45c90d0eca1ea9647c8", null ],
     [ "picker", "classLayerColorPicker.html#a7dd5e4deeb0522b00c575b9c7bfe70c5", null ],
     [ "resetColor", "classLayerColorPicker.html#a9fb7a8008515a9235a424b8d14374911", null ],
