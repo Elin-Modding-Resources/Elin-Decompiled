@@ -192,9 +192,7 @@ public class Portrait : UIButton
 			}
 			else
 			{
-				Rand.SetSeed(c.uid);
-				colorOverlay = PCCManager.current.GetBodySet("female").map["hair"].GetRandomColor();
-				Rand.SetSeed();
+				colorOverlay = GetRandomHairColor(c);
 				if (c.id == "shojo")
 				{
 					overlay.enabled = false;
@@ -202,6 +200,14 @@ public class Portrait : UIButton
 			}
 		}
 		SetPortrait(c.GetIdPortrait(), colorOverlay);
+	}
+
+	public Color GetRandomHairColor(Chara c)
+	{
+		Rand.SetSeed(c.uid);
+		Color randomColor = PCCManager.current.GetBodySet("female").map["hair"].GetRandomColor();
+		Rand.SetSeed();
+		return randomColor;
 	}
 
 	public void SetPortrait(string id, Color colorOverlay = default(Color))

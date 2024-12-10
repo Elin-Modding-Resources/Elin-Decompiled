@@ -117,7 +117,8 @@ public class TraitNewZone : Trait
 				Msg.Say("badidea");
 				return false;
 			}
-			return MoveZone();
+			MoveZone();
+			return false;
 		}, owner, CursorSystem.MoveZone);
 	}
 

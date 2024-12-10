@@ -4,7 +4,7 @@ public class ConTransmute : BaseBuff
 
 	public override void Tick()
 	{
-		if (owner.host == null)
+		if (owner.host == null && owner.conSleep == null && (EClass.pc.conSleep == null || EClass.pc.conSleep.pcSleep == 0))
 		{
 			base.Tick();
 		}

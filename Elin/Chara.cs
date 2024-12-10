@@ -4023,7 +4023,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			DropHeld();
 		}
-		foreach (Thing item in EClass.pc.things.List((Thing t) => t.trait.CanOnlyCarry))
+		foreach (Thing item in things.List((Thing t) => t.trait.CanOnlyCarry))
 		{
 			DropThing(item);
 		}
@@ -4707,7 +4707,10 @@ public class Chara : Card, IPathfindWalker
 				Msg.SetColor();
 				SpawnLoot(origin);
 			}
-			TryDropCarryOnly();
+			if (IsPC)
+			{
+				TryDropCarryOnly();
+			}
 		}
 		if (IsPCFaction)
 		{

@@ -20,6 +20,7 @@ public class TraitBed : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
+		ValidateOwners();
 		p.TrySetAct(new AI_Sleep
 		{
 			target = owner.Thing
@@ -80,6 +81,23 @@ public class TraitBed : Trait
 			uIContextMenu.Show();
 			return false;
 		}, owner);
+	}
+
+	public void ValidateOwners()
+	{
+		CharaList data = owner.c_charaList;
+		if (data == null)
+		{
+			return;
+		}
+		data.list.ForeachReverse(delegate(int i)
+		{
+			Chara chara = EClass._map.FindChara(i) ?? EClass.game.cards.globalCharas.Find(i);
+			if (chara == null || (chara.IsPCFaction && chara.homeBranch != EClass._zone.branch))
+			{
+				data.list.Remove(i);
+			}
+		});
 	}
 
 	public void AddHolder(Chara c)

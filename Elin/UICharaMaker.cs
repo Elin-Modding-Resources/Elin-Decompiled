@@ -78,6 +78,8 @@ public class UICharaMaker : EMono
 		chara = c;
 		BuildRaces();
 		SetPortraitSlider();
+		portrait.SetChara(chara, chara.pccData);
+		portraitZoom.SetChara(chara);
 		Refresh();
 		toggleExtra.SetToggle(extraRace, delegate(bool a)
 		{
@@ -457,16 +459,6 @@ public class UICharaMaker : EMono
 
 	public void SetPortraitSlider()
 	{
-		if ((bool)sliderPortrait)
-		{
-			List<ModItem<Sprite>> list = Portrait.ListPlayerPortraits(chara.bio.gender);
-			sliderPortrait.SetList(list.Find((ModItem<Sprite> a) => a.id == chara.c_idPortrait), list, delegate(int a, ModItem<Sprite> b)
-			{
-				chara.c_idPortrait = b.id;
-				portrait.SetChara(chara);
-				portraitZoom.SetChara(chara);
-			}, (ModItem<Sprite> a) => a.id);
-		}
 	}
 
 	public void RerollPCC()
@@ -500,6 +492,14 @@ public class UICharaMaker : EMono
 		{
 			portrait.SetChara(chara);
 			SetPortraitSlider();
+		});
+	}
+
+	public void OnClickChangePortrait()
+	{
+		EMono.ui.AddLayer<LayerEditPortrait>().Activate(chara, chara.pccData, delegate
+		{
+			portrait.SetChara(chara, chara.pccData);
 		});
 	}
 }

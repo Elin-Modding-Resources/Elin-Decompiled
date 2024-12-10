@@ -116,6 +116,15 @@ public class LayerEditPCC : ELayer
 		applied = true;
 	}
 
+	public void OnClickChangePortrait()
+	{
+		ELayer.ui.AddLayer<LayerEditPortrait>().Activate(chara, uiPCC.pcc.data, delegate
+		{
+			portrait.SetChara(chara, uiPCC.actor.data);
+			uiPCC.actor.Reset();
+		});
+	}
+
 	public override void OnKill()
 	{
 		Apply();

@@ -292,6 +292,10 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 				{
 					if (c.pccData == null)
 					{
+						uIContextMenu.AddButton("editPCC", delegate
+						{
+							EClass.ui.AddLayer<LayerEditPortrait>().Activate(c);
+						});
 						uIContextMenu.AddButton("togglePCC", delegate
 						{
 							bool isSynced = c.isSynced;

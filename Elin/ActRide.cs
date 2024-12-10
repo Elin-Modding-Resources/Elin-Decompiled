@@ -123,7 +123,10 @@ public class ActRide : Ability
 		host.SetDirtySpeed();
 		chara.SetDirtySpeed();
 		host.Refresh();
-		Point randomNeighbor = host.pos.GetRandomNeighbor();
-		chara.MoveImmediate(randomNeighbor);
+		Point randomPoint = host.pos.GetRandomPoint(1);
+		if (randomPoint != null)
+		{
+			chara.MoveImmediate(randomPoint);
+		}
 	}
 }

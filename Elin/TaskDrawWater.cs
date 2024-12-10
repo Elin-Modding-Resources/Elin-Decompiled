@@ -6,7 +6,17 @@ public class TaskDrawWater : TaskDesignation
 
 	public override bool CanPressRepeat => true;
 
-	public override bool Loop => CanProgress();
+	public override bool Loop
+	{
+		get
+		{
+			if (CanProgress())
+			{
+				return !owner.HasCondition<ConSuffocation>();
+			}
+			return false;
+		}
+	}
 
 	public override CursorInfo CursorIcon => CursorSystem.Hand;
 

@@ -3036,8 +3036,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return false;
 		}
-		to.ModNum(Num);
 		to.decay = (to.decay * to.Num + decay * Num) / (to.Num + Num);
+		to.ModNum(Num);
 		if (c_isImportant)
 		{
 			to.c_isImportant = true;
