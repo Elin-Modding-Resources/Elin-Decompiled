@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"classTraitManager.html#a067d996cb2fecff60760aac97a0b837e":[1,0,1408,2],
+"classTraitManager.html#a081802c5d65cca165bcb166eace19913":[1,0,1408,5],
 "classTraitManager.html#a5c7be3389262c6008368f88f346b7761":[1,0,1408,7],
 "classTraitManager.html#a7bf4a93c42e4356203fc8384b749e68b":[1,0,1408,0],
 "classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273":[1,0,1408,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "classTraitPerfume.html#a44af00dc25af7b63e520aac54a3621e5":[1,0,1471,2],
 "classTraitPerfume.html#a8a2dd71e42b790ecd858cc97e58cd624":[1,0,1471,3],
 "classTraitPerfume.html#ad1358859d7c5b49bf9333a3a4fd2c38d":[1,0,1471,1],
-"classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1471,0],
-"classTraitPetHouse.html":[1,0,1472],
-"classTraitPhone.html":[1,0,1473]
+"classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1471,0]
 };

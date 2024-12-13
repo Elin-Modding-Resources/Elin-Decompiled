@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classTraitBaseSpellbook.html":[1,0,1194],
 "classTraitBaseSpellbook.html#a0b97be9a164b766e6256c23aab2afa1c":[1,0,1194,1],
 "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3":[1,0,1194,0],
 "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a615755cd42631ce31ff696a9891b3c2a":[1,0,1194,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitClerk__Casino.html":[1,0,1241],
 "classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1241,0],
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1241,1],
-"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1241,3],
-"classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1241,2]
+"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1241,3]
 };

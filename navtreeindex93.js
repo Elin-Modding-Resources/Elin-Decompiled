@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1241,2],
 "classTraitClerk__Fighter.html":[1,0,1242],
 "classTraitClerk__Mage.html":[1,0,1243],
 "classTraitClerk__Merchant.html":[1,0,1244],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "classTraitDrawingPaper.html":[1,0,1292],
 "classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1292,2],
 "classTraitDrawingPaper.html#a9d3c27a16d974dcd0cef28907885c8b5":[1,0,1292,0],
-"classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1292,1],
-"classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1292,3]
+"classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1292,1]
 };

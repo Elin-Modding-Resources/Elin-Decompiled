@@ -164,6 +164,7 @@ var classTrait =
     [ "IDInvStyle", "classTrait.html#a23a8f240d97abe6938f4e378ded4aa0e", null ],
     [ "IdleUseChance", "classTrait.html#ae5233ec2fda4f1b464b58c0d2451b164", null ],
     [ "IdNoRestock", "classTrait.html#a5503e75134664e964c38de54581de9b7", null ],
+    [ "IdSkin", "classTrait.html#a7eb804d440234fc9a7512248700d4de1", null ],
     [ "IdToggleExtra", "classTrait.html#a1c2daa2fd743cdd5707d254414078140", null ],
     [ "IgnoreLastStackHeight", "classTrait.html#a39ace83d7e9e32e675a6cc4614497718", null ],
     [ "InvertHeldSprite", "classTrait.html#a931316468e85d9b8b1f102dd2215cb75", null ],
