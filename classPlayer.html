@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.54</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.55 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -391,8 +391,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af94b0c5e06e3a14f05fc10e39883430a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b855e109bdf60f785f8a4a61af5116d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZoneTransition.html">ZoneTransition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a0b855e109bdf60f785f8a4a61af5116d">lastTransition</a></td></tr>
 <tr class="separator:a0b855e109bdf60f785f8a4a61af5116d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2a2eac49a3681d65cb58711f608819"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classPoint.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a7a2a2eac49a3681d65cb58711f608819">lastMarkedHighlights</a> = new List&lt;<a class="el" href="classPoint.html">Point</a>&gt;()</td></tr>
-<tr class="separator:a7a2a2eac49a3681d65cb58711f608819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565eeb519b8fbe02d172211bab007a22"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classCell.html">Cell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a565eeb519b8fbe02d172211bab007a22">lastMarkedHighlights</a> = new List&lt;<a class="el" href="classCell.html">Cell</a>&gt;()</td></tr>
+<tr class="separator:a565eeb519b8fbe02d172211bab007a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1470d00f4d7584a8a0001738c419f77c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHotItem.html">HotItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a1470d00f4d7584a8a0001738c419f77c">lastHotItem</a></td></tr>
 <tr class="separator:a1470d00f4d7584a8a0001738c419f77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3df2ab89636da24fcf3290d2e404535"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHotItem.html">HotItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ad3df2ab89636da24fcf3290d2e404535">hotItemToRestore</a></td></tr>
@@ -923,13 +923,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l02152">2152</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 2153</span>    {</div>
-<div class="line"><span class="lineno"> 2154</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> lastMarkedHighlight <span class="keywordflow">in</span> <a class="code hl_variable" href="classPlayer.html#a7a2a2eac49a3681d65cb58711f608819">lastMarkedHighlights</a>)</div>
+<div class="line"><span class="lineno"> 2154</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCell.html">Cell</a> lastMarkedHighlight <span class="keywordflow">in</span> <a class="code hl_variable" href="classPlayer.html#a565eeb519b8fbe02d172211bab007a22">lastMarkedHighlights</a>)</div>
 <div class="line"><span class="lineno"> 2155</span>        {</div>
-<div class="line"><span class="lineno"> 2156</span>            lastMarkedHighlight.cell.highlight = 0;</div>
+<div class="line"><span class="lineno"> 2156</span>            lastMarkedHighlight.highlight = 0;</div>
 <div class="line"><span class="lineno"> 2157</span>        }</div>
-<div class="line"><span class="lineno"> 2158</span>        <a class="code hl_variable" href="classPlayer.html#a7a2a2eac49a3681d65cb58711f608819">lastMarkedHighlights</a>.Clear();</div>
+<div class="line"><span class="lineno"> 2158</span>        <a class="code hl_variable" href="classPlayer.html#a565eeb519b8fbe02d172211bab007a22">lastMarkedHighlights</a>.Clear();</div>
 <div class="line"><span class="lineno"> 2159</span>    }</div>
-<div class="ttc" id="aclassPlayer_html_a7a2a2eac49a3681d65cb58711f608819"><div class="ttname"><a href="classPlayer.html#a7a2a2eac49a3681d65cb58711f608819">Player.lastMarkedHighlights</a></div><div class="ttdeci">List&lt; Point &gt; lastMarkedHighlights</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00906">Player.cs:906</a></div></div>
+<div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a565eeb519b8fbe02d172211bab007a22"><div class="ttname"><a href="classPlayer.html#a565eeb519b8fbe02d172211bab007a22">Player.lastMarkedHighlights</a></div><div class="ttdeci">List&lt; Cell &gt; lastMarkedHighlights</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00906">Player.cs:906</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Player_8cs_source.html#l00906">lastMarkedHighlights</a>.</p>
 
@@ -1245,12 +1246,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00478">ElementContainer.cs:478</a></div></div>
 <div class="ttc" id="aclassElement_html_abb374ab60a118d24de75da758763f791"><div class="ttname"><a href="classElement.html#abb374ab60a118d24de75da758763f791">Element.vPotential</a></div><div class="ttdeci">int vPotential</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00903">Element.2.cs:903</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00010">SourceElement.cs:11</a></div></div>
-<div class="ttc" id="aclassSourceElement_1_1Row_html_a4652ce165a6625864e2ba4058c07563e"><div class="ttname"><a href="classSourceElement_1_1Row.html#a4652ce165a6625864e2ba4058c07563e">SourceElement.Row.aliasRef</a></div><div class="ttdeci">string aliasRef</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00034">SourceElement.cs:34</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a4652ce165a6625864e2ba4058c07563e"><div class="ttname"><a href="classSourceElement_1_1Row.html#a4652ce165a6625864e2ba4058c07563e">SourceElement.Row.aliasRef</a></div><div class="ttdeci">string aliasRef</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00026">SourceElement.cs:26</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_a99432e5acb5134731ae3aca223e261ef"><div class="ttname"><a href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">SourceElement.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00012">SourceElement.cs:12</a></div></div>
 <div class="ttc" id="aclassSourceElement_html"><div class="ttname"><a href="classSourceElement.html">SourceElement</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00007">SourceElement.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceElement_8cs_source.html#l00034">SourceElement.Row.aliasRef</a>, <a class="el" href="Element_82_8cs_source.html#l00782">Element.Create()</a>, <a class="el" href="Player_8cs_source.html#l00843">domains</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Card_8cs_source.html#l02359">Card.Evalue()</a>, <a class="el" href="Chara_8cs_source.html#l08727">Chara.GainAbility()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00478">ElementContainer.GetElement()</a>, <a class="el" href="SourceElement_8cs_source.html#l00012">SourceElement.Row.id</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="Element_82_8cs_source.html#l00903">Element.vPotential</a>.</p>
+<p class="reference">References <a class="el" href="SourceElement_8cs_source.html#l00026">SourceElement.Row.aliasRef</a>, <a class="el" href="Element_82_8cs_source.html#l00782">Element.Create()</a>, <a class="el" href="Player_8cs_source.html#l00843">domains</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Card_8cs_source.html#l02359">Card.Evalue()</a>, <a class="el" href="Chara_8cs_source.html#l08727">Chara.GainAbility()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00478">ElementContainer.GetElement()</a>, <a class="el" href="SourceElement_8cs_source.html#l00012">SourceElement.Row.id</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Element_82_8cs_source.html#l00025">Element.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="Element_82_8cs_source.html#l00903">Element.vPotential</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConSleep_8cs_source.html#l00227">ConSleep.OnRemoved()</a>.</p>
 
@@ -1338,9 +1339,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1421</span>        Util.Run(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">pathCurrentSave</a> + <span class="stringliteral">&quot;background.txt&quot;</span>);</div>
 <div class="line"><span class="lineno"> 1422</span>    }</div>
 <div class="ttc" id="aclassGameIO_html"><div class="ttname"><a href="classGameIO.html">GameIO</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00009">GameIO.cs:10</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a3d95322fcd775b6675b6f5195ca0643f"><div class="ttname"><a href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">GameIO.pathCurrentSave</a></div><div class="ttdeci">static string pathCurrentSave</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00032">GameIO.cs:32</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a3d95322fcd775b6675b6f5195ca0643f"><div class="ttname"><a href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">GameIO.pathCurrentSave</a></div><div class="ttdeci">static string pathCurrentSave</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00033">GameIO.cs:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00032">GameIO.pathCurrentSave</a>.</p>
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00033">GameIO.pathCurrentSave</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00827">WindowChara.RefreshNote()</a>.</p>
 
@@ -1767,7 +1768,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1382</span>        IO.SaveText(<a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_property" href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">pathCurrentSave</a> + <span class="stringliteral">&quot;background.txt&quot;</span>, text);</div>
 <div class="line"><span class="lineno"> 1383</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00032">GameIO.pathCurrentSave</a>.</p>
+<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00033">GameIO.pathCurrentSave</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01140">OnStartNewGame()</a>.</p>
 
@@ -1841,7 +1842,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01943">Card.cs:1943</a></div></div>
 <div class="ttc" id="aclassChara_html_a8d4d12cb1ff927b90512ff98e14d1ec5"><div class="ttname"><a href="classChara.html#a8d4d12cb1ff927b90512ff98e14d1ec5">Chara.Aka</a></div><div class="ttdeci">string Aka</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00201">Chara.cs:201</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00201">Chara.Aka</a>, <a class="el" href="Card_8cs_source.html#l00040">Card.bio</a>, <a class="el" href="Biography_8cs_source.html#l00065">Biography.birthDay</a>, <a class="el" href="Biography_8cs_source.html#l00077">Biography.birthMonth</a>, <a class="el" href="Biography_8cs_source.html#l00089">Biography.birthYear</a>, <a class="el" href="Card_8cs_source.html#l02160">Card.IsMale</a>, <a class="el" href="Chara_8cs_source.html#l00451">Chara.job</a>, <a class="el" href="Biography_8cs_source.html#l00260">Biography.nameDad</a>, <a class="el" href="Biography_8cs_source.html#l00256">Biography.nameHome</a>, <a class="el" href="Biography_8cs_source.html#l00258">Biography.nameLoc</a>, <a class="el" href="Biography_8cs_source.html#l00262">Biography.nameMom</a>, <a class="el" href="Card_8cs_source.html#l01943">Card.NameSimple</a>, <a class="el" href="GameIO_8cs_source.html#l00032">GameIO.pathCurrentSave</a>, and <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00201">Chara.Aka</a>, <a class="el" href="Card_8cs_source.html#l00040">Card.bio</a>, <a class="el" href="Biography_8cs_source.html#l00065">Biography.birthDay</a>, <a class="el" href="Biography_8cs_source.html#l00077">Biography.birthMonth</a>, <a class="el" href="Biography_8cs_source.html#l00089">Biography.birthYear</a>, <a class="el" href="Card_8cs_source.html#l02160">Card.IsMale</a>, <a class="el" href="Chara_8cs_source.html#l00451">Chara.job</a>, <a class="el" href="Biography_8cs_source.html#l00260">Biography.nameDad</a>, <a class="el" href="Biography_8cs_source.html#l00256">Biography.nameHome</a>, <a class="el" href="Biography_8cs_source.html#l00258">Biography.nameLoc</a>, <a class="el" href="Biography_8cs_source.html#l00262">Biography.nameMom</a>, <a class="el" href="Card_8cs_source.html#l01943">Card.NameSimple</a>, <a class="el" href="GameIO_8cs_source.html#l00033">GameIO.pathCurrentSave</a>, and <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00827">WindowChara.RefreshNote()</a>.</p>
 
@@ -2123,7 +2124,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Player_8cs_source.html#l01908">CountKeyItem()</a>, <a class="el" href="Player_8cs_source.html#l00672">fame</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Tutorial_8cs_source.html#l00055">Tutorial.Reserve()</a>, and <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZonePreEnterBoutWin_8cs_source.html#l00007">ZonePreEnterBoutWin.Execute()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01944">CoreDebug.ModFame()</a>, <a class="el" href="QuestRandom_8cs_source.html#l00015">QuestRandom.OnDropReward()</a>, and <a class="el" href="Chara_8cs_source.html#l04890">Chara.TryDropBossLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZonePreEnterBoutWin_8cs_source.html#l00007">ZonePreEnterBoutWin.Execute()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01948">CoreDebug.ModFame()</a>, <a class="el" href="QuestRandom_8cs_source.html#l00015">QuestRandom.OnDropReward()</a>, and <a class="el" href="Chara_8cs_source.html#l04890">Chara.TryDropBossLoot()</a>.</p>
 
 </div>
 </div>
@@ -2190,7 +2191,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Player_8cs_source.html#l00669">karma</a>, <a class="el" href="QuestManager_8cs_source.html#l00011">QuestManager.list</a>, <a class="el" href="Quest_8cs_source.html#l00553">Quest.OnModKarma()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.quests</a>, <a class="el" href="Zone_8cs_source.html#l03172">Zone.RefreshCriminal()</a>, <a class="el" href="Tutorial_8cs_source.html#l00055">Tutorial.Reserve()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, and <a class="el" href="Point_8cs_source.html#l00856">Point.TryWitnessCrime()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitAltar_8cs_source.html#l00195">TraitAltar._OnOffer()</a>, <a class="el" href="Quest_8cs_source.html#l00466">Quest.Complete()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Chara_8cs_source.html#l04608">Chara.Die()</a>, <a class="el" href="ZonePreEnterEncounter_8cs_source.html#l00013">ZonePreEnterEncounter.Execute()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00118">AI_Fuck.Finish()</a>, <a class="el" href="Chara_8cs_source.html#l03903">Chara.HoldCard()</a>, <a class="el" href="Chara_8cs_source.html#l04990">Chara.Kick()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01955">CoreDebug.ModKarma()</a>, <a class="el" href="Player_8cs_source.html#l02125">OnAdvanceDay()</a>, <a class="el" href="Faction_82_8cs_source.html#l00234">Faction.OnAdvanceMonth()</a>, <a class="el" href="InvOwner_8cs_source.html#l00754">InvOwner.OnClick()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00073">ZoneEventHarvest.OnLeaveZone()</a>, <a class="el" href="TaskDig_8cs_source.html#l00137">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00134">TaskMine.OnProgressComplete()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00150">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="TraitIndulgence_8cs_source.html#l00003">TraitIndulgence.OnRead()</a>, <a class="el" href="ActRestrain_8cs_source.html#l00027">ActRestrain.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l02097">ActEffect.Poison()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00062">FoodEffect.Proc()</a>, <a class="el" href="InvOwner_8cs_source.html#l00135">InvOwner.Transaction.Process()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00052">AI_Steal.Run()</a>, <a class="el" href="AI__Shopping_8cs_source.html#l00142">AI_Shopping.SellChara()</a>, <a class="el" href="Chara_8cs_source.html#l04890">Chara.TryDropBossLoot()</a>, <a class="el" href="Trait_8cs_source.html#l00827">Trait.TryOpenLock()</a>, and <a class="el" href="Card_8cs_source.html#l05977">Card.TryUnrestrain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitAltar_8cs_source.html#l00195">TraitAltar._OnOffer()</a>, <a class="el" href="Quest_8cs_source.html#l00466">Quest.Complete()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Chara_8cs_source.html#l04608">Chara.Die()</a>, <a class="el" href="ZonePreEnterEncounter_8cs_source.html#l00013">ZonePreEnterEncounter.Execute()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00118">AI_Fuck.Finish()</a>, <a class="el" href="Chara_8cs_source.html#l03903">Chara.HoldCard()</a>, <a class="el" href="Chara_8cs_source.html#l04990">Chara.Kick()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01959">CoreDebug.ModKarma()</a>, <a class="el" href="Player_8cs_source.html#l02125">OnAdvanceDay()</a>, <a class="el" href="Faction_82_8cs_source.html#l00234">Faction.OnAdvanceMonth()</a>, <a class="el" href="InvOwner_8cs_source.html#l00754">InvOwner.OnClick()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00073">ZoneEventHarvest.OnLeaveZone()</a>, <a class="el" href="TaskDig_8cs_source.html#l00137">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00134">TaskMine.OnProgressComplete()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00150">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="TraitIndulgence_8cs_source.html#l00003">TraitIndulgence.OnRead()</a>, <a class="el" href="ActRestrain_8cs_source.html#l00027">ActRestrain.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l02102">ActEffect.Poison()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00062">FoodEffect.Proc()</a>, <a class="el" href="InvOwner_8cs_source.html#l00135">InvOwner.Transaction.Process()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00052">AI_Steal.Run()</a>, <a class="el" href="AI__Shopping_8cs_source.html#l00142">AI_Shopping.SellChara()</a>, <a class="el" href="Chara_8cs_source.html#l04890">Chara.TryDropBossLoot()</a>, <a class="el" href="Trait_8cs_source.html#l00827">Trait.TryOpenLock()</a>, and <a class="el" href="Card_8cs_source.html#l05977">Card.TryUnrestrain()</a>.</p>
 
 </div>
 </div>
@@ -3078,7 +3079,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Player_8cs_source.html#l00843">domains</a>, <a class="el" href="Chara_8cs_source.html#l00451">Chara.job</a>, and <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l02046">CoreDebug.ChangeJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00367">UICharaMaker.ListJob()</a>, <a class="el" href="Player_8cs_source.html#l01107">OnCreateGame()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00360">UICharaMaker.RerollJob()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l02050">CoreDebug.ChangeJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00367">UICharaMaker.ListJob()</a>, <a class="el" href="Player_8cs_source.html#l01107">OnCreateGame()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00360">UICharaMaker.RerollJob()</a>.</p>
 
 </div>
 </div>
@@ -4081,7 +4082,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00837">837</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00528">Zone.Activate()</a>, <a class="el" href="Map_8cs_source.html#l01540">Map.AddBackerTree()</a>, <a class="el" href="Map_8cs_source.html#l01565">Map.ApplyBackerObj()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02136">CoreDebug.ClearLastWishFlag()</a>, <a class="el" href="Chara_8cs_source.html#l04608">Chara.Die()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02118">CoreDebug.LastWish()</a>, <a class="el" href="Chara_8cs_source.html#l01295">Chara.OnCreate()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="Zone_8cs_source.html#l01005">Zone.Revive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00528">Zone.Activate()</a>, <a class="el" href="Map_8cs_source.html#l01540">Map.AddBackerTree()</a>, <a class="el" href="Map_8cs_source.html#l01565">Map.ApplyBackerObj()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02140">CoreDebug.ClearLastWishFlag()</a>, <a class="el" href="Chara_8cs_source.html#l04608">Chara.Die()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02122">CoreDebug.LastWish()</a>, <a class="el" href="Chara_8cs_source.html#l01295">Chara.OnCreate()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="Zone_8cs_source.html#l01005">Zone.Revive()</a>.</p>
 
 </div>
 </div>
@@ -4189,7 +4190,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00672">672</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00113">WidgetStatsBar.Build()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="Faction_82_8cs_source.html#l00379">Faction.GetFameTax()</a>, <a class="el" href="Player_8cs_source.html#l01841">ModFame()</a>, <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>, and <a class="el" href="Zone_8cs_source.html#l03224">Zone.UpdateQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00125">WidgetStatsBar.Build()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Quest.Fail()</a>, <a class="el" href="Faction_82_8cs_source.html#l00379">Faction.GetFameTax()</a>, <a class="el" href="Player_8cs_source.html#l01841">ModFame()</a>, <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>, and <a class="el" href="Zone_8cs_source.html#l03224">Zone.UpdateQuests()</a>.</p>
 
 </div>
 </div>
@@ -4507,7 +4508,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00669">669</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00113">WidgetStatsBar.Build()</a>, <a class="el" href="Player_8cs_source.html#l02244">ModKarma()</a>, <a class="el" href="Player_8cs_source.html#l02125">OnAdvanceDay()</a>, <a class="el" href="Player_8cs_source.html#l01107">OnCreateGame()</a>, <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>, and <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00125">WidgetStatsBar.Build()</a>, <a class="el" href="Player_8cs_source.html#l02244">ModKarma()</a>, <a class="el" href="Player_8cs_source.html#l02125">OnAdvanceDay()</a>, <a class="el" href="Player_8cs_source.html#l01107">OnCreateGame()</a>, <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>, and <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>.</p>
 
 </div>
 </div>
@@ -4629,7 +4630,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00952">952</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00113">WidgetStatsBar.Build()</a>, <a class="el" href="Player_8cs_source.html#l01365">RefreshEmptyAlly()</a>, <a class="el" href="Chara_8cs_source.html#l01581">Chara.RefreshSpeed()</a>, and <a class="el" href="GoalCombat_8cs_source.html#l00413">GoalCombat.TryUseAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00125">WidgetStatsBar.Build()</a>, <a class="el" href="Player_8cs_source.html#l01365">RefreshEmptyAlly()</a>, <a class="el" href="Chara_8cs_source.html#l01581">Chara.RefreshSpeed()</a>, and <a class="el" href="GoalCombat_8cs_source.html#l00413">GoalCombat.TryUseAbility()</a>.</p>
 
 </div>
 </div>
@@ -4669,21 +4670,21 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a2a2eac49a3681d65cb58711f608819" name="a7a2a2eac49a3681d65cb58711f608819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a2a2eac49a3681d65cb58711f608819">&#9670;&#160;</a></span>lastMarkedHighlights</h2>
+<a id="a565eeb519b8fbe02d172211bab007a22" name="a565eeb519b8fbe02d172211bab007a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565eeb519b8fbe02d172211bab007a22">&#9670;&#160;</a></span>lastMarkedHighlights</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="classPoint.html">Point</a>&gt; Player.lastMarkedHighlights = new List&lt;<a class="el" href="classPoint.html">Point</a>&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="classCell.html">Cell</a>&gt; Player.lastMarkedHighlights = new List&lt;<a class="el" href="classCell.html">Cell</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00906">906</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02152">ClearMapHighlights()</a>, and <a class="el" href="ACT_8cs_source.html#l00447">Act.OnMarkMapHighlights()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02152">ClearMapHighlights()</a>, and <a class="el" href="Point_8cs_source.html#l01378">Point.SetHighlight()</a>.</p>
 
 </div>
 </div>
@@ -5129,7 +5130,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00777">777</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00309">Game.Load()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00129">BuildMenu.OnActivate()</a>, <a class="el" href="AM__Build_8cs_source.html#l00309">AM_Build.OnFinishProcessTiles()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00032">LayerAbility.OnInit()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00037">LayerPeople.OnInit()</a>, <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="UIInventory_8cs_source.html#l00227">UIInventory.OnInit()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="UIInventory_8cs_source.html#l00448">UIInventory.RefreshMenu()</a>, <a class="el" href="LayerTech_8cs_source.html#l00014">LayerTech.RefreshTech()</a>, <a class="el" href="LayerHome_8cs_source.html#l00078">LayerHome.RefreshTech()</a>, <a class="el" href="Game_8cs_source.html#l00845">Game.Save()</a>, and <a class="el" href="UIInventory_8cs_source.html#l00983">UIInventory.Sort()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00309">Game.Load()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00133">BuildMenu.OnActivate()</a>, <a class="el" href="AM__Build_8cs_source.html#l00309">AM_Build.OnFinishProcessTiles()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00032">LayerAbility.OnInit()</a>, <a class="el" href="LayerPeople_8cs_source.html#l00037">LayerPeople.OnInit()</a>, <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="UIInventory_8cs_source.html#l00227">UIInventory.OnInit()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="UIInventory_8cs_source.html#l00448">UIInventory.RefreshMenu()</a>, <a class="el" href="LayerTech_8cs_source.html#l00014">LayerTech.RefreshTech()</a>, <a class="el" href="LayerHome_8cs_source.html#l00078">LayerHome.RefreshTech()</a>, <a class="el" href="Game_8cs_source.html#l00845">Game.Save()</a>, and <a class="el" href="UIInventory_8cs_source.html#l00983">UIInventory.Sort()</a>.</p>
 
 </div>
 </div>
@@ -5245,7 +5246,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00861">861</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitShrine_8cs_source.html#l00030">TraitShrine._OnUse()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00236">BuildMenu._Search()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00677">CoreDebug.AddAllRecipes()</a>, <a class="el" href="Card_8cs_source.html#l02812">Card.AddThing()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02100">CoreDebug.AllRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00217">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00144">RecipeCard.Craft()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00260">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="AM__Picker_8cs_source.html#l00018">AM_Picker.Result.GetText()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00246">RecipeManager.GetUnlearnedRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00138">RecipeManager.IsKnown()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00147">RecipeManager.ListSources()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskDig_8cs_source.html#l00137">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00134">TaskMine.OnProgressComplete()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00018">TraitRecipe.OnRead()</a>, <a class="el" href="TraitRecipeCat_8cs_source.html#l00010">TraitRecipeCat.OnRead()</a>, <a class="el" href="ConSleep_8cs_source.html#l00227">ConSleep.OnRemoved()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00415">TraitCrafter.OnUse()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00070">ResearchPlan.ParseReward()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00487">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00583">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00024">TraitRecipe.SetName()</a>, <a class="el" href="AM__Picker_8cs_source.html#l00170">AM_Picker.TryGetRecipe()</a>, and <a class="el" href="TraitCrafter_8cs_source.html#l00382">TraitCrafter.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitShrine_8cs_source.html#l00030">TraitShrine._OnUse()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00677">CoreDebug.AddAllRecipes()</a>, <a class="el" href="Card_8cs_source.html#l02812">Card.AddThing()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02104">CoreDebug.AllRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00217">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00144">RecipeCard.Craft()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00260">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="AM__Picker_8cs_source.html#l00018">AM_Picker.Result.GetText()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00246">RecipeManager.GetUnlearnedRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00138">RecipeManager.IsKnown()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00147">RecipeManager.ListSources()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskDig_8cs_source.html#l00137">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00134">TaskMine.OnProgressComplete()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00018">TraitRecipe.OnRead()</a>, <a class="el" href="TraitRecipeCat_8cs_source.html#l00010">TraitRecipeCat.OnRead()</a>, <a class="el" href="ConSleep_8cs_source.html#l00227">ConSleep.OnRemoved()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00415">TraitCrafter.OnUse()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00070">ResearchPlan.ParseReward()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00583">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00024">TraitRecipe.SetName()</a>, <a class="el" href="AM__Picker_8cs_source.html#l00170">AM_Picker.TryGetRecipe()</a>, and <a class="el" href="TraitCrafter_8cs_source.html#l00382">TraitCrafter.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -5297,7 +5298,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00657">657</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, <a class="el" href="Chara_8cs_source.html#l02863">Chara.MoveZone()</a>, <a class="el" href="HotItemActionSleep_8cs_source.html#l00007">HotItemActionSleep.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l00769">ActEffect.Proc()</a>, and <a class="el" href="Chara_8cs_source.html#l03417">Chara.Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, <a class="el" href="Chara_8cs_source.html#l02863">Chara.MoveZone()</a>, <a class="el" href="HotItemActionSleep_8cs_source.html#l00007">HotItemActionSleep.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l00774">ActEffect.Proc()</a>, and <a class="el" href="Chara_8cs_source.html#l03417">Chara.Tick()</a>.</p>
 
 </div>
 </div>
@@ -6295,7 +6296,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l01037">1037</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00113">WidgetStatsBar.Build()</a>, and <a class="el" href="Player_8cs_source.html#l01365">RefreshEmptyAlly()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStatsBar_8cs_source.html#l00125">WidgetStatsBar.Build()</a>, and <a class="el" href="Player_8cs_source.html#l01365">RefreshEmptyAlly()</a>.</p>
 
 </div>
 </div>

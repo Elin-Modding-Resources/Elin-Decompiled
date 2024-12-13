@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"classCoreConfig_1_1UISetting.html#a8cfbe5f0446d017fe3d4c4451c709ea1":[1,0,330,12,21],
+"classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74":[1,0,330,12,6],
+"classCoreConfig_1_1UISetting.html#aa8ca49b829e5b0244c73606cd12421cc":[1,0,330,12,16],
+"classCoreConfig_1_1UISetting.html#abb81ec9073fd7e06a58445df95402e82":[1,0,330,12,15],
 "classCoreConfig_1_1UISetting.html#abf7c51941d4db0fc9eeaecd7558ca8d2":[1,0,330,12,9],
 "classCoreConfig_1_1UISetting.html#ad513b374f43b6e4dbaf1f542ac1ae998":[1,0,330,12,10],
 "classCoreConfig_1_1UISetting.html#ad82d50a86dd3c0d93e904f41ddf25169":[1,0,330,12,8],
@@ -89,6 +93,7 @@ var NAVTREEINDEX42 =
 "classCoreDebug.html#a68d5e0c38c1c979da243d41dfd74fd43":[1,0,331,57],
 "classCoreDebug.html#a69aef1e06f50b9739f7f06b799e397ab":[1,0,331,98],
 "classCoreDebug.html#a6eb3facfeaab2eca59cacb0f796faf14":[1,0,331,150],
+"classCoreDebug.html#a710080962de63085be3884177bad6e16":[1,0,331,46],
 "classCoreDebug.html#a73641165be1d83ed1569e1059bf8721a":[1,0,331,125],
 "classCoreDebug.html#a7550f0a672761aacb9e52c7d30a27bb7":[1,0,331,108],
 "classCoreDebug.html#a7583c0a633820738845b2a24b29008af":[1,0,331,27],
@@ -144,7 +149,6 @@ var NAVTREEINDEX42 =
 "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91ab3ff996fe5c77610359114835baf9b38":[1,0,331,6,1],
 "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91ab78a3223503896721cca1303f776159b":[1,0,331,6,0],
 "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91acd2881bbcb2a1b4594de0c5bc6501410":[1,0,331,6,8],
-"classCoreDebug.html#ab732f996edfbe64aa89ec45a9ac79296":[1,0,331,46],
 "classCoreDebug.html#abe88549f467c19fb1e1d999f5ee2bd9c":[1,0,331,134],
 "classCoreDebug.html#abeda409739a6918ff6e0d979793a9879":[1,0,331,42],
 "classCoreDebug.html#ac353b15e1f130324b31a6a8d30ce554e":[1,0,331,18],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "classCoreRef.html#ae2b12d5f2345e7e9f52c017d4b467512":[1,0,333,58],
 "classCoreRef.html#ae5efd0b0bf8d7427c01bfd6622c3c716":[1,0,333,30],
 "classCoreRef.html#af3caee96c1fc3153ff87b8febf353ac6":[1,0,333,48],
-"classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236":[1,0,333,42],
-"classCoreRef.html#afb1f3cdc02fb15cc2138061d141211db":[1,0,333,61],
-"classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,333,39],
-"classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,333,40],
-"classCoreRef_1_1Biomes.html":[1,0,333,0]
+"classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236":[1,0,333,42]
 };

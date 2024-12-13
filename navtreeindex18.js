@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"Zone__Yowyn_8cs_source.html":[2,0,0,1879],
+"annotated.html":[1,0],
 "classABILITY.html":[1,0,3],
 "classABILITY.html#a045614514412a5bfd4324d98c0de1184":[1,0,3,89],
 "classABILITY.html#a062bc8adf7ed06a6ed0d4105359a6af6":[1,0,3,76],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classAIWork.html#ae378dd10487b1b4fb9779cbcc401fca0":[1,0,94,12],
 "classAIWork.html#ae4fdd30e6cf2898b569b7368c73f3381":[1,0,94,7],
 "classAIWork.html#ae61bcc638bcf82cdce2bfe6d2b70ed87":[1,0,94,16],
-"classAIWork.html#af05e0263212a4e23ac602ba937e34b42":[1,0,94,11],
-"classAIWork.html#af2c8f02ecc6f98c9c06d8a23e9b42fd9":[1,0,94,6],
-"classAIWork__Chore.html":[1,0,95]
+"classAIWork.html#af05e0263212a4e23ac602ba937e34b42":[1,0,94,11]
 };

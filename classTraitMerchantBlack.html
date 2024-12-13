@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.54</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.55 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Properties</h2></td></tr>
 <tr class="separator:a0c55ab4bf916652cb165aba6b61f358b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaee57988bd078678deba34c5ba43121"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMerchantBlack.html#aaaee57988bd078678deba34c5ba43121">CanSellStolenGoods</a><code> [get]</code></td></tr>
 <tr class="separator:aaaee57988bd078678deba34c5ba43121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c10f324fc16b05a1806794b99a06f7"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMerchantBlack.html#a63c10f324fc16b05a1806794b99a06f7">ShopLv</a><code> [get]</code></td></tr>
+<tr class="separator:a63c10f324fc16b05a1806794b99a06f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classTraitMerchant"><td colspan="2" onclick="javascript:toggleInherit('properties_classTraitMerchant')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classTraitMerchant.html">TraitMerchant</a></td></tr>
 <tr class="memitem:ac785b13ae49732f62e5c6494e0bd2d96 inherit properties_classTraitMerchant"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMerchant.html#ac785b13ae49732f62e5c6494e0bd2d96">GuidePriotiy</a><code> [get]</code></td></tr>
 <tr class="separator:ac785b13ae49732f62e5c6494e0bd2d96 inherit properties_classTraitMerchant"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -842,6 +844,45 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitMerchantBlack_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitMerchantBlack_8cs_source.html">TraitMerchantBlack.cs</a>.</p>
 
+</div>
+</div>
+<a id="a63c10f324fc16b05a1806794b99a06f7" name="a63c10f324fc16b05a1806794b99a06f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c10f324fc16b05a1806794b99a06f7">&#9670;&#160;</a></span>ShopLv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int TraitMerchantBlack.ShopLv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitMerchantBlack_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitMerchantBlack_8cs_source.html">TraitMerchantBlack.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">return</span> base.ShopLv;</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#adf59026dcd0719d722979cee73513ba5">startSetting</a>.<a class="code hl_variable" href="classCoreDebug_1_1StartSetting.html#a7f0172ab8c018e1d59a0bad50c370c07">lv</a>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclassCoreDebug_1_1StartSetting_html_a7f0172ab8c018e1d59a0bad50c370c07"><div class="ttname"><a href="classCoreDebug_1_1StartSetting.html#a7f0172ab8c018e1d59a0bad50c370c07">CoreDebug.StartSetting.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00018">CoreDebug.cs:18</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_adf59026dcd0719d722979cee73513ba5"><div class="ttname"><a href="classCoreDebug.html#adf59026dcd0719d722979cee73513ba5">CoreDebug.startSetting</a></div><div class="ttdeci">StartSetting startSetting</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00103">CoreDebug.cs:103</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0c55ab4bf916652cb165aba6b61f358b" name="a0c55ab4bf916652cb165aba6b61f358b"></a>

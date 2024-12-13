@@ -110,7 +110,7 @@ var classPlayer =
     [ "lastEmptyAlly", "classPlayer.html#aee065266b7d43b1efd2dfbf833a6ee8f", null ],
     [ "lastFelmeraReward", "classPlayer.html#a127cb89ec018035fb384cfe6bf143b83", null ],
     [ "lastHotItem", "classPlayer.html#a1470d00f4d7584a8a0001738c419f77c", null ],
-    [ "lastMarkedHighlights", "classPlayer.html#a7a2a2eac49a3681d65cb58711f608819", null ],
+    [ "lastMarkedHighlights", "classPlayer.html#a565eeb519b8fbe02d172211bab007a22", null ],
     [ "lastRecipes", "classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138", null ],
     [ "lastTransition", "classPlayer.html#a0b855e109bdf60f785f8a4a61af5116d", null ],
     [ "lastTurn", "classPlayer.html#ace0883e7e5f36e437c25a5250740d1c5", null ],

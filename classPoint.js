@@ -65,6 +65,7 @@ var classPoint =
     [ "Set", "classPoint.html#ae6cc942c6e8e95b9f73d0abac2b0b919", null ],
     [ "SetBlock", "classPoint.html#aa9f4606372ab30aaf490838175342c3e", null ],
     [ "SetFloor", "classPoint.html#a7c79c7d7ececfa4b997a01fe93f3e385", null ],
+    [ "SetHighlight", "classPoint.html#a24faf995bc1f381ad3c29edd597fbf1b", null ],
     [ "SetObj", "classPoint.html#a1b776a5c157ff23d2c418ba134448d74", null ],
     [ "TalkWitnesses", "classPoint.html#aa7525364037105d28c600c86463a8ef7", null ],
     [ "ToRegionPos", "classPoint.html#ad1d1d6268bb74ea2f46c5c496e9c2f69", null ],

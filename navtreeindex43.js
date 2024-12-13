@@ -1,5 +1,9 @@
 var NAVTREEINDEX43 =
 {
+"classCoreRef.html#afb1f3cdc02fb15cc2138061d141211db":[1,0,333,61],
+"classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,333,39],
+"classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,333,40],
+"classCoreRef_1_1Biomes.html":[1,0,333,0],
 "classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a":[1,0,333,0,0],
 "classCoreRef_1_1Biomes.html#a4277df483fb1c7778a23d940f84c73e6":[1,0,333,0,3],
 "classCoreRef_1_1Biomes.html#aca559167d7a556680efbce71ba52bbf4":[1,0,333,0,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX43 =
 "classDNA.html#a6b460b5a4ecde57106b2c83ed2772237":[1,0,357,2],
 "classDNA.html#a6c24861a5030f44db8c5093699cbbf35":[1,0,357,0],
 "classDNA.html#a6c24861a5030f44db8c5093699cbbf35a64dbb87794fbe7f587582b27d08ace2b":[1,0,357,0,2],
-"classDNA.html#a6c24861a5030f44db8c5093699cbbf35a71bb21a64807546d7f3107b32dc49afc":[1,0,357,0,3],
-"classDNA.html#a6c24861a5030f44db8c5093699cbbf35a7a1920d61156abc05a60135aefe8bc67":[1,0,357,0,1],
-"classDNA.html#a6c24861a5030f44db8c5093699cbbf35ab5e2299a2eabcc8fbba9a826454799d2":[1,0,357,0,0],
-"classDNA.html#a72de04b5db8d67d810222658885796be":[1,0,357,16],
-"classDNA.html#a8181373a1c6fa69902c2a9da918029cc":[1,0,357,27]
+"classDNA.html#a6c24861a5030f44db8c5093699cbbf35a71bb21a64807546d7f3107b32dc49afc":[1,0,357,0,3]
 };

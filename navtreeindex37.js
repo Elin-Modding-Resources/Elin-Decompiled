@@ -1,5 +1,9 @@
 var NAVTREEINDEX37 =
 {
+"classChara.html#af6ad4002a7667b61356da996c1f8c646":[1,0,220,283],
+"classChara.html#af6ec8bc00881d6ebff143ebda7b5d492":[1,0,220,324],
+"classChara.html#af877f3464245a47c6e57ac5d1a487066":[1,0,220,57],
+"classChara.html#af87e6b91255977fa17b444364b7ef011":[1,0,220,359],
 "classChara.html#af906e8ef6b0b5ac4599561f36427d2d2":[1,0,220,274],
 "classChara.html#afae9adbf64d60c7a4074da9153570971":[1,0,220,140],
 "classChara.html#afce16dab6c2041b61788c8435dedd54c":[1,0,220,336],
@@ -245,9 +249,5 @@ var NAVTREEINDEX37 =
 "classColorProfile_1_1BlockColors.html#a572c4f7424ddfb30881648a7d5afcc38":[1,0,240,0,22],
 "classColorProfile_1_1BlockColors.html#a5b3ab5daf9d5646056382286089fec96":[1,0,240,0,19],
 "classColorProfile_1_1BlockColors.html#a72768cbeded5c86e63a69f6369b48e06":[1,0,240,0,18],
-"classColorProfile_1_1BlockColors.html#a894f0680a4edc4588a10d044b5d6d0bb":[1,0,240,0,1],
-"classColorProfile_1_1BlockColors.html#a8b23e44fb0b5641c3e53fb5898b5b48a":[1,0,240,0,15],
-"classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e":[1,0,240,0,0],
-"classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2":[1,0,240,0,3],
-"classColorProfile_1_1BlockColors.html#a922c1abed4b5e24ced0fcc7f7c96a093":[1,0,240,0,7]
+"classColorProfile_1_1BlockColors.html#a894f0680a4edc4588a10d044b5d6d0bb":[1,0,240,0,1]
 };

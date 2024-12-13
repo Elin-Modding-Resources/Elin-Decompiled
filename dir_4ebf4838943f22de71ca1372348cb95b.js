@@ -474,6 +474,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "GameScreen.cs", "GameScreen_8cs.html", "GameScreen_8cs" ],
     [ "GameScreenElona.cs", "GameScreenElona_8cs.html", "GameScreenElona_8cs" ],
     [ "GameScreenNoMap.cs", "GameScreenNoMap_8cs.html", "GameScreenNoMap_8cs" ],
+    [ "GameSerializationBinder.cs", "GameSerializationBinder_8cs.html", "GameSerializationBinder_8cs" ],
     [ "GameSetting.cs", "GameSetting_8cs.html", "GameSetting_8cs" ],
     [ "GameUpdater.cs", "GameUpdater_8cs.html", "GameUpdater_8cs" ],
     [ "GenBounds.cs", "GenBounds_8cs.html", "GenBounds_8cs" ],

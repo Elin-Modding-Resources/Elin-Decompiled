@@ -144,6 +144,9 @@ var hierarchy =
     [ "DayData", "classDayData.html", null ],
     [ "CoreDebug.DebugCommand", "classCoreDebug_1_1DebugCommand.html", null ],
     [ "CoreRef.DefaultRoof", "classCoreRef_1_1DefaultRoof.html", null ],
+    [ "DefaultSerializationBinder", null, [
+      [ "GameSerializationBinder", "classGameSerializationBinder.html", null ]
+    ] ],
     [ "DesignationList< TaskBuild >", "classDesignationList.html", null ],
     [ "DesignationList< TaskCut >", "classDesignationList.html", null ],
     [ "DesignationList< TaskDig >", "classDesignationList.html", null ],
@@ -2043,6 +2046,9 @@ var hierarchy =
     ] ],
     [ "IReservable", "interfaceIReservable.html", [
       [ "Card", "classCard.html", null ]
+    ] ],
+    [ "ISerializationBinder", null, [
+      [ "GameSerializationBinder", "classGameSerializationBinder.html", null ]
     ] ],
     [ "ISerializationCallbackReceiver", null, [
       [ "SourcePref", "classSourcePref.html", null ]

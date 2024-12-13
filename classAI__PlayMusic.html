@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.54</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.55 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -973,20 +973,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAIAct.html#a34784155fda9e0bd48316556fb3c9a5d">AIAct</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AI__PlayMusic_8cs_source.html#l00525">525</a> of file <a class="el" href="AI__PlayMusic_8cs_source.html">AI_PlayMusic.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  526</span>    {</div>
-<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a> != <span class="keyword">null</span> &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#aa134db28dad20339767ace26156d99d4">bgm</a>)</div>
-<div class="line"><span class="lineno">  528</span>        {</div>
-<div class="line"><span class="lineno">  529</span>            <a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#aa134db28dad20339767ace26156d99d4">bgm</a>.song.Fail(<a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#a5742d972fdb8b2fb2435d1316119f08d">source</a>, <a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#aa134db28dad20339767ace26156d99d4">bgm</a>);</div>
-<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classUISong.html">UISong</a>.<a class="code hl_variable" href="classUISong.html#ac20a95ba4beed45a735ccf8eccd97822">Instance</a>)</div>
-<div class="line"><span class="lineno">  531</span>            {</div>
-<div class="line"><span class="lineno">  532</span>                <a class="code hl_class" href="classUISong.html">UISong</a>.<a class="code hl_variable" href="classUISong.html#ac20a95ba4beed45a735ccf8eccd97822">Instance</a>.<a class="code hl_function" href="classUISong.html#a0690226507c8135286f4d2c54621ba79">Kill</a>();</div>
-<div class="line"><span class="lineno">  533</span>            }</div>
-<div class="line"><span class="lineno">  534</span>            playing.source = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  535</span>            SoundManager.jingleTimer = 1f;</div>
-<div class="line"><span class="lineno">  536</span>        }</div>
-<div class="line"><span class="lineno">  537</span>        <a class="code hl_function" href="classAI__PlayMusic.html#accf2ba0f0af523cd265b8c0543cfaaea">Evaluate</a>(success: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  538</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AI__PlayMusic_8cs_source.html#l00522">522</a> of file <a class="el" href="AI__PlayMusic_8cs_source.html">AI_PlayMusic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  523</span>    {</div>
+<div class="line"><span class="lineno">  524</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a> != <span class="keyword">null</span> &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#aa134db28dad20339767ace26156d99d4">bgm</a>)</div>
+<div class="line"><span class="lineno">  525</span>        {</div>
+<div class="line"><span class="lineno">  526</span>            <a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#aa134db28dad20339767ace26156d99d4">bgm</a>.song.Fail(<a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#a5742d972fdb8b2fb2435d1316119f08d">source</a>, <a class="code hl_variable" href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">playing</a>.<a class="code hl_variable" href="classPlayingSong.html#aa134db28dad20339767ace26156d99d4">bgm</a>);</div>
+<div class="line"><span class="lineno">  527</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classUISong.html">UISong</a>.<a class="code hl_variable" href="classUISong.html#ac20a95ba4beed45a735ccf8eccd97822">Instance</a>)</div>
+<div class="line"><span class="lineno">  528</span>            {</div>
+<div class="line"><span class="lineno">  529</span>                <a class="code hl_class" href="classUISong.html">UISong</a>.<a class="code hl_variable" href="classUISong.html#ac20a95ba4beed45a735ccf8eccd97822">Instance</a>.<a class="code hl_function" href="classUISong.html#a0690226507c8135286f4d2c54621ba79">Kill</a>();</div>
+<div class="line"><span class="lineno">  530</span>            }</div>
+<div class="line"><span class="lineno">  531</span>            playing.source = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  532</span>            SoundManager.jingleTimer = 1f;</div>
+<div class="line"><span class="lineno">  533</span>        }</div>
+<div class="line"><span class="lineno">  534</span>        <a class="code hl_function" href="classAI__PlayMusic.html#accf2ba0f0af523cd265b8c0543cfaaea">Evaluate</a>(success: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  535</span>    }</div>
 <div class="ttc" id="aclassAI__PlayMusic_html_accf2ba0f0af523cd265b8c0543cfaaea"><div class="ttname"><a href="classAI__PlayMusic.html#accf2ba0f0af523cd265b8c0543cfaaea">AI_PlayMusic.Evaluate</a></div><div class="ttdeci">void Evaluate(bool success)</div><div class="ttdef"><b>Definition:</b> <a href="AI__PlayMusic_8cs_source.html#l00383">AI_PlayMusic.cs:383</a></div></div>
 <div class="ttc" id="aclassAI__PlayMusic_html_ad7986a2149abbd67214bcf1f0daf9188"><div class="ttname"><a href="classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188">AI_PlayMusic.playing</a></div><div class="ttdeci">PlayingSong playing</div><div class="ttdef"><b>Definition:</b> <a href="AI__PlayMusic_8cs_source.html#l00016">AI_PlayMusic.cs:16</a></div></div>
 <div class="ttc" id="aclassPlayingSong_html_a5742d972fdb8b2fb2435d1316119f08d"><div class="ttname"><a href="classPlayingSong.html#a5742d972fdb8b2fb2435d1316119f08d">PlayingSong.source</a></div><div class="ttdeci">SoundSource source</div><div class="ttdef"><b>Definition:</b> <a href="PlayingSong_8cs_source.html#l00013">PlayingSong.cs:13</a></div></div>
@@ -1558,22 +1558,19 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  505</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#af2de292db3056b8bdb3956c6fbbae9ce">IsFull</a>())</div>
 <div class="line"><span class="lineno">  506</span>        {</div>
 <div class="line"><span class="lineno">  507</span>            thing.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
-<div class="line"><span class="lineno">  508</span>        }</div>
-<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  510</span>        {</div>
-<div class="line"><span class="lineno">  511</span>            <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(thing);</div>
-<div class="line"><span class="lineno">  512</span>        }</div>
-<div class="line"><span class="lineno">  513</span>        <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;money&quot;</span> &amp;&amp; !<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
-<div class="line"><span class="lineno">  514</span>        {</div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordtype">int</span> num2 = (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(241) * 10 + 100) / ((<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default) ? 1 : 10);</div>
-<div class="line"><span class="lineno">  516</span>            <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>() - num2;</div>
-<div class="line"><span class="lineno">  517</span>            <span class="keywordflow">if</span> (num3 &gt; 0)</div>
-<div class="line"><span class="lineno">  518</span>            {</div>
-<div class="line"><span class="lineno">  519</span>                owner.c_allowance += num3;</div>
-<div class="line"><span class="lineno">  520</span>                <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(-num3);</div>
-<div class="line"><span class="lineno">  521</span>            }</div>
-<div class="line"><span class="lineno">  522</span>        }</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
+<div class="line"><span class="lineno">  508</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  509</span>        }</div>
+<div class="line"><span class="lineno">  510</span>        <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(thing);</div>
+<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;money&quot;</span> &amp;&amp; !<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  512</span>        {</div>
+<div class="line"><span class="lineno">  513</span>            <span class="keywordtype">int</span> num2 = (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(241) * 10 + 100) / ((<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classChara.html#a99afe3a20d2ad672773a2258b535019f">memberType</a> == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default) ? 1 : 10);</div>
+<div class="line"><span class="lineno">  514</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>() - num2 &gt; 0)</div>
+<div class="line"><span class="lineno">  515</span>            {</div>
+<div class="line"><span class="lineno">  516</span>                owner.c_allowance += num;</div>
+<div class="line"><span class="lineno">  517</span>                <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(-num);</div>
+<div class="line"><span class="lineno">  518</span>            }</div>
+<div class="line"><span class="lineno">  519</span>        }</div>
+<div class="line"><span class="lineno">  520</span>    }</div>
 <div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00001">FactionMemberType.cs:2</a></div></div>
 <div class="ttc" id="aThrowMethod_8cs_html_affb590f54f8533b392d16826a627ccc0"><div class="ttname"><a href="ThrowMethod_8cs.html#affb590f54f8533b392d16826a627ccc0">ThrowMethod</a></div><div class="ttdeci">ThrowMethod</div><div class="ttdef"><b>Definition:</b> <a href="ThrowMethod_8cs_source.html#l00001">ThrowMethod.cs:2</a></div></div>
 <div class="ttc" id="aclassAI__PlayMusic_html_ae3a51a9cdf907a8b71758f85c64fa900"><div class="ttname"><a href="classAI__PlayMusic.html#ae3a51a9cdf907a8b71758f85c64fa900">AI_PlayMusic.ignoreDamage</a></div><div class="ttdeci">static bool ignoreDamage</div><div class="ttdef"><b>Definition:</b> <a href="AI__PlayMusic_8cs_source.html#l00014">AI_PlayMusic.cs:14</a></div></div>
