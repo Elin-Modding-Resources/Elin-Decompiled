@@ -41,6 +41,8 @@ public class Trait : EClass
 
 	public virtual byte WeightMod => 0;
 
+	public virtual int IdSkin => owner.idSkin;
+
 	public virtual string Name => owner.NameSimple;
 
 	public virtual TileType tileType => owner.TileType;

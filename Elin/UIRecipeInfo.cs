@@ -232,7 +232,7 @@ public class UIRecipeInfo : EMono
 		{
 			if (recipe.UseStock && !recipe.VirtualBlock)
 			{
-				recipe.ingredients[0].thing.SetImage(imageIcon, recipe._dir, recipe.ingredients[0].thing.idSkin);
+				recipe.ingredients[0].thing.SetImage(imageIcon, recipe._dir, recipe.ingredients[0].thing.trait.IdSkin);
 			}
 			else
 			{

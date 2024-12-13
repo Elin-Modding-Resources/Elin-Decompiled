@@ -82,7 +82,10 @@ public class CharaBody : EClass
 		slot.thing = null;
 		if (owner.IsPC)
 		{
-			LayerChara.Refresh();
+			if (refresh)
+			{
+				LayerChara.Refresh();
+			}
 			LayerInventory.SetDirty(thing);
 			WidgetEquip.SetDirty();
 		}
@@ -217,7 +220,10 @@ public class CharaBody : EClass
 		owner.SetTempHand();
 		if (owner.IsPC)
 		{
-			LayerChara.Refresh();
+			if (msg)
+			{
+				LayerChara.Refresh();
+			}
 			LayerInventory.SetDirty(thing);
 			WidgetEquip.SetDirty();
 		}

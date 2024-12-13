@@ -519,7 +519,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 		Recipe recipe = a.recipe;
 		if (recipe.UseStock && !recipe.VirtualBlock && recipe.ingredients[0].thing != null)
 		{
-			recipe.ingredients[0].thing.SetImage(icon, a.dir, recipe.ingredients[0].thing.idSkin);
+			recipe.ingredients[0].thing.SetImage(icon, a.dir, recipe.ingredients[0].thing.trait.IdSkin);
 		}
 		else
 		{
@@ -553,7 +553,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 			mainText.SetText(thing.Num.ToString() ?? "", SkinManager.CurrentColors.buttonGrid);
 			if (r.VirtualBlock)
 			{
-				r.renderRow.SetImage(icon, null, r.GetDefaultColor(), setNativeSize: true, 0, thing.idSkin);
+				r.renderRow.SetImage(icon, null, r.GetDefaultColor(), setNativeSize: true, 0, thing.trait.IdSkin);
 			}
 			else
 			{

@@ -1490,9 +1490,9 @@ public class Thing : Card
 			}
 			break;
 		}
-		if (base.idSkin != 0)
+		if (trait.IdSkin != 0)
 		{
-			int num6 = base.idSkin - 1;
+			int num6 = trait.IdSkin - 1;
 			if (sourceCard.skins.Length != 0)
 			{
 				p.tile += ((p.tile < 0f) ? (-sourceCard.skins[num6]) : sourceCard.skins[num6]);

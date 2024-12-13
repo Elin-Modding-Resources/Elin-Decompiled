@@ -59,7 +59,7 @@ public class HotItemEQSet : HotAction
 				if (slot2.elementId != 44 && slot2.thing != null && slot2.thing.blessedState >= BlessedState.Normal)
 				{
 					dictionary.Add(slot2.thing.c_equippedSlot - 1, slot2.thing);
-					EClass.pc.body.Unequip(slot2.thing);
+					EClass.pc.body.Unequip(slot2.thing, refresh: false);
 				}
 			}
 			Card card = null;
@@ -105,6 +105,7 @@ public class HotItemEQSet : HotAction
 			}
 		}
 		SE.Equip();
+		LayerChara.Refresh();
 	}
 
 	public override void OnShowContextMenu(UIContextMenu m)

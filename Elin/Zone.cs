@@ -230,9 +230,9 @@ public class Zone : Spatial, ICardParent, IInspect
 	{
 		get
 		{
-			if (!IsTown)
+			if (!IsTown && !IsPCFaction)
 			{
-				return IsPCFaction;
+				return Guild.GetCurrentGuild() != null;
 			}
 			return true;
 		}
