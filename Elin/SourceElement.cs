@@ -23,17 +23,29 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 		public string aliasParent;
 
+		public string aliasRef;
+
+		public string aliasMtp;
+
 		public float parentFactor;
 
 		public int lvFactor;
 
 		public int encFactor;
 
+		public string encSlot;
+
 		public int mtp;
 
-		public string aliasRef;
+		public int LV;
 
-		public string aliasMtp;
+		public int chance;
+
+		public int value;
+
+		public int[] cost;
+
+		public int geneSlot;
 
 		public int sort;
 
@@ -59,16 +71,6 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 		public int cooldown;
 
-		public int LV;
-
-		public int chance;
-
-		public int value;
-
-		public int[] cost;
-
-		public int geneSlot;
-
 		public int charge;
 
 		public float radius;
@@ -78,8 +80,6 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 		public string[] req;
 
 		public string idTrainer;
-
-		public string encSlot;
 
 		public int partySkill;
 
@@ -273,35 +273,35 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			altname_JP = SourceData.GetString(4),
 			altname = SourceData.GetString(5),
 			aliasParent = SourceData.GetString(6),
-			parentFactor = SourceData.GetFloat(7),
-			lvFactor = SourceData.GetInt(8),
-			encFactor = SourceData.GetInt(9),
-			mtp = SourceData.GetInt(10),
-			aliasRef = SourceData.GetString(11),
-			aliasMtp = SourceData.GetString(12),
-			sort = SourceData.GetInt(13),
-			target = SourceData.GetString(14),
-			proc = SourceData.GetStringArray(15),
-			type = SourceData.GetString(16),
-			group = SourceData.GetString(17),
-			category = SourceData.GetString(18),
-			categorySub = SourceData.GetString(19),
-			abilityType = SourceData.GetStringArray(20),
-			tag = SourceData.GetStringArray(21),
-			thing = SourceData.GetString(22),
-			eleP = SourceData.GetInt(23),
-			cooldown = SourceData.GetInt(24),
-			LV = SourceData.GetInt(25),
-			chance = SourceData.GetInt(26),
-			value = SourceData.GetInt(27),
-			cost = SourceData.GetIntArray(28),
-			geneSlot = SourceData.GetInt(29),
-			charge = SourceData.GetInt(30),
-			radius = SourceData.GetFloat(31),
-			max = SourceData.GetInt(32),
-			req = SourceData.GetStringArray(33),
-			idTrainer = SourceData.GetString(34),
-			encSlot = SourceData.GetString(35),
+			aliasRef = SourceData.GetString(7),
+			aliasMtp = SourceData.GetString(8),
+			parentFactor = SourceData.GetFloat(9),
+			lvFactor = SourceData.GetInt(10),
+			encFactor = SourceData.GetInt(11),
+			encSlot = SourceData.GetString(12),
+			mtp = SourceData.GetInt(13),
+			LV = SourceData.GetInt(14),
+			chance = SourceData.GetInt(15),
+			value = SourceData.GetInt(16),
+			cost = SourceData.GetIntArray(17),
+			geneSlot = SourceData.GetInt(18),
+			sort = SourceData.GetInt(19),
+			target = SourceData.GetString(20),
+			proc = SourceData.GetStringArray(21),
+			type = SourceData.GetString(22),
+			group = SourceData.GetString(23),
+			category = SourceData.GetString(24),
+			categorySub = SourceData.GetString(25),
+			abilityType = SourceData.GetStringArray(26),
+			tag = SourceData.GetStringArray(27),
+			thing = SourceData.GetString(28),
+			eleP = SourceData.GetInt(29),
+			cooldown = SourceData.GetInt(30),
+			charge = SourceData.GetInt(31),
+			radius = SourceData.GetFloat(32),
+			max = SourceData.GetInt(33),
+			req = SourceData.GetStringArray(34),
+			idTrainer = SourceData.GetString(35),
 			partySkill = SourceData.GetInt(36),
 			tagTrainer = SourceData.GetString(37),
 			levelBonus_JP = SourceData.GetString(38),

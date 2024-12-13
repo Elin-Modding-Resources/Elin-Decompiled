@@ -47,6 +47,17 @@ public class AI_Idle : AIAct
 				}
 				yield return KeepRunning();
 			}
+			if (owner.pos.cell.HasFire)
+			{
+				if (EClass.rnd(5) == 0)
+				{
+					owner.Talk("onFire");
+				}
+				if (owner.MoveNeighborDefinitely())
+				{
+					yield return Restart();
+				}
+			}
 			if (EClass.rnd(owner.IsPCParty ? 10 : 100) == 0 && owner.hunger.GetPhase() >= 3)
 			{
 				Thing thing = owner.things.Find((Thing a) => owner.CanEat(a, owner.IsPCFaction) && !a.c_isImportant, recursive: false);

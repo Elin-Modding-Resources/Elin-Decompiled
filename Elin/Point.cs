@@ -1374,4 +1374,10 @@ public class Point : EClass
 		point.z += EClass.scene.elomap.minY;
 		return point;
 	}
+
+	public void SetHighlight(int id)
+	{
+		cell.highlight = (byte)id;
+		EClass.player.lastMarkedHighlights.Add(cell);
+	}
 }

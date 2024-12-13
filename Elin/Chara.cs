@@ -5728,7 +5728,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return true;
 		}
-		return race == c.race;
+		return false;
 	}
 
 	public override CardRenderer _CreateRenderer()

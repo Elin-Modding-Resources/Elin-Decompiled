@@ -12,7 +12,7 @@ public class TraitHitchingPost : TraitFloorSwitch
 		{
 			foreach (Chara chara in owner.pos.Charas)
 			{
-				if (chara.IsPCFaction && !chara.IsPC && !chara.IsPCParty)
+				if (chara.IsPCFaction && !chara.IsPC && !chara.IsPCParty && chara.trait.CanJoinParty)
 				{
 					ActRide.Ride(EClass.pc, chara);
 					return;

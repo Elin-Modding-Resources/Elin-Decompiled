@@ -46,6 +46,8 @@ public class WidgetStatsBar : Widget
 
 		public bool maxAlly;
 
+		public bool maxMinion;
+
 		public bool hearthLv;
 
 		public bool tourism_value;
@@ -53,6 +55,8 @@ public class WidgetStatsBar : Widget
 		public bool fame;
 
 		public bool dv;
+
+		public bool fertility;
 	}
 
 	public static WidgetStatsBar Instance;
@@ -87,6 +91,10 @@ public class WidgetStatsBar : Widget
 
 	public Sprite iconDvPv;
 
+	public Sprite iconMaxMinion;
+
+	public Sprite iconFertility;
+
 	private UIItem mold;
 
 	public Extra extra => base.config.extra as Extra;
@@ -106,6 +114,10 @@ public class WidgetStatsBar : Widget
 	{
 		Instance = this;
 		mold = layout.CreateMold<UIItem>();
+		if (extra == null)
+		{
+			base.config.extra = CreateExtra();
+		}
 		Build();
 		InvokeRepeating("Refresh", 0.2f, 0.2f);
 	}
@@ -129,6 +141,10 @@ public class WidgetStatsBar : Widget
 		if (extra.maxAlly)
 		{
 			Add(null, "maxAlly", iconMaxAlly, () => EMono.pc.party.members.Count - 1 + "/" + EMono.player.MaxAlly, () => (EMono.player.lastEmptyAlly >= 0) ? FontColor.Default : FontColor.Bad);
+		}
+		if (extra.maxMinion)
+		{
+			Add(null, "maxMinion", iconMaxMinion, () => EMono._zone.CountMinions(EMono.pc) + "/" + EMono.pc.MaxSummon, () => (EMono.pc.MaxSummon - EMono._zone.CountMinions(EMono.pc) >= 0) ? FontColor.Default : FontColor.Bad);
 		}
 		if (extra.money)
 		{
@@ -169,6 +185,26 @@ public class WidgetStatsBar : Widget
 		if (extra.hearthLv)
 		{
 			Add(null, "hearth_lv", iconHearth, () => (EMono.Branch != null) ? EMono.Branch.TextLv : "", () => (EMono.Branch != null && EMono.Branch.exp < EMono.Branch.GetNextExp()) ? FontColor.Default : FontColor.Good, () => EMono._zone.IsPCFaction);
+		}
+		if (extra.fertility)
+		{
+			Add(null, "fertility", iconFertility, delegate
+			{
+				object obj;
+				if (EMono.Branch != null)
+				{
+					obj = (EMono.Branch.MaxSoil - EMono._zone.GetSoilCost()).ToString();
+					if (obj == null)
+					{
+						return "";
+					}
+				}
+				else
+				{
+					obj = "";
+				}
+				return (string)obj;
+			}, () => (EMono.Branch == null || EMono.Branch.MaxSoil - EMono._zone.GetSoilCost() >= 0) ? FontColor.Default : FontColor.Bad, () => EMono._zone.IsPCFaction);
 		}
 		if (extra.weight)
 		{
@@ -287,6 +323,11 @@ public class WidgetStatsBar : Widget
 			extra.maxAlly = a;
 			Build();
 		});
+		uIContextMenu.AddToggle("maxMinion", extra.maxMinion, delegate(bool a)
+		{
+			extra.maxMinion = a;
+			Build();
+		});
 		uIContextMenu.AddToggle("money", extra.money, delegate(bool a)
 		{
 			extra.money = a;
@@ -338,6 +379,11 @@ public class WidgetStatsBar : Widget
 		uIContextMenu.AddToggle("hearth_lv", extra.hearthLv, delegate(bool a)
 		{
 			extra.hearthLv = a;
+			Build();
+		});
+		uIContextMenu.AddToggle("fertility", extra.fertility, delegate(bool a)
+		{
+			extra.fertility = a;
 			Build();
 		});
 		uIContextMenu.AddToggle("invWeight", extra.weight, delegate(bool a)

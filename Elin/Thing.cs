@@ -1846,15 +1846,19 @@ public class Thing : Card
 		}
 		int num4 = EClass.rnd(num);
 		int num5 = 0;
-		foreach (SourceElement.Row item2 in list)
+		foreach (SourceElement.Row item in list)
 		{
-			num5 += item2.chance;
+			num5 += item.chance;
 			if (num4 < num5)
 			{
-				string text = EClass.sources.elements.map[item2.id].category;
+				string text = EClass.sources.elements.map[item.id].category;
 				bool flag = text == "skill" || text == "attribute" || text == "resist";
-				int item = (item2.mtp + EClass.rnd(item2.mtp + (int)num3)) / item2.mtp * ((!(flag && neg)) ? 1 : (-1));
-				return new Tuple<SourceElement.Row, int>(item2, item);
+				int num6 = (item.mtp + EClass.rnd(item.mtp + (int)num3)) / item.mtp * ((!(flag && neg)) ? 1 : (-1));
+				if (item.encFactor == 0 && num6 > 25)
+				{
+					num6 = 25;
+				}
+				return new Tuple<SourceElement.Row, int>(item, num6);
 			}
 		}
 		return null;

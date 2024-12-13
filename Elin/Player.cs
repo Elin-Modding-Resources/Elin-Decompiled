@@ -903,7 +903,7 @@ public class Player : EClass
 
 	public ZoneTransition lastTransition;
 
-	public List<Point> lastMarkedHighlights = new List<Point>();
+	public List<Cell> lastMarkedHighlights = new List<Cell>();
 
 	public HotItem lastHotItem;
 
@@ -2151,9 +2151,9 @@ public class Player : EClass
 
 	public void ClearMapHighlights()
 	{
-		foreach (Point lastMarkedHighlight in lastMarkedHighlights)
+		foreach (Cell lastMarkedHighlight in lastMarkedHighlights)
 		{
-			lastMarkedHighlight.cell.highlight = 0;
+			lastMarkedHighlight.highlight = 0;
 		}
 		lastMarkedHighlights.Clear();
 	}

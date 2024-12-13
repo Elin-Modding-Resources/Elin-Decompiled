@@ -17,4 +17,16 @@ public class TraitMerchantBlack : TraitMerchant
 	}
 
 	public override bool CanSellStolenGoods => true;
+
+	public override int ShopLv
+	{
+		get
+		{
+			if (!EClass.debug.enable)
+			{
+				return base.ShopLv;
+			}
+			return EClass.debug.startSetting.lv;
+		}
+	}
 }

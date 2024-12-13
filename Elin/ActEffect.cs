@@ -244,6 +244,10 @@ public class ActEffect : EClass
 					{
 						num5 += EClass.pc.Evalue(302);
 					}
+					if (CC.HasElement(1214))
+					{
+						num5 *= 2;
+					}
 					if (num5 > 0)
 					{
 						if (num5 * 10 > EClass.rnd(num4 + 1))
@@ -297,6 +301,11 @@ public class ActEffect : EClass
 						break;
 					}
 				}
+				if (RapidCount > 0)
+				{
+					num4 = num4 * 100 / (100 + RapidCount * 50);
+				}
+				num4 = num4 * Act.powerMod / 100;
 				c.DamageHP(num4, e.id, power * num / 100, AttackSource.None, chara ?? CC);
 				if (id == EffectId.Explosive && CC.trait is TraitCookerMicrowave)
 				{
@@ -383,10 +392,6 @@ public class ActEffect : EClass
 				angle = 30;
 			}
 			Debug.Log(angle);
-		}
-		if (RapidCount > 0)
-		{
-			power = power * 100 / (100 + RapidCount * 50);
 		}
 		switch (id)
 		{

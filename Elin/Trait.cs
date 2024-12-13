@@ -1982,45 +1982,45 @@ public class Trait : EClass
 					return FromFilter("shop_magic");
 				case ShopType.Ecopo:
 				{
-					Thing thing3 = TraitSeed.MakeRandomSeed(enc: true);
-					TraitSeed.LevelSeed(thing3, (thing3.trait as TraitSeed).row, 1);
-					return thing3;
+					Thing thing = TraitSeed.MakeRandomSeed(enc: true);
+					TraitSeed.LevelSeed(thing, (thing.trait as TraitSeed).row, 1);
+					return thing;
 				}
 				case ShopType.Healer:
 				{
-					Thing thing = null;
+					Thing thing2 = null;
 					for (int i = 0; i < 1000; i++)
 					{
-						thing = FromFilter("shop_healer");
-						if (thing.trait is TraitScroll { source: not null } traitScroll)
+						thing2 = FromFilter("shop_healer");
+						if (thing2.trait is TraitScroll { source: not null } traitScroll)
 						{
 							if (!(traitScroll.source.aliasParent != "WIL") && !(traitScroll.source.categorySub == "attack"))
 							{
 								break;
 							}
 						}
-						else if (thing.trait is TraitPotionRandom { source: not null } traitPotionRandom)
+						else if (thing2.trait is TraitPotionRandom { source: not null } traitPotionRandom)
 						{
 							if (!(traitPotionRandom.source.aliasParent != "WIL") && !(traitPotionRandom.source.categorySub == "attack"))
 							{
-								thing.SetNum(EClass.rnd(5) + 1);
+								thing2.SetNum(EClass.rnd(5) + 1);
 								break;
 							}
 						}
-						else if (thing.trait is TraitRodRandom { source: not null } traitRodRandom && !(traitRodRandom.source.aliasParent != "WIL") && !(traitRodRandom.source.categorySub == "attack"))
+						else if (thing2.trait is TraitRodRandom { source: not null } traitRodRandom && !(traitRodRandom.source.aliasParent != "WIL") && !(traitRodRandom.source.categorySub == "attack"))
 						{
 							break;
 						}
 					}
-					return thing;
+					return thing2;
 				}
 				case ShopType.Milk:
 					if (EClass._zone is Zone_Nefu && EClass.rnd(2) == 0)
 					{
-						Thing thing2 = ThingGen.Create("milk");
-						thing2.MakeRefFrom(EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "mifu" || r.race == "nefu").RandomItem().model);
-						Debug.Log(thing2);
-						return thing2;
+						Thing thing3 = ThingGen.Create("milk");
+						thing3.MakeRefFrom(EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "mifu" || r.race == "nefu").RandomItem().model);
+						Debug.Log(thing3);
+						return thing3;
 					}
 					return Create("milk");
 				case ShopType.Map:
@@ -2046,6 +2046,10 @@ public class Trait : EClass
 					if (Guild.Merchant.IsCurrentZone)
 					{
 						num = 15;
+					}
+					if (EClass.debug.enable)
+					{
+						num = 1;
 					}
 					CardBlueprint.SetRarity((EClass.rnd(num * 5) == 0) ? Rarity.Mythical : ((EClass.rnd(num) == 0) ? Rarity.Legendary : ((EClass.rnd(5) == 0) ? Rarity.Superior : Rarity.Normal)));
 					return FromFilter("shop_blackmarket");

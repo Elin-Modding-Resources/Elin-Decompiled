@@ -1868,7 +1868,7 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
-	public static string Spawn(string id, int num = 1, string aliasMat = "")
+	public static string Spawn(string id, int num = 1, string aliasMat = "", int objLv = -1)
 	{
 		if (!CheatEnabled())
 		{
@@ -1876,7 +1876,7 @@ public class CoreDebug : EScriptable
 		}
 		if (EClass.sources.things.map.ContainsKey(id))
 		{
-			Thing thing = ThingGen.Create(id).SetNum(num);
+			Thing thing = ThingGen.Create(id, -1, objLv).SetNum(num);
 			if (!aliasMat.IsEmpty())
 			{
 				thing.ChangeMaterial(aliasMat);
@@ -1887,6 +1887,10 @@ public class CoreDebug : EScriptable
 		if (EClass.sources.charas.map.ContainsKey(id))
 		{
 			Chara chara = CharaGen.Create(id);
+			if (objLv != -1)
+			{
+				chara.SetLv(objLv);
+			}
 			EClass._zone.AddCard(chara, EClass.pc.pos);
 			return "Spawned " + chara.Name;
 		}

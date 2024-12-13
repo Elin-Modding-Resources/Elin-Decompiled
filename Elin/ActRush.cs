@@ -15,8 +15,7 @@ public class ActRush : ActMelee
 		{
 			if (!p.Equals(EClass.pc.pos))
 			{
-				p.cell.highlight = (byte)((blocked || p.IsBlocked || (!p.Equals(dest) && p.HasChara)) ? 4u : ((p.Distance(EClass.pc.pos) <= 2) ? 2u : 8u));
-				EClass.player.lastMarkedHighlights.Add(p.Copy());
+				p.SetHighlight((blocked || p.IsBlocked || (!p.Equals(dest) && p.HasChara)) ? 4 : ((p.Distance(EClass.pc.pos) <= 2) ? 2 : 8));
 			}
 		});
 	}

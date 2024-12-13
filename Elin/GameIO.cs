@@ -14,7 +14,8 @@ public class GameIO : EClass
 		DefaultValueHandling = DefaultValueHandling.Ignore,
 		PreserveReferencesHandling = PreserveReferencesHandling.Objects,
 		TypeNameHandling = TypeNameHandling.Auto,
-		Error = IO.OnError
+		Error = IO.OnError,
+		SerializationBinder = GameSerializationBinder.Instance
 	};
 
 	public static JsonSerializerSettings jsWriteGame = new JsonSerializerSettings

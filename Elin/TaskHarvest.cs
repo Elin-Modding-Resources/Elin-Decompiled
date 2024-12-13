@@ -498,7 +498,7 @@ public class TaskHarvest : BaseTaskHarvest
 		}
 		int decay = target.decay;
 		int lV = target.LV;
-		target.Die();
+		target.Die(null, EClass.pc);
 		if (target.trait is TraitGrave || text.Contains("$") || text.Contains("#") || text.Contains("@") || text.Contains("-") || text == target.id || !EClass.sources.cards.map.ContainsKey(text) || (int)num <= 0 || target.source.components.IsEmpty())
 		{
 			return;

@@ -505,19 +505,16 @@ public class AI_PlayMusic : AIAct
 		if (!owner.IsPC && owner.things.IsFull())
 		{
 			thing.Destroy();
+			return;
 		}
-		else
-		{
-			owner.Pick(thing);
-		}
+		owner.Pick(thing);
 		if (thing.id == "money" && !owner.IsPC)
 		{
 			int num2 = (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction && owner.memberType == FactionMemberType.Default) ? 1 : 10);
-			int num3 = owner.GetCurrency() - num2;
-			if (num3 > 0)
+			if (owner.GetCurrency() - num2 > 0)
 			{
-				owner.c_allowance += num3;
-				owner.ModCurrency(-num3);
+				owner.c_allowance += num;
+				owner.ModCurrency(-num);
 			}
 		}
 	}

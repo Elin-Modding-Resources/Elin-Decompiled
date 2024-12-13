@@ -246,7 +246,7 @@ public class Act : Element
 		int num = id;
 		if ((num == 8230 || num == 8232) && TC.isThing)
 		{
-			int power = CC.elements.GetOrCreateElement(base.source.id).GetPower(CC) * powerMod / 100;
+			int power = CC.elements.GetOrCreateElement(base.source.id).GetPower(CC);
 			ActEffect.Proc(base.source.proc[0].ToEnum<EffectId>(), power, BlessedState.Normal, CC, TC);
 			return true;
 		}
@@ -267,7 +267,7 @@ public class Act : Element
 				TC = CC;
 				TP.Set(CC.pos);
 			}
-			int power2 = CC.elements.GetOrCreateElement(base.source.id).GetPower(CC) * powerMod / 100;
+			int power2 = CC.elements.GetOrCreateElement(base.source.id).GetPower(CC);
 			ActEffect.ProcAt(base.source.proc[0].ToEnum<EffectId>(), power2, BlessedState.Normal, CC, TC, TP, base.source.tag.Contains("neg"), new ActRef
 			{
 				n1 = base.source.proc.TryGet(1, returnNull: true),
@@ -450,8 +450,7 @@ public class Act : Element
 		{
 			if (!p.HasBlock && ShouldMapHighlight(p))
 			{
-				p.cell.highlight = 8;
-				EClass.player.lastMarkedHighlights.Add(p.Copy());
+				p.SetHighlight(8);
 			}
 		});
 	}

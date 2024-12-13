@@ -7,4 +7,6 @@ public class TraitLoytel : TraitUniqueMerchant
 	public override string LangBarter => "daBuyStarter";
 
 	public override bool CanBeBanished => false;
+
+	public override bool CanJoinParty => EClass.game.quests.Get("pre_debt_runaway") == null;
 }

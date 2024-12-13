@@ -108,6 +108,13 @@ public class ModManager : BaseModManager
 				AddPackage(directoryInfo, isInPackages: true);
 			}
 		}
+		DirectoryInfo[] directories2 = new DirectoryInfo(CorePath.custom).GetDirectories();
+		ModPackage package = new ModPackage();
+		array = directories2;
+		foreach (DirectoryInfo dir in array)
+		{
+			ParseExtra(dir, package);
+		}
 	}
 
 	private void HandleResults(UgcQuery query)

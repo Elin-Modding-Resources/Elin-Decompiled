@@ -110,6 +110,10 @@ public class HotItemContext : HotItem
 				{
 					EClass.ui.AddLayer<LayerTextureViewer>();
 				});
+				uIContextMenu2.AddButton("OpenCustomFolder", delegate
+				{
+					Util.ShowExplorer(CorePath.custom + "Portrait");
+				});
 				m.AddSeparator();
 				m.AddButton("help", delegate
 				{

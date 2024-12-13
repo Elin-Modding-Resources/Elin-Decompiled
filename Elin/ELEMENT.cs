@@ -416,7 +416,7 @@ public class Element : EClass
 		{
 			SourceValueType.Chara => v * (100 + (lv - 1 + EClass.rnd(lv / 2 + 1)) * source.lvFactor / 10) / 100 + EClass.rnd(lv / 3) * source.lvFactor / 100, 
 			SourceValueType.Fixed => v, 
-			_ => v * ((source.encFactor == 0) ? 100 : (50 + EClass.rnd(100) + EClass.rnd((int)Mathf.Sqrt(lv * 100)) * source.encFactor / 100)) / 100, 
+			_ => v * (50 + EClass.rnd(100) + EClass.rnd((int)Mathf.Sqrt(lv * 100)) * source.encFactor / 100) / 100, 
 		};
 	}
 

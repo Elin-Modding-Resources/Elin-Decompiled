@@ -96,7 +96,11 @@ public class BuildMenu : EMono
 		EMono.player.hotbars.bars[3].dirty = true;
 		EMono.player.hotbars.ResetHotbar(4);
 		EMono.player.hotbars.bars[4].dirty = true;
-		if (ActionMode.LastBuildMode != null)
+		if (ActionMode.LastBuildMode == ActionMode.Build)
+		{
+			ActionMode.Inspect.Activate();
+		}
+		else if (ActionMode.LastBuildMode != null)
 		{
 			ActionMode.LastBuildMode.Activate();
 		}
