@@ -21,7 +21,6 @@ public class HitSummary : EClass
 
 	public void Clear()
 	{
-		hasFactory = true;
 		money = (count = (countValid = 0));
 		targets.Clear();
 		groups.Clear();

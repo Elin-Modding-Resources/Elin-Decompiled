@@ -55,7 +55,7 @@ public class TraitBaseSpellbook : TraitScroll
 		}
 		case Type.Ero:
 		{
-			IEnumerable<SourceChara.Row> ie = EClass.sources.charas.rows.Where((SourceChara.Row a) => !a.name.IsEmpty() && a.name.Length > 2 && a.name[0] != '<' && a.race != "god");
+			IEnumerable<SourceChara.Row> ie = EClass.sources.charas.rows.Where((SourceChara.Row a) => !a.name.IsEmpty() && a.name.Length > 2 && a.name[0] != '<' && a.race != "god" && !a.HasTag(CTAG.noRandomProduct));
 			owner.c_idRefName = ie.RandomItem().id;
 			break;
 		}

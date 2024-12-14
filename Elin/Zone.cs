@@ -1672,14 +1672,22 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			return true;
 		}
-		if (base.dateExpire == 0 || !EClass.world.date.IsExpired(base.dateExpire))
+		bool flag = false;
+		if (id == "cave_yeek" && !(this is Zone_DungeonYeek))
 		{
-			return false;
+			flag = true;
 		}
 		Zone topZone = GetTopZone();
-		if (!base.isRandomSite && !(this is Zone_Field) && (topZone == null || topZone == this || topZone.FindDeepestZone() == this))
+		if (!flag)
 		{
-			return false;
+			if (base.dateExpire == 0 || !EClass.world.date.IsExpired(base.dateExpire))
+			{
+				return false;
+			}
+			if (!base.isRandomSite && !(this is Zone_Field) && (topZone == null || topZone == this || topZone.FindDeepestZone() == this))
+			{
+				return false;
+			}
 		}
 		if (EClass.pc.currentZone == null || EClass.pc.currentZone is Zone_Tent || topZone == EClass.pc.currentZone.GetTopZone() || (EClass.player.nextZone != null && topZone == EClass.player.nextZone.GetTopZone()))
 		{

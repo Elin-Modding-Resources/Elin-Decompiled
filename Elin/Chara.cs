@@ -1388,6 +1388,15 @@ public class Chara : Card, IPathfindWalker
 		}
 		switch (id)
 		{
+		case "golem_wood":
+			ChangeMaterial("pine");
+			break;
+		case "golem_steel":
+			ChangeMaterial("steel");
+			break;
+		case "golem_gold":
+			ChangeMaterial("gold");
+			break;
 		case "dodo":
 			base.idSkin = EClass.rnd(4);
 			break;

@@ -4393,7 +4393,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			else
 			{
-				thing3.ChangeMaterial(Chara.race.material);
+				thing3.ChangeMaterial(Chara.material);
 			}
 			list.Add(thing3);
 		}

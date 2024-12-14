@@ -1039,6 +1039,10 @@ public class FactionBranch : EClass
 
 	public Thing GetMeal(Chara c)
 	{
+		if (c.things.IsFull())
+		{
+			return null;
+		}
 		Thing thing = EClass._zone.TryGetThingFromSharedContainer((Thing t) => c.CanEat(t, shouldEat: true) && !t.c_isImportant);
 		if (thing != null)
 		{

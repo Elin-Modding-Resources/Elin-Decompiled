@@ -121,7 +121,7 @@ public class GrowSystemTree : GrowSystem
 
 	public int GetPlantBonus(PlantData plant)
 	{
-		if (plant == null || plant.seed == null)
+		if (plant == null || plant.seed == null || EClass._zone.IsUserZone)
 		{
 			return 0;
 		}

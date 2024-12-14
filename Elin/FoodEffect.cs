@@ -9,6 +9,22 @@ public class FoodEffect : EClass
 		{
 			return false;
 		}
+		if (food.id == "deadbody")
+		{
+			return true;
+		}
+		if (food.source._origin != "meat" && food.source._origin != "dish")
+		{
+			return false;
+		}
+		string[] components = food.source.components;
+		for (int i = 0; i < components.Length; i++)
+		{
+			if (components[i].Contains("egg"))
+			{
+				return false;
+			}
+		}
 		if (!IsHumanFlesh(food.refCard))
 		{
 			return IsHumanFlesh(food.refCard2);
@@ -18,6 +34,10 @@ public class FoodEffect : EClass
 
 	public static bool IsUndeadFlesh(Thing food)
 	{
+		if (food.source._origin != "meat" && food.source._origin != "dish")
+		{
+			return false;
+		}
 		if (!IsUndeadFlesh(food.refCard))
 		{
 			return IsUndeadFlesh(food.refCard2);
@@ -74,24 +94,9 @@ public class FoodEffect : EClass
 		string idTaste = "";
 		bool flag2 = IsHumanFlesh(food);
 		bool flag3 = IsUndeadFlesh(food);
-		if (food.source._origin != "meat" && food.source._origin != "dish")
-		{
-			flag2 = (flag3 = false);
-		}
-		if (food.id == "deadbody")
-		{
-			flag2 = true;
-		}
-		string[] components = food.source.components;
-		for (int i = 0; i < components.Length; i++)
-		{
-			if (components[i].Contains("egg"))
-			{
-				flag2 = false;
-			}
-		}
 		bool flag4 = c.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
+		Debug.Log(flag2 + "/" + flag4);
 		if (food.IsBlessed)
 		{
 			num2 *= 1.5f;

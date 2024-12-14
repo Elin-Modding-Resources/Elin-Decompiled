@@ -1831,7 +1831,6 @@ public class Thing : Card
 		List<SourceElement.Row> list = new List<SourceElement.Row>();
 		int num = 0;
 		int num2 = lv + 5 + EClass.rndSqrt(10);
-		float num3 = (float)(3 + Mathf.Min(lv / 10, 15)) + Mathf.Sqrt(lv);
 		foreach (SourceElement.Row row in EClass.sources.elements.rows)
 		{
 			if ((!neg || !row.tag.Contains("flag")) && func(row) && row.LV < num2)
@@ -1844,16 +1843,17 @@ public class Thing : Card
 		{
 			return null;
 		}
-		int num4 = EClass.rnd(num);
-		int num5 = 0;
+		int num3 = EClass.rnd(num);
+		int num4 = 0;
 		foreach (SourceElement.Row item in list)
 		{
-			num5 += item.chance;
-			if (num4 < num5)
+			num4 += item.chance;
+			if (num3 < num4)
 			{
 				string text = EClass.sources.elements.map[item.id].category;
 				bool flag = text == "skill" || text == "attribute" || text == "resist";
-				int num6 = (item.mtp + EClass.rnd(item.mtp + (int)num3)) / item.mtp * ((!(flag && neg)) ? 1 : (-1));
+				float num5 = (float)(3 + Mathf.Min(lv / 10, 15)) + Mathf.Sqrt(lv * item.encFactor / 100);
+				int num6 = (item.mtp + EClass.rnd(item.mtp + (int)num5)) / item.mtp * ((!(flag && neg)) ? 1 : (-1));
 				if (item.encFactor == 0 && num6 > 25)
 				{
 					num6 = 25;

@@ -740,6 +740,7 @@ public class SerializedCards : EClass
 				{
 					card2.ApplyBacker(card2.c_idBacker);
 				}
+				card2.SetObj(5, null);
 			}
 			if (addToZone)
 			{
