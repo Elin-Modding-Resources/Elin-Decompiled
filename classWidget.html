@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.56 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.57 Nightly</span>
    </div>
   </td>
  </tr>
@@ -770,8 +770,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  445</span>            Vector2 vector2 = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Screen.width - margin, (<span class="keywordtype">float</span>)Screen.height - margin);</div>
 <div class="line"><span class="lineno">  446</span>            Vector3 vector3 = vector - rect.rect.min;</div>
 <div class="line"><span class="lineno">  447</span>            Vector3 vector4 = vector2 - rect.rect.max;</div>
-<div class="line"><span class="lineno">  448</span>            position.x = (int)Mathf.Clamp(position.x, vector3.x - 20f, vector4.x + 20f);</div>
-<div class="line"><span class="lineno">  449</span>            position.y = (int)Mathf.Clamp(position.y, vector3.y - 20f, vector4.y + 20f);</div>
+<div class="line"><span class="lineno">  448</span>            position.x = Mathf.Clamp(position.x, vector3.x - 20f, vector4.x + 20f);</div>
+<div class="line"><span class="lineno">  449</span>            position.y = Mathf.Clamp(position.y, vector3.y - 20f, vector4.y + 20f);</div>
 <div class="line"><span class="lineno">  450</span>            rect.position = position;</div>
 <div class="line"><span class="lineno">  451</span>        }</div>
 <div class="line"><span class="lineno">  452</span>    }</div>
