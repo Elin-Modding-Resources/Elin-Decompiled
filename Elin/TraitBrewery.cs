@@ -91,7 +91,7 @@ public class TraitBrewery : TraitContainer
 			{
 				return false;
 			}
-			c = ThingGen.Create(productID).SetNum(num2);
+			c = ((!thing.isCopy) ? ThingGen.Create(productID).SetNum(num2) : ThingGen.Create("ash3").SetNum(Mathf.Min(num2, 10)));
 			break;
 		}
 		default:

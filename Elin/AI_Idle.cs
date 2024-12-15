@@ -155,20 +155,20 @@ public class AI_Idle : AIAct
 				Thing thing2 = owner.things.Find("polish_powder");
 				if (thing2 != null && EClass._map.props.installed.Find<TraitGrindstone>() != null)
 				{
-					foreach (Thing thing7 in owner.things)
+					foreach (Thing thing8 in owner.things)
 					{
-						if (!thing7.IsEquipment || thing7.encLV >= 0)
+						if (!thing8.IsEquipment || thing8.encLV >= 0)
 						{
 							continue;
 						}
 						for (int i = 0; i < 5; i++)
 						{
-							if (thing7.encLV >= 0)
+							if (thing8.encLV >= 0)
 							{
 								break;
 							}
-							owner.Say("polish", owner, thing7);
-							thing7.ModEncLv(1);
+							owner.Say("polish", owner, thing8);
+							thing8.ModEncLv(1);
 							thing2.ModNum(-1);
 							if (thing2.isDestroyed)
 							{
@@ -191,6 +191,17 @@ public class AI_Idle : AIAct
 						shackle = owner.pos.FindThing<TraitShackle>()
 					});
 					yield return Restart();
+				}
+				if (EClass.rnd(20) == 0)
+				{
+					Thing thing3 = owner.things.Find((Thing a) => a.parent == owner && a.isGifted && (a.category.id == "skillbook" || a.category.id == "ancientbook"));
+					if (thing3 != null && thing3.trait.CanRead(owner))
+					{
+						yield return Do(new AI_Read
+						{
+							target = thing3
+						});
+					}
 				}
 				if (EClass.rnd(100) == 0 && !EClass._zone.IsRegion && owner.HasElement(1227))
 				{
@@ -388,7 +399,7 @@ public class AI_Idle : AIAct
 			}
 			else if (EClass.player.stats.turns > owner.turnLastSeen + 50 && Los.IsVisible(EClass.pc, owner) && owner.CanSee(EClass.pc))
 			{
-				if (EClass.rnd(5) == 0 && owner.hostility >= Hostility.Neutral && EClass.pc.IsPCC && EClass.pc.pccData.state == PCCState.Undie)
+				if (EClass.rnd(5) == 0 && owner.hostility >= Hostility.Neutral && EClass.pc.IsPCC && EClass.pc.pccData.state == PCCState.Undie && EClass.pc.pos.cell.IsTopWaterAndNoSnow)
 				{
 					owner.Talk("pervert3");
 				}
@@ -426,9 +437,9 @@ public class AI_Idle : AIAct
 			{
 				if (owner.noMove)
 				{
-					foreach (Thing thing8 in owner.pos.Things)
+					foreach (Thing thing9 in owner.pos.Things)
 					{
-						if (thing8.IsInstalled && thing8.trait is TraitGeneratorWheel)
+						if (thing9.IsInstalled && thing9.trait is TraitGeneratorWheel)
 						{
 							owner.Talk("labor");
 							owner.PlayAnime(AnimeID.Shiver);
@@ -478,19 +489,19 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(2000) == 0 && owner.IsHuman && (owner.host == null || owner.host.ride != owner))
 		{
-			Thing thing3 = owner.things.Find((Thing a) => !a.IsNegativeGift && a.trait.CanDrink(owner), recursive: false);
-			if (thing3 != null && thing3.trait is TraitPotion && owner.IsPCParty)
+			Thing thing4 = owner.things.Find((Thing a) => !a.IsNegativeGift && a.trait.CanDrink(owner), recursive: false);
+			if (thing4 != null && thing4.trait is TraitPotion && owner.IsPCParty)
 			{
-				thing3 = null;
+				thing4 = null;
 			}
-			if (thing3 == null && (owner.homeBranch == null || !owner.homeBranch.policies.IsActive(2503)))
+			if (thing4 == null && (owner.homeBranch == null || !owner.homeBranch.policies.IsActive(2503)))
 			{
-				thing3 = ThingGen.Create("crimAle");
-				owner.Drink(thing3);
+				thing4 = ThingGen.Create("crimAle");
+				owner.Drink(thing4);
 			}
-			if (thing3 != null && !thing3.isDestroyed)
+			if (thing4 != null && !thing4.isDestroyed)
 			{
-				owner.TryUse(thing3);
+				owner.TryUse(thing4);
 				yield return Restart();
 			}
 		}
@@ -610,8 +621,8 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(EClass.debug.enable ? 3 : 30) == 0)
 		{
-			Thing thing4 = owner.things.Find<TraitBall>();
-			if (thing4 == null)
+			Thing thing5 = owner.things.Find<TraitBall>();
+			if (thing5 == null)
 			{
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
@@ -628,7 +639,7 @@ public class AI_Idle : AIAct
 				{
 					if (EClass.rnd(3) != 0 && chara4 != owner && chara4.Dist(owner) <= 6 && chara4.Dist(owner) >= 3 && Los.IsVisible(chara4, owner))
 					{
-						ActThrow.Throw(owner, chara4.pos, thing4);
+						ActThrow.Throw(owner, chara4.pos, thing5);
 						break;
 					}
 				}
@@ -683,26 +694,26 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				List<Thing> list3 = owner.things.List((Thing a) => a.parent == owner && (a.category.id == "spellbook" || a.category.id == "ancientbook" || a.category.id == "skillbook"));
-				Thing thing5 = null;
+				List<Thing> list3 = owner.things.List((Thing a) => a.parent == owner && (a.category.id == "spellbook" || a.category.id == "ancientbook" || a.category.id == "skillbook"), onlyAccessible: true);
+				Thing thing6 = null;
 				if (list3.Count > 0)
 				{
-					thing5 = list3.RandomItem();
-					if (!thing5.trait.CanRead(owner))
+					thing6 = list3.RandomItem();
+					if (!thing6.trait.CanRead(owner))
 					{
-						thing5 = null;
+						thing6 = null;
 					}
 				}
-				if (thing5 == null)
+				if (thing6 == null)
 				{
 					if (owner.things.IsFull())
 					{
 						break;
 					}
-					thing5 = ThingGen.CreateFromCategory((EClass.rnd(5) != 0) ? "spellbook" : "ancientbook");
-					thing5.isNPCProperty = true;
+					thing6 = ThingGen.CreateFromCategory((EClass.rnd(5) != 0) ? "spellbook" : "ancientbook");
+					thing6.isNPCProperty = true;
 				}
-				if (!(thing5.id == "1084") || !owner.IsPCFaction)
+				if (!(thing6.id == "1084") || !owner.IsPCFaction)
 				{
 					if (!owner.HasElement(285))
 					{
@@ -710,7 +721,7 @@ public class AI_Idle : AIAct
 					}
 					yield return Do(new AI_Read
 					{
-						target = thing5
+						target = thing6
 					});
 				}
 				break;
@@ -772,10 +783,10 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(100) == 0 && owner.id == "bee")
 		{
-			Thing thing6 = EClass._map.ListThing<TraitBeekeep>()?.RandomItem();
-			if (thing6 != null)
+			Thing thing7 = EClass._map.ListThing<TraitBeekeep>()?.RandomItem();
+			if (thing7 != null)
 			{
-				yield return DoGoto(thing6.pos);
+				yield return DoGoto(thing7.pos);
 			}
 		}
 		string aiIdle = owner.source.aiIdle;

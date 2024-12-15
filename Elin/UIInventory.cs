@@ -773,10 +773,23 @@ public class UIInventory : EMono
 						uIContextMenu7.Show();
 					});
 				}
+				if (EMono.core.config.game.advancedMenu)
+				{
+					UIContextMenu uIContextMenu8 = uIContextMenu.AddChild("anchor");
+					foreach (RectPosition p in Util.EnumToList<RectPosition>())
+					{
+						uIContextMenu8.AddButton(((data.customAnchor == p) ? "★ " : "") + p.ToString().lang(), delegate
+						{
+							data.customAnchor = p;
+							window.UpdateSaveData();
+							SE.ClickGeneral();
+						});
+					}
+				}
 				if (EMono.debug.enable)
 				{
-					UIContextMenu uIContextMenu8 = uIContextMenu.AddChild("debug", TextAnchor.UpperRight);
-					uIContextMenu8.AddToggle("toggleGrid", EMono.core.config.game.useGrid, delegate(bool a)
+					UIContextMenu uIContextMenu9 = uIContextMenu.AddChild("debug", TextAnchor.UpperRight);
+					uIContextMenu9.AddToggle("toggleGrid", EMono.core.config.game.useGrid, delegate(bool a)
 					{
 						EMono.core.config.game.useGrid = a;
 						foreach (LayerInventory item4 in LayerInventory.listInv)
@@ -785,7 +798,7 @@ public class UIInventory : EMono
 							item4.invs[0].RefreshGrid();
 						}
 					});
-					uIContextMenu8.AddSlider("iconSize", (float a) => a.ToString() ?? "", EMono.game.config.gridIconSize, delegate(float b)
+					uIContextMenu9.AddSlider("iconSize", (float a) => a.ToString() ?? "", EMono.game.config.gridIconSize, delegate(float b)
 					{
 						EMono.game.config.gridIconSize = (int)b;
 						RefreshGrid();

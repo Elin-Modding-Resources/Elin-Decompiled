@@ -305,7 +305,7 @@ public class UIRecipeInfo : EMono
 			if (!r.UseStock && r.source.NeedFactory)
 			{
 				PropSet propSet = EMono._map.Installed.cardMap.TryGetValue(r.source.idFactory);
-				if (propSet == null || propSet.Count == 0)
+				if ((propSet == null || propSet.Count == 0) && EMono.pc.things.Find((Thing t) => t.id == r.source.idFactory) == null)
 				{
 					note.Space(8);
 					note.AddText("noFactory".lang(r.source.NameFactory), FontColor.Bad);

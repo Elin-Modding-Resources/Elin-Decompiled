@@ -445,8 +445,8 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 			Vector2 vector2 = new Vector2((float)Screen.width - margin, (float)Screen.height - margin);
 			Vector3 vector3 = vector - rect.rect.min;
 			Vector3 vector4 = vector2 - rect.rect.max;
-			position.x = (int)Mathf.Clamp(position.x, vector3.x - 20f, vector4.x + 20f);
-			position.y = (int)Mathf.Clamp(position.y, vector3.y - 20f, vector4.y + 20f);
+			position.x = Mathf.Clamp(position.x, vector3.x - 20f, vector4.x + 20f);
+			position.y = Mathf.Clamp(position.y, vector3.y - 20f, vector4.y + 20f);
 			rect.position = position;
 		}
 	}

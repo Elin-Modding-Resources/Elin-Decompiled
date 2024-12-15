@@ -230,7 +230,10 @@ public class CardRenderer : RenderObject
 			}
 			int shadow = pref.shadow;
 			bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.race.visibleWithTelepathy);
-			p.x += pref.x * (float)((!owner.flipX) ? 1 : (-1));
+			if (isChara)
+			{
+				p.x += pref.x * (float)((!owner.flipX) ? 1 : (-1));
+			}
 			p.y += pref.y;
 			if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
 			{

@@ -24,6 +24,7 @@ public class HitSummary : EClass
 		money = (count = (countValid = 0));
 		targets.Clear();
 		groups.Clear();
+		SetRecipe(recipe);
 	}
 
 	public void SetRecipe(Recipe r)
@@ -33,7 +34,7 @@ public class HitSummary : EClass
 		if (r != null && !r.UseStock && r.source.NeedFactory)
 		{
 			PropSet propSet = EClass._map.Installed.cardMap.TryGetValue(r.source.idFactory);
-			if (propSet == null || propSet.Count == 0)
+			if ((propSet == null || propSet.Count == 0) && EClass.pc.things.Find((Thing t) => t.id == r.source.idFactory) == null)
 			{
 				hasFactory = false;
 			}
