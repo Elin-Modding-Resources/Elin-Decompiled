@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"classGameSetting.html#ab79249a4d614032bac52b8828bf7bf4d":[1,0,442,30],
 "classGameSetting.html#ac54a18d18f4936ce6e9ff15349068f24":[1,0,442,33],
 "classGameSetting.html#ade4e29ed2adb7e5e958e45739fed657e":[1,0,442,28],
 "classGameSetting.html#adfbef08a70a5450d50eb21c3d38c98ca":[1,0,442,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "classGenRoom.html":[1,0,446],
 "classGenRoom.html#a013820066327f0193b498c23a3370de9":[1,0,446,2],
 "classGenRoom.html#a19aefaeef18d9692459005dea3ca4cff":[1,0,446,0],
-"classGenRoom.html#a28eb66b4b7bd62636d40044c3fb17222":[1,0,446,14],
-"classGenRoom.html#a2e0f7b7b611ca8cc7337c42201dc5e28":[1,0,446,4]
+"classGenRoom.html#a28eb66b4b7bd62636d40044c3fb17222":[1,0,446,14]
 };

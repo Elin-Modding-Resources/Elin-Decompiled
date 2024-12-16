@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.57 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.58 Nightly</span>
    </div>
   </td>
  </tr>
@@ -142,6 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af2c92ee3d8f03a6665c97bc2792804f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4e115676f0ce8e488ac20981251be22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUI.html#ad4e115676f0ce8e488ac20981251be22">Hide</a> (float duration=1f)</td></tr>
 <tr class="separator:ad4e115676f0ce8e488ac20981251be22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630baf3e122583f742e382157d7e26f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUI.html#a630baf3e122583f742e382157d7e26f2">ToggleCanvas</a> ()</td></tr>
+<tr class="separator:a630baf3e122583f742e382157d7e26f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f04da8eeea9eb42ff68a561b1055d4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUI.html#a4f04da8eeea9eb42ff68a561b1055d4c">OnUpdate</a> ()</td></tr>
 <tr class="separator:a4f04da8eeea9eb42ff68a561b1055d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae541b1d7278ec7cb1abbc088b9bddc6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUI.html#ae541b1d7278ec7cb1abbc088b9bddc6c">ShowMouseHint</a> ()</td></tr>
@@ -427,29 +429,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00448">448</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  449</span>    {</div>
-<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">if</span> (layers.Count &gt; 0)</div>
-<div class="line"><span class="lineno">  451</span>        {</div>
-<div class="line"><span class="lineno">  452</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  453</span>        }</div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">foreach</span> (GameObject item <span class="keywordflow">in</span> InputModuleEX.GetPointerEventData().hovered)</div>
-<div class="line"><span class="lineno">  455</span>        {</div>
-<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)item)</div>
-<div class="line"><span class="lineno">  457</span>            {</div>
-<div class="line"><span class="lineno">  458</span>                <a class="code hl_class" href="classWidget.html">Widget</a> component = item.GetComponent&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;();</div>
-<div class="line"><span class="lineno">  459</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)component &amp;&amp; !component.AlwaysBottom &amp;&amp; <a class="code hl_variable" href="classUI.html#a5b3ea66477005df27fc843ec52387e84">widgets</a>.transform.GetChild(<a class="code hl_variable" href="classUI.html#a5b3ea66477005df27fc843ec52387e84">widgets</a>.transform.childCount - 1) != item.transform)</div>
-<div class="line"><span class="lineno">  460</span>                {</div>
-<div class="line"><span class="lineno">  461</span>                    item.transform.SetAsLastSibling();</div>
-<div class="line"><span class="lineno">  462</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  463</span>                }</div>
-<div class="line"><span class="lineno">  464</span>            }</div>
-<div class="line"><span class="lineno">  465</span>        }</div>
-<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>)</div>
-<div class="line"><span class="lineno">  467</span>        {</div>
-<div class="line"><span class="lineno">  468</span>            <a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>.transform.SetAsLastSibling();</div>
-<div class="line"><span class="lineno">  469</span>        }</div>
-<div class="line"><span class="lineno">  470</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00457">457</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  458</span>    {</div>
+<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">if</span> (layers.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  460</span>        {</div>
+<div class="line"><span class="lineno">  461</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  462</span>        }</div>
+<div class="line"><span class="lineno">  463</span>        <span class="keywordflow">foreach</span> (GameObject item <span class="keywordflow">in</span> InputModuleEX.GetPointerEventData().hovered)</div>
+<div class="line"><span class="lineno">  464</span>        {</div>
+<div class="line"><span class="lineno">  465</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)item)</div>
+<div class="line"><span class="lineno">  466</span>            {</div>
+<div class="line"><span class="lineno">  467</span>                <a class="code hl_class" href="classWidget.html">Widget</a> component = item.GetComponent&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;();</div>
+<div class="line"><span class="lineno">  468</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)component &amp;&amp; !component.AlwaysBottom &amp;&amp; <a class="code hl_variable" href="classUI.html#a5b3ea66477005df27fc843ec52387e84">widgets</a>.transform.GetChild(<a class="code hl_variable" href="classUI.html#a5b3ea66477005df27fc843ec52387e84">widgets</a>.transform.childCount - 1) != item.transform)</div>
+<div class="line"><span class="lineno">  469</span>                {</div>
+<div class="line"><span class="lineno">  470</span>                    item.transform.SetAsLastSibling();</div>
+<div class="line"><span class="lineno">  471</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  472</span>                }</div>
+<div class="line"><span class="lineno">  473</span>            }</div>
+<div class="line"><span class="lineno">  474</span>        }</div>
+<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>)</div>
+<div class="line"><span class="lineno">  476</span>        {</div>
+<div class="line"><span class="lineno">  477</span>            <a class="code hl_class" href="classWidgetFeed.html">WidgetFeed</a>.<a class="code hl_variable" href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">Instance</a>.transform.SetAsLastSibling();</div>
+<div class="line"><span class="lineno">  478</span>        }</div>
+<div class="line"><span class="lineno">  479</span>    }</div>
 <div class="ttc" id="aclassUI_html_a5b3ea66477005df27fc843ec52387e84"><div class="ttname"><a href="classUI.html#a5b3ea66477005df27fc843ec52387e84">UI.widgets</a></div><div class="ttdeci">WidgetManager widgets</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00023">UI.cs:23</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_html"><div class="ttname"><a href="classWidgetFeed.html">WidgetFeed</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00003">WidgetFeed.cs:4</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_html_ac1b5284142e34a0206ab4061e95c7a76"><div class="ttname"><a href="classWidgetFeed.html#ac1b5284142e34a0206ab4061e95c7a76">WidgetFeed.Instance</a></div><div class="ttdeci">static WidgetFeed Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00014">WidgetFeed.cs:14</a></div></div>
@@ -483,10 +485,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00528">528</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  529</span>    {</div>
-<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4">contextMenu</a>.Create(cid);</div>
-<div class="line"><span class="lineno">  531</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00537">537</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  538</span>    {</div>
+<div class="line"><span class="lineno">  539</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4">contextMenu</a>.Create(cid);</div>
+<div class="line"><span class="lineno">  540</span>    }</div>
 <div class="ttc" id="aclassUI_html_a9c9ad79602bcaa8e44209fa1d2695bd4"><div class="ttname"><a href="classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4">UI.contextMenu</a></div><div class="ttdeci">UIContextMenuManager contextMenu</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00021">UI.cs:21</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -514,10 +516,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00533">533</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  534</span>    {</div>
-<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4">contextMenu</a>.Create(<span class="stringliteral">&quot;ContextInteraction&quot;</span>);</div>
-<div class="line"><span class="lineno">  536</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00542">542</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  543</span>    {</div>
+<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4">contextMenu</a>.Create(<span class="stringliteral">&quot;ContextInteraction&quot;</span>);</div>
+<div class="line"><span class="lineno">  545</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="AM__EditArea_8cs_source.html#l00027">AM_EditArea.OnProcessTiles()</a>.</p>
 
@@ -547,36 +549,36 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00778">778</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  779</span>    {</div>
-<div class="line"><span class="lineno">  780</span>        <span class="keywordflow">if</span> (currentDrag == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  781</span>        {</div>
-<div class="line"><span class="lineno">  782</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  783</span>        }</div>
-<div class="line"><span class="lineno">  784</span>        <span class="keywordtype">bool</span> num = <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">true</span>, canceled);</div>
-<div class="line"><span class="lineno">  785</span>        EInput.Consume();</div>
-<div class="line"><span class="lineno">  786</span>        EInput.dragHack = 0f;</div>
-<div class="line"><span class="lineno">  787</span>        <span class="keywordflow">if</span> (num)</div>
-<div class="line"><span class="lineno">  788</span>        {</div>
-<div class="line"><span class="lineno">  789</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;();</div>
-<div class="line"><span class="lineno">  790</span>            <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#aabeb1388cfc04ac4e2c52c7c5d5aa79a">OnEndDrag</a>();</div>
-<div class="line"><span class="lineno">  791</span>            <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  792</span>            <span class="keywordflow">if</span> (nextDrag != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  793</span>            {</div>
-<div class="line"><span class="lineno">  794</span>                <a class="code hl_function" href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">StartDrag</a>(nextDrag);</div>
-<div class="line"><span class="lineno">  795</span>                <a class="code hl_variable" href="classUI.html#aa3951010c45976cc3e53609a172d82c5">nextDrag</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  796</span>            }</div>
-<div class="line"><span class="lineno">  797</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  798</span>            {</div>
-<div class="line"><span class="lineno">  799</span>                <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_function" href="classHUD.html#a6f895b1850cfbbaeb4e1ae7949cfa7eb">SetDragImage</a>(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  800</span>            }</div>
-<div class="line"><span class="lineno">  801</span>            UIButton.TryShowTip();</div>
-<div class="line"><span class="lineno">  802</span>        }</div>
-<div class="line"><span class="lineno">  803</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  804</span>        {</div>
-<div class="line"><span class="lineno">  805</span>            SE.BeepSmall();</div>
-<div class="line"><span class="lineno">  806</span>        }</div>
-<div class="line"><span class="lineno">  807</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00786">786</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  787</span>    {</div>
+<div class="line"><span class="lineno">  788</span>        <span class="keywordflow">if</span> (currentDrag == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  789</span>        {</div>
+<div class="line"><span class="lineno">  790</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  791</span>        }</div>
+<div class="line"><span class="lineno">  792</span>        <span class="keywordtype">bool</span> num = <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">true</span>, canceled);</div>
+<div class="line"><span class="lineno">  793</span>        EInput.Consume();</div>
+<div class="line"><span class="lineno">  794</span>        EInput.dragHack = 0f;</div>
+<div class="line"><span class="lineno">  795</span>        <span class="keywordflow">if</span> (num)</div>
+<div class="line"><span class="lineno">  796</span>        {</div>
+<div class="line"><span class="lineno">  797</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;();</div>
+<div class="line"><span class="lineno">  798</span>            <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#aabeb1388cfc04ac4e2c52c7c5d5aa79a">OnEndDrag</a>();</div>
+<div class="line"><span class="lineno">  799</span>            <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  800</span>            <span class="keywordflow">if</span> (nextDrag != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  801</span>            {</div>
+<div class="line"><span class="lineno">  802</span>                <a class="code hl_function" href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">StartDrag</a>(nextDrag);</div>
+<div class="line"><span class="lineno">  803</span>                <a class="code hl_variable" href="classUI.html#aa3951010c45976cc3e53609a172d82c5">nextDrag</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  804</span>            }</div>
+<div class="line"><span class="lineno">  805</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  806</span>            {</div>
+<div class="line"><span class="lineno">  807</span>                <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_function" href="classHUD.html#a6f895b1850cfbbaeb4e1ae7949cfa7eb">SetDragImage</a>(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  808</span>            }</div>
+<div class="line"><span class="lineno">  809</span>            UIButton.TryShowTip();</div>
+<div class="line"><span class="lineno">  810</span>        }</div>
+<div class="line"><span class="lineno">  811</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  812</span>        {</div>
+<div class="line"><span class="lineno">  813</span>            SE.BeepSmall();</div>
+<div class="line"><span class="lineno">  814</span>        }</div>
+<div class="line"><span class="lineno">  815</span>    }</div>
 <div class="ttc" id="aclassDragItem_html_aabeb1388cfc04ac4e2c52c7c5d5aa79a"><div class="ttname"><a href="classDragItem.html#aabeb1388cfc04ac4e2c52c7c5d5aa79a">DragItem.OnEndDrag</a></div><div class="ttdeci">virtual void OnEndDrag()</div><div class="ttdef"><b>Definition:</b> <a href="DragItem_8cs_source.html#l00016">DragItem.cs:16</a></div></div>
 <div class="ttc" id="aclassDragItem_html_adfd723034f1b3b5ad77a223da1144343"><div class="ttname"><a href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">DragItem.OnDrag</a></div><div class="ttdeci">virtual bool OnDrag(bool execute, bool cancel=false)</div><div class="ttdef"><b>Definition:</b> <a href="DragItem_8cs_source.html#l00020">DragItem.cs:20</a></div></div>
 <div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
@@ -586,7 +588,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUI_html_a375c743fb76841297505107d233f7ef5"><div class="ttname"><a href="classUI.html#a375c743fb76841297505107d233f7ef5">UI.hud</a></div><div class="ttdeci">HUD hud</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00015">UI.cs:15</a></div></div>
 <div class="ttc" id="aclassUI_html_a980340b0c681d5262f64cf4e57e4fc7a"><div class="ttname"><a href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">UI.currentDrag</a></div><div class="ttdeci">DragItem currentDrag</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00063">UI.cs:63</a></div></div>
 <div class="ttc" id="aclassUI_html_aa3951010c45976cc3e53609a172d82c5"><div class="ttname"><a href="classUI.html#aa3951010c45976cc3e53609a172d82c5">UI.nextDrag</a></div><div class="ttdeci">DragItem nextDrag</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00065">UI.cs:65</a></div></div>
-<div class="ttc" id="aclassUI_html_aeb0603f798fd20701d7b95490392f8a3"><div class="ttname"><a href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">UI.StartDrag</a></div><div class="ttdeci">void StartDrag(DragItem item)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00743">UI.cs:743</a></div></div>
+<div class="ttc" id="aclassUI_html_aeb0603f798fd20701d7b95490392f8a3"><div class="ttname"><a href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">UI.StartDrag</a></div><div class="ttdeci">void StartDrag(DragItem item)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00752">UI.cs:752</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DragItem_8cs_source.html#l00020">DragItem.OnDrag()</a>, <a class="el" href="DragItem_8cs_source.html#l00016">DragItem.OnEndDrag()</a>, <a class="el" href="HUD_8cs_source.html#l00065">HUD.SetDragImage()</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
@@ -693,24 +695,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00544">544</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  545</span>    {</div>
-<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)texFreeze)</div>
-<div class="line"><span class="lineno">  547</span>        {</div>
-<div class="line"><span class="lineno">  548</span>            UnityEngine.Object.Destroy(texFreeze);</div>
-<div class="line"><span class="lineno">  549</span>        }</div>
-<div class="line"><span class="lineno">  550</span>        texFreeze = ScreenCapture.CaptureScreenshotAsTexture();</div>
-<div class="line"><span class="lineno">  551</span>        <a class="code hl_variable" href="classUI.html#ab7931327fe4dec98f34ede643e384163">imageFreeze</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  552</span>        imageFreeze.texture = texFreeze;</div>
-<div class="line"><span class="lineno">  553</span>        <span class="keywordflow">if</span> (duration != 0f)</div>
-<div class="line"><span class="lineno">  554</span>        {</div>
-<div class="line"><span class="lineno">  555</span>            TweenUtil.Tween(duration, <span class="keyword">null</span>, delegate</div>
-<div class="line"><span class="lineno">  556</span>            {</div>
-<div class="line"><span class="lineno">  557</span>                <a class="code hl_function" href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UnfreezeScreen</a>();</div>
-<div class="line"><span class="lineno">  558</span>            });</div>
-<div class="line"><span class="lineno">  559</span>        }</div>
-<div class="line"><span class="lineno">  560</span>    }</div>
-<div class="ttc" id="aclassUI_html_a1591cf4519e26129ac9a82bd73b8b523"><div class="ttname"><a href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UI.UnfreezeScreen</a></div><div class="ttdeci">void UnfreezeScreen()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00562">UI.cs:562</a></div></div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00553">553</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  554</span>    {</div>
+<div class="line"><span class="lineno">  555</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)texFreeze)</div>
+<div class="line"><span class="lineno">  556</span>        {</div>
+<div class="line"><span class="lineno">  557</span>            UnityEngine.Object.Destroy(texFreeze);</div>
+<div class="line"><span class="lineno">  558</span>        }</div>
+<div class="line"><span class="lineno">  559</span>        texFreeze = ScreenCapture.CaptureScreenshotAsTexture();</div>
+<div class="line"><span class="lineno">  560</span>        <a class="code hl_variable" href="classUI.html#ab7931327fe4dec98f34ede643e384163">imageFreeze</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  561</span>        imageFreeze.texture = texFreeze;</div>
+<div class="line"><span class="lineno">  562</span>        <span class="keywordflow">if</span> (duration != 0f)</div>
+<div class="line"><span class="lineno">  563</span>        {</div>
+<div class="line"><span class="lineno">  564</span>            TweenUtil.Tween(duration, <span class="keyword">null</span>, delegate</div>
+<div class="line"><span class="lineno">  565</span>            {</div>
+<div class="line"><span class="lineno">  566</span>                <a class="code hl_function" href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UnfreezeScreen</a>();</div>
+<div class="line"><span class="lineno">  567</span>            });</div>
+<div class="line"><span class="lineno">  568</span>        }</div>
+<div class="line"><span class="lineno">  569</span>    }</div>
+<div class="ttc" id="aclassUI_html_a1591cf4519e26129ac9a82bd73b8b523"><div class="ttname"><a href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UI.UnfreezeScreen</a></div><div class="ttdeci">void UnfreezeScreen()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00571">UI.cs:571</a></div></div>
 <div class="ttc" id="aclassUI_html_ab7931327fe4dec98f34ede643e384163"><div class="ttname"><a href="classUI.html#ab7931327fe4dec98f34ede643e384163">UI.imageFreeze</a></div><div class="ttdeci">RawImage imageFreeze</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00061">UI.cs:61</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -875,12 +877,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00441">441</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  442</span>    {</div>
-<div class="line"><span class="lineno">  443</span>        <a class="code hl_variable" href="classUI.html#ac77444d04df4b6888c0063e42c790632">durationHideMouseHint</a> = duration;</div>
-<div class="line"><span class="lineno">  444</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  445</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  446</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00450">450</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  451</span>    {</div>
+<div class="line"><span class="lineno">  452</span>        <a class="code hl_variable" href="classUI.html#ac77444d04df4b6888c0063e42c790632">durationHideMouseHint</a> = duration;</div>
+<div class="line"><span class="lineno">  453</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  454</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  455</span>    }</div>
 <div class="ttc" id="aclassHUD_html_a27c3195857629794eb5e62586a95669a"><div class="ttname"><a href="classHUD.html#a27c3195857629794eb5e62586a95669a">HUD.textMouseHintRight</a></div><div class="ttdeci">UIText textMouseHintRight</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00024">HUD.cs:24</a></div></div>
 <div class="ttc" id="aclassHUD_html_ac64d4e8c87923eb2603ceaac538e8eac"><div class="ttname"><a href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">HUD.textMouseHintLeft</a></div><div class="ttdeci">UIText textMouseHintLeft</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00026">HUD.cs:26</a></div></div>
 <div class="ttc" id="aclassUI_html_ac77444d04df4b6888c0063e42c790632"><div class="ttname"><a href="classUI.html#ac77444d04df4b6888c0063e42c790632">UI.durationHideMouseHint</a></div><div class="ttdeci">float durationHideMouseHint</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00083">UI.cs:83</a></div></div>
@@ -1119,11 +1121,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00764">764</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  765</span>    {</div>
-<div class="line"><span class="lineno">  766</span>        <a class="code hl_variable" href="classUI.html#ade5da93235afadf3a65ced62359ec2d6">dragDuration</a> += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
-<div class="line"><span class="lineno">  767</span>        <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  768</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00772">772</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  773</span>    {</div>
+<div class="line"><span class="lineno">  774</span>        <a class="code hl_variable" href="classUI.html#ade5da93235afadf3a65ced62359ec2d6">dragDuration</a> += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
+<div class="line"><span class="lineno">  775</span>        <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  776</span>    }</div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
 <div class="ttc" id="aclassCore_html_ae788cd24238994318d2c10d0deb32ce8"><div class="ttname"><a href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">Core.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:13</a></div></div>
 <div class="ttc" id="aclassUI_html_ade5da93235afadf3a65ced62359ec2d6"><div class="ttname"><a href="classUI.html#ade5da93235afadf3a65ced62359ec2d6">UI.dragDuration</a></div><div class="ttdeci">float dragDuration</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00073">UI.cs:73</a></div></div>
@@ -1155,15 +1157,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00770">770</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  771</span>    {</div>
-<div class="line"><span class="lineno">  772</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#a1534c27bfdc61b2d1a46f3b113c08e22">OnDragSpecial</a>())</div>
-<div class="line"><span class="lineno">  773</span>        {</div>
-<div class="line"><span class="lineno">  774</span>            <a class="code hl_function" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">EndDrag</a>(canceled: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  775</span>        }</div>
-<div class="line"><span class="lineno">  776</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00778">778</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  779</span>    {</div>
+<div class="line"><span class="lineno">  780</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a>.<a class="code hl_function" href="classDragItem.html#a1534c27bfdc61b2d1a46f3b113c08e22">OnDragSpecial</a>())</div>
+<div class="line"><span class="lineno">  781</span>        {</div>
+<div class="line"><span class="lineno">  782</span>            <a class="code hl_function" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">EndDrag</a>(canceled: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  783</span>        }</div>
+<div class="line"><span class="lineno">  784</span>    }</div>
 <div class="ttc" id="aclassDragItem_html_a1534c27bfdc61b2d1a46f3b113c08e22"><div class="ttname"><a href="classDragItem.html#a1534c27bfdc61b2d1a46f3b113c08e22">DragItem.OnDragSpecial</a></div><div class="ttdeci">virtual bool OnDragSpecial()</div><div class="ttdef"><b>Definition:</b> <a href="DragItem_8cs_source.html#l00025">DragItem.cs:25</a></div></div>
-<div class="ttc" id="aclassUI_html_a62eb916b498c54279db1c59a6fb58b71"><div class="ttname"><a href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">UI.EndDrag</a></div><div class="ttdeci">void EndDrag(bool canceled=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00778">UI.cs:778</a></div></div>
+<div class="ttc" id="aclassUI_html_a62eb916b498c54279db1c59a6fb58b71"><div class="ttname"><a href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">UI.EndDrag</a></div><div class="ttdeci">void EndDrag(bool canceled=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00786">UI.cs:786</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DragItem_8cs_source.html#l00025">DragItem.OnDragSpecial()</a>.</p>
 
@@ -1229,58 +1231,58 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00336">336</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
-<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.gameObject.activeSelf)</div>
-<div class="line"><span class="lineno">  339</span>        {</div>
-<div class="line"><span class="lineno">  340</span>            hud.imageDrag.transform.position = EInput.mpos + (ELayer.game.UseGrid ? hud.imageDragFix2 : <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#aec12d6fa33421ab7bec69561269bca1d">imageDragFix2</a>);</div>
-<div class="line"><span class="lineno">  341</span>            Util.ClampToScreen(<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.Rect(), <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a9d2c30383efa22911fc20d61cd26c2f3">marginImageDrag</a>);</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a70bd5539bf1b14987db2032fb13cf18b">blur</a> &amp;&amp; layers.Count &gt; 0 &amp;&amp; IsUseBlur())</div>
-<div class="line"><span class="lineno">  344</span>        {</div>
-<div class="line"><span class="lineno">  345</span>            <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> += Time.unscaledDeltaTime * <a class="code hl_variable" href="classUI.html#a98ddd497acae2499f721049436c6a424">blurSpeed</a>;</div>
-<div class="line"><span class="lineno">  346</span>            <span class="keywordflow">if</span> (blurSize &gt; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74">blurSize</a>)</div>
-<div class="line"><span class="lineno">  347</span>            {</div>
-<div class="line"><span class="lineno">  348</span>                <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74">blurSize</a>;</div>
-<div class="line"><span class="lineno">  349</span>            }</div>
-<div class="line"><span class="lineno">  350</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.activeSelf)</div>
-<div class="line"><span class="lineno">  351</span>            {</div>
-<div class="line"><span class="lineno">  352</span>                <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.SetActive(value: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  353</span>            }</div>
-<div class="line"><span class="lineno">  354</span>            <span class="keywordtype">int</span> siblingIndex = <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.transform.GetSiblingIndex();</div>
-<div class="line"><span class="lineno">  355</span>            <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num2 = layers.Count - 1; num2 &gt;= 0; num2--)</div>
-<div class="line"><span class="lineno">  357</span>            {</div>
-<div class="line"><span class="lineno">  358</span>                <span class="keywordflow">if</span> (layers[num2].IsUseBlur())</div>
-<div class="line"><span class="lineno">  359</span>                {</div>
-<div class="line"><span class="lineno">  360</span>                    num = layers[num2].transform.GetSiblingIndex() - 1;</div>
-<div class="line"><span class="lineno">  361</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  362</span>                }</div>
-<div class="line"><span class="lineno">  363</span>            }</div>
-<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (siblingIndex != num)</div>
-<div class="line"><span class="lineno">  365</span>            {</div>
-<div class="line"><span class="lineno">  366</span>                <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.transform.SetSiblingIndex(num);</div>
-<div class="line"><span class="lineno">  367</span>            }</div>
-<div class="line"><span class="lineno">  368</span>        }</div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  370</span>        {</div>
-<div class="line"><span class="lineno">  371</span>            <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> -= Time.unscaledDeltaTime * blurSpeed;</div>
-<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">if</span> (blurSize &lt; 0f)</div>
-<div class="line"><span class="lineno">  373</span>            {</div>
-<div class="line"><span class="lineno">  374</span>                <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> = 0f;</div>
-<div class="line"><span class="lineno">  375</span>            }</div>
-<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.activeSelf &amp;&amp; blurSize == 0f)</div>
-<div class="line"><span class="lineno">  377</span>            {</div>
-<div class="line"><span class="lineno">  378</span>                <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.SetActive(value: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  379</span>            }</div>
-<div class="line"><span class="lineno">  380</span>        }</div>
-<div class="line"><span class="lineno">  381</span>        <a class="code hl_variable" href="classUI.html#aedaf584f51e744b12c2c8b649c37b5a4">matBlur</a>.SetFloat(<span class="stringliteral">&quot;_Size&quot;</span>, blurSize);</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">if</span> (!EInput.isShiftDown)</div>
-<div class="line"><span class="lineno">  383</span>        {</div>
-<div class="line"><span class="lineno">  384</span>            LayerInventory.highlightInv = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  385</span>        }</div>
-<div class="line"><span class="lineno">  386</span>        <a class="code hl_function" href="classUI.html#ae541b1d7278ec7cb1abbc088b9bddc6c">ShowMouseHint</a>();</div>
-<div class="line"><span class="lineno">  387</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00345">345</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  346</span>    {</div>
+<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">  348</span>        {</div>
+<div class="line"><span class="lineno">  349</span>            hud.imageDrag.transform.position = EInput.mpos + (ELayer.game.UseGrid ? hud.imageDragFix2 : <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#aec12d6fa33421ab7bec69561269bca1d">imageDragFix2</a>);</div>
+<div class="line"><span class="lineno">  350</span>            Util.ClampToScreen(<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a35962c2c8e0a7151c9572c89f39b6b90">imageDrag</a>.Rect(), <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a9d2c30383efa22911fc20d61cd26c2f3">marginImageDrag</a>);</div>
+<div class="line"><span class="lineno">  351</span>        }</div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a70bd5539bf1b14987db2032fb13cf18b">blur</a> &amp;&amp; layers.Count &gt; 0 &amp;&amp; IsUseBlur())</div>
+<div class="line"><span class="lineno">  353</span>        {</div>
+<div class="line"><span class="lineno">  354</span>            <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> += Time.unscaledDeltaTime * <a class="code hl_variable" href="classUI.html#a98ddd497acae2499f721049436c6a424">blurSpeed</a>;</div>
+<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">if</span> (blurSize &gt; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74">blurSize</a>)</div>
+<div class="line"><span class="lineno">  356</span>            {</div>
+<div class="line"><span class="lineno">  357</span>                <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">ui</a>.<a class="code hl_variable" href="classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74">blurSize</a>;</div>
+<div class="line"><span class="lineno">  358</span>            }</div>
+<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.activeSelf)</div>
+<div class="line"><span class="lineno">  360</span>            {</div>
+<div class="line"><span class="lineno">  361</span>                <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.SetActive(value: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  362</span>            }</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordtype">int</span> siblingIndex = <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.transform.GetSiblingIndex();</div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  365</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num2 = layers.Count - 1; num2 &gt;= 0; num2--)</div>
+<div class="line"><span class="lineno">  366</span>            {</div>
+<div class="line"><span class="lineno">  367</span>                <span class="keywordflow">if</span> (layers[num2].IsUseBlur())</div>
+<div class="line"><span class="lineno">  368</span>                {</div>
+<div class="line"><span class="lineno">  369</span>                    num = layers[num2].transform.GetSiblingIndex() - 1;</div>
+<div class="line"><span class="lineno">  370</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  371</span>                }</div>
+<div class="line"><span class="lineno">  372</span>            }</div>
+<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">if</span> (siblingIndex != num)</div>
+<div class="line"><span class="lineno">  374</span>            {</div>
+<div class="line"><span class="lineno">  375</span>                <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.transform.SetSiblingIndex(num);</div>
+<div class="line"><span class="lineno">  376</span>            }</div>
+<div class="line"><span class="lineno">  377</span>        }</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  379</span>        {</div>
+<div class="line"><span class="lineno">  380</span>            <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> -= Time.unscaledDeltaTime * blurSpeed;</div>
+<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">if</span> (blurSize &lt; 0f)</div>
+<div class="line"><span class="lineno">  382</span>            {</div>
+<div class="line"><span class="lineno">  383</span>                <a class="code hl_variable" href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">blurSize</a> = 0f;</div>
+<div class="line"><span class="lineno">  384</span>            }</div>
+<div class="line"><span class="lineno">  385</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.activeSelf &amp;&amp; blurSize == 0f)</div>
+<div class="line"><span class="lineno">  386</span>            {</div>
+<div class="line"><span class="lineno">  387</span>                <a class="code hl_variable" href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">blur</a>.SetActive(value: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  388</span>            }</div>
+<div class="line"><span class="lineno">  389</span>        }</div>
+<div class="line"><span class="lineno">  390</span>        <a class="code hl_variable" href="classUI.html#aedaf584f51e744b12c2c8b649c37b5a4">matBlur</a>.SetFloat(<span class="stringliteral">&quot;_Size&quot;</span>, blurSize);</div>
+<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">if</span> (!EInput.isShiftDown)</div>
+<div class="line"><span class="lineno">  392</span>        {</div>
+<div class="line"><span class="lineno">  393</span>            LayerInventory.highlightInv = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  394</span>        }</div>
+<div class="line"><span class="lineno">  395</span>        <a class="code hl_function" href="classUI.html#ae541b1d7278ec7cb1abbc088b9bddc6c">ShowMouseHint</a>();</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
 <div class="ttc" id="aclassCoreConfig_1_1UISetting_html_a70bd5539bf1b14987db2032fb13cf18b"><div class="ttname"><a href="classCoreConfig_1_1UISetting.html#a70bd5539bf1b14987db2032fb13cf18b">CoreConfig.UISetting.blur</a></div><div class="ttdeci">bool blur</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00341">CoreConfig.cs:341</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1UISetting_html_a8e0a7347feed08510e1a11fba431fa74"><div class="ttname"><a href="classCoreConfig_1_1UISetting.html#a8e0a7347feed08510e1a11fba431fa74">CoreConfig.UISetting.blurSize</a></div><div class="ttdeci">float blurSize</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00365">CoreConfig.cs:365</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_ad6f27d4b5d228d836d386c0dc368e575"><div class="ttname"><a href="classCoreConfig.html#ad6f27d4b5d228d836d386c0dc368e575">CoreConfig.ui</a></div><div class="ttdeci">new UISetting ui</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00576">CoreConfig.cs:576</a></div></div>
@@ -1291,10 +1293,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUI_html_a75c9b36eaeb114aa81f43d5e60a326ca"><div class="ttname"><a href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">UI.blur</a></div><div class="ttdeci">GameObject blur</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00035">UI.cs:35</a></div></div>
 <div class="ttc" id="aclassUI_html_a8246c0789b5fe73069d44b6310b575c7"><div class="ttname"><a href="classUI.html#a8246c0789b5fe73069d44b6310b575c7">UI.blurSize</a></div><div class="ttdeci">static float blurSize</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00011">UI.cs:11</a></div></div>
 <div class="ttc" id="aclassUI_html_a98ddd497acae2499f721049436c6a424"><div class="ttname"><a href="classUI.html#a98ddd497acae2499f721049436c6a424">UI.blurSpeed</a></div><div class="ttdeci">float blurSpeed</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00057">UI.cs:57</a></div></div>
-<div class="ttc" id="aclassUI_html_ae541b1d7278ec7cb1abbc088b9bddc6c"><div class="ttname"><a href="classUI.html#ae541b1d7278ec7cb1abbc088b9bddc6c">UI.ShowMouseHint</a></div><div class="ttdeci">void ShowMouseHint()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00389">UI.cs:389</a></div></div>
+<div class="ttc" id="aclassUI_html_ae541b1d7278ec7cb1abbc088b9bddc6c"><div class="ttname"><a href="classUI.html#ae541b1d7278ec7cb1abbc088b9bddc6c">UI.ShowMouseHint</a></div><div class="ttdeci">void ShowMouseHint()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00398">UI.cs:398</a></div></div>
 <div class="ttc" id="aclassUI_html_aedaf584f51e744b12c2c8b649c37b5a4"><div class="ttname"><a href="classUI.html#aedaf584f51e744b12c2c8b649c37b5a4">UI.matBlur</a></div><div class="ttdeci">Material matBlur</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00037">UI.cs:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00341">CoreConfig.UISetting.blur</a>, <a class="el" href="CoreConfig_8cs_source.html#l00365">CoreConfig.UISetting.blurSize</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.config</a>, <a class="el" href="HUD_8cs_source.html#l00014">HUD.imageDrag</a>, <a class="el" href="HUD_8cs_source.html#l00030">HUD.imageDragFix2</a>, <a class="el" href="HUD_8cs_source.html#l00036">HUD.marginImageDrag</a>, <a class="el" href="UI_8cs_source.html#l00389">ShowMouseHint()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00576">CoreConfig.ui</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00341">CoreConfig.UISetting.blur</a>, <a class="el" href="CoreConfig_8cs_source.html#l00365">CoreConfig.UISetting.blurSize</a>, <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.config</a>, <a class="el" href="HUD_8cs_source.html#l00014">HUD.imageDrag</a>, <a class="el" href="HUD_8cs_source.html#l00030">HUD.imageDragFix2</a>, <a class="el" href="HUD_8cs_source.html#l00036">HUD.marginImageDrag</a>, <a class="el" href="UI_8cs_source.html#l00398">ShowMouseHint()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00576">CoreConfig.ui</a>.</p>
 
 </div>
 </div>
@@ -1322,27 +1324,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00635">635</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  636</span>    {</div>
-<div class="line"><span class="lineno">  637</span>        TooltipManager.Instance.disableTimer = 0.1f;</div>
-<div class="line"><span class="lineno">  638</span>        <span class="keywordflow">if</span> (ignoreSound)</div>
-<div class="line"><span class="lineno">  639</span>        {</div>
-<div class="line"><span class="lineno">  640</span>            SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  641</span>        }</div>
-<div class="line"><span class="lineno">  642</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a47d3598389275953a2e4a523ac46b9d6">CreatePCBackpack</a>());</div>
-<div class="line"><span class="lineno">  643</span>        SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  644</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Activate(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
-<div class="line"><span class="lineno">  645</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> a) =&gt; a.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf">IsContainer</a>))</div>
-<div class="line"><span class="lineno">  646</span>        {</div>
-<div class="line"><span class="lineno">  647</span>            Window.SaveData c_windowSaveData = item.<a class="code hl_property" href="classCard.html#ac711a2542eacf6fd8a38ec1bece4c65f">c_windowSaveData</a>;</div>
-<div class="line"><span class="lineno">  648</span>            <span class="keywordflow">if</span> (!(item.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolBelt.html">TraitToolBelt</a>) &amp;&amp; c_windowSaveData != <span class="keyword">null</span> &amp;&amp; c_windowSaveData.open)</div>
-<div class="line"><span class="lineno">  649</span>            {</div>
-<div class="line"><span class="lineno">  650</span>                <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a236c25bffa8fba7846e22317c892f70b">CreateContainer</a>(item);</div>
-<div class="line"><span class="lineno">  651</span>            }</div>
-<div class="line"><span class="lineno">  652</span>        }</div>
-<div class="line"><span class="lineno">  653</span>        SoundManager.ignoreSounds = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  654</span>        TooltipManager.Instance.disableTimer = 0f;</div>
-<div class="line"><span class="lineno">  655</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00644">644</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  645</span>    {</div>
+<div class="line"><span class="lineno">  646</span>        TooltipManager.Instance.disableTimer = 0.1f;</div>
+<div class="line"><span class="lineno">  647</span>        <span class="keywordflow">if</span> (ignoreSound)</div>
+<div class="line"><span class="lineno">  648</span>        {</div>
+<div class="line"><span class="lineno">  649</span>            SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  650</span>        }</div>
+<div class="line"><span class="lineno">  651</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a47d3598389275953a2e4a523ac46b9d6">CreatePCBackpack</a>());</div>
+<div class="line"><span class="lineno">  652</span>        SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  653</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Activate(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
+<div class="line"><span class="lineno">  654</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> a) =&gt; a.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf">IsContainer</a>))</div>
+<div class="line"><span class="lineno">  655</span>        {</div>
+<div class="line"><span class="lineno">  656</span>            Window.SaveData c_windowSaveData = item.<a class="code hl_property" href="classCard.html#ac711a2542eacf6fd8a38ec1bece4c65f">c_windowSaveData</a>;</div>
+<div class="line"><span class="lineno">  657</span>            <span class="keywordflow">if</span> (!(item.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolBelt.html">TraitToolBelt</a>) &amp;&amp; c_windowSaveData != <span class="keyword">null</span> &amp;&amp; c_windowSaveData.open)</div>
+<div class="line"><span class="lineno">  658</span>            {</div>
+<div class="line"><span class="lineno">  659</span>                <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a236c25bffa8fba7846e22317c892f70b">CreateContainer</a>(item);</div>
+<div class="line"><span class="lineno">  660</span>            }</div>
+<div class="line"><span class="lineno">  661</span>        }</div>
+<div class="line"><span class="lineno">  662</span>        SoundManager.ignoreSounds = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  663</span>        TooltipManager.Instance.disableTimer = 0f;</div>
+<div class="line"><span class="lineno">  664</span>    }</div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00049">Card.cs:49</a></div></div>
 <div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00034">Card.cs:34</a></div></div>
 <div class="ttc" id="aclassCard_html_ac711a2542eacf6fd8a38ec1bece4c65f"><div class="ttname"><a href="classCard.html#ac711a2542eacf6fd8a38ec1bece4c65f">Card.c_windowSaveData</a></div><div class="ttdeci">Window.SaveData c_windowSaveData</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01648">Card.cs:1649</a></div></div>
@@ -1442,11 +1444,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00538">538</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  539</span>    {</div>
-<div class="line"><span class="lineno">  540</span>        <a class="code hl_variable" href="classUI.html#a151895e492ae930882e76ef4745bf81d">popSystem</a>.PopText(text.lang(), sprite, <span class="stringliteral">&quot;PopAchievement&quot;</span>);</div>
-<div class="line"><span class="lineno">  541</span>        Debug.Log(text);</div>
-<div class="line"><span class="lineno">  542</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00547">547</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  548</span>    {</div>
+<div class="line"><span class="lineno">  549</span>        <a class="code hl_variable" href="classUI.html#a151895e492ae930882e76ef4745bf81d">popSystem</a>.PopText(text.lang(), sprite, <span class="stringliteral">&quot;PopAchievement&quot;</span>);</div>
+<div class="line"><span class="lineno">  550</span>        Debug.Log(text);</div>
+<div class="line"><span class="lineno">  551</span>    }</div>
 <div class="ttc" id="aclassUI_html_a151895e492ae930882e76ef4745bf81d"><div class="ttname"><a href="classUI.html#a151895e492ae930882e76ef4745bf81d">UI.popSystem</a></div><div class="ttdeci">PopManager popSystem</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00055">UI.cs:55</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1475,9 +1477,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00524">524</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  525</span>    {</div>
-<div class="line"><span class="lineno">  526</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00533">533</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  534</span>    {</div>
+<div class="line"><span class="lineno">  535</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1680,42 +1682,42 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00495">495</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  496</span>    {</div>
-<div class="line"><span class="lineno">  497</span>        canvasScaler.scaleFactor = 1f;</div>
-<div class="line"><span class="lineno">  498</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIBrightness&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  499</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIContrast&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  500</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  501</span>        Button t = <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.CreateMold&lt;Button&gt;();</div>
-<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">foreach</span> (LangSetting value <span class="keywordflow">in</span> MOD.langs.Values)</div>
-<div class="line"><span class="lineno">  503</span>        {</div>
-<div class="line"><span class="lineno">  504</span>            Button button = Util.Instantiate(t, layoutLang);</div>
-<div class="line"><span class="lineno">  505</span>            LangSetting _l = value;</div>
-<div class="line"><span class="lineno">  506</span>            button.GetComponentInChildren&lt;Text&gt;().text = value.name + <span class="stringliteral">&quot; (&quot;</span> + value.name_en + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  507</span>            button.onClick.AddListener(delegate</div>
-<div class="line"><span class="lineno">  508</span>            {</div>
-<div class="line"><span class="lineno">  509</span>                <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  510</span>                ELayer.core.langCode = _l.id;</div>
-<div class="line"><span class="lineno">  511</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a1ced6ba5e09ec9205fbec1df39ce65f3">showSceneSelector</a> || (Input.GetKey(KeyCode.LeftShift) &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>))</div>
-<div class="line"><span class="lineno">  512</span>                {</div>
-<div class="line"><span class="lineno">  513</span>                    <a class="code hl_function" href="classUI.html#a7629834fc1aab51397f4acf15785b6a5">ShowSceneSelector</a>();</div>
-<div class="line"><span class="lineno">  514</span>                }</div>
-<div class="line"><span class="lineno">  515</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  516</span>                {</div>
-<div class="line"><span class="lineno">  517</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_function" href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Init</a>();</div>
-<div class="line"><span class="lineno">  518</span>                }</div>
-<div class="line"><span class="lineno">  519</span>            });</div>
-<div class="line"><span class="lineno">  520</span>        }</div>
-<div class="line"><span class="lineno">  521</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">  522</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00504">504</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  505</span>    {</div>
+<div class="line"><span class="lineno">  506</span>        canvasScaler.scaleFactor = 1f;</div>
+<div class="line"><span class="lineno">  507</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIBrightness&quot;</span>, 1f);</div>
+<div class="line"><span class="lineno">  508</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIContrast&quot;</span>, 1f);</div>
+<div class="line"><span class="lineno">  509</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  510</span>        Button t = <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.CreateMold&lt;Button&gt;();</div>
+<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">foreach</span> (LangSetting value <span class="keywordflow">in</span> MOD.langs.Values)</div>
+<div class="line"><span class="lineno">  512</span>        {</div>
+<div class="line"><span class="lineno">  513</span>            Button button = Util.Instantiate(t, layoutLang);</div>
+<div class="line"><span class="lineno">  514</span>            LangSetting _l = value;</div>
+<div class="line"><span class="lineno">  515</span>            button.GetComponentInChildren&lt;Text&gt;().text = value.name + <span class="stringliteral">&quot; (&quot;</span> + value.name_en + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  516</span>            button.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">  517</span>            {</div>
+<div class="line"><span class="lineno">  518</span>                <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  519</span>                ELayer.core.langCode = _l.id;</div>
+<div class="line"><span class="lineno">  520</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a1ced6ba5e09ec9205fbec1df39ce65f3">showSceneSelector</a> || (Input.GetKey(KeyCode.LeftShift) &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>))</div>
+<div class="line"><span class="lineno">  521</span>                {</div>
+<div class="line"><span class="lineno">  522</span>                    <a class="code hl_function" href="classUI.html#a7629834fc1aab51397f4acf15785b6a5">ShowSceneSelector</a>();</div>
+<div class="line"><span class="lineno">  523</span>                }</div>
+<div class="line"><span class="lineno">  524</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  525</span>                {</div>
+<div class="line"><span class="lineno">  526</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_function" href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Init</a>();</div>
+<div class="line"><span class="lineno">  527</span>                }</div>
+<div class="line"><span class="lineno">  528</span>            });</div>
+<div class="line"><span class="lineno">  529</span>        }</div>
+<div class="line"><span class="lineno">  530</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">  531</span>    }</div>
 <div class="ttc" id="aclassCoreDebug_html_a1ced6ba5e09ec9205fbec1df39ce65f3"><div class="ttname"><a href="classCoreDebug.html#a1ced6ba5e09ec9205fbec1df39ce65f3">CoreDebug.showSceneSelector</a></div><div class="ttdeci">bool showSceneSelector</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00108">CoreDebug.cs:108</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
 <div class="ttc" id="aclassCore_html_a47331fd958351023e3f154c8cf7cfc08"><div class="ttname"><a href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Core.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00506">Core.cs:506</a></div></div>
 <div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00043">ELayer.cs:43</a></div></div>
-<div class="ttc" id="aclassUI_html_a7629834fc1aab51397f4acf15785b6a5"><div class="ttname"><a href="classUI.html#a7629834fc1aab51397f4acf15785b6a5">UI.ShowSceneSelector</a></div><div class="ttdeci">void ShowSceneSelector()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00472">UI.cs:472</a></div></div>
+<div class="ttc" id="aclassUI_html_a7629834fc1aab51397f4acf15785b6a5"><div class="ttname"><a href="classUI.html#a7629834fc1aab51397f4acf15785b6a5">UI.ShowSceneSelector</a></div><div class="ttdeci">void ShowSceneSelector()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00481">UI.cs:481</a></div></div>
 <div class="ttc" id="aclassUI_html_acba5ee300b2dcfb1a563f864e108117a"><div class="ttname"><a href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">UI.layoutLang</a></div><div class="ttdeci">LayoutGroup layoutLang</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00039">UI.cs:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Core_8cs_source.html#l00506">Core.Init()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00108">CoreDebug.showSceneSelector</a>, and <a class="el" href="UI_8cs_source.html#l00472">ShowSceneSelector()</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Core_8cs_source.html#l00506">Core.Init()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00108">CoreDebug.showSceneSelector</a>, and <a class="el" href="UI_8cs_source.html#l00481">ShowSceneSelector()</a>.</p>
 
 </div>
 </div>
@@ -1742,57 +1744,57 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00389">389</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  390</span>    {</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">if</span> (durationHideMouseHint &gt; 0f)</div>
-<div class="line"><span class="lineno">  392</span>        {</div>
-<div class="line"><span class="lineno">  393</span>            <a class="code hl_variable" href="classUI.html#ac77444d04df4b6888c0063e42c790632">durationHideMouseHint</a> -= <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
-<div class="line"><span class="lineno">  394</span>            <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  395</span>            <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  397</span>        }</div>
-<div class="line"><span class="lineno">  398</span>        <a class="code hl_interface" href="interfaceIMouseHint.html">IMouseHint</a> mouseHint = UIButton.currentHighlight as <a class="code hl_interface" href="interfaceIMouseHint.html">IMouseHint</a>;</div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordtype">bool</span> flag = mouseHint != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_property" href="classUI.html#ad31494c511bfe26bb68aae1f23b6542d">IsDragging</a> &amp;&amp; <a class="code hl_variable" href="classUI.html#ac3a5e7b58f54c58b2752dfd7a007655d">isPointerOverUI</a> &amp;&amp; (bool)UIButton.currentHighlight &amp;&amp; InputModuleEX.IsPointerOver(UIButton.currentHighlight) &amp;&amp; LayerAbility.hotElement == <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  400</span>        <span class="keywordtype">bool</span> flag2 = flag;</div>
-<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">if</span> (flag2)</div>
-<div class="line"><span class="lineno">  402</span>        {</div>
-<div class="line"><span class="lineno">  403</span>            <span class="keywordflow">if</span> (mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#a099e28bf822465cb8781af155f2c4853">ShowMouseHintLeft</a>())</div>
-<div class="line"><span class="lineno">  404</span>            {</div>
-<div class="line"><span class="lineno">  405</span>                hud.textMouseHintLeft.text = mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#a70ca89a963dacc7a327a3bc1768b2d5c">GetTextMouseHintLeft</a>();</div>
-<div class="line"><span class="lineno">  406</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.text == <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  407</span>                {</div>
-<div class="line"><span class="lineno">  408</span>                    flag2 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  409</span>                }</div>
-<div class="line"><span class="lineno">  410</span>            }</div>
-<div class="line"><span class="lineno">  411</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  412</span>            {</div>
-<div class="line"><span class="lineno">  413</span>                flag2 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  414</span>            }</div>
-<div class="line"><span class="lineno">  415</span>        }</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  417</span>        {</div>
-<div class="line"><span class="lineno">  418</span>            <span class="keywordflow">if</span> (mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#a75528713c7deb9501223d2b8b9e09a10">ShowMouseHintRight</a>())</div>
-<div class="line"><span class="lineno">  419</span>            {</div>
-<div class="line"><span class="lineno">  420</span>                hud.textMouseHintRight.text = mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#ad7a7fdc0757dc8f014d581c8bfb0a280">GetTextMouseHintRight</a>();</div>
-<div class="line"><span class="lineno">  421</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.text == <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  422</span>                {</div>
-<div class="line"><span class="lineno">  423</span>                    flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  424</span>                }</div>
-<div class="line"><span class="lineno">  425</span>            }</div>
-<div class="line"><span class="lineno">  426</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  427</span>            {</div>
-<div class="line"><span class="lineno">  428</span>                flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  429</span>            }</div>
-<div class="line"><span class="lineno">  430</span>        }</div>
-<div class="line"><span class="lineno">  431</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.SetActive(flag2);</div>
-<div class="line"><span class="lineno">  432</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.SetActive(flag);</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span> (flag || flag2)</div>
-<div class="line"><span class="lineno">  434</span>        {</div>
-<div class="line"><span class="lineno">  435</span>            hud.textMouseHintLeft.transform.position = UIButton.currentHighlight.transform.position + <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a954133c11609d3e694f468fcc13fcff3">textMouseHintFixLeft</a>;</div>
-<div class="line"><span class="lineno">  436</span>            hud.textMouseHintRight.transform.position = UIButton.currentHighlight.transform.position + <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a0c9bf2c9a82a63f33c2be5082ef4606d">textMouseHintFix</a>;</div>
-<div class="line"><span class="lineno">  437</span>            Util.ClampToScreen(<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.Rect(), 10);</div>
-<div class="line"><span class="lineno">  438</span>        }</div>
-<div class="line"><span class="lineno">  439</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00398">398</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  399</span>    {</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">if</span> (durationHideMouseHint &gt; 0f)</div>
+<div class="line"><span class="lineno">  401</span>        {</div>
+<div class="line"><span class="lineno">  402</span>            <a class="code hl_variable" href="classUI.html#ac77444d04df4b6888c0063e42c790632">durationHideMouseHint</a> -= <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
+<div class="line"><span class="lineno">  403</span>            <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  404</span>            <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  406</span>        }</div>
+<div class="line"><span class="lineno">  407</span>        <a class="code hl_interface" href="interfaceIMouseHint.html">IMouseHint</a> mouseHint = UIButton.currentHighlight as <a class="code hl_interface" href="interfaceIMouseHint.html">IMouseHint</a>;</div>
+<div class="line"><span class="lineno">  408</span>        <span class="keywordtype">bool</span> flag = mouseHint != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_property" href="classUI.html#ad31494c511bfe26bb68aae1f23b6542d">IsDragging</a> &amp;&amp; <a class="code hl_variable" href="classUI.html#ac3a5e7b58f54c58b2752dfd7a007655d">isPointerOverUI</a> &amp;&amp; (bool)UIButton.currentHighlight &amp;&amp; InputModuleEX.IsPointerOver(UIButton.currentHighlight) &amp;&amp; LayerAbility.hotElement == <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordtype">bool</span> flag2 = flag;</div>
+<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">  411</span>        {</div>
+<div class="line"><span class="lineno">  412</span>            <span class="keywordflow">if</span> (mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#a099e28bf822465cb8781af155f2c4853">ShowMouseHintLeft</a>())</div>
+<div class="line"><span class="lineno">  413</span>            {</div>
+<div class="line"><span class="lineno">  414</span>                hud.textMouseHintLeft.text = mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#a70ca89a963dacc7a327a3bc1768b2d5c">GetTextMouseHintLeft</a>();</div>
+<div class="line"><span class="lineno">  415</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.text == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  416</span>                {</div>
+<div class="line"><span class="lineno">  417</span>                    flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  418</span>                }</div>
+<div class="line"><span class="lineno">  419</span>            }</div>
+<div class="line"><span class="lineno">  420</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  421</span>            {</div>
+<div class="line"><span class="lineno">  422</span>                flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  423</span>            }</div>
+<div class="line"><span class="lineno">  424</span>        }</div>
+<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  426</span>        {</div>
+<div class="line"><span class="lineno">  427</span>            <span class="keywordflow">if</span> (mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#a75528713c7deb9501223d2b8b9e09a10">ShowMouseHintRight</a>())</div>
+<div class="line"><span class="lineno">  428</span>            {</div>
+<div class="line"><span class="lineno">  429</span>                hud.textMouseHintRight.text = mouseHint.<a class="code hl_function" href="interfaceIMouseHint.html#ad7a7fdc0757dc8f014d581c8bfb0a280">GetTextMouseHintRight</a>();</div>
+<div class="line"><span class="lineno">  430</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.text == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  431</span>                {</div>
+<div class="line"><span class="lineno">  432</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  433</span>                }</div>
+<div class="line"><span class="lineno">  434</span>            }</div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  436</span>            {</div>
+<div class="line"><span class="lineno">  437</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  438</span>            }</div>
+<div class="line"><span class="lineno">  439</span>        }</div>
+<div class="line"><span class="lineno">  440</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#ac64d4e8c87923eb2603ceaac538e8eac">textMouseHintLeft</a>.SetActive(flag2);</div>
+<div class="line"><span class="lineno">  441</span>        <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.SetActive(flag);</div>
+<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">if</span> (flag || flag2)</div>
+<div class="line"><span class="lineno">  443</span>        {</div>
+<div class="line"><span class="lineno">  444</span>            hud.textMouseHintLeft.transform.position = UIButton.currentHighlight.transform.position + <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a954133c11609d3e694f468fcc13fcff3">textMouseHintFixLeft</a>;</div>
+<div class="line"><span class="lineno">  445</span>            hud.textMouseHintRight.transform.position = UIButton.currentHighlight.transform.position + <a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a0c9bf2c9a82a63f33c2be5082ef4606d">textMouseHintFix</a>;</div>
+<div class="line"><span class="lineno">  446</span>            Util.ClampToScreen(<a class="code hl_variable" href="classUI.html#a375c743fb76841297505107d233f7ef5">hud</a>.<a class="code hl_variable" href="classHUD.html#a27c3195857629794eb5e62586a95669a">textMouseHintRight</a>.Rect(), 10);</div>
+<div class="line"><span class="lineno">  447</span>        }</div>
+<div class="line"><span class="lineno">  448</span>    }</div>
 <div class="ttc" id="aclassHUD_html_a0c9bf2c9a82a63f33c2be5082ef4606d"><div class="ttname"><a href="classHUD.html#a0c9bf2c9a82a63f33c2be5082ef4606d">HUD.textMouseHintFix</a></div><div class="ttdeci">Vector3 textMouseHintFix</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00032">HUD.cs:32</a></div></div>
 <div class="ttc" id="aclassHUD_html_a954133c11609d3e694f468fcc13fcff3"><div class="ttname"><a href="classHUD.html#a954133c11609d3e694f468fcc13fcff3">HUD.textMouseHintFixLeft</a></div><div class="ttdeci">Vector3 textMouseHintFixLeft</div><div class="ttdef"><b>Definition:</b> <a href="HUD_8cs_source.html#l00034">HUD.cs:34</a></div></div>
 <div class="ttc" id="aclassUI_html_ad31494c511bfe26bb68aae1f23b6542d"><div class="ttname"><a href="classUI.html#ad31494c511bfe26bb68aae1f23b6542d">UI.IsDragging</a></div><div class="ttdeci">bool IsDragging</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00161">UI.cs:161</a></div></div>
@@ -1804,7 +1806,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Core_8cs_source.html#l00013">Core.delta</a>, <a class="el" href="interfaceIMouseHint.html#a70ca89a963dacc7a327a3bc1768b2d5c">IMouseHint.GetTextMouseHintLeft()</a>, <a class="el" href="interfaceIMouseHint.html#ad7a7fdc0757dc8f014d581c8bfb0a280">IMouseHint.GetTextMouseHintRight()</a>, <a class="el" href="interfaceIMouseHint.html#a099e28bf822465cb8781af155f2c4853">IMouseHint.ShowMouseHintLeft()</a>, <a class="el" href="interfaceIMouseHint.html#a75528713c7deb9501223d2b8b9e09a10">IMouseHint.ShowMouseHintRight()</a>, <a class="el" href="HUD_8cs_source.html#l00032">HUD.textMouseHintFix</a>, <a class="el" href="HUD_8cs_source.html#l00034">HUD.textMouseHintFixLeft</a>, <a class="el" href="HUD_8cs_source.html#l00026">HUD.textMouseHintLeft</a>, and <a class="el" href="HUD_8cs_source.html#l00024">HUD.textMouseHintRight</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00336">OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00345">OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -1831,34 +1833,34 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00472">472</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  473</span>    {</div>
-<div class="line"><span class="lineno">  474</span>        canvasScaler.scaleFactor = 1f;</div>
-<div class="line"><span class="lineno">  475</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIBrightness&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  476</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIContrast&quot;</span>, 1f);</div>
-<div class="line"><span class="lineno">  477</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  478</span>        List&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>.<a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">StartScene</a>&gt; list = Util.EnumToList&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>.<a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">StartScene</a>&gt;();</div>
-<div class="line"><span class="lineno">  479</span>        Button t = <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.CreateMold&lt;Button&gt;();</div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>.<a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">StartScene</a> item in list)</div>
-<div class="line"><span class="lineno">  481</span>        {</div>
-<div class="line"><span class="lineno">  482</span>            Button button = Util.Instantiate(t, layoutLang);</div>
-<div class="line"><span class="lineno">  483</span>            <a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">CoreDebug.StartScene</a> _l = item;</div>
-<div class="line"><span class="lineno">  484</span>            button.GetComponentInChildren&lt;Text&gt;().text = item.ToString();</div>
-<div class="line"><span class="lineno">  485</span>            button.onClick.AddListener(delegate</div>
-<div class="line"><span class="lineno">  486</span>            {</div>
-<div class="line"><span class="lineno">  487</span>                <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  488</span>                ELayer.debug.startScene = _l;</div>
-<div class="line"><span class="lineno">  489</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_function" href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Init</a>();</div>
-<div class="line"><span class="lineno">  490</span>            });</div>
-<div class="line"><span class="lineno">  491</span>        }</div>
-<div class="line"><span class="lineno">  492</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">  493</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00481">481</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  482</span>    {</div>
+<div class="line"><span class="lineno">  483</span>        canvasScaler.scaleFactor = 1f;</div>
+<div class="line"><span class="lineno">  484</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIBrightness&quot;</span>, 1f);</div>
+<div class="line"><span class="lineno">  485</span>        Shader.SetGlobalFloat(<span class="stringliteral">&quot;_UIContrast&quot;</span>, 1f);</div>
+<div class="line"><span class="lineno">  486</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  487</span>        List&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>.<a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">StartScene</a>&gt; list = Util.EnumToList&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>.<a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">StartScene</a>&gt;();</div>
+<div class="line"><span class="lineno">  488</span>        Button t = <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.CreateMold&lt;Button&gt;();</div>
+<div class="line"><span class="lineno">  489</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>.<a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">StartScene</a> item in list)</div>
+<div class="line"><span class="lineno">  490</span>        {</div>
+<div class="line"><span class="lineno">  491</span>            Button button = Util.Instantiate(t, layoutLang);</div>
+<div class="line"><span class="lineno">  492</span>            <a class="code hl_enumeration" href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">CoreDebug.StartScene</a> _l = item;</div>
+<div class="line"><span class="lineno">  493</span>            button.GetComponentInChildren&lt;Text&gt;().text = item.ToString();</div>
+<div class="line"><span class="lineno">  494</span>            button.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">  495</span>            {</div>
+<div class="line"><span class="lineno">  496</span>                <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  497</span>                ELayer.debug.startScene = _l;</div>
+<div class="line"><span class="lineno">  498</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_function" href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Init</a>();</div>
+<div class="line"><span class="lineno">  499</span>            });</div>
+<div class="line"><span class="lineno">  500</span>        }</div>
+<div class="line"><span class="lineno">  501</span>        <a class="code hl_variable" href="classUI.html#acba5ee300b2dcfb1a563f864e108117a">layoutLang</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">  502</span>    }</div>
 <div class="ttc" id="aclassCoreDebug_html"><div class="ttname"><a href="classCoreDebug.html">CoreDebug</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00009">CoreDebug.cs:10</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_ab5ff357725e781bf865cf09100670c91"><div class="ttname"><a href="classCoreDebug.html#ab5ff357725e781bf865cf09100670c91">CoreDebug.StartScene</a></div><div class="ttdeci">StartScene</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00046">CoreDebug.cs:47</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, and <a class="el" href="Core_8cs_source.html#l00506">Core.Init()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00495">ShowLang()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00504">ShowLang()</a>.</p>
 
 </div>
 </div>
@@ -1886,28 +1888,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00743">743</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  744</span>    {</div>
-<div class="line"><span class="lineno">  745</span>        Debug.Log(EInput.leftMouse.down);</div>
-<div class="line"><span class="lineno">  746</span>        <a class="code hl_variable" href="classUI.html#ade5da93235afadf3a65ced62359ec2d6">dragDuration</a> = 0f;</div>
-<div class="line"><span class="lineno">  747</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  748</span>        {</div>
-<div class="line"><span class="lineno">  749</span>            <a class="code hl_function" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">EndDrag</a>(canceled: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  750</span>            <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  751</span>            {</div>
-<div class="line"><span class="lineno">  752</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  753</span>            }</div>
-<div class="line"><span class="lineno">  754</span>        }</div>
-<div class="line"><span class="lineno">  755</span>        <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a> = item;</div>
-<div class="line"><span class="lineno">  756</span>        item.<a class="code hl_function" href="classDragItem.html#ab2605ca0d5f19e0109cb800cc32a5c38">OnStartDrag</a>();</div>
-<div class="line"><span class="lineno">  757</span>        <a class="code hl_function" href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">OnDrag</a>();</div>
-<div class="line"><span class="lineno">  758</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.actionsNextFrame.Add(delegate</div>
-<div class="line"><span class="lineno">  759</span>        {</div>
-<div class="line"><span class="lineno">  760</span>            TooltipManager.Instance.HideTooltips(immediate: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  761</span>        });</div>
-<div class="line"><span class="lineno">  762</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00752">752</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  753</span>    {</div>
+<div class="line"><span class="lineno">  754</span>        <a class="code hl_variable" href="classUI.html#ade5da93235afadf3a65ced62359ec2d6">dragDuration</a> = 0f;</div>
+<div class="line"><span class="lineno">  755</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  756</span>        {</div>
+<div class="line"><span class="lineno">  757</span>            <a class="code hl_function" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">EndDrag</a>(canceled: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  758</span>            <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  759</span>            {</div>
+<div class="line"><span class="lineno">  760</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  761</span>            }</div>
+<div class="line"><span class="lineno">  762</span>        }</div>
+<div class="line"><span class="lineno">  763</span>        <a class="code hl_variable" href="classUI.html#a980340b0c681d5262f64cf4e57e4fc7a">currentDrag</a> = item;</div>
+<div class="line"><span class="lineno">  764</span>        item.<a class="code hl_function" href="classDragItem.html#ab2605ca0d5f19e0109cb800cc32a5c38">OnStartDrag</a>();</div>
+<div class="line"><span class="lineno">  765</span>        <a class="code hl_function" href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">OnDrag</a>();</div>
+<div class="line"><span class="lineno">  766</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  767</span>        {</div>
+<div class="line"><span class="lineno">  768</span>            TooltipManager.Instance.HideTooltips(immediate: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  769</span>        });</div>
+<div class="line"><span class="lineno">  770</span>    }</div>
 <div class="ttc" id="aclassDragItem_html_ab2605ca0d5f19e0109cb800cc32a5c38"><div class="ttname"><a href="classDragItem.html#ab2605ca0d5f19e0109cb800cc32a5c38">DragItem.OnStartDrag</a></div><div class="ttdeci">virtual void OnStartDrag()</div><div class="ttdef"><b>Definition:</b> <a href="DragItem_8cs_source.html#l00012">DragItem.cs:12</a></div></div>
-<div class="ttc" id="aclassUI_html_a9ccf309fdc58804b3ebdd06d16788c53"><div class="ttname"><a href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">UI.OnDrag</a></div><div class="ttdeci">void OnDrag()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00764">UI.cs:764</a></div></div>
+<div class="ttc" id="aclassUI_html_a9ccf309fdc58804b3ebdd06d16788c53"><div class="ttname"><a href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">UI.OnDrag</a></div><div class="ttdeci">void OnDrag()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00772">UI.cs:772</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, and <a class="el" href="DragItem_8cs_source.html#l00012">DragItem.OnStartDrag()</a>.</p>
 
@@ -1937,32 +1938,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00571">571</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  572</span>    {</div>
-<div class="line"><span class="lineno">  573</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_property" href="classGame.html#a0b6ef45569f091050847284c1abc35c5">altAbility</a>)</div>
-<div class="line"><span class="lineno">  574</span>        {</div>
-<div class="line"><span class="lineno">  575</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.GetLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
-<div class="line"><span class="lineno">  576</span>            {</div>
-<div class="line"><span class="lineno">  577</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
-<div class="line"><span class="lineno">  578</span>                ELayer.player.pref.layerAbility = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  579</span>                SE.Play(<span class="stringliteral">&quot;pop_ability_deactivate&quot;</span>);</div>
-<div class="line"><span class="lineno">  580</span>            }</div>
-<div class="line"><span class="lineno">  581</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  582</span>            {</div>
-<div class="line"><span class="lineno">  583</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;(<span class="stringliteral">&quot;LayerAbility/LayerAbilityFloat&quot;</span>);</div>
-<div class="line"><span class="lineno">  584</span>                ELayer.player.pref.layerAbility = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  585</span>            }</div>
-<div class="line"><span class="lineno">  586</span>        }</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
-<div class="line"><span class="lineno">  588</span>        {</div>
-<div class="line"><span class="lineno">  589</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a> layerAbility = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
-<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">if</span> (delay)</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00580">580</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  581</span>    {</div>
+<div class="line"><span class="lineno">  582</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_property" href="classGame.html#a0b6ef45569f091050847284c1abc35c5">altAbility</a>)</div>
+<div class="line"><span class="lineno">  583</span>        {</div>
+<div class="line"><span class="lineno">  584</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.GetLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
+<div class="line"><span class="lineno">  585</span>            {</div>
+<div class="line"><span class="lineno">  586</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
+<div class="line"><span class="lineno">  587</span>                ELayer.player.pref.layerAbility = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  588</span>                SE.Play(<span class="stringliteral">&quot;pop_ability_deactivate&quot;</span>);</div>
+<div class="line"><span class="lineno">  589</span>            }</div>
+<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  591</span>            {</div>
-<div class="line"><span class="lineno">  592</span>                layerAbility.windows[0].SetRect(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236">rects</a>.<a class="code hl_variable" href="classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5">center</a>);</div>
-<div class="line"><span class="lineno">  593</span>                layerAbility.Delay();</div>
+<div class="line"><span class="lineno">  592</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;(<span class="stringliteral">&quot;LayerAbility/LayerAbilityFloat&quot;</span>);</div>
+<div class="line"><span class="lineno">  593</span>                ELayer.player.pref.layerAbility = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  594</span>            }</div>
 <div class="line"><span class="lineno">  595</span>        }</div>
-<div class="line"><span class="lineno">  596</span>    }</div>
+<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
+<div class="line"><span class="lineno">  597</span>        {</div>
+<div class="line"><span class="lineno">  598</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a> layerAbility = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
+<div class="line"><span class="lineno">  599</span>            <span class="keywordflow">if</span> (delay)</div>
+<div class="line"><span class="lineno">  600</span>            {</div>
+<div class="line"><span class="lineno">  601</span>                layerAbility.windows[0].SetRect(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236">rects</a>.<a class="code hl_variable" href="classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5">center</a>);</div>
+<div class="line"><span class="lineno">  602</span>                layerAbility.Delay();</div>
+<div class="line"><span class="lineno">  603</span>            }</div>
+<div class="line"><span class="lineno">  604</span>        }</div>
+<div class="line"><span class="lineno">  605</span>    }</div>
 <div class="ttc" id="aclassCoreRef_1_1Rects_html_afba78bcd48689c3d66f90d5c972080e5"><div class="ttname"><a href="classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5">CoreRef.Rects.center</a></div><div class="ttdeci">RectData center</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00124">CoreRef.cs:124</a></div></div>
 <div class="ttc" id="aclassCoreRef_html_af8c13f3744eb7a70d2bc66ec79d50236"><div class="ttname"><a href="classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236">CoreRef.rects</a></div><div class="ttdeci">Rects rects</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00297">CoreRef.cs:297</a></div></div>
 <div class="ttc" id="aclassCore_html_a174ab976ba96dbcd610d5219de4a85cb"><div class="ttname"><a href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">Core.refs</a></div><div class="ttdeci">CoreRef refs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00045">Core.cs:45</a></div></div>
@@ -1971,6 +1972,45 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLayerAbility_html"><div class="ttname"><a href="classLayerAbility.html">LayerAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00005">LayerAbility.cs:6</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Game_8cs_source.html#l00263">Game.altAbility</a>, <a class="el" href="CoreRef_8cs_source.html#l00124">CoreRef.Rects.center</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="CoreRef_8cs_source.html#l00297">CoreRef.rects</a>, <a class="el" href="Core_8cs_source.html#l00045">Core.refs</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
+
+</div>
+</div>
+<a id="a630baf3e122583f742e382157d7e26f2" name="a630baf3e122583f742e382157d7e26f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630baf3e122583f742e382157d7e26f2">&#9670;&#160;</a></span>ToggleCanvas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UI.ToggleCanvas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00336">336</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
+<div class="line"><span class="lineno">  338</span>        canvas.enabled = !<a class="code hl_variable" href="classUI.html#a696aa64f163be353920a7b62ac48284c">canvas</a>.enabled;</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetSideScreen.html">WidgetSideScreen</a>.<a class="code hl_variable" href="classWidgetSideScreen.html#a423f774f23e2f37a4802dbd13295521d">Instance</a>)</div>
+<div class="line"><span class="lineno">  340</span>        {</div>
+<div class="line"><span class="lineno">  341</span>            <a class="code hl_class" href="classWidgetSideScreen.html">WidgetSideScreen</a>.<a class="code hl_variable" href="classWidgetSideScreen.html#a423f774f23e2f37a4802dbd13295521d">Instance</a>.SetActive(<a class="code hl_variable" href="classUI.html#a696aa64f163be353920a7b62ac48284c">canvas</a>.enabled);</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span>    }</div>
+<div class="ttc" id="aclassUI_html_a696aa64f163be353920a7b62ac48284c"><div class="ttname"><a href="classUI.html#a696aa64f163be353920a7b62ac48284c">UI.canvas</a></div><div class="ttdeci">Canvas canvas</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00013">UI.cs:13</a></div></div>
+<div class="ttc" id="aclassWidgetSideScreen_html"><div class="ttname"><a href="classWidgetSideScreen.html">WidgetSideScreen</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00004">WidgetSideScreen.cs:5</a></div></div>
+<div class="ttc" id="aclassWidgetSideScreen_html_a423f774f23e2f37a4802dbd13295521d"><div class="ttname"><a href="classWidgetSideScreen.html#a423f774f23e2f37a4802dbd13295521d">WidgetSideScreen.Instance</a></div><div class="ttdeci">static WidgetSideScreen Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00021">WidgetSideScreen.cs:21</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00021">WidgetSideScreen.Instance</a>.</p>
 
 </div>
 </div>
@@ -1997,92 +2037,92 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00657">657</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  658</span>    {</div>
-<div class="line"><span class="lineno">  659</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  660</span>        <span class="keywordflow">if</span> (Application.isEditor)</div>
-<div class="line"><span class="lineno">  661</span>        {</div>
-<div class="line"><span class="lineno">  662</span>            text = <span class="stringliteral">&quot;Debug&quot;</span>;</div>
-<div class="line"><span class="lineno">  663</span>        }</div>
-<div class="line"><span class="lineno">  664</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  665</span>        {</div>
-<div class="line"><span class="lineno">  666</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  667</span>            {</div>
-<div class="line"><span class="lineno">  668</span>                <span class="keywordflow">if</span> (SteamAPI.IsSteamRunning())</div>
-<div class="line"><span class="lineno">  669</span>                {</div>
-<div class="line"><span class="lineno">  670</span>                    text = SteamFriends.GetPersonaName();</div>
-<div class="line"><span class="lineno">  671</span>                    <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><span class="lineno">  672</span>                    {</div>
-<div class="line"><span class="lineno">  673</span>                        text = <span class="stringliteral">&quot;NULL&quot;</span>;</div>
-<div class="line"><span class="lineno">  674</span>                    }</div>
-<div class="line"><span class="lineno">  675</span>                }</div>
-<div class="line"><span class="lineno">  676</span>            }</div>
-<div class="line"><span class="lineno">  677</span>            <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  678</span>            {</div>
-<div class="line"><span class="lineno">  679</span>            }</div>
-<div class="line"><span class="lineno">  680</span>        }</div>
-<div class="line"><span class="lineno">  681</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><span class="lineno">  682</span>        {</div>
-<div class="line"><span class="lineno">  683</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_needToLogOn&quot;</span>);</div>
-<div class="line"><span class="lineno">  684</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  685</span>        }</div>
-<div class="line"><span class="lineno">  686</span>        <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  687</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  688</span>        {</div>
-<div class="line"><span class="lineno">  689</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">  690</span>            {</div>
-<div class="line"><span class="lineno">  691</span>                text2 = <span class="stringliteral">&quot;backer&quot;</span>;</div>
-<div class="line"><span class="lineno">  692</span>                text2 = ElinEncoder.GetID(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>);</div>
-<div class="line"><span class="lineno">  693</span>            }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00666">666</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  667</span>    {</div>
+<div class="line"><span class="lineno">  668</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  669</span>        <span class="keywordflow">if</span> (Application.isEditor)</div>
+<div class="line"><span class="lineno">  670</span>        {</div>
+<div class="line"><span class="lineno">  671</span>            text = <span class="stringliteral">&quot;Debug&quot;</span>;</div>
+<div class="line"><span class="lineno">  672</span>        }</div>
+<div class="line"><span class="lineno">  673</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  674</span>        {</div>
+<div class="line"><span class="lineno">  675</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  676</span>            {</div>
+<div class="line"><span class="lineno">  677</span>                <span class="keywordflow">if</span> (SteamAPI.IsSteamRunning())</div>
+<div class="line"><span class="lineno">  678</span>                {</div>
+<div class="line"><span class="lineno">  679</span>                    text = SteamFriends.GetPersonaName();</div>
+<div class="line"><span class="lineno">  680</span>                    <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><span class="lineno">  681</span>                    {</div>
+<div class="line"><span class="lineno">  682</span>                        text = <span class="stringliteral">&quot;NULL&quot;</span>;</div>
+<div class="line"><span class="lineno">  683</span>                    }</div>
+<div class="line"><span class="lineno">  684</span>                }</div>
+<div class="line"><span class="lineno">  685</span>            }</div>
+<div class="line"><span class="lineno">  686</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  687</span>            {</div>
+<div class="line"><span class="lineno">  688</span>            }</div>
+<div class="line"><span class="lineno">  689</span>        }</div>
+<div class="line"><span class="lineno">  690</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><span class="lineno">  691</span>        {</div>
+<div class="line"><span class="lineno">  692</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_needToLogOn&quot;</span>);</div>
+<div class="line"><span class="lineno">  693</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  694</span>        }</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">catch</span> (Exception message)</div>
-<div class="line"><span class="lineno">  696</span>        {</div>
-<div class="line"><span class="lineno">  697</span>            text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  698</span>            Debug.Log(message);</div>
-<div class="line"><span class="lineno">  699</span>        }</div>
-<div class="line"><span class="lineno">  700</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; text2.IsEmpty())</div>
-<div class="line"><span class="lineno">  701</span>        {</div>
-<div class="line"><span class="lineno">  702</span>            <span class="keywordtype">string</span> pchName = <span class="stringliteral">&quot;public&quot;</span>;</div>
-<div class="line"><span class="lineno">  703</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  704</span>            {</div>
-<div class="line"><span class="lineno">  705</span>                <span class="keywordflow">if</span> (!SteamApps.GetCurrentBetaName(out pchName, 128) || !(pchName == <span class="stringliteral">&quot;nightly&quot;</span>))</div>
-<div class="line"><span class="lineno">  706</span>                {</div>
-<div class="line"><span class="lineno">  707</span>                    <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
-<div class="line"><span class="lineno">  708</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  709</span>                }</div>
-<div class="line"><span class="lineno">  710</span>                Debug.Log(pchName);</div>
-<div class="line"><span class="lineno">  711</span>            }</div>
-<div class="line"><span class="lineno">  712</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  695</span>        <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  697</span>        {</div>
+<div class="line"><span class="lineno">  698</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  699</span>            {</div>
+<div class="line"><span class="lineno">  700</span>                text2 = <span class="stringliteral">&quot;backer&quot;</span>;</div>
+<div class="line"><span class="lineno">  701</span>                text2 = ElinEncoder.GetID(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>);</div>
+<div class="line"><span class="lineno">  702</span>            }</div>
+<div class="line"><span class="lineno">  703</span>        }</div>
+<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">catch</span> (Exception message)</div>
+<div class="line"><span class="lineno">  705</span>        {</div>
+<div class="line"><span class="lineno">  706</span>            text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  707</span>            Debug.Log(message);</div>
+<div class="line"><span class="lineno">  708</span>        }</div>
+<div class="line"><span class="lineno">  709</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; text2.IsEmpty())</div>
+<div class="line"><span class="lineno">  710</span>        {</div>
+<div class="line"><span class="lineno">  711</span>            <span class="keywordtype">string</span> pchName = <span class="stringliteral">&quot;public&quot;</span>;</div>
+<div class="line"><span class="lineno">  712</span>            <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  713</span>            {</div>
-<div class="line"><span class="lineno">  714</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
-<div class="line"><span class="lineno">  715</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  716</span>            }</div>
-<div class="line"><span class="lineno">  717</span>        }</div>
-<div class="line"><span class="lineno">  718</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;() &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConHallucination.html">ConHallucination</a>&gt;())</div>
-<div class="line"><span class="lineno">  719</span>        {</div>
-<div class="line"><span class="lineno">  720</span>            SE.Play(<span class="stringliteral">&quot;wow&quot;</span>);</div>
-<div class="line"><span class="lineno">  721</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;bug_hal&quot;</span>);</div>
-<div class="line"><span class="lineno">  722</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  723</span>        }</div>
-<div class="line"><span class="lineno">  724</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.version.demo || (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a0cff1040ff0e51b872785ee541a2430b">flags</a>.<a class="code hl_property" href="classPlayer_1_1Flags.html#acf3dc4c31ea9de11013410ead128b0c8">debugEnabled</a>)))</div>
-<div class="line"><span class="lineno">  725</span>        {</div>
-<div class="line"><span class="lineno">  726</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_debugFeedback&quot;</span>);</div>
-<div class="line"><span class="lineno">  727</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  728</span>        }</div>
-<div class="line"><span class="lineno">  729</span>        <span class="keywordtype">string</span> userName = <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
-<div class="line"><span class="lineno">  730</span>        <span class="keywordtype">string</span>[] array = Application.persistentDataPath.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  731</span>        <span class="keywordflow">if</span> (array.Length &gt; 2)</div>
-<div class="line"><span class="lineno">  732</span>        {</div>
-<div class="line"><span class="lineno">  733</span>            userName = array[2];</div>
-<div class="line"><span class="lineno">  734</span>        }</div>
-<div class="line"><span class="lineno">  735</span>        LayerFeedback.userName = userName;</div>
-<div class="line"><span class="lineno">  736</span>        LayerFeedback.playedHours = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">maxPlayedHours</a>;</div>
-<div class="line"><span class="lineno">  737</span>        LayerFeedback.backerId = text2;</div>
-<div class="line"><span class="lineno">  738</span>        LayerFeedback.steamName = text;</div>
-<div class="line"><span class="lineno">  739</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;();</div>
-<div class="line"><span class="lineno">  740</span>        SE.Tab();</div>
-<div class="line"><span class="lineno">  741</span>    }</div>
-<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08216">Chara.cs:8216</a></div></div>
+<div class="line"><span class="lineno">  714</span>                <span class="keywordflow">if</span> (!SteamApps.GetCurrentBetaName(out pchName, 128) || !(pchName == <span class="stringliteral">&quot;nightly&quot;</span>))</div>
+<div class="line"><span class="lineno">  715</span>                {</div>
+<div class="line"><span class="lineno">  716</span>                    <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
+<div class="line"><span class="lineno">  717</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  718</span>                }</div>
+<div class="line"><span class="lineno">  719</span>                Debug.Log(pchName);</div>
+<div class="line"><span class="lineno">  720</span>            }</div>
+<div class="line"><span class="lineno">  721</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  722</span>            {</div>
+<div class="line"><span class="lineno">  723</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
+<div class="line"><span class="lineno">  724</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  725</span>            }</div>
+<div class="line"><span class="lineno">  726</span>        }</div>
+<div class="line"><span class="lineno">  727</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;() &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConHallucination.html">ConHallucination</a>&gt;())</div>
+<div class="line"><span class="lineno">  728</span>        {</div>
+<div class="line"><span class="lineno">  729</span>            SE.Play(<span class="stringliteral">&quot;wow&quot;</span>);</div>
+<div class="line"><span class="lineno">  730</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;bug_hal&quot;</span>);</div>
+<div class="line"><span class="lineno">  731</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  732</span>        }</div>
+<div class="line"><span class="lineno">  733</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.version.demo || (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a0cff1040ff0e51b872785ee541a2430b">flags</a>.<a class="code hl_property" href="classPlayer_1_1Flags.html#acf3dc4c31ea9de11013410ead128b0c8">debugEnabled</a>)))</div>
+<div class="line"><span class="lineno">  734</span>        {</div>
+<div class="line"><span class="lineno">  735</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_debugFeedback&quot;</span>);</div>
+<div class="line"><span class="lineno">  736</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  737</span>        }</div>
+<div class="line"><span class="lineno">  738</span>        <span class="keywordtype">string</span> userName = <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
+<div class="line"><span class="lineno">  739</span>        <span class="keywordtype">string</span>[] array = Application.persistentDataPath.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  740</span>        <span class="keywordflow">if</span> (array.Length &gt; 2)</div>
+<div class="line"><span class="lineno">  741</span>        {</div>
+<div class="line"><span class="lineno">  742</span>            userName = array[2];</div>
+<div class="line"><span class="lineno">  743</span>        }</div>
+<div class="line"><span class="lineno">  744</span>        LayerFeedback.userName = userName;</div>
+<div class="line"><span class="lineno">  745</span>        LayerFeedback.playedHours = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">maxPlayedHours</a>;</div>
+<div class="line"><span class="lineno">  746</span>        LayerFeedback.backerId = text2;</div>
+<div class="line"><span class="lineno">  747</span>        LayerFeedback.steamName = text;</div>
+<div class="line"><span class="lineno">  748</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;();</div>
+<div class="line"><span class="lineno">  749</span>        SE.Tab();</div>
+<div class="line"><span class="lineno">  750</span>    }</div>
+<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08221">Chara.cs:8221</a></div></div>
 <div class="ttc" id="aclassConHallucination_html"><div class="ttname"><a href="classConHallucination.html">ConHallucination</a></div><div class="ttdef"><b>Definition:</b> <a href="ConHallucination_8cs_source.html#l00001">ConHallucination.cs:2</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_a13506ba1492b0a68be989876f12c03fb"><div class="ttname"><a href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">CoreConfig.maxPlayedHours</a></div><div class="ttdeci">int maxPlayedHours</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00566">CoreConfig.cs:566</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_a497228804eaf78f77ae2054da72f863a"><div class="ttname"><a href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">CoreConfig.rewardCode</a></div><div class="ttdeci">string rewardCode</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00564">CoreConfig.cs:564</a></div></div>
@@ -2094,7 +2134,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPlayer_1_1Flags_html_acf3dc4c31ea9de11013410ead128b0c8"><div class="ttname"><a href="classPlayer_1_1Flags.html#acf3dc4c31ea9de11013410ead128b0c8">Player.Flags.debugEnabled</a></div><div class="ttdeci">bool debugEnabled</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00386">Player.cs:387</a></div></div>
 <div class="ttc" id="aclassPlayer_html_a0cff1040ff0e51b872785ee541a2430b"><div class="ttname"><a href="classPlayer.html#a0cff1040ff0e51b872785ee541a2430b">Player.flags</a></div><div class="ttdeci">Flags flags</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00858">Player.cs:858</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="Player_8cs_source.html#l00387">Player.Flags.debugEnabled</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Player_8cs_source.html#l00858">Player.flags</a>, <a class="el" href="Chara_8cs_source.html#l08216">Chara.HasCondition()</a>, <a class="el" href="Core_8cs_source.html#l00078">Core.IsGameStarted</a>, <a class="el" href="CoreConfig_8cs_source.html#l00566">CoreConfig.maxPlayedHours</a>, <a class="el" href="Dialog_8cs_source.html#l00222">Dialog.Ok()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="CoreConfig_8cs_source.html#l00564">CoreConfig.rewardCode</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00031">ELayer.config</a>, <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="Player_8cs_source.html#l00387">Player.Flags.debugEnabled</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Player_8cs_source.html#l00858">Player.flags</a>, <a class="el" href="Chara_8cs_source.html#l08221">Chara.HasCondition()</a>, <a class="el" href="Core_8cs_source.html#l00078">Core.IsGameStarted</a>, <a class="el" href="CoreConfig_8cs_source.html#l00566">CoreConfig.maxPlayedHours</a>, <a class="el" href="Dialog_8cs_source.html#l00222">Dialog.Ok()</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="CoreConfig_8cs_source.html#l00564">CoreConfig.rewardCode</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
 </div>
 </div>
@@ -2122,49 +2162,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00598">598</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  599</span>    {</div>
-<div class="line"><span class="lineno">  600</span>        <span class="keywordflow">if</span> (IsInventoryOpen)</div>
-<div class="line"><span class="lineno">  601</span>        {</div>
-<div class="line"><span class="lineno">  602</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classInvOwner.html">InvOwner</a>.<a class="code hl_property" href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">HasTrader</a>)</div>
-<div class="line"><span class="lineno">  603</span>            {</div>
-<div class="line"><span class="lineno">  604</span>                SE.Beep();</div>
-<div class="line"><span class="lineno">  605</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  606</span>            }</div>
-<div class="line"><span class="lineno">  607</span>            List&lt;Card&gt; list = <span class="keyword">new</span> List&lt;Card&gt;();</div>
-<div class="line"><span class="lineno">  608</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> item <span class="keywordflow">in</span> <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>)</div>
-<div class="line"><span class="lineno">  609</span>            {</div>
-<div class="line"><span class="lineno">  610</span>                <span class="keywordflow">if</span> (item.<a class="code hl_function" href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">IsPlayerContainer</a>())</div>
-<div class="line"><span class="lineno">  611</span>                {</div>
-<div class="line"><span class="lineno">  612</span>                    list.Add(item.<a class="code hl_variable" href="classLayerInventory.html#a13623db366d1e1d41cbda95292fbe79f">invs</a>[0].owner.Container);</div>
-<div class="line"><span class="lineno">  613</span>                }</div>
-<div class="line"><span class="lineno">  614</span>            }</div>
-<div class="line"><span class="lineno">  615</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>.ForeachReverse(delegate(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> l)</div>
-<div class="line"><span class="lineno">  616</span>            {</div>
-<div class="line"><span class="lineno">  617</span>                <span class="keywordflow">if</span> (l.<a class="code hl_function" href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">IsPlayerContainer</a>(includePlayer: <span class="keyword">true</span>))</div>
-<div class="line"><span class="lineno">  618</span>                {</div>
-<div class="line"><span class="lineno">  619</span>                    ELayer.ui.layerFloat.RemoveLayer(l);</div>
-<div class="line"><span class="lineno">  620</span>                }</div>
-<div class="line"><span class="lineno">  621</span>            });</div>
-<div class="line"><span class="lineno">  622</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.DeactivateWidget(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
-<div class="line"><span class="lineno">  623</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> item2 <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">  624</span>            {</div>
-<div class="line"><span class="lineno">  625</span>                item2.c_windowSaveData.open = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  626</span>            }</div>
-<div class="line"><span class="lineno">  627</span>            SE.Play(<span class="stringliteral">&quot;pop_inventory_deactivate&quot;</span>);</div>
-<div class="line"><span class="lineno">  628</span>        }</div>
-<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  630</span>        {</div>
-<div class="line"><span class="lineno">  631</span>            <a class="code hl_function" href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">OpenFloatInv</a>();</div>
-<div class="line"><span class="lineno">  632</span>        }</div>
-<div class="line"><span class="lineno">  633</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00607">607</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  608</span>    {</div>
+<div class="line"><span class="lineno">  609</span>        <span class="keywordflow">if</span> (IsInventoryOpen)</div>
+<div class="line"><span class="lineno">  610</span>        {</div>
+<div class="line"><span class="lineno">  611</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classInvOwner.html">InvOwner</a>.<a class="code hl_property" href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">HasTrader</a>)</div>
+<div class="line"><span class="lineno">  612</span>            {</div>
+<div class="line"><span class="lineno">  613</span>                SE.Beep();</div>
+<div class="line"><span class="lineno">  614</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  615</span>            }</div>
+<div class="line"><span class="lineno">  616</span>            List&lt;Card&gt; list = <span class="keyword">new</span> List&lt;Card&gt;();</div>
+<div class="line"><span class="lineno">  617</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> item <span class="keywordflow">in</span> <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>)</div>
+<div class="line"><span class="lineno">  618</span>            {</div>
+<div class="line"><span class="lineno">  619</span>                <span class="keywordflow">if</span> (item.<a class="code hl_function" href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">IsPlayerContainer</a>())</div>
+<div class="line"><span class="lineno">  620</span>                {</div>
+<div class="line"><span class="lineno">  621</span>                    list.Add(item.<a class="code hl_variable" href="classLayerInventory.html#a13623db366d1e1d41cbda95292fbe79f">invs</a>[0].owner.Container);</div>
+<div class="line"><span class="lineno">  622</span>                }</div>
+<div class="line"><span class="lineno">  623</span>            }</div>
+<div class="line"><span class="lineno">  624</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>.ForeachReverse(delegate(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> l)</div>
+<div class="line"><span class="lineno">  625</span>            {</div>
+<div class="line"><span class="lineno">  626</span>                <span class="keywordflow">if</span> (l.<a class="code hl_function" href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">IsPlayerContainer</a>(includePlayer: <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  627</span>                {</div>
+<div class="line"><span class="lineno">  628</span>                    ELayer.ui.layerFloat.RemoveLayer(l);</div>
+<div class="line"><span class="lineno">  629</span>                }</div>
+<div class="line"><span class="lineno">  630</span>            });</div>
+<div class="line"><span class="lineno">  631</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.DeactivateWidget(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
+<div class="line"><span class="lineno">  632</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> item2 <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">  633</span>            {</div>
+<div class="line"><span class="lineno">  634</span>                item2.c_windowSaveData.open = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  635</span>            }</div>
+<div class="line"><span class="lineno">  636</span>            SE.Play(<span class="stringliteral">&quot;pop_inventory_deactivate&quot;</span>);</div>
+<div class="line"><span class="lineno">  637</span>        }</div>
+<div class="line"><span class="lineno">  638</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  639</span>        {</div>
+<div class="line"><span class="lineno">  640</span>            <a class="code hl_function" href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">OpenFloatInv</a>();</div>
+<div class="line"><span class="lineno">  641</span>        }</div>
+<div class="line"><span class="lineno">  642</span>    }</div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassInvOwner_html"><div class="ttname"><a href="classInvOwner.html">InvOwner</a></div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00005">InvOwner.cs:6</a></div></div>
 <div class="ttc" id="aclassInvOwner_html_a3e5f66224e5c3e183203f8e564f0fc64"><div class="ttname"><a href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">InvOwner.HasTrader</a></div><div class="ttdeci">static bool HasTrader</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00537">InvOwner.cs:537</a></div></div>
 <div class="ttc" id="aclassLayerInventory_html_a13623db366d1e1d41cbda95292fbe79f"><div class="ttname"><a href="classLayerInventory.html#a13623db366d1e1d41cbda95292fbe79f">LayerInventory.invs</a></div><div class="ttdeci">List&lt; UIInventory &gt; invs</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00011">LayerInventory.cs:11</a></div></div>
 <div class="ttc" id="aclassLayerInventory_html_a859b8c7f75365fba1e441ce5d983d466"><div class="ttname"><a href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">LayerInventory.listInv</a></div><div class="ttdeci">static List&lt; LayerInventory &gt; listInv</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00007">LayerInventory.cs:7</a></div></div>
 <div class="ttc" id="aclassLayerInventory_html_ae34b6f124fedd52744bd0937c42f3051"><div class="ttname"><a href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">LayerInventory.IsPlayerContainer</a></div><div class="ttdeci">bool IsPlayerContainer(bool includePlayer=false)</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00201">LayerInventory.cs:201</a></div></div>
-<div class="ttc" id="aclassUI_html_a41a1a57b2747554d08f05c9d38ffc559"><div class="ttname"><a href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">UI.OpenFloatInv</a></div><div class="ttdeci">void OpenFloatInv(bool ignoreSound=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00635">UI.cs:635</a></div></div>
+<div class="ttc" id="aclassUI_html_a41a1a57b2747554d08f05c9d38ffc559"><div class="ttname"><a href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">UI.OpenFloatInv</a></div><div class="ttdeci">void OpenFloatInv(bool ignoreSound=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00644">UI.cs:644</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="InvOwner_8cs_source.html#l00537">InvOwner.HasTrader</a>, <a class="el" href="LayerInventory_8cs_source.html#l00011">LayerInventory.invs</a>, <a class="el" href="LayerInventory_8cs_source.html#l00201">LayerInventory.IsPlayerContainer()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00007">LayerInventory.listInv</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
@@ -2193,14 +2233,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00562">562</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  563</span>    {</div>
-<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)texFreeze)</div>
-<div class="line"><span class="lineno">  565</span>        {</div>
-<div class="line"><span class="lineno">  566</span>            UnityEngine.Object.DestroyImmediate(texFreeze);</div>
-<div class="line"><span class="lineno">  567</span>        }</div>
-<div class="line"><span class="lineno">  568</span>        <a class="code hl_variable" href="classUI.html#ab7931327fe4dec98f34ede643e384163">imageFreeze</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  569</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UI_8cs_source.html#l00571">571</a> of file <a class="el" href="UI_8cs_source.html">UI.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  572</span>    {</div>
+<div class="line"><span class="lineno">  573</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)texFreeze)</div>
+<div class="line"><span class="lineno">  574</span>        {</div>
+<div class="line"><span class="lineno">  575</span>            UnityEngine.Object.DestroyImmediate(texFreeze);</div>
+<div class="line"><span class="lineno">  576</span>        }</div>
+<div class="line"><span class="lineno">  577</span>        <a class="code hl_variable" href="classUI.html#ab7931327fe4dec98f34ede643e384163">imageFreeze</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  578</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

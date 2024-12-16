@@ -1,5 +1,9 @@
 var NAVTREEINDEX88 =
 {
+"classTerrainMenu.html#a122840077fc080af939dbfcc2f8a3419":[1,0,1096,0],
+"classTerrainMenu.html#a312444a36c35f2189ac1e40db3264e1e":[1,0,1096,5],
+"classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81":[1,0,1096,2],
+"classTerrainMenu.html#a96894c83c943f1729dd1a03715bdec3e":[1,0,1096,1],
 "classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e":[1,0,1096,3],
 "classTerrainMenu.html#adb27949ecd88a0379d29246e85f11394":[1,0,1096,4],
 "classTextureData.html":[1,0,1097],
@@ -245,9 +249,5 @@ var NAVTREEINDEX88 =
 "classTileType.html#a1b463a2557d2342d1b4a7e4d19b5292b":[1,0,1112,36],
 "classTileType.html#a1b9fcbbffb060bcfa7b868f9afd3295b":[1,0,1112,45],
 "classTileType.html#a1c89888b3e445b482e4a6743379f1951":[1,0,1112,99],
-"classTileType.html#a1d0a35452ba4fc878b50fd4181045199":[1,0,1112,85],
-"classTileType.html#a1f55d5fd61bde40e0256453979a05d23":[1,0,1112,39],
-"classTileType.html#a1f57f8425c92d5b5b7bac21cac1f224f":[1,0,1112,24],
-"classTileType.html#a2092765e232ee79e9c4517a79dfaf4ba":[1,0,1112,113],
-"classTileType.html#a22bfb39845fe0852d2a95f1e93e7970b":[1,0,1112,26]
+"classTileType.html#a1d0a35452ba4fc878b50fd4181045199":[1,0,1112,85]
 };

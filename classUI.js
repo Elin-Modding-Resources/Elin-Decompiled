@@ -33,6 +33,7 @@ var classUI =
     [ "ShowSceneSelector", "classUI.html#a7629834fc1aab51397f4acf15785b6a5", null ],
     [ "StartDrag", "classUI.html#aeb0603f798fd20701d7b95490392f8a3", null ],
     [ "ToggleAbility", "classUI.html#a579396b757c487905778cf48d773e61e", null ],
+    [ "ToggleCanvas", "classUI.html#a630baf3e122583f742e382157d7e26f2", null ],
     [ "ToggleFeedback", "classUI.html#ac00ce42a6a899126725eb6692988416f", null ],
     [ "ToggleInventory", "classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6", null ],
     [ "UnfreezeScreen", "classUI.html#a1591cf4519e26129ac9a82bd73b8b523", null ],

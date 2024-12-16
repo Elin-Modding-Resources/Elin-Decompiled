@@ -1,5 +1,9 @@
 var NAVTREEINDEX92 =
 {
+"classTraitBaseContainer.html#aba40dd7581c64fbe7d7e642f03ee9cec":[1,0,1193,11],
+"classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e":[1,0,1193,12],
+"classTraitBaseContainer.html#af2be049c1e713bd8c4aa9606bce693d9":[1,0,1193,7],
+"classTraitBaseContainer.html#afc9dbd59337c35d62fc825bd8af9202a":[1,0,1193,8],
 "classTraitBaseSpellbook.html":[1,0,1194],
 "classTraitBaseSpellbook.html#a0b97be9a164b766e6256c23aab2afa1c":[1,0,1194,1],
 "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3":[1,0,1194,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1239,2],
 "classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1239,1],
 "classTraitCitizen.html":[1,0,1240],
-"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1240,0],
-"classTraitClerk__Casino.html":[1,0,1241],
-"classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1241,0],
-"classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1241,1],
-"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1241,3]
+"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1240,0]
 };

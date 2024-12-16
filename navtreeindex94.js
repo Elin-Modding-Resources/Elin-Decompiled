@@ -1,5 +1,9 @@
 var NAVTREEINDEX94 =
 {
+"classTraitDrawingPaper.html":[1,0,1292],
+"classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1292,2],
+"classTraitDrawingPaper.html#a9d3c27a16d974dcd0cef28907885c8b5":[1,0,1292,0],
+"classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1292,1],
 "classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1292,3],
 "classTraitDreamBug.html":[1,0,1293],
 "classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1293,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX94 =
 "classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1348,3],
 "classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1348,0],
 "classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1348,4],
-"classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1348,1],
-"classTraitGene.html#a8e6b1c7317611d1cf438e56d285a37af":[1,0,1348,6],
-"classTraitGene.html#aaac1b8bb856a544a6550160fe9e76d90":[1,0,1348,5],
-"classTraitGene.html#aad06c098417be0e93df7d983f89cb51e":[1,0,1348,2],
-"classTraitGeneMachine.html":[1,0,1349]
+"classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1348,1]
 };

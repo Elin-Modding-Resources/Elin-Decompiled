@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"classKnowledgeResearch.html":[1,0,623],
 "classKnownSong.html":[1,0,624],
 "classKnownSong.html#a8c2167f1668086f4dc715109d28d80e4":[1,0,624,0],
 "classLIQUID.html":[1,0,702],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "classLayerCredit.html":[1,0,640],
 "classLayerCredit.html#a32d248c3dafd34b0a1d034ae0e206abb":[1,0,640,0],
 "classLayerDebug.html":[1,0,641],
-"classLayerDebug.html#a18a1e3cfe9dfcc17f2362b5d68fba493":[1,0,641,0],
-"classLayerDebug.html#a7324f4f4bcb0c4b79d5f15c451ef4c05":[1,0,641,1]
+"classLayerDebug.html#a18a1e3cfe9dfcc17f2362b5d68fba493":[1,0,641,0]
 };

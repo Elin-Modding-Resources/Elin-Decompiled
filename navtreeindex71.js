@@ -1,5 +1,6 @@
 var NAVTREEINDEX71 =
 {
+"classPolicyManager.html#ada77c66837873c30b5b71efc3808ab15":[1,0,790,10],
 "classPopupManager.html":[1,0,791],
 "classPopupManager.html#a0c11d1ab5f6d03e7b834c817eede47ec":[1,0,791,2],
 "classPopupManager.html#a2eaccec004bb43aedb2926f05a6ca810":[1,0,791,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX71 =
 "classQuest.html#a8b86dbb9e1fb562b9f47167f8ecdfed5":[1,0,804,73],
 "classQuest.html#a8c4671fb359b99c1956a67c54baf0b02":[1,0,804,69],
 "classQuest.html#a904bf1d009f4e0eceb3d486acd976eb7":[1,0,804,96],
-"classQuest.html#a91269393d91e61f61bececf40be5485b":[1,0,804,59],
-"classQuest.html#a9196bc64a6c7509e60aa6cc1fa5f0c53":[1,0,804,88]
+"classQuest.html#a91269393d91e61f61bececf40be5485b":[1,0,804,59]
 };

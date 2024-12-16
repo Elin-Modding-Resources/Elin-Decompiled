@@ -96,6 +96,7 @@ var classFactionBranch =
     [ "ContentLV", "classFactionBranch.html#a8a096267039638816b9326c33f1d152d", null ],
     [ "DangerLV", "classFactionBranch.html#a83c5809a52a68dc7c5e63434d34ddbd1", null ],
     [ "elements", "classFactionBranch.html#aed5261461375018a53ad7853e6b081c6", null ],
+    [ "HasItemProtection", "classFactionBranch.html#ae1cc5a1833b3259d65f0f38df2e3a254", null ],
     [ "HasNetwork", "classFactionBranch.html#a12e4dddf9d6e0f7bced93f636756ae26", null ],
     [ "IsStartBranch", "classFactionBranch.html#af173ffe36dbf9a092fd1a87884292869", null ],
     [ "IsTaxFree", "classFactionBranch.html#ac590a60a2e6d973b87d6a58a4205ae3d", null ],

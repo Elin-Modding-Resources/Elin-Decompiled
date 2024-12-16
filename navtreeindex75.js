@@ -1,5 +1,9 @@
 var NAVTREEINDEX75 =
 {
+"classRefChara.html#ab151b5d2bb2357fed3ba938925619e09":[1,0,893,3],
+"classRefFaction.html":[1,0,894],
+"classRefFaction.html#a10a6111ce1db282335bc69c966930613":[1,0,894,0],
+"classRefFaction.html#a86f73f6e511dcf9600eac1b8aa7e5a60":[1,0,894,2],
 "classRefFaction.html#a8fe68ccb0314a99cb39fbbeee09f8487":[1,0,894,1],
 "classRefFaction.html#a9cef092136f3d0bac362882b5b6c9ce0":[1,0,894,3],
 "classRefFaction.html#acba300026563fba0533a60b482126be7":[1,0,894,4],
@@ -69,7 +73,6 @@ var NAVTREEINDEX75 =
 "classReligion.html#a0f4c9dd49de96a8c0354290c9be03d99":[1,0,902,32],
 "classReligion.html#a16c5d953e8c01159a3c4542ebdb06f52":[1,0,902,41],
 "classReligion.html#a1ccfce72109bf80853a297cca61e25bf":[1,0,902,2],
-"classReligion.html#a1d28ae3b61e72c77cb7a97d637f60b72":[1,0,902,9],
 "classReligion.html#a1fefbe63a57c591ad81d61e1e28c0ca0":[1,0,902,31],
 "classReligion.html#a2536fa1c9945d217a9916de8e677073b":[1,0,902,26],
 "classReligion.html#a2742cf180abe4f44fa24f0b57dd4f5b0":[1,0,902,13],
@@ -105,6 +108,7 @@ var NAVTREEINDEX75 =
 "classReligion.html#ace6b5f5de9a2ad1ba93734625aa605ac":[1,0,902,23],
 "classReligion.html#ad937233bc12a7f44cc5928fe5ae9e41c":[1,0,902,37],
 "classReligion.html#adb384c960d33d46d068c3fdd1fe82056":[1,0,902,7],
+"classReligion.html#af99cabbe3a75ab06d457f405cc49e1cf":[1,0,902,9],
 "classReligion.html#afac69a2f0e61c63a15bba99e55a9286c":[1,0,902,10],
 "classReligionEarth.html":[1,0,903],
 "classReligionEarth.html#a4d445ea2606528249dda9dad9db96c2a":[1,0,903,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX75 =
 "classRenderDataObjAdd.html":[1,0,927],
 "classRenderDataObjAdd.html#a5faed5b491666937424021b8f27cfc6c":[1,0,927,0],
 "classRenderDataObjAdd.html#ad16b736f74179aa654e8d6d51b0d53f6":[1,0,927,4],
-"classRenderDataObjAdd.html#af342975371452905bb725ba7f1efcb0a":[1,0,927,3],
-"classRenderDataObjAdd.html#af99afbf3224677c1669ab9ca05add881":[1,0,927,1],
-"classRenderDataObjAdd.html#afa7f2d3bce599bb865d73be0f9ca9aa2":[1,0,927,2],
-"classRenderDataObjDummy.html":[1,0,928],
-"classRenderDataObjDummy.html#a44a7d6891ad904bb1bc896c55f86ee21":[1,0,928,0]
+"classRenderDataObjAdd.html#af342975371452905bb725ba7f1efcb0a":[1,0,927,3]
 };

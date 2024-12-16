@@ -14,6 +14,7 @@ var classRecipeManager =
     [ "ListSources", "classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c", null ],
     [ "OnSleep", "classRecipeManager.html#aa562b72a517f7388895d1411ebbae69b", null ],
     [ "OnVersionUpdate", "classRecipeManager.html#ac8a72b822fb5d9f56382dd698ee3e55a", null ],
+    [ "craftedRecipes", "classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f", null ],
     [ "dict", "classRecipeManager.html#a55425d40b3d652e142df32604a70fb70", null ],
     [ "hoveredRecipes", "classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703", null ],
     [ "knownIngredients", "classRecipeManager.html#a5da142696079aedce2d43e94e76b964c", null ],

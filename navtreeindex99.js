@@ -1,5 +1,9 @@
 var NAVTREEINDEX99 =
 {
+"classTraitTile.html#a987ac06392217f7222915d9266d6d3bf":[1,0,1590,2],
+"classTraitTile.html#ad8366d37bfea1a3aebb3efdee522963a":[1,0,1590,1],
+"classTraitTile.html#ae66a1ad1b38c2488aaf089ac308ab4e7":[1,0,1590,0],
+"classTraitTool.html":[1,0,1591],
 "classTraitTool.html#a0cf304d701d5457989f429ecac5fc1ab":[1,0,1591,1],
 "classTraitTool.html#a756d3c26ce8d9c023e1ce1dbe200cea2":[1,0,1591,0],
 "classTraitTool.html#a9a1537ba5d24196c7b94f1baafb33fef":[1,0,1591,3],
@@ -242,12 +246,8 @@ var NAVTREEINDEX99 =
 "classTutorial.html#aa538aa010806489d96924e8005aec0c2":[1,0,1645,2],
 "classTutorial.html#aad010e98af70d4cafa738f43205e4887":[1,0,1645,0],
 "classTutorial.html#ab85440503c3af4aabb573a5966e257fe":[1,0,1645,1],
-"classTwoDLaserPack_1_1LineBasedLaser.html":[0,4,2,0],
 "classTwoDLaserPack_1_1LineBasedLaser.html":[1,0,2,0],
+"classTwoDLaserPack_1_1LineBasedLaser.html":[0,4,2,0],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[1,0,2,0,10],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[0,4,2,0,10],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[1,0,2,0,36],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[0,4,2,0,36],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[0,4,2,0,3],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[1,0,2,0,3]
+"classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[0,4,2,0,10]
 };

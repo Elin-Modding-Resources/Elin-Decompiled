@@ -1,12 +1,13 @@
 var NAVTREEINDEX51 =
 {
+"classFeat.html#aaca849870f79e6ec033fe5b0b92ecd4f":[1,0,423,14],
 "classFeat.html#ab1592a097e653f368aa1760c1086469d":[1,0,423,11],
 "classFeat.html#ab1592a097e653f368aa1760c1086469d":[1,0,423,10],
 "classFeat.html#ab8c83695ab38de342ecaeeee63dadca9":[1,0,423,9],
 "classFeat.html#adf4842f52b0595280e5c73d6e51314b8":[1,0,423,8],
 "classFeat.html#aea07558370ab24ca08da738c76155302":[1,0,423,25],
-"classFeat.html#af3e2fb8cbfcf33926ae56b171a87799f":[1,0,423,17],
 "classFeat.html#af3e2fb8cbfcf33926ae56b171a87799f":[1,0,423,16],
+"classFeat.html#af3e2fb8cbfcf33926ae56b171a87799f":[1,0,423,17],
 "classFeat.html#afed0438237c9c4dfa57e12f679492a1e":[1,0,423,4],
 "classFoodEffect.html":[1,0,426],
 "classFoodEffect.html#a2e8ea64a39532e5ac6567c109d494a22":[1,0,426,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "classGameSetting.html#a9c1574799fd859a2d29b16bae055721a":[1,0,442,19],
 "classGameSetting.html#a9dc510e93d32ba0f834c33c9def46606":[1,0,442,35],
 "classGameSetting.html#aa356e781eaf1e09ca1f7b9e042bb90ae":[1,0,442,31],
-"classGameSetting.html#aaa00735fe2797e6f61f0f98738cd0cd9":[1,0,442,26],
-"classGameSetting.html#ab79249a4d614032bac52b8828bf7bf4d":[1,0,442,30]
+"classGameSetting.html#aaa00735fe2797e6f61f0f98738cd0cd9":[1,0,442,26]
 };

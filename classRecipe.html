@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.57 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.58 Nightly</span>
    </div>
   </td>
  </tr>
@@ -194,6 +194,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a123d8acc734e50c7c492c141eddf2680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fbb91fe1d63d180871e4d94aa6cbfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecipe.html#a69fbb91fe1d63d180871e4d94aa6cbfc">GetSortVal</a> ()</td></tr>
 <tr class="separator:a69fbb91fe1d63d180871e4d94aa6cbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e86438d15313db59e2a168e785463d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecipe.html#ac9e86438d15313db59e2a168e785463d">HasFirstTimeBonus</a> ()</td></tr>
+<tr class="separator:ac9e86438d15313db59e2a168e785463d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71081158bfbc8117bab4ac25dfa68b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecipe.html#aa71081158bfbc8117bab4ac25dfa68b0">TryGetFirstTimeBonus</a> ()</td></tr>
+<tr class="separator:aa71081158bfbc8117bab4ac25dfa68b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -659,7 +663,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00133">ingredients</a>, <a class="el" href="Recipe_8cs_source.html#l00232">RequireIngredients</a>, <a class="el" href="Recipe_8cs_source.html#l00156">source</a>, and <a class="el" href="Recipe_8cs_source.html#l00136">UseStock</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00277">Create()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00074">RecipeManager.Create()</a>, <a class="el" href="Recipe_8cs_source.html#l00317">DropIngredients()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00277">Create()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00077">RecipeManager.Create()</a>, <a class="el" href="Recipe_8cs_source.html#l00317">DropIngredients()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, and <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>.</p>
 
 </div>
 </div>
@@ -803,7 +807,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l02793">Card.AddCard()</a>, <a class="el" href="ThingGen_8cs_source.html#l00101">ThingGen.CreateBlock()</a>, <a class="el" href="ThingGen_8cs_source.html#l00108">ThingGen.CreateFloor()</a>, <a class="el" href="ThingGen_8cs_source.html#l00116">ThingGen.CreateObj()</a>, <a class="el" href="Recipe_8cs_source.html#l00436">GetMainMaterial()</a>, <a class="el" href="Card_8cs_source.html#l03062">Card.GetRootCard()</a>, <a class="el" href="Chara_8cs_source.html#l03912">Chara.HoldCard()</a>, <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>, <a class="el" href="RecipeSource_8cs_source.html#l00013">RecipeSource.isBridge</a>, <a class="el" href="Trait_8cs_source.html#l00596">Trait.OnCrafted()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l03360">Card.SetBlessedState()</a>, <a class="el" href="Recipe_8cs_source.html#l00156">source</a>, <a class="el" href="Recipe_8cs_source.html#l00160">tileRow</a>, <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>, and <a class="el" href="RecipeSource_8cs_source.html#l00007">RecipeSource.type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00465">LayerCraft.RefreshProduct()</a>, and <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00469">LayerCraft.RefreshProduct()</a>, and <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>.</p>
 
 </div>
 </div>
@@ -875,7 +879,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00154">_source</a>, <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00009">RecipeSource.id</a>, <a class="el" href="Recipe_8cs_source.html#l00148">idMat</a>, and <a class="el" href="RecipeSource_8cs_source.html#l00007">RecipeSource.type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00074">RecipeManager.Create()</a>, <a class="el" href="Trait_8cs_source.html#l00745">Trait.GetBuildModeRecipe()</a>, <a class="el" href="TraitTile_8cs_source.html#l00021">TraitTile.GetBuildModeRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00262">GetOrCreate()</a>, <a class="el" href="Trait_8cs_source.html#l00740">Trait.GetRecipe()</a>, <a class="el" href="TraitTile_8cs_source.html#l00016">TraitTile.GetRecipe()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00189">LayerCraftFloat.RefreshDisassemble()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00077">RecipeManager.Create()</a>, <a class="el" href="Trait_8cs_source.html#l00745">Trait.GetBuildModeRecipe()</a>, <a class="el" href="TraitTile_8cs_source.html#l00021">TraitTile.GetBuildModeRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00262">GetOrCreate()</a>, <a class="el" href="Trait_8cs_source.html#l00740">Trait.GetRecipe()</a>, <a class="el" href="TraitTile_8cs_source.html#l00016">TraitTile.GetRecipe()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00189">LayerCraftFloat.RefreshDisassemble()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>.</p>
 
 </div>
 </div>
@@ -996,13 +1000,13 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassCard_html_aca629319c0060497dea0b3fb95b4e516"><div class="ttname"><a href="classCard.html#aca629319c0060497dea0b3fb95b4e516">Card.ChangeMaterial</a></div><div class="ttdeci">Card ChangeMaterial(int idNew)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02744">Card.cs:2744</a></div></div>
 <div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00012">EClass.cs:12</a></div></div>
 <div class="ttc" id="aclassPlayer_html_ac75d9ea1e3654304fd72f8161838e071"><div class="ttname"><a href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">Player.DropReward</a></div><div class="ttdeci">Thing DropReward(Thing t, bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02275">Player.cs:2275</a></div></div>
-<div class="ttc" id="aclassRecipeManager_html_a08cedf9e6be21bde401f263ff203412f"><div class="ttname"><a href="classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f">RecipeManager.BuildList</a></div><div class="ttdeci">static void BuildList()</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00025">RecipeManager.cs:25</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a08cedf9e6be21bde401f263ff203412f"><div class="ttname"><a href="classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f">RecipeManager.BuildList</a></div><div class="ttdeci">static void BuildList()</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00028">RecipeManager.cs:28</a></div></div>
 <div class="ttc" id="aclassRecipe_html_ad84f96e28ecfa54ada1bff52d70241d0"><div class="ttname"><a href="classRecipe.html#ad84f96e28ecfa54ada1bff52d70241d0">Recipe.GetOrCreate</a></div><div class="ttdeci">static Recipe GetOrCreate(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00262">Recipe.cs:262</a></div></div>
 <div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00025">RecipeManager.BuildList()</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="Card_8cs_source.html#l02744">Card.ChangeMaterial()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Player_8cs_source.html#l02275">Player.DropReward()</a>, <a class="el" href="Recipe_8cs_source.html#l00262">GetOrCreate()</a>, <a class="el" href="Recipe_8cs_source.html#l00029">Recipe.Ingredient.id</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Recipe_8cs_source.html#l00020">Recipe.Ingredient.req</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l03131">Card.SetNum()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00028">RecipeManager.BuildList()</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="Card_8cs_source.html#l02744">Card.ChangeMaterial()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Player_8cs_source.html#l02275">Player.DropReward()</a>, <a class="el" href="Recipe_8cs_source.html#l00262">GetOrCreate()</a>, <a class="el" href="Recipe_8cs_source.html#l00029">Recipe.Ingredient.id</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Recipe_8cs_source.html#l00020">Recipe.Ingredient.req</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l03131">Card.SetNum()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00066">DramaOutcome.QuestShippingChest_Drop1()</a>.</p>
 
@@ -1371,7 +1375,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00133">ingredients</a>, <a class="el" href="Card_8cs_source.html#l00071">Card.isDestroyed</a>, <a class="el" href="Recipe_8cs_source.html#l00039">Recipe.Ingredient.optional</a>, <a class="el" href="Recipe_8cs_source.html#l00020">Recipe.Ingredient.req</a>, and <a class="el" href="Recipe_8cs_source.html#l00037">Recipe.Ingredient.thing</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00455">LayerCraft.RefreshInputNum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00459">LayerCraft.RefreshInputNum()</a>.</p>
 
 </div>
 </div>
@@ -1654,6 +1658,46 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="ac9e86438d15313db59e2a168e785463d" name="ac9e86438d15313db59e2a168e785463d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e86438d15313db59e2a168e785463d">&#9670;&#160;</a></span>HasFirstTimeBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Recipe.HasFirstTimeBonus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00905">905</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  906</span>    {</div>
+<div class="line"><span class="lineno">  907</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f">craftedRecipes</a>.Contains(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  908</span>        {</div>
+<div class="line"><span class="lineno">  909</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  910</span>        }</div>
+<div class="line"><span class="lineno">  911</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  912</span>    }</div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00861">Player.cs:861</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a24f862b11b5d3fc1701f42739236f67f"><div class="ttname"><a href="classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f">RecipeManager.craftedRecipes</a></div><div class="ttdeci">HashSet&lt; string &gt; craftedRecipes</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00017">RecipeManager.cs:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RecipeManager_8cs_source.html#l00017">RecipeManager.craftedRecipes</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, and <a class="el" href="Player_8cs_source.html#l00861">Player.recipes</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, and <a class="el" href="Recipe_8cs_source.html#l00914">TryGetFirstTimeBonus()</a>.</p>
+
+</div>
+</div>
 <a id="a2e5fc07ff7bf8f9733181e2d03ce8f29" name="a2e5fc07ff7bf8f9733181e2d03ce8f29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e5fc07ff7bf8f9733181e2d03ce8f29">&#9670;&#160;</a></span>HasSameTile()</h2>
 
@@ -1852,7 +1896,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00120">RenderRow.Category</a>, <a class="el" href="RecipeSource_8cs_source.html#l00075">RecipeSource.idFactory</a>, <a class="el" href="Recipe_8cs_source.html#l00162">renderRow</a>, and <a class="el" href="Recipe_8cs_source.html#l00156">source</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00349">GetQualityBonus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00349">GetQualityBonus()</a>, and <a class="el" href="Recipe_8cs_source.html#l00914">TryGetFirstTimeBonus()</a>.</p>
 
 </div>
 </div>
@@ -1919,7 +1963,7 @@ Properties</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  502</span>    {</div>
 <div class="line"><span class="lineno">  503</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00284">DropdownGrid.OnChangeIngredient()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00393">LayerCraft.RefreshRecipe()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00284">DropdownGrid.OnChangeIngredient()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00397">LayerCraft.RefreshRecipe()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>.</p>
 
 </div>
 </div>
@@ -2363,6 +2407,50 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="aa71081158bfbc8117bab4ac25dfa68b0" name="aa71081158bfbc8117bab4ac25dfa68b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71081158bfbc8117bab4ac25dfa68b0">&#9670;&#160;</a></span>TryGetFirstTimeBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Recipe.TryGetFirstTimeBonus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00914">914</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  915</span>    {</div>
+<div class="line"><span class="lineno">  916</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classRecipe.html#ac9e86438d15313db59e2a168e785463d">HasFirstTimeBonus</a>())</div>
+<div class="line"><span class="lineno">  917</span>        {</div>
+<div class="line"><span class="lineno">  918</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f">craftedRecipes</a>.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  919</span>            <a class="code hl_class" href="classElement.html">Element</a> reqSkill = <a class="code hl_property" href="classRecipe.html#a64cba6b9b821d7650e1974b045f095b6">source</a>.<a class="code hl_function" href="classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551">GetReqSkill</a>();</div>
+<div class="line"><span class="lineno">  920</span>            <span class="keywordtype">int</span> num = 1 + ((!<a class="code hl_function" href="classRecipe.html#ad4c0c2c288b907cea49dd4bd0610a22b">IsStaticLV</a>()) ? (reqSkill.<a class="code hl_property" href="classElement.html#a6ee910da0d50599d65f25277f4573aae">Value</a> / 20) : 0);</div>
+<div class="line"><span class="lineno">  921</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;firstTimeCraft&quot;</span>, <a class="code hl_property" href="classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774">Name</a>);</div>
+<div class="line"><span class="lineno">  922</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;ticket_fortune&quot;</span>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num));</div>
+<div class="line"><span class="lineno">  923</span>        }</div>
+<div class="line"><span class="lineno">  924</span>    }</div>
+<div class="ttc" id="aclassChara_html_ae543d364c9735273f1fc52d6585df722"><div class="ttname"><a href="classChara.html#ae543d364c9735273f1fc52d6585df722">Chara.Pick</a></div><div class="ttdeci">Thing Pick(Thing t, bool msg=true, bool tryStack=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03754">Chara.cs:3754</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aa7db47ecf58fbca2ce34c2250595b774"><div class="ttname"><a href="classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774">Recipe.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00164">Recipe.cs:164</a></div></div>
+<div class="ttc" id="aclassRecipe_html_ac9e86438d15313db59e2a168e785463d"><div class="ttname"><a href="classRecipe.html#ac9e86438d15313db59e2a168e785463d">Recipe.HasFirstTimeBonus</a></div><div class="ttdeci">bool HasFirstTimeBonus()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00905">Recipe.cs:905</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="RecipeManager_8cs_source.html#l00017">RecipeManager.craftedRecipes</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">RecipeSource.GetReqSkill()</a>, <a class="el" href="Recipe_8cs_source.html#l00905">HasFirstTimeBonus()</a>, <a class="el" href="Recipe_8cs_source.html#l00335">IsStaticLV()</a>, <a class="el" href="Recipe_8cs_source.html#l00164">Name</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l03754">Chara.Pick()</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l00861">Player.recipes</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l03131">Card.SetNum()</a>, <a class="el" href="Recipe_8cs_source.html#l00156">source</a>, and <a class="el" href="Element_82_8cs_source.html#l00054">Element.Value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>.</p>
+
+</div>
+</div>
 <a id="a16d6e7a1f3e7ec064260d975ece515ec" name="a16d6e7a1f3e7ec064260d975ece515ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16d6e7a1f3e7ec064260d975ece515ec">&#9670;&#160;</a></span>WriteNote()</h2>
 
@@ -2544,7 +2632,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00130">130</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">DropdownGrid.BuildIngredients()</a>, <a class="el" href="HitSummary_8cs_source.html#l00078">HitSummary.Execute()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00046">RecipeCard.GetIdThing()</a>, <a class="el" href="Player_8cs_source.html#l00538">Player.Flags.OnBuild()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00138">LayerCraft.OnClickCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00218">LayerCraft.OnCompleteCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00092">LayerCraft.OnKill()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00416">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>, <a class="el" href="RecipeUpdater_8cs_source.html#l00066">RecipeUpdater.RunRecipe()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00409">BuildMenu.Select()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00583">ButtonGrid.SetCraftRecipe()</a>, and <a class="el" href="QuestTrackCraft_8cs_source.html#l00023">QuestTrackCraft.SetRecipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">DropdownGrid.BuildIngredients()</a>, <a class="el" href="HitSummary_8cs_source.html#l00078">HitSummary.Execute()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00046">RecipeCard.GetIdThing()</a>, <a class="el" href="Player_8cs_source.html#l00538">Player.Flags.OnBuild()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00138">LayerCraft.OnClickCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00218">LayerCraft.OnCompleteCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00092">LayerCraft.OnKill()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00067">LayerCraftFloat.RefreshCraft()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00420">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>, <a class="el" href="RecipeUpdater_8cs_source.html#l00066">RecipeUpdater.RunRecipe()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00409">BuildMenu.Select()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00583">ButtonGrid.SetCraftRecipe()</a>, and <a class="el" href="QuestTrackCraft_8cs_source.html#l00023">QuestTrackCraft.SetRecipe()</a>.</p>
 
 </div>
 </div>
@@ -2616,7 +2704,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00133">133</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00107">TaskBuild._CanPerformTask()</a>, <a class="el" href="Recipe_8cs_source.html#l00574">Build()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00347">RecipeCard.Build()</a>, <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00065">RecipeCard.BuildIngredientList()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">DropdownGrid.BuildIngredients()</a>, <a class="el" href="HitSummary_8cs_source.html#l00044">HitSummary.CanExecute()</a>, <a class="el" href="Recipe_8cs_source.html#l00295">Create()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00112">RecipeCard.CreateMold()</a>, <a class="el" href="HitSummary_8cs_source.html#l00078">HitSummary.Execute()</a>, <a class="el" href="Recipe_8cs_source.html#l00450">GetColorMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00426">GetDefaultColor()</a>, <a class="el" href="Recipe_8cs_source.html#l00436">GetMainMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00868">GetMaxCount()</a>, <a class="el" href="Recipe_8cs_source.html#l00729">GetName()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00208">LayerCraft.GetReqIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00195">LayerCraft.GetTargets()</a>, <a class="el" href="Recipe_8cs_source.html#l00856">IsCraftable()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00111">TaskCraft.IsIngredientsValid()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00305">RecipeCard.MakeDish()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00317">RecipeCard.MixIngredients()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00122">TaskBuild.OnAdd()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00138">LayerCraft.OnClickCraft()</a>, <a class="el" href="AM__Build_8cs_source.html#l00309">AM_Build.OnFinishProcessTiles()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00017">DropdownRecipe.RefreshLabel()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00465">LayerCraft.RefreshProduct()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00393">LayerCraft.RefreshRecipe()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00053">TaskCraft.ResetReq()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, <a class="el" href="RecipeUpdater_8cs_source.html#l00066">RecipeUpdater.RunRecipe()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00583">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00851">SetImage()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00545">ButtonGrid.SetRecipe()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00125">UIRecipeInfo.SetRecipe()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00516">ButtonGrid.SetRecipeVariation()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00136">LayerCraftFloat.ShowContextMenu()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00644">ButtonGrid.WriteReqMat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00107">TaskBuild._CanPerformTask()</a>, <a class="el" href="Recipe_8cs_source.html#l00574">Build()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00347">RecipeCard.Build()</a>, <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00065">RecipeCard.BuildIngredientList()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">DropdownGrid.BuildIngredients()</a>, <a class="el" href="HitSummary_8cs_source.html#l00044">HitSummary.CanExecute()</a>, <a class="el" href="Recipe_8cs_source.html#l00295">Create()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00112">RecipeCard.CreateMold()</a>, <a class="el" href="HitSummary_8cs_source.html#l00078">HitSummary.Execute()</a>, <a class="el" href="Recipe_8cs_source.html#l00450">GetColorMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00426">GetDefaultColor()</a>, <a class="el" href="Recipe_8cs_source.html#l00436">GetMainMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00868">GetMaxCount()</a>, <a class="el" href="Recipe_8cs_source.html#l00729">GetName()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00208">LayerCraft.GetReqIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00195">LayerCraft.GetTargets()</a>, <a class="el" href="Recipe_8cs_source.html#l00856">IsCraftable()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00111">TaskCraft.IsIngredientsValid()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00305">RecipeCard.MakeDish()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00317">RecipeCard.MixIngredients()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00122">TaskBuild.OnAdd()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00138">LayerCraft.OnClickCraft()</a>, <a class="el" href="AM__Build_8cs_source.html#l00309">AM_Build.OnFinishProcessTiles()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00017">DropdownRecipe.RefreshLabel()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00469">LayerCraft.RefreshProduct()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00397">LayerCraft.RefreshRecipe()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00053">TaskCraft.ResetReq()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, <a class="el" href="RecipeUpdater_8cs_source.html#l00066">RecipeUpdater.RunRecipe()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00583">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00851">SetImage()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00545">ButtonGrid.SetRecipe()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00125">UIRecipeInfo.SetRecipe()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00516">ButtonGrid.SetRecipeVariation()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00136">LayerCraftFloat.ShowContextMenu()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00644">ButtonGrid.WriteReqMat()</a>.</p>
 
 </div>
 </div>
@@ -3148,7 +3236,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00164">164</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00050">UICardInfo.SetRecipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00050">UICardInfo.SetRecipe()</a>, and <a class="el" href="Recipe_8cs_source.html#l00914">TryGetFirstTimeBonus()</a>.</p>
 
 </div>
 </div>
@@ -3252,7 +3340,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00156">156</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00579">Build()</a>, <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="Recipe_8cs_source.html#l00505">Craft()</a>, <a class="el" href="Recipe_8cs_source.html#l00450">GetColorMaterial()</a>, <a class="el" href="TraitFactory_8cs_source.html#l00016">TraitFactory.GetCostSp()</a>, <a class="el" href="Recipe_8cs_source.html#l00751">GetDetail()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00193">TraitCrafter.GetDuration()</a>, <a class="el" href="Recipe_8cs_source.html#l00391">GetIdThing()</a>, <a class="el" href="Recipe_8cs_source.html#l00729">GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00349">GetQualityBonus()</a>, <a class="el" href="Recipe_8cs_source.html#l00374">GetRefVal()</a>, <a class="el" href="Recipe_8cs_source.html#l00899">GetSortVal()</a>, <a class="el" href="Recipe_8cs_source.html#l00335">IsStaticLV()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00081">TaskCraft.OnProgress()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00180">UIRecipeInfo.RefreshBalance()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00017">DropdownRecipe.RefreshLabel()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00409">BuildMenu.Select()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00050">UICardInfo.SetRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00891">SetTextDifficulty()</a>, <a class="el" href="Recipe_8cs_source.html#l00762">WriteReqFactory()</a>, and <a class="el" href="Recipe_8cs_source.html#l00771">WriteReqSkill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00579">Build()</a>, <a class="el" href="Recipe_8cs_source.html#l00478">BuildIngredientList()</a>, <a class="el" href="Recipe_8cs_source.html#l00505">Craft()</a>, <a class="el" href="Recipe_8cs_source.html#l00450">GetColorMaterial()</a>, <a class="el" href="TraitFactory_8cs_source.html#l00016">TraitFactory.GetCostSp()</a>, <a class="el" href="Recipe_8cs_source.html#l00751">GetDetail()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00193">TraitCrafter.GetDuration()</a>, <a class="el" href="Recipe_8cs_source.html#l00391">GetIdThing()</a>, <a class="el" href="Recipe_8cs_source.html#l00729">GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00349">GetQualityBonus()</a>, <a class="el" href="Recipe_8cs_source.html#l00374">GetRefVal()</a>, <a class="el" href="Recipe_8cs_source.html#l00899">GetSortVal()</a>, <a class="el" href="Recipe_8cs_source.html#l00335">IsStaticLV()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00081">TaskCraft.OnProgress()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00180">UIRecipeInfo.RefreshBalance()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00017">DropdownRecipe.RefreshLabel()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00074">AI_UseCrafter.Run()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00409">BuildMenu.Select()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00050">UICardInfo.SetRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00891">SetTextDifficulty()</a>, <a class="el" href="Recipe_8cs_source.html#l00914">TryGetFirstTimeBonus()</a>, <a class="el" href="Recipe_8cs_source.html#l00762">WriteReqFactory()</a>, and <a class="el" href="Recipe_8cs_source.html#l00771">WriteReqSkill()</a>.</p>
 
 </div>
 </div>

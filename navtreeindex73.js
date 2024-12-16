@@ -1,5 +1,6 @@
 var NAVTREEINDEX73 =
 {
+"classQuestIntoDarkness.html#abdb2a13c591879b41c096646bfb1574e":[1,0,836,1],
 "classQuestIntroInspector.html":[1,0,837],
 "classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,837,0],
 "classQuestLoytelFarm.html":[1,0,838],
@@ -248,6 +249,5 @@ var NAVTREEINDEX73 =
 "classQueueManager.html#a5315ec5ee2b123a1ebf660f8921bf919":[1,0,879,8],
 "classQueueManager.html#a5b0d2087347e33edf12e53b997639f22":[1,0,879,7],
 "classQueueManager.html#a6912e3a9cc70e86b454efad6f0517fc2":[1,0,879,3],
-"classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5":[1,0,879,10],
-"classQueueManager.html#a7c4ed105c397310ff235ace14ecedabb":[1,0,879,2]
+"classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5":[1,0,879,10]
 };

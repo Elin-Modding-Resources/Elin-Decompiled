@@ -1,5 +1,9 @@
 var NAVTREEINDEX93 =
 {
+"classTraitClerk__Casino.html":[1,0,1241],
+"classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1241,0],
+"classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1241,1],
+"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1241,3],
 "classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1241,2],
 "classTraitClerk__Fighter.html":[1,0,1242],
 "classTraitClerk__Mage.html":[1,0,1243],
@@ -245,9 +249,5 @@ var NAVTREEINDEX93 =
 "classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1288,1],
 "classTraitDoorman__Thief.html":[1,0,1289],
 "classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1289,0],
-"classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1289,1],
-"classTraitDrawingPaper.html":[1,0,1292],
-"classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1292,2],
-"classTraitDrawingPaper.html#a9d3c27a16d974dcd0cef28907885c8b5":[1,0,1292,0],
-"classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1292,1]
+"classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1289,1]
 };

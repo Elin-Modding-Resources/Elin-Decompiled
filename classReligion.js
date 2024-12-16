@@ -9,7 +9,7 @@ var classReligion =
     [ "Init", "classReligion.html#aa9761f5dc15f2242794d70b9bc165274", null ],
     [ "IsValidArtifact", "classReligion.html#adb384c960d33d46d068c3fdd1fe82056", null ],
     [ "JoinFaith", "classReligion.html#a42f51521134142b84f3cc4d1a1772d7c", null ],
-    [ "LeaveFaith", "classReligion.html#a1d28ae3b61e72c77cb7a97d637f60b72", null ],
+    [ "LeaveFaith", "classReligion.html#af99cabbe3a75ab06d457f405cc49e1cf", null ],
     [ "OnAdvanceDay", "classReligion.html#afac69a2f0e61c63a15bba99e55a9286c", null ],
     [ "OnBecomeBranchFaith", "classReligion.html#aa5f12e7fdbd4e62943adc817e9d23a8d", null ],
     [ "OnChangeHour", "classReligion.html#a38206e35e94346ebe027de70547a5135", null ],
