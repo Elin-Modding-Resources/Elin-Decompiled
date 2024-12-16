@@ -333,6 +333,15 @@ public class UI : ELayer
 		}
 	}
 
+	public void ToggleCanvas()
+	{
+		canvas.enabled = !canvas.enabled;
+		if ((bool)WidgetSideScreen.Instance)
+		{
+			WidgetSideScreen.Instance.SetActive(canvas.enabled);
+		}
+	}
+
 	public void OnUpdate()
 	{
 		if (hud.imageDrag.gameObject.activeSelf)
@@ -742,7 +751,6 @@ public class UI : ELayer
 
 	public void StartDrag(DragItem item)
 	{
-		Debug.Log(EInput.leftMouse.down);
 		dragDuration = 0f;
 		if (currentDrag != null)
 		{

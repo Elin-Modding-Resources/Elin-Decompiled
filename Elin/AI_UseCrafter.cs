@@ -213,6 +213,7 @@ public class AI_UseCrafter : AIAct
 						Effect.Get("mine").Play(from).SetParticleColor(recipe.GetColorMaterial().GetColor())
 							.Emit(10 + EClass.rnd(10));
 						owner.renderer.PlayAnime(AnimeID.JumpSmall);
+						recipe.TryGetFirstTimeBonus();
 					}
 					else
 					{

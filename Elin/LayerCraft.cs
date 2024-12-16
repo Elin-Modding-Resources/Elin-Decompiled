@@ -303,6 +303,10 @@ public class LayerCraft : LayerBaseCraft
 				{
 					b.Attach("recipe_new", rightAttach: false);
 				}
+				if (a.HasFirstTimeBonus())
+				{
+					b.Attach("recipe_firstTime", rightAttach: false);
+				}
 			},
 			onList = delegate
 			{

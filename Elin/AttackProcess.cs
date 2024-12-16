@@ -411,10 +411,15 @@ public class AttackProcess : EClass
 				dMulti *= 1.25f;
 			}
 		}
-		if (CC.Evalue(1355) > 0)
+		int num2 = CC.Evalue(1355);
+		ConStrife condition = CC.GetCondition<ConStrife>();
+		if (condition != null)
 		{
-			ConStrife condition = CC.GetCondition<ConStrife>();
-			num = ((condition == null) ? (num + 1) : (num + condition.GetDice().Roll()));
+			num += condition.GetDice().Roll();
+		}
+		else if (num2 > 0)
+		{
+			num++;
 		}
 		num = Mathf.Clamp(num, 0, 9999999);
 		num = (int)(dMulti * (float)num * dmgMulti);
@@ -428,8 +433,8 @@ public class AttackProcess : EClass
 			num /= 2;
 		}
 		List<Element> list2 = new List<Element>();
-		int num2 = CC.Evalue(91);
-		int num3 = 0;
+		int num3 = CC.Evalue(91);
+		int num4 = 0;
 		if (weapon != null)
 		{
 			list2 = weapon.elements.dict.Values.ToList();
@@ -439,9 +444,9 @@ public class AttackProcess : EClass
 			}
 			if (IsRanged || isThrow)
 			{
-				num2 += weapon.Evalue(91);
+				num3 += weapon.Evalue(91);
 			}
-			num3 += weapon.Evalue(603);
+			num4 += weapon.Evalue(603);
 		}
 		else if (CC.id == "rabbit_vopal")
 		{
@@ -472,7 +477,7 @@ public class AttackProcess : EClass
 				list2.Add(value);
 			}
 		}
-		if (hit && num2 > EClass.rnd(100))
+		if (hit && num3 > EClass.rnd(100))
 		{
 			CC.Say("vopal");
 			penetration = 100;
@@ -526,9 +531,9 @@ public class AttackProcess : EClass
 			CC.Say("attackMelee", CC, TC, GetAttackText(attackType, 0));
 		}
 		bool showEffect = true;
-		int num4 = 0;
 		int num5 = 0;
 		int num6 = 0;
+		int num7 = 0;
 		ConWeapon conWeapon = null;
 		if (weapon != null)
 		{
@@ -536,40 +541,40 @@ public class AttackProcess : EClass
 			{
 				if (value2.source.categorySub == "eleConvert")
 				{
-					num4 = EClass.sources.elements.alias[value2.source.aliasRef].id;
-					num5 = 50 + value2.Value * 2;
-					num6 = Mathf.Min(value2.Value, 100);
+					num5 = EClass.sources.elements.alias[value2.source.aliasRef].id;
+					num6 = 50 + value2.Value * 2;
+					num7 = Mathf.Min(value2.Value, 100);
 					break;
 				}
 			}
 		}
-		if (num4 == 0)
+		if (num5 == 0)
 		{
 			if (CC.HasCondition<ConWeapon>())
 			{
 				conWeapon = CC.GetCondition<ConWeapon>();
-				num4 = conWeapon.sourceElement.id;
-				num5 = conWeapon.power / 2;
-				num6 = 40 + (int)Mathf.Min(MathF.Sqrt(conWeapon.power), 80f);
+				num5 = conWeapon.sourceElement.id;
+				num6 = conWeapon.power / 2;
+				num7 = 40 + (int)Mathf.Min(MathF.Sqrt(conWeapon.power), 80f);
 			}
 			if (conWeapon == null && weapon == null && (CC.MainElement != Element.Void || CC.HasElement(1565)))
 			{
-				num4 = (CC.HasElement(1565) ? 915 : CC.MainElement.id);
-				num5 = CC.Power / 3 + EClass.rnd(CC.Power / 2);
+				num5 = (CC.HasElement(1565) ? 915 : CC.MainElement.id);
+				num6 = CC.Power / 3 + EClass.rnd(CC.Power / 2);
 				if (CC.MainElement != Element.Void)
 				{
-					num5 += CC.MainElement.Value;
+					num6 += CC.MainElement.Value;
 				}
 				showEffect = false;
-				num6 = 50;
+				num7 = 50;
 			}
 			if (conWeapon == null && weapon != null && weapon.trait is TraitToolRangeCane)
 			{
 				IEnumerable<Element> enumerable = weapon.elements.dict.Values.Where((Element e) => e.source.categorySub == "eleAttack");
 				if (enumerable.Count() > 0)
 				{
-					num4 = enumerable.RandomItem().id;
-					num5 = num4 switch
+					num5 = enumerable.RandomItem().id;
+					num6 = num5 switch
 					{
 						920 => 30, 
 						914 => 50, 
@@ -577,16 +582,16 @@ public class AttackProcess : EClass
 						_ => 100, 
 					};
 				}
-				num6 = 50;
+				num7 = 50;
 			}
 		}
-		int num7 = num;
-		int num8 = num * num6 / 100;
-		num -= num8;
-		int num9 = num * penetration / 100;
+		int num8 = num;
+		int num9 = num * num7 / 100;
 		num -= num9;
-		num = TC.ApplyProtection(num) + num9 + num8;
-		TC.DamageHP(num, num4, num5, (!IsRanged && !isThrow) ? AttackSource.Melee : AttackSource.Range, CC, showEffect);
+		int num10 = num * penetration / 100;
+		num -= num10;
+		num = TC.ApplyProtection(num) + num10 + num9;
+		TC.DamageHP(num, num5, num6, (!IsRanged && !isThrow) ? AttackSource.Melee : AttackSource.Range, CC, showEffect);
 		conWeapon?.Mod(-1);
 		bool flag2 = IsCane || (weapon != null && weapon.Evalue(482) > 0);
 		int attackStyleElement = CC.body.GetAttackStyleElement(attackStyle);
@@ -624,13 +629,13 @@ public class AttackProcess : EClass
 				}
 				if (item.source.categorySub == "eleAttack")
 				{
-					int num10 = 25;
+					int num11 = 25;
 					int dmg = EClass.rnd(num * (100 + item.Value * 10) / 500 + 5);
 					if (conWeapon == null && weapon != null && weapon.trait is TraitToolRangeCane)
 					{
-						num10 = 0;
+						num11 = 0;
 					}
-					if (num10 >= EClass.rnd(100))
+					if (num11 >= EClass.rnd(100))
 					{
 						TC.DamageHP(dmg, item.id, isThrow ? (100 + item.Value * 5) : (30 + item.Value), AttackSource.WeaponEnchant, CC);
 					}
@@ -644,12 +649,12 @@ public class AttackProcess : EClass
 		}
 		if (!IsRanged && attackStyle == AttackStyle.Shield)
 		{
-			int num11 = CC.Evalue(123);
-			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num11) - 2f, 8f, 12f) > (float)EClass.rnd(100))
+			int num12 = CC.Evalue(123);
+			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num12) - 2f, 8f, 12f) > (float)EClass.rnd(100))
 			{
-				num = num7 * Mathf.Min(50 + num11, 200) / 100;
+				num = num8 * Mathf.Min(50 + num12, 200) / 100;
 				num = TC.ApplyProtection(num);
-				Debug.Log("Bash:" + num + "/" + num7);
+				Debug.Log("Bash:" + num + "/" + num8);
 				CC.PlaySound("shield_bash");
 				CC.Say("shield_bash", CC, TC);
 				TC.DamageHP(num, AttackSource.None, CC);
@@ -657,7 +662,7 @@ public class AttackProcess : EClass
 				{
 					if (EClass.rnd(2) == 0)
 					{
-						TC.Chara.AddCondition<ConDim>(50 + (int)Mathf.Sqrt(num11) * 10);
+						TC.Chara.AddCondition<ConDim>(50 + (int)Mathf.Sqrt(num12) * 10);
 					}
 					TC.Chara.AddCondition<ConParalyze>(EClass.rnd(2), force: true);
 				}
@@ -667,7 +672,7 @@ public class AttackProcess : EClass
 		{
 			return true;
 		}
-		if (TC.isChara && num3 > 0 && num3 * 2 + 15 > EClass.rnd(100) && !TC.isRestrained && TC.Chara.TryMoveFrom(CC.pos) == Card.MoveResult.Success)
+		if (TC.isChara && num4 > 0 && num4 * 2 + 15 > EClass.rnd(100) && !TC.isRestrained && TC.Chara.TryMoveFrom(CC.pos) == Card.MoveResult.Success)
 		{
 			TC.pos.PlayEffect("vanish");
 			TC.PlaySound("push", 1.5f);
@@ -769,9 +774,9 @@ public class AttackProcess : EClass
 			{
 				if (item2 is Ability)
 				{
-					int num12 = 10 + item2.Value / 5;
+					int num13 = 10 + item2.Value / 5;
 					int power = EClass.curve((100 + item2.Value * 10) * (100 + weaponSkill.Value) / 100, 400, 100);
-					if (num12 >= EClass.rnd(100))
+					if (num13 >= EClass.rnd(100))
 					{
 						Act obj = item2 as Act;
 						Card card = (obj.TargetType.CanSelectSelf ? CC : TC);

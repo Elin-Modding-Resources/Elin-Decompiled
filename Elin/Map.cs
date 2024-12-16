@@ -1191,7 +1191,7 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				continue;
 			}
-			if (EClass._zone.IsPCFaction && EClass.Branch.lv >= 3)
+			if (EClass._zone.IsPCFaction && EClass.Branch.HasItemProtection)
 			{
 				Card rootCard = item.GetRootCard();
 				if (!rootCard.isChara || rootCard.Chara.IsPCFaction)

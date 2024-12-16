@@ -44,7 +44,7 @@ public class TraitKettle : TraitUniqueChara
 
 	public override bool CanBeBanished => false;
 
-	public override int RestockDay => 30;
+	public override int RestockDay => 28;
 
 	public override bool CanCopy(Thing t)
 	{

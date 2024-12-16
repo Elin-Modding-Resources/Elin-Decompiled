@@ -6413,6 +6413,11 @@ public class Chara : Card, IPathfindWalker
 		int num3 = 2;
 		int num4 = 2;
 		int num5 = 2;
+		if (homeBranch != null && homeBranch.HasItemProtection && !IsPCParty)
+		{
+			num4 = 0;
+			num5 = 0;
+		}
 		foreach (Thing thing3 in things)
 		{
 			if (CanEat(thing3, shouldEat))

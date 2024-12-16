@@ -99,7 +99,7 @@ public class HotItemContext : HotItem
 				uIContextMenu.AddButton("hideUI", delegate
 				{
 					SE.ClickGeneral();
-					EClass.ui.canvas.enabled = !EClass.ui.canvas.enabled;
+					EClass.ui.ToggleCanvas();
 				});
 				UIContextMenu uIContextMenu2 = m.AddChild("tool");
 				uIContextMenu2.AddButton("LayerMod", delegate

@@ -216,6 +216,11 @@ public class CardRenderer : RenderObject
 						drawShadow = traitFigure.ShowShadow;
 						pref = row.pref;
 					}
+					if (renderData.pass != null && renderData.pass.name == "pass charaL" && EClass.pc.held == owner)
+					{
+						int num = (int)renderData.pass.pmesh.tiling.x;
+						p.tile = (int)p.tile / num * num * 2 + (int)p.tile % num;
+					}
 				}
 				else
 				{
@@ -309,9 +314,9 @@ public class CardRenderer : RenderObject
 		{
 			RenderObject.tempV = position;
 			RenderObject.tempV.y += data.offset.y + data.size.y;
-			for (int num = listTC.Count - 1; num >= 0; num--)
+			for (int num2 = listTC.Count - 1; num2 >= 0; num2--)
 			{
-				listTC[num].OnDraw(ref RenderObject.tempV);
+				listTC[num2].OnDraw(ref RenderObject.tempV);
 			}
 		}
 		if (owner.trait.RenderExtra)

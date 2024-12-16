@@ -311,6 +311,10 @@ public class Net : MonoBehaviour
 		}
 		try
 		{
+			if (EClass.debug.enable)
+			{
+				idLang = "DEBUG";
+			}
 			Debug.Log("Start Sending Text:");
 			WWWForm wWWForm = new WWWForm();
 			wWWForm.AddField("submit", "Send");
@@ -348,6 +352,10 @@ public class Net : MonoBehaviour
 		List<ChatLog> list = new List<ChatLog>();
 		try
 		{
+			if (EClass.debug.enable)
+			{
+				idLang = "DEBUG";
+			}
 			string uri = $"http://ylva.php.xdomain.jp/script/chat/logs/all_{idLang}.json";
 			using UnityWebRequest www = UnityWebRequest.Get(uri);
 			await www.SendWebRequest();

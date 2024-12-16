@@ -320,11 +320,12 @@ public class CharaRenderer : CardRenderer
 
 	public override void DrawHeld()
 	{
+		Card held = owner.held;
 		int num = currentDir;
-		RenderData renderData = owner.held.renderer.data;
-		SourcePref pref = owner.held.Pref;
+		RenderData renderData = held.renderer.data;
+		SourcePref pref = held.Pref;
 		bool flag = num == 1 || num == 3;
-		if (owner.held.isChara)
+		if (held.isChara)
 		{
 			Vector3[] array = (EClass.player.altHeldPos ? RenderObject.renderSetting.heldPosChara2 : RenderObject.renderSetting.heldPosChara);
 			RenderObject.currentParam.x += array[num].x;
@@ -332,11 +333,11 @@ public class CharaRenderer : CardRenderer
 			RenderObject.currentParam.z += array[num].z + data.offset.z - renderData.offset.z;
 			if (EClass.player.altHeldPos)
 			{
-				owner.held.SetDir((owner.dir == 0) ? 2 : ((owner.dir == 1) ? 1 : ((owner.dir != 2) ? 3 : 0)));
+				held.SetDir((owner.dir == 0) ? 2 : ((owner.dir == 1) ? 1 : ((owner.dir != 2) ? 3 : 0)));
 			}
 			else
 			{
-				owner.held.SetDir((owner.dir == 0) ? 2 : owner.dir);
+				held.SetDir((owner.dir == 0) ? 2 : owner.dir);
 			}
 		}
 		else
@@ -354,26 +355,26 @@ public class CharaRenderer : CardRenderer
 				RenderObject.currentParam.y += heldPos[4].y;
 				RenderObject.currentParam.z += heldPos[4].z + data.offset.z - renderData.offset.z;
 			}
-			if (owner.held.trait.NoHeldDir || !owner.held.sourceCard.ContainsTag("noHeldDir"))
+			if (held.trait.NoHeldDir || !held.sourceCard.ContainsTag("noHeldDir"))
 			{
-				owner.held.dir = (owner.flipX ? 1 : 0);
+				held.dir = (owner.flipX ? 1 : 0);
 			}
 		}
 		if (!owner.Cell.sourceSurface.tileType.IsDeepWater)
 		{
 			int liquidLv = RenderObject.currentParam.liquidLv;
-			if (owner.held.isChara)
+			if (held.isChara)
 			{
 				RenderObject.currentParam.liquidLv = 0;
 			}
-			owner.held.SetRenderParam(RenderObject.currentParam);
+			held.SetRenderParam(RenderObject.currentParam);
 			RenderObject.currentParam.x += renderData.heldPos.x - renderData.offset.x + (flag ? 0.01f : (-0.01f)) * (float)pref.equipX;
 			RenderObject.currentParam.y += renderData.heldPos.y - renderData.offset.y + 0.01f * (float)pref.equipY;
 			RenderObject.currentParam.z += renderData.heldPos.z;
 			RenderObject.tempV.x = RenderObject.currentParam.x;
 			RenderObject.tempV.y = RenderObject.currentParam.y;
 			RenderObject.tempV.z = RenderObject.currentParam.z;
-			owner.held.renderer.Draw(RenderObject.currentParam, ref RenderObject.tempV, drawShadow: false);
+			held.renderer.Draw(RenderObject.currentParam, ref RenderObject.tempV, drawShadow: false);
 			RenderObject.currentParam.liquidLv = liquidLv;
 		}
 	}

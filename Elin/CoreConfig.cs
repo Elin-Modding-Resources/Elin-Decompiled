@@ -699,10 +699,6 @@ public class CoreConfig : EClass
 	{
 		EClass.core.ui.skins.SetMainSkin(test.idSkin);
 		Apply();
-		if (EClass.debug.enable)
-		{
-			net.enable = false;
-		}
 	}
 
 	public bool HasBackerRewardCode()

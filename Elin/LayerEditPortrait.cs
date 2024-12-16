@@ -129,6 +129,7 @@ public class LayerEditPortrait : ELayer
 			{
 				b.mainText.SetText(a.id);
 				b.SetPortrait(a.id, hairColor);
+				b.tooltip.lang = a.id;
 			},
 			onList = delegate
 			{

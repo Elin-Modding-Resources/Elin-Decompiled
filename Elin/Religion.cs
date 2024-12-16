@@ -373,7 +373,7 @@ public class Religion : EClass
 		}
 		if (c.faith != this)
 		{
-			c.faith.LeaveFaith(c);
+			c.faith.LeaveFaith(c, this);
 		}
 		EClass.pc.c_daysWithGod = 0;
 		Msg.Say("worship", Name);
@@ -381,7 +381,6 @@ public class Religion : EClass
 		EClass.Sound.Play("worship");
 		c.PlayEffect("aura_heaven");
 		c.faith = this;
-		c.elements.SetBase(85, 0);
 		OnJoinFaith();
 		if (IsEyth)
 		{
@@ -402,22 +401,36 @@ public class Religion : EClass
 		}
 	}
 
-	public void LeaveFaith(Chara c)
+	public void LeaveFaith(Chara c, Religion newFaith)
 	{
-		if (!IsEyth)
+		if (IsEyth)
 		{
-			if (c.IsPC)
+			return;
+		}
+		bool flag = (newFaith == EClass.game.religions.Trickery && this == EClass.game.religions.MoonShadow) || (newFaith == EClass.game.religions.MoonShadow && this == EClass.game.religions.Trickery);
+		if (c.IsPC)
+		{
+			Msg.Say("worship2");
+			if (!flag)
 			{
-				Msg.Say("worship2");
 				Punish(c);
 			}
-			if (c.IsPC)
-			{
-				EClass.pc.faction.charaElements.OnLeaveFaith();
-			}
-			OnLeaveFaith();
-			c.RefreshFaithElement();
 		}
+		if (flag)
+		{
+			Talk("regards");
+			c.elements.SetBase(85, c.Evalue(85) / 2);
+		}
+		else
+		{
+			c.elements.SetBase(85, 0);
+		}
+		if (c.IsPC)
+		{
+			EClass.pc.faction.charaElements.OnLeaveFaith();
+		}
+		OnLeaveFaith();
+		c.RefreshFaithElement();
 	}
 
 	public void Punish(Chara c)

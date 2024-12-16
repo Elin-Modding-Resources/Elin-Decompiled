@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public class VirtualDate : Date
 {
@@ -54,7 +53,6 @@ public class VirtualDate : Date
 
 	public void BuildSunMap()
 	{
-		Debug.Log("Building Sunmap");
 		sunMap = new HashSet<int>();
 		foreach (Trait value in EClass._map.props.installed.traits.suns.Values)
 		{

@@ -102,8 +102,7 @@ public class LayerUploader : ELayer
 
 	public void Upload()
 	{
-		Debug.Log("aaaa");
-		if (ini.Global["agreed"].IsEmpty())
+		if (ini.Global["agreed"].IsEmpty() || ELayer.debug.enable)
 		{
 			string[] items = new string[3] { "readTerms", "agree", "disagree" };
 			Dialog.List("dialogTermsOfUse".lang(), items, (string j) => j, delegate(int c, string d)

@@ -6238,8 +6238,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			p = Guild.Mage.BuySpellbookPrice((int)p);
 		}
 		int num = ((priceType != PriceType.CopyShop) ? 1 : 5);
-		float num2 = 1f + Mathf.Min(0.01f * (float)Evalue(752), 1f) + Mathf.Min(0.01f * (float)Evalue(751), 1f) * (float)num;
-		p *= num2;
+		float num2 = Mathf.Min(0.01f * (float)Evalue(752), 1f);
+		float num3 = Mathf.Min(0.01f * (float)Evalue(751), 1f);
+		if (num3 > 0f)
+		{
+			num3 *= (float)num;
+		}
+		float num4 = Mathf.Clamp(1f + num2 + num3, 0.5f, 5f);
+		p *= num4;
 		p *= 0.20000000298023224;
 		if (sell)
 		{
@@ -6322,11 +6328,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			break;
 		}
-		float num3 = Math.Clamp(Mathf.Sqrt(c.Evalue(291) + ((!sell && EClass._zone.IsPCFaction) ? (EClass.Branch.Evalue(2800) * 2) : 0)), 0f, 25f);
+		float num5 = Math.Clamp(Mathf.Sqrt(c.Evalue(291) + ((!sell && EClass._zone.IsPCFaction) ? (EClass.Branch.Evalue(2800) * 2) : 0)), 0f, 25f);
 		switch (priceType)
 		{
 		case PriceType.Tourism:
-			num3 = 0f;
+			num5 = 0f;
 			break;
 		case PriceType.Shipping:
 			if (sell)
@@ -6340,52 +6346,52 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				break;
 			}
-			float num4 = 1.25f;
+			float num6 = 1.25f;
 			if (EClass.Branch != null)
 			{
 				if (EClass.Branch.policies.IsActive(2817))
 				{
-					num4 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2817));
+					num6 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2817));
 				}
 				if (EClass.Branch.policies.IsActive(2816))
 				{
-					num4 += 0.2f + 0.02f * Mathf.Sqrt(EClass.Branch.Evalue(2816));
+					num6 += 0.2f + 0.02f * Mathf.Sqrt(EClass.Branch.Evalue(2816));
 				}
 				if (isChara)
 				{
 					if (EClass.Branch.policies.IsActive(2828))
 					{
-						num4 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2828));
+						num6 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2828));
 					}
 				}
 				else if (category.IsChildOf("food") || category.IsChildOf("drink"))
 				{
 					if (EClass.Branch.policies.IsActive(2818))
 					{
-						num4 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2818));
+						num6 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2818));
 					}
 				}
 				else if (category.IsChildOf("furniture"))
 				{
 					if (EClass.Branch.policies.IsActive(2819))
 					{
-						num4 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2819));
+						num6 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2819));
 					}
 				}
 				else if (EClass.Branch.policies.IsActive(2820))
 				{
-					num4 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2820));
+					num6 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2820));
 				}
 			}
-			p *= num4;
+			p *= num6;
 			break;
 		}
 		}
 		if ((uint)currency > 1u)
 		{
-			num3 = 0f;
+			num5 = 0f;
 		}
-		p *= (sell ? (1f + num3 * 0.02f) : (1f - num3 * 0.02f));
+		p *= (sell ? (1f + num5 * 0.02f) : (1f - num5 * 0.02f));
 		if (sell)
 		{
 			p = EClass.curve((int)p, 10000, 10000, 80);

@@ -901,4 +901,25 @@ public class Recipe : EClass
 		Element reqSkill = source.GetReqSkill();
 		return reqSkill.source.id * 10000 - reqSkill.Value;
 	}
+
+	public bool HasFirstTimeBonus()
+	{
+		if (EClass.player.recipes.craftedRecipes.Contains(id))
+		{
+			return false;
+		}
+		return true;
+	}
+
+	public void TryGetFirstTimeBonus()
+	{
+		if (HasFirstTimeBonus())
+		{
+			EClass.player.recipes.craftedRecipes.Add(id);
+			Element reqSkill = source.GetReqSkill();
+			int num = 1 + ((!IsStaticLV()) ? (reqSkill.Value / 20) : 0);
+			Msg.Say("firstTimeCraft", Name);
+			EClass.pc.Pick(ThingGen.Create("ticket_fortune").SetNum(num));
+		}
+	}
 }

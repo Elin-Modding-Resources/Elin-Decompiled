@@ -44,7 +44,7 @@ public class AM_Cinema : AM_BaseTileSelect
 		if (EInput.leftMouse.clicked && !EClass.ui.isPointerOverUI)
 		{
 			SE.ClickGeneral();
-			EClass.ui.canvas.enabled = !EClass.ui.canvas.enabled;
+			EClass.ui.ToggleCanvas();
 		}
 		if (EInput.rightMouse.down || conf.speed == 0)
 		{

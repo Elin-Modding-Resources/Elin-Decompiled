@@ -131,6 +131,8 @@ public class FactionBranch : EClass
 
 	public int DangerLV => Mathf.Max(1, ContentLV - (int)Mathf.Sqrt(Evalue(2704)) * 2 + (int)Mathf.Sqrt(Evalue(2706)) * 4);
 
+	public bool HasItemProtection => lv >= 3;
+
 	public bool HasNetwork => lv >= 5;
 
 	public bool IsTaxFree => policies.IsActive(2514);

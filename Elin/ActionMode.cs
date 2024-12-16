@@ -765,7 +765,7 @@ public class ActionMode : EClass
 			}
 			if (!EClass.ui.canvas.enabled && EInput.IsAnyKeyDown())
 			{
-				EClass.ui.canvas.enabled = true;
+				EClass.ui.ToggleCanvas();
 				EInput.Consume();
 				return;
 			}

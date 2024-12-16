@@ -14,6 +14,9 @@ public class RecipeManager : EClass
 	public HashSet<string> knownIngredients = new HashSet<string>();
 
 	[JsonProperty]
+	public HashSet<string> craftedRecipes = new HashSet<string>();
+
+	[JsonProperty]
 	public Dictionary<string, int> knownRecipes = new Dictionary<string, int>();
 
 	[JsonProperty]
