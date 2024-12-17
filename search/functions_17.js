@@ -3,7 +3,7 @@ var searchData=
   ['wait_0',['Wait',['../classEClass.html#abc86a94ff74181ef4ad76960c4186df6',1,'EClass.Wait()'],['../classGame.html#aabe7e6472b92da43673526dca5d41bd9',1,'Game.Wait(float a, Point p)'],['../classGame.html#a9dccaf6fb486511d5ad1b3fd01c6c113',1,'Game.Wait(float a, Card c)'],['../classGame.html#ae4b1668508e5b5b8854bd1fb309a2562',1,'Game.Wait(float a)'],['../classLayerSleep.html#a84af00219c2842215fdb2c821104f0c1',1,'LayerSleep.Wait()'],['../classEClass.html#a44f68f6f1c55b824f3684c78364abf5f',1,'EClass.Wait()']]],
   ['waituntilidle_1',['WaitUntilIdle',['../classLayerCraft.html#a31081eedb2ca12b87d9eb9734bd2dbe8',1,'LayerCraft']]],
   ['welcomemsg_2',['WelcomeMsg',['../classDramaOutcome.html#a41d41dcbb226bf7da45ef3c85763180a',1,'DramaOutcome']]],
-  ['whore_3',['Whore',['../classCalcMoney.html#a058a26be6587d453207351a09d6a6fda',1,'CalcMoney']]],
+  ['whore_3',['Whore',['../classCalcMoney.html#a9ea51b5553a37974bfd91db5de6b247e',1,'CalcMoney']]],
   ['willconsumeturn_4',['WillConsumeTurn',['../classChara.html#af906e8ef6b0b5ac4599561f36427d2d2',1,'Chara']]],
   ['wish_5',['Wish',['../classActEffect.html#af0a12faa8a339ae864d2a64f2ed54901',1,'ActEffect']]],
   ['within_6',['Within',['../classPoint.html#ab3d03009ba72a935354c5dfe2a720145',1,'Point']]],

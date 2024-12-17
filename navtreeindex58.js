@@ -1,5 +1,12 @@
 var NAVTREEINDEX58 =
 {
+"classInvOwnerHotbar.html#a5722f7641632897a346261eba0c61ad0":[1,0,584,1],
+"classInvOwnerHotbar.html#a59e92b27a6bb2d177cd39718248cc35c":[1,0,584,2],
+"classInvOwnerHotbar.html#a73ccd6d72dfbc08153f659aea6166828":[1,0,584,5],
+"classInvOwnerHotbar.html#a773641d3d93ff7b49a60cf24adf9c441":[1,0,584,6],
+"classInvOwnerHotbar.html#ac53686c5bf9530f5e5130403ea8548b0":[1,0,584,3],
+"classInvOwnerHotbar.html#ad903a2d268da548e3b0b3ddefe65f690":[1,0,584,0],
+"classInvOwnerIdentify.html":[1,0,585],
 "classInvOwnerIdentify.html#a58f9a75f0b24bc0896ffec89caa05c42":[1,0,585,4],
 "classInvOwnerIdentify.html#aa939c978eef6ee2387c534b2c407b2d3":[1,0,585,3],
 "classInvOwnerIdentify.html#aab74d23eae4cd10c0fc27f7864e84b97":[1,0,585,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX58 =
 "classItemWidget.html#af3ad5a0c140f562dafa07a78a8efd037":[1,0,617,2],
 "classKnowledge.html":[1,0,618],
 "classKnowledgeFaction.html":[1,0,619],
-"classKnowledgeList.html":[1,0,620],
-"classKnowledgeList.html#ace18e80339a381c9c47139d43366e084":[1,0,620,0],
-"classKnowledgeList.html#ad35625cfb7422a47c4b491eccc4d9dba":[1,0,620,1],
-"classKnowledgeManager.html":[1,0,621],
-"classKnowledgeManager.html#a31b6a27de63dde3f5de0b8228d75098a":[1,0,621,0],
-"classKnowledgeManager.html#a91d01a316bc11ed4d9fe99fcb57220bd":[1,0,621,1],
-"classKnowledgeManager.html#ae4cc17b8305c088ffbd4dfb5680a21be":[1,0,621,2],
-"classKnowledgeRecipe.html":[1,0,622]
+"classKnowledgeList.html":[1,0,620]
 };

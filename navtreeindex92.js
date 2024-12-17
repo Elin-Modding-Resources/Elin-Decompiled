@@ -1,5 +1,12 @@
 var NAVTREEINDEX92 =
 {
+"classTraitBaseContainer.html#a5439e8ab2aaf5589279c2fbb38c24fe1":[1,0,1193,9],
+"classTraitBaseContainer.html#a56db8303fcfd0eabd8d8cce9345b6646":[1,0,1193,15],
+"classTraitBaseContainer.html#a6721af720e99232fba046dd160683836":[1,0,1193,18],
+"classTraitBaseContainer.html#aa5095ee548da9ab01cfa069245ac5941":[1,0,1193,19],
+"classTraitBaseContainer.html#aa718a473f4b13481f316f5bfbd16692d":[1,0,1193,2],
+"classTraitBaseContainer.html#aa71e553b25e41e7805103a25938a28ab":[1,0,1193,6],
+"classTraitBaseContainer.html#ab4b64ea541549c831bcdda278121d280":[1,0,1193,16],
 "classTraitBaseContainer.html#aba40dd7581c64fbe7d7e642f03ee9cec":[1,0,1193,11],
 "classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e":[1,0,1193,12],
 "classTraitBaseContainer.html#af2be049c1e713bd8c4aa9606bce693d9":[1,0,1193,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitChestPractice.html":[1,0,1238],
 "classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1238,0],
 "classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1238,3],
-"classTraitChestPractice.html#aa888ef024cbf4d967f1780c60ffeab9d":[1,0,1238,2],
-"classTraitChestPractice.html#ad10c89e064ae12a6d55672e2c02e0fcd":[1,0,1238,1],
-"classTraitChopper.html":[1,0,1239],
-"classTraitChopper.html#a94d6375d40d335e6b98e54be09f2185a":[1,0,1239,0],
-"classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1239,2],
-"classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1239,1],
-"classTraitCitizen.html":[1,0,1240],
-"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1240,0]
+"classTraitChestPractice.html#aa888ef024cbf4d967f1780c60ffeab9d":[1,0,1238,2]
 };

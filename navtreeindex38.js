@@ -1,5 +1,10 @@
 var NAVTREEINDEX38 =
 {
+"classColorProfile_1_1BlockColors.html#a4ee7cc4fab4868c88bc3d203d3957eb5":[1,0,240,0,5],
+"classColorProfile_1_1BlockColors.html#a572c4f7424ddfb30881648a7d5afcc38":[1,0,240,0,22],
+"classColorProfile_1_1BlockColors.html#a5b3ab5daf9d5646056382286089fec96":[1,0,240,0,19],
+"classColorProfile_1_1BlockColors.html#a72768cbeded5c86e63a69f6369b48e06":[1,0,240,0,18],
+"classColorProfile_1_1BlockColors.html#a894f0680a4edc4588a10d044b5d6d0bb":[1,0,240,0,1],
 "classColorProfile_1_1BlockColors.html#a8b23e44fb0b5641c3e53fb5898b5b48a":[1,0,240,0,15],
 "classColorProfile_1_1BlockColors.html#a8f1d01f1b9c929e4a788360ab59b292e":[1,0,240,0,0],
 "classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2":[1,0,240,0,3],
@@ -81,9 +86,11 @@ var NAVTREEINDEX38 =
 "classConDim.html":[1,0,252],
 "classConDim.html#ab62c03810e3c03a3655c938d3e16e4f0":[1,0,252,0],
 "classConDisease.html":[1,0,253],
-"classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,253,0],
-"classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,253,2],
-"classConDisease.html#ad8527bb782ccef1f688df0ded6e72923":[1,0,253,1],
+"classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,253,1],
+"classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,253,4],
+"classConDisease.html#ad8527bb782ccef1f688df0ded6e72923":[1,0,253,2],
+"classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,253,0],
+"classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,253,3],
 "classConDrawBacker.html":[1,0,255],
 "classConDrawMetal.html":[1,0,256],
 "classConDrawMonster.html":[1,0,257],
@@ -242,12 +249,5 @@ var NAVTREEINDEX38 =
 "classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,319,2],
 "classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013":[1,0,319,0],
 "classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f":[1,0,319,1],
-"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,319,3],
-"classConTransmuteBroom.html":[1,0,320],
-"classConTransmuteBroom.html#aeb7fecc8d0e9cd898c0223cf5c69563a":[1,0,320,0],
-"classConTransmutePutit.html":[1,0,321],
-"classConTransmutePutit.html#ada9c385182f1466817153ea230fe2df3":[1,0,321,0],
-"classConWait.html":[1,0,322],
-"classConWait.html#a1b779fa88b0ebec7ba621cd29e30b3f5":[1,0,322,2],
-"classConWait.html#a2d776cfc0c273df7309b94ddc9cf42c2":[1,0,322,1]
+"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,319,3]
 };

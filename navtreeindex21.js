@@ -1,5 +1,9 @@
 var NAVTREEINDEX21 =
 {
+"classAM__BaseTileSelect.html#a75731dffcf7ca3f546409897a7433aa6":[1,0,107,4],
+"classAM__BaseTileSelect.html#ad18b129af79cfb55e890442eb5032bb7":[1,0,107,2],
+"classAM__BaseTileSelect.html#ad9b2a73c1064205a0eacacd313b8bbb7":[1,0,107,7],
+"classAM__BaseTileSelect.html#aeb061014d8d582c7ced087ac2a27cf06":[1,0,107,5],
 "classAM__BaseTileSelect.html#af64c6585f4514e55609a401866f65cd7":[1,0,107,3],
 "classAM__Bird.html":[1,0,108],
 "classAM__Bird.html#a03b49dd20b9a39cd1481d6626a034cac":[1,0,108,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX21 =
 "classAM__Mine.html#a9957f7d4d9186bcab4387e3630838341":[1,0,125,10],
 "classAM__Mine.html#aa251fa405d85abd3101511cf57b71b43":[1,0,125,4],
 "classAM__Mine.html#aa589e3b1d99a5528af8b3041885ae7f5":[1,0,125,9],
-"classAM__Mine.html#aa9bf030484779bbbb47d6912411c7a00":[1,0,125,0],
-"classAM__Mine.html#ab7f0ef8ccfca545a959be2aee22dc5cb":[1,0,125,11],
-"classAM__Mine.html#ae2fa680be538fd3f11de0f6fd4b7dfa9":[1,0,125,7],
-"classAM__Mine.html#aea1067114d1aa999211a08e03f2bbb4d":[1,0,125,6],
-"classAM__MiniGame.html":[1,0,126]
+"classAM__Mine.html#aa9bf030484779bbbb47d6912411c7a00":[1,0,125,0]
 };

@@ -256,6 +256,7 @@ var classChara =
     [ "TryNeckHunt", "classChara.html#a24cd68ad8d4a830c31be6a6c004d66bb", null ],
     [ "TryNullifyCurse", "classChara.html#a72137ad0c9c6f325ca8975f985c7fcec", null ],
     [ "TryPickGroundItem", "classChara.html#a22832967e7461bef1cca87004c3ba26b", null ],
+    [ "TryPoisonPotion", "classChara.html#aded9525cc609f31e640e4dc34c6c9e12", null ],
     [ "TryPush", "classChara.html#aecdab7109fb77eb402fb19171c25951d", null ],
     [ "TryPutShared", "classChara.html#a2d725d599498a05af9f1b9df51af9fcf", null ],
     [ "TryPutSharedItems", "classChara.html#a49f1b65b270ca414c9fe8b4b40e172b0", null ],

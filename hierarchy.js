@@ -1421,6 +1421,7 @@ var hierarchy =
           [ "TraitKiln", "classTraitKiln.html", null ],
           [ "TraitMill", "classTraitMill.html", null ],
           [ "TraitRationMaker", "classTraitRationMaker.html", null ],
+          [ "TraitRollingFortune", "classTraitRollingFortune.html", null ],
           [ "TraitSawMill", "classTraitSawMill.html", null ],
           [ "TraitScratchMachine", "classTraitScratchMachine.html", null ],
           [ "TraitSculpture", "classTraitSculpture.html", null ],
@@ -1540,6 +1541,7 @@ var hierarchy =
           ] ],
           [ "TraitGambleChest", "classTraitGambleChest.html", null ],
           [ "TraitGiftPack", "classTraitGiftPack.html", [
+            [ "TraitGiftJure", "classTraitGiftJure.html", null ],
             [ "TraitGiftNewYear", "classTraitGiftNewYear.html", null ]
           ] ],
           [ "TraitHat", "classTraitHat.html", null ],

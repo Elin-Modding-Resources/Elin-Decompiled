@@ -1,5 +1,12 @@
 var NAVTREEINDEX74 =
 {
+"classQueueList.html#a8036c1811253966374d065f3d352f009":[1,0,878,0],
+"classQueueManager.html":[1,0,879],
+"classQueueManager.html#a172d5f1c9a33750e6f294d1ea8da93ad":[1,0,879,9],
+"classQueueManager.html#a5315ec5ee2b123a1ebf660f8921bf919":[1,0,879,8],
+"classQueueManager.html#a5b0d2087347e33edf12e53b997639f22":[1,0,879,7],
+"classQueueManager.html#a6912e3a9cc70e86b454efad6f0517fc2":[1,0,879,3],
+"classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5":[1,0,879,10],
 "classQueueManager.html#a7c4ed105c397310ff235ace14ecedabb":[1,0,879,2],
 "classQueueManager.html#a7eec5ab018b512037bc00f9cf3af084e":[1,0,879,4],
 "classQueueManager.html#ab191b724677e68bc9dfaaf83131be611":[1,0,879,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX74 =
 "classRecipe_1_1Ingredient.html#adb75bbb89b0497042619a166873e8228":[1,0,885,0,10],
 "classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e":[1,0,885,0,3],
 "classRecipe_1_1Ingredient.html#af0da4401bda0ad0a031ee77a998c49f4":[1,0,885,0,15],
-"classRecipe_1_1Ingredient.html#afa031387a17b7a59d5fe90441094b48f":[1,0,885,0,5],
-"classRefArea.html":[1,0,892],
-"classRefArea.html#a4797f3313ca4a15478a0c217ba1bf159":[1,0,892,0],
-"classRefArea.html#ae7e711c193bf875d424d5f271e24e126":[1,0,892,1],
-"classRefChara.html":[1,0,893],
-"classRefChara.html#a65bdc808d9a0235095d7086ee37ae236":[1,0,893,0],
-"classRefChara.html#a74adc7412a35cd956f2d7cfb52ba226b":[1,0,893,1],
-"classRefChara.html#a9f3c00b87d81d5e040a30daa6d014f30":[1,0,893,2]
+"classRecipe_1_1Ingredient.html#afa031387a17b7a59d5fe90441094b48f":[1,0,885,0,5]
 };

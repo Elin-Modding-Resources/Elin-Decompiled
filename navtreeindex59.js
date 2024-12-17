@@ -1,5 +1,12 @@
 var NAVTREEINDEX59 =
 {
+"classKnowledgeList.html#ace18e80339a381c9c47139d43366e084":[1,0,620,0],
+"classKnowledgeList.html#ad35625cfb7422a47c4b491eccc4d9dba":[1,0,620,1],
+"classKnowledgeManager.html":[1,0,621],
+"classKnowledgeManager.html#a31b6a27de63dde3f5de0b8228d75098a":[1,0,621,0],
+"classKnowledgeManager.html#a91d01a316bc11ed4d9fe99fcb57220bd":[1,0,621,1],
+"classKnowledgeManager.html#ae4cc17b8305c088ffbd4dfb5680a21be":[1,0,621,2],
+"classKnowledgeRecipe.html":[1,0,622],
 "classKnowledgeResearch.html":[1,0,623],
 "classKnownSong.html":[1,0,624],
 "classKnownSong.html#a8c2167f1668086f4dc715109d28d80e4":[1,0,624,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX59 =
 "classLayerCraftFloat.html#a9cb631a51ddaf00439d5d32386ff6eeb":[1,0,639,12],
 "classLayerCraftFloat.html#aa53107b9c062a96902c3534efd90220b":[1,0,639,6],
 "classLayerCraftFloat.html#ad1df82067e31e183fcdf9c822ba18285":[1,0,639,13],
-"classLayerCraftFloat.html#ad3407107107859da2e28eeb718d9927c":[1,0,639,7],
-"classLayerCraftFloat.html#ae5f635d4f49d9c85e936b9435b134f44":[1,0,639,15],
-"classLayerCraftFloat.html#ae7bb1dd7436a4bf1b31f86618fbc0b6c":[1,0,639,8],
-"classLayerCraftFloat.html#af937b171e1d1554aa2e70963833cc5cb":[1,0,639,11],
-"classLayerCredit.html":[1,0,640],
-"classLayerCredit.html#a32d248c3dafd34b0a1d034ae0e206abb":[1,0,640,0],
-"classLayerDebug.html":[1,0,641],
-"classLayerDebug.html#a18a1e3cfe9dfcc17f2362b5d68fba493":[1,0,641,0]
+"classLayerCraftFloat.html#ad3407107107859da2e28eeb718d9927c":[1,0,639,7]
 };

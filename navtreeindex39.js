@@ -1,5 +1,12 @@
 var NAVTREEINDEX39 =
 {
+"classConTransmuteBroom.html":[1,0,320],
+"classConTransmuteBroom.html#aeb7fecc8d0e9cd898c0223cf5c69563a":[1,0,320,0],
+"classConTransmutePutit.html":[1,0,321],
+"classConTransmutePutit.html#ada9c385182f1466817153ea230fe2df3":[1,0,321,0],
+"classConWait.html":[1,0,322],
+"classConWait.html#a1b779fa88b0ebec7ba621cd29e30b3f5":[1,0,322,2],
+"classConWait.html#a2d776cfc0c273df7309b94ddc9cf42c2":[1,0,322,1],
 "classConWait.html#a8a9e67c8523c0598cb17e0fafcaaa885":[1,0,322,0],
 "classConWait.html#a9dabf691ef01a51d647f9f94bf221fbe":[1,0,322,3],
 "classConWardMonster.html":[1,0,323],
@@ -242,12 +249,5 @@ var NAVTREEINDEX39 =
 "classContentGallery_1_1Page.html#acb17c55ab31e16d4dbd90111298951f3":[1,0,305,0,2],
 "classContentGallery_1_1Page.html#ae627f35bfdd04a62198040a7aa513264":[1,0,305,0,1],
 "classContentGallery_1_1Page_1_1Item.html":[1,0,305,0,0],
-"classContentGallery_1_1Page_1_1Item.html#a73e61fa288b3b092876a163d1df7858c":[1,0,305,0,0,0],
-"classContentGallery_1_1Page_1_1Item.html#a9c9a5a39b4b6e97d0b769860b068f5c9":[1,0,305,0,0,1],
-"classContentHallOfFame.html":[1,0,306],
-"classContentHallOfFame.html#a003154a145678cceddce88a3db761ada":[1,0,306,0],
-"classContentHallOfFame.html#a2ac3171209495f2704927cc6b39c9d32":[1,0,306,3],
-"classContentHallOfFame.html#a2d3d1df6e302a9c6b79d999f99b29c2b":[1,0,306,8],
-"classContentHallOfFame.html#a5ea24647a313a54c985a1f7ec8cebac4":[1,0,306,1],
-"classContentHallOfFame.html#a6dd44452696be3b3d9c5e7f1236d7995":[1,0,306,4]
+"classContentGallery_1_1Page_1_1Item.html#a73e61fa288b3b092876a163d1df7858c":[1,0,305,0,0,0]
 };

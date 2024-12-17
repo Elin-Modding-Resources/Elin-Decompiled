@@ -11,5 +11,5 @@ var classCalcMoney =
     [ "Picklock", "classCalcMoney.html#a1ed5dcdb2fdad9775c606c408620ea89", null ],
     [ "Revive", "classCalcMoney.html#aaa3bce77f8cdce7bebc21f8a0eaebf88", null ],
     [ "SellSlave", "classCalcMoney.html#a59c727aee99fe298c0530f2cad45ad07", null ],
-    [ "Whore", "classCalcMoney.html#a058a26be6587d453207351a09d6a6fda", null ]
+    [ "Whore", "classCalcMoney.html#a9ea51b5553a37974bfd91db5de6b247e", null ]
 ];

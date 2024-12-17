@@ -1,5 +1,12 @@
 var NAVTREEINDEX45 =
 {
+"classDramaActor.html#a5d4dbaf0ff42734e0a0661535b425af2":[1,0,363,0],
+"classDramaActor.html#a77fee054b0e38d653178e752b6095c3d":[1,0,363,4],
+"classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38":[1,0,363,1],
+"classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b":[1,0,363,9],
+"classDramaActor.html#ac6307f57faa1a481c54975385adbf562":[1,0,363,3],
+"classDramaActor.html#ad8d294303a2b2b25327ed8fcb0a61af9":[1,0,363,8],
+"classDramaActor.html#add2d49bf6ba26f5e06c5f248c1a976b2":[1,0,363,5],
 "classDramaActor.html#af4d105a979cecc1d374e44c2ab702466":[1,0,363,7],
 "classDramaChoice.html":[1,0,364],
 "classDramaChoice.html#a0389856ea3878c846bbb2852c15d2faa":[1,0,364,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX45 =
 "classDramaSequence.html#a6c208684bf0e15aa50e92de593e741cc":[1,0,377,2],
 "classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f":[1,0,377,14],
 "classDramaSequence.html#a86ea69bffdc2a8d35e3157b8171dd21a":[1,0,377,21],
-"classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0":[1,0,377,10],
-"classDramaSequence.html#a926b9c4c4ca7851d5d2086609166f10b":[1,0,377,3],
-"classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b":[1,0,377,15],
-"classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049":[1,0,377,23],
-"classDramaSequence.html#aae1d5cd2845ca1e6397ece8a20681924":[1,0,377,4],
-"classDramaSequence.html#ab4da3e0eb4757986c1c690d43a3170dc":[1,0,377,18],
-"classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761":[1,0,377,24],
-"classDramaSequence.html#ab94829503185d562bfccdbca66009f5e":[1,0,377,19]
+"classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0":[1,0,377,10]
 };

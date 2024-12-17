@@ -172,8 +172,8 @@ var searchData=
   ['submenumodeindex_169',['SubMenuModeIndex',['../classAM__Populate.html#a16cdac8df3e5ec98efd202098bbe72ea',1,'AM_Populate.SubMenuModeIndex()'],['../classAM__Terrain.html#a6fde264a1391cebd5d3f13c6d35ec0da',1,'AM_Terrain.SubMenuModeIndex()'],['../classAM__FlagCell.html#a6e8e60891acfae929f907313753ce39a',1,'AM_FlagCell.SubMenuModeIndex()'],['../classActionMode.html#a2d6e34263a36174a3f2487dbced46816',1,'ActionMode.SubMenuModeIndex()']]],
   ['suffix_170',['suffix',['../classTraitPlatform.html#ac84c80f09f56c79e194ff076ce0f3f44',1,'TraitPlatform.suffix()'],['../classTraitTile.html#a38a38cdb93d68cd278187a2a70d3d693',1,'TraitTile.suffix()']]],
   ['suffixcoin_171',['suffixCoin',['../classTraitGacha.html#a2dc893f597a04a16f6bd9c1efb9b20e0',1,'TraitGacha']]],
-  ['summary_172',['Summary',['../classActionMode.html#a7336e0d2d984efbbaad0df9acb461e05',1,'ActionMode']]],
-  ['summary_173',['summary',['../classUIRecipeInfo.html#a206549acd1879e103cb78b8004bf4411',1,'UIRecipeInfo']]],
+  ['summary_172',['summary',['../classUIRecipeInfo.html#a206549acd1879e103cb78b8004bf4411',1,'UIRecipeInfo']]],
+  ['summary_173',['Summary',['../classActionMode.html#a7336e0d2d984efbbaad0df9acb461e05',1,'ActionMode']]],
   ['surface_174',['Surface',['../classSourcePref.html#a3e5ffc716c6bf0c52ca762827c4c5ce5',1,'SourcePref']]],
   ['sync_175',['Sync',['../interfaceISyncScreen.html#ae2f6349697ade2e30a22b1cc783d15a8',1,'ISyncScreen.Sync()'],['../classRenderObject.html#a039c38d98c3da01d2963f34b6affc28f',1,'RenderObject.Sync()'],['../classTaskDesignation.html#af60662a7b41644862fb29c026a6b31c7',1,'TaskDesignation.Sync()']]],
   ['syncride_176',['SyncRide',['../classBaseCondition.html#a1621edf4ea484f2bb5b489f3390c8d0f',1,'BaseCondition.SyncRide()'],['../classConInvisibility.html#af0165653c4373e4fd5f7699b34e13a4b',1,'ConInvisibility.SyncRide()'],['../classConLevitate.html#a9948f98226735557999565a550fdf9c9',1,'ConLevitate.SyncRide()'],['../classConSeeInvisible.html#a8f0fe1ec07339cfa0b05e0cf5178e767',1,'ConSeeInvisible.SyncRide()']]]

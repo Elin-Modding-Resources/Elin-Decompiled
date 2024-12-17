@@ -1,5 +1,12 @@
 var NAVTREEINDEX56 =
 {
+"classHotItemContext.html#ae22d272730010f9b2fdedc90079349d8":[1,0,533,0],
+"classHotItemContext.html#af2799f7c9f8f86b54d71730bdccbbb60":[1,0,533,2],
+"classHotItemEQSet.html":[1,0,534],
+"classHotItemEQSet.html#a1208b97ac50aea8b3f6c49c3f5fedf8d":[1,0,534,1],
+"classHotItemEQSet.html#a2feec2ab2e95e1dc2dcc3cef6d657d18":[1,0,534,2],
+"classHotItemEQSet.html#a605676deb05de99a482416d49b95ce5c":[1,0,534,3],
+"classHotItemEQSet.html#aa7bf7f20168f3cfc48d455cf2b7b7602":[1,0,534,5],
 "classHotItemEQSet.html#aabae5b1b9a1cbb5ecfd5fd7c11a31129":[1,0,534,6],
 "classHotItemEQSet.html#ad2d79b47dfcb698f520ae4780776fe32":[1,0,534,4],
 "classHotItemEQSet.html#ae417a0f9c536b9d6a00ce86f7d1647fc":[1,0,534,7],
@@ -194,8 +201,8 @@ var NAVTREEINDEX56 =
 "classIngredientAndRecipe.html#aff251c139803d4168e200317c3afa9d6":[1,0,557,1],
 "classInspectGroup.html":[1,0,558],
 "classInspectGroup.html#a02aceaa2fd654155af75e40d4db30e76":[1,0,558,3],
-"classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264":[1,0,558,13],
 "classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264":[1,0,558,11],
+"classInspectGroup.html#a0e360ab375a94c0dd0ed66e310a49264":[1,0,558,13],
 "classInspectGroup.html#a154621f748f34ab3f52b2952b9adf448":[1,0,558,1],
 "classInspectGroup.html#a15f846bb8593699aadf8afc408765117":[1,0,558,20],
 "classInspectGroup.html#a2bb5f8bb305510884ae22010e8f444a0":[1,0,558,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX56 =
 "classInspectGroup_1_1Item.html#adb52274b121272b836fe556ab7ac9ed6":[1,0,558,0,7],
 "classInspectGroup_1_1Item.html#ae9f62ca9ce7b2c3c77aa5b05d7775863":[1,0,558,0,2],
 "classInspectGroup_1_1Item.html#affd5deb36207b6a23987c5e90e881cf8":[1,0,558,0,4],
-"classInt3.html":[1,0,566],
-"classInt3.html#a11c334ae27b281ea32a8c54eca06e226":[1,0,566,5],
-"classInt3.html#a15dd6f12478d41f5d4e15aedc0464e0f":[1,0,566,2],
-"classInt3.html#a5460c47eba40892a8e94d8f0e788adb1":[1,0,566,6],
-"classInt3.html#a5678165276bd214d0b121c64dabd5529":[1,0,566,4],
-"classInt3.html#a84a5cd19f62b5e07738d5974a84a8bba":[1,0,566,3],
-"classInt3.html#aa8f3987af5510e10557ef97ccf34c06a":[1,0,566,7],
-"classInt3.html#ab7999a3f6f599f75199221bff863f43b":[1,0,566,1]
+"classInt3.html":[1,0,566]
 };

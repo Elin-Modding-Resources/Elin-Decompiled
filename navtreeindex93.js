@@ -1,5 +1,12 @@
 var NAVTREEINDEX93 =
 {
+"classTraitChestPractice.html#ad10c89e064ae12a6d55672e2c02e0fcd":[1,0,1238,1],
+"classTraitChopper.html":[1,0,1239],
+"classTraitChopper.html#a94d6375d40d335e6b98e54be09f2185a":[1,0,1239,0],
+"classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1239,2],
+"classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1239,1],
+"classTraitCitizen.html":[1,0,1240],
+"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1240,0],
 "classTraitClerk__Casino.html":[1,0,1241],
 "classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1241,0],
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1241,1],
@@ -87,6 +94,7 @@ var NAVTREEINDEX93 =
 "classTraitCrafter.html#a1a84b8dee033decea221e05d7cbc5d5c":[1,0,1265,19],
 "classTraitCrafter.html#a1dce63c1a7164229467ea19e49e69db6":[1,0,1265,27],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcb":[1,0,1265,1],
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba07f3fb85953bf41d154cba88825ee748":[1,0,1265,1,10],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67":[1,0,1265,1,1],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8":[1,0,1265,1,5],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39":[1,0,1265,1,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX93 =
 "classTraitDoorSwingGrass.html":[1,0,1291],
 "classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1291,0],
 "classTraitDoorman__Fighter.html":[1,0,1287],
-"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1287,1],
-"classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1287,2],
-"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1287,0],
-"classTraitDoorman__Mage.html":[1,0,1288],
-"classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1288,0],
-"classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1288,1],
-"classTraitDoorman__Thief.html":[1,0,1289],
-"classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1289,0],
-"classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1289,1]
+"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1287,1]
 };

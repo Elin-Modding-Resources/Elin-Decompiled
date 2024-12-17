@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.58 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.59 Nightly</span>
    </div>
   </td>
  </tr>
@@ -125,8 +125,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8b8f576c8e9f6ec5a286627cc24b4c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c727aee99fe298c0530f2cad45ad07"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalcMoney.html#a59c727aee99fe298c0530f2cad45ad07">SellSlave</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
 <tr class="separator:a59c727aee99fe298c0530f2cad45ad07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058a26be6587d453207351a09d6a6fda"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalcMoney.html#a058a26be6587d453207351a09d6a6fda">Whore</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
-<tr class="separator:a058a26be6587d453207351a09d6a6fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea51b5553a37974bfd91db5de6b247e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalcMoney.html#a9ea51b5553a37974bfd91db5de6b247e">Whore</a> (<a class="el" href="classChara.html">Chara</a> seller, <a class="el" href="classChara.html">Chara</a> buyer)</td></tr>
+<tr class="separator:a9ea51b5553a37974bfd91db5de6b247e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97f4e295592f13e43b4fb695bc767417"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalcMoney.html#a97f4e295592f13e43b4fb695bc767417">InvestShop</a> (<a class="el" href="classChara.html">Chara</a> c, <a class="el" href="classChara.html">Chara</a> tc)</td></tr>
 <tr class="separator:a97f4e295592f13e43b4fb695bc767417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a100adf4e016de897ebebe7acafda1a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalcMoney.html#a6a100adf4e016de897ebebe7acafda1a">InvestZone</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
@@ -366,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l02123">Card.CHA</a>, <a class="el" href="Card_8cs_source.html#l02359">Card.Evalue()</a>, and <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CalcMoney_8cs_source.html#l00055">InvestShop()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00060">InvestZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CalcMoney_8cs_source.html#l00062">InvestShop()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00067">InvestZone()</a>.</p>
 
 </div>
 </div>
@@ -404,10 +404,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CalcMoney_8cs_source.html#l00055">55</a> of file <a class="el" href="CalcMoney_8cs_source.html">CalcMoney.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69">Invest</a>(<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8">Merchant</a>.<a class="code hl_function" href="classGuildMerchant.html#a308445667282e679a2a1aaa4fd54f761">InvestPrice</a>(Mathf.Max(tc.<a class="code hl_property" href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">c_invest</a> * 700, tc.<a class="code hl_property" href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">c_invest</a> * tc.<a class="code hl_property" href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">c_invest</a> * 80) + 200));</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CalcMoney_8cs_source.html#l00062">62</a> of file <a class="el" href="CalcMoney_8cs_source.html">CalcMoney.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69">Invest</a>(<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8">Merchant</a>.<a class="code hl_function" href="classGuildMerchant.html#a308445667282e679a2a1aaa4fd54f761">InvestPrice</a>(Mathf.Max(tc.<a class="code hl_property" href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">c_invest</a> * 700, tc.<a class="code hl_property" href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">c_invest</a> * tc.<a class="code hl_property" href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">c_invest</a> * 80) + 200));</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 <div class="ttc" id="aclassCalcMoney_html_a19f6f324d65f59f86d572589b6b9cd69"><div class="ttname"><a href="classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69">CalcMoney.Invest</a></div><div class="ttdeci">static int Invest(int a, float mod=2f)</div><div class="ttdef"><b>Definition:</b> <a href="CalcMoney_8cs_source.html#l00010">CalcMoney.cs:10</a></div></div>
 <div class="ttc" id="aclassCard_html_a3e491597c0f9b44f0bfdb6fe6a86b0ef"><div class="ttname"><a href="classCard.html#a3e491597c0f9b44f0bfdb6fe6a86b0ef">Card.c_invest</a></div><div class="ttdeci">int c_invest</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01192">Card.cs:1193</a></div></div>
 <div class="ttc" id="aclassGuildMerchant_html_a308445667282e679a2a1aaa4fd54f761"><div class="ttname"><a href="classGuildMerchant.html#a308445667282e679a2a1aaa4fd54f761">GuildMerchant.InvestPrice</a></div><div class="ttdeci">int InvestPrice(int a)</div><div class="ttdef"><b>Definition:</b> <a href="GuildMerchant_8cs_source.html#l00007">GuildMerchant.cs:7</a></div></div>
@@ -441,10 +441,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CalcMoney_8cs_source.html#l00060">60</a> of file <a class="el" href="CalcMoney_8cs_source.html">CalcMoney.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69">Invest</a>((<span class="keywordtype">int</span>)Mathf.Max((<span class="keywordtype">long</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> * 50L, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> * <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> / 4) + 500);</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CalcMoney_8cs_source.html#l00067">67</a> of file <a class="el" href="CalcMoney_8cs_source.html">CalcMoney.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69">Invest</a>((<span class="keywordtype">int</span>)Mathf.Max((<span class="keywordtype">long</span>)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> * 50L, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> * <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> / 4) + 500);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
 <div class="ttc" id="aclassSpatial_html_ab74629ab14442169d029714917e0b5a1"><div class="ttname"><a href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">Spatial.development</a></div><div class="ttdeci">int development</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00237">Spatial.cs:238</a></div></div>
 </div><!-- fragment -->
@@ -526,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l02123">Card.CHA</a>, <a class="el" href="Card_8cs_source.html#l02359">Card.Evalue()</a>, and <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CalcMoney_8cs_source.html#l00040">BuySlave()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00020">Heal()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00030">Identify()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00015">Meal()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00025">Picklock()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00035">Revive()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00050">Whore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CalcMoney_8cs_source.html#l00040">BuySlave()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00020">Heal()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00030">Identify()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00015">Meal()</a>, <a class="el" href="CalcMoney_8cs_source.html#l00025">Picklock()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00035">Revive()</a>.</p>
 
 </div>
 </div>
@@ -642,8 +642,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a058a26be6587d453207351a09d6a6fda" name="a058a26be6587d453207351a09d6a6fda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a058a26be6587d453207351a09d6a6fda">&#9670;&#160;</a></span>Whore()</h2>
+<a id="a9ea51b5553a37974bfd91db5de6b247e" name="a9ea51b5553a37974bfd91db5de6b247e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea51b5553a37974bfd91db5de6b247e">&#9670;&#160;</a></span>Whore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -655,8 +655,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">static int CalcMoney.Whore </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classChara.html">Chara</a>&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramname"><em>seller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classChara.html">Chara</a>&#160;</td>
+          <td class="paramname"><em>buyer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -668,14 +678,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CalcMoney_8cs_source.html#l00050">50</a> of file <a class="el" href="CalcMoney_8cs_source.html">CalcMoney.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classCalcMoney.html#a18a242323d95d32aad0dd76ceebf78a6">Negotiate</a>(c.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * 4 + 20 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a02de4a34c829b5f827fdd1c0dadd36f0">tempFame</a> / 10);</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00012">EClass.cs:12</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a02de4a34c829b5f827fdd1c0dadd36f0"><div class="ttname"><a href="classPlayer.html#a02de4a34c829b5f827fdd1c0dadd36f0">Player.tempFame</a></div><div class="ttdeci">int tempFame</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00980">Player.cs:980</a></div></div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> num = Mathf.Max(seller.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * 6, 20) * ((!buyer.<a class="code hl_property" href="classChara.html#a264e5b71fca0288e8a390ef39efd6a44">IsWealthy</a>) ? 1 : 2);</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">int</span> num2 = Mathf.Max(buyer.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * 12, 20) * ((!buyer.<a class="code hl_property" href="classChara.html#a264e5b71fca0288e8a390ef39efd6a44">IsWealthy</a>) ? 1 : 2);</div>
+<div class="line"><span class="lineno">   54</span>        Debug.Log(<span class="stringliteral">&quot;seller:&quot;</span> + num + <span class="stringliteral">&quot; buyer:&quot;</span> + num2 + <span class="stringliteral">&quot; wealthy:&quot;</span> + buyer.<a class="code hl_property" href="classChara.html#a264e5b71fca0288e8a390ef39efd6a44">IsWealthy</a>);</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (num &gt; num2)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            num = num2;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassChara_html_a264e5b71fca0288e8a390ef39efd6a44"><div class="ttname"><a href="classChara.html#a264e5b71fca0288e8a390ef39efd6a44">Chara.IsWealthy</a></div><div class="ttdeci">bool IsWealthy</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00853">Chara.cs:854</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02123">Card.CHA</a>, <a class="el" href="CalcMoney_8cs_source.html#l00005">Negotiate()</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, and <a class="el" href="Player_8cs_source.html#l00980">Player.tempFame</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02123">Card.CHA</a>, and <a class="el" href="Chara_8cs_source.html#l00854">Chara.IsWealthy</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00118">AI_Fuck.Finish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00119">AI_Fuck.Finish()</a>.</p>
 
 </div>
 </div>
