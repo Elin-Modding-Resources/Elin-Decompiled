@@ -1509,15 +1509,14 @@ public class Chara : Card, IPathfindWalker
 		chara.stamina.value = stamina.value;
 		foreach (KeyValuePair<int, Element> item in elements.dict)
 		{
-			Element element = chara.elements.GetElement(item.Key);
-			if (element != null)
-			{
-				element.vBase = item.Value.ValueWithoutLink - element.vSource;
-			}
+			Element orCreateElement = chara.elements.GetOrCreateElement(item.Key);
+			orCreateElement.vBase = item.Value.ValueWithoutLink - orCreateElement.vSource;
 		}
 		chara.SetFaith(faith);
 		chara.bio = IO.DeepCopy(bio);
 		chara.LV = base.LV;
+		chara.c_daysWithGod = base.c_daysWithGod;
+		chara.RefreshFaithElement();
 		chara.hp = (int)Mathf.Clamp((float)chara.MaxHP * ((float)base.hp / (float)MaxHP) * 0.99f, 0f, chara.MaxHP);
 		chara.isCopy = true;
 		if (HaveFur())
@@ -3762,6 +3761,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return t;
 		}
+		t = TryPoisonPotion(t);
 		ThingContainer.DestData dest = things.GetDest(t, tryStack);
 		if (!dest.IsValid)
 		{
@@ -3791,6 +3791,17 @@ public class Chara : Card, IPathfindWalker
 			return dest.stack;
 		}
 		TryAbsorbRod(t);
+		if (msg)
+		{
+			PlaySound("pick_thing");
+			Say("pick_thing", this, t);
+		}
+		TryReservePickupTutorial(t);
+		return dest.container.AddThing(t, tryStack);
+	}
+
+	public Thing TryPoisonPotion(Thing t)
+	{
 		if (t.trait is TraitPotion && t.id != "1165" && !t.source.tag.Contains("neg") && EClass.rnd(2) == 0 && HasElement(1565))
 		{
 			string text = EClass.sources.things.rows.Where((SourceThing.Row a) => a._origin == "potion" && a.tag.Contains("neg")).ToList().RandomItemWeighted((SourceThing.Row a) => a.chance)
@@ -3800,13 +3811,7 @@ public class Chara : Card, IPathfindWalker
 			t.Destroy();
 			t = ThingGen.Create(text).SetNum(num);
 		}
-		if (msg)
-		{
-			PlaySound("pick_thing");
-			Say("pick_thing", this, t);
-		}
-		TryReservePickupTutorial(t);
-		return dest.container.AddThing(t, tryStack);
+		return t;
 	}
 
 	public void TryAbsorbRod(Thing t)

@@ -930,6 +930,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
+			EClass.pc.AddCondition<ConDisease>();
 			(EClass.pc.AddCondition<ConStrife>() as ConStrife).lv = 6;
 			for (int i = 0; i < 10; i++)
 			{

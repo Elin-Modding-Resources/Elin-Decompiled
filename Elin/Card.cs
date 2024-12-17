@@ -3930,6 +3930,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				if (attackSource == AttackSource.Melee && HasElement(1221))
 				{
 					int ele2 = ((Chara.MainElement == Element.Void) ? 924 : Chara.MainElement.id);
+					if (id == "hedgehog_ether")
+					{
+						ele2 = 922;
+					}
 					Say("reflect_thorne", this, origin);
 					origin.DamageHP(Mathf.Clamp(dmg / 20, 1, MaxHP / 20), ele2, Power, AttackSource.Condition);
 				}

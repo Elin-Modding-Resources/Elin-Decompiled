@@ -173,6 +173,13 @@ public class AI_UseCrafter : AIAct
 					}
 					return !crafter.owner.isDestroyed;
 				},
+				onProgressBegin = delegate
+				{
+					if (crafter is TraitRollingFortune)
+					{
+						crafter.owner.animeCounter = 0.01f;
+					}
+				},
 				onProgress = delegate
 				{
 					if (crafter.owner.ExistsOnMap && !owner.pos.Equals(crafter.owner.pos))

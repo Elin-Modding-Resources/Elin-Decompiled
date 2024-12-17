@@ -47,9 +47,16 @@ public class CalcMoney : EClass
 		return (c.LV + 5) * (c.LV + 5) * 5;
 	}
 
-	public static int Whore(Chara c)
+	public static int Whore(Chara seller, Chara buyer)
 	{
-		return Negotiate(c.CHA * 4 + 20 + EClass.player.tempFame / 10);
+		int num = Mathf.Max(seller.CHA * 6, 20) * ((!buyer.IsWealthy) ? 1 : 2);
+		int num2 = Mathf.Max(buyer.CHA * 12, 20) * ((!buyer.IsWealthy) ? 1 : 2);
+		Debug.Log("seller:" + num + " buyer:" + num2 + " wealthy:" + buyer.IsWealthy);
+		if (num > num2)
+		{
+			num = num2;
+		}
+		return num;
 	}
 
 	public static int InvestShop(Chara c, Chara tc)

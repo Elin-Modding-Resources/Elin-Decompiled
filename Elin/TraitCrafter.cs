@@ -14,7 +14,8 @@ public class TraitCrafter : Trait
 		Sculpture,
 		Talisman,
 		Scratch,
-		Incubator
+		Incubator,
+		Fortune
 	}
 
 	public enum AnimeType
@@ -276,8 +277,8 @@ public class TraitCrafter : Trait
 			break;
 		case MixType.Resource:
 		{
-			string[] array = thing3.Split('%');
-			t = CraftUtil.MixIngredients(ThingGen.Create(array[0], (array.Length > 1) ? EClass.sources.materials.alias[array[1]].id : thing.material.id), ai.ings, CraftUtil.MixType.General, 999, EClass.pc).Thing;
+			string[] array3 = thing3.Split('%');
+			t = CraftUtil.MixIngredients(ThingGen.Create(array3[0], (array3.Length > 1) ? EClass.sources.materials.alias[array3[1]].id : thing.material.id), ai.ings, CraftUtil.MixType.General, 999, EClass.pc).Thing;
 			break;
 		}
 		case MixType.Dye:
@@ -315,18 +316,18 @@ public class TraitCrafter : Trait
 		}
 		case MixType.Talisman:
 		{
-			int num2 = EClass.pc.Evalue(1418);
-			Thing thing4 = ai.ings[1];
-			SourceElement.Row source2 = (thing4.trait as TraitSpellbook).source;
-			int num3 = thing4.c_charges * source2.charge * (100 + num2 * 50) / 500 + 1;
-			int num4 = 100;
-			Thing thing5 = ThingGen.Create("talisman").SetNum(num3);
-			thing5.refVal = source2.id;
-			thing5.encLV = num4 * (100 + num2 * 10) / 100;
-			thing.ammoData = thing5;
-			thing.c_ammo = num3;
-			EClass.pc.Say("talisman", thing, thing5);
-			thing4.Destroy();
+			int num4 = EClass.pc.Evalue(1418);
+			Thing thing5 = ai.ings[1];
+			SourceElement.Row source2 = (thing5.trait as TraitSpellbook).source;
+			int num5 = thing5.c_charges * source2.charge * (100 + num4 * 50) / 500 + 1;
+			int num6 = 100;
+			Thing thing6 = ThingGen.Create("talisman").SetNum(num5);
+			thing6.refVal = source2.id;
+			thing6.encLV = num6 * (100 + num4 * 10) / 100;
+			thing.ammoData = thing6;
+			thing.c_ammo = num5;
+			EClass.pc.Say("talisman", thing, thing6);
+			thing5.Destroy();
 			break;
 		}
 		case MixType.Scratch:
@@ -338,6 +339,32 @@ public class TraitCrafter : Trait
 			Prize(4, "plamo_box", "nice", cat: false);
 			Prize(4, "food", "", cat: false);
 			Prize(1, "casino_coin", "", cat: false);
+			break;
+		}
+		case MixType.Fortune:
+		{
+			EClass.player.seedFortune++;
+			string[] array = new string[4] { "plastic", "water", "hide_dragon", "gold" };
+			int[] array2 = new int[4] { 1, 10, 50, 200 };
+			int num2 = 0;
+			Rand.SetSeed(EClass.game.seed + EClass.player.seedFortune);
+			for (int num3 = 3; num3 > 0; num3--)
+			{
+				if (EClass.rnd(array2[num3]) == 0)
+				{
+					num2 = num3;
+					break;
+				}
+			}
+			Rand.SetSeed();
+			if (num2 != 0)
+			{
+				owner.PlaySound((num2 == 3) ? "fortuneroll_winBig" : "fortuneroll_win");
+			}
+			Thing thing4 = ThingGen.Create("fortune_ball");
+			thing4.ChangeMaterial(array[num2]);
+			EClass._zone.AddCard(thing4, owner.pos);
+			owner.PlaySound("fortuneroll_ball");
 			break;
 		}
 		case MixType.Incubator:

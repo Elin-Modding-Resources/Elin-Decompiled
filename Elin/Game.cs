@@ -437,6 +437,12 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.IsBelow(0, 23, 59))
+		{
+			while (TryDestroy())
+			{
+			}
+		}
 		if (version.IsBelow(0, 23, 52))
 		{
 			player.flags.toggleHotbarHighlightActivated = true;
@@ -573,6 +579,27 @@ public class Game : EClass
 			{
 				quests.Add(idQuest);
 			}
+		}
+		static bool TryDestroy()
+		{
+			for (int i = 0; i < EClass.pc.party.members.Count; i++)
+			{
+				Chara chara3 = EClass.pc.party.members[i];
+				Debug.Log(chara3.id + "/" + chara3.uid + "/" + chara3._cints[1]);
+				for (int j = 0; j < EClass.pc.party.members.Count; j++)
+				{
+					Chara chara4 = EClass.pc.party.members[j];
+					if (i != j && chara3.uid == chara4.uid)
+					{
+						EClass.pc.party.uidMembers.RemoveAt(j);
+						EClass.pc.party.members.RemoveAt(j);
+						chara4.Destroy();
+						Debug.Log("Destroyed");
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 	}
 

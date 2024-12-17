@@ -198,7 +198,7 @@ public class DramaCustomSequence : EClass
 			{
 				Choice2("daBout", "_bout");
 			}
-			if (c.isDrunk)
+			if (c.isDrunk || EClass.debug.enable)
 			{
 				Choice2(flag2 ? "daBird" : "daTail", "_tail");
 			}
@@ -647,7 +647,7 @@ public class DramaCustomSequence : EClass
 		Step("_whore");
 		Method(delegate
 		{
-			int costWhore = CalcMoney.Whore(c);
+			int costWhore = CalcMoney.Whore(c, EClass.pc);
 			GameLang.refDrama1 = costWhore.ToString() ?? "";
 			TempTalkTopic(bird + "3", null);
 			Choice("yes2", delegate

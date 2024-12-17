@@ -738,6 +738,9 @@ public class Player : EClass
 	public int debt;
 
 	[JsonProperty]
+	public int seedFortune;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]
@@ -976,8 +979,6 @@ public class Player : EClass
 	public PlayingSong playingSong;
 
 	public List<Chara> listSummon = new List<Chara>();
-
-	public int tempFame;
 
 	public int autoCombatStartHP;
 

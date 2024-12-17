@@ -1437,7 +1437,7 @@ public class Thing : Card
 			{
 				animeCounter += Time.deltaTime;
 				int num3 = (int)(animeCounter / (0.001f * (float)source.anime[1]));
-				if (num3 > source.anime[2])
+				if (num3 > ((source.anime.Length > 2) ? source.anime[2] : source.anime[0]))
 				{
 					animeCounter = 0f;
 				}

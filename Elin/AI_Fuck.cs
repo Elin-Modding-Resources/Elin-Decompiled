@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class AI_Fuck : AIAct
 {
@@ -63,7 +64,7 @@ public class AI_Fuck : AIAct
 			cc.SetTempHand(1104, -1);
 		}
 		int destDist = ((Type == FuckType.fuck) ? 1 : 1);
-		maxProgress = 25;
+		maxProgress = ((!EClass.debug.enable) ? 25 : 0);
 		if (succubus)
 		{
 			cc.Talk("seduce");
@@ -152,7 +153,7 @@ public class AI_Fuck : AIAct
 					chara2.AddCondition<ConInsane>(100 + EClass.rnd(100));
 				}
 			}
-			int num = CalcMoney.Whore(chara2);
+			int num = CalcMoney.Whore(chara2, chara);
 			chara.Talk("tail_after");
 			bool flag2 = false;
 			if (succubus)
@@ -171,11 +172,16 @@ public class AI_Fuck : AIAct
 					chara = chara5;
 					chara2 = chara4;
 				}
-				if (!chara.IsPCParty && chara2 == EClass.pc && EClass.rnd(4) != 0)
+				Debug.Log("buyer:" + chara.Name + " seller:" + chara2.Name + " money:" + num);
+				if (!chara.IsPC)
 				{
-					num = num / 5 + 1;
-					chara.ModCurrency(num);
+					chara.ModCurrency(EClass.rndHalf(num));
 				}
+				if (!chara2.IsPC && chara.GetCurrency() < num && EClass.rnd(2) == 0)
+				{
+					num = chara.GetCurrency();
+				}
+				Debug.Log("money:" + num + " buyer:" + chara.GetCurrency());
 				if (chara.GetCurrency() >= num)
 				{
 					chara.Talk("tail_pay");
@@ -187,7 +193,7 @@ public class AI_Fuck : AIAct
 					chara2.Say("angry", chara2);
 					chara2.Talk("angry");
 					flag = (sell ? true : false);
-					if (EClass.rnd(20) == 0)
+					if (EClass.rnd(chara.IsPC ? 2 : 20) == 0)
 					{
 						flag2 = true;
 					}
@@ -203,7 +209,15 @@ public class AI_Fuck : AIAct
 				}
 				else
 				{
-					chara2.ModCurrency(num);
+					int num2 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction && chara2.memberType == FactionMemberType.Default) ? 1 : 10);
+					if (chara2.GetCurrency() - num2 > 0)
+					{
+						chara2.c_allowance += num;
+					}
+					else
+					{
+						chara2.ModCurrency(num);
+					}
 				}
 				chara = chara4;
 				chara2 = chara5;

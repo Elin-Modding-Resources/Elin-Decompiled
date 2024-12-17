@@ -7,4 +7,9 @@ public class TraitScratchMachine : TraitCrafter
 	public override AnimeID IdAnimeProgress => AnimeID.Shiver;
 
 	public override string idSoundProgress => "craft_scratch";
+
+	public override int GetDuration(AI_UseCrafter ai, int costSp)
+	{
+		return GetSource(ai).time;
+	}
 }

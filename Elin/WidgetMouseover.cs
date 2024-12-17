@@ -81,7 +81,7 @@ public class WidgetMouseover : Widget
 				text = text + Environment.NewLine + mouseTarget.target.InspectName;
 			}
 		}
-		else
+		else if (mouseTarget.target != null)
 		{
 			text = mouseTarget.target.InspectName;
 		}

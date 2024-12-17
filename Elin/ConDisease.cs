@@ -1,7 +1,11 @@
 using System.Linq;
+using Newtonsoft.Json;
 
 public class ConDisease : BadCondition
 {
+	[JsonProperty]
+	private ElementContainer ec = new ElementContainer();
+
 	public override bool PreventRegen
 	{
 		get
@@ -17,8 +21,7 @@ public class ConDisease : BadCondition
 	public override void SetOwner(Chara _owner, bool onDeserialize = false)
 	{
 		base.SetOwner(_owner);
-		elements = new ElementContainer();
-		elements.SetParent(owner);
+		ec.SetParent(owner);
 	}
 
 	public override void Tick()
@@ -27,10 +30,15 @@ public class ConDisease : BadCondition
 		{
 			Mod((EClass.rnd(2) == 0) ? 1 : (-1));
 		}
-		if (EClass.rnd(200) == 0)
+		if (EClass.rnd(EClass.debug.enable ? 1 : 200) == 0)
 		{
 			SourceElement.Row row = EClass.sources.elements.rows.Where((SourceElement.Row e) => e.tag.Contains("primary")).RandomItem();
-			elements.ModBase(row.id, -1);
+			ec.ModBase(row.id, -1);
 		}
+	}
+
+	public override void OnRemoved()
+	{
+		ec.SetParent();
 	}
 }

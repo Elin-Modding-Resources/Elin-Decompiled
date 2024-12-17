@@ -96,7 +96,6 @@ public class FoodEffect : EClass
 		bool flag3 = IsUndeadFlesh(food);
 		bool flag4 = c.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
-		Debug.Log(flag2 + "/" + flag4);
 		if (food.IsBlessed)
 		{
 			num2 *= 1.5f;

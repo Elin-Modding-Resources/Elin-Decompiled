@@ -838,10 +838,10 @@ public class ActEffect : EClass
 			{
 				return;
 			}
-			Thing thing2 = ThingGen.Create("mine");
-			thing2.c_idRefCard = "dog_mine";
+			Thing thing = ThingGen.Create("mine");
+			thing.c_idRefCard = "dog_mine";
 			Zone.ignoreSpawnAnime = true;
-			EClass._zone.AddCard(thing2, CC.pos).Install();
+			EClass._zone.AddCard(thing, CC.pos).Install();
 			break;
 		}
 		case EffectId.MagicMap:
@@ -894,9 +894,9 @@ public class ActEffect : EClass
 			TC.PlaySound("curse3");
 			TC.PlayEffect("curse");
 			TC.Say("forgetItems", TC);
-			int num4 = power / 50 + 1 + EClass.rnd(3);
+			int num = power / 50 + 1 + EClass.rnd(3);
 			List<Thing> source = TC.things.List((Thing t) => t.c_IDTState == 0);
-			for (int j = 0; j < num4; j++)
+			for (int i = 0; i < num; i++)
 			{
 				source.RandomItem().c_IDTState = 5;
 			}
@@ -985,7 +985,7 @@ public class ActEffect : EClass
 			}
 			cc.PlaySound("offering");
 			cc.PlayEffect("buff");
-			int num3 = (tc.isWeightChanged ? tc.c_weight : tc.Thing.source.weight);
+			int num4 = (tc.isWeightChanged ? tc.c_weight : tc.Thing.source.weight);
 			tc.isWeightChanged = true;
 			Element orCreateElement = tc.elements.GetOrCreateElement(64);
 			Element orCreateElement2 = tc.elements.GetOrCreateElement(65);
@@ -994,10 +994,10 @@ public class ActEffect : EClass
 			bool flag3 = tc.IsEquipmentOrRanged || tc.IsThrownWeapon || tc.IsAmmo;
 			if (flag)
 			{
-				num3 = (int)(0.01f * (float)num3 * (float)power * 0.75f + 500f);
-				if (num3 < 1)
+				num4 = (int)(0.01f * (float)num4 * (float)power * 0.75f + 500f);
+				if (num4 < 0 || num4 > 10000000)
 				{
-					num3 = 1;
+					num4 = 10000000;
 				}
 				if (flag3)
 				{
@@ -1016,7 +1016,7 @@ public class ActEffect : EClass
 			}
 			else
 			{
-				num3 = num3 * (100 - power / 10) / 100;
+				num4 = num4 * (100 - power / 10) / 100;
 				if (blessed)
 				{
 					power /= 4;
@@ -1036,7 +1036,7 @@ public class ActEffect : EClass
 				}
 				cc.Say("lighten", cc, tc);
 			}
-			tc.c_weight = num3;
+			tc.c_weight = num4;
 			tc.SetDirtyWeight();
 			if (tc.parent == null)
 			{
@@ -1060,13 +1060,13 @@ public class ActEffect : EClass
 			cc.PlayEffect("identify");
 			cc.Say("reconstruct", cc, tc);
 			EClass.game.cards.uidNext += EClass.rnd(30);
-			Thing thing = ThingGen.Create(tc.id, -1, tc.LV * power / 100);
-			thing.SetBlessedState(state);
+			Thing thing2 = ThingGen.Create(tc.id, -1, tc.LV * power / 100);
+			thing2.SetBlessedState(state);
 			tc.Destroy();
-			CC.Pick(thing, msg: false);
+			CC.Pick(thing2, msg: false);
 			if (!CC.IsPC)
 			{
-				CC.TryEquip(thing);
+				CC.TryEquip(thing2);
 			}
 			break;
 		}
@@ -1087,36 +1087,36 @@ public class ActEffect : EClass
 			string name = tc.Name;
 			if (row == null)
 			{
-				bool num = id == EffectId.ChangeMaterialGreater;
+				bool num2 = id == EffectId.ChangeMaterialGreater;
 				bool flag2 = id == EffectId.ChangeMaterialLesser;
 				string text2 = tc.Thing.source.tierGroup;
 				Dictionary<string, SourceMaterial.TierList> tierMap = SourceMaterial.tierMap;
-				int num2 = 1;
+				int num3 = 1;
 				if (flag)
 				{
-					num2 -= 2;
+					num3 -= 2;
 				}
 				if (blessed)
 				{
-					num2++;
+					num3++;
 				}
-				if (num)
+				if (num2)
 				{
-					num2++;
+					num3++;
 				}
 				if (flag2)
 				{
-					num2 -= 2;
+					num3 -= 2;
 				}
-				num2 = Mathf.Clamp(num2 + EClass.rnd(2), 0, 4);
+				num3 = Mathf.Clamp(num3 + EClass.rnd(2), 0, 4);
 				if (EClass.rnd(10) == 0)
 				{
 					text2 = ((text2 == "metal") ? "leather" : "metal");
 				}
 				SourceMaterial.TierList tierList = (text2.IsEmpty() ? tierMap.RandomItem() : tierMap[text2]);
-				for (int i = 0; i < 1000; i++)
+				for (int j = 0; j < 1000; j++)
 				{
-					row = tierList.tiers[num2].Select();
+					row = tierList.tiers[num3].Select();
 					if (row != tc.material)
 					{
 						break;

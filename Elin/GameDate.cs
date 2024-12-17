@@ -192,6 +192,10 @@ public class GameDate : Date
 				EClass.world.SendPackage(p);
 			}
 		}
+		if (base.day == 25 && base.month == 12)
+		{
+			EClass.world.SendPackage(ThingGen.Create("box_xmas"));
+		}
 	}
 
 	public void AdvanceMonth()

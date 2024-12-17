@@ -171,12 +171,12 @@ public class AttackProcess : EClass
 				weaponSkill = CC.elements.GetOrCreateElement(305);
 			}
 			attackType = ((!CC.race.meleeStyle.IsEmpty()) ? CC.race.meleeStyle.ToEnum<AttackType>() : ((EClass.rnd(2) == 0) ? AttackType.Kick : AttackType.Punch));
-			dBonus = CC.DMG + CC.encLV + (int)Mathf.Sqrt(Mathf.Max(0, CC.STR / 5 + weaponSkill.Value / 4));
+			dBonus = CC.DMG + CC.encLV + (int)Mathf.Sqrt(Mathf.Max(0, weaponSkill.GetParent(CC).Value / 5 + weaponSkill.Value / 4));
 			dNum = 2 + Mathf.Min(weaponSkill.Value / 10, 4);
 			dDim = 5 + (int)Mathf.Sqrt(Mathf.Max(0, weaponSkill.Value / 3));
-			dMulti = 0.6f + (float)(CC.STR / 2 + weaponSkill.Value / 2 + CC.Evalue(flag2 ? 304 : 132) / 2) / 50f;
+			dMulti = 0.6f + (float)(weaponSkill.GetParent(CC).Value / 2 + weaponSkill.Value / 2 + CC.Evalue(flag2 ? 304 : 132) / 2) / 50f;
 			dMulti += 0.05f * (float)CC.Evalue(1400);
-			toHitBase = EClass.curve(CC.DEX / 3 + CC.STR / 3 + weaponSkill.Value, 50, 25) + 50;
+			toHitBase = EClass.curve(CC.DEX / 3 + weaponSkill.GetParent(CC).Value / 3 + weaponSkill.Value, 50, 25) + 50;
 			toHitFix = CC.HIT;
 			if (attackStyle == AttackStyle.Shield)
 			{
@@ -339,11 +339,12 @@ public class AttackProcess : EClass
 		Point _TP = posRangedAnime.Copy();
 		Thing _weapon = weapon;
 		bool ignoreSound = ignoreAttackSound;
+		Zone _zone = CC.currentZone;
 		for (int i = 0; i < numFire; i++)
 		{
 			TweenUtil.Delay((float)i * data.delay, delegate
 			{
-				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone)
+				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone && _zone == _CC.currentZone)
 				{
 					if (_weapon.id == "gun_rail")
 					{

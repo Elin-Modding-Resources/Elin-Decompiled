@@ -202,7 +202,10 @@ public class TraitBaseSpellbook : TraitScroll
 						EClass.player.codex.AddWeakspot(cardRow.id);
 					}
 				}
-				ActEffect.Proc(EffectId.Sleep, c);
+				if (c.conSleep != null)
+				{
+					ActEffect.Proc(EffectId.Sleep, c);
+				}
 				break;
 			case Type.Dojin:
 			{
