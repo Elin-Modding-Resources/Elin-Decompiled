@@ -17,6 +17,8 @@ public class AI_Fuck : AIAct
 
 	public bool succubus;
 
+	public bool ntr;
+
 	public int maxProgress;
 
 	public int progress;
@@ -32,6 +34,10 @@ public class AI_Fuck : AIAct
 	public override int MaxProgress => maxProgress;
 
 	public override int CurrentProgress => progress;
+
+	public override bool CancelOnAggro => !ntr;
+
+	public override bool CancelWhenDamaged => !ntr;
 
 	public virtual bool CanTame()
 	{
@@ -64,7 +70,7 @@ public class AI_Fuck : AIAct
 			cc.SetTempHand(1104, -1);
 		}
 		int destDist = ((Type == FuckType.fuck) ? 1 : 1);
-		maxProgress = ((!EClass.debug.enable) ? 25 : 0);
+		maxProgress = 25;
 		if (succubus)
 		{
 			cc.Talk("seduce");
@@ -272,5 +278,15 @@ public class AI_Fuck : AIAct
 				}
 			}
 		}
+	}
+
+	public override void OnCancel()
+	{
+		Debug.Log("Cancel");
+	}
+
+	public override void OnSuccess()
+	{
+		Debug.Log("SUCCESS");
 	}
 }

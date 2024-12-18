@@ -37,6 +37,8 @@ public class GoalCombat : Goal
 
 	public override bool CancelWhenDamaged => false;
 
+	public override bool CancelOnAggro => false;
+
 	public Tactics tactics => owner.tactics;
 
 	public override bool CanManualCancel()
@@ -177,35 +179,52 @@ public class GoalCombat : Goal
 			int dist = owner.Dist(tc);
 			bool move = owner.host == null && (tactics.ChanceMove > EClass.rnd(100) || (owner.IsPC && tc.HasCondition<ConFear>() && dist >= EClass.pc.GetSightRadius() - 1));
 			bool haltSecondMove = false;
-			if (!owner.IsPC && !owner.isBlind && tc.source.HasTag(CTAG.suicide) && owner.IsNeutralOrAbove() && !owner.isSummon && !owner.IsMinion && !tc.HasCondition<ConWet>())
+			if (!owner.IsPC && owner.IsNeutralOrAbove() && !owner.isBlind && !owner.isSummon && !owner.IsMinion)
 			{
-				if (dist <= 3)
+				int num = -1;
+				if (tc.HasElement(1221))
 				{
-					if (EClass.rnd(15) == 0)
-					{
-						owner.Talk("run_suicide");
-					}
-					if (owner.host == null && owner.TryMoveFrom(tc.pos) != 0)
-					{
-						yield return Status.Running;
-						idleCount = 0;
-						continue;
-					}
+					num = 1;
 				}
-				else if (dist <= 5)
+				if (tc.source.HasTag(CTAG.suicide) && !tc.HasCondition<ConWet>())
 				{
-					haltSecondMove = true;
-					move = false;
+					num = 3;
+				}
+				if (num > 0)
+				{
+					if (dist <= num)
+					{
+						if (EClass.rnd(15) == 0)
+						{
+							owner.Talk("run_suicide");
+						}
+						if (owner.host == null && owner.TryMoveFrom(tc.pos) != 0)
+						{
+							yield return Status.Running;
+							idleCount = 0;
+							continue;
+						}
+						if (EClass.debug.logCombat)
+						{
+							Debug.Log("Failed to Run: " + owner.Name);
+						}
+					}
+					if (dist == num + 1)
+					{
+						haltSecondMove = true;
+						move = false;
+						idleCount = 0;
+					}
 				}
 			}
 			if (dontWander)
 			{
-				int num = owner.Dist(EClass.pc);
-				if (num > 3)
+				int num2 = owner.Dist(EClass.pc);
+				if (num2 > 3)
 				{
 					int x = tc.pos.x;
 					int z = tc.pos.z;
-					if (EClass.pc.pos.Distance(owner.pos.x + ((x > owner.pos.x) ? 1 : ((x < owner.pos.x) ? (-1) : 0)), owner.pos.z + ((z > owner.pos.z) ? 1 : ((z < owner.pos.z) ? (-1) : 0))) >= num)
+					if (EClass.pc.pos.Distance(owner.pos.x + ((x > owner.pos.x) ? 1 : ((x < owner.pos.x) ? (-1) : 0)), owner.pos.z + ((z > owner.pos.z) ? 1 : ((z < owner.pos.z) ? (-1) : 0))) >= num2)
 					{
 						move = false;
 						haltSecondMove = true;
@@ -320,6 +339,10 @@ public class GoalCombat : Goal
 
 	public bool TryMove(int dist)
 	{
+		if (EClass.debug.logCombat)
+		{
+			Debug.Log("TryMove: " + owner.Name + "/" + dist);
+		}
 		if (owner.host != null)
 		{
 			return false;
@@ -465,9 +488,9 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag7 = owner.HasCondition<StanceTaunt>();
-				bool flag8 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
+				bool flag6 = owner.HasCondition<StanceTaunt>();
+				bool flag7 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag6 && !flag7) ? 100 : ((!flag6 && flag7) ? 100 : 0));
 				break;
 			}
 			case "melee":
@@ -484,13 +507,20 @@ public class GoalCombat : Goal
 				{
 					num -= (owner.IsPC ? 50 : 10);
 				}
-				if (tc.HasElement(1221))
+				if (dist <= 1)
 				{
-					num -= 40;
-				}
-				if (tc.HasElement(1223))
-				{
-					num -= 40;
+					if (tc.HasElement(1221))
+					{
+						num -= 40;
+					}
+					if (tc.HasElement(1223))
+					{
+						num -= 40;
+					}
+					if (tc.id == "hedgehog_ether")
+					{
+						num = -999999;
+					}
 				}
 				break;
 			case "range":
@@ -535,13 +565,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = text == "dot";
-				if (flag6 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag8 = text == "dot";
+				if (flag8 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag6)
+				if (num > 0 && flag8)
 				{
 					num += 10;
 				}
@@ -795,11 +825,17 @@ public class GoalCombat : Goal
 					break;
 				}
 			}
-			if ((cost.cost <= 0 || EClass.rnd(100) <= tactics.AbilityChance) && ability2.act.CanPerform(owner, ability2.tg ?? tc) && owner.UseAbility(ability2.act, ability2.tg ?? tc, null, (ability2.act.HaveLongPressAction && ability2.pt) || ability2.aiPt))
+			if (cost.cost > 0 && EClass.rnd(100) > tactics.AbilityChance)
+			{
+				continue;
+			}
+			Chara chara = owner;
+			if (ability2.act.CanPerform(owner, ability2.tg ?? tc) && owner.UseAbility(ability2.act, ability2.tg ?? tc, null, (ability2.act.HaveLongPressAction && ability2.pt) || ability2.aiPt))
 			{
 				if (EClass.debug.logCombat)
 				{
-					Debug.Log(owner.Name + "/" + ability2.act.id + "/" + ability2.act.CanPerform(owner, ability2.tg ?? tc) + "/" + ability2.tg?.ToString() + "/" + tc);
+					Debug.Log("Used Ability: " + chara?.ToString() + "/" + ability2.act?.ToString() + "/" + ability2.tg?.ToString() + "/" + tc);
+					Debug.Log(ability2.act.CanPerform(chara, ability2.tg ?? tc));
 				}
 				return true;
 			}
@@ -822,17 +858,17 @@ public class GoalCombat : Goal
 			charas.Clear();
 			charaBuilt = true;
 			int sightRadius = owner.GetSightRadius();
-			foreach (Chara chara in EClass._map.charas)
+			foreach (Chara chara2 in EClass._map.charas)
 			{
-				if (chara != owner)
+				if (chara2 != owner)
 				{
-					int num5 = owner.Dist(chara);
-					if (num5 > sightRadius || !owner.CanSeeLos(chara, num5))
+					int num5 = owner.Dist(chara2);
+					if (num5 > sightRadius || !owner.CanSeeLos(chara2, num5))
 					{
 						continue;
 					}
 				}
-				charas.Add(chara);
+				charas.Add(chara2);
 			}
 		}
 		int ForeachChara(ItemAbility a, Func<Chara, int> func, bool isFriendlyAbility)
@@ -844,36 +880,36 @@ public class GoalCombat : Goal
 			}
 			BuildCharaList();
 			int num3 = 0;
-			foreach (Chara chara2 in charas)
+			foreach (Chara chara3 in charas)
 			{
-				int num4 = func(chara2);
+				int num4 = func(chara3);
 				if (num4 > 0)
 				{
 					if (isFriendlyAbility)
 					{
 						if (owner.IsPCParty)
 						{
-							if (!chara2.IsPCParty)
+							if (!chara3.IsPCParty)
 							{
 								continue;
 							}
 						}
-						else if (!owner.IsFriendOrAbove(chara2))
+						else if (!owner.IsFriendOrAbove(chara3))
 						{
 							continue;
 						}
-						if (chara2 != owner)
+						if (chara3 != owner)
 						{
 							num4 += tactics.P_Party;
 						}
 					}
-					else if (!owner.IsHostile(chara2))
+					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
 					if (num4 >= num3)
 					{
-						a.tg = chara2;
+						a.tg = chara3;
 						num3 = num4;
 					}
 				}
@@ -919,9 +955,9 @@ public class GoalCombat : Goal
 			}
 			BuildCharaList();
 			numEnemy = 0;
-			foreach (Chara chara3 in charas)
+			foreach (Chara chara4 in charas)
 			{
-				if (chara3.host == null && owner.IsHostile(chara3) && owner.Dist(chara3) < radius && owner.CanSeeLos(chara3))
+				if (chara4.host == null && owner.IsHostile(chara4) && owner.Dist(chara4) < radius && owner.CanSeeLos(chara4))
 				{
 					numEnemy++;
 				}
@@ -935,9 +971,9 @@ public class GoalCombat : Goal
 			}
 			BuildCharaList();
 			numNeutral = 0;
-			foreach (Chara chara4 in charas)
+			foreach (Chara chara5 in charas)
 			{
-				if (!chara4.IsPCFactionOrMinion && chara4.IsNeutralOrAbove() && owner.Dist(chara4) <= radius && owner.CanSeeLos(chara4))
+				if (!chara5.IsPCFactionOrMinion && chara5.IsNeutralOrAbove() && owner.Dist(chara5) <= radius && owner.CanSeeLos(chara5))
 				{
 					numNeutral++;
 				}

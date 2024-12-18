@@ -3619,7 +3619,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					enemy = null;
 				}
-				else if (!IsPC && ((!(ai is GoalCombat) && !(ai is AI_Trolley)) || !ai.IsRunning))
+				else if (!IsPC && (ai.CancelOnAggro || !ai.IsRunning))
 				{
 					SetAIAggro();
 				}
@@ -3804,7 +3804,7 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (t.trait is TraitPotion && t.id != "1165" && !t.source.tag.Contains("neg") && EClass.rnd(2) == 0 && HasElement(1565))
 		{
-			string text = EClass.sources.things.rows.Where((SourceThing.Row a) => a._origin == "potion" && a.tag.Contains("neg")).ToList().RandomItemWeighted((SourceThing.Row a) => a.chance)
+			string text = EClass.sources.things.rows.Where((SourceThing.Row a) => a._origin == "potion" && a.tag.Contains("neg") && a.chance > 100).ToList().RandomItemWeighted((SourceThing.Row a) => a.chance)
 				.id;
 			Say("poisonDrip", this);
 			int num = t.Num;
@@ -4455,7 +4455,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
-		if (!IsPC && !trait.CanJoinPartyResident)
+		if (!IsPC && (!trait.CanJoinPartyResident || !trait.CanJoinParty))
 		{
 			if (homeZone != null && EClass._zone != homeZone)
 			{

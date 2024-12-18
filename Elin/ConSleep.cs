@@ -137,6 +137,9 @@ public class ConSleep : BadCondition
 					member.AddCondition<ConSleep>(5 + EClass.rnd(10), force: true);
 				}
 			}
+			owner.RemoveCondition<ConBleed>();
+			owner.RemoveCondition<ConPoison>();
+			owner.RemoveCondition<ConMiasma>();
 			EClass.ui.AddLayer<LayerSleep>().Sleep(num2, pcBed, pcPillow);
 			return;
 		}

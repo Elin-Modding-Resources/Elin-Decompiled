@@ -77,6 +77,8 @@ public class AIAct : Act
 
 	public virtual bool IsIdle => false;
 
+	public virtual bool CancelOnAggro => true;
+
 	public virtual bool PushChara => true;
 
 	public virtual int MaxProgress => 20;

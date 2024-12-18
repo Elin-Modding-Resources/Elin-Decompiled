@@ -408,6 +408,10 @@ public class TraitCrafter : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
+		if (!EClass.debug.enable && this is TraitRollingFortune)
+		{
+			return;
+		}
 		if (IsFactory)
 		{
 			Thing _t = owner.Thing;

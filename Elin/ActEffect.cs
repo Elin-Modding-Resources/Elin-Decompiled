@@ -1274,7 +1274,7 @@ public class ActEffect : EClass
 		case EffectId.Draw:
 		{
 			Point point = CC.pos.GetRandomPoint(1)?.GetNearestPoint(allowBlock: false, allowChara: false);
-			if (point == null || !CC.CanSeeLos(point))
+			if (point == null || !CC.CanSeeLos(point) || (CC.IsPCFactionOrMinion && TC.IsPCFactionOrMinion && TC.isRestrained))
 			{
 				break;
 			}

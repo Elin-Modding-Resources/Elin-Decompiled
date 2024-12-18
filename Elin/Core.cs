@@ -395,6 +395,10 @@ public class Core : BaseCore
 
 	public void OnApplicationFocus(bool focus)
 	{
+		if (config == null)
+		{
+			return;
+		}
 		if (focus)
 		{
 			AudioListener.volume = 1f;

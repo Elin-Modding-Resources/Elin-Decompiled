@@ -395,7 +395,7 @@ public class Element : EClass
 
 	public int GetMaterialSourceValue(Thing t, int v)
 	{
-		if (id == 2)
+		if (id == 2 || v < 0)
 		{
 			return v;
 		}

@@ -44,6 +44,8 @@ public class AI_Trolley : AIAct
 
 	public override bool CancelWhenMoved => true;
 
+	public override bool CancelOnAggro => false;
+
 	public override bool ShowCursor => false;
 
 	public override bool CanManualCancel()

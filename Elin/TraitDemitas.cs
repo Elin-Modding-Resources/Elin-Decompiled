@@ -44,7 +44,7 @@ public class TraitDemitas : TraitUniqueChara
 
 	public override int NumCopyItem => 3 + Mathf.Min(base.owner.c_invest / 5, 7);
 
-	public override bool CanJoinParty => EClass.debug.enable;
+	public override bool CanJoinParty => false;
 
 	public override bool CanBeBanished => false;
 

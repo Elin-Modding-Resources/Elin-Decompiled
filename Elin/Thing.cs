@@ -64,7 +64,7 @@ public class Thing : Card
 		{
 			if (!base.IsUnique)
 			{
-				return (base.isWeightChanged ? base.c_weight : source.weight) * base.material.weight / 100;
+				return (int)((long)(base.isWeightChanged ? base.c_weight : source.weight) * (long)base.material.weight / 100);
 			}
 			if (!base.isWeightChanged)
 			{

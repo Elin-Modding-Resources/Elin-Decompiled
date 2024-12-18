@@ -2619,7 +2619,7 @@ public class BaseTileMap : EMono
 								thingPos.z += pref.z;
 							}
 						}
-						if (!tileType.UseMountHeight && m > 1)
+						if (!tileType.UseMountHeight && m > 10)
 						{
 							flag11 = true;
 						}

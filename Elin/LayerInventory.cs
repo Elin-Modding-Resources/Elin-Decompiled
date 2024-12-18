@@ -535,18 +535,19 @@ public class LayerInventory : ELayer
 		{
 			return CreateContainerPC(owner);
 		}
-		Card container = owner;
+		Card card = owner;
 		if (owner.trait is TraitShippingChest)
 		{
-			container = ELayer.game.cards.container_shipping;
+			card = ELayer.game.cards.container_shipping;
+			card.things.SetSize(owner.things.width, owner.things.height);
 			ELayer.player.uidLastShippedZone = ELayer._zone.uid;
 		}
 		if (owner.trait is TraitDeliveryChest)
 		{
-			container = ELayer.game.cards.container_deliver;
+			card = ELayer.game.cards.container_deliver;
 			Tutorial.Play("deliver_box");
 		}
-		return CreateContainer(owner, container);
+		return CreateContainer(owner, card);
 	}
 
 	public static LayerInventory CreateContainer(Card owner, Card container)
