@@ -614,6 +614,7 @@ var hierarchy =
           [ "Ability", "classAbility.html", [
             [ "ActBreathe", "classActBreathe.html", null ],
             [ "ActDreamBug", "classActDreamBug.html", null ],
+            [ "ActNTR", "classActNTR.html", null ],
             [ "ActQuickCraft", "classActQuickCraft.html", null ],
             [ "ActRide", "classActRide.html", [
               [ "ActParasite", "classActParasite.html", null ]
@@ -1362,6 +1363,7 @@ var hierarchy =
             [ "TraitKettle", "classTraitKettle.html", null ],
             [ "TraitMiko_Mifu", "classTraitMiko__Mifu.html", null ],
             [ "TraitMiko_Nefu", "classTraitMiko__Nefu.html", null ],
+            [ "TraitMoyer", "classTraitMoyer.html", null ],
             [ "TraitOlderYoungerSister", "classTraitOlderYoungerSister.html", null ],
             [ "TraitPuppy", "classTraitPuppy.html", null ],
             [ "TraitQuru", "classTraitQuru.html", null ],

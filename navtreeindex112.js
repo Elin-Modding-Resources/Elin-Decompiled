@@ -1,0 +1,23 @@
+var NAVTREEINDEX112 =
+{
+"structModManager_1_1SheetIndex.html":[1,0,742,0],
+"structModManager_1_1SheetIndex.html#a8d815610980e7c11b77ef47219f44f14":[1,0,742,0,1],
+"structModManager_1_1SheetIndex.html#af1f6856b1d2785553212efe92b672a6c":[1,0,742,0,0],
+"structThingContainer_1_1DestData.html":[1,0,1103,0],
+"structThingContainer_1_1DestData.html#a4702fc011c6ff355a2ba13e7395a5f9c":[1,0,1103,0,0],
+"structThingContainer_1_1DestData.html#a4f85512c6feee5d0b099a45b05c8f76f":[1,0,1103,0,2],
+"structThingContainer_1_1DestData.html#ac731ec918cccfca92cf1ad1edd3c1fae":[1,0,1103,0,1],
+"structWall.html":[1,0,1686],
+"structWall.html#a11c9b51929524d3b2c9ab454b12d0e09":[1,0,1686,1],
+"structWall.html#a1c0fe7808ce21e297f493431ac9bdb77":[1,0,1686,4],
+"structWall.html#a4c1cc881759c2018ef92d4dd5d77e2a3":[1,0,1686,0],
+"structWall.html#a74796500b179b084fe4083d0fa51179f":[1,0,1686,2],
+"structWall.html#a93fa4ecba6562c944603f63ca2591cc0":[1,0,1686,3],
+"structXY.html":[1,0,1737],
+"structXY.html#a671ff8952388c884c10782e46808c8b1":[1,0,1737,2],
+"structXY.html#a86ef9f95d24632f70207d603689a4b70":[1,0,1737,0],
+"structXY.html#a97f055b4700397c064faee99a9309572":[1,0,1737,1],
+"structZoneBlueprint_1_1MapGenSetting.html":[1,0,1807,0],
+"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,1807,0,1],
+"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,1807,0,0]
+};

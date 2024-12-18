@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.59 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.60 Nightly</span>
    </div>
   </td>
  </tr>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('Thing_8cs_source.html',''); initResiza
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!base.IsUnique)</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">return</span> (base.isWeightChanged ? base.c_weight : <a class="code hl_variable" href="classThing.html#a1356967911bd1872c00852223aaebcd7">source</a>.weight) * base.material.weight / 100;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((long)(base.isWeightChanged ? base.c_weight : <a class="code hl_variable" href="classThing.html#a1356967911bd1872c00852223aaebcd7">source</a>.weight) * (long)base.material.weight / 100);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">if</span> (!base.isWeightChanged)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            {</div>

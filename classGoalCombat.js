@@ -16,6 +16,7 @@ var classGoalCombat =
     [ "idleCount", "classGoalCombat.html#a5e3a1a85d6b197380da42273c5a8d4b5", null ],
     [ "moveFail", "classGoalCombat.html#ace487d76923e212d80f9d0b999d7e9cd", null ],
     [ "tc", "classGoalCombat.html#a29a7eb89e9fe0d78d7ee1fd5a9c4314b", null ],
+    [ "CancelOnAggro", "classGoalCombat.html#a7d130edf908caf0cf259a5d7f4692378", null ],
     [ "CancelWhenDamaged", "classGoalCombat.html#abe14ec2e5ea805d31be2dfc34701cd93", null ],
     [ "CursorIcon", "classGoalCombat.html#aaa48e0068704064909172bc590274f1d", null ],
     [ "tactics", "classGoalCombat.html#a4b0365304964156d50339dbb3c3fe5e8", null ]

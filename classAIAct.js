@@ -62,6 +62,7 @@ var classAIAct =
     [ "restartCount", "classAIAct.html#a04713bb4a1da09888bd244e32b08ced3", null ],
     [ "status", "classAIAct.html#a85c02a6c23799bbe6f6d2af9b4f41eee", null ],
     [ "actionIcon", "classAIAct.html#a9bde108aee690e443961cea8bdfbdd89", null ],
+    [ "CancelOnAggro", "classAIAct.html#abbd5eb492f77ac298e2fd2f0c4ce5649", null ],
     [ "CancelWhenDamaged", "classAIAct.html#abdfbda03d04c413a812b97d977a0cad2", null ],
     [ "CancelWhenMoved", "classAIAct.html#ae16b1d5e90f8da276b8315966c8861e5", null ],
     [ "Current", "classAIAct.html#a196e007d187cbc8e5fcead1d7fcb24d6", null ],
