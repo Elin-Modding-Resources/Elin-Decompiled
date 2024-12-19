@@ -234,22 +234,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FactionManager_8cs_source.html#l00028">28</a> of file <a class="el" href="FactionManager_8cs_source.html">FactionManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classFaction.html">Faction</a> faction = <a class="code hl_variable" href="classFactionManager.html#a5db140f14aa4e548dd81c6fe350f8fc1">dictAll</a>.TryGetValue(s.<a class="code hl_variable" href="classFaction.html#a636916d9da2f8b42ca4460a997e5c52e">id</a>);</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classFaction.html">Faction</a> faction = <a class="code hl_variable" href="classFactionManager.html#a5db140f14aa4e548dd81c6fe350f8fc1">dictAll</a>.TryGetValue(s.<a class="code hl_variable" href="classFaction.html#aab77e25a5474e62cb55204867e21e674">id</a>);</div>
 <div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (faction != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            Debug.LogError(<span class="stringliteral">&quot;exception: Faction id already exists:&quot;</span> + faction.<a class="code hl_variable" href="classFaction.html#a636916d9da2f8b42ca4460a997e5c52e">id</a>);</div>
+<div class="line"><span class="lineno">   33</span>            Debug.LogError(<span class="stringliteral">&quot;exception: Faction id already exists:&quot;</span> + faction.<a class="code hl_variable" href="classFaction.html#aab77e25a5474e62cb55204867e21e674">id</a>);</div>
 <div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        s.uid = s.<a class="code hl_variable" href="classFaction.html#a636916d9da2f8b42ca4460a997e5c52e">id</a>;</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="classFactionManager.html#a5db140f14aa4e548dd81c6fe350f8fc1">dictAll</a>.Add(s.<a class="code hl_variable" href="classFaction.html#a6ad8515c3a47c9f014546d73bc861475">uid</a>, s);</div>
+<div class="line"><span class="lineno">   35</span>        s.uid = s.<a class="code hl_variable" href="classFaction.html#aab77e25a5474e62cb55204867e21e674">id</a>;</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="classFactionManager.html#a5db140f14aa4e548dd81c6fe350f8fc1">dictAll</a>.Add(s.<a class="code hl_variable" href="classFaction.html#a40d1436a0a7e7e8cf88278428c67630b">uid</a>, s);</div>
 <div class="line"><span class="lineno">   37</span>    }</div>
 <div class="ttc" id="aclassFactionManager_html_a5db140f14aa4e548dd81c6fe350f8fc1"><div class="ttname"><a href="classFactionManager.html#a5db140f14aa4e548dd81c6fe350f8fc1">FactionManager.dictAll</a></div><div class="ttdeci">Dictionary&lt; string, Faction &gt; dictAll</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00008">FactionManager.cs:8</a></div></div>
-<div class="ttc" id="aclassFaction_html"><div class="ttname"><a href="classFaction.html">Faction</a></div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00006">Faction.2.cs:7</a></div></div>
-<div class="ttc" id="aclassFaction_html_a636916d9da2f8b42ca4460a997e5c52e"><div class="ttname"><a href="classFaction.html#a636916d9da2f8b42ca4460a997e5c52e">Faction.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00430">Faction.2.cs:430</a></div></div>
-<div class="ttc" id="aclassFaction_html_a6ad8515c3a47c9f014546d73bc861475"><div class="ttname"><a href="classFaction.html#a6ad8515c3a47c9f014546d73bc861475">Faction.uid</a></div><div class="ttdeci">string uid</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00433">Faction.2.cs:433</a></div></div>
+<div class="ttc" id="aclassFaction_html"><div class="ttname"><a href="classFaction.html">Faction</a></div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00121">FACTION.cs:122</a></div></div>
+<div class="ttc" id="aclassFaction_html_a40d1436a0a7e7e8cf88278428c67630b"><div class="ttname"><a href="classFaction.html#a40d1436a0a7e7e8cf88278428c67630b">Faction.uid</a></div><div class="ttdeci">string uid</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00130">FACTION.cs:130</a></div></div>
+<div class="ttc" id="aclassFaction_html_aab77e25a5474e62cb55204867e21e674"><div class="ttname"><a href="classFaction.html#aab77e25a5474e62cb55204867e21e674">Faction.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00127">FACTION.cs:127</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionManager_8cs_source.html#l00008">dictAll</a>, <a class="el" href="Faction_82_8cs_source.html#l00430">Faction.id</a>, and <a class="el" href="Faction_82_8cs_source.html#l00433">Faction.uid</a>.</p>
+<p class="reference">References <a class="el" href="FactionManager_8cs_source.html#l00008">dictAll</a>, <a class="el" href="FACTION_8cs_source.html#l00127">Faction.id</a>, and <a class="el" href="FACTION_8cs_source.html#l00130">Faction.uid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Faction_82_8cs_source.html#l00045">Faction.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FACTION_8cs_source.html#l00162">Faction.Init()</a>.</p>
 
 </div>
 </div>
@@ -281,7 +281,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
 <div class="line"><span class="lineno">   69</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classFaction.html">Faction</a> value <span class="keywordflow">in</span> <a class="code hl_variable" href="classFactionManager.html#a5db140f14aa4e548dd81c6fe350f8fc1">dictAll</a>.Values)</div>
 <div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (value.<a class="code hl_variable" href="classFaction.html#a636916d9da2f8b42ca4460a997e5c52e">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (value.<a class="code hl_variable" href="classFaction.html#aab77e25a5474e62cb55204867e21e674">id</a> == <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">   72</span>            {</div>
 <div class="line"><span class="lineno">   73</span>                <span class="keywordflow">return</span> value;</div>
 <div class="line"><span class="lineno">   74</span>            }</div>
@@ -289,7 +289,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionManager_8cs_source.html#l00008">dictAll</a>, and <a class="el" href="Faction_82_8cs_source.html#l00430">Faction.id</a>.</p>
+<p class="reference">References <a class="el" href="FactionManager_8cs_source.html#l00008">dictAll</a>, and <a class="el" href="FACTION_8cs_source.html#l00127">Faction.id</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00648">Game._Create()</a>, <a class="el" href="FactionManager_8cs_source.html#l00062">Find&lt; T &gt;()</a>, and <a class="el" href="FactionManager_8cs_source.html#l00039">OnCreateGame()</a>.</p>
 
@@ -385,12 +385,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassFactionManager_html_ab4063728a49c0ab69df5b7ef1a3c20ee"><div class="ttname"><a href="classFactionManager.html#ab4063728a49c0ab69df5b7ef1a3c20ee">FactionManager.Wilds</a></div><div class="ttdeci">new Faction Wilds</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00014">FactionManager.cs:14</a></div></div>
 <div class="ttc" id="aclassFactionRelation_html"><div class="ttname"><a href="classFactionRelation.html">FactionRelation</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00004">FactionRelation.cs:5</a></div></div>
 <div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84caf"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">FactionRelation.RelationType</a></div><div class="ttdeci">RelationType</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00006">FactionRelation.cs:7</a></div></div>
-<div class="ttc" id="aclassFaction_html_abe63e4d34bdc461787e3c3a2cf548c9d"><div class="ttname"><a href="classFaction.html#abe63e4d34bdc461787e3c3a2cf548c9d">Faction.Create</a></div><div class="ttdeci">static Faction Create(SourceFaction.Row r)</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00037">Faction.2.cs:37</a></div></div>
+<div class="ttc" id="aclassFaction_html_abe63e4d34bdc461787e3c3a2cf548c9d"><div class="ttname"><a href="classFaction.html#abe63e4d34bdc461787e3c3a2cf548c9d">Faction.Create</a></div><div class="ttdeci">static Faction Create(SourceFaction.Row r)</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00154">FACTION.cs:154</a></div></div>
 <div class="ttc" id="aclassSourceFaction_1_1Row_html"><div class="ttname"><a href="classSourceFaction_1_1Row.html">SourceFaction.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFaction_8cs_source.html#l00006">SourceFaction.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceFaction_html"><div class="ttname"><a href="classSourceFaction.html">SourceFaction</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFaction_8cs_source.html#l00003">SourceFaction.cs:4</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a0036753bc9e25f95a06c6472e85beaf7"><div class="ttname"><a href="classSourceManager.html#a0036753bc9e25f95a06c6472e85beaf7">SourceManager.factions</a></div><div class="ttdeci">SourceFaction factions</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00050">SourceManager.cs:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Faction_82_8cs_source.html#l00037">Faction.Create()</a>, <a class="el" href="SourceManager_8cs_source.html#l00050">SourceManager.factions</a>, <a class="el" href="FactionManager_8cs_source.html#l00017">Fighter</a>, <a class="el" href="FactionManager_8cs_source.html#l00067">Find()</a>, <a class="el" href="FactionManager_8cs_source.html#l00011">Home</a>, <a class="el" href="FactionManager_8cs_source.html#l00020">Mage</a>, <a class="el" href="FactionManager_8cs_source.html#l00026">Merchant</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="FactionManager_8cs_source.html#l00023">Thief</a>, and <a class="el" href="FactionManager_8cs_source.html#l00014">Wilds</a>.</p>
+<p class="reference">References <a class="el" href="FACTION_8cs_source.html#l00154">Faction.Create()</a>, <a class="el" href="SourceManager_8cs_source.html#l00050">SourceManager.factions</a>, <a class="el" href="FactionManager_8cs_source.html#l00017">Fighter</a>, <a class="el" href="FactionManager_8cs_source.html#l00067">Find()</a>, <a class="el" href="FactionManager_8cs_source.html#l00011">Home</a>, <a class="el" href="FactionManager_8cs_source.html#l00020">Mage</a>, <a class="el" href="FactionManager_8cs_source.html#l00026">Merchant</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="FactionManager_8cs_source.html#l00023">Thief</a>, and <a class="el" href="FactionManager_8cs_source.html#l00014">Wilds</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00648">Game._Create()</a>.</p>
 
@@ -426,9 +426,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   58</span>            value.<a class="code hl_function" href="classFaction.html#aea8a0b60f7064fa8f4e90de9817f1a5a">OnLoad</a>();</div>
 <div class="line"><span class="lineno">   59</span>        }</div>
 <div class="line"><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aclassFaction_html_aea8a0b60f7064fa8f4e90de9817f1a5a"><div class="ttname"><a href="classFaction.html#aea8a0b60f7064fa8f4e90de9817f1a5a">Faction.OnLoad</a></div><div class="ttdeci">void OnLoad()</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00053">Faction.2.cs:53</a></div></div>
+<div class="ttc" id="aclassFaction_html_aea8a0b60f7064fa8f4e90de9817f1a5a"><div class="ttname"><a href="classFaction.html#aea8a0b60f7064fa8f4e90de9817f1a5a">Faction.OnLoad</a></div><div class="ttdeci">void OnLoad()</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00170">FACTION.cs:170</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionManager_8cs_source.html#l00008">dictAll</a>, and <a class="el" href="Faction_82_8cs_source.html#l00053">Faction.OnLoad()</a>.</p>
+<p class="reference">References <a class="el" href="FactionManager_8cs_source.html#l00008">dictAll</a>, and <a class="el" href="FACTION_8cs_source.html#l00170">Faction.OnLoad()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00343">Game.OnLoad()</a>.</p>
 
@@ -449,7 +449,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FactionManager_8cs_source.html#l00008">8</a> of file <a class="el" href="FactionManager_8cs_source.html">FactionManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FactionManager_8cs_source.html#l00028">AssignUID()</a>, <a class="el" href="FactionManager_8cs_source.html#l00067">Find()</a>, <a class="el" href="Faction_82_8cs_source.html#l00353">Faction.GetFactionSalary()</a>, <a class="el" href="FactionManager_8cs_source.html#l00054">OnLoad()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, and <a class="el" href="ContentFaction_8cs_source.html#l00029">ContentFaction.RefreshFactions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FactionManager_8cs_source.html#l00028">AssignUID()</a>, <a class="el" href="FactionManager_8cs_source.html#l00067">Find()</a>, <a class="el" href="FACTION_8cs_source.html#l00466">Faction.GetFactionSalary()</a>, <a class="el" href="FactionManager_8cs_source.html#l00054">OnLoad()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, and <a class="el" href="ContentFaction_8cs_source.html#l00029">ContentFaction.RefreshFactions()</a>.</p>
 
 </div>
 </div>

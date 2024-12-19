@@ -53,7 +53,7 @@ var searchData=
   ['actions_50',['actions',['../classInspectGroup.html#aeb4372a9bef65deb8636140a332ccd09',1,'InspectGroup']]],
   ['actitem_51',['ActItem',['../classABILITY.html#a47d8388e5509eb1eea4cbe3651f44a86',1,'ABILITY']]],
   ['activating_52',['activating',['../classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8',1,'BaseWidgetNotice']]],
-  ['active_53',['active',['../classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0',1,'RigidUpdate.active()'],['../classThirstPersonInfo.html#a6c6d8d6c1f9a2425ac76540f6e62a239',1,'ThirstPersonInfo.active()'],['../classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771',1,'Policy.active()'],['../classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53',1,'CollectibleActor.active()']]],
+  ['active_53',['active',['../classRigidUpdate.html#a6d4ca41bb6f158de8824788da6b2dfd0',1,'RigidUpdate.active()'],['../classThirstPersonInfo.html#a6c6d8d6c1f9a2425ac76540f6e62a239',1,'ThirstPersonInfo.active()'],['../classPolicy.html#a618b8ba030f07541239efa8bd209bea9',1,'Policy.active()'],['../classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53',1,'CollectibleActor.active()']]],
   ['active_54',['Active',['../classColorProfile_1_1BlockColors.html#ad3ad2430d2a9d22f6c39d61d349218bd',1,'ColorProfile::BlockColors']]],
   ['activecondition_55',['activeCondition',['../classDramaChoice.html#a4a5208e5c480f24f9c1887b9b26f6c29',1,'DramaChoice']]],
   ['activecount_56',['activeCount',['../classBaseTileMap.html#a3fe43024f67811f0bf16e35535e6ff65',1,'BaseTileMap']]],

@@ -240,17 +240,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
 <div class="line"><span class="lineno">   51</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">id</a> == <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">   54</span>            {</div>
 <div class="line"><span class="lineno">   55</span>                item.active = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   56</span>            }</div>
 <div class="line"><span class="lineno">   57</span>        }</div>
 <div class="line"><span class="lineno">   58</span>    }</div>
 <div class="ttc" id="aclassPolicyManager_html_abb8c5915395e73cea689ac06feb94695"><div class="ttname"><a href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">PolicyManager.list</a></div><div class="ttdeci">List&lt; Policy &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="PolicyManager_8cs_source.html#l00007">PolicyManager.cs:7</a></div></div>
-<div class="ttc" id="aclassPolicy_html"><div class="ttname"><a href="classPolicy.html">Policy</a></div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00005">Policy.2.cs:6</a></div></div>
-<div class="ttc" id="aclassPolicy_html_ad95ba604bb3e05c49f345907a3941e7d"><div class="ttname"><a href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">Policy.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00115">Policy.2.cs:115</a></div></div>
+<div class="ttc" id="aclassPolicy_html"><div class="ttname"><a href="classPolicy.html">Policy</a></div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00113">POLICY.cs:114</a></div></div>
+<div class="ttc" id="aclassPolicy_html_a4b7ff60de211ec5f277fffad12eb0c2a"><div class="ttname"><a href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">Policy.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00116">POLICY.cs:116</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00115">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00116">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l01056">FactionBranch.OnClaimZone()</a>.</p>
 
@@ -306,9 +306,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   39</span>        {</div>
 <div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classWidgetPopText.html">WidgetPopText</a>.<a class="code hl_function" href="classWidgetPopText.html#a6e29c3e84b474c58fd5590d92975be0f">Say</a>(<span class="stringliteral">&quot;rewardPolicy&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[<span class="keywordtype">id</span>].GetName()));</div>
 <div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (policy.<a class="code hl_property" href="classPolicy.html#a45587ce377e44d99d432f1696e58f3ee">source</a>.tag.Contains(<span class="stringliteral">&quot;globalPolicy&quot;</span>))</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (policy.<a class="code hl_property" href="classPolicy.html#abfda47a340d0c44cea9a0798df71c3c4">source</a>.tag.Contains(<span class="stringliteral">&quot;globalPolicy&quot;</span>))</div>
 <div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">faction</a>.<a class="code hl_function" href="classFaction.html#a0feb646017df04891d945c9a0242d80b">AddGlobalPolicy</a>(policy.<a class="code hl_variable" href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">id</a>);</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">faction</a>.<a class="code hl_function" href="classFaction.html#a0feb646017df04891d945c9a0242d80b">AddGlobalPolicy</a>(policy.<a class="code hl_variable" href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">id</a>);</div>
 <div class="line"><span class="lineno">   45</span>        }</div>
 <div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> policy;</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
@@ -319,15 +319,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElementContainer_html_acc8918541c5d18ee2741762a612487b5"><div class="ttname"><a href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">ElementContainer.SetBase</a></div><div class="ttdeci">Element SetBase(string alias, int v, int potential=0)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00351">ElementContainer.cs:351</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00478">ElementContainer.cs:478</a></div></div>
 <div class="ttc" id="aclassFactionBranch_html_aed5261461375018a53ad7853e6b081c6"><div class="ttname"><a href="classFactionBranch.html#aed5261461375018a53ad7853e6b081c6">FactionBranch.elements</a></div><div class="ttdeci">ElementContainerZone elements</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00146">FactionBranch.cs:146</a></div></div>
-<div class="ttc" id="aclassFaction_html_a0feb646017df04891d945c9a0242d80b"><div class="ttname"><a href="classFaction.html#a0feb646017df04891d945c9a0242d80b">Faction.AddGlobalPolicy</a></div><div class="ttdeci">void AddGlobalPolicy(int id)</div><div class="ttdef"><b>Definition:</b> <a href="Faction_82_8cs_source.html#l00296">Faction.2.cs:296</a></div></div>
+<div class="ttc" id="aclassFaction_html_a0feb646017df04891d945c9a0242d80b"><div class="ttname"><a href="classFaction.html#a0feb646017df04891d945c9a0242d80b">Faction.AddGlobalPolicy</a></div><div class="ttdeci">void AddGlobalPolicy(int id)</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00412">FACTION.cs:412</a></div></div>
 <div class="ttc" id="aclassPolicyManager_html_a6e36235690fcb1f725c4713674c647cb"><div class="ttname"><a href="classPolicyManager.html#a6e36235690fcb1f725c4713674c647cb">PolicyManager.owner</a></div><div class="ttdeci">FactionBranch owner</div><div class="ttdef"><b>Definition:</b> <a href="PolicyManager_8cs_source.html#l00009">PolicyManager.cs:9</a></div></div>
-<div class="ttc" id="aclassPolicy_html_a45587ce377e44d99d432f1696e58f3ee"><div class="ttname"><a href="classPolicy.html#a45587ce377e44d99d432f1696e58f3ee">Policy.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00015">Policy.2.cs:16</a></div></div>
-<div class="ttc" id="aclassPolicy_html_af1e8cb21a656b8edd472d7a2a669c342"><div class="ttname"><a href="classPolicy.html#af1e8cb21a656b8edd472d7a2a669c342">Policy.SetOwner</a></div><div class="ttdeci">void SetOwner(FactionBranch _branch)</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00055">Policy.2.cs:55</a></div></div>
+<div class="ttc" id="aclassPolicy_html_abfda47a340d0c44cea9a0798df71c3c4"><div class="ttname"><a href="classPolicy.html#abfda47a340d0c44cea9a0798df71c3c4">Policy.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00128">POLICY.cs:128</a></div></div>
+<div class="ttc" id="aclassPolicy_html_af1e8cb21a656b8edd472d7a2a669c342"><div class="ttname"><a href="classPolicy.html#af1e8cb21a656b8edd472d7a2a669c342">Policy.SetOwner</a></div><div class="ttdeci">void SetOwner(FactionBranch _branch)</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00138">POLICY.cs:138</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
 <div class="ttc" id="aclassWidgetPopText_html"><div class="ttname"><a href="classWidgetPopText.html">WidgetPopText</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00003">WidgetPopText.cs:4</a></div></div>
 <div class="ttc" id="aclassWidgetPopText_html_a6e29c3e84b474c58fd5590d92975be0f"><div class="ttname"><a href="classWidgetPopText.html#a6e29c3e84b474c58fd5590d92975be0f">WidgetPopText.Say</a></div><div class="ttdeci">static void Say(string text, FontColor fontColor=FontColor.Default, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetPopText_8cs_source.html#l00032">WidgetPopText.cs:32</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Faction_82_8cs_source.html#l00296">Faction.AddGlobalPolicy()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00146">FactionBranch.elements</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Chara_8cs_source.html#l00412">Chara.faction</a>, <a class="el" href="ElementContainer_8cs_source.html#l00478">ElementContainer.GetElement()</a>, <a class="el" href="Policy_82_8cs_source.html#l00115">Policy.id</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00009">owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="WidgetPopText_8cs_source.html#l00032">WidgetPopText.Say()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00351">ElementContainer.SetBase()</a>, <a class="el" href="Policy_82_8cs_source.html#l00055">Policy.SetOwner()</a>, <a class="el" href="Policy_82_8cs_source.html#l00016">Policy.source</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="FACTION_8cs_source.html#l00412">Faction.AddGlobalPolicy()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00146">FactionBranch.elements</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Chara_8cs_source.html#l00412">Chara.faction</a>, <a class="el" href="ElementContainer_8cs_source.html#l00478">ElementContainer.GetElement()</a>, <a class="el" href="POLICY_8cs_source.html#l00116">Policy.id</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00009">owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="WidgetPopText_8cs_source.html#l00032">WidgetPopText.Say()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00351">ElementContainer.SetBase()</a>, <a class="el" href="POLICY_8cs_source.html#l00138">Policy.SetOwner()</a>, <a class="el" href="POLICY_8cs_source.html#l00128">Policy.source</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -395,17 +395,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  128</span>        <span class="keywordtype">int</span> num = 0;</div>
 <div class="line"><span class="lineno">  129</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">  130</span>        {</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771">active</a>)</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a618b8ba030f07541239efa8bd209bea9">active</a>)</div>
 <div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                num += item.<a class="code hl_property" href="classPolicy.html#a9eeb26e4eca2403e5130da087e65b53f">Cost</a>;</div>
+<div class="line"><span class="lineno">  133</span>                num += item.<a class="code hl_property" href="classPolicy.html#a0bf7def019b4a281a1f021527b13f3be">Cost</a>;</div>
 <div class="line"><span class="lineno">  134</span>            }</div>
 <div class="line"><span class="lineno">  135</span>        }</div>
 <div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> num;</div>
 <div class="line"><span class="lineno">  137</span>    }</div>
-<div class="ttc" id="aclassPolicy_html_a2cb75c890fc9932e6dbfc9745db79771"><div class="ttname"><a href="classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771">Policy.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00121">Policy.2.cs:121</a></div></div>
-<div class="ttc" id="aclassPolicy_html_a9eeb26e4eca2403e5130da087e65b53f"><div class="ttname"><a href="classPolicy.html#a9eeb26e4eca2403e5130da087e65b53f">Policy.Cost</a></div><div class="ttdeci">int Cost</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00047">Policy.2.cs:48</a></div></div>
+<div class="ttc" id="aclassPolicy_html_a0bf7def019b4a281a1f021527b13f3be"><div class="ttname"><a href="classPolicy.html#a0bf7def019b4a281a1f021527b13f3be">Policy.Cost</a></div><div class="ttdeci">int Cost</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00136">POLICY.cs:136</a></div></div>
+<div class="ttc" id="aclassPolicy_html_a618b8ba030f07541239efa8bd209bea9"><div class="ttname"><a href="classPolicy.html#a618b8ba030f07541239efa8bd209bea9">Policy.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00122">POLICY.cs:122</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00121">Policy.active</a>, <a class="el" href="Policy_82_8cs_source.html#l00048">Policy.Cost</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00122">Policy.active</a>, <a class="el" href="POLICY_8cs_source.html#l00136">Policy.Cost</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UICurrency_8cs_source.html#l00085">UICurrency.Build()</a>, <a class="el" href="ContentPolicy_8cs_source.html#l00120">ContentPolicy.RefreshPolicyIcons()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00071">LayerPolicy.RefreshPolicyIcons()</a>, and <a class="el" href="LayerPolicy_8cs_source.html#l00027">LayerPolicy.RefreshPolicyList()</a>.</p>
 
@@ -439,17 +439,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
 <div class="line"><span class="lineno">  116</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">  117</span>        {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">id</a> == <span class="keywordtype">id</span> &amp;&amp; item.<a class="code hl_variable" href="classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771">active</a>)</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">id</a> == <span class="keywordtype">id</span> &amp;&amp; item.<a class="code hl_variable" href="classPolicy.html#a618b8ba030f07541239efa8bd209bea9">active</a>)</div>
 <div class="line"><span class="lineno">  119</span>            {</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> item.<a class="code hl_property" href="classPolicy.html#a20ec15bd8858aa154ae5096cea29315a">Ele</a>.<a class="code hl_property" href="classElement.html#a6ee910da0d50599d65f25277f4573aae">Value</a>;</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> item.<a class="code hl_property" href="classPolicy.html#a1deb4d4d6b77940beeb756b4bc87ca5b">Ele</a>.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>;</div>
 <div class="line"><span class="lineno">  121</span>            }</div>
 <div class="line"><span class="lineno">  122</span>        }</div>
 <div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclassElement_html_a6ee910da0d50599d65f25277f4573aae"><div class="ttname"><a href="classElement.html#a6ee910da0d50599d65f25277f4573aae">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="Element_82_8cs_source.html#l00053">Element.2.cs:54</a></div></div>
-<div class="ttc" id="aclassPolicy_html_a20ec15bd8858aa154ae5096cea29315a"><div class="ttname"><a href="classPolicy.html#a20ec15bd8858aa154ae5096cea29315a">Policy.Ele</a></div><div class="ttdeci">Element Ele</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00007">Policy.2.cs:8</a></div></div>
+<div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00267">ELEMENT.cs:267</a></div></div>
+<div class="ttc" id="aclassPolicy_html_a1deb4d4d6b77940beeb756b4bc87ca5b"><div class="ttname"><a href="classPolicy.html#a1deb4d4d6b77940beeb756b4bc87ca5b">Policy.Ele</a></div><div class="ttdeci">Element Ele</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00126">POLICY.cs:126</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00121">Policy.active</a>, <a class="el" href="Policy_82_8cs_source.html#l00008">Policy.Ele</a>, <a class="el" href="Policy_82_8cs_source.html#l00115">Policy.id</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, and <a class="el" href="Element_82_8cs_source.html#l00054">Element.Value</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00122">Policy.active</a>, <a class="el" href="POLICY_8cs_source.html#l00126">Policy.Ele</a>, <a class="el" href="POLICY_8cs_source.html#l00116">Policy.id</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00267">Element.Value</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00159">FactionBranch.Evalue()</a>.</p>
 
@@ -483,7 +483,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
 <div class="line"><span class="lineno">   85</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">id</a> == <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">   88</span>            {</div>
 <div class="line"><span class="lineno">   89</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   90</span>            }</div>
@@ -491,7 +491,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   93</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00115">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00116">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitBookSkill_8cs_source.html#l00071">TraitBookSkill.OnRead()</a>, and <a class="el" href="FactionBranch_8cs_source.html#l01116">FactionBranch.ValidateUpgradePolicies()</a>.</p>
 
@@ -535,18 +535,18 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
 <div class="line"><span class="lineno">   73</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771">active</a> &amp;&amp; item.<a class="code hl_variable" href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">id</a> == <span class="keywordtype">id</span> &amp;&amp; (days == -1 || item.<a class="code hl_variable" href="classPolicy.html#a44a659d300069723685c6d525b4eff26">days</a> &gt;= days))</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a618b8ba030f07541239efa8bd209bea9">active</a> &amp;&amp; item.<a class="code hl_variable" href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">id</a> == <span class="keywordtype">id</span> &amp;&amp; (days == -1 || item.<a class="code hl_variable" href="classPolicy.html#af02d45eb04f5c6428bc46046ac65ab78">days</a> &gt;= days))</div>
 <div class="line"><span class="lineno">   76</span>            {</div>
 <div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   78</span>            }</div>
 <div class="line"><span class="lineno">   79</span>        }</div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   81</span>    }</div>
-<div class="ttc" id="aclassPolicy_html_a44a659d300069723685c6d525b4eff26"><div class="ttname"><a href="classPolicy.html#a44a659d300069723685c6d525b4eff26">Policy.days</a></div><div class="ttdeci">int days</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00118">Policy.2.cs:118</a></div></div>
+<div class="ttc" id="aclassPolicy_html_af02d45eb04f5c6428bc46046ac65ab78"><div class="ttname"><a href="classPolicy.html#af02d45eb04f5c6428bc46046ac65ab78">Policy.days</a></div><div class="ttdeci">int days</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00119">POLICY.cs:119</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00121">Policy.active</a>, <a class="el" href="Policy_82_8cs_source.html#l00118">Policy.days</a>, <a class="el" href="Policy_82_8cs_source.html#l00115">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00122">Policy.active</a>, <a class="el" href="POLICY_8cs_source.html#l00119">Policy.days</a>, <a class="el" href="POLICY_8cs_source.html#l00116">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00969">FactionBranch.CalcInnIncome()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01005">FactionBranch.CalcTourismIncome()</a>, <a class="el" href="FACTION_8cs_source.html#l00520">Faction.CountTaxFreeLand()</a>, <a class="el" href="Card_8cs_source.html#l06139">Card.GetPrice()</a>, <a class="el" href="HomeResourceWorth_8cs_source.html#l00033">HomeResourceWorth.GetPrice()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00923">FactionBranch.GetResidentTax()</a>, <a class="el" href="Zone_8cs_source.html#l03043">Zone.GrowPlants()</a>, <a class="el" href="FACTION_8cs_source.html#l00417">Faction.IsGlobalPolicyActive()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01240">FactionBranch.ModExp()</a>, <a class="el" href="Faction_82_8cs_source.html#l00234">Faction.OnAdvanceMonth()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="GameDate_8cs_source.html#l00427">GameDate.ShipRandomPackages()</a>, and <a class="el" href="AI__Shopping_8cs_source.html#l00010">AI_Shopping.TryShop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00969">FactionBranch.CalcInnIncome()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01005">FactionBranch.CalcTourismIncome()</a>, <a class="el" href="FACTION_8cs_source.html#l00520">Faction.CountTaxFreeLand()</a>, <a class="el" href="Card_8cs_source.html#l06139">Card.GetPrice()</a>, <a class="el" href="HomeResourceWorth_8cs_source.html#l00033">HomeResourceWorth.GetPrice()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00923">FactionBranch.GetResidentTax()</a>, <a class="el" href="Zone_8cs_source.html#l03043">Zone.GrowPlants()</a>, <a class="el" href="FACTION_8cs_source.html#l00417">Faction.IsGlobalPolicyActive()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01240">FactionBranch.ModExp()</a>, <a class="el" href="FACTION_8cs_source.html#l00351">Faction.OnAdvanceMonth()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="GameDate_8cs_source.html#l00427">GameDate.ShipRandomPackages()</a>, and <a class="el" href="AI__Shopping_8cs_source.html#l00010">AI_Shopping.TryShop()</a>.</p>
 
 </div>
 </div>
@@ -578,12 +578,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
 <div class="line"><span class="lineno">   97</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">   98</span>        {</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771">active</a>)</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a618b8ba030f07541239efa8bd209bea9">active</a>)</div>
 <div class="line"><span class="lineno">  100</span>            {</div>
 <div class="line"><span class="lineno">  101</span>                item.<a class="code hl_function" href="classPolicy.html#a70452c409002d4735bc0202269413836">OnAdvanceHour</a>(date);</div>
 <div class="line"><span class="lineno">  102</span>                <span class="keywordflow">if</span> (date.<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> == 0)</div>
 <div class="line"><span class="lineno">  103</span>                {</div>
-<div class="line"><span class="lineno">  104</span>                    item.<a class="code hl_variable" href="classPolicy.html#a44a659d300069723685c6d525b4eff26">days</a>++;</div>
+<div class="line"><span class="lineno">  104</span>                    item.<a class="code hl_variable" href="classPolicy.html#af02d45eb04f5c6428bc46046ac65ab78">days</a>++;</div>
 <div class="line"><span class="lineno">  105</span>                }</div>
 <div class="line"><span class="lineno">  106</span>            }</div>
 <div class="line"><span class="lineno">  107</span>            <span class="keywordflow">else</span></div>
@@ -593,9 +593,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  111</span>        }</div>
 <div class="line"><span class="lineno">  112</span>    }</div>
 <div class="ttc" id="aclassDate_html_a4fbc0c424e43ae001a65ba38f3f11dc7"><div class="ttname"><a href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">Date.hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00073">Date.cs:74</a></div></div>
-<div class="ttc" id="aclassPolicy_html_a70452c409002d4735bc0202269413836"><div class="ttname"><a href="classPolicy.html#a70452c409002d4735bc0202269413836">Policy.OnAdvanceHour</a></div><div class="ttdeci">void OnAdvanceHour(VirtualDate date)</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00060">Policy.2.cs:60</a></div></div>
+<div class="ttc" id="aclassPolicy_html_a70452c409002d4735bc0202269413836"><div class="ttname"><a href="classPolicy.html#a70452c409002d4735bc0202269413836">Policy.OnAdvanceHour</a></div><div class="ttdeci">void OnAdvanceHour(VirtualDate date)</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00143">POLICY.cs:143</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00121">Policy.active</a>, <a class="el" href="Policy_82_8cs_source.html#l00118">Policy.days</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, and <a class="el" href="Policy_82_8cs_source.html#l00060">Policy.OnAdvanceHour()</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00122">Policy.active</a>, <a class="el" href="POLICY_8cs_source.html#l00119">Policy.days</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, and <a class="el" href="POLICY_8cs_source.html#l00143">Policy.OnAdvanceHour()</a>.</p>
 
 </div>
 </div>
@@ -634,7 +634,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  148</span>        }</div>
 <div class="line"><span class="lineno">  149</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item3 <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">  150</span>        {</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">if</span> (item3.<a class="code hl_variable" href="classPolicy.html#a2cb75c890fc9932e6dbfc9745db79771">active</a>)</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">if</span> (item3.<a class="code hl_variable" href="classPolicy.html#a618b8ba030f07541239efa8bd209bea9">active</a>)</div>
 <div class="line"><span class="lineno">  152</span>            {</div>
 <div class="line"><span class="lineno">  153</span>                item3.<a class="code hl_function" href="classPolicy.html#a1d46c98afc4faf7b1dc8ee1b5747f1fe">RefreshEffect</a>();</div>
 <div class="line"><span class="lineno">  154</span>            }</div>
@@ -650,9 +650,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassHappiness_html_a806643309cab03a06c9a7e2902a232ca"><div class="ttname"><a href="classHappiness.html#a806643309cab03a06c9a7e2902a232ca">Happiness.OnRefreshEffect</a></div><div class="ttdeci">void OnRefreshEffect()</div><div class="ttdef"><b>Definition:</b> <a href="Happiness_8cs_source.html#l00032">Happiness.cs:32</a></div></div>
 <div class="ttc" id="aclassHomeResourceManager_html_a3242633e908c805e41c16dbecbc6c143"><div class="ttname"><a href="classHomeResourceManager.html#a3242633e908c805e41c16dbecbc6c143">HomeResourceManager.SetDirty</a></div><div class="ttdeci">void SetDirty()</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceManager_8cs_source.html#l00084">HomeResourceManager.cs:84</a></div></div>
 <div class="ttc" id="aclassHomeResourceManager_html_ab73d5050469d309262621f288e366c14"><div class="ttname"><a href="classHomeResourceManager.html#ab73d5050469d309262621f288e366c14">HomeResourceManager.list</a></div><div class="ttdeci">List&lt; BaseHomeResource &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="HomeResourceManager_8cs_source.html#l00052">HomeResourceManager.cs:52</a></div></div>
-<div class="ttc" id="aclassPolicy_html_a1d46c98afc4faf7b1dc8ee1b5747f1fe"><div class="ttname"><a href="classPolicy.html#a1d46c98afc4faf7b1dc8ee1b5747f1fe">Policy.RefreshEffect</a></div><div class="ttdeci">void RefreshEffect(UINote note=null)</div><div class="ttdef"><b>Definition:</b> <a href="Policy_82_8cs_source.html#l00065">Policy.2.cs:65</a></div></div>
+<div class="ttc" id="aclassPolicy_html_a1d46c98afc4faf7b1dc8ee1b5747f1fe"><div class="ttname"><a href="classPolicy.html#a1d46c98afc4faf7b1dc8ee1b5747f1fe">Policy.RefreshEffect</a></div><div class="ttdeci">void RefreshEffect(UINote note=null)</div><div class="ttdef"><b>Definition:</b> <a href="POLICY_8cs_source.html#l00148">POLICY.cs:148</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00121">Policy.active</a>, <a class="el" href="FactionBranch_8cs_source.html#l00073">FactionBranch.happiness</a>, <a class="el" href="HappinessManager_8cs_source.html#l00007">HappinessManager.list</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00052">HomeResourceManager.list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00062">BaseHomeResource.OnRefreshEffect()</a>, <a class="el" href="Happiness_8cs_source.html#l00032">Happiness.OnRefreshEffect()</a>, <a class="el" href="PolicyManager_8cs_source.html#l00009">owner</a>, <a class="el" href="Policy_82_8cs_source.html#l00065">Policy.RefreshEffect()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00064">FactionBranch.resources</a>, and <a class="el" href="HomeResourceManager_8cs_source.html#l00084">HomeResourceManager.SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00122">Policy.active</a>, <a class="el" href="FactionBranch_8cs_source.html#l00073">FactionBranch.happiness</a>, <a class="el" href="HappinessManager_8cs_source.html#l00007">HappinessManager.list</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00052">HomeResourceManager.list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00062">BaseHomeResource.OnRefreshEffect()</a>, <a class="el" href="Happiness_8cs_source.html#l00032">Happiness.OnRefreshEffect()</a>, <a class="el" href="PolicyManager_8cs_source.html#l00009">owner</a>, <a class="el" href="POLICY_8cs_source.html#l00148">Policy.RefreshEffect()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00064">FactionBranch.resources</a>, and <a class="el" href="HomeResourceManager_8cs_source.html#l00084">HomeResourceManager.SetDirty()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ContentPolicy_8cs_source.html#l00034">ContentPolicy.RefreshPolicyList()</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00011">SetOwner()</a>.</p>
 
@@ -696,16 +696,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
 <div class="line"><span class="lineno">   62</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPolicy.html">Policy</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classPolicyManager.html#abb8c5915395e73cea689ac06feb94695">list</a>)</div>
 <div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#ad95ba604bb3e05c49f345907a3941e7d">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (item.<a class="code hl_variable" href="classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a">id</a> == <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">   65</span>            {</div>
 <div class="line"><span class="lineno">   66</span>                item.active = active;</div>
 <div class="line"><span class="lineno">   67</span>            }</div>
 <div class="line"><span class="lineno">   68</span>        }</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Policy_82_8cs_source.html#l00115">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
+<p class="reference">References <a class="el" href="POLICY_8cs_source.html#l00116">Policy.id</a>, and <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Faction_82_8cs_source.html#l00317">Faction.SetGlobalPolicyActive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FACTION_8cs_source.html#l00430">Faction.SetGlobalPolicyActive()</a>.</p>
 
 </div>
 </div>
@@ -744,7 +744,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   19</span>    }</div>
 <div class="ttc" id="aclassPolicyManager_html_a2fbbe478978208503b47cccc563e7f02"><div class="ttname"><a href="classPolicyManager.html#a2fbbe478978208503b47cccc563e7f02">PolicyManager.RefreshEffects</a></div><div class="ttdeci">void RefreshEffects()</div><div class="ttdef"><b>Definition:</b> <a href="PolicyManager_8cs_source.html#l00139">PolicyManager.cs:139</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00009">owner</a>, <a class="el" href="PolicyManager_8cs_source.html#l00139">RefreshEffects()</a>, and <a class="el" href="Policy_82_8cs_source.html#l00055">Policy.SetOwner()</a>.</p>
+<p class="reference">References <a class="el" href="PolicyManager_8cs_source.html#l00007">list</a>, <a class="el" href="PolicyManager_8cs_source.html#l00009">owner</a>, <a class="el" href="PolicyManager_8cs_source.html#l00139">RefreshEffects()</a>, and <a class="el" href="POLICY_8cs_source.html#l00138">Policy.SetOwner()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00239">FactionBranch.SetOwner()</a>.</p>
 

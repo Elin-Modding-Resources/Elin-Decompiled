@@ -20,7 +20,7 @@ var searchData=
   ['findbasearea_17',['FindBaseArea',['../classRoomManager.html#adedff79e2aca4b1f380b3db2d47250ad',1,'RoomManager']]],
   ['findbed_18',['FindBed',['../classChara.html#a5dc42be5baa1e207703e7db972f95687',1,'Chara']]],
   ['findbest_3c_20t_20_3e_19',['FindBest&lt; T &gt;',['../classThingContainer.html#aaba93256eed8f54f1ae76a7b165903c0',1,'ThingContainer']]],
-  ['findbranch_20',['FindBranch',['../classFaction.html#a146046424a50eceeb1c1fc683dc7740c',1,'Faction.FindBranch(Chara c)'],['../classFaction.html#a146046424a50eceeb1c1fc683dc7740c',1,'Faction.FindBranch(Chara c)']]],
+  ['findbranch_20',['FindBranch',['../classFaction.html#a146046424a50eceeb1c1fc683dc7740c',1,'Faction']]],
   ['findchara_21',['FindChara',['../classMap.html#a12e741633a9867a460ce372592e59b3a',1,'Map.FindChara(string id)'],['../classMap.html#ad3b6a081e2cc93fc9018ad3354bdfaf5',1,'Map.FindChara(int uid)'],['../classPoint.html#a913a936560c0ab238a22fc0e9b30ebcf',1,'Point.FindChara()'],['../classZone.html#aaa7ff2c0ede4f0bc48a3fbd22bae1b88',1,'Zone.FindChara(string id)'],['../classZone.html#a765158383897b5cb414530520bec6cba',1,'Zone.FindChara(int uid)']]],
   ['finddeepestzone_22',['FindDeepestZone',['../classSpatial.html#ae2fbe67f202d66202ab74f8960b3efdf',1,'Spatial']]],
   ['findemptycontainer_3c_20t_20_3e_23',['FindEmptyContainer&lt; T &gt;',['../classProps.html#ad829f2d0059bec6bf49bc3de908c4b72',1,'Props.FindEmptyContainer&lt; T &gt;()'],['../classProps.html#a837cc46bcf227b936896bb2be5b3eaf6',1,'Props.FindEmptyContainer&lt; T &gt;(Thing target)']]],
