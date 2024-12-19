@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"classScene.html#ab98b367a03b266c4d180bb191c78ac29":[1,0,951,3],
 "classScene.html#abbeee828430cd8415c1f1341fd4a8342":[1,0,951,52],
 "classScene.html#abdb39513e54d4ea3497d5118538cdf5d":[1,0,951,13],
 "classScene.html#ac2673e5cdc0919a5507a19dddd506bc4":[1,0,951,25],
@@ -235,8 +236,8 @@ var NAVTREEINDEX79 =
 "classShrineData.html#aca60c4ca64bc1f4d9ce7f10628d2b32b":[1,0,968,3],
 "classSkill.html":[1,0,969],
 "classSkill.html#a84b8676c5da2657560789c08163b37b7":[1,0,969,6],
-"classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,969,1],
 "classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,969,0],
+"classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,969,1],
 "classSkill.html#a92a696cc730fdd93735fd1fbd73b3626":[1,0,969,7],
 "classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,969,2],
 "classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,969,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "classSkinRootRedirect.html#af410049eccf44123fa8bbbf22416b70a":[1,0,972,0],
 "classSlaverData.html":[1,0,973],
 "classSlaverData.html#a43ffae8134178b1a8548cfb91d1136e6":[1,0,973,1],
-"classSlaverData.html#a5e91250a1136c7d4642d5bb91d962d9a":[1,0,973,2],
-"classSlaverData.html#a69b3714ce515571ca353d616ec11e94b":[1,0,973,0]
+"classSlaverData.html#a5e91250a1136c7d4642d5bb91d962d9a":[1,0,973,2]
 };

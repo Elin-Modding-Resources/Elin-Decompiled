@@ -6,8 +6,6 @@ var classAI__Fuck =
     ] ],
     [ "CanTame", "classAI__Fuck.html#a3ea545b46befe7f014f28f4f45243c1d", null ],
     [ "Finish", "classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449", null ],
-    [ "OnCancel", "classAI__Fuck.html#a0600d1c9fb57f912d8cd4bd970e3b7fc", null ],
-    [ "OnSuccess", "classAI__Fuck.html#ab96619a318e99ec0d9f6ff082fe20791", null ],
     [ "Run", "classAI__Fuck.html#a2c79902b65680ac0345ea3d263905678", null ],
     [ "bitch", "classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81", null ],
     [ "maxProgress", "classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d", null ],

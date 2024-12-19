@@ -1412,6 +1412,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitFoodPrepared.cs", "TraitFoodPrepared_8cs.html", "TraitFoodPrepared_8cs" ],
     [ "TraitFoodSeasoning.cs", "TraitFoodSeasoning_8cs.html", "TraitFoodSeasoning_8cs" ],
     [ "TraitFoodTravel.cs", "TraitFoodTravel_8cs.html", "TraitFoodTravel_8cs" ],
+    [ "TraitFortuneBall.cs", "TraitFortuneBall_8cs.html", "TraitFortuneBall_8cs" ],
     [ "TraitFortuneCookie.cs", "TraitFortuneCookie_8cs.html", "TraitFortuneCookie_8cs" ],
     [ "TraitFridge.cs", "TraitFridge_8cs.html", "TraitFridge_8cs" ],
     [ "TraitGacha.cs", "TraitGacha_8cs.html", "TraitGacha_8cs" ],

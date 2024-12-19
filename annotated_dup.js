@@ -1361,6 +1361,7 @@ var annotated_dup =
     [ "TraitFoodPrepared", "classTraitFoodPrepared.html", "classTraitFoodPrepared" ],
     [ "TraitFoodSeasoning", "classTraitFoodSeasoning.html", "classTraitFoodSeasoning" ],
     [ "TraitFoodTravel", "classTraitFoodTravel.html", "classTraitFoodTravel" ],
+    [ "TraitFortuneBall", "classTraitFortuneBall.html", null ],
     [ "TraitFortuneCookie", "classTraitFortuneCookie.html", "classTraitFortuneCookie" ],
     [ "TraitFridge", "classTraitFridge.html", "classTraitFridge" ],
     [ "TraitGacha", "classTraitGacha.html", "classTraitGacha" ],

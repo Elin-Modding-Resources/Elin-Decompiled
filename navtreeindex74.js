@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classQuestTrackCraft.html#ab7ad04d609685b248b6312f34da5436d":[1,0,876,7],
 "classQuestTrackCraft.html#ac5cc012a86527adb6082f33b1a005998":[1,0,876,5],
 "classQuestTrackCraft.html#aefc388a00c6867fb36a8bf2953b9761f":[1,0,876,6],
 "classQuestTrackCraft.html#aff5c4b88bd2bf521f70d5ddd49491b6a":[1,0,876,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classRecipeUpdater.html#a7d543febda95b5729ab0d1053f54777d":[1,0,892,10],
 "classRecipeUpdater.html#aa2ea7ff8068ac977f162e7d01ba1c3c1":[1,0,892,3],
 "classRecipeUpdater.html#aaebcb9fc50d8c69a6861a1f884269c76":[1,0,892,14],
-"classRecipeUpdater.html#ade9645fe135cc6060607744242707bbc":[1,0,892,2],
-"classRecipe_1_1Ingredient.html":[1,0,886,0]
+"classRecipeUpdater.html#ade9645fe135cc6060607744242707bbc":[1,0,892,2]
 };

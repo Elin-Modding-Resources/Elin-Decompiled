@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.60 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 1</span>
    </div>
   </td>
  </tr>
@@ -710,31 +710,69 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   19</span>                <a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> metaData = <a class="code hl_class" href="classMap.html">Map</a>.<a class="code hl_function" href="classMap.html#aa426157c406b2301c8586007a65ecb43">GetMetaData</a>(item.FullName);</div>
 <div class="line"><span class="lineno">   20</span>                <span class="keywordflow">if</span> (metaData != <span class="keyword">null</span> &amp;&amp; metaData.<a class="code hl_function" href="classMapMetaData.html#a955cb7af4bf8c9c0b61162ae8a9b2244">IsValidVersion</a>())</div>
 <div class="line"><span class="lineno">   21</span>                {</div>
-<div class="line"><span class="lineno">   22</span>                    list.Add(metaData);</div>
-<div class="line"><span class="lineno">   23</span>                }</div>
-<div class="line"><span class="lineno">   24</span>            }</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">SayNothingHappans</a>();</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetList2(list, (<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a) =&gt; a.name, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
-<div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_function" href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">LoadMap</a>(a);</div>
-<div class="line"><span class="lineno">   34</span>        }, delegate</div>
+<div class="line"><span class="lineno">   22</span>                    metaData.path = item.FullName;</div>
+<div class="line"><span class="lineno">   23</span>                    list.Add(metaData);</div>
+<div class="line"><span class="lineno">   24</span>                }</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">SayNothingHappans</a>();</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_class" href="classLayerList.html">LayerList</a> layer = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">bool</span> skipDialog = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   34</span>        layer = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetList2(list, (<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a) =&gt; a.name, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
 <div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>        }).SetSize(500f)</div>
-<div class="line"><span class="lineno">   37</span>            .SetTitles(<span class="stringliteral">&quot;wMoongate&quot;</span>);</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
-<div class="ttc" id="aclassCard_html_aa89684d63a6b62711e7337d9ac11f059"><div class="ttname"><a href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">Card.SayNothingHappans</a></div><div class="ttdeci">void SayNothingHappans()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05725">Card.cs:5725</a></div></div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_function" href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">LoadMap</a>(a);</div>
+<div class="line"><span class="lineno">   37</span>        }, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            b.<a class="code hl_function" href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">AddSubButton</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">icons</a>.<a class="code hl_variable" href="classCoreRef_1_1Icons.html#a8144f2e6c2979f1b858603052c82aae1">trash</a>, delegate</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                if (skipDialog)</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    func();</div>
+<div class="line"><span class="lineno">   44</span>                }</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>                    Dialog.Choice(<span class="stringliteral">&quot;dialogDeleteGame&quot;</span>, delegate(Dialog d)</div>
+<div class="line"><span class="lineno">   48</span>                    {</div>
+<div class="line"><span class="lineno">   49</span>                        d.AddButton(<span class="stringliteral">&quot;yes&quot;</span>.lang(), delegate</div>
+<div class="line"><span class="lineno">   50</span>                        {</div>
+<div class="line"><span class="lineno">   51</span>                            func();</div>
+<div class="line"><span class="lineno">   52</span>                        });</div>
+<div class="line"><span class="lineno">   53</span>                        d.AddButton(<span class="stringliteral">&quot;yesAndSkip&quot;</span>.lang(), delegate</div>
+<div class="line"><span class="lineno">   54</span>                        {</div>
+<div class="line"><span class="lineno">   55</span>                            func();</div>
+<div class="line"><span class="lineno">   56</span>                            skipDialog = true;</div>
+<div class="line"><span class="lineno">   57</span>                        });</div>
+<div class="line"><span class="lineno">   58</span>                        d.AddButton(<span class="stringliteral">&quot;no&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">   59</span>                    });</div>
+<div class="line"><span class="lineno">   60</span>                }</div>
+<div class="line"><span class="lineno">   61</span>            });</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">void</span> func()</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                IO.DeleteFile(a.path);</div>
+<div class="line"><span class="lineno">   65</span>                list.Remove(a);</div>
+<div class="line"><span class="lineno">   66</span>                layer.<a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.List();</div>
+<div class="line"><span class="lineno">   67</span>                SE.Trash();</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>        }).SetSize(500f)</div>
+<div class="line"><span class="lineno">   70</span>            .SetTitles(<span class="stringliteral">&quot;wMoongate&quot;</span>) as <a class="code hl_class" href="classLayerList.html">LayerList</a>;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassCard_html_aa89684d63a6b62711e7337d9ac11f059"><div class="ttname"><a href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">Card.SayNothingHappans</a></div><div class="ttdeci">void SayNothingHappans()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05731">Card.cs:5731</a></div></div>
+<div class="ttc" id="aclassCoreRef_1_1Icons_html_a8144f2e6c2979f1b858603052c82aae1"><div class="ttname"><a href="classCoreRef_1_1Icons.html#a8144f2e6c2979f1b858603052c82aae1">CoreRef.Icons.trash</a></div><div class="ttdeci">Sprite trash</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00072">CoreRef.cs:72</a></div></div>
+<div class="ttc" id="aclassCoreRef_html_a52546c5617153fd210e634ad96c7eae7"><div class="ttname"><a href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">CoreRef.icons</a></div><div class="ttdeci">Icons icons</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00291">CoreRef.cs:291</a></div></div>
+<div class="ttc" id="aclassCore_html_a174ab976ba96dbcd610d5219de4a85cb"><div class="ttname"><a href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">Core.refs</a></div><div class="ttdeci">CoreRef refs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00045">Core.cs:45</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00006">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
 <div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_a386a4f0ea416c6463ff620facdbe2574"><div class="ttname"><a href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">ItemGeneral.AddSubButton</a></div><div class="ttdeci">UIButton AddSubButton(Sprite sprite, Action action, string lang=null, Action&lt; UITooltip &gt; onTooltip=null)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00076">ItemGeneral.cs:76</a></div></div>
 <div class="ttc" id="aclassLayerList_html"><div class="ttname"><a href="classLayerList.html">LayerList</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00005">LayerList.cs:6</a></div></div>
+<div class="ttc" id="aclassLayerList_html_a2f0d0d5e509a0580a826a00eed1b000e"><div class="ttname"><a href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">LayerList.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00016">LayerList.cs:16</a></div></div>
 <div class="ttc" id="aclassMapMetaData_html"><div class="ttname"><a href="classMapMetaData.html">MapMetaData</a></div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00003">MapMetaData.cs:4</a></div></div>
 <div class="ttc" id="aclassMapMetaData_html_a955cb7af4bf8c9c0b61162ae8a9b2244"><div class="ttname"><a href="classMapMetaData.html#a955cb7af4bf8c9c0b61162ae8a9b2244">MapMetaData.IsValidVersion</a></div><div class="ttdeci">bool IsValidVersion()</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00022">MapMetaData.cs:22</a></div></div>
 <div class="ttc" id="aclassMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00012">Map.cs:13</a></div></div>
@@ -743,7 +781,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassMsg_html_aecd2169a069c87c9eca10d3a04249b54"><div class="ttname"><a href="classMsg.html#aecd2169a069c87c9eca10d3a04249b54">Msg.SayNothingHappen</a></div><div class="ttdeci">static string SayNothingHappen()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00096">Msg.cs:96</a></div></div>
 <div class="ttc" id="aclassTraitMoongate_html_a074c20e5f9d54bcc590372dc69766388"><div class="ttname"><a href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">TraitMoongate.LoadMap</a></div><div class="ttdeci">void LoadMap(MapMetaData m)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00081">TraitMoongate.cs:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Map_8cs_source.html#l00718">Map.GetMetaData()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00022">MapMetaData.IsValidVersion()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00081">TraitMoongate.LoadMap()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00006">MapMetaData.name</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05725">Card.SayNothingHappans()</a>, <a class="el" href="Msg_8cs_source.html#l00096">Msg.SayNothingHappen()</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00076">ItemGeneral.AddSubButton()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Map_8cs_source.html#l00718">Map.GetMetaData()</a>, <a class="el" href="CoreRef_8cs_source.html#l00291">CoreRef.icons</a>, <a class="el" href="MapMetaData_8cs_source.html#l00022">MapMetaData.IsValidVersion()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00081">TraitMoongate.LoadMap()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00006">MapMetaData.name</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Core_8cs_source.html#l00045">Core.refs</a>, <a class="el" href="Card_8cs_source.html#l05731">Card.SayNothingHappans()</a>, <a class="el" href="Msg_8cs_source.html#l00096">Msg.SayNothingHappen()</a>, <a class="el" href="CoreRef_8cs_source.html#l00072">CoreRef.Icons.trash</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 </div>
 </div>

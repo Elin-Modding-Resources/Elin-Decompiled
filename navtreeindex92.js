@@ -1,5 +1,7 @@
 var NAVTREEINDEX92 =
 {
+"classTraitBarrelMaker.html#a93088d0ec064de45c08e9ff4b70a5afb":[1,0,1192,6],
+"classTraitBarrelMaker.html#a96bd2b9600019e91e01c6df811a3c7d8":[1,0,1192,8],
 "classTraitBarrelMaker.html#aaf3e781ea935e84684918019407f9aea":[1,0,1192,1],
 "classTraitBarrelMaker.html#ac10c63eff6b98a9742b2ab12029b4f3c":[1,0,1192,3],
 "classTraitBarrelMaker.html#ac7199acafedd971411fbdf12587fa1e4":[1,0,1192,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitChara.html#acd41bf1785e6918b297a392c75f7befc":[1,0,1235,39],
 "classTraitChara.html#ace611e0fe5d161c8864fb87ed0235174":[1,0,1235,10],
 "classTraitChara.html#ace7150ea9c28b1453f967f6d2fc2c809":[1,0,1235,23],
-"classTraitChara.html#ad48e72e12c1f6f8d871a505cda74abcd":[1,0,1235,26],
-"classTraitChara.html#ad5c4df45be3036b5b5b6279fdf9edc64":[1,0,1235,5],
-"classTraitChara.html#adcaa7c08fbc98fec1738215d19da08ea":[1,0,1235,15]
+"classTraitChara.html#ad48e72e12c1f6f8d871a505cda74abcd":[1,0,1235,26]
 };

@@ -1,14 +1,16 @@
 var NAVTREEINDEX18 =
 {
-"Zone__Vernis_8cs_source.html":[2,0,0,1878],
-"Zone__Void_8cs.html":[2,0,0,1880],
-"Zone__Void_8cs_source.html":[2,0,0,1880],
-"Zone__Wilds_8cs.html":[2,0,0,1881],
-"Zone__Wilds_8cs_source.html":[2,0,0,1881],
-"Zone__WindRest_8cs.html":[2,0,0,1882],
-"Zone__WindRest_8cs_source.html":[2,0,0,1882],
-"Zone__Yowyn_8cs.html":[2,0,0,1883],
-"Zone__Yowyn_8cs_source.html":[2,0,0,1883],
+"Zone__VernisMine_8cs_source.html":[2,0,0,1880],
+"Zone__Vernis_8cs.html":[2,0,0,1879],
+"Zone__Vernis_8cs_source.html":[2,0,0,1879],
+"Zone__Void_8cs.html":[2,0,0,1881],
+"Zone__Void_8cs_source.html":[2,0,0,1881],
+"Zone__Wilds_8cs.html":[2,0,0,1882],
+"Zone__Wilds_8cs_source.html":[2,0,0,1882],
+"Zone__WindRest_8cs.html":[2,0,0,1883],
+"Zone__WindRest_8cs_source.html":[2,0,0,1883],
+"Zone__Yowyn_8cs.html":[2,0,0,1884],
+"Zone__Yowyn_8cs_source.html":[2,0,0,1884],
 "annotated.html":[1,0],
 "classABILITY.html":[1,0,3],
 "classABILITY.html#a045614514412a5bfd4324d98c0de1184":[1,0,3,91],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classAIWork.html#a43d3863762df78c231e7ff70df9a5035":[1,0,95,9],
 "classAIWork.html#a45bc2734b93e902595d007bcd474e58d":[1,0,95,17],
 "classAIWork.html#a751ce6464ca3848fa1ba0219447d30db":[1,0,95,10],
-"classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186f":[1,0,95,0],
-"classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186fa1819001b72329e2ef5799fe504238035":[1,0,95,0,1],
-"classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186fa7a1920d61156abc05a60135aefe8bc67":[1,0,95,0,0]
+"classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186f":[1,0,95,0]
 };

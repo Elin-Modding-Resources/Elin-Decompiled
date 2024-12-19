@@ -1493,6 +1493,7 @@ var hierarchy =
           [ "TraitFoodTravel", "classTraitFoodTravel.html", null ],
           [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ]
         ] ],
+        [ "TraitFortuneBall", "classTraitFortuneBall.html", null ],
         [ "TraitGacha", "classTraitGacha.html", null ],
         [ "TraitGene", "classTraitGene.html", null ],
         [ "TraitGenerator", "classTraitGenerator.html", [

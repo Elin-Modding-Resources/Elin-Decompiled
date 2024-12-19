@@ -153,7 +153,7 @@ var searchData=
   ['beautify_150',['beautify',['../classCameraSupport.html#af7f7b084af2dde37232480b9f9f921fe',1,'CameraSupport']]],
   ['bed_151',['bed',['../classListPeopleBed.html#a480712d3223f934f305dcbcc9a940762',1,'ListPeopleBed.bed()'],['../classLayerSleep.html#a4456052e6a81b33249047d722ff4705f',1,'LayerSleep.bed()'],['../classGoalSleep.html#a40eb287df3688a02f603483536e741f7',1,'GoalSleep.bed()'],['../classCoreRef_1_1Icons.html#af73c420bed60717a9c9bcd82aa5e36c3',1,'CoreRef.Icons.bed()']]],
   ['bed_5fquality_152',['bed_quality',['../classPOLICY.html#a11e880a92494eaa0087a8d742f25910c',1,'POLICY']]],
-  ['bedtype_153',['bedType',['../classCINT.html#a9eea6137acfc7ab538aad4be1d3bd11e',1,'CINT']]],
+  ['bedtype_153',['bedType',['../classListPeopleBed.html#a21d3c5400b8d6d46305693bd71d240fb',1,'ListPeopleBed.bedType()'],['../classCINT.html#a9eea6137acfc7ab538aad4be1d3bd11e',1,'CINT.bedType()']]],
   ['bedtype_154',['BedType',['../BedType_8cs.html#a711ea7d92d8a6ea17c280e126f063d76',1,'BedType.cs']]],
   ['bedtype_2ecs_155',['BedType.cs',['../BedType_8cs.html',1,'']]],
   ['behaviour_156',['Behaviour',['../classAI__Idle.html#afa5679332200dd300cdd9974178e71cb',1,'AI_Idle']]],

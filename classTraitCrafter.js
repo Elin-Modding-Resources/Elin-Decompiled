@@ -28,6 +28,7 @@ var classTraitCrafter =
     [ "IsCraftIngredient", "classTraitCrafter.html#ada15d322729b7ddd06d3b5dcf8c92c9f", null ],
     [ "IsIngredient", "classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b", null ],
     [ "IsIngredient", "classTraitCrafter.html#a380ec8a3ad068bb5d7f154aa6b9d5e30", null ],
+    [ "OnEndAI", "classTraitCrafter.html#aade7caa6ae03de7628ab79027edbf23c", null ],
     [ "OnUse", "classTraitCrafter.html#a824ce8e058c0eb2b1de4bfbb0cb7f787", null ],
     [ "ShouldConsumeIng", "classTraitCrafter.html#a48ba3e8202cfb2e57ddad797be7baa1d", null ],
     [ "TrySetAct", "classTraitCrafter.html#ab6976f17a6b72bb6a3af88d0627373cd", null ],

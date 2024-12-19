@@ -1,5 +1,6 @@
 var NAVTREEINDEX85 =
 {
+"classSpatial.html#ac3b83a744d43d129fc395175ad240ce2":[1,0,1019,95],
 "classSpatial.html#ac4f7274ea2784cd381e21dd3a8483330":[1,0,1019,40],
 "classSpatial.html#ac91ab5f2967837520d40a341ce0ede79":[1,0,1019,99],
 "classSpatial.html#acd25cabedb5055f8fbc259c01ae2c4a6":[1,0,1019,88],
@@ -63,7 +64,7 @@ var NAVTREEINDEX85 =
 "classSpawnListThing.html#acd56126d7e0516394006424ae69cfad8":[1,0,1025,0],
 "classSpawnSetting.html":[1,0,1026],
 "classSpawnSetting.html#a0cb6358dbdc2a78e6b0d794701da5b0e":[1,0,1026,2],
-"classSpawnSetting.html#a16dffa2fa82e6d8e79407d4ef04f7d46":[1,0,1026,17],
+"classSpawnSetting.html#a16dffa2fa82e6d8e79407d4ef04f7d46":[1,0,1026,18],
 "classSpawnSetting.html#a173add994ee5df417322be39c52aea79":[1,0,1026,13],
 "classSpawnSetting.html#a17b584515ae72d8471f7b41a5c915588":[1,0,1026,8],
 "classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967":[1,0,1026,6],
@@ -72,15 +73,16 @@ var NAVTREEINDEX85 =
 "classSpawnSetting.html#a3b50dc0e398966092d680d41b941a611":[1,0,1026,4],
 "classSpawnSetting.html#a3e9c654b0589c2f09c6b493758268039":[1,0,1026,0],
 "classSpawnSetting.html#a489d36b071421240d07e5caaada0d581":[1,0,1026,12],
-"classSpawnSetting.html#a6e87093df32af6f2c144907ec43ae7f6":[1,0,1026,21],
+"classSpawnSetting.html#a50f4f42f5c7d25c92d8fe0ec46b91eb3":[1,0,1026,7],
+"classSpawnSetting.html#a6e87093df32af6f2c144907ec43ae7f6":[1,0,1026,22],
+"classSpawnSetting.html#a9824bebf004b4b2b038699808ff9a87d":[1,0,1026,15],
 "classSpawnSetting.html#aa580628089b00d52eb870b037d9cd3f3":[1,0,1026,14],
-"classSpawnSetting.html#ab05b7a4cf8640a000889af414880dab0":[1,0,1026,20],
-"classSpawnSetting.html#ac8f954151ce73f00eb8592f9d1d83237":[1,0,1026,7],
-"classSpawnSetting.html#ac9967d2ba69dd3c0b0ed2b6855b121eb":[1,0,1026,15],
+"classSpawnSetting.html#ab05b7a4cf8640a000889af414880dab0":[1,0,1026,21],
+"classSpawnSetting.html#ac9967d2ba69dd3c0b0ed2b6855b121eb":[1,0,1026,16],
 "classSpawnSetting.html#ad0b09c0647d774fc82deace7d2932f6b":[1,0,1026,1],
-"classSpawnSetting.html#add15efe890d670829aef42c70aee6bcf":[1,0,1026,18],
-"classSpawnSetting.html#ae27e7a07baf5bf5816fe611e0e5adfcd":[1,0,1026,16],
-"classSpawnSetting.html#af0eaf354ef07f73cfad029ec9884cd88":[1,0,1026,19],
+"classSpawnSetting.html#add15efe890d670829aef42c70aee6bcf":[1,0,1026,19],
+"classSpawnSetting.html#ae27e7a07baf5bf5816fe611e0e5adfcd":[1,0,1026,17],
+"classSpawnSetting.html#af0eaf354ef07f73cfad029ec9884cd88":[1,0,1026,20],
 "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e":[1,0,1026,10],
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1026,5],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1026,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX85 =
 "classStickyQuest.html#ab5cecc901445a8a77afb51998482d66b":[1,0,1045,0],
 "classStickyQuest.html#afa5d5eb61b3ea047f550e29d9ab52d4d":[1,0,1045,1],
 "classStickySiege.html":[1,0,1046],
-"classStickySiege.html#a16401e15a4bd22e2d47834652276eb60":[1,0,1046,0],
-"classStickyTutorial.html":[1,0,1047],
-"classStickyTutorial.html#a51dca3c7b911e89581fdb6ee0c665575":[1,0,1047,0]
+"classStickySiege.html#a16401e15a4bd22e2d47834652276eb60":[1,0,1046,0]
 };

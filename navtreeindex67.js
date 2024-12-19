@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"classMiniGame.html#aca40b6dd9568979ce74b2a3dc9e09ef6":[1,0,739,11],
 "classMiniGame.html#ad9e0f2e2146cd442bf0f40bae409caff":[1,0,739,9],
 "classMiniGame.html#adb368cf1c5fa3a40cc724a04386684b0":[1,0,739,17],
 "classMiniGame.html#afcda7ba48b8833a6b0ef1f1c512843f3":[1,0,739,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "classNumLogStability.html#a974a0a4de907cd62b67f31b8e8a73e82":[1,0,769,1],
 "classNumLogStability.html#a99033f0d04092088992c167a7d42db83":[1,0,769,0],
 "classNumLogWorth.html":[1,0,770],
-"classNumLogWorth.html#aaab5a17b53fe0722653e6a0503331cf5":[1,0,770,0],
-"classObjInfo.html":[1,0,771]
+"classNumLogWorth.html#aaab5a17b53fe0722653e6a0503331cf5":[1,0,770,0]
 };

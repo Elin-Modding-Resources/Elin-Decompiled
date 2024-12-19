@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"classRenderDataCrate.html#a85df1126d2bcfe96e97c11adb1591e4f":[1,0,922,0],
 "classRenderDataEffect.html":[1,0,923],
 "classRenderDataEffect.html#a5cd1397c3ef7bc5905138057d88f6863":[1,0,923,0],
 "classRenderDataEffect.html#aaa488ae9be6ceb84a71219885a959570":[1,0,923,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "classRigidUpdate.html":[1,0,946],
 "classRigidUpdate.html#a14c021d211af572ffdd0e15ded6ab4f4":[1,0,946,1],
 "classRigidUpdate.html#a28c0e5089380e6875b10fd28525585a2":[1,0,946,5],
-"classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee":[1,0,946,3],
-"classRigidUpdate.html#a5615ee82a393de6d04dfdd87df272d8a":[1,0,946,4]
+"classRigidUpdate.html#a309bbc39e91e85a490136775889b08ee":[1,0,946,3]
 };
