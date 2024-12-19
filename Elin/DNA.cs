@@ -244,6 +244,7 @@ public class DNA : EClass
 		int body = 0;
 		int action = 0;
 		int feat = 0;
+		int maxSlot = 1;
 		List<Element> listAttb = model.elements.ListBestAttributes();
 		List<Element> listSkill = model.elements.ListBestSkills();
 		List<Element> listFeat = model.elements.ListGeneFeats();
@@ -336,7 +337,14 @@ public class DNA : EClass
 			{
 				feat++;
 				Element e = listFeat.RandomItem();
-				AddVal(e.id, 1, allowStack: false, (int v) => e.source.cost[0] * 5);
+				if (maxSlot <= 1 || e.source.geneSlot <= 1)
+				{
+					if (e.source.geneSlot > maxSlot)
+					{
+						maxSlot = e.source.geneSlot;
+					}
+					AddVal(e.id, 1, allowStack: false, (int v) => e.source.cost[0] * 5);
+				}
 			}
 		}
 		void AddRandom(int n)

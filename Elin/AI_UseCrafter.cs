@@ -69,6 +69,7 @@ public class AI_UseCrafter : AIAct
 		{
 			layer.OnEndCraft();
 		}
+		crafter.OnEndAI(this);
 	}
 
 	public override IEnumerable<Status> Run()

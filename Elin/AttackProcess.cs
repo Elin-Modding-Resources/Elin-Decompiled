@@ -405,7 +405,7 @@ public class AttackProcess : EClass
 			num = Dice.RollMax(dNum, dDim, dBonus);
 			if (ammo != null && !flag)
 			{
-				num += Dice.RollMax(dNumAmmo, dDimAmmo);
+				num += Dice.RollMax(dNumAmmo, dDimAmmo, dBonusAmmo);
 			}
 			if (crit && (IsMartial || IsMartialWeapon))
 			{
@@ -458,6 +458,10 @@ public class AttackProcess : EClass
 		{
 			SourceRace.Row race = TC.Chara.race;
 			bane = CC.Evalue(468);
+			if (IsRanged)
+			{
+				bane += toolRange.owner.Evalue(468);
+			}
 			AddBane(race.IsUndead, 461);
 			AddBane(race.IsAnimal, 463);
 			AddBane(race.IsHuman, 464);
@@ -683,6 +687,10 @@ public class AttackProcess : EClass
 		{
 			if (valid)
 			{
+				if (IsRanged)
+				{
+					bane += toolRange.owner.Evalue(idEle);
+				}
 				bane += CC.Evalue(idEle);
 			}
 		}

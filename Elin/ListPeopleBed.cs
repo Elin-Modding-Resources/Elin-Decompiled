@@ -2,6 +2,8 @@ public class ListPeopleBed : ListPeople
 {
 	public TraitBed bed;
 
+	public BedType bedType => bed.owner.c_bedType;
+
 	public override void OnInstantiate(Chara c, ItemGeneral i)
 	{
 		UIButton uIButton = i.AddSubButton(EClass.core.refs.icons.bed, delegate
@@ -37,12 +39,23 @@ public class ListPeopleBed : ListPeople
 	{
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (!chara.IsPCFaction || chara.memberType != 0)
+			if (!chara.IsPCFaction || (chara.memberType != 0 && chara.memberType != FactionMemberType.Livestock))
 			{
 				continue;
 			}
 			if (main)
 			{
+				if (bedType == BedType.livestock)
+				{
+					if (chara.memberType != FactionMemberType.Livestock)
+					{
+						continue;
+					}
+				}
+				else if (chara.memberType == FactionMemberType.Livestock)
+				{
+					continue;
+				}
 				if (!bed.IsHolder(chara))
 				{
 					list.Add(chara);

@@ -2591,7 +2591,7 @@ public class BaseTileMap : EMono
 								liquidLv = 0;
 							}
 						}
-						else if (!flag11 && t.trait.IsChangeFloorHeight)
+						else if (!flag11 && t.trait.IsChangeFloorHeight && !t.ignoreStackHeight)
 						{
 							orgY += num25 + (float)t.altitude * altitudeFix.y;
 							orgZ += (float)t.altitude * altitudeFix.z;

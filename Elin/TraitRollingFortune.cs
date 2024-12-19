@@ -14,4 +14,16 @@ public class TraitRollingFortune : TraitCrafter
 	{
 		return GetSource(ai).time;
 	}
+
+	public override void OnEndAI(AI_UseCrafter ai)
+	{
+		if (EClass.pc.isDead || !owner.ExistsOnMap)
+		{
+			return;
+		}
+		foreach (Card item in owner.pos.ListThings<TraitFortuneBall>(onlyInstalled: false))
+		{
+			EClass.pc.Pick(item.Thing, msg: false);
+		}
+	}
 }

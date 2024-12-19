@@ -16,6 +16,8 @@ public class SpawnSetting
 
 	public string id;
 
+	public string idEle;
+
 	public Rarity rarity = Rarity.Random;
 
 	public SpawnHostility hostility = SpawnHostility.Enemy;
@@ -63,11 +65,12 @@ public class SpawnSetting
 		};
 	}
 
-	public static SpawnSetting Mob(string id, int fixedLv = -1)
+	public static SpawnSetting Mob(string id, string idEle = null, int fixedLv = -1)
 	{
 		return new SpawnSetting
 		{
 			id = id,
+			idEle = idEle,
 			fixedLv = fixedLv
 		};
 	}

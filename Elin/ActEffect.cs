@@ -998,6 +998,7 @@ public class ActEffect : EClass
 				if (num4 < 0 || num4 > 10000000)
 				{
 					num4 = 10000000;
+					flag3 = false;
 				}
 				if (flag3)
 				{

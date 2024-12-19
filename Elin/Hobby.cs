@@ -44,10 +44,13 @@ public class Hobby : EClass
 			{
 				return 0;
 			}
-			TraitBed traitBed = c.FindBed();
-			if (traitBed != null)
+			if (c.memberType != FactionMemberType.Livestock)
 			{
-				num += 30 + traitBed.owner.GetTotalQuality() + traitBed.owner.Evalue(750);
+				TraitBed traitBed = c.FindBed();
+				if (traitBed != null)
+				{
+					num += 30 + traitBed.owner.GetTotalQuality() + traitBed.owner.Evalue(750);
+				}
 			}
 		}
 		if (source.alias == "Breeding")

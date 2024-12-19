@@ -2511,7 +2511,8 @@ public class Zone : Spatial, ICardParent, IInspect
 		int dangerLv = DangerLv;
 		CardBlueprint cardBlueprint = new CardBlueprint
 		{
-			rarity = Rarity.Normal
+			rarity = Rarity.Normal,
+			idEle = setting.idEle
 		};
 		int num = ((setting.filterLv == -1) ? dangerLv : setting.filterLv);
 		if (ScaleMonsterLevel)

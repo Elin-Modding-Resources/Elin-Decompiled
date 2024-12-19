@@ -279,14 +279,4 @@ public class AI_Fuck : AIAct
 			}
 		}
 	}
-
-	public override void OnCancel()
-	{
-		Debug.Log("Cancel");
-	}
-
-	public override void OnSuccess()
-	{
-		Debug.Log("SUCCESS");
-	}
 }

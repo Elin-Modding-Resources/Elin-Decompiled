@@ -54,7 +54,7 @@ public class TraitBed : Trait
 					SE.Play("jingle_embark");
 				});
 			}
-			if (owner.c_bedType == BedType.resident || owner.c_bedType == BedType.residentOne)
+			if (owner.c_bedType == BedType.resident || owner.c_bedType == BedType.residentOne || owner.c_bedType == BedType.livestock)
 			{
 				uIContextMenu.AddButton("assignBed", delegate
 				{
@@ -65,17 +65,15 @@ public class TraitBed : Trait
 			{
 				BedType.resident,
 				BedType.residentOne,
+				BedType.livestock,
 				BedType.guest
 			})
 			{
-				if (t != BedType.livestock && t != BedType.patient)
+				uIContextMenu.AddButton(((t == owner.c_bedType) ? "context_checker".lang() : "") + ("bed_" + t).lang(), delegate
 				{
-					uIContextMenu.AddButton(((t == owner.c_bedType) ? "context_checker".lang() : "") + ("bed_" + t).lang(), delegate
-					{
-						SetBedType(t);
-						SE.ClickOk();
-					});
-				}
+					SetBedType(t);
+					SE.ClickOk();
+				});
 			}
 			CursorSystem.ignoreCount = 5;
 			uIContextMenu.Show();

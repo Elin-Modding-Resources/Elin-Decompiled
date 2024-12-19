@@ -790,17 +790,18 @@ public class ThingContainer : List<Thing>
 
 	public void _List(Func<Thing, bool> func, bool onlyAccessible = false)
 	{
+		if (onlyAccessible && !owner.trait.CanSearchContents)
+		{
+			return;
+		}
 		using Enumerator enumerator = GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			Thing current = enumerator.Current;
-			if (!onlyAccessible || !(current.parent is Card) || (current.parent as Card).c_lockLv <= 0)
+			current.things._List(func, onlyAccessible);
+			if (func(current))
 			{
-				current.things._List(func, onlyAccessible);
-				if (func(current))
-				{
-					tempList.Add(current);
-				}
+				tempList.Add(current);
 			}
 		}
 	}

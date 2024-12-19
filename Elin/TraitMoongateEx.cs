@@ -19,6 +19,7 @@ public class TraitMoongateEx : TraitMoongate
 				MapMetaData metaData = Map.GetMetaData(item.FullName);
 				if (metaData != null && metaData.IsValidVersion())
 				{
+					metaData.path = item.FullName;
 					list.Add(metaData);
 				}
 			}
@@ -28,13 +29,45 @@ public class TraitMoongateEx : TraitMoongate
 			EClass.pc.SayNothingHappans();
 			return false;
 		}
-		EClass.ui.AddLayer<LayerList>().SetList2(list, (MapMetaData a) => a.name, delegate(MapMetaData a, ItemGeneral b)
+		LayerList layer = null;
+		bool skipDialog = false;
+		layer = EClass.ui.AddLayer<LayerList>().SetList2(list, (MapMetaData a) => a.name, delegate(MapMetaData a, ItemGeneral b)
 		{
 			LoadMap(a);
-		}, delegate
+		}, delegate(MapMetaData a, ItemGeneral b)
 		{
+			b.AddSubButton(EClass.core.refs.icons.trash, delegate
+			{
+				if (skipDialog)
+				{
+					func();
+				}
+				else
+				{
+					Dialog.Choice("dialogDeleteGame", delegate(Dialog d)
+					{
+						d.AddButton("yes".lang(), delegate
+						{
+							func();
+						});
+						d.AddButton("yesAndSkip".lang(), delegate
+						{
+							func();
+							skipDialog = true;
+						});
+						d.AddButton("no".lang());
+					});
+				}
+			});
+			void func()
+			{
+				IO.DeleteFile(a.path);
+				list.Remove(a);
+				layer.list.List();
+				SE.Trash();
+			}
 		}).SetSize(500f)
-			.SetTitles("wMoongate");
+			.SetTitles("wMoongate") as LayerList;
 		return false;
 	}
 }

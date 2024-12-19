@@ -54,7 +54,7 @@ public class GoalSleep : Goal
 		{
 			owner.TryAssignBed();
 		}
-		if (bed != null && !bed.pos.HasChara)
+		if (bed != null)
 		{
 			owner.MoveImmediate(bed.pos);
 			return;

@@ -332,11 +332,14 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 		goCover = Util.Instantiate("UI/Widget/CoverWidget", base.transform).gameObject;
 		RectTransform rectTransform = goCover.transform.Rect();
 		RectTransform rectTransform2 = dragPanel.Rect();
-		rectTransform.pivot = rectTransform2.pivot;
-		rectTransform.anchorMin = rectTransform2.anchorMin;
-		rectTransform.anchorMax = rectTransform2.anchorMax;
-		rectTransform.anchoredPosition = rectTransform2.anchoredPosition;
-		rectTransform.sizeDelta = rectTransform2.sizeDelta;
+		if ((bool)rectTransform && (bool)rectTransform2)
+		{
+			rectTransform.pivot = rectTransform2.pivot;
+			rectTransform.anchorMin = rectTransform2.anchorMin;
+			rectTransform.anchorMax = rectTransform2.anchorMax;
+			rectTransform.anchoredPosition = rectTransform2.anchoredPosition;
+			rectTransform.sizeDelta = rectTransform2.sizeDelta;
+		}
 		UIDragPanel componentInChildren = goCover.GetComponentInChildren<UIDragPanel>();
 		componentInChildren.autoAnchor = config.userAnchor == RectPosition.Auto;
 		componentInChildren.onDrag = OnChangePosition;

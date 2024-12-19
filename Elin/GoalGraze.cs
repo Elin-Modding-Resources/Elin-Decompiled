@@ -14,7 +14,6 @@ public class GoalGraze : Goal
 
 	public Point GetPos()
 	{
-		owner.ClearBed();
 		Thing thing = null;
 		Rand.SetSeed(owner.uid);
 		if (thing == null)

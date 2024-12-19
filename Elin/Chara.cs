@@ -1338,7 +1338,7 @@ public class Chara : Card, IPathfindWalker
 				string[] array = mainElement[i].Split('/');
 				SourceElement.Row row = EClass.sources.elements.alias["ele" + array[0]];
 				int num2 = source.LV * row.eleP / 100 + base.LV - source.LV;
-				if (list.Count == 0 || num2 < genLv)
+				if (list.Count == 0 || num2 < genLv || array[0] == bp.idEle)
 				{
 					list.Add(new Tuple<string, int, int>(array[0], (array.Length > 1) ? int.Parse(array[1]) : 0, num2));
 				}
@@ -1346,7 +1346,7 @@ public class Chara : Card, IPathfindWalker
 			Tuple<string, int, int> tuple = list.RandomItemWeighted((Tuple<string, int, int> a) => 10000 / (100 + (genLv - a.Item3) * 25));
 			if (!bp.idEle.IsEmpty())
 			{
-				tuple = list.Where((Tuple<string, int, int> a) => a.Item1 == bp.idEle).First();
+				tuple = list.Where((Tuple<string, int, int> a) => a.Item1 == bp.idEle).FirstOrDefault() ?? tuple;
 			}
 			SetMainElement(tuple.Item1, (tuple.Item2 == 0) ? 10 : tuple.Item2, elemental: true);
 			if (list.Count >= 2)
@@ -5852,7 +5852,7 @@ public class Chara : Card, IPathfindWalker
 		else if (sourceCard._tiles.Length > 1)
 		{
 			int num2 = ((base.idSkin != 0 || source.staticSkin) ? base.idSkin : (base.uid % sourceCard._tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0)));
-			p.tile = sourceCard._tiles[(num2 < sourceCard._tiles.Length) ? num2 : 0] * ((!flipX) ? 1 : (-1));
+			p.tile = sourceCard._tiles[(num2 >= 0 && num2 < sourceCard._tiles.Length) ? num2 : 0] * ((!flipX) ? 1 : (-1));
 		}
 		else
 		{
@@ -6347,7 +6347,7 @@ public class Chara : Card, IPathfindWalker
 
 	public TraitBed TryAssignBed()
 	{
-		if (memberType == FactionMemberType.Livestock || (!IsPCFaction && !IsGuest()))
+		if (!IsPCFaction && !IsGuest())
 		{
 			return null;
 		}
@@ -8385,10 +8385,6 @@ public class Chara : Card, IPathfindWalker
 			}
 			CureCondition<ConWait>();
 			CureCondition<ConSleep>();
-			if (type == CureType.Death && hunger.value > 30)
-			{
-				hunger.value = 30;
-			}
 			if (type == CureType.Jure)
 			{
 				SAN.Mod(-999);

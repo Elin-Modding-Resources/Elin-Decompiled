@@ -461,4 +461,8 @@ public class TraitCrafter : Trait
 		LayerDragGrid.CreateCraft(this);
 		return false;
 	}
+
+	public virtual void OnEndAI(AI_UseCrafter ai)
+	{
+	}
 }

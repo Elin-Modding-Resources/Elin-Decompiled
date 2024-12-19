@@ -7,10 +7,12 @@ public class AI_Sleep : AI_TargetThing
 		if (!owner.CanSleep())
 		{
 			Msg.Say((EClass._zone.events.GetEvent<ZoneEventQuest>() != null) ? "badidea" : "notSleepy");
+			return;
 		}
-		else
+		if (base.target != null && !owner.pos.Equals(base.target.pos))
 		{
-			owner.Sleep(base.target);
+			owner._Move(base.target.pos);
 		}
+		owner.Sleep(base.target);
 	}
 }

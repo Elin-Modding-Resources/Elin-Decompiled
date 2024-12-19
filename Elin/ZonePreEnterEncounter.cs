@@ -24,7 +24,7 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 				Point randomPointInRadius = EClass.pc.pos.GetRandomPointInRadius(2, 5, requireLos: false, allowChara: false);
 				if (randomPointInRadius != null)
 				{
-					Chara chara = EClass._zone.SpawnMob(randomPointInRadius, SpawnSetting.Mob(mob.id));
+					Chara chara = EClass._zone.SpawnMob(randomPointInRadius, SpawnSetting.Mob(mob.id, (mob.MainElement == Element.Void) ? null : mob.MainElement.source.alias.Substring(3)));
 					Hostility hostility2 = (chara.c_originalHostility = Hostility.Enemy);
 					chara.hostility = hostility2;
 					chara.enemy = EClass.pc.party.members.RandomItem();

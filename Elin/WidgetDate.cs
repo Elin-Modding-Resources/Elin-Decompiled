@@ -117,6 +117,10 @@ public class WidgetDate : Widget
 		{
 			text += item2.TextWidgetDate;
 		}
+		if (EMono.debug.enable)
+		{
+			text += " *DEBUG MODE*";
+		}
 		textTime.text = text;
 		rectClock.SetActive(extra.clock);
 		if (extra.clock)

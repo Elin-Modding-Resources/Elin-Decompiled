@@ -308,7 +308,7 @@ public class Region : Zone
 				}
 			}
 		}
-		if (ListMobs().Count >= 6 || EClass.rnd(3) != 0)
+		if (ListMobs().Count >= (EClass.debug.enable ? 100 : 6) || EClass.rnd(3) != 0)
 		{
 			return;
 		}
