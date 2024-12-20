@@ -1521,6 +1521,7 @@ var hierarchy =
           [ "TraitDetector", "classTraitDetector.html", null ],
           [ "TraitEditPlaylist", "classTraitEditPlaylist.html", [
             [ "TraitJukeBox", "classTraitJukeBox.html", [
+              [ "TraitMusicBox", "classTraitMusicBox.html", null ],
               [ "TraitTV", "classTraitTV.html", null ]
             ] ]
           ] ],
@@ -1547,6 +1548,7 @@ var hierarchy =
             [ "TraitGiftJure", "classTraitGiftJure.html", null ],
             [ "TraitGiftNewYear", "classTraitGiftNewYear.html", null ]
           ] ],
+          [ "TraitGoodsCoin", "classTraitGoodsCoin.html", null ],
           [ "TraitHat", "classTraitHat.html", null ],
           [ "TraitItemProc", "classTraitItemProc.html", null ],
           [ "TraitMaterialHammer", "classTraitMaterialHammer.html", null ],

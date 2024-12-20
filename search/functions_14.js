@@ -101,7 +101,7 @@ var searchData=
   ['tryaddroom_98',['TryAddRoom',['../classMap.html#a9a3d7902605e992a765bfe47d0de8cc9',1,'Map']]],
   ['tryaddthing_99',['TryAddThing',['../classZone.html#aa78dfef8a6e0775da35f0f4b1fd2c1bc',1,'Zone']]],
   ['tryaddthinginsharedcontainer_100',['TryAddThingInSharedContainer',['../classZone.html#a9217c2b54b9bd4c9c866de30116dc6f7',1,'Zone']]],
-  ['tryaddthinginspot_3c_20t_20_3e_101',['TryAddThingInSpot&lt; T &gt;',['../classZone.html#a92faf312cc928179ef16ef2021b886b4',1,'Zone']]],
+  ['tryaddthinginspot_3c_20t_20_3e_101',['TryAddThingInSpot&lt; T &gt;',['../classZone.html#af2558287a17254f8759f9311f22a19aa',1,'Zone']]],
   ['tryaltmove_102',['TryAltMove',['../classGoalManualMove.html#a77571ceeadf2dc97db63cc79df111948',1,'GoalManualMove']]],
   ['tryassignareatask_103',['TryAssignAreaTask',['../classGoalTask.html#ac50abab5c540b60e25b744f39f67e116',1,'GoalTask.TryAssignAreaTask()'],['../classGoalTask.html#a1cfb24798cf9f4527bfc4f3ef82d47ac',1,'GoalTask.TryAssignAreaTask(Area a)']]],
   ['tryassignbed_104',['TryAssignBed',['../classChara.html#a50576031d73193ba1431c018038e90f5',1,'Chara']]],

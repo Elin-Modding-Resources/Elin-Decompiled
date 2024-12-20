@@ -1,5 +1,10 @@
 var NAVTREEINDEX63 =
 {
+"classLayerSleep.html#af0008dcab9b1b602b3b7f4f5d4b22cf6":[1,0,690,9],
+"classLayerSleep.html#afe4cefcdbdcb5077878ddfdbb2cbe3e3":[1,0,690,2],
+"classLayerStockpile.html":[1,0,691],
+"classLayerTactics.html":[1,0,692],
+"classLayerTactics.html#a04e7de861444b8fd47eef4742510f711":[1,0,692,0],
 "classLayerTech.html":[1,0,693],
 "classLayerTech.html#a42fd0cc46addc364b56faae0c3969b97":[1,0,693,0],
 "classLayerTech.html#a440176680a6eb5909b6a7aaa68bef5b6":[1,0,693,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX63 =
 "classListPeopleRevive.html#ac2c87362089d236ca39d86862fd77c51":[1,0,712,1],
 "classListPeopleRevive.html#adc707b3249dc262f2a42c490630c3d41":[1,0,712,2],
 "classListPeopleSelect.html":[1,0,713],
-"classListPeopleSelect.html#a1852cb164395ca8ac4530dc0540b3bd5":[1,0,713,0],
-"classListPeopleSelect.html#a35b0d559171b8712b89d24067c303f69":[1,0,713,3],
-"classListPeopleSelect.html#a86b40be1da421d958c7999f8a37476f3":[1,0,713,4],
-"classListPeopleSelect.html#a9dfa569d5f25e07a83e5134e460dcbe9":[1,0,713,2],
-"classListPeopleSelect.html#ad0966f7a48c0177024aa5f5e185b8c05":[1,0,713,6],
-"classListPeopleSelect.html#ae56ce14783f73a0e337386558db9e578":[1,0,713,5]
+"classListPeopleSelect.html#a1852cb164395ca8ac4530dc0540b3bd5":[1,0,713,0]
 };

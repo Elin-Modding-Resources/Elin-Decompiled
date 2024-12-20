@@ -1,5 +1,11 @@
 var NAVTREEINDEX89 =
 {
+"classTileTypeBlockShip.html#a7e39781594ca8bf401c5c3046bcfb791":[1,0,1116,1],
+"classTileTypeBoat.html":[1,0,1117],
+"classTileTypeBoat.html#a6b49d12d5388a94a1c275016b20bc9ce":[1,0,1117,0],
+"classTileTypeBoat.html#ae80ebad0268cf91ec769f3c41f6334bc":[1,0,1117,1],
+"classTileTypeBridge.html":[1,0,1118],
+"classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5":[1,0,1118,3],
 "classTileTypeBridge.html#a4eec48fa9724ee9869b274df30c06bae":[1,0,1118,1],
 "classTileTypeBridge.html#ac0654f8e915881990692038574b5a0e2":[1,0,1118,0],
 "classTileTypeBridge.html#af5ab25877c18302d3a41a3a31beac243":[1,0,1118,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX89 =
 "classTrait.html#a07686b64eaa110a7fa893adb571251ea":[1,0,1167,179],
 "classTrait.html#a079d08960c9c3455958636f326f2376c":[1,0,1167,218],
 "classTrait.html#a07db3b3661073b4b2f354f56325bf324":[1,0,1167,46],
-"classTrait.html#a0826d316a7a09a58676e12ce3b24030f":[1,0,1167,162],
-"classTrait.html#a084ca609ac3ba2761f415fb29cb0e967":[1,0,1167,113],
-"classTrait.html#a0a7e5cdb59af92f5951899d1e1cf4df9":[1,0,1167,163],
-"classTrait.html#a0c0503f13752c71b4848747d2d52afe8":[1,0,1167,149],
-"classTrait.html#a0caa424c507858d532c559d32dbde569":[1,0,1167,196],
-"classTrait.html#a0e831d89088a69a6b279f0b0c94c022d":[1,0,1167,19],
-"classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4":[1,0,1167,106]
+"classTrait.html#a0826d316a7a09a58676e12ce3b24030f":[1,0,1167,162]
 };

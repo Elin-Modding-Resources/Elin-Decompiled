@@ -6,6 +6,7 @@ var classTraitGeneMachine =
     [ "GetTarget", "classTraitGeneMachine.html#a18fc33579f038949f461da6fbc04ac49", null ],
     [ "IsTargetUsingGene", "classTraitGeneMachine.html#af1ad39a68f732324fc81ce0d0963e0b8", null ],
     [ "OnUse", "classTraitGeneMachine.html#acd96fe02bc2700863076918aa3dabcc7", null ],
+    [ "CanBeHeld", "classTraitGeneMachine.html#a30f763812a2f54de86e466b44e7bcc4e", null ],
     [ "CanBeOnlyBuiltInHome", "classTraitGeneMachine.html#a1f7be56595047759e8b9b61ae3f3a148", null ],
     [ "IsHomeItem", "classTraitGeneMachine.html#aaba778eaed8a003cd53f8b1f995546b9", null ]
 ];

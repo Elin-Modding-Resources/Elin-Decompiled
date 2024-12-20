@@ -1,5 +1,11 @@
 var NAVTREEINDEX86 =
 {
+"classTactics.html#ac4322cddc93ca830748a7cc0d56f52f0":[1,0,1050,12],
+"classTactics.html#aca6e83ceafab77d366a230842eca1fb8":[1,0,1050,2],
+"classTactics.html#ad00ead456657bbe3c0770824b9a40ba6":[1,0,1050,4],
+"classTactics.html#ae25eb5fe9f443fdafabd8aca89cce9ba":[1,0,1050,15],
+"classTactics.html#aead71eceb5b1a4d2c1754d2bcca763c6":[1,0,1050,3],
+"classTactics.html#af3743527373a7249a53c9a4156c5ab43":[1,0,1050,0],
 "classTactics.html#afb472ee81016a5aec1e24ec5961f9998":[1,0,1050,17],
 "classTalkText.html":[1,0,1051],
 "classTalkText.html#a5eb886a787c22328bf1782c1cd002440":[1,0,1051,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX86 =
 "classTaskList.html#a6afe212b870762312893c27f0c8e9c20":[1,0,1074,3],
 "classTaskList.html#a8541e9dd7f5163e557beb348680326ab":[1,0,1074,8],
 "classTaskList.html#a8a680779a9d0b1a9bae66200ca34ae3a":[1,0,1074,11],
-"classTaskList.html#aa901b29447a4d0655b4df88cdd9cf48c":[1,0,1074,9],
-"classTaskList.html#aab3215a2036567471019d0e459d4e2aa":[1,0,1074,2],
-"classTaskList.html#ac323afdd2b8f83b9dc29094cf560eb7a":[1,0,1074,10],
-"classTaskList.html#acfb0564ecfe7a09bfedb6090b78ddc37":[1,0,1074,15],
-"classTaskManager.html":[1,0,1075],
-"classTaskManager.html#a582373a8a8090fb23ace874a28c1d61c":[1,0,1075,1],
-"classTaskManager.html#aaa878b4dc22ec710917b414e66c741f0":[1,0,1075,2]
+"classTaskList.html#aa901b29447a4d0655b4df88cdd9cf48c":[1,0,1074,9]
 };

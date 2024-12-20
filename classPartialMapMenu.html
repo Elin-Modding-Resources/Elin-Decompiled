@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
    </div>
   </td>
  </tr>
@@ -624,9 +624,9 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  229</span>            {</div>
 <div class="line"><span class="lineno">  230</span>                <span class="keywordtype">int</span> num = 0;</div>
 <div class="line"><span class="lineno">  231</span>                FileInfo[] files = a.GetFiles(<span class="stringliteral">&quot;*.mp&quot;</span>, SearchOption.AllDirectories);</div>
-<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; files.Length; i++)</div>
+<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; files.Length; j++)</div>
 <div class="line"><span class="lineno">  233</span>                {</div>
-<div class="line"><span class="lineno">  234</span>                    _ = files[i];</div>
+<div class="line"><span class="lineno">  234</span>                    _ = files[j];</div>
 <div class="line"><span class="lineno">  235</span>                    num++;</div>
 <div class="line"><span class="lineno">  236</span>                }</div>
 <div class="line"><span class="lineno">  237</span>                b.mainText.text = ((a == <a class="code hl_property" href="classPartialMapMenu.html#a7da8aedd3df54a7726c51f4d1d97f3b7">dir</a> &amp;&amp; !isMain) ? <span class="stringliteral">&quot;(Root)&quot;</span> : (a.Name + <span class="stringliteral">&quot;(&quot;</span> + num + <span class="stringliteral">&quot;)&quot;</span>));</div>

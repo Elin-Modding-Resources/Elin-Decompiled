@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
    </div>
   </td>
  </tr>
@@ -409,8 +409,8 @@ $(document).ready(function(){initNavTree('LayerCraft_8cs_source.html',''); initR
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                {</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    <span class="keywordflow">if</span> (cat == <span class="stringliteral">&quot;all&quot;</span> || item.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.IsChildOf(cat))</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                        <a class="code hl_class" href="classRecipe.html">Recipe</a> o = <a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_function" href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Create</a>(item);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                        <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Add(o);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                        <a class="code hl_class" href="classRecipe.html">Recipe</a> o2 = <a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_function" href="classRecipe.html#a968929b2cbb9d440eeb72b7cd95a5c6c">Create</a>(item);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                        <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Add(o2);</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                    }</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    <a class="code hl_class" href="classSourceCategory_1_1Row.html">SourceCategory.Row</a> row = item.<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.GetSecondRoot();</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceCategory_1_1Row.html#a7a1e4cd547823f8b3227ba4a574d3c8a">id</a> != <span class="stringliteral">&quot;lightsource&quot;</span> &amp;&amp; row.<a class="code hl_function" href="classSourceCategory_1_1Row.html#a9fa12e7fd725535437b9fdc34f375ee0">IsChildOf</a>(<span class="stringliteral">&quot;armor&quot;</span>))</div>
@@ -454,7 +454,7 @@ $(document).ready(function(){initNavTree('LayerCraft_8cs_source.html',''); initR
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        {</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        }</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordtype">object</span> o2 = <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.rows[0].objects[0];</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordtype">object</span> o = <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.rows[0].objects[0];</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordflow">if</span> (first)</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        {</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            <span class="keywordtype">string</span> key = ((<a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a> == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;hand&quot;</span> : <a class="code hl_variable" href="classLayerCraft.html#ad26c25208ddb5134b0976d46d8d55ea4">factory</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>);</div>
@@ -465,13 +465,13 @@ $(document).ready(function(){initNavTree('LayerCraft_8cs_source.html',''); initR
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                {</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                    <span class="keywordflow">if</span> ((@<span class="keywordtype">object</span> as <a class="code hl_class" href="classRecipe.html">Recipe</a>).id == text)</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                    {</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                        o2 = @object;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                        o = @object;</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                    }</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                }</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            }</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Scroll(o2);</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(o2, invoke: <span class="keyword">true</span>))</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Scroll(o);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(o, invoke: <span class="keyword">true</span>))</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            {</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Scroll();</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(<a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.rows[0].objects[0]);</div>
@@ -479,7 +479,7 @@ $(document).ready(function(){initNavTree('LayerCraft_8cs_source.html',''); initR
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        }</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        {</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>            <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(o2, invoke: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>            <a class="code hl_variable" href="classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c">list</a>.Select(o, invoke: <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        }</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    }</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
@@ -714,8 +714,8 @@ $(document).ready(function(){initNavTree('LayerCraft_8cs_source.html',''); initR
 <div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00003">LayerInfo.cs:4</a></div></div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a103cf0b4ff61eb6e494d0ff29f013138"><div class="ttname"><a href="classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138">Player.lastRecipes</a></div><div class="ttdeci">Dictionary&lt; string, string &gt; lastRecipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00816">Player.cs:816</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00864">Player.cs:864</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a103cf0b4ff61eb6e494d0ff29f013138"><div class="ttname"><a href="classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138">Player.lastRecipes</a></div><div class="ttdeci">Dictionary&lt; string, string &gt; lastRecipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00819">Player.cs:819</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00867">Player.cs:867</a></div></div>
 <div class="ttc" id="aclassQuestManager_html_a102f38cc568090a09ed0169f18fd9dcf"><div class="ttname"><a href="classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf">QuestManager.list</a></div><div class="ttdeci">List&lt; Quest &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00011">QuestManager.cs:11</a></div></div>
 <div class="ttc" id="aclassQuestManager_html_abcb5c423e6aa6418f34a2b81bdfbd40e"><div class="ttname"><a href="classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e">QuestManager.Start</a></div><div class="ttdeci">Quest Start(string id, string idGlobalChara)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00041">QuestManager.cs:41</a></div></div>
 <div class="ttc" id="aclassQuestTrackCraft_html"><div class="ttname"><a href="classQuestTrackCraft.html">QuestTrackCraft</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestTrackCraft_8cs_source.html#l00005">QuestTrackCraft.cs:6</a></div></div>

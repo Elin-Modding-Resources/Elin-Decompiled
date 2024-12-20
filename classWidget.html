@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
    </div>
   </td>
  </tr>
@@ -1803,21 +1803,21 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  609</span>    {</div>
 <div class="line"><span class="lineno">  610</span>        UIContextMenu uIContextMenu = m.AddChild(<span class="stringliteral">&quot;anchor&quot;</span>);</div>
 <div class="line"><span class="lineno">  611</span>        SkinConfig cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
-<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">foreach</span> (RectPosition p <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
+<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">foreach</span> (RectPosition p2 <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
 <div class="line"><span class="lineno">  613</span>        {</div>
-<div class="line"><span class="lineno">  614</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
+<div class="line"><span class="lineno">  614</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
 <div class="line"><span class="lineno">  615</span>            {</div>
-<div class="line"><span class="lineno">  616</span>                SetAnchor(p);</div>
+<div class="line"><span class="lineno">  616</span>                SetAnchor(p2);</div>
 <div class="line"><span class="lineno">  617</span>                SE.ClickGeneral();</div>
 <div class="line"><span class="lineno">  618</span>                m.Hide();</div>
 <div class="line"><span class="lineno">  619</span>            });</div>
 <div class="line"><span class="lineno">  620</span>        }</div>
 <div class="line"><span class="lineno">  621</span>        uIContextMenu = m.AddChild(<span class="stringliteral">&quot;pivot&quot;</span>);</div>
-<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">foreach</span> (RectPosition p2 <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
+<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">foreach</span> (RectPosition p <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
 <div class="line"><span class="lineno">  623</span>        {</div>
-<div class="line"><span class="lineno">  624</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
+<div class="line"><span class="lineno">  624</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
 <div class="line"><span class="lineno">  625</span>            {</div>
-<div class="line"><span class="lineno">  626</span>                SetPivot(p2);</div>
+<div class="line"><span class="lineno">  626</span>                SetPivot(p);</div>
 <div class="line"><span class="lineno">  627</span>                SE.ClickGeneral();</div>
 <div class="line"><span class="lineno">  628</span>                m.Hide();</div>
 <div class="line"><span class="lineno">  629</span>            });</div>

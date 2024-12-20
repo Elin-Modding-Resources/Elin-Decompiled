@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
    </div>
   </td>
  </tr>
@@ -262,7 +262,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   66</span>            onList = delegate</div>
 <div class="line"><span class="lineno">   67</span>            {</div>
 <div class="line"><span class="lineno">   68</span>                List&lt;string&gt; <a class="code hl_property" href="classDramaEventEndRoll.html#a7bfda0d13dd72d0e8b71f7b49c8e5b24">list</a> = IO.LoadTextArray(CorePath.CorePackage.TextCommon + <span class="stringliteral">&quot;endroll&quot;</span>).ToList();</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; Screen.height / 32 + 1; j++)</div>
+<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; Screen.height / 32 + 1; k++)</div>
 <div class="line"><span class="lineno">   70</span>                {</div>
 <div class="line"><span class="lineno">   71</span>                    Space(newline: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   72</span>                }</div>
@@ -272,12 +272,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   76</span>                    {</div>
 <div class="line"><span class="lineno">   77</span>                        <span class="keywordtype">string</span>[] array = item.Replace(<span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Split(<span class="charliteral">&#39;,&#39;</span>);</div>
 <div class="line"><span class="lineno">   78</span>                        <span class="keywordtype">string</span> text = array[0];</div>
-<div class="line"><span class="lineno">   79</span>                        <span class="keywordtype">int</span> num = array[1].ToInt();</div>
+<div class="line"><span class="lineno">   79</span>                        <span class="keywordtype">int</span> num2 = array[1].ToInt();</div>
 <div class="line"><span class="lineno">   80</span>                        <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; item2 <span class="keywordflow">in</span> items)</div>
 <div class="line"><span class="lineno">   81</span>                        {</div>
-<div class="line"><span class="lineno">   82</span>                            <span class="keywordflow">if</span> (index % 5 &lt; num)</div>
+<div class="line"><span class="lineno">   82</span>                            <span class="keywordflow">if</span> (index % 5 &lt; num2)</div>
 <div class="line"><span class="lineno">   83</span>                            {</div>
-<div class="line"><span class="lineno">   84</span>                                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num; k++)</div>
+<div class="line"><span class="lineno">   84</span>                                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; num2; l++)</div>
 <div class="line"><span class="lineno">   85</span>                                {</div>
 <div class="line"><span class="lineno">   86</span>                                    this.list.Add(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   87</span>                                    index++;</div>
@@ -287,9 +287,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>                            {</div>
 <div class="line"><span class="lineno">   92</span>                                AddBacker(item2[<span class="stringliteral">&quot;Name&quot;</span>]);</div>
 <div class="line"><span class="lineno">   93</span>                            }</div>
-<div class="line"><span class="lineno">   94</span>                            <span class="keywordflow">if</span> (index % 5 &gt;= 5 - num)</div>
+<div class="line"><span class="lineno">   94</span>                            <span class="keywordflow">if</span> (index % 5 &gt;= 5 - num2)</div>
 <div class="line"><span class="lineno">   95</span>                            {</div>
-<div class="line"><span class="lineno">   96</span>                                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; num; l++)</div>
+<div class="line"><span class="lineno">   96</span>                                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; num2; n++)</div>
 <div class="line"><span class="lineno">   97</span>                                {</div>
 <div class="line"><span class="lineno">   98</span>                                    this.list.Add(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   99</span>                                    index++;</div>
@@ -302,7 +302,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  106</span>                        Add(item);</div>
 <div class="line"><span class="lineno">  107</span>                    }</div>
 <div class="line"><span class="lineno">  108</span>                }</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; Screen.height / 32 / 2 - 1; n++)</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num3 = 0; num3 &lt; Screen.height / 32 / 2 - 1; num3++)</div>
 <div class="line"><span class="lineno">  110</span>                {</div>
 <div class="line"><span class="lineno">  111</span>                    Space(newline: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  112</span>                }</div>
@@ -326,12 +326,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  130</span>        }</div>
 <div class="line"><span class="lineno">  131</span>        <span class="keywordtype">void</span> Space(<span class="keywordtype">bool</span> newline)</div>
 <div class="line"><span class="lineno">  132</span>        {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordtype">int</span> num2 = (newline ? 5 : 0);</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordtype">int</span> num = (newline ? 5 : 0);</div>
 <div class="line"><span class="lineno">  134</span>            <span class="keywordflow">if</span> (index % 5 != 0)</div>
 <div class="line"><span class="lineno">  135</span>            {</div>
-<div class="line"><span class="lineno">  136</span>                num2 += 5 - index % 5;</div>
+<div class="line"><span class="lineno">  136</span>                num += 5 - index % 5;</div>
 <div class="line"><span class="lineno">  137</span>            }</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num3 = 0; num3 &lt; num2; num3++)</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num; j++)</div>
 <div class="line"><span class="lineno">  139</span>            {</div>
 <div class="line"><span class="lineno">  140</span>                <a class="code hl_property" href="classDramaEventEndRoll.html#a7bfda0d13dd72d0e8b71f7b49c8e5b24">list</a>.Add(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">  141</span>                index++;</div>

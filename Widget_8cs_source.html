@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
    </div>
   </td>
  </tr>
@@ -703,21 +703,21 @@ $(document).ready(function(){initNavTree('Widget_8cs_source.html',''); initResiz
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    {</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        UIContextMenu uIContextMenu = m.AddChild(<span class="stringliteral">&quot;anchor&quot;</span>);</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>        SkinConfig cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        <span class="keywordflow">foreach</span> (RectPosition p <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        <span class="keywordflow">foreach</span> (RectPosition p2 <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>        {</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>            {</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                SetAnchor(p);</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                SetAnchor(p2);</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>                SE.ClickGeneral();</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>                m.Hide();</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>            });</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        }</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        uIContextMenu = m.AddChild(<span class="stringliteral">&quot;pivot&quot;</span>);</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        <span class="keywordflow">foreach</span> (RectPosition p2 <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        <span class="keywordflow">foreach</span> (RectPosition p <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        {</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            {</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>                SetPivot(p2);</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>                SetPivot(p);</div>
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>                SE.ClickGeneral();</div>
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>                m.Hide();</div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>            });</div>
@@ -850,7 +850,7 @@ $(document).ready(function(){initNavTree('Widget_8cs_source.html',''); initResiz
 <div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00005">LayerColorPicker.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerSkinDeco_html"><div class="ttname"><a href="classLayerSkinDeco.html">LayerSkinDeco</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerSkinDeco_8cs_source.html#l00005">LayerSkinDeco.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerWidget_html"><div class="ttname"><a href="classLayerWidget.html">LayerWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00003">LayerWidget.cs:4</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a32eea09b622f81f3ad2afe9ea4fcb55d"><div class="ttname"><a href="classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d">Player.widgets</a></div><div class="ttdeci">WidgetManager.SaveData widgets</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00993">Player.cs:994</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a32eea09b622f81f3ad2afe9ea4fcb55d"><div class="ttname"><a href="classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d">Player.widgets</a></div><div class="ttdeci">WidgetManager.SaveData widgets</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00996">Player.cs:997</a></div></div>
 <div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00077">Scene.cs:77</a></div></div>
 <div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00004">WidgetQuestTracker.cs:5</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_html"><div class="ttname"><a href="classWidgetSideScreen.html">WidgetSideScreen</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00004">WidgetSideScreen.cs:5</a></div></div>

@@ -92,7 +92,7 @@ var classZone =
     [ "ToString", "classZone.html#a1339d73d4f6375d2f738cf2ba1c10e8b", null ],
     [ "TryAddThing", "classZone.html#aa78dfef8a6e0775da35f0f4b1fd2c1bc", null ],
     [ "TryAddThingInSharedContainer", "classZone.html#a9217c2b54b9bd4c9c866de30116dc6f7", null ],
-    [ "TryAddThingInSpot< T >", "classZone.html#a92faf312cc928179ef16ef2021b886b4", null ],
+    [ "TryAddThingInSpot< T >", "classZone.html#af2558287a17254f8759f9311f22a19aa", null ],
     [ "TryGenerateBigDaddy", "classZone.html#ad78139c9703c79c3d1fc55486416337f", null ],
     [ "TryGenerateEvolved", "classZone.html#a527e68e4296dbe8776456da24fc5e5cf", null ],
     [ "TryGenerateOre", "classZone.html#a99a9535f55f4d0b29277e78a65d5ce6f", null ],

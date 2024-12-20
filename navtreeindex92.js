@@ -1,5 +1,11 @@
 var NAVTREEINDEX92 =
 {
+"classTraitButcher.html#a7c70e9340a319dcaea9405e19e121223":[1,0,1225,0],
+"classTraitButcher.html#aaa2e972b3aecbd51a01b4df7e1aede2a":[1,0,1225,2],
+"classTraitButcher.html#aabe2afc5aa8883e90a78ffc9325172db":[1,0,1225,1],
+"classTraitButcher.html#ad06c72c96bc8d4520e5f41a3a11dea30":[1,0,1225,4],
+"classTraitButcher.html#af9cd246546f984180c50259ad6651217":[1,0,1225,3],
+"classTraitCamera.html":[1,0,1226],
 "classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1226,0],
 "classTraitCanvas.html":[1,0,1227],
 "classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1227,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX92 =
 "classTraitDaggerGrave.html#a3d61deede7bf6c9338c372164507bd6f":[1,0,1271,1],
 "classTraitDaggerGrave.html#a4fe260b1a1e644df232832be5bae583d":[1,0,1271,3],
 "classTraitDaggerGrave.html#a9f325398c45e2274af5e891c6b8a037e":[1,0,1271,5],
-"classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1271,4],
-"classTraitDaggerGrave.html#acf147a5264c45378dd110273219aa277":[1,0,1271,0],
-"classTraitDaggerGrave.html#af35f76abd92bc5cf9735d463db3b8cc4":[1,0,1271,2],
-"classTraitDeed.html":[1,0,1272],
-"classTraitDeed.html#a89dff9f45bf4831d416c7fd49b995ff3":[1,0,1272,0],
-"classTraitDeed.html#aa67b89d49deb49ab6a97d33226616440":[1,0,1272,1],
-"classTraitDeed.html#ad3a5f615aa20d8cdd0052fe2e38b672b":[1,0,1272,2]
+"classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1271,4]
 };

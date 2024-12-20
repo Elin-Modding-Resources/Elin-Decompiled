@@ -1,5 +1,10 @@
 var NAVTREEINDEX53 =
 {
+"classGoalSearch.html#a885afe6c04988f4f300229da758ee4b4":[1,0,466,2],
+"classGoalSearch.html#acc56fdaaff2ec78ea6887d8679f00489":[1,0,466,1],
+"classGoalSiege.html":[1,0,467],
+"classGoalSiege.html#a073e02dd951587c191e56845b0f1afe6":[1,0,467,2],
+"classGoalSiege.html#ac0662c8da6e9714f2393d9f12272867a":[1,0,467,0],
 "classGoalSiege.html#ae254c8188d3f2dd2727a202d5ef21412":[1,0,467,1],
 "classGoalSleep.html":[1,0,468],
 "classGoalSleep.html#a26c4d69d04f6b93fc19018ed5a3b2932":[1,0,468,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX53 =
 "classGuildFighter.html":[1,0,497],
 "classGuildFighter.html#a22f91f806934e4857465d31fff28ddcf":[1,0,497,3],
 "classGuildFighter.html#a4a2f7c8e99bdd6642f4d9533d586e158":[1,0,497,4],
-"classGuildFighter.html#a507da7baf36e3e45bbe77898dd00fc2e":[1,0,497,1],
-"classGuildFighter.html#abcb58ab873d564b6f5d06ebee392cb58":[1,0,497,2],
-"classGuildFighter.html#abff767150b3a93afed2296f18333a5c6":[1,0,497,0],
-"classGuildFighter.html#ad7d6d24de2e4d3e50810aa7b889e6d9f":[1,0,497,5],
-"classGuildMage.html":[1,0,498],
-"classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c":[1,0,498,1]
+"classGuildFighter.html#a507da7baf36e3e45bbe77898dd00fc2e":[1,0,497,1]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX19 =
 {
+"classAIWork__Fish.html":[1,0,100],
+"classAIWork__Fish.html#a2fd441c9762f335a1fbe51761388b6df":[1,0,100,1],
+"classAIWork__Fish.html#ac24cc5b97279bb062294410f5147f86f":[1,0,100,2],
+"classAIWork__Fish.html#aed3f79386b9f0b1626fb53553965934d":[1,0,100,0],
+"classAIWork__Lumberjack.html":[1,0,101],
 "classAIWork__Lumberjack.html#a11fe10027ad2b9913cde404de11c53ba":[1,0,101,0],
 "classAIWork__Lumberjack.html#a763161e7e4552e3386beb111c1bf6444":[1,0,101,1],
 "classAIWork__Lumberjack.html#a986bfca56d8554f375cf197eae88cec9":[1,0,101,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX19 =
 "classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,75,4],
 "classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,75,2],
 "classAI__PracticeDummy.html#a2caa3366643ef1267b72d7b0462357e2":[1,0,75,5],
-"classAI__PracticeDummy.html#a43a0f46559087698ffbc468e4e3d6963":[1,0,75,6],
-"classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,75,3],
-"classAI__PracticeDummy.html#a68ceb43d8ca521a27b813b5e6a6bbfb5":[1,0,75,7],
-"classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,75,1],
-"classAI__PracticeDummy.html#af992b999215cf0f6d948d6c44a226946":[1,0,75,0],
-"classAI__Pray.html":[1,0,76]
+"classAI__PracticeDummy.html#a43a0f46559087698ffbc468e4e3d6963":[1,0,75,6]
 };

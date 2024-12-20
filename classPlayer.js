@@ -87,6 +87,7 @@ var classPlayer =
     [ "flags", "classPlayer.html#a0cff1040ff0e51b872785ee541a2430b", null ],
     [ "focusedchara", "classPlayer.html#a60c96a6b3d5c763df9dcaf94335ac518", null ],
     [ "forceTalk", "classPlayer.html#a9c1d369c32bdbb5c824d3a04832142b6", null ],
+    [ "giftJure", "classPlayer.html#af8fe694a26f432cbc82095d1f846b542", null ],
     [ "haltMove", "classPlayer.html#a55907c83ad217f2ee1ecfa1de0e7f2df", null ],
     [ "hangIcons", "classPlayer.html#ab5b7542e587509c1c5cfa81ec0e506e7", null ],
     [ "hasNewQuest", "classPlayer.html#a1f7fc54985d1c74f6dd096e016eaa508", null ],

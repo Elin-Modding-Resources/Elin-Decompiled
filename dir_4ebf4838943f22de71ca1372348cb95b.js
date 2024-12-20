@@ -1,8 +1,7 @@
 var dir_4ebf4838943f22de71ca1372348cb95b =
 [
     [ "Algorithms", "dir_cd23900d07b8b1e69b979450ea9f15c5.html", "dir_cd23900d07b8b1e69b979450ea9f15c5" ],
-    [ "Assets.Resources.Scene.Profile.Global", "dir_e288ca0aeaeb99ed54626a36cd6ea346.html", "dir_e288ca0aeaeb99ed54626a36cd6ea346" ],
-    [ "Assets.Resources.Scene.Render", "dir_fa0e38f6188af741fff21f50dd8c01e1.html", "dir_fa0e38f6188af741fff21f50dd8c01e1" ],
+    [ "Assets", "dir_55284aae4a4f1b01d5af1423fa438bef.html", "dir_55284aae4a4f1b01d5af1423fa438bef" ],
     [ "Properties", "dir_306e96a4dc5b43e01f3c081320bd1010.html", "dir_306e96a4dc5b43e01f3c081320bd1010" ],
     [ "TwoDLaserPack", "dir_6b09264ad8f51f6a28577ac0d4500fd6.html", "dir_6b09264ad8f51f6a28577ac0d4500fd6" ],
     [ "ABILITY.cs", "ABILITY_8cs.html", "ABILITY_8cs" ],
@@ -1424,6 +1423,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitGM_Merchant.cs", "TraitGM__Merchant_8cs.html", "TraitGM__Merchant_8cs" ],
     [ "TraitGM_Thief.cs", "TraitGM__Thief_8cs.html", "TraitGM__Thief_8cs" ],
     [ "TraitGodStatue.cs", "TraitGodStatue_8cs.html", "TraitGodStatue_8cs" ],
+    [ "TraitGoodsCoin.cs", "TraitGoodsCoin_8cs.html", "TraitGoodsCoin_8cs" ],
     [ "TraitGrave.cs", "TraitGrave_8cs.html", "TraitGrave_8cs" ],
     [ "TraitGriffin.cs", "TraitGriffin_8cs.html", "TraitGriffin_8cs" ],
     [ "TraitGrimoire.cs", "TraitGrimoire_8cs.html", "TraitGrimoire_8cs" ],
@@ -1519,6 +1519,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitMoongate.cs", "TraitMoongate_8cs.html", "TraitMoongate_8cs" ],
     [ "TraitMoongateEx.cs", "TraitMoongateEx_8cs.html", "TraitMoongateEx_8cs" ],
     [ "TraitMoyer.cs", "TraitMoyer_8cs.html", "TraitMoyer_8cs" ],
+    [ "TraitMusicBox.cs", "TraitMusicBox_8cs.html", "TraitMusicBox_8cs" ],
     [ "TraitNewspaper.cs", "TraitNewspaper_8cs.html", "TraitNewspaper_8cs" ],
     [ "TraitNewZone.cs", "TraitNewZone_8cs.html", "TraitNewZone_8cs" ],
     [ "TraitNino.cs", "TraitNino_8cs.html", "TraitNino_8cs" ],

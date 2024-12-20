@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,75,3],
+"classAI__PracticeDummy.html#a68ceb43d8ca521a27b813b5e6a6bbfb5":[1,0,75,7],
+"classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,75,1],
+"classAI__PracticeDummy.html#af992b999215cf0f6d948d6c44a226946":[1,0,75,0],
+"classAI__Pray.html":[1,0,76],
 "classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,76,0],
 "classAI__Pray.html#a72cbc4ccf6864ede8f4dcc1f3b3ca90f":[1,0,76,2],
 "classAI__Pray.html#a76dad0b469e00ae0458c9cf0367a4cd9":[1,0,76,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "classAM__Blueprint.html#a23b7c9373eba7f93ba9e1c88a60bb5aa":[1,0,110,2],
 "classAM__Blueprint.html#a2852fdf4cefb2c694620a7091b670fd7":[1,0,110,1],
 "classAM__Blueprint.html#a411fb78b6a4d8eee5c174591cc0806dc":[1,0,110,5],
-"classAM__Blueprint.html#a96aae9fe2358c69bf634dc54fee9fb56":[1,0,110,0],
-"classAM__Blueprint.html#a97d1302696ed237e5cc191f6cd748895":[1,0,110,3],
-"classAM__Blueprint.html#afceae73eda50f5eac1ef2958fd8278b2":[1,0,110,4],
-"classAM__Build.html":[1,0,111],
-"classAM__Build.html#a007d83e3f6738839cfca45e887ee6fad":[1,0,111,2],
-"classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf":[1,0,111,24]
+"classAM__Blueprint.html#a96aae9fe2358c69bf634dc54fee9fb56":[1,0,110,0]
 };
