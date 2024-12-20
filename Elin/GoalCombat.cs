@@ -606,8 +606,8 @@ public class GoalCombat : Goal
 			case "buffStats":
 				num = ForeachChara(ability, delegate(Chara c)
 				{
-					Element buffStats2 = c.GetBuffStats(s.proc[1]);
-					return (buffStats2 == null || buffStats2.Value < 0) ? tactics.P_Buff : 0;
+					Element buffStats = c.GetBuffStats(s.proc[1]);
+					return (buffStats == null || buffStats.Value < 0) ? tactics.P_Buff : 0;
 				}, isFriendlyAbility: true);
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
 				{
@@ -628,8 +628,8 @@ public class GoalCombat : Goal
 				}
 				num = ForeachChara(ability, delegate(Chara c)
 				{
-					Element buffStats = c.GetBuffStats(s.proc[1]);
-					return (buffStats == null || buffStats.Value > 0) ? tactics.P_Debuff : 0;
+					Element buffStats2 = c.GetBuffStats(s.proc[1]);
+					return (buffStats2 == null || buffStats2.Value > 0) ? tactics.P_Debuff : 0;
 				}, isFriendlyAbility: false);
 				break;
 			case "ground":
@@ -747,36 +747,36 @@ public class GoalCombat : Goal
 				{
 					return 0;
 				}
-				float num8 = (float)c.hp / (float)c.MaxHP;
-				if (num8 > (isHOT ? 0.85f : 0.75f))
+				float num3 = (float)c.hp / (float)c.MaxHP;
+				if (num3 > (isHOT ? 0.85f : 0.75f))
 				{
 					return 0;
 				}
-				int num9 = tactics.P_Heal - (int)((float)tactics.P_Heal * num8) + (isHOT ? 50 : 25);
+				int num4 = tactics.P_Heal - (int)((float)tactics.P_Heal * num3) + (isHOT ? 50 : 25);
 				foreach (Condition condition in c.conditions)
 				{
 					if (condition is ConFear)
 					{
-						num9 += 10;
+						num4 += 10;
 					}
 					else if (condition is ConPoison)
 					{
-						num9 += 2;
+						num4 += 2;
 					}
 					else if (condition is ConConfuse)
 					{
-						num9 += 4;
+						num4 += 4;
 					}
 					else if (condition is ConDim)
 					{
-						num9 += 6;
+						num4 += 6;
 					}
 					else if (condition is ConBleed)
 					{
-						num9 += 8;
+						num4 += 8;
 					}
 				}
-				return num9;
+				return num4;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);
@@ -862,8 +862,8 @@ public class GoalCombat : Goal
 			{
 				if (chara2 != owner)
 				{
-					int num5 = owner.Dist(chara2);
-					if (num5 > sightRadius || !owner.CanSeeLos(chara2, num5))
+					int num7 = owner.Dist(chara2);
+					if (num7 > sightRadius || !owner.CanSeeLos(chara2, num7))
 					{
 						continue;
 					}
@@ -879,11 +879,11 @@ public class GoalCombat : Goal
 				return func(owner);
 			}
 			BuildCharaList();
-			int num3 = 0;
+			int num8 = 0;
 			foreach (Chara chara3 in charas)
 			{
-				int num4 = func(chara3);
-				if (num4 > 0)
+				int num9 = func(chara3);
+				if (num9 > 0)
 				{
 					if (isFriendlyAbility)
 					{
@@ -900,21 +900,21 @@ public class GoalCombat : Goal
 						}
 						if (chara3 != owner)
 						{
-							num4 += tactics.P_Party;
+							num9 += tactics.P_Party;
 						}
 					}
 					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
-					if (num4 >= num3)
+					if (num9 >= num8)
 					{
 						a.tg = chara3;
-						num3 = num4;
+						num8 = num9;
 					}
 				}
 			}
-			return num3;
+			return num8;
 		}
 		int GetAttackMod(Act a)
 		{
@@ -922,30 +922,30 @@ public class GoalCombat : Goal
 			{
 				return 0;
 			}
-			int num6 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
-			int num7 = -15 * tc.ResistLvFrom(num6);
-			switch (num6)
+			int num5 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
+			int num6 = -15 * tc.ResistLvFrom(num5);
+			switch (num5)
 			{
 			case 910:
 				if (tc.isWet)
 				{
-					num7 -= 30;
+					num6 -= 30;
 				}
 				break;
 			case 911:
 				if (tc.HasCondition<ConBurning>())
 				{
-					num7 -= 30;
+					num6 -= 30;
 				}
 				break;
 			case 912:
 				if (tc.isWet)
 				{
-					num7 += 30;
+					num6 += 30;
 				}
 				break;
 			}
-			return num7;
+			return num6;
 		}
 		void GetNumEnemy(int radius)
 		{

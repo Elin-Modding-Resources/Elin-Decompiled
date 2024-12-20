@@ -47,9 +47,9 @@ public class TaskDrawWater : TaskDesignation
 		};
 		p.onProgress = delegate
 		{
-			SourceMaterial.Row row = (pos.cell.HasBridge ? pos.cell.matBridge : pos.cell.matFloor);
-			row.PlayHitEffect(pos);
-			owner.PlaySound(row.GetSoundImpact());
+			SourceMaterial.Row row2 = (pos.cell.HasBridge ? pos.cell.matBridge : pos.cell.matFloor);
+			row2.PlayHitEffect(pos);
+			owner.PlaySound(row2.GetSoundImpact());
 		};
 		p.onProgressComplete = delegate
 		{
@@ -82,10 +82,10 @@ public class TaskDrawWater : TaskDesignation
 		};
 		void ChangeFloor(string id)
 		{
-			SourceFloor.Row row2 = EClass.sources.floors.alias[id];
+			SourceFloor.Row row = EClass.sources.floors.alias[id];
 			if (pos.HasBridge)
 			{
-				pos.cell._bridge = (byte)row2.id;
+				pos.cell._bridge = (byte)row.id;
 				if (id == "floor_raw3")
 				{
 					pos.cell._bridgeMat = 45;
@@ -93,7 +93,7 @@ public class TaskDrawWater : TaskDesignation
 			}
 			else
 			{
-				pos.cell._floor = (byte)row2.id;
+				pos.cell._floor = (byte)row.id;
 				if (id == "floor_raw3")
 				{
 					pos.cell._floorMat = 45;

@@ -315,8 +315,8 @@ public class LayerCraft : LayerBaseCraft
 				{
 					if (cat == "all" || item.row.Category.IsChildOf(cat))
 					{
-						Recipe o = Recipe.Create(item);
-						list.Add(o);
+						Recipe o2 = Recipe.Create(item);
+						list.Add(o2);
 					}
 					SourceCategory.Row row = item.row.Category.GetSecondRoot();
 					if (row.id != "lightsource" && row.IsChildOf("armor"))
@@ -360,7 +360,7 @@ public class LayerCraft : LayerBaseCraft
 		{
 			return;
 		}
-		object o2 = list.rows[0].objects[0];
+		object o = list.rows[0].objects[0];
 		if (first)
 		{
 			string key = ((factory == null) ? "hand" : factory.id);
@@ -371,13 +371,13 @@ public class LayerCraft : LayerBaseCraft
 				{
 					if ((@object as Recipe).id == text)
 					{
-						o2 = @object;
+						o = @object;
 						break;
 					}
 				}
 			}
-			list.Scroll(o2);
-			if (!list.Select(o2, invoke: true))
+			list.Scroll(o);
+			if (!list.Select(o, invoke: true))
 			{
 				list.Scroll();
 				list.Select(list.rows[0].objects[0]);
@@ -385,7 +385,7 @@ public class LayerCraft : LayerBaseCraft
 		}
 		else
 		{
-			list.Select(o2, invoke: true);
+			list.Select(o, invoke: true);
 		}
 	}
 

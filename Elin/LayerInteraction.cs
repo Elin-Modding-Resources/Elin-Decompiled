@@ -150,24 +150,24 @@ public class LayerInteraction : ELayer
 		}
 		else if (o is Chara)
 		{
-			Chara t = o as Chara;
+			Chara t2 = o as Chara;
 			string text = "charaInfo".lang();
-			if (!t.IsHomeMember())
+			if (!t2.IsHomeMember())
 			{
 				text = text + "(" + "unidentified".lang() + ")";
 			}
-			if (t.IsHomeMember())
+			if (t2.IsHomeMember())
 			{
-				page.Add(t, "tTalk".lang(), "", delegate
+				page.Add(t2, "tTalk".lang(), "", delegate
 				{
-					t.ShowDialog();
+					t2.ShowDialog();
 				});
 			}
 			else
 			{
-				page.Add(t, text, "", delegate
+				page.Add(t2, text, "", delegate
 				{
-					if (!t.IsHomeMember())
+					if (!t2.IsHomeMember())
 					{
 						SE.Beep();
 					}
@@ -176,41 +176,41 @@ public class LayerInteraction : ELayer
 		}
 		else if (o is Thing)
 		{
-			Thing t2 = o as Thing;
-			page.Add(t2, "objInfo", "", delegate
+			Thing t = o as Thing;
+			page.Add(t, "objInfo", "", delegate
 			{
-				ELayer.ui.AddLayer<LayerInfo>().Set(t2);
+				ELayer.ui.AddLayer<LayerInfo>().Set(t);
 			});
-			if (t2.trait is TraitQuestBoard)
+			if (t.trait is TraitQuestBoard)
 			{
-				page.Add(t2, "quest", "", delegate
+				page.Add(t, "quest", "", delegate
 				{
 					ELayer.ui.AddLayer<LayerQuestBoard>();
 				}, 20, auto: true);
-				page.Add(t2, "hire", "", delegate
+				page.Add(t, "hire", "", delegate
 				{
 					ELayer.ui.AddLayer<LayerHire>();
 				}, 20, auto: true);
 			}
-			if (t2.trait is TraitGacha)
+			if (t.trait is TraitGacha)
 			{
-				page.Add(t2, "gacha", "", delegate
+				page.Add(t, "gacha", "", delegate
 				{
 					ELayer.ui.AddLayer<LayerGacha>();
 				}, 10, auto: true);
 			}
-			if (t2.trait.IsFactory)
+			if (t.trait.IsFactory)
 			{
-				page.Add(t2, "craft", "icon_Inspect", delegate
+				page.Add(t, "craft", "icon_Inspect", delegate
 				{
-					ELayer.ui.AddLayer<LayerCraft>().SetFactory(t2);
+					ELayer.ui.AddLayer<LayerCraft>().SetFactory(t);
 				}, 100, auto: true);
 			}
-			if (t2.IsInstalled)
+			if (t.IsInstalled)
 			{
-				page.Add(t2, "move", "", delegate
+				page.Add(t, "move", "", delegate
 				{
-					ActionMode.Inspect.Activate(t2);
+					ActionMode.Inspect.Activate(t);
 				});
 			}
 		}

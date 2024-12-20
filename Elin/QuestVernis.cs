@@ -98,15 +98,15 @@ public class QuestVernis : QuestProgression
 	{
 		if (phase == 3 && EClass._zone is Zone_Vernis && EClass._zone.lv == 0)
 		{
-			int n = 0;
+			int i = 0;
 			EClass._map.bounds.ForeachCell(delegate(Cell c)
 			{
 				if (c.sourceObj.id == 100)
 				{
-					n++;
+					i++;
 				}
 			});
-			return "progressVernis".lang(n.ToString() ?? "");
+			return "progressVernis".lang(i.ToString() ?? "");
 		}
 		return base.GetTextProgress();
 	}

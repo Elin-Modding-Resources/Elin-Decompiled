@@ -176,28 +176,28 @@ public class UIHomeInfo : EMono
 		buttonLv.mainText.SetText(branch.lv.ToString() ?? "");
 		buttonLv.SetTooltip(delegate(UITooltip t)
 		{
-			UINote n = t.note;
-			n.Clear();
-			n.AddHeader("branchLv".lang());
-			n.AddTopic("TopicLeft", "vCurrent".lang(), EMono.Branch.TextLv);
-			n.Space();
+			UINote i = t.note;
+			i.Clear();
+			i.AddHeader("branchLv".lang());
+			i.AddTopic("TopicLeft", "vCurrent".lang(), EMono.Branch.TextLv);
+			i.Space();
 			Write(branch.lv);
 			if (branch.lv < branch.MaxLv)
 			{
-				n.Space();
-				n.AddHeaderTopic("nextLevel");
+				i.Space();
+				i.AddHeaderTopic("nextLevel");
 				Write(branch.lv + 1);
 			}
 			t.note.Build();
 			void Write(int lv)
 			{
 				string[] array = branch.GetHearthHint(lv).SplitNewline();
-				for (int i = 0; i < array.Length; i++)
+				for (int j = 0; j < array.Length; j++)
 				{
-					string text = array[i].Replace(Environment.NewLine, "");
+					string text = array[j].Replace(Environment.NewLine, "");
 					if (!text.IsEmpty())
 					{
-						n.AddText(text);
+						i.AddText(text);
 					}
 				}
 			}
@@ -205,23 +205,23 @@ public class UIHomeInfo : EMono
 		buttonRanking.mainText.SetText(EMono.game.spatials.ranks.GetRankText(EMono._zone));
 		buttonRanking.SetTooltip(delegate(UITooltip t)
 		{
-			UINote note = t.note;
-			note.Clear();
-			note.AddHeader("homeRanking".lang());
-			note.AddTopic("TopicLeft", "vCurrent".lang(), EMono.game.spatials.ranks.GetRankText(EMono._zone));
-			note.Space();
-			note.AddHeader("HeaderTopic", "rank_income".lang());
-			note.Space(1);
-			note.AddText("rank_income2".lang(EMono.game.spatials.ranks.GetIncome(EMono._zone).ToFormat()));
+			UINote note2 = t.note;
+			note2.Clear();
+			note2.AddHeader("homeRanking".lang());
+			note2.AddTopic("TopicLeft", "vCurrent".lang(), EMono.game.spatials.ranks.GetRankText(EMono._zone));
+			note2.Space();
+			note2.AddHeader("HeaderTopic", "rank_income".lang());
+			note2.Space(1);
+			note2.AddText("rank_income2".lang(EMono.game.spatials.ranks.GetIncome(EMono._zone).ToFormat()));
 			t.note.Build();
 		});
 		buttonRank.mainText.SetText(branch.rank.ToString() ?? "");
 		buttonRank.SetTooltip(delegate(UITooltip t)
 		{
-			UINote note2 = t.note;
-			note2.Clear();
-			note2.AddHeader("factionRank2".lang());
-			note2.AddTopic("TopicLeft", "vCurrent".lang(), branch.rank.ToString() ?? "");
+			UINote note = t.note;
+			note.Clear();
+			note.AddHeader("factionRank2".lang());
+			note.AddTopic("TopicLeft", "vCurrent".lang(), branch.rank.ToString() ?? "");
 			t.note.Build();
 		});
 		buttonHappinessResident.mainText.text = branch.happiness.residents.GetText();

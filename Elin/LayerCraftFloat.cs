@@ -135,29 +135,29 @@ public class LayerCraftFloat : ELayer
 
 	public void ShowContextMenu(Recipe a)
 	{
-		UIContextMenu m = ELayer.ui.CreateContextMenuInteraction();
+		UIContextMenu i = ELayer.ui.CreateContextMenuInteraction();
 		Point point = ELayer.pc.pos.Copy();
 		foreach (Recipe.Ingredient ing in a.ingredients)
 		{
-			UIContextMenu uIContextMenu = ((a.ingredients.Count == 1) ? m : m.AddChild(ing.GetName() + "x" + ing.req));
+			UIContextMenu uIContextMenu = ((a.ingredients.Count == 1) ? i : i.AddChild(ing.GetName() + "x" + ing.req));
 			List<Thing> list = new List<Thing>();
 			foreach (Thing thing in ELayer.pc.things)
 			{
 				thing.GetIngredients(ing, list);
 			}
-			for (int i = point.x - 1; i < point.x + 2; i++)
+			for (int j = point.x - 1; j < point.x + 2; j++)
 			{
-				if (i < 0 || i >= ELayer._map.Size)
+				if (j < 0 || j >= ELayer._map.Size)
 				{
 					continue;
 				}
-				for (int j = point.z - 1; j < point.z + 2; j++)
+				for (int k = point.z - 1; k < point.z + 2; k++)
 				{
-					if (j < 0 || j >= ELayer._map.Size)
+					if (k < 0 || k >= ELayer._map.Size)
 					{
 						continue;
 					}
-					Cell cell = ELayer._map.cells[i, j];
+					Cell cell = ELayer._map.cells[j, k];
 					if (cell.detail == null || cell.detail.things.Count == 0)
 					{
 						continue;
@@ -179,11 +179,11 @@ public class LayerCraftFloat : ELayer
 					ing.thing = t;
 					SE.ClickOk();
 					this.list.List();
-					m.Hide();
+					i.Hide();
 				});
 			}
 		}
-		m.Show();
+		i.Show();
 	}
 
 	public void RefreshDisassemble()

@@ -65,24 +65,24 @@ public class UIDragGridInfo : EMono
 					{
 						Util.Instantiate(moldPlus, b);
 					}
-					string[] array = i switch
+					string[] array2 = i switch
 					{
 						1 => a.ing2, 
 						0 => a.ing1, 
 						_ => a.ing3, 
 					};
-					if (array.IsEmpty())
+					if (array2.IsEmpty())
 					{
 						break;
 					}
-					string[] array2 = array;
-					foreach (string text in array2)
+					string[] array3 = array2;
+					foreach (string text2 in array3)
 					{
-						if (text != array[0])
+						if (text2 != array2[0])
 						{
 							Util.Instantiate(moldOr, b);
 						}
-						AddThing(text);
+						AddThing(text2);
 					}
 				}
 				Util.Instantiate(moldEqual, b);
@@ -111,29 +111,29 @@ public class UIDragGridInfo : EMono
 			else
 			{
 				id = id.Replace("%", "@");
-				string[] array3 = id.Split('@');
-				string text2 = "";
-				id = array3[0];
+				string[] array = id.Split('@');
+				string text = "";
+				id = array[0];
 				if (id.StartsWith('#'))
 				{
-					text2 = id.Replace("#", "");
-					id = EMono.sources.categories.map[text2].GetIdThing();
+					text = id.Replace("#", "");
+					id = EMono.sources.categories.map[text].GetIdThing();
 				}
 				CardRow cardRow = EMono.sources.cards.map[id];
 				SourceMaterial.Row mat = cardRow.DefaultMaterial;
-				if (array3.Length >= 2)
+				if (array.Length >= 2)
 				{
-					mat = ((!(array3[1] == "gelatin")) ? EMono.sources.materials.alias[array3[1]] : EMono.sources.materials.alias["jelly"]);
+					mat = ((!(array[1] == "gelatin")) ? EMono.sources.materials.alias[array[1]] : EMono.sources.materials.alias["jelly"]);
 				}
 				Transform transform = Util.Instantiate(moldThing, P_1.b);
 				Image componentInChildren = transform.GetComponentInChildren<Image>();
 				UIButton component = componentInChildren.GetComponent<UIButton>();
 				cardRow.SetImage(componentInChildren, null, cardRow.GetColorInt(mat));
 				string s = cardRow.GetName();
-				if (!text2.IsEmpty())
+				if (!text.IsEmpty())
 				{
 					Transform obj = Util.Instantiate(moldCat, transform);
-					string @ref = EMono.sources.categories.map[text2].GetName();
+					string @ref = EMono.sources.categories.map[text].GetName();
 					obj.GetComponentInChildren<UIText>().SetText("category".lang());
 					s = "ingCat".lang(@ref);
 				}

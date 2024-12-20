@@ -219,14 +219,14 @@ public class AI_PlayMusic : AIAct
 					UISong.Instance.SetSong(playing.source, playing.bgm, part);
 					if (EClass.Sound.currentBGM != null)
 					{
-						float num = 0.5f - 0.1f * (float)playing.index;
-						if (num < 0f)
+						float num3 = 0.5f - 0.1f * (float)playing.index;
+						if (num3 < 0f)
 						{
-							num = 0f;
+							num3 = 0f;
 						}
-						if (EClass.Sound.sourceBGM.volume > EClass.Sound.currentBGM.data.volume * num)
+						if (EClass.Sound.sourceBGM.volume > EClass.Sound.currentBGM.data.volume * num3)
 						{
-							EClass.Sound.sourceBGM.DOFade(EClass.Sound.currentBGM.data.volume * num, 3f);
+							EClass.Sound.sourceBGM.DOFade(EClass.Sound.currentBGM.data.volume * num3, 3f);
 						}
 						SoundManager.jingleTimer = part.duration / playing.bgm.pitch + playing.bgm.song.fadeIn + 2f;
 					}
@@ -265,8 +265,8 @@ public class AI_PlayMusic : AIAct
 						}
 					}
 					List<Chara> list = owner.pos.ListWitnesses(owner, 4, WitnessType.music);
-					int num2 = owner.Evalue(241) * (100 + toolLv) / 100;
-					int num3 = 0;
+					int num = owner.Evalue(241) * (100 + toolLv) / 100;
+					int num2 = 0;
 					foreach (Chara item2 in list)
 					{
 						if (owner == null)
@@ -288,10 +288,10 @@ public class AI_PlayMusic : AIAct
 									continue;
 								}
 							}
-							if (EClass.rnd(num3 * num3) <= 30 && item2.pos.FirstChara == item2)
+							if (EClass.rnd(num2 * num2) <= 30 && item2.pos.FirstChara == item2)
 							{
 								bool isMinion = item2.IsMinion;
-								if (num2 < item2.LV && EClass.rnd(2) == 0)
+								if (num < item2.LV && EClass.rnd(2) == 0)
 								{
 									reacted.Add(item2);
 									if (!isMinion)
@@ -312,9 +312,9 @@ public class AI_PlayMusic : AIAct
 									{
 										ThrowReward(item2, punish: true);
 									}
-									num3++;
+									num2++;
 								}
-								else if (EClass.rnd(num2 + 5) > EClass.rnd(item2.LV * 5 + 1))
+								else if (EClass.rnd(num + 5) > EClass.rnd(item2.LV * 5 + 1))
 								{
 									reacted.Add(item2);
 									if (!isMinion)
@@ -336,12 +336,12 @@ public class AI_PlayMusic : AIAct
 									{
 										ThrowReward(item2, punish: false);
 									}
-									num3++;
+									num2++;
 								}
 							}
 						}
 					}
-					if (owner != null && owner.IsPC && EClass.rnd(80) < num3)
+					if (owner != null && owner.IsPC && EClass.rnd(80) < num2)
 					{
 						owner.stamina.Mod(-1);
 					}

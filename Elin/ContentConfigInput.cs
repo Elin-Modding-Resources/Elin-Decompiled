@@ -225,17 +225,17 @@ public class ContentConfigInput : ContentConfigGame
 			},
 			onList = delegate
 			{
-				EInput.KeyMapManager keys = base.config.input.keys;
-				UIList uIList = listMovement;
-				uIList.Add(keys.axisUp);
-				uIList.Add(keys.axisDown);
-				uIList.Add(keys.axisLeft);
-				uIList.Add(keys.axisRight);
-				uIList.Add(keys.axisUpLeft);
-				uIList.Add(keys.axisUpRight);
-				uIList.Add(keys.axisDownLeft);
-				uIList.Add(keys.axisDownRight);
-				uIList.Add(keys.wait);
+				EInput.KeyMapManager keys5 = base.config.input.keys;
+				UIList uIList5 = listMovement;
+				uIList5.Add(keys5.axisUp);
+				uIList5.Add(keys5.axisDown);
+				uIList5.Add(keys5.axisLeft);
+				uIList5.Add(keys5.axisRight);
+				uIList5.Add(keys5.axisUpLeft);
+				uIList5.Add(keys5.axisUpRight);
+				uIList5.Add(keys5.axisDownLeft);
+				uIList5.Add(keys5.axisDownRight);
+				uIList5.Add(keys5.wait);
 			}
 		};
 		listGeneral.callbacks = new UIList.Callback<EInput.KeyMap, ItemKeymap>
@@ -246,14 +246,14 @@ public class ContentConfigInput : ContentConfigGame
 			},
 			onList = delegate
 			{
-				EInput.KeyMapManager keys2 = base.config.input.keys;
-				UIList uIList2 = listGeneral;
-				uIList2.Add(keys2.mouseLeft);
-				uIList2.Add(keys2.mouseMiddle);
-				uIList2.Add(keys2.mouseRight);
-				uIList2.Add(keys2.fire);
-				uIList2.Add(keys2.autoCombat);
-				uIList2.Add(keys2.emptyHand);
+				EInput.KeyMapManager keys4 = base.config.input.keys;
+				UIList uIList4 = listGeneral;
+				uIList4.Add(keys4.mouseLeft);
+				uIList4.Add(keys4.mouseMiddle);
+				uIList4.Add(keys4.mouseRight);
+				uIList4.Add(keys4.fire);
+				uIList4.Add(keys4.autoCombat);
+				uIList4.Add(keys4.emptyHand);
 			}
 		};
 		listMenu.callbacks = new UIList.Callback<EInput.KeyMap, ItemKeymap>
@@ -283,11 +283,11 @@ public class ContentConfigInput : ContentConfigGame
 			},
 			onList = delegate
 			{
-				EInput.KeyMapManager keys4 = base.config.input.keys;
-				UIList uIList4 = listEtc;
-				uIList4.Add(keys4.switchHotbar);
-				uIList4.Add(keys4.quickSave);
-				uIList4.Add(keys4.quickLoad);
+				EInput.KeyMapManager keys2 = base.config.input.keys;
+				UIList uIList2 = listEtc;
+				uIList2.Add(keys2.switchHotbar);
+				uIList2.Add(keys2.quickSave);
+				uIList2.Add(keys2.quickLoad);
 			}
 		};
 		listAdvanced.callbacks = new UIList.Callback<EInput.KeyMap, ItemKeymap>
@@ -298,13 +298,13 @@ public class ContentConfigInput : ContentConfigGame
 			},
 			onList = delegate
 			{
-				EInput.KeyMapManager keys5 = base.config.input.keys;
-				UIList uIList5 = listAdvanced;
-				uIList5.Add(keys5.examine);
-				uIList5.Add(keys5.getAll);
-				uIList5.Add(keys5.dump);
-				uIList5.Add(keys5.mute);
-				uIList5.Add(keys5.meditate);
+				EInput.KeyMapManager keys = base.config.input.keys;
+				UIList uIList = listAdvanced;
+				uIList.Add(keys.examine);
+				uIList.Add(keys.getAll);
+				uIList.Add(keys.dump);
+				uIList.Add(keys.mute);
+				uIList.Add(keys.meditate);
 			}
 		};
 		_refreshList();

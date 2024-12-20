@@ -3332,12 +3332,12 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public int GetSoilCost()
 	{
-		int n = 0;
+		int i = 0;
 		EClass._map.bounds.ForeachCell(delegate(Cell c)
 		{
-			n += c.sourceObj.costSoil;
+			i += c.sourceObj.costSoil;
 		});
-		return n / 10;
+		return i / 10;
 	}
 
 	public void SpawnLostItems()

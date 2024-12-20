@@ -681,16 +681,16 @@ public class FactionBranch : EClass
 	public void DailyOutcome(VirtualDate date)
 	{
 		Thing thing = null;
-		Chara m;
+		Chara i;
 		foreach (Chara member in members)
 		{
-			m = member;
-			if (m.IsPCParty || !m.ExistsOnMap)
+			i = member;
+			if (i.IsPCParty || !i.ExistsOnMap)
 			{
 				continue;
 			}
-			m.RefreshWorkElements(elements);
-			if (m.memberType == FactionMemberType.Livestock)
+			i.RefreshWorkElements(elements);
+			if (i.memberType == FactionMemberType.Livestock)
 			{
 				if (thing == null)
 				{
@@ -700,28 +700,28 @@ public class FactionBranch : EClass
 				{
 					continue;
 				}
-				if (m.race.breeder >= EClass.rnd(2500 - (int)Mathf.Sqrt(Evalue(2827) * 100)))
+				if (i.race.breeder >= EClass.rnd(2500 - (int)Mathf.Sqrt(Evalue(2827) * 100)))
 				{
 					if (EClass.rnd(3) != 0)
 					{
-						Thing t2 = m.MakeEgg(date.IsRealTime, 1, date.IsRealTime);
+						Thing t2 = i.MakeEgg(date.IsRealTime, 1, date.IsRealTime);
 						if (!date.IsRealTime)
 						{
-							m.TryPutShared(t2);
+							i.TryPutShared(t2);
 						}
 					}
 					else
 					{
-						Thing t3 = m.MakeMilk(date.IsRealTime, 1, date.IsRealTime);
+						Thing t3 = i.MakeMilk(date.IsRealTime, 1, date.IsRealTime);
 						if (!date.IsRealTime)
 						{
-							m.TryPutShared(t3);
+							i.TryPutShared(t3);
 						}
 					}
 				}
-				if (m.HaveFur())
+				if (i.HaveFur())
 				{
-					m.c_fur++;
+					i.c_fur++;
 				}
 				thing.ModNum(-1);
 				if (thing.isDestroyed || thing.Num == 0)
@@ -730,11 +730,11 @@ public class FactionBranch : EClass
 				}
 				continue;
 			}
-			foreach (Hobby item in m.ListHobbies())
+			foreach (Hobby item in i.ListHobbies())
 			{
 				GetOutcome(item);
 			}
-			foreach (Hobby item2 in m.ListWorks())
+			foreach (Hobby item2 in i.ListWorks())
 			{
 				GetOutcome(item2);
 			}
@@ -782,18 +782,18 @@ public class FactionBranch : EClass
 		}
 		void GetOutcome(Hobby h)
 		{
-			int num3 = h.GetEfficiency(m) * GetProductBonus(m) / 100;
-			int num4 = h.GetLv(m);
+			int num3 = h.GetEfficiency(i) * GetProductBonus(i) / 100;
+			int num4 = h.GetLv(i);
 			int id = EClass.sources.elements.alias[h.source.skill].id;
-			if (!m.elements.HasBase(id))
+			if (!i.elements.HasBase(id))
 			{
-				m.elements.SetBase(id, 1);
+				i.elements.SetBase(id, 1);
 			}
-			m.ModExp(id, 100);
-			for (int i = 0; i < h.source.things.Length; i += 2)
+			i.ModExp(id, 100);
+			for (int j = 0; j < h.source.things.Length; j += 2)
 			{
-				string text = h.source.things[i];
-				int num5 = Mathf.Max(1, h.source.things[i + 1].ToInt() * num3 / 1000);
+				string text = h.source.things[j];
+				int num5 = Mathf.Max(1, h.source.things[j + 1].ToInt() * num3 / 1000);
 				int num6 = num5 / 1000;
 				if (num5 % 1000 > EClass.rnd(1000))
 				{
@@ -805,11 +805,11 @@ public class FactionBranch : EClass
 					{
 						if (text == "milk")
 						{
-							m.MakeMilk(date.IsRealTime, num6);
+							i.MakeMilk(date.IsRealTime, num6);
 						}
 						else
 						{
-							Thing thing3 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[i], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
+							Thing thing3 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[j], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
 							if (thing3 != null)
 							{
 								thing3.SetNum(thing3.trait.CraftNum * num6);
@@ -820,13 +820,13 @@ public class FactionBranch : EClass
 									thing3.ChangeMaterial("iron");
 									thing3.c_IDTState = 0;
 								}
-								m.TryPutShared(thing3);
+								i.TryPutShared(thing3);
 							}
 						}
 					}
 					else
 					{
-						m.MakeEgg(date.IsRealTime, num6);
+						i.MakeEgg(date.IsRealTime, num6);
 					}
 				}
 			}
@@ -840,7 +840,7 @@ public class FactionBranch : EClass
 					{
 						if (member2.isDead && EClass.rnd(num3) > EClass.rnd(100))
 						{
-							Log("bNurse", m, member2);
+							Log("bNurse", i, member2);
 							member2.Revive(member2.pos, msg: true);
 							break;
 						}
@@ -855,7 +855,7 @@ public class FactionBranch : EClass
 			case "Chore":
 			case "Clean":
 			{
-				for (int j = 0; j < num3 / 2; j++)
+				for (int k = 0; k < num3 / 2; k++)
 				{
 					Point randomPoint = EClass._map.bounds.GetRandomPoint();
 					if (randomPoint.HasDecal)
@@ -872,7 +872,7 @@ public class FactionBranch : EClass
 					if (thing4 != null)
 					{
 						Thing thing5 = ThingGen.CreateTreasure("chest_treasure", thing4.LV);
-						m.TryPutShared(thing5);
+						i.TryPutShared(thing5);
 						thing4.Destroy();
 						WidgetPopText.Say("foundTreasure".lang(thing5.Name));
 					}

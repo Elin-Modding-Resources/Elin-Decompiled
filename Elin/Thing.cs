@@ -1223,30 +1223,30 @@ public class Thing : Card
 			}
 			elements.AddNote(n, (Element e) => list.Contains(e), null, ElementContainer.NoteMode.Trait, addRaceFeat: false, delegate(Element e, string s)
 			{
-				string text7 = s;
-				string text8 = e.source.GetText("textExtra");
-				if (!text8.IsEmpty())
+				string text11 = s;
+				string text12 = e.source.GetText("textExtra");
+				if (!text12.IsEmpty())
 				{
-					string text9 = "";
+					string text13 = "";
 					if (e.id == 2 && mode == IInspect.NoteMode.Product)
 					{
-						int num = recipe.GetQualityBonus() / 10;
-						if (num >= 0)
+						int num2 = recipe.GetQualityBonus() / 10;
+						if (num2 >= 0)
 						{
-							num++;
+							num2++;
 						}
-						text9 = "qualityLimit".lang(num.ToString() ?? "");
+						text13 = "qualityLimit".lang(num2.ToString() ?? "");
 					}
-					int num2 = e.Value / 10;
-					num2 = ((e.Value < 0) ? (num2 - 1) : (num2 + 1));
-					text8 = "Lv." + num2 + text9 + " " + text8;
+					int num3 = e.Value / 10;
+					num3 = ((e.Value < 0) ? (num3 - 1) : (num3 + 1));
+					text12 = "Lv." + num3 + text13 + " " + text12;
 					if (infoMode && e.IsFoodTraitMain)
 					{
-						text8 += "traitAdditive".lang();
+						text12 += "traitAdditive".lang();
 					}
-					text7 += (" <size=12>" + text8 + "</size>").TagColor(FontColor.Passive);
+					text11 += (" <size=12>" + text12 + "</size>").TagColor(FontColor.Passive);
 				}
-				return text7;
+				return text11;
 			}, delegate
 			{
 			});
@@ -1270,21 +1270,21 @@ public class Thing : Card
 				n.AddHeader("HeaderAdditionalTrait", "additional_trait");
 				source.model.elements.AddNote(n, (Element e) => e.IsFoodTraitMain, null, ElementContainer.NoteMode.Trait, addRaceFeat: false, delegate(Element e, string s)
 				{
-					string text10 = s;
-					string text11 = e.source.GetText("textExtra");
-					if (!text11.IsEmpty())
+					string text8 = s;
+					string text9 = e.source.GetText("textExtra");
+					if (!text9.IsEmpty())
 					{
-						string text12 = "";
-						int num3 = e.Value / 10;
-						num3 = ((e.Value < 0) ? (num3 - 1) : (num3 + 1));
-						text11 = "Lv." + num3 + text12 + " " + text11;
+						string text10 = "";
+						int num = e.Value / 10;
+						num = ((e.Value < 0) ? (num - 1) : (num + 1));
+						text9 = "Lv." + num + text10 + " " + text9;
 						if (infoMode && e.IsFoodTraitMain)
 						{
-							text11 += "traitAdditive".lang();
+							text9 += "traitAdditive".lang();
 						}
-						text10 += (" <size=12>" + text11 + "</size>").TagColor(FontColor.Passive);
+						text8 += (" <size=12>" + text9 + "</size>").TagColor(FontColor.Passive);
 					}
-					return text10;
+					return text8;
 				});
 			}
 		}
@@ -1320,9 +1320,9 @@ public class Thing : Card
 			{
 				n.AddHeader("headerAttackEval");
 				AttackProcess.Current.Prepare(chara ?? EClass.pc, this, null, null, 0, base.IsThrownWeapon);
-				string text13 = AttackProcess.Current.GetText();
-				text13 = text13.TagColor(() => true);
-				n.AddText(text13);
+				string text7 = AttackProcess.Current.GetText();
+				text7 = text7.TagColor(() => true);
+				n.AddText(text7);
 			}
 		}
 		if (base.ammoData != null)
@@ -1670,11 +1670,11 @@ public class Thing : Card
 	public void ShowSplitMenu(ButtonGrid button, InvOwner.Transaction trans = null)
 	{
 		int count = 1;
-		UIContextMenu m = EClass.ui.CreateContextMenuInteraction();
+		UIContextMenu i = EClass.ui.CreateContextMenuInteraction();
 		bool buy = trans != null;
 		UIButton buttonBuy = null;
 		UIItem itemSlider = null;
-		itemSlider = m.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
+		itemSlider = i.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
 		{
 			count = (int)b;
 			if (trans != null)
@@ -1685,19 +1685,19 @@ public class Thing : Card
 		}, 1f, base.Num, isInt: true, hideOther: false, useInput: true).GetComponent<UIItem>();
 		if (buy)
 		{
-			buttonBuy = m.AddButton("invBuy", delegate
+			buttonBuy = i.AddButton("invBuy", delegate
 			{
 				Process();
 			});
 		}
-		m.onDestroy = delegate
+		i.onDestroy = delegate
 		{
-			if (!buy && !m.wasCanceled)
+			if (!buy && !i.wasCanceled)
 			{
 				Process();
 			}
 		};
-		m.Show();
+		i.Show();
 		if ((bool)buttonBuy)
 		{
 			buttonBuy.gameObject.AddComponent<CanvasGroup>();

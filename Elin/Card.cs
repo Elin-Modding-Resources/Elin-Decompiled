@@ -3699,9 +3699,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					if (e != Element.Void)
 					{
 						c2 = EClass.Colors.elementColors.TryGetValue(e.source.alias);
-						float num8 = (c2.r + c2.g + c2.b) / 3f;
-						num8 = ((num8 > 0.5f) ? 0f : (0.6f - num8));
-						c2 = new Color(c2.r + num8, c2.g + num8, c2.b + num8, 1f);
+						float num14 = (c2.r + c2.g + c2.b) / 3f;
+						num14 = ((num14 > 0.5f) ? 0f : (0.6f - num14));
+						c2 = new Color(c2.r + num14, c2.g + num14, c2.b + num14, 1f);
 					}
 					popper.SetText(dmg.ToString() ?? "", c2);
 				}
@@ -3912,8 +3912,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else if (isChara)
 		{
-			int num9 = ((attackSource != AttackSource.Condition && attackSource != AttackSource.WeaponEnchant) ? 1 : 2);
-			if (num5 >= num9)
+			int num8 = ((attackSource != AttackSource.Condition && attackSource != AttackSource.WeaponEnchant) ? 1 : 2);
+			if (num5 >= num8)
 			{
 				if (e != Element.Void)
 				{
@@ -3952,29 +3952,29 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (origin.HasElement(662) && attackSource == AttackSource.Melee && origin.isChara && Chara.IsHostile(origin as Chara))
 			{
-				int num10 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, origin.Evalue(662) / 10));
-				origin.Chara.stamina.Mod(num10);
+				int num9 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, origin.Evalue(662) / 10));
+				origin.Chara.stamina.Mod(num9);
 				if (IsAliveInCurrentZone)
 				{
-					Chara.stamina.Mod(-num10);
+					Chara.stamina.Mod(-num9);
 				}
 			}
 			if (origin.HasElement(1350) && attackSource == AttackSource.Melee)
 			{
-				int num11 = EClass.rndHalf(2 + Mathf.Clamp(dmg / 10, 0, origin.Chara.GetPietyValue() + 10));
-				origin.Chara.mana.Mod(num11);
+				int num10 = EClass.rndHalf(2 + Mathf.Clamp(dmg / 10, 0, origin.Chara.GetPietyValue() + 10));
+				origin.Chara.mana.Mod(num10);
 				if (IsAliveInCurrentZone)
 				{
-					Chara.mana.Mod(-num11);
+					Chara.mana.Mod(-num10);
 				}
 			}
 			if (origin.HasElement(661) && attackSource == AttackSource.Melee)
 			{
-				int num12 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, origin.Evalue(661) + 10));
-				origin.Chara.mana.Mod(num12);
+				int num11 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, origin.Evalue(661) + 10));
+				origin.Chara.mana.Mod(num11);
 				if (IsAliveInCurrentZone)
 				{
-					Chara.mana.Mod(-num12);
+					Chara.mana.Mod(-num11);
 				}
 			}
 		}
@@ -3992,15 +3992,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				elements.ModExp(123, a3);
 			}
 		}
-		int num13 = ((EClass.rnd(2) == 0) ? 1 : 0);
+		int num12 = ((EClass.rnd(2) == 0) ? 1 : 0);
 		if (attackSource == AttackSource.Condition)
 		{
-			num13 = 1 + EClass.rnd(2);
+			num12 = 1 + EClass.rnd(2);
 		}
-		if (num13 > 0)
+		if (num12 > 0)
 		{
 			bool flag = Chara.HasCondition<ConPoison>() || ((e.id == 915 || e.id == 923) && ResistLv(Evalue(955)) < 4);
-			AddBlood(num13, flag ? 6 : (-1));
+			AddBlood(num12, flag ? 6 : (-1));
 		}
 		bool flag2 = true;
 		switch (e.id)
@@ -4156,14 +4156,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (IsPC)
 		{
-			float num14 = (float)hp / (float)MaxHP;
+			float num13 = (float)hp / (float)MaxHP;
 			if (Evalue(1421) > 0)
 			{
-				num14 = (float)Chara.mana.value / (float)Chara.mana.max;
+				num13 = (float)Chara.mana.value / (float)Chara.mana.max;
 			}
-			if (num14 < 0.3f)
+			if (num13 < 0.3f)
 			{
-				PlaySound("heartbeat", 1f - num14 * 2f);
+				PlaySound("heartbeat", 1f - num13 * 2f);
 			}
 		}
 		if (!IsPC && hp < MaxHP / 5 && Evalue(423) <= 0 && dmg * 100 / MaxHP + 10 > EClass.rnd(IsPowerful ? 400 : 150) && !HasCondition<ConFear>())
@@ -6472,10 +6472,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			int dist = 99;
 			ForeachPoint(delegate(Point p, bool main)
 			{
-				int num = DistMulti(p, c);
-				if (num < dist)
+				int num2 = DistMulti(p, c);
+				if (num2 < dist)
 				{
-					dist = num;
+					dist = num2;
 				}
 			});
 			return dist;
@@ -6490,10 +6490,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			int dist2 = 99;
 			c.ForeachPoint(delegate(Point p, bool main)
 			{
-				int num2 = p1.Distance(p);
-				if (num2 < dist2)
+				int num = p1.Distance(p);
+				if (num < dist2)
 				{
-					dist2 = num2;
+					dist2 = num;
 				}
 			});
 			return dist2;

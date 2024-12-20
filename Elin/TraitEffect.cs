@@ -112,12 +112,12 @@ public class TraitEffect : TraitItem
 		{
 			p.TrySetAct("actChangeSymbol", delegate
 			{
-				UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
-				uIContextMenu.AddSlider("adjustment", (float a) => ((int)a).ToString() ?? "", data.sprite, delegate(float b)
+				UIContextMenu uIContextMenu4 = EClass.ui.CreateContextMenuInteraction();
+				uIContextMenu4.AddSlider("adjustment", (float a) => ((int)a).ToString() ?? "", data.sprite, delegate(float b)
 				{
 					data.sprite = (int)b;
 				}, 0f, Effect.sprites.Length - 1, isInt: true, hideOther: false);
-				uIContextMenu.Show();
+				uIContextMenu4.Show();
 				return false;
 			}, owner);
 		}
@@ -134,22 +134,22 @@ public class TraitEffect : TraitItem
 		}
 		p.TrySetAct("actChangeInterval", delegate
 		{
-			UIContextMenu uIContextMenu2 = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu2.AddSlider("adjustment", (float a) => (0.01f * (float)(int)(a * 10f)).ToString() ?? "", data.interval * 10f, delegate(float b)
+			UIContextMenu uIContextMenu3 = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu3.AddSlider("adjustment", (float a) => (0.01f * (float)(int)(a * 10f)).ToString() ?? "", data.interval * 10f, delegate(float b)
 			{
 				data.interval = b * 0.1f;
 			}, 0f, 200f, isInt: true, hideOther: false);
-			uIContextMenu2.Show();
+			uIContextMenu3.Show();
 			return false;
 		}, owner);
 		p.TrySetAct("actChangeDelay", delegate
 		{
-			UIContextMenu uIContextMenu3 = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu3.AddSlider("adjustment", (float a) => (0.01f * (float)(int)(a * 10f)).ToString() ?? "", data.delay * 10f, delegate(float b)
+			UIContextMenu uIContextMenu2 = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu2.AddSlider("adjustment", (float a) => (0.01f * (float)(int)(a * 10f)).ToString() ?? "", data.delay * 10f, delegate(float b)
 			{
 				data.delay = b * 0.1f;
 			}, 0f, 200f, isInt: true, hideOther: false);
-			uIContextMenu3.Show();
+			uIContextMenu2.Show();
 			return false;
 		}, owner);
 		if (!EClass.debug.enable)
@@ -158,13 +158,13 @@ public class TraitEffect : TraitItem
 		}
 		p.TrySetAct("actChangeType", delegate
 		{
-			UIContextMenu uIContextMenu4 = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu4.AddSlider("adjustment", (float a) => a.ToString() ?? "", id, delegate(float b)
+			UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu.AddSlider("adjustment", (float a) => a.ToString() ?? "", id, delegate(float b)
 			{
 				id = (int)b;
 				Proc();
 			}, 0f, EClass.core.refs.fireworks.Count - 1, isInt: true, hideOther: false);
-			uIContextMenu4.Show();
+			uIContextMenu.Show();
 			return false;
 		}, owner);
 	}

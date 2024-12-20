@@ -706,15 +706,15 @@ public class AttackProcess : EClass
 		{
 			if (!IgnoreExp() && (!TC.isCopy || EClass.rnd(10) == 0))
 			{
-				int a2 = (Mathf.Clamp((TC.LV + 10 - CC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(TC.LV / 10, 10)) * mod / 100;
-				a2 = Mathf.Min(a2, 200);
+				int a = (Mathf.Clamp((TC.LV + 10 - CC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(TC.LV / 10, 10)) * mod / 100;
+				a = Mathf.Min(a, 200);
 				if (TC == CC)
 				{
-					a2 /= 2;
+					a /= 2;
 				}
-				if (a2 > 0)
+				if (a > 0)
 				{
-					CC.ModExp(ele, a2 + EClass.rnd(a2 / 2 + 1));
+					CC.ModExp(ele, a + EClass.rnd(a / 2 + 1));
 				}
 			}
 		}
@@ -722,19 +722,19 @@ public class AttackProcess : EClass
 		{
 			if (!IgnoreExp() && (!CC.isCopy || EClass.rnd(10) == 0))
 			{
-				int a = (Mathf.Clamp((CC.LV + 10 - TC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(CC.LV / 10, 10)) * mod / 100;
-				a = Mathf.Min(a, TC.isRestrained ? 10 : 200);
+				int a2 = (Mathf.Clamp((CC.LV + 10 - TC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(CC.LV / 10, 10)) * mod / 100;
+				a2 = Mathf.Min(a2, TC.isRestrained ? 10 : 200);
 				if (TC == CC)
 				{
-					a /= 2;
+					a2 /= 2;
 				}
 				if (!TC.IsPC && !TC.isRestrained && !TC.HasHost)
 				{
-					a *= 3;
+					a2 *= 3;
 				}
-				if (a > 0)
+				if (a2 > 0)
 				{
-					TC.ModExp(ele, a + EClass.rnd(a / 2 + 1));
+					TC.ModExp(ele, a2 + EClass.rnd(a2 / 2 + 1));
 				}
 			}
 		}

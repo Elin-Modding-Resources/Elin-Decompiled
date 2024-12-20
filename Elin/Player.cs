@@ -1314,15 +1314,15 @@ public class Player : EClass
 		}
 		return EClass.ui.AddLayer<LayerList>().SetListCheck(list2, (SourceElement.Row a) => a.GetName(), delegate(SourceElement.Row s, ItemGeneral b)
 		{
-			bool flag = false;
+			bool flag4 = false;
 			foreach (int domain in EClass.player.domains)
 			{
 				if (s.id == domain)
 				{
-					flag = true;
+					flag4 = true;
 				}
 			}
-			if (flag)
+			if (flag4)
 			{
 				EClass.player.domains.Remove(s.id);
 			}
@@ -1332,29 +1332,29 @@ public class Player : EClass
 			}
 		}, delegate(List<UIList.ButtonPair> list)
 		{
-			bool flag2 = EClass.player.domains.Count >= 3 + EClass.pc.Evalue(1402);
+			bool flag = EClass.player.domains.Count >= 3 + EClass.pc.Evalue(1402);
 			foreach (UIList.ButtonPair item in list)
 			{
 				UIButton button = (item.component as ItemGeneral).button1;
 				SourceElement.Row row = item.obj as SourceElement.Row;
+				bool flag2 = false;
 				bool flag3 = false;
-				bool flag4 = false;
 				foreach (int domain2 in EClass.player.domains)
 				{
 					if (row.id == domain2)
 					{
-						flag4 = true;
+						flag3 = true;
 					}
 				}
-				button.SetCheck(flag4);
+				button.SetCheck(flag3);
 				for (int i = 0; i < ((EClass.pc.job.id == "swordsage") ? 5 : 3); i++)
 				{
 					if (EClass.pc.job.domain[i * 2] == row.id)
 					{
-						flag3 = true;
+						flag2 = true;
 					}
 				}
-				button.interactable = !flag3 && (!flag2 || flag4);
+				button.interactable = !flag2 && (!flag || flag3);
 				button.GetComponent<CanvasGroup>().enabled = !button.interactable;
 			}
 		}).SetOnKill(delegate

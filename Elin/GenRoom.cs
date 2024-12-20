@@ -122,10 +122,10 @@ public class GenRoom : GenBounds
 				case 1:
 					if (zone.biome.spawn.thing.Count > 0)
 					{
-						Thing thing = ThingGen.CreateFromFilter(zone.biome.spawn.GetRandomThingId(), EClass._zone.DangerLv);
-						if (thing != null)
+						Thing thing2 = ThingGen.CreateFromFilter(zone.biome.spawn.GetRandomThingId(), EClass._zone.DangerLv);
+						if (thing2 != null)
 						{
-							zone.AddCard(thing, p);
+							zone.AddCard(thing2, p);
 						}
 					}
 					break;
@@ -159,10 +159,10 @@ public class GenRoom : GenBounds
 			{
 				if (EClass.rnd(3) == 0)
 				{
-					Thing thing2 = ThingGen.CreateFromFilter(zone.biome.spawn.GetRandomThingId(), EClass._zone.DangerLv);
-					if (thing2 != null)
+					Thing thing = ThingGen.CreateFromFilter(zone.biome.spawn.GetRandomThingId(), EClass._zone.DangerLv);
+					if (thing != null)
 					{
-						zone.AddCard(thing2, p);
+						zone.AddCard(thing, p);
 					}
 				}
 				else

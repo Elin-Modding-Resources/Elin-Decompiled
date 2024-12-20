@@ -307,15 +307,15 @@ public class DNA : EClass
 		}
 		void AddAttribute()
 		{
-			Element element2 = listAttb[EClass.rnd(3)];
-			AddVal(element2.id, EClass.rndHalf(element2.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1);
+			Element element = listAttb[EClass.rnd(3)];
+			AddVal(element.id, EClass.rndHalf(element.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1);
 		}
 		void AddBody()
 		{
 			if (body == 0)
 			{
 				BodySlot bodySlot = null;
-				for (int l = 0; l < 100; l++)
+				for (int j = 0; j < 100; j++)
 				{
 					BodySlot bodySlot2 = model.body.slots.RandomItem();
 					if (bodySlot2 != null && bodySlot2.elementId != 40)
@@ -349,7 +349,7 @@ public class DNA : EClass
 		}
 		void AddRandom(int n)
 		{
-			for (int j = 0; j < n; j++)
+			for (int l = 0; l < n; l++)
 			{
 				if (EClass.debug.enable && EClass.rnd(2) == 0)
 				{
@@ -367,8 +367,8 @@ public class DNA : EClass
 		}
 		void AddSkill()
 		{
-			Element element = listSkill[Mathf.Clamp(EClass.rnd(6), 0, listSkill.Count - 1)];
-			AddVal(element.id, EClass.rndHalf(element.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1);
+			Element element2 = listSkill[Mathf.Clamp(EClass.rnd(6), 0, listSkill.Count - 1)];
+			AddVal(element2.id, EClass.rndHalf(element2.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1);
 		}
 		void AddSpecial()
 		{

@@ -1338,8 +1338,8 @@ public class InvOwner : EClass
 			{
 				if (!flag3 && (Trader.currency == CurrencyType.None || t.GetPrice() == 0))
 				{
-					Transaction trans = new Transaction(b, t.Num);
-					if (trans.IsValid())
+					Transaction trans2 = new Transaction(b, t.Num);
+					if (trans2.IsValid())
 					{
 						listInteraction.Add(Container.isNPCProperty ? "actSteal".lang().TagColor(FontColor.Bad, SkinManager.DarkColors) : destInvOwner.langTransfer, 0, delegate
 						{
@@ -1347,12 +1347,12 @@ public class InvOwner : EClass
 							{
 								Dialog.TryWarnCrime(delegate
 								{
-									trans.Process();
+									trans2.Process();
 								});
 							}
 							else
 							{
-								trans.Process();
+								trans2.Process();
 							}
 						});
 					}
@@ -1360,10 +1360,10 @@ public class InvOwner : EClass
 				else
 				{
 					bool isShiftDown = EInput.isShiftDown;
-					Transaction trans2 = new Transaction(b);
-					listInteraction.Add(trans2.GetTextDetail(), 0, delegate
+					Transaction trans = new Transaction(b);
+					listInteraction.Add(trans.GetTextDetail(), 0, delegate
 					{
-						trans2.Process();
+						trans.Process();
 					}).repeatable = true;
 					if (t.Num > 1)
 					{

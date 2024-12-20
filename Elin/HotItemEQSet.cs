@@ -51,7 +51,7 @@ public class HotItemEQSet : HotAction
 
 	public override void Perform()
 	{
-		for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 2; j++)
 		{
 			Dictionary<int, Thing> dictionary = new Dictionary<int, Thing>();
 			foreach (BodySlot slot2 in EClass.pc.body.slots)
@@ -63,9 +63,9 @@ public class HotItemEQSet : HotAction
 				}
 			}
 			Card card = null;
-			foreach (int i2 in ids)
+			foreach (int i in ids)
 			{
-				Thing thing = EClass.pc.things.Find((Thing t) => t.uid == i2 && !t.isEquipped);
+				Thing thing = EClass.pc.things.Find((Thing t) => t.uid == i && !t.isEquipped);
 				if (thing == null)
 				{
 					continue;

@@ -3459,8 +3459,8 @@ public class Chara : Card, IPathfindWalker
 						}
 					}
 					Chara chara = null;
-					EloMap.Cell cell = EClass.scene.elomap.GetCell(EClass.pc.pos);
-					if (cell != null && (cell.zone == null || (cell.zone is Zone_Field && !cell.zone.IsPCFaction)))
+					EloMap.Cell cell2 = EClass.scene.elomap.GetCell(EClass.pc.pos);
+					if (cell2 != null && (cell2.zone == null || (cell2.zone is Zone_Field && !cell2.zone.IsPCFaction)))
 					{
 						foreach (Chara chara2 in EClass._map.charas)
 						{
@@ -3483,7 +3483,7 @@ public class Chara : Card, IPathfindWalker
 					}
 					else if (EClass.player.safeTravel <= 0)
 					{
-						if (cell != null && cell.zone == null && !EClass.debug.ignoreEncounter)
+						if (cell2 != null && cell2.zone == null && !EClass.debug.ignoreEncounter)
 						{
 							EloMap.TileInfo tileInfo = EClass.scene.elomap.GetTileInfo(EClass.pc.pos.eloX, EClass.pc.pos.eloY);
 							if (!tileInfo.shore)
@@ -3630,19 +3630,19 @@ public class Chara : Card, IPathfindWalker
 			}
 			ai.Tick();
 		}
-		Cell cell2 = base.Cell;
-		if (cell2.IsTopWaterAndNoSnow && !cell2.isFloating)
+		Cell cell = base.Cell;
+		if (cell.IsTopWaterAndNoSnow && !cell.isFloating)
 		{
 			AddCondition<ConWet>(50);
 		}
-		if (IsPC && !EClass._zone.IsRegion && cell2.CanSuffocate())
+		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate())
 		{
 			AddCondition<ConSuffocation>(800 / (100 + Evalue(200) * 10));
 		}
 		CellEffect e;
-		if (cell2.effect != null)
+		if (cell.effect != null)
 		{
-			e = cell2.effect;
+			e = cell.effect;
 			switch (e.id)
 			{
 			case 1:
@@ -3686,7 +3686,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		void ClearEffect()
 		{
-			EClass._map.SetLiquid(cell2.x, cell2.z, 0, 0);
+			EClass._map.SetLiquid(cell.x, cell.z, 0, 0);
 		}
 		void ProcEffect()
 		{
@@ -5061,7 +5061,7 @@ public class Chara : Card, IPathfindWalker
 		int num = 1;
 		Act.Cost cost = a.GetCost(this);
 		a.GetPower(this);
-		int n = 1;
+		int i = 1;
 		int num2 = 0;
 		if (IsPC && HasCondition<StanceManaCost>())
 		{
@@ -5074,30 +5074,30 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (pt)
 		{
-			n = 0;
+			i = 0;
 			ForeachParty(delegate
 			{
-				n++;
+				i++;
 			});
 		}
-		if (a is Spell && IsPC && a.vPotential < n)
+		if (a is Spell && IsPC && a.vPotential < i)
 		{
-			n = 1;
+			i = 1;
 			_pts.Clear();
 			_pts.Add(this);
 			pt = false;
 		}
 		int num3 = 100;
-		if (!a.TargetType.ForceParty && n > 1)
+		if (!a.TargetType.ForceParty && i > 1)
 		{
-			num3 = (IsPC ? (n * 100) : (50 + n * 50));
+			num3 = (IsPC ? (i * 100) : (50 + i * 50));
 		}
 		int num4 = cost.cost * num3 / 100;
 		if (cost.type == Act.CostType.MP && Evalue(483) > 0)
 		{
 			num4 = num4 * 100 / (100 + (int)Mathf.Sqrt(Evalue(483) * 10) * 3);
 		}
-		if (n == 0)
+		if (i == 0)
 		{
 			if (IsPC)
 			{
@@ -5156,21 +5156,21 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (IsPC)
 			{
-				_ = (n + 1) / 2;
-				if (a.vPotential < n)
+				_ = (i + 1) / 2;
+				if (a.vPotential < i)
 				{
 					Msg.Say("noSpellStock");
 					EInput.Consume();
 					return false;
 				}
-				if (num2 > 0 && a.vPotential >= n * 2)
+				if (num2 > 0 && a.vPotential >= i * 2)
 				{
-					a.vPotential -= n * 2;
+					a.vPotential -= i * 2;
 					num4 = num4 * (100 - num2 * 20) / 100;
 				}
 				else
 				{
-					a.vPotential -= n;
+					a.vPotential -= i;
 				}
 				LayerAbility.SetDirty(a);
 			}
@@ -5223,7 +5223,7 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		int spellExp = elements.GetSpellExp(this, a, num3);
-		if (EClass.rnd(100) >= CalcCastingChance(a, n) && !EClass.debug.godMode)
+		if (EClass.rnd(100) >= CalcCastingChance(a, i) && !EClass.debug.godMode)
 		{
 			Say("fizzle", this);
 			PlayEffect("fizzle");
@@ -5247,13 +5247,13 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			for (int i = 0; i < num; i++)
+			for (int j = 0; j < num; j++)
 			{
 				if (a.TargetType != TargetType.SelfParty && tc != null && !tc.IsAliveInCurrentZone)
 				{
 					break;
 				}
-				ActEffect.RapidCount = i;
+				ActEffect.RapidCount = j;
 				ActEffect.RapidDelay = a.RapidDelay;
 				flag = a.Perform(this, tc, pos);
 			}
@@ -6497,24 +6497,24 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (t.IsEquipmentOrRanged)
 			{
-				bool flag2 = false;
+				bool flag3 = false;
 				int slot = t.category.slot;
 				int equipValue = t.GetEquipValue();
 				foreach (Thing listItem in _ListItems)
 				{
 					if (listItem.category.slot == slot && listItem.GetEquipValue() > equipValue)
 					{
-						flag2 = true;
+						flag3 = true;
 						break;
 					}
 				}
-				if (flag2)
+				if (flag3)
 				{
 					_ListItems.Remove(t);
 				}
 			}
 		});
-		bool flag3 = false;
+		bool flag2 = false;
 		foreach (Thing listItem2 in _ListItems)
 		{
 			Thing thing = listItem2;
@@ -6535,10 +6535,10 @@ public class Chara : Card, IPathfindWalker
 			if (ShouldEquip(thing, useFav: true) && thing.category.slot != 0)
 			{
 				TryEquip(thing, useFav: true);
-				flag3 = true;
+				flag2 = true;
 			}
 		}
-		if (flag3 && flag)
+		if (flag2 && flag)
 		{
 			TryPutSharedItems(containers);
 		}

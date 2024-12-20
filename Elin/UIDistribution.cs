@@ -43,16 +43,16 @@ public class UIDistribution : EMono
 			{
 				b.uid = a.uid;
 				b.mainText.text = a.GetName().ToTitleCase();
-				bool flag = false;
+				bool flag3 = false;
 				foreach (int item in cats)
 				{
 					if (a.Contatin(item))
 					{
-						flag = true;
+						flag3 = true;
 						break;
 					}
 				}
-				b.SetFold(a.children.Count > 0, !flag, delegate(UIList l)
+				b.SetFold(a.children.Count > 0, !flag3, delegate(UIList l)
 				{
 					foreach (SourceCategory.Row child in a.children)
 					{
@@ -62,9 +62,9 @@ public class UIDistribution : EMono
 				b.buttonToggle.icon.SetActive(cats.Contains(a.uid));
 				b.buttonToggle.SetOnClick(delegate
 				{
-					bool flag2 = !cats.Contains(a.uid);
-					b.buttonToggle.icon.SetActive(flag2);
-					if (flag2)
+					bool flag4 = !cats.Contains(a.uid);
+					b.buttonToggle.icon.SetActive(flag4);
+					if (flag4)
 					{
 						cats.Add(a.uid);
 					}
@@ -72,7 +72,7 @@ public class UIDistribution : EMono
 					{
 						cats.Remove(a.uid);
 					}
-					SetAll(a.uid, flag2);
+					SetAll(a.uid, flag4);
 					SE.Click();
 				});
 			},
@@ -109,32 +109,32 @@ public class UIDistribution : EMono
 						cats.Add(row3.uid);
 					}
 				}
-				bool flag3;
+				bool flag;
 				do
 				{
-					flag3 = true;
+					flag = true;
 					foreach (SourceCategory.Row row4 in EMono.sources.categories.rows)
 					{
 						if (row4.children.Count != 0 && cats.Contains(row4.uid))
 						{
-							bool flag4 = false;
+							bool flag2 = false;
 							foreach (int item2 in cats)
 							{
 								if (item2 != row4.uid && row4.Contatin(item2))
 								{
-									flag4 = true;
+									flag2 = true;
 									break;
 								}
 							}
-							if (!flag4)
+							if (!flag2)
 							{
 								cats.Remove(row4.uid);
-								flag3 = false;
+								flag = false;
 							}
 						}
 					}
 				}
-				while (!flag3);
+				while (!flag);
 				ButtonCategory[] componentsInChildren = list.GetComponentsInChildren<ButtonCategory>();
 				foreach (ButtonCategory buttonCategory in componentsInChildren)
 				{

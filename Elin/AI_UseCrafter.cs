@@ -160,9 +160,9 @@ public class AI_UseCrafter : AIAct
 					if ((bool)LayerDragGrid.Instance)
 					{
 						InvOwnerDraglet invOwnerDraglet = LayerDragGrid.Instance.owner;
-						for (int l = 0; l < invOwnerDraglet.numDragGrid; l++)
+						for (int num = 0; num < invOwnerDraglet.numDragGrid; num++)
 						{
-							if (invOwnerDraglet.buttons[l].Card == null)
+							if (invOwnerDraglet.buttons[num].Card == null)
 							{
 								return false;
 							}
@@ -211,9 +211,9 @@ public class AI_UseCrafter : AIAct
 					Element orCreateElement = owner.elements.GetOrCreateElement(crafter.IDReqEle(recipe?.source ?? null));
 					if (recipe != null)
 					{
-						for (int m = 0; m < this.num; m++)
+						for (int l = 0; l < num; l++)
 						{
-							recipe.Craft(blessed, m == 0, ings, crafter);
+							recipe.Craft(blessed, l == 0, ings, crafter);
 						}
 						EClass.Sound.Play("craft");
 						Point from = (crafter.owner.ExistsOnMap ? crafter.owner.pos : owner.pos);
@@ -238,11 +238,11 @@ public class AI_UseCrafter : AIAct
 							owner.Pick(thing2);
 						}
 					}
-					for (int n = 0; n < ings.Count; n++)
+					for (int m = 0; m < ings.Count; m++)
 					{
-						if (crafter.ShouldConsumeIng(crafter.GetSource(this), n))
+						if (crafter.ShouldConsumeIng(crafter.GetSource(this), m))
 						{
-							ings[n].Destroy();
+							ings[m].Destroy();
 						}
 					}
 					foreach (Thing ing3 in ings)
@@ -254,14 +254,14 @@ public class AI_UseCrafter : AIAct
 					}
 					if (crafter.IsRequireFuel)
 					{
-						crafter.owner.ModCharge(-crafter.FuelCost * this.num);
+						crafter.owner.ModCharge(-crafter.FuelCost * num);
 						if (crafter.owner.c_charges <= 0)
 						{
 							crafter.owner.c_charges = 0;
 							crafter.Toggle(on: false);
 						}
 					}
-					for (int num = 0; num < this.num; num++)
+					for (int n = 0; n < num; n++)
 					{
 						owner.RemoveCondition<ConInvulnerable>();
 						owner.elements.ModExp(orCreateElement.id, costSP * 12 * (100 + duration * 2) / 100);

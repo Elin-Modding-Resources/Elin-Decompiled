@@ -76,8 +76,8 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 							item2.Talk((EClass.rnd(5) == 0) ? "rumor_good" : ((EClass.rnd(3) == 0) ? "thanks3" : "thanks"));
 						}
 						item2.ShowEmo(Emo.happy);
-						Hostility hostility4 = (item2.c_originalHostility = Hostility.Neutral);
-						item2.hostility = hostility4;
+						Hostility hostility5 = (item2.c_originalHostility = Hostility.Neutral);
+						item2.hostility = hostility5;
 						item2.enemy = null;
 					}
 					EClass.player.ModKarma(1);

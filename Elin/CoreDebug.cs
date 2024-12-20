@@ -641,17 +641,17 @@ public class CoreDebug : EScriptable
 		}
 		static Thing AddAbility(string id)
 		{
-			Thing thing10 = EClass.pc.AddThing(ThingGen.Create("catalyst"));
-			thing10.c_idAbility = id;
-			return thing10;
+			Thing thing9 = EClass.pc.AddThing(ThingGen.Create("catalyst"));
+			thing9.c_idAbility = id;
+			return thing9;
 		}
 		Thing AddHotbar(string id)
 		{
-			Thing thing9 = EClass.pc.AddThing(ThingGen.Create(id));
-			thing9.invX = idx;
-			thing9.invY = 1;
+			Thing thing10 = EClass.pc.AddThing(ThingGen.Create(id));
+			thing10.invX = idx;
+			thing10.invY = 1;
 			idx++;
-			return thing9;
+			return thing10;
 		}
 		void AddParty(string id)
 		{

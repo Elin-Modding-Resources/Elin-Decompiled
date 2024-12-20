@@ -564,11 +564,11 @@ public class Point : EClass
 	{
 		if (EClass._zone.IsRegion)
 		{
-			PositionTopdown();
+			_ = ref PositionTopdown();
 		}
 		else
 		{
-			Position();
+			_ = ref Position();
 		}
 		vCache.x += EClass.screen.tileWorldSize.x * 0.5f;
 		vCache.y += EClass.screen.tileWorldSize.y * 0.75f;

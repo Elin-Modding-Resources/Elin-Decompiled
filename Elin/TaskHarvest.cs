@@ -231,34 +231,34 @@ public class TaskHarvest : BaseTaskHarvest
 	public override void OnCreateProgress(Progress_Custom p)
 	{
 		SetTarget(owner);
-		string n = (IsObj ? pos.cell.GetObjName() : target.Name);
+		string i = (IsObj ? pos.cell.GetObjName() : target.Name);
 		SourceMaterial.Row mat = (IsObj ? pos.cell.matObj : target.material);
 		GrowSystem growth = pos.growth;
 		float num = (base.IsHarvest ? 0.5f : ((!IsObj) ? 1f : ((growth != null) ? growth.MtpProgress : 1f)));
 		int exp = 50;
 		wasReapSeed = IsReapSeed;
 		wasCrime = IsHostileAct;
-		p.textHint = n;
+		p.textHint = i;
 		p.maxProgress = (int)((float)(maxProgress * 150) * num / 100f);
 		p.interval = 1;
 		p.onProgressBegin = delegate
 		{
 			if (base.IsTooHard)
 			{
-				owner.Say((mode == HarvestType.Disassemble) ? "tooHardToDisassemble" : "tooHardToHarvest", owner, n);
+				owner.Say((mode == HarvestType.Disassemble) ? "tooHardToDisassemble" : "tooHardToHarvest", owner, i);
 				p.Cancel();
 			}
 			else if (mode == HarvestType.Disassemble)
 			{
-				owner.Say("disassemble_start", owner, owner.Tool, n);
+				owner.Say("disassemble_start", owner, owner.Tool, i);
 			}
 			else if (owner.Tool == null)
 			{
-				owner.Say("harvestHand_start", owner, n);
+				owner.Say("harvestHand_start", owner, i);
 			}
 			else
 			{
-				owner.Say("harvest_start", owner, owner.Tool, n);
+				owner.Say("harvest_start", owner, owner.Tool, i);
 			}
 		};
 		p.onProgress = delegate(Progress_Custom _p)

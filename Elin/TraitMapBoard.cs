@@ -15,8 +15,8 @@ public class TraitMapBoard : TraitBoard
 		}
 		p.TrySetAct("actChangeHomeIcon", delegate
 		{
-			UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
-			GridLayoutGroup parent = uIContextMenu.AddGridLayout();
+			UIContextMenu uIContextMenu4 = EClass.ui.CreateContextMenuInteraction();
+			GridLayoutGroup parent = uIContextMenu4.AddGridLayout();
 			HashSet<int> hashSet = new HashSet<int>();
 			foreach (Spatial value in EClass.game.spatials.map.Values)
 			{
@@ -39,68 +39,68 @@ public class TraitMapBoard : TraitBoard
 					EClass.scene.elomap.SetZone(EClass._zone.x, EClass._zone.y, EClass._zone, updateMesh: true);
 				});
 			}
-			uIContextMenu.Show();
+			uIContextMenu4.Show();
 			return false;
 		}, owner);
 		p.TrySetAct("actChangeBlockHeight", delegate
 		{
-			UIContextMenu uIContextMenu2 = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu2.AddSlider("adjustment", (float a) => a.ToString() ?? "", EClass._map.config.blockHeight * 10f, delegate(float b)
+			UIContextMenu uIContextMenu3 = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu3.AddSlider("adjustment", (float a) => a.ToString() ?? "", EClass._map.config.blockHeight * 10f, delegate(float b)
 			{
 				EClass._map.config.blockHeight = b * 0.1f;
 			}, 0f, 40f, isInt: true, hideOther: false);
-			uIContextMenu2.Show();
+			uIContextMenu3.Show();
 			return false;
 		}, owner);
 		p.TrySetAct("actChangeSkyBlockHeight", delegate
 		{
-			UIContextMenu uIContextMenu3 = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu3.AddSlider("adjustment", (float a) => a.ToString() ?? "", EClass._map.config.skyBlockHeight, delegate(float b)
+			UIContextMenu uIContextMenu2 = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu2.AddSlider("adjustment", (float a) => a.ToString() ?? "", EClass._map.config.skyBlockHeight, delegate(float b)
 			{
 				EClass._map.config.skyBlockHeight = (int)b;
 			}, 1f, 20f, isInt: true, hideOther: false);
-			uIContextMenu3.Show();
+			uIContextMenu2.Show();
 			return false;
 		}, owner);
 		p.TrySetAct("actChangeMapBG", delegate
 		{
-			LayerList layerList = EClass.ui.AddLayer<LayerList>().SetSize(400f);
-			List<MapBG> list = Util.EnumToList<MapBG>();
-			for (int i = 0; i < list.Count; i++)
-			{
-				layerList.Add(list[i].ToString(), delegate(int a)
-				{
-					EClass._map.config.bg = list[a];
-					EClass.scene.RefreshBG();
-				});
-			}
-			layerList.Show();
-			return false;
-		}, owner);
-		p.TrySetAct("actChangeShadowStrength", delegate
-		{
-			UIContextMenu uIContextMenu4 = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu4.AddSlider("adjustment", (float a) => a + "%", EClass._map.config.shadowStrength * 100f, delegate(float b)
-			{
-				EClass._map.config.shadowStrength = b * 0.01f;
-				EClass.screen.RefreshAll();
-			}, 0f, 400f, isInt: true, hideOther: false);
-			uIContextMenu4.Show();
-			return false;
-		}, owner);
-		p.TrySetAct("actChangeFogDensity", delegate
-		{
 			LayerList layerList2 = EClass.ui.AddLayer<LayerList>().SetSize(400f);
-			List<FogType> list2 = Util.EnumToList<FogType>();
+			List<MapBG> list2 = Util.EnumToList<MapBG>();
 			for (int j = 0; j < list2.Count; j++)
 			{
 				layerList2.Add(list2[j].ToString(), delegate(int a)
 				{
-					EClass._map.config.fog = list2[a];
-					EClass.screen.RefreshAll();
+					EClass._map.config.bg = list2[a];
+					EClass.scene.RefreshBG();
 				});
 			}
 			layerList2.Show();
+			return false;
+		}, owner);
+		p.TrySetAct("actChangeShadowStrength", delegate
+		{
+			UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu.AddSlider("adjustment", (float a) => a + "%", EClass._map.config.shadowStrength * 100f, delegate(float b)
+			{
+				EClass._map.config.shadowStrength = b * 0.01f;
+				EClass.screen.RefreshAll();
+			}, 0f, 400f, isInt: true, hideOther: false);
+			uIContextMenu.Show();
+			return false;
+		}, owner);
+		p.TrySetAct("actChangeFogDensity", delegate
+		{
+			LayerList layerList = EClass.ui.AddLayer<LayerList>().SetSize(400f);
+			List<FogType> list = Util.EnumToList<FogType>();
+			for (int i = 0; i < list.Count; i++)
+			{
+				layerList.Add(list[i].ToString(), delegate(int a)
+				{
+					EClass._map.config.fog = list[a];
+					EClass.screen.RefreshAll();
+				});
+			}
+			layerList.Show();
 			return false;
 		}, owner);
 		p.TrySetAct("actChangeSkyColor", delegate

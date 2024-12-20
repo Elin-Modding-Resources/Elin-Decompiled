@@ -609,21 +609,21 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 	{
 		UIContextMenu uIContextMenu = m.AddChild("anchor");
 		SkinConfig cfg = config.skin;
-		foreach (RectPosition p in Util.EnumToList<RectPosition>())
+		foreach (RectPosition p2 in Util.EnumToList<RectPosition>())
 		{
-			uIContextMenu.AddButton(((config.userAnchor == p) ? "★ " : "") + p.ToString().lang(), delegate
+			uIContextMenu.AddButton(((config.userAnchor == p2) ? "★ " : "") + p2.ToString().lang(), delegate
 			{
-				SetAnchor(p);
+				SetAnchor(p2);
 				SE.ClickGeneral();
 				m.Hide();
 			});
 		}
 		uIContextMenu = m.AddChild("pivot");
-		foreach (RectPosition p2 in Util.EnumToList<RectPosition>())
+		foreach (RectPosition p in Util.EnumToList<RectPosition>())
 		{
-			uIContextMenu.AddButton(((config.pivot == p2) ? "★ " : "") + p2.ToString().lang(), delegate
+			uIContextMenu.AddButton(((config.pivot == p) ? "★ " : "") + p.ToString().lang(), delegate
 			{
-				SetPivot(p2);
+				SetPivot(p);
 				SE.ClickGeneral();
 				m.Hide();
 			});

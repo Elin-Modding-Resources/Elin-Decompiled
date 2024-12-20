@@ -67,7 +67,7 @@ public class HotItemContext : HotItem
 	public static void Show(string id, Vector3 pos)
 	{
 		string menuName = ((id == "system") ? "ContextSystem" : "ContextMenu");
-		UIContextMenu m = EClass.ui.contextMenu.Create(menuName);
+		UIContextMenu i = EClass.ui.contextMenu.Create(menuName);
 		GameDate d = EClass.core.game.world.date;
 		Game.Config conf = EClass.game.config;
 		bool isRegion = EClass._zone.IsRegion;
@@ -75,7 +75,7 @@ public class HotItemContext : HotItem
 		{
 			if (id == "system")
 			{
-				UIContextMenu uIContextMenu = m.AddChild("etc");
+				UIContextMenu uIContextMenu = i.AddChild("etc");
 				uIContextMenu.AddButton("LayerFeedback".lang() + "(" + EInput.keys.report.key.ToString() + ")", delegate
 				{
 					EClass.ui.ToggleFeedback();
@@ -101,7 +101,7 @@ public class HotItemContext : HotItem
 					SE.ClickGeneral();
 					EClass.ui.ToggleCanvas();
 				});
-				UIContextMenu uIContextMenu2 = m.AddChild("tool");
+				UIContextMenu uIContextMenu2 = i.AddChild("tool");
 				uIContextMenu2.AddButton("LayerMod", delegate
 				{
 					EClass.ui.AddLayer<LayerMod>();
@@ -114,56 +114,56 @@ public class HotItemContext : HotItem
 				{
 					Util.ShowExplorer(CorePath.custom + "Portrait");
 				});
-				m.AddSeparator();
-				m.AddButton("help", delegate
+				i.AddSeparator();
+				i.AddButton("help", delegate
 				{
 					LayerHelp.Toggle("general", "1");
 				});
-				m.AddButton("widget", delegate
+				i.AddButton("widget", delegate
 				{
 					EClass.ui.AddLayer<LayerWidget>();
 				});
-				m.AddButton("config", delegate
+				i.AddButton("config", delegate
 				{
 					EClass.ui.AddLayer<LayerConfig>();
 				});
-				m.AddSeparator();
-				m.AddButton("LayerHoard", delegate
+				i.AddSeparator();
+				i.AddButton("LayerHoard", delegate
 				{
 					EClass.ui.AddLayer<LayerHoard>();
 				});
-				m.AddSeparator();
+				i.AddSeparator();
 				if (EClass.game.Difficulty.allowManualSave || EClass.debug.enable)
 				{
-					m.AddButton("save", delegate
+					i.AddButton("save", delegate
 					{
 						EClass.game.Save();
 					});
-					m.AddButton("load", delegate
+					i.AddButton("load", delegate
 					{
 						EClass.ui.AddLayer<LayerLoadGame>().Init(_backup: false);
 					});
 				}
-				m.AddSeparator();
-				m.AddButton("title", delegate
+				i.AddSeparator();
+				i.AddButton("title", delegate
 				{
 					EClass.game.GotoTitle();
 				});
-				m.AddButton("quit", EClass.game.Quit);
-				m.GetComponent<Image>().SetAlpha(1f);
+				i.AddButton("quit", EClass.game.Quit);
+				i.GetComponent<Image>().SetAlpha(1f);
 			}
 		}
 		else if (EClass.scene.actionMode.IsBuildMode)
 		{
 			if (EClass.debug.enable)
 			{
-				m.AddButton("Reset Map", delegate
+				i.AddButton("Reset Map", delegate
 				{
 					Zone.forceRegenerate = true;
 					EClass._zone.Activate();
 				});
-				m.AddChild("Map Subset");
-				m.AddSeparator();
+				i.AddChild("Map Subset");
+				i.AddSeparator();
 				AddSliderMonth();
 				AddSliderHour();
 				AddSliderWeather();
@@ -173,50 +173,50 @@ public class HotItemContext : HotItem
 		{
 			if (!isRegion && EClass.scene.flock.gameObject.activeSelf)
 			{
-				m.AddButton("birdView", delegate
+				i.AddButton("birdView", delegate
 				{
 					EClass.scene.ToggleBirdView();
 				});
 			}
 			AddTilt();
-			m.AddToggle("highlightArea", conf.highlightArea, delegate
+			i.AddToggle("highlightArea", conf.highlightArea, delegate
 			{
 				EClass.scene.ToggleHighlightArea();
 			});
-			m.AddToggle("noRoof", conf.noRoof, delegate
+			i.AddToggle("noRoof", conf.noRoof, delegate
 			{
 				EClass.scene.ToggleRoof();
 			});
 			if (EClass._zone.IsRegion)
 			{
-				m.AddSlider("zoomRegion", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.regionZoom / CoreConfig.ZoomStep, delegate(float b)
+				i.AddSlider("zoomRegion", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.regionZoom / CoreConfig.ZoomStep, delegate(float b)
 				{
 					conf.regionZoom = (int)b * CoreConfig.ZoomStep;
 				}, 100 / CoreConfig.ZoomStep, 200 / CoreConfig.ZoomStep, isInt: true, hideOther: false);
 			}
 			else if (ActionMode.Adv.zoomOut2)
 			{
-				m.AddSlider("zoomAlt", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.zoomedZoom / CoreConfig.ZoomStep, delegate(float b)
+				i.AddSlider("zoomAlt", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.zoomedZoom / CoreConfig.ZoomStep, delegate(float b)
 				{
 					conf.zoomedZoom = (int)b * CoreConfig.ZoomStep;
 				}, 50 / CoreConfig.ZoomStep, 200 / CoreConfig.ZoomStep, isInt: true, hideOther: false);
 			}
 			else
 			{
-				m.AddSlider("zoom", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.defaultZoom / CoreConfig.ZoomStep, delegate(float b)
+				i.AddSlider("zoom", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.defaultZoom / CoreConfig.ZoomStep, delegate(float b)
 				{
 					conf.defaultZoom = (int)b * CoreConfig.ZoomStep;
 				}, 50 / CoreConfig.ZoomStep, 200 / CoreConfig.ZoomStep, isInt: true, hideOther: false);
 			}
-			m.AddSlider("backDrawAlpha", (float a) => a + "%", EClass.game.config.backDrawAlpha, delegate(float b)
+			i.AddSlider("backDrawAlpha", (float a) => a + "%", EClass.game.config.backDrawAlpha, delegate(float b)
 			{
 				EClass.game.config.backDrawAlpha = (int)b;
 			}, 0f, 50f, isInt: true, hideOther: false);
 			if (EClass.debug.enable)
 			{
-				m.AddSeparator();
+				i.AddSeparator();
 				AddSliderMonth();
-				m.AddSlider("sliderDay", (float a) => a.ToString() ?? "", EClass.world.date.day, delegate(float b)
+				i.AddSlider("sliderDay", (float a) => a.ToString() ?? "", EClass.world.date.day, delegate(float b)
 				{
 					if ((int)b != EClass.world.date.day)
 					{
@@ -228,11 +228,11 @@ public class HotItemContext : HotItem
 				}, 1f, 30f, isInt: true, hideOther: false);
 				AddSliderHour();
 				AddSliderWeather();
-				m.AddSlider("sliderAnimeSpeed", (float a) => EClass.game.config.animeSpeed + "%", EClass.game.config.animeSpeed, delegate(float b)
+				i.AddSlider("sliderAnimeSpeed", (float a) => EClass.game.config.animeSpeed + "%", EClass.game.config.animeSpeed, delegate(float b)
 				{
 					EClass.game.config.animeSpeed = (int)b;
 				}, 0f, 100f, isInt: true, hideOther: false);
-				UIContextMenu uIContextMenu3 = m.AddChild("debug");
+				UIContextMenu uIContextMenu3 = i.AddChild("debug");
 				uIContextMenu3.AddToggle("reveal_map", EClass.debug.revealMap, delegate
 				{
 					EClass.debug.ToggleRevealMap();
@@ -264,14 +264,14 @@ public class HotItemContext : HotItem
 				}, 0f, 500f, isInt: true, hideOther: false);
 			}
 		}
-		m.Show(pos);
+		i.Show(pos);
 		if (id == "system")
 		{
-			m.hideOnMouseLeave = false;
+			i.hideOnMouseLeave = false;
 		}
 		void AddSliderHour()
 		{
-			m.AddSlider("sliderTime", (float a) => a.ToString() ?? "", d.hour, delegate(float b)
+			i.AddSlider("sliderTime", (float a) => a.ToString() ?? "", d.hour, delegate(float b)
 			{
 				Weather.Condition currentCondition = EClass.world.weather._currentCondition;
 				if (d.hour != (int)b)
@@ -287,7 +287,7 @@ public class HotItemContext : HotItem
 		}
 		void AddSliderMonth()
 		{
-			m.AddSlider("sliderMonth", (float a) => a.ToString() ?? "", EClass.world.date.month, delegate(float b)
+			i.AddSlider("sliderMonth", (float a) => a.ToString() ?? "", EClass.world.date.month, delegate(float b)
 			{
 				if (d.month != (int)b)
 				{
@@ -303,18 +303,18 @@ public class HotItemContext : HotItem
 		}
 		void AddSliderWeather()
 		{
-			m.AddSlider("sliderWeather", (float a) => EClass.world.weather.GetName(((int)a).ToEnum<Weather.Condition>()) ?? "", (float)EClass.world.weather._currentCondition, delegate(float b)
+			i.AddSlider("sliderWeather", (float a) => EClass.world.weather.GetName(((int)a).ToEnum<Weather.Condition>()) ?? "", (float)EClass.world.weather._currentCondition, delegate(float b)
 			{
 				EClass.world.weather.SetCondition(((int)b).ToEnum<Weather.Condition>());
 			}, 0f, 7f, isInt: true, hideOther: false);
 		}
 		void AddTilt()
 		{
-			m.AddToggle("alwaysTilt".lang() + (isRegion ? "(Region)" : ""), isRegion ? conf.tiltRegion : conf.tilt, delegate
+			i.AddToggle("alwaysTilt".lang() + (isRegion ? "(Region)" : ""), isRegion ? conf.tiltRegion : conf.tilt, delegate
 			{
 				EClass.scene.ToggleTilt();
 			});
-			m.AddSlider("tiltPower", (float a) => a.ToString() ?? "", isRegion ? conf.tiltPowerRegion : conf.tiltPower, delegate(float b)
+			i.AddSlider("tiltPower", (float a) => a.ToString() ?? "", isRegion ? conf.tiltPowerRegion : conf.tiltPower, delegate(float b)
 			{
 				if (isRegion)
 				{

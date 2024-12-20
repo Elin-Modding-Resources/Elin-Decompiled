@@ -235,15 +235,15 @@ public class BaseArea : EClass, IInspect
 				text = "limitRoomHeight",
 				action = delegate
 				{
-					List<string> list = new List<string>();
+					List<string> list2 = new List<string>();
 					EClass.ui.AddLayer<LayerList>().SetStringList(delegate
 					{
-						list.Clear();
-						for (int i = 1; i < 10; i++)
+						list2.Clear();
+						for (int j = 1; j < 10; j++)
 						{
-							list.Add(i.ToString() ?? "");
+							list2.Add(j.ToString() ?? "");
 						}
-						return list;
+						return list2;
 					}, delegate(int a, string b)
 					{
 						data.maxHeight = a + 1;
@@ -260,15 +260,15 @@ public class BaseArea : EClass, IInspect
 				text = "changeGroup",
 				action = delegate
 				{
-					List<string> list2 = new List<string>();
+					List<string> list = new List<string>();
 					EClass.ui.AddLayer<LayerList>().SetStringList(delegate
 					{
-						list2.Clear();
-						for (int j = 0; j < 5; j++)
+						list.Clear();
+						for (int i = 0; i < 5; i++)
 						{
-							list2.Add(j.ToString() ?? "");
+							list.Add(i.ToString() ?? "");
 						}
-						return list2;
+						return list;
 					}, delegate(int a, string b)
 					{
 						data.group = a;

@@ -578,8 +578,8 @@ public class AI_Idle : AIAct
 				if (c.HasElement(1211) && !(EClass._zone is Zone_Casino))
 				{
 					owner.Talk("snail");
-					Thing t3 = ThingGen.Create("1142");
-					ActThrow.Throw(owner, c.pos, t3);
+					Thing t4 = ThingGen.Create("1142");
+					ActThrow.Throw(owner, c.pos, t4);
 				}
 			});
 			yield return Restart();
@@ -613,8 +613,8 @@ public class AI_Idle : AIAct
 			{
 				if (EClass.rnd(3) != 0 && chara3 != owner && chara3.pos.cell.IsSnowTile && chara3.Dist(owner) <= 6 && Los.IsVisible(chara3, owner))
 				{
-					Thing t4 = ThingGen.Create("snow");
-					ActThrow.Throw(owner, chara3.pos, t4);
+					Thing t3 = ThingGen.Create("snow");
+					ActThrow.Throw(owner, chara3.pos, t3);
 					break;
 				}
 			}

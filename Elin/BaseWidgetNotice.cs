@@ -51,14 +51,14 @@ public class BaseWidgetNotice : Widget
 	{
 		OnRefresh();
 		bool rebuild = false;
-		foreach (BaseNotification n in list)
+		foreach (BaseNotification i in list)
 		{
-			n.Refresh();
-			n.item.SetActive(n.Visible, delegate(bool enabled)
+			i.Refresh();
+			i.item.SetActive(i.Visible, delegate(bool enabled)
 			{
 				if (enabled)
 				{
-					n.item.button.RebuildLayout(recursive: true);
+					i.item.button.RebuildLayout(recursive: true);
 				}
 				rebuild = true;
 			});

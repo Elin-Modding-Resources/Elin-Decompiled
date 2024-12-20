@@ -26,10 +26,10 @@ public class Region : Zone
 	{
 		children.ForeachReverse(delegate(Spatial _z)
 		{
-			Zone zone = _z as Zone;
-			if (zone.CanDestroy())
+			Zone zone2 = _z as Zone;
+			if (zone2.CanDestroy())
 			{
-				zone.Destroy();
+				zone2.Destroy();
 			}
 		});
 		children.ForeachReverse(delegate(Spatial _z)
@@ -41,10 +41,10 @@ public class Region : Zone
 		});
 		children.ForEach(delegate(Spatial a)
 		{
-			Zone zone2 = a as Zone;
-			if (!zone2.IsInstance && (zone2.IsPCFaction || !(zone2 is Zone_Field)) && !(zone2 is Zone_SisterHouse))
+			Zone zone = a as Zone;
+			if (!zone.IsInstance && (zone.IsPCFaction || !(zone is Zone_Field)) && !(zone is Zone_SisterHouse))
 			{
-				elomap.SetZone(zone2.x, zone2.y, zone2);
+				elomap.SetZone(zone.x, zone.y, zone);
 			}
 		});
 		CheckRandomSites();

@@ -473,22 +473,22 @@ public class GameUpdater : EClass
 					}
 				}
 			}
-			Point hit = Scene.HitPoint;
-			if (hit.IsValid)
+			Point hit2 = Scene.HitPoint;
+			if (hit2.IsValid)
 			{
 				for (int i = 0; i < EClass._map.charas.Count; i++)
 				{
 					Chara tg = EClass._map.charas[i];
-					if (!Los.IsVisible(hit, tg.pos))
+					if (!Los.IsVisible(hit2, tg.pos))
 					{
 						continue;
 					}
-					Los.IsVisible(hit, tg.pos, delegate(Point point, bool blocked)
+					Los.IsVisible(hit2, tg.pos, delegate(Point point, bool blocked)
 					{
 						EClass.screen.tileMap.passGuideFloor.Add(point, 20f);
 						if (Input.GetKey(KeyCode.LeftControl))
 						{
-							Debug.Log(tg.Name + ": Distance:" + hit.Distance(tg.pos));
+							Debug.Log(tg.Name + ": Distance:" + hit2.Distance(tg.pos));
 						}
 					});
 				}
@@ -496,12 +496,12 @@ public class GameUpdater : EClass
 		}
 		if (EClass.debug.testLOS2)
 		{
-			Point hit2 = Scene.HitPoint;
-			if (hit2.IsValid)
+			Point hit = Scene.HitPoint;
+			if (hit.IsValid)
 			{
-				EClass._map.ForeachSphere(hit2.x, hit2.z, 6f, delegate(Point p)
+				EClass._map.ForeachSphere(hit.x, hit.z, 6f, delegate(Point p)
 				{
-					if (p.IsValid && Los.IsVisible(hit2, p))
+					if (p.IsValid && Los.IsVisible(hit, p))
 					{
 						EClass.screen.tileMap.passGuideFloor.Add(p, 20f);
 					}

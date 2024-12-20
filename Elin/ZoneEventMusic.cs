@@ -36,15 +36,15 @@ public class ZoneEventMusic : ZoneEventQuest
 					num = EClass.rnd(maxLv);
 				}
 				List<Point> list = b.ListEmptyPoint();
-				for (int j = 0; j < EClass.rndHalf(list.Count); j++)
+				for (int k = 0; k < EClass.rndHalf(list.Count); k++)
 				{
 					if (list.Count == 0)
 					{
 						break;
 					}
 					Point point = list.RandomItem();
-					Chara c2 = CharaGen.CreateFromFilter("c_neutral", num, 5);
-					Spawn(c2, point);
+					Chara c4 = CharaGen.CreateFromFilter("c_neutral", num, 5);
+					Spawn(c4, point);
 					list.Remove(point);
 				}
 			});
@@ -70,17 +70,17 @@ public class ZoneEventMusic : ZoneEventQuest
 			}
 			if (flag)
 			{
-				Chara c3 = CharaGen.Create(item.id);
-				Spawn(c3, randomPoint);
+				Chara c2 = CharaGen.Create(item.id);
+				Spawn(c2, randomPoint);
 			}
 		}
-		for (int k = 0; k < 50; k++)
+		for (int j = 0; j < 50; j++)
 		{
 			Point randomPoint2 = EClass._map.bounds.GetRandomPoint();
 			if (!randomPoint2.HasChara && !randomPoint2.HasBlock)
 			{
-				Chara c4 = CharaGen.CreateFromFilter("c_neutral", maxLv / 2);
-				Spawn(c4, randomPoint2);
+				Chara c3 = CharaGen.CreateFromFilter("c_neutral", maxLv / 2);
+				Spawn(c3, randomPoint2);
 			}
 		}
 		foreach (Thing thing in EClass._map.things)

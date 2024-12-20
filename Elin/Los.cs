@@ -94,10 +94,10 @@ public class Los : EClass
 		Point lastPoint = p1.Copy();
 		IsVisible(p1.x, p2.x, p1.z, p2.z, delegate(Point p, bool blocked)
 		{
-			Point point = new Point(p.x - lastPoint.x, p.z - lastPoint.z);
-			if (point.x != 0 || point.z != 0)
+			Point point3 = new Point(p.x - lastPoint.x, p.z - lastPoint.z);
+			if (point3.x != 0 || point3.z != 0)
 			{
-				vecs.Add(point);
+				vecs.Add(point3);
 			}
 			lastPoint.Set(p);
 		}, returnOnBlock: false);
@@ -105,14 +105,14 @@ public class Los : EClass
 		{
 			return list;
 		}
-		Point point2 = p1.Copy();
+		Point point = p1.Copy();
 		for (int i = 0; i < radius; i++)
 		{
-			Point point3 = vecs[i % vecs.Count];
-			point2.x += point3.x;
-			point2.z += point3.z;
+			Point point2 = vecs[i % vecs.Count];
+			point.x += point2.x;
+			point.z += point2.z;
 		}
-		IsVisible(p1.x, point2.x, p1.z, point2.z, delegate(Point p, bool blocked)
+		IsVisible(p1.x, point.x, p1.z, point.z, delegate(Point p, bool blocked)
 		{
 			if (!blocked)
 			{

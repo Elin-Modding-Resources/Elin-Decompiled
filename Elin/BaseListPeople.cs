@@ -298,16 +298,16 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						});
 						uIContextMenu.AddButton("togglePCC", delegate
 						{
-							bool isSynced = c.isSynced;
+							bool isSynced2 = c.isSynced;
 							c.pccData = PCCData.Create(c.IDPCCBodySet);
 							c.pccData.Randomize(c.IDPCCBodySet);
-							if (isSynced)
+							if (isSynced2)
 							{
 								c.renderer.OnLeaveScreen();
 							}
 							EClass.scene.syncList.Remove(c.renderer);
 							c._CreateRenderer();
-							if (isSynced)
+							if (isSynced2)
 							{
 								EClass.scene.syncList.Add(c.renderer);
 								c.renderer.OnEnterScreen();
@@ -324,15 +324,15 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						});
 						uIContextMenu.AddButton("togglePCC", delegate
 						{
-							bool isSynced2 = c.isSynced;
-							if (isSynced2)
+							bool isSynced = c.isSynced;
+							if (isSynced)
 							{
 								c.renderer.OnLeaveScreen();
 							}
 							EClass.scene.syncList.Remove(c.renderer);
 							c.pccData = null;
 							c._CreateRenderer();
-							if (isSynced2)
+							if (isSynced)
 							{
 								EClass.scene.syncList.Add(c.renderer);
 								c.renderer.OnEnterScreen();

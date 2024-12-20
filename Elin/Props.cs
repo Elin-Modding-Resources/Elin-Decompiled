@@ -236,8 +236,8 @@ public class Props : EClass
 			{
 				foreach (Card value in cardMap.GetOrCreate(id).Values)
 				{
-					Card obj2 = value.parent as Card;
-					if (obj2 != null && obj2.c_lockLv == 0)
+					Card obj = value.parent as Card;
+					if (obj != null && obj.c_lockLv == 0)
 					{
 						TryAdd(value.Thing);
 					}
@@ -258,8 +258,8 @@ public class Props : EClass
 			{
 				foreach (Thing thing in things)
 				{
-					Card obj = thing.parent as Card;
-					if (obj != null && obj.c_lockLv == 0 && thing.category.IsChildOf(cat.id) && !thing.IsExcludeFromCraft())
+					Card obj2 = thing.parent as Card;
+					if (obj2 != null && obj2.c_lockLv == 0 && thing.category.IsChildOf(cat.id) && !thing.IsExcludeFromCraft())
 					{
 						stack.Add(thing);
 					}
