@@ -6,8 +6,14 @@ public class TraitGeneMachine : TraitStasisChamber
 
 	public override bool IsHomeItem => true;
 
+	public override bool CanBeHeld => !IsTargetUsingGene();
+
 	public Chara GetTarget()
 	{
+		if (!owner.IsInstalled)
+		{
+			return null;
+		}
 		foreach (Chara chara in owner.pos.Charas)
 		{
 			ConSuspend condition = chara.GetCondition<ConSuspend>();

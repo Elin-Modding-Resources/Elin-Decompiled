@@ -517,9 +517,9 @@ public class GoalCombat : Goal
 					{
 						num -= 40;
 					}
-					if (tc.id == "hedgehog_ether")
+					if (!owner.IsPC && owner.IsPCFaction && tc.id == "hedgehog_ether")
 					{
-						num = -999999;
+						continue;
 					}
 				}
 				break;
@@ -584,7 +584,7 @@ public class GoalCombat : Goal
 					continue;
 				}
 				bool flag5 = ability.act is ActBolt;
-				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)))
+				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}

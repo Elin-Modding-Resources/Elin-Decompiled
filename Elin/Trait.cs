@@ -1140,20 +1140,28 @@ public class Trait : EClass
 				if (!silent)
 				{
 					owner.Say(flag ? "toggle_fire" : "toggle_ele", EClass.pc, owner);
-					owner.PlaySound((Electricity < 0) ? "switch_on_electricity" : (flag ? "torch_lit" : "switch_on"));
+					string id = ((Electricity < 0) ? "switch_on_electricity" : (flag ? "torch_lit" : "switch_on"));
+					if (this is TraitMusicBox)
+					{
+						id = "switch_on_musicbox";
+					}
+					owner.PlaySound(id);
 				}
 				RefreshRenderer();
 				owner.RecalculateFOV();
+				break;
 			}
-			else
+			if (!silent)
 			{
-				if (!silent)
+				string id2 = ((Electricity < 0) ? "switch_off_electricity" : (flag ? "torch_unlit" : "switch_off"));
+				if (this is TraitMusicBox)
 				{
-					owner.PlaySound((Electricity < 0) ? "switch_off_electricity" : (flag ? "torch_unlit" : "switch_off"));
+					id2 = "switch_off_musicbox";
 				}
-				RefreshRenderer();
-				owner.RecalculateFOV();
+				owner.PlaySound(id2);
 			}
+			RefreshRenderer();
+			owner.RecalculateFOV();
 			break;
 		case ToggleType.None:
 			break;

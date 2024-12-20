@@ -570,7 +570,7 @@ public class Thing : Card
 			}
 			if (!(text7 == "*r"))
 			{
-				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1", text7) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
+				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", (base.refCard != null) ? base.refCard.GetName() : text7).Replace("#1", text7) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
 			}
 			else
 			{

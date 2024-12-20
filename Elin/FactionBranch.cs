@@ -624,7 +624,6 @@ public class FactionBranch : EClass
 					}
 					if (!TryTrash(t))
 					{
-						EClass._zone.AddCard(t, EClass._map.bounds.GetRandomSurface());
 						unsortedCount++;
 						if (unsortedCount >= 5)
 						{
@@ -638,13 +637,13 @@ public class FactionBranch : EClass
 
 	public bool TryTrash(Thing t)
 	{
-		Thing thing = ((t.id == "_poop") ? EClass._map.props.installed.FindEmptyContainer<TraitContainerCompost>(t) : (t.isFireproof ? EClass._map.props.installed.FindEmptyContainer<TraitContainerUnburnable>(t) : EClass._map.props.installed.FindEmptyContainer<TraitContainerBurnable>(t)));
+		Thing thing = ((t.id == "_poop" || t.source._origin == "dish") ? EClass._map.props.installed.FindEmptyContainer<TraitContainerCompost>(t) : (t.isFireproof ? EClass._map.props.installed.FindEmptyContainer<TraitContainerUnburnable>(t) : EClass._map.props.installed.FindEmptyContainer<TraitContainerBurnable>(t)));
 		if (thing != null)
 		{
 			thing.AddCard(t);
 			return true;
 		}
-		return EClass._zone.TryAddThingInSpot<TraitSpotGarbage>(t, useContainer: false, putRandomPosIfNoSpot: false);
+		return EClass._zone.TryAddThingInSpot<TraitSpotGarbage>(t, useContainer: false);
 	}
 
 	public void ReceivePackages(VirtualDate date)
@@ -820,7 +819,26 @@ public class FactionBranch : EClass
 									thing3.ChangeMaterial("iron");
 									thing3.c_IDTState = 0;
 								}
-								i.TryPutShared(thing3);
+								bool flag = thing3.category.id == "garbage";
+								if (thing3.trait is TraitFoodMeal)
+								{
+									if (thing3.HasTag(CTAG.dish_fail))
+									{
+										flag = true;
+									}
+									else
+									{
+										CraftUtil.MakeDish(thing3, num4 + 10, i);
+									}
+								}
+								if (flag)
+								{
+									TryTrash(thing3);
+								}
+								else
+								{
+									i.TryPutShared(thing3);
+								}
 							}
 						}
 					}

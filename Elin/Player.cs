@@ -741,6 +741,9 @@ public class Player : EClass
 	public int seedFortune;
 
 	[JsonProperty]
+	public int giftJure;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]

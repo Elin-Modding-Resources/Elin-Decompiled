@@ -1882,16 +1882,12 @@ public class Zone : Spatial, ICardParent, IInspect
 		return EClass._map.props.installed.traits.GetRandomThing<T>() as T;
 	}
 
-	public bool TryAddThingInSpot<T>(Thing t, bool useContainer = true, bool putRandomPosIfNoSpot = true) where T : Trait
+	public bool TryAddThingInSpot<T>(Thing t, bool useContainer = true) where T : Trait
 	{
 		Thing randomThing = EClass._map.props.installed.traits.GetRandomThing<T>();
 		if (randomThing == null)
 		{
-			if (putRandomPosIfNoSpot)
-			{
-				AddCard(t, EClass._map.bounds.GetRandomSurface());
-				return true;
-			}
+			AddCard(t, EClass._map.bounds.GetRandomSurface());
 			return false;
 		}
 		if (useContainer && (!t.IsContainer || t.things.Count == 0))

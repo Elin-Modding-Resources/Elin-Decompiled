@@ -47,7 +47,7 @@ public class ActorEx : Actor
 
 	public float GetVolume()
 	{
-		if (!EMono._zone.isStarted)
+		if (!EMono._zone.isStarted || !owner.IsInstalled)
 		{
 			return 0f;
 		}

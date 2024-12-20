@@ -31,5 +31,6 @@ public enum CTAG
 	staticSkin,
 	godArtifact,
 	noWish,
-	dish_bonus
+	dish_bonus,
+	dish_fail
 }
