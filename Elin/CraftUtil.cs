@@ -151,7 +151,7 @@ public class CraftUtil : EClass
 		foreach (Element value2 in product.elements.dict.Values)
 		{
 			int id = value2.id;
-			if ((uint)(id - 914) > 1u && value2.Value >= 0 && IsValidTrait(value2))
+			if ((uint)(id - 914) > 1u && value2.Value >= 0 && (value2.HasTag("noInherit") || IsValidTrait(value2)))
 			{
 				product.elements.SetTo(value2.id, 0);
 			}
@@ -222,6 +222,10 @@ public class CraftUtil : EClass
 		return product;
 		bool IsValidTrait(Element e)
 		{
+			if (e.HasTag("noInherit"))
+			{
+				return false;
+			}
 			switch (type)
 			{
 			case MixType.General:

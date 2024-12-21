@@ -81,9 +81,10 @@ public class FoodEffect : EClass
 
 	public static void Proc(Chara c, Thing food)
 	{
+		food.CheckJustCooked();
 		bool flag = EClass._zone.IsPCFaction && c.IsInSpot<TraitSpotDining>();
 		int num = (food.isCrafted ? ((EClass.pc.Evalue(1650) >= 3) ? 5 : 0) : 0);
-		float num2 = (float)(100 + (flag ? 10 : 0) + num + Mathf.Min(food.QualityLv * 10, 100)) / 200f;
+		float num2 = (float)(100 + (food.HasElement(757) ? 10 : 0) + (flag ? 10 : 0) + num + Mathf.Min(food.QualityLv * 10, 100)) / 200f;
 		if (num2 < 0.1f)
 		{
 			num2 = 0.1f;

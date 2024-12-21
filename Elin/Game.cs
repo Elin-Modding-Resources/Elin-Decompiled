@@ -54,6 +54,9 @@ public class Game : EClass
 		public bool cheat;
 
 		[JsonProperty]
+		public bool showAllFeat;
+
+		[JsonProperty]
 		public int slopeMod = 50;
 
 		[JsonProperty]

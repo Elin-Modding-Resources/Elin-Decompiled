@@ -27,6 +27,8 @@ public class UIDragGridInfo : EMono
 
 	public Card owner;
 
+	public UINote note;
+
 	private void Awake()
 	{
 		window.SetActive(enable: false);
@@ -100,6 +102,12 @@ public class UIDragGridInfo : EMono
 			}
 		};
 		list.List();
+		TraitRollingFortune traitRollingFortune = owner.trait as TraitRollingFortune;
+		note.SetActive(traitRollingFortune != null);
+		if (traitRollingFortune != null)
+		{
+			EMono._zone.GetOrCreateFortuneRollData().WriteNote(note);
+		}
 		window.SetActive(enable: true);
 		window.RebuildLayout(recursive: true);
 		void AddThing(string id)

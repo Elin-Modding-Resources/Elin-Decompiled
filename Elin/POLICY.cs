@@ -49,7 +49,7 @@ public class POLICY
 
 	public const int noAnimal = 2709;
 
-	public const int inquisition = 2507;
+	public const int human_right = 2506;
 
 	public const int auto_farm = 2707;
 
@@ -65,7 +65,7 @@ public class POLICY
 
 	public const int legal_drug = 2505;
 
-	public const int faith_tax = 2501;
+	public const int inquisition = 2507;
 
 	public const int nocturnal_life = 2508;
 
@@ -75,7 +75,7 @@ public class POLICY
 
 	public const int self_sufficient = 2511;
 
-	public const int human_right = 2506;
+	public const int faith_tax = 2501;
 
 	public const int resident_wanted = 2513;
 
@@ -105,8 +105,8 @@ public class POLICY
 	{
 		2816, 2711, 2800, 2810, 2811, 2812, 2813, 2814, 2815, 2817,
 		2823, 2819, 2820, 2821, 2822, 2710, 2824, 2825, 2826, 2827,
-		2828, 2818, 2709, 2507, 2707, 2708, 2500, 2502, 2503, 2504,
-		2505, 2501, 2508, 2509, 2510, 2511, 2506, 2513, 2705, 2512,
+		2828, 2818, 2709, 2506, 2707, 2708, 2500, 2502, 2503, 2504,
+		2505, 2507, 2508, 2509, 2510, 2511, 2501, 2513, 2705, 2512,
 		2704, 2706, 2702, 2703, 2700, 2516, 2515, 2514, 2701
 	};
 }

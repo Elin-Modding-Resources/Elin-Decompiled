@@ -77,12 +77,12 @@ public class ButtonElement : UIButton
 			break;
 		case Mode.LandFeat:
 		{
-			string text2 = text + e.Name;
+			string text3 = text + e.Name;
 			if (e.HasTag("network") && EClass.Branch != null && EClass.Branch.HasNetwork)
 			{
-				text2 = "feat_network".lang(text2);
+				text3 = "feat_network".lang(text3);
 			}
-			mainText.SetText(text2 + " " + e.Value, FontColor.Default);
+			mainText.SetText(text3 + " " + e.Value, FontColor.Default);
 			subText.horizontalOverflow = HorizontalWrapMode.Overflow;
 			subText.text = e.GetDetail().SplitNewline()[0].StripLastPun();
 			if ((bool)imagePotential)
@@ -96,20 +96,21 @@ public class ButtonElement : UIButton
 		case Mode.FeatMini:
 			if (mode == Mode.FeatPurchase)
 			{
-				mainText.SetText(e.FullName, FontColor.Default);
+				e.IsPurchaseFeatReqMet(EClass.pc.elements);
+				mainText.SetText(e.FullName, e.IsPurchaseFeatReqMet(EClass.pc.elements) ? FontColor.Default : FontColor.Warning);
 				subText.text = e.GetDetail().SplitNewline()[0].StripLastPun();
 				subText2.text = "".TagColor((EClass.pc.feat >= e.CostLearn) ? EClass.Colors.Skin.textGood : EClass.Colors.Skin.textBad, e.CostLearn.ToString() ?? "");
 			}
 			else
 			{
-				string text3 = ((mode == Mode.FeatMini) ? e.FullName : e.source.GetText("textPhase").SplitNewline().TryGet(e.Value - 1)
+				string text2 = ((mode == Mode.FeatMini) ? e.FullName : e.source.GetText("textPhase").SplitNewline().TryGet(e.Value - 1)
 					.StripLastPun());
 				FontColor c = (e.HasTag("neg") ? FontColor.Bad : FontColor.ButtonSelectable);
 				if (e.source.category == "ether")
 				{
 					c = FontColor.Ether;
 				}
-				mainText.SetText(text + text3, c);
+				mainText.SetText(text + text2, c);
 				subText.text = ((mode == Mode.FeatMini) ? "" : (e as Feat).GetHint(owner));
 			}
 			if ((bool)imagePotential)
@@ -145,7 +146,7 @@ public class ButtonElement : UIButton
 			imagePotential.color = ((num >= 0) ? Color.white : new Color(1f, 0.7f, 0.7f));
 		}
 		e.SetImage(icon);
-		if (mode == Mode.FeatPurchase && e.Value > 1)
+		if (mode == Mode.FeatPurchase)
 		{
 			Element refEle = Element.Create(e.id, e.Value - 1);
 			SetTooltip("note", delegate(UITooltip tt)

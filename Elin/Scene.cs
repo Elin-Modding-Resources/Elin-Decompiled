@@ -314,7 +314,7 @@ public class Scene : EMono
 			{
 				EMono.ui.widgets.Activate("QuestTracker");
 			}
-			if (EMono._zone is Zone_Town && !EMono._zone.isMapSaved)
+			if (EMono._zone is Zone_Town && !EMono._zone.isMapSaved && !EMono.debug.enable)
 			{
 				EMono.game.Save();
 			}

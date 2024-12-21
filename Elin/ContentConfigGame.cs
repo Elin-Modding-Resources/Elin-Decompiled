@@ -45,6 +45,8 @@ public class ContentConfigGame : ContentConfig
 
 	public UIButton toggleAutoBackup;
 
+	public UIButton toggleSortEach;
+
 	public UISelectableGroup groupBackerFilter;
 
 	public UISelectableGroup groupBorder;
@@ -144,6 +146,10 @@ public class ContentConfigGame : ContentConfig
 		toggleAdvanceMenu.SetToggle(base.config.game.advancedMenu, delegate(bool on)
 		{
 			base.config.game.advancedMenu = on;
+		});
+		toggleSortEach.SetToggle(base.config.game.sortEach, delegate(bool on)
+		{
+			base.config.game.sortEach = on;
 		});
 		toggleOffhand.SetToggle(base.config.game.showOffhand, delegate(bool on)
 		{

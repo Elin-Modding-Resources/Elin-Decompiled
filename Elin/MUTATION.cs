@@ -6,25 +6,25 @@ public class MUTATION
 
 	public const int mutationDexN = 1515;
 
-	public const int mutationDex = 1514;
+	public const int etherPoisonHand = 1565;
 
-	public const int etherManaBattery = 1564;
+	public const int mutationEyeN = 1513;
 
 	public const int mutationEye = 1512;
 
 	public const int mutationSkinN = 1511;
 
-	public const int etherPoisonHand = 1565;
-
 	public const int mutationSpeed = 1518;
 
-	public const int mutationEyeN = 1513;
+	public const int mutationDex = 1514;
 
 	public const int mutationSpeedN = 1519;
 
 	public const int mutationSkin = 1510;
 
 	public const int mutationStrN = 1521;
+
+	public const int etherManaBattery = 1564;
 
 	public const int etherProvoke = 1563;
 
@@ -78,8 +78,8 @@ public class MUTATION
 
 	public static readonly int[] IDS = new int[38]
 	{
-		1517, 1516, 1515, 1514, 1564, 1512, 1511, 1565, 1518, 1513,
-		1519, 1510, 1521, 1563, 1520, 1561, 1560, 1559, 1558, 1557,
+		1517, 1516, 1515, 1565, 1513, 1512, 1511, 1518, 1514, 1519,
+		1510, 1521, 1564, 1563, 1520, 1561, 1560, 1559, 1558, 1557,
 		1556, 1555, 1554, 1553, 1552, 1562, 1551, 1522, 1524, 1525,
 		1526, 1527, 1523, 1529, 1530, 1531, 1550, 1528
 	};

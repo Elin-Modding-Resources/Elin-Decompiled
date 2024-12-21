@@ -62,6 +62,7 @@ public class Affinity : EClass
 
 	public Thing OnGift(Thing t)
 	{
+		t.CheckJustCooked();
 		Thing result = CC.AddThing(t.Thing);
 		EClass.pc.PlaySound("build_resource");
 		int num = 0;
@@ -73,7 +74,7 @@ public class Affinity : EClass
 			flag2 = true;
 		}
 		num = Mathf.Clamp(t.GetPrice() / (flag2 ? 10 : (flag ? 20 : 200)), 0, 50) + (flag2 ? 20 : (flag ? 5 : 0));
-		num = num * 100 / (100 + CC.LV * 10);
+		num = num * (100 + (t.HasElement(757) ? 50 : 0)) / (100 + CC.LV * 10);
 		if (num2)
 		{
 			num += 100;

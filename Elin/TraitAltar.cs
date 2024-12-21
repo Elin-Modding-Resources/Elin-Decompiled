@@ -25,7 +25,7 @@ public class TraitAltar : Trait
 
 	public override void OnImportMap()
 	{
-		if (owner.c_idDeity.IsEmpty())
+		if (owner.c_idDeity.IsEmpty() || GetParam(1) != null)
 		{
 			SetDeity(GetParam(1) ?? EClass.game.religions.GetRandomReligion().id);
 		}

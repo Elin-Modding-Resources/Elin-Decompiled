@@ -275,8 +275,6 @@ public class Biography : EClass
 		}
 	}
 
-	public int ageOriginal => EClass.game.Prologue.year - birthYear;
-
 	public bool IsUnderAge => age < 18;
 
 	public string TextAge(Chara c)
@@ -284,7 +282,7 @@ public class Biography : EClass
 		object obj;
 		if (age < 1000)
 		{
-			obj = (c.IsUnique ? ageOriginal : age).ToString();
+			obj = (c.IsUnique ? GetOriginalAge(c) : age).ToString();
 			if (obj == null)
 			{
 				return "";
@@ -295,6 +293,16 @@ public class Biography : EClass
 			obj = "???";
 		}
 		return (string)obj;
+	}
+
+	public int GetOriginalAge(Chara c)
+	{
+		string[] array = c.source.bio.Split('/');
+		if (array.Length > 1)
+		{
+			return int.Parse(array[1]);
+		}
+		return age;
 	}
 
 	public void Generate(Chara c)

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int hotspring = 756;
+	public const int justcooked = 757;
 
-	public const int blood = 755;
+	public const int hotspring = 756;
 
 	public const int nerve = 754;
 
@@ -19,15 +19,17 @@ public class ELEMENT
 
 	public const int comfort = 750;
 
+	public const int blood = 755;
+
 	public const int _void = 0;
 
-	public const int d = 3;
+	public const int socket = 5;
 
 	public const int lv = 1;
 
 	public const int quality = 2;
 
-	public const int socket = 5;
+	public const int d = 3;
 
 	public const int nutrition = 10;
 
@@ -65,11 +67,12 @@ public class ELEMENT
 
 	public const int poison = 20;
 
-	public static readonly int[] IDS = new int[30]
+	public static readonly int[] IDS = new int[31]
 	{
-		756, 755, 754, 753, 752, 751, 750, 0, 3, 1,
-		2, 5, 10, 11, 12, 13, 14, 16, 17, 18,
-		15, 21, 22, 23, 24, 25, 26, 29, 85, 20
+		757, 756, 754, 753, 752, 751, 750, 755, 0, 5,
+		1, 2, 3, 10, 11, 12, 13, 14, 16, 17,
+		18, 15, 21, 22, 23, 24, 25, 26, 29, 85,
+		20
 	};
 }
 public class Element : EClass
@@ -554,7 +557,14 @@ public class Element : EClass
 	{
 		n.Clear();
 		_WriteNote(n, owner, onWriteNote, isRef: false);
-		refEle._WriteNote(n, owner, onWriteNote, isRef: true);
+		if (refEle.Value > 0)
+		{
+			refEle._WriteNote(n, owner, onWriteNote, isRef: true);
+		}
+		if (!IsPurchaseFeatReqMet(owner))
+		{
+			WritePurchaseReq(n);
+		}
 		n.Build();
 	}
 
@@ -842,6 +852,15 @@ public class Element : EClass
 			text2 = "<color=" + ((DisplayValue > ValueWithoutLink) ? SkinManager.CurrentColors.textGood : SkinManager.CurrentColors.textBad).ToHex() + ">" + text2 + (" (" + text3 + ")").TagSize(13) + "</color>";
 		}
 		text.text = text2;
+	}
+
+	public virtual bool IsPurchaseFeatReqMet(ElementContainer owner, int lv = -1)
+	{
+		return false;
+	}
+
+	public virtual void WritePurchaseReq(UINote n, int lv = 1)
+	{
 	}
 
 	public static Element Create(int id, int v = 0)

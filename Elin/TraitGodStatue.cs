@@ -51,14 +51,14 @@ public class TraitGodStatue : TraitPowerStatue
 		{
 		case "harvest":
 		{
-			Thing t = ThingGen.Create("book_kumiromi");
-			EClass.pc.Pick(t);
+			Thing t2 = ThingGen.Create("book_kumiromi");
+			EClass.pc.Pick(t2);
 			break;
 		}
 		case "machine":
 		{
-			Thing t2 = owner.things.Find("gene") ?? GetManiGene();
-			EClass.pc.Pick(t2);
+			Thing t = owner.things.Find("gene") ?? GetManiGene();
+			EClass.pc.Pick(t);
 			break;
 		}
 		case "healing":
@@ -76,7 +76,7 @@ public class TraitGodStatue : TraitPowerStatue
 		case "element":
 		{
 			Rand.SetSeed(owner.c_seed);
-			SourceMaterial.Row randomMaterial = MATERIAL.GetRandomMaterial(owner.LV / 2 + 20, (Religion.id == "earth") ? "metal" : "leather", tryLevelMatTier: true);
+			SourceMaterial.Row randomMaterial = MATERIAL.GetRandomMaterial(((owner.LV < 200) ? (owner.LV / 2) : (owner.LV % 50 * 2)) + 10, (Religion.id == "earth") ? "metal" : "leather", tryLevelMatTier: true);
 			Thing thing = ThingGen.Create("mathammer");
 			thing.ChangeMaterial(randomMaterial);
 			thing.noSell = true;

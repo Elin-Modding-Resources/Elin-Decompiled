@@ -75,8 +75,9 @@ public class InvOwnerDraglet : InvOwner
 			{
 				button.SetCard(null);
 				dragGrid.RefreshCurrentGrid();
-				dragGrid.uiIngredients.Refresh();
 			}
+			dragGrid.TryPutBack();
+			dragGrid.uiIngredients.Refresh();
 			SE.Equip();
 			if (EClass.pc.ai is AI_UseCrafter && EClass.pc.ai.IsRunning)
 			{

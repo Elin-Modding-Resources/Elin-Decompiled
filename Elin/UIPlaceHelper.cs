@@ -21,6 +21,7 @@ public class UIPlaceHelper : EMono
 		base.gameObject.SetActive(flag);
 		if (flag)
 		{
+			ActionMode.Build.recipe = recipe;
 			buttonAutoWall.SetActive(enable: false);
 			buttonAutoWall.mainText.text = (EMono.game.config.autoWall ? "On" : "Off");
 			buttonAutoWall.icon.SetAlpha(EMono.game.config.autoWall ? 1f : 0.4f);

@@ -54,6 +54,9 @@ public class Zone : Spatial, ICardParent, IInspect
 	[JsonProperty]
 	public List<int> landFeats;
 
+	[JsonProperty]
+	private FortuneRollData fortuneRoll;
+
 	public Map map;
 
 	public MapSubset subset;
@@ -3427,5 +3430,19 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 			}
 		}
+	}
+
+	public FortuneRollData GetOrCreateFortuneRollData(bool refresh = true)
+	{
+		if (fortuneRoll == null)
+		{
+			fortuneRoll = new FortuneRollData();
+			fortuneRoll.seed = EClass.rnd(50000) + 1;
+		}
+		if (refresh || fortuneRoll.count == 0)
+		{
+			fortuneRoll.Refresh();
+		}
+		return fortuneRoll;
 	}
 }

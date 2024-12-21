@@ -2206,7 +2206,7 @@ public class ActEffect : EClass
 			{
 				continue;
 			}
-			string text = r.GetName(1).ToLower();
+			string text = r.GetName().ToLower();
 			int score = Compare(_s, text);
 			if (score == 0)
 			{

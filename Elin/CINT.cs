@@ -102,6 +102,8 @@ public class CINT
 
 	public const int bossType = 65;
 
+	public const int dateCooked = 66;
+
 	public const int fiamaPet = 100;
 
 	public const int noRestock = 101;

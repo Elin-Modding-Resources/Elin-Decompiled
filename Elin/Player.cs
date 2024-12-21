@@ -419,6 +419,18 @@ public class Player : EClass
 			}
 		}
 
+		public bool gotJurePillow
+		{
+			get
+			{
+				return bits[30];
+			}
+			set
+			{
+				bits[30] = value;
+			}
+		}
+
 		public int start
 		{
 			get

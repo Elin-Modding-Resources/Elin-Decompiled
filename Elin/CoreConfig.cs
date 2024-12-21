@@ -108,6 +108,8 @@ public class CoreConfig : EClass
 
 		public bool autoBackup;
 
+		public bool sortEach;
+
 		public bool autopause;
 
 		public bool showQuickMenuHint;

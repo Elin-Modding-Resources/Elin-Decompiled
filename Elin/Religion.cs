@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Religion : EClass
 {
+	public enum ConvertType
+	{
+		Default,
+		Campaign
+	}
+
 	[JsonProperty]
 	public int relation;
 
@@ -160,6 +166,7 @@ public class Religion : EClass
 
 	public int GetOfferingValue(Thing t, int num = -1)
 	{
+		t.CheckJustCooked();
 		if (num == -1)
 		{
 			num = t.Num;
@@ -194,7 +201,7 @@ public class Religion : EClass
 		{
 			num2 /= 10;
 		}
-		num2 *= (t.LV * 2 + 100) / 100;
+		num2 = num2 * (100 + Mathf.Min(t.LV * 2, 100) + (t.HasElement(757) ? 50 : 0)) / 100;
 		return Mathf.Max(num2, 1) * num;
 	}
 
@@ -361,7 +368,7 @@ public class Religion : EClass
 	{
 	}
 
-	public void JoinFaith(Chara c)
+	public void JoinFaith(Chara c, ConvertType type = ConvertType.Default)
 	{
 		if (!c.IsPC)
 		{
@@ -373,9 +380,12 @@ public class Religion : EClass
 		}
 		if (c.faith != this)
 		{
-			c.faith.LeaveFaith(c, this);
+			c.faith.LeaveFaith(c, this, type);
 		}
-		EClass.pc.c_daysWithGod = 0;
+		if (type != ConvertType.Campaign)
+		{
+			EClass.pc.c_daysWithGod = 0;
+		}
 		Msg.Say("worship", Name);
 		Talk("worship", c);
 		EClass.Sound.Play("worship");
@@ -401,7 +411,7 @@ public class Religion : EClass
 		}
 	}
 
-	public void LeaveFaith(Chara c, Religion newFaith)
+	public void LeaveFaith(Chara c, Religion newFaith, ConvertType type)
 	{
 		if (IsEyth)
 		{
@@ -411,7 +421,7 @@ public class Religion : EClass
 		if (c.IsPC)
 		{
 			Msg.Say("worship2");
-			if (!flag)
+			if (!flag && type != ConvertType.Campaign)
 			{
 				Punish(c);
 			}

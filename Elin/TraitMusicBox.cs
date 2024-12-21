@@ -6,7 +6,7 @@ public class TraitMusicBox : TraitJukeBox
 
 	public override bool OnUse(Chara c)
 	{
-		owner.refVal = 115;
+		owner.refVal = GetParam(1).ToInt();
 		Toggle(!owner.isOn);
 		return true;
 	}

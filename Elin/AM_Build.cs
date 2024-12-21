@@ -379,6 +379,10 @@ public class AM_Build : AM_Designation<TaskBuild>
 
 	public void SetAltitude(int a)
 	{
+		if (mold == null)
+		{
+			CreateNewMold();
+		}
 		altitude = (mold.altitude = a);
 		recipe.OnChangeAltitude(a);
 		if (recipe.tileType.AltitudeAsDir && !IsRoofEditMode())

@@ -249,6 +249,11 @@ public class RecipeCard : Recipe
 				if (!flag)
 				{
 					MakeDish(thing);
+					if (EClass.pc.HasElement(1658))
+					{
+						thing.elements.SetBase(757, 1);
+						thing.c_dateCooked = EClass.world.date.GetRaw();
+					}
 				}
 			}
 			else

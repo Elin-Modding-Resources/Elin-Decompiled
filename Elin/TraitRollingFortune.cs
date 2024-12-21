@@ -23,7 +23,7 @@ public class TraitRollingFortune : TraitCrafter
 		}
 		foreach (Card item in owner.pos.ListThings<TraitFortuneBall>(onlyInstalled: false))
 		{
-			EClass.pc.Pick(item.Thing, msg: false);
+			item.Destroy();
 		}
 	}
 }

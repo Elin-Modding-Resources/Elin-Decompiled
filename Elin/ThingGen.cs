@@ -181,6 +181,13 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
+	public static Thing CreateLetter(string idLetter)
+	{
+		Thing thing = Create("letter");
+		thing.SetStr(53, idLetter);
+		return thing;
+	}
+
 	public static Thing CreateCardboardBox(int uidZone = -1)
 	{
 		Thing thing = Create("cardboard_box", new string[5] { "pine", "wood_birch", "wood_acacia", "oak", "cedar" }.RandomItem());

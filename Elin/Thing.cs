@@ -836,6 +836,10 @@ public class Thing : Card
 
 	public override void WriteNote(UINote n, Action<UINote> onWriteNote = null, IInspect.NoteMode mode = IInspect.NoteMode.Default, Recipe recipe = null)
 	{
+		if (sourceCard._origin == "dish")
+		{
+			CheckJustCooked();
+		}
 		n.Clear();
 		string text = "";
 		TraitAbility traitAbility = trait as TraitAbility;

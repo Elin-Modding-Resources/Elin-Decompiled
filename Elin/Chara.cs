@@ -1547,7 +1547,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void CalcBurden()
 	{
-		int num = base.ChildrenWeight * 100 / WeightLimit;
+		int num = base.ChildrenWeight * 100 / Mathf.Max(1, WeightLimit);
 		if (num < 0)
 		{
 			num = 1000;
@@ -6220,13 +6220,20 @@ public class Chara : Card, IPathfindWalker
 			{
 				string tag = ((trait is TraitDoorman_Fighter) ? "fighter" : ((trait is TraitDoorman_Mage) ? "mage" : "thief"));
 				ShowDialog("guild_doorman", "main", tag);
+				return;
 			}
-			else if (trait is TraitGuildClerk)
+			if (trait is TraitGuildClerk)
 			{
 				string tag2 = ((trait is TraitClerk_Fighter) ? "fighter" : ((trait is TraitClerk_Mage) ? "mage" : "thief"));
 				ShowDialog("guild_clerk", "main", tag2);
+				return;
 			}
-			else if (File.Exists(CorePath.DramaData + id + ".xlsx"))
+			bool flag = true;
+			if (id == "parttimer_jure" && (!EClass._zone.IsFestival || !(EClass._zone is Zone_Noyel) || EClass.pc.faith == EClass.game.religions.Healing))
+			{
+				flag = false;
+			}
+			if (flag && File.Exists(CorePath.DramaData + id + ".xlsx"))
 			{
 				ShowDialog(id);
 			}
@@ -8577,14 +8584,14 @@ public class Chara : Card, IPathfindWalker
 		corruption = num2 * 100 + corruption % 100;
 	}
 
-	public List<Element> ListAvailabeFeats(bool pet = false)
+	public List<Element> ListAvailabeFeats(bool pet = false, bool showAll = false)
 	{
 		List<Element> list = new List<Element>();
 		foreach (SourceElement.Row item in EClass.sources.elements.rows.Where((SourceElement.Row a) => a.group == "FEAT" && a.cost[0] != -1 && !a.categorySub.IsEmpty()))
 		{
 			Feat feat = elements.GetOrCreateElement(item.id) as Feat;
 			int num = ((feat.ValueWithoutLink <= 0) ? 1 : (feat.ValueWithoutLink + 1));
-			if (num <= feat.source.max && !feat.HasTag("class") && !feat.HasTag("hidden") && !feat.HasTag("innate") && (!pet || !feat.HasTag("noPet")) && feat.IsAvailable(elements, feat.Value))
+			if (num <= feat.source.max && !feat.HasTag("class") && !feat.HasTag("hidden") && !feat.HasTag("innate") && (!pet || !feat.HasTag("noPet")) && (showAll || feat.IsPurchaseFeatReqMet(elements)))
 			{
 				list.Add(Element.Create(feat.id, num) as Feat);
 			}

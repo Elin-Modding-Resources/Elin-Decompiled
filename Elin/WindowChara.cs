@@ -136,6 +136,8 @@ public class WindowChara : WindowController
 
 	public UIButton buttonFeatMode;
 
+	public UIButton buttonFeatOption;
+
 	public Image imageView;
 
 	public Sprite mask;
@@ -204,6 +206,7 @@ public class WindowChara : WindowController
 			}
 			listEquipment2.transform.parent.SetActive(flag);
 			buttonFeatMode.SetActive(idTab == 2 && chara.IsPC);
+			buttonFeatOption.SetActive(idTab == 2 && chara.IsPC && featMode);
 		}
 	}
 
@@ -235,6 +238,12 @@ public class WindowChara : WindowController
 	{
 		featMode = !featMode;
 		RefreshSkill(window.idTab);
+		buttonFeatOption.SetActive(featMode);
+		buttonFeatOption.SetToggle(EClass.game.config.showAllFeat, delegate(bool a)
+		{
+			EClass.game.config.showAllFeat = a;
+			RefreshSkill(window.idTab);
+		});
 	}
 
 	public void RefreshFeatMode()
@@ -763,7 +772,11 @@ public class WindowChara : WindowController
 			{
 				onClick = delegate(Element a, ButtonElement b)
 				{
-					if (EClass.pc.feat < a.CostLearn)
+					if (!a.IsPurchaseFeatReqMet(chara.elements) && !EClass.debug.enable)
+					{
+						SE.BeepSmall();
+					}
+					else if (EClass.pc.feat < a.CostLearn)
 					{
 						SE.BeepSmall();
 						Msg.Say("notEnoughFeatPoint");
@@ -787,7 +800,7 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item9 in chara.ListAvailabeFeats())
+					foreach (Element item9 in chara.ListAvailabeFeats(pet: false, EClass.game.config.showAllFeat))
 					{
 						if (item9.source.categorySub == idSubCat)
 						{

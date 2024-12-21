@@ -1237,6 +1237,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_dateCooked
+	{
+		get
+		{
+			return GetInt(66);
+		}
+		set
+		{
+			SetInt(66, value);
+		}
+	}
+
 	public int c_containerSize
 	{
 		get
@@ -5549,6 +5561,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				t.DecayNatural(hour);
 			});
+			if (sourceCard._origin == "dish")
+			{
+				CheckJustCooked();
+			}
 			if (parent is Card && (parent as Card).trait.CanChildDecay(this))
 			{
 				Decay(10 * hour);
@@ -5557,6 +5573,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				Decay(trait.Decay * hour);
 			}
+		}
+	}
+
+	public void CheckJustCooked()
+	{
+		if (HasElement(757) && c_dateCooked <= EClass.world.date.GetRaw() - 120)
+		{
+			c_dateCooked = 0;
+			elements.Remove(757);
 		}
 	}
 

@@ -58,6 +58,16 @@ public class DramaOutcome : EMono
 	{
 	}
 
+	public void convert_Jure()
+	{
+		EMono.game.religions.Healing.JoinFaith(EMono.pc, Religion.ConvertType.Campaign);
+		if (!EMono.player.flags.gotJurePillow)
+		{
+			EMono.player.flags.gotJurePillow = true;
+			EMono.player.DropReward(ThingGen.Create("pillow_jure"));
+		}
+	}
+
 	public void QuestSharedContainer_Drop1()
 	{
 		EMono.player.DropReward(ThingGen.Create("chest6"));

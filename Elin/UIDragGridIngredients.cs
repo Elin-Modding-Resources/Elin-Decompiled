@@ -14,9 +14,9 @@ public class UIDragGridIngredients : EMono
 	public void Update()
 	{
 		bool activeSelf = goList.activeSelf;
-		bool isNoGoal = EMono.pc.ai.IsNoGoal;
-		goList.SetActive(isNoGoal);
-		if (activeSelf != isNoGoal)
+		bool flag = EMono.pc.ai.IsNoGoal || !EMono.pc.ai.IsRunning;
+		goList.SetActive(flag);
+		if (activeSelf != flag)
 		{
 			Refresh();
 		}
@@ -28,11 +28,13 @@ public class UIDragGridIngredients : EMono
 		if ((bool)componentOf && (bool)componentOf.GetComponentInParent<UIDragGridIngredients>())
 		{
 			Thing t = componentOf.card.Thing;
+			Thing container = t.parent as Thing;
 			t.ShowSplitMenu2(componentOf, "actPutIn", delegate(int n)
 			{
 				Thing t2 = t.Split(n);
 				t2 = EMono.pc.Pick(t2, msg: true, tryStack: false);
 				int currentIndex = layer.currentIndex;
+				layer.AddPutBack(t2, container);
 				layer.buttons[currentIndex].SetCardGrid(t2, layer.owner);
 				layer.owner.OnProcess(t2);
 			});
@@ -66,6 +68,7 @@ public class UIDragGridIngredients : EMono
 				int currentIndex = layer.currentIndex;
 				layer.buttons[currentIndex].SetCardGrid(a, layer.owner);
 				layer.owner.OnProcess(a);
+				layer.AddPutBack(a, a.parent as Thing);
 			},
 			onInstantiate = delegate(Thing a, ButtonGrid b)
 			{

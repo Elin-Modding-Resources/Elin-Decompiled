@@ -12,7 +12,17 @@ public class TraitDoor : Trait
 
 	public override bool HaveUpdate => true;
 
-	public override bool IsOpenSight => IsOpen();
+	public override bool IsOpenSight
+	{
+		get
+		{
+			if (!IsOpen())
+			{
+				return !IsValid(shouldLookGood: false);
+			}
+			return true;
+		}
+	}
 
 	public override bool IsDoor => true;
 
@@ -88,18 +98,21 @@ public class TraitDoor : Trait
 	{
 		int dir = owner.dir;
 		Cell cell = owner.pos.cell;
-		if (!cell.Right.HasFullBlockOrWallOrFence && (dir == 0 || dir == 2) && cell.Front.HasFullBlockOrWallOrFence)
+		if (dir == 0 || dir == 2)
 		{
-			return true;
+			if (cell.Front.HasFullBlockOrWallOrFence || cell.Back.HasFullBlockOrWallOrFence)
+			{
+				return true;
+			}
 		}
-		if (!cell.Front.HasFullBlockOrWallOrFence && (dir == 1 || dir == 3) && cell.Right.HasFullBlockOrWallOrFence)
+		else if (cell.Left.HasFullBlockOrWallOrFence || cell.Right.HasFullBlockOrWallOrFence)
 		{
 			return true;
 		}
 		return false;
 	}
 
-	public bool IsValid()
+	public bool IsValid(bool shouldLookGood = true)
 	{
 		_ = owner.dir;
 		Cell cell = owner.pos.cell;
@@ -107,21 +120,26 @@ public class TraitDoor : Trait
 		{
 			return false;
 		}
-		bool hasFullBlockOrWallOrFence = cell.Left.HasFullBlockOrWallOrFence;
-		bool hasFullBlockOrWallOrFence2 = cell.Right.HasFullBlockOrWallOrFence;
-		bool hasFullBlockOrWallOrFence3 = cell.Front.HasFullBlockOrWallOrFence;
-		bool hasFullBlockOrWallOrFence4 = cell.Back.HasFullBlockOrWallOrFence;
-		if ((hasFullBlockOrWallOrFence ? 1 : 0) + (hasFullBlockOrWallOrFence2 ? 1 : 0) + (hasFullBlockOrWallOrFence3 ? 1 : 0) + (hasFullBlockOrWallOrFence4 ? 1 : 0) >= 3)
+		if (shouldLookGood)
 		{
+			bool hasFullBlockOrWallOrFence = cell.Left.HasFullBlockOrWallOrFence;
+			bool hasFullBlockOrWallOrFence2 = cell.Right.HasFullBlockOrWallOrFence;
+			bool hasFullBlockOrWallOrFence3 = cell.Front.HasFullBlockOrWallOrFence;
+			bool hasFullBlockOrWallOrFence4 = cell.Back.HasFullBlockOrWallOrFence;
+			if (hasFullBlockOrWallOrFence && hasFullBlockOrWallOrFence2)
+			{
+				return true;
+			}
+			if (hasFullBlockOrWallOrFence3 && hasFullBlockOrWallOrFence4)
+			{
+				return true;
+			}
 			return false;
 		}
-		if (hasFullBlockOrWallOrFence && hasFullBlockOrWallOrFence2)
+		int num = (cell.Left.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.Right.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.Front.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.Back.HasFullBlockOrWallOrFence ? 1 : 0);
+		if (num > 0)
 		{
-			return true;
-		}
-		if (hasFullBlockOrWallOrFence3 && hasFullBlockOrWallOrFence4)
-		{
-			return true;
+			return num < 3;
 		}
 		return false;
 	}

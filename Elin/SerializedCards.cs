@@ -673,7 +673,10 @@ public class SerializedCards : EClass
 			card2.isImported = true;
 			card2.refVal = card4.refVal;
 			card2.idSkin = card4.idSkin;
-			card2.c_idDeity = card4.idDeity;
+			if (isUserZone)
+			{
+				card2.c_idDeity = card4.idDeity;
+			}
 			if (isUserZone && (card2.isHidden || card2.isMasked) && ((card2.TileType.IsBlockPass && card2.IsInstalled) || card2.trait is TraitCoreZone || card2.trait is TraitWaystone))
 			{
 				Card card3 = card2;

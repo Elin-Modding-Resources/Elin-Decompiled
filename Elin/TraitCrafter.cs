@@ -277,8 +277,8 @@ public class TraitCrafter : Trait
 			break;
 		case MixType.Resource:
 		{
-			string[] array3 = thing3.Split('%');
-			t = CraftUtil.MixIngredients(ThingGen.Create(array3[0], (array3.Length > 1) ? EClass.sources.materials.alias[array3[1]].id : thing.material.id), ai.ings, CraftUtil.MixType.General, 999, EClass.pc).Thing;
+			string[] array = thing3.Split('%');
+			t = CraftUtil.MixIngredients(ThingGen.Create(array[0], (array.Length > 1) ? EClass.sources.materials.alias[array[1]].id : thing.material.id), ai.ings, CraftUtil.MixType.General, 999, EClass.pc).Thing;
 			break;
 		}
 		case MixType.Dye:
@@ -344,13 +344,13 @@ public class TraitCrafter : Trait
 		case MixType.Fortune:
 		{
 			EClass.player.seedFortune++;
-			string[] array = new string[4] { "plastic", "water", "hide_dragon", "gold" };
-			int[] array2 = new int[4] { 1, 10, 50, 200 };
 			int num2 = 0;
-			Rand.SetSeed(EClass.game.seed + EClass.player.seedFortune);
+			FortuneRollData orCreateFortuneRollData = EClass._zone.GetOrCreateFortuneRollData(refresh: false);
+			int seed = orCreateFortuneRollData.seed + orCreateFortuneRollData.count + EClass.player.seedFortune;
+			Rand.SetSeed(seed);
 			for (int num3 = 3; num3 > 0; num3--)
 			{
-				if (EClass.rnd(array2[num3]) == 0)
+				if (EClass.rnd(FortuneRollData.chances[num3]) == 0)
 				{
 					num2 = num3;
 					break;
@@ -362,9 +362,14 @@ public class TraitCrafter : Trait
 				owner.PlaySound((num2 == 3) ? "fortuneroll_winBig" : "fortuneroll_win");
 			}
 			Thing thing4 = ThingGen.Create("fortune_ball");
-			thing4.ChangeMaterial(array[num2]);
+			thing4.ChangeMaterial(FortuneRollData.mats[num2]);
 			EClass._zone.AddCard(thing4, owner.pos);
 			owner.PlaySound("fortuneroll_ball");
+			orCreateFortuneRollData.GetPrize(num2, seed);
+			if ((bool)LayerDragGrid.Instance)
+			{
+				LayerDragGrid.Instance.info.Refresh();
+			}
 			break;
 		}
 		case MixType.Incubator:
@@ -408,10 +413,6 @@ public class TraitCrafter : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
-		if (!EClass.debug.enable && this is TraitRollingFortune)
-		{
-			return;
-		}
 		if (IsFactory)
 		{
 			Thing _t = owner.Thing;

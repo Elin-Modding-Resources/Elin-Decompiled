@@ -1482,6 +1482,11 @@ public class Trait : EClass
 				Thing thing4 = thing8.Duplicate(1);
 				thing4.isStolen = false;
 				thing4.isCopy = true;
+				thing4.c_priceFix = 0;
+				foreach (Element item in thing4.elements.dict.Values.Where((Element e) => e.HasTag("noInherit")).ToList())
+				{
+					thing4.elements.Remove(item.id);
+				}
 				int num4 = 1;
 				switch (owner.trait.CopyShop)
 				{
@@ -1524,9 +1529,9 @@ public class Trait : EClass
 				{
 					break;
 				}
-				foreach (Thing item in new DramaOutcome().ListFelmeraBarter())
+				foreach (Thing item2 in new DramaOutcome().ListFelmeraBarter())
 				{
-					AddThing(item);
+					AddThing(item2);
 				}
 			}
 			else
@@ -1733,18 +1738,18 @@ public class Trait : EClass
 					break;
 				}
 				}
-				foreach (RecipeSource item2 in RecipeManager.list)
+				foreach (RecipeSource item3 in RecipeManager.list)
 				{
-					if (item2.row.recipeKey.IsEmpty())
+					if (item3.row.recipeKey.IsEmpty())
 					{
 						continue;
 					}
-					string[] recipeKey = item2.row.recipeKey;
+					string[] recipeKey = item3.row.recipeKey;
 					for (int m = 0; m < recipeKey.Length; m++)
 					{
 						if (recipeKey[m] == ShopType.ToString())
 						{
-							NoRestock(ThingGen.CreateRecipe(item2.id));
+							NoRestock(ThingGen.CreateRecipe(item3.id));
 							break;
 						}
 					}

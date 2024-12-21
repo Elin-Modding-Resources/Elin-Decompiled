@@ -5,7 +5,16 @@ using UnityEngine.UI;
 
 public class LayerDragGrid : LayerBaseCraft
 {
+	public class PutbackInfo
+	{
+		public Thing thing;
+
+		public Thing container;
+	}
+
 	public static LayerDragGrid Instance;
+
+	public List<PutbackInfo> putBacks = new List<PutbackInfo>();
 
 	public UIItem itemCost;
 
@@ -308,6 +317,36 @@ public class LayerDragGrid : LayerBaseCraft
 			}
 		}
 		LayerInventory.SetDirtyAll(immediate: true);
+	}
+
+	public void AddPutBack(Thing t, Thing container)
+	{
+		if (container != null)
+		{
+			putBacks.Add(new PutbackInfo
+			{
+				thing = t,
+				container = container
+			});
+		}
+	}
+
+	public void TryPutBack()
+	{
+		foreach (PutbackInfo putBack in putBacks)
+		{
+			if (!putBack.thing.isDestroyed && putBack.thing.Num != 0 && putBack.thing.parent != putBack.container && !putBack.container.isDestroyed)
+			{
+				putBack.container.AddCard(putBack.thing);
+			}
+		}
+		putBacks.Clear();
+		RefreshCurrentGrid();
+	}
+
+	public override void OnEndCraft()
+	{
+		TryPutBack();
 	}
 
 	public override void OnKill()

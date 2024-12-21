@@ -158,6 +158,8 @@ public class UIInventory : EMono
 
 	public bool IsShop => owner.Container.trait is TraitChestMerchant;
 
+	public bool IsAdvSort => EMono.core.config.game.sortEach;
+
 	public CoreRef.InventoryStyle InvStyle => EMono.core.refs.invStyle[(UseBG || IsToolbelt) ? owner.Container.trait.IDInvStyle : "transparent"];
 
 	public bool IsMainMode
@@ -462,7 +464,7 @@ public class UIInventory : EMono
 				foreach (UIList.SortMode sortMode in sorts)
 				{
 					UIList.SortMode _sort = sortMode;
-					uIContextMenu2.AddButton((((IsShop ? EMono.player.pref.sortInvShop : EMono.player.pref.sortInv) == _sort) ? "context_checker".lang() : "") + _sort.ToString().lang(), delegate
+					uIContextMenu2.AddButton((((IsShop ? EMono.player.pref.sortInvShop : (IsAdvSort ? data.sortMode : EMono.player.pref.sortInv)) == _sort) ? "context_checker".lang() : "") + _sort.ToString().lang(), delegate
 					{
 						if (IsShop)
 						{
@@ -472,11 +474,12 @@ public class UIInventory : EMono
 						{
 							EMono.player.pref.sortInv = _sort;
 						}
+						data.sortMode = _sort;
 						Sort();
 						SE.Click();
 					});
 				}
-				uIContextMenu2.AddToggle("sort_ascending", IsShop ? EMono.player.pref.sort_ascending_shop : EMono.player.pref.sort_ascending, delegate(bool a)
+				uIContextMenu2.AddToggle("sort_ascending", IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? data.sort_ascending : EMono.player.pref.sort_ascending), delegate(bool a)
 				{
 					if (IsShop)
 					{
@@ -486,6 +489,7 @@ public class UIInventory : EMono
 					{
 						EMono.player.pref.sort_ascending = a;
 					}
+					data.sort_ascending = a;
 					Sort();
 					SE.Click();
 				});
@@ -995,7 +999,7 @@ public class UIInventory : EMono
 
 	public void Sort(bool redraw = true)
 	{
-		UIList.SortMode i = (IsShop ? EMono.player.pref.sortInvShop : EMono.player.pref.sortInv);
+		UIList.SortMode i = (IsShop ? EMono.player.pref.sortInvShop : (IsAdvSort ? window.saveData.sortMode : EMono.player.pref.sortInv));
 		bool flag = true;
 		while (flag)
 		{
@@ -1033,7 +1037,7 @@ public class UIInventory : EMono
 		}
 		owner.Container.things.Sort(delegate(Thing a, Thing b)
 		{
-			bool flag2 = (IsShop ? EMono.player.pref.sort_ascending_shop : EMono.player.pref.sort_ascending);
+			bool flag2 = (IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? window.saveData.sort_ascending : EMono.player.pref.sort_ascending));
 			if (i == UIList.SortMode.ByName)
 			{
 				if (flag2)

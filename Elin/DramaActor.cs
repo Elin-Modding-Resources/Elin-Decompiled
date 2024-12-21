@@ -75,7 +75,7 @@ public class DramaActor : EMono
 				dialog.transRank.SetActive(flag);
 				if (flag)
 				{
-					dialog.textRank.text = "factionRank2".lang() + " " + chara.trait.GetAdvRankText();
+					dialog.textRank.text = "factionRank2".lang() + " " + chara.trait.GetAdvRankText() + " " + ((chara.GetInt(111) > 0) ? "advDefeated".lang(chara.GetInt(111).ToString() ?? "") : "");
 				}
 			}
 			if (chara != null)
