@@ -109,7 +109,7 @@ Inheritance diagram for SerializableDateTime:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a94aeffabdad29b56b3eefa85edd94f7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerializableDateTime.html#a94aeffabdad29b56b3eefa85edd94f7d">SerializableDateTime</a> (<a class="el" href="classSerializableDateTime.html#aaed47be04ea69c9f23b5b2579cc1e851">DateTime</a> dateTime)</td></tr>
 <tr class="separator:a94aeffabdad29b56b3eefa85edd94f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaabb02707876db36e8aba849f2979071"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerializableDateTime.html#aaabb02707876db36e8aba849f2979071">CompareTo</a> (<a class="el" href="classSerializableDateTime.html">SerializableDateTime</a> other)</td></tr>
+<tr class="memitem:aaabb02707876db36e8aba849f2979071"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerializableDateTime.html#aaabb02707876db36e8aba849f2979071">CompareTo</a> (<a class="el" href="classSerializableDateTime.html">SerializableDateTime</a> <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba795f3202b17cb6bc3d4b771d8c6c9eaf">other</a>)</td></tr>
 <tr class="separator:aaabb02707876db36e8aba849f2979071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -198,14 +198,15 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SerializableDateTime_8cs_source.html#l00034">34</a> of file <a class="el" href="SerializableDateTime_8cs_source.html">SerializableDateTime.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (other == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba795f3202b17cb6bc3d4b771d8c6c9eaf">other</a> == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   37</span>        {</div>
 <div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> 1;</div>
 <div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSerializableDateTime.html#a67e5ce3f763a8ced5a200ae3772e7629">m_ticks</a>.CompareTo(other.<a class="code hl_variable" href="classSerializableDateTime.html#a67e5ce3f763a8ced5a200ae3772e7629">m_ticks</a>);</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSerializableDateTime.html#a67e5ce3f763a8ced5a200ae3772e7629">m_ticks</a>.CompareTo(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba795f3202b17cb6bc3d4b771d8c6c9eaf">other</a>.m_ticks);</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba795f3202b17cb6bc3d4b771d8c6c9eaf"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba795f3202b17cb6bc3d4b771d8c6c9eaf">ContainerFlag.other</a></div><div class="ttdeci">@ other</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SerializableDateTime_8cs_source.html#l00008">m_ticks</a>.</p>
+<p class="reference">References <a class="el" href="SerializableDateTime_8cs_source.html#l00008">m_ticks</a>, and <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba795f3202b17cb6bc3d4b771d8c6c9eaf">other</a>.</p>
 
 </div>
 </div>

@@ -108,6 +108,7 @@ Inheritance diagram for WidgetMenuPanel:</div>
   <map id="WidgetMenuPanel_map" name="WidgetMenuPanel_map">
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
+<area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -159,9 +160,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acff238f1edde59feb5b454e873c0cec5 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07afdbb7e0dc8eb844f4b5d3a4cce37 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37">OnManagerDeactivate</a> ()</td></tr>
 <tr class="separator:af07afdbb7e0dc8eb844f4b5d3a4cce37 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (RectPosition p)</td></tr>
+<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (RectPosition p)</td></tr>
+<tr class="memitem:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8fe1c734b47957816912262c78a5b38 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad8fe1c734b47957816912262c78a5b38">OnChangePivot</a> ()</td></tr>
 <tr class="separator:ad8fe1c734b47957816912262c78a5b38 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,6 +216,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
+<tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -459,8 +462,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetMenuPanel_8cs_source.html#l00105">105</a> of file <a class="el" href="WidgetMenuPanel_8cs_source.html">WidgetMenuPanel.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
-<div class="line"><span class="lineno">  107</span>        UIButton uIButton = Util.Instantiate(<a class="code hl_variable" href="classWidgetMenuPanel.html#a91dc46d684b3a6a1651270bcc75ea5af">mold</a>, _layout);</div>
-<div class="line"><span class="lineno">  108</span>        uIButton.icon.sprite = SpriteSheet.Get(<span class="stringliteral">&quot;icon_&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  107</span>        UIButton uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classWidgetMenuPanel.html#a91dc46d684b3a6a1651270bcc75ea5af">mold</a>, _layout);</div>
+<div class="line"><span class="lineno">  108</span>        uIButton.icon.sprite = <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">Get</a>(<span class="stringliteral">&quot;icon_&quot;</span> + <span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">  109</span>        uIButton.subText.SetActive(enableSubtext);</div>
 <div class="line"><span class="lineno">  110</span>        uIButton.tooltip.text = <span class="keywordtype">id</span>.lang();</div>
 <div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (action != <span class="keyword">null</span>)</div>
@@ -472,9 +475,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  117</span>        }</div>
 <div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> uIButton;</div>
 <div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html_a3ba485078c417ef19ea17e2f624dba02"><div class="ttname"><a href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">SpriteSheet.Get</a></div><div class="ttdeci">static Sprite Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.cs:28</a></div></div>
+<div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
+<div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 <div class="ttc" id="aclassWidgetMenuPanel_html_a91dc46d684b3a6a1651270bcc75ea5af"><div class="ttname"><a href="classWidgetMenuPanel.html#a91dc46d684b3a6a1651270bcc75ea5af">WidgetMenuPanel.mold</a></div><div class="ttdeci">UIButton mold</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMenuPanel_8cs_source.html#l00017">WidgetMenuPanel.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetMenuPanel_8cs_source.html#l00017">mold</a>.</p>
+<p class="reference">References <a class="el" href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.Get()</a>, and <a class="el" href="WidgetMenuPanel_8cs_source.html#l00017">mold</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetMenuPanel_8cs_source.html#l00082">Build()</a>.</p>
 

@@ -308,10 +308,10 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00185">185</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
 <div class="line"><span class="lineno">  187</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;Widget&quot;</span> + id;</div>
-<div class="line"><span class="lineno">  188</span>        <a class="code hl_class" href="classWidget.html">Widget</a> widget = Util.Instantiate&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;(<span class="stringliteral">&quot;UI/Widget/&quot;</span> + text, <span class="keyword">this</span>) ?? Util.Instantiate&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;(<span class="stringliteral">&quot;UI/Widget/&quot;</span> + text + <span class="stringliteral">&quot;/&quot;</span> + text, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_class" href="classWidget.html">Widget</a> widget = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;(<span class="stringliteral">&quot;UI/Widget/&quot;</span> + text, <span class="keyword">this</span>) ?? <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classWidget.html">Widget</a>&gt;(<span class="stringliteral">&quot;UI/Widget/&quot;</span> + text + <span class="stringliteral">&quot;/&quot;</span> + text, <span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (!widget)</div>
 <div class="line"><span class="lineno">  190</span>        {</div>
-<div class="line"><span class="lineno">  191</span>            Debug.LogError(<span class="stringliteral">&quot;Widget:&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot; not found.&quot;</span>);</div>
+<div class="line"><span class="lineno">  191</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;Widget:&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot; not found.&quot;</span>);</div>
 <div class="line"><span class="lineno">  192</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  193</span>        }</div>
 <div class="line"><span class="lineno">  194</span>        <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>.Add(widget);</div>
@@ -324,15 +324,18 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  201</span>        }</div>
 <div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> widget;</div>
 <div class="line"><span class="lineno">  203</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassLayerWidget_html"><div class="ttname"><a href="classLayerWidget.html">LayerWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00003">LayerWidget.cs:4</a></div></div>
 <div class="ttc" id="aclassLayerWidget_html_aad7face4139f9581a563a9dadbcfd7c2"><div class="ttname"><a href="classLayerWidget.html#aad7face4139f9581a563a9dadbcfd7c2">LayerWidget.Instance</a></div><div class="ttdeci">static LayerWidget Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00005">LayerWidget.cs:5</a></div></div>
+<div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
+<div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 <div class="ttc" id="aclassWidgetManager_html_ab2f3ed28fcf34a6559c87e153a9cc4bd"><div class="ttname"><a href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">WidgetManager.list</a></div><div class="ttdeci">List&lt; Widget &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00020">WidgetManager.cs:20</a></div></div>
 <div class="ttc" id="aclassWidgetManager_html_afb66d91560b642e0662f548f36402454"><div class="ttname"><a href="classWidgetManager.html#afb66d91560b642e0662f548f36402454">WidgetManager.RefreshWidget</a></div><div class="ttdeci">void RefreshWidget(Widget.Config c)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00205">WidgetManager.cs:205</a></div></div>
 <div class="ttc" id="aclassWidget_html"><div class="ttname"><a href="classWidget.html">Widget</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00006">Widget.cs:7</a></div></div>
 <div class="ttc" id="aclassWidget_html_a68ce9e662d9247f18353bf38f9a47aa0"><div class="ttname"><a href="classWidget.html#a68ce9e662d9247f18353bf38f9a47aa0">Widget.Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00225">Widget.cs:225</a></div></div>
 <div class="ttc" id="aclassWidget_html_acff238f1edde59feb5b454e873c0cec5"><div class="ttname"><a href="classWidget.html#acff238f1edde59feb5b454e873c0cec5">Widget.OnManagerActivate</a></div><div class="ttdeci">virtual void OnManagerActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00330">Widget.cs:330</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00225">Widget.Activate()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00005">LayerWidget.Instance</a>, <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>, <a class="el" href="Widget_8cs_source.html#l00330">Widget.OnManagerActivate()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00205">RefreshWidget()</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00225">Widget.Activate()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="LayerWidget_8cs_source.html#l00005">LayerWidget.Instance</a>, <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>, <a class="el" href="Widget_8cs_source.html#l00330">Widget.OnManagerActivate()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00205">RefreshWidget()</a>.</p>
 
 </div>
 </div>
@@ -477,9 +480,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00320">320</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  321</span>    {</div>
-<div class="line"><span class="lineno">  322</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.WaitForEndOfFrame(delegate</div>
+<div class="line"><span class="lineno">  322</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_function" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a>(delegate</div>
 <div class="line"><span class="lineno">  323</span>        {</div>
-<div class="line"><span class="lineno">  324</span>            <span class="keywordtype">string</span>[] array = StandaloneFileBrowser.OpenFilePanel(<span class="stringliteral">&quot;Load Widget Theme&quot;</span>, CorePath.WidgetSave, <span class="stringliteral">&quot;json&quot;</span>, multiselect: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  324</span>            <span class="keywordtype">string</span>[] array = <a class="code hl_class" href="classSFB_1_1StandaloneFileBrowser.html">StandaloneFileBrowser</a>.<a class="code hl_function" href="classSFB_1_1StandaloneFileBrowser.html#a871e7e04541bd40aa520e4ac175861f5">OpenFilePanel</a>(<span class="stringliteral">&quot;Load Widget Theme&quot;</span>, <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#ad49546400b0ee7415636918602c1ea72">WidgetSave</a>, <span class="stringliteral">&quot;json&quot;</span>, multiselect: <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  325</span>            if (array.Length != 0)</div>
 <div class="line"><span class="lineno">  326</span>            {</div>
 <div class="line"><span class="lineno">  327</span>                Load(EMono.player.useSubWidgetTheme, array[0]);</div>
@@ -491,10 +494,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  333</span>            }</div>
 <div class="line"><span class="lineno">  334</span>        });</div>
 <div class="line"><span class="lineno">  335</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html_a5755e1f33429715944ea9afeda8b1472"><div class="ttname"><a href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">BaseCore.WaitForEndOfFrame</a></div><div class="ttdeci">void WaitForEndOfFrame(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00061">BaseCore.cs:61</a></div></div>
+<div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
+<div class="ttc" id="aclassCorePath_html_ad49546400b0ee7415636918602c1ea72"><div class="ttname"><a href="classCorePath.html#ad49546400b0ee7415636918602c1ea72">CorePath.WidgetSave</a></div><div class="ttdeci">static string WidgetSave</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00187">CorePath.cs:187</a></div></div>
 <div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
 <div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00005">EMono.cs:5</a></div></div>
+<div class="ttc" id="aclassSFB_1_1StandaloneFileBrowser_html"><div class="ttname"><a href="classSFB_1_1StandaloneFileBrowser.html">SFB.StandaloneFileBrowser</a></div><div class="ttdef"><b>Definition:</b> <a href="StandaloneFileBrowser_8cs_source.html#l00005">StandaloneFileBrowser.cs:6</a></div></div>
+<div class="ttc" id="aclassSFB_1_1StandaloneFileBrowser_html_a871e7e04541bd40aa520e4ac175861f5"><div class="ttname"><a href="classSFB_1_1StandaloneFileBrowser.html#a871e7e04541bd40aa520e4ac175861f5">SFB.StandaloneFileBrowser.OpenFilePanel</a></div><div class="ttdeci">static string[] OpenFilePanel(string title, string directory, string extension, bool multiselect)</div><div class="ttdef"><b>Definition:</b> <a href="StandaloneFileBrowser_8cs_source.html#l00014">StandaloneFileBrowser.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="StandaloneFileBrowser_8cs_source.html#l00014">SFB.StandaloneFileBrowser.OpenFilePanel()</a>, <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>, and <a class="el" href="CorePath_8cs_source.html#l00187">CorePath.WidgetSave</a>.</p>
 
 </div>
 </div>
@@ -524,9 +532,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00297">297</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  298</span>    {</div>
-<div class="line"><span class="lineno">  299</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.WaitForEndOfFrame(delegate</div>
+<div class="line"><span class="lineno">  299</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_function" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a>(delegate</div>
 <div class="line"><span class="lineno">  300</span>        {</div>
-<div class="line"><span class="lineno">  301</span>            <span class="keywordtype">string</span> text = StandaloneFileBrowser.SaveFilePanel(<span class="stringliteral">&quot;Save Widget Theme&quot;</span>, CorePath.WidgetSave, <span class="stringliteral">&quot;new theme&quot;</span>, <span class="stringliteral">&quot;json&quot;</span>);</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordtype">string</span> text = <a class="code hl_class" href="classSFB_1_1StandaloneFileBrowser.html">StandaloneFileBrowser</a>.<a class="code hl_function" href="classSFB_1_1StandaloneFileBrowser.html#adca7d6cba7ff4f3f4f00f5e79e7aad57">SaveFilePanel</a>(<span class="stringliteral">&quot;Save Widget Theme&quot;</span>, <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#ad49546400b0ee7415636918602c1ea72">WidgetSave</a>, <span class="stringliteral">&quot;new theme&quot;</span>, <span class="stringliteral">&quot;json&quot;</span>);</div>
 <div class="line"><span class="lineno">  302</span>            if (!<span class="keywordtype">string</span>.IsNullOrEmpty(text))</div>
 <div class="line"><span class="lineno">  303</span>            {</div>
 <div class="line"><span class="lineno">  304</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> &amp;&amp; (text.Contains(<span class="stringliteral">&quot;Default.json&quot;</span>) || text.Contains(<span class="stringliteral">&quot;Modern.json&quot;</span>) || text.Contains(<span class="stringliteral">&quot;Classic.json&quot;</span>)))</div>
@@ -546,8 +554,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  318</span>    }</div>
 <div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
 <div class="ttc" id="aclassEMono_html_af8f655ce6663c9ac9ec7a91c56f99c85"><div class="ttname"><a href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">EMono.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00045">EMono.cs:45</a></div></div>
+<div class="ttc" id="aclassSFB_1_1StandaloneFileBrowser_html_adca7d6cba7ff4f3f4f00f5e79e7aad57"><div class="ttname"><a href="classSFB_1_1StandaloneFileBrowser.html#adca7d6cba7ff4f3f4f00f5e79e7aad57">SFB.StandaloneFileBrowser.SaveFilePanel</a></div><div class="ttdeci">static string SaveFilePanel(string title, string directory, string defaultName, string extension)</div><div class="ttdef"><b>Definition:</b> <a href="StandaloneFileBrowser_8cs_source.html#l00052">StandaloneFileBrowser.cs:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="StandaloneFileBrowser_8cs_source.html#l00052">SFB.StandaloneFileBrowser.SaveFilePanel()</a>, <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>, and <a class="el" href="CorePath_8cs_source.html#l00187">CorePath.WidgetSave</a>.</p>
 
 </div>
 </div>
@@ -577,17 +586,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00218">218</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
 <div class="line"><span class="lineno">  221</span>        {</div>
-<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (item.gameObject.name == <span class="stringliteral">&quot;Widget&quot;</span> + <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.gameObject.name == <span class="stringliteral">&quot;Widget&quot;</span> + <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">  223</span>            {</div>
-<div class="line"><span class="lineno">  224</span>                <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno">  224</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
 <div class="line"><span class="lineno">  225</span>            }</div>
 <div class="line"><span class="lineno">  226</span>        }</div>
 <div class="line"><span class="lineno">  227</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  228</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00144">Activate()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00230">DeactivateWidget()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00028">OnActivateZone()</a>, <a class="el" href="WidgetManager_8cs_source.html#l00205">RefreshWidget()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00152">Toggle()</a>.</p>
 
@@ -618,11 +628,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00266">266</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  267</span>    {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
 <div class="line"><span class="lineno">  269</span>        {</div>
-<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (item is <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a> || item is <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a> || item is <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a> || item is <a class="code hl_class" href="classWidgetMemo.html">WidgetMemo</a> || item is <a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>)</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> is <a class="code hl_class" href="classWidgetCurrentTool.html">WidgetCurrentTool</a> || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> is <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a> || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> is <a class="code hl_class" href="classWidgetTracker.html">WidgetTracker</a> || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> is <a class="code hl_class" href="classWidgetMemo.html">WidgetMemo</a> || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> is <a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>)</div>
 <div class="line"><span class="lineno">  271</span>            {</div>
-<div class="line"><span class="lineno">  272</span>                item.gameObject.SetActive(value: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  272</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.gameObject.SetActive(value: <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  273</span>            }</div>
 <div class="line"><span class="lineno">  274</span>        }</div>
 <div class="line"><span class="lineno">  275</span>    }</div>
@@ -632,7 +642,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00004">WidgetQuestTracker.cs:5</a></div></div>
 <div class="ttc" id="aclassWidgetTracker_html"><div class="ttname"><a href="classWidgetTracker.html">WidgetTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetTracker_8cs_source.html#l00004">WidgetTracker.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00226">UI.OnChangeLayer()</a>.</p>
 
@@ -715,7 +725,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  350</span>        {</div>
 <div class="line"><span class="lineno">  351</span>            path = CorePath.WidgetSave + (isSubTheme ? EMono.core.config.other.idSubWidgetTheme : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">other</a>.<a class="code hl_variable" href="classCoreConfig_1_1OtherSetting.html#a44c4e94e8e86ed7daa4497190180e9b9">idMainWidgetTheme</a>) + <span class="stringliteral">&quot;.json&quot;</span>;</div>
 <div class="line"><span class="lineno">  352</span>        }</div>
-<div class="line"><span class="lineno">  353</span>        SaveData saveData = IO.LoadFile&lt;SaveData&gt;(path);</div>
+<div class="line"><span class="lineno">  353</span>        SaveData saveData = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;SaveData&gt;(path);</div>
 <div class="line"><span class="lineno">  354</span>        <span class="keywordflow">if</span> (isSubTheme)</div>
 <div class="line"><span class="lineno">  355</span>        {</div>
 <div class="line"><span class="lineno">  356</span>            EMono.player.subWidgets = saveData;</div>
@@ -729,6 +739,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCoreConfig_1_1OtherSetting_html_a44c4e94e8e86ed7daa4497190180e9b9"><div class="ttname"><a href="classCoreConfig_1_1OtherSetting.html#a44c4e94e8e86ed7daa4497190180e9b9">CoreConfig.OtherSetting.idMainWidgetTheme</a></div><div class="ttdeci">string idMainWidgetTheme</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00503">CoreConfig.cs:503</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_ace7c91a480e766e3e6aea9d50079c5e5"><div class="ttname"><a href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">CoreConfig.other</a></div><div class="ttdeci">OtherSetting other</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00596">CoreConfig.cs:596</a></div></div>
 <div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00064">Core.cs:64</a></div></div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00008">IO.cs:9</a></div></div>
 <div class="ttc" id="aclassWidgetManager_html_aaa138557dcce3cb621e8b8282860ebd4"><div class="ttname"><a href="classWidgetManager.html#aaa138557dcce3cb621e8b8282860ebd4">WidgetManager.currentPath</a></div><div class="ttdeci">string currentPath</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00017">WidgetManager.cs:17</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Core_8cs_source.html#l00064">Core.config</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="CoreConfig_8cs_source.html#l00503">CoreConfig.OtherSetting.idMainWidgetTheme</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>.</p>
@@ -824,14 +835,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00128">128</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
 <div class="line"><span class="lineno">  131</span>        {</div>
-<div class="line"><span class="lineno">  132</span>            item.<a class="code hl_function" href="classWidget.html#ad609d2633bca92b69f91569c9a7e5c07">OnChangeActionMode</a>();</div>
+<div class="line"><span class="lineno">  132</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.OnChangeActionMode();</div>
 <div class="line"><span class="lineno">  133</span>        }</div>
 <div class="line"><span class="lineno">  134</span>    }</div>
-<div class="ttc" id="aclassWidget_html_ad609d2633bca92b69f91569c9a7e5c07"><div class="ttname"><a href="classWidget.html#ad609d2633bca92b69f91569c9a7e5c07">Widget.OnChangeActionMode</a></div><div class="ttdeci">virtual void OnChangeActionMode()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00473">Widget.cs:473</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>, and <a class="el" href="Widget_8cs_source.html#l00473">Widget.OnChangeActionMode()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00277">Reset()</a>.</p>
 
@@ -880,9 +890,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>            <a class="code hl_function" href="classWidgetManager.html#a5653b03bbd5c06ff558016e77574d661">Load</a>(isSubTheme: <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (Screen.width &lt;= 1300 &amp;&amp; !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a2d6b723453add2e1b272341c38451262">useSubWidgetTheme</a>)</div>
 <div class="line"><span class="lineno">   75</span>            {</div>
-<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, Widget.Config&gt; item <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ace998cd817f7f40663a1f8883d510953">mainWidgets</a>.dict)</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, Widget.Config&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ace998cd817f7f40663a1f8883d510953">mainWidgets</a>.dict)</div>
 <div class="line"><span class="lineno">   77</span>                {</div>
-<div class="line"><span class="lineno">   78</span>                    <span class="keywordflow">if</span> (item.Key == <span class="stringliteral">&quot;StatsBar&quot;</span>)</div>
+<div class="line"><span class="lineno">   78</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Key == <span class="stringliteral">&quot;StatsBar&quot;</span>)</div>
 <div class="line"><span class="lineno">   79</span>                    {</div>
 <div class="line"><span class="lineno">   80</span>                        item.Value.state = <a class="code hl_class" href="classWidget.html">Widget</a>.<a class="code hl_enumeration" href="classWidget.html#aa91ece767174d862948d83a17ec7a724">State</a>.Inactive;</div>
 <div class="line"><span class="lineno">   81</span>                    }</div>
@@ -938,7 +948,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidget_1_1Config_html_a78ae707ae1b1c34feac36a51b980866e"><div class="ttname"><a href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">Widget.Config.skin</a></div><div class="ttdeci">SkinConfig skin</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00061">Widget.cs:61</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Meta_html"><div class="ttname"><a href="classWidget_1_1Meta.html">Widget.Meta</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00009">Widget.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetManager_8cs_source.html#l00026">configs</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="WidgetManager_8cs_source.html#l00022">first</a>, <a class="el" href="Widget_8cs_source.html#l00047">Widget.Config.id</a>, <a class="el" href="Player_8cs_source.html#l00783">Player.isEditor</a>, <a class="el" href="WidgetManager_8cs_source.html#l00347">Load()</a>, <a class="el" href="Player_8cs_source.html#l00810">Player.mainWidgets</a>, <a class="el" href="WidgetManager_8cs_source.html#l00015">metaMap</a>, <a class="el" href="WidgetManager_8cs_source.html#l00024">metas</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="CoreDebug_8cs_source.html#l00119">CoreDebug.resetPlayerConfig</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, <a class="el" href="Player_8cs_source.html#l00813">Player.subWidgets</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, and <a class="el" href="Player_8cs_source.html#l00768">Player.useSubWidgetTheme</a>.</p>
+<p class="reference">References <a class="el" href="WidgetManager_8cs_source.html#l00026">configs</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="WidgetManager_8cs_source.html#l00022">first</a>, <a class="el" href="Widget_8cs_source.html#l00047">Widget.Config.id</a>, <a class="el" href="Player_8cs_source.html#l00783">Player.isEditor</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="WidgetManager_8cs_source.html#l00347">Load()</a>, <a class="el" href="Player_8cs_source.html#l00810">Player.mainWidgets</a>, <a class="el" href="WidgetManager_8cs_source.html#l00015">metaMap</a>, <a class="el" href="WidgetManager_8cs_source.html#l00024">metas</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="CoreDebug_8cs_source.html#l00119">CoreDebug.resetPlayerConfig</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, <a class="el" href="Player_8cs_source.html#l00813">Player.subWidgets</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, and <a class="el" href="Player_8cs_source.html#l00768">Player.useSubWidgetTheme</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00277">Reset()</a>.</p>
 
@@ -1138,8 +1148,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  341</span>            path = CorePath.WidgetSave + (EMono.player.useSubWidgetTheme ? EMono.core.config.other.idSubWidgetTheme : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">other</a>.<a class="code hl_variable" href="classCoreConfig_1_1OtherSetting.html#a44c4e94e8e86ed7daa4497190180e9b9">idMainWidgetTheme</a>) + <span class="stringliteral">&quot;.json&quot;</span>;</div>
 <div class="line"><span class="lineno">  342</span>        }</div>
 <div class="line"><span class="lineno">  343</span>        <a class="code hl_function" href="classWidgetManager.html#a305f662da517a4ea3a7a52dcab6b52b0">UpdateConfigs</a>();</div>
-<div class="line"><span class="lineno">  344</span>        IO.SaveFile(path, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_property" href="classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d">widgets</a>);</div>
+<div class="line"><span class="lineno">  344</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">SaveFile</a>(path, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_property" href="classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d">widgets</a>);</div>
 <div class="line"><span class="lineno">  345</span>    }</div>
+<div class="ttc" id="aclassIO_html_ac15051fb75be08e9ff3dd16de65959b3"><div class="ttname"><a href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">IO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj, bool compress=false, JsonSerializerSettings setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00087">IO.cs:87</a></div></div>
 <div class="ttc" id="aclassPlayer_html_a32eea09b622f81f3ad2afe9ea4fcb55d"><div class="ttname"><a href="classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d">Player.widgets</a></div><div class="ttdeci">WidgetManager.SaveData widgets</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01008">Player.cs:1009</a></div></div>
 <div class="ttc" id="aclassWidgetManager_html_a305f662da517a4ea3a7a52dcab6b52b0"><div class="ttname"><a href="classWidgetManager.html#a305f662da517a4ea3a7a52dcab6b52b0">WidgetManager.UpdateConfigs</a></div><div class="ttdeci">void UpdateConfigs()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetManager_8cs_source.html#l00136">WidgetManager.cs:136</a></div></div>
 </div><!-- fragment -->
@@ -1172,17 +1183,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00255">255</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  256</span>    {</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
 <div class="line"><span class="lineno">  258</span>        {</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">if</span> (item.<a class="code hl_function" href="classWidget.html#ad00ac46c24aed99d7016c15a0a7c67c9">IsInRightMode</a>())</div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsInRightMode())</div>
 <div class="line"><span class="lineno">  260</span>            {</div>
-<div class="line"><span class="lineno">  261</span>                item.gameObject.SetActive(value: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  261</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.gameObject.SetActive(value: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  262</span>            }</div>
 <div class="line"><span class="lineno">  263</span>        }</div>
 <div class="line"><span class="lineno">  264</span>    }</div>
-<div class="ttc" id="aclassWidget_html_ad00ac46c24aed99d7016c15a0a7c67c9"><div class="ttname"><a href="classWidget.html#ad00ac46c24aed99d7016c15a0a7c67c9">Widget.IsInRightMode</a></div><div class="ttdeci">bool IsInRightMode()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00216">Widget.cs:216</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00216">Widget.IsInRightMode()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
 
 </div>
 </div>
@@ -1328,14 +1338,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetManager_8cs_source.html#l00136">136</a> of file <a class="el" href="WidgetManager_8cs_source.html">WidgetManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetManager.html#ab2f3ed28fcf34a6559c87e153a9cc4bd">list</a>)</div>
 <div class="line"><span class="lineno">  139</span>        {</div>
-<div class="line"><span class="lineno">  140</span>            item.<a class="code hl_function" href="classWidget.html#a1cd943f3cd97ce448beff32c01a341c1">UpdateConfig</a>();</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.UpdateConfig();</div>
 <div class="line"><span class="lineno">  141</span>        }</div>
 <div class="line"><span class="lineno">  142</span>    }</div>
-<div class="ttc" id="aclassWidget_html_a1cd943f3cd97ce448beff32c01a341c1"><div class="ttname"><a href="classWidget.html#a1cd943f3cd97ce448beff32c01a341c1">Widget.UpdateConfig</a></div><div class="ttdeci">void UpdateConfig()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00412">Widget.cs:412</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>, and <a class="el" href="Widget_8cs_source.html#l00412">Widget.UpdateConfig()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00020">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="HotItemToggleWidget_8cs_source.html#l00007">HotItemToggleWidget.OnClick()</a>.</p>
 

@@ -123,7 +123,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c49f0f9e9a93a3c6c5a7baed4d3f9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415a071758cf87d5a043d96cca497b40"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a415a071758cf87d5a043d96cca497b40">GetStoryRow</a> (string idBook, int id)</td></tr>
 <tr class="separator:a415a071758cf87d5a043d96cca497b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54dff5dd6b71d968c6b672cdc69f2280"><td class="memItemLeft" align="right" valign="top">ExcelData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a> (string idBook)</td></tr>
+<tr class="memitem:a54dff5dd6b71d968c6b672cdc69f2280"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classExcelData.html">ExcelData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a> (string idBook)</td></tr>
 <tr class="separator:a54dff5dd6b71d968c6b672cdc69f2280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c306733c6f758ae19d9e608e413a3fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a5c306733c6f758ae19d9e608e413a3fe">PlayStory</a> (string idBook, int id, bool fromBook=false)</td></tr>
 <tr class="separator:a5c306733c6f758ae19d9e608e413a3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,9 +148,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:abdcc642033cf7f2922df1d135f3fad2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9cb96de2bfcda59bb4d3685e64974a6"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#ab9cb96de2bfcda59bb4d3685e64974a6">reservedTutorial</a> = new List&lt;string&gt;()</td></tr>
 <tr class="separator:ab9cb96de2bfcda59bb4d3685e64974a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a12707ba9824967c8c519fe097c9c08"><td class="memItemLeft" align="right" valign="top">BitArray32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a></td></tr>
+<tr class="memitem:a3a12707ba9824967c8c519fe097c9c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBitArray32.html">BitArray32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a></td></tr>
 <tr class="separator:a3a12707ba9824967c8c519fe097c9c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f986cd1e9ca77d5ceeb22a141f9e5de"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, ExcelData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a> = new Dictionary&lt;string, ExcelData&gt;()</td></tr>
+<tr class="memitem:a9f986cd1e9ca77d5ceeb22a141f9e5de"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classExcelData.html">ExcelData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a> = new Dictionary&lt;string, <a class="el" href="classExcelData.html">ExcelData</a>&gt;()</td></tr>
 <tr class="separator:a9f986cd1e9ca77d5ceeb22a141f9e5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -362,11 +362,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00531">531</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  532</span>        {</div>
-<div class="line"><span class="lineno">  533</span>            <a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[0] = (int)<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>.Bits;</div>
+<div class="line"><span class="lineno">  533</span>            <a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a4b47e1714f2e3191309e186b1925f9">ints</a>[0] = (int)<a class="code hl_variable" href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">bits</a>.<a class="code hl_variable" href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">Bits</a>;</div>
 <div class="line"><span class="lineno">  534</span>        }</div>
 <div class="ttc" id="aclassPlayer_1_1Flags_html_a3a12707ba9824967c8c519fe097c9c08"><div class="ttname"><a href="classPlayer_1_1Flags.html#a3a12707ba9824967c8c519fe097c9c08">Player.Flags.bits</a></div><div class="ttdeci">BitArray32 bits</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00154">Player.cs:154</a></div></div>
+<div class="ttc" id="astructBitArray32_html_a83496c94eb91a5bb1d40d561f8fdf479"><div class="ttname"><a href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">BitArray32.Bits</a></div><div class="ttdeci">uint Bits</div><div class="ttdef"><b>Definition:</b> <a href="BitArray32_8cs_source.html#l00006">BitArray32.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Player_8cs_source.html#l00154">Player.Flags.bits</a>, and <a class="el" href="Player_8cs_source.html#l00140">Player.Flags.ints</a>.</p>
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l00154">Player.Flags.bits</a>, <a class="el" href="BitArray32_8cs_source.html#l00006">BitArray32.Bits</a>, and <a class="el" href="Player_8cs_source.html#l00140">Player.Flags.ints</a>.</p>
 
 </div>
 </div>
@@ -424,7 +425,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ExcelData Player.Flags.GetStoryExcelData </td>
+          <td class="memname"><a class="el" href="classExcelData.html">ExcelData</a> Player.Flags.GetStoryExcelData </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>idBook</em></td><td>)</td>
@@ -440,19 +441,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00587">587</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  588</span>        {</div>
-<div class="line"><span class="lineno">  589</span>            ExcelData excelData = <a class="code hl_variable" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a>.TryGetValue(idBook);</div>
+<div class="line"><span class="lineno">  589</span>            <a class="code hl_class" href="classExcelData.html">ExcelData</a> excelData = <a class="code hl_variable" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a>.TryGetValue(idBook);</div>
 <div class="line"><span class="lineno">  590</span>            <span class="keywordflow">if</span> (excelData == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  591</span>            {</div>
-<div class="line"><span class="lineno">  592</span>                excelData = <span class="keyword">new</span> ExcelData();</div>
+<div class="line"><span class="lineno">  592</span>                excelData = <span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>();</div>
 <div class="line"><span class="lineno">  593</span>                excelData.path = CorePath.DramaData + idBook + <span class="stringliteral">&quot;.xlsx&quot;</span>;</div>
-<div class="line"><span class="lineno">  594</span>                excelData.BuildList(<span class="stringliteral">&quot;index&quot;</span>);</div>
+<div class="line"><span class="lineno">  594</span>                excelData.<a class="code hl_function" href="classExcelData.html#a0be9c5038f66b91b39e53c5b1004b1ab">BuildList</a>(<span class="stringliteral">&quot;index&quot;</span>);</div>
 <div class="line"><span class="lineno">  595</span>                <a class="code hl_variable" href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">storyExcel</a>.Add(idBook, excelData);</div>
 <div class="line"><span class="lineno">  596</span>            }</div>
 <div class="line"><span class="lineno">  597</span>            <span class="keywordflow">return</span> excelData;</div>
 <div class="line"><span class="lineno">  598</span>        }</div>
+<div class="ttc" id="aclassExcelData_html"><div class="ttname"><a href="classExcelData.html">ExcelData</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00010">ExcelData.cs:11</a></div></div>
+<div class="ttc" id="aclassExcelData_html_a0be9c5038f66b91b39e53c5b1004b1ab"><div class="ttname"><a href="classExcelData.html#a0be9c5038f66b91b39e53c5b1004b1ab">ExcelData.BuildList</a></div><div class="ttdeci">List&lt; Dictionary&lt; string, string &gt; &gt; BuildList(string sheetName=&quot;_default&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00092">ExcelData.cs:92</a></div></div>
 <div class="ttc" id="aclassPlayer_1_1Flags_html_a9f986cd1e9ca77d5ceeb22a141f9e5de"><div class="ttname"><a href="classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de">Player.Flags.storyExcel</a></div><div class="ttdeci">Dictionary&lt; string, ExcelData &gt; storyExcel</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00156">Player.cs:156</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Player_8cs_source.html#l00156">Player.Flags.storyExcel</a>.</p>
+<p class="reference">References <a class="el" href="ExcelData_8cs_source.html#l00092">ExcelData.BuildList()</a>, and <a class="el" href="Player_8cs_source.html#l00156">Player.Flags.storyExcel</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00575">Player.Flags.GetStoryRow()</a>, and <a class="el" href="Player_8cs_source.html#l00563">Player.Flags.GetStoryRowID()</a>.</p>
 
@@ -494,18 +497,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00575">575</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  576</span>        {</div>
-<div class="line"><span class="lineno">  577</span>            <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; item <span class="keywordflow">in</span> <a class="code hl_function" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a>(idBook).sheets[<span class="stringliteral">&quot;index&quot;</span>].list)</div>
+<div class="line"><span class="lineno">  577</span>            <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_function" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a>(idBook).sheets[<span class="stringliteral">&quot;index&quot;</span>].list)</div>
 <div class="line"><span class="lineno">  578</span>            {</div>
-<div class="line"><span class="lineno">  579</span>                <span class="keywordflow">if</span> (item[<span class="stringliteral">&quot;id&quot;</span>].ToInt() == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  579</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>[<span class="stringliteral">&quot;id&quot;</span>].ToInt() == <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">  580</span>                {</div>
-<div class="line"><span class="lineno">  581</span>                    <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno">  581</span>                    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
 <div class="line"><span class="lineno">  582</span>                }</div>
 <div class="line"><span class="lineno">  583</span>            }</div>
 <div class="line"><span class="lineno">  584</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  585</span>        }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassPlayer_1_1Flags_html_a54dff5dd6b71d968c6b672cdc69f2280"><div class="ttname"><a href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">Player.Flags.GetStoryExcelData</a></div><div class="ttdeci">ExcelData GetStoryExcelData(string idBook)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00587">Player.cs:587</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Player_8cs_source.html#l00587">Player.Flags.GetStoryExcelData()</a>.</p>
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l00587">Player.Flags.GetStoryExcelData()</a>, and <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00600">Player.Flags.PlayStory()</a>.</p>
 
@@ -547,17 +551,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00563">563</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  564</span>        {</div>
-<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; item <span class="keywordflow">in</span> <a class="code hl_function" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a>(idBook).sheets[<span class="stringliteral">&quot;index&quot;</span>].list)</div>
+<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">foreach</span> (Dictionary&lt;string, string&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_function" href="classPlayer_1_1Flags.html#a54dff5dd6b71d968c6b672cdc69f2280">GetStoryExcelData</a>(idBook).sheets[<span class="stringliteral">&quot;index&quot;</span>].list)</div>
 <div class="line"><span class="lineno">  566</span>            {</div>
-<div class="line"><span class="lineno">  567</span>                <span class="keywordflow">if</span> (item[<span class="stringliteral">&quot;step&quot;</span>] == idStep)</div>
+<div class="line"><span class="lineno">  567</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>[<span class="stringliteral">&quot;step&quot;</span>] == idStep)</div>
 <div class="line"><span class="lineno">  568</span>                {</div>
-<div class="line"><span class="lineno">  569</span>                    <span class="keywordflow">return</span> item[<span class="stringliteral">&quot;id&quot;</span>].ToInt();</div>
+<div class="line"><span class="lineno">  569</span>                    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>[<span class="stringliteral">&quot;id&quot;</span>].ToInt();</div>
 <div class="line"><span class="lineno">  570</span>                }</div>
 <div class="line"><span class="lineno">  571</span>            }</div>
 <div class="line"><span class="lineno">  572</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  573</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Player_8cs_source.html#l00587">Player.Flags.GetStoryExcelData()</a>.</p>
+<p class="reference">References <a class="el" href="Player_8cs_source.html#l00587">Player.Flags.GetStoryExcelData()</a>, and <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Tutorial_8cs_source.html#l00007">Tutorial.Play()</a>, <a class="el" href="Tutorial_8cs_source.html#l00049">Tutorial.Remove()</a>, and <a class="el" href="Tutorial_8cs_source.html#l00055">Tutorial.Reserve()</a>.</p>
 
@@ -940,7 +944,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BitArray32 Player.Flags.bits</td>
+          <td class="memname"><a class="el" href="structBitArray32.html">BitArray32</a> Player.Flags.bits</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1052,7 +1056,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Dictionary&lt;string, ExcelData&gt; Player.Flags.storyExcel = new Dictionary&lt;string, ExcelData&gt;()</td>
+          <td class="memname">Dictionary&lt;string, <a class="el" href="classExcelData.html">ExcelData</a>&gt; Player.Flags.storyExcel = new Dictionary&lt;string, <a class="el" href="classExcelData.html">ExcelData</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">

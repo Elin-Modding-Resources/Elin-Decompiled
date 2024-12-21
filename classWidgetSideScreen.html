@@ -108,6 +108,7 @@ Inheritance diagram for WidgetSideScreen:</div>
   <map id="WidgetSideScreen_map" name="WidgetSideScreen_map">
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
+<area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -155,9 +156,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acff238f1edde59feb5b454e873c0cec5 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07afdbb7e0dc8eb844f4b5d3a4cce37 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37">OnManagerDeactivate</a> ()</td></tr>
 <tr class="separator:af07afdbb7e0dc8eb844f4b5d3a4cce37 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (RectPosition p)</td></tr>
+<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (RectPosition p)</td></tr>
+<tr class="memitem:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8fe1c734b47957816912262c78a5b38 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad8fe1c734b47957816912262c78a5b38">OnChangePivot</a> ()</td></tr>
 <tr class="separator:ad8fe1c734b47957816912262c78a5b38 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +212,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
+<tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -836,13 +839,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
 <div class="line"><span class="lineno">   33</span>        <span class="keyword">get</span></div>
 <div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> IntColor.FromInt(<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#a69e71c3539287ccf5693a7e897396fb5">bgColor</a>);</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classIntColor.html">IntColor</a>.<a class="code hl_function" href="classIntColor.html#aa1896d3a2fb16365e35456ad6c0d516b">FromInt</a>(<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#a69e71c3539287ccf5693a7e897396fb5">bgColor</a>);</div>
 <div class="line"><span class="lineno">   36</span>        }</div>
 <div class="line"><span class="lineno">   37</span>        <span class="keyword">set</span></div>
 <div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            extra.bgColor = IntColor.ToInt(ref value);</div>
+<div class="line"><span class="lineno">   39</span>            extra.bgColor = <a class="code hl_class" href="classIntColor.html">IntColor</a>.<a class="code hl_function" href="classIntColor.html#a7fc449704cbd3add53a8956a0be96f20">ToInt</a>(ref value);</div>
 <div class="line"><span class="lineno">   40</span>        }</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassIntColor_html"><div class="ttname"><a href="classIntColor.html">IntColor</a></div><div class="ttdef"><b>Definition:</b> <a href="IntColor_8cs_source.html#l00003">IntColor.cs:4</a></div></div>
+<div class="ttc" id="aclassIntColor_html_a7fc449704cbd3add53a8956a0be96f20"><div class="ttname"><a href="classIntColor.html#a7fc449704cbd3add53a8956a0be96f20">IntColor.ToInt</a></div><div class="ttdeci">static int ToInt(ref Color c)</div><div class="ttdef"><b>Definition:</b> <a href="IntColor_8cs_source.html#l00024">IntColor.cs:24</a></div></div>
+<div class="ttc" id="aclassIntColor_html_aa1896d3a2fb16365e35456ad6c0d516b"><div class="ttname"><a href="classIntColor.html#aa1896d3a2fb16365e35456ad6c0d516b">IntColor.FromInt</a></div><div class="ttdeci">static Color32 FromInt(int i)</div><div class="ttdef"><b>Definition:</b> <a href="IntColor_8cs_source.html#l00015">IntColor.cs:15</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_1_1Extra_html_a69e71c3539287ccf5693a7e897396fb5"><div class="ttname"><a href="classWidgetSideScreen_1_1Extra.html#a69e71c3539287ccf5693a7e897396fb5">WidgetSideScreen.Extra.bgColor</a></div><div class="ttdeci">int bgColor</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00014">WidgetSideScreen.cs:14</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>.</p>

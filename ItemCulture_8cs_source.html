@@ -126,9 +126,9 @@ $(document).ready(function(){initNavTree('ItemCulture_8cs_source.html',''); init
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        });</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        text1.SetText(e.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a>);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, Element&gt; item <span class="keywordflow">in</span> elements.dict)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, Element&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> elements.dict)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (item.Value.source.aliasParent == <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Value.source.aliasParent == <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                num++;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
@@ -138,6 +138,7 @@ $(document).ready(function(){initNavTree('ItemCulture_8cs_source.html',''); init
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="classItemCulture.html#a918daa4b2bff4454ec670d63abf5b14a">textHearth</a>.SetText(<span class="stringliteral">&quot;_hearth&quot;</span>.lang(branch.GetHearthIncome(e.source.alias).ToString(<span class="stringliteral">&quot;F1&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>));</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00239">Chara.cs:240</a></div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
 <div class="ttc" id="aclassCore_html_a23f118d951da98e4d7fcb3f1691c59c5"><div class="ttname"><a href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">Core.game</a></div><div class="ttdeci">Game game</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00066">Core.cs:66</a></div></div>

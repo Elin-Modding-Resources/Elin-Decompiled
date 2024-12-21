@@ -247,7 +247,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
 <div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> MenuItem</div>
 <div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            card = t,</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> = t,</div>
 <div class="line"><span class="lineno">   98</span>            text = t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>,</div>
 <div class="line"><span class="lineno">   99</span>            action = delegate</div>
 <div class="line"><span class="lineno">  100</span>            {</div>
@@ -262,6 +262,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  109</span>            }</div>
 <div class="line"><span class="lineno">  110</span>        };</div>
 <div class="line"><span class="lineno">  111</span>    }</div>
+<div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01885">Card.cs:1886</a></div></div>
 <div class="ttc" id="aclassCard_html_a5a6f253b03f13d9e792836ee2ec678ec"><div class="ttname"><a href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Card.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01953">Card.cs:1953</a></div></div>
 <div class="ttc" id="aclassCard_html_ab75ffdacfe8891e42eec65abdc40648c"><div class="ttname"><a href="classCard.html#ab75ffdacfe8891e42eec65abdc40648c">Card.isChara</a></div><div class="ttdeci">virtual bool isChara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01899">Card.cs:1899</a></div></div>
@@ -270,7 +271,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLayerChara_html"><div class="ttname"><a href="classLayerChara.html">LayerChara</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00001">LayerChara.cs:2</a></div></div>
 <div class="ttc" id="aclassLayerInfo_html"><div class="ttname"><a href="classLayerInfo.html">LayerInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInfo_8cs_source.html#l00003">LayerInfo.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01886">Card.Chara</a>, <a class="el" href="Card_8cs_source.html#l01899">Card.isChara</a>, <a class="el" href="Card_8cs_source.html#l01953">Card.Name</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>, <a class="el" href="Card_8cs_source.html#l01886">Card.Chara</a>, <a class="el" href="Card_8cs_source.html#l01899">Card.isChara</a>, <a class="el" href="Card_8cs_source.html#l01953">Card.Name</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerInspect_8cs_source.html#l00113">GetMenuItems()</a>, and <a class="el" href="LayerInspect_8cs_source.html#l00026">SetItems()</a>.</p>
 
@@ -307,11 +308,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  118</span>        {</div>
 <div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classLayerInspect.html#a8d074519f3b64bb86f590040cf8cda9e">list</a>;</div>
 <div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> item <span class="keywordflow">in</span> point.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>())</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> point.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>())</div>
 <div class="line"><span class="lineno">  122</span>        {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (item.<a class="code hl_property" href="classCard.html#af87a7b7b683accc297391119398618cc">isSynced</a>)</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.isSynced)</div>
 <div class="line"><span class="lineno">  124</span>            {</div>
-<div class="line"><span class="lineno">  125</span>                <a class="code hl_variable" href="classLayerInspect.html#a8d074519f3b64bb86f590040cf8cda9e">list</a>.Add(<a class="code hl_function" href="classLayerInspect.html#ab8ec70c2e7fec2da5bf51acd55ad6943">GetItem</a>(item));</div>
+<div class="line"><span class="lineno">  125</span>                <a class="code hl_variable" href="classLayerInspect.html#a8d074519f3b64bb86f590040cf8cda9e">list</a>.Add(<a class="code hl_function" href="classLayerInspect.html#ab8ec70c2e7fec2da5bf51acd55ad6943">GetItem</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>));</div>
 <div class="line"><span class="lineno">  126</span>            }</div>
 <div class="line"><span class="lineno">  127</span>        }</div>
 <div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (point.<a class="code hl_property" href="classPoint.html#acd5999e555a324bcf6f8a17216a72d76">area</a> != <span class="keyword">null</span>)</div>
@@ -374,9 +375,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  185</span>        }</div>
 <div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classLayerInspect.html#a8d074519f3b64bb86f590040cf8cda9e">list</a>;</div>
 <div class="line"><span class="lineno">  187</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassBaseArea_html_abdbffe15f1c7f8ae7f36d672ca084695"><div class="ttname"><a href="classBaseArea.html#abdbffe15f1c7f8ae7f36d672ca084695">BaseArea.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="BaseArea_8cs_source.html#l00036">BaseArea.cs:37</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
-<div class="ttc" id="aclassCard_html_af87a7b7b683accc297391119398618cc"><div class="ttname"><a href="classCard.html#af87a7b7b683accc297391119398618cc">Card.isSynced</a></div><div class="ttdeci">virtual bool isSynced</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01903">Card.cs:1903</a></div></div>
 <div class="ttc" id="aclassCell_html_a8e4777712a3cfb75549d437c51c4edc7"><div class="ttname"><a href="classCell.html#a8e4777712a3cfb75549d437c51c4edc7">Cell.HasLiquid</a></div><div class="ttdeci">bool HasLiquid</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00673">Cell.cs:673</a></div></div>
 <div class="ttc" id="aclassCell_html_a9d426016ed41725165ee710931fe30a7"><div class="ttname"><a href="classCell.html#a9d426016ed41725165ee710931fe30a7">Cell.GetFloorName</a></div><div class="ttdeci">string GetFloorName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01590">Cell.cs:1590</a></div></div>
 <div class="ttc" id="aclassCell_html_aa9073401b6489eff1deffe4d18c493db"><div class="ttname"><a href="classCell.html#aa9073401b6489eff1deffe4d18c493db">Cell.obj</a></div><div class="ttdeci">byte obj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00038">Cell.cs:38</a></div></div>
@@ -397,7 +398,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassScene_html_a333286137d2976b11b59fd8c5b751717"><div class="ttname"><a href="classScene.html#a333286137d2976b11b59fd8c5b751717">Scene.HitPoint</a></div><div class="ttdeci">static Point HitPoint</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00021">Scene.cs:21</a></div></div>
 <div class="ttc" id="aclassSourceObj_html_a48f86c2b89c8a9337102b8ee64560131"><div class="ttname"><a href="classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131">SourceObj.GetName</a></div><div class="ttdeci">string GetName(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00147">SourceObj.cs:147</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Point_8cs_source.html#l00467">Point.Copy()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00093">GetItem()</a>, <a class="el" href="Scene_8cs_source.html#l00021">Scene.HitPoint</a>, <a class="el" href="Card_8cs_source.html#l01903">Card.isSynced</a>, <a class="el" href="Point_8cs_source.html#l00088">Point.IsValid</a>, <a class="el" href="LayerInspect_8cs_source.html#l00022">list</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00467">Point.Copy()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00093">GetItem()</a>, <a class="el" href="Scene_8cs_source.html#l00021">Scene.HitPoint</a>, <a class="el" href="Point_8cs_source.html#l00088">Point.IsValid</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerInspect_8cs_source.html#l00022">list</a>, and <a class="el" href="ELayer_8cs_source.html#l00021">ELayer.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerInspect_8cs_source.html#l00035">SetItemsOnHitPoint()</a>.</p>
 

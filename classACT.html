@@ -275,7 +275,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ACT_8cs_source.html#l00046">46</a> of file <a class="el" href="ACT_8cs_source.html">ACT.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_class" href="classAct.html">Act</a> act = ClassCache.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>&lt;<a class="code hl_class" href="classAct.html">Act</a>&gt;(row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580">type</a>.IsEmpty(row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>), <span class="stringliteral">&quot;Elin&quot;</span>) ?? <span class="keyword">new</span> <a class="code hl_class" href="classAct.html">Act</a>();</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_class" href="classAct.html">Act</a> act = <a class="code hl_class" href="classClassCache.html">ClassCache</a>.Create&lt;<a class="code hl_class" href="classAct.html">Act</a>&gt;(row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580">type</a>.IsEmpty(row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>), <span class="stringliteral">&quot;Elin&quot;</span>) ?? <span class="keyword">new</span> <a class="code hl_class" href="classAct.html">Act</a>();</div>
 <div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (act != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   50</span>        {</div>
 <div class="line"><span class="lineno">   51</span>            act.id = row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a>;</div>
@@ -284,13 +284,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> act;</div>
 <div class="line"><span class="lineno">   55</span>    }</div>
 <div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00057">ACT.cs:58</a></div></div>
-<div class="ttc" id="aclassElement_html_a7f33c59a74a6c34a37f8eee0e0cecd1e"><div class="ttname"><a href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Element.Create</a></div><div class="ttdeci">static Element Create(int id, int v=0)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00866">ELEMENT.cs:866</a></div></div>
+<div class="ttc" id="aclassClassCache_html"><div class="ttname"><a href="classClassCache.html">ClassCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00006">ClassCache.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_a99432e5acb5134731ae3aca223e261ef"><div class="ttname"><a href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">SourceElement.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00012">SourceElement.cs:12</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_aa9b6be183183173bc2d17d5a18bce762"><div class="ttname"><a href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">SourceElement.Row.alias</a></div><div class="ttdeci">string alias</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00014">SourceElement.cs:14</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_abf32b2e2ae58e3cbec41c187bf2ac580"><div class="ttname"><a href="classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580">SourceElement.Row.type</a></div><div class="ttdeci">string type</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00056">SourceElement.cs:56</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELEMENT_8cs_source.html#l00866">Element.Create()</a>.</p>
-
 </div>
 </div>
 <a id="a4471badd97a155675704c552ba9a2699" name="a4471badd97a155675704c552ba9a2699"></a>

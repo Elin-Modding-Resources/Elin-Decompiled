@@ -186,7 +186,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8e2aa2e76b7a1c49808f1181677ce4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab4329d699ae6c617e286b6b3b6cc20"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20">vals</a> = new List&lt;int&gt;()</td></tr>
 <tr class="separator:aeab4329d699ae6c617e286b6b3b6cc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddd01e83b7ca731a900ba3300a706be"><td class="memItemLeft" align="right" valign="top">BitArray32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDNA.html#a9ddd01e83b7ca731a900ba3300a706be">bits</a></td></tr>
+<tr class="memitem:a9ddd01e83b7ca731a900ba3300a706be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBitArray32.html">BitArray32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDNA.html#a9ddd01e83b7ca731a900ba3300a706be">bits</a></td></tr>
 <tr class="separator:a9ddd01e83b7ca731a900ba3300a706be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
@@ -360,11 +360,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DNA_8cs_source.html#l00089">89</a> of file <a class="el" href="DNA_8cs_source.html">DNA.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="classDNA.html#a8e2aa2e76b7a1c49808f1181677ce4b5">ints</a>[4] = <a class="code hl_variable" href="classDNA.html#a9ddd01e83b7ca731a900ba3300a706be">bits</a>.ToInt();</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="classDNA.html#a8e2aa2e76b7a1c49808f1181677ce4b5">ints</a>[4] = <a class="code hl_variable" href="classDNA.html#a9ddd01e83b7ca731a900ba3300a706be">bits</a>.<a class="code hl_function" href="structBitArray32.html#af1c823fc2ad0746fe1f552574be231f3">ToInt</a>();</div>
 <div class="line"><span class="lineno">   92</span>    }</div>
 <div class="ttc" id="aclassDNA_html_a9ddd01e83b7ca731a900ba3300a706be"><div class="ttname"><a href="classDNA.html#a9ddd01e83b7ca731a900ba3300a706be">DNA.bits</a></div><div class="ttdeci">BitArray32 bits</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00026">DNA.cs:26</a></div></div>
+<div class="ttc" id="astructBitArray32_html_af1c823fc2ad0746fe1f552574be231f3"><div class="ttname"><a href="structBitArray32.html#af1c823fc2ad0746fe1f552574be231f3">BitArray32.ToInt</a></div><div class="ttdeci">int ToInt()</div><div class="ttdef"><b>Definition:</b> <a href="BitArray32_8cs_source.html#l00084">BitArray32.cs:84</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00026">bits</a>, and <a class="el" href="DNA_8cs_source.html#l00021">ints</a>.</p>
+<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00026">bits</a>, <a class="el" href="DNA_8cs_source.html#l00021">ints</a>, and <a class="el" href="BitArray32_8cs_source.html#l00084">BitArray32.ToInt()</a>.</p>
 
 </div>
 </div>
@@ -419,7 +420,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>, <a class="el" href="Card_8cs_source.html#l01685">Card.c_genes</a>, <a class="el" href="DNA_8cs_source.html#l00041">cost</a>, <a class="el" href="CharaGenes_8cs_source.html#l00010">CharaGenes.inferior</a>, <a class="el" href="CharaGenes_8cs_source.html#l00007">CharaGenes.items</a>, and <a class="el" href="DNA_8cs_source.html#l00029">type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>, and <a class="el" href="CharaGenes_8cs_source.html#l00012">CharaGenes.Remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>.</p>
 
 </div>
 </div>
@@ -695,8 +696,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  221</span>        <a class="code hl_property" href="classDNA.html#a1a70e7426ec87aeadc9dcb344aef99be">type</a> = _type;</div>
 <div class="line"><span class="lineno">  222</span>        <a class="code hl_property" href="classDNA.html#a283f5abff7ec3fcf6d7494dc8c954e4d">cost</a> = 0;</div>
 <div class="line"><span class="lineno">  223</span>        <a class="code hl_variable" href="classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20">vals</a>.Clear();</div>
-<div class="line"><span class="lineno">  224</span>        Debug.Log(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
-<div class="line"><span class="lineno">  225</span>        Rand.SetSeed(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
+<div class="line"><span class="lineno">  224</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
+<div class="line"><span class="lineno">  225</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
 <div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (model == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  227</span>        {</div>
 <div class="line"><span class="lineno">  228</span>            model = <a class="code hl_class" href="classCharaGen.html">CharaGen</a>.<a class="code hl_function" href="classCharaGen.html#aea54439a71ae1fe0a07d3ee4d3084b15">Create</a>(<span class="keywordtype">id</span>);</div>
@@ -722,12 +723,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  248</span>        List&lt;Element&gt; listAttb = model.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ac62364ea18c1b7d47a5a843035470bec">ListBestAttributes</a>();</div>
 <div class="line"><span class="lineno">  249</span>        List&lt;Element&gt; listSkill = model.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aae6af3f16e4db24da44b8d8184ada319">ListBestSkills</a>();</div>
 <div class="line"><span class="lineno">  250</span>        List&lt;Element&gt; listFeat = model.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ad0f040e5eb34d7edb48f09398299e38c">ListGeneFeats</a>();</div>
-<div class="line"><span class="lineno">  251</span>        Rand.SetSeed(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
+<div class="line"><span class="lineno">  251</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
 <div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (listFeat.Count == 0)</div>
 <div class="line"><span class="lineno">  253</span>        {</div>
 <div class="line"><span class="lineno">  254</span>            listFeat = model.<a class="code hl_function" href="classChara.html#a7d40369ecde8a844548d10e8432a7dd0">ListAvailabeFeats</a>(pet: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        Rand.SetSeed(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
+<div class="line"><span class="lineno">  256</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_property" href="classDNA.html#a5a70a19a5e267f56c03141173cfa0213">seed</a>);</div>
 <div class="line"><span class="lineno">  257</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classDNA.html#a1a70e7426ec87aeadc9dcb344aef99be">type</a>)</div>
 <div class="line"><span class="lineno">  258</span>        {</div>
 <div class="line"><span class="lineno">  259</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDNA.html#a6c24861a5030f44db8c5093699cbbf35">Type</a>.Default:</div>
@@ -764,7 +765,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  290</span>                }</div>
 <div class="line"><span class="lineno">  291</span>            }</div>
 <div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        Rand.SetSeed();</div>
+<div class="line"><span class="lineno">  293</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
 <div class="line"><span class="lineno">  294</span>        <a class="code hl_function" href="classDNA.html#ad8f8df21f5bb4bba184433d24cc60ae7">CalcCost</a>();</div>
 <div class="line"><span class="lineno">  295</span>        <a class="code hl_function" href="classDNA.html#ab7fae840137a248774d4da8a3d4f9b0f">CalcSlot</a>();</div>
 <div class="line"><span class="lineno">  296</span>        <span class="keywordtype">void</span> AddAction()</div>
@@ -881,7 +882,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  407</span>                        v /= 2;</div>
 <div class="line"><span class="lineno">  408</span>                        num /= 2;</div>
 <div class="line"><span class="lineno">  409</span>                        <a class="code hl_variable" href="classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20">vals</a>[k + 1] += v;</div>
-<div class="line"><span class="lineno">  410</span>                        Debug.Log(<a class="code hl_variable" href="classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20">vals</a>[k + 1] + <span class="stringliteral">&quot;: &quot;</span> + v + <span class="stringliteral">&quot;/&quot;</span> + num);</div>
+<div class="line"><span class="lineno">  410</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20">vals</a>[k + 1] + <span class="stringliteral">&quot;: &quot;</span> + v + <span class="stringliteral">&quot;/&quot;</span> + num);</div>
 <div class="line"><span class="lineno">  411</span>                        flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  412</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  413</span>                    }</div>
@@ -899,6 +900,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  425</span>            }</div>
 <div class="line"><span class="lineno">  426</span>        }</div>
 <div class="line"><span class="lineno">  427</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassActList_1_1Item_html"><div class="ttname"><a href="classActList_1_1Item.html">ActList.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="ActList_8cs_source.html#l00005">ActList.cs:6</a></div></div>
 <div class="ttc" id="aclassActList_1_1Item_html_a2343a06cd87792445d8b706bed9d3104"><div class="ttname"><a href="classActList_1_1Item.html#a2343a06cd87792445d8b706bed9d3104">ActList.Item.chance</a></div><div class="ttdeci">int chance</div><div class="ttdef"><b>Definition:</b> <a href="ActList_8cs_source.html#l00009">ActList.cs:9</a></div></div>
 <div class="ttc" id="aclassActList_1_1Item_html_ad7763dc3ffe2805983010f104336a95e"><div class="ttname"><a href="classActList_1_1Item.html#ad7763dc3ffe2805983010f104336a95e">ActList.Item.pt</a></div><div class="ttdeci">bool pt</div><div class="ttdef"><b>Definition:</b> <a href="ActList_8cs_source.html#l00011">ActList.cs:11</a></div></div>
@@ -927,8 +929,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElementContainer_html_ad0f040e5eb34d7edb48f09398299e38c"><div class="ttname"><a href="classElementContainer.html#ad0f040e5eb34d7edb48f09398299e38c">ElementContainer.ListGeneFeats</a></div><div class="ttdeci">List&lt; Element &gt; ListGeneFeats()</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00621">ElementContainer.cs:621</a></div></div>
 <div class="ttc" id="aclassElement_html_a1360f9020059a1c35402e1b66e8dfee4"><div class="ttname"><a href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">Element.ValueWithoutLink</a></div><div class="ttdeci">int ValueWithoutLink</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00272">ELEMENT.cs:272</a></div></div>
 <div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00228">ELEMENT.cs:228</a></div></div>
+<div class="ttc" id="aclassRand_html"><div class="ttname"><a href="classRand.html">Rand</a></div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00003">Rand.cs:4</a></div></div>
+<div class="ttc" id="aclassRand_html_aedb43adb5963433dd4098a0d2514c599"><div class="ttname"><a href="classRand.html#aedb43adb5963433dd4098a0d2514c599">Rand.SetSeed</a></div><div class="ttdeci">static void SetSeed(int a=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00037">Rand.cs:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActList_8cs_source.html#l00007">ActList.Item.act</a>, <a class="el" href="DNA_8cs_source.html#l00429">CalcCost()</a>, <a class="el" href="DNA_8cs_source.html#l00437">CalcSlot()</a>, <a class="el" href="ActList_8cs_source.html#l00009">ActList.Item.chance</a>, <a class="el" href="DNA_8cs_source.html#l00041">cost</a>, <a class="el" href="CharaGen_8cs_source.html#l00021">CharaGen.Create()</a>, <a class="el" href="EClass_8cs_source.html#l00055">EClass.curve()</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="BodySlot_8cs_source.html#l00006">BodySlot.elementId</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="ELEMENT_8cs_source.html#l00228">Element.id</a>, <a class="el" href="DNA_8cs_source.html#l00053">lv</a>, <a class="el" href="ActList_8cs_source.html#l00011">ActList.Item.pt</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00074">EClass.rndHalf()</a>, <a class="el" href="DNA_8cs_source.html#l00065">seed</a>, <a class="el" href="Card_8cs_source.html#l02657">Card.SetLv()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00251">Element.source</a>, <a class="el" href="DNA_8cs_source.html#l00029">type</a>, <a class="el" href="DNA_8cs_source.html#l00024">vals</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00272">Element.ValueWithoutLink</a>.</p>
+<p class="reference">References <a class="el" href="ActList_8cs_source.html#l00007">ActList.Item.act</a>, <a class="el" href="DNA_8cs_source.html#l00429">CalcCost()</a>, <a class="el" href="DNA_8cs_source.html#l00437">CalcSlot()</a>, <a class="el" href="ActList_8cs_source.html#l00009">ActList.Item.chance</a>, <a class="el" href="DNA_8cs_source.html#l00041">cost</a>, <a class="el" href="CharaGen_8cs_source.html#l00021">CharaGen.Create()</a>, <a class="el" href="EClass_8cs_source.html#l00055">EClass.curve()</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="BodySlot_8cs_source.html#l00006">BodySlot.elementId</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="ELEMENT_8cs_source.html#l00228">Element.id</a>, <a class="el" href="DNA_8cs_source.html#l00053">lv</a>, <a class="el" href="ActList_8cs_source.html#l00011">ActList.Item.pt</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00074">EClass.rndHalf()</a>, <a class="el" href="DNA_8cs_source.html#l00065">seed</a>, <a class="el" href="Card_8cs_source.html#l02657">Card.SetLv()</a>, <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00251">Element.source</a>, <a class="el" href="DNA_8cs_source.html#l00029">type</a>, <a class="el" href="DNA_8cs_source.html#l00024">vals</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00272">Element.ValueWithoutLink</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00212">GenerateWithGene()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00774">ActEffect.Proc()</a>.</p>
 
@@ -1184,9 +1188,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  579</span>            {</div>
 <div class="line"><span class="lineno">  580</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  581</span>            }</div>
-<div class="line"><span class="lineno">  582</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classActList.html">ActList</a>.<a class="code hl_class" href="classActList_1_1Item.html">Item</a> item in c.<a class="code hl_property" href="classChara.html#ac575b5cb46d316045a491f663867477e">ability</a>.<a class="code hl_variable" href="classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa">list</a>.<a class="code hl_variable" href="classActList.html#aa6343ddc5220ff66102e85e468712071">items</a>)</div>
+<div class="line"><span class="lineno">  582</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classActList.html">ActList</a>.<a class="code hl_class" href="classActList_1_1Item.html">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in c.<a class="code hl_property" href="classChara.html#ac575b5cb46d316045a491f663867477e">ability</a>.<a class="code hl_variable" href="classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa">list</a>.<a class="code hl_variable" href="classActList.html#aa6343ddc5220ff66102e85e468712071">items</a>)</div>
 <div class="line"><span class="lineno">  583</span>            {</div>
-<div class="line"><span class="lineno">  584</span>                <span class="keywordflow">if</span> (item.act.source.id == element.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>)</div>
+<div class="line"><span class="lineno">  584</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.act.source.id == element.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>)</div>
 <div class="line"><span class="lineno">  585</span>                {</div>
 <div class="line"><span class="lineno">  586</span>                    <span class="keywordflow">return</span> element;</div>
 <div class="line"><span class="lineno">  587</span>                }</div>
@@ -1194,9 +1198,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  589</span>        }</div>
 <div class="line"><span class="lineno">  590</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  591</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassActList_html"><div class="ttname"><a href="classActList.html">ActList</a></div><div class="ttdef"><b>Definition:</b> <a href="ActList_8cs_source.html#l00003">ActList.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00409">Chara.ability</a>, <a class="el" href="ELEMENT_8cs_source.html#l00866">Element.Create()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00228">Element.id</a>, <a class="el" href="ActList_8cs_source.html#l00014">ActList.items</a>, <a class="el" href="CharaAbility_8cs_source.html#l00010">CharaAbility.list</a>, <a class="el" href="ELEMENT_8cs_source.html#l00251">Element.source</a>, and <a class="el" href="DNA_8cs_source.html#l00024">vals</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00409">Chara.ability</a>, <a class="el" href="ELEMENT_8cs_source.html#l00866">Element.Create()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00228">Element.id</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ActList_8cs_source.html#l00014">ActList.items</a>, <a class="el" href="CharaAbility_8cs_source.html#l00010">CharaAbility.list</a>, <a class="el" href="ELEMENT_8cs_source.html#l00251">Element.source</a>, and <a class="el" href="DNA_8cs_source.html#l00024">vals</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>.</p>
 
@@ -1516,7 +1521,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BitArray32 DNA.bits</td>
+          <td class="memname"><a class="el" href="structBitArray32.html">BitArray32</a> DNA.bits</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1540,8 +1545,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DNA_8cs_source.html#l00018">18</a> of file <a class="el" href="DNA_8cs_source.html">DNA.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Tactics_8cs_source.html#l00161">Tactics.Tactics()</a>.</p>
 
 </div>
 </div>
@@ -1614,7 +1617,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>        }</div>
 <div class="line"><span class="lineno">   50</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>, <a class="el" href="DNA_8cs_source.html#l00219">Generate()</a>, <a class="el" href="DNA_8cs_source.html#l00472">GetDurationHour()</a>, <a class="el" href="DNA_8cs_source.html#l00490">GetText()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00020">CharaGenes.GetTotalCost()</a>, <a class="el" href="TraitGene_8cs_source.html#l00036">TraitGene.GetValue()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00084">InvOwnerGene.OnWriteNote()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00012">CharaGenes.Remove()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00016">InvOwnerGene.ShouldShowGuide()</a>, and <a class="el" href="TraitGene_8cs_source.html#l00020">TraitGene.WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>, <a class="el" href="DNA_8cs_source.html#l00219">Generate()</a>, <a class="el" href="DNA_8cs_source.html#l00472">GetDurationHour()</a>, <a class="el" href="DNA_8cs_source.html#l00490">GetText()</a>, <a class="el" href="TraitGene_8cs_source.html#l00036">TraitGene.GetValue()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00084">InvOwnerGene.OnWriteNote()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00016">InvOwnerGene.ShouldShowGuide()</a>, and <a class="el" href="TraitGene_8cs_source.html#l00020">TraitGene.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -1722,7 +1725,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   85</span>        }</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00095">_OnDeserialized()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="DNA_8cs_source.html#l00437">CalcSlot()</a>, <a class="el" href="CharaGenes_8cs_source.html#l00030">CharaGenes.GetGeneSlot()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00084">InvOwnerGene.OnWriteNote()</a>, and <a class="el" href="DNA_8cs_source.html#l00495">WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DNA_8cs_source.html#l00095">_OnDeserialized()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="DNA_8cs_source.html#l00437">CalcSlot()</a>, <a class="el" href="InvOwnerGene_8cs_source.html#l00084">InvOwnerGene.OnWriteNote()</a>, and <a class="el" href="DNA_8cs_source.html#l00495">WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1761,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   37</span>        }</div>
 <div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>, <a class="el" href="DNA_8cs_source.html#l00219">Generate()</a>, <a class="el" href="DNA_8cs_source.html#l00104">GenerateGene()</a>, <a class="el" href="DNA_8cs_source.html#l00212">GenerateWithGene()</a>, <a class="el" href="DNA_8cs_source.html#l00461">GetMaterialId()</a>, <a class="el" href="TraitGene_8cs_source.html#l00011">TraitGene.GetName()</a>, <a class="el" href="Tactics_8cs_source.html#l00161">Tactics.Tactics()</a>, and <a class="el" href="DNA_8cs_source.html#l00495">WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="DNA_8cs_source.html#l00130">Apply()</a>, <a class="el" href="DNA_8cs_source.html#l00219">Generate()</a>, <a class="el" href="DNA_8cs_source.html#l00104">GenerateGene()</a>, <a class="el" href="DNA_8cs_source.html#l00212">GenerateWithGene()</a>, <a class="el" href="DNA_8cs_source.html#l00461">GetMaterialId()</a>, <a class="el" href="TraitGene_8cs_source.html#l00011">TraitGene.GetName()</a>, and <a class="el" href="DNA_8cs_source.html#l00495">WriteNote()</a>.</p>
 
 </div>
 </div>

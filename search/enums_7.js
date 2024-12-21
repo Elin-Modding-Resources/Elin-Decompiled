@@ -7,5 +7,6 @@ var searchData=
   ['hitresult_4',['HitResult',['../HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a',1,'HitResult.cs']]],
   ['hittype_5',['HitType',['../classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6',1,'BaseTileSelector']]],
   ['homeresourcetype_6',['HomeResourceType',['../HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9c',1,'HomeResourceType.cs']]],
-  ['hostility_7',['Hostility',['../Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500',1,'Hostility.cs']]]
+  ['hooktype_7',['HookType',['../namespaceB83_1_1Win32.html#a627533690054d981042e076f04aa24e1',1,'B83::Win32']]],
+  ['hostility_8',['Hostility',['../Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500',1,'Hostility.cs']]]
 ];

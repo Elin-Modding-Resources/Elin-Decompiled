@@ -2,6 +2,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
 [
     [ "Algorithms", "dir_cd23900d07b8b1e69b979450ea9f15c5.html", "dir_cd23900d07b8b1e69b979450ea9f15c5" ],
     [ "Assets", "dir_55284aae4a4f1b01d5af1423fa438bef.html", "dir_55284aae4a4f1b01d5af1423fa438bef" ],
+    [ "Plugins.basecore", "dir_59ae87babc71723b1fb1066db0b4cdb0.html", "dir_59ae87babc71723b1fb1066db0b4cdb0" ],
     [ "Properties", "dir_306e96a4dc5b43e01f3c081320bd1010.html", "dir_306e96a4dc5b43e01f3c081320bd1010" ],
     [ "TwoDLaserPack", "dir_6b09264ad8f51f6a28577ac0d4500fd6.html", "dir_6b09264ad8f51f6a28577ac0d4500fd6" ],
     [ "ABILITY.cs", "ABILITY_8cs.html", "ABILITY_8cs" ],

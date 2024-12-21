@@ -250,9 +250,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a22ed66ff6f783eebb7c87e61b976ad31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4285ce016ad986c5a1b6e2c1d73cd449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCritter.html">Critter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCell.html#a4285ce016ad986c5a1b6e2c1d73cd449">critter</a></td></tr>
 <tr class="separator:a4285ce016ad986c5a1b6e2c1d73cd449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e5595a9f63d9aca6e19cd5c0e6654e"><td class="memItemLeft" align="right" valign="top">BitArray32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCell.html#a92e5595a9f63d9aca6e19cd5c0e6654e">bits</a></td></tr>
+<tr class="memitem:a92e5595a9f63d9aca6e19cd5c0e6654e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBitArray32.html">BitArray32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCell.html#a92e5595a9f63d9aca6e19cd5c0e6654e">bits</a></td></tr>
 <tr class="separator:a92e5595a9f63d9aca6e19cd5c0e6654e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5202c3ac15e57c44de0409f3bf7ae3d2"><td class="memItemLeft" align="right" valign="top">BitArray32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCell.html#a5202c3ac15e57c44de0409f3bf7ae3d2">bits2</a></td></tr>
+<tr class="memitem:a5202c3ac15e57c44de0409f3bf7ae3d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBitArray32.html">BitArray32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCell.html#a5202c3ac15e57c44de0409f3bf7ae3d2">bits2</a></td></tr>
 <tr class="separator:a5202c3ac15e57c44de0409f3bf7ae3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08f807559626eeda17f411b6a038665f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRoom.html">Room</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a></td></tr>
 <tr class="separator:a08f807559626eeda17f411b6a038665f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -890,12 +890,14 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Cell_8cs_source.html#l01585">1585</a> of file <a class="el" href="Cell_8cs_source.html">Cell.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1586</span>    {</div>
-<div class="line"><span class="lineno"> 1587</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;blockName&quot;</span>, <a class="code hl_property" href="classCell.html#a1459cf95d4dc91f85486299805f6b9f2">matBlock</a>.GetName(), <a class="code hl_property" href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">sourceBlock</a>.GetName());</div>
+<div class="line"><span class="lineno"> 1587</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#af887d535fa835b69d8cc340132257e74">Parse</a>(<span class="stringliteral">&quot;blockName&quot;</span>, <a class="code hl_property" href="classCell.html#a1459cf95d4dc91f85486299805f6b9f2">matBlock</a>.GetName(), <a class="code hl_property" href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">sourceBlock</a>.GetName());</div>
 <div class="line"><span class="lineno"> 1588</span>    }</div>
 <div class="ttc" id="aclassCell_html_a0eb7a933fea2fd077f321a2d5bdbce1a"><div class="ttname"><a href="classCell.html#a0eb7a933fea2fd077f321a2d5bdbce1a">Cell.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01052">Cell.cs:1052</a></div></div>
 <div class="ttc" id="aclassCell_html_a1459cf95d4dc91f85486299805f6b9f2"><div class="ttname"><a href="classCell.html#a1459cf95d4dc91f85486299805f6b9f2">Cell.matBlock</a></div><div class="ttdeci">SourceMaterial.Row matBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01030">Cell.cs:1030</a></div></div>
+<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
+<div class="ttc" id="aclassLang_html_af887d535fa835b69d8cc340132257e74"><div class="ttname"><a href="classLang.html#af887d535fa835b69d8cc340132257e74">Lang.Parse</a></div><div class="ttdeci">static string Parse(string idLang, string val1, string val2=null, string val3=null, string val4=null, string val5=null)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00144">Lang.cs:144</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01030">matBlock</a>, and <a class="el" href="Cell_8cs_source.html#l01052">sourceBlock</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01030">matBlock</a>, <a class="el" href="Lang_8cs_source.html#l00144">Lang.Parse()</a>, and <a class="el" href="Cell_8cs_source.html#l01052">sourceBlock</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TaskMine_8cs_source.html#l00047">TaskMine.GetTextSmall()</a>, <a class="el" href="TaskMine_8cs_source.html#l00056">TaskMine.OnCreateProgress()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00038">LayerInfo.SetBlock()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00064">UICardInfo.SetBlock()</a>, and <a class="el" href="BlockInfo_8cs_source.html#l00036">BlockInfo.WriteNote()</a>.</p>
 
@@ -926,12 +928,12 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Cell_8cs_source.html#l01595">1595</a> of file <a class="el" href="Cell_8cs_source.html">Cell.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1596</span>    {</div>
-<div class="line"><span class="lineno"> 1597</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;blockName&quot;</span>, <a class="code hl_property" href="classCell.html#a497fe1417352832c8c66c452a58e815c">matBridge</a>.GetName(), <a class="code hl_property" href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">sourceBridge</a>.GetName());</div>
+<div class="line"><span class="lineno"> 1597</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#af887d535fa835b69d8cc340132257e74">Parse</a>(<span class="stringliteral">&quot;blockName&quot;</span>, <a class="code hl_property" href="classCell.html#a497fe1417352832c8c66c452a58e815c">matBridge</a>.GetName(), <a class="code hl_property" href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">sourceBridge</a>.GetName());</div>
 <div class="line"><span class="lineno"> 1598</span>    }</div>
 <div class="ttc" id="aclassCell_html_a497fe1417352832c8c66c452a58e815c"><div class="ttname"><a href="classCell.html#a497fe1417352832c8c66c452a58e815c">Cell.matBridge</a></div><div class="ttdeci">SourceMaterial.Row matBridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01034">Cell.cs:1034</a></div></div>
 <div class="ttc" id="aclassCell_html_a87ad2a0882511641cd15a40dda9512e5"><div class="ttname"><a href="classCell.html#a87ad2a0882511641cd15a40dda9512e5">Cell.sourceBridge</a></div><div class="ttdeci">SourceFloor.Row sourceBridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01056">Cell.cs:1056</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01034">matBridge</a>, and <a class="el" href="Cell_8cs_source.html#l01056">sourceBridge</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01034">matBridge</a>, <a class="el" href="Lang_8cs_source.html#l00144">Lang.Parse()</a>, and <a class="el" href="Cell_8cs_source.html#l01056">sourceBridge</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TaskDig_8cs_source.html#l00042">TaskDig.GetTextSmall()</a>, and <a class="el" href="TaskDig_8cs_source.html#l00051">TaskDig.OnCreateProgress()</a>.</p>
 
@@ -962,12 +964,12 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Cell_8cs_source.html#l01590">1590</a> of file <a class="el" href="Cell_8cs_source.html">Cell.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1591</span>    {</div>
-<div class="line"><span class="lineno"> 1592</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;blockName&quot;</span>, <a class="code hl_property" href="classCell.html#a9ef942696e0364d6b54651927eebdc50">matFloor</a>.GetName(), <a class="code hl_property" href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">sourceFloor</a>.GetName());</div>
+<div class="line"><span class="lineno"> 1592</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#af887d535fa835b69d8cc340132257e74">Parse</a>(<span class="stringliteral">&quot;blockName&quot;</span>, <a class="code hl_property" href="classCell.html#a9ef942696e0364d6b54651927eebdc50">matFloor</a>.GetName(), <a class="code hl_property" href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">sourceFloor</a>.GetName());</div>
 <div class="line"><span class="lineno"> 1593</span>    }</div>
 <div class="ttc" id="aclassCell_html_a2211b3bdcf9f2ccf06b3aa8917dc7c4d"><div class="ttname"><a href="classCell.html#a2211b3bdcf9f2ccf06b3aa8917dc7c4d">Cell.sourceFloor</a></div><div class="ttdeci">SourceFloor.Row sourceFloor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01054">Cell.cs:1054</a></div></div>
 <div class="ttc" id="aclassCell_html_a9ef942696e0364d6b54651927eebdc50"><div class="ttname"><a href="classCell.html#a9ef942696e0364d6b54651927eebdc50">Cell.matFloor</a></div><div class="ttdeci">SourceMaterial.Row matFloor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01032">Cell.cs:1032</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01032">matFloor</a>, and <a class="el" href="Cell_8cs_source.html#l01054">sourceFloor</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01032">matFloor</a>, <a class="el" href="Lang_8cs_source.html#l00144">Lang.Parse()</a>, and <a class="el" href="Cell_8cs_source.html#l01054">sourceFloor</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TaskDig_8cs_source.html#l00042">TaskDig.GetTextSmall()</a>, <a class="el" href="TaskMine_8cs_source.html#l00047">TaskMine.GetTextSmall()</a>, <a class="el" href="TaskDig_8cs_source.html#l00051">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskWater_8cs_source.html#l00032">TaskWater.Run()</a>, <a class="el" href="LayerInfo_8cs_source.html#l00044">LayerInfo.SetFloor()</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00074">UICardInfo.SetFloor()</a>.</p>
 
@@ -1031,11 +1033,11 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Cell_8cs_source.html#l01644">1644</a> of file <a class="el" href="Cell_8cs_source.html">Cell.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1645</span>    {</div>
-<div class="line"><span class="lineno"> 1646</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;liquidName&quot;</span>, <a class="code hl_property" href="classCell.html#abfec7ca49decc34072f1303285b9cf9d">sourceEffect</a>.GetName());</div>
+<div class="line"><span class="lineno"> 1646</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#af887d535fa835b69d8cc340132257e74">Parse</a>(<span class="stringliteral">&quot;liquidName&quot;</span>, <a class="code hl_property" href="classCell.html#abfec7ca49decc34072f1303285b9cf9d">sourceEffect</a>.GetName());</div>
 <div class="line"><span class="lineno"> 1647</span>    }</div>
 <div class="ttc" id="aclassCell_html_abfec7ca49decc34072f1303285b9cf9d"><div class="ttname"><a href="classCell.html#abfec7ca49decc34072f1303285b9cf9d">Cell.sourceEffect</a></div><div class="ttdeci">SourceCellEffect.Row sourceEffect</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01070">Cell.cs:1070</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l01070">sourceEffect</a>.</p>
+<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00144">Lang.Parse()</a>, and <a class="el" href="Cell_8cs_source.html#l01070">sourceEffect</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerInfo_8cs_source.html#l00050">LayerInfo.SetLiquid()</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00084">UICardInfo.SetLiquid()</a>.</p>
 
@@ -1074,7 +1076,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1607</span>        }</div>
 <div class="line"><span class="lineno"> 1608</span>        <span class="keywordflow">if</span> (plantData != <span class="keyword">null</span> &amp;&amp; plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> &gt; 0)</div>
 <div class="line"><span class="lineno"> 1609</span>        {</div>
-<div class="line"><span class="lineno"> 1610</span>            text = Lang.GetList(<span class="stringliteral">&quot;plant_size&quot;</span>)[plantData.size - 1] + text;</div>
+<div class="line"><span class="lineno"> 1610</span>            text = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;plant_size&quot;</span>)[plantData.size - 1] + text;</div>
 <div class="line"><span class="lineno"> 1611</span>        }</div>
 <div class="line"><span class="lineno"> 1612</span>        text = text.AddArticle();</div>
 <div class="line"><span class="lineno"> 1613</span>        <span class="keywordflow">if</span> (plantData != <span class="keyword">null</span>)</div>
@@ -1118,6 +1120,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00006">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassLang_html_aa34e85634a016f6f433868d7d697904b"><div class="ttname"><a href="classLang.html#aa34e85634a016f6f433868d7d697904b">Lang.GetList</a></div><div class="ttdeci">static string[] GetList(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00111">Lang.cs:111</a></div></div>
 <div class="ttc" id="aclassMap_html_a0929dc7b8015444c40a2f72630766e90"><div class="ttname"><a href="classMap.html#a0929dc7b8015444c40a2f72630766e90">Map.TryGetPlant</a></div><div class="ttdeci">PlantData TryGetPlant(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l01894">Map.cs:1894</a></div></div>
 <div class="ttc" id="aclassMap_html_a61c2ca8f68f4927c6f727af4611b5834"><div class="ttname"><a href="classMap.html#a61c2ca8f68f4927c6f727af4611b5834">Map.backerObjs</a></div><div class="ttdeci">Dictionary&lt; int, int &gt; backerObjs</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00067">Map.cs:67</a></div></div>
 <div class="ttc" id="aclassPlantData_html"><div class="ttname"><a href="classPlantData.html">PlantData</a></div><div class="ttdef"><b>Definition:</b> <a href="PlantData_8cs_source.html#l00003">PlantData.cs:4</a></div></div>
@@ -1129,7 +1132,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSourceManager_html_ab4cf7dce730d8197f24cb4da0832b5d7"><div class="ttname"><a href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">SourceManager.backers</a></div><div class="ttdeci">SourceBacker backers</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00082">SourceManager.cs:82</a></div></div>
 <div class="ttc" id="aclassSourceObj_html_a48f86c2b89c8a9337102b8ee64560131"><div class="ttname"><a href="classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131">SourceObj.GetName</a></div><div class="ttdeci">string GetName(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceObj_8cs_source.html#l00147">SourceObj.cs:147</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="CoreConfig_8cs_source.html#l00590">CoreConfig.backer</a>, <a class="el" href="Map_8cs_source.html#l00067">Map.backerObjs</a>, <a class="el" href="SourceManager_8cs_source.html#l00082">SourceManager.backers</a>, <a class="el" href="Card_8cs_source.html#l01481">Card.c_refText</a>, <a class="el" href="Core_8cs_source.html#l00064">Core.config</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Card_8cs_source.html#l00310">Card.encLV</a>, <a class="el" href="PlantData_8cs_source.html#l00012">PlantData.fert</a>, <a class="el" href="SourceObj_8cs_source.html#l00147">SourceObj.GetName()</a>, <a class="el" href="Cell_8cs_source.html#l00114">index</a>, <a class="el" href="Cell_8cs_source.html#l00008">map</a>, <a class="el" href="Cell_8cs_source.html#l01036">matObj</a>, <a class="el" href="SourceBacker_8cs_source.html#l00049">SourceBacker.Row.Name</a>, <a class="el" href="PlantData_8cs_source.html#l00006">PlantData.seed</a>, <a class="el" href="CoreConfig_8cs_source.html#l00431">CoreConfig.BackerContentConfig.Show()</a>, <a class="el" href="PlantData_8cs_source.html#l00015">PlantData.size</a>, <a class="el" href="Cell_8cs_source.html#l01072">sourceObj</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="Map_8cs_source.html#l01894">Map.TryGetPlant()</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="CoreConfig_8cs_source.html#l00590">CoreConfig.backer</a>, <a class="el" href="Map_8cs_source.html#l00067">Map.backerObjs</a>, <a class="el" href="SourceManager_8cs_source.html#l00082">SourceManager.backers</a>, <a class="el" href="Card_8cs_source.html#l01481">Card.c_refText</a>, <a class="el" href="Core_8cs_source.html#l00064">Core.config</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Card_8cs_source.html#l00310">Card.encLV</a>, <a class="el" href="PlantData_8cs_source.html#l00012">PlantData.fert</a>, <a class="el" href="Lang_8cs_source.html#l00111">Lang.GetList()</a>, <a class="el" href="SourceObj_8cs_source.html#l00147">SourceObj.GetName()</a>, <a class="el" href="Cell_8cs_source.html#l00114">index</a>, <a class="el" href="Cell_8cs_source.html#l00008">map</a>, <a class="el" href="Cell_8cs_source.html#l01036">matObj</a>, <a class="el" href="SourceBacker_8cs_source.html#l00049">SourceBacker.Row.Name</a>, <a class="el" href="PlantData_8cs_source.html#l00006">PlantData.seed</a>, <a class="el" href="CoreConfig_8cs_source.html#l00431">CoreConfig.BackerContentConfig.Show()</a>, <a class="el" href="PlantData_8cs_source.html#l00015">PlantData.size</a>, <a class="el" href="Cell_8cs_source.html#l01072">sourceObj</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="Map_8cs_source.html#l01894">Map.TryGetPlant()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00070">BaseTaskHarvest.GetTextSmall()</a>, <a class="el" href="Map_8cs_source.html#l01796">Map.MineObj()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00231">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00592">GrowSystem.PopHarvest()</a>.</p>
 
@@ -2544,7 +2547,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BitArray32 Cell.bits</td>
+          <td class="memname"><a class="el" href="structBitArray32.html">BitArray32</a> Cell.bits</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2560,7 +2563,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BitArray32 Cell.bits2</td>
+          <td class="memname"><a class="el" href="structBitArray32.html">BitArray32</a> Cell.bits2</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -107,8 +107,11 @@ $(document).ready(function(){initNavTree('classCore.html',''); initResizable(); 
 Inheritance diagram for Core:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classCore.png" alt=""/>
- </div></div>
+  <img src="classCore.png" usemap="#Core_map" alt=""/>
+  <map id="Core_map" name="Core_map">
+<area href="classBaseCore.html" alt="BaseCore" shape="rect" coords="0,56,102,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -130,7 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a63525d6965298d0e674f5e297b13f862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac93d2a178af12a3f940d3f77c922fd29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ac93d2a178af12a3f940d3f77c922fd29">SetReferences</a> ()</td></tr>
 <tr class="separator:ac93d2a178af12a3f940d3f77c922fd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a7a5ca50473a3e8d8e27a8a9f59c97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a96a7a5ca50473a3e8d8e27a8a9f59c97">SetReleaseMode</a> (ReleaseMode m)</td></tr>
+<tr class="memitem:a96a7a5ca50473a3e8d8e27a8a9f59c97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a96a7a5ca50473a3e8d8e27a8a9f59c97">SetReleaseMode</a> (<a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a> m)</td></tr>
 <tr class="separator:a96a7a5ca50473a3e8d8e27a8a9f59c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc7b85b18dfb6198c13c0a047f52004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8dc7b85b18dfb6198c13c0a047f52004">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a8dc7b85b18dfb6198c13c0a047f52004"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,10 +149,25 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a358b8707c3dc0b2a95c864e7f7d5f1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0680449b7ced75f8b653bbf5e20b2a09"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a0680449b7ced75f8b653bbf5e20b2a09">StopEventSystem</a> (float duration=0.2f)</td></tr>
 <tr class="separator:a0680449b7ced75f8b653bbf5e20b2a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2428059ecf3fc37afd4069dbdc6c3b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ae2428059ecf3fc37afd4069dbdc6c3b5">SetLang</a> (string langCode, bool force=false)</td></tr>
+<tr class="memitem:ae2428059ecf3fc37afd4069dbdc6c3b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ae2428059ecf3fc37afd4069dbdc6c3b5">SetLang</a> (string <a class="el" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a>, bool force=false)</td></tr>
 <tr class="separator:ae2428059ecf3fc37afd4069dbdc6c3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0612b7ca3a9f42af5a2339bfffd11a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#aa0612b7ca3a9f42af5a2339bfffd11a5">ApplySkins</a> ()</td></tr>
 <tr class="separator:aa0612b7ca3a9f42af5a2339bfffd11a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classBaseCore"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBaseCore')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBaseCore.html">BaseCore</a></td></tr>
+<tr class="memitem:a29c3fddfccd1c56c8bf77ca71ca3b0cc inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a29c3fddfccd1c56c8bf77ca71ca3b0cc">ConsumeInput</a> ()</td></tr>
+<tr class="separator:a29c3fddfccd1c56c8bf77ca71ca3b0cc inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5755e1f33429715944ea9afeda8b1472 inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a> (Action action)</td></tr>
+<tr class="separator:a5755e1f33429715944ea9afeda8b1472 inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb290858386b0e84a5ae236ed1ff3cd5 inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#aeb290858386b0e84a5ae236ed1ff3cd5">StopEventSystem</a> (float duration=0.2f)</td></tr>
+<tr class="separator:aeb290858386b0e84a5ae236ed1ff3cd5 inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70efafa273d391132253cd92b98b162a inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a70efafa273d391132253cd92b98b162a">StopEventSystem</a> (Component c, Action action, float duration=0.15f)</td></tr>
+<tr class="separator:a70efafa273d391132253cd92b98b162a inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d97bcac3a5d84a11861697c991d8c2 inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#aa8d97bcac3a5d84a11861697c991d8c2">FreezeScreen</a> (float duration)</td></tr>
+<tr class="separator:aa8d97bcac3a5d84a11861697c991d8c2 inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8907ca077476e5d75ac82ca09b0e8284 inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a8907ca077476e5d75ac82ca09b0e8284">UnfreezeScreen</a> ()</td></tr>
+<tr class="separator:a8907ca077476e5d75ac82ca09b0e8284 inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a451a79b24acc438cf6bc56810f022922 inherit pub_methods_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a451a79b24acc438cf6bc56810f022922">RebuildBGMList</a> ()</td></tr>
+<tr class="separator:a451a79b24acc438cf6bc56810f022922 inherit pub_methods_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -208,6 +226,29 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a23f118d951da98e4d7fcb3f1691c59c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e458dc5119454864d2c6fd4fd86547d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8e458dc5119454864d2c6fd4fd86547d">initialized</a></td></tr>
 <tr class="separator:a8e458dc5119454864d2c6fd4fd86547d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classBaseCore"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classBaseCore')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classBaseCore.html">BaseCore</a></td></tr>
+<tr class="memitem:aa560bb8f25eb2a78768fe250b772c470 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVersion.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a></td></tr>
+<tr class="separator:aa560bb8f25eb2a78768fe250b772c470 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc94ac14db7f178f257e3484c7b4aad inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVersion.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#abbc94ac14db7f178f257e3484c7b4aad">versionMoongate</a></td></tr>
+<tr class="separator:abbc94ac14db7f178f257e3484c7b4aad inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f9f2d214a410f065fc8a49b1bee5c5 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVersion.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a88f9f2d214a410f065fc8a49b1bee5c5">versionMod</a></td></tr>
+<tr class="separator:a88f9f2d214a410f065fc8a49b1bee5c5 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36e2555050bb5810f690e7f6d494d30 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a></td></tr>
+<tr class="separator:ae36e2555050bb5810f690e7f6d494d30 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420ab513c317adffc539eb2f6ad1462d inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a></td></tr>
+<tr class="separator:a420ab513c317adffc539eb2f6ad1462d inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4848c82717450330ace40463001c6e63 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">EventSystem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a4848c82717450330ace40463001c6e63">eventSystem</a></td></tr>
+<tr class="separator:a4848c82717450330ace40463001c6e63 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea99096bc2e9772b6a52b8e4cb8d0008 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">List&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#aea99096bc2e9772b6a52b8e4cb8d0008">actionsLateUpdate</a> = new List&lt;Action&gt;()</td></tr>
+<tr class="separator:aea99096bc2e9772b6a52b8e4cb8d0008 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a647d6b64fd99120d09aebff659b6c0a5 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">List&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a> = new List&lt;Action&gt;()</td></tr>
+<tr class="separator:a647d6b64fd99120d09aebff659b6c0a5 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f27db83d3270bfd7b2f476e81cc6424 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">Canvas&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a9f27db83d3270bfd7b2f476e81cc6424">canvas</a></td></tr>
+<tr class="separator:a9f27db83d3270bfd7b2f476e81cc6424 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fbecc71668f3f4302f6ba73651867a4 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">forceLangCode</a></td></tr>
+<tr class="separator:a6fbecc71668f3f4302f6ba73651867a4 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1715dc3ad4e42c6657c8c9d4e3dbc0 inherit pub_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a6e1715dc3ad4e42c6657c8c9d4e3dbc0">frame</a></td></tr>
+<tr class="separator:a6e1715dc3ad4e42c6657c8c9d4e3dbc0 inherit pub_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -223,11 +264,22 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a864a76f915195d387f817e5fe61af44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66ee242e31e0d490f627b43040969bb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#aa66ee242e31e0d490f627b43040969bb">spiked</a></td></tr>
 <tr class="separator:aa66ee242e31e0d490f627b43040969bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classBaseCore"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classBaseCore')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classBaseCore.html">BaseCore</a></td></tr>
+<tr class="memitem:a45471b02b87fd352f4ff62aeddaa01a3 inherit pub_static_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a45471b02b87fd352f4ff62aeddaa01a3">IsOffline</a></td></tr>
+<tr class="separator:a45471b02b87fd352f4ff62aeddaa01a3 inherit pub_static_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c29aa6af4d4e8979c2df152853fc28 inherit pub_static_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classBaseCore.html">BaseCore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#ac6c29aa6af4d4e8979c2df152853fc28">Instance</a></td></tr>
+<tr class="separator:ac6c29aa6af4d4e8979c2df152853fc28 inherit pub_static_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b3eae769edaccb7751155b1a6785c5 inherit pub_static_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#ad9b3eae769edaccb7751155b1a6785c5">resetRuntime</a></td></tr>
+<tr class="separator:ad9b3eae769edaccb7751155b1a6785c5 inherit pub_static_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a0e79058316604b126081eaf9b29c9 inherit pub_static_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">static Func&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a57a0e79058316604b126081eaf9b29c9">BlockInput</a></td></tr>
+<tr class="separator:a57a0e79058316604b126081eaf9b29c9 inherit pub_static_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8ec098a1649ee7ff7d195d9205ba883b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8ec098a1649ee7ff7d195d9205ba883b">Awake</a> ()</td></tr>
 <tr class="separator:a8ec098a1649ee7ff7d195d9205ba883b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739911b7efc79e2ea38422b21ce53d4d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a739911b7efc79e2ea38422b21ce53d4d">Awake</a> ()</td></tr>
+<tr class="separator:a739911b7efc79e2ea38422b21ce53d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -235,6 +287,9 @@ Properties</h2></td></tr>
 <tr class="separator:ac31f5b0fe98a25c00ca5700c328ae460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0adecdbfe97eb888046531f358f94804"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a0adecdbfe97eb888046531f358f94804">uiScale</a><code> [get]</code></td></tr>
 <tr class="separator:a0adecdbfe97eb888046531f358f94804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_classBaseCore"><td colspan="2" onclick="javascript:toggleInherit('properties_classBaseCore')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classBaseCore.html">BaseCore</a></td></tr>
+<tr class="memitem:ac587cbd6b7c83c57d7098889ab7ba95f inherit properties_classBaseCore"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#ac587cbd6b7c83c57d7098889ab7ba95f">uiScale</a><code> [get]</code></td></tr>
+<tr class="separator:ac587cbd6b7c83c57d7098889ab7ba95f inherit properties_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -260,6 +315,14 @@ Private Attributes</h2></td></tr>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a2aa809c9366da231e8bd66b3cca1d6c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceElement.html">SourceElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a2aa809c9366da231e8bd66b3cca1d6c1">sourceElement</a></td></tr>
 <tr class="separator:a2aa809c9366da231e8bd66b3cca1d6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classBaseCore"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classBaseCore')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classBaseCore.html">BaseCore</a></td></tr>
+<tr class="memitem:ad2fc0dec011a240bd0fde41ecb2d269d inherit pro_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#ad2fc0dec011a240bd0fde41ecb2d269d">lastScreenWidth</a></td></tr>
+<tr class="separator:ad2fc0dec011a240bd0fde41ecb2d269d inherit pro_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1089fcaa072fe3b8c55f605b2a7d95eb inherit pro_attribs_classBaseCore"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCore.html#a1089fcaa072fe3b8c55f605b2a7d95eb">lastScreenHeight</a></td></tr>
+<tr class="separator:a1089fcaa072fe3b8c55f605b2a7d95eb inherit pro_attribs_classBaseCore"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -320,40 +383,42 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="classBaseCore.html#a739911b7efc79e2ea38422b21ce53d4d">BaseCore</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00091">91</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
 <div class="line"><span class="lineno">   93</span>        base.Awake();</div>
-<div class="line"><span class="lineno">   94</span>        Debug.Log(<span class="stringliteral">&quot;Core Awake&quot;</span>);</div>
-<div class="line"><span class="lineno">   95</span>        Debug.Log(<span class="stringliteral">&quot;Version:&quot;</span> + version.GetText());</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Core Awake&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Version:&quot;</span> + <a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_function" href="structVersion.html#a69625683678d8dd21be6146d936d2bb4">GetText</a>());</div>
 <div class="line"><span class="lineno">   96</span>        QualitySettings.vSyncCount = 0;</div>
 <div class="line"><span class="lineno">   97</span>        Application.targetFrameRate = 60;</div>
-<div class="line"><span class="lineno">   98</span>        IO.CreateDirectory(CorePath.Temp);</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a14d601287968907ef2791eaaf2bccb91">Temp</a>);</div>
 <div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="classCore.html#a58bee3d68d4be80c1e02e9d2be0ab06c">SetCurrent</a>();</div>
 <div class="line"><span class="lineno">  100</span>        Lang.langCode = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (Application.isEditor &amp;&amp; <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aefbcda0c2b6434282186c44e63652cf1">langCode</a> != 0)</div>
 <div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            forceLangCode = <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aefbcda0c2b6434282186c44e63652cf1">langCode</a>.ToString();</div>
+<div class="line"><span class="lineno">  103</span>            <a class="code hl_variable" href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">forceLangCode</a> = <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aefbcda0c2b6434282186c44e63652cf1">langCode</a>.ToString();</div>
 <div class="line"><span class="lineno">  104</span>        }</div>
 <div class="line"><span class="lineno">  105</span>        <span class="keywordtype">string</span>[] array = (Application.isEditor ? <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a6672d25c0aa6527a795a3e294445dd27">command</a>.Split(<span class="charliteral">&#39;,&#39;</span>) : Environment.GetCommandLineArgs());</div>
 <div class="line"><span class="lineno">  106</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
 <div class="line"><span class="lineno">  107</span>        {</div>
 <div class="line"><span class="lineno">  108</span>            <span class="keywordtype">string</span> text = array[i];</div>
 <div class="line"><span class="lineno">  109</span>            text = text.Replace(<span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).ToUpper();</div>
-<div class="line"><span class="lineno">  110</span>            Debug.Log(<span class="stringliteral">&quot;Commandline args:&quot;</span> + text);</div>
+<div class="line"><span class="lineno">  110</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Commandline args:&quot;</span> + text);</div>
 <div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (text.StartsWith(<span class="stringliteral">&quot;LANG_&quot;</span>))</div>
 <div class="line"><span class="lineno">  112</span>            {</div>
-<div class="line"><span class="lineno">  113</span>                forceLangCode = text.Replace(<span class="stringliteral">&quot;LANG_&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>                <a class="code hl_variable" href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">forceLangCode</a> = text.Replace(<span class="stringliteral">&quot;LANG_&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">  114</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  115</span>            }</div>
 <div class="line"><span class="lineno">  116</span>            <span class="keywordflow">switch</span> (text)</div>
 <div class="line"><span class="lineno">  117</span>            {</div>
 <div class="line"><span class="lineno">  118</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;DEV&quot;</span>:</div>
-<div class="line"><span class="lineno">  119</span>                releaseMode = ReleaseMode.Debug;</div>
+<div class="line"><span class="lineno">  119</span>                <a class="code hl_variable" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a> = <a class="code hl_enumeration" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a>.Debug;</div>
 <div class="line"><span class="lineno">  120</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  121</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;UPDATE_LANG&quot;</span>:</div>
 <div class="line"><span class="lineno">  122</span>                Lang.runUpdate = <span class="keyword">true</span>;</div>
@@ -365,9 +430,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  128</span>        }</div>
 <div class="line"><span class="lineno">  129</span>        NewsList.dict = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  130</span>        InvOwner.Trader = (InvOwner.Main = <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  131</span>        SpriteSheet.dict.Clear();</div>
-<div class="line"><span class="lineno">  132</span>        SpriteSheet.loadedPath.Clear();</div>
-<div class="line"><span class="lineno">  133</span>        SpriteReplacerAnimation.dict.Clear();</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_variable" href="classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016">dict</a>.Clear();</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_variable" href="classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714">loadedPath</a>.Clear();</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_class" href="classSpriteReplacerAnimation.html">SpriteReplacerAnimation</a>.<a class="code hl_variable" href="classSpriteReplacerAnimation.html#a21d5036fdbd4877031ec1d7bc4676538">dict</a>.Clear();</div>
 <div class="line"><span class="lineno">  134</span>        LayerDrama.haltPlaylist = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  135</span>        LayerDrama.keepBGM = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  136</span>        BaseModManager.isInitialized = <span class="keyword">false</span>;</div>
@@ -375,14 +440,14 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  138</span>        MapPiece.initialized = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  139</span>        ActPlan.warning = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  140</span>        Game.isPaused = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (Application.isEditor &amp;&amp; BaseCore.resetRuntime)</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (Application.isEditor &amp;&amp; <a class="code hl_class" href="classBaseCore.html">BaseCore</a>.<a class="code hl_variable" href="classBaseCore.html#ad9b3eae769edaccb7751155b1a6785c5">resetRuntime</a>)</div>
 <div class="line"><span class="lineno">  142</span>        {</div>
 <div class="line"><span class="lineno">  143</span>            <a class="code hl_function" href="classCore.html#a57239d45ff6a48527e3a335d1534d9f6">ResetRuntime</a>();</div>
 <div class="line"><span class="lineno">  144</span>        }</div>
 <div class="line"><span class="lineno">  145</span>        Window.dictData.Clear();</div>
 <div class="line"><span class="lineno">  146</span>        <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>.Clear();</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a> = Resources.Load&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>&gt;(<span class="stringliteral">&quot;_Debug &quot;</span> + releaseMode);</div>
-<div class="line"><span class="lineno">  148</span>        debug.enable = releaseMode != ReleaseMode.Public;</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a> = Resources.Load&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>&gt;(<span class="stringliteral">&quot;_Debug &quot;</span> + <a class="code hl_variable" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a>);</div>
+<div class="line"><span class="lineno">  148</span>        debug.enable = <a class="code hl_variable" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a> != <a class="code hl_enumeration" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a>.Public;</div>
 <div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCore.html#af2d8c5f9df3891278b46ef8c46059262">useUImat</a>)</div>
 <div class="line"><span class="lineno">  150</span>        {</div>
 <div class="line"><span class="lineno">  151</span>            Canvas.GetDefaultCanvasMaterial().CopyPropertiesFromMaterial(<a class="code hl_variable" href="classCore.html#a109ff8bad337801d937c5c268a68f862">matUI</a>);</div>
@@ -390,15 +455,15 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  153</span>        }</div>
 <div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>)</div>
 <div class="line"><span class="lineno">  155</span>        {</div>
-<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a> = Util.Instantiate&lt;<a class="code hl_class" href="classUI.html">UI</a>&gt;(<span class="stringliteral">&quot;UI/UI&quot;</span>);</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classUI.html">UI</a>&gt;(<span class="stringliteral">&quot;UI/UI&quot;</span>);</div>
 <div class="line"><span class="lineno">  157</span>        }</div>
 <div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>)</div>
 <div class="line"><span class="lineno">  159</span>        {</div>
-<div class="line"><span class="lineno">  160</span>            <a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a> = Util.Instantiate&lt;<a class="code hl_class" href="classScene.html">Scene</a>&gt;(<span class="stringliteral">&quot;Scene/Scene&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>            <a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classScene.html">Scene</a>&gt;(<span class="stringliteral">&quot;Scene/Scene&quot;</span>);</div>
 <div class="line"><span class="lineno">  161</span>        }</div>
 <div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_variable" href="classScene.html#ac40eb163ca8d5c2a3c555c50dcc45b1b">screenNoMap</a>.<a class="code hl_function" href="classBaseGameScreen.html#a49c409d337650f1955eca663f9ddbdf7">Activate</a>();</div>
 <div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.ShowCover();</div>
-<div class="line"><span class="lineno">  164</span>        canvas = <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.canvas;</div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_variable" href="classBaseCore.html#a9f27db83d3270bfd7b2f476e81cc6424">canvas</a> = <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.canvas;</div>
 <div class="line"><span class="lineno">  165</span>        <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.OnCoreStart();</div>
 <div class="line"><span class="lineno">  166</span>        BaseCore.BlockInput = () =&gt; <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.IsDragging;</div>
 <div class="line"><span class="lineno">  167</span>        CommandRegistry.assemblies.Add(typeof(<a class="code hl_class" href="classCore.html">Core</a>).Assembly);</div>
@@ -407,23 +472,31 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  170</span>            <a class="code hl_variable" href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">game</a>.<a class="code hl_variable" href="classGame.html#a2c3d7514a2db1030fb90f7f0626a299e">player</a>.<a class="code hl_variable" href="classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee">chara</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(a.name);</div>
 <div class="line"><span class="lineno">  171</span>        };</div>
 <div class="line"><span class="lineno">  172</span>        SoundManager.funcCanPlayBGM = () =&gt; !<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_variable" href="classLayerDrama.html#ada46697fddd0a2c44e96f81804721ed6">haltPlaylist</a> &amp;&amp; !<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_variable" href="classLayerDrama.html#a75194987ef0384cd11416586d1e41afe">keepBGM</a>;</div>
-<div class="line"><span class="lineno">  173</span>        FileDragAndDrop.onDrop = <a class="code hl_variable" href="classCore.html#a7cd100aaf7af83dfaa8a1f10ca82fbd7">textures</a>.<a class="code hl_function" href="classTextureManager.html#a78d1784c5f986f6c216fbed46e3800e3">OnDropFile</a>;</div>
-<div class="line"><span class="lineno">  174</span>        MOD.langs.Clear();</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_class" href="classFileDragAndDrop.html">FileDragAndDrop</a>.<a class="code hl_variable" href="classFileDragAndDrop.html#af8baf403dc5fac2852e1456f1e4bd8f7">onDrop</a> = <a class="code hl_variable" href="classCore.html#a7cd100aaf7af83dfaa8a1f10ca82fbd7">textures</a>.<a class="code hl_function" href="classTextureManager.html#a78d1784c5f986f6c216fbed46e3800e3">OnDropFile</a>;</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">langs</a>.Clear();</div>
 <div class="line"><span class="lineno">  175</span>        MOD.OnAddPcc = <a class="code hl_variable" href="classCore.html#addb7a6f655c0e106e16b03991892ca98">pccs</a>.Add;</div>
-<div class="line"><span class="lineno">  176</span>        MOD.listTalk = <span class="keyword">new</span> TalkDataList();</div>
-<div class="line"><span class="lineno">  177</span>        MOD.tones = <span class="keyword">new</span> ToneDataList();</div>
-<div class="line"><span class="lineno">  178</span>        MOD.listMaps.Clear();</div>
-<div class="line"><span class="lineno">  179</span>        MOD.listPartialMaps.Clear();</div>
-<div class="line"><span class="lineno">  180</span>        Portrait.modPortraitBGFs = <span class="keyword">new</span> ModItemList&lt;Sprite&gt;();</div>
-<div class="line"><span class="lineno">  181</span>        Portrait.modPortraitBGs = <span class="keyword">new</span> ModItemList&lt;Sprite&gt;();</div>
-<div class="line"><span class="lineno">  182</span>        Portrait.modPortraits = <span class="keyword">new</span> ModItemList&lt;Sprite&gt;();</div>
-<div class="line"><span class="lineno">  183</span>        Portrait.modOverlays = <span class="keyword">new</span> ModItemList&lt;Sprite&gt;();</div>
-<div class="line"><span class="lineno">  184</span>        Portrait.modFull = <span class="keyword">new</span> ModItemList&lt;Sprite&gt;();</div>
+<div class="line"><span class="lineno">  176</span>        MOD.listTalk = <span class="keyword">new</span> <a class="code hl_class" href="classTalkDataList.html">TalkDataList</a>();</div>
+<div class="line"><span class="lineno">  177</span>        MOD.tones = <span class="keyword">new</span> <a class="code hl_class" href="classToneDataList.html">ToneDataList</a>();</div>
+<div class="line"><span class="lineno">  178</span>        <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#af5d400f232b2c4ef9c548521df7541b4">listMaps</a>.Clear();</div>
+<div class="line"><span class="lineno">  179</span>        <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#af8ab386eec652c6fee6b10ab265e1e05">listPartialMaps</a>.Clear();</div>
+<div class="line"><span class="lineno">  180</span>        Portrait.modPortraitBGFs = <span class="keyword">new</span> <a class="code hl_class" href="classModItemList.html">ModItemList&lt;Sprite&gt;</a>();</div>
+<div class="line"><span class="lineno">  181</span>        Portrait.modPortraitBGs = <span class="keyword">new</span> <a class="code hl_class" href="classModItemList.html">ModItemList&lt;Sprite&gt;</a>();</div>
+<div class="line"><span class="lineno">  182</span>        Portrait.modPortraits = <span class="keyword">new</span> <a class="code hl_class" href="classModItemList.html">ModItemList&lt;Sprite&gt;</a>();</div>
+<div class="line"><span class="lineno">  183</span>        Portrait.modOverlays = <span class="keyword">new</span> <a class="code hl_class" href="classModItemList.html">ModItemList&lt;Sprite&gt;</a>();</div>
+<div class="line"><span class="lineno">  184</span>        Portrait.modFull = <span class="keyword">new</span> <a class="code hl_class" href="classModItemList.html">ModItemList&lt;Sprite&gt;</a>();</div>
 <div class="line"><span class="lineno">  185</span>        Portrait.dictList = <span class="keyword">new</span> Dictionary&lt;string, List&lt;ModItem&lt;Sprite&gt;&gt;&gt;();</div>
 <div class="line"><span class="lineno">  186</span>        <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_function" href="classTileType.html#a4456e9bf550fe200ae026894f22e0922">Init</a>();</div>
 <div class="line"><span class="lineno">  187</span>        <a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#adf25a70ab2d4b77734dd669376f43cfa">rendererObjDummy</a>.<a class="code hl_function" href="classRenderData.html#aba75940aa3f40125a63c3e017ca8b69b">Init</a>();</div>
-<div class="line"><span class="lineno">  188</span>        Debug.Log(<a class="code hl_variable" href="classCore.html#a7103d2867587f5aa8743d27a7ab2df78">steam</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="classCore.html#a7103d2867587f5aa8743d27a7ab2df78">steam</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId);</div>
 <div class="line"><span class="lineno">  189</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52db"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a></div><div class="ttdeci">ReleaseMode</div><div class="ttdef"><b>Definition:</b> <a href="ReleaseMode_8cs_source.html#l00001">ReleaseMode.cs:2</a></div></div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
+<div class="ttc" id="aclassBaseCore_html"><div class="ttname"><a href="classBaseCore.html">BaseCore</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00007">BaseCore.cs:8</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_a6fbecc71668f3f4302f6ba73651867a4"><div class="ttname"><a href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">BaseCore.forceLangCode</a></div><div class="ttdeci">string forceLangCode</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00037">BaseCore.cs:37</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_a9f27db83d3270bfd7b2f476e81cc6424"><div class="ttname"><a href="classBaseCore.html#a9f27db83d3270bfd7b2f476e81cc6424">BaseCore.canvas</a></div><div class="ttdeci">Canvas canvas</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00034">BaseCore.cs:34</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_aa560bb8f25eb2a78768fe250b772c470"><div class="ttname"><a href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">BaseCore.version</a></div><div class="ttdeci">Version version</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00017">BaseCore.cs:17</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_ad9b3eae769edaccb7751155b1a6785c5"><div class="ttname"><a href="classBaseCore.html#ad9b3eae769edaccb7751155b1a6785c5">BaseCore.resetRuntime</a></div><div class="ttdeci">static bool resetRuntime</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00013">BaseCore.cs:13</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_ae36e2555050bb5810f690e7f6d494d30"><div class="ttname"><a href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">BaseCore.releaseMode</a></div><div class="ttdeci">ReleaseMode releaseMode</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00023">BaseCore.cs:23</a></div></div>
 <div class="ttc" id="aclassBaseGameScreen_html_a49c409d337650f1955eca663f9ddbdf7"><div class="ttname"><a href="classBaseGameScreen.html#a49c409d337650f1955eca663f9ddbdf7">BaseGameScreen.Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00192">BaseGameScreen.cs:192</a></div></div>
 <div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.cs:114</a></div></div>
 <div class="ttc" id="aclassBaseTileMap_html_adf25a70ab2d4b77734dd669376f43cfa"><div class="ttname"><a href="classBaseTileMap.html#adf25a70ab2d4b77734dd669376f43cfa">BaseTileMap.rendererObjDummy</a></div><div class="ttdeci">RenderDataObjDummy rendererObjDummy</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00225">BaseTileMap.cs:225</a></div></div>
@@ -431,6 +504,8 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCoreDebug_html"><div class="ttname"><a href="classCoreDebug.html">CoreDebug</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00009">CoreDebug.cs:10</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a6672d25c0aa6527a795a3e294445dd27"><div class="ttname"><a href="classCoreDebug.html#a6672d25c0aa6527a795a3e294445dd27">CoreDebug.command</a></div><div class="ttdeci">string command</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00135">CoreDebug.cs:135</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_aefbcda0c2b6434282186c44e63652cf1"><div class="ttname"><a href="classCoreDebug.html#aefbcda0c2b6434282186c44e63652cf1">CoreDebug.langCode</a></div><div class="ttdeci">Lang.LangCode langCode</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00113">CoreDebug.cs:113</a></div></div>
+<div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
+<div class="ttc" id="aclassCorePath_html_a14d601287968907ef2791eaaf2bccb91"><div class="ttname"><a href="classCorePath.html#a14d601287968907ef2791eaaf2bccb91">CorePath.Temp</a></div><div class="ttdeci">static string Temp</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00207">CorePath.cs:207</a></div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00009">Core.cs:10</a></div></div>
 <div class="ttc" id="aclassCore_html_a109ff8bad337801d937c5c268a68f862"><div class="ttname"><a href="classCore.html#a109ff8bad337801d937c5c268a68f862">Core.matUI</a></div><div class="ttdeci">Material matUI</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00049">Core.cs:49</a></div></div>
 <div class="ttc" id="aclassCore_html_a23f118d951da98e4d7fcb3f1691c59c5"><div class="ttname"><a href="classCore.html#a23f118d951da98e4d7fcb3f1691c59c5">Core.game</a></div><div class="ttdeci">Game game</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00066">Core.cs:66</a></div></div>
@@ -443,23 +518,42 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCore_html_aa115bf6d048542080bc7a185949ade75"><div class="ttname"><a href="classCore.html#aa115bf6d048542080bc7a185949ade75">Core.screen</a></div><div class="ttdeci">BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00061">Core.cs:61</a></div></div>
 <div class="ttc" id="aclassCore_html_addb7a6f655c0e106e16b03991892ca98"><div class="ttname"><a href="classCore.html#addb7a6f655c0e106e16b03991892ca98">Core.pccs</a></div><div class="ttdeci">PCCManager pccs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00035">Core.cs:35</a></div></div>
 <div class="ttc" id="aclassCore_html_af2d8c5f9df3891278b46ef8c46059262"><div class="ttname"><a href="classCore.html#af2d8c5f9df3891278b46ef8c46059262">Core.useUImat</a></div><div class="ttdeci">bool useUImat</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00053">Core.cs:53</a></div></div>
+<div class="ttc" id="aclassFileDragAndDrop_html"><div class="ttname"><a href="classFileDragAndDrop.html">FileDragAndDrop</a></div><div class="ttdef"><b>Definition:</b> <a href="FileDragAndDrop_8cs_source.html#l00006">FileDragAndDrop.cs:7</a></div></div>
+<div class="ttc" id="aclassFileDragAndDrop_html_af8baf403dc5fac2852e1456f1e4bd8f7"><div class="ttname"><a href="classFileDragAndDrop.html#af8baf403dc5fac2852e1456f1e4bd8f7">FileDragAndDrop.onDrop</a></div><div class="ttdeci">static Action&lt; List&lt; string &gt; &gt; onDrop</div><div class="ttdef"><b>Definition:</b> <a href="FileDragAndDrop_8cs_source.html#l00008">FileDragAndDrop.cs:8</a></div></div>
 <div class="ttc" id="aclassGame_html_a2c3d7514a2db1030fb90f7f0626a299e"><div class="ttname"><a href="classGame.html#a2c3d7514a2db1030fb90f7f0626a299e">Game.player</a></div><div class="ttdeci">new Player player</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00176">Game.cs:176</a></div></div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00008">IO.cs:9</a></div></div>
+<div class="ttc" id="aclassIO_html_a936ea0e43adecbf23afb5bbc53c484f9"><div class="ttname"><a href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">IO.CreateDirectory</a></div><div class="ttdeci">static void CreateDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00331">IO.cs:331</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html_a75194987ef0384cd11416586d1e41afe"><div class="ttname"><a href="classLayerDrama.html#a75194987ef0384cd11416586d1e41afe">LayerDrama.keepBGM</a></div><div class="ttdeci">static bool keepBGM</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00010">LayerDrama.cs:10</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html_ada46697fddd0a2c44e96f81804721ed6"><div class="ttname"><a href="classLayerDrama.html#ada46697fddd0a2c44e96f81804721ed6">LayerDrama.haltPlaylist</a></div><div class="ttdeci">static bool haltPlaylist</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00012">LayerDrama.cs:12</a></div></div>
 <div class="ttc" id="aclassLayerInventory_html"><div class="ttname"><a href="classLayerInventory.html">LayerInventory</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00005">LayerInventory.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerInventory_html_a859b8c7f75365fba1e441ce5d983d466"><div class="ttname"><a href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">LayerInventory.listInv</a></div><div class="ttdeci">static List&lt; LayerInventory &gt; listInv</div><div class="ttdef"><b>Definition:</b> <a href="LayerInventory_8cs_source.html#l00007">LayerInventory.cs:7</a></div></div>
+<div class="ttc" id="aclassMOD_html"><div class="ttname"><a href="classMOD.html">MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00006">MOD.cs:7</a></div></div>
+<div class="ttc" id="aclassMOD_html_ad43925def27c6120e24dd26883f31ff3"><div class="ttname"><a href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">MOD.langs</a></div><div class="ttdeci">static Dictionary&lt; string, LangSetting &gt; langs</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00008">MOD.cs:8</a></div></div>
+<div class="ttc" id="aclassMOD_html_af5d400f232b2c4ef9c548521df7541b4"><div class="ttname"><a href="classMOD.html#af5d400f232b2c4ef9c548521df7541b4">MOD.listMaps</a></div><div class="ttdeci">static List&lt; FileInfo &gt; listMaps</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00020">MOD.cs:20</a></div></div>
+<div class="ttc" id="aclassMOD_html_af8ab386eec652c6fee6b10ab265e1e05"><div class="ttname"><a href="classMOD.html#af8ab386eec652c6fee6b10ab265e1e05">MOD.listPartialMaps</a></div><div class="ttdeci">static List&lt; FileInfo &gt; listPartialMaps</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00022">MOD.cs:22</a></div></div>
+<div class="ttc" id="aclassModItemList_html"><div class="ttname"><a href="classModItemList.html">ModItemList</a></div><div class="ttdef"><b>Definition:</b> <a href="ModItemList_8cs_source.html#l00005">ModItemList.cs:6</a></div></div>
 <div class="ttc" id="aclassPlayer_html_ad3cd52c1adaa2d738f19f6f259298eee"><div class="ttname"><a href="classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee">Player.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00978">Player.cs:978</a></div></div>
 <div class="ttc" id="aclassRenderData_html_aba75940aa3f40125a63c3e017ca8b69b"><div class="ttname"><a href="classRenderData.html#aba75940aa3f40125a63c3e017ca8b69b">RenderData.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00094">RenderData.cs:94</a></div></div>
 <div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00007">Scene.cs:8</a></div></div>
 <div class="ttc" id="aclassScene_html_ac40eb163ca8d5c2a3c555c50dcc45b1b"><div class="ttname"><a href="classScene.html#ac40eb163ca8d5c2a3c555c50dcc45b1b">Scene.screenNoMap</a></div><div class="ttdeci">GameScreenNoMap screenNoMap</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00093">Scene.cs:93</a></div></div>
+<div class="ttc" id="aclassSpriteReplacerAnimation_html"><div class="ttname"><a href="classSpriteReplacerAnimation.html">SpriteReplacerAnimation</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacerAnimation_8cs_source.html#l00005">SpriteReplacerAnimation.cs:6</a></div></div>
+<div class="ttc" id="aclassSpriteReplacerAnimation_html_a21d5036fdbd4877031ec1d7bc4676538"><div class="ttname"><a href="classSpriteReplacerAnimation.html#a21d5036fdbd4877031ec1d7bc4676538">SpriteReplacerAnimation.dict</a></div><div class="ttdeci">static Dictionary&lt; string, SpriteData &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacerAnimation_8cs_source.html#l00013">SpriteReplacerAnimation.cs:13</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html_a64d65426cb6cd1bceedef51608ee1016"><div class="ttname"><a href="classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016">SpriteSheet.dict</a></div><div class="ttdeci">static Dictionary&lt; string, Sprite &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00006">SpriteSheet.cs:6</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html_a86eec185d2242b3f76cafe1a5c59a714"><div class="ttname"><a href="classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714">SpriteSheet.loadedPath</a></div><div class="ttdeci">static HashSet&lt; string &gt; loadedPath</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00008">SpriteSheet.cs:8</a></div></div>
 <div class="ttc" id="aclassSteam_html_a202d04d123f0110ae37da006d3a839ba"><div class="ttname"><a href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">Steam.steamworks</a></div><div class="ttdeci">SteamworksBehaviour steamworks</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00011">Steam.cs:11</a></div></div>
+<div class="ttc" id="aclassTalkDataList_html"><div class="ttname"><a href="classTalkDataList.html">TalkDataList</a></div><div class="ttdef"><b>Definition:</b> <a href="TalkDataList_8cs_source.html#l00005">TalkDataList.cs:6</a></div></div>
 <div class="ttc" id="aclassTextureManager_html_a78d1784c5f986f6c216fbed46e3800e3"><div class="ttname"><a href="classTextureManager.html#a78d1784c5f986f6c216fbed46e3800e3">TextureManager.OnDropFile</a></div><div class="ttdeci">void OnDropFile(List&lt; string &gt; paths)</div><div class="ttdef"><b>Definition:</b> <a href="TextureManager_8cs_source.html#l00097">TextureManager.cs:97</a></div></div>
 <div class="ttc" id="aclassTileType_html"><div class="ttname"><a href="classTileType.html">TileType</a></div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00005">TileType.cs:6</a></div></div>
 <div class="ttc" id="aclassTileType_html_a4456e9bf550fe200ae026894f22e0922"><div class="ttname"><a href="classTileType.html#a4456e9bf550fe200ae026894f22e0922">TileType.Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00264">TileType.cs:264</a></div></div>
+<div class="ttc" id="aclassToneDataList_html"><div class="ttname"><a href="classToneDataList.html">ToneDataList</a></div><div class="ttdef"><b>Definition:</b> <a href="ToneDataList_8cs_source.html#l00005">ToneDataList.cs:6</a></div></div>
 <div class="ttc" id="aclassUI_html"><div class="ttname"><a href="classUI.html">UI</a></div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00009">UI.cs:10</a></div></div>
+<div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
+<div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
+<div class="ttc" id="astructVersion_html_a69625683678d8dd21be6146d936d2bb4"><div class="ttname"><a href="structVersion.html#a69625683678d8dd21be6146d936d2bb4">Version.GetText</a></div><div class="ttdeci">string GetText()</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00016">Version.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseGameScreen_8cs_source.html#l00192">BaseGameScreen.Activate()</a>, <a class="el" href="Player_8cs_source.html#l00978">Player.chara</a>, <a class="el" href="CoreDebug_8cs_source.html#l00135">CoreDebug.command</a>, <a class="el" href="Core_8cs_source.html#l00025">debug</a>, <a class="el" href="Core_8cs_source.html#l00066">game</a>, <a class="el" href="LayerDrama_8cs_source.html#l00012">LayerDrama.haltPlaylist</a>, <a class="el" href="RenderData_8cs_source.html#l00094">RenderData.Init()</a>, <a class="el" href="TileType_8cs_source.html#l00264">TileType.Init()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00010">LayerDrama.keepBGM</a>, <a class="el" href="CoreDebug_8cs_source.html#l00113">CoreDebug.langCode</a>, <a class="el" href="LayerInventory_8cs_source.html#l00007">LayerInventory.listInv</a>, <a class="el" href="Core_8cs_source.html#l00049">matUI</a>, <a class="el" href="TextureManager_8cs_source.html#l00097">TextureManager.OnDropFile()</a>, <a class="el" href="Core_8cs_source.html#l00035">pccs</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.player</a>, <a class="el" href="Card_8cs_source.html#l05127">Card.PlaySound()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00225">BaseTileMap.rendererObjDummy</a>, <a class="el" href="Core_8cs_source.html#l00498">ResetRuntime()</a>, <a class="el" href="Core_8cs_source.html#l00059">scene</a>, <a class="el" href="Core_8cs_source.html#l00061">screen</a>, <a class="el" href="Scene_8cs_source.html#l00093">Scene.screenNoMap</a>, <a class="el" href="Core_8cs_source.html#l00562">SetCurrent()</a>, <a class="el" href="Core_8cs_source.html#l00051">steam</a>, <a class="el" href="Steam_8cs_source.html#l00011">Steam.steamworks</a>, <a class="el" href="Core_8cs_source.html#l00039">textures</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, <a class="el" href="Core_8cs_source.html#l00057">ui</a>, and <a class="el" href="Core_8cs_source.html#l00053">useUImat</a>.</p>
+<p class="reference">References <a class="el" href="BaseGameScreen_8cs_source.html#l00192">BaseGameScreen.Activate()</a>, <a class="el" href="BaseCore_8cs_source.html#l00034">BaseCore.canvas</a>, <a class="el" href="Player_8cs_source.html#l00978">Player.chara</a>, <a class="el" href="CoreDebug_8cs_source.html#l00135">CoreDebug.command</a>, <a class="el" href="Core_8cs_source.html#l00025">debug</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteReplacerAnimation_8cs_source.html#l00013">SpriteReplacerAnimation.dict</a>, <a class="el" href="SpriteSheet_8cs_source.html#l00006">SpriteSheet.dict</a>, <a class="el" href="BaseCore_8cs_source.html#l00037">BaseCore.forceLangCode</a>, <a class="el" href="Core_8cs_source.html#l00066">game</a>, <a class="el" href="Version_8cs_source.html#l00016">Version.GetText()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00012">LayerDrama.haltPlaylist</a>, <a class="el" href="RenderData_8cs_source.html#l00094">RenderData.Init()</a>, <a class="el" href="TileType_8cs_source.html#l00264">TileType.Init()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00010">LayerDrama.keepBGM</a>, <a class="el" href="CoreDebug_8cs_source.html#l00113">CoreDebug.langCode</a>, <a class="el" href="MOD_8cs_source.html#l00008">MOD.langs</a>, <a class="el" href="LayerInventory_8cs_source.html#l00007">LayerInventory.listInv</a>, <a class="el" href="MOD_8cs_source.html#l00020">MOD.listMaps</a>, <a class="el" href="MOD_8cs_source.html#l00022">MOD.listPartialMaps</a>, <a class="el" href="SpriteSheet_8cs_source.html#l00008">SpriteSheet.loadedPath</a>, <a class="el" href="Core_8cs_source.html#l00049">matUI</a>, <a class="el" href="FileDragAndDrop_8cs_source.html#l00008">FileDragAndDrop.onDrop</a>, <a class="el" href="TextureManager_8cs_source.html#l00097">TextureManager.OnDropFile()</a>, <a class="el" href="Core_8cs_source.html#l00035">pccs</a>, <a class="el" href="Game_8cs_source.html#l00176">Game.player</a>, <a class="el" href="Card_8cs_source.html#l05127">Card.PlaySound()</a>, <a class="el" href="BaseCore_8cs_source.html#l00023">BaseCore.releaseMode</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00225">BaseTileMap.rendererObjDummy</a>, <a class="el" href="Core_8cs_source.html#l00498">ResetRuntime()</a>, <a class="el" href="BaseCore_8cs_source.html#l00013">BaseCore.resetRuntime</a>, <a class="el" href="Core_8cs_source.html#l00059">scene</a>, <a class="el" href="Core_8cs_source.html#l00061">screen</a>, <a class="el" href="Scene_8cs_source.html#l00093">Scene.screenNoMap</a>, <a class="el" href="Core_8cs_source.html#l00562">SetCurrent()</a>, <a class="el" href="Core_8cs_source.html#l00051">steam</a>, <a class="el" href="Steam_8cs_source.html#l00011">Steam.steamworks</a>, <a class="el" href="CorePath_8cs_source.html#l00207">CorePath.Temp</a>, <a class="el" href="Core_8cs_source.html#l00039">textures</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, <a class="el" href="Core_8cs_source.html#l00057">ui</a>, <a class="el" href="Core_8cs_source.html#l00053">useUImat</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
 
 </div>
 </div>
@@ -481,16 +575,22 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="classBaseCore.html#a29c3fddfccd1c56c8bf77ca71ca3b0cc">BaseCore</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00557">557</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  558</span>    {</div>
-<div class="line"><span class="lineno">  559</span>        EInput.Consume();</div>
+<div class="line"><span class="lineno">  559</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
 <div class="line"><span class="lineno">  560</span>    }</div>
+<div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
+<div class="ttc" id="aclassEInput_html_a37ae393407e04100c89ce0578ee5f726"><div class="ttname"><a href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">EInput.Consume</a></div><div class="ttdeci">static void Consume(int _skipFrame)</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00656">EInput.cs:656</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="EInput_8cs_source.html#l00656">EInput.Consume()</a>.</p>
+
 </div>
 </div>
 <a id="a5786d37ea16fed4c26f7b6577143ed76" name="a5786d37ea16fed4c26f7b6577143ed76"></a>
@@ -512,10 +612,12 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCore.html#aa8d97bcac3a5d84a11861697c991d8c2">BaseCore</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00643">643</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  644</span>    {</div>
@@ -594,7 +696,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  724</span>        }</div>
 <div class="line"><span class="lineno">  725</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classCore.html#a2aa809c9366da231e8bd66b3cca1d6c1">sourceElement</a>.alias.TryGetValue(<span class="keywordtype">id</span> ?? <span class="stringliteral">&quot;_void&quot;</span>, out var value))</div>
 <div class="line"><span class="lineno">  726</span>        {</div>
-<div class="line"><span class="lineno">  727</span>            Debug.LogError(<span class="stringliteral">&quot;exception:&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  727</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception:&quot;</span> + <span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">  728</span>            value = <a class="code hl_variable" href="classCore.html#a2aa809c9366da231e8bd66b3cca1d6c1">sourceElement</a>.rows[0];</div>
 <div class="line"><span class="lineno">  729</span>        }</div>
 <div class="line"><span class="lineno">  730</span>        <span class="keywordflow">return</span> value.id;</div>
@@ -603,7 +705,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSourceManager_html"><div class="ttname"><a href="classSourceManager.html">SourceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00004">SourceManager.cs:5</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SourceCategory_8cs_source.html#l00140">SourceCategory.CreateRow()</a>, and <a class="el" href="SourceCheck_8cs_source.html#l00033">SourceCheck.CreateRow()</a>.</p>
 
@@ -663,7 +765,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00510">510</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  511</span>    {</div>
-<div class="line"><span class="lineno">  512</span>        Debug.Log(<span class="stringliteral">&quot;Initializing:&quot;</span> + langCode + <span class="stringliteral">&quot;/&quot;</span> + forceLangCode);</div>
+<div class="line"><span class="lineno">  512</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Initializing:&quot;</span> + <a class="code hl_variable" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">forceLangCode</a>);</div>
 <div class="line"><span class="lineno">  513</span>        StartCoroutine(<span class="stringliteral">&quot;OnEndOfFrame&quot;</span>);</div>
 <div class="line"><span class="lineno">  514</span>        InvokeRepeating(<span class="stringliteral">&quot;Update100ms&quot;</span>, 0.1f, 0.1f);</div>
 <div class="line"><span class="lineno">  515</span>        UnityEngine.Object.DestroyImmediate(<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.layoutLang.gameObject);</div>
@@ -671,12 +773,12 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  517</span>        <a class="code hl_function" href="classCore.html#ae2428059ecf3fc37afd4069dbdc6c3b5">SetLang</a>(<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#aa1b21097831b581be4b734571e8e296d">lang</a>);</div>
 <div class="line"><span class="lineno">  518</span>        <a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_function" href="classCoreRef.html#ab8ee69b00b8cc684f2e56800457151c2">Init</a>();</div>
 <div class="line"><span class="lineno">  519</span>        <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_function" href="classCoreDebug.html#a0b8be10ec4de5a0b29350b0d451d495f">Init</a>();</div>
-<div class="line"><span class="lineno">  520</span>        SpriteSheet.Add(<span class="stringliteral">&quot;Media/Graphics/Icon/icons_48&quot;</span>);</div>
+<div class="line"><span class="lineno">  520</span>        <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a05dff4385d92835230dd33b766dadadb">Add</a>(<span class="stringliteral">&quot;Media/Graphics/Icon/icons_48&quot;</span>);</div>
 <div class="line"><span class="lineno">  521</span>        Cal.Init();</div>
 <div class="line"><span class="lineno">  522</span>        <a class="code hl_variable" href="classCore.html#a8da627870e23785b524c9bb9e7cf6c06">Colors</a>.<a class="code hl_function" href="classColorProfile.html#a53f70169754269f9583f0a7517241e7e">Init</a>();</div>
 <div class="line"><span class="lineno">  523</span>        <a class="code hl_variable" href="classCore.html#a22c024f5e9c815f605b3daae8430d92e">gameSetting</a>.<a class="code hl_function" href="classGameSetting.html#ae065c4af91f590b7fd9e66c1bd0ce0d6">Init</a>();</div>
-<div class="line"><span class="lineno">  524</span>        <a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.InitLang();</div>
-<div class="line"><span class="lineno">  525</span>        <span class="keywordflow">if</span> (!Lang.isBuiltin)</div>
+<div class="line"><span class="lineno">  524</span>        <a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classBaseModManager.html#a5f75932e2c64d87262bde02a9c6b1c19">InitLang</a>();</div>
+<div class="line"><span class="lineno">  525</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a>)</div>
 <div class="line"><span class="lineno">  526</span>        {</div>
 <div class="line"><span class="lineno">  527</span>            <a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_function" href="classSourceManager.html#a6d01d4e3041469e444b5e244fa9873f8">ImportSourceTexts</a>();</div>
 <div class="line"><span class="lineno">  528</span>        }</div>
@@ -701,6 +803,8 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  547</span>        <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.HideCover(2f);</div>
 <div class="line"><span class="lineno">  548</span>        <a class="code hl_variable" href="classCore.html#a8e458dc5119454864d2c6fd4fd86547d">initialized</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  549</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html_a420ab513c317adffc539eb2f6ad1462d"><div class="ttname"><a href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">BaseCore.langCode</a></div><div class="ttdeci">string langCode</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00025">BaseCore.cs:25</a></div></div>
+<div class="ttc" id="aclassBaseModManager_html_a5f75932e2c64d87262bde02a9c6b1c19"><div class="ttname"><a href="classBaseModManager.html#a5f75932e2c64d87262bde02a9c6b1c19">BaseModManager.InitLang</a></div><div class="ttdeci">void InitLang()</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00052">BaseModManager.cs:52</a></div></div>
 <div class="ttc" id="aclassColorProfile_html_a53f70169754269f9583f0a7517241e7e"><div class="ttname"><a href="classColorProfile.html#a53f70169754269f9583f0a7517241e7e">ColorProfile.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="ColorProfile_8cs_source.html#l00153">ColorProfile.cs:153</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html"><div class="ttname"><a href="classCoreConfig.html">CoreConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00011">CoreConfig.cs:12</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_aa1b21097831b581be4b734571e8e296d"><div class="ttname"><a href="classCoreConfig.html#aa1b21097831b581be4b734571e8e296d">CoreConfig.lang</a></div><div class="ttdeci">string lang</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00560">CoreConfig.cs:560</a></div></div>
@@ -720,6 +824,8 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCore_html_ae2428059ecf3fc37afd4069dbdc6c3b5"><div class="ttname"><a href="classCore.html#ae2428059ecf3fc37afd4069dbdc6c3b5">Core.SetLang</a></div><div class="ttdeci">void SetLang(string langCode, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00680">Core.cs:680</a></div></div>
 <div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00064">Core.cs:64</a></div></div>
 <div class="ttc" id="aclassGameSetting_html_ae065c4af91f590b7fd9e66c1bd0ce0d6"><div class="ttname"><a href="classGameSetting.html#ae065c4af91f590b7fd9e66c1bd0ce0d6">GameSetting.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00351">GameSetting.cs:351</a></div></div>
+<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
+<div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00040">Lang.cs:40</a></div></div>
 <div class="ttc" id="aclassScene_html_aad011d2a2e5d734d347c6d00fb1e9d1b"><div class="ttname"><a href="classScene.html#aad011d2a2e5d734d347c6d00fb1e9d1b">Scene.InitPass</a></div><div class="ttdeci">void InitPass()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l01015">Scene.cs:1015</a></div></div>
 <div class="ttc" id="aclassScene_html_af120ca86a7f8635df083ecea1553b4d3"><div class="ttname"><a href="classScene.html#af120ca86a7f8635df083ecea1553b4d3">Scene.Init</a></div><div class="ttdeci">void Init(Mode newMode)</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00168">Scene.cs:168</a></div></div>
 <div class="ttc" id="aclassScene_html_af9a10bacabef174fc4a33a90c793ceaf"><div class="ttname"><a href="classScene.html#af9a10bacabef174fc4a33a90c793ceaf">Scene.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00009">Scene.cs:10</a></div></div>
@@ -727,10 +833,11 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSourcePrefInspector_html"><div class="ttname"><a href="classSourcePrefInspector.html">SourcePrefInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00004">SourcePrefInspector.cs:5</a></div></div>
 <div class="ttc" id="aclassSourcePrefInspector_html_a3ed35230899d9977ca3eb8065bba0ff3"><div class="ttname"><a href="classSourcePrefInspector.html#a3ed35230899d9977ca3eb8065bba0ff3">SourcePrefInspector.Instance</a></div><div class="ttdeci">static SourcePrefInspector Instance</div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00006">SourcePrefInspector.cs:6</a></div></div>
 <div class="ttc" id="aclassSourcePrefInspector_html_aceba88b57dcd66031c42fb9f0c5e1740"><div class="ttname"><a href="classSourcePrefInspector.html#aceba88b57dcd66031c42fb9f0c5e1740">SourcePrefInspector.ValidatePrefs</a></div><div class="ttdeci">void ValidatePrefs()</div><div class="ttdef"><b>Definition:</b> <a href="SourcePrefInspector_8cs_source.html#l00065">SourcePrefInspector.cs:65</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html_a05dff4385d92835230dd33b766dadadb"><div class="ttname"><a href="classSpriteSheet.html#a05dff4385d92835230dd33b766dadadb">SpriteSheet.Add</a></div><div class="ttdeci">static void Add(Sprite sprite)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00010">SpriteSheet.cs:10</a></div></div>
 <div class="ttc" id="aclassTextureManager_html_a0afd835440eb54c263a4856e8995daf9"><div class="ttname"><a href="classTextureManager.html#a0afd835440eb54c263a4856e8995daf9">TextureManager.RefreshTextures</a></div><div class="ttdeci">void RefreshTextures()</div><div class="ttdef"><b>Definition:</b> <a href="TextureManager_8cs_source.html#l00085">TextureManager.cs:85</a></div></div>
 <div class="ttc" id="aclassTextureManager_html_a711c77f3541c2de99b0ae2013933f42e"><div class="ttname"><a href="classTextureManager.html#a711c77f3541c2de99b0ae2013933f42e">TextureManager.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="TextureManager_8cs_source.html#l00011">TextureManager.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00191">SourceManager.ImportSourceTexts()</a>, <a class="el" href="ColorProfile_8cs_source.html#l00153">ColorProfile.Init()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00677">CoreConfig.Init()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00329">CoreDebug.Init()</a>, <a class="el" href="CoreRef_8cs_source.html#l00357">CoreRef.Init()</a>, <a class="el" href="GameSetting_8cs_source.html#l00351">GameSetting.Init()</a>, <a class="el" href="TextureManager_8cs_source.html#l00011">TextureManager.Init()</a>, <a class="el" href="Scene_8cs_source.html#l00168">Scene.Init()</a>, <a class="el" href="Scene_8cs_source.html#l01015">Scene.InitPass()</a>, <a class="el" href="SourcePrefInspector_8cs_source.html#l00006">SourcePrefInspector.Instance</a>, <a class="el" href="CoreConfig_8cs_source.html#l00560">CoreConfig.lang</a>, <a class="el" href="CoreDebug_8cs_source.html#l00335">CoreDebug.QuickStart()</a>, <a class="el" href="TextureManager_8cs_source.html#l00085">TextureManager.RefreshTextures()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00095">CoreDebug.startScene</a>, <a class="el" href="CoreDebug_8cs_source.html#l00251">CoreDebug.validatePref</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00065">SourcePrefInspector.ValidatePrefs()</a>.</p>
+<p class="reference">References <a class="el" href="SpriteSheet_8cs_source.html#l00010">SpriteSheet.Add()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SourceManager_8cs_source.html#l00191">SourceManager.ImportSourceTexts()</a>, <a class="el" href="ColorProfile_8cs_source.html#l00153">ColorProfile.Init()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00677">CoreConfig.Init()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00329">CoreDebug.Init()</a>, <a class="el" href="CoreRef_8cs_source.html#l00357">CoreRef.Init()</a>, <a class="el" href="GameSetting_8cs_source.html#l00351">GameSetting.Init()</a>, <a class="el" href="TextureManager_8cs_source.html#l00011">TextureManager.Init()</a>, <a class="el" href="Scene_8cs_source.html#l00168">Scene.Init()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00052">BaseModManager.InitLang()</a>, <a class="el" href="Scene_8cs_source.html#l01015">Scene.InitPass()</a>, <a class="el" href="SourcePrefInspector_8cs_source.html#l00006">SourcePrefInspector.Instance</a>, <a class="el" href="Lang_8cs_source.html#l00040">Lang.isBuiltin</a>, <a class="el" href="CoreConfig_8cs_source.html#l00560">CoreConfig.lang</a>, <a class="el" href="CoreDebug_8cs_source.html#l00335">CoreDebug.QuickStart()</a>, <a class="el" href="TextureManager_8cs_source.html#l00085">TextureManager.RefreshTextures()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00095">CoreDebug.startScene</a>, <a class="el" href="CoreDebug_8cs_source.html#l00251">CoreDebug.validatePref</a>, and <a class="el" href="SourcePrefInspector_8cs_source.html#l00065">SourcePrefInspector.ValidatePrefs()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UI_8cs_source.html#l00504">UI.ShowLang()</a>, <a class="el" href="UI_8cs_source.html#l00481">UI.ShowSceneSelector()</a>, and <a class="el" href="Core_8cs_source.html#l00209">StartCase()</a>.</p>
 
@@ -770,19 +877,20 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  382</span>            UIButton.actionTooltip();</div>
 <div class="line"><span class="lineno">  383</span>            UIButton.actionTooltip = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  384</span>        }</div>
-<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">if</span> (actionsLateUpdate.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCore.html#aea99096bc2e9772b6a52b8e4cb8d0008">actionsLateUpdate</a>.Count &gt; 0)</div>
 <div class="line"><span class="lineno">  386</span>        {</div>
-<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = actionsLateUpdate.Count - 1; num &gt;= 0; num--)</div>
+<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = <a class="code hl_variable" href="classBaseCore.html#aea99096bc2e9772b6a52b8e4cb8d0008">actionsLateUpdate</a>.Count - 1; num &gt;= 0; num--)</div>
 <div class="line"><span class="lineno">  388</span>            {</div>
-<div class="line"><span class="lineno">  389</span>                actionsLateUpdate[num]();</div>
-<div class="line"><span class="lineno">  390</span>                actionsLateUpdate.RemoveAt(num);</div>
+<div class="line"><span class="lineno">  389</span>                <a class="code hl_variable" href="classBaseCore.html#aea99096bc2e9772b6a52b8e4cb8d0008">actionsLateUpdate</a>[num]();</div>
+<div class="line"><span class="lineno">  390</span>                <a class="code hl_variable" href="classBaseCore.html#aea99096bc2e9772b6a52b8e4cb8d0008">actionsLateUpdate</a>.RemoveAt(num);</div>
 <div class="line"><span class="lineno">  391</span>            }</div>
 <div class="line"><span class="lineno">  392</span>        }</div>
 <div class="line"><span class="lineno">  393</span>        <a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_function" href="classScene.html#a4778b9bd80d0f72de533f524a440bb37">OnLateUpdate</a>();</div>
 <div class="line"><span class="lineno">  394</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html_aea99096bc2e9772b6a52b8e4cb8d0008"><div class="ttname"><a href="classBaseCore.html#aea99096bc2e9772b6a52b8e4cb8d0008">BaseCore.actionsLateUpdate</a></div><div class="ttdeci">List&lt; Action &gt; actionsLateUpdate</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00029">BaseCore.cs:29</a></div></div>
 <div class="ttc" id="aclassScene_html_a4778b9bd80d0f72de533f524a440bb37"><div class="ttname"><a href="classScene.html#a4778b9bd80d0f72de533f524a440bb37">Scene.OnLateUpdate</a></div><div class="ttdeci">void OnLateUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00723">Scene.cs:723</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Core_8cs_source.html#l00069">initialized</a>, <a class="el" href="Scene_8cs_source.html#l00723">Scene.OnLateUpdate()</a>, and <a class="el" href="Core_8cs_source.html#l00059">scene</a>.</p>
+<p class="reference">References <a class="el" href="BaseCore_8cs_source.html#l00029">BaseCore.actionsLateUpdate</a>, <a class="el" href="Core_8cs_source.html#l00069">initialized</a>, <a class="el" href="Scene_8cs_source.html#l00723">Scene.OnLateUpdate()</a>, and <a class="el" href="Core_8cs_source.html#l00059">scene</a>.</p>
 
 </div>
 </div>
@@ -828,12 +936,12 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  411</span>        {</div>
 <div class="line"><span class="lineno">  412</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  413</span>        }</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">if</span> (actionsNextFrame.Count == 0)</div>
+<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Count == 0)</div>
 <div class="line"><span class="lineno">  415</span>        {</div>
-<div class="line"><span class="lineno">  416</span>            actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  416</span>            <a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Add(delegate</div>
 <div class="line"><span class="lineno">  417</span>            {</div>
 <div class="line"><span class="lineno">  418</span>                <a class="code hl_variable" href="classCore.html#a7cd100aaf7af83dfaa8a1f10ca82fbd7">textures</a>.<a class="code hl_function" href="classTextureManager.html#a0afd835440eb54c263a4856e8995daf9">RefreshTextures</a>();</div>
-<div class="line"><span class="lineno">  419</span>                actionsNextFrame.Add(delegate</div>
+<div class="line"><span class="lineno">  419</span>                <a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Add(delegate</div>
 <div class="line"><span class="lineno">  420</span>                {</div>
 <div class="line"><span class="lineno">  421</span>                    <span class="keywordflow">if</span> (<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a>)</div>
 <div class="line"><span class="lineno">  422</span>                    {</div>
@@ -856,9 +964,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  439</span>        {</div>
 <div class="line"><span class="lineno">  440</span>            <span class="keywordflow">foreach</span> (PCC.Part value in <a class="code hl_variable" href="classCore.html#addb7a6f655c0e106e16b03991892ca98">pccs</a>.allParts.Values)</div>
 <div class="line"><span class="lineno">  441</span>            {</div>
-<div class="line"><span class="lineno">  442</span>                <span class="keywordflow">foreach</span> (ModItem&lt;Texture2D&gt; value2 <span class="keywordflow">in</span> value.modTextures.Values)</div>
+<div class="line"><span class="lineno">  442</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classModItem.html">ModItem&lt;Texture2D&gt;</a> value2 <span class="keywordflow">in</span> value.modTextures.Values)</div>
 <div class="line"><span class="lineno">  443</span>                {</div>
-<div class="line"><span class="lineno">  444</span>                    value2.ClearCache();</div>
+<div class="line"><span class="lineno">  444</span>                    value2.<a class="code hl_function" href="classModItem.html#ad2bbc32161e7f4bab155d4600d14b1e5">ClearCache</a>();</div>
 <div class="line"><span class="lineno">  445</span>                }</div>
 <div class="line"><span class="lineno">  446</span>            }</div>
 <div class="line"><span class="lineno">  447</span>            <a class="code hl_class" href="classCharaActorPCC.html">CharaActorPCC</a>[] array = UnityEngine.Object.FindObjectsOfType&lt;<a class="code hl_class" href="classCharaActorPCC.html">CharaActorPCC</a>&gt;();</div>
@@ -867,10 +975,11 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  450</span>                array[i].<a class="code hl_variable" href="classCharaActorPCC.html#aed4022487f3a8c672a36b5d67948a5e0">provider</a>.Rebuild();</div>
 <div class="line"><span class="lineno">  451</span>            }</div>
 <div class="line"><span class="lineno">  452</span>        }</div>
-<div class="line"><span class="lineno">  453</span>        EInput.Consume();</div>
+<div class="line"><span class="lineno">  453</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
 <div class="line"><span class="lineno">  454</span>        EInput.dragHack = 0f;</div>
-<div class="line"><span class="lineno">  455</span>        EInput.DisableIME();</div>
+<div class="line"><span class="lineno">  455</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#acc0c1b593d82ceedfea5e6d18726618b">DisableIME</a>();</div>
 <div class="line"><span class="lineno">  456</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html_a647d6b64fd99120d09aebff659b6c0a5"><div class="ttname"><a href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">BaseCore.actionsNextFrame</a></div><div class="ttdeci">List&lt; Action &gt; actionsNextFrame</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00031">BaseCore.cs:31</a></div></div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
 <div class="ttc" id="aclassCharaActorPCC_html"><div class="ttname"><a href="classCharaActorPCC.html">CharaActorPCC</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaActorPCC_8cs_source.html#l00003">CharaActorPCC.cs:4</a></div></div>
 <div class="ttc" id="aclassCharaActorPCC_html_aed4022487f3a8c672a36b5d67948a5e0"><div class="ttname"><a href="classCharaActorPCC.html#aed4022487f3a8c672a36b5d67948a5e0">CharaActorPCC.provider</a></div><div class="ttdeci">SpriteProvider provider</div><div class="ttdef"><b>Definition:</b> <a href="CharaActorPCC_8cs_source.html#l00009">CharaActorPCC.cs:9</a></div></div>
@@ -878,12 +987,15 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCoreConfig_html_ace7c91a480e766e3e6aea9d50079c5e5"><div class="ttname"><a href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">CoreConfig.other</a></div><div class="ttdeci">OtherSetting other</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00596">CoreConfig.cs:596</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00287">CoreDebug.cs:287</a></div></div>
 <div class="ttc" id="aclassCore_html_ac31f5b0fe98a25c00ca5700c328ae460"><div class="ttname"><a href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">Core.IsGameStarted</a></div><div class="ttdeci">bool IsGameStarted</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00077">Core.cs:78</a></div></div>
+<div class="ttc" id="aclassEInput_html_acc0c1b593d82ceedfea5e6d18726618b"><div class="ttname"><a href="classEInput.html#acc0c1b593d82ceedfea5e6d18726618b">EInput.DisableIME</a></div><div class="ttdeci">static void DisableIME()</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00454">EInput.cs:454</a></div></div>
+<div class="ttc" id="aclassModItem_html"><div class="ttname"><a href="classModItem.html">ModItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ModItem_8cs_source.html#l00004">ModItem.cs:5</a></div></div>
+<div class="ttc" id="aclassModItem_html_ad2bbc32161e7f4bab155d4600d14b1e5"><div class="ttname"><a href="classModItem.html#ad2bbc32161e7f4bab155d4600d14b1e5">ModItem.ClearCache</a></div><div class="ttdeci">void ClearCache()</div><div class="ttdef"><b>Definition:</b> <a href="ModItem_8cs_source.html#l00065">ModItem.cs:65</a></div></div>
 <div class="ttc" id="aclassSourceCard_html_a018040ba7dad38f3bddf9b25a65ba8e6"><div class="ttname"><a href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">SourceCard.rows</a></div><div class="ttdeci">List&lt; CardRow &gt; rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00006">SourceCard.cs:6</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
 <div class="ttc" id="aclassWidgetMinimap_html"><div class="ttname"><a href="classWidgetMinimap.html">WidgetMinimap</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetMinimap_8cs_source.html#l00006">WidgetMinimap.cs:7</a></div></div>
 <div class="ttc" id="aclassWidgetMinimap_html_a867bceff530bdb47b07e0d18e164519f"><div class="ttname"><a href="classWidgetMinimap.html#a867bceff530bdb47b07e0d18e164519f">WidgetMinimap.Instance</a></div><div class="ttdeci">static WidgetMinimap Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMinimap_8cs_source.html#l00023">WidgetMinimap.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="Core_8cs_source.html#l00011">Instance</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00023">WidgetMinimap.Instance</a>, <a class="el" href="Core_8cs_source.html#l00078">IsGameStarted</a>, <a class="el" href="CoreConfig_8cs_source.html#l00495">CoreConfig.OtherSetting.muteBackground</a>, <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>, <a class="el" href="TextureManager_8cs_source.html#l00085">TextureManager.RefreshTextures()</a>, <a class="el" href="SourceCard_8cs_source.html#l00006">SourceCard.rows</a>, <a class="el" href="Core_8cs_source.html#l00027">sources</a>, and <a class="el" href="Core_8cs_source.html#l00039">textures</a>.</p>
+<p class="reference">References <a class="el" href="BaseCore_8cs_source.html#l00031">BaseCore.actionsNextFrame</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="Core_8cs_source.html#l00011">Instance</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00023">WidgetMinimap.Instance</a>, <a class="el" href="Core_8cs_source.html#l00078">IsGameStarted</a>, <a class="el" href="CoreConfig_8cs_source.html#l00495">CoreConfig.OtherSetting.muteBackground</a>, <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>, <a class="el" href="TextureManager_8cs_source.html#l00085">TextureManager.RefreshTextures()</a>, <a class="el" href="SourceCard_8cs_source.html#l00006">SourceCard.rows</a>, <a class="el" href="Core_8cs_source.html#l00027">sources</a>, and <a class="el" href="Core_8cs_source.html#l00039">textures</a>.</p>
 
 </div>
 </div>
@@ -922,11 +1034,11 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  467</span>                    UnityEngine.Object.Destroy(widget.gameObject);</div>
 <div class="line"><span class="lineno">  468</span>                }</div>
 <div class="line"><span class="lineno">  469</span>            }</div>
-<div class="line"><span class="lineno">  470</span>            IO.PrintLog();</div>
+<div class="line"><span class="lineno">  470</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a8bd6788298e0ac7c5e3a068b59df6b3b">PrintLog</a>();</div>
 <div class="line"><span class="lineno">  471</span>        }</div>
 <div class="line"><span class="lineno">  472</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
 <div class="line"><span class="lineno">  473</span>        {</div>
-<div class="line"><span class="lineno">  474</span>            Debug.Log(<span class="stringliteral">&quot;Exception:&quot;</span> + ex);</div>
+<div class="line"><span class="lineno">  474</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Exception:&quot;</span> + ex);</div>
 <div class="line"><span class="lineno">  475</span>        }</div>
 <div class="line"><span class="lineno">  476</span>        <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  477</span>        {</div>
@@ -937,23 +1049,26 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  482</span>        }</div>
 <div class="line"><span class="lineno">  483</span>        <span class="keywordflow">catch</span> (Exception ex2)</div>
 <div class="line"><span class="lineno">  484</span>        {</div>
-<div class="line"><span class="lineno">  485</span>            Debug.Log(<span class="stringliteral">&quot;Exception:&quot;</span> + ex2);</div>
+<div class="line"><span class="lineno">  485</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Exception:&quot;</span> + ex2);</div>
 <div class="line"><span class="lineno">  486</span>        }</div>
 <div class="line"><span class="lineno">  487</span>        <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  488</span>        {</div>
-<div class="line"><span class="lineno">  489</span>            IO.DeleteDirectory(CorePath.Temp);</div>
-<div class="line"><span class="lineno">  490</span>            <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#a3641078c1136f225277874c099b60179">DeleteEmptyGameFolders</a>(CorePath.RootSave);</div>
+<div class="line"><span class="lineno">  489</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a14d601287968907ef2791eaaf2bccb91">Temp</a>);</div>
+<div class="line"><span class="lineno">  490</span>            <a class="code hl_class" href="classGameIO.html">GameIO</a>.<a class="code hl_function" href="classGameIO.html#a3641078c1136f225277874c099b60179">DeleteEmptyGameFolders</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">RootSave</a>);</div>
 <div class="line"><span class="lineno">  491</span>        }</div>
 <div class="line"><span class="lineno">  492</span>        <span class="keywordflow">catch</span> (Exception ex3)</div>
 <div class="line"><span class="lineno">  493</span>        {</div>
-<div class="line"><span class="lineno">  494</span>            Debug.Log(<span class="stringliteral">&quot;Exception:&quot;</span> + ex3);</div>
+<div class="line"><span class="lineno">  494</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Exception:&quot;</span> + ex3);</div>
 <div class="line"><span class="lineno">  495</span>        }</div>
 <div class="line"><span class="lineno">  496</span>    }</div>
+<div class="ttc" id="aclassCorePath_html_a65ef1a6b58a53140342d1505b198e472"><div class="ttname"><a href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">CorePath.RootSave</a></div><div class="ttdeci">static string RootSave</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00203">CorePath.cs:203</a></div></div>
 <div class="ttc" id="aclassGameIO_html"><div class="ttname"><a href="classGameIO.html">GameIO</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00009">GameIO.cs:10</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a3641078c1136f225277874c099b60179"><div class="ttname"><a href="classGameIO.html#a3641078c1136f225277874c099b60179">GameIO.DeleteEmptyGameFolders</a></div><div class="ttdeci">static void DeleteEmptyGameFolders(string path)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00320">GameIO.cs:320</a></div></div>
+<div class="ttc" id="aclassIO_html_a16222d71ed2dd65f9bf4470dd744b017"><div class="ttname"><a href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">IO.DeleteDirectory</a></div><div class="ttdeci">static void DeleteDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00339">IO.cs:339</a></div></div>
+<div class="ttc" id="aclassIO_html_a8bd6788298e0ac7c5e3a068b59df6b3b"><div class="ttname"><a href="classIO.html#a8bd6788298e0ac7c5e3a068b59df6b3b">IO.PrintLog</a></div><div class="ttdeci">static void PrintLog()</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00068">IO.cs:68</a></div></div>
 <div class="ttc" id="aclassWidget_html"><div class="ttname"><a href="classWidget.html">Widget</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00006">Widget.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GameIO_8cs_source.html#l00320">GameIO.DeleteEmptyGameFolders()</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="GameIO_8cs_source.html#l00320">GameIO.DeleteEmptyGameFolders()</a>, <a class="el" href="CorePath_8cs_source.html#l00203">CorePath.RootSave</a>, and <a class="el" href="CorePath_8cs_source.html#l00207">CorePath.Temp</a>.</p>
 
 </div>
 </div>
@@ -987,21 +1102,25 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  626</span>            <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_function" href="classCoreConfig.html#aaf97e864945409d10bcb60c21f911ce9">OnChangeResolution</a>();</div>
 <div class="line"><span class="lineno">  627</span>        }</div>
 <div class="line"><span class="lineno">  628</span>        <a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">RefreshScreenSize</a>();</div>
-<div class="line"><span class="lineno">  629</span>        lastScreenWidth = Screen.width;</div>
-<div class="line"><span class="lineno">  630</span>        lastScreenHeight = Screen.height;</div>
-<div class="line"><span class="lineno">  631</span>        IChangeResolution[] componentsInChildren = <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.GetComponentsInChildren&lt;IChangeResolution&gt;();</div>
+<div class="line"><span class="lineno">  629</span>        <a class="code hl_variable" href="classBaseCore.html#ad2fc0dec011a240bd0fde41ecb2d269d">lastScreenWidth</a> = Screen.width;</div>
+<div class="line"><span class="lineno">  630</span>        <a class="code hl_variable" href="classBaseCore.html#a1089fcaa072fe3b8c55f605b2a7d95eb">lastScreenHeight</a> = Screen.height;</div>
+<div class="line"><span class="lineno">  631</span>        <a class="code hl_interface" href="interfaceIChangeResolution.html">IChangeResolution</a>[] componentsInChildren = <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.GetComponentsInChildren&lt;<a class="code hl_interface" href="interfaceIChangeResolution.html">IChangeResolution</a>&gt;();</div>
 <div class="line"><span class="lineno">  632</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
 <div class="line"><span class="lineno">  633</span>        {</div>
-<div class="line"><span class="lineno">  634</span>            componentsInChildren[i].OnChangeResolution();</div>
+<div class="line"><span class="lineno">  634</span>            componentsInChildren[i].<a class="code hl_function" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a>();</div>
 <div class="line"><span class="lineno">  635</span>        }</div>
 <div class="line"><span class="lineno">  636</span>        <a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_variable" href="classScene.html#a4fed7b4258761e1c13852b02ea502564">camSupport</a>.<a class="code hl_function" href="classCameraSupport.html#a4960d89790b6001f79a60a3d158d1285">OnChangeResolution</a>();</div>
 <div class="line"><span class="lineno">  637</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html_a1089fcaa072fe3b8c55f605b2a7d95eb"><div class="ttname"><a href="classBaseCore.html#a1089fcaa072fe3b8c55f605b2a7d95eb">BaseCore.lastScreenHeight</a></div><div class="ttdeci">int lastScreenHeight</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00044">BaseCore.cs:44</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_ad2fc0dec011a240bd0fde41ecb2d269d"><div class="ttname"><a href="classBaseCore.html#ad2fc0dec011a240bd0fde41ecb2d269d">BaseCore.lastScreenWidth</a></div><div class="ttdeci">int lastScreenWidth</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00042">BaseCore.cs:42</a></div></div>
 <div class="ttc" id="aclassBaseGameScreen_html_ad6c40c221707b1b31fdf76bffcc6d1bf"><div class="ttname"><a href="classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf">BaseGameScreen.RefreshScreenSize</a></div><div class="ttdeci">void RefreshScreenSize()</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00540">BaseGameScreen.cs:540</a></div></div>
 <div class="ttc" id="aclassCameraSupport_html_a4960d89790b6001f79a60a3d158d1285"><div class="ttname"><a href="classCameraSupport.html#a4960d89790b6001f79a60a3d158d1285">CameraSupport.OnChangeResolution</a></div><div class="ttdeci">void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00051">CameraSupport.cs:51</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_aaf97e864945409d10bcb60c21f911ce9"><div class="ttname"><a href="classCoreConfig.html#aaf97e864945409d10bcb60c21f911ce9">CoreConfig.OnChangeResolution</a></div><div class="ttdeci">void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00805">CoreConfig.cs:805</a></div></div>
 <div class="ttc" id="aclassScene_html_a4fed7b4258761e1c13852b02ea502564"><div class="ttname"><a href="classScene.html#a4fed7b4258761e1c13852b02ea502564">Scene.camSupport</a></div><div class="ttdeci">CameraSupport camSupport</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00041">Scene.cs:41</a></div></div>
+<div class="ttc" id="ainterfaceIChangeResolution_html"><div class="ttname"><a href="interfaceIChangeResolution.html">IChangeResolution</a></div><div class="ttdef"><b>Definition:</b> <a href="IChangeResolution_8cs_source.html#l00001">IChangeResolution.cs:2</a></div></div>
+<div class="ttc" id="ainterfaceIChangeResolution_html_a96eb6faf64a5ddb49d52fbea2279634d"><div class="ttname"><a href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">IChangeResolution.OnChangeResolution</a></div><div class="ttdeci">void OnChangeResolution()</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00041">Scene.camSupport</a>, <a class="el" href="CameraSupport_8cs_source.html#l00051">CameraSupport.OnChangeResolution()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00805">CoreConfig.OnChangeResolution()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00540">BaseGameScreen.RefreshScreenSize()</a>.</p>
+<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00041">Scene.camSupport</a>, <a class="el" href="CameraSupport_8cs_source.html#l00051">CameraSupport.OnChangeResolution()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00805">CoreConfig.OnChangeResolution()</a>, <a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">IChangeResolution.OnChangeResolution()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00540">BaseGameScreen.RefreshScreenSize()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="GameSetting_8cs_source.html#l00340">GameSetting.ApplyConfig()</a>, <a class="el" href="LayerConfig_8cs_source.html#l00222">LayerConfig.Refresh()</a>, and <a class="el" href="Core_8cs_source.html#l00288">Update()</a>.</p>
 
@@ -1034,13 +1153,14 @@ Static Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  603</span>    {</div>
 <div class="line"><span class="lineno">  604</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
 <div class="line"><span class="lineno">  605</span>        {</div>
-<div class="line"><span class="lineno">  606</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForEndOfFrame();</div>
+<div class="line"><span class="lineno">  606</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a>();</div>
 <div class="line"><span class="lineno">  607</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>)</div>
 <div class="line"><span class="lineno">  608</span>            {</div>
 <div class="line"><span class="lineno">  609</span>                <a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">guide</a>.<a class="code hl_function" href="classScreenGuide.html#a42d9143cc717c5b9886cf8c196c9915e">OnEndOfFrame</a>();</div>
 <div class="line"><span class="lineno">  610</span>            }</div>
 <div class="line"><span class="lineno">  611</span>        }</div>
 <div class="line"><span class="lineno">  612</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html_a5755e1f33429715944ea9afeda8b1472"><div class="ttname"><a href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">BaseCore.WaitForEndOfFrame</a></div><div class="ttdeci">void WaitForEndOfFrame(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00061">BaseCore.cs:61</a></div></div>
 <div class="ttc" id="aclassBaseGameScreen_html_a0244963d488be65fb895dc19ca4cbaf9"><div class="ttname"><a href="classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9">BaseGameScreen.guide</a></div><div class="ttdeci">ScreenGuide guide</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00118">BaseGameScreen.cs:118</a></div></div>
 <div class="ttc" id="aclassScreenGuide_html_a42d9143cc717c5b9886cf8c196c9915e"><div class="ttname"><a href="classScreenGuide.html#a42d9143cc717c5b9886cf8c196c9915e">ScreenGuide.OnEndOfFrame</a></div><div class="ttdeci">void OnEndOfFrame()</div><div class="ttdef"><b>Definition:</b> <a href="ScreenGuide_8cs_source.html#l00037">ScreenGuide.cs:37</a></div></div>
 </div><!-- fragment -->
@@ -1120,9 +1240,11 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00551">551</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  552</span>    {</div>
 <div class="line"><span class="lineno">  553</span>        Application.Quit();</div>
-<div class="line"><span class="lineno">  554</span>        Debug.Log(<span class="stringliteral">&quot;Quit&quot;</span>);</div>
+<div class="line"><span class="lineno">  554</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Quit&quot;</span>);</div>
 <div class="line"><span class="lineno">  555</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="LayerTitle_8cs_source.html#l00128">LayerTitle.OnClickExit()</a>, and <a class="el" href="Game_8cs_source.html#l00864">Game.Quit()</a>.</p>
 
 </div>
@@ -1145,10 +1267,12 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCore.html#a451a79b24acc438cf6bc56810f022922">BaseCore</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00653">653</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  654</span>    {</div>
@@ -1285,9 +1409,9 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00680">680</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  681</span>    {</div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">if</span> (!(Lang.langCode == langCode) || !<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a> || !<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a12963043d0b1a0aa8fe8cd3ae7c45db5">langGeneral</a>)</div>
+<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">if</span> (!(<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a> == <a class="code hl_variable" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a>) || !<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a> || !<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a12963043d0b1a0aa8fe8cd3ae7c45db5">langGeneral</a>)</div>
 <div class="line"><span class="lineno">  683</span>        {</div>
-<div class="line"><span class="lineno">  684</span>            Lang.Init(langCode);</div>
+<div class="line"><span class="lineno">  684</span>            <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ad2cd6f38059597f486fa74b4c4d246e2">Init</a>(<a class="code hl_variable" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a>);</div>
 <div class="line"><span class="lineno">  685</span>            AliasGen.list = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  686</span>            NameGen.list = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  687</span>            WordGen.initialized = <span class="keyword">false</span>;</div>
@@ -1301,10 +1425,12 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  695</span>    }</div>
 <div class="ttc" id="aclassCoreConfig_html_add36f080c499392ce1f73f6a611ffcf9"><div class="ttname"><a href="classCoreConfig.html#add36f080c499392ce1f73f6a611ffcf9">CoreConfig.OnSetLang</a></div><div class="ttdeci">void OnSetLang()</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00988">CoreConfig.cs:988</a></div></div>
 <div class="ttc" id="aclassGame_html_a78107f466f8a2fe5f5fcc46551006d37"><div class="ttname"><a href="classGame.html#a78107f466f8a2fe5f5fcc46551006d37">Game.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00943">Game.cs:943</a></div></div>
+<div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00028">Lang.cs:28</a></div></div>
+<div class="ttc" id="aclassLang_html_ad2cd6f38059597f486fa74b4c4d246e2"><div class="ttname"><a href="classLang.html#ad2cd6f38059597f486fa74b4c4d246e2">Lang.Init</a></div><div class="ttdeci">static void Init(string lang)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00069">Lang.cs:69</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a12963043d0b1a0aa8fe8cd3ae7c45db5"><div class="ttname"><a href="classSourceManager.html#a12963043d0b1a0aa8fe8cd3ae7c45db5">SourceManager.langGeneral</a></div><div class="ttdeci">LangGeneral langGeneral</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00006">SourceManager.cs:6</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_ad7aa8bf1cf013ed0e33767a5cfe80caf"><div class="ttname"><a href="classSourceManager.html#ad7aa8bf1cf013ed0e33767a5cfe80caf">SourceManager.OnChangeLang</a></div><div class="ttdeci">void OnChangeLang()</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00110">SourceManager.cs:110</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Game_8cs_source.html#l00943">Game.Kill()</a>, <a class="el" href="SourceManager_8cs_source.html#l00006">SourceManager.langGeneral</a>, <a class="el" href="SourceManager_8cs_source.html#l00110">SourceManager.OnChangeLang()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00988">CoreConfig.OnSetLang()</a>.</p>
+<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00069">Lang.Init()</a>, <a class="el" href="Game_8cs_source.html#l00943">Game.Kill()</a>, <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>, <a class="el" href="SourceManager_8cs_source.html#l00006">SourceManager.langGeneral</a>, <a class="el" href="SourceManager_8cs_source.html#l00110">SourceManager.OnChangeLang()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00988">CoreConfig.OnSetLang()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00764">CoreDebug.UpdateAlways()</a>.</p>
 
@@ -1335,7 +1461,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00582">582</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  583</span>    {</div>
-<div class="line"><span class="lineno">  584</span>        CorePath.Init();</div>
+<div class="line"><span class="lineno">  584</span>        <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_function" href="classCorePath.html#a5dd5e1d13055c4adcbdfcd816444a859">Init</a>();</div>
 <div class="line"><span class="lineno">  585</span>        SourceData.dataPath = CorePath.packageCore + <span class="stringliteral">&quot;/Data/Source/&quot;</span>;</div>
 <div class="line"><span class="lineno">  586</span>        <a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a> = (EClass.core = (EMono.core = <span class="keyword">this</span>));</div>
 <div class="line"><span class="lineno">  587</span>        SkinManager._Instance = <a class="code hl_variable" href="classCore.html#a6e24c18d286a3018ed7cea74c8c62f4c">skins</a>;</div>
@@ -1343,12 +1469,13 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  589</span>        EffectManager.Instance = <a class="code hl_variable" href="classCore.html#a39bfb0096dac177b2b41abf6fc61a6d7">effects</a>;</div>
 <div class="line"><span class="lineno">  590</span>        <a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_function" href="classSourceManager.html#a963f0805a7d67bbed8d1a6918a29a654">InitLang</a>();</div>
 <div class="line"><span class="lineno">  591</span>    }</div>
+<div class="ttc" id="aclassCorePath_html_a5dd5e1d13055c4adcbdfcd816444a859"><div class="ttname"><a href="classCorePath.html#a5dd5e1d13055c4adcbdfcd816444a859">CorePath.Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00217">CorePath.cs:217</a></div></div>
 <div class="ttc" id="aclassCore_html_a39bfb0096dac177b2b41abf6fc61a6d7"><div class="ttname"><a href="classCore.html#a39bfb0096dac177b2b41abf6fc61a6d7">Core.effects</a></div><div class="ttdeci">EffectManager effects</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00031">Core.cs:31</a></div></div>
 <div class="ttc" id="aclassCore_html_a6e24c18d286a3018ed7cea74c8c62f4c"><div class="ttname"><a href="classCore.html#a6e24c18d286a3018ed7cea74c8c62f4c">Core.skins</a></div><div class="ttdeci">SkinManager skins</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00037">Core.cs:37</a></div></div>
 <div class="ttc" id="aclassCore_html_acc32d29c220425c7b61b5fa8d6464050"><div class="ttname"><a href="classCore.html#acc32d29c220425c7b61b5fa8d6464050">Core.pathManager</a></div><div class="ttdeci">PathManager pathManager</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00029">Core.cs:29</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a963f0805a7d67bbed8d1a6918a29a654"><div class="ttname"><a href="classSourceManager.html#a963f0805a7d67bbed8d1a6918a29a654">SourceManager.InitLang</a></div><div class="ttdeci">void InitLang()</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00096">SourceManager.cs:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00096">SourceManager.InitLang()</a>.</p>
+<p class="reference">References <a class="el" href="CorePath_8cs_source.html#l00217">CorePath.Init()</a>, and <a class="el" href="SourceManager_8cs_source.html#l00096">SourceManager.InitLang()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00562">SetCurrent()</a>.</p>
 
@@ -1366,7 +1493,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Core.SetReleaseMode </td>
           <td>(</td>
-          <td class="paramtype">ReleaseMode&#160;</td>
+          <td class="paramtype"><a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1380,10 +1507,10 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00593">593</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  594</span>    {</div>
-<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">if</span> (releaseMode != m)</div>
+<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a> != m)</div>
 <div class="line"><span class="lineno">  596</span>        {</div>
-<div class="line"><span class="lineno">  597</span>            releaseMode = m;</div>
-<div class="line"><span class="lineno">  598</span>            <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a> = Resources.Load&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>&gt;(<span class="stringliteral">&quot;_Debug &quot;</span> + releaseMode);</div>
+<div class="line"><span class="lineno">  597</span>            <a class="code hl_variable" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a> = m;</div>
+<div class="line"><span class="lineno">  598</span>            <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a> = Resources.Load&lt;<a class="code hl_class" href="classCoreDebug.html">CoreDebug</a>&gt;(<span class="stringliteral">&quot;_Debug &quot;</span> + <a class="code hl_variable" href="classBaseCore.html#ae36e2555050bb5810f690e7f6d494d30">releaseMode</a>);</div>
 <div class="line"><span class="lineno">  599</span>        }</div>
 <div class="line"><span class="lineno">  600</span>    }</div>
 </div><!-- fragment -->
@@ -1415,7 +1542,7 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00191">191</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
 <div class="line"><span class="lineno">  193</span>        <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a> = <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_function" href="classCoreConfig.html#a87c8b12a1a6e588004e9514cf7ba0106">TryLoadConfig</a>();</div>
-<div class="line"><span class="lineno">  194</span>        Debug.Log(<span class="stringliteral">&quot;Loading Config:&quot;</span> + <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a> + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>);</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Loading Config:&quot;</span> + <a class="code hl_class" href="classCoreConfig.html">CoreConfig</a>.<a class="code hl_property" href="classCoreConfig.html#ab58606cb626ed12304fd82020d759d59">path</a> + <span class="stringliteral">&quot; - &quot;</span> + <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>);</div>
 <div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">other</a>.<a class="code hl_variable" href="classCoreConfig_1_1OtherSetting.html#a00d3938f18861cc71407f455846e227b">disableMods</a>)</div>
 <div class="line"><span class="lineno">  196</span>        {</div>
 <div class="line"><span class="lineno">  197</span>            ModManager.disableMod = <span class="keyword">true</span>;</div>
@@ -1435,7 +1562,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCore_html_a06d3e324e8199245f606c31df5b2d284"><div class="ttname"><a href="classCore.html#a06d3e324e8199245f606c31df5b2d284">Core.StartCase</a></div><div class="ttdeci">void StartCase()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00209">Core.cs:209</a></div></div>
 <div class="ttc" id="aclassSteam_html_a97a5dc96771772c2d6aa9326f22fd65a"><div class="ttname"><a href="classSteam.html#a97a5dc96771772c2d6aa9326f22fd65a">Steam.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00024">Steam.cs:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="CoreConfig_8cs_source.html#l00501">CoreConfig.OtherSetting.disableMods</a>, <a class="el" href="Steam_8cs_source.html#l00024">Steam.Init()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>, <a class="el" href="CoreConfig_8cs_source.html#l00613">CoreConfig.path</a>, <a class="el" href="Core_8cs_source.html#l00209">StartCase()</a>, <a class="el" href="Core_8cs_source.html#l00051">steam</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00639">CoreConfig.TryLoadConfig()</a>.</p>
+<p class="reference">References <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="CoreConfig_8cs_source.html#l00501">CoreConfig.OtherSetting.disableMods</a>, <a class="el" href="Steam_8cs_source.html#l00024">Steam.Init()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>, <a class="el" href="CoreConfig_8cs_source.html#l00613">CoreConfig.path</a>, <a class="el" href="Core_8cs_source.html#l00209">StartCase()</a>, <a class="el" href="Core_8cs_source.html#l00051">steam</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00639">CoreConfig.TryLoadConfig()</a>.</p>
 
 </div>
 </div>
@@ -1464,24 +1591,24 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00209">209</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  210</span>    {</div>
-<div class="line"><span class="lineno">  211</span>        Debug.Log(<span class="stringliteral">&quot;StartCase:&quot;</span> + <a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_property" href="classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1">IsInitialized</a>);</div>
+<div class="line"><span class="lineno">  211</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;StartCase:&quot;</span> + <a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_property" href="classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1">IsInitialized</a>);</div>
 <div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_property" href="classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1">IsInitialized</a>)</div>
 <div class="line"><span class="lineno">  213</span>        {</div>
-<div class="line"><span class="lineno">  214</span>            <a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classModManager.html#a9219aa9f35decd9d524b93f5f4263d66">Init</a>(CorePath.rootMod);</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classModManager.html#a9219aa9f35decd9d524b93f5f4263d66">Init</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a>);</div>
 <div class="line"><span class="lineno">  215</span>            StartCoroutine(<a class="code hl_variable" href="classCore.html#a177018324b0a8085746d77c8fafb40d5">mods</a>.<a class="code hl_function" href="classModManager.html#a9c8d6cc2333e49ae1a49627efe962e7d">RefreshMods</a>(delegate</div>
 <div class="line"><span class="lineno">  216</span>            {</div>
 <div class="line"><span class="lineno">  217</span>                MOD.actorSources.Initialize();</div>
 <div class="line"><span class="lineno">  218</span>                StartCase();</div>
-<div class="line"><span class="lineno">  219</span>            }, !<a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_variable" href="classModManager.html#ab2008faf39c4e179f5b5d538b2ec7996">disableMod</a> &amp;&amp; !BaseCore.IsOffline &amp;&amp; !<a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a8ceb008e4ccdd48882695004076842b2">skipModSync</a> &amp;&amp; (<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">other</a>.<a class="code hl_variable" href="classCoreConfig_1_1OtherSetting.html#a088a23f824f73d09d302579c0ddfb18e">syncMods</a>)));</div>
+<div class="line"><span class="lineno">  219</span>            }, !<a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_variable" href="classModManager.html#ab2008faf39c4e179f5b5d538b2ec7996">disableMod</a> &amp;&amp; !<a class="code hl_class" href="classBaseCore.html">BaseCore</a>.<a class="code hl_variable" href="classBaseCore.html#a45471b02b87fd352f4ff62aeddaa01a3">IsOffline</a> &amp;&amp; !<a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a8ceb008e4ccdd48882695004076842b2">skipModSync</a> &amp;&amp; (<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ace7c91a480e766e3e6aea9d50079c5e5">other</a>.<a class="code hl_variable" href="classCoreConfig_1_1OtherSetting.html#a088a23f824f73d09d302579c0ddfb18e">syncMods</a>)));</div>
 <div class="line"><span class="lineno">  220</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  221</span>        }</div>
-<div class="line"><span class="lineno">  222</span>        Debug.Log(<span class="stringliteral">&quot;Plugins:&quot;</span> + <a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_variable" href="classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2">ListPluginObject</a>.Count);</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">object</span> item <span class="keywordflow">in</span> <a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_variable" href="classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2">ListPluginObject</a>)</div>
+<div class="line"><span class="lineno">  222</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Plugins:&quot;</span> + <a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_variable" href="classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2">ListPluginObject</a>.Count);</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">object</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classModManager.html">ModManager</a>.<a class="code hl_variable" href="classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2">ListPluginObject</a>)</div>
 <div class="line"><span class="lineno">  224</span>        {</div>
-<div class="line"><span class="lineno">  225</span>            Component component = item as Component;</div>
+<div class="line"><span class="lineno">  225</span>            Component component = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> as Component;</div>
 <div class="line"><span class="lineno">  226</span>            <span class="keywordflow">if</span> (!component)</div>
 <div class="line"><span class="lineno">  227</span>            {</div>
-<div class="line"><span class="lineno">  228</span>                Debug.Log(<span class="stringliteral">&quot;no go&quot;</span>);</div>
+<div class="line"><span class="lineno">  228</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;no go&quot;</span>);</div>
 <div class="line"><span class="lineno">  229</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  230</span>            }</div>
 <div class="line"><span class="lineno">  231</span>            GameObject obj = component.gameObject;</div>
@@ -1489,19 +1616,19 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  233</span>            Component[] componentsInChildren = obj.GetComponentsInChildren&lt;Component&gt;();</div>
 <div class="line"><span class="lineno">  234</span>            <span class="keywordflow">foreach</span> (Component component2 <span class="keywordflow">in</span> componentsInChildren)</div>
 <div class="line"><span class="lineno">  235</span>            {</div>
-<div class="line"><span class="lineno">  236</span>                Debug.Log(component2.GetType().Assembly.GetName().Name);</div>
-<div class="line"><span class="lineno">  237</span>                ClassCache.assemblies.Add(component2.GetType().Assembly.GetName().Name);</div>
+<div class="line"><span class="lineno">  236</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(component2.GetType().Assembly.GetName().Name);</div>
+<div class="line"><span class="lineno">  237</span>                <a class="code hl_class" href="classClassCache.html">ClassCache</a>.<a class="code hl_variable" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">assemblies</a>.Add(component2.GetType().Assembly.GetName().Name);</div>
 <div class="line"><span class="lineno">  238</span>            }</div>
 <div class="line"><span class="lineno">  239</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  240</span>        }</div>
 <div class="line"><span class="lineno">  241</span>        <a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_function" href="classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362">Init</a>();</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (!forceLangCode.IsEmpty())</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">forceLangCode</a>.IsEmpty())</div>
 <div class="line"><span class="lineno">  243</span>        {</div>
-<div class="line"><span class="lineno">  244</span>            langCode = forceLangCode;</div>
+<div class="line"><span class="lineno">  244</span>            <a class="code hl_variable" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a> = <a class="code hl_variable" href="classBaseCore.html#a6fbecc71668f3f4302f6ba73651867a4">forceLangCode</a>;</div>
 <div class="line"><span class="lineno">  245</span>        }</div>
 <div class="line"><span class="lineno">  246</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a> == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  247</span>        {</div>
-<div class="line"><span class="lineno">  248</span>            Debug.Log(<span class="stringliteral">&quot;Config doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><span class="lineno">  248</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Config doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><span class="lineno">  249</span>            <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  250</span>            {</div>
 <div class="line"><span class="lineno">  251</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || !SteamAPI.IsSteamRunning())</div>
@@ -1519,16 +1646,16 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  263</span>                        <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.ShowLang();</div>
 <div class="line"><span class="lineno">  264</span>                        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  265</span>                    }</div>
-<div class="line"><span class="lineno">  266</span>                    langCode = <span class="stringliteral">&quot;JP&quot;</span>;</div>
+<div class="line"><span class="lineno">  266</span>                    <a class="code hl_variable" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a> = <span class="stringliteral">&quot;JP&quot;</span>;</div>
 <div class="line"><span class="lineno">  267</span>                }</div>
 <div class="line"><span class="lineno">  268</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  269</span>                {</div>
-<div class="line"><span class="lineno">  270</span>                    langCode = <span class="stringliteral">&quot;CN&quot;</span>;</div>
+<div class="line"><span class="lineno">  270</span>                    <a class="code hl_variable" href="classBaseCore.html#a420ab513c317adffc539eb2f6ad1462d">langCode</a> = <span class="stringliteral">&quot;CN&quot;</span>;</div>
 <div class="line"><span class="lineno">  271</span>                }</div>
 <div class="line"><span class="lineno">  272</span>            }</div>
 <div class="line"><span class="lineno">  273</span>            <span class="keywordflow">catch</span> (Exception message)</div>
 <div class="line"><span class="lineno">  274</span>            {</div>
-<div class="line"><span class="lineno">  275</span>                Debug.Log(message);</div>
+<div class="line"><span class="lineno">  275</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
 <div class="line"><span class="lineno">  276</span>            }</div>
 <div class="line"><span class="lineno">  277</span>        }</div>
 <div class="line"><span class="lineno">  278</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a1ced6ba5e09ec9205fbec1df39ce65f3">showSceneSelector</a> || (Input.GetKey(KeyCode.LeftShift) &amp;&amp; <a class="code hl_variable" href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>))</div>
@@ -1540,9 +1667,14 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  284</span>            <a class="code hl_function" href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Init</a>();</div>
 <div class="line"><span class="lineno">  285</span>        }</div>
 <div class="line"><span class="lineno">  286</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
+<div class="ttc" id="aclassBaseCore_html_a45471b02b87fd352f4ff62aeddaa01a3"><div class="ttname"><a href="classBaseCore.html#a45471b02b87fd352f4ff62aeddaa01a3">BaseCore.IsOffline</a></div><div class="ttdeci">static bool IsOffline</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00009">BaseCore.cs:9</a></div></div>
+<div class="ttc" id="aclassClassCache_html"><div class="ttname"><a href="classClassCache.html">ClassCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00006">ClassCache.cs:7</a></div></div>
+<div class="ttc" id="aclassClassCache_html_a7a130179b409895401a1f64b0dc3bfce"><div class="ttname"><a href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">ClassCache.assemblies</a></div><div class="ttdeci">static HashSet&lt; string &gt; assemblies</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00052">ClassCache.cs:52</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1OtherSetting_html_a088a23f824f73d09d302579c0ddfb18e"><div class="ttname"><a href="classCoreConfig_1_1OtherSetting.html#a088a23f824f73d09d302579c0ddfb18e">CoreConfig.OtherSetting.syncMods</a></div><div class="ttdeci">bool syncMods</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00499">CoreConfig.cs:499</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a1ced6ba5e09ec9205fbec1df39ce65f3"><div class="ttname"><a href="classCoreDebug.html#a1ced6ba5e09ec9205fbec1df39ce65f3">CoreDebug.showSceneSelector</a></div><div class="ttdeci">bool showSceneSelector</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00108">CoreDebug.cs:108</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a8ceb008e4ccdd48882695004076842b2"><div class="ttname"><a href="classCoreDebug.html#a8ceb008e4ccdd48882695004076842b2">CoreDebug.skipModSync</a></div><div class="ttdeci">bool skipModSync</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00111">CoreDebug.cs:111</a></div></div>
+<div class="ttc" id="aclassCorePath_html_a31fdacbd188c623a8fb245a33d18be9d"><div class="ttname"><a href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">CorePath.rootMod</a></div><div class="ttdeci">static string rootMod</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00166">CorePath.cs:166</a></div></div>
 <div class="ttc" id="aclassCore_html_a47331fd958351023e3f154c8cf7cfc08"><div class="ttname"><a href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Core.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00510">Core.cs:510</a></div></div>
 <div class="ttc" id="aclassModManager_html"><div class="ttname"><a href="classModManager.html">ModManager</a></div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00016">ModManager.cs:17</a></div></div>
 <div class="ttc" id="aclassModManager_html_a594b09f9d3d29068875fa79caa4b5ab1"><div class="ttname"><a href="classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1">ModManager.IsInitialized</a></div><div class="ttdeci">static bool IsInitialized</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00037">ModManager.cs:37</a></div></div>
@@ -1552,7 +1684,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassModManager_html_ada7518f02da2ce3f6fb3dc92128b2fe2"><div class="ttname"><a href="classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2">ModManager.ListPluginObject</a></div><div class="ttdeci">static List&lt; object &gt; ListPluginObject</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00027">ModManager.cs:27</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a74ca8efaabc1b44566387ccc6a663362"><div class="ttname"><a href="classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362">SourceManager.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00115">SourceManager.cs:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="Core_8cs_source.html#l00025">debug</a>, <a class="el" href="ModManager_8cs_source.html#l00029">ModManager.disableMod</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="Core_8cs_source.html#l00510">Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00115">SourceManager.Init()</a>, <a class="el" href="ModManager_8cs_source.html#l00071">ModManager.Init()</a>, <a class="el" href="ModManager_8cs_source.html#l00037">ModManager.IsInitialized</a>, <a class="el" href="ModManager_8cs_source.html#l00027">ModManager.ListPluginObject</a>, <a class="el" href="Core_8cs_source.html#l00033">mods</a>, <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>, <a class="el" href="ModManager_8cs_source.html#l00131">ModManager.RefreshMods()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00108">CoreDebug.showSceneSelector</a>, <a class="el" href="CoreDebug_8cs_source.html#l00111">CoreDebug.skipModSync</a>, <a class="el" href="Core_8cs_source.html#l00027">sources</a>, <a class="el" href="CoreConfig_8cs_source.html#l00499">CoreConfig.OtherSetting.syncMods</a>, and <a class="el" href="Core_8cs_source.html#l00057">ui</a>.</p>
+<p class="reference">References <a class="el" href="ClassCache_8cs_source.html#l00052">ClassCache&lt; T &gt;.assemblies</a>, <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="Core_8cs_source.html#l00025">debug</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ModManager_8cs_source.html#l00029">ModManager.disableMod</a>, <a class="el" href="CoreDebug_8cs_source.html#l00287">CoreDebug.enable</a>, <a class="el" href="BaseCore_8cs_source.html#l00037">BaseCore.forceLangCode</a>, <a class="el" href="Core_8cs_source.html#l00510">Init()</a>, <a class="el" href="SourceManager_8cs_source.html#l00115">SourceManager.Init()</a>, <a class="el" href="ModManager_8cs_source.html#l00071">ModManager.Init()</a>, <a class="el" href="ModManager_8cs_source.html#l00037">ModManager.IsInitialized</a>, <a class="el" href="BaseCore_8cs_source.html#l00009">BaseCore.IsOffline</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="BaseCore_8cs_source.html#l00025">BaseCore.langCode</a>, <a class="el" href="ModManager_8cs_source.html#l00027">ModManager.ListPluginObject</a>, <a class="el" href="Core_8cs_source.html#l00033">mods</a>, <a class="el" href="CoreConfig_8cs_source.html#l00596">CoreConfig.other</a>, <a class="el" href="ModManager_8cs_source.html#l00131">ModManager.RefreshMods()</a>, <a class="el" href="CorePath_8cs_source.html#l00166">CorePath.rootMod</a>, <a class="el" href="CoreDebug_8cs_source.html#l00108">CoreDebug.showSceneSelector</a>, <a class="el" href="CoreDebug_8cs_source.html#l00111">CoreDebug.skipModSync</a>, <a class="el" href="Core_8cs_source.html#l00027">sources</a>, <a class="el" href="CoreConfig_8cs_source.html#l00499">CoreConfig.OtherSetting.syncMods</a>, and <a class="el" href="Core_8cs_source.html#l00057">ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00191">Start()</a>.</p>
 
@@ -1593,10 +1725,12 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCore.html#a70efafa273d391132253cd92b98b162a">BaseCore</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00658">658</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  659</span>    {</div>
@@ -1632,10 +1766,12 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCore.html#aeb290858386b0e84a5ae236ed1ff3cd5">BaseCore</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00671">671</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  672</span>    {</div>
@@ -1666,10 +1802,12 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCore.html#a8907ca077476e5d75ac82ca09b0e8284">BaseCore</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00648">648</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  649</span>    {</div>
@@ -1703,7 +1841,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00288">288</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  289</span>    {</div>
-<div class="line"><span class="lineno">  290</span>        frame++;</div>
+<div class="line"><span class="lineno">  290</span>        <a class="code hl_variable" href="classBaseCore.html#a6e1715dc3ad4e42c6657c8c9d4e3dbc0">frame</a>++;</div>
 <div class="line"><span class="lineno">  291</span>        SoundManager.requestCount = 0;</div>
 <div class="line"><span class="lineno">  292</span>        InputModuleEX.UpdateEventData();</div>
 <div class="line"><span class="lineno">  293</span>        EInput.uiMousePosition = Input.mousePosition / <a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.canvasScaler.scaleFactor;</div>
@@ -1756,7 +1894,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  340</span>                    Screen.SetResolution(w, h, Screen.fullScreen);</div>
 <div class="line"><span class="lineno">  341</span>                }</div>
 <div class="line"><span class="lineno">  342</span>            }</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (Screen.width != lastScreenWidth || Screen.height != lastScreenHeight)</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (Screen.width != <a class="code hl_variable" href="classBaseCore.html#ad2fc0dec011a240bd0fde41ecb2d269d">lastScreenWidth</a> || Screen.height != <a class="code hl_variable" href="classBaseCore.html#a1089fcaa072fe3b8c55f605b2a7d95eb">lastScreenHeight</a>)</div>
 <div class="line"><span class="lineno">  344</span>            {</div>
 <div class="line"><span class="lineno">  345</span>                <a class="code hl_function" href="classCore.html#a8dc7b85b18dfb6198c13c0a047f52004">OnChangeResolution</a>();</div>
 <div class="line"><span class="lineno">  346</span>            }</div>
@@ -1777,16 +1915,17 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  361</span>            <a class="code hl_variable" href="classCore.html#a8661ed62f17a60ae1169ed07c0b56812">gameDelta</a> = 0f;</div>
 <div class="line"><span class="lineno">  362</span>        }</div>
 <div class="line"><span class="lineno">  363</span>        <a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_function" href="classScene.html#aa920b67f2b4e39d7785b72a2396b73ba">OnUpdate</a>();</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (actionsNextFrame.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Count &gt; 0)</div>
 <div class="line"><span class="lineno">  365</span>        {</div>
-<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = actionsNextFrame.Count - 1; num &gt;= 0; num--)</div>
+<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = <a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Count - 1; num &gt;= 0; num--)</div>
 <div class="line"><span class="lineno">  367</span>            {</div>
-<div class="line"><span class="lineno">  368</span>                actionsNextFrame[num]();</div>
-<div class="line"><span class="lineno">  369</span>                actionsNextFrame.RemoveAt(num);</div>
+<div class="line"><span class="lineno">  368</span>                <a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>[num]();</div>
+<div class="line"><span class="lineno">  369</span>                <a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.RemoveAt(num);</div>
 <div class="line"><span class="lineno">  370</span>            }</div>
 <div class="line"><span class="lineno">  371</span>        }</div>
 <div class="line"><span class="lineno">  372</span>    }</div>
 <div class="ttc" id="aclassActionMode_html_adcfbc9ac50366e79643e381f2a7ddf64"><div class="ttname"><a href="classActionMode.html#adcfbc9ac50366e79643e381f2a7ddf64">ActionMode.gameSpeed</a></div><div class="ttdeci">virtual float gameSpeed</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00119">ActionMode.cs:119</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_a6e1715dc3ad4e42c6657c8c9d4e3dbc0"><div class="ttname"><a href="classBaseCore.html#a6e1715dc3ad4e42c6657c8c9d4e3dbc0">BaseCore.frame</a></div><div class="ttdeci">int frame</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00040">BaseCore.cs:40</a></div></div>
 <div class="ttc" id="aclassBaseTileMap_html_af2f27b63b7d3cbd869e0cf76d7fc063c"><div class="ttname"><a href="classBaseTileMap.html#af2f27b63b7d3cbd869e0cf76d7fc063c">BaseTileMap.passBlock</a></div><div class="ttdeci">MeshPass passBlock</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00147">BaseTileMap.cs:147</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1GraphicSetting_html_a72d8938881eeda8edbbda96dfa440ee7"><div class="ttname"><a href="classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7">CoreConfig.GraphicSetting.w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00319">CoreConfig.cs:319</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1GraphicSetting_html_a82a66877e92d21c4782754f2b5c862dd"><div class="ttname"><a href="classCoreConfig_1_1GraphicSetting.html#a82a66877e92d21c4782754f2b5c862dd">CoreConfig.GraphicSetting.h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00321">CoreConfig.cs:321</a></div></div>
@@ -1806,7 +1945,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00077">Scene.cs:77</a></div></div>
 <div class="ttc" id="aclassScene_html_aa920b67f2b4e39d7785b72a2396b73ba"><div class="ttname"><a href="classScene.html#aa920b67f2b4e39d7785b72a2396b73ba">Scene.OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00350">Scene.cs:350</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00077">Scene.actionMode</a>, <a class="el" href="Core_8cs_source.html#l00015">avgDelta</a>, <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="Core_8cs_source.html#l00025">debug</a>, <a class="el" href="Core_8cs_source.html#l00013">delta</a>, <a class="el" href="CoreConfig_8cs_source.html#l00287">CoreConfig.GraphicSetting.fixedResolution</a>, <a class="el" href="Core_8cs_source.html#l00066">game</a>, <a class="el" href="Core_8cs_source.html#l00017">gameDelta</a>, <a class="el" href="Core_8cs_source.html#l00019">gameDeltaNoPause</a>, <a class="el" href="ActionMode_8cs_source.html#l00119">ActionMode.gameSpeed</a>, <a class="el" href="CoreConfig_8cs_source.html#l00584">CoreConfig.graphic</a>, <a class="el" href="CoreConfig_8cs_source.html#l00321">CoreConfig.GraphicSetting.h</a>, <a class="el" href="CoreDebug_8cs_source.html#l00116">CoreDebug.ignorePool</a>, <a class="el" href="Core_8cs_source.html#l00069">initialized</a>, <a class="el" href="Core_8cs_source.html#l00078">IsGameStarted</a>, <a class="el" href="Core_8cs_source.html#l00071">lastFullScreen</a>, <a class="el" href="MeshPass_8cs_source.html#l00021">MeshPass.mat</a>, <a class="el" href="Core_8cs_source.html#l00049">matUI</a>, <a class="el" href="Core_8cs_source.html#l00073">nextResolutionUpdate</a>, <a class="el" href="Core_8cs_source.html#l00622">OnChangeResolution()</a>, <a class="el" href="Game_8cs_source.html#l00288">Game.OnUpdate()</a>, <a class="el" href="Scene_8cs_source.html#l00350">Scene.OnUpdate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00147">BaseTileMap.passBlock</a>, <a class="el" href="TextureManager_8cs_source.html#l00085">TextureManager.RefreshTextures()</a>, <a class="el" href="Core_8cs_source.html#l00059">scene</a>, <a class="el" href="Core_8cs_source.html#l00061">screen</a>, <a class="el" href="Core_8cs_source.html#l00039">textures</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, <a class="el" href="Core_8cs_source.html#l00057">ui</a>, <a class="el" href="CoreDebug_8cs_source.html#l00764">CoreDebug.UpdateAlways()</a>, <a class="el" href="Core_8cs_source.html#l00053">useUImat</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00319">CoreConfig.GraphicSetting.w</a>.</p>
+<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00077">Scene.actionMode</a>, <a class="el" href="BaseCore_8cs_source.html#l00031">BaseCore.actionsNextFrame</a>, <a class="el" href="Core_8cs_source.html#l00015">avgDelta</a>, <a class="el" href="Core_8cs_source.html#l00064">config</a>, <a class="el" href="Core_8cs_source.html#l00025">debug</a>, <a class="el" href="Core_8cs_source.html#l00013">delta</a>, <a class="el" href="CoreConfig_8cs_source.html#l00287">CoreConfig.GraphicSetting.fixedResolution</a>, <a class="el" href="BaseCore_8cs_source.html#l00040">BaseCore.frame</a>, <a class="el" href="Core_8cs_source.html#l00066">game</a>, <a class="el" href="Core_8cs_source.html#l00017">gameDelta</a>, <a class="el" href="Core_8cs_source.html#l00019">gameDeltaNoPause</a>, <a class="el" href="ActionMode_8cs_source.html#l00119">ActionMode.gameSpeed</a>, <a class="el" href="CoreConfig_8cs_source.html#l00584">CoreConfig.graphic</a>, <a class="el" href="CoreConfig_8cs_source.html#l00321">CoreConfig.GraphicSetting.h</a>, <a class="el" href="CoreDebug_8cs_source.html#l00116">CoreDebug.ignorePool</a>, <a class="el" href="Core_8cs_source.html#l00069">initialized</a>, <a class="el" href="Core_8cs_source.html#l00078">IsGameStarted</a>, <a class="el" href="Core_8cs_source.html#l00071">lastFullScreen</a>, <a class="el" href="BaseCore_8cs_source.html#l00044">BaseCore.lastScreenHeight</a>, <a class="el" href="BaseCore_8cs_source.html#l00042">BaseCore.lastScreenWidth</a>, <a class="el" href="MeshPass_8cs_source.html#l00021">MeshPass.mat</a>, <a class="el" href="Core_8cs_source.html#l00049">matUI</a>, <a class="el" href="Core_8cs_source.html#l00073">nextResolutionUpdate</a>, <a class="el" href="Core_8cs_source.html#l00622">OnChangeResolution()</a>, <a class="el" href="Game_8cs_source.html#l00288">Game.OnUpdate()</a>, <a class="el" href="Scene_8cs_source.html#l00350">Scene.OnUpdate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00147">BaseTileMap.passBlock</a>, <a class="el" href="TextureManager_8cs_source.html#l00085">TextureManager.RefreshTextures()</a>, <a class="el" href="Core_8cs_source.html#l00059">scene</a>, <a class="el" href="Core_8cs_source.html#l00061">screen</a>, <a class="el" href="Core_8cs_source.html#l00039">textures</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, <a class="el" href="Core_8cs_source.html#l00057">ui</a>, <a class="el" href="CoreDebug_8cs_source.html#l00764">CoreDebug.UpdateAlways()</a>, <a class="el" href="Core_8cs_source.html#l00053">useUImat</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00319">CoreConfig.GraphicSetting.w</a>.</p>
 
 </div>
 </div>
@@ -2114,7 +2253,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Core_8cs_source.html#l00011">11</a> of file <a class="el" href="Core_8cs_source.html">Core.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameSetting_8cs_source.html#l00340">GameSetting.ApplyConfig()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00999">CoreConfig.ApplySkin()</a>, <a class="el" href="GameSetting_8cs_source.html#l00346">GameSetting.CopyColors()</a>, <a class="el" href="RefChara_8cs_source.html#l00036">RefChara.Get()</a>, <a class="el" href="RefChara_8cs_source.html#l00005">RefChara.GetAndCache()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00145">SourceMaterial.Row.GetColor()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00022">DropdownRecipe.GetLabel()</a>, <a class="el" href="RenderRow_8cs_source.html#l00382">RenderRow.GetRenderParam()</a>, <a class="el" href="RenderRow_8cs_source.html#l00266">RenderRow.GetSprite()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00110">SourceMaterial.Row.Init()</a>, <a class="el" href="Core_8cs_source.html#l00396">OnApplicationFocus()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00153">SourceBlock.OnInit()</a>, <a class="el" href="LayerList_8cs_source.html#l00316">LayerList.OnKill()</a>, <a class="el" href="ItemCulture_8cs_source.html#l00015">ItemCulture.Refresh()</a>, <a class="el" href="MeshPass_8cs_source.html#l00446">MeshPass.Refresh()</a>, <a class="el" href="UIHangIcon_8cs_source.html#l00068">UIHangIcon.Refresh()</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00014">ButtonHotItem.RefreshItem()</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00108">ButtonHotItem.RegisterHotbar()</a>, <a class="el" href="Cell_8cs_source.html#l01489">Cell.RotateAll()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00184">ButtonGrid.SetCard()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="Portrait_8cs_source.html#l00221">Portrait.SetPortrait()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00536">ButtonGrid.SetRecipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameSetting_8cs_source.html#l00340">GameSetting.ApplyConfig()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00999">CoreConfig.ApplySkin()</a>, <a class="el" href="GameSetting_8cs_source.html#l00346">GameSetting.CopyColors()</a>, <a class="el" href="RefChara_8cs_source.html#l00036">RefChara.Get()</a>, <a class="el" href="RefChara_8cs_source.html#l00005">RefChara.GetAndCache()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00145">SourceMaterial.Row.GetColor()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00022">DropdownRecipe.GetLabel()</a>, <a class="el" href="RenderRow_8cs_source.html#l00382">RenderRow.GetRenderParam()</a>, <a class="el" href="RenderRow_8cs_source.html#l00266">RenderRow.GetSprite()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00110">SourceMaterial.Row.Init()</a>, <a class="el" href="Core_8cs_source.html#l00396">OnApplicationFocus()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00153">SourceBlock.OnInit()</a>, <a class="el" href="ItemCulture_8cs_source.html#l00015">ItemCulture.Refresh()</a>, <a class="el" href="MeshPass_8cs_source.html#l00446">MeshPass.Refresh()</a>, <a class="el" href="UIHangIcon_8cs_source.html#l00068">UIHangIcon.Refresh()</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00014">ButtonHotItem.RefreshItem()</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00108">ButtonHotItem.RegisterHotbar()</a>, <a class="el" href="Cell_8cs_source.html#l01489">Cell.RotateAll()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00184">ButtonGrid.SetCard()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="Portrait_8cs_source.html#l00221">Portrait.SetPortrait()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00536">ButtonGrid.SetRecipe()</a>.</p>
 
 </div>
 </div>

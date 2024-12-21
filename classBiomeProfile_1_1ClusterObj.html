@@ -169,24 +169,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00542">542</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  543</span>        {</div>
-<div class="line"><span class="lineno">  544</span>            Item item = <a class="code hl_variable" href="classBiomeProfile_1_1ClusterObj.html#a86653a992f7c13a99828633dbe524d5e">items</a>.RandomItem();</div>
-<div class="line"><span class="lineno">  545</span>            <span class="keywordflow">if</span> (Rand.Range(0f, 1f) &gt; item.chance)</div>
+<div class="line"><span class="lineno">  544</span>            Item <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_variable" href="classBiomeProfile_1_1ClusterObj.html#a86653a992f7c13a99828633dbe524d5e">items</a>.RandomItem();</div>
+<div class="line"><span class="lineno">  545</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(0f, 1f) &gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.chance)</div>
 <div class="line"><span class="lineno">  546</span>            {</div>
 <div class="line"><span class="lineno">  547</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  548</span>            }</div>
 <div class="line"><span class="lineno">  549</span>            <a class="code hl_class" href="classCell.html">Cell</a> cell = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
 <div class="line"><span class="lineno">  550</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
 <div class="line"><span class="lineno">  551</span>            {</div>
-<div class="line"><span class="lineno">  552</span>                <span class="keywordflow">if</span> (!item.IsSpawnOnBlock)</div>
+<div class="line"><span class="lineno">  552</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSpawnOnBlock)</div>
 <div class="line"><span class="lineno">  553</span>                {</div>
 <div class="line"><span class="lineno">  554</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  555</span>                }</div>
 <div class="line"><span class="lineno">  556</span>            }</div>
-<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.IsSpawnOnBlock)</div>
+<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSpawnOnBlock)</div>
 <div class="line"><span class="lineno">  558</span>            {</div>
 <div class="line"><span class="lineno">  559</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  560</span>            }</div>
-<div class="line"><span class="lineno">  561</span>            p.<a class="code hl_function" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a>(item.idObj);</div>
+<div class="line"><span class="lineno">  561</span>            p.<a class="code hl_function" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.idObj);</div>
 <div class="line"><span class="lineno">  562</span>            cell.objDir = <a class="code hl_class" href="classEScriptable.html">EScriptable</a>.<a class="code hl_function" href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">rnd</a>(8);</div>
 <div class="line"><span class="lineno">  563</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.HasGrowth &amp;&amp; cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id != 103)</div>
 <div class="line"><span class="lineno">  564</span>            {</div>
@@ -194,6 +194,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  566</span>            }</div>
 <div class="line"><span class="lineno">  567</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  568</span>        }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassBiomeProfile_1_1ClusterObj_html_a86653a992f7c13a99828633dbe524d5e"><div class="ttname"><a href="classBiomeProfile_1_1ClusterObj.html#a86653a992f7c13a99828633dbe524d5e">BiomeProfile.ClusterObj.items</a></div><div class="ttdeci">List&lt; Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00540">BiomeProfile.cs:540</a></div></div>
 <div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
 <div class="ttc" id="aclassCell_html_a1c9c4cee0dcd497d8af3378d29214943"><div class="ttname"><a href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">Cell.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00643">Cell.cs:643</a></div></div>
@@ -204,8 +205,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassGrowSystem_html_ab1b371c9b7bcec41814c9b256028e20f"><div class="ttname"><a href="classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f">GrowSystem.SetRandomStage</a></div><div class="ttdeci">void SetRandomStage()</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00239">GrowSystem.cs:239</a></div></div>
 <div class="ttc" id="aclassPoint_html_a1b776a5c157ff23d2c418ba134448d74"><div class="ttname"><a href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">Point.SetObj</a></div><div class="ttdeci">void SetObj(int id=0, int value=1, int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00903">Point.cs:903</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
+<div class="ttc" id="aclassRand_html"><div class="ttname"><a href="classRand.html">Rand</a></div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00003">Rand.cs:4</a></div></div>
+<div class="ttc" id="aclassRand_html_a6cc0599974b496e07844cbeb25e755ad"><div class="ttname"><a href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Rand.Range</a></div><div class="ttdeci">static int Range(int min, int max)</div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00042">Rand.cs:42</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00480">BiomeProfile.Cluster.BaseItem.chance</a>, <a class="el" href="Cell_8cs_source.html#l00225">Cell.growth</a>, <a class="el" href="Cell_8cs_source.html#l00643">Cell.HasBlock</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00490">BiomeProfile.Cluster.Item.idObj</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00492">BiomeProfile.Cluster.Item.IsSpawnOnBlock</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00540">BiomeProfile.ClusterObj.items</a>, <a class="el" href="EScriptable_8cs_source.html#l00005">EScriptable.rnd()</a>, <a class="el" href="Point_8cs_source.html#l00903">Point.SetObj()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00239">GrowSystem.SetRandomStage()</a>, and <a class="el" href="Cell_8cs_source.html#l01072">Cell.sourceObj</a>.</p>
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l00225">Cell.growth</a>, <a class="el" href="Cell_8cs_source.html#l00643">Cell.HasBlock</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00540">BiomeProfile.ClusterObj.items</a>, <a class="el" href="Rand_8cs_source.html#l00042">Rand.Range()</a>, <a class="el" href="EScriptable_8cs_source.html#l00005">EScriptable.rnd()</a>, <a class="el" href="Point_8cs_source.html#l00903">Point.SetObj()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00239">GrowSystem.SetRandomStage()</a>, and <a class="el" href="Cell_8cs_source.html#l01072">Cell.sourceObj</a>.</p>
 
 </div>
 </div>

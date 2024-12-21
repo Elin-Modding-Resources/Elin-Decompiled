@@ -234,9 +234,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerImage_8cs_source.html#l00055">55</a> of file <a class="el" href="LayerImage_8cs_source.html">LayerImage.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        EInput.Consume(2);</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>(2);</div>
 <div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
+<div class="ttc" id="aclassEInput_html_a37ae393407e04100c89ce0578ee5f726"><div class="ttname"><a href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">EInput.Consume</a></div><div class="ttdeci">static void Consume(int _skipFrame)</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00656">EInput.cs:656</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="EInput_8cs_source.html#l00656">EInput.Consume()</a>.</p>
+
 </div>
 </div>
 <a id="a71143726f484d08cb590dba58b8f1de5" name="a71143726f484d08cb590dba58b8f1de5"></a>
@@ -264,22 +268,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerImage_8cs_source.html#l00027">27</a> of file <a class="el" href="LayerImage_8cs_source.html">LayerImage.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (EInput.wheel != 0)</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a0e9d56f4beb93728d627ceb867e1feb4">wheel</a> != 0)</div>
 <div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            <a class="code hl_function" href="classLayerImage.html#a723b86c308c752bf06a932af9fbcf64b">Zoom</a>((EInput.wheel &gt; 0) ? 0.25f : (-0.25f));</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_function" href="classLayerImage.html#a723b86c308c752bf06a932af9fbcf64b">Zoom</a>((<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a0e9d56f4beb93728d627ceb867e1feb4">wheel</a> &gt; 0) ? 0.25f : (-0.25f));</div>
 <div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (EInput.middleMouse.clicked)</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a27401c30d8046080a3fe380a0a99450d">middleMouse</a>.<a class="code hl_variable" href="classButtonState.html#a3e4c86be0bfb79ff8fb68640b05584f3">clicked</a>)</div>
 <div class="line"><span class="lineno">   34</span>        {</div>
 <div class="line"><span class="lineno">   35</span>            <a class="code hl_variable" href="classLayerImage.html#a0f5cc5c2c91a7acef96df60cd02cf50c">image</a>.SetNativeSize();</div>
 <div class="line"><span class="lineno">   36</span>            <a class="code hl_variable" href="classLayerImage.html#a706204911e86d35257066b69ee21e5f4">zoom</a> = 1f;</div>
 <div class="line"><span class="lineno">   37</span>            <a class="code hl_function" href="classLayerImage.html#a723b86c308c752bf06a932af9fbcf64b">Zoom</a>(0f);</div>
 <div class="line"><span class="lineno">   38</span>        }</div>
 <div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassButtonState_html_a3e4c86be0bfb79ff8fb68640b05584f3"><div class="ttname"><a href="classButtonState.html#a3e4c86be0bfb79ff8fb68640b05584f3">ButtonState.clicked</a></div><div class="ttdeci">bool clicked</div><div class="ttdef"><b>Definition:</b> <a href="ButtonState_8cs_source.html#l00037">ButtonState.cs:37</a></div></div>
+<div class="ttc" id="aclassEInput_html_a0e9d56f4beb93728d627ceb867e1feb4"><div class="ttname"><a href="classEInput.html#a0e9d56f4beb93728d627ceb867e1feb4">EInput.wheel</a></div><div class="ttdeci">static int wheel</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00289">EInput.cs:289</a></div></div>
+<div class="ttc" id="aclassEInput_html_a27401c30d8046080a3fe380a0a99450d"><div class="ttname"><a href="classEInput.html#a27401c30d8046080a3fe380a0a99450d">EInput.middleMouse</a></div><div class="ttdeci">static ButtonState middleMouse</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00353">EInput.cs:353</a></div></div>
 <div class="ttc" id="aclassLayerImage_html_a0f5cc5c2c91a7acef96df60cd02cf50c"><div class="ttname"><a href="classLayerImage.html#a0f5cc5c2c91a7acef96df60cd02cf50c">LayerImage.image</a></div><div class="ttdeci">Image image</div><div class="ttdef"><b>Definition:</b> <a href="LayerImage_8cs_source.html#l00006">LayerImage.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerImage_html_a706204911e86d35257066b69ee21e5f4"><div class="ttname"><a href="classLayerImage.html#a706204911e86d35257066b69ee21e5f4">LayerImage.zoom</a></div><div class="ttdeci">float zoom</div><div class="ttdef"><b>Definition:</b> <a href="LayerImage_8cs_source.html#l00010">LayerImage.cs:10</a></div></div>
 <div class="ttc" id="aclassLayerImage_html_a723b86c308c752bf06a932af9fbcf64b"><div class="ttname"><a href="classLayerImage.html#a723b86c308c752bf06a932af9fbcf64b">LayerImage.Zoom</a></div><div class="ttdeci">void Zoom(float a)</div><div class="ttdef"><b>Definition:</b> <a href="LayerImage_8cs_source.html#l00041">LayerImage.cs:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerImage_8cs_source.html#l00006">image</a>, <a class="el" href="LayerImage_8cs_source.html#l00010">zoom</a>, and <a class="el" href="LayerImage_8cs_source.html#l00041">Zoom()</a>.</p>
+<p class="reference">References <a class="el" href="ButtonState_8cs_source.html#l00037">ButtonState.clicked</a>, <a class="el" href="LayerImage_8cs_source.html#l00006">image</a>, <a class="el" href="EInput_8cs_source.html#l00353">EInput.middleMouse</a>, <a class="el" href="EInput_8cs_source.html#l00289">EInput.wheel</a>, <a class="el" href="LayerImage_8cs_source.html#l00010">zoom</a>, and <a class="el" href="LayerImage_8cs_source.html#l00041">Zoom()</a>.</p>
 
 </div>
 </div>

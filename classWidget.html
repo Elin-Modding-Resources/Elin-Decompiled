@@ -109,6 +109,7 @@ Inheritance diagram for Widget:</div>
   <img src="classWidget.png" usemap="#Widget_map" alt=""/>
   <map id="Widget_map" name="Widget_map">
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,148,80"/>
+<area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="158,56,306,80"/>
 <area href="classBaseWidgetNotice.html" alt="BaseWidgetNotice" shape="rect" coords="316,168,464,192"/>
 <area href="classWidgetArtTool.html" alt="WidgetArtTool" shape="rect" coords="316,224,464,248"/>
 <area href="classWidgetBottomBar.html" alt="WidgetBottomBar" shape="rect" coords="316,280,464,304"/>
@@ -192,9 +193,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acff238f1edde59feb5b454e873c0cec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07afdbb7e0dc8eb844f4b5d3a4cce37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37">OnManagerDeactivate</a> ()</td></tr>
 <tr class="separator:af07afdbb7e0dc8eb844f4b5d3a4cce37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (RectPosition p)</td></tr>
+<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a16f8971a6cd0e4f2c64efdc9c62f2406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d181e100a013722ca36a1765865a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (RectPosition p)</td></tr>
+<tr class="memitem:a82d181e100a013722ca36a1765865a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a82d181e100a013722ca36a1765865a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8fe1c734b47957816912262c78a5b38"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad8fe1c734b47957816912262c78a5b38">OnChangePivot</a> ()</td></tr>
 <tr class="separator:ad8fe1c734b47957816912262c78a5b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,6 +249,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
+<tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -462,7 +465,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  240</span>        }</div>
 <div class="line"><span class="lineno">  241</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  242</span>        {</div>
-<div class="line"><span class="lineno">  243</span>            dragPanel.autoAnchor = config.userAnchor == RectPosition.Auto;</div>
+<div class="line"><span class="lineno">  243</span>            dragPanel.autoAnchor = config.userAnchor == <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto;</div>
 <div class="line"><span class="lineno">  244</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> != 0)</div>
 <div class="line"><span class="lineno">  245</span>            {</div>
 <div class="line"><span class="lineno">  246</span>                <a class="code hl_variable" href="classWidget.html#ae0c5df8474492431c11f08c1c84d4992">_rect</a>.SetAnchor(<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a>);</div>
@@ -490,6 +493,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  268</span>        }</div>
 <div class="line"><span class="lineno">  269</span>        <a class="code hl_function" href="classWidget.html#ae9ece0be9b4ac277401b430d7f7b9f92">RefreshOrder</a>();</div>
 <div class="line"><span class="lineno">  270</span>    }</div>
+<div class="ttc" id="aRectPosition_8cs_html_a3710d51f7d4efe0dcd0dc570ee11f623"><div class="ttname"><a href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a></div><div class="ttdeci">RectPosition</div><div class="ttdef"><b>Definition:</b> <a href="RectPosition_8cs_source.html#l00001">RectPosition.cs:2</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a08531cdd93e83f8a4d989c317b723687"><div class="ttname"><a href="classWidget_1_1Config.html#a08531cdd93e83f8a4d989c317b723687">Widget.Config.anchor</a></div><div class="ttdeci">RectPosition anchor</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00041">Widget.cs:41</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a51618db074e0b8b7c8f8120f09a66224"><div class="ttname"><a href="classWidget_1_1Config.html#a51618db074e0b8b7c8f8120f09a66224">Widget.Config.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00053">Widget.cs:53</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a5f86598db1c8b868e34b5d88688841b0"><div class="ttname"><a href="classWidget_1_1Config.html#a5f86598db1c8b868e34b5d88688841b0">Widget.Config.extra</a></div><div class="ttdeci">object extra</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00059">Widget.cs:59</a></div></div>
@@ -763,7 +767,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00442">442</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  443</span>    {</div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classWidget.html#a7b718091e56a015556f0a3acdf02ad50">IsStaticPosition</a> &amp;&amp; <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == RectPosition.Auto)</div>
+<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classWidget.html#a7b718091e56a015556f0a3acdf02ad50">IsStaticPosition</a> &amp;&amp; <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto)</div>
 <div class="line"><span class="lineno">  445</span>        {</div>
 <div class="line"><span class="lineno">  446</span>            Vector3 position = rect.position;</div>
 <div class="line"><span class="lineno">  447</span>            Vector2 vector = <span class="keyword">new</span> Vector2(margin, margin);</div>
@@ -1032,12 +1036,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00575">575</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  576</span>    {</div>
-<div class="line"><span class="lineno">  577</span>        SkinDecoActor skinDecoActor = (deco.actor = Util.Instantiate&lt;SkinDecoActor&gt;(<span class="stringliteral">&quot;UI/Widget/SkinDecoActor&quot;</span>, base.transform));</div>
+<div class="line"><span class="lineno">  577</span>        SkinDecoActor skinDecoActor = (deco.actor = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;SkinDecoActor&gt;(<span class="stringliteral">&quot;UI/Widget/SkinDecoActor&quot;</span>, base.transform));</div>
 <div class="line"><span class="lineno">  578</span>        skinDecoActor.owner = deco;</div>
-<div class="line"><span class="lineno">  579</span>        skinDecoActor.image.sprite = ResourceCache.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Deco/deco&quot;</span> + deco.id);</div>
+<div class="line"><span class="lineno">  579</span>        skinDecoActor.image.sprite = <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Deco/deco&quot;</span> + deco.id);</div>
 <div class="line"><span class="lineno">  580</span>        skinDecoActor.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(deco.x, deco.y);</div>
 <div class="line"><span class="lineno">  581</span>        skinDecoActor.Refresh();</div>
 <div class="line"><span class="lineno">  582</span>    }</div>
+<div class="ttc" id="aclassResourceCache_html"><div class="ttname"><a href="classResourceCache.html">ResourceCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceCache_8cs_source.html#l00019">ResourceCache.cs:20</a></div></div>
+<div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
+<div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00225">Activate()</a>, and <a class="el" href="Widget_8cs_source.html#l00584">AddDeco()</a>.</p>
 
@@ -1068,10 +1075,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00482">482</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  483</span>    {</div>
-<div class="line"><span class="lineno">  484</span>        RectPosition anchor = this.Rect().GetAnchor();</div>
-<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">if</span> (anchor != RectPosition.TopCenter &amp;&amp; anchor != RectPosition.TopLEFT)</div>
+<div class="line"><span class="lineno">  484</span>        <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> anchor = this.Rect().GetAnchor();</div>
+<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">if</span> (anchor != <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.TopCenter &amp;&amp; anchor != <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.TopLEFT)</div>
 <div class="line"><span class="lineno">  486</span>        {</div>
-<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">return</span> anchor == RectPosition.TopRIGHT;</div>
+<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">return</span> anchor == <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.TopRIGHT;</div>
 <div class="line"><span class="lineno">  488</span>        }</div>
 <div class="line"><span class="lineno">  489</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  490</span>    }</div>
@@ -1117,7 +1124,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Scene_8cs_source.html#l00077">Scene.actionMode</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="Widget_8cs_source.html#l00101">Widget.Config.IsInRightMode()</a>, <a class="el" href="EMono_8cs_source.html#l00027">EMono.scene</a>, <a class="el" href="ActionMode_8cs_source.html#l00183">ActionMode.ShowBuildWidgets</a>, and <a class="el" href="Widget_8cs_source.html#l00206">ShowInBuildMode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00473">OnChangeActionMode()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00255">WidgetManager.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00473">OnChangeActionMode()</a>.</p>
 
 </div>
 </div>
@@ -1220,8 +1227,6 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Widget_8cs_source.html#l00216">IsInRightMode()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00128">WidgetManager.OnChangeActionMode()</a>.</p>
-
 </div>
 </div>
 <a id="ad8fe1c734b47957816912262c78a5b38" name="ad8fe1c734b47957816912262c78a5b38"></a>
@@ -1320,6 +1325,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">IChangeResolution</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classWidgetBottomBar.html#a1a6f27e12c3ae683e4d193eee8f8d6e7">WidgetBottomBar</a>, <a class="el" href="classWidgetMainText.html#a9a8930ed56d8f6caba44b0784a0ceecb">WidgetMainText</a>, <a class="el" href="classWidgetMenuPanel.html#ab9c9ac27a1312ec97cbf84c24997961f">WidgetMenuPanel</a>, and <a class="el" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">WidgetSideScreen</a>.</p>
 
@@ -1427,7 +1434,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00330">330</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  331</span>    {</div>
-<div class="line"><span class="lineno">  332</span>        <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a> = Util.Instantiate(<span class="stringliteral">&quot;UI/Widget/CoverWidget&quot;</span>, base.transform).gameObject;</div>
+<div class="line"><span class="lineno">  332</span>        <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<span class="stringliteral">&quot;UI/Widget/CoverWidget&quot;</span>, base.transform).gameObject;</div>
 <div class="line"><span class="lineno">  333</span>        RectTransform rectTransform = <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a>.transform.Rect();</div>
 <div class="line"><span class="lineno">  334</span>        RectTransform rectTransform2 = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.Rect();</div>
 <div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)rectTransform &amp;&amp; (<span class="keywordtype">bool</span>)rectTransform2)</div>
@@ -1439,7 +1446,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  341</span>            rectTransform.sizeDelta = rectTransform2.sizeDelta;</div>
 <div class="line"><span class="lineno">  342</span>        }</div>
 <div class="line"><span class="lineno">  343</span>        UIDragPanel componentInChildren = <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a>.GetComponentInChildren&lt;UIDragPanel&gt;();</div>
-<div class="line"><span class="lineno">  344</span>        componentInChildren.autoAnchor = config.userAnchor == RectPosition.Auto;</div>
+<div class="line"><span class="lineno">  344</span>        componentInChildren.autoAnchor = config.userAnchor == <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto;</div>
 <div class="line"><span class="lineno">  345</span>        componentInChildren.onDrag = <a class="code hl_function" href="classWidget.html#a5e1fe26459166e4a8423656a7e5ce48b">OnChangePosition</a>;</div>
 <div class="line"><span class="lineno">  346</span>        componentInChildren.container = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.container;</div>
 <div class="line"><span class="lineno">  347</span>        componentInChildren.target = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.target;</div>
@@ -1491,8 +1498,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  359</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Widget_8cs_source.html#l00166">goCover</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="LayerWidget_8cs_source.html#l00135">LayerWidget.OnKill()</a>.</p>
 
 </div>
 </div>
@@ -1635,11 +1640,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  279</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (setSiblingAfter != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  281</span>        {</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> item <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.list)</div>
+<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classWidget.html">Widget</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.list)</div>
 <div class="line"><span class="lineno">  283</span>            {</div>
-<div class="line"><span class="lineno">  284</span>                <span class="keywordflow">if</span> (item.GetType() == setSiblingAfter)</div>
+<div class="line"><span class="lineno">  284</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.GetType() == setSiblingAfter)</div>
 <div class="line"><span class="lineno">  285</span>                {</div>
-<div class="line"><span class="lineno">  286</span>                    base.transform.SetSiblingIndex(item.transform.GetSiblingIndex() + 1);</div>
+<div class="line"><span class="lineno">  286</span>                    base.transform.SetSiblingIndex(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.transform.GetSiblingIndex() + 1);</div>
 <div class="line"><span class="lineno">  287</span>                    flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  288</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  289</span>                }</div>
@@ -1650,11 +1655,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  294</span>            base.transform.SetAsFirstSibling();</div>
 <div class="line"><span class="lineno">  295</span>        }</div>
 <div class="line"><span class="lineno">  296</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassWidget_html"><div class="ttname"><a href="classWidget.html">Widget</a></div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00006">Widget.cs:7</a></div></div>
 <div class="ttc" id="aclassWidget_html_a1c419033759d11ef59031ac038af11b1"><div class="ttname"><a href="classWidget.html#a1c419033759d11ef59031ac038af11b1">Widget.SetSiblingAfter</a></div><div class="ttdeci">virtual Type SetSiblingAfter</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00204">Widget.cs:204</a></div></div>
 <div class="ttc" id="aclassWidget_html_a91f2490f483c6d1d492380af8825023b"><div class="ttname"><a href="classWidget.html#a91f2490f483c6d1d492380af8825023b">Widget.AlwaysBottom</a></div><div class="ttdeci">virtual bool AlwaysBottom</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00202">Widget.cs:202</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00202">AlwaysBottom</a>, <a class="el" href="Widget_8cs_source.html#l00204">SetSiblingAfter</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00202">AlwaysBottom</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Widget_8cs_source.html#l00204">SetSiblingAfter</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00225">Activate()</a>, and <a class="el" href="LayerSkinDeco_8cs_source.html#l00142">LayerSkinDeco.OnKill()</a>.</p>
 
@@ -1752,7 +1758,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.SetAnchor </td>
           <td>(</td>
-          <td class="paramtype">RectPosition&#160;</td>
+          <td class="paramtype"><a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1767,7 +1773,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00361">361</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  362</span>    {</div>
 <div class="line"><span class="lineno">  363</span>        config.userAnchor = p;</div>
-<div class="line"><span class="lineno">  364</span>        dragPanel.autoAnchor = p == RectPosition.Auto;</div>
+<div class="line"><span class="lineno">  364</span>        dragPanel.autoAnchor = p == <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto;</div>
 <div class="line"><span class="lineno">  365</span>        <a class="code hl_variable" href="classWidget.html#ae0c5df8474492431c11f08c1c84d4992">_rect</a>.SetAnchor(p);</div>
 <div class="line"><span class="lineno">  366</span>    }</div>
 </div><!-- fragment -->
@@ -1803,7 +1809,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  609</span>    {</div>
 <div class="line"><span class="lineno">  610</span>        UIContextMenu uIContextMenu = m.AddChild(<span class="stringliteral">&quot;anchor&quot;</span>);</div>
 <div class="line"><span class="lineno">  611</span>        SkinConfig cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
-<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">foreach</span> (RectPosition p2 <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
+<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p2 <span class="keywordflow">in</span> <a class="code hl_class" href="classUtil.html">Util</a>.EnumToList&lt;<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>&gt;())</div>
 <div class="line"><span class="lineno">  613</span>        {</div>
 <div class="line"><span class="lineno">  614</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
 <div class="line"><span class="lineno">  615</span>            {</div>
@@ -1813,7 +1819,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  619</span>            });</div>
 <div class="line"><span class="lineno">  620</span>        }</div>
 <div class="line"><span class="lineno">  621</span>        uIContextMenu = m.AddChild(<span class="stringliteral">&quot;pivot&quot;</span>);</div>
-<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">foreach</span> (RectPosition p <span class="keywordflow">in</span> Util.EnumToList&lt;RectPosition&gt;())</div>
+<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p <span class="keywordflow">in</span> <a class="code hl_class" href="classUtil.html">Util</a>.EnumToList&lt;<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>&gt;())</div>
 <div class="line"><span class="lineno">  623</span>        {</div>
 <div class="line"><span class="lineno">  624</span>            uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
 <div class="line"><span class="lineno">  625</span>            {</div>
@@ -1971,7 +1977,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.SetPivot </td>
           <td>(</td>
-          <td class="paramtype">RectPosition&#160;</td>
+          <td class="paramtype"><a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1990,28 +1996,28 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  372</span>        Vector3 position = base.transform.position;</div>
 <div class="line"><span class="lineno">  373</span>        <span class="keywordflow">switch</span> (p)</div>
 <div class="line"><span class="lineno">  374</span>        {</div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">case</span> RectPosition.TopCenter:</div>
+<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.TopCenter:</div>
 <div class="line"><span class="lineno">  376</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(0.5f, 1f);</div>
 <div class="line"><span class="lineno">  377</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">case</span> RectPosition.BottomCenter:</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.BottomCenter:</div>
 <div class="line"><span class="lineno">  379</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(0.5f, 0f);</div>
 <div class="line"><span class="lineno">  380</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">case</span> RectPosition.TopLEFT:</div>
+<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.TopLEFT:</div>
 <div class="line"><span class="lineno">  382</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(0f, 1f);</div>
 <div class="line"><span class="lineno">  383</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">case</span> RectPosition.BottomLEFT:</div>
+<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.BottomLEFT:</div>
 <div class="line"><span class="lineno">  385</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(0f, 0f);</div>
 <div class="line"><span class="lineno">  386</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">case</span> RectPosition.TopRIGHT:</div>
+<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.TopRIGHT:</div>
 <div class="line"><span class="lineno">  388</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(1f, 1f);</div>
 <div class="line"><span class="lineno">  389</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">case</span> RectPosition.BottomRIGHT:</div>
+<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.BottomRIGHT:</div>
 <div class="line"><span class="lineno">  391</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(1f, 0f);</div>
 <div class="line"><span class="lineno">  392</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">case</span> RectPosition.Left:</div>
+<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Left:</div>
 <div class="line"><span class="lineno">  394</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(0f, 0.5f);</div>
 <div class="line"><span class="lineno">  395</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordflow">case</span> RectPosition.Right:</div>
+<div class="line"><span class="lineno">  396</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Right:</div>
 <div class="line"><span class="lineno">  397</span>            rectTransform.pivot = <span class="keyword">new</span> Vector2(1f, 0.5f);</div>
 <div class="line"><span class="lineno">  398</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  399</span>        <span class="keywordflow">default</span>:</div>
@@ -2252,7 +2258,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Widget_8cs_source.html#l00156">_rect</a>, and <a class="el" href="Widget_8cs_source.html#l00420">OnUpdateConfig()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00307">Deactivate()</a>, and <a class="el" href="WidgetManager_8cs_source.html#l00136">WidgetManager.UpdateConfigs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00307">Deactivate()</a>.</p>
 
 </div>
 </div>

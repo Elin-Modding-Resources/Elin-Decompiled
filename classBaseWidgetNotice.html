@@ -106,6 +106,7 @@ Inheritance diagram for BaseWidgetNotice:</div>
   <map id="BaseWidgetNotice_map" name="BaseWidgetNotice_map">
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
+<area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
 <area href="classWidgetNotice.html" alt="WidgetNotice" shape="rect" coords="63,224,180,248"/>
 <area href="classWidgetStats.html" alt="WidgetStats" shape="rect" coords="190,224,307,248"/>
   </map>
@@ -158,9 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acff238f1edde59feb5b454e873c0cec5 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07afdbb7e0dc8eb844f4b5d3a4cce37 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37">OnManagerDeactivate</a> ()</td></tr>
 <tr class="separator:af07afdbb7e0dc8eb844f4b5d3a4cce37 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (RectPosition p)</td></tr>
+<tr class="memitem:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406">SetAnchor</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a16f8971a6cd0e4f2c64efdc9c62f2406 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (RectPosition p)</td></tr>
+<tr class="memitem:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a82d181e100a013722ca36a1765865a6f">SetPivot</a> (<a class="el" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p)</td></tr>
 <tr class="separator:a82d181e100a013722ca36a1765865a6f inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8fe1c734b47957816912262c78a5b38 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad8fe1c734b47957816912262c78a5b38">OnChangePivot</a> ()</td></tr>
 <tr class="separator:ad8fe1c734b47957816912262c78a5b38 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +215,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
+<tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -482,7 +485,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
 <div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Add(n);</div>
 <div class="line"><span class="lineno">   83</span>        LayoutGroup layoutGroup = n.<a class="code hl_function" href="classBaseNotification.html#aadaf2a55ea4e15bf578129b267562574">GetLayoutGroup</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>;</div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="classItemNotice.html">ItemNotice</a> itemNotice = Util.Instantiate(n.<a class="code hl_function" href="classBaseNotification.html#a03ad07673672207ae93f4d7a3bfa6b1f">GetMold</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a>, parent ?? layoutGroup.transform);</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="classItemNotice.html">ItemNotice</a> itemNotice = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(n.<a class="code hl_function" href="classBaseNotification.html#a03ad07673672207ae93f4d7a3bfa6b1f">GetMold</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a>, parent ?? layoutGroup.transform);</div>
 <div class="line"><span class="lineno">   85</span>        itemNotice.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.onClick.AddListener(delegate</div>
 <div class="line"><span class="lineno">   86</span>        {</div>
 <div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a> == <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">NoMap</a>)</div>
@@ -531,6 +534,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEMono_html_a9916c61944ad1e7568a4ad90832675a3"><div class="ttname"><a href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">EMono.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00027">EMono.cs:27</a></div></div>
 <div class="ttc" id="aclassItemNotice_html"><div class="ttname"><a href="classItemNotice.html">ItemNotice</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemNotice_8cs_source.html#l00003">ItemNotice.cs:4</a></div></div>
 <div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00077">Scene.cs:77</a></div></div>
+<div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
+<div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Scene_8cs_source.html#l00077">Scene.actionMode</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00017">activating</a>, <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00028">BaseNotification.GetLayoutGroup()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00023">BaseNotification.GetMold()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00015">BaseNotification.idSprite</a>, <a class="el" href="BaseNotification_8cs_source.html#l00019">BaseNotification.Interactable</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">layout</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00015">mold</a>, <a class="el" href="ActionMode_8cs_source.html#l00025">ActionMode.NoMap</a>, <a class="el" href="BaseNotification_8cs_source.html#l00061">BaseNotification.OnInstantiate()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00021">BaseNotification.onShowTooltip</a>, <a class="el" href="BaseNotification_8cs_source.html#l00033">BaseNotification.Refresh()</a>, <a class="el" href="EMono_8cs_source.html#l00027">EMono.scene</a>, <a class="el" href="BaseNotification_8cs_source.html#l00013">BaseNotification.Sprite</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00007">sprites</a>.</p>
 
@@ -821,15 +826,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
 <div class="line"><span class="lineno">  145</span>        SkinAsset_Button button = GetComponent&lt;SkinRoot&gt;().Config.Button;</div>
 <div class="line"><span class="lineno">  146</span>        <span class="keywordtype">int</span> y = button.size.y;</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
 <div class="line"><span class="lineno">  148</span>        {</div>
-<div class="line"><span class="lineno">  149</span>            RectTransform rectTransform = item.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.Rect();</div>
+<div class="line"><span class="lineno">  149</span>            RectTransform rectTransform = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.item.Rect();</div>
 <div class="line"><span class="lineno">  150</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x, y);</div>
 <div class="line"><span class="lineno">  151</span>        }</div>
 <div class="line"><span class="lineno">  152</span>        layout.spacing = button.spacing.y;</div>
 <div class="line"><span class="lineno">  153</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseNotification_8cs_source.html#l00007">BaseNotification.item</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00155">OnApplySkin()</a>.</p>
 

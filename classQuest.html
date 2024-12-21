@@ -572,8 +572,6 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  696</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  697</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>.</p>
-
 </div>
 </div>
 <a id="a52a40ae32e2d7dbea5da494677e24212" name="a52a40ae32e2d7dbea5da494677e24212"></a>
@@ -641,8 +639,6 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  318</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  319</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00103">QuestManager.OnShowDialog()</a>.</p>
-
 </div>
 </div>
 <a id="acad9590a4c4f3eb6d619a4590a970e63" name="acad9590a4c4f3eb6d619a4590a970e63"></a>
@@ -850,7 +846,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00239">239</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  240</span>    {</div>
-<div class="line"><span class="lineno">  241</span>        <a class="code hl_class" href="classQuest.html">Quest</a> quest = ClassCache.<a class="code hl_function" href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Create</a>&lt;<a class="code hl_class" href="classQuest.html">Quest</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.map[_id].type.IsEmpty(<span class="stringliteral">&quot;Quest&quot;</span>), <span class="stringliteral">&quot;Elin&quot;</span>);</div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_class" href="classQuest.html">Quest</a> quest = <a class="code hl_class" href="classClassCache.html">ClassCache</a>.Create&lt;<a class="code hl_class" href="classQuest.html">Quest</a>&gt;(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.map[_id].type.IsEmpty(<span class="stringliteral">&quot;Quest&quot;</span>), <span class="stringliteral">&quot;Elin&quot;</span>);</div>
 <div class="line"><span class="lineno">  242</span>        quest.id = _id;</div>
 <div class="line"><span class="lineno">  243</span>        quest.person = <span class="keyword">new</span> <a class="code hl_class" href="classPerson.html">Person</a>(_idPerson);</div>
 <div class="line"><span class="lineno">  244</span>        <span class="keywordflow">if</span> (quest is <a class="code hl_class" href="classQuestDestZone.html">QuestDestZone</a> { IsDeliver: not <span class="keyword">false</span> } questDestZone)</div>
@@ -865,6 +861,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  253</span>        quest.<a class="code hl_function" href="classQuest.html#a665eb12cd8bc28a561a29a13eec1a5d8">Init</a>();</div>
 <div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> quest;</div>
 <div class="line"><span class="lineno">  255</span>    }</div>
+<div class="ttc" id="aclassClassCache_html"><div class="ttname"><a href="classClassCache.html">ClassCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00006">ClassCache.cs:7</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassPerson_html"><div class="ttname"><a href="classPerson.html">Person</a></div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00005">Person.cs:6</a></div></div>
 <div class="ttc" id="aclassQuestDestZone_html"><div class="ttname"><a href="classQuestDestZone.html">QuestDestZone</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDestZone_8cs_source.html#l00003">QuestDestZone.cs:4</a></div></div>
@@ -872,14 +869,13 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassQuest_html_a090fd8b5f245ecb9ba21e0cc9dce4978"><div class="ttname"><a href="classQuest.html#a090fd8b5f245ecb9ba21e0cc9dce4978">Quest.ListDeliver</a></div><div class="ttdeci">static List&lt; Zone &gt; ListDeliver()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00257">Quest.cs:257</a></div></div>
 <div class="ttc" id="aclassQuest_html_a665eb12cd8bc28a561a29a13eec1a5d8"><div class="ttname"><a href="classQuest.html#a665eb12cd8bc28a561a29a13eec1a5d8">Quest.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00333">Quest.cs:333</a></div></div>
 <div class="ttc" id="aclassQuest_html_ad045ae343fd7941a61152f2491c530e6"><div class="ttname"><a href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">Quest.SetClient</a></div><div class="ttdeci">Quest SetClient(Chara c, bool assignQuest=true)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00378">Quest.cs:378</a></div></div>
-<div class="ttc" id="aclassQuest_html_af77068e8fb1546a55b985b222ad255b4"><div class="ttname"><a href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Quest.Create</a></div><div class="ttdeci">static Quest Create(string _id, string _idPerson=null, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00239">Quest.cs:239</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_ae13e44c82dc0772f87c1ad21b9c653f8"><div class="ttname"><a href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">SourceManager.quests</a></div><div class="ttdeci">SourceQuest quests</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00058">SourceManager.cs:58</a></div></div>
 <div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 <div class="ttc" id="aclassZone_html_a0f9bbf3e45710f1a2697d10505618200"><div class="ttname"><a href="classZone.html#a0f9bbf3e45710f1a2697d10505618200">Zone.dictCitizen</a></div><div class="ttdeci">Dictionary&lt; int, string &gt; dictCitizen</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00049">Zone.cs:49</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00239">Create()</a>, <a class="el" href="Zone_8cs_source.html#l00049">Zone.dictCitizen</a>, <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="Quest_8cs_source.html#l00257">ListDeliver()</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, <a class="el" href="Quest_8cs_source.html#l00378">SetClient()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="Zone_8cs_source.html#l00049">Zone.dictCitizen</a>, <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="Quest_8cs_source.html#l00257">ListDeliver()</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, <a class="el" href="Quest_8cs_source.html#l00378">SetClient()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00029">QuestManager.Add()</a>, <a class="el" href="QuestManager_8cs_source.html#l00245">QuestManager.AddQuestAsh()</a>, <a class="el" href="QuestManager_8cs_source.html#l00255">QuestManager.AddQuestFiama()</a>, <a class="el" href="Quest_8cs_source.html#l00239">Create()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00036">QuestDefense.OnChangePhase()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00047">DramaOutcome.OnClaimLand()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00125">QuestCraft.OnComplete()</a>, <a class="el" href="QuestIntroInspector_8cs_source.html#l00003">QuestIntroInspector.OnComplete()</a>, <a class="el" href="QuestSharedContainer_8cs_source.html#l00018">QuestSharedContainer.OnComplete()</a>, <a class="el" href="QuestDialog_8cs_source.html#l00027">QuestDialog.OnDropReward()</a>, <a class="el" href="QuestExploration_8cs_source.html#l00017">QuestExploration.OnStart()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00420">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="QuestManager_8cs_source.html#l00041">QuestManager.Start()</a>, <a class="el" href="Game_8cs_source.html#l00681">Game.StartNewGame()</a>, and <a class="el" href="Zone_8cs_source.html#l03232">Zone.UpdateQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00029">QuestManager.Add()</a>, <a class="el" href="QuestManager_8cs_source.html#l00245">QuestManager.AddQuestAsh()</a>, <a class="el" href="QuestManager_8cs_source.html#l00255">QuestManager.AddQuestFiama()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00036">QuestDefense.OnChangePhase()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00047">DramaOutcome.OnClaimLand()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00125">QuestCraft.OnComplete()</a>, <a class="el" href="QuestIntroInspector_8cs_source.html#l00003">QuestIntroInspector.OnComplete()</a>, <a class="el" href="QuestSharedContainer_8cs_source.html#l00018">QuestSharedContainer.OnComplete()</a>, <a class="el" href="QuestDialog_8cs_source.html#l00027">QuestDialog.OnDropReward()</a>, <a class="el" href="QuestExploration_8cs_source.html#l00017">QuestExploration.OnStart()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00420">LayerCraft.RefreshTrackButton()</a>, <a class="el" href="QuestManager_8cs_source.html#l00041">QuestManager.Start()</a>, <a class="el" href="Game_8cs_source.html#l00681">Game.StartNewGame()</a>, and <a class="el" href="Zone_8cs_source.html#l03232">Zone.UpdateQuests()</a>.</p>
 
 </div>
 </div>
@@ -1235,15 +1231,17 @@ Properties</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00644">644</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  645</span>    {</div>
 <div class="line"><span class="lineno">  646</span>        <span class="keywordtype">string</span> s = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  647</span>        Rand.UseSeed(<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>, delegate</div>
+<div class="line"><span class="lineno">  647</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a830d4d30ba870344c9be961357746a04">UseSeed</a>(<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>, delegate</div>
 <div class="line"><span class="lineno">  648</span>        {</div>
 <div class="line"><span class="lineno">  649</span>            s = <a class="code hl_property" href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">source</a>.GetText(<span class="stringliteral">&quot;detail&quot;</span>).Split(Environment.NewLine.ToCharArray()).RandomItem();</div>
 <div class="line"><span class="lineno">  650</span>        });</div>
 <div class="line"><span class="lineno">  651</span>        <span class="keywordflow">return</span> s.ToTitleCase();</div>
 <div class="line"><span class="lineno">  652</span>    }</div>
 <div class="ttc" id="aclassQuest_html_aeb3bf5e8dca000f28bf64c8ad02308e0"><div class="ttname"><a href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">Quest.source</a></div><div class="ttdeci">SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
+<div class="ttc" id="aclassRand_html"><div class="ttname"><a href="classRand.html">Rand</a></div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00003">Rand.cs:4</a></div></div>
+<div class="ttc" id="aclassRand_html_a830d4d30ba870344c9be961357746a04"><div class="ttname"><a href="classRand.html#a830d4d30ba870344c9be961357746a04">Rand.UseSeed</a></div><div class="ttdeci">static void UseSeed(int seed, Action action)</div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00022">Rand.cs:22</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00107">source</a>, and <a class="el" href="Quest_8cs_source.html#l00034">uid</a>.</p>
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00107">source</a>, <a class="el" href="Quest_8cs_source.html#l00034">uid</a>, and <a class="el" href="Rand_8cs_source.html#l00022">Rand.UseSeed()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00626">GetDetail()</a>.</p>
 
@@ -1502,14 +1500,14 @@ Properties</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00606">606</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  607</span>    {</div>
 <div class="line"><span class="lineno">  608</span>        <span class="keywordtype">string</span> s = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  609</span>        Rand.UseSeed(<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>, delegate</div>
+<div class="line"><span class="lineno">  609</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a830d4d30ba870344c9be961357746a04">UseSeed</a>(<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>, delegate</div>
 <div class="line"><span class="lineno">  610</span>        {</div>
 <div class="line"><span class="lineno">  611</span>            s = <a class="code hl_property" href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">source</a>.GetText().Split(Environment.NewLine.ToCharArray()).RandomItem();</div>
 <div class="line"><span class="lineno">  612</span>        });</div>
 <div class="line"><span class="lineno">  613</span>        <span class="keywordflow">return</span> s;</div>
 <div class="line"><span class="lineno">  614</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00107">source</a>, and <a class="el" href="Quest_8cs_source.html#l00034">uid</a>.</p>
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00107">source</a>, <a class="el" href="Quest_8cs_source.html#l00034">uid</a>, and <a class="el" href="Rand_8cs_source.html#l00022">Rand.UseSeed()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00020">ItemQuestTracker.Refresh()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00102">ContentQuest.SelectQuest()</a>, <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>, <a class="el" href="Quest_8cs_source.html#l00460">ShowCompleteText()</a>, and <a class="el" href="Quest_8cs_source.html#l00683">UpdateJournal()</a>.</p>
 
@@ -1681,8 +1679,6 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  691</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  692</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00233">QuestManager.IsDeliverTarget()</a>.</p>
-
 </div>
 </div>
 <a id="ac6c1e6c3a2f9b07ff30afdde79a9f6a2" name="ac6c1e6c3a2f9b07ff30afdde79a9f6a2"></a>
@@ -2349,7 +2345,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  588</span>        GameLang.refDrama2 = <a class="code hl_property" href="classQuest.html#a29cc236d01c0178103bb8af00d24f1f3">RefDrama2</a>.TagColor(FontColor.QuestObjective);</div>
 <div class="line"><span class="lineno">  589</span>        GameLang.refDrama3 = <a class="code hl_property" href="classQuest.html#a71520a0f753bf095c990a85ba51e1571">RefDrama3</a>.TagColor(FontColor.QuestObjective);</div>
 <div class="line"><span class="lineno">  590</span>        GameLang.refDrama4 = <a class="code hl_property" href="classQuest.html#a985ebc908f9a07dacc8e2b648d953db8">RefDrama4</a>.TagColor(FontColor.QuestObjective);</div>
-<div class="line"><span class="lineno">  591</span>        Rand.UseSeed(<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>, delegate</div>
+<div class="line"><span class="lineno">  591</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a830d4d30ba870344c9be961357746a04">UseSeed</a>(<a class="code hl_variable" href="classQuest.html#a217a870eaef419b26ab35fc5b0805910">uid</a>, delegate</div>
 <div class="line"><span class="lineno">  592</span>        {</div>
 <div class="line"><span class="lineno">  593</span>            s = <a class="code hl_class" href="classGameLang.html">GameLang</a>.<a class="code hl_function" href="classGameLang.html#a3e58d5fcdd3b345d8af675fe08cfa90a">ConvertDrama</a>(s, <a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a>);</div>
 <div class="line"><span class="lineno">  594</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a> != <span class="keyword">null</span>)</div>
@@ -2374,7 +2370,7 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassQuest_html_a71520a0f753bf095c990a85ba51e1571"><div class="ttname"><a href="classQuest.html#a71520a0f753bf095c990a85ba51e1571">Quest.RefDrama3</a></div><div class="ttdeci">virtual string RefDrama3</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00217">Quest.cs:218</a></div></div>
 <div class="ttc" id="aclassQuest_html_a985ebc908f9a07dacc8e2b648d953db8"><div class="ttname"><a href="classQuest.html#a985ebc908f9a07dacc8e2b648d953db8">Quest.RefDrama4</a></div><div class="ttdeci">virtual string RefDrama4</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00229">Quest.cs:229</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l05807">Card.ApplyTone()</a>, <a class="el" href="Quest_8cs_source.html#l00105">chara</a>, <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="Person_8cs_source.html#l00023">Person.gender</a>, <a class="el" href="Quest_8cs_source.html#l00073">person</a>, <a class="el" href="Quest_8cs_source.html#l00194">RefDrama1</a>, <a class="el" href="Quest_8cs_source.html#l00206">RefDrama2</a>, <a class="el" href="Quest_8cs_source.html#l00218">RefDrama3</a>, <a class="el" href="Quest_8cs_source.html#l00229">RefDrama4</a>, <a class="el" href="Person_8cs_source.html#l00017">Person.tones</a>, and <a class="el" href="Quest_8cs_source.html#l00034">uid</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05807">Card.ApplyTone()</a>, <a class="el" href="Quest_8cs_source.html#l00105">chara</a>, <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="Person_8cs_source.html#l00023">Person.gender</a>, <a class="el" href="Quest_8cs_source.html#l00073">person</a>, <a class="el" href="Quest_8cs_source.html#l00194">RefDrama1</a>, <a class="el" href="Quest_8cs_source.html#l00206">RefDrama2</a>, <a class="el" href="Quest_8cs_source.html#l00218">RefDrama3</a>, <a class="el" href="Quest_8cs_source.html#l00229">RefDrama4</a>, <a class="el" href="Person_8cs_source.html#l00017">Person.tones</a>, <a class="el" href="Quest_8cs_source.html#l00034">uid</a>, and <a class="el" href="Rand_8cs_source.html#l00022">Rand.UseSeed()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00626">GetDetail()</a>, <a class="el" href="Quest_8cs_source.html#l00678">GetTalkComplete()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00165">QuestCraft.GetTalkComplete()</a>, and <a class="el" href="Quest_8cs_source.html#l00673">GetTalkProgress()</a>.</p>
 
@@ -2629,7 +2625,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Quest_8cs_source.html#l00565">NextPhase()</a>, and <a class="el" href="Quest_8cs_source.html#l00420">OnClickQuest()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestVernis_8cs_source.html#l00005">QuestVernis.OnEnterZone()</a>, and <a class="el" href="QuestManager_8cs_source.html#l00103">QuestManager.OnShowDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestVernis_8cs_source.html#l00005">QuestVernis.OnEnterZone()</a>.</p>
 
 </div>
 </div>
@@ -2720,7 +2716,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00031">31</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00160">QuestManager.Get()</a>, <a class="el" href="QuestManager_8cs_source.html#l00184">QuestManager.GetGlobal()</a>, <a class="el" href="QuestSequence_8cs_source.html#l00007">QuestSequence.GetTitle()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00125">QuestCraft.OnComplete()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00109">QuestCraft.OnDropReward()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00089">QuestCraft.OnProgressComplete()</a>, and <a class="el" href="QuestCraft_8cs_source.html#l00019">QuestCraft.Req.Req()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00184">QuestManager.GetGlobal()</a>, <a class="el" href="QuestSequence_8cs_source.html#l00007">QuestSequence.GetTitle()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00125">QuestCraft.OnComplete()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00109">QuestCraft.OnDropReward()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00089">QuestCraft.OnProgressComplete()</a>, and <a class="el" href="QuestCraft_8cs_source.html#l00019">QuestCraft.Req.Req()</a>.</p>
 
 </div>
 </div>
@@ -2756,7 +2752,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00064">64</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00201">QuestManager.CountNew()</a>, <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="TCExtra_8cs_source.html#l00067">TCExtra.OnDraw()</a>, and <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="TCExtra_8cs_source.html#l00067">TCExtra.OnDraw()</a>, and <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -2790,7 +2786,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00073">73</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestDeliver_8cs_source.html#l00172">QuestDeliver.CanDeliverToClient()</a>, <a class="el" href="QuestManager_8cs_source.html#l00103">QuestManager.OnShowDialog()</a>, <a class="el" href="Quest_8cs_source.html#l00581">Parse()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00020">ItemQuestTracker.Refresh()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00102">ContentQuest.SelectQuest()</a>, <a class="el" href="Quest_8cs_source.html#l00378">SetClient()</a>, and <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestDeliver_8cs_source.html#l00172">QuestDeliver.CanDeliverToClient()</a>, <a class="el" href="Quest_8cs_source.html#l00581">Parse()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00020">ItemQuestTracker.Refresh()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00102">ContentQuest.SelectQuest()</a>, <a class="el" href="Quest_8cs_source.html#l00378">SetClient()</a>, and <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>.</p>
 
 </div>
 </div>
@@ -2808,7 +2804,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00040">40</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestCompanion_8cs_source.html#l00003">QuestCompanion.CanUpdateOnTalk()</a>, <a class="el" href="QuestCouncil_8cs_source.html#l00003">QuestCouncil.CanUpdateOnTalk()</a>, <a class="el" href="QuestCrafter_8cs_source.html#l00003">QuestCrafter.CanUpdateOnTalk()</a>, <a class="el" href="QuestDebt_8cs_source.html#l00031">QuestDebt.CanUpdateOnTalk()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00007">QuestDefense.CanUpdateOnTalk()</a>, <a class="el" href="QuestExploration_8cs_source.html#l00022">QuestExploration.CanUpdateOnTalk()</a>, <a class="el" href="QuestFiamaLock_8cs_source.html#l00003">QuestFiamaLock.CanUpdateOnTalk()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00003">QuestLoytelFarm.CanUpdateOnTalk()</a>, <a class="el" href="QuestPuppy_8cs_source.html#l00003">QuestPuppy.CanUpdateOnTalk()</a>, <a class="el" href="QuestSharedContainer_8cs_source.html#l00003">QuestSharedContainer.CanUpdateOnTalk()</a>, <a class="el" href="QuestShippingChest_8cs_source.html#l00003">QuestShippingChest.CanUpdateOnTalk()</a>, <a class="el" href="QuestTax_8cs_source.html#l00003">QuestTax.CanUpdateOnTalk()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00042">QuestVernis.CanUpdateOnTalk()</a>, <a class="el" href="Quest_8cs_source.html#l00570">ChangePhase()</a>, <a class="el" href="QuestManager_8cs_source.html#l00132">QuestManager.GetPhase&lt; T &gt;()</a>, <a class="el" href="QuestCompanion_8cs_source.html#l00018">QuestCompanion.GetTextProgress()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00044">QuestDefense.GetTextProgress()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00097">QuestVernis.GetTextProgress()</a>, <a class="el" href="QuestSequence_8cs_source.html#l00007">QuestSequence.GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00565">NextPhase()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00036">QuestDefense.OnChangePhase()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00013">QuestVernis.OnChangePhase()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00005">QuestVernis.OnEnterZone()</a>, and <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00007">Zone_DungeonPuppy.OnGenerateMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestCompanion_8cs_source.html#l00003">QuestCompanion.CanUpdateOnTalk()</a>, <a class="el" href="QuestCouncil_8cs_source.html#l00003">QuestCouncil.CanUpdateOnTalk()</a>, <a class="el" href="QuestCrafter_8cs_source.html#l00003">QuestCrafter.CanUpdateOnTalk()</a>, <a class="el" href="QuestDebt_8cs_source.html#l00031">QuestDebt.CanUpdateOnTalk()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00007">QuestDefense.CanUpdateOnTalk()</a>, <a class="el" href="QuestExploration_8cs_source.html#l00022">QuestExploration.CanUpdateOnTalk()</a>, <a class="el" href="QuestFiamaLock_8cs_source.html#l00003">QuestFiamaLock.CanUpdateOnTalk()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00003">QuestLoytelFarm.CanUpdateOnTalk()</a>, <a class="el" href="QuestPuppy_8cs_source.html#l00003">QuestPuppy.CanUpdateOnTalk()</a>, <a class="el" href="QuestSharedContainer_8cs_source.html#l00003">QuestSharedContainer.CanUpdateOnTalk()</a>, <a class="el" href="QuestShippingChest_8cs_source.html#l00003">QuestShippingChest.CanUpdateOnTalk()</a>, <a class="el" href="QuestTax_8cs_source.html#l00003">QuestTax.CanUpdateOnTalk()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00042">QuestVernis.CanUpdateOnTalk()</a>, <a class="el" href="Quest_8cs_source.html#l00570">ChangePhase()</a>, <a class="el" href="QuestCompanion_8cs_source.html#l00018">QuestCompanion.GetTextProgress()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00044">QuestDefense.GetTextProgress()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00097">QuestVernis.GetTextProgress()</a>, <a class="el" href="QuestSequence_8cs_source.html#l00007">QuestSequence.GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00565">NextPhase()</a>, <a class="el" href="QuestDefense_8cs_source.html#l00036">QuestDefense.OnChangePhase()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00013">QuestVernis.OnChangePhase()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00005">QuestVernis.OnEnterZone()</a>, and <a class="el" href="Zone__DungeonPuppy_8cs_source.html#l00007">Zone_DungeonPuppy.OnGenerateMap()</a>.</p>
 
 </div>
 </div>
@@ -2920,7 +2916,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00070">70</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>, <a class="el" href="ItemQuestTracker_8cs_source.html#l00020">ItemQuestTracker.Refresh()</a>, <a class="el" href="WidgetQuestTracker_8cs_source.html#l00030">WidgetQuestTracker.Refresh()</a>, and <a class="el" href="WidgetQuestTracker_8cs_source.html#l00082">WidgetQuestTracker.TryShow()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>, and <a class="el" href="ItemQuestTracker_8cs_source.html#l00020">ItemQuestTracker.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -2938,7 +2934,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00034">34</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestDeliver_8cs_source.html#l00172">QuestDeliver.CanDeliverToClient()</a>, <a class="el" href="Quest_8cs_source.html#l00466">Complete()</a>, <a class="el" href="QuestInstance_8cs_source.html#l00025">QuestInstance.CreateInstanceZone()</a>, <a class="el" href="Quest_8cs_source.html#l00285">Equals()</a>, <a class="el" href="ZonePreEnterOnCompleteQuestInstance_8cs_source.html#l00011">ZonePreEnterOnCompleteQuestInstance.Execute()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Fail()</a>, <a class="el" href="QuestManager_8cs_source.html#l00172">QuestManager.Get()</a>, <a class="el" href="Quest_8cs_source.html#l00644">GetDetailText()</a>, <a class="el" href="Quest_8cs_source.html#l00606">GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00155">QuestDeliver.IsDeliverTarget()</a>, <a class="el" href="QuestRandom_8cs_source.html#l00015">QuestRandom.OnDropReward()</a>, <a class="el" href="Quest_8cs_source.html#l00581">Parse()</a>, <a class="el" href="QuestManager_8cs_source.html#l00067">QuestManager.Remove()</a>, and <a class="el" href="Zone_8cs_source.html#l03232">Zone.UpdateQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestDeliver_8cs_source.html#l00172">QuestDeliver.CanDeliverToClient()</a>, <a class="el" href="Quest_8cs_source.html#l00466">Complete()</a>, <a class="el" href="QuestInstance_8cs_source.html#l00025">QuestInstance.CreateInstanceZone()</a>, <a class="el" href="Quest_8cs_source.html#l00285">Equals()</a>, <a class="el" href="ZonePreEnterOnCompleteQuestInstance_8cs_source.html#l00011">ZonePreEnterOnCompleteQuestInstance.Execute()</a>, <a class="el" href="Quest_8cs_source.html#l00436">Fail()</a>, <a class="el" href="Quest_8cs_source.html#l00644">GetDetailText()</a>, <a class="el" href="Quest_8cs_source.html#l00606">GetTitle()</a>, <a class="el" href="Quest_8cs_source.html#l00333">Init()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00155">QuestDeliver.IsDeliverTarget()</a>, <a class="el" href="QuestRandom_8cs_source.html#l00015">QuestRandom.OnDropReward()</a>, <a class="el" href="Quest_8cs_source.html#l00581">Parse()</a>, and <a class="el" href="QuestManager_8cs_source.html#l00067">QuestManager.Remove()</a>.</p>
 
 </div>
 </div>
@@ -3061,7 +3057,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00233">233</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00103">QuestManager.OnShowDialog()</a>, and <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -3317,8 +3313,6 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Quest_8cs_source.html#l00185">185</a> of file <a class="el" href="Quest_8cs_source.html">Quest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitTeleporter_8cs_source.html#l00062">TraitTeleporter.TryTeleport()</a>.</p>
-
 </div>
 </div>
 <a id="a36c6becdcd90ebb0a513664a07ef2e5d" name="a36c6becdcd90ebb0a513664a07ef2e5d"></a>
@@ -3440,7 +3434,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  120</span>        }</div>
 <div class="line"><span class="lineno">  121</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00115">QuestManager.OnAdvanceHour()</a>, and <a class="el" href="Zone_8cs_source.html#l03232">Zone.UpdateQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestManager_8cs_source.html#l00115">QuestManager.OnAdvanceHour()</a>.</p>
 
 </div>
 </div>

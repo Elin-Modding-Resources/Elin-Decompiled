@@ -257,15 +257,15 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="MapPiece_8cs_source.html#l00049">49</a> of file <a class="el" href="MapPiece_8cs_source.html">MapPiece.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
 <div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="classMapPiece.html#a75fffc4272a96903992651e44f8a9b44">Init</a>();</div>
-<div class="line"><span class="lineno">   52</span>        Item item = <a class="code hl_variable" href="classMapPiece.html#a7a433cbc0b13d4f3a60b2181f2ea2a67">items</a>.RandomItemWeighted((Item a) =&gt; (a.chance != 0f || !(type.ToString() == a.id)) ? (a.chance * (<span class="keywordtype">float</span>)((type == <a class="code hl_enumeration" href="classMapPiece.html#acfe3f2510fd310cc25d63a3ab81abbc1">Type</a>.Any || type.ToString() == a.id) ? 1 : 0)) : 1f);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (item.paths.Count == 0)</div>
+<div class="line"><span class="lineno">   52</span>        Item <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_variable" href="classMapPiece.html#a7a433cbc0b13d4f3a60b2181f2ea2a67">items</a>.RandomItemWeighted((Item a) =&gt; (a.chance != 0f || !(type.ToString() == a.id)) ? (a.chance * (<span class="keywordtype">float</span>)((type == <a class="code hl_enumeration" href="classMapPiece.html#acfe3f2510fd310cc25d63a3ab81abbc1">Type</a>.Any || type.ToString() == a.id) ? 1 : 0)) : 1f);</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.paths.Count == 0)</div>
 <div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            Debug.Log(<span class="stringliteral">&quot;no path&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;no path&quot;</span>);</div>
 <div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   57</span>        }</div>
 <div class="line"><span class="lineno">   58</span>        <span class="keywordtype">string</span>[] array = (tag.IsEmpty() ? null : tag.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
 <div class="line"><span class="lineno">   59</span>        List&lt;MapPath&gt; list = <span class="keyword">new</span> List&lt;MapPath&gt;();</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">foreach</span> (MapPath path2 <span class="keywordflow">in</span> item.paths)</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">foreach</span> (MapPath path2 <span class="keywordflow">in</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.paths)</div>
 <div class="line"><span class="lineno">   61</span>        {</div>
 <div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (path2.tag.IsEmpty() || (array != <span class="keyword">null</span> &amp;&amp; array.Contains(tag)))</div>
 <div class="line"><span class="lineno">   63</span>            {</div>
@@ -277,7 +277,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   70</span>        }</div>
 <div class="line"><span class="lineno">   71</span>        <span class="keywordtype">string</span> path = list.RandomItem().path;</div>
-<div class="line"><span class="lineno">   72</span>        Debug.Log(<span class="stringliteral">&quot;Loading PartialMap:&quot;</span> + path);</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Loading PartialMap:&quot;</span> + path);</div>
 <div class="line"><span class="lineno">   73</span>        <a class="code hl_class" href="classPartialMap.html">PartialMap</a> partialMap = <a class="code hl_variable" href="classMapPiece.html#a44a0590d1c28e7b516e0041f04933ad1">CacheMap</a>.TryGetValue(path);</div>
 <div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (partialMap == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   75</span>        {</div>
@@ -292,6 +292,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   84</span>        partialMap.ruinChance = ruin;</div>
 <div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> partialMap;</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassEScriptable_html"><div class="ttname"><a href="classEScriptable.html">EScriptable</a></div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00003">EScriptable.cs:4</a></div></div>
 <div class="ttc" id="aclassEScriptable_html_a7e82765e268f34ed86f8407036038ac2"><div class="ttname"><a href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">EScriptable.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00005">EScriptable.cs:5</a></div></div>
 <div class="ttc" id="aclassMapPiece_html_a44a0590d1c28e7b516e0041f04933ad1"><div class="ttname"><a href="classMapPiece.html#a44a0590d1c28e7b516e0041f04933ad1">MapPiece.CacheMap</a></div><div class="ttdeci">static Dictionary&lt; string, PartialMap &gt; CacheMap</div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00043">MapPiece.cs:43</a></div></div>
@@ -302,7 +304,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPartialMap_html_a072014e35f90c4623f996c9a162a6faf"><div class="ttname"><a href="classPartialMap.html#a072014e35f90c4623f996c9a162a6faf">PartialMap.allowRotate</a></div><div class="ttdeci">bool allowRotate</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00055">PartialMap.cs:55</a></div></div>
 <div class="ttc" id="aclassPartialMap_html_a912adc5a36d7a14e7a9ae94a92f42375"><div class="ttname"><a href="classPartialMap.html#a912adc5a36d7a14e7a9ae94a92f42375">PartialMap.Load</a></div><div class="ttdeci">static PartialMap Load(string path=null)</div><div class="ttdef"><b>Definition:</b> <a href="PartialMap_8cs_source.html#l00448">PartialMap.cs:448</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PartialMap_8cs_source.html#l00055">PartialMap.allowRotate</a>, <a class="el" href="MapPiece_8cs_source.html#l00043">CacheMap</a>, <a class="el" href="MapPiece_8cs_source.html#l00030">MapPiece.Item.chance</a>, <a class="el" href="MapPiece_8cs_source.html#l00028">MapPiece.Item.id</a>, <a class="el" href="MapPiece_8cs_source.html#l00088">Init()</a>, <a class="el" href="MapPiece_8cs_source.html#l00041">items</a>, <a class="el" href="PartialMap_8cs_source.html#l00448">PartialMap.Load()</a>, <a class="el" href="MapPiece_8cs_source.html#l00034">MapPiece.Item.paths</a>, <a class="el" href="EScriptable_8cs_source.html#l00005">EScriptable.rnd()</a>, and <a class="el" href="MapPiece_8cs_source.html#l00012">MapPiece.MapPath.tag</a>.</p>
+<p class="reference">References <a class="el" href="PartialMap_8cs_source.html#l00055">PartialMap.allowRotate</a>, <a class="el" href="MapPiece_8cs_source.html#l00043">CacheMap</a>, <a class="el" href="MapPiece_8cs_source.html#l00030">MapPiece.Item.chance</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="MapPiece_8cs_source.html#l00028">MapPiece.Item.id</a>, <a class="el" href="MapPiece_8cs_source.html#l00088">Init()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="MapPiece_8cs_source.html#l00041">items</a>, <a class="el" href="PartialMap_8cs_source.html#l00448">PartialMap.Load()</a>, <a class="el" href="EScriptable_8cs_source.html#l00005">EScriptable.rnd()</a>, and <a class="el" href="MapPiece_8cs_source.html#l00012">MapPiece.MapPath.tag</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00183">GenBounds.TryAddMapPiece()</a>.</p>
 
@@ -337,17 +339,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>        {</div>
 <div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">foreach</span> (Item item <span class="keywordflow">in</span> <a class="code hl_variable" href="classMapPiece.html#a7a433cbc0b13d4f3a60b2181f2ea2a67">items</a>)</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">foreach</span> (Item <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classMapPiece.html#a7a433cbc0b13d4f3a60b2181f2ea2a67">items</a>)</div>
 <div class="line"><span class="lineno">   95</span>        {</div>
-<div class="line"><span class="lineno">   96</span>            item.paths.Clear();</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">string</span>[] files = Directory.GetFiles(CorePath.MapPieceSave + item.id, <span class="stringliteral">&quot;*&quot;</span>, SearchOption.AllDirectories);</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.paths.Clear();</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">string</span>[] files = Directory.GetFiles(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#aaee62bfe34a3fa2bf775a8bea8b5879d">MapPieceSave</a> + <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id, <span class="stringliteral">&quot;*&quot;</span>, SearchOption.AllDirectories);</div>
 <div class="line"><span class="lineno">   98</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> files)</div>
 <div class="line"><span class="lineno">   99</span>            {</div>
 <div class="line"><span class="lineno">  100</span>                <span class="keywordflow">if</span> (text.EndsWith(<span class="stringliteral">&quot;mp&quot;</span>))</div>
 <div class="line"><span class="lineno">  101</span>                {</div>
 <div class="line"><span class="lineno">  102</span>                    DirectoryInfo directory = <span class="keyword">new</span> FileInfo(text).Directory;</div>
-<div class="line"><span class="lineno">  103</span>                    <span class="keywordtype">string</span> tag = ((directory.Parent.Name != item.id) ? <span class="stringliteral">&quot;&quot;</span> : directory.Name);</div>
-<div class="line"><span class="lineno">  104</span>                    item.paths.Add(<span class="keyword">new</span> MapPath</div>
+<div class="line"><span class="lineno">  103</span>                    <span class="keywordtype">string</span> tag = ((directory.Parent.Name != <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) ? <span class="stringliteral">&quot;&quot;</span> : directory.Name);</div>
+<div class="line"><span class="lineno">  104</span>                    <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.paths.Add(<span class="keyword">new</span> MapPath</div>
 <div class="line"><span class="lineno">  105</span>                    {</div>
 <div class="line"><span class="lineno">  106</span>                        path = text,</div>
 <div class="line"><span class="lineno">  107</span>                        tag = tag</div>
@@ -357,9 +359,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  111</span>        }</div>
 <div class="line"><span class="lineno">  112</span>        <a class="code hl_variable" href="classMapPiece.html#a6f86e83624fb98f43df67bc3d7946567">initialized</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
+<div class="ttc" id="aclassCorePath_html_aaee62bfe34a3fa2bf775a8bea8b5879d"><div class="ttname"><a href="classCorePath.html#aaee62bfe34a3fa2bf775a8bea8b5879d">CorePath.MapPieceSave</a></div><div class="ttdeci">static string MapPieceSave</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00197">CorePath.cs:197</a></div></div>
 <div class="ttc" id="aclassMapPiece_html_a6f86e83624fb98f43df67bc3d7946567"><div class="ttname"><a href="classMapPiece.html#a6f86e83624fb98f43df67bc3d7946567">MapPiece.initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="MapPiece_8cs_source.html#l00039">MapPiece.cs:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MapPiece_8cs_source.html#l00028">MapPiece.Item.id</a>, <a class="el" href="MapPiece_8cs_source.html#l00039">initialized</a>, <a class="el" href="MapPiece_8cs_source.html#l00041">items</a>, and <a class="el" href="MapPiece_8cs_source.html#l00034">MapPiece.Item.paths</a>.</p>
+<p class="reference">References <a class="el" href="MapPiece_8cs_source.html#l00039">initialized</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="MapPiece_8cs_source.html#l00041">items</a>, and <a class="el" href="CorePath_8cs_source.html#l00197">CorePath.MapPieceSave</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MapPiece_8cs_source.html#l00049">GetMap()</a>.</p>
 

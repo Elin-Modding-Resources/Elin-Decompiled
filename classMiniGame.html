@@ -165,7 +165,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa9078eeeb3d0845470479b54b97b7538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029cc7803f3adfd89b4e736136cbda00"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a></td></tr>
 <tr class="separator:a029cc7803f3adfd89b4e736136cbda00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5984df8380fd9f404bdd311f798aefda"><td class="memItemLeft" align="right" valign="top">AssetBundle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a></td></tr>
+<tr class="memitem:a5984df8380fd9f404bdd311f798aefda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5ae8cbe8f681e78018c49cfb82158030d8">AssetBundle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a></td></tr>
 <tr class="separator:a5984df8380fd9f404bdd311f798aefda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a131b3e551cd419f283fd224cdd266401"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">path</a></td></tr>
 <tr class="separator:a131b3e551cd419f283fd224cdd266401"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,7 +256,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   51</span>        {</div>
 <div class="line"><span class="lineno">   52</span>            <a class="code hl_variable" href="classMiniGame.html#a71d101e6c95e17f1767c7e00d2f980cf">minigames</a>.Add(<span class="stringliteral">&quot;Blackjack&quot;</span>, <span class="keyword">new</span> <a class="code hl_class" href="classMiniGame__Blackjack.html">MiniGame_Blackjack</a>());</div>
 <div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        Debug.Log(<span class="stringliteral">&quot;Activating:&quot;</span> + type);</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Activating:&quot;</span> + type);</div>
 <div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="classMiniGame.html">MiniGame</a> miniGame = <a class="code hl_variable" href="classMiniGame.html#a71d101e6c95e17f1767c7e00d2f980cf">minigames</a>.TryGetValue(type.ToString());</div>
 <div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (miniGame == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   57</span>        {</div>
@@ -265,14 +265,15 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   61</span>        }</div>
 <div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classLayerMiniGame.html">LayerMiniGame</a> layerMiniGame = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerMiniGame.html">LayerMiniGame</a>&gt;();</div>
-<div class="line"><span class="lineno">   63</span>        Debug.Log(layerMiniGame);</div>
-<div class="line"><span class="lineno">   64</span>        Debug.Log(miniGame);</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(layerMiniGame);</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(miniGame);</div>
 <div class="line"><span class="lineno">   65</span>        miniGame.balance = <span class="keyword">new</span> Balance();</div>
 <div class="line"><span class="lineno">   66</span>        layerMiniGame.mini = miniGame;</div>
 <div class="line"><span class="lineno">   67</span>        layerMiniGame.type = type;</div>
-<div class="line"><span class="lineno">   68</span>        Debug.Log(<span class="stringliteral">&quot;aaa&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;aaa&quot;</span>);</div>
 <div class="line"><span class="lineno">   69</span>        layerMiniGame.<a class="code hl_function" href="classLayerMiniGame.html#af0cc4ac8a642f69d7b312bd92cbb22e0">Run</a>();</div>
 <div class="line"><span class="lineno">   70</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00030">EClass.cs:30</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
@@ -286,7 +287,7 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
 <div class="ttc" id="aclassScene_html_a76e64af9460b76839584210b8b343447"><div class="ttname"><a href="classScene.html#a76e64af9460b76839584210b8b343447">Scene.TryWarnLinuxMod</a></div><div class="ttdeci">void TryWarnLinuxMod()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00157">Scene.cs:157</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00023">minigames</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00055">LayerMiniGame.Run()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="EClass_8cs_source.html#l00030">EClass.scene</a>, <a class="el" href="Scene_8cs_source.html#l00157">Scene.TryWarnLinuxMod()</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="MiniGame_8cs_source.html#l00023">minigames</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00055">LayerMiniGame.Run()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="EClass_8cs_source.html#l00030">EClass.scene</a>, <a class="el" href="Scene_8cs_source.html#l00157">Scene.TryWarnLinuxMod()</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitBasketGame_8cs_source.html#l00003">TraitBasketGame.OnActivateTrap()</a>, <a class="el" href="TraitBJTable_8cs_source.html#l00005">TraitBJTable.OnUse()</a>, <a class="el" href="TraitSlotMachine_8cs_source.html#l00010">TraitSlotMachine.OnUse()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00823">CoreDebug.UpdateInput()</a>.</p>
 
@@ -350,8 +351,8 @@ Properties</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="MiniGame_8cs_source.html#l00084">84</a> of file <a class="el" href="MiniGame_8cs_source.html">MiniGame.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
 <div class="line"><span class="lineno">   86</span>        <a class="code hl_function" href="classMiniGame.html#abbecef084a95542383bf8f6ce178e13d">OnDeactivate</a>();</div>
-<div class="line"><span class="lineno">   87</span>        Debug.Log(<a class="code hl_variable" href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">balance</a>.<a class="code hl_variable" href="classMiniGame_1_1Balance.html#acbc87a54916231a8634b866458d0eb98">lastCoin</a>);</div>
-<div class="line"><span class="lineno">   88</span>        Debug.Log(<a class="code hl_variable" href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">balance</a>.<a class="code hl_variable" href="classMiniGame_1_1Balance.html#a8833567ed4c9713c3c55696db7ef2b43">changeCoin</a>);</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">balance</a>.<a class="code hl_variable" href="classMiniGame_1_1Balance.html#acbc87a54916231a8634b866458d0eb98">lastCoin</a>);</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">balance</a>.<a class="code hl_variable" href="classMiniGame_1_1Balance.html#a8833567ed4c9713c3c55696db7ef2b43">changeCoin</a>);</div>
 <div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">balance</a>.<a class="code hl_variable" href="classMiniGame_1_1Balance.html#a8833567ed4c9713c3c55696db7ef2b43">changeCoin</a> != 0)</div>
 <div class="line"><span class="lineno">   90</span>        {</div>
 <div class="line"><span class="lineno">   91</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(<a class="code hl_variable" href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">balance</a>.<a class="code hl_variable" href="classMiniGame_1_1Balance.html#a8833567ed4c9713c3c55696db7ef2b43">changeCoin</a>, <span class="stringliteral">&quot;casino_coin&quot;</span>);</div>
@@ -370,7 +371,7 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassMiniGame_html_aa9078eeeb3d0845470479b54b97b7538"><div class="ttname"><a href="classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538">MiniGame.balance</a></div><div class="ttdeci">Balance balance</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00025">MiniGame.cs:25</a></div></div>
 <div class="ttc" id="aclassMiniGame_html_abbecef084a95542383bf8f6ce178e13d"><div class="ttname"><a href="classMiniGame.html#abbecef084a95542383bf8f6ce178e13d">MiniGame.OnDeactivate</a></div><div class="ttdeci">virtual void OnDeactivate()</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00076">MiniGame.cs:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00025">balance</a>, <a class="el" href="MiniGame_8cs_source.html#l00011">MiniGame.Balance.changeCoin</a>, <a class="el" href="MiniGame_8cs_source.html#l00009">MiniGame.Balance.lastCoin</a>, <a class="el" href="Card_8cs_source.html#l03438">Card.ModCurrency()</a>, <a class="el" href="MiniGame_8cs_source.html#l00076">OnDeactivate()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00025">balance</a>, <a class="el" href="MiniGame_8cs_source.html#l00011">MiniGame.Balance.changeCoin</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="MiniGame_8cs_source.html#l00009">MiniGame.Balance.lastCoin</a>, <a class="el" href="Card_8cs_source.html#l03438">Card.ModCurrency()</a>, <a class="el" href="MiniGame_8cs_source.html#l00076">OnDeactivate()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerMiniGame_8cs_source.html#l00069">LayerMiniGame.OnKill()</a>.</p>
 
@@ -453,7 +454,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  155</span>        {</div>
 <div class="line"><span class="lineno">  156</span>            <span class="keywordtype">id</span> = <span class="keyword">new</span> <span class="keywordtype">string</span>[6] { <span class="stringliteral">&quot;ehe&quot;</span>, <span class="stringliteral">&quot;wild&quot;</span>, <span class="stringliteral">&quot;cat&quot;</span>, <span class="stringliteral">&quot;larnneire&quot;</span>, <span class="stringliteral">&quot;lomias&quot;</span>, <span class="stringliteral">&quot;bread&quot;</span> }.RandomItem();</div>
-<div class="line"><span class="lineno">  157</span>            Debug.Log(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">  158</span>        }</div>
 <div class="line"><span class="lineno">  159</span>        <a class="code hl_class" href="classThing.html">Thing</a> c = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;casino_coin&quot;</span>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(pay * bet);</div>
 <div class="line"><span class="lineno">  160</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;slot_win&quot;</span>, c);</div>
@@ -463,7 +464,7 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, and <a class="el" href="Card_8cs_source.html#l03143">Card.SetNum()</a>.</p>
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, and <a class="el" href="Card_8cs_source.html#l03143">Card.SetNum()</a>.</p>
 
 </div>
 </div>
@@ -637,12 +638,12 @@ Properties</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
 <div class="line"><span class="lineno">   39</span>        g.path = <span class="keyword">new</span> FileInfo(_path).DirectoryName;</div>
 <div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="classMiniGame.html#a71d101e6c95e17f1767c7e00d2f980cf">minigames</a>[<a class="code hl_property" href="classMiniGame.html#a4146f72c61e7109de04bfbf3e6c165f6">id</a>] = g;</div>
-<div class="line"><span class="lineno">   41</span>        Debug.Log(<span class="stringliteral">&quot;Registered:&quot;</span> + g?.ToString() + <span class="stringliteral">&quot; at &quot;</span> + g.<a class="code hl_variable" href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">path</a>);</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Registered:&quot;</span> + g?.ToString() + <span class="stringliteral">&quot; at &quot;</span> + g.<a class="code hl_variable" href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">path</a>);</div>
 <div class="line"><span class="lineno">   42</span>    }</div>
 <div class="ttc" id="aclassMiniGame_html_a131b3e551cd419f283fd224cdd266401"><div class="ttname"><a href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">MiniGame.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00031">MiniGame.cs:31</a></div></div>
 <div class="ttc" id="aclassMiniGame_html_a4146f72c61e7109de04bfbf3e6c165f6"><div class="ttname"><a href="classMiniGame.html#a4146f72c61e7109de04bfbf3e6c165f6">MiniGame.id</a></div><div class="ttdeci">virtual string id</div><div class="ttdef"><b>Definition:</b> <a href="MiniGame_8cs_source.html#l00035">MiniGame.cs:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MiniGame_8cs_source.html#l00035">id</a>, <a class="el" href="MiniGame_8cs_source.html#l00023">minigames</a>, and <a class="el" href="MiniGame_8cs_source.html#l00031">path</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="MiniGame_8cs_source.html#l00035">id</a>, <a class="el" href="MiniGame_8cs_source.html#l00023">minigames</a>, and <a class="el" href="MiniGame_8cs_source.html#l00031">path</a>.</p>
 
 </div>
 </div>
@@ -759,7 +760,7 @@ Properties</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">AssetBundle MiniGame.asset</td>
+          <td class="memname"><a class="el" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5ae8cbe8f681e78018c49cfb82158030d8">AssetBundle</a> MiniGame.asset</td>
         </tr>
       </table>
 </div><div class="memdoc">

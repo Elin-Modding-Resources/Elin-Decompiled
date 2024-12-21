@@ -242,7 +242,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  448</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  449</span>            }</div>
 <div class="line"><span class="lineno">  450</span>            <span class="keywordtype">bool</span> flag = row.lang == <span class="stringliteral">&quot;JP&quot;</span> || row.lang == <span class="stringliteral">&quot;CN&quot;</span>;</div>
-<div class="line"><span class="lineno">  451</span>            <span class="keywordtype">string</span> langCode = Lang.langCode;</div>
+<div class="line"><span class="lineno">  451</span>            <span class="keywordtype">string</span> langCode = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>;</div>
 <div class="line"><span class="lineno">  452</span>            <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span> || langCode == <span class="stringliteral">&quot;CN&quot;</span>)</div>
 <div class="line"><span class="lineno">  453</span>            {</div>
 <div class="line"><span class="lineno">  454</span>                <span class="keywordflow">return</span> flag;</div>
@@ -251,8 +251,10 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  457</span>        }</div>
 <div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a090c244be8008cefd203291380ba4cbc"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a090c244be8008cefd203291380ba4cbc">CoreConfig.BackerContentConfig.FilterNone</a></div><div class="ttdeci">bool FilterNone</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00429">CoreConfig.cs:429</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a7cf341c52b2d2c57f023672b9b3d7bbf"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a7cf341c52b2d2c57f023672b9b3d7bbf">CoreConfig.BackerContentConfig.FilterAll</a></div><div class="ttdeci">bool FilterAll</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00425">CoreConfig.cs:425</a></div></div>
+<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
+<div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00028">Lang.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00425">CoreConfig.BackerContentConfig.FilterAll</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00429">CoreConfig.BackerContentConfig.FilterNone</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00425">CoreConfig.BackerContentConfig.FilterAll</a>, <a class="el" href="CoreConfig_8cs_source.html#l00429">CoreConfig.BackerContentConfig.FilterNone</a>, and <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>.</p>
 
 </div>
 </div>
@@ -291,7 +293,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  467</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  468</span>            }</div>
 <div class="line"><span class="lineno">  469</span>            <span class="keywordtype">bool</span> flag = <a class="code hl_function" href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">IsJapanese</a>(s);</div>
-<div class="line"><span class="lineno">  470</span>            <span class="keywordtype">string</span> langCode = Lang.langCode;</div>
+<div class="line"><span class="lineno">  470</span>            <span class="keywordtype">string</span> langCode = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>;</div>
 <div class="line"><span class="lineno">  471</span>            <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span> || langCode == <span class="stringliteral">&quot;CN&quot;</span>)</div>
 <div class="line"><span class="lineno">  472</span>            {</div>
 <div class="line"><span class="lineno">  473</span>                <span class="keywordflow">return</span> flag;</div>
@@ -300,7 +302,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  476</span>        }</div>
 <div class="ttc" id="aclassCoreConfig_1_1BackerContentConfig_html_a919864547c4267a1e98f8a73938c74b8"><div class="ttname"><a href="classCoreConfig_1_1BackerContentConfig.html#a919864547c4267a1e98f8a73938c74b8">CoreConfig.BackerContentConfig.IsJapanese</a></div><div class="ttdeci">bool IsJapanese(string text)</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00478">CoreConfig.cs:478</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00425">CoreConfig.BackerContentConfig.FilterAll</a>, <a class="el" href="CoreConfig_8cs_source.html#l00429">CoreConfig.BackerContentConfig.FilterNone</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00478">CoreConfig.BackerContentConfig.IsJapanese()</a>.</p>
+<p class="reference">References <a class="el" href="CoreConfig_8cs_source.html#l00425">CoreConfig.BackerContentConfig.FilterAll</a>, <a class="el" href="CoreConfig_8cs_source.html#l00429">CoreConfig.BackerContentConfig.FilterNone</a>, <a class="el" href="CoreConfig_8cs_source.html#l00478">CoreConfig.BackerContentConfig.IsJapanese()</a>, and <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>.</p>
 
 </div>
 </div>

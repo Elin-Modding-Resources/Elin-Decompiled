@@ -105,17 +105,18 @@ Inheritance diagram for RenderRow:</div>
  <div class="center">
   <img src="classRenderRow.png" usemap="#RenderRow_map" alt=""/>
   <map id="RenderRow_map" name="RenderRow_map">
-<area href="interfaceIRenderSource.html" alt="IRenderSource" shape="rect" coords="365,0,501,24"/>
-<area href="classCardRow.html" alt="CardRow" shape="rect" coords="73,112,209,136"/>
-<area href="classTileRow.html" alt="TileRow" shape="rect" coords="511,112,647,136"/>
-<area href="classSourceChara_1_1Row.html" alt="SourceChara.Row" shape="rect" coords="0,168,136,192"/>
-<area href="classSourceThing_1_1Row.html" alt="SourceThing.Row" shape="rect" coords="146,168,282,192"/>
-<area href="classSourceBlock_1_1Row.html" alt="SourceBlock.Row" shape="rect" coords="292,168,428,192"/>
-<area href="classSourceCellEffect_1_1Row.html" alt="SourceCellEffect.Row" shape="rect" coords="438,168,574,192"/>
-<area href="classSourceFloor_1_1Row.html" alt="SourceFloor.Row" shape="rect" coords="584,168,720,192"/>
-<area href="classSourceObj_1_1Row.html" alt="SourceObj.Row" shape="rect" coords="730,168,866,192"/>
-<area href="classSourceThingV_1_1Row.html" alt="SourceThingV.Row" shape="rect" coords="146,224,282,248"/>
-<area href="classSourceFood_1_1Row2.html" alt="SourceFood.Row2" shape="rect" coords="146,280,282,304"/>
+<area href="classSourceData_1_1BaseRow.html" alt="SourceData&lt; T, T2 &gt;.BaseRow" shape="rect" coords="298,0,487,24"/>
+<area href="interfaceIRenderSource.html" alt="IRenderSource" shape="rect" coords="497,0,686,24"/>
+<area href="classCardRow.html" alt="CardRow" shape="rect" coords="99,112,288,136"/>
+<area href="classTileRow.html" alt="TileRow" shape="rect" coords="696,112,885,136"/>
+<area href="classSourceChara_1_1Row.html" alt="SourceChara.Row" shape="rect" coords="0,168,189,192"/>
+<area href="classSourceThing_1_1Row.html" alt="SourceThing.Row" shape="rect" coords="199,168,388,192"/>
+<area href="classSourceBlock_1_1Row.html" alt="SourceBlock.Row" shape="rect" coords="398,168,587,192"/>
+<area href="classSourceCellEffect_1_1Row.html" alt="SourceCellEffect.Row" shape="rect" coords="597,168,786,192"/>
+<area href="classSourceFloor_1_1Row.html" alt="SourceFloor.Row" shape="rect" coords="796,168,985,192"/>
+<area href="classSourceObj_1_1Row.html" alt="SourceObj.Row" shape="rect" coords="995,168,1184,192"/>
+<area href="classSourceThingV_1_1Row.html" alt="SourceThingV.Row" shape="rect" coords="199,224,388,248"/>
+<area href="classSourceFood_1_1Row2.html" alt="SourceFood.Row2" shape="rect" coords="199,280,388,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -127,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa8870920d19affb19b96dd7bd8ce444a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56abb4c2067e3bdf13dd80dbef117f54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a56abb4c2067e3bdf13dd80dbef117f54">ContainsTag</a> (string _tag)</td></tr>
 <tr class="separator:a56abb4c2067e3bdf13dd80dbef117f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0237d9eb8b48e4d17919ed001f91c49"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49">OnImportData</a> (SourceData data)</td></tr>
+<tr class="memitem:af0237d9eb8b48e4d17919ed001f91c49"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49">OnImportData</a> (<a class="el" href="classSourceData.html">SourceData</a> data)</td></tr>
 <tr class="separator:af0237d9eb8b48e4d17919ed001f91c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab65ea9cd24798f115b3628ac3833c255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#ab65ea9cd24798f115b3628ac3833c255">SetRenderData</a> ()</td></tr>
 <tr class="separator:ab65ea9cd24798f115b3628ac3833c255"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,6 +152,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adce2993750fa8bfc77d6de91231e1fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e21e8fd472ec7cb4b810bbb94532071"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat)</td></tr>
 <tr class="separator:a1e21e8fd472ec7cb4b810bbb94532071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classSourceData_1_1BaseRow"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSourceData_1_1BaseRow')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSourceData_1_1BaseRow.html">SourceData&lt; T, T2 &gt;.BaseRow</a></td></tr>
+<tr class="memitem:a75c7482d88c201d26098c4a2d1a6279b inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a75c7482d88c201d26098c4a2d1a6279b">GetName</a> ()</td></tr>
+<tr class="separator:a75c7482d88c201d26098c4a2d1a6279b inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2b122f2061738b17564cc3df06cb18 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a1e2b122f2061738b17564cc3df06cb18">GetDetail</a> ()</td></tr>
+<tr class="separator:a1e2b122f2061738b17564cc3df06cb18 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e4a115a936079304cbf7181644188e inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a11e4a115a936079304cbf7181644188e">GetEditorListName</a> ()</td></tr>
+<tr class="separator:a11e4a115a936079304cbf7181644188e inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8512b7966929e9046ae37773fd30aac0 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a> (string id=&quot;name&quot;, bool returnNull=false)</td></tr>
+<tr class="separator:a8512b7966929e9046ae37773fd30aac0 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dacf0f27364383f6448840f33d6b5a0 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a4dacf0f27364383f6448840f33d6b5a0">GetTextArray</a> (string id)</td></tr>
+<tr class="separator:a4dacf0f27364383f6448840f33d6b5a0 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61821d93866cb83a7a6ed1f4ecfff433 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a61821d93866cb83a7a6ed1f4ecfff433">SetID</a> (ref int count)</td></tr>
+<tr class="separator:a61821d93866cb83a7a6ed1f4ecfff433 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49e6e06e0d10b9eeff10d278feb111d inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#ad49e6e06e0d10b9eeff10d278feb111d">OnImportData</a> (<a class="el" href="classSourceData.html">SourceData</a> data)</td></tr>
+<tr class="separator:ad49e6e06e0d10b9eeff10d278feb111d inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -226,12 +242,15 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aeef0ce3d1caad12ea1943519e9decdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b49ae679e6f97b4eff323e4357d364"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a></td></tr>
 <tr class="separator:ae8b49ae679e6f97b4eff323e4357d364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fda5314b89bffa36510282e3192ed21"><td class="memItemLeft" align="right" valign="top">SpriteReplacer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a></td></tr>
+<tr class="memitem:a0fda5314b89bffa36510282e3192ed21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSpriteReplacer.html">SpriteReplacer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a></td></tr>
 <tr class="separator:a0fda5314b89bffa36510282e3192ed21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a756eb9dabeef0b2dab6819bd83f91ba0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a></td></tr>
 <tr class="separator:a756eb9dabeef0b2dab6819bd83f91ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbad842b2a43c3f64ccaa573b7327682"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a></td></tr>
 <tr class="separator:acbad842b2a43c3f64ccaa573b7327682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classSourceData_1_1BaseRow"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classSourceData_1_1BaseRow')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classSourceData_1_1BaseRow.html">SourceData&lt; T, T2 &gt;.BaseRow</a></td></tr>
+<tr class="memitem:a0da6b0c6fb9cdd65f738f6c5cd342b7c inherit pub_attribs_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a0da6b0c6fb9cdd65f738f6c5cd342b7c">_index</a></td></tr>
+<tr class="separator:a0da6b0c6fb9cdd65f738f6c5cd342b7c inherit pub_attribs_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -262,6 +281,11 @@ Properties</h2></td></tr>
 <tr class="separator:ab63ec1eda06ed17cd53d17231abd3cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f34f005da6c0978f96568dac3018da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceManager.html">SourceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">sources</a><code> [get]</code></td></tr>
 <tr class="separator:a18f34f005da6c0978f96568dac3018da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_classSourceData_1_1BaseRow"><td colspan="2" onclick="javascript:toggleInherit('properties_classSourceData_1_1BaseRow')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classSourceData_1_1BaseRow.html">SourceData&lt; T, T2 &gt;.BaseRow</a></td></tr>
+<tr class="memitem:a8b0f9c29ce0c44f7ddc354af829af822 inherit properties_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a8b0f9c29ce0c44f7ddc354af829af822">UseAlias</a><code> [get]</code></td></tr>
+<tr class="separator:a8b0f9c29ce0c44f7ddc354af829af822 inherit properties_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5700a8a44412170f6956427d6a4641d9 inherit properties_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a5700a8a44412170f6956427d6a4641d9">GetAlias</a><code> [get]</code></td></tr>
+<tr class="separator:a5700a8a44412170f6956427d6a4641d9 inherit properties_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -306,7 +330,7 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00058">tag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00321">CharaRenderer.DrawHeld()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00249">RecipeManager.GetUnlearnedRecipe()</a>, and <a class="el" href="SourceFloor_8cs_source.html#l00167">SourceFloor.OnAfterInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00321">CharaRenderer.DrawHeld()</a>, and <a class="el" href="SourceFloor_8cs_source.html#l00167">SourceFloor.OnAfterInit()</a>.</p>
 
 </div>
 </div>
@@ -572,17 +596,18 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  141</span>        }</div>
 <div class="line"><span class="lineno">  142</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            obj = <a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> ?? (<a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> = GetText().ToLower());</div>
+<div class="line"><span class="lineno">  144</span>            obj = <a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> ?? (<a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>().ToLower());</div>
 <div class="line"><span class="lineno">  145</span>        }</div>
 <div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
 <div class="line"><span class="lineno">  147</span>    }</div>
 <div class="ttc" id="aclassRenderRow_html_a756eb9dabeef0b2dab6819bd83f91ba0"><div class="ttname"><a href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">RenderRow._nameSearch</a></div><div class="ttdeci">string _nameSearch</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00093">RenderRow.cs:93</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a85103e4c2e585d0cea563def6cfc42c7"><div class="ttname"><a href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">RenderRow.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00030">RenderRow.cs:30</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_acbad842b2a43c3f64ccaa573b7327682"><div class="ttname"><a href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">RenderRow._nameSearchJP</a></div><div class="ttdeci">string _nameSearchJP</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00096">RenderRow.cs:96</a></div></div>
+<div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00556">SourceData.cs:556</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00093">_nameSearch</a>, <a class="el" href="RenderRow_8cs_source.html#l00096">_nameSearchJP</a>, and <a class="el" href="RenderRow_8cs_source.html#l00030">name</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00093">_nameSearch</a>, <a class="el" href="RenderRow_8cs_source.html#l00096">_nameSearchJP</a>, <a class="el" href="SourceData_8cs_source.html#l00556">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00030">name</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>, and <a class="el" href="WidgetSearch_8cs_source.html#l00090">WidgetSearch.Search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetSearch_8cs_source.html#l00090">WidgetSearch.Search()</a>.</p>
 
 </div>
 </div>
@@ -628,9 +653,9 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00266">266</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  267</span>    {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a>.HasSprite(<a class="code hl_property" href="classRenderRow.html#a069cf07ec50c1f95f9bab49fe5281fc3">idSprite</a>))</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a>.<a class="code hl_function" href="classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e">HasSprite</a>(<a class="code hl_property" href="classRenderRow.html#a069cf07ec50c1f95f9bab49fe5281fc3">idSprite</a>))</div>
 <div class="line"><span class="lineno">  269</span>        {</div>
-<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a>.data.GetSprite(snow);</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a>.<a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_function" href="classSpriteData.html#adbedf9a97764bc7bdcf20b0bfc472dab">GetSprite</a>(snow);</div>
 <div class="line"><span class="lineno">  271</span>        }</div>
 <div class="line"><span class="lineno">  272</span>        <span class="keywordtype">int</span>[] array = <span class="keyword">null</span> ?? <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>;</div>
 <div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">sprites</a> == <span class="keyword">null</span>)</div>
@@ -662,7 +687,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  299</span>            }</div>
 <div class="line"><span class="lineno">  300</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  301</span>            {</div>
-<div class="line"><span class="lineno">  302</span>                <a class="code hl_variable" href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">sprites</a>[skin, dir] = SpriteSheet.Get(<a class="code hl_property" href="classRenderRow.html#a069cf07ec50c1f95f9bab49fe5281fc3">idSprite</a>);</div>
+<div class="line"><span class="lineno">  302</span>                <a class="code hl_variable" href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">sprites</a>[skin, dir] = <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">Get</a>(<a class="code hl_property" href="classRenderRow.html#a069cf07ec50c1f95f9bab49fe5281fc3">idSprite</a>);</div>
 <div class="line"><span class="lineno">  303</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">sprites</a>[skin, dir])</div>
 <div class="line"><span class="lineno">  304</span>                {</div>
 <div class="line"><span class="lineno">  305</span>                    <a class="code hl_variable" href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">sprites</a>[skin, dir] = Resources.Load&lt;Sprite&gt;(<a class="code hl_property" href="classRenderRow.html#a28dd73072703594090071e3f25998722">pathSprite</a> + <a class="code hl_property" href="classRenderRow.html#a069cf07ec50c1f95f9bab49fe5281fc3">idSprite</a>) ?? Resources.Load&lt;Sprite&gt;(<a class="code hl_property" href="classRenderRow.html#a28dd73072703594090071e3f25998722">pathSprite</a> + <a class="code hl_property" href="classRenderRow.html#a069cf07ec50c1f95f9bab49fe5281fc3">idSprite</a> + <span class="stringliteral">&quot;_0&quot;</span>);</div>
@@ -689,8 +714,13 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassRenderRow_html_a42f046e3b3eaa41b3fda82a66226bf7a"><div class="ttname"><a href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">RenderRow.sprites</a></div><div class="ttdeci">Sprite[,] sprites</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00072">RenderRow.cs:72</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aab6f3b2a133696df8dc47e810be77776"><div class="ttname"><a href="classRenderRow.html#aab6f3b2a133696df8dc47e810be77776">RenderRow.skins</a></div><div class="ttdeci">int[] skins</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00014">RenderRow.cs:14</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00012">RenderRow.cs:12</a></div></div>
+<div class="ttc" id="aclassSpriteData_html_adbedf9a97764bc7bdcf20b0bfc472dab"><div class="ttname"><a href="classSpriteData.html#adbedf9a97764bc7bdcf20b0bfc472dab">SpriteData.GetSprite</a></div><div class="ttdeci">Sprite GetSprite(bool snow=false)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00058">SpriteData.cs:58</a></div></div>
+<div class="ttc" id="aclassSpriteReplacer_html_a3a55fa97a3e1176d3f27e7ae0b640d37"><div class="ttname"><a href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">SpriteReplacer.data</a></div><div class="ttdeci">SpriteData data</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00012">SpriteReplacer.cs:12</a></div></div>
+<div class="ttc" id="aclassSpriteReplacer_html_ad63fa5ef4b826f6467d03efaa362316e"><div class="ttname"><a href="classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e">SpriteReplacer.HasSprite</a></div><div class="ttdeci">bool HasSprite(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00014">SpriteReplacer.cs:14</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
+<div class="ttc" id="aclassSpriteSheet_html_a3ba485078c417ef19ea17e2f624dba02"><div class="ttname"><a href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">SpriteSheet.Get</a></div><div class="ttdeci">static Sprite Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>, <a class="el" href="RenderRow_8cs_source.html#l00116">idSprite</a>, <a class="el" href="Core_8cs_source.html#l00011">Core.Instance</a>, <a class="el" href="MeshPass_8cs_source.html#l00021">MeshPass.mat</a>, <a class="el" href="RenderData_8cs_source.html#l00032">RenderData.multiSize</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="RenderRow_8cs_source.html#l00114">pathSprite</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="Core_8cs_source.html#l00045">Core.refs</a>, <a class="el" href="RenderRow_8cs_source.html#l00069">renderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00090">replacer</a>, <a class="el" href="RenderRow_8cs_source.html#l00014">skins</a>, <a class="el" href="CoreRef_8cs_source.html#l00327">CoreRef.spriteNull</a>, <a class="el" href="RenderRow_8cs_source.html#l00072">sprites</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.tiling</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00012">SpriteReplacer.data</a>, <a class="el" href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.Get()</a>, <a class="el" href="SpriteData_8cs_source.html#l00058">SpriteData.GetSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00014">SpriteReplacer.HasSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00116">idSprite</a>, <a class="el" href="Core_8cs_source.html#l00011">Core.Instance</a>, <a class="el" href="MeshPass_8cs_source.html#l00021">MeshPass.mat</a>, <a class="el" href="RenderData_8cs_source.html#l00032">RenderData.multiSize</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="RenderRow_8cs_source.html#l00114">pathSprite</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="Core_8cs_source.html#l00045">Core.refs</a>, <a class="el" href="RenderRow_8cs_source.html#l00069">renderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00090">replacer</a>, <a class="el" href="RenderRow_8cs_source.html#l00014">skins</a>, <a class="el" href="CoreRef_8cs_source.html#l00327">CoreRef.spriteNull</a>, <a class="el" href="RenderRow_8cs_source.html#l00072">sprites</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.tiling</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05074">Card.GetSprite()</a>, <a class="el" href="Chara_8cs_source.html#l05792">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00347">SetImage()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00316">SetSpriteRenderer()</a>.</p>
 
@@ -790,17 +820,21 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">override void RenderRow.OnImportData </td>
           <td>(</td>
-          <td class="paramtype">SourceData&#160;</td>
+          <td class="paramtype"><a class="el" href="classSourceData.html">SourceData</a>&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classSourceData_1_1BaseRow.html#ad49e6e06e0d10b9eeff10d278feb111d">SourceData&lt; T, T2 &gt;.BaseRow</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classSourceThing_1_1Row.html#aa752fcafa080cdade0efcd7e1bf5d6e0">SourceThing.Row</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00154">154</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  155</span>    {</div>
@@ -937,7 +971,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00161">161</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
-<div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a> = <span class="keyword">new</span> SpriteReplacer();</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="classRenderRow.html#a0fda5314b89bffa36510282e3192ed21">replacer</a> = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteReplacer.html">SpriteReplacer</a>();</div>
 <div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classRenderRow.html#ab0f3eea963c33b27c6cf4a658320df60">idRenderData</a>.IsEmpty())</div>
 <div class="line"><span class="lineno">  165</span>        {</div>
 <div class="line"><span class="lineno">  166</span>            this.renderData = <a class="code hl_property" href="classRenderRow.html#a54dfc47a9ccca915b38335ca008cd059">defaultRenderData</a>;</div>
@@ -953,7 +987,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  176</span>            this.renderData = <a class="code hl_variable" href="classRenderRow.html#acfe30e8de10e2308d7f79486dfa8fd6f">DictRenderData</a>.TryGetValue(text);</div>
 <div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (this.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  178</span>            {</div>
-<div class="line"><span class="lineno">  179</span>                <a class="code hl_class" href="classRenderData.html">RenderData</a> <a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> = (ResourceCache.Load&lt;<a class="code hl_class" href="classRenderData.html">RenderData</a>&gt;(<a class="code hl_property" href="classRenderRow.html#a43fef0850b2d4331b2d32c229aabf473">pathRenderData</a> + text) ?? <a class="code hl_property" href="classRenderRow.html#a54dfc47a9ccca915b38335ca008cd059">defaultRenderData</a>).Instantiate();</div>
+<div class="line"><span class="lineno">  179</span>                <a class="code hl_class" href="classRenderData.html">RenderData</a> <a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> = (<a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;<a class="code hl_class" href="classRenderData.html">RenderData</a>&gt;(<a class="code hl_property" href="classRenderRow.html#a43fef0850b2d4331b2d32c229aabf473">pathRenderData</a> + text) ?? <a class="code hl_property" href="classRenderRow.html#a54dfc47a9ccca915b38335ca008cd059">defaultRenderData</a>).Instantiate();</div>
 <div class="line"><span class="lineno">  180</span>                <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>)</div>
 <div class="line"><span class="lineno">  181</span>                {</div>
 <div class="line"><span class="lineno">  182</span>                    renderData.offset.x += renderData.pass.pmesh.size.x * 0.5f;</div>
@@ -977,7 +1011,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  200</span>        }</div>
 <div class="line"><span class="lineno">  201</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  202</span>        {</div>
-<div class="line"><span class="lineno">  203</span>            this.renderData = ResourceCache.Load&lt;<a class="code hl_class" href="classRenderData.html">RenderData</a>&gt;(<a class="code hl_property" href="classRenderRow.html#a43fef0850b2d4331b2d32c229aabf473">pathRenderData</a> + <a class="code hl_property" href="classRenderRow.html#ab0f3eea963c33b27c6cf4a658320df60">idRenderData</a>) ?? <a class="code hl_property" href="classRenderRow.html#a54dfc47a9ccca915b38335ca008cd059">defaultRenderData</a>;</div>
+<div class="line"><span class="lineno">  203</span>            this.renderData = <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;<a class="code hl_class" href="classRenderData.html">RenderData</a>&gt;(<a class="code hl_property" href="classRenderRow.html#a43fef0850b2d4331b2d32c229aabf473">pathRenderData</a> + <a class="code hl_property" href="classRenderRow.html#ab0f3eea963c33b27c6cf4a658320df60">idRenderData</a>) ?? <a class="code hl_property" href="classRenderRow.html#a54dfc47a9ccca915b38335ca008cd059">defaultRenderData</a>;</div>
 <div class="line"><span class="lineno">  204</span>        }</div>
 <div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; <a class="code hl_variable" href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">pref</a> == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  206</span>        {</div>
@@ -1018,10 +1052,11 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  241</span>        }</div>
 <div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias.ContainsKey(<a class="code hl_variable" href="classRenderRow.html#a65b53cf1137a59a8071e49582c75ca9d">defMat</a>))</div>
 <div class="line"><span class="lineno">  243</span>        {</div>
-<div class="line"><span class="lineno">  244</span>            Debug.Log(<a class="code hl_variable" href="classRenderRow.html#a65b53cf1137a59a8071e49582c75ca9d">defMat</a>);</div>
+<div class="line"><span class="lineno">  244</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="classRenderRow.html#a65b53cf1137a59a8071e49582c75ca9d">defMat</a>);</div>
 <div class="line"><span class="lineno">  245</span>        }</div>
 <div class="line"><span class="lineno">  246</span>        <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a> = <a class="code hl_property" href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<a class="code hl_variable" href="classRenderRow.html#a65b53cf1137a59a8071e49582c75ca9d">defMat</a>];</div>
 <div class="line"><span class="lineno">  247</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassProceduralMesh_html_af8f81e07870f27302f1047f59b4468c2"><div class="ttname"><a href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">ProceduralMesh.pos</a></div><div class="ttdeci">Vector3 pos</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00010">ProceduralMesh.cs:10</a></div></div>
 <div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
 <div class="ttc" id="aclassRenderData_html_a805ff3d001c452809b0cfb2c9cacb4ed"><div class="ttname"><a href="classRenderData.html#a805ff3d001c452809b0cfb2c9cacb4ed">RenderData.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00053">RenderData.cs:53</a></div></div>
@@ -1037,13 +1072,15 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassRenderRow_html_ade8721fbc115f980f2166568a247c03f"><div class="ttname"><a href="classRenderRow.html#ade8721fbc115f980f2166568a247c03f">RenderRow.aliasPref</a></div><div class="ttdeci">string aliasPref</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00050">RenderRow.cs:50</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_ae8b49ae679e6f97b4eff323e4357d364"><div class="ttname"><a href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">RenderRow.DefaultMaterial</a></div><div class="ttdeci">SourceMaterial.Row DefaultMaterial</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00087">RenderRow.cs:87</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aeef0ce3d1caad12ea1943519e9decdb7"><div class="ttname"><a href="classRenderRow.html#aeef0ce3d1caad12ea1943519e9decdb7">RenderRow.fixedMaterial</a></div><div class="ttdeci">bool fixedMaterial</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00084">RenderRow.cs:84</a></div></div>
+<div class="ttc" id="aclassResourceCache_html"><div class="ttname"><a href="classResourceCache.html">ResourceCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceCache_8cs_source.html#l00019">ResourceCache.cs:20</a></div></div>
 <div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceChara_1_1Row_html"><div class="ttname"><a href="classSourceChara_1_1Row.html">SourceChara.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00007">SourceChara.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceChara_html"><div class="ttname"><a href="classSourceChara.html">SourceChara</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00004">SourceChara.cs:5</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
+<div class="ttc" id="aclassSpriteReplacer_html"><div class="ttname"><a href="classSpriteReplacer.html">SpriteReplacer</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00006">SpriteReplacer.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00050">aliasPref</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="RenderRow_8cs_source.html#l00044">colorType</a>, <a class="el" href="RenderRow_8cs_source.html#l00087">DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00112">defaultRenderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00042">defMat</a>, <a class="el" href="RenderRow_8cs_source.html#l00008">DictRenderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00084">fixedMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00110">idRenderData</a>, <a class="el" href="RenderData_8cs_source.html#l00094">RenderData.Init()</a>, <a class="el" href="RenderData_8cs_source.html#l00053">RenderData.initialized</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="RenderRow_8cs_source.html#l00108">pathRenderData</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00010">ProceduralMesh.pos</a>, <a class="el" href="RenderRow_8cs_source.html#l00066">pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00069">renderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00090">replacer</a>, <a class="el" href="RenderRow_8cs_source.html#l00249">SetTiles()</a>, <a class="el" href="RenderRow_8cs_source.html#l00124">sources</a>, <a class="el" href="RenderRow_8cs_source.html#l00078">useAltColor</a>, and <a class="el" href="RenderRow_8cs_source.html#l00081">useRandomColor</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00050">aliasPref</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="RenderRow_8cs_source.html#l00044">colorType</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="RenderRow_8cs_source.html#l00087">DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00112">defaultRenderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00042">defMat</a>, <a class="el" href="RenderRow_8cs_source.html#l00008">DictRenderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00084">fixedMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00110">idRenderData</a>, <a class="el" href="RenderData_8cs_source.html#l00094">RenderData.Init()</a>, <a class="el" href="RenderData_8cs_source.html#l00053">RenderData.initialized</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="RenderRow_8cs_source.html#l00108">pathRenderData</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="ProceduralMesh_8cs_source.html#l00010">ProceduralMesh.pos</a>, <a class="el" href="RenderRow_8cs_source.html#l00066">pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00069">renderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00090">replacer</a>, <a class="el" href="RenderRow_8cs_source.html#l00249">SetTiles()</a>, <a class="el" href="RenderRow_8cs_source.html#l00124">sources</a>, <a class="el" href="RenderRow_8cs_source.html#l00078">useAltColor</a>, and <a class="el" href="RenderRow_8cs_source.html#l00081">useRandomColor</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00032">SourceCard.AddRow()</a>, and <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>.</p>
 
@@ -1406,7 +1443,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00046">46</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00102">RecipeManager.Add()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="CardFilter_8cs_source.html#l00091">CardFilter.Pass()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00102">RecipeManager.Add()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="CardFilter_8cs_source.html#l00091">CardFilter.Pass()</a>.</p>
 
 </div>
 </div>
@@ -1514,7 +1551,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00042">42</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, <a class="el" href="AM__Inspect_8cs_source.html#l00014">AM_Inspect.OnUpdateInput()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00161">SetRenderData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00161">SetRenderData()</a>.</p>
 
 </div>
 </div>
@@ -1594,7 +1631,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00054">54</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00028">RecipeManager.BuildList()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00028">RecipeManager.BuildList()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1701,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00022">22</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00220">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00250">TraitCrafter.Craft()</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">SpawnList.Filter()</a>, <a class="el" href="DNA_8cs_source.html#l00117">DNA.GenerateGene()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">RecipeSource.GetReqSkill()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00249">RecipeManager.GetUnlearnedRecipe()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00027">TraitFigure.GetValue()</a>, <a class="el" href="Chara_8cs_source.html#l07065">Chara.MakeMilk()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00220">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00250">TraitCrafter.Craft()</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">SpawnList.Filter()</a>, <a class="el" href="DNA_8cs_source.html#l00117">DNA.GenerateGene()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">RecipeSource.GetReqSkill()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00027">TraitFigure.GetValue()</a>, <a class="el" href="Chara_8cs_source.html#l07065">Chara.MakeMilk()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>.</p>
 
 </div>
 </div>
@@ -1754,7 +1791,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00056">56</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00150">RecipeManager.ListSources()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="Trait_8cs_source.html#l01443">Trait.OnBarter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="Trait_8cs_source.html#l01443">Trait.OnBarter()</a>.</p>
 
 </div>
 </div>
@@ -1783,7 +1820,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SpriteReplacer RenderRow.replacer</td>
+          <td class="memname"><a class="el" href="classSpriteReplacer.html">SpriteReplacer</a> RenderRow.replacer</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1808,7 +1845,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00014">14</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="RenderRow_8cs_source.html#l00266">GetSprite()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, and <a class="el" href="Thing_8cs_source.html#l01380">Thing.SetRenderParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00266">GetSprite()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00090">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="Thing_8cs_source.html#l01380">Thing.SetRenderParam()</a>.</p>
 
 </div>
 </div>
@@ -1932,7 +1969,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00075">75</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02329">Chara._Move()</a>, <a class="el" href="Map_8cs_source.html#l01781">Map.DestroyObj()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00898">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00051">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00041">SourceBlock.Row.OnInit()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, and <a class="el" href="Recipe_8cs_source.html#l00794">Recipe.Rotate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02329">Chara._Move()</a>, <a class="el" href="Map_8cs_source.html#l01781">Map.DestroyObj()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00898">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00051">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00041">SourceBlock.Row.OnInit()</a>, and <a class="el" href="Recipe_8cs_source.html#l00794">Recipe.Rotate()</a>.</p>
 
 </div>
 </div>
@@ -2031,7 +2068,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00120">120</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00220">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00263">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00249">RecipeManager.GetUnlearnedRecipe()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">UIDragGridInfo.InitFuel()</a>, <a class="el" href="Recipe_8cs_source.html#l00335">Recipe.IsStaticLV()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00280">LayerCraft.RefreshCategory()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00139">SpawnList.Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00220">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00263">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">UIDragGridInfo.InitFuel()</a>, <a class="el" href="Recipe_8cs_source.html#l00335">Recipe.IsStaticLV()</a>, and <a class="el" href="SpawnList_8cs_source.html#l00139">SpawnList.Select()</a>.</p>
 
 </div>
 </div>

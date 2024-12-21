@@ -329,7 +329,7 @@ Private Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>.ContainsKey(tag))</div>
 <div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            Debug.LogWarning(<span class="stringliteral">&quot;Pool with tag&quot;</span> + tag + <span class="stringliteral">&quot; does not excist.&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogWarning(<span class="stringliteral">&quot;Pool with tag&quot;</span> + tag + <span class="stringliteral">&quot; does not excist.&quot;</span>);</div>
 <div class="line"><span class="lineno">   83</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   84</span>        }</div>
 <div class="line"><span class="lineno">   85</span>        GameObject gameObject = <a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>[tag].Dequeue();</div>
@@ -339,9 +339,10 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">poolDictionary</a>[tag].Enqueue(gameObject);</div>
 <div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> gameObject;</div>
 <div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassHS__ParticleEndSound_html_ab8a451d1541490ac7640904584b59aa1"><div class="ttname"><a href="classHS__ParticleEndSound.html#ab8a451d1541490ac7640904584b59aa1">HS_ParticleEndSound.poolDictionary</a></div><div class="ttdeci">Dictionary&lt; string, Queue&lt; GameObject &gt; &gt; poolDictionary</div><div class="ttdef"><b>Definition:</b> <a href="HS__ParticleEndSound_8cs_source.html#l00044">HS_ParticleEndSound.cs:44</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00044">poolDictionary</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00044">poolDictionary</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="HS__ParticleEndSound_8cs_source.html#l00093">LateUpdate()</a>.</p>
 

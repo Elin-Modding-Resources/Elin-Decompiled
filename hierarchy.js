@@ -32,16 +32,18 @@ var hierarchy =
     [ "CoreConfig.BackerContentConfig", "classCoreConfig_1_1BackerContentConfig.html", null ],
     [ "MiniGame.Balance", "classMiniGame_1_1Balance.html", null ],
     [ "GameSetting.BalanceSetting", "classGameSetting_1_1BalanceSetting.html", null ],
-    [ "BaseCore", null, [
-      [ "Core", "classCore.html", null ]
-    ] ],
-    [ "BaseModManager", null, [
+    [ "BaseModManager", "classBaseModManager.html", [
       [ "ModManager", "classModManager.html", null ]
     ] ],
-    [ "BaseModPackage", null, [
+    [ "BaseModPackage", "classBaseModPackage.html", [
       [ "ModPackage", "classModPackage.html", null ]
     ] ],
+    [ "BaseModManager.BaseResource", "classBaseModManager_1_1BaseResource.html", null ],
     [ "BaseRow", null, [
+      [ "LangList.Row", "classLangList_1_1Row.html", null ],
+      [ "LangNote.Row", "classLangNote_1_1Row.html", null ],
+      [ "LangTalk.Row", "classLangTalk_1_1Row.html", null ],
+      [ "LangWord.Row", "classLangWord_1_1Row.html", null ],
       [ "SourceArea.Row", "classSourceArea_1_1Row.html", null ],
       [ "SourceBacker.Row", "classSourceBacker_1_1Row.html", null ],
       [ "SourceCalc.Row", "classSourceCalc_1_1Row.html", null ],
@@ -69,7 +71,11 @@ var hierarchy =
       [ "SourceZone.Row", "classSourceZone_1_1Row.html", null ],
       [ "SourceZoneAffix.Row", "classSourceZoneAffix_1_1Row.html", null ]
     ] ],
-    [ "SourceData.BaseRow", null, [
+    [ "SourceData< T, T2 >.BaseRow", "classSourceData_1_1BaseRow.html", [
+      [ "LangRow", "classLangRow.html", [
+        [ "LangGame.Row", "classLangGame_1_1Row.html", null ],
+        [ "LangGeneral.Row", "classLangGeneral_1_1Row.html", null ]
+      ] ],
       [ "RenderRow", "classRenderRow.html", [
         [ "CardRow", "classCardRow.html", [
           [ "SourceChara.Row", "classSourceChara_1_1Row.html", null ],
@@ -108,6 +114,7 @@ var hierarchy =
     [ "ColorProfile.BlockColors", "classColorProfile_1_1BlockColors.html", null ],
     [ "Element.BonusInfo", "classElement_1_1BonusInfo.html", null ],
     [ "CoreRef.ButtonAssets", "classCoreRef_1_1ButtonAssets.html", null ],
+    [ "ButtonState", "classButtonState.html", null ],
     [ "CoreConfig.CameraConfig", "classCoreConfig_1_1CameraConfig.html", null ],
     [ "CardBlueprint", "classCardBlueprint.html", null ],
     [ "EloMap.Cell", "classEloMap_1_1Cell.html", null ],
@@ -116,6 +123,9 @@ var hierarchy =
     [ "Net.ChatLog", "classNet_1_1ChatLog.html", null ],
     [ "CheckExtension", "classCheckExtension.html", null ],
     [ "CINT", "classCINT.html", null ],
+    [ "ClassCache< T >", "classClassCache.html", null ],
+    [ "ClassCache< object >", "classClassCache.html", null ],
+    [ "ClassExtension", "classClassExtension.html", null ],
     [ "ClassWithBits", "classClassWithBits.html", null ],
     [ "BiomeProfile.Cluster", "classBiomeProfile_1_1Cluster.html", [
       [ "BiomeProfile.ClusterObj", "classBiomeProfile_1_1ClusterObj.html", null ],
@@ -123,13 +133,18 @@ var hierarchy =
     ] ],
     [ "BiomeProfile.Clusters", "classBiomeProfile_1_1Clusters.html", null ],
     [ "COBJ", "classCOBJ.html", null ],
+    [ "TableData.Col", "classTableData_1_1Col.html", null ],
+    [ "ColorUtil", "classColorUtil.html", null ],
     [ "LayerAbility.Config", "classLayerAbility_1_1Config.html", null ],
     [ "Widget.Config", "classWidget_1_1Config.html", null ],
+    [ "ConsoleProDebug", "classConsoleProDebug.html", null ],
     [ "BackerContentInspector.Content", "classBackerContentInspector_1_1Content.html", [
       [ "BackerContentInspector.ContentCard", "classBackerContentInspector_1_1ContentCard.html", null ],
       [ "BackerContentInspector.ContentObj", "classBackerContentInspector_1_1ContentObj.html", null ]
     ] ],
     [ "CoreExtension", "classCoreExtension.html", null ],
+    [ "CorePath.CorePackage", "classCorePath_1_1CorePackage.html", null ],
+    [ "CorePath", "classCorePath.html", null ],
     [ "Act.Cost", "structAct_1_1Cost.html", null ],
     [ "HomeResource.Cost", "classHomeResource_1_1Cost.html", null ],
     [ "CoreRef.Crawlers", "classCoreRef_1_1Crawlers.html", null ],
@@ -137,12 +152,18 @@ var hierarchy =
     [ "Currency", "classCurrency.html", null ],
     [ "CoreConfig.CustomFont", "classCoreConfig_1_1CustomFont.html", null ],
     [ "LayerList.CustomItem", "classLayerList_1_1CustomItem.html", null ],
+    [ "B83.Win32.CWPSTRUCT", "structB83_1_1Win32_1_1CWPSTRUCT.html", null ],
     [ "LayerGachaResult.Data", "classLayerGachaResult_1_1Data.html", null ],
+    [ "TextureImportSetting.Data", "classTextureImportSetting_1_1Data.html", null ],
     [ "TraitEffect.Data", "classTraitEffect_1_1Data.html", null ],
     [ "TraitHouseBoard.Data", "classTraitHouseBoard_1_1Data.html", null ],
     [ "TextureData.Date", "classTextureData_1_1Date.html", null ],
+    [ "DateHelper", "classDateHelper.html", null ],
     [ "DayData", "classDayData.html", null ],
     [ "CoreDebug.DebugCommand", "classCoreDebug_1_1DebugCommand.html", null ],
+    [ "DefaultContractResolver", null, [
+      [ "ShouldSerializeContractResolver", "classShouldSerializeContractResolver.html", null ]
+    ] ],
     [ "CoreRef.DefaultRoof", "classCoreRef_1_1DefaultRoof.html", null ],
     [ "DefaultSerializationBinder", null, [
       [ "GameSerializationBinder", "classGameSerializationBinder.html", null ]
@@ -170,7 +191,9 @@ var hierarchy =
     [ "DragItemCard.DragInfo", "classDragItemCard_1_1DragInfo.html", null ],
     [ "DramaChoice", "classDramaChoice.html", null ],
     [ "DramaSetup", "classDramaSetup.html", null ],
-    [ "DynamicAsset", null, [
+    [ "ImageExample.DropInfo", "classImageExample_1_1DropInfo.html", null ],
+    [ "DynamicAsset< T >", "classDynamicAsset.html", null ],
+    [ "DynamicAsset< Effect >", "classDynamicAsset.html", [
       [ "EffectManager.EffectList", "classEffectManager_1_1EffectList.html", null ]
     ] ],
     [ "EClass", "classEClass.html", [
@@ -1846,8 +1869,23 @@ var hierarchy =
     [ "ELEMENT", "classELEMENT.html", null ],
     [ "ElementOrigin", "classElementOrigin.html", null ],
     [ "ElementRef", "classElementRef.html", null ],
+    [ "ElinEncoder", "classElinEncoder.html", null ],
     [ "ENC", "classENC.html", null ],
+    [ "ERROR", "classERROR.html", null ],
     [ "InvOwner.ErrorMessage", "classInvOwner_1_1ErrorMessage.html", null ],
+    [ "ExcelBookImportSetting", "classExcelBookImportSetting.html", null ],
+    [ "ExcelData", "classExcelData.html", [
+      [ "TextConv", "classTextConv.html", null ]
+    ] ],
+    [ "ExcelDataList", "classExcelDataList.html", [
+      [ "TalkDataList", "classTalkDataList.html", null ],
+      [ "ToneDataList", "classToneDataList.html", null ]
+    ] ],
+    [ "ExcelDataListExtension", "classExcelDataListExtension.html", null ],
+    [ "ExcelIndex", "classExcelIndex.html", null ],
+    [ "ExcelParser", "classExcelParser.html", null ],
+    [ "ExcelSheetImportSetting", "classExcelSheetImportSetting.html", null ],
+    [ "SFB.ExtensionFilter", "structSFB_1_1ExtensionFilter.html", null ],
     [ "WidgetBottomBar.Extra", "classWidgetBottomBar_1_1Extra.html", null ],
     [ "WidgetCurrentTool.Extra", "classWidgetCurrentTool_1_1Extra.html", null ],
     [ "WidgetDate.Extra", "classWidgetDate_1_1Extra.html", null ],
@@ -1869,18 +1907,23 @@ var hierarchy =
     [ "WidgetSticky.Extra", "classWidgetSticky_1_1Extra.html", null ],
     [ "WidgetTracker.Extra", "classWidgetTracker_1_1Extra.html", null ],
     [ "FACTION", "classFACTION.html", null ],
+    [ "FastString", "classFastString.html", null ],
     [ "FEAT", "classFEAT.html", null ],
+    [ "SourceData< T, T2 >.FieldInfo", "classSourceData_1_1FieldInfo.html", null ],
+    [ "SourceData< T, T2 >.FieldMap", "classSourceData_1_1FieldMap.html", null ],
     [ "ZoneInspector.FillUtil", "classZoneInspector_1_1FillUtil.html", null ],
     [ "CardFilter.FilterCategory", "classCardFilter_1_1FilterCategory.html", null ],
     [ "CardFilter.FilterItem", "classCardFilter_1_1FilterItem.html", null ],
     [ "CoreConfig.Fix", "classCoreConfig_1_1Fix.html", null ],
     [ "BaseGameScreen.FocusOption", "classBaseGameScreen_1_1FocusOption.html", null ],
     [ "CoreConfig.FontSetting", "classCoreConfig_1_1FontSetting.html", null ],
+    [ "LangSetting.FontSetting", "classLangSetting_1_1FontSetting.html", null ],
     [ "FOOD", "classFOOD.html", null ],
     [ "Footmark", "classFootmark.html", null ],
     [ "InvOwner.ForceGiveData", "classInvOwner_1_1ForceGiveData.html", null ],
     [ "Weather.Forecast", "classWeather_1_1Forecast.html", null ],
     [ "CoreConfig.GameConfig", "classCoreConfig_1_1GameConfig.html", null ],
+    [ "Gender", "classGender.html", null ],
     [ "GeneratedClass", "classGeneratedClass.html", null ],
     [ "GameSetting.GenSetting", "classGameSetting_1_1GenSetting.html", null ],
     [ "GoalList", "classGoalList.html", null ],
@@ -1895,10 +1938,10 @@ var hierarchy =
       [ "Card", "classCard.html", null ],
       [ "Zone", "classZone.html", null ]
     ] ],
-    [ "IChangeLanguage", null, [
+    [ "IChangeLanguage", "interfaceIChangeLanguage.html", [
       [ "LayerTitle", "classLayerTitle.html", null ]
     ] ],
-    [ "IChangeResolution", null, [
+    [ "IChangeResolution", "interfaceIChangeResolution.html", [
       [ "LayerTitle", "classLayerTitle.html", null ],
       [ "Widget", "classWidget.html", [
         [ "BaseWidgetNotice", "classBaseWidgetNotice.html", [
@@ -1944,6 +1987,9 @@ var hierarchy =
         [ "WidgetUnityChan", "classWidgetUnityChan.html", null ]
       ] ]
     ] ],
+    [ "ICollection", null, [
+      [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
+    ] ],
     [ "IComparable", null, [
       [ "SerializableDateTime", "classSerializableDateTime.html", null ]
     ] ],
@@ -1951,6 +1997,12 @@ var hierarchy =
       [ "Algorithms.PathFinder.ComparePFNodeMatrix", "classAlgorithms_1_1PathFinder_1_1ComparePFNodeMatrix.html", null ]
     ] ],
     [ "CoreRef.Icons", "classCoreRef_1_1Icons.html", null ],
+    [ "IDeserializationCallback", null, [
+      [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
+    ] ],
+    [ "IDictionary", null, [
+      [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
+    ] ],
     [ "IDragHandler", null, [
       [ "ButtonGridDrag", "classButtonGridDrag.html", [
         [ "ButtonHotItem", "classButtonHotItem.html", null ]
@@ -1960,6 +2012,12 @@ var hierarchy =
     [ "IDragParent", null, [
       [ "LayerAbility", "classLayerAbility.html", null ],
       [ "WidgetHotbar", "classWidgetHotbar.html", null ]
+    ] ],
+    [ "IEnumerable", null, [
+      [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
+    ] ],
+    [ "IEquatable", null, [
+      [ "BitArray32", "structBitArray32.html", null ]
     ] ],
     [ "IEventSystemHandler", null, [
       [ "ButtonGridDrag", "classButtonGridDrag.html", null ],
@@ -1986,6 +2044,9 @@ var hierarchy =
       [ "TaskPoint", "classTaskPoint.html", null ],
       [ "Zone", "classZone.html", null ]
     ] ],
+    [ "ObjectPool.IItem", "interfaceObjectPool_1_1IItem.html", [
+      [ "ObjectPool.Item< T >", "classObjectPool_1_1Item.html", null ]
+    ] ],
     [ "IMouseHint", "interfaceIMouseHint.html", [
       [ "ButtonAbility", "classButtonAbility.html", null ],
       [ "ButtonGrid", "classButtonGrid.html", [
@@ -1995,9 +2056,11 @@ var hierarchy =
     [ "IngredientAndRecipe", "classIngredientAndRecipe.html", null ],
     [ "CoreConfig.InputSetting", "classCoreConfig_1_1InputSetting.html", null ],
     [ "Int3", "classInt3.html", null ],
+    [ "IntColor", "classIntColor.html", null ],
     [ "BaseArea.Interaction", "classBaseArea_1_1Interaction.html", null ],
     [ "InvOwner.Interaction", "classInvOwner_1_1Interaction.html", null ],
     [ "CoreRef.InventoryStyle", "classCoreRef_1_1InventoryStyle.html", null ],
+    [ "IO", "classIO.html", null ],
     [ "IPathfinder", "interfaceIPathfinder.html", [
       [ "Algorithms.PathFinder", "classAlgorithms_1_1PathFinder.html", null ]
     ] ],
@@ -2019,6 +2082,7 @@ var hierarchy =
     [ "IPointerUpHandler", null, [
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
+    [ "IPoolObject", "interfaceIPoolObject.html", null ],
     [ "IPrefImage", "interfaceIPrefImage.html", [
       [ "ButtonGrid", "classButtonGrid.html", null ],
       [ "ItemGeneral", "classItemGeneral.html", null ]
@@ -2057,14 +2121,22 @@ var hierarchy =
     [ "IReservable", "interfaceIReservable.html", [
       [ "Card", "classCard.html", null ]
     ] ],
+    [ "ISerializable", null, [
+      [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
+    ] ],
     [ "ISerializationBinder", null, [
       [ "GameSerializationBinder", "classGameSerializationBinder.html", null ]
     ] ],
     [ "ISerializationCallbackReceiver", null, [
-      [ "SourcePref", "classSourcePref.html", null ]
+      [ "CustomAssetManager", "classCustomAssetManager.html", null ],
+      [ "SourcePref", "classSourcePref.html", null ],
+      [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
     ] ],
     [ "ISkinRoot", null, [
       [ "Widget", "classWidget.html", null ]
+    ] ],
+    [ "SFB.IStandaloneFileBrowser", "interfaceSFB_1_1IStandaloneFileBrowser.html", [
+      [ "SFB.StandaloneFileBrowserWindows", "classSFB_1_1StandaloneFileBrowserWindows.html", null ]
     ] ],
     [ "ISyncScreen", "interfaceISyncScreen.html", [
       [ "RenderObject", "classRenderObject.html", null ],
@@ -2083,6 +2155,8 @@ var hierarchy =
     [ "ShadowData.Item", "classShadowData_1_1Item.html", null ],
     [ "ShippingResult.Item", "classShippingResult_1_1Item.html", null ],
     [ "ShopTransaction.Item", "classShopTransaction_1_1Item.html", null ],
+    [ "SpriteAnimation.Item", "classSpriteAnimation_1_1Item.html", null ],
+    [ "TextConv.Item", "classTextConv_1_1Item.html", null ],
     [ "UIButton.Item", null, [
       [ "HotItem", "classHotItem.html", [
         [ "HotAction", "classHotAction.html", [
@@ -2119,9 +2193,17 @@ var hierarchy =
     [ "UndoManager.Item", "classUndoManager_1_1Item.html", null ],
     [ "WidgetStatsBar.Item", "classWidgetStatsBar_1_1Item.html", null ],
     [ "GoalCombat.ItemAbility", "classGoalCombat_1_1ItemAbility.html", null ],
+    [ "IWin32Window", null, [
+      [ "SFB.WindowWrapper", "classSFB_1_1WindowWrapper.html", null ]
+    ] ],
+    [ "EInput.KeyboardPress", "classEInput_1_1KeyboardPress.html", null ],
+    [ "EInput.KeyMap", "classEInput_1_1KeyMap.html", null ],
+    [ "EInput.KeyMapManager", "classEInput_1_1KeyMapManager.html", null ],
     [ "KnowledgeList< KnowledgeFaction >", "classKnowledgeList.html", null ],
     [ "KnowledgeList< KnowledgeRecipe >", "classKnowledgeList.html", null ],
     [ "KnowledgeList< KnowledgeResearch >", "classKnowledgeList.html", null ],
+    [ "Lang", "classLang.html", null ],
+    [ "LangSetting", "classLangSetting.html", null ],
     [ "Layer", null, [
       [ "ELayer", "classELayer.html", [
         [ "Dialog", "classDialog.html", null ],
@@ -2204,6 +2286,7 @@ var hierarchy =
     ] ],
     [ "HotItemLayout.Layout", "classHotItemLayout_1_1Layout.html", null ],
     [ "Fov.LevelPoint", "structFov_1_1LevelPoint.html", null ],
+    [ "LightData", "classLightData.html", null ],
     [ "LIQUID", "classLIQUID.html", null ],
     [ "ActPlan.List", "classActPlan_1_1List.html", null ],
     [ "List", null, [
@@ -2214,9 +2297,11 @@ var hierarchy =
     [ "ActPlan.List< Thing >", "classActPlan_1_1List.html", [
       [ "ThingContainer", "classThingContainer.html", null ]
     ] ],
+    [ "Log", "classLog.html", null ],
     [ "GameSetting.RenderSetting.MapBGSetting", "classGameSetting_1_1RenderSetting_1_1MapBGSetting.html", null ],
     [ "ZoneBlueprint.MapGenSetting", "structZoneBlueprint_1_1MapGenSetting.html", null ],
     [ "MapPiece.MapPath", "classMapPiece_1_1MapPath.html", null ],
+    [ "MatColors", "classMatColors.html", null ],
     [ "CoreDebug.MatColorTest", "classCoreDebug_1_1MatColorTest.html", null ],
     [ "Crawler.Member", "classCrawler_1_1Member.html", null ],
     [ "LayerInspect.MenuItem", "classLayerInspect_1_1MenuItem.html", null ],
@@ -2229,6 +2314,10 @@ var hierarchy =
       [ "ModMinigame< T >", "classModMinigame.html", null ]
     ] ],
     [ "Gross.Mod", "structGross_1_1Mod.html", null ],
+    [ "MOD", "classMOD.html", null ],
+    [ "ModItem< T >", "classModItem.html", null ],
+    [ "ModItemList< T >", "classModItemList.html", null ],
+    [ "ModItemList< Sprite >", "classModItemList.html", null ],
     [ "ModMinigame< Blackjack >", "classModMinigame.html", [
       [ "MiniGame_Blackjack", "classMiniGame__Blackjack.html", null ]
     ] ],
@@ -2236,8 +2325,14 @@ var hierarchy =
       [ "MiniGame_Basket", "classMiniGame__Basket.html", null ]
     ] ],
     [ "MonoBehaviour", null, [
+      [ "BaseCore", "classBaseCore.html", [
+        [ "Core", "classCore.html", null ],
+        [ "CoreEmu", "classCoreEmu.html", null ]
+      ] ],
       [ "ButtonGridExt", "classButtonGridExt.html", null ],
+      [ "CameraFilterPack_Atmosphere_Rain", "classCameraFilterPack__Atmosphere__Rain.html", null ],
       [ "CameraSupport", "classCameraSupport.html", null ],
+      [ "EInput", "classEInput.html", null ],
       [ "EMono", "classEMono.html", [
         [ "ActionHint", "classActionHint.html", null ],
         [ "BackerContentInspector", "classBackerContentInspector.html", null ],
@@ -2365,24 +2460,39 @@ var hierarchy =
         [ "WorldInspector", "classWorldInspector.html", null ],
         [ "ZoneInspector", "classZoneInspector.html", null ]
       ] ],
+      [ "FileDragAndDrop", "classFileDragAndDrop.html", null ],
       [ "HS_ParticleEndSound", "classHS__ParticleEndSound.html", null ],
+      [ "ImageExample", "classImageExample.html", null ],
       [ "ItemKeymap", "classItemKeymap.html", null ],
       [ "LightControl", "classLightControl.html", null ],
       [ "LightControl2", "classLightControl2.html", null ],
+      [ "LoadingScreen", "classLoadingScreen.html", null ],
       [ "Net", "classNet.html", null ],
+      [ "ObjectPool", "classObjectPool.html", null ],
       [ "PathManager", "classPathManager.html", null ],
+      [ "PoolManager", "classPoolManager.html", null ],
+      [ "PrefabFix", "classPrefabFix.html", null ],
       [ "RandomPositionMover", "classRandomPositionMover.html", null ],
+      [ "SingleContent", "classSingleContent.html", null ],
       [ "SplashText", "classSplashText.html", null ],
+      [ "SpriteAnimation", "classSpriteAnimation.html", null ],
       [ "SpriteBasedLaser", "classSpriteBasedLaser.html", null ],
+      [ "SpriteReplacerAnimation", "classSpriteReplacerAnimation.html", null ],
+      [ "SpriteSheet", "classSpriteSheet.html", null ],
       [ "Steam", "classSteam.html", null ],
+      [ "TextureImportSetting", "classTextureImportSetting.html", null ],
       [ "TwoDLaserPack.LineBasedLaser", "classTwoDLaserPack_1_1LineBasedLaser.html", null ],
       [ "UIMultiList", "classUIMultiList.html", null ]
     ] ],
+    [ "B83.Win32.MSG", "structB83_1_1Win32_1_1MSG.html", null ],
     [ "MultiSprite", "classMultiSprite.html", null ],
     [ "MUTATION", "classMUTATION.html", null ],
     [ "CoreConfig.NetSetting", "classCoreConfig_1_1NetSetting.html", null ],
     [ "NoticeManager.Notice", "classNoticeManager_1_1Notice.html", null ],
     [ "NoticeManager", "classNoticeManager.html", null ],
+    [ "Object", null, [
+      [ "TextData", "classTextData.html", null ]
+    ] ],
     [ "UICurrency.Options", "classUICurrency_1_1Options.html", null ],
     [ "CoreRef.OrbitIcons", "classCoreRef_1_1OrbitIcons.html", null ],
     [ "CoreConfig.OtherSetting", "classCoreConfig_1_1OtherSetting.html", null ],
@@ -2390,6 +2500,7 @@ var hierarchy =
     [ "UIBook.Page", null, [
       [ "ContentGallery.Page", "classContentGallery_1_1Page.html", null ]
     ] ],
+    [ "PaintPosition", "classPaintPosition.html", null ],
     [ "GameSetting.PassSetting", "classGameSetting_1_1PassSetting.html", null ],
     [ "Algorithms.PathFinderNode", "structAlgorithms_1_1PathFinderNode.html", null ],
     [ "Algorithms.PathFinder.PathFinderNodeFast", "structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html", null ],
@@ -2399,8 +2510,10 @@ var hierarchy =
     [ "PlantData", "classPlantData.html", null ],
     [ "PlayingSong", "classPlayingSong.html", null ],
     [ "POIMap", "classPOIMap.html", null ],
+    [ "B83.Win32.POINT", "structB83_1_1Win32_1_1POINT.html", null ],
     [ "POLICY", "classPOLICY.html", null ],
     [ "HS_ParticleEndSound.Pool", "classHS__ParticleEndSound_1_1Pool.html", null ],
+    [ "PoolManager.PoolGroup", "classPoolManager_1_1PoolGroup.html", null ],
     [ "CoreRef.PopperSprites", "classCoreRef_1_1PopperSprites.html", null ],
     [ "Zone.PortalReturnData", "classZone_1_1PortalReturnData.html", null ],
     [ "Player.Pref", "classPlayer_1_1Pref.html", null ],
@@ -2409,18 +2522,26 @@ var hierarchy =
     [ "AM_Adv.PressedAction", "classAM__Adv_1_1PressedAction.html", null ],
     [ "Algorithms.PriorityQueueB< int >", "classAlgorithms_1_1PriorityQueueB.html", null ],
     [ "Prologue", "classPrologue.html", null ],
+    [ "PropertyAttribute", null, [
+      [ "Hide", "classHide.html", null ]
+    ] ],
     [ "LayerDragGrid.PutbackInfo", "classLayerDragGrid_1_1PutbackInfo.html", null ],
     [ "Queue", "classQueue.html", null ],
     [ "QueueList< TaskCraft >", "classQueueList.html", null ],
     [ "QuickMenu", "classQuickMenu.html", null ],
+    [ "Rand", "classRand.html", null ],
     [ "ColorProfile.RarityColors", "classColorProfile_1_1RarityColors.html", null ],
     [ "UIRecipeInfo.RecipeVariation", "classUIRecipeInfo_1_1RecipeVariation.html", null ],
+    [ "B83.Win32.RECT", "structB83_1_1Win32_1_1RECT.html", null ],
+    [ "RectData", "classRectData.html", null ],
     [ "CoreRef.Rects", "classCoreRef_1_1Rects.html", null ],
     [ "CoreRef.Renderers", "classCoreRef_1_1Renderers.html", null ],
     [ "GameSetting.RenderSetting", "classGameSetting_1_1RenderSetting.html", null ],
     [ "UIHomeInfo.ReportData", "classUIHomeInfo_1_1ReportData.html", null ],
     [ "QuestCraft.Req", "classQuestCraft_1_1Req.html", null ],
     [ "ZoneInspector.ResizeUtil", "classZoneInspector_1_1ResizeUtil.html", null ],
+    [ "ResourceCache< T >", "classResourceCache.html", null ],
+    [ "ResourceCache< Object >", "classResourceCache.html", null ],
     [ "AM_Picker.Result", "structAM__Picker_1_1Result.html", null ],
     [ "Crawler.Result", "classCrawler_1_1Result.html", null ],
     [ "PartialMap.Result", "classPartialMap_1_1Result.html", null ],
@@ -2431,8 +2552,16 @@ var hierarchy =
     [ "WidgetManager.SaveData", "classWidgetManager_1_1SaveData.html", null ],
     [ "Schedule", "classSchedule.html", null ],
     [ "ScriptableObject", null, [
+      [ "SourceData< T, int >", "classSourceData.html", [
+        [ "SourceDataInt< T >", "classSourceDataInt.html", null ]
+      ] ],
+      [ "SourceData< T, string >", "classSourceData.html", [
+        [ "SourceDataString< T >", "classSourceDataString.html", null ],
+        [ "SourceLang< T >", "classSourceLang.html", null ]
+      ] ],
       [ "Assets.Resources.Scene.Profile.Global.SceneGlobalProfile", "classAssets_1_1Resources_1_1Scene_1_1Profile_1_1Global_1_1SceneGlobalProfile.html", null ],
       [ "CoreRef", "classCoreRef.html", null ],
+      [ "CustomAssetManager", "classCustomAssetManager.html", null ],
       [ "EScriptable", "classEScriptable.html", [
         [ "BiomeProfile", "classBiomeProfile.html", null ],
         [ "ColorProfile", "classColorProfile.html", null ],
@@ -2460,9 +2589,13 @@ var hierarchy =
       [ "SceneLightProfile", "classSceneLightProfile.html", null ],
       [ "SceneProfile", "classSceneProfile.html", null ],
       [ "ScreenFlash", "classScreenFlash.html", null ],
+      [ "SourceData< T, T2 >", "classSourceData.html", null ],
+      [ "TableData", "classTableData.html", null ],
       [ "TransAnimeData", "classTransAnimeData.html", null ]
     ] ],
     [ "ZoneProfile.Seeds", "classZoneProfile_1_1Seeds.html", null ],
+    [ "SerializableColor", "classSerializableColor.html", null ],
+    [ "ExcelData.Sheet", "classExcelData_1_1Sheet.html", null ],
     [ "ModManager.SheetIndex", "structModManager_1_1SheetIndex.html", null ],
     [ "SKILL", "classSKILL.html", null ],
     [ "SkinRoot", null, [
@@ -2471,52 +2604,136 @@ var hierarchy =
     [ "LayerFaith.Slot", "classLayerFaith_1_1Slot.html", null ],
     [ "SLOT", "classSLOT.html", null ],
     [ "CoreConfig.SoundSetting", "classCoreConfig_1_1SoundSetting.html", null ],
-    [ "SourceDataInt", null, [
-      [ "SourceBacker", "classSourceBacker.html", null ],
-      [ "SourceBlock", "classSourceBlock.html", null ],
-      [ "SourceCellEffect", "classSourceCellEffect.html", null ],
-      [ "SourceElement", "classSourceElement.html", null ],
-      [ "SourceFloor", "classSourceFloor.html", null ],
-      [ "SourceGlobalTile", "classSourceGlobalTile.html", null ],
-      [ "SourceHobby", "classSourceHobby.html", null ],
-      [ "SourceKeyItem", "classSourceKeyItem.html", null ],
-      [ "SourceMaterial", "classSourceMaterial.html", null ],
-      [ "SourceObj", "classSourceObj.html", null ],
-      [ "SourceRecipe", "classSourceRecipe.html", null ],
-      [ "SourceStat", "classSourceStat.html", null ],
+    [ "SourceDataInt< LangWord.Row >", "classSourceDataInt.html", [
+      [ "LangWord", "classLangWord.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceBacker.Row >", "classSourceDataInt.html", [
+      [ "SourceBacker", "classSourceBacker.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceBlock.Row >", "classSourceDataInt.html", [
+      [ "SourceBlock", "classSourceBlock.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceCellEffect.Row >", "classSourceDataInt.html", [
+      [ "SourceCellEffect", "classSourceCellEffect.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceElement.Row >", "classSourceDataInt.html", [
+      [ "SourceElement", "classSourceElement.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceFloor.Row >", "classSourceDataInt.html", [
+      [ "SourceFloor", "classSourceFloor.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceGlobalTile.Row >", "classSourceDataInt.html", [
+      [ "SourceGlobalTile", "classSourceGlobalTile.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceHobby.Row >", "classSourceDataInt.html", [
+      [ "SourceHobby", "classSourceHobby.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceKeyItem.Row >", "classSourceDataInt.html", [
+      [ "SourceKeyItem", "classSourceKeyItem.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceMaterial.Row >", "classSourceDataInt.html", [
+      [ "SourceMaterial", "classSourceMaterial.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceObj.Row >", "classSourceDataInt.html", [
+      [ "SourceObj", "classSourceObj.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceRecipe.Row >", "classSourceDataInt.html", [
+      [ "SourceRecipe", "classSourceRecipe.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceStat.Row >", "classSourceDataInt.html", [
+      [ "SourceStat", "classSourceStat.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceZoneAffix.Row >", "classSourceDataInt.html", [
       [ "SourceZoneAffix", "classSourceZoneAffix.html", null ]
     ] ],
-    [ "SourceDataString", null, [
-      [ "SourceArea", "classSourceArea.html", null ],
-      [ "SourceCalc", "classSourceCalc.html", null ],
-      [ "SourceCategory", "classSourceCategory.html", null ],
-      [ "SourceChara", "classSourceChara.html", null ],
-      [ "SourceCharaText", "classSourceCharaText.html", null ],
-      [ "SourceCheck", "classSourceCheck.html", null ],
-      [ "SourceCollectible", "classSourceCollectible.html", null ],
-      [ "SourceFaction", "classSourceFaction.html", null ],
-      [ "SourceHomeResource", "classSourceHomeResource.html", null ],
-      [ "SourceJob", "classSourceJob.html", null ],
-      [ "SourcePerson", "classSourcePerson.html", null ],
-      [ "SourceQuest", "classSourceQuest.html", null ],
-      [ "SourceRace", "classSourceRace.html", null ],
-      [ "SourceReligion", "classSourceReligion.html", null ],
-      [ "SourceResearch", "classSourceResearch.html", null ],
-      [ "SourceSpawnList", "classSourceSpawnList.html", null ],
-      [ "SourceTactics", "classSourceTactics.html", null ],
-      [ "SourceThing", "classSourceThing.html", null ],
+    [ "SourceDataString< LangList.Row >", "classSourceDataString.html", [
+      [ "LangList", "classLangList.html", null ]
+    ] ],
+    [ "SourceDataString< LangNote.Row >", "classSourceDataString.html", [
+      [ "LangNote", "classLangNote.html", null ]
+    ] ],
+    [ "SourceDataString< LangTalk.Row >", "classSourceDataString.html", [
+      [ "LangTalk", "classLangTalk.html", null ]
+    ] ],
+    [ "SourceDataString< SourceArea.Row >", "classSourceDataString.html", [
+      [ "SourceArea", "classSourceArea.html", null ]
+    ] ],
+    [ "SourceDataString< SourceCalc.Row >", "classSourceDataString.html", [
+      [ "SourceCalc", "classSourceCalc.html", null ]
+    ] ],
+    [ "SourceDataString< SourceCategory.Row >", "classSourceDataString.html", [
+      [ "SourceCategory", "classSourceCategory.html", null ]
+    ] ],
+    [ "SourceDataString< SourceChara.Row >", "classSourceDataString.html", [
+      [ "SourceChara", "classSourceChara.html", null ]
+    ] ],
+    [ "SourceDataString< SourceCharaText.Row >", "classSourceDataString.html", [
+      [ "SourceCharaText", "classSourceCharaText.html", null ]
+    ] ],
+    [ "SourceDataString< SourceCheck.Row >", "classSourceDataString.html", [
+      [ "SourceCheck", "classSourceCheck.html", null ]
+    ] ],
+    [ "SourceDataString< SourceCollectible.Row >", "classSourceDataString.html", [
+      [ "SourceCollectible", "classSourceCollectible.html", null ]
+    ] ],
+    [ "SourceDataString< SourceFaction.Row >", "classSourceDataString.html", [
+      [ "SourceFaction", "classSourceFaction.html", null ]
+    ] ],
+    [ "SourceDataString< SourceHomeResource.Row >", "classSourceDataString.html", [
+      [ "SourceHomeResource", "classSourceHomeResource.html", null ]
+    ] ],
+    [ "SourceDataString< SourceJob.Row >", "classSourceDataString.html", [
+      [ "SourceJob", "classSourceJob.html", null ]
+    ] ],
+    [ "SourceDataString< SourcePerson.Row >", "classSourceDataString.html", [
+      [ "SourcePerson", "classSourcePerson.html", null ]
+    ] ],
+    [ "SourceDataString< SourceQuest.Row >", "classSourceDataString.html", [
+      [ "SourceQuest", "classSourceQuest.html", null ]
+    ] ],
+    [ "SourceDataString< SourceRace.Row >", "classSourceDataString.html", [
+      [ "SourceRace", "classSourceRace.html", null ]
+    ] ],
+    [ "SourceDataString< SourceReligion.Row >", "classSourceDataString.html", [
+      [ "SourceReligion", "classSourceReligion.html", null ]
+    ] ],
+    [ "SourceDataString< SourceResearch.Row >", "classSourceDataString.html", [
+      [ "SourceResearch", "classSourceResearch.html", null ]
+    ] ],
+    [ "SourceDataString< SourceSpawnList.Row >", "classSourceDataString.html", [
+      [ "SourceSpawnList", "classSourceSpawnList.html", null ]
+    ] ],
+    [ "SourceDataString< SourceTactics.Row >", "classSourceDataString.html", [
+      [ "SourceTactics", "classSourceTactics.html", null ]
+    ] ],
+    [ "SourceDataString< SourceThing.Row >", "classSourceDataString.html", [
+      [ "SourceThing", "classSourceThing.html", null ]
+    ] ],
+    [ "SourceDataString< SourceThingV.Row >", "classSourceDataString.html", [
       [ "SourceThingV", "classSourceThingV.html", [
         [ "SourceFood", "classSourceFood.html", null ]
-      ] ],
+      ] ]
+    ] ],
+    [ "SourceDataString< SourceZone.Row >", "classSourceDataString.html", [
       [ "SourceZone", "classSourceZone.html", null ]
+    ] ],
+    [ "SourceLang< LangGame.Row >", "classSourceLang.html", [
+      [ "LangGame", "classLangGame.html", null ]
+    ] ],
+    [ "SourceLang< LangGeneral.Row >", "classSourceLang.html", [
+      [ "LangGeneral", "classLangGeneral.html", null ]
     ] ],
     [ "SourceLiquid", "classSourceLiquid.html", null ],
     [ "SourceSupplyType", "classSourceSupplyType.html", null ],
     [ "BiomeProfile.Spawns", "classBiomeProfile_1_1Spawns.html", null ],
     [ "SpawnSetting", "classSpawnSetting.html", null ],
     [ "SPELL", "classSPELL.html", null ],
+    [ "SpriteData", "classSpriteData.html", null ],
+    [ "SpriteLoadOption", "classSpriteLoadOption.html", null ],
+    [ "SpriteReplacer", "classSpriteReplacer.html", null ],
     [ "GrowSystem.Stage", "classGrowSystem_1_1Stage.html", null ],
     [ "SourceObj.Stage", "classSourceObj_1_1Stage.html", null ],
+    [ "SFB.StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ],
     [ "CoreDebug.StartSetting", "classCoreDebug_1_1StartSetting.html", null ],
     [ "GameSetting.StartSetting", "classGameSetting_1_1StartSetting.html", null ],
     [ "CoreRef.StateIcons", "classCoreRef_1_1StateIcons.html", null ],
@@ -2541,16 +2758,55 @@ var hierarchy =
     [ "UIInventory.Transaction", "classUIInventory_1_1Transaction.html", null ],
     [ "TransAnime", "classTransAnime.html", null ],
     [ "GameSetting.TransData", "classGameSetting_1_1TransData.html", null ],
-    [ "UDictionary", null, [
-      [ "CoreRef.UDIconWeather", "classCoreRef_1_1UDIconWeather.html", null ],
-      [ "CoreRef.UDInvStyle", "classCoreRef_1_1UDInvStyle.html", null ],
-      [ "CoreRef.UDInvTab", "classCoreRef_1_1UDInvTab.html", null ],
-      [ "GameSetting.RenderSetting.UD_FogSetting", "classGameSetting_1_1RenderSetting_1_1UD__FogSetting.html", null ],
-      [ "GameSetting.RenderSetting.UD_MapBGSetting", "classGameSetting_1_1RenderSetting_1_1UD__MapBGSetting.html", null ],
-      [ "UD_Biome", "classUD__Biome.html", null ],
-      [ "UD_String_EffectData", "classUD__String__EffectData.html", null ],
+    [ "UDictionary< FogType, ScreenGradingProfile.Fog >", "classUDictionary.html", [
+      [ "GameSetting.RenderSetting.UD_FogSetting", "classGameSetting_1_1RenderSetting_1_1UD__FogSetting.html", null ]
+    ] ],
+    [ "UDictionary< int, string >", "classUDictionary.html", [
+      [ "UD_Int_String", "classUD__Int__String.html", null ]
+    ] ],
+    [ "UDictionary< MapBG, MapBGSetting >", "classUDictionary.html", [
+      [ "GameSetting.RenderSetting.UD_MapBGSetting", "classGameSetting_1_1RenderSetting_1_1UD__MapBGSetting.html", null ]
+    ] ],
+    [ "UDictionary< string, AnimationCurve >", "classUDictionary.html", [
+      [ "UD_String_Curve", "classUD__String__Curve.html", null ]
+    ] ],
+    [ "UDictionary< string, BiomeProfile >", "classUDictionary.html", [
+      [ "UD_Biome", "classUD__Biome.html", null ]
+    ] ],
+    [ "UDictionary< string, Color >", "classUDictionary.html", [
+      [ "UD_String_Color", "classUD__String__Color.html", null ]
+    ] ],
+    [ "UDictionary< string, ElementRef >", "classUDictionary.html", [
       [ "UD_String_ElementRef", "classUD__String__ElementRef.html", null ]
     ] ],
+    [ "UDictionary< string, GameSetting.EffectData >", "classUDictionary.html", [
+      [ "UD_String_EffectData", "classUD__String__EffectData.html", null ]
+    ] ],
+    [ "UDictionary< string, Gradient >", "classUDictionary.html", [
+      [ "UD_String_Gradient", "classUD__String__Gradient.html", null ]
+    ] ],
+    [ "UDictionary< string, InventoryStyle >", "classUDictionary.html", [
+      [ "CoreRef.UDInvStyle", "classCoreRef_1_1UDInvStyle.html", null ]
+    ] ],
+    [ "UDictionary< string, LightData >", "classUDictionary.html", [
+      [ "UD_String_LightData", "classUD__String__LightData.html", null ]
+    ] ],
+    [ "UDictionary< string, MatColors >", "classUDictionary.html", [
+      [ "UD_String_MatData", "classUD__String__MatData.html", null ]
+    ] ],
+    [ "UDictionary< string, PaintPosition >", "classUDictionary.html", [
+      [ "UD_String_PaintPosition", "classUD__String__PaintPosition.html", null ]
+    ] ],
+    [ "UDictionary< string, string >", "classUDictionary.html", [
+      [ "UD_String_String", "classUD__String__String.html", null ]
+    ] ],
+    [ "UDictionary< UIInventory.Mode, Sprite >", "classUDictionary.html", [
+      [ "CoreRef.UDInvTab", "classCoreRef_1_1UDInvTab.html", null ]
+    ] ],
+    [ "UDictionary< Weather.Condition, Sprite >", "classUDictionary.html", [
+      [ "CoreRef.UDIconWeather", "classCoreRef_1_1UDIconWeather.html", null ]
+    ] ],
+    [ "CorePath.UI", "classCorePath_1_1UI.html", null ],
     [ "UIButton", null, [
       [ "ButtonAbility", "classButtonAbility.html", null ],
       [ "ButtonChara", "classButtonChara.html", null ],
@@ -2604,6 +2860,13 @@ var hierarchy =
     [ "CoreConfig.UISetting", "classCoreConfig_1_1UISetting.html", null ],
     [ "GameSetting.UISetting", "classGameSetting_1_1UISetting.html", null ],
     [ "UndoManager", "classUndoManager.html", null ],
+    [ "B83.Win32.UnityDragAndDropHook", "classB83_1_1Win32_1_1UnityDragAndDropHook.html", null ],
+    [ "UnityEvent", null, [
+      [ "UnityEventBool", "classUnityEventBool.html", null ]
+    ] ],
+    [ "UPair< T >", "classUPair.html", null ],
+    [ "Util", "classUtil.html", null ],
+    [ "Version", "structVersion.html", null ],
     [ "Net.VoteLog", "classNet_1_1VoteLog.html", null ],
     [ "Wall", "structWall.html", null ],
     [ "Weather.WeatherForecast", "classWeather_1_1WeatherForecast.html", null ],
@@ -2611,12 +2874,15 @@ var hierarchy =
     [ "Algorithms.WeightCell", "classAlgorithms_1_1WeightCell.html", [
       [ "Cell", "classCell.html", null ]
     ] ],
+    [ "B83.Win32.WinAPI", "classB83_1_1Win32_1_1WinAPI.html", null ],
+    [ "B83.Win32.Window", "classB83_1_1Win32_1_1Window.html", null ],
     [ "WindowController", null, [
       [ "WindowChara", "classWindowChara.html", null ],
       [ "WindowCharaMini", "classWindowCharaMini.html", null ]
     ] ],
     [ "ActEffect.WishItem", "classActEffect_1_1WishItem.html", null ],
     [ "WidgetSearch.Word", "classWidgetSearch_1_1Word.html", null ],
+    [ "Lang.Words", "classLang_1_1Words.html", null ],
     [ "XY", "structXY.html", null ],
     [ "ZINT", "classZINT.html", null ],
     [ "ZoneUtil", "classZoneUtil.html", null ],

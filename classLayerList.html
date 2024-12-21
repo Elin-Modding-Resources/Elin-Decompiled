@@ -524,10 +524,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   60</span>        {</div>
 <div class="line"><span class="lineno">   61</span>            <a class="code hl_variable" href="classLayerList.html#a74aa8673ca6880a2a727e22abb3463a2">highlightTarget</a>.DoHighlightTransition();</div>
 <div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>        EInput.WaitReleaseKey();</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a0740b0f7747f6119a5222c9e7ed16b5f">WaitReleaseKey</a>();</div>
 <div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
+<div class="ttc" id="aclassEInput_html_a0740b0f7747f6119a5222c9e7ed16b5f"><div class="ttname"><a href="classEInput.html#a0740b0f7747f6119a5222c9e7ed16b5f">EInput.WaitReleaseKey</a></div><div class="ttdeci">static void WaitReleaseKey()</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00650">EInput.cs:650</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerList_8cs_source.html#l00020">highlightTarget</a>.</p>
+<p class="reference">References <a class="el" href="LayerList_8cs_source.html#l00020">highlightTarget</a>, and <a class="el" href="EInput_8cs_source.html#l00650">EInput.WaitReleaseKey()</a>.</p>
 
 </div>
 </div>
@@ -558,7 +560,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  317</span>    {</div>
 <div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classLayerList.html#a74aa8673ca6880a2a727e22abb3463a2">highlightTarget</a>)</div>
 <div class="line"><span class="lineno">  319</span>        {</div>
-<div class="line"><span class="lineno">  320</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.WaitForEndOfFrame(delegate</div>
+<div class="line"><span class="lineno">  320</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_function" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a>(delegate</div>
 <div class="line"><span class="lineno">  321</span>            {</div>
 <div class="line"><span class="lineno">  322</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classLayerList.html#a74aa8673ca6880a2a727e22abb3463a2">highlightTarget</a>)</div>
 <div class="line"><span class="lineno">  323</span>                {</div>
@@ -573,15 +575,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  332</span>                }</div>
 <div class="line"><span class="lineno">  333</span>            });</div>
 <div class="line"><span class="lineno">  334</span>        }</div>
-<div class="line"><span class="lineno">  335</span>        TooltipManager.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.HideTooltips(immediate: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  335</span>        TooltipManager.Instance.HideTooltips(immediate: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  336</span>        TooltipManager.Instance.disableHide = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  337</span>        EInput.WaitReleaseKey();</div>
+<div class="line"><span class="lineno">  337</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a0740b0f7747f6119a5222c9e7ed16b5f">WaitReleaseKey</a>();</div>
 <div class="line"><span class="lineno">  338</span>    }</div>
-<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00011">Core.cs:11</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_a5755e1f33429715944ea9afeda8b1472"><div class="ttname"><a href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">BaseCore.WaitForEndOfFrame</a></div><div class="ttdeci">void WaitForEndOfFrame(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00061">BaseCore.cs:61</a></div></div>
 <div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
 <div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00007">ELayer.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerList_8cs_source.html#l00020">highlightTarget</a>, and <a class="el" href="Core_8cs_source.html#l00011">Core.Instance</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00007">ELayer.core</a>, <a class="el" href="LayerList_8cs_source.html#l00020">highlightTarget</a>, <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>, and <a class="el" href="EInput_8cs_source.html#l00650">EInput.WaitReleaseKey()</a>.</p>
 
 </div>
 </div>
@@ -812,25 +814,25 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  190</span>                    Close();</div>
 <div class="line"><span class="lineno">  191</span>                }</div>
 <div class="line"><span class="lineno">  192</span>            },</div>
-<div class="line"><span class="lineno">  193</span>            onInstantiate = delegate(TValue a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  193</span>            onInstantiate = delegate(TValue a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</div>
 <div class="line"><span class="lineno">  194</span>            {</div>
 <div class="line"><span class="lineno">  195</span>                item.button1.mainText.text = getText(a);</div>
-<div class="line"><span class="lineno">  196</span>                item.<a class="code hl_function" href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">DisableIcon</a>();</div>
-<div class="line"><span class="lineno">  197</span>                item.<a class="code hl_function" href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">Build</a>();</div>
+<div class="line"><span class="lineno">  196</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DisableIcon();</div>
+<div class="line"><span class="lineno">  197</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Build();</div>
 <div class="line"><span class="lineno">  198</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerList.html#ad0ced18c39dc9a2e032ffd970d22a1f5">noSound</a>)</div>
 <div class="line"><span class="lineno">  199</span>                {</div>
 <div class="line"><span class="lineno">  200</span>                    item.button1.soundClick = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  201</span>                }</div>
 <div class="line"><span class="lineno">  202</span>                <span class="keywordflow">if</span> (onInstantiate != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  203</span>                {</div>
-<div class="line"><span class="lineno">  204</span>                    onInstantiate(a, item);</div>
+<div class="line"><span class="lineno">  204</span>                    onInstantiate(a, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  205</span>                }</div>
 <div class="line"><span class="lineno">  206</span>            },</div>
 <div class="line"><span class="lineno">  207</span>            onList = delegate</div>
 <div class="line"><span class="lineno">  208</span>            {</div>
-<div class="line"><span class="lineno">  209</span>                <span class="keywordflow">foreach</span> (TValue item <span class="keywordflow">in</span> _list)</div>
+<div class="line"><span class="lineno">  209</span>                <span class="keywordflow">foreach</span> (TValue <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> _list)</div>
 <div class="line"><span class="lineno">  210</span>                {</div>
-<div class="line"><span class="lineno">  211</span>                    <a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.Add(item);</div>
+<div class="line"><span class="lineno">  211</span>                    <a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  212</span>                }</div>
 <div class="line"><span class="lineno">  213</span>            }</div>
 <div class="line"><span class="lineno">  214</span>        };</div>
@@ -839,11 +841,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  217</span>        UIButton.TryShowTip(base.transform);</div>
 <div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  219</span>    }</div>
-<div class="ttc" id="aclassItemGeneral_html_a005bd66508b64671962d3f4889018adf"><div class="ttname"><a href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">ItemGeneral.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00161">ItemGeneral.cs:161</a></div></div>
-<div class="ttc" id="aclassItemGeneral_html_ad04bc95b354b2dbf271ca3e571ef6f1a"><div class="ttname"><a href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">ItemGeneral.DisableIcon</a></div><div class="ttdeci">void DisableIcon()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00147">ItemGeneral.cs:147</a></div></div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassLayerList_html_ad0ced18c39dc9a2e032ffd970d22a1f5"><div class="ttname"><a href="classLayerList.html#ad0ced18c39dc9a2e032ffd970d22a1f5">LayerList.noSound</a></div><div class="ttdeci">bool noSound</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00034">LayerList.cs:34</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00161">ItemGeneral.Build()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00147">ItemGeneral.DisableIcon()</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, <a class="el" href="LayerList_8cs_source.html#l00034">noSound</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, <a class="el" href="LayerList_8cs_source.html#l00034">noSound</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
 
 </div>
 </div>
@@ -896,16 +897,16 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="LayerList_8cs_source.html#l00135">135</a> of file <a class="el" href="LayerList_8cs_source.html">LayerList.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
 <div class="line"><span class="lineno">  137</span>        List&lt;string&gt; strs = <span class="keyword">new</span> List&lt;string&gt;();</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">foreach</span> (TValue item <span class="keywordflow">in</span> items)</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">foreach</span> (TValue <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> items)</div>
 <div class="line"><span class="lineno">  139</span>        {</div>
-<div class="line"><span class="lineno">  140</span>            strs.Add(getString(item));</div>
+<div class="line"><span class="lineno">  140</span>            strs.Add(getString(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>));</div>
 <div class="line"><span class="lineno">  141</span>        }</div>
 <div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="classLayerList.html#adc4d514087e114210ca0d756f0de8e95">SetStringList</a>(() =&gt; strs, onSelect, autoClose);</div>
 <div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  144</span>    }</div>
 <div class="ttc" id="aclassLayerList_html_adc4d514087e114210ca0d756f0de8e95"><div class="ttname"><a href="classLayerList.html#adc4d514087e114210ca0d756f0de8e95">LayerList.SetStringList</a></div><div class="ttdeci">LayerList SetStringList(Func&lt; ICollection&lt; string &gt; &gt; getList, Action&lt; int, string &gt; onSelect, bool autoClose=true)</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00146">LayerList.cs:146</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerList_8cs_source.html#l00146">SetStringList()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="LayerList_8cs_source.html#l00146">SetStringList()</a>.</p>
 
 </div>
 </div>
@@ -963,22 +964,22 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  226</span>            onClick = delegate</div>
 <div class="line"><span class="lineno">  227</span>            {</div>
 <div class="line"><span class="lineno">  228</span>            },</div>
-<div class="line"><span class="lineno">  229</span>            onInstantiate = delegate(TValue a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  229</span>            onInstantiate = delegate(TValue a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</div>
 <div class="line"><span class="lineno">  230</span>            {</div>
 <div class="line"><span class="lineno">  231</span>                item.button1.mainText.text = getText(a);</div>
-<div class="line"><span class="lineno">  232</span>                item.<a class="code hl_function" href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">DisableIcon</a>();</div>
-<div class="line"><span class="lineno">  233</span>                item.<a class="code hl_function" href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">Build</a>();</div>
-<div class="line"><span class="lineno">  234</span>                item.button1.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  232</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DisableIcon();</div>
+<div class="line"><span class="lineno">  233</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Build();</div>
+<div class="line"><span class="lineno">  234</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.button1.SetOnClick(delegate</div>
 <div class="line"><span class="lineno">  235</span>                {</div>
-<div class="line"><span class="lineno">  236</span>                    onClick(a, item);</div>
+<div class="line"><span class="lineno">  236</span>                    onClick(a, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  237</span>                    Validate();</div>
 <div class="line"><span class="lineno">  238</span>                });</div>
 <div class="line"><span class="lineno">  239</span>            },</div>
 <div class="line"><span class="lineno">  240</span>            onList = delegate</div>
 <div class="line"><span class="lineno">  241</span>            {</div>
-<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">foreach</span> (TValue item <span class="keywordflow">in</span> _list)</div>
+<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">foreach</span> (TValue <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> _list)</div>
 <div class="line"><span class="lineno">  243</span>                {</div>
-<div class="line"><span class="lineno">  244</span>                    <a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.Add(item);</div>
+<div class="line"><span class="lineno">  244</span>                    <a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  245</span>                }</div>
 <div class="line"><span class="lineno">  246</span>            }</div>
 <div class="line"><span class="lineno">  247</span>        };</div>
@@ -994,7 +995,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  257</span>    }</div>
 <div class="ttc" id="aclassLayerList_html_a49d965389c6da30afe1da4539ade4307"><div class="ttname"><a href="classLayerList.html#a49d965389c6da30afe1da4539ade4307">LayerList.moldItemCheck</a></div><div class="ttdeci">UIItem moldItemCheck</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00022">LayerList.cs:22</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00161">ItemGeneral.Build()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00147">ItemGeneral.DisableIcon()</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, <a class="el" href="LayerList_8cs_source.html#l00022">moldItemCheck</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, <a class="el" href="LayerList_8cs_source.html#l00022">moldItemCheck</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
 
 </div>
 </div>
@@ -1223,11 +1224,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  155</span>                    Close();</div>
 <div class="line"><span class="lineno">  156</span>                }</div>
 <div class="line"><span class="lineno">  157</span>            },</div>
-<div class="line"><span class="lineno">  158</span>            onInstantiate = delegate(<span class="keywordtype">string</span> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  158</span>            onInstantiate = delegate(<span class="keywordtype">string</span> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</div>
 <div class="line"><span class="lineno">  159</span>            {</div>
 <div class="line"><span class="lineno">  160</span>                item.button1.mainText.text = a;</div>
-<div class="line"><span class="lineno">  161</span>                item.<a class="code hl_function" href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">DisableIcon</a>();</div>
-<div class="line"><span class="lineno">  162</span>                item.<a class="code hl_function" href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">Build</a>();</div>
+<div class="line"><span class="lineno">  161</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DisableIcon();</div>
+<div class="line"><span class="lineno">  162</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Build();</div>
 <div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerList.html#ad0ced18c39dc9a2e032ffd970d22a1f5">noSound</a>)</div>
 <div class="line"><span class="lineno">  164</span>                {</div>
 <div class="line"><span class="lineno">  165</span>                    item.button1.soundClick = <span class="keyword">null</span>;</div>
@@ -1235,9 +1236,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  167</span>            },</div>
 <div class="line"><span class="lineno">  168</span>            onList = delegate</div>
 <div class="line"><span class="lineno">  169</span>            {</div>
-<div class="line"><span class="lineno">  170</span>                <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> item <span class="keywordflow">in</span> getList())</div>
+<div class="line"><span class="lineno">  170</span>                <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> getList())</div>
 <div class="line"><span class="lineno">  171</span>                {</div>
-<div class="line"><span class="lineno">  172</span>                    <a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.Add(item);</div>
+<div class="line"><span class="lineno">  172</span>                    <a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  173</span>                }</div>
 <div class="line"><span class="lineno">  174</span>            }</div>
 <div class="line"><span class="lineno">  175</span>        };</div>
@@ -1246,7 +1247,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  179</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00161">ItemGeneral.Build()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00147">ItemGeneral.DisableIcon()</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, <a class="el" href="LayerList_8cs_source.html#l00034">noSound</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, <a class="el" href="LayerList_8cs_source.html#l00034">noSound</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerList_8cs_source.html#l00135">SetList&lt; TValue &gt;()</a>.</p>
 
@@ -1288,11 +1289,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  363</span>                    Close();</div>
 <div class="line"><span class="lineno">  364</span>                }</div>
 <div class="line"><span class="lineno">  365</span>            },</div>
-<div class="line"><span class="lineno">  366</span>            onInstantiate = delegate(CustomItem a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> item)</div>
+<div class="line"><span class="lineno">  366</span>            onInstantiate = delegate(CustomItem a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</div>
 <div class="line"><span class="lineno">  367</span>            {</div>
 <div class="line"><span class="lineno">  368</span>                item.button1.mainText.text = a.lang.lang();</div>
-<div class="line"><span class="lineno">  369</span>                item.<a class="code hl_function" href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">DisableIcon</a>();</div>
-<div class="line"><span class="lineno">  370</span>                item.<a class="code hl_function" href="classItemGeneral.html#a005bd66508b64671962d3f4889018adf">Build</a>();</div>
+<div class="line"><span class="lineno">  369</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DisableIcon();</div>
+<div class="line"><span class="lineno">  370</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Build();</div>
 <div class="line"><span class="lineno">  371</span>            },</div>
 <div class="line"><span class="lineno">  372</span>            onList = delegate</div>
 <div class="line"><span class="lineno">  373</span>            {</div>
@@ -1311,7 +1312,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  386</span>        }</div>
 <div class="line"><span class="lineno">  387</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerList_8cs_source.html#l00011">LayerList.CustomItem.action</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00161">ItemGeneral.Build()</a>, <a class="el" href="LayerList_8cs_source.html#l00018">buttonReroll</a>, <a class="el" href="LayerList_8cs_source.html#l00046">customItems</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00147">ItemGeneral.DisableIcon()</a>, <a class="el" href="LayerList_8cs_source.html#l00013">LayerList.CustomItem.id</a>, <a class="el" href="LayerList_8cs_source.html#l00009">LayerList.CustomItem.lang</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
+<p class="reference">References <a class="el" href="LayerList_8cs_source.html#l00011">LayerList.CustomItem.action</a>, <a class="el" href="LayerList_8cs_source.html#l00018">buttonReroll</a>, <a class="el" href="LayerList_8cs_source.html#l00046">customItems</a>, <a class="el" href="LayerList_8cs_source.html#l00013">LayerList.CustomItem.id</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerList_8cs_source.html#l00009">LayerList.CustomItem.lang</a>, <a class="el" href="LayerList_8cs_source.html#l00016">list</a>, and <a class="el" href="LayerList_8cs_source.html#l00117">RefreshSize()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitMapBoard_8cs_source.html#l00010">TraitMapBoard.TrySetAct()</a>.</p>
 

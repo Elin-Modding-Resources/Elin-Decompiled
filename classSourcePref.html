@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac953060b560b13354232d982721b2be7"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a> = new int[25]</td></tr>
 <tr class="separator:ac953060b560b13354232d982721b2be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae297f0f764b20941ca54a04932546153"><td class="memItemLeft" align="right" valign="top">BitArray32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a></td></tr>
+<tr class="memitem:ae297f0f764b20941ca54a04932546153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBitArray32.html">BitArray32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a></td></tr>
 <tr class="separator:ae297f0f764b20941ca54a04932546153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
@@ -283,7 +283,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  317</span>    {</div>
 <div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>.Length &gt;= 25)</div>
 <div class="line"><span class="lineno">  319</span>        {</div>
-<div class="line"><span class="lineno">  320</span>            <a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>.SetInt(<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[22]);</div>
+<div class="line"><span class="lineno">  320</span>            <a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>.<a class="code hl_function" href="structBitArray32.html#ad24ef4922fe039f4fd833826ed4f0c82">SetInt</a>(<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[22]);</div>
 <div class="line"><span class="lineno">  321</span>        }</div>
 <div class="line"><span class="lineno">  322</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  323</span>        {</div>
@@ -293,8 +293,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourcePref_html_ac953060b560b13354232d982721b2be7"><div class="ttname"><a href="classSourcePref.html#ac953060b560b13354232d982721b2be7">SourcePref.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00009">SourcePref.cs:9</a></div></div>
 <div class="ttc" id="aclassSourcePref_html_ae297f0f764b20941ca54a04932546153"><div class="ttname"><a href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">SourcePref._bits1</a></div><div class="ttdeci">BitArray32 _bits1</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00011">SourcePref.cs:11</a></div></div>
 <div class="ttc" id="aclassSourcePref_html_afbc57d24dff0f3bc7c9a0b10cbdb6923"><div class="ttname"><a href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">SourcePref.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00333">SourcePref.cs:333</a></div></div>
+<div class="ttc" id="astructBitArray32_html_ad24ef4922fe039f4fd833826ed4f0c82"><div class="ttname"><a href="structBitArray32.html#ad24ef4922fe039f4fd833826ed4f0c82">BitArray32.SetInt</a></div><div class="ttdeci">void SetInt(int i)</div><div class="ttdef"><b>Definition:</b> <a href="BitArray32_8cs_source.html#l00089">BitArray32.cs:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00011">_bits1</a>, <a class="el" href="SourcePref_8cs_source.html#l00009">ints</a>, and <a class="el" href="SourcePref_8cs_source.html#l00333">Validate()</a>.</p>
+<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00011">_bits1</a>, <a class="el" href="SourcePref_8cs_source.html#l00009">ints</a>, <a class="el" href="BitArray32_8cs_source.html#l00089">BitArray32.SetInt()</a>, and <a class="el" href="SourcePref_8cs_source.html#l00333">Validate()</a>.</p>
 
 </div>
 </div>
@@ -323,10 +324,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourcePref_8cs_source.html#l00328">328</a> of file <a class="el" href="SourcePref_8cs_source.html">SourcePref.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  329</span>    {</div>
-<div class="line"><span class="lineno">  330</span>        <a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[22] = <a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>.ToInt();</div>
+<div class="line"><span class="lineno">  330</span>        <a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[22] = <a class="code hl_variable" href="classSourcePref.html#ae297f0f764b20941ca54a04932546153">_bits1</a>.<a class="code hl_function" href="structBitArray32.html#af1c823fc2ad0746fe1f552574be231f3">ToInt</a>();</div>
 <div class="line"><span class="lineno">  331</span>    }</div>
+<div class="ttc" id="astructBitArray32_html_af1c823fc2ad0746fe1f552574be231f3"><div class="ttname"><a href="structBitArray32.html#af1c823fc2ad0746fe1f552574be231f3">BitArray32.ToInt</a></div><div class="ttdeci">int ToInt()</div><div class="ttdef"><b>Definition:</b> <a href="BitArray32_8cs_source.html#l00084">BitArray32.cs:84</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00011">_bits1</a>, and <a class="el" href="SourcePref_8cs_source.html#l00009">ints</a>.</p>
+<p class="reference">References <a class="el" href="SourcePref_8cs_source.html#l00011">_bits1</a>, <a class="el" href="SourcePref_8cs_source.html#l00009">ints</a>, and <a class="el" href="BitArray32_8cs_source.html#l00084">BitArray32.ToInt()</a>.</p>
 
 </div>
 </div>
@@ -375,7 +377,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BitArray32 SourcePref._bits1</td>
+          <td class="memname"><a class="el" href="structBitArray32.html">BitArray32</a> SourcePref._bits1</td>
         </tr>
       </table>
 </div><div class="memdoc">

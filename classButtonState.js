@@ -1,0 +1,38 @@
+var classButtonState =
+[
+    [ "ClickCriteria", "classButtonState.html#af5e075d3c9722f40f311bbe87768aa96", [
+      [ "ByDuration", "classButtonState.html#af5e075d3c9722f40f311bbe87768aa96a66a77ee9f0f40a02b96e59a8470b8d98", null ],
+      [ "ByMargin", "classButtonState.html#af5e075d3c9722f40f311bbe87768aa96a47410e38e4fac0fc30144cbe20ebc3f4", null ],
+      [ "ByDurationAndMargin", "classButtonState.html#af5e075d3c9722f40f311bbe87768aa96a3ecec9db29177bd8194c34a99cc23e30", null ]
+    ] ],
+    [ "Clear", "classButtonState.html#ac582e823770e71cb6706ca2e940dc191", null ],
+    [ "Consume", "classButtonState.html#a5fcd285e98bf50465df8719456db036c", null ],
+    [ "IsInDoubleClickDuration", "classButtonState.html#a88c76152d86e72db9bda5d02fdff9713", null ],
+    [ "Update", "classButtonState.html#a17b9f312ac9196cd963ffc5617f9c2d6", null ],
+    [ "clickCriteria", "classButtonState.html#ac14ce35ac191a152835f22953f28071b", null ],
+    [ "clickDuration", "classButtonState.html#a598e5ac784821fdb7b7e43f1f0739155", null ],
+    [ "clicked", "classButtonState.html#a3e4c86be0bfb79ff8fb68640b05584f3", null ],
+    [ "consumed", "classButtonState.html#a7e1830bfd54b59b2aa1d69dc656693aa", null ],
+    [ "delta", "classButtonState.html#a5c1c282e78f3d0b2f04aa7c508d0a3fc", null ],
+    [ "doubleClicked", "classButtonState.html#a5cd3e1e0e5ef133789d7acc2843e6f77", null ],
+    [ "down", "classButtonState.html#aac251aea46bc70da7cfc0045584eacbf", null ],
+    [ "draggedOverMargin", "classButtonState.html#a818d9c0ff8942f4fa506d7b51704dab6", null ],
+    [ "dragging", "classButtonState.html#a1ce03d1bb28e9aa396e06adc2172bfc2", null ],
+    [ "dragging2", "classButtonState.html#a2618300216fc878a9d2599aa86459255", null ],
+    [ "dragMargin", "classButtonState.html#a3cf74a20529921e88c924a135c5e0df3", null ],
+    [ "id", "classButtonState.html#aa04635449d8b9dadeaabb3eaf2e9a411", null ],
+    [ "ignoreClick", "classButtonState.html#a0cfdb93cec1eb892309a9ff4884680f8", null ],
+    [ "ignoreWheel", "classButtonState.html#ad34cf94860a302d02c8c4012ebae0e4c", null ],
+    [ "keymap", "classButtonState.html#af29f229abd0193cbe62a0422c0ef9fd8", null ],
+    [ "mouse", "classButtonState.html#a2f7a354c493cc3846083000a70e29648", null ],
+    [ "pressedLongAction", "classButtonState.html#ace9a0d494c0368efcc8389cb851dccf9", null ],
+    [ "pressedTimer", "classButtonState.html#a476a8245970b0eb33baa7adfab9b908e", null ],
+    [ "pressing", "classButtonState.html#a2795e664e9d9d2e7daf816393e89ddd4", null ],
+    [ "timeSinceLastButtonDown", "classButtonState.html#a6ce3c0fcfae9b2b49ae18d6d9a02222c", null ],
+    [ "timeSinceLastClick", "classButtonState.html#acd28b1a8ef5c08a118ccbc38f2105480", null ],
+    [ "up", "classButtonState.html#a04d33e55b19d8574135cc0c707b2254f", null ],
+    [ "usedKey", "classButtonState.html#a26ef7a7d55c9c834358bd18e57f3a0d7", null ],
+    [ "usedMouse", "classButtonState.html#a9388d76915fc9b39451173a95a7d6496", null ],
+    [ "wasConsumed", "classButtonState.html#a641d4dc78ed81ee63ddf827b7d3c639d", null ],
+    [ "pressedLong", "classButtonState.html#ab9ea0c4bd7f30bc6e62e29e7ddd93f88", null ]
+];

@@ -216,7 +216,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa5e19c9606472451bed0fb2402beee07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac061a63451fb6c789d3fbdac04a047d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#ac061a63451fb6c789d3fbdac04a047d9">isImported</a></td></tr>
 <tr class="separator:ac061a63451fb6c789d3fbdac04a047d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a872aba4f74325d925c3306f42503d569"><td class="memItemLeft" align="right" valign="top">BitArray32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#a872aba4f74325d925c3306f42503d569">bits</a></td></tr>
+<tr class="memitem:a872aba4f74325d925c3306f42503d569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBitArray32.html">BitArray32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#a872aba4f74325d925c3306f42503d569">bits</a></td></tr>
 <tr class="separator:a872aba4f74325d925c3306f42503d569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -712,7 +712,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  598</span>        <a class="code hl_property" href="classSpatial.html#af8df28fd32e0eb5c0fc25a68cb2c8035">x</a> = _x;</div>
 <div class="line"><span class="lineno">  599</span>        <a class="code hl_property" href="classSpatial.html#ac91ab5f2967837520d40a341ce0ede79">y</a> = _y;</div>
 <div class="line"><span class="lineno">  600</span>        <a class="code hl_property" href="classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce">icon</a> = _icon;</div>
-<div class="line"><span class="lineno">  601</span>        Rand.SetSeed(<a class="code hl_property" href="classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b">Seed</a>);</div>
+<div class="line"><span class="lineno">  601</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_property" href="classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b">Seed</a>);</div>
 <div class="line"><span class="lineno">  602</span>        <span class="keywordtype">id</span> = _id;</div>
 <div class="line"><span class="lineno">  603</span>        <a class="code hl_property" href="classSpatial.html#ab74629ab14442169d029714917e0b5a1">development</a> = <a class="code hl_property" href="classSpatial.html#aa42f763f502591c824b67010aa9ecde7">source</a>.dev;</div>
 <div class="line"><span class="lineno">  604</span>        _ = source.name == <span class="stringliteral">&quot;*r&quot;</span>;</div>
@@ -722,11 +722,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  608</span>            <a class="code hl_property" href="classSpatial.html#a9cc9fd9ed985357c10aac0f11d38836b">isKnown</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  609</span>        }</div>
 <div class="line"><span class="lineno">  610</span>        <a class="code hl_function" href="classSpatial.html#a23eedba5194d6f73cb944a3be1670605">OnCreate</a>();</div>
-<div class="line"><span class="lineno">  611</span>        Rand.SetSeed();</div>
+<div class="line"><span class="lineno">  611</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
 <div class="line"><span class="lineno">  612</span>    }</div>
 <div class="ttc" id="aclassCoreDebug_html_a5c80339ebecccc975300f9a66eb4d9e1"><div class="ttname"><a href="classCoreDebug.html#a5c80339ebecccc975300f9a66eb4d9e1">CoreDebug.travelAnywhere</a></div><div class="ttdeci">bool travelAnywhere</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00206">CoreDebug.cs:206</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
+<div class="ttc" id="aclassRand_html"><div class="ttname"><a href="classRand.html">Rand</a></div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00003">Rand.cs:4</a></div></div>
+<div class="ttc" id="aclassRand_html_aedb43adb5963433dd4098a0d2514c599"><div class="ttname"><a href="classRand.html#aedb43adb5963433dd4098a0d2514c599">Rand.SetSeed</a></div><div class="ttdeci">static void SetSeed(int a=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00037">Rand.cs:37</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a0acfe59475a875ecfaf22c8dc2173262"><div class="ttname"><a href="classSpatial.html#a0acfe59475a875ecfaf22c8dc2173262">Spatial._dangerLv</a></div><div class="ttdeci">int _dangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00189">Spatial.cs:190</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a23eedba5194d6f73cb944a3be1670605"><div class="ttname"><a href="classSpatial.html#a23eedba5194d6f73cb944a3be1670605">Spatial.OnCreate</a></div><div class="ttdeci">virtual void OnCreate()</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00622">Spatial.cs:622</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a4eba294dd1fc5a221a599e58354ca8ce"><div class="ttname"><a href="classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce">Spatial.icon</a></div><div class="ttdeci">int icon</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00081">Spatial.cs:82</a></div></div>
@@ -737,7 +739,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSpatial_html_ac91ab5f2967837520d40a341ce0ede79"><div class="ttname"><a href="classSpatial.html#ac91ab5f2967837520d40a341ce0ede79">Spatial.y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00105">Spatial.cs:106</a></div></div>
 <div class="ttc" id="aclassSpatial_html_af8df28fd32e0eb5c0fc25a68cb2c8035"><div class="ttname"><a href="classSpatial.html#af8df28fd32e0eb5c0fc25a68cb2c8035">Spatial.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00093">Spatial.cs:94</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00190">_dangerLv</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Spatial_8cs_source.html#l00238">development</a>, <a class="el" href="Spatial_8cs_source.html#l00082">icon</a>, <a class="el" href="Spatial_8cs_source.html#l00346">isKnown</a>, <a class="el" href="Spatial_8cs_source.html#l00622">OnCreate()</a>, <a class="el" href="Spatial_8cs_source.html#l00548">Seed</a>, <a class="el" href="Spatial_8cs_source.html#l00441">source</a>, <a class="el" href="CoreDebug_8cs_source.html#l00206">CoreDebug.travelAnywhere</a>, <a class="el" href="Spatial_8cs_source.html#l00094">x</a>, and <a class="el" href="Spatial_8cs_source.html#l00106">y</a>.</p>
+<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00190">_dangerLv</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Spatial_8cs_source.html#l00238">development</a>, <a class="el" href="Spatial_8cs_source.html#l00082">icon</a>, <a class="el" href="Spatial_8cs_source.html#l00346">isKnown</a>, <a class="el" href="Spatial_8cs_source.html#l00622">OnCreate()</a>, <a class="el" href="Spatial_8cs_source.html#l00548">Seed</a>, <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>, <a class="el" href="Spatial_8cs_source.html#l00441">source</a>, <a class="el" href="CoreDebug_8cs_source.html#l00206">CoreDebug.travelAnywhere</a>, <a class="el" href="Spatial_8cs_source.html#l00094">x</a>, and <a class="el" href="Spatial_8cs_source.html#l00106">y</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SpatialGen_8cs_source.html#l00016">SpatialGen.Create()</a>.</p>
 
@@ -772,14 +774,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  681</span>        {</div>
 <div class="line"><span class="lineno">  682</span>            child.<a class="code hl_function" href="classSpatial.html#a5a4034c9e257a5424dfd850f853d1fe2">DeleteMapRecursive</a>();</div>
 <div class="line"><span class="lineno">  683</span>        }</div>
-<div class="line"><span class="lineno">  684</span>        IO.DeleteDirectory(<a class="code hl_property" href="classSpatial.html#a839c20ec6dcb720f013f2871590f7eb3">pathSave</a>);</div>
+<div class="line"><span class="lineno">  684</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(<a class="code hl_property" href="classSpatial.html#a839c20ec6dcb720f013f2871590f7eb3">pathSave</a>);</div>
 <div class="line"><span class="lineno">  685</span>    }</div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00008">IO.cs:9</a></div></div>
+<div class="ttc" id="aclassIO_html_a16222d71ed2dd65f9bf4470dd744b017"><div class="ttname"><a href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">IO.DeleteDirectory</a></div><div class="ttdeci">static void DeleteDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00339">IO.cs:339</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a5a4034c9e257a5424dfd850f853d1fe2"><div class="ttname"><a href="classSpatial.html#a5a4034c9e257a5424dfd850f853d1fe2">Spatial.DeleteMapRecursive</a></div><div class="ttdeci">void DeleteMapRecursive()</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00678">Spatial.cs:678</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a839c20ec6dcb720f013f2871590f7eb3"><div class="ttname"><a href="classSpatial.html#a839c20ec6dcb720f013f2871590f7eb3">Spatial.pathSave</a></div><div class="ttdeci">string pathSave</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00491">Spatial.cs:491</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00037">children</a>, <a class="el" href="Spatial_8cs_source.html#l00678">DeleteMapRecursive()</a>, and <a class="el" href="Spatial_8cs_source.html#l00491">pathSave</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Spatial_8cs_source.html#l00678">DeleteMapRecursive()</a>, and <a class="el" href="Game_8cs_source.html#l00929">Game.OnBeforeSave()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Spatial_8cs_source.html#l00678">DeleteMapRecursive()</a>.</p>
 
 </div>
 </div>
@@ -1385,11 +1389,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Spatial_8cs_source.html#l00585">585</a> of file <a class="el" href="Spatial_8cs_source.html">Spatial.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  586</span>    {</div>
-<div class="line"><span class="lineno">  587</span>        <a class="code hl_property" href="classSpatial.html#aed7afafed8578beb91d1d7631ca82967">_bits</a> = (int)<a class="code hl_variable" href="classSpatial.html#a872aba4f74325d925c3306f42503d569">bits</a>.Bits;</div>
+<div class="line"><span class="lineno">  587</span>        <a class="code hl_property" href="classSpatial.html#aed7afafed8578beb91d1d7631ca82967">_bits</a> = (int)<a class="code hl_variable" href="classSpatial.html#a872aba4f74325d925c3306f42503d569">bits</a>.<a class="code hl_variable" href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">Bits</a>;</div>
 <div class="line"><span class="lineno">  588</span>    }</div>
 <div class="ttc" id="aclassSpatial_html_a872aba4f74325d925c3306f42503d569"><div class="ttname"><a href="classSpatial.html#a872aba4f74325d925c3306f42503d569">Spatial.bits</a></div><div class="ttdeci">BitArray32 bits</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00049">Spatial.cs:49</a></div></div>
+<div class="ttc" id="astructBitArray32_html_a83496c94eb91a5bb1d40d561f8fdf479"><div class="ttname"><a href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">BitArray32.Bits</a></div><div class="ttdeci">uint Bits</div><div class="ttdef"><b>Definition:</b> <a href="BitArray32_8cs_source.html#l00006">BitArray32.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00058">_bits</a>, and <a class="el" href="Spatial_8cs_source.html#l00049">bits</a>.</p>
+<p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00058">_bits</a>, <a class="el" href="BitArray32_8cs_source.html#l00006">BitArray32.Bits</a>, and <a class="el" href="Spatial_8cs_source.html#l00049">bits</a>.</p>
 
 </div>
 </div>
@@ -1695,7 +1700,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BitArray32 Spatial.bits</td>
+          <td class="memname"><a class="el" href="structBitArray32.html">BitArray32</a> Spatial.bits</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1772,7 +1777,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Spatial_8cs_source.html#l00013">13</a> of file <a class="el" href="Spatial_8cs_source.html">Spatial.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00141">GameDate.AdvanceDay()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00042">QuestVernis.CanUpdateOnTalk()</a>, <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="Trait_8cs_source.html#l01970">Trait.CreateStock()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00238">TraitNewZone.CreateZone()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">SpatialManager.Find()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l01471">DramaCustomSequence.GetRumor()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00277">TraitNewZone.IsFor()</a>, <a class="el" href="Chara_8cs_source.html#l02871">Chara.MoveZone()</a>, <a class="el" href="Trait_8cs_source.html#l01443">Trait.OnBarter()</a>, <a class="el" href="Chara_8cs_source.html#l01295">Chara.OnCreate()</a>, <a class="el" href="Player_8cs_source.html#l00631">Player.Flags.OnEnterZone()</a>, <a class="el" href="QuestTaskFlyer_8cs_source.html#l00020">QuestTaskFlyer.OnGiveItem()</a>, <a class="el" href="Game_8cs_source.html#l00346">Game.OnLoad()</a>, <a class="el" href="Spatial_8cs_source.html#l00564">SetInt()</a>, <a class="el" href="ListPeopleExpedition_8cs_source.html#l00043">ListPeopleExpedition.SetSubText()</a>, <a class="el" href="Chara_8cs_source.html#l06086">Chara.ShowDialog()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00823">CoreDebug.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="QuestVernis_8cs_source.html#l00042">QuestVernis.CanUpdateOnTalk()</a>, <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="Trait_8cs_source.html#l01970">Trait.CreateStock()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00238">TraitNewZone.CreateZone()</a>, <a class="el" href="SpatialManager_8cs_source.html#l00060">SpatialManager.Find()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l01471">DramaCustomSequence.GetRumor()</a>, <a class="el" href="TraitNewZone_8cs_source.html#l00277">TraitNewZone.IsFor()</a>, <a class="el" href="Chara_8cs_source.html#l02871">Chara.MoveZone()</a>, <a class="el" href="Trait_8cs_source.html#l01443">Trait.OnBarter()</a>, <a class="el" href="Chara_8cs_source.html#l01295">Chara.OnCreate()</a>, <a class="el" href="Player_8cs_source.html#l00631">Player.Flags.OnEnterZone()</a>, <a class="el" href="QuestTaskFlyer_8cs_source.html#l00020">QuestTaskFlyer.OnGiveItem()</a>, <a class="el" href="Game_8cs_source.html#l00346">Game.OnLoad()</a>, <a class="el" href="Spatial_8cs_source.html#l00564">SetInt()</a>, <a class="el" href="ListPeopleExpedition_8cs_source.html#l00043">ListPeopleExpedition.SetSubText()</a>, <a class="el" href="Chara_8cs_source.html#l06086">Chara.ShowDialog()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00823">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -2766,7 +2771,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  354</span>        }</div>
 <div class="line"><span class="lineno">  355</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Spatial_8cs_source.html#l00596">Create()</a>, <a class="el" href="Expedition_8cs_source.html#l00076">Expedition.End()</a>, <a class="el" href="Region_8cs_source.html#l00276">Region.ListTravelZones()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, and <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Spatial_8cs_source.html#l00596">Create()</a>, <a class="el" href="Region_8cs_source.html#l00276">Region.ListTravelZones()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, and <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -2864,7 +2869,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Spatial_8cs_source.html#l00443">443</a> of file <a class="el" href="Spatial_8cs_source.html">Spatial.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00531">BaseTileMap.Draw()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00047">RankedZoneManager.GetList()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00011">LayerNewZone.OnInit()</a>, <a class="el" href="LayerHire_8cs_source.html#l00010">LayerHire.Refresh()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00113">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="ActionMode_8cs_source.html#l00417">ActionMode.RefreshTexts()</a>, and <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00531">BaseTileMap.Draw()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00047">RankedZoneManager.GetList()</a>, <a class="el" href="LayerNewZone_8cs_source.html#l00011">LayerNewZone.OnInit()</a>, <a class="el" href="ActionMode_8cs_source.html#l00417">ActionMode.RefreshTexts()</a>, and <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>.</p>
 
 </div>
 </div>

@@ -7,7 +7,10 @@ var searchData=
   ['animetype_4',['AnimeType',['../classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4',1,'TraitCrafter']]],
   ['applymode_5',['ApplyMode',['../classPartialMap.html#a845a72bfb177eaaef400ee175e28b06b',1,'PartialMap']]],
   ['areahighlightmode_6',['AreaHighlightMode',['../AreaHighlightMode_8cs.html#a15798da014a287e7a68b371004532342',1,'AreaHighlightMode.cs']]],
-  ['attacksource_7',['AttackSource',['../AttackSource_8cs.html#a94a286604244a15021d28571897475a4',1,'AttackSource.cs']]],
-  ['attackstyle_8',['AttackStyle',['../AttackStyle_8cs.html#ab3a1ba8ba961f9163c3dd895f7f7ffd4',1,'AttackStyle.cs']]],
-  ['attacktype_9',['AttackType',['../AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afe',1,'AttackType.cs']]]
+  ['articlestyle_7',['ArticleStyle',['../ArticleStyle_8cs.html#aa7f4cf8991adc81403e8c4a74db37d09',1,'ArticleStyle.cs']]],
+  ['attacksource_8',['AttackSource',['../AttackSource_8cs.html#a94a286604244a15021d28571897475a4',1,'AttackSource.cs']]],
+  ['attackstyle_9',['AttackStyle',['../AttackStyle_8cs.html#ab3a1ba8ba961f9163c3dd895f7f7ffd4',1,'AttackStyle.cs']]],
+  ['attacktype_10',['AttackType',['../AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afe',1,'AttackType.cs']]],
+  ['autodumpflag_11',['AutodumpFlag',['../AutodumpFlag_8cs.html#a4d2959963559bdb2dad9ad9b4946e0f2',1,'AutodumpFlag.cs']]],
+  ['autoid_12',['AutoID',['../classSourceData.html#a1b80b7306c23020dfd08da08141308a8',1,'SourceData']]]
 ];

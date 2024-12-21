@@ -1,0 +1,37 @@
+var ContainerFlag2_8cs =
+[
+    [ "ContainerFlag2", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7", [
+      [ "none", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a334c4a4c42fdb79d7ebc3e73b517e6f8", null ],
+      [ "meal", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ad9ed7694f0cdbc0ce83246bc1db2d789", null ],
+      [ "foodstuff", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a4b1b82dc878a7f17c65f5540fe292d8b", null ],
+      [ "meat", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a07202a7e6cbfbabe27abba87989f807e", null ],
+      [ "vegi", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a2b6206d1d7715b7dde14aacb4da1b838", null ],
+      [ "fruit", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ae0deff349b2c61f5f796ccaa344a4930", null ],
+      [ "mushroom", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a4e026537a7d32360c5a22b7cb2e7f61a", null ],
+      [ "egg", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a0e9312087f58f367d001ec9bae8f325a", null ],
+      [ "fish", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a83e4a96aed96436c621b9809e258b309", null ],
+      [ "nuts", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a8749246c850dfc40522ab007e5424898", null ],
+      [ "foodstuff_raw", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ab1d0b690f3215d262b109dc1ca2a0680", null ],
+      [ "seasoning", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7aef5ca41e122bc3b4c3f38079fb096521", null ],
+      [ "rod", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a52c59993d8e149a1d70b65cb08abf692", null ],
+      [ "junk", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a0c821f675f132d790b3f25e79da739a7", null ],
+      [ "garbage", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ac8e8df895c2cae166bad027fdf15335b", null ],
+      [ "bill", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ae8375d7cd983efcbf956da5937050ffc", null ],
+      [ "scroll", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a089b0cdd8835d09cb1cabf38b3ce9c09", null ],
+      [ "spellbook", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ac89d3140fb325ab0b42351c645b2ace8", null ],
+      [ "card", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5", null ],
+      [ "figure", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7acb071d80d1a54f21c8867a038f6a6c66", null ],
+      [ "bait", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a03c737deb9ed03ae122e29348ac7c90d", null ],
+      [ "seed", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7afe4c0f30aa359c41d9f9a5f69c8c4192", null ],
+      [ "stone", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a0a840ef45467fb3932dbf2c2896c5cbf", null ],
+      [ "textile", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a8000f61488f3018ca6a1c1e5e4e557e4", null ],
+      [ "flora", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a979c8e8f8271e3431249f935cd7d3f4c", null ],
+      [ "bodyparts", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7afa3f544af6507bb6633afd7213d595c0", null ],
+      [ "fertilizer", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7aa73f74e20a519becf44fa188b3b5bbe3", null ],
+      [ "milk", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7aecbdb882ae865a07d87611437fda0772", null ],
+      [ "wood", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a22811dd94d65037ef86535740b98dec8", null ],
+      [ "ore", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7abe98d2fda00d8768f28b0d464bf8aacd", null ],
+      [ "ammo", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7ae164e9aaa50bab18d4b3ee92b9fc03be", null ],
+      [ "bed", "ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a001cbc059a402b3be7c99be558eaaf73", null ]
+    ] ]
+];

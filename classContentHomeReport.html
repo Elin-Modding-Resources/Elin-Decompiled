@@ -194,9 +194,9 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> num2 = 0;</div>
 <div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> num3 = 0;</div>
 <div class="line"><span class="lineno">   75</span>        <span class="keywordtype">int</span> num4 = 0;</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> item <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
 <div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">int</span> happiness = item.<a class="code hl_function" href="classChara.html#a4cd0ce41a9879d087391ac3652446a3d">GetHappiness</a>();</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">int</span> happiness = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.GetHappiness();</div>
 <div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (happiness &gt;= 80)</div>
 <div class="line"><span class="lineno">   80</span>            {</div>
 <div class="line"><span class="lineno">   81</span>                num2++;</div>
@@ -215,10 +215,10 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   94</span>        <span class="keywordtype">string</span> s = <span class="stringliteral">&quot;(&quot;</span> + num2.ToString().TagColor(FontColor.Good) + <span class="stringliteral">&quot;/&quot;</span> + num3.ToString().TagColor(FontColor.Default) + <span class="stringliteral">&quot;/&quot;</span> + num4.ToString().TagColor(FontColor.Bad) + <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> (((list.Count == 0) ? <span class="stringliteral">&quot; - &quot;</span> : avg.ToString()) + <span class="stringliteral">&quot;%&quot;</span>).TagColorGoodBad(() =&gt; list.Count == 0 || avg &gt;= 50) + <span class="stringliteral">&quot; &quot;</span> + s.TagSize(14);</div>
 <div class="line"><span class="lineno">   96</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
-<div class="ttc" id="aclassChara_html_a4cd0ce41a9879d087391ac3652446a3d"><div class="ttname"><a href="classChara.html#a4cd0ce41a9879d087391ac3652446a3d">Chara.GetHappiness</a></div><div class="ttdeci">int GetHappiness()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06272">Chara.cs:6272</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l06272">Chara.GetHappiness()</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.</p>
 
 </div>
 </div>
@@ -375,11 +375,11 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  106</span>            },</div>
 <div class="line"><span class="lineno">  107</span>            onList = delegate</div>
 <div class="line"><span class="lineno">  108</span>            {</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseHomeResource.html">BaseHomeResource</a> item <span class="keywordflow">in</span> <a class="code hl_variable" href="classContentHomeReport.html#a1d2ddc2262aa8afb0f932b87f8179def">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#ab73d5050469d309262621f288e366c14">list</a>)</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseHomeResource.html">BaseHomeResource</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classContentHomeReport.html#a1d2ddc2262aa8afb0f932b87f8179def">branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_variable" href="classHomeResourceManager.html#ab73d5050469d309262621f288e366c14">list</a>)</div>
 <div class="line"><span class="lineno">  110</span>                {</div>
-<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span> (item.<a class="code hl_property" href="classBaseHomeResource.html#ad0fcb5fd21d2649941890abbbc239d0a">IsCurrency</a>)</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsCurrency)</div>
 <div class="line"><span class="lineno">  112</span>                    {</div>
-<div class="line"><span class="lineno">  113</span>                        <a class="code hl_variable" href="classContentHomeReport.html#a55e687beb52e67046be70f15ed994013">listCurrencies</a>.Add(item);</div>
+<div class="line"><span class="lineno">  113</span>                        <a class="code hl_variable" href="classContentHomeReport.html#a55e687beb52e67046be70f15ed994013">listCurrencies</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  114</span>                    }</div>
 <div class="line"><span class="lineno">  115</span>                }</div>
 <div class="line"><span class="lineno">  116</span>            }</div>
@@ -407,7 +407,6 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  138</span>    }</div>
 <div class="ttc" id="aclassBaseHomeResource_html"><div class="ttname"><a href="classBaseHomeResource.html">BaseHomeResource</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00004">BaseHomeResource.cs:5</a></div></div>
 <div class="ttc" id="aclassBaseHomeResource_html_aae9a04a6939419e2fb53a15c28dfddc7"><div class="ttname"><a href="classBaseHomeResource.html#aae9a04a6939419e2fb53a15c28dfddc7">BaseHomeResource.IsRate</a></div><div class="ttdeci">bool IsRate</div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00033">BaseHomeResource.cs:33</a></div></div>
-<div class="ttc" id="aclassBaseHomeResource_html_ad0fcb5fd21d2649941890abbbc239d0a"><div class="ttname"><a href="classBaseHomeResource.html#ad0fcb5fd21d2649941890abbbc239d0a">BaseHomeResource.IsCurrency</a></div><div class="ttdeci">bool IsCurrency</div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00031">BaseHomeResource.cs:31</a></div></div>
 <div class="ttc" id="aclassContentHomeReport_html_a02a688d4f3977465b6790780a7572309"><div class="ttname"><a href="classContentHomeReport.html#a02a688d4f3977465b6790780a7572309">ContentHomeReport.listResources</a></div><div class="ttdeci">UIList listResources</div><div class="ttdef"><b>Definition:</b> <a href="ContentHomeReport_8cs_source.html#l00031">ContentHomeReport.cs:31</a></div></div>
 <div class="ttc" id="aclassContentHomeReport_html_a55e687beb52e67046be70f15ed994013"><div class="ttname"><a href="classContentHomeReport.html#a55e687beb52e67046be70f15ed994013">ContentHomeReport.listCurrencies</a></div><div class="ttdeci">UIList listCurrencies</div><div class="ttdef"><b>Definition:</b> <a href="ContentHomeReport_8cs_source.html#l00029">ContentHomeReport.cs:29</a></div></div>
 <div class="ttc" id="aclassFactionBranch_html_ae50927e9082d4a32af38b7340c2758a9"><div class="ttname"><a href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">FactionBranch.resources</a></div><div class="ttdeci">HomeResourceManager resources</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00064">FactionBranch.cs:64</a></div></div>
@@ -415,7 +414,7 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassItemHomeResource_html"><div class="ttname"><a href="classItemHomeResource.html">ItemHomeResource</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemHomeResource_8cs_source.html#l00003">ItemHomeResource.cs:4</a></div></div>
 <div class="ttc" id="aclassItemHomeResource_html_a7d019bb03a0a33b18adfcb7ec4465b11"><div class="ttname"><a href="classItemHomeResource.html#a7d019bb03a0a33b18adfcb7ec4465b11">ItemHomeResource.SetResource</a></div><div class="ttdeci">void SetResource(BaseHomeResource _r)</div><div class="ttdef"><b>Definition:</b> <a href="ItemHomeResource_8cs_source.html#l00009">ItemHomeResource.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ContentHomeReport_8cs_source.html#l00035">branch</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00031">BaseHomeResource.IsCurrency</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00033">BaseHomeResource.IsRate</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00052">HomeResourceManager.list</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00029">listCurrencies</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00031">listResources</a>, <a class="el" href="FactionBranch_8cs_source.html#l00064">FactionBranch.resources</a>, and <a class="el" href="ItemHomeResource_8cs_source.html#l00009">ItemHomeResource.SetResource()</a>.</p>
+<p class="reference">References <a class="el" href="ContentHomeReport_8cs_source.html#l00035">branch</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00033">BaseHomeResource.IsRate</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="HomeResourceManager_8cs_source.html#l00052">HomeResourceManager.list</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00029">listCurrencies</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00031">listResources</a>, <a class="el" href="FactionBranch_8cs_source.html#l00064">FactionBranch.resources</a>, and <a class="el" href="ItemHomeResource_8cs_source.html#l00009">ItemHomeResource.SetResource()</a>.</p>
 
 </div>
 </div>
