@@ -23,6 +23,7 @@ var classWindowChara =
     [ "barColor1", "classWindowChara.html#a9aa7d7e9a018f6270c53a0c120f2e24b", null ],
     [ "barColor2", "classWindowChara.html#ad96dadc7404129caaf8f0a94649f054c", null ],
     [ "buttonFeatMode", "classWindowChara.html#aff3be4ce31b47d3c269abbf10499dbea", null ],
+    [ "buttonFeatOption", "classWindowChara.html#a44580b791e1a023f39351f911f06406d", null ],
     [ "buttonLife", "classWindowChara.html#a49ed970123f77493ec9984f4ab40767a", null ],
     [ "buttonMana", "classWindowChara.html#a2fc1b3755a9eca7f95c3254fcd16b8d4", null ],
     [ "buttonSpeed", "classWindowChara.html#ada6ea2362e7c0774a2e8fe8e59fb812e", null ],

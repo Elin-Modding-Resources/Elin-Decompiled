@@ -1,5 +1,9 @@
 var NAVTREEINDEX20 =
 {
+"classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,75,4],
+"classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,75,2],
+"classAI__PracticeDummy.html#a2caa3366643ef1267b72d7b0462357e2":[1,0,75,5],
+"classAI__PracticeDummy.html#a43a0f46559087698ffbc468e4e3d6963":[1,0,75,6],
 "classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,75,3],
 "classAI__PracticeDummy.html#a68ceb43d8ca521a27b813b5e6a6bbfb5":[1,0,75,7],
 "classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,75,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX20 =
 "classAM__Bird.html#a03b49dd20b9a39cd1481d6626a034cac":[1,0,109,2],
 "classAM__Bird.html#a3fe205a551067676de164ab92faa3412":[1,0,109,0],
 "classAM__Bird.html#a4b776cc8d26396e265d98c64e513bb9e":[1,0,109,1],
-"classAM__Blueprint.html":[1,0,110],
-"classAM__Blueprint.html#a23b7c9373eba7f93ba9e1c88a60bb5aa":[1,0,110,2],
-"classAM__Blueprint.html#a2852fdf4cefb2c694620a7091b670fd7":[1,0,110,1],
-"classAM__Blueprint.html#a411fb78b6a4d8eee5c174591cc0806dc":[1,0,110,5],
-"classAM__Blueprint.html#a96aae9fe2358c69bf634dc54fee9fb56":[1,0,110,0]
+"classAM__Blueprint.html":[1,0,110]
 };

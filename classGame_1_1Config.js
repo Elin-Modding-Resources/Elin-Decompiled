@@ -16,6 +16,7 @@ var classGame_1_1Config =
     [ "preference", "classGame_1_1Config.html#a4cf7f5be30a566d0b3e9a39c4a8eb09f", null ],
     [ "regionZoom", "classGame_1_1Config.html#a46675d17b44d78c7b56b88d43e32cbcc", null ],
     [ "reverseSnow", "classGame_1_1Config.html#ab84ab9fa63e7a301c50e175f50832dfd", null ],
+    [ "showAllFeat", "classGame_1_1Config.html#a9c7e664cdeaf74907f4878042ac64298", null ],
     [ "showGuideGrid", "classGame_1_1Config.html#a619371418ec5c480e733642b4a47c9f1", null ],
     [ "showRoof", "classGame_1_1Config.html#a223530ce684d56b97afd5a7b4a7851f4", null ],
     [ "showWall", "classGame_1_1Config.html#a297c69c5e6ebdd6457a45863c0a7d3b8", null ],

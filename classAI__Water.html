@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.62 Nightly hotfix 1</span>
    </div>
   </td>
  </tr>
@@ -338,6 +338,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a68cfe23ce1ce41da21b7ce89d260ea73 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74b986a3a4646f015dfdccfd74836ab8 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a74b986a3a4646f015dfdccfd74836ab8">SetTextValue</a> (UIText text)</td></tr>
 <tr class="separator:a74b986a3a4646f015dfdccfd74836ab8 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445488caa04fb5048418f8f1d8f770f4 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a445488caa04fb5048418f8f1d8f770f4">IsPurchaseFeatReqMet</a> (<a class="el" href="classElementContainer.html">ElementContainer</a> <a class="el" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>, int lv=-1)</td></tr>
+<tr class="separator:a445488caa04fb5048418f8f1d8f770f4 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb22b38fcc665a2d253a3915bae9ee9 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a3eb22b38fcc665a2d253a3915bae9ee9">WritePurchaseReq</a> (UINote n, int lv=1)</td></tr>
+<tr class="separator:a3eb22b38fcc665a2d253a3915bae9ee9 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53694e39c0b8ee3f771896555166a20c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c">WriteNote</a> (UINote n, Action&lt; UINote &gt; onWriteNote=null, <a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4">NoteMode</a> mode=<a class="el" href="interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a7a1920d61156abc05a60135aefe8bc67">NoteMode.Default</a>, <a class="el" href="classRecipe.html">Recipe</a> recipe=null)</td></tr>
 <tr class="separator:a53694e39c0b8ee3f771896555166a20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1a43bcf9a39d8dba914b60172c4c1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f">OnInspect</a> ()</td></tr>
@@ -803,10 +807,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;Material/mud&quot;</span>);</div>
 <div class="line"><span class="lineno">   15</span>    }</div>
 <div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00014">AIAct.cs:14</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05115">Card.cs:5115</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05127">Card.cs:5127</a></div></div>
 <div class="ttc" id="aclassChara_html_aa5d23539c607ca814ba0c64a5ccf7322"><div class="ttname"><a href="classChara.html#aa5d23539c607ca814ba0c64a5ccf7322">Chara.SetTempHand</a></div><div class="ttdeci">void SetTempHand(int right=0, int left=0)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05803">Chara.cs:5803</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l05115">Card.PlaySound()</a>, and <a class="el" href="Chara_8cs_source.html#l05803">Chara.SetTempHand()</a>.</p>
+<p class="reference">References <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l05127">Card.PlaySound()</a>, and <a class="el" href="Chara_8cs_source.html#l05803">Chara.SetTempHand()</a>.</p>
 
 </div>
 </div>
@@ -848,7 +852,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00039">Point.cs:39</a></div></div>
 <div class="ttc" id="aclassTaskPoint_html_a14bd72967b54c56f9fc32d26a866fbaa"><div class="ttname"><a href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">TaskPoint.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00011">TaskPoint.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l05115">Card.PlaySound()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00011">TaskPoint.pos</a>, <a class="el" href="Map_8cs_source.html#l01446">Map.SetLiquid()</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l05127">Card.PlaySound()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00011">TaskPoint.pos</a>, <a class="el" href="Map_8cs_source.html#l01446">Map.SetLiquid()</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
 
 </div>
 </div>

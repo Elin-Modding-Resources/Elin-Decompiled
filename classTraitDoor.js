@@ -3,7 +3,7 @@ var classTraitDoor =
     [ "CanClose", "classTraitDoor.html#abc7aef1574c49408d97fee6d584d942d", null ],
     [ "ForceClose", "classTraitDoor.html#a46fa02502e2c160ef5b5cedfca30e686", null ],
     [ "IsOpen", "classTraitDoor.html#a1defc093d2ead2e268a06889bfa905cd", null ],
-    [ "IsValid", "classTraitDoor.html#a6db75e8e36dc593cf05d68c277460806", null ],
+    [ "IsValid", "classTraitDoor.html#adf1a3b9932603789145e294254d33fbe", null ],
     [ "RotateDoor", "classTraitDoor.html#ab111722c46952bc7660035117fe42807", null ],
     [ "ToggleDoor", "classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c", null ],
     [ "TryAutoClose", "classTraitDoor.html#a14d76135089ef809b5ad45d8dbd6a1c8", null ],

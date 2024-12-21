@@ -28,6 +28,7 @@ var classContentConfigGame =
     [ "toggleShippingResult", "classContentConfigGame.html#aa07c117b2f1727f7cba55448b9b8eaad", null ],
     [ "toggleShowInvBG", "classContentConfigGame.html#a26ec5afb37f94e772074804c26214674", null ],
     [ "toggleSmoothPick", "classContentConfigGame.html#acb2f2fd561fdc8adb0c7801ffb5d1c04", null ],
+    [ "toggleSortEach", "classContentConfigGame.html#a55cdd7d15b503081237ba1c31079067c", null ],
     [ "toggleTutorial", "classContentConfigGame.html#ac7e3ad9c94d43b7cd4e579c08774cfbf", null ],
     [ "toggleUseAbilityOnHotkey", "classContentConfigGame.html#a9ce91311e41f976e2b045080735d1a89", null ],
     [ "toggleWaitOnDebuff", "classContentConfigGame.html#a2116c2617f9a5da12c60d8a574b04bc5", null ],

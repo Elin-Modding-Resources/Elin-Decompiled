@@ -33,6 +33,7 @@ var classPlayer_1_1Flags =
     [ "fiamaStoryBookGiven", "classPlayer_1_1Flags.html#ad562e8c3ff18d18ade5b1f883ca704d3", null ],
     [ "gotClickReward", "classPlayer_1_1Flags.html#a3bcac4246cb62687ae8dd0940717e8ce", null ],
     [ "gotEtherDisease", "classPlayer_1_1Flags.html#a0e5de12c4be974b9ba21190161d514e6", null ],
+    [ "gotJurePillow", "classPlayer_1_1Flags.html#a18363eb223e3eb3f6071db5901764bd5", null ],
     [ "gotMelilithCurse", "classPlayer_1_1Flags.html#aade2c4bf438cde2bc5d80aac7f9bd8b8", null ],
     [ "helpHighlightDisabled", "classPlayer_1_1Flags.html#a74a126baeb27da0fb77813e520e70da3", null ],
     [ "isShoesOff", "classPlayer_1_1Flags.html#afede34f5fce7d68e3b31ebf3f59d6c04", null ],

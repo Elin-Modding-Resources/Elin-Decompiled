@@ -15,6 +15,7 @@ var classELEMENT =
     [ "heat", "classELEMENT.html#a7225c50f90f78234c8cd393a26d6b86c", null ],
     [ "hotspring", "classELEMENT.html#ab0f33674cfb361292fbfdae9d074c4eb", null ],
     [ "IDS", "classELEMENT.html#aa68d877c7f359886ac76e4f46c9aace7", null ],
+    [ "justcooked", "classELEMENT.html#a9735e965cd00af1f7e750f18583ecbd2", null ],
     [ "lv", "classELEMENT.html#ad2c4c6e4241f572213044eee18e0aabb", null ],
     [ "nerve", "classELEMENT.html#a951c0985e4a75a97bb36aba890729437", null ],
     [ "nutrition", "classELEMENT.html#a66e0381c92f80ded8646ef0c56e365ab", null ],

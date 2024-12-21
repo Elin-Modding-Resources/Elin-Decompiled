@@ -11,6 +11,7 @@ var classThingGen =
     [ "CreateFromCategory", "classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8", null ],
     [ "CreateFromFilter", "classThingGen.html#a281cc475b772addc30ebe918809aaa30", null ],
     [ "CreateFromTag", "classThingGen.html#a997cd040f138451a604a862526360a5d", null ],
+    [ "CreateLetter", "classThingGen.html#ac53b2ac8485c7d5bb15371b22754fc0f", null ],
     [ "CreateMap", "classThingGen.html#a2d2ac3c0ddedbe2df8dfc7d29eae3179", null ],
     [ "CreateObj", "classThingGen.html#a52d9259ff236badd987e097b1c5c86ae", null ],
     [ "CreateParcel", "classThingGen.html#a66895d20c6bb1e1eeae510b476d1303c", null ],

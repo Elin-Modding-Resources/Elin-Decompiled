@@ -9,6 +9,7 @@ var classFEAT =
     [ "featBoost", "classFEAT.html#a186c336699bd1f8e57b0c4350db485e2", null ],
     [ "featCannibalism", "classFEAT.html#a108834adbbcf268f82d82c65737e39d3", null ],
     [ "featCHA", "classFEAT.html#adacbce9259f9c2f4c96d6e28c08f1465", null ],
+    [ "featChef", "classFEAT.html#aed7da48dd5efcf6e3769de20eff93908", null ],
     [ "featCosmicHorror", "classFEAT.html#a99799ffa0458a177ff163acb2b76bb2c", null ],
     [ "featDefender", "classFEAT.html#af028af952f3c8a7f7979d8e15658a90d", null ],
     [ "featDefense", "classFEAT.html#a84de4d872622596f4376dd2353da59fa", null ],

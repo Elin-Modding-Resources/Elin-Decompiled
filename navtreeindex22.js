@@ -1,5 +1,9 @@
 var NAVTREEINDEX22 =
 {
+"classAM__MoveInstalled.html#a043f889264546b830927e58cf7c82c12":[1,0,128,20],
+"classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601":[1,0,128,15],
+"classAM__MoveInstalled.html#a1ca7794b65e63e3ed4a5314dcff402fa":[1,0,128,27],
+"classAM__MoveInstalled.html#a257cdf514813c2c497d432e834465583":[1,0,128,30],
 "classAM__MoveInstalled.html#a2fb7b082dc7ec43763a64e667f56de63":[1,0,128,22],
 "classAM__MoveInstalled.html#a3a577f5de923532fcf02643320874c17":[1,0,128,28],
 "classAM__MoveInstalled.html#a3ce29a3258ab1f58d9a1396d4d6ec6fa":[1,0,128,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX22 =
 "classActBolt.html#aa7e92d6306492c55549e1c2c52510a3e":[1,0,11,0],
 "classActBolt.html#aeddc60271a10015641594df5f3a7c1f8":[1,0,11,1],
 "classActBreathe.html":[1,0,12],
-"classActBreathe.html#a36d8ee33f9accda16f48a4dd44e5d1dc":[1,0,12,2],
-"classActBreathe.html#a60457d7264e26509408ac042cc004fef":[1,0,12,0],
-"classActBreathe.html#a8f9245b9be5061b7120bb4f99f747228":[1,0,12,1],
-"classActChat.html":[1,0,13],
-"classActChat.html#a0283750aa4c1ae67687dbdc6cc673699":[1,0,13,2]
+"classActBreathe.html#a36d8ee33f9accda16f48a4dd44e5d1dc":[1,0,12,2]
 };

@@ -38,6 +38,7 @@ var classCoreConfig_1_1GameConfig =
     [ "showRide", "classCoreConfig_1_1GameConfig.html#aa32b5132314d9cb66da0253291ac9a7f", null ],
     [ "showShippingResult", "classCoreConfig_1_1GameConfig.html#aeccae2af04458f1f022b30603803c202", null ],
     [ "smoothPick", "classCoreConfig_1_1GameConfig.html#ad0a43fed377da813a29ff9a5e6cc9545", null ],
+    [ "sortEach", "classCoreConfig_1_1GameConfig.html#a72ef8ca21a6c9678d1c261bc0ca5a499", null ],
     [ "tutorial", "classCoreConfig_1_1GameConfig.html#a241904d9b6248f3731595c70bb257e60", null ],
     [ "useAbilityOnHotkey", "classCoreConfig_1_1GameConfig.html#accfb0e21b95f30f1b2f5502ae4f904c1", null ],
     [ "useGrid", "classCoreConfig_1_1GameConfig.html#aaefee1abe9d2e49c23c342b4f7c25ef3", null ],

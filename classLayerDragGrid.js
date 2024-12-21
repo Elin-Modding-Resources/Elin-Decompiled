@@ -1,5 +1,7 @@
 var classLayerDragGrid =
 [
+    [ "PutbackInfo", "classLayerDragGrid_1_1PutbackInfo.html", "classLayerDragGrid_1_1PutbackInfo" ],
+    [ "AddPutBack", "classLayerDragGrid.html#a12c5929fa128bbfc5783e3fe288e811d", null ],
     [ "ClearButtons", "classLayerDragGrid.html#a24882f607033e8e59d05f46879cdee58", null ],
     [ "Create", "classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7", null ],
     [ "CreateChangeMaterial", "classLayerDragGrid.html#a4669d01f952e862df97cd6aadf707876", null ],
@@ -17,6 +19,7 @@ var classLayerDragGrid =
     [ "GetPrice", "classLayerDragGrid.html#aad8cc533deec09e4b8d29922cb747e8e", null ],
     [ "GetTargets", "classLayerDragGrid.html#a47ebb103631b42b320b2c7efc66dc615", null ],
     [ "IsAllGridSet", "classLayerDragGrid.html#aa4d351d9c214a76ade75e5748fa81dc1", null ],
+    [ "OnEndCraft", "classLayerDragGrid.html#a4f04e53e2de18c322279b5c52bbe7f90", null ],
     [ "OnKill", "classLayerDragGrid.html#acab974ac8e4d37681b4f69688c3cc998", null ],
     [ "OnOpen", "classLayerDragGrid.html#a83e6da0655c3e3116e995a8eb6582540", null ],
     [ "OnRightClick", "classLayerDragGrid.html#ae56672c1a8193d689875068d90d60abf", null ],
@@ -26,6 +29,7 @@ var classLayerDragGrid =
     [ "RefreshCurrentGrid", "classLayerDragGrid.html#aba7c9ddeadca46aede8c0a80aa65ba46", null ],
     [ "SetInv", "classLayerDragGrid.html#a824b1ad8d5d3e0e8e20ccc2b39dd19e8", null ],
     [ "TryProc", "classLayerDragGrid.html#a54b7066b7b76617a661460510f025285", null ],
+    [ "TryPutBack", "classLayerDragGrid.html#a1d25db5058c6f93b23211fb45eeb7c23", null ],
     [ "Update", "classLayerDragGrid.html#a2811078a7b3921d8dff6a374311e23f3", null ],
     [ "Validate", "classLayerDragGrid.html#aa61a7f1e17b533cf4881cce2d64d7e17", null ],
     [ "buttonAlly", "classLayerDragGrid.html#a0461d98b570ae0423e48474fa0b2a751", null ],
@@ -42,6 +46,7 @@ var classLayerDragGrid =
     [ "lastNum", "classLayerDragGrid.html#a643baa2a4c7d433dd77ed26fddcc80aa", null ],
     [ "listAlly", "classLayerDragGrid.html#a0f901bf9d2742a95b36e6bb22fa7f5f2", null ],
     [ "owner", "classLayerDragGrid.html#a646d6ba63609d2af1fd21318c44ebc7d", null ],
+    [ "putBacks", "classLayerDragGrid.html#a6aca08627fc378b11246c791f365cd1c", null ],
     [ "textFuel", "classLayerDragGrid.html#a7d12b1527f6f94982c3f2ff1f641540a", null ],
     [ "textTitle", "classLayerDragGrid.html#ad370a45c2735f61cb03f6e22f94e2f80", null ],
     [ "transIndex", "classLayerDragGrid.html#aac10c24147e69c2bdb259b4835aa8b07", null ],

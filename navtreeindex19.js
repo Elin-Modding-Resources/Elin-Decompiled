@@ -1,5 +1,9 @@
 var NAVTREEINDEX19 =
 {
+"classAIWork__Explore.html#ab610006a0b58f9d49de8fbaf450bf9d3":[1,0,98,0],
+"classAIWork__Farm.html":[1,0,99],
+"classAIWork__Farm.html#a0a5897032beb03862f9b5e3a40908104":[1,0,99,0],
+"classAIWork__Farm.html#aa34ce7e4071416c998223e125ed9afd8":[1,0,99,1],
 "classAIWork__Fish.html":[1,0,100],
 "classAIWork__Fish.html#a2fd441c9762f335a1fbe51761388b6df":[1,0,100,1],
 "classAIWork__Fish.html#ac24cc5b97279bb062294410f5147f86f":[1,0,100,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX19 =
 "classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188":[1,0,74,8],
 "classAI__PlayMusic.html#ae3a51a9cdf907a8b71758f85c64fa900":[1,0,74,6],
 "classAI__PlayMusic.html#af3ddb1180da01215545e2ebca91a6483":[1,0,74,5],
-"classAI__PracticeDummy.html":[1,0,75],
-"classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,75,4],
-"classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,75,2],
-"classAI__PracticeDummy.html#a2caa3366643ef1267b72d7b0462357e2":[1,0,75,5],
-"classAI__PracticeDummy.html#a43a0f46559087698ffbc468e4e3d6963":[1,0,75,6]
+"classAI__PracticeDummy.html":[1,0,75]
 };

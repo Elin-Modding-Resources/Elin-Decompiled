@@ -11,6 +11,7 @@ var classUIDragGridInfo =
     [ "moldPlus", "classUIDragGridInfo.html#a10580b60ee85306338c077227600e6c9", null ],
     [ "moldThing", "classUIDragGridInfo.html#afbdb46112ab9a1ff156cf6519e637b7f", null ],
     [ "moldUnknown", "classUIDragGridInfo.html#a4fd17cb3b6aada58c3760f9e9414be37", null ],
+    [ "note", "classUIDragGridInfo.html#aad0b4952f2fbea3a6a7601c6c386165e", null ],
     [ "owner", "classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba", null ],
     [ "textHeader", "classUIDragGridInfo.html#ac3ae4b9b11b9e370b0ac687a771c03f3", null ],
     [ "transMold", "classUIDragGridInfo.html#a7a83d91d00063f10230c4760bed56648", null ],

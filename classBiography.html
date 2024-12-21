@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.61 hotfix 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.62 Nightly hotfix 1</span>
    </div>
   </td>
  </tr>
@@ -113,6 +113,8 @@ Inheritance diagram for Biography:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ada069b0ad974426ca99a3fd6881ad70b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">TextAge</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
 <tr class="separator:ada069b0ad974426ca99a3fd6881ad70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5582aee7b6eb80538c184c1eb7496103"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#a5582aee7b6eb80538c184c1eb7496103">GetOriginalAge</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
+<tr class="separator:a5582aee7b6eb80538c184c1eb7496103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd34f09f6bc961050fcdfdb19fedb070"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#acd34f09f6bc961050fcdfdb19fedb070">Generate</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
 <tr class="separator:acd34f09f6bc961050fcdfdb19fedb070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3046219269dedf4b0b297c466340741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#aa3046219269dedf4b0b297c466340741">RerollBio</a> (<a class="el" href="classChara.html">Chara</a> c, int ageIndex=0, bool keepParent=false)</td></tr>
@@ -209,8 +211,6 @@ Properties</h2></td></tr>
 <tr class="separator:a4b9ba74b551ed00b9c1ed9dc154da6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d846a4d3aab4bab50353384e4d49032"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a><code> [get, set]</code></td></tr>
 <tr class="separator:a4d846a4d3aab4bab50353384e4d49032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd747476eb23d8afad9881ec8a56aa1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#a9dd747476eb23d8afad9881ec8a56aa1">ageOriginal</a><code> [get]</code></td></tr>
-<tr class="separator:a9dd747476eb23d8afad9881ec8a56aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a0e182bb644d186dbb077e634c0544"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiography.html#ae6a0e182bb644d186dbb077e634c0544">IsUnderAge</a><code> [get]</code></td></tr>
 <tr class="separator:ae6a0e182bb644d186dbb077e634c0544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classEClass"><td colspan="2" onclick="javascript:toggleInherit('properties_classEClass')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
@@ -314,97 +314,97 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00300">300</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  301</span>    {</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordtype">string</span> bio = c.<a class="code hl_variable" href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">source</a>.bio;</div>
-<div class="line"><span class="lineno">  303</span>        _ = c.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>;</div>
-<div class="line"><span class="lineno">  304</span>        <a class="code hl_property" href="classBiography.html#acba37bf941b4a714034f01eebd4abe12">stability</a> = Rand.rndNormal(100);</div>
-<div class="line"><span class="lineno">  305</span>        <a class="code hl_property" href="classBiography.html#a3bb56e1ad21273b11818c7b5c5025780">law</a> = Rand.rndNormal(100);</div>
-<div class="line"><span class="lineno">  306</span>        <a class="code hl_property" href="classBiography.html#a27562ca7fc8d53266f7efaedec45cc56">affection</a> = Rand.rndNormal(100);</div>
-<div class="line"><span class="lineno">  307</span>        <a class="code hl_property" href="classBiography.html#af9c3cbbb8b6bea54824c108ebdb28ea9">dominance</a> = Rand.rndNormal(100);</div>
-<div class="line"><span class="lineno">  308</span>        <a class="code hl_property" href="classBiography.html#ac318259048a911b0726d4a50a59ec806">extroversion</a> = Rand.rndNormal(100);</div>
-<div class="line"><span class="lineno">  309</span>        <a class="code hl_property" href="classBiography.html#abc72190cd2c15ad5e87dcf85c82ce2b5">idInterest</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(Enum.GetNames(typeof(<a class="code hl_enumeration" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81da">Interest</a>)).Length);</div>
-<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBiography.html#a487d821c9564bb3eef8bbe56e5c6b548">idFemale</a>.Contains(c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>) || c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.id == <span class="stringliteral">&quot;roran&quot;</span>)</div>
-<div class="line"><span class="lineno">  311</span>        {</div>
-<div class="line"><span class="lineno">  312</span>            <a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>(1);</div>
-<div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  315</span>        {</div>
-<div class="line"><span class="lineno">  316</span>            <a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>(Gender.GetRandom());</div>
-<div class="line"><span class="lineno">  317</span>        }</div>
-<div class="line"><span class="lineno">  318</span>        <a class="code hl_function" href="classBiography.html#aa3046219269dedf4b0b297c466340741">RerollBio</a>(c);</div>
-<div class="line"><span class="lineno">  319</span>        c.<a class="code hl_function" href="classCard.html#a5c4cb5a17fbbe8ee86f3d13cab60d31c">SetRandomTone</a>();</div>
-<div class="line"><span class="lineno">  320</span>        c.<a class="code hl_function" href="classCard.html#ab525f5d183acb75b468adb7c54cd555e">SetRandomTalk</a>();</div>
-<div class="line"><span class="lineno">  321</span>        <span class="keywordtype">bool</span> flag = c.<a class="code hl_property" href="classChara.html#a6c26ce4c75d34b228566bcf60adce8e8">IsHuman</a>;</div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (!bio.IsEmpty())</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00308">308</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>    {</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordtype">string</span> bio = c.<a class="code hl_variable" href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">source</a>.bio;</div>
+<div class="line"><span class="lineno">  311</span>        _ = c.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>;</div>
+<div class="line"><span class="lineno">  312</span>        <a class="code hl_property" href="classBiography.html#acba37bf941b4a714034f01eebd4abe12">stability</a> = Rand.rndNormal(100);</div>
+<div class="line"><span class="lineno">  313</span>        <a class="code hl_property" href="classBiography.html#a3bb56e1ad21273b11818c7b5c5025780">law</a> = Rand.rndNormal(100);</div>
+<div class="line"><span class="lineno">  314</span>        <a class="code hl_property" href="classBiography.html#a27562ca7fc8d53266f7efaedec45cc56">affection</a> = Rand.rndNormal(100);</div>
+<div class="line"><span class="lineno">  315</span>        <a class="code hl_property" href="classBiography.html#af9c3cbbb8b6bea54824c108ebdb28ea9">dominance</a> = Rand.rndNormal(100);</div>
+<div class="line"><span class="lineno">  316</span>        <a class="code hl_property" href="classBiography.html#ac318259048a911b0726d4a50a59ec806">extroversion</a> = Rand.rndNormal(100);</div>
+<div class="line"><span class="lineno">  317</span>        <a class="code hl_property" href="classBiography.html#abc72190cd2c15ad5e87dcf85c82ce2b5">idInterest</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(Enum.GetNames(typeof(<a class="code hl_enumeration" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81da">Interest</a>)).Length);</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBiography.html#a487d821c9564bb3eef8bbe56e5c6b548">idFemale</a>.Contains(c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>) || c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.id == <span class="stringliteral">&quot;roran&quot;</span>)</div>
+<div class="line"><span class="lineno">  319</span>        {</div>
+<div class="line"><span class="lineno">  320</span>            <a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>(1);</div>
+<div class="line"><span class="lineno">  321</span>        }</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  323</span>        {</div>
-<div class="line"><span class="lineno">  324</span>            <span class="keywordtype">string</span>[] array = bio.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  325</span>            <a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>((array[0] == <span class="stringliteral">&quot;f&quot;</span>) ? 1 : 2);</div>
-<div class="line"><span class="lineno">  326</span>            <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
-<div class="line"><span class="lineno">  327</span>            {</div>
-<div class="line"><span class="lineno">  328</span>                <span class="keywordflow">if</span> (!c.<a class="code hl_variable" href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">source</a>.HasTag(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.randomPortrait))</div>
-<div class="line"><span class="lineno">  329</span>                {</div>
-<div class="line"><span class="lineno">  330</span>                    flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  331</span>                }</div>
-<div class="line"><span class="lineno">  332</span>                <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = <span class="keywordtype">int</span>.Parse(array[1]);</div>
-<div class="line"><span class="lineno">  333</span>                c.pccData = IO.LoadFile&lt;PCCData&gt;(CorePath.packageCore + <span class="stringliteral">&quot;Data/PCC/&quot;</span> + c.id + <span class="stringliteral">&quot;.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  334</span>            }</div>
-<div class="line"><span class="lineno">  335</span>            <span class="keywordflow">if</span> (array.Length &gt; 2)</div>
-<div class="line"><span class="lineno">  336</span>            {</div>
-<div class="line"><span class="lineno">  337</span>                <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> = <span class="keywordtype">int</span>.Parse(array[2]);</div>
-<div class="line"><span class="lineno">  338</span>            }</div>
-<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">if</span> (array.Length &gt; 3)</div>
-<div class="line"><span class="lineno">  340</span>            {</div>
-<div class="line"><span class="lineno">  341</span>                <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a> = <span class="keywordtype">int</span>.Parse(array[3]);</div>
+<div class="line"><span class="lineno">  324</span>            <a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>(Gender.GetRandom());</div>
+<div class="line"><span class="lineno">  325</span>        }</div>
+<div class="line"><span class="lineno">  326</span>        <a class="code hl_function" href="classBiography.html#aa3046219269dedf4b0b297c466340741">RerollBio</a>(c);</div>
+<div class="line"><span class="lineno">  327</span>        c.<a class="code hl_function" href="classCard.html#a5c4cb5a17fbbe8ee86f3d13cab60d31c">SetRandomTone</a>();</div>
+<div class="line"><span class="lineno">  328</span>        c.<a class="code hl_function" href="classCard.html#ab525f5d183acb75b468adb7c54cd555e">SetRandomTalk</a>();</div>
+<div class="line"><span class="lineno">  329</span>        <span class="keywordtype">bool</span> flag = c.<a class="code hl_property" href="classChara.html#a6c26ce4c75d34b228566bcf60adce8e8">IsHuman</a>;</div>
+<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">if</span> (!bio.IsEmpty())</div>
+<div class="line"><span class="lineno">  331</span>        {</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordtype">string</span>[] array = bio.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  333</span>            <a class="code hl_function" href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">SetGender</a>((array[0] == <span class="stringliteral">&quot;f&quot;</span>) ? 1 : 2);</div>
+<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
+<div class="line"><span class="lineno">  335</span>            {</div>
+<div class="line"><span class="lineno">  336</span>                <span class="keywordflow">if</span> (!c.<a class="code hl_variable" href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">source</a>.HasTag(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.randomPortrait))</div>
+<div class="line"><span class="lineno">  337</span>                {</div>
+<div class="line"><span class="lineno">  338</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  339</span>                }</div>
+<div class="line"><span class="lineno">  340</span>                <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = <span class="keywordtype">int</span>.Parse(array[1]);</div>
+<div class="line"><span class="lineno">  341</span>                c.pccData = IO.LoadFile&lt;PCCData&gt;(CorePath.packageCore + <span class="stringliteral">&quot;Data/PCC/&quot;</span> + c.id + <span class="stringliteral">&quot;.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">  342</span>            }</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (array.Length &gt; 4)</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">if</span> (array.Length &gt; 2)</div>
 <div class="line"><span class="lineno">  344</span>            {</div>
-<div class="line"><span class="lineno">  345</span>                c.c_idTone = array[4];</div>
+<div class="line"><span class="lineno">  345</span>                <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> = <span class="keywordtype">int</span>.Parse(array[2]);</div>
 <div class="line"><span class="lineno">  346</span>            }</div>
-<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">if</span> (array.Length &gt; 5 &amp;&amp; !array[5].IsEmpty())</div>
+<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">if</span> (array.Length &gt; 3)</div>
 <div class="line"><span class="lineno">  348</span>            {</div>
-<div class="line"><span class="lineno">  349</span>                c.c_idTalk = array[5];</div>
+<div class="line"><span class="lineno">  349</span>                <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a> = <span class="keywordtype">int</span>.Parse(array[3]);</div>
 <div class="line"><span class="lineno">  350</span>            }</div>
-<div class="line"><span class="lineno">  351</span>        }</div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a> is <a class="code hl_class" href="classTraitGuildClerk.html">TraitGuildClerk</a>)</div>
-<div class="line"><span class="lineno">  353</span>        {</div>
-<div class="line"><span class="lineno">  354</span>            flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  355</span>        }</div>
-<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (flag &amp;&amp; !c.<a class="code hl_function" href="classCard.html#a810e687225ccdc1dc342506473c87334">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.noPortrait))</div>
-<div class="line"><span class="lineno">  357</span>        {</div>
-<div class="line"><span class="lineno">  358</span>            <a class="code hl_function" href="classBiography.html#adc85e798fcbdce8617ce5586512a68a4">SetPortrait</a>(c);</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">if</span> (array.Length &gt; 4)</div>
+<div class="line"><span class="lineno">  352</span>            {</div>
+<div class="line"><span class="lineno">  353</span>                c.c_idTone = array[4];</div>
+<div class="line"><span class="lineno">  354</span>            }</div>
+<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">if</span> (array.Length &gt; 5 &amp;&amp; !array[5].IsEmpty())</div>
+<div class="line"><span class="lineno">  356</span>            {</div>
+<div class="line"><span class="lineno">  357</span>                c.c_idTalk = array[5];</div>
+<div class="line"><span class="lineno">  358</span>            }</div>
 <div class="line"><span class="lineno">  359</span>        }</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;prostitute&quot;</span> &amp;&amp; <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> &lt; 15)</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a> is <a class="code hl_class" href="classTraitGuildClerk.html">TraitGuildClerk</a>)</div>
 <div class="line"><span class="lineno">  361</span>        {</div>
-<div class="line"><span class="lineno">  362</span>            <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = 15;</div>
+<div class="line"><span class="lineno">  362</span>            flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  363</span>        }</div>
-<div class="line"><span class="lineno">  364</span>        <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.RandomItem();</div>
-<div class="line"><span class="lineno">  365</span>        <a class="code hl_property" href="classBiography.html#addc51ae2121a9547107655177e036851">idLike</a> = row.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>;</div>
-<div class="line"><span class="lineno">  366</span>        <a class="code hl_property" href="classBiography.html#af6fffb81f0987adf9c2c3f9cabdcdb96">idHobby</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.<a class="code hl_variable" href="classSourceElement.html#a3f6b76730df6ffd7a597b0e2183d9173">hobbies</a>.RandomItem().id;</div>
-<div class="line"><span class="lineno">  367</span>    }</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (flag &amp;&amp; !c.<a class="code hl_function" href="classCard.html#a810e687225ccdc1dc342506473c87334">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.noPortrait))</div>
+<div class="line"><span class="lineno">  365</span>        {</div>
+<div class="line"><span class="lineno">  366</span>            <a class="code hl_function" href="classBiography.html#adc85e798fcbdce8617ce5586512a68a4">SetPortrait</a>(c);</div>
+<div class="line"><span class="lineno">  367</span>        }</div>
+<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;prostitute&quot;</span> &amp;&amp; <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> &lt; 15)</div>
+<div class="line"><span class="lineno">  369</span>        {</div>
+<div class="line"><span class="lineno">  370</span>            <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = 15;</div>
+<div class="line"><span class="lineno">  371</span>        }</div>
+<div class="line"><span class="lineno">  372</span>        <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.RandomItem();</div>
+<div class="line"><span class="lineno">  373</span>        <a class="code hl_property" href="classBiography.html#addc51ae2121a9547107655177e036851">idLike</a> = row.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>;</div>
+<div class="line"><span class="lineno">  374</span>        <a class="code hl_property" href="classBiography.html#af6fffb81f0987adf9c2c3f9cabdcdb96">idHobby</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.<a class="code hl_variable" href="classSourceElement.html#a3f6b76730df6ffd7a597b0e2183d9173">hobbies</a>.RandomItem().id;</div>
+<div class="line"><span class="lineno">  375</span>    }</div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a></div><div class="ttdeci">CTAG</div><div class="ttdef"><b>Definition:</b> <a href="CTAG_8cs_source.html#l00001">CTAG.cs:2</a></div></div>
 <div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81da"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81da">Interest</a></div><div class="ttdeci">Interest</div><div class="ttdef"><b>Definition:</b> <a href="Interest_8cs_source.html#l00001">Interest.cs:2</a></div></div>
 <div class="ttc" id="aclassBiography_html_a27562ca7fc8d53266f7efaedec45cc56"><div class="ttname"><a href="classBiography.html#a27562ca7fc8d53266f7efaedec45cc56">Biography.affection</a></div><div class="ttdeci">int affection</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00208">Biography.cs:209</a></div></div>
 <div class="ttc" id="aclassBiography_html_a3bb56e1ad21273b11818c7b5c5025780"><div class="ttname"><a href="classBiography.html#a3bb56e1ad21273b11818c7b5c5025780">Biography.law</a></div><div class="ttdeci">int law</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00196">Biography.cs:197</a></div></div>
 <div class="ttc" id="aclassBiography_html_a487d821c9564bb3eef8bbe56e5c6b548"><div class="ttname"><a href="classBiography.html#a487d821c9564bb3eef8bbe56e5c6b548">Biography.idFemale</a></div><div class="ttdeci">static string[] idFemale</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00006">Biography.cs:6</a></div></div>
-<div class="ttc" id="aclassBiography_html_a4b942b6cd8c0142e84845fbb70e9e79a"><div class="ttname"><a href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">Biography.SetGender</a></div><div class="ttdeci">void SetGender(int g)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00442">Biography.cs:442</a></div></div>
+<div class="ttc" id="aclassBiography_html_a4b942b6cd8c0142e84845fbb70e9e79a"><div class="ttname"><a href="classBiography.html#a4b942b6cd8c0142e84845fbb70e9e79a">Biography.SetGender</a></div><div class="ttdeci">void SetGender(int g)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00450">Biography.cs:450</a></div></div>
 <div class="ttc" id="aclassBiography_html_a4d846a4d3aab4bab50353384e4d49032"><div class="ttname"><a href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">Biography.age</a></div><div class="ttdeci">int age</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00266">Biography.cs:267</a></div></div>
 <div class="ttc" id="aclassBiography_html_a68a5e6a8bb2e1659140e7460c064b125"><div class="ttname"><a href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">Biography.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00052">Biography.cs:53</a></div></div>
 <div class="ttc" id="aclassBiography_html_a75a55f1f1bb02417f76fc5a57427f526"><div class="ttname"><a href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">Biography.weight</a></div><div class="ttdeci">int weight</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00040">Biography.cs:41</a></div></div>
-<div class="ttc" id="aclassBiography_html_aa3046219269dedf4b0b297c466340741"><div class="ttname"><a href="classBiography.html#aa3046219269dedf4b0b297c466340741">Biography.RerollBio</a></div><div class="ttdeci">void RerollBio(Chara c, int ageIndex=0, bool keepParent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00369">Biography.cs:369</a></div></div>
+<div class="ttc" id="aclassBiography_html_aa3046219269dedf4b0b297c466340741"><div class="ttname"><a href="classBiography.html#aa3046219269dedf4b0b297c466340741">Biography.RerollBio</a></div><div class="ttdeci">void RerollBio(Chara c, int ageIndex=0, bool keepParent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00377">Biography.cs:377</a></div></div>
 <div class="ttc" id="aclassBiography_html_abc72190cd2c15ad5e87dcf85c82ce2b5"><div class="ttname"><a href="classBiography.html#abc72190cd2c15ad5e87dcf85c82ce2b5">Biography.idInterest</a></div><div class="ttdeci">int idInterest</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00244">Biography.cs:245</a></div></div>
 <div class="ttc" id="aclassBiography_html_ac318259048a911b0726d4a50a59ec806"><div class="ttname"><a href="classBiography.html#ac318259048a911b0726d4a50a59ec806">Biography.extroversion</a></div><div class="ttdeci">int extroversion</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00232">Biography.cs:233</a></div></div>
 <div class="ttc" id="aclassBiography_html_acba37bf941b4a714034f01eebd4abe12"><div class="ttname"><a href="classBiography.html#acba37bf941b4a714034f01eebd4abe12">Biography.stability</a></div><div class="ttdeci">int stability</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00184">Biography.cs:185</a></div></div>
-<div class="ttc" id="aclassBiography_html_adc85e798fcbdce8617ce5586512a68a4"><div class="ttname"><a href="classBiography.html#adc85e798fcbdce8617ce5586512a68a4">Biography.SetPortrait</a></div><div class="ttdeci">void SetPortrait(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00451">Biography.cs:451</a></div></div>
+<div class="ttc" id="aclassBiography_html_adc85e798fcbdce8617ce5586512a68a4"><div class="ttname"><a href="classBiography.html#adc85e798fcbdce8617ce5586512a68a4">Biography.SetPortrait</a></div><div class="ttdeci">void SetPortrait(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00459">Biography.cs:459</a></div></div>
 <div class="ttc" id="aclassBiography_html_addc51ae2121a9547107655177e036851"><div class="ttname"><a href="classBiography.html#addc51ae2121a9547107655177e036851">Biography.idLike</a></div><div class="ttdeci">string idLike</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00016">Biography.cs:17</a></div></div>
 <div class="ttc" id="aclassBiography_html_af6fffb81f0987adf9c2c3f9cabdcdb96"><div class="ttname"><a href="classBiography.html#af6fffb81f0987adf9c2c3f9cabdcdb96">Biography.idHobby</a></div><div class="ttdeci">int idHobby</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00172">Biography.cs:173</a></div></div>
 <div class="ttc" id="aclassBiography_html_af9c3cbbb8b6bea54824c108ebdb28ea9"><div class="ttname"><a href="classBiography.html#af9c3cbbb8b6bea54824c108ebdb28ea9">Biography.dominance</a></div><div class="ttdeci">int dominance</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00220">Biography.cs:221</a></div></div>
 <div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00007">CardRow.cs:7</a></div></div>
-<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01873">Card.cs:1874</a></div></div>
+<div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01885">Card.cs:1886</a></div></div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00031">Card.cs:31</a></div></div>
-<div class="ttc" id="aclassCard_html_a5c4cb5a17fbbe8ee86f3d13cab60d31c"><div class="ttname"><a href="classCard.html#a5c4cb5a17fbbe8ee86f3d13cab60d31c">Card.SetRandomTone</a></div><div class="ttdeci">void SetRandomTone()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05845">Card.cs:5845</a></div></div>
-<div class="ttc" id="aclassCard_html_a810e687225ccdc1dc342506473c87334"><div class="ttname"><a href="classCard.html#a810e687225ccdc1dc342506473c87334">Card.HasTag</a></div><div class="ttdeci">bool HasTag(CTAG tag)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02369">Card.cs:2369</a></div></div>
-<div class="ttc" id="aclassCard_html_ab525f5d183acb75b468adb7c54cd555e"><div class="ttname"><a href="classCard.html#ab525f5d183acb75b468adb7c54cd555e">Card.SetRandomTalk</a></div><div class="ttdeci">void SetRandomTalk()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05836">Card.cs:5836</a></div></div>
+<div class="ttc" id="aclassCard_html_a5c4cb5a17fbbe8ee86f3d13cab60d31c"><div class="ttname"><a href="classCard.html#a5c4cb5a17fbbe8ee86f3d13cab60d31c">Card.SetRandomTone</a></div><div class="ttdeci">void SetRandomTone()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05870">Card.cs:5870</a></div></div>
+<div class="ttc" id="aclassCard_html_a810e687225ccdc1dc342506473c87334"><div class="ttname"><a href="classCard.html#a810e687225ccdc1dc342506473c87334">Card.HasTag</a></div><div class="ttdeci">bool HasTag(CTAG tag)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02381">Card.cs:2381</a></div></div>
+<div class="ttc" id="aclassCard_html_ab525f5d183acb75b468adb7c54cd555e"><div class="ttname"><a href="classCard.html#ab525f5d183acb75b468adb7c54cd555e">Card.SetRandomTalk</a></div><div class="ttdeci">void SetRandomTalk()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05861">Card.cs:5861</a></div></div>
 <div class="ttc" id="aclassChara_html_a16699a6f035a4c14d4c846f48be7b850"><div class="ttname"><a href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">Chara.trait</a></div><div class="ttdeci">new TraitChara trait</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00487">Chara.cs:488</a></div></div>
 <div class="ttc" id="aclassChara_html_a6c26ce4c75d34b228566bcf60adce8e8"><div class="ttname"><a href="classChara.html#a6c26ce4c75d34b228566bcf60adce8e8">Chara.IsHuman</a></div><div class="ttdeci">bool IsHuman</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00811">Chara.cs:811</a></div></div>
 <div class="ttc" id="aclassChara_html_a9622b36b4e46eae03ff4363bf2cd355e"><div class="ttname"><a href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">Chara.source</a></div><div class="ttdeci">SourceChara.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00143">Chara.cs:143</a></div></div>
@@ -418,7 +418,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00007">SourceThing.cs:8</a></div></div>
 <div class="ttc" id="aclassTraitGuildClerk_html"><div class="ttname"><a href="classTraitGuildClerk.html">TraitGuildClerk</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildClerk_8cs_source.html#l00001">TraitGuildClerk.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00209">affection</a>, <a class="el" href="Biography_8cs_source.html#l00267">age</a>, <a class="el" href="Card_8cs_source.html#l01874">Card.Chara</a>, <a class="el" href="Biography_8cs_source.html#l00221">dominance</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Biography_8cs_source.html#l00233">extroversion</a>, <a class="el" href="Card_8cs_source.html#l02369">Card.HasTag()</a>, <a class="el" href="Biography_8cs_source.html#l00053">height</a>, <a class="el" href="SourceElement_8cs_source.html#l00261">SourceElement.hobbies</a>, <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>, <a class="el" href="CardRow_8cs_source.html#l00007">CardRow.id</a>, <a class="el" href="Biography_8cs_source.html#l00006">idFemale</a>, <a class="el" href="Biography_8cs_source.html#l00173">idHobby</a>, <a class="el" href="Biography_8cs_source.html#l00245">idInterest</a>, <a class="el" href="Biography_8cs_source.html#l00017">idLike</a>, <a class="el" href="Chara_8cs_source.html#l00811">Chara.IsHuman</a>, <a class="el" href="Biography_8cs_source.html#l00197">law</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="Biography_8cs_source.html#l00442">SetGender()</a>, <a class="el" href="Biography_8cs_source.html#l00451">SetPortrait()</a>, <a class="el" href="Card_8cs_source.html#l05836">Card.SetRandomTalk()</a>, <a class="el" href="Card_8cs_source.html#l05845">Card.SetRandomTone()</a>, <a class="el" href="Chara_8cs_source.html#l00143">Chara.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="Biography_8cs_source.html#l00185">stability</a>, <a class="el" href="SourceManager_8cs_source.html#l00026">SourceManager.things</a>, <a class="el" href="Chara_8cs_source.html#l00488">Chara.trait</a>, and <a class="el" href="Biography_8cs_source.html#l00041">weight</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00209">affection</a>, <a class="el" href="Biography_8cs_source.html#l00267">age</a>, <a class="el" href="Card_8cs_source.html#l01886">Card.Chara</a>, <a class="el" href="Biography_8cs_source.html#l00221">dominance</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Biography_8cs_source.html#l00233">extroversion</a>, <a class="el" href="Card_8cs_source.html#l02381">Card.HasTag()</a>, <a class="el" href="Biography_8cs_source.html#l00053">height</a>, <a class="el" href="SourceElement_8cs_source.html#l00261">SourceElement.hobbies</a>, <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>, <a class="el" href="CardRow_8cs_source.html#l00007">CardRow.id</a>, <a class="el" href="Biography_8cs_source.html#l00006">idFemale</a>, <a class="el" href="Biography_8cs_source.html#l00173">idHobby</a>, <a class="el" href="Biography_8cs_source.html#l00245">idInterest</a>, <a class="el" href="Biography_8cs_source.html#l00017">idLike</a>, <a class="el" href="Chara_8cs_source.html#l00811">Chara.IsHuman</a>, <a class="el" href="Biography_8cs_source.html#l00197">law</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="Biography_8cs_source.html#l00450">SetGender()</a>, <a class="el" href="Biography_8cs_source.html#l00459">SetPortrait()</a>, <a class="el" href="Card_8cs_source.html#l05861">Card.SetRandomTalk()</a>, <a class="el" href="Card_8cs_source.html#l05870">Card.SetRandomTone()</a>, <a class="el" href="Chara_8cs_source.html#l00143">Chara.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="Biography_8cs_source.html#l00185">stability</a>, <a class="el" href="SourceManager_8cs_source.html#l00026">SourceManager.things</a>, <a class="el" href="Chara_8cs_source.html#l00488">Chara.trait</a>, and <a class="el" href="Biography_8cs_source.html#l00041">weight</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01295">Chara.OnCreate()</a>.</p>
 
@@ -448,18 +448,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00400">400</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  401</span>    {</div>
-<div class="line"><span class="lineno">  402</span>        <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> race = c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>;</div>
-<div class="line"><span class="lineno">  403</span>        <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> = race.height + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#ac0ebe220194c0cb2b297543bfdd804b2">height</a> / 5 + 1) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#ac0ebe220194c0cb2b297543bfdd804b2">height</a> / 5 + 1);</div>
-<div class="line"><span class="lineno">  404</span>        <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a> = <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> * <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> * (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6) + 18) / 10000;</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00408">408</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>    {</div>
+<div class="line"><span class="lineno">  410</span>        <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> race = c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>;</div>
+<div class="line"><span class="lineno">  411</span>        <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> = race.height + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#ac0ebe220194c0cb2b297543bfdd804b2">height</a> / 5 + 1) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#ac0ebe220194c0cb2b297543bfdd804b2">height</a> / 5 + 1);</div>
+<div class="line"><span class="lineno">  412</span>        <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a> = <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> * <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a> * (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6) + 18) / 10000;</div>
+<div class="line"><span class="lineno">  413</span>    }</div>
 <div class="ttc" id="aclassSourceRace_1_1Row_html"><div class="ttname"><a href="classSourceRace_1_1Row.html">SourceRace.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRace_8cs_source.html#l00007">SourceRace.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceRace_1_1Row_html_ac0ebe220194c0cb2b297543bfdd804b2"><div class="ttname"><a href="classSourceRace_1_1Row.html#ac0ebe220194c0cb2b297543bfdd804b2">SourceRace.Row.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="SourceRace_8cs_source.html#l00085">SourceRace.cs:85</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Biography_8cs_source.html#l00053">height</a>, <a class="el" href="SourceRace_8cs_source.html#l00085">SourceRace.Row.height</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, and <a class="el" href="Biography_8cs_source.html#l00041">weight</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -497,30 +497,30 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00382">382</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  383</span>    {</div>
-<div class="line"><span class="lineno">  384</span>        <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> race = c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>;</div>
-<div class="line"><span class="lineno">  385</span>        <span class="keywordtype">int</span> num = race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#aca3c28b999f1f5c06d9da72673158471">age</a>[0];</div>
-<div class="line"><span class="lineno">  386</span>        <span class="keywordtype">int</span> num2 = race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#aca3c28b999f1f5c06d9da72673158471">age</a>[1];</div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">if</span> (ageIndex != 0)</div>
-<div class="line"><span class="lineno">  388</span>        {</div>
-<div class="line"><span class="lineno">  389</span>            <span class="keywordtype">int</span> num3 = (num2 - num) / 4;</div>
-<div class="line"><span class="lineno">  390</span>            <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = Rand.Range(num + num3 * (ageIndex - 1), num + num3 * ageIndex);</div>
-<div class="line"><span class="lineno">  391</span>        }</div>
-<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  393</span>        {</div>
-<div class="line"><span class="lineno">  394</span>            <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = Rand.Range(num, num2);</div>
-<div class="line"><span class="lineno">  395</span>        }</div>
-<div class="line"><span class="lineno">  396</span>        <a class="code hl_property" href="classBiography.html#a53c524b31f813dcc63b4731d98657718">birthDay</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(30) + 1;</div>
-<div class="line"><span class="lineno">  397</span>        <a class="code hl_property" href="classBiography.html#af9a949773f625a38725a62c9e304ee20">birthMonth</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) + 1;</div>
-<div class="line"><span class="lineno">  398</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00390">390</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  391</span>    {</div>
+<div class="line"><span class="lineno">  392</span>        <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> race = c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>;</div>
+<div class="line"><span class="lineno">  393</span>        <span class="keywordtype">int</span> num = race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#aca3c28b999f1f5c06d9da72673158471">age</a>[0];</div>
+<div class="line"><span class="lineno">  394</span>        <span class="keywordtype">int</span> num2 = race.<a class="code hl_variable" href="classSourceRace_1_1Row.html#aca3c28b999f1f5c06d9da72673158471">age</a>[1];</div>
+<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">if</span> (ageIndex != 0)</div>
+<div class="line"><span class="lineno">  396</span>        {</div>
+<div class="line"><span class="lineno">  397</span>            <span class="keywordtype">int</span> num3 = (num2 - num) / 4;</div>
+<div class="line"><span class="lineno">  398</span>            <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = Rand.Range(num + num3 * (ageIndex - 1), num + num3 * ageIndex);</div>
+<div class="line"><span class="lineno">  399</span>        }</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  401</span>        {</div>
+<div class="line"><span class="lineno">  402</span>            <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> = Rand.Range(num, num2);</div>
+<div class="line"><span class="lineno">  403</span>        }</div>
+<div class="line"><span class="lineno">  404</span>        <a class="code hl_property" href="classBiography.html#a53c524b31f813dcc63b4731d98657718">birthDay</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(30) + 1;</div>
+<div class="line"><span class="lineno">  405</span>        <a class="code hl_property" href="classBiography.html#af9a949773f625a38725a62c9e304ee20">birthMonth</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(12) + 1;</div>
+<div class="line"><span class="lineno">  406</span>    }</div>
 <div class="ttc" id="aclassBiography_html_a53c524b31f813dcc63b4731d98657718"><div class="ttname"><a href="classBiography.html#a53c524b31f813dcc63b4731d98657718">Biography.birthDay</a></div><div class="ttdeci">int birthDay</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00064">Biography.cs:65</a></div></div>
 <div class="ttc" id="aclassBiography_html_af9a949773f625a38725a62c9e304ee20"><div class="ttname"><a href="classBiography.html#af9a949773f625a38725a62c9e304ee20">Biography.birthMonth</a></div><div class="ttdeci">int birthMonth</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00076">Biography.cs:77</a></div></div>
 <div class="ttc" id="aclassSourceRace_1_1Row_html_aca3c28b999f1f5c06d9da72673158471"><div class="ttname"><a href="classSourceRace_1_1Row.html#aca3c28b999f1f5c06d9da72673158471">SourceRace.Row.age</a></div><div class="ttdeci">int[] age</div><div class="ttdef"><b>Definition:</b> <a href="SourceRace_8cs_source.html#l00083">SourceRace.cs:83</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Biography_8cs_source.html#l00267">age</a>, <a class="el" href="SourceRace_8cs_source.html#l00083">SourceRace.Row.age</a>, <a class="el" href="Biography_8cs_source.html#l00065">birthDay</a>, <a class="el" href="Biography_8cs_source.html#l00077">birthMonth</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, and <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -547,18 +547,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00407">407</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  408</span>    {</div>
-<div class="line"><span class="lineno">  409</span>        <a class="code hl_property" href="classBiography.html#a503808d44ae9e79ddca4423face01e22">idDad</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;parent&quot;</span>);</div>
-<div class="line"><span class="lineno">  410</span>        <a class="code hl_property" href="classBiography.html#a933c6223df472d3e2dfd403424ba8e1c">idAdvDad</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;adv&quot;</span>);</div>
-<div class="line"><span class="lineno">  411</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00415">415</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>    {</div>
+<div class="line"><span class="lineno">  417</span>        <a class="code hl_property" href="classBiography.html#a503808d44ae9e79ddca4423face01e22">idDad</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;parent&quot;</span>);</div>
+<div class="line"><span class="lineno">  418</span>        <a class="code hl_property" href="classBiography.html#a933c6223df472d3e2dfd403424ba8e1c">idAdvDad</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;adv&quot;</span>);</div>
+<div class="line"><span class="lineno">  419</span>    }</div>
 <div class="ttc" id="aclassBiography_html_a503808d44ae9e79ddca4423face01e22"><div class="ttname"><a href="classBiography.html#a503808d44ae9e79ddca4423face01e22">Biography.idDad</a></div><div class="ttdeci">int idDad</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00112">Biography.cs:113</a></div></div>
 <div class="ttc" id="aclassBiography_html_a933c6223df472d3e2dfd403424ba8e1c"><div class="ttname"><a href="classBiography.html#a933c6223df472d3e2dfd403424ba8e1c">Biography.idAdvDad</a></div><div class="ttdeci">int idAdvDad</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00148">Biography.cs:149</a></div></div>
-<div class="ttc" id="aclassBiography_html_a9c62c98f1b26eb90d362724df04cace5"><div class="ttname"><a href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">Biography.RndBio</a></div><div class="ttdeci">int RndBio(string group)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00419">Biography.cs:419</a></div></div>
+<div class="ttc" id="aclassBiography_html_a9c62c98f1b26eb90d362724df04cace5"><div class="ttname"><a href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">Biography.RndBio</a></div><div class="ttdeci">int RndBio(string group)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00427">Biography.cs:427</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00149">idAdvDad</a>, <a class="el" href="Biography_8cs_source.html#l00113">idDad</a>, and <a class="el" href="Biography_8cs_source.html#l00419">RndBio()</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00149">idAdvDad</a>, <a class="el" href="Biography_8cs_source.html#l00113">idDad</a>, and <a class="el" href="Biography_8cs_source.html#l00427">RndBio()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -585,17 +585,57 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00413">413</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>    {</div>
-<div class="line"><span class="lineno">  415</span>        <a class="code hl_property" href="classBiography.html#aace1e729260916e2c84a6196e37dbe2b">idMom</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;parent&quot;</span>);</div>
-<div class="line"><span class="lineno">  416</span>        <a class="code hl_property" href="classBiography.html#a2131374fca3733ae9d7f4d9bd1f99612">idAdvMom</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;adv&quot;</span>);</div>
-<div class="line"><span class="lineno">  417</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00421">421</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  422</span>    {</div>
+<div class="line"><span class="lineno">  423</span>        <a class="code hl_property" href="classBiography.html#aace1e729260916e2c84a6196e37dbe2b">idMom</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;parent&quot;</span>);</div>
+<div class="line"><span class="lineno">  424</span>        <a class="code hl_property" href="classBiography.html#a2131374fca3733ae9d7f4d9bd1f99612">idAdvMom</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;adv&quot;</span>);</div>
+<div class="line"><span class="lineno">  425</span>    }</div>
 <div class="ttc" id="aclassBiography_html_a2131374fca3733ae9d7f4d9bd1f99612"><div class="ttname"><a href="classBiography.html#a2131374fca3733ae9d7f4d9bd1f99612">Biography.idAdvMom</a></div><div class="ttdeci">int idAdvMom</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00160">Biography.cs:161</a></div></div>
 <div class="ttc" id="aclassBiography_html_aace1e729260916e2c84a6196e37dbe2b"><div class="ttname"><a href="classBiography.html#aace1e729260916e2c84a6196e37dbe2b">Biography.idMom</a></div><div class="ttdeci">int idMom</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00124">Biography.cs:125</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00161">idAdvMom</a>, <a class="el" href="Biography_8cs_source.html#l00125">idMom</a>, and <a class="el" href="Biography_8cs_source.html#l00419">RndBio()</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00161">idAdvMom</a>, <a class="el" href="Biography_8cs_source.html#l00125">idMom</a>, and <a class="el" href="Biography_8cs_source.html#l00427">RndBio()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
+
+</div>
+</div>
+<a id="a5582aee7b6eb80538c184c1eb7496103" name="a5582aee7b6eb80538c184c1eb7496103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5582aee7b6eb80538c184c1eb7496103">&#9670;&#160;</a></span>GetOriginalAge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Biography.GetOriginalAge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classChara.html">Chara</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00298">298</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  299</span>    {</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordtype">string</span>[] array = c.<a class="code hl_variable" href="classChara.html#a9622b36b4e46eae03ff4363bf2cd355e">source</a>.bio.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
+<div class="line"><span class="lineno">  302</span>        {</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">return</span> <span class="keywordtype">int</span>.Parse(array[1]);</div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a>;</div>
+<div class="line"><span class="lineno">  306</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00267">age</a>, and <a class="el" href="Chara_8cs_source.html#l00143">Chara.source</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00280">TextAge()</a>.</p>
 
 </div>
 </div>
@@ -639,28 +679,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00369">369</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  370</span>    {</div>
-<div class="line"><span class="lineno">  371</span>        <a class="code hl_function" href="classBiography.html#aeadefe4a493224f2abaf744a10255202">GenerateBirthday</a>(c, ageIndex);</div>
-<div class="line"><span class="lineno">  372</span>        <a class="code hl_function" href="classBiography.html#a5843f113c94770e82ba0c02724b09411">GenerateAppearance</a>(c);</div>
-<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">if</span> (!keepParent)</div>
-<div class="line"><span class="lineno">  374</span>        {</div>
-<div class="line"><span class="lineno">  375</span>            <a class="code hl_function" href="classBiography.html#a4f43aaa7a387b875977c44c2147dc907">GenerateDad</a>();</div>
-<div class="line"><span class="lineno">  376</span>            <a class="code hl_function" href="classBiography.html#a1a0038bd7a4a4c52b36ba573e6143ed6">GenerateMom</a>();</div>
-<div class="line"><span class="lineno">  377</span>            <a class="code hl_property" href="classBiography.html#aca708975bdf77b689202ce84e92d77e5">idHome</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;home&quot;</span>);</div>
-<div class="line"><span class="lineno">  378</span>            <a class="code hl_property" href="classBiography.html#a34abb781135cab0723c00662bb2cd041">idLoc</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;loc&quot;</span>);</div>
-<div class="line"><span class="lineno">  379</span>        }</div>
-<div class="line"><span class="lineno">  380</span>    }</div>
-<div class="ttc" id="aclassBiography_html_a1a0038bd7a4a4c52b36ba573e6143ed6"><div class="ttname"><a href="classBiography.html#a1a0038bd7a4a4c52b36ba573e6143ed6">Biography.GenerateMom</a></div><div class="ttdeci">void GenerateMom()</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00413">Biography.cs:413</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00377">377</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  378</span>    {</div>
+<div class="line"><span class="lineno">  379</span>        <a class="code hl_function" href="classBiography.html#aeadefe4a493224f2abaf744a10255202">GenerateBirthday</a>(c, ageIndex);</div>
+<div class="line"><span class="lineno">  380</span>        <a class="code hl_function" href="classBiography.html#a5843f113c94770e82ba0c02724b09411">GenerateAppearance</a>(c);</div>
+<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">if</span> (!keepParent)</div>
+<div class="line"><span class="lineno">  382</span>        {</div>
+<div class="line"><span class="lineno">  383</span>            <a class="code hl_function" href="classBiography.html#a4f43aaa7a387b875977c44c2147dc907">GenerateDad</a>();</div>
+<div class="line"><span class="lineno">  384</span>            <a class="code hl_function" href="classBiography.html#a1a0038bd7a4a4c52b36ba573e6143ed6">GenerateMom</a>();</div>
+<div class="line"><span class="lineno">  385</span>            <a class="code hl_property" href="classBiography.html#aca708975bdf77b689202ce84e92d77e5">idHome</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;home&quot;</span>);</div>
+<div class="line"><span class="lineno">  386</span>            <a class="code hl_property" href="classBiography.html#a34abb781135cab0723c00662bb2cd041">idLoc</a> = <a class="code hl_function" href="classBiography.html#a9c62c98f1b26eb90d362724df04cace5">RndBio</a>(<span class="stringliteral">&quot;loc&quot;</span>);</div>
+<div class="line"><span class="lineno">  387</span>        }</div>
+<div class="line"><span class="lineno">  388</span>    }</div>
+<div class="ttc" id="aclassBiography_html_a1a0038bd7a4a4c52b36ba573e6143ed6"><div class="ttname"><a href="classBiography.html#a1a0038bd7a4a4c52b36ba573e6143ed6">Biography.GenerateMom</a></div><div class="ttdeci">void GenerateMom()</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00421">Biography.cs:421</a></div></div>
 <div class="ttc" id="aclassBiography_html_a34abb781135cab0723c00662bb2cd041"><div class="ttname"><a href="classBiography.html#a34abb781135cab0723c00662bb2cd041">Biography.idLoc</a></div><div class="ttdeci">int idLoc</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00136">Biography.cs:137</a></div></div>
-<div class="ttc" id="aclassBiography_html_a4f43aaa7a387b875977c44c2147dc907"><div class="ttname"><a href="classBiography.html#a4f43aaa7a387b875977c44c2147dc907">Biography.GenerateDad</a></div><div class="ttdeci">void GenerateDad()</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00407">Biography.cs:407</a></div></div>
-<div class="ttc" id="aclassBiography_html_a5843f113c94770e82ba0c02724b09411"><div class="ttname"><a href="classBiography.html#a5843f113c94770e82ba0c02724b09411">Biography.GenerateAppearance</a></div><div class="ttdeci">void GenerateAppearance(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00400">Biography.cs:400</a></div></div>
+<div class="ttc" id="aclassBiography_html_a4f43aaa7a387b875977c44c2147dc907"><div class="ttname"><a href="classBiography.html#a4f43aaa7a387b875977c44c2147dc907">Biography.GenerateDad</a></div><div class="ttdeci">void GenerateDad()</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00415">Biography.cs:415</a></div></div>
+<div class="ttc" id="aclassBiography_html_a5843f113c94770e82ba0c02724b09411"><div class="ttname"><a href="classBiography.html#a5843f113c94770e82ba0c02724b09411">Biography.GenerateAppearance</a></div><div class="ttdeci">void GenerateAppearance(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00408">Biography.cs:408</a></div></div>
 <div class="ttc" id="aclassBiography_html_aca708975bdf77b689202ce84e92d77e5"><div class="ttname"><a href="classBiography.html#aca708975bdf77b689202ce84e92d77e5">Biography.idHome</a></div><div class="ttdeci">int idHome</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00100">Biography.cs:101</a></div></div>
-<div class="ttc" id="aclassBiography_html_aeadefe4a493224f2abaf744a10255202"><div class="ttname"><a href="classBiography.html#aeadefe4a493224f2abaf744a10255202">Biography.GenerateBirthday</a></div><div class="ttdeci">void GenerateBirthday(Chara c, int ageIndex=0)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00382">Biography.cs:382</a></div></div>
+<div class="ttc" id="aclassBiography_html_aeadefe4a493224f2abaf744a10255202"><div class="ttname"><a href="classBiography.html#aeadefe4a493224f2abaf744a10255202">Biography.GenerateBirthday</a></div><div class="ttdeci">void GenerateBirthday(Chara c, int ageIndex=0)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00390">Biography.cs:390</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00400">GenerateAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00382">GenerateBirthday()</a>, <a class="el" href="Biography_8cs_source.html#l00407">GenerateDad()</a>, <a class="el" href="Biography_8cs_source.html#l00413">GenerateMom()</a>, <a class="el" href="Biography_8cs_source.html#l00101">idHome</a>, <a class="el" href="Biography_8cs_source.html#l00137">idLoc</a>, and <a class="el" href="Biography_8cs_source.html#l00419">RndBio()</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00408">GenerateAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00390">GenerateBirthday()</a>, <a class="el" href="Biography_8cs_source.html#l00415">GenerateDad()</a>, <a class="el" href="Biography_8cs_source.html#l00421">GenerateMom()</a>, <a class="el" href="Biography_8cs_source.html#l00101">idHome</a>, <a class="el" href="Biography_8cs_source.html#l00137">idLoc</a>, and <a class="el" href="Biography_8cs_source.html#l00427">RndBio()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00483">UICharaMaker.RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, and <a class="el" href="UICharaMaker_8cs_source.html#l00483">UICharaMaker.RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -688,12 +728,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00419">419</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  420</span>    {</div>
-<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">return</span> WordGen.GetID(group);</div>
-<div class="line"><span class="lineno">  422</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00427">427</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  428</span>    {</div>
+<div class="line"><span class="lineno">  429</span>        <span class="keywordflow">return</span> WordGen.GetID(group);</div>
+<div class="line"><span class="lineno">  430</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00407">GenerateDad()</a>, <a class="el" href="Biography_8cs_source.html#l00413">GenerateMom()</a>, and <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00415">GenerateDad()</a>, <a class="el" href="Biography_8cs_source.html#l00421">GenerateMom()</a>, and <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -721,19 +761,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00442">442</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  443</span>    {</div>
-<div class="line"><span class="lineno">  444</span>        <a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> = g;</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> &gt; 2)</div>
-<div class="line"><span class="lineno">  446</span>        {</div>
-<div class="line"><span class="lineno">  447</span>            <a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> = 0;</div>
-<div class="line"><span class="lineno">  448</span>        }</div>
-<div class="line"><span class="lineno">  449</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00450">450</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  451</span>    {</div>
+<div class="line"><span class="lineno">  452</span>        <a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> = g;</div>
+<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> &gt; 2)</div>
+<div class="line"><span class="lineno">  454</span>        {</div>
+<div class="line"><span class="lineno">  455</span>            <a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a> = 0;</div>
+<div class="line"><span class="lineno">  456</span>        }</div>
+<div class="line"><span class="lineno">  457</span>    }</div>
 <div class="ttc" id="aclassBiography_html_ad30fca890328c9ff7ec6685b1a84b83c"><div class="ttname"><a href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">Biography.gender</a></div><div class="ttdeci">int gender</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00028">Biography.cs:29</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Biography_8cs_source.html#l00029">gender</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05883">Card.ApplyBacker()</a>, <a class="el" href="Chara_8cs_source.html#l01730">Chara.ApplyEditorTags()</a>, <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00431">UICharaMaker.ListGender()</a>, and <a class="el" href="AM__MoveInstalled_8cs_source.html#l00148">AM_MoveInstalled.SetTarget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05908">Card.ApplyBacker()</a>, <a class="el" href="Chara_8cs_source.html#l01730">Chara.ApplyEditorTags()</a>, <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00431">UICharaMaker.ListGender()</a>, and <a class="el" href="AM__MoveInstalled_8cs_source.html#l00148">AM_MoveInstalled.SetTarget()</a>.</p>
 
 </div>
 </div>
@@ -761,32 +801,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00451">451</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  452</span>    {</div>
-<div class="line"><span class="lineno">  453</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>;</div>
-<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">if</span> (!(<span class="keywordtype">id</span> == <span class="stringliteral">&quot;shojo&quot;</span>))</div>
-<div class="line"><span class="lineno">  455</span>        {</div>
-<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;sister&quot;</span>)</div>
-<div class="line"><span class="lineno">  457</span>            {</div>
-<div class="line"><span class="lineno">  458</span>                c.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(<span class="stringliteral">&quot;special_f-littlesister&quot;</span>);</div>
-<div class="line"><span class="lineno">  459</span>            }</div>
-<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  461</span>            {</div>
-<div class="line"><span class="lineno">  462</span>                c.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>, c.<a class="code hl_function" href="classChara.html#a9bb2f98e7971540ea72e788644e43887">GetIdPortraitCat</a>());</div>
-<div class="line"><span class="lineno">  463</span>            }</div>
-<div class="line"><span class="lineno">  464</span>        }</div>
-<div class="line"><span class="lineno">  465</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  466</span>        {</div>
-<div class="line"><span class="lineno">  467</span>            c.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(<span class="stringliteral">&quot;special_f-littlegirl&quot;</span>);</div>
-<div class="line"><span class="lineno">  468</span>        }</div>
-<div class="line"><span class="lineno">  469</span>    }</div>
-<div class="ttc" id="aclassChara_html_a9bb2f98e7971540ea72e788644e43887"><div class="ttname"><a href="classChara.html#a9bb2f98e7971540ea72e788644e43887">Chara.GetIdPortraitCat</a></div><div class="ttdeci">string GetIdPortraitCat()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07002">Chara.cs:7002</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00459">459</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  460</span>    {</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>;</div>
+<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">if</span> (!(<span class="keywordtype">id</span> == <span class="stringliteral">&quot;shojo&quot;</span>))</div>
+<div class="line"><span class="lineno">  463</span>        {</div>
+<div class="line"><span class="lineno">  464</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;sister&quot;</span>)</div>
+<div class="line"><span class="lineno">  465</span>            {</div>
+<div class="line"><span class="lineno">  466</span>                c.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(<span class="stringliteral">&quot;special_f-littlesister&quot;</span>);</div>
+<div class="line"><span class="lineno">  467</span>            }</div>
+<div class="line"><span class="lineno">  468</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  469</span>            {</div>
+<div class="line"><span class="lineno">  470</span>                c.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>, c.<a class="code hl_function" href="classChara.html#a9bb2f98e7971540ea72e788644e43887">GetIdPortraitCat</a>());</div>
+<div class="line"><span class="lineno">  471</span>            }</div>
+<div class="line"><span class="lineno">  472</span>        }</div>
+<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  474</span>        {</div>
+<div class="line"><span class="lineno">  475</span>            c.c_idPortrait = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a424351a84e09594607b223055f9c9101">GetRandomPortrait</a>(<span class="stringliteral">&quot;special_f-littlegirl&quot;</span>);</div>
+<div class="line"><span class="lineno">  476</span>        }</div>
+<div class="line"><span class="lineno">  477</span>    }</div>
+<div class="ttc" id="aclassChara_html_a9bb2f98e7971540ea72e788644e43887"><div class="ttname"><a href="classChara.html#a9bb2f98e7971540ea72e788644e43887">Chara.GetIdPortraitCat</a></div><div class="ttdeci">string GetIdPortraitCat()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07009">Chara.cs:7009</a></div></div>
 <div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00006">Portrait.cs:7</a></div></div>
 <div class="ttc" id="aclassPortrait_html_a424351a84e09594607b223055f9c9101"><div class="ttname"><a href="classPortrait.html#a424351a84e09594607b223055f9c9101">Portrait.GetRandomPortrait</a></div><div class="ttdeci">static string GetRandomPortrait(string idDict)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00105">Portrait.cs:105</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00029">gender</a>, <a class="el" href="Chara_8cs_source.html#l07002">Chara.GetIdPortraitCat()</a>, <a class="el" href="Portrait_8cs_source.html#l00105">Portrait.GetRandomPortrait()</a>, and <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00029">gender</a>, <a class="el" href="Chara_8cs_source.html#l07009">Chara.GetIdPortraitCat()</a>, <a class="el" href="Portrait_8cs_source.html#l00105">Portrait.GetRandomPortrait()</a>, and <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05883">Card.ApplyBacker()</a>, and <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05908">Card.ApplyBacker()</a>, and <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -814,23 +854,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00424">424</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  425</span>    {</div>
-<div class="line"><span class="lineno">  426</span>        <span class="keywordtype">object</span> obj;</div>
-<div class="line"><span class="lineno">  427</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">langWord</a>.map.ContainsKey(<span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">  428</span>        {</div>
-<div class="line"><span class="lineno">  429</span>            obj = <span class="keywordtype">id</span>.ToString();</div>
-<div class="line"><span class="lineno">  430</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  431</span>            {</div>
-<div class="line"><span class="lineno">  432</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  433</span>            }</div>
-<div class="line"><span class="lineno">  434</span>        }</div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">else</span></div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00432">432</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  433</span>    {</div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordtype">object</span> obj;</div>
+<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">langWord</a>.map.ContainsKey(<span class="keywordtype">id</span>))</div>
 <div class="line"><span class="lineno">  436</span>        {</div>
-<div class="line"><span class="lineno">  437</span>            obj = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">langWord</a>.map[id].GetText().Split(<span class="charliteral">&#39;,&#39;</span>)[0];</div>
-<div class="line"><span class="lineno">  438</span>        }</div>
-<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
-<div class="line"><span class="lineno">  440</span>    }</div>
+<div class="line"><span class="lineno">  437</span>            obj = <span class="keywordtype">id</span>.ToString();</div>
+<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  439</span>            {</div>
+<div class="line"><span class="lineno">  440</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  441</span>            }</div>
+<div class="line"><span class="lineno">  442</span>        }</div>
+<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  444</span>        {</div>
+<div class="line"><span class="lineno">  445</span>            obj = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">langWord</a>.map[id].GetText().Split(<span class="charliteral">&#39;,&#39;</span>)[0];</div>
+<div class="line"><span class="lineno">  446</span>        }</div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
+<div class="line"><span class="lineno">  448</span>    }</div>
 <div class="ttc" id="aclassSourceManager_html_a76110f02ea7ac11778eaa98e513f3c17"><div class="ttname"><a href="classSourceManager.html#a76110f02ea7ac11778eaa98e513f3c17">SourceManager.langWord</a></div><div class="ttdeci">LangWord langWord</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00012">SourceManager.cs:12</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00012">SourceManager.langWord</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
@@ -861,28 +901,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00282">282</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  283</span>    {</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordtype">object</span> obj;</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> &lt; 1000)</div>
-<div class="line"><span class="lineno">  286</span>        {</div>
-<div class="line"><span class="lineno">  287</span>            obj = (c.IsUnique ? <a class="code hl_property" href="classBiography.html#a9dd747476eb23d8afad9881ec8a56aa1">ageOriginal</a> : <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a>).ToString();</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  289</span>            {</div>
-<div class="line"><span class="lineno">  290</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  291</span>            }</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  294</span>        {</div>
-<div class="line"><span class="lineno">  295</span>            obj = <span class="stringliteral">&quot;???&quot;</span>;</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
-<div class="line"><span class="lineno">  298</span>    }</div>
-<div class="ttc" id="aclassBiography_html_a9dd747476eb23d8afad9881ec8a56aa1"><div class="ttname"><a href="classBiography.html#a9dd747476eb23d8afad9881ec8a56aa1">Biography.ageOriginal</a></div><div class="ttdeci">int ageOriginal</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00278">Biography.cs:278</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00280">280</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>    {</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordtype">object</span> obj;</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a> &lt; 1000)</div>
+<div class="line"><span class="lineno">  284</span>        {</div>
+<div class="line"><span class="lineno">  285</span>            obj = (c.IsUnique ? <a class="code hl_function" href="classBiography.html#a5582aee7b6eb80538c184c1eb7496103">GetOriginalAge</a>(c) : <a class="code hl_property" href="classBiography.html#a4d846a4d3aab4bab50353384e4d49032">age</a>).ToString();</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  287</span>            {</div>
+<div class="line"><span class="lineno">  288</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  289</span>            }</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            obj = <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">  294</span>        }</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
+<div class="line"><span class="lineno">  296</span>    }</div>
+<div class="ttc" id="aclassBiography_html_a5582aee7b6eb80538c184c1eb7496103"><div class="ttname"><a href="classBiography.html#a5582aee7b6eb80538c184c1eb7496103">Biography.GetOriginalAge</a></div><div class="ttdeci">int GetOriginalAge(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00298">Biography.cs:298</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00267">age</a>, and <a class="el" href="Biography_8cs_source.html#l00278">ageOriginal</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00267">age</a>, and <a class="el" href="Biography_8cs_source.html#l00298">GetOriginalAge()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Person_8cs_source.html#l00106">Person.GetDramaTitle()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00035">ButtonChara.SetChara()</a>, <a class="el" href="Biography_8cs_source.html#l00471">TextBio()</a>, and <a class="el" href="Biography_8cs_source.html#l00481">TextBirthDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Person_8cs_source.html#l00106">Person.GetDramaTitle()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00035">ButtonChara.SetChara()</a>, <a class="el" href="Biography_8cs_source.html#l00479">TextBio()</a>, and <a class="el" href="Biography_8cs_source.html#l00489">TextBirthDate()</a>.</p>
 
 </div>
 </div>
@@ -909,10 +949,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00486">486</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  487</span>    {</div>
-<div class="line"><span class="lineno">  488</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;heightWeight&quot;</span>, <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  489</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00494">494</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  495</span>    {</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;heightWeight&quot;</span>, <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  497</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Biography_8cs_source.html#l00053">height</a>, and <a class="el" href="Biography_8cs_source.html#l00041">weight</a>.</p>
 
@@ -944,15 +984,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00471">471</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  472</span>    {</div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">return</span> c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.GetText().ToTitleCase(wholeText: <span class="keyword">true</span>) + <span class="stringliteral">&quot; &quot;</span> + Lang.Parse(<span class="stringliteral">&quot;age&quot;</span>, <a class="code hl_function" href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">TextAge</a>(c)) + <span class="stringliteral">&quot; &quot;</span> + Lang._gender(<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>);</div>
-<div class="line"><span class="lineno">  474</span>    }</div>
-<div class="ttc" id="aclassBiography_html_ada069b0ad974426ca99a3fd6881ad70b"><div class="ttname"><a href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">Biography.TextAge</a></div><div class="ttdeci">string TextAge(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00282">Biography.cs:282</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00479">479</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  480</span>    {</div>
+<div class="line"><span class="lineno">  481</span>        <span class="keywordflow">return</span> c.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.GetText().ToTitleCase(wholeText: <span class="keyword">true</span>) + <span class="stringliteral">&quot; &quot;</span> + Lang.Parse(<span class="stringliteral">&quot;age&quot;</span>, <a class="code hl_function" href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">TextAge</a>(c)) + <span class="stringliteral">&quot; &quot;</span> + Lang._gender(<a class="code hl_property" href="classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c">gender</a>);</div>
+<div class="line"><span class="lineno">  482</span>    }</div>
+<div class="ttc" id="aclassBiography_html_ada069b0ad974426ca99a3fd6881ad70b"><div class="ttname"><a href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">Biography.TextAge</a></div><div class="ttdeci">string TextAge(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00280">Biography.cs:280</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00029">gender</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, and <a class="el" href="Biography_8cs_source.html#l00282">TextAge()</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00029">gender</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, and <a class="el" href="Biography_8cs_source.html#l00280">TextAge()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00827">WindowChara.RefreshNote()</a>, <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00034">ItemGachaResult.SetChara()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00840">WindowChara.RefreshNote()</a>, <a class="el" href="WindowChara_8cs_source.html#l00364">WindowChara.RefreshProfile()</a>, and <a class="el" href="ItemGachaResult_8cs_source.html#l00034">ItemGachaResult.SetChara()</a>.</p>
 
 </div>
 </div>
@@ -980,15 +1020,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00476">476</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  477</span>    {</div>
-<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;heightWeight&quot;</span>, <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot; &quot;</span> + ((c.material.alias == <span class="stringliteral">&quot;meat&quot;</span>) ? <span class="stringliteral">&quot;&quot;</span> : c.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.GetName().ToTitleCase(wholeText: <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">  479</span>    }</div>
-<div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01855">Card.cs:1855</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00484">484</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  485</span>    {</div>
+<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;heightWeight&quot;</span>, <a class="code hl_property" href="classBiography.html#a68a5e6a8bb2e1659140e7460c064b125">height</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classBiography.html#a75a55f1f1bb02417f76fc5a57427f526">weight</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot; &quot;</span> + ((c.material.alias == <span class="stringliteral">&quot;meat&quot;</span>) ? <span class="stringliteral">&quot;&quot;</span> : c.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.GetName().ToTitleCase(wholeText: <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">  487</span>    }</div>
+<div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01867">Card.cs:1867</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00053">height</a>, <a class="el" href="Card_8cs_source.html#l01855">Card.material</a>, and <a class="el" href="Biography_8cs_source.html#l00041">weight</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00053">height</a>, <a class="el" href="Card_8cs_source.html#l01867">Card.material</a>, and <a class="el" href="Biography_8cs_source.html#l00041">weight</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00827">WindowChara.RefreshNote()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00355">WindowChara.RefreshProfile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WindowChara_8cs_source.html#l00840">WindowChara.RefreshNote()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00364">WindowChara.RefreshProfile()</a>.</p>
 
 </div>
 </div>
@@ -1026,15 +1066,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00481">481</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  482</span>    {</div>
-<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;birthText&quot;</span>, (<a class="code hl_property" href="classBiography.html#a0a9b1108d0710bc270180af5853047ef">birthYear</a> &gt;= 0) ? (<a class="code hl_property" href="classBiography.html#a0a9b1108d0710bc270180af5853047ef">birthYear</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) : <span class="stringliteral">&quot;???&quot;</span>, <a class="code hl_property" href="classBiography.html#af9a949773f625a38725a62c9e304ee20">birthMonth</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classBiography.html#a53c524b31f813dcc63b4731d98657718">birthDay</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + (_age ? (<span class="stringliteral">&quot; (&quot;</span> + Lang.Parse(<span class="stringliteral">&quot;age&quot;</span>, <a class="code hl_function" href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">TextAge</a>(c)) + <span class="stringliteral">&quot;)&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  484</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00489">489</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>    {</div>
+<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> Lang.Parse(<span class="stringliteral">&quot;birthText&quot;</span>, (<a class="code hl_property" href="classBiography.html#a0a9b1108d0710bc270180af5853047ef">birthYear</a> &gt;= 0) ? (<a class="code hl_property" href="classBiography.html#a0a9b1108d0710bc270180af5853047ef">birthYear</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) : <span class="stringliteral">&quot;???&quot;</span>, <a class="code hl_property" href="classBiography.html#af9a949773f625a38725a62c9e304ee20">birthMonth</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classBiography.html#a53c524b31f813dcc63b4731d98657718">birthDay</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + (_age ? (<span class="stringliteral">&quot; (&quot;</span> + Lang.Parse(<span class="stringliteral">&quot;age&quot;</span>, <a class="code hl_function" href="classBiography.html#ada069b0ad974426ca99a3fd6881ad70b">TextAge</a>(c)) + <span class="stringliteral">&quot;)&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  492</span>    }</div>
 <div class="ttc" id="aclassBiography_html_a0a9b1108d0710bc270180af5853047ef"><div class="ttname"><a href="classBiography.html#a0a9b1108d0710bc270180af5853047ef">Biography.birthYear</a></div><div class="ttdeci">int birthYear</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00088">Biography.cs:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00065">birthDay</a>, <a class="el" href="Biography_8cs_source.html#l00077">birthMonth</a>, <a class="el" href="Biography_8cs_source.html#l00089">birthYear</a>, and <a class="el" href="Biography_8cs_source.html#l00282">TextAge()</a>.</p>
+<p class="reference">References <a class="el" href="Biography_8cs_source.html#l00065">birthDay</a>, <a class="el" href="Biography_8cs_source.html#l00077">birthMonth</a>, <a class="el" href="Biography_8cs_source.html#l00089">birthYear</a>, and <a class="el" href="Biography_8cs_source.html#l00280">TextAge()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00469">WindowChara.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1101,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00006">6</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1187,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  218</span>    }</div>
 <div class="ttc" id="aclassBiography_html_a9c859714dfb8dc60b7cd44ed473b33eb"><div class="ttname"><a href="classBiography.html#a9c859714dfb8dc60b7cd44ed473b33eb">Biography.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00009">Biography.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -1183,33 +1223,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  275</span>        }</div>
 <div class="line"><span class="lineno">  276</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, <a class="el" href="Biography_8cs_source.html#l00382">GenerateBirthday()</a>, and <a class="el" href="Biography_8cs_source.html#l00282">TextAge()</a>.</p>
-
-</div>
-</div>
-<a id="a9dd747476eb23d8afad9881ec8a56aa1" name="a9dd747476eb23d8afad9881ec8a56aa1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dd747476eb23d8afad9881ec8a56aa1">&#9670;&#160;</a></span>ageOriginal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Biography.ageOriginal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00278">278</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00282">TextAge()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, <a class="el" href="Biography_8cs_source.html#l00390">GenerateBirthday()</a>, <a class="el" href="Biography_8cs_source.html#l00298">GetOriginalAge()</a>, and <a class="el" href="Biography_8cs_source.html#l00280">TextAge()</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1259,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>        }</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00382">GenerateBirthday()</a>, <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>, and <a class="el" href="Biography_8cs_source.html#l00481">TextBirthDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00390">GenerateBirthday()</a>, <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>, and <a class="el" href="Biography_8cs_source.html#l00489">TextBirthDate()</a>.</p>
 
 </div>
 </div>
@@ -1281,7 +1295,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   85</span>        }</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00382">GenerateBirthday()</a>, <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>, and <a class="el" href="Biography_8cs_source.html#l00481">TextBirthDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00390">GenerateBirthday()</a>, <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>, and <a class="el" href="Biography_8cs_source.html#l00489">TextBirthDate()</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1331,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   97</span>        }</div>
 <div class="line"><span class="lineno">   98</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>, and <a class="el" href="Biography_8cs_source.html#l00481">TextBirthDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>, and <a class="el" href="Biography_8cs_source.html#l00489">TextBirthDate()</a>.</p>
 
 </div>
 </div>
@@ -1353,7 +1367,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  229</span>        }</div>
 <div class="line"><span class="lineno">  230</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1403,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  241</span>        }</div>
 <div class="line"><span class="lineno">  242</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -1425,7 +1439,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   37</span>        }</div>
 <div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="Person_8cs_source.html#l00106">Person.GetDramaTitle()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00431">UICharaMaker.ListGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, <a class="el" href="Person_8cs_source.html#l00088">Person.SetChara()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00035">ButtonChara.SetChara()</a>, <a class="el" href="Biography_8cs_source.html#l00442">SetGender()</a>, <a class="el" href="Biography_8cs_source.html#l00451">SetPortrait()</a>, and <a class="el" href="Biography_8cs_source.html#l00471">TextBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="Person_8cs_source.html#l00106">Person.GetDramaTitle()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00431">UICharaMaker.ListGender()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, <a class="el" href="Person_8cs_source.html#l00088">Person.SetChara()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00035">ButtonChara.SetChara()</a>, <a class="el" href="Biography_8cs_source.html#l00450">SetGender()</a>, <a class="el" href="Biography_8cs_source.html#l00459">SetPortrait()</a>, and <a class="el" href="Biography_8cs_source.html#l00479">TextBio()</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1475,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   61</span>        }</div>
 <div class="line"><span class="lineno">   62</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, <a class="el" href="Biography_8cs_source.html#l00400">GenerateAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00486">TextAppearance()</a>, and <a class="el" href="Biography_8cs_source.html#l00476">TextBio2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, <a class="el" href="Biography_8cs_source.html#l00408">GenerateAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00494">TextAppearance()</a>, and <a class="el" href="Biography_8cs_source.html#l00484">TextBio2()</a>.</p>
 
 </div>
 </div>
@@ -1497,7 +1511,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  157</span>        }</div>
 <div class="line"><span class="lineno">  158</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00407">GenerateDad()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00415">GenerateDad()</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +1547,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  169</span>        }</div>
 <div class="line"><span class="lineno">  170</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00413">GenerateMom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00421">GenerateMom()</a>.</p>
 
 </div>
 </div>
@@ -1569,7 +1583,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  121</span>        }</div>
 <div class="line"><span class="lineno">  122</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00407">GenerateDad()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00415">GenerateDad()</a>.</p>
 
 </div>
 </div>
@@ -1605,7 +1619,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  181</span>        }</div>
 <div class="line"><span class="lineno">  182</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00469">WindowChara.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1641,7 +1655,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  109</span>        }</div>
 <div class="line"><span class="lineno">  110</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -1677,7 +1691,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  253</span>        }</div>
 <div class="line"><span class="lineno">  254</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, and <a class="el" href="DramaCustomSequence_8cs_source.html#l01471">DramaCustomSequence.GetRumor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, and <a class="el" href="DramaCustomSequence_8cs_source.html#l01471">DramaCustomSequence.GetRumor()</a>.</p>
 
 </div>
 </div>
@@ -1714,7 +1728,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   26</span>    }</div>
 <div class="ttc" id="aclassBiography_html_a66d43af733cf993eec4355915643b5e6"><div class="ttname"><a href="classBiography.html#a66d43af733cf993eec4355915643b5e6">Biography.strs</a></div><div class="ttdeci">string[] strs</div><div class="ttdef"><b>Definition:</b> <a href="Biography_8cs_source.html#l00012">Biography.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00469">WindowChara.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1750,7 +1764,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  145</span>        }</div>
 <div class="line"><span class="lineno">  146</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00369">RerollBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00377">RerollBio()</a>.</p>
 
 </div>
 </div>
@@ -1786,7 +1800,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  133</span>        }</div>
 <div class="line"><span class="lineno">  134</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00413">GenerateMom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00421">GenerateMom()</a>.</p>
 
 </div>
 </div>
@@ -1810,7 +1824,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00280">280</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00278">278</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>.</p>
 
@@ -1848,7 +1862,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  205</span>        }</div>
 <div class="line"><span class="lineno">  206</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -1874,7 +1888,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00264">264</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00469">WindowChara.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1900,7 +1914,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00260">260</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00469">WindowChara.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1926,7 +1940,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00256">256</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +1966,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00258">258</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>.</p>
 
 </div>
 </div>
@@ -1978,7 +1992,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Biography_8cs_source.html#l00262">262</a> of file <a class="el" href="Biography_8cs_source.html">Biography.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01389">Player.GetBackgroundText()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00469">WindowChara.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l01401">Player.GetBackgroundText()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, and <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -2014,7 +2028,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  193</span>        }</div>
 <div class="line"><span class="lineno">  194</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>.</p>
 
 </div>
 </div>
@@ -2050,7 +2064,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>        }</div>
 <div class="line"><span class="lineno">   50</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00300">Generate()</a>, <a class="el" href="Biography_8cs_source.html#l00400">GenerateAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00486">TextAppearance()</a>, and <a class="el" href="Biography_8cs_source.html#l00476">TextBio2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biography_8cs_source.html#l00308">Generate()</a>, <a class="el" href="Biography_8cs_source.html#l00408">GenerateAppearance()</a>, <a class="el" href="Biography_8cs_source.html#l00494">TextAppearance()</a>, and <a class="el" href="Biography_8cs_source.html#l00484">TextBio2()</a>.</p>
 
 </div>
 </div>

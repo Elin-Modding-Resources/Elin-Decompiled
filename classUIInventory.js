@@ -92,6 +92,7 @@ var classUIInventory =
     [ "dest", "classUIInventory.html#a87bcd82c03ad207c65e944cf33b391b8", null ],
     [ "IDCurrency", "classUIInventory.html#a1523e56034daa0f748962e29bafe90d5", null ],
     [ "InvStyle", "classUIInventory.html#a2e66fd4707c826264b95df06b1f7b376", null ],
+    [ "IsAdvSort", "classUIInventory.html#aea2b366c6a6858184d2156df230ac415", null ],
     [ "IsMagicChest", "classUIInventory.html#a57be65232fcc210faeceed1050b2285f", null ],
     [ "IsMainMode", "classUIInventory.html#a3366bbec2103d09dcb8c68b01feb0f95", null ],
     [ "IsShop", "classUIInventory.html#ace96393c7c4be273754fd0b96950ff88", null ],
