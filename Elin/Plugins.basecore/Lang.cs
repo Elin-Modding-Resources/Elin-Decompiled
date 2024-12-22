@@ -37,6 +37,8 @@ public class Lang
 
 	public static bool isJP;
 
+	public static bool isEN;
+
 	public static bool isBuiltin;
 
 	public static List<char[]> articlesToRemove;
@@ -71,6 +73,7 @@ public class Lang
 		setting = MOD.langs.TryGetValue(lang) ?? MOD.langs["EN"];
 		langCode = lang;
 		isJP = lang == "JP";
+		isEN = lang == "EN";
 		isBuiltin = lang == "JP" || lang == "EN";
 		suffix = ((!isBuiltin) ? "_L" : (isJP ? "_JP" : ""));
 		space = (setting.useSpace ? " " : "");
