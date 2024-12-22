@@ -67,9 +67,12 @@ public class LayerMod : ELayer
 					{
 						uIContextMenu.AddButton("mod_publish", delegate
 						{
-							Dialog.YesNo("mod_publish_warn".lang(a.title, a.id, a.author), delegate
+							Core.TryWarnUpload(delegate
 							{
-								ELayer.core.steam.CreateUserContent(a);
+								Dialog.YesNo("mod_publish_warn".lang(a.title, a.id, a.author), delegate
+								{
+									ELayer.core.steam.CreateUserContent(a);
+								});
 							});
 						});
 					}

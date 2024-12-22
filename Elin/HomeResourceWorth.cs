@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -64,54 +65,60 @@ public class HomeResourceWorth : HomeResourceRate
 		long num = 0L;
 		int num2 = branch.Evalue(2814);
 		int num3 = branch.Evalue(2823);
-		foreach (Thing thing in EClass._map.things)
+		List<Thing> list3 = EClass._map.things.Where((Thing t) => t.IsInstalled && t.HasTag(CTAG.tourism)).ToList();
+		foreach (Thing item in list3)
 		{
-			if (!thing.IsInstalled)
+			item.sortVal = GetPrice(item);
+		}
+		list3.Sort((Thing a, Thing b) => b.sortVal - a.sortVal);
+		foreach (Thing item2 in list3)
+		{
+			if (!item2.HasTag(CTAG.tourism))
 			{
 				continue;
 			}
-			if (thing.HasTag(CTAG.tourism))
+			bool flag = item2.trait is TraitFigure;
+			if (flag)
 			{
-				bool flag = thing.trait is TraitFigure;
-				if (flag)
+				if (array[item2.pos.index] != 0)
 				{
-					if (array[thing.pos.index] != 0)
-					{
-						continue;
-					}
-					array[thing.pos.index]++;
+					continue;
 				}
-				string text = "";
-				int num4 = 1;
-				if (flag)
+				array[item2.pos.index]++;
+			}
+			string text = "";
+			int num4 = 1;
+			if (flag)
+			{
+				text = "figure_" + item2.c_idRefCard;
+				num4 = 2;
+			}
+			else
+			{
+				text = item2.id + "_" + item2.idSkin;
+			}
+			if (!hashSet.Contains(text))
+			{
+				int num5 = item2.sortVal * num4;
+				if (num3 > 0)
 				{
-					text = "figure_" + thing.c_idRefCard;
-					num4 = 2;
+					num5 = num5 * (110 + (int)Mathf.Sqrt(num3) * 4) / 100;
 				}
-				else
+				num += num5;
+				hashSet.Add(text);
+			}
+			else if (num2 > 0)
+			{
+				int num6 = item2.sortVal * num4 / Mathf.Max(20, 30 - (int)Mathf.Sqrt(num2));
+				if (num6 > 0)
 				{
-					text = thing.id + "_" + thing.idSkin;
-				}
-				if (!hashSet.Contains(text))
-				{
-					int num5 = GetPrice(thing) * num4;
-					if (num3 > 0)
-					{
-						num5 = num5 * (110 + (int)Mathf.Sqrt(num3) * 4) / 100;
-					}
-					num += num5;
-					hashSet.Add(text);
-				}
-				else if (num2 > 0)
-				{
-					int num6 = GetPrice(thing) * num4 / Mathf.Max(20, 30 - (int)Mathf.Sqrt(num2));
-					if (num6 > 0)
-					{
-						num += num6;
-					}
+					num += num6;
 				}
 			}
-			if (thing.IsFurniture || thing.trait is TraitToolMusic)
+		}
+		foreach (Thing thing in EClass._map.things)
+		{
+			if (thing.IsInstalled && (thing.IsFurniture || thing.trait is TraitToolMusic))
 			{
 				list2.Add(thing);
 			}

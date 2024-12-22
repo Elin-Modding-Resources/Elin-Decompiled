@@ -57,17 +57,18 @@ public class LayerEditPortrait : ELayer
 		}
 		uiPicker.SetColor(hairColor, hairColor, delegate(PickerState state, Color _c)
 		{
+			ColorUtility.TryParseHtmlString("#" + ColorUtility.ToHtmlStringRGBA(_c), out var color);
 			if (pcc == null)
 			{
-				chara.SetInt(105, IntColor.ToInt(_c));
+				chara.SetInt(105, IntColor.ToInt(color));
 			}
 			else
 			{
-				pcc.SetColor("hair", _c);
+				pcc.SetColor("hair", color);
 			}
 			portrait.SetChara(chara, pcc);
-			action(_c);
-			hairColor = _c;
+			action(color);
+			hairColor = color;
 			hasColorChanged = true;
 		});
 		RefreshList();

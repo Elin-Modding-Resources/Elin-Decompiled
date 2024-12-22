@@ -12,6 +12,8 @@ public class TraitAdventurer : TraitChara
 
 	public override bool CanBout => true;
 
+	public override bool IsWearingPanty => true;
+
 	public override Adv_Type AdvType
 	{
 		get

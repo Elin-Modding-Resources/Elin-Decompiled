@@ -100,6 +100,8 @@ public class Scene : EMono
 
 	public Tileset tileset;
 
+	public Material matFloorEx;
+
 	public ParticleSystem psFoot;
 
 	public ParticleSystem psSmoke;

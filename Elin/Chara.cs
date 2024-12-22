@@ -940,7 +940,7 @@ public class Chara : Card, IPathfindWalker
 
 	public Stats sleepiness => Stats.Sleepiness.Set(_cints, 17, this);
 
-	public Stats SAN => Stats.SAN.Set(_cints, 17, this);
+	public Stats SAN => Stats.SAN.Set(_cints, 18, this);
 
 	public bool CanGainConResist
 	{
@@ -1689,7 +1689,7 @@ public class Chara : Card, IPathfindWalker
 				info?.AddFix(EClass.player.lastEmptyAlly * 10 - 10, "exceedParty".lang());
 			}
 		}
-		else if (base.LV >= 1000)
+		else if (base.LV >= 1000 && currentZone is Zone_Void)
 		{
 			num += EClass.curve((base.LV - 900) / 100 * 10, 500, 100);
 			info?.AddFix(EClass.curve((base.LV - 900) / 100 * 10, 500, 100), "enemySpeedBuff".lang());
@@ -8065,6 +8065,7 @@ public class Chara : Card, IPathfindWalker
 			_cints[14] = 70;
 			_cints[15] = 70;
 			_cints[17] = 0;
+			_cints[18] = 0;
 		}
 		foreach (Condition condition in conditions)
 		{
@@ -8487,7 +8488,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			num += traitPillow.owner.Power / 2;
 		}
-		num += Evalue(750) * 5;
+		if (bed != null)
+		{
+			num += bed.Evalue(750) * 5;
+		}
 		OnSleep(num, days);
 	}
 
@@ -8832,7 +8836,7 @@ public class Chara : Card, IPathfindWalker
 				int num2 = array[i + 1] * num / 50;
 				if (array[i] == 79)
 				{
-					num2 = EClass.curve(num2, 100, 20, 60);
+					num2 = EClass.curve(num2, array[i + 1] * 2, 10, 50);
 				}
 				if (num2 >= 20 && array[i] >= 950 && array[i] < 970)
 				{

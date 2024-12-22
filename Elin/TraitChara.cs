@@ -118,6 +118,18 @@ public class TraitChara : Trait
 
 	public virtual bool UseRandomAlias => false;
 
+	public virtual bool IsWearingPanty
+	{
+		get
+		{
+			if ((!IsUnique || owner.bio.gender != 2) && (owner.race.IsHuman || owner.race.IsFairy))
+			{
+				return !(this is TraitMerchant);
+			}
+			return false;
+		}
+	}
+
 	public override string IDInvStyle => "backpack";
 
 	public virtual string IDRumor => "";

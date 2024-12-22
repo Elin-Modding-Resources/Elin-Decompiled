@@ -1,7 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using DG.Tweening;
+using IniParser;
+using IniParser.Model;
 using ReflexCLI;
 using Steamworks;
 using UnityEngine;
@@ -736,6 +740,100 @@ public class Core : BaseCore
 		for (int i = 0; i < componentsInChildren.Length; i++)
 		{
 			componentsInChildren[i].ApplySkin();
+		}
+	}
+
+	public static IniData GetElinIni()
+	{
+		string pathIni = CorePath.PathIni;
+		try
+		{
+			string ie = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			FileIniDataParser fileIniDataParser = new FileIniDataParser();
+			if (!File.Exists(pathIni))
+			{
+				File.CreateText(pathIni).Close();
+			}
+			IniData iniData = fileIniDataParser.ReadFile(pathIni, Encoding.UTF8);
+			if (iniData.GetKey("pass").IsEmpty())
+			{
+				string text = "";
+				for (int i = 0; i < 4; i++)
+				{
+					text += ie.RandomItem();
+				}
+				iniData.Global["pass"] = text;
+				fileIniDataParser.WriteFile(pathIni, iniData);
+			}
+			return iniData;
+		}
+		catch (Exception message)
+		{
+			Debug.Log(message);
+			Debug.Log("exception: Failed to parse:" + pathIni);
+			return null;
+		}
+	}
+
+	public static void SaveElinIni(IniData ini)
+	{
+		new FileIniDataParser().WriteFile(CorePath.PathIni, ini);
+	}
+
+	public static void TryWarnMod(Action action, bool warn = true)
+	{
+		if (warn)
+		{
+			IniData ini = GetElinIni();
+			if (ini.Global["agreed_usercontens_usage_terms"] != "yes")
+			{
+				string[] items = new string[3] { "readTerms", "agree", "disagree" };
+				Dialog.List("dialogTermsOfUseUGC".lang(), items, (string j) => j, delegate(int c, string d)
+				{
+					switch (c)
+					{
+					case 0:
+						LayerHelp.Toggle("custom", "terms2");
+						return false;
+					case 1:
+						ini.Global["agreed_usercontens_usage_terms"] = "yes";
+						SaveElinIni(ini);
+						action();
+						break;
+					}
+					return true;
+				}, canCancel: true);
+				return;
+			}
+		}
+		action();
+	}
+
+	public static void TryWarnUpload(Action action)
+	{
+		IniData ini = GetElinIni();
+		if (ini.Global["agreed_usercontents_upload_terms"] != "yes")
+		{
+			string[] items = new string[3] { "readTerms", "agree", "disagree" };
+			Dialog.List("dialogTermsOfUse".lang(), items, (string j) => j, delegate(int c, string d)
+			{
+				switch (c)
+				{
+				case 0:
+					LayerHelp.Toggle("custom", "terms");
+					return false;
+				case 1:
+					ini.Global["agreed_usercontents_upload_terms"] = "yes";
+					SaveElinIni(ini);
+					action();
+					break;
+				}
+				return true;
+			}, canCancel: true);
+		}
+		else
+		{
+			action();
 		}
 	}
 }

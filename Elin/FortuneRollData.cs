@@ -14,12 +14,19 @@ public class FortuneRollData : EClass
 		public string id;
 
 		[JsonProperty]
+		public string idRef;
+
+		[JsonProperty]
 		public bool claimed;
 
 		public Card model => EClass.sources.cards.map[id].model;
 
 		public int GetNum()
 		{
+			if (id == "ration")
+			{
+				return 10;
+			}
 			if (id == "medal")
 			{
 				if (grade != 2)
@@ -58,7 +65,20 @@ public class FortuneRollData : EClass
 		public void AddNote(UINote n)
 		{
 			string text = "_circle".lang().TagColor(EClass.sources.materials.alias[mats[grade]].GetColor()) + "  " + Lang.GetList("fortuneroll")[grade];
-			string text2 = (model.IsUnique ? "★" : "") + EClass.sources.cards.map[id].GetName().ToTitleCase();
+			string text2 = (model.IsUnique ? "★" : "") + EClass.sources.cards.map[id].GetName();
+			string text3 = id;
+			if (!(text3 == "panty"))
+			{
+				if (text3 == "mathammer")
+				{
+					text2 = "_of".lang(EClass.sources.materials.alias[idRef].GetName(), text2);
+				}
+			}
+			else
+			{
+				string name = EClass.sources.cards.map[idRef].GetName();
+				text2 = "_of".lang(name, text2);
+			}
 			int num = GetNum();
 			if (num > 1)
 			{
@@ -68,13 +88,13 @@ public class FortuneRollData : EClass
 			{
 				text2 = "fortuneroll_claimed".lang();
 			}
-			n.AddTopic("TopicDomain", text, text2.TagColor(model.IsUnique ? FontColor.Great : FontColor.Good));
+			n.AddTopic("TopicDomain", text, text2.ToTitleCase().TagColor(model.IsUnique ? FontColor.Great : FontColor.Good));
 		}
 	}
 
 	public static string[] mats = new string[4] { "plastic", "water", "hide_dragon", "gold" };
 
-	public static int[] chances = new int[4] { 1, 10, 20, 50 };
+	public static int[] chances = new int[4] { 1, 8, 25, 60 };
 
 	[JsonProperty]
 	public List<Prize> prizes = new List<Prize>();
@@ -108,23 +128,40 @@ public class FortuneRollData : EClass
 		prizes.Clear();
 		Rand.SetSeed(EClass.game.seed + seed + count);
 		List<List<string>> list = GetPrizeList();
-		Add(3);
-		Add(2);
-		Add(2);
-		Add(1);
-		Add(1);
-		Add(1);
+		if (EClass._zone.IsTown && EClass._zone.lv == 0)
+		{
+			Add(3);
+			Add(2);
+			Add(2);
+			Add(1);
+			Add(1);
+			Add(1);
+		}
 		Rand.SetSeed();
 		void Add(int grade)
 		{
 			List<string> list2 = list[grade];
 			int index = EClass.rnd(list2.Count);
-			Prize item = new Prize
+			Prize prize = new Prize
 			{
 				id = list2[index],
 				grade = grade
 			};
-			prizes.Add(item);
+			string id = prize.id;
+			if (!(id == "panty"))
+			{
+				if (id == "mathammer")
+				{
+					SourceMaterial.Row randomMaterial = MATERIAL.GetRandomMaterial(20);
+					prize.idRef = randomMaterial.alias;
+				}
+			}
+			else
+			{
+				IEnumerable<SourceChara.Row> ie = EClass.sources.charas.map.Values.Where((SourceChara.Row r) => (r.model.trait as TraitChara).IsWearingPanty && !r.HasTag(CTAG.noRandomProduct));
+				prize.idRef = ie.RandomItem().id;
+			}
+			prizes.Add(prize);
 			list2.RemoveAt(index);
 		}
 	}
@@ -137,14 +174,22 @@ public class FortuneRollData : EClass
 			new List<string>
 			{
 				"microchip", "1089", "150", "855", "medal", "water", "goods_charm", "electronicsS", "electronics", "plat",
-				"plat"
+				"plat", "ration", "backpack2", "sister", "rp_food", "rp_block", "157"
 			},
 			new List<string>
 			{
 				"computer", "834", "1090", "goods_figure", "goods_canvas", "mb_1", "mb_2", "mb_3", "mb_4", "mb_5",
-				"1174", "1085", "toilet", "714", "nobility", "plat", "1165", "mathammer", "medal"
+				"1174", "1085", "toilet", "714", "nobility", "plat", "1165", "mathammer", "medal", "bbq",
+				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun"
 			},
-			new List<string> { "goods_coin", "goods_coin", "plat", "1165", "boat3", "medal" }
+			new List<string>
+			{
+				(EClass.player.luckycoin < 10) ? "goods_coin" : "plat",
+				"plat",
+				"1165",
+				"boat3",
+				"medal"
+			}
 		};
 	}
 
@@ -157,10 +202,34 @@ public class FortuneRollData : EClass
 		{
 			prize = list.RandomItem();
 		}
-		Thing thing = null;
+		Card card = null;
 		if (prize != null)
 		{
-			thing = ThingGen.Create(prize.id).SetNum(prize.GetNum());
+			if (prize.id == "sister")
+			{
+				card = CharaGen.Create("sister");
+			}
+			else
+			{
+				card = ThingGen.Create(prize.id).SetNum(prize.GetNum());
+				switch (card.id)
+				{
+				case "rp_food":
+				case "rp_block":
+					card.SetLv(10);
+					break;
+				case "goods_coin":
+					EClass.player.luckycoin++;
+					break;
+				case "mathammer":
+					card.ChangeMaterial(prize.idRef);
+					break;
+				case "panty":
+					card.c_idRefCard = prize.idRef;
+					card.rarity = Rarity.Legendary;
+					break;
+				}
+			}
 			if (grade != 3)
 			{
 				prize.claimed = true;
@@ -168,9 +237,17 @@ public class FortuneRollData : EClass
 		}
 		else
 		{
-			thing = ThingGen.Create(GetPrizeList()[0].RandomItem());
+			card = ThingGen.Create(GetPrizeList()[0].RandomItem());
 		}
-		EClass.pc.Pick(thing);
+		if (card.isChara)
+		{
+			EClass._zone.AddCard(card, EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? EClass.pc.pos);
+			card.Chara.MakeMinion(EClass.pc);
+		}
+		else
+		{
+			EClass.pc.Pick(card.Thing);
+		}
 		Rand.SetSeed();
 	}
 

@@ -361,7 +361,7 @@ public class ActEffect : EClass
 			}
 			if (e.id == 911)
 			{
-				p.ModFire(-20);
+				p.ModFire(-20, extinguish: true);
 			}
 		}
 		if (RapidCount == 0)

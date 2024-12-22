@@ -56,6 +56,16 @@ public class TraitKettle : TraitUniqueChara
 		{
 			return true;
 		}
+		if (t.sockets != null)
+		{
+			foreach (int socket in t.sockets)
+			{
+				if (socket != 0)
+				{
+					return false;
+				}
+			}
+		}
 		return t.isCrafted;
 	}
 }

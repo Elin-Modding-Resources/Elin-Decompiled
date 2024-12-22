@@ -136,10 +136,10 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 			}
 		}
 
-		public void PlayHitEffect(Point p)
+		public void PlayHitEffect(Point p, int emit = 2)
 		{
 			Effect.Get("mine2").Play(p).SetParticleColor(GetColor())
-				.Emit(2 + EClass.rnd(4));
+				.Emit(emit + EClass.rnd(4));
 		}
 
 		public Color GetColor()

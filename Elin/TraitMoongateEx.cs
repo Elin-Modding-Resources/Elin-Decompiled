@@ -11,6 +11,15 @@ public class TraitMoongateEx : TraitMoongate
 			Msg.SayNothingHappen();
 			return false;
 		}
+		Core.TryWarnMod(delegate
+		{
+			_OnUse();
+		}, warn: false);
+		return false;
+	}
+
+	public void _OnUse()
+	{
 		List<MapMetaData> list = new List<MapMetaData>();
 		foreach (FileInfo item in new DirectoryInfo(CorePath.ZoneSaveUser).GetFiles().Concat(MOD.listMaps))
 		{
@@ -27,7 +36,7 @@ public class TraitMoongateEx : TraitMoongate
 		if (list.Count == 0)
 		{
 			EClass.pc.SayNothingHappans();
-			return false;
+			return;
 		}
 		LayerList layer = null;
 		bool skipDialog = false;
@@ -68,6 +77,5 @@ public class TraitMoongateEx : TraitMoongate
 			}
 		}).SetSize(500f)
 			.SetTitles("wMoongate") as LayerList;
-		return false;
 	}
 }

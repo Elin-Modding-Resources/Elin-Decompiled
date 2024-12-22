@@ -2,10 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using HeathenEngineering.SteamworksIntegration;
 using HeathenEngineering.SteamworksIntegration.API;
-using IniParser;
 using IniParser.Model;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
@@ -22,8 +20,6 @@ public class ModManager : BaseModManager
 		public int old;
 	}
 
-	public static readonly string PasswordChar = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 	public static List<object> ListPluginObject = new List<object>();
 
 	public static bool disableMod = false;
@@ -36,42 +32,10 @@ public class ModManager : BaseModManager
 
 	public static bool IsInitialized => BaseModManager.isInitialized;
 
-	public static string PathIni => CorePath.PathIni;
-
-	public IniData GetElinIni()
-	{
-		try
-		{
-			FileIniDataParser fileIniDataParser = new FileIniDataParser();
-			if (!File.Exists(PathIni))
-			{
-				File.CreateText(PathIni).Close();
-			}
-			IniData iniData = fileIniDataParser.ReadFile(PathIni, Encoding.UTF8);
-			if (iniData.GetKey("pass").IsEmpty())
-			{
-				string text = "";
-				for (int i = 0; i < 4; i++)
-				{
-					text += PasswordChar.RandomItem();
-				}
-				iniData.Global["pass"] = text;
-				fileIniDataParser.WriteFile(PathIni, iniData);
-			}
-			return iniData;
-		}
-		catch (Exception message)
-		{
-			Debug.Log(message);
-			Debug.Log("exception: Failed to parse:" + PathIni);
-			return null;
-		}
-	}
-
 	public override void Init(string path, string defaultPackage = "_Elona")
 	{
 		base.Init(path, defaultPackage);
-		IniData elinIni = GetElinIni();
+		IniData elinIni = Core.GetElinIni();
 		Debug.Log("IsOffline:" + BaseCore.IsOffline);
 		if (elinIni != null)
 		{
@@ -88,7 +52,7 @@ public class ModManager : BaseModManager
 				DirectoryInfo parent = new DirectoryInfo(App.Client.GetAppInstallDirectory(SteamSettings.behaviour.settings.applicationId)).Parent.Parent;
 				dirWorkshop = new DirectoryInfo(parent.FullName + "/workshop/content/2135150");
 				elinIni.Global["path_workshop"] = dirWorkshop.FullName ?? "";
-				new FileIniDataParser().WriteFile(PathIni, elinIni);
+				Core.SaveElinIni(elinIni);
 			}
 		}
 		if (dirWorkshop != null && !dirWorkshop.Exists)
@@ -323,6 +287,19 @@ public class ModManager : BaseModManager
 		modPackage.loadPriority = priorityIndex;
 		priorityIndex++;
 		return modPackage;
+	}
+
+	public int CountUserMod()
+	{
+		int num = 0;
+		foreach (BaseModPackage package in packages)
+		{
+			if (!package.builtin)
+			{
+				num++;
+			}
+		}
+		return num;
 	}
 
 	public override void ParseExtra(DirectoryInfo dir, BaseModPackage package)

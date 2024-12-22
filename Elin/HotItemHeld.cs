@@ -396,6 +396,13 @@ public class HotItemHeld : HotItemThing
 			{
 				return true;
 			}
+			if (thing.HasElement(225) && p.TrySetAct(new TaskChopWoord
+			{
+				pos = pos.Copy()
+			}))
+			{
+				return true;
+			}
 		}
 		if (pos.HasChara)
 		{

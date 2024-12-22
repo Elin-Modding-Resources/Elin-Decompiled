@@ -246,7 +246,11 @@ public class RecipeCard : Recipe
 		{
 			if (isDish)
 			{
-				if (!flag)
+				if (flag)
+				{
+					thing.ChangeMaterial("meat");
+				}
+				else
 				{
 					MakeDish(thing);
 					if (EClass.pc.HasElement(1658))

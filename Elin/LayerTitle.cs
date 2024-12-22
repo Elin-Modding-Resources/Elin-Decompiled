@@ -77,8 +77,11 @@ public class LayerTitle : ELayer, IChangeLanguage, IChangeResolution
 	{
 		if (ELayer.ui.GetTopLayer() is LayerTitle)
 		{
-			embark = ELayer.ui.AddLayer<LayerEditBio>();
-			SoundManager.current.PlayBGM(CurrentTitle.bgm);
+			Core.TryWarnMod(delegate
+			{
+				embark = ELayer.ui.AddLayer<LayerEditBio>();
+				SoundManager.current.PlayBGM(CurrentTitle.bgm);
+			}, ELayer.core.mods.CountUserMod() > 0);
 		}
 	}
 
@@ -91,7 +94,10 @@ public class LayerTitle : ELayer, IChangeLanguage, IChangeResolution
 	{
 		if (ELayer.ui.GetTopLayer() is LayerTitle)
 		{
-			ELayer.ui.AddLayer<LayerLoadGame>().Init(_backup: false);
+			Core.TryWarnMod(delegate
+			{
+				ELayer.ui.AddLayer<LayerLoadGame>().Init(_backup: false);
+			}, ELayer.core.mods.CountUserMod() > 0);
 		}
 	}
 

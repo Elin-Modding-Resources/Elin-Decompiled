@@ -74,7 +74,7 @@ public class TaskWater : Task
 				}
 				if (p.cell.HasFire)
 				{
-					EClass._map.ModFire(p.x, p.z, -50);
+					p.ModFire(-50, extinguish: true);
 				}
 				owner.PlaySound("water_farm");
 				owner.Say("water_farm", owner, p.cell.GetFloorName());

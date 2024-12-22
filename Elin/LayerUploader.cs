@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using IniParser;
 using IniParser.Model;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,7 +45,7 @@ public class LayerUploader : ELayer
 
 	public override void OnInit()
 	{
-		ini = ELayer.core.mods.GetElinIni();
+		ini = Core.GetElinIni();
 		string text = ini.GetKey("pass") ?? "password";
 		inputId.text = ELayer._map.custom?.id ?? "new_zone";
 		inputPassword.text = text;
@@ -90,7 +89,7 @@ public class LayerUploader : ELayer
 			ELayer._map.custom.id = inputId.text;
 		}
 		ini.Global["pass"] = inputPassword.text;
-		new FileIniDataParser().WriteFile(ModManager.PathIni, ini);
+		Core.SaveElinIni(ini);
 	}
 
 	public void ExportMap()
@@ -102,7 +101,7 @@ public class LayerUploader : ELayer
 
 	public void Upload()
 	{
-		if (ini.Global["agreed"].IsEmpty() || ELayer.debug.enable)
+		if (ini.Global["agreed_usercontents_upload_terms"] != "yes")
 		{
 			string[] items = new string[3] { "readTerms", "agree", "disagree" };
 			Dialog.List("dialogTermsOfUse".lang(), items, (string j) => j, delegate(int c, string d)
@@ -113,7 +112,7 @@ public class LayerUploader : ELayer
 					LayerHelp.Toggle("custom", "terms");
 					return false;
 				case 1:
-					ini.Global["agreed"] = "yes";
+					ini.Global["agreed_usercontents_upload_terms"] = "yes";
 					Upload();
 					break;
 				}

@@ -25,7 +25,10 @@ public class TraitMoongate : Trait
 			Msg.SayNothingHappen();
 			return false;
 		}
-		LayerProgress.StartAsync("Loading", UseMoongate());
+		Core.TryWarnMod(delegate
+		{
+			LayerProgress.StartAsync("Loading", UseMoongate());
+		}, warn: false);
 		return false;
 	}
 

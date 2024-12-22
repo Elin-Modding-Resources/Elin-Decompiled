@@ -905,8 +905,14 @@ public class Point : EClass
 		map.SetObj(x, z, id, value, dir);
 	}
 
-	public void ModFire(int value)
+	public void ModFire(int value, bool extinguish = false)
 	{
+		if (extinguish && cell.HasFire)
+		{
+			PlaySound("extinguish");
+			PlayEffect("smoke");
+			PlayEffect("vanish");
+		}
 		map.ModFire(x, z, value);
 	}
 
@@ -1100,6 +1106,21 @@ public class Point : EClass
 				if (thing.trait is T)
 				{
 					return thing.trait as T;
+				}
+			}
+		}
+		return null;
+	}
+
+	public Thing FindThing(Func<Thing, bool> func)
+	{
+		if (detail != null)
+		{
+			foreach (Thing thing in detail.things)
+			{
+				if (func(thing))
+				{
+					return thing;
 				}
 			}
 		}

@@ -570,7 +570,7 @@ public class Thing : Card
 			}
 			if (!(text7 == "*r"))
 			{
-				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", (base.refCard != null) ? base.refCard.GetName() : text7).Replace("#1", text7) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
+				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard != null) ? base.refCard.GetName() : text7)).Replace("#1", base.c_extraNameRef.IsEmpty(text7)) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
 			}
 			else
 			{
@@ -1978,6 +1978,48 @@ public class Thing : Card
 		}
 		LayerInventory.SetDirty(this);
 		return this;
+	}
+
+	public override bool MatchEncSearch(string s)
+	{
+		if (trait is TraitGene)
+		{
+			DNA dNA = base.c_DNA;
+			if (dNA == null || dNA.type == DNA.Type.Brain || dNA.type == DNA.Type.Inferior)
+			{
+				return false;
+			}
+			for (int i = 0; i < dNA.vals.Count; i += 2)
+			{
+				SourceElement.Row row = EClass.sources.elements.map.TryGetValue(dNA.vals[i]);
+				if (row.name.ToLower().Contains(s))
+				{
+					return true;
+				}
+				if (!Lang.isEN && row.GetName().ToLower().Contains(s))
+				{
+					return true;
+				}
+			}
+		}
+		else
+		{
+			foreach (Element value in elements.dict.Values)
+			{
+				if (value.Value != 0)
+				{
+					if (value.source.name.ToLower().Contains(s))
+					{
+						return true;
+					}
+					if (!Lang.isEN && value.source.GetName().ToLower().Contains(s))
+					{
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 }
 public static class THING

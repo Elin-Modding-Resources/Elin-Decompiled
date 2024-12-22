@@ -40,13 +40,13 @@ public class ConSuffocation : Condition
 		}
 		if (base.value >= 100 && !EClass._zone.IsRegion)
 		{
-			owner.DamageHP(10 + owner.MaxHP / 20, AttackSource.Condition);
+			owner.DamageHP((base.value - 100) / 10 + owner.MaxHP / 20, AttackSource.Condition);
 		}
 		if (owner != null && owner.IsAliveInCurrentZone)
 		{
 			if (!owner.Cell.CanSuffocate())
 			{
-				Mod(-20);
+				Mod(-25);
 			}
 			else if (!EClass._zone.IsRegion)
 			{

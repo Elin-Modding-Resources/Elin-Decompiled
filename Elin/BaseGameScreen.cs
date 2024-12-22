@@ -531,6 +531,14 @@ public class BaseGameScreen : EMono
 		{
 			grading.material.EnableKeyword("CLOUD_ON");
 		}
+		if (EMono.core.config.graphic.floorEx)
+		{
+			EMono.scene.matFloorEx.EnableKeyword("EX_ON");
+		}
+		else
+		{
+			EMono.scene.matFloorEx.DisableKeyword("EX_ON");
+		}
 		grading.profile.vignette.enable = EMono.scene.profile.light.vignette;
 		grading.profile.vignette.vignetteColor = EMono.scene.profile.light.vignetteColor;
 		RefreshSky();

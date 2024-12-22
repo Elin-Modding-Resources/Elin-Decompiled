@@ -286,6 +286,8 @@ public class CoreConfig : EClass
 
 		public bool fixedResolution;
 
+		public bool floorEx;
+
 		public bool cloud;
 
 		public bool firefly;
@@ -657,6 +659,10 @@ public class CoreConfig : EClass
 			coreConfig.game.numBackup = 5;
 			coreConfig.game.backupInterval = 8;
 			coreConfig.game.autoBackup = true;
+		}
+		if (coreConfig.version.IsBelow(0, 23, 63))
+		{
+			coreConfig.graphic.floorEx = true;
 		}
 		if (coreConfig.version.IsBelow(0, 22, 17))
 		{

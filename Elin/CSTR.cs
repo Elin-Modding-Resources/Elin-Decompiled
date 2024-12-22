@@ -22,6 +22,8 @@ public class CSTR
 
 	public const int idCat = 11;
 
+	public const int extraNameRef = 12;
+
 	public const int context = 20;
 
 	public const int idTalk = 21;

@@ -464,12 +464,7 @@ public class CharaBody : EClass
 
 	public int GetSortVal(BodySlot slot)
 	{
-		int num = slot.element.sort * 10;
-		if (slot.elementId == 35)
-		{
-			num += owner.body.slots.IndexOf(slot);
-		}
-		return -num;
+		return -(slot.element.sort * 100 + owner.body.slots.IndexOf(slot));
 	}
 
 	public void SetBodyIndexText(BodySlot b, UIText t)
@@ -478,25 +473,25 @@ public class CharaBody : EClass
 		{
 			return;
 		}
+		if (b.indexPart == 0)
+		{
+			int num = 0;
+			foreach (BodySlot slot in slots)
+			{
+				if (slot.elementId == b.element.id)
+				{
+					num++;
+				}
+				if (b == slot)
+				{
+					break;
+				}
+			}
+			b.indexPart = num;
+		}
 		if (b.elementId == 35)
 		{
-			if (b.indexHnd == 0)
-			{
-				int num = 0;
-				foreach (BodySlot slot in slots)
-				{
-					if (slot.elementId == 35)
-					{
-						num++;
-					}
-					if (b == slot)
-					{
-						break;
-					}
-				}
-				b.indexHnd = num;
-			}
-			t.SetText(b.indexHnd.ToString() ?? "");
+			t.SetText(b.indexPart.ToString() ?? "");
 			t.SetActive(enable: true);
 		}
 		else

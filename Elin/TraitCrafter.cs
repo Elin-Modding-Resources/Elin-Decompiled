@@ -446,6 +446,11 @@ public class TraitCrafter : Trait
 
 	public override bool OnUse(Chara c)
 	{
+		if (EClass._zone.IsRegion)
+		{
+			Msg.SayCannotUseHere();
+			return false;
+		}
 		if (IsFactory)
 		{
 			Thing thing = owner.Thing;

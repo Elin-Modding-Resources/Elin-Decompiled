@@ -9,7 +9,7 @@ public class BodySlot : EClass
 
 	public int index;
 
-	public int indexHnd;
+	public int indexPart;
 
 	public string name => EClass.sources.elements.map[elementId].GetText();
 

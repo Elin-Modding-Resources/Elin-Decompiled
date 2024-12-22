@@ -28,6 +28,7 @@ public class TraitGiftJure : TraitGiftPack
 		Add("cake_festival", 3);
 		Add("bushdenoel", 3);
 		Add("mancookie", 3);
+		EClass.pc.Pick(ThingGen.CreateRecipe("xmas_tree"));
 		Thing thing = ThingGen.CreateLetter("letter_juremas");
 		thing.ChangeMaterial("grass_forest");
 		EClass.pc.Pick(thing);

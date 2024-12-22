@@ -904,6 +904,10 @@ public class Recipe : EClass
 
 	public bool HasFirstTimeBonus()
 	{
+		if (IsStaticLV())
+		{
+			return false;
+		}
 		if (EClass.player.recipes.craftedRecipes.Contains(id))
 		{
 			return false;

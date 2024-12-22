@@ -81,6 +81,8 @@ public class LayerConfig : ELayer
 
 	public UIButton toggleBalloon;
 
+	public UIButton toggleFloorEx;
+
 	public UIItem fontUI;
 
 	public UIItem fontChatbox;
@@ -434,17 +436,34 @@ public class LayerConfig : ELayer
 		toggleFirefly.SetToggle(ELayer.config.graphic.firefly, delegate(bool on)
 		{
 			ELayer.config.graphic.firefly = on;
-			ELayer.screen.RefreshSky();
+			if (ELayer.core.IsGameStarted)
+			{
+				ELayer.screen.RefreshSky();
+			}
+		});
+		toggleFloorEx.SetToggle(ELayer.config.graphic.floorEx, delegate(bool on)
+		{
+			ELayer.config.graphic.floorEx = on;
+			if (ELayer.core.IsGameStarted)
+			{
+				ELayer.screen.RefreshAll();
+			}
 		});
 		toggleGodray.SetToggle(ELayer.config.graphic.godray, delegate(bool on)
 		{
 			ELayer.config.graphic.godray = on;
-			ELayer.screen.RefreshSky();
+			if (ELayer.core.IsGameStarted)
+			{
+				ELayer.screen.RefreshSky();
+			}
 		});
 		toggleBlizzard.SetToggle(ELayer.config.graphic.blizzard, delegate(bool on)
 		{
 			ELayer.config.graphic.blizzard = on;
-			ELayer.screen.RefreshSky();
+			if (ELayer.core.IsGameStarted)
+			{
+				ELayer.screen.RefreshSky();
+			}
 		});
 		toggleAllyLight.SetToggle(ELayer.config.graphic.drawAllyLight, delegate(bool on)
 		{

@@ -95,14 +95,20 @@ public class WidgetSearch : WidgetCodex
 		}
 		s = s.ToLower();
 		buttonClear.SetActive(field.text != "");
-		if (s == lastSearch)
+		if (s == lastSearch || s.Length == 0)
 		{
 			return;
+		}
+		lastSearch = s;
+		bool encSearch = s.Length >= 2 && (s[0] == '@' || s[1] == '＠');
+		if (encSearch)
+		{
+			s = s.Substring(1);
 		}
 		HashSet<Card> newCards = new HashSet<Card>();
 		if (!s.IsEmpty())
 		{
-			if (EMono._zone.IsTown || EMono._zone.IsPCFaction || EMono._zone is Zone_Tent)
+			if (!encSearch && (EMono._zone.IsTown || EMono._zone.IsPCFaction || EMono._zone is Zone_Tent))
 			{
 				foreach (Chara chara in EMono._map.charas)
 				{
@@ -116,14 +122,32 @@ public class WidgetSearch : WidgetCodex
 			{
 				foreach (Thing thing in EMono._map.things)
 				{
-					if (thing.Name.ToLower().Contains(s) || thing.sourceCard.GetSearchName(jp: false).Contains(s))
+					if (encSearch)
+					{
+						if (thing.MatchEncSearch(s))
+						{
+							newCards.Add(thing);
+						}
+					}
+					else if (thing.Name.ToLower().Contains(s) || thing.sourceCard.GetSearchName(jp: false).Contains(s))
 					{
 						newCards.Add(thing);
 					}
 				}
 				foreach (Card value in EMono._map.props.stocked.all.Values)
 				{
-					if (value.parent is Thing && (value.parent as Thing).c_lockLv <= 0 && (value.Name.ToLower().Contains(s) || value.sourceCard.GetSearchName(jp: false).Contains(s)))
+					if (!(value.parent is Thing) || (value.parent as Thing).c_lockLv > 0)
+					{
+						continue;
+					}
+					if (encSearch)
+					{
+						if (value.MatchEncSearch(s))
+						{
+							newCards.Add(value);
+						}
+					}
+					else if (value.Name.ToLower().Contains(s) || value.sourceCard.GetSearchName(jp: false).Contains(s))
 					{
 						newCards.Add(value);
 					}
@@ -139,9 +163,19 @@ public class WidgetSearch : WidgetCodex
 					}
 					chara2.things.Foreach(delegate(Thing t)
 					{
-						if (!((t.parent as Card)?.trait is TraitChestMerchant) && (t.Name.ToLower().Contains(s) || t.source.GetSearchName(jp: false).Contains(s)))
+						if (!((t.parent as Card)?.trait is TraitChestMerchant))
 						{
-							newCards.Add(t);
+							if (encSearch)
+							{
+								if (t.MatchEncSearch(s))
+								{
+									newCards.Add(t);
+								}
+							}
+							else if (t.Name.ToLower().Contains(s) || t.source.GetSearchName(jp: false).Contains(s))
+							{
+								newCards.Add(t);
+							}
 						}
 					});
 				}
@@ -153,7 +187,6 @@ public class WidgetSearch : WidgetCodex
 			RefreshList();
 		}
 		cgResult.alpha = ((list.ItemCount > 0) ? 1f : 0f);
-		lastSearch = s;
 	}
 
 	public void RefreshWords()

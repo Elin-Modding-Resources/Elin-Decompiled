@@ -4,6 +4,8 @@ public class TraitRollingFortune : TraitCrafter
 
 	public override string CrafterTitle => "invRoll";
 
+	public override bool CanUseFromInventory => false;
+
 	public override AnimeType animeType => AnimeType.Microwave;
 
 	public override string idSoundProgress => "fortuneroll";

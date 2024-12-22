@@ -149,12 +149,17 @@ public class ThingContainer : List<Thing>
 		magic.cats.Clear();
 		magic.catCount.Clear();
 		grid = new List<Thing>(new Thing[GridSize]);
-		string lastSearch = magic.lastSearch;
-		bool flag = !lastSearch.IsEmpty();
+		string text = magic.lastSearch;
+		bool flag = !text.IsEmpty();
 		bool flag2 = !magic.idCat.IsEmpty();
 		Window.SaveData.CategoryType category = data.category;
 		bool flag3 = category != Window.SaveData.CategoryType.None;
-		string text = "";
+		string text2 = "";
+		bool flag4 = text != null && text.Length >= 2 && (text[0] == '@' || text[1] == '＠');
+		if (flag4)
+		{
+			text = text.Substring(1);
+		}
 		using (Enumerator enumerator = GetEnumerator())
 		{
 			while (enumerator.MoveNext())
@@ -165,37 +170,47 @@ public class ThingContainer : List<Thing>
 					switch (category)
 					{
 					case Window.SaveData.CategoryType.Main:
-						text = current.category.GetRoot().id;
+						text2 = current.category.GetRoot().id;
 						break;
 					case Window.SaveData.CategoryType.Sub:
-						text = current.category.GetSecondRoot().id;
+						text2 = current.category.GetSecondRoot().id;
 						break;
 					case Window.SaveData.CategoryType.Exact:
-						text = current.category.id;
+						text2 = current.category.id;
 						break;
 					}
-					magic.cats.Add(text);
-					if (magic.catCount.ContainsKey(text))
+					magic.cats.Add(text2);
+					if (magic.catCount.ContainsKey(text2))
 					{
-						magic.catCount[text]++;
+						magic.catCount[text2]++;
 					}
 					else
 					{
-						magic.catCount.Add(text, 1);
+						magic.catCount.Add(text2, 1);
 					}
 				}
 				if (flag)
 				{
-					if (current.tempName == null)
+					if (flag4)
 					{
-						current.tempName = current.GetName(NameStyle.Full, 1).ToLower();
+						if (!current.MatchEncSearch(text))
+						{
+							continue;
+						}
 					}
-					if (!current.tempName.Contains(lastSearch) && !current.source.GetSearchName(jp: false).Contains(lastSearch) && !current.source.GetSearchName(jp: true).Contains(lastSearch))
+					else
 					{
-						continue;
+						if (current.tempName == null)
+						{
+							current.tempName = current.GetName(NameStyle.Full, 1).ToLower();
+						}
+						if (!current.tempName.Contains(text) && !current.source.GetSearchName(jp: false).Contains(text) && !current.source.GetSearchName(jp: true).Contains(text))
+						{
+							continue;
+						}
 					}
 				}
-				if (!flag2 || !(text != magic.idCat))
+				if (!flag2 || !(text2 != magic.idCat))
 				{
 					magic.filteredList.Add(current);
 				}

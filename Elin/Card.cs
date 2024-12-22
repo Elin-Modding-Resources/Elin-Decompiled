@@ -1477,6 +1477,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public string c_extraNameRef
+	{
+		get
+		{
+			return GetStr(12);
+		}
+		set
+		{
+			SetStr(12, value);
+		}
+	}
+
 	public string c_refText
 	{
 		get
@@ -4844,6 +4856,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			c_idRefCard2 = c2.id;
 			c_altName2 = (c2.IsPC ? c2.c_altName : c2.GetName(NameStyle.Ref, (!c2.isChara) ? 1 : 0));
 		}
+		c_extraNameRef = (c1.IsPC ? EClass.pc.c_altName : c1.c_extraNameRef);
 	}
 
 	public void SetHidden(bool hide = true)
@@ -5122,6 +5135,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public void PlaySoundDrop(bool spatial = true)
 	{
 		PlaySound(material.GetSoundDrop(sourceCard), 1f, spatial);
+	}
+
+	public void PlaySoundImpact(bool spatial = true)
+	{
+		PlaySound(material.GetSoundImpact(sourceCard), 1f, spatial);
+	}
+
+	public void PlaySoundDead(bool spatial = true)
+	{
+		PlaySound(material.GetSoundDead(sourceCard), 1f, spatial);
 	}
 
 	public SoundSource PlaySound(string id, float v = 1f, bool spatial = true)
@@ -6559,6 +6582,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			isDeconstructing = deconstruct;
 		}
+	}
+
+	public virtual bool MatchEncSearch(string s)
+	{
+		return false;
 	}
 
 	public virtual void SetSortVal(UIList.SortMode m, CurrencyType currency = CurrencyType.Money)

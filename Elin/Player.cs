@@ -756,6 +756,9 @@ public class Player : EClass
 	public int giftJure;
 
 	[JsonProperty]
+	public int luckycoin;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]

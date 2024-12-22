@@ -3437,7 +3437,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		if (fortuneRoll == null)
 		{
 			fortuneRoll = new FortuneRollData();
-			fortuneRoll.seed = EClass.rnd(50000) + 1;
+			fortuneRoll.seed = EClass._zone.uid * 100 + EClass.game.seed;
 		}
 		if (refresh || fortuneRoll.count == 0)
 		{

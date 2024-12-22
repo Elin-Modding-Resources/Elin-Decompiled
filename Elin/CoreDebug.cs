@@ -905,8 +905,8 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass._zone.TryGenerateEvolved(force: true);
-			EClass._zone.SpawnMob(null, SpawnSetting.Boss(100));
+			EClass.pc.Pick(EClass.pc.MakeMilk(effect: true, 10));
+			EClass.pc.Pick(EClass.pc.MakeEgg(effect: true, 10));
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
@@ -914,17 +914,6 @@ public class CoreDebug : EScriptable
 				EClass.pc.Pick(targetChara.MakeGene());
 				EClass.pc.Pick(targetChara.MakeBraineCell());
 				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
-			}
-			if (EClass.game.quests.Get<QuestDebt>() == null)
-			{
-				Chara chara = CharaGen.Create("loytel");
-				EClass._zone.AddCard(chara, EClass.pc.pos);
-				chara.SetGlobal();
-				Quest q = EClass.game.quests.Add("debt", "loytel");
-				EClass.game.quests.Start(q);
-				EClass.pc.party.RemoveMember(chara);
-				Hostility hostility2 = (chara.c_originalHostility = Hostility.Ally);
-				chara.hostility = hostility2;
 			}
 			return;
 		}

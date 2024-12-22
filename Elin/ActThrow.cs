@@ -162,7 +162,7 @@ public class ActThrow : ActBaseAttack
 			{
 				Act.TC.Say("throw_hit", t, Act.TC);
 			}
-			Act.TP.ModFire(-50);
+			Act.TP.ModFire(-50, extinguish: true);
 			if (Act.TC != null && Act.TC.isChara)
 			{
 				if (t.trait.CanDrink(Act.TC.Chara))

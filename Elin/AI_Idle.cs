@@ -105,7 +105,7 @@ public class AI_Idle : AIAct
 					}
 				}
 			}
-			if (EClass.rnd(3) == 0 && owner.mana.value > 0)
+			if (EClass.rnd(3) == 0 && owner.mana.value > 0 && !EClass._zone.IsRegion)
 			{
 				Act act = null;
 				Act actRevive = null;
