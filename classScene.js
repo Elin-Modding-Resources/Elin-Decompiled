@@ -68,6 +68,7 @@ var classScene =
     [ "HitPoint", "classScene.html#a333286137d2976b11b59fd8c5b751717", null ],
     [ "isAnnounced", "classScene.html#a8f16f28ac6f79f76b7ec72447a83f2e8", null ],
     [ "loadedPrefabs", "classScene.html#ad9b140fe6ffcaa99cdd175b80d66767d", null ],
+    [ "matFloorEx", "classScene.html#a055a3c73a72a16e78ae940cbf57f0f05", null ],
     [ "mode", "classScene.html#a0233886ab04264ff9de5760f79f7a523", null ],
     [ "mouseTarget", "classScene.html#acb1c8aaa9c42aaff99807d85c8653bd1", null ],
     [ "passes", "classScene.html#ac86281827f49078ae334e5ac121cc52c", null ],

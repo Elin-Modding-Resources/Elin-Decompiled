@@ -6,6 +6,7 @@ var classCSTR =
     [ "context", "classCSTR.html#aa055174d40e3a16b93ad3403d0ba7892", null ],
     [ "editorTags", "classCSTR.html#a07b67b47ca1ac5ad4b219a288c30245e", null ],
     [ "editorTraitVal", "classCSTR.html#a697bc9f5aed80f7340136d77929711b4", null ],
+    [ "extraNameRef", "classCSTR.html#af188053286177fff8d18c66a9cdab104", null ],
     [ "idAbility", "classCSTR.html#afb199ccd4e011123fb9cb2d66e65a019", null ],
     [ "idActorEx", "classCSTR.html#a3c43549abebf522bf5bea0953d38f210", null ],
     [ "idBook", "classCSTR.html#ab517498a4982086260d26ebe0f3495f1", null ],

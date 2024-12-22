@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.62 Nightly hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.63 Nightly</span>
    </div>
   </td>
  </tr>
@@ -565,7 +565,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
 <div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classConSuspend.html#aea94be915fd13a3408cdf828e2086446">uidMachine</a> != 0)</div>
 <div class="line"><span class="lineno">   45</span>        {</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classTraitGeneMachine.html">TraitGeneMachine</a> traitGeneMachine = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.FindThing&lt;<a class="code hl_class" href="classTraitGeneMachine.html">TraitGeneMachine</a>&gt;();</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="classTraitGeneMachine.html">TraitGeneMachine</a> traitGeneMachine = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#aec0a6ef72e47671812fba01d52d2602b">FindThing</a>&lt;<a class="code hl_class" href="classTraitGeneMachine.html">TraitGeneMachine</a>&gt;();</div>
 <div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (traitGeneMachine == <span class="keyword">null</span> || !traitGeneMachine.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a> || (<a class="code hl_variable" href="classConSuspend.html#aa2a2cb050ea49cd6191cb3a00dcddb69">duration</a> &gt; 0 &amp;&amp; !<a class="code hl_property" href="classConSuspend.html#ac8b8c049184570eafc004a0fe46668c7">HasGene</a>))</div>
 <div class="line"><span class="lineno">   48</span>            {</div>
 <div class="line"><span class="lineno">   49</span>                <a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
@@ -576,10 +576,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassConSuspend_html_aa2a2cb050ea49cd6191cb3a00dcddb69"><div class="ttname"><a href="classConSuspend.html#aa2a2cb050ea49cd6191cb3a00dcddb69">ConSuspend.duration</a></div><div class="ttdeci">int duration</div><div class="ttdef"><b>Definition:</b> <a href="ConSuspend_8cs_source.html#l00009">ConSuspend.cs:9</a></div></div>
 <div class="ttc" id="aclassConSuspend_html_aea94be915fd13a3408cdf828e2086446"><div class="ttname"><a href="classConSuspend.html#aea94be915fd13a3408cdf828e2086446">ConSuspend.uidMachine</a></div><div class="ttdeci">int uidMachine</div><div class="ttdef"><b>Definition:</b> <a href="ConSuspend_8cs_source.html#l00006">ConSuspend.cs:6</a></div></div>
 <div class="ttc" id="aclassCondition_html_a9441709e24ca102eed7a41b3ccaa4cee"><div class="ttname"><a href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Condition.Kill</a></div><div class="ttdeci">void Kill(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00091">Condition.cs:91</a></div></div>
+<div class="ttc" id="aclassPoint_html_aec0a6ef72e47671812fba01d52d2602b"><div class="ttname"><a href="classPoint.html#aec0a6ef72e47671812fba01d52d2602b">Point.FindThing</a></div><div class="ttdeci">Thing FindThing(Func&lt; Thing, bool &gt; func)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01115">Point.cs:1115</a></div></div>
 <div class="ttc" id="aclassTraitGeneMachine_html"><div class="ttname"><a href="classTraitGeneMachine.html">TraitGeneMachine</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGeneMachine_8cs_source.html#l00003">TraitGeneMachine.cs:4</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConSuspend_8cs_source.html#l00009">duration</a>, <a class="el" href="ConSuspend_8cs_source.html#l00020">HasGene</a>, <a class="el" href="Card_8cs_source.html#l00514">Card.isOn</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, and <a class="el" href="ConSuspend_8cs_source.html#l00006">uidMachine</a>.</p>
+<p class="reference">References <a class="el" href="ConSuspend_8cs_source.html#l00009">duration</a>, <a class="el" href="Point_8cs_source.html#l01115">Point.FindThing()</a>, <a class="el" href="ConSuspend_8cs_source.html#l00020">HasGene</a>, <a class="el" href="Card_8cs_source.html#l00514">Card.isOn</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, and <a class="el" href="ConSuspend_8cs_source.html#l00006">uidMachine</a>.</p>
 
 </div>
 </div>
@@ -712,7 +713,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   28</span>        }</div>
 <div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03074">Card.cs:3074</a></div></div>
+<div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03086">Card.cs:3086</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="TraitGeneMachine_8cs_source.html#l00033">TraitGeneMachine.GetProgress()</a>, <a class="el" href="ConSuspend_8cs_source.html#l00054">OnRemoved()</a>, and <a class="el" href="ConSuspend_8cs_source.html#l00042">Tick()</a>.</p>
 

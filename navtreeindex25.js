@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAM__ViewMap.html#a5b4a5303ecdad401a2644b13026360b1":[1,0,143,3],
+"classAM__ViewMap.html#a600065c283237571a833d38832ccc828":[1,0,143,6],
 "classAM__ViewMap.html#a7e6db6c2e695bece85b6bd39f0241df9":[1,0,143,11],
 "classAM__ViewMap.html#a9b91333a0ecd0d97b798066b278ab4a6":[1,0,143,5],
 "classAM__ViewMap.html#aca2db0a0203f83f1b0ccc1c0b60a2020":[1,0,143,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classActPray.html#a6285ddb3797a820de21835e33b631647":[1,0,35,4],
 "classActPray.html#afd81a647a671bba5ebfd4bf600301860":[1,0,35,2],
 "classActPray.html#aff54cfcf9f76a2c16db38007a3808d69":[1,0,35,0],
-"classActQuickCraft.html":[1,0,36],
-"classActQuickCraft.html#aad6033f738a9b7850dfe6333c402ef59":[1,0,36,0],
-"classActRanged.html":[1,0,37]
+"classActQuickCraft.html":[1,0,36]
 };

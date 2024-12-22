@@ -54,6 +54,7 @@ var classLayerConfig =
     [ "toggleDynamicBrightness", "classLayerConfig.html#aa12bd9a4ae7641144ec71f028071174e", null ],
     [ "toggleFirefly", "classLayerConfig.html#a26a3b713534acd9ea2088aa8404d2159", null ],
     [ "toggleFixedResolution", "classLayerConfig.html#a8bf19de14df1d84fcec5071b11377399", null ],
+    [ "toggleFloorEx", "classLayerConfig.html#a6b6937655465e4d9f17f854ac98ccb71", null ],
     [ "toggleFullscreen", "classLayerConfig.html#a73a13371a09d5ef0e52fa6f9d3c7f138", null ],
     [ "toggleGodray", "classLayerConfig.html#a6e0d3e9f1babb2fb9819ff1fbaa22612", null ],
     [ "toggleGradientWater", "classLayerConfig.html#a3bdd7b4c6df0a48162481f19ea40e397", null ],

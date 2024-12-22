@@ -5,5 +5,6 @@ var classFortuneRollData_1_1Prize =
     [ "claimed", "classFortuneRollData_1_1Prize.html#a032c73bc3fd549abf7e8e2e449be9170", null ],
     [ "grade", "classFortuneRollData_1_1Prize.html#ab3ad6e7372e28eda08884cd160b1f004", null ],
     [ "id", "classFortuneRollData_1_1Prize.html#a261ed42d776da88910640c3c568ab380", null ],
+    [ "idRef", "classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267", null ],
     [ "model", "classFortuneRollData_1_1Prize.html#a4958542f4dc5399e696e9b9eb3bdbc13", null ]
 ];

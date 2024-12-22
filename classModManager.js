@@ -3,7 +3,7 @@ var classModManager =
     [ "SheetIndex", "structModManager_1_1SheetIndex.html", "structModManager_1_1SheetIndex" ],
     [ "AddPackage", "classModManager.html#ad2cdba89ab473a05d1b5b5cd95c42a20", null ],
     [ "AddWorkshopPackage", "classModManager.html#a80fd4b86d141d807723e33bfcef61576", null ],
-    [ "GetElinIni", "classModManager.html#a58d3bf1f033610647b3dd0113c2e9e44", null ],
+    [ "CountUserMod", "classModManager.html#adbda329411b887499cdb89bf606b099b", null ],
     [ "HandleResults", "classModManager.html#a16e3b1e41ee836a44e4e0501cb92e1ea", null ],
     [ "Init", "classModManager.html#a9219aa9f35decd9d524b93f5f4263d66", null ],
     [ "LoadLoadOrder", "classModManager.html#a7bd714c9042cc306187915ad62ceccbe", null ],
@@ -16,10 +16,8 @@ var classModManager =
     [ "UpdateTalks", "classModManager.html#a3002875761fefa7e78d8ae644cf096f7", null ],
     [ "disableMod", "classModManager.html#ab2008faf39c4e179f5b5d538b2ec7996", null ],
     [ "ListPluginObject", "classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2", null ],
-    [ "PasswordChar", "classModManager.html#ae69d4321da67dd1db5e31aa809ac82f3", null ],
     [ "replaceFiles", "classModManager.html#a76a8d2fbb962ccaa2d1393f2719b454e", null ],
     [ "DirWorkshop", "classModManager.html#af7b1f26106310a4557070f1567afb09f", null ],
     [ "IsInitialized", "classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1", null ],
-    [ "ListChainLoad", "classModManager.html#a72543a8d9f646fa41a019b19c5f92646", null ],
-    [ "PathIni", "classModManager.html#ae99a61aad518a9c1ef773a00ae98dfab", null ]
+    [ "ListChainLoad", "classModManager.html#a72543a8d9f646fa41a019b19c5f92646", null ]
 ];

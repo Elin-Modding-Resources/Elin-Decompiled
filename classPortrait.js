@@ -10,7 +10,7 @@ var classPortrait =
     [ "SetChara", "classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4", null ],
     [ "SetPerson", "classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc", null ],
     [ "SetPortrait", "classPortrait.html#a407881fe00fd076f721d0bbe0eecc3fc", null ],
-    [ "SetPortrait", "classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14", null ],
+    [ "SetPortrait", "classPortrait.html#a456a5b9dcb8bfab28d0a1f89076aaa38", null ],
     [ "allIds", "classPortrait.html#a81a0e083cf8bef34a7c43f1f859bb595", null ],
     [ "charaScale", "classPortrait.html#aa1956585ac18ef116e06058981e04d10", null ],
     [ "dictList", "classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a", null ],

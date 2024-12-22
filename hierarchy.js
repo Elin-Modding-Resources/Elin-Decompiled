@@ -624,6 +624,7 @@ var hierarchy =
                     [ "TaskBuild", "classTaskBuild.html", null ],
                     [ "TaskMoveInstalled", "classTaskMoveInstalled.html", null ]
                   ] ],
+                  [ "TaskChopWoord", "classTaskChopWoord.html", null ],
                   [ "TaskCut", "classTaskCut.html", null ],
                   [ "TaskDrawWater", "classTaskDrawWater.html", null ],
                   [ "TaskPlow", "classTaskPlow.html", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.62 Nightly hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.63 Nightly</span>
    </div>
   </td>
  </tr>
@@ -297,35 +297,36 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   57</span>        }</div>
 <div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#ab4b60186844cc4fed548b459d1e4604d">uiPicker</a>.<a class="code hl_function" href="classUIColorPicker.html#a5f8e327900f2b7beae087e365fd4d489">SetColor</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
 <div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   61</span>            {</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(105, <a class="code hl_class" href="classIntColor.html">IntColor</a>.<a class="code hl_function" href="classIntColor.html#a7fc449704cbd3add53a8956a0be96f20">ToInt</a>(_c));</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   65</span>            {</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>.SetColor(<span class="stringliteral">&quot;hair&quot;</span>, _c);</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>);</div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">action</a>(_c);</div>
-<div class="line"><span class="lineno">   70</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a> = _c;</div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">hasColorChanged</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   72</span>        });</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="classLayerEditPortrait.html#a59e53e898a1f6fd32e9097fbb8271095">RefreshList</a>();</div>
-<div class="line"><span class="lineno">   74</span>        InvokeRepeating(<span class="stringliteral">&quot;RefreshHairColor&quot;</span>, 0f, 0.1f);</div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">buttonGender</a> = windows[0].AddBottomButton(<span class="stringliteral">&quot;portrait_gender&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a> = !<a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a>;</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">RefreshButtons</a>();</div>
-<div class="line"><span class="lineno">   79</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.List();</div>
-<div class="line"><span class="lineno">   80</span>        });</div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">buttonUnique</a> = windows[0].AddBottomButton(<span class="stringliteral">&quot;portrait_unique&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a> = !<a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a>;</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_function" href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">RefreshButtons</a>();</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.List();</div>
-<div class="line"><span class="lineno">   86</span>        });</div>
-<div class="line"><span class="lineno">   87</span>        <a class="code hl_function" href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">RefreshButtons</a>();</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="line"><span class="lineno">   60</span>            ColorUtility.TryParseHtmlString(<span class="stringliteral">&quot;#&quot;</span> + ColorUtility.ToHtmlStringRGBA(_c), out var color);</div>
+<div class="line"><span class="lineno">   61</span>            if (<a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>.<a class="code hl_function" href="classBaseCard.html#aec9bc518d017df1251b991ca321223cb">SetInt</a>(105, <a class="code hl_class" href="classIntColor.html">IntColor</a>.<a class="code hl_function" href="classIntColor.html#a7fc449704cbd3add53a8956a0be96f20">ToInt</a>(color));</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>.SetColor(<span class="stringliteral">&quot;hair&quot;</span>, color);</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>);</div>
+<div class="line"><span class="lineno">   70</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">action</a>(color);</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a> = color;</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">hasColorChanged</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   73</span>        });</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_function" href="classLayerEditPortrait.html#a59e53e898a1f6fd32e9097fbb8271095">RefreshList</a>();</div>
+<div class="line"><span class="lineno">   75</span>        InvokeRepeating(<span class="stringliteral">&quot;RefreshHairColor&quot;</span>, 0f, 0.1f);</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">buttonGender</a> = windows[0].AddBottomButton(<span class="stringliteral">&quot;portrait_gender&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a> = !<a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a>;</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_function" href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">RefreshButtons</a>();</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.List();</div>
+<div class="line"><span class="lineno">   81</span>        });</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">buttonUnique</a> = windows[0].AddBottomButton(<span class="stringliteral">&quot;portrait_unique&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a> = !<a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a>;</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_function" href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">RefreshButtons</a>();</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.List();</div>
+<div class="line"><span class="lineno">   87</span>        });</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">RefreshButtons</a>();</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00001">PickerState.cs:2</a></div></div>
 <div class="ttc" id="aclassBaseCard_html_ad7c3c0cccca41404bd714fc6ec34ef98"><div class="ttname"><a href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">BaseCard.GetInt</a></div><div class="ttdeci">int GetInt(int id, int? defaultInt=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00025">BaseCard.cs:25</a></div></div>
@@ -334,7 +335,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassIntColor_html_a7fc449704cbd3add53a8956a0be96f20"><div class="ttname"><a href="classIntColor.html#a7fc449704cbd3add53a8956a0be96f20">IntColor.ToInt</a></div><div class="ttdeci">static int ToInt(ref Color c)</div><div class="ttdef"><b>Definition:</b> <a href="IntColor_8cs_source.html#l00024">IntColor.cs:24</a></div></div>
 <div class="ttc" id="aclassIntColor_html_aa1896d3a2fb16365e35456ad6c0d516b"><div class="ttname"><a href="classIntColor.html#aa1896d3a2fb16365e35456ad6c0d516b">IntColor.FromInt</a></div><div class="ttdeci">static Color32 FromInt(int i)</div><div class="ttdef"><b>Definition:</b> <a href="IntColor_8cs_source.html#l00015">IntColor.cs:15</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_a3b097baa02b51f53062e7aa9ec4ff167"><div class="ttname"><a href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">LayerEditPortrait.action</a></div><div class="ttdeci">Action&lt; Color &gt; action</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00026">LayerEditPortrait.cs:26</a></div></div>
-<div class="ttc" id="aclassLayerEditPortrait_html_a59e53e898a1f6fd32e9097fbb8271095"><div class="ttname"><a href="classLayerEditPortrait.html#a59e53e898a1f6fd32e9097fbb8271095">LayerEditPortrait.RefreshList</a></div><div class="ttdeci">void RefreshList()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00115">LayerEditPortrait.cs:115</a></div></div>
+<div class="ttc" id="aclassLayerEditPortrait_html_a59e53e898a1f6fd32e9097fbb8271095"><div class="ttname"><a href="classLayerEditPortrait.html#a59e53e898a1f6fd32e9097fbb8271095">LayerEditPortrait.RefreshList</a></div><div class="ttdeci">void RefreshList()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00116">LayerEditPortrait.cs:116</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_a5d1fcc29b3c8323946905231af588716"><div class="ttname"><a href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">LayerEditPortrait.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00010">LayerEditPortrait.cs:10</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_a7bd905fafc4158588b683b4477253e0a"><div class="ttname"><a href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">LayerEditPortrait.buttonGender</a></div><div class="ttdeci">UIButton buttonGender</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00020">LayerEditPortrait.cs:20</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_a82aca8a8df2715b598ea569a1c060d8d"><div class="ttname"><a href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">LayerEditPortrait.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00016">LayerEditPortrait.cs:16</a></div></div>
@@ -342,7 +343,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLayerEditPortrait_html_a90f0d044009acd7cc1993cdbe0f5309d"><div class="ttname"><a href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">LayerEditPortrait.gender</a></div><div class="ttdeci">bool gender</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00030">LayerEditPortrait.cs:30</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_a939c3c85d8ea8df3df664876b8d78eb2"><div class="ttname"><a href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">LayerEditPortrait.hasColorChanged</a></div><div class="ttdeci">bool hasColorChanged</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00028">LayerEditPortrait.cs:28</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_aa348ccafc01427b1464c270d8bea5bee"><div class="ttname"><a href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">LayerEditPortrait.buttonUnique</a></div><div class="ttdeci">UIButton buttonUnique</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00022">LayerEditPortrait.cs:22</a></div></div>
-<div class="ttc" id="aclassLayerEditPortrait_html_ab32f2715c5a8fe81b82a99402e56dfdf"><div class="ttname"><a href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">LayerEditPortrait.RefreshButtons</a></div><div class="ttdeci">void RefreshButtons()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00090">LayerEditPortrait.cs:90</a></div></div>
+<div class="ttc" id="aclassLayerEditPortrait_html_ab32f2715c5a8fe81b82a99402e56dfdf"><div class="ttname"><a href="classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf">LayerEditPortrait.RefreshButtons</a></div><div class="ttdeci">void RefreshButtons()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00091">LayerEditPortrait.cs:91</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_ab4b60186844cc4fed548b459d1e4604d"><div class="ttname"><a href="classLayerEditPortrait.html#ab4b60186844cc4fed548b459d1e4604d">LayerEditPortrait.uiPicker</a></div><div class="ttdeci">UIColorPicker uiPicker</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00014">LayerEditPortrait.cs:14</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_acb57627372aa29489410b35fe5d9ceb0"><div class="ttname"><a href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">LayerEditPortrait.pcc</a></div><div class="ttdeci">PCCData pcc</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00018">LayerEditPortrait.cs:18</a></div></div>
 <div class="ttc" id="aclassLayerEditPortrait_html_accee51a7bf8fa47715fdfccdffa11609"><div class="ttname"><a href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">LayerEditPortrait.unique</a></div><div class="ttdeci">bool unique</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPortrait_8cs_source.html#l00032">LayerEditPortrait.cs:32</a></div></div>
@@ -351,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00138">Portrait.cs:138</a></div></div>
 <div class="ttc" id="aclassUIColorPicker_html_a5f8e327900f2b7beae087e365fd4d489"><div class="ttname"><a href="classUIColorPicker.html#a5f8e327900f2b7beae087e365fd4d489">UIColorPicker.SetColor</a></div><div class="ttdeci">void SetColor(Color _startColor, Color _resetColor, Action&lt; PickerState, Color &gt; _onChangeColor)</div><div class="ttdef"><b>Definition:</b> <a href="UIColorPicker_8cs_source.html#l00018">UIColorPicker.cs:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerEditPortrait_8cs_source.html#l00026">action</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00020">buttonGender</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00022">buttonUnique</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00010">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="IntColor_8cs_source.html#l00015">IntColor.FromInt()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00030">gender</a>, <a class="el" href="BaseCard_8cs_source.html#l00025">BaseCard.GetInt()</a>, <a class="el" href="Portrait_8cs_source.html#l00205">Portrait.GetRandomHairColor()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00024">hairColor</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00028">hasColorChanged</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00016">list</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00018">pcc</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00008">portrait</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00090">RefreshButtons()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, <a class="el" href="UIColorPicker_8cs_source.html#l00018">UIColorPicker.SetColor()</a>, <a class="el" href="BaseCard_8cs_source.html#l00039">BaseCard.SetInt()</a>, <a class="el" href="IntColor_8cs_source.html#l00024">IntColor.ToInt()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00014">uiPicker</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00032">unique</a>.</p>
+<p class="reference">References <a class="el" href="LayerEditPortrait_8cs_source.html#l00026">action</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00020">buttonGender</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00022">buttonUnique</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00010">chara</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="IntColor_8cs_source.html#l00015">IntColor.FromInt()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00030">gender</a>, <a class="el" href="BaseCard_8cs_source.html#l00025">BaseCard.GetInt()</a>, <a class="el" href="Portrait_8cs_source.html#l00205">Portrait.GetRandomHairColor()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00024">hairColor</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00028">hasColorChanged</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00016">list</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00018">pcc</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00008">portrait</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00091">RefreshButtons()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, <a class="el" href="UIColorPicker_8cs_source.html#l00018">UIColorPicker.SetColor()</a>, <a class="el" href="BaseCard_8cs_source.html#l00039">BaseCard.SetInt()</a>, <a class="el" href="IntColor_8cs_source.html#l00024">IntColor.ToInt()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00014">uiPicker</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00032">unique</a>.</p>
 
 </div>
 </div>
@@ -378,13 +379,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00098">98</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>        SE.Trash();</div>
-<div class="line"><span class="lineno">  101</span>        chara.c_idPortrait = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>);</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">action</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>);</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00099">99</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        SE.Trash();</div>
+<div class="line"><span class="lineno">  102</span>        chara.c_idPortrait = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>);</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">action</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>);</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LayerEditPortrait_8cs_source.html#l00026">action</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00010">chara</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00024">hairColor</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00018">pcc</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00008">portrait</a>, and <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>.</p>
 
@@ -413,13 +414,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00090">90</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">buttonGender</a>.mainText.SetText(<span class="stringliteral">&quot;portrait_gender&quot;</span>.lang() + <span class="stringliteral">&quot; (&quot;</span> + (<a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a> ? <span class="stringliteral">&quot;On&quot;</span> : <span class="stringliteral">&quot;Off&quot;</span>) + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">buttonUnique</a>.mainText.SetText(<span class="stringliteral">&quot;portrait_unique&quot;</span>.lang() + <span class="stringliteral">&quot; (&quot;</span> + (<a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a> ? <span class="stringliteral">&quot;On&quot;</span> : <span class="stringliteral">&quot;Off&quot;</span>) + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">buttonGender</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">   95</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">buttonUnique</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00091">91</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">buttonGender</a>.mainText.SetText(<span class="stringliteral">&quot;portrait_gender&quot;</span>.lang() + <span class="stringliteral">&quot; (&quot;</span> + (<a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a> ? <span class="stringliteral">&quot;On&quot;</span> : <span class="stringliteral">&quot;Off&quot;</span>) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">buttonUnique</a>.mainText.SetText(<span class="stringliteral">&quot;portrait_unique&quot;</span>.lang() + <span class="stringliteral">&quot; (&quot;</span> + (<a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a> ? <span class="stringliteral">&quot;On&quot;</span> : <span class="stringliteral">&quot;Off&quot;</span>) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a7bd905fafc4158588b683b4477253e0a">buttonGender</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee">buttonUnique</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LayerEditPortrait_8cs_source.html#l00020">buttonGender</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00022">buttonUnique</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00030">gender</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00032">unique</a>.</p>
 
@@ -450,14 +451,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00106">106</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">hasColorChanged</a>)</div>
-<div class="line"><span class="lineno">  109</span>        {</div>
-<div class="line"><span class="lineno">  110</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Redraw();</div>
-<div class="line"><span class="lineno">  111</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">hasColorChanged</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00107">107</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">hasColorChanged</a>)</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Redraw();</div>
+<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2">hasColorChanged</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LayerEditPortrait_8cs_source.html#l00028">hasColorChanged</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00016">list</a>.</p>
 
@@ -486,50 +487,50 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">115</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Clear();</div>
-<div class="line"><span class="lineno">  118</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a>, <a class="code hl_class" href="classPortrait.html">Portrait</a>&gt;</div>
-<div class="line"><span class="lineno">  119</span>        {</div>
-<div class="line"><span class="lineno">  120</span>            onClick = delegate(<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> a, <a class="code hl_class" href="classPortrait.html">Portrait</a> b)</div>
-<div class="line"><span class="lineno">  121</span>            {</div>
-<div class="line"><span class="lineno">  122</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Select(a);</div>
-<div class="line"><span class="lineno">  123</span>                SE.Click();</div>
-<div class="line"><span class="lineno">  124</span>                chara.c_idPortrait = a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>;</div>
-<div class="line"><span class="lineno">  125</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>);</div>
-<div class="line"><span class="lineno">  126</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">action</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>);</div>
-<div class="line"><span class="lineno">  127</span>            },</div>
-<div class="line"><span class="lineno">  128</span>            onRedraw = delegate(<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> a, <a class="code hl_class" href="classPortrait.html">Portrait</a> b, <span class="keywordtype">int</span> i)</div>
-<div class="line"><span class="lineno">  129</span>            {</div>
-<div class="line"><span class="lineno">  130</span>                b.mainText.SetText(a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>);</div>
-<div class="line"><span class="lineno">  131</span>                b.<a class="code hl_function" href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">SetPortrait</a>(a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>);</div>
-<div class="line"><span class="lineno">  132</span>                b.tooltip.lang = a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>;</div>
-<div class="line"><span class="lineno">  133</span>            },</div>
-<div class="line"><span class="lineno">  134</span>            onList = delegate</div>
-<div class="line"><span class="lineno">  135</span>            {</div>
-<div class="line"><span class="lineno">  136</span>                <span class="keywordtype">int</span> num = (<a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a> ? chara.bio.gender : 0);</div>
-<div class="line"><span class="lineno">  137</span>                IEnumerable&lt;ModItem&lt;Sprite&gt;&gt; enumerable = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;c&quot;</span>).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;guard&quot;</span>)).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;special&quot;</span>))</div>
-<div class="line"><span class="lineno">  138</span>                    .Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;foxfolk&quot;</span>));</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a>)</div>
-<div class="line"><span class="lineno">  140</span>                {</div>
-<div class="line"><span class="lineno">  141</span>                    enumerable = enumerable.Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(0, <span class="stringliteral">&quot;UN&quot;</span>));</div>
-<div class="line"><span class="lineno">  142</span>                }</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> enumerable.ToList())</div>
-<div class="line"><span class="lineno">  144</span>                {</div>
-<div class="line"><span class="lineno">  145</span>                    <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">  146</span>                }</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>        };</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.List();</div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Select((<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> a) =&gt; a.id == <a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>.<a class="code hl_property" href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">c_idPortrait</a>);</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">116</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Clear();</div>
+<div class="line"><span class="lineno">  119</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a>, <a class="code hl_class" href="classPortrait.html">Portrait</a>&gt;</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            onClick = delegate(<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> a, <a class="code hl_class" href="classPortrait.html">Portrait</a> b)</div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Select(a);</div>
+<div class="line"><span class="lineno">  124</span>                SE.Click();</div>
+<div class="line"><span class="lineno">  125</span>                chara.c_idPortrait = a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>;</div>
+<div class="line"><span class="lineno">  126</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894">portrait</a>.<a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0">pcc</a>);</div>
+<div class="line"><span class="lineno">  127</span>                <a class="code hl_variable" href="classLayerEditPortrait.html#a3b097baa02b51f53062e7aa9ec4ff167">action</a>(<a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>);</div>
+<div class="line"><span class="lineno">  128</span>            },</div>
+<div class="line"><span class="lineno">  129</span>            onRedraw = delegate(<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> a, <a class="code hl_class" href="classPortrait.html">Portrait</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                b.mainText.SetText(a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>);</div>
+<div class="line"><span class="lineno">  132</span>                b.<a class="code hl_function" href="classPortrait.html#a456a5b9dcb8bfab28d0a1f89076aaa38">SetPortrait</a>(a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>, <a class="code hl_variable" href="classLayerEditPortrait.html#a8ed439b721d2ab18ce182db80b02f88b">hairColor</a>);</div>
+<div class="line"><span class="lineno">  133</span>                b.tooltip.lang = a.<a class="code hl_variable" href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">id</a>;</div>
+<div class="line"><span class="lineno">  134</span>            },</div>
+<div class="line"><span class="lineno">  135</span>            onList = delegate</div>
+<div class="line"><span class="lineno">  136</span>            {</div>
+<div class="line"><span class="lineno">  137</span>                <span class="keywordtype">int</span> num = (<a class="code hl_variable" href="classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d">gender</a> ? chara.bio.gender : 0);</div>
+<div class="line"><span class="lineno">  138</span>                IEnumerable&lt;ModItem&lt;Sprite&gt;&gt; enumerable = <a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;c&quot;</span>).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;guard&quot;</span>)).Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;special&quot;</span>))</div>
+<div class="line"><span class="lineno">  139</span>                    .Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(num, <span class="stringliteral">&quot;foxfolk&quot;</span>));</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609">unique</a>)</div>
+<div class="line"><span class="lineno">  141</span>                {</div>
+<div class="line"><span class="lineno">  142</span>                    enumerable = enumerable.Concat(<a class="code hl_class" href="classPortrait.html">Portrait</a>.<a class="code hl_function" href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">ListPortraits</a>(0, <span class="stringliteral">&quot;UN&quot;</span>));</div>
+<div class="line"><span class="lineno">  143</span>                }</div>
+<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> enumerable.ToList())</div>
+<div class="line"><span class="lineno">  145</span>                {</div>
+<div class="line"><span class="lineno">  146</span>                    <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">  147</span>                }</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>        };</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.List();</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="classLayerEditPortrait.html#a82aca8a8df2715b598ea569a1c060d8d">list</a>.Select((<a class="code hl_class" href="classModItem.html">ModItem&lt;Sprite&gt;</a> a) =&gt; a.id == <a class="code hl_variable" href="classLayerEditPortrait.html#a5d1fcc29b3c8323946905231af588716">chara</a>.<a class="code hl_property" href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">c_idPortrait</a>);</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html_a125a12ce0be00c6009f365bb8070c0dc"><div class="ttname"><a href="classCard.html#a125a12ce0be00c6009f365bb8070c0dc">Card.c_idPortrait</a></div><div class="ttdeci">string c_idPortrait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01372">Card.cs:1373</a></div></div>
 <div class="ttc" id="aclassModItem_html"><div class="ttname"><a href="classModItem.html">ModItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ModItem_8cs_source.html#l00004">ModItem.cs:5</a></div></div>
 <div class="ttc" id="aclassModItem_html_a3f7a0cffd5ddb50139e74e56de79a7f9"><div class="ttname"><a href="classModItem.html#a3f7a0cffd5ddb50139e74e56de79a7f9">ModItem.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="ModItem_8cs_source.html#l00010">ModItem.cs:10</a></div></div>
 <div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00006">Portrait.cs:7</a></div></div>
 <div class="ttc" id="aclassPortrait_html_a2d9b53ffbff9fc593ece5684a10e119c"><div class="ttname"><a href="classPortrait.html#a2d9b53ffbff9fc593ece5684a10e119c">Portrait.ListPortraits</a></div><div class="ttdeci">static List&lt; ModItem&lt; Sprite &gt; &gt; ListPortraits(string idDict)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00059">Portrait.cs:59</a></div></div>
-<div class="ttc" id="aclassPortrait_html_ad9403f77aaa725cf008a85c1b7558f14"><div class="ttname"><a href="classPortrait.html#ad9403f77aaa725cf008a85c1b7558f14">Portrait.SetPortrait</a></div><div class="ttdeci">void SetPortrait(string id, Color colorOverlay=default(Color))</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00213">Portrait.cs:213</a></div></div>
+<div class="ttc" id="aclassPortrait_html_a456a5b9dcb8bfab28d0a1f89076aaa38"><div class="ttname"><a href="classPortrait.html#a456a5b9dcb8bfab28d0a1f89076aaa38">Portrait.SetPortrait</a></div><div class="ttdeci">void SetPortrait(string id, Color colorOverlay=default(Color), bool applyColorMod=true)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00213">Portrait.cs:213</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LayerEditPortrait_8cs_source.html#l00026">action</a>, <a class="el" href="Card_8cs_source.html#l01373">Card.c_idPortrait</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00010">chara</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00030">gender</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00024">hairColor</a>, <a class="el" href="ModItem_8cs_source.html#l00010">ModItem&lt; T &gt;.id</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00016">list</a>, <a class="el" href="Portrait_8cs_source.html#l00059">Portrait.ListPortraits()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00018">pcc</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00008">portrait</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, <a class="el" href="Portrait_8cs_source.html#l00213">Portrait.SetPortrait()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00032">unique</a>.</p>
 
@@ -552,7 +553,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00026">26</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00098">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00099">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -570,7 +571,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00020">20</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00090">RefreshButtons()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00091">RefreshButtons()</a>.</p>
 
 </div>
 </div>
@@ -588,7 +589,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00022">22</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00090">RefreshButtons()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00091">RefreshButtons()</a>.</p>
 
 </div>
 </div>
@@ -606,7 +607,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00098">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00099">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -632,7 +633,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00030">30</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00090">RefreshButtons()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00091">RefreshButtons()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -650,7 +651,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00024">24</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00098">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00099">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -676,7 +677,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00028">28</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00106">RefreshHairColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00107">RefreshHairColor()</a>.</p>
 
 </div>
 </div>
@@ -694,7 +695,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00016">16</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00106">RefreshHairColor()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00107">RefreshHairColor()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -712,7 +713,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00018">18</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00098">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00099">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -730,7 +731,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00008">8</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00098">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00099">OnClickClear()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -790,7 +791,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPortrait_8cs_source.html#l00032">32</a> of file <a class="el" href="LayerEditPortrait_8cs_source.html">LayerEditPortrait.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00090">RefreshButtons()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00115">RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPortrait_8cs_source.html#l00034">Activate()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00091">RefreshButtons()</a>, and <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">RefreshList()</a>.</p>
 
 </div>
 </div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.62 Nightly hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.63 Nightly</span>
    </div>
   </td>
  </tr>
@@ -198,8 +198,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7c79c7d7ececfa4b997a01fe93f3e385 inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b776a5c157ff23d2c418ba134448d74 inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a> (int id=0, int value=1, int dir=0)</td></tr>
 <tr class="separator:a1b776a5c157ff23d2c418ba134448d74 inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64728a3bd858dd483990756ab66d1b56 inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">ModFire</a> (int value)</td></tr>
-<tr class="separator:a64728a3bd858dd483990756ab66d1b56 inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8c61a0c27eed004dd7335176c83faf inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">ModFire</a> (int value, bool extinguish=false)</td></tr>
+<tr class="separator:a6d8c61a0c27eed004dd7335176c83faf inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a205b18481b54171fb3ae1106d32e6acc inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a205b18481b54171fb3ae1106d32e6acc">Plow</a> ()</td></tr>
 <tr class="separator:a205b18481b54171fb3ae1106d32e6acc inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91e18491812702289084e1b9728d1fa0 inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a> (int _x, int _z)</td></tr>
@@ -226,6 +226,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a913a936560c0ab238a22fc0e9b30ebcf inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f7d56ff10030b0f62710f63404f3d7 inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a51f7d56ff10030b0f62710f63404f3d7">FindThing&lt; T &gt;</a> ()</td></tr>
 <tr class="separator:a51f7d56ff10030b0f62710f63404f3d7 inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0a6ef72e47671812fba01d52d2602b inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classThing.html">Thing</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#aec0a6ef72e47671812fba01d52d2602b">FindThing</a> (Func&lt; <a class="el" href="classThing.html">Thing</a>, bool &gt; func)</td></tr>
+<tr class="separator:aec0a6ef72e47671812fba01d52d2602b inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e88a45c9c04fd202cb46ebf5a192ee6 inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classCard.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a1e88a45c9c04fd202cb46ebf5a192ee6">ListThings&lt; T &gt;</a> (bool onlyInstalled=true)</td></tr>
 <tr class="separator:a1e88a45c9c04fd202cb46ebf5a192ee6 inherit pub_methods_classPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965804b59f2be20290d5d14ceeda6625 inherit pub_methods_classPoint"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classChara.html">Chara</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoint.html#a965804b59f2be20290d5d14ceeda6625">ListCharas</a> ()</td></tr>
@@ -528,15 +530,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LogicalFire_8cs_source.html#l00089">89</a> of file <a class="el" href="LogicalFire_8cs_source.html">LogicalFire.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">ModFire</a>(-amount);</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">ModFire</a>(-amount);</div>
 <div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (!p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#aaedd016b01dc09d12c3c5737d22caa84">HasFire</a>)</div>
 <div class="line"><span class="lineno">   93</span>        {</div>
 <div class="line"><span class="lineno">   94</span>            SE.Play(<span class="stringliteral">&quot;fire&quot;</span>);</div>
 <div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span>        p.<a class="code hl_function" href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">ModFire</a>(amount);</div>
+<div class="line"><span class="lineno">   96</span>        p.<a class="code hl_function" href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">ModFire</a>(amount);</div>
 <div class="line"><span class="lineno">   97</span>    }</div>
 <div class="ttc" id="aclassCell_html_aaedd016b01dc09d12c3c5737d22caa84"><div class="ttname"><a href="classCell.html#aaedd016b01dc09d12c3c5737d22caa84">Cell.HasFire</a></div><div class="ttdeci">bool HasFire</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00675">Cell.cs:676</a></div></div>
-<div class="ttc" id="aclassPoint_html_a64728a3bd858dd483990756ab66d1b56"><div class="ttname"><a href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">Point.ModFire</a></div><div class="ttdeci">void ModFire(int value)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00908">Point.cs:908</a></div></div>
+<div class="ttc" id="aclassPoint_html_a6d8c61a0c27eed004dd7335176c83faf"><div class="ttname"><a href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">Point.ModFire</a></div><div class="ttdeci">void ModFire(int value, bool extinguish=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00908">Point.cs:908</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l00676">Cell.HasFire</a>, and <a class="el" href="Point_8cs_source.html#l00908">Point.ModFire()</a>.</p>
@@ -607,7 +609,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>                    {</div>
 <div class="line"><span class="lineno">   42</span>                        <a class="code hl_function" href="classLogicalFire.html#ae1d15df7d063a2a83e8c2ba1478e1efe">Transfer</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>, 1);</div>
 <div class="line"><span class="lineno">   43</span>                    }</div>
-<div class="line"><span class="lineno">   44</span>                    <a class="code hl_function" href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">ModFire</a>(-1);</div>
+<div class="line"><span class="lineno">   44</span>                    <a class="code hl_function" href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">ModFire</a>(-1);</div>
 <div class="line"><span class="lineno">   45</span>                    flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   46</span>                }</div>
 <div class="line"><span class="lineno">   47</span>            }</div>
@@ -615,12 +617,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>            {</div>
 <div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLogicalPoint.html#a0e00f45935c4861197130fb2810e6d80">life</a> &lt; 2)</div>
 <div class="line"><span class="lineno">   51</span>                {</div>
-<div class="line"><span class="lineno">   52</span>                    <a class="code hl_function" href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">ModFire</a>(-1);</div>
+<div class="line"><span class="lineno">   52</span>                    <a class="code hl_function" href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">ModFire</a>(-1);</div>
 <div class="line"><span class="lineno">   53</span>                }</div>
 <div class="line"><span class="lineno">   54</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
 <div class="line"><span class="lineno">   55</span>                {</div>
 <div class="line"><span class="lineno">   56</span>                    <a class="code hl_function" href="classLogicalFire.html#ae1d15df7d063a2a83e8c2ba1478e1efe">Transfer</a>(<a class="code hl_class" href="classPoint.html">Point</a>.<a class="code hl_variable" href="classPoint.html#a090d94a6a4141358d605e78ba8cb56fa">shared</a>, 1);</div>
-<div class="line"><span class="lineno">   57</span>                    <a class="code hl_function" href="classPoint.html#a64728a3bd858dd483990756ab66d1b56">ModFire</a>(1);</div>
+<div class="line"><span class="lineno">   57</span>                    <a class="code hl_function" href="classPoint.html#a6d8c61a0c27eed004dd7335176c83faf">ModFire</a>(1);</div>
 <div class="line"><span class="lineno">   58</span>                    flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   59</span>                }</div>
 <div class="line"><span class="lineno">   60</span>            }</div>

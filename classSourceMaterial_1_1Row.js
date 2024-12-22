@@ -9,7 +9,7 @@ var classSourceMaterial_1_1Row =
     [ "GetSoundImpact", "classSourceMaterial_1_1Row.html#a22834f3fe7c12f43bb9ca45087bbc54d", null ],
     [ "Init", "classSourceMaterial_1_1Row.html#a27d582c5702812a1e2fcadcb6cca3686", null ],
     [ "OnImportData", "classSourceMaterial_1_1Row.html#a7c32d3983c8efcd21cd30b15fd54161f", null ],
-    [ "PlayHitEffect", "classSourceMaterial_1_1Row.html#ac251a6e4baf2ad84c2588f17523a5208", null ],
+    [ "PlayHitEffect", "classSourceMaterial_1_1Row.html#aeb48f33fbe8be8e76490714bd83ffdc4", null ],
     [ "SetTiles", "classSourceMaterial_1_1Row.html#ab6b6404711d8f6eb56cb2f6a1f027ed7", null ],
     [ "TryGetSound", "classSourceMaterial_1_1Row.html#a15b77a4369bc49b75280e5852be38ab1", null ],
     [ "alias", "classSourceMaterial_1_1Row.html#a28c5f8719fb3c00b9bf1a2c131008c5e", null ],

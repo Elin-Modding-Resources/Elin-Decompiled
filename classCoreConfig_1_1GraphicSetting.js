@@ -13,6 +13,7 @@ var classCoreConfig_1_1GraphicSetting =
     [ "firefly", "classCoreConfig_1_1GraphicSetting.html#a69e81a83aa90e60951da95263485f589", null ],
     [ "fireflyCount", "classCoreConfig_1_1GraphicSetting.html#abf7192aa09904ed13b53c477bb1b3428", null ],
     [ "fixedResolution", "classCoreConfig_1_1GraphicSetting.html#a84226218746bcdd5680acfad52cebd56", null ],
+    [ "floorEx", "classCoreConfig_1_1GraphicSetting.html#a58a2fef14e385f86eebfbf052419d23a", null ],
     [ "fps", "classCoreConfig_1_1GraphicSetting.html#a834ef04589852cec03c8b41cb3660034", null ],
     [ "fullScreen", "classCoreConfig_1_1GraphicSetting.html#abab510dd23bde3c9c7177a098b8d4f5f", null ],
     [ "godray", "classCoreConfig_1_1GraphicSetting.html#a6827c75a3bef67fb69719d5279b007fa", null ],

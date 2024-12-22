@@ -21,6 +21,7 @@ var classThing =
     [ "IsValidIngredient", "classThing.html#a1aa83d30dff765c13d89f0e682a03587", null ],
     [ "ListLimitedValidTraits", "classThing.html#aba7608b985b3932f2be00992444d0e32", null ],
     [ "ListValidTraits", "classThing.html#af8c63279f5a9aaa6f67c807fbc3d944f", null ],
+    [ "MatchEncSearch", "classThing.html#a764c93de7129f11c11077b2d172b3565", null ],
     [ "OnCreate", "classThing.html#ae5e847dff35393a21f55ef7e86f68195", null ],
     [ "RemoveEnchant", "classThing.html#a22b6ffd7b2e669417855ff854e84a2a6", null ],
     [ "SetRenderParam", "classThing.html#a286c34589ee1992ae444aea811945859", null ],

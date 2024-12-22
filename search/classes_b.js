@@ -45,6 +45,6 @@ var searchData=
   ['msg_42',['Msg',['../classMsg.html',1,'']]],
   ['msglog_43',['MsgLog',['../classMsgLog.html',1,'']]],
   ['multisprite_44',['MultiSprite',['../classMultiSprite.html',1,'']]],
-  ['mutation_45',['MUTATION',['../classMUTATION.html',1,'']]],
-  ['mutation_46',['Mutation',['../classMutation.html',1,'']]]
+  ['mutation_45',['Mutation',['../classMutation.html',1,'']]],
+  ['mutation_46',['MUTATION',['../classMUTATION.html',1,'']]]
 ];

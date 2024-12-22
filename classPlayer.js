@@ -122,6 +122,7 @@ var classPlayer =
     [ "listSummon", "classPlayer.html#ab84cd42b1c7b17c4e57f661a40f38934", null ],
     [ "little_dead", "classPlayer.html#a747b297ed23aa184b894e4b5b2ca7417", null ],
     [ "little_saved", "classPlayer.html#aecce22c783d38ac05c67b384c8ae259a", null ],
+    [ "luckycoin", "classPlayer.html#a960909597b2f57b1d8888f52269a3620", null ],
     [ "mainWidgets", "classPlayer.html#ace998cd817f7f40663a1f8883d510953", null ],
     [ "memo", "classPlayer.html#a6cbd253420008666ef350e81e71854e1", null ],
     [ "nextMove", "classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classBiography.html#a1a0038bd7a4a4c52b36ba573e6143ed6":[1,0,191,4],
+"classBiography.html#a2131374fca3733ae9d7f4d9bd1f99612":[1,0,191,30],
 "classBiography.html#a27562ca7fc8d53266f7efaedec45cc56":[1,0,191,20],
 "classBiography.html#a34abb781135cab0723c00662bb2cd041":[1,0,191,36],
 "classBiography.html#a3bb56e1ad21273b11818c7b5c5025780":[1,0,191,39],
@@ -192,9 +194,9 @@ var NAVTREEINDEX32 =
 "classBodySlot.html#a0101b1d9759069f1b1329105e70ce085":[1,0,196,2],
 "classBodySlot.html#a1330a949d13cdd78e0807bd5266d9b43":[1,0,196,6],
 "classBodySlot.html#a267347d222852c4a9c677c1b46b4987b":[1,0,196,1],
+"classBodySlot.html#a6b62ce7239de2c0d7c08cea211f7189a":[1,0,196,3],
 "classBodySlot.html#a865f4623a636e94aa12ef5d7d61047d6":[1,0,196,0],
 "classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba":[1,0,196,4],
-"classBodySlot.html#ac3ea867ebeb36c34565b8acd6a7d7719":[1,0,196,3],
 "classBodySlot.html#adfb8b22ac45198052bfa56cbe3a1eef7":[1,0,196,5],
 "classBranchMap.html":[1,0,197],
 "classBranchMap.html#a6cec9be77c04fa44f3afecd6f3e36777":[1,0,197,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classBuildMenu.html#abcfbcdbd5b1f4b2333de78010370e700":[1,0,198,50],
 "classBuildMenu.html#acb4f8465ead6c9bf39f2a4b48418723b":[1,0,198,2],
 "classBuildMenu.html#acba211d15749a750701b838ac1f8bdf8":[1,0,198,38],
-"classBuildMenu.html#acea1f800b136e1ecc8464eecc3ef58d1":[1,0,198,12],
-"classBuildMenu.html#ad2a5527001bb8bf263848cd6017ac47a":[1,0,198,41],
-"classBuildMenu.html#ad7952b80b774e07ae218998ca8dc0750":[1,0,198,46]
+"classBuildMenu.html#acea1f800b136e1ecc8464eecc3ef58d1":[1,0,198,12]
 };

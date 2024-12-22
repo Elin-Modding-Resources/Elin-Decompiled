@@ -32,6 +32,7 @@ var classLang =
     [ "Game", "classLang.html#ac72c791b12dc4fd790e4054a3fb20d1c", null ],
     [ "General", "classLang.html#a2adf65b7539776ce02ae7819590e4120", null ],
     [ "isBuiltin", "classLang.html#ada42353e8636a1085ec2f851e7b3c403", null ],
+    [ "isEN", "classLang.html#a88af2343da57ec6ea7470bb26f60422b", null ],
     [ "isJP", "classLang.html#ae68ced98bb5ad8d8f206f4905b790653", null ],
     [ "langCode", "classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659", null ],
     [ "List", "classLang.html#aa4aac366da6f8666433dfa30d92d7409", null ],
