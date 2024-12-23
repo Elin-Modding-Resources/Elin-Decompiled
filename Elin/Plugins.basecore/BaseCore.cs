@@ -77,7 +77,7 @@ public class BaseCore : MonoBehaviour
 	{
 	}
 
-	public virtual void FreezeScreen(float duration)
+	public virtual void FreezeScreen(float duration = 0.3f)
 	{
 	}
 
