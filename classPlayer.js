@@ -97,6 +97,7 @@ var classPlayer =
     [ "hotbars", "classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a", null ],
     [ "hotItemNoItem", "classPlayer.html#ae199db6a497b6fb9241caf64c13927c5", null ],
     [ "hotItemToRestore", "classPlayer.html#ad3df2ab89636da24fcf3290d2e404535", null ],
+    [ "ignoreFallOver", "classPlayer.html#a9fc4bbbd5f1d68cef6a5ee49570e103c", null ],
     [ "instaComplete", "classPlayer.html#ab2b183e8459e103bf50c641b39bbd505", null ],
     [ "invlunerable", "classPlayer.html#a5ec187405974c96f99605c58ca3f1633", null ],
     [ "isAutoFarming", "classPlayer.html#a4ff336053e550b8fd506210049cdf3af", null ],

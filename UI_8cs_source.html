@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.63 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.65</span>
    </div>
   </td>
  </tr>
@@ -658,256 +658,257 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            TweenUtil.Tween(duration, <span class="keyword">null</span>, delegate</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>            {</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>                UnfreezeScreen();</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            });</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        }</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>    }</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno"><a class="line" href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">  571</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UnfreezeScreen</a>()</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    {</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)texFreeze)</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        {</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>            UnityEngine.Object.DestroyImmediate(texFreeze);</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        }</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        imageFreeze.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    }</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno"><a class="line" href="classUI.html#a579396b757c487905778cf48d773e61e">  580</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a579396b757c487905778cf48d773e61e">ToggleAbility</a>(<span class="keywordtype">bool</span> delay = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    {</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_property" href="classGame.html#a0b6ef45569f091050847284c1abc35c5">altAbility</a>)</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        {</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.GetLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            {</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                ELayer.player.pref.layerAbility = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                SE.Play(<span class="stringliteral">&quot;pop_ability_deactivate&quot;</span>);</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>            }</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>            {</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;(<span class="stringliteral">&quot;LayerAbility/LayerAbilityFloat&quot;</span>);</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                ELayer.player.pref.layerAbility = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>            }</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>        }</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        {</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a> layerAbility = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <span class="keywordflow">if</span> (delay)</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            {</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>                layerAbility.windows[0].SetRect(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236">rects</a>.<a class="code hl_variable" href="classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5">center</a>);</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>                layerAbility.Delay();</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            }</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>        }</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    }</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno"><a class="line" href="classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6">  607</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6">ToggleInventory</a>(<span class="keywordtype">bool</span> delay = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    {</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        <span class="keywordflow">if</span> (IsInventoryOpen)</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        {</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classInvOwner.html">InvOwner</a>.<a class="code hl_property" href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">HasTrader</a>)</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>            {</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>                SE.Beep();</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>            }</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>            List&lt;Card&gt; list = <span class="keyword">new</span> List&lt;Card&gt;();</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>)</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>            {</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsPlayerContainer())</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                {</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                    list.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.invs[0].owner.Container);</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                }</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>            }</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>.ForeachReverse(delegate(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> l)</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            {</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>                <span class="keywordflow">if</span> (l.<a class="code hl_function" href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">IsPlayerContainer</a>(includePlayer: <span class="keyword">true</span>))</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>                {</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>                    ELayer.ui.layerFloat.RemoveLayer(l);</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>                }</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>            });</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.DeactivateWidget(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> item2 <span class="keywordflow">in</span> list)</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>            {</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>                item2.c_windowSaveData.open = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>            }</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            SE.Play(<span class="stringliteral">&quot;pop_inventory_deactivate&quot;</span>);</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        }</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>        {</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>            OpenFloatInv();</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>        }</div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>    }</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span> </div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno"><a class="line" href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">  644</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">OpenFloatInv</a>(<span class="keywordtype">bool</span> ignoreSound = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    {</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>        TooltipManager.Instance.disableTimer = 0.1f;</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>        <span class="keywordflow">if</span> (ignoreSound)</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        {</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>            SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>        }</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a47d3598389275953a2e4a523ac46b9d6">CreatePCBackpack</a>());</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Activate(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> a) =&gt; a.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf">IsContainer</a>))</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        {</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>            Window.SaveData c_windowSaveData = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.c_windowSaveData;</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>            <span class="keywordflow">if</span> (!(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait is <a class="code hl_class" href="classTraitToolBelt.html">TraitToolBelt</a>) &amp;&amp; c_windowSaveData != <span class="keyword">null</span> &amp;&amp; c_windowSaveData.open)</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>            {</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>                <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a236c25bffa8fba7846e22317c892f70b">CreateContainer</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>            }</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>        }</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>        SoundManager.ignoreSounds = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>        TooltipManager.Instance.disableTimer = 0f;</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    }</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span> </div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno"><a class="line" href="classUI.html#ac00ce42a6a899126725eb6692988416f">  666</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#ac00ce42a6a899126725eb6692988416f">ToggleFeedback</a>()</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>    {</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        <span class="keywordflow">if</span> (Application.isEditor)</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        {</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>            text = <span class="stringliteral">&quot;Debug&quot;</span>;</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        }</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        {</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>            <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>            {</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>                <span class="keywordflow">if</span> (SteamAPI.IsSteamRunning())</div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>                {</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>                    text = SteamFriends.GetPersonaName();</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>                    <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>                    {</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>                        text = <span class="stringliteral">&quot;NULL&quot;</span>;</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>                    }</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>                }</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            }</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            <span class="keywordflow">catch</span></div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>            {</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            }</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>        }</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        {</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_needToLogOn&quot;</span>);</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>        }</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>        <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        {</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>.IsEmpty())</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>            {</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>                text2 = <span class="stringliteral">&quot;backer&quot;</span>;</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>                text2 = <a class="code hl_class" href="classElinEncoder.html">ElinEncoder</a>.<a class="code hl_function" href="classElinEncoder.html#a3c48a92d4df406136594e6769f44bb44">GetID</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>);</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>            }</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        }</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        <span class="keywordflow">catch</span> (Exception message)</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        {</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>            text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        }</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; text2.IsEmpty())</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        {</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>            <span class="keywordtype">string</span> pchName = <span class="stringliteral">&quot;public&quot;</span>;</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>            <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>            {</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>                <span class="keywordflow">if</span> (!SteamApps.GetCurrentBetaName(out pchName, 128) || !(pchName == <span class="stringliteral">&quot;nightly&quot;</span>))</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                {</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>                    <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                }</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(pchName);</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>            }</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>            <span class="keywordflow">catch</span></div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>            {</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>            }</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>        }</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;() &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConHallucination.html">ConHallucination</a>&gt;())</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>        {</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>            SE.Play(<span class="stringliteral">&quot;wow&quot;</span>);</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;bug_hal&quot;</span>);</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>        }</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a> || (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a0cff1040ff0e51b872785ee541a2430b">flags</a>.<a class="code hl_property" href="classPlayer_1_1Flags.html#acf3dc4c31ea9de11013410ead128b0c8">debugEnabled</a>)))</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>        {</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_debugFeedback&quot;</span>);</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>        }</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>        <span class="keywordtype">string</span> userName = <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>        <span class="keywordtype">string</span>[] array = Application.persistentDataPath.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>        <span class="keywordflow">if</span> (array.Length &gt; 2)</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>        {</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>            userName = array[2];</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>        }</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>        LayerFeedback.userName = userName;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>        LayerFeedback.playedHours = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">maxPlayedHours</a>;</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>        LayerFeedback.backerId = text2;</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>        LayerFeedback.steamName = text;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;();</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>        SE.Tab();</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    }</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span> </div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno"><a class="line" href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">  752</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">StartDrag</a>(<a class="code hl_class" href="classDragItem.html">DragItem</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    {</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>        dragDuration = 0f;</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>        {</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>            EndDrag(canceled: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>            <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>            {</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>            }</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>        }</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>        currentDrag = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>        <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.OnStartDrag();</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        OnDrag();</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Add(delegate</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        {</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>            TooltipManager.Instance.HideTooltips(immediate: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>        });</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    }</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span> </div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno"><a class="line" href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">  772</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">OnDrag</a>()</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    {</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>        dragDuration += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>        currentDrag.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    }</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span> </div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno"><a class="line" href="classUI.html#a3d26cd8e51ce9b4d576ea2deb298cd48">  778</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a3d26cd8e51ce9b4d576ea2deb298cd48">OnDragSpecial</a>()</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    {</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span> &amp;&amp; !currentDrag.<a class="code hl_function" href="classDragItem.html#a1534c27bfdc61b2d1a46f3b113c08e22">OnDragSpecial</a>())</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>        {</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>            EndDrag(canceled: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>        }</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    }</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span> </div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno"><a class="line" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">  786</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">EndDrag</a>(<span class="keywordtype">bool</span> canceled = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>    {</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>        <span class="keywordflow">if</span> (currentDrag == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        {</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>        }</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        <span class="keywordtype">bool</span> num = currentDrag.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">true</span>, canceled);</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>        EInput.dragHack = 0f;</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>        <span class="keywordflow">if</span> (num)</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>        {</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;();</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            currentDrag.<a class="code hl_function" href="classDragItem.html#aabeb1388cfc04ac4e2c52c7c5d5aa79a">OnEndDrag</a>();</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>            currentDrag = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>            <span class="keywordflow">if</span> (nextDrag != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>            {</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>                StartDrag(nextDrag);</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                nextDrag = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>            }</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>            {</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>                hud.<a class="code hl_function" href="classHUD.html#a6f895b1850cfbbaeb4e1ae7949cfa7eb">SetDragImage</a>(<span class="keyword">null</span>);</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>            }</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>            UIButton.TryShowTip();</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        }</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        {</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>            SE.BeepSmall();</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>        }</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    }</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>}</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                UIButton.TryHihlight();</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>            });</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        }</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    }</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno"><a class="line" href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">  572</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UnfreezeScreen</a>()</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    {</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)texFreeze)</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        {</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>            UnityEngine.Object.DestroyImmediate(texFreeze);</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        }</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        imageFreeze.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    }</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno"><a class="line" href="classUI.html#a579396b757c487905778cf48d773e61e">  581</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a579396b757c487905778cf48d773e61e">ToggleAbility</a>(<span class="keywordtype">bool</span> delay = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    {</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_property" href="classGame.html#a0b6ef45569f091050847284c1abc35c5">altAbility</a>)</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        {</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.GetLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>            {</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                ELayer.player.pref.layerAbility = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                SE.Play(<span class="stringliteral">&quot;pop_ability_deactivate&quot;</span>);</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>            }</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>            {</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;(<span class="stringliteral">&quot;LayerAbility/LayerAbilityFloat&quot;</span>);</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>                ELayer.player.pref.layerAbility = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>            }</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        }</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;())</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>        {</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a> layerAbility = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>&gt;();</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            <span class="keywordflow">if</span> (delay)</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            {</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>                layerAbility.windows[0].SetRect(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236">rects</a>.<a class="code hl_variable" href="classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5">center</a>);</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>                layerAbility.Delay();</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            }</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        }</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>    }</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno"><a class="line" href="classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6">  608</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6">ToggleInventory</a>(<span class="keywordtype">bool</span> delay = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    {</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        <span class="keywordflow">if</span> (IsInventoryOpen)</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>        {</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classInvOwner.html">InvOwner</a>.<a class="code hl_property" href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">HasTrader</a>)</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>            {</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                SE.Beep();</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>            }</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>            List&lt;Card&gt; list = <span class="keyword">new</span> List&lt;Card&gt;();</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>)</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>            {</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsPlayerContainer())</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                {</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                    list.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.invs[0].owner.Container);</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>                }</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            }</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_variable" href="classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466">listInv</a>.ForeachReverse(delegate(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a> l)</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>            {</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>                <span class="keywordflow">if</span> (l.<a class="code hl_function" href="classLayerInventory.html#ae34b6f124fedd52744bd0937c42f3051">IsPlayerContainer</a>(includePlayer: <span class="keyword">true</span>))</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>                {</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>                    ELayer.ui.layerFloat.RemoveLayer(l);</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                }</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>            });</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.DeactivateWidget(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> item2 <span class="keywordflow">in</span> list)</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>            {</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>                item2.c_windowSaveData.open = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            }</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>            SE.Play(<span class="stringliteral">&quot;pop_inventory_deactivate&quot;</span>);</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>        }</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>        {</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>            OpenFloatInv();</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>        }</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    }</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno"><a class="line" href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">  645</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">OpenFloatInv</a>(<span class="keywordtype">bool</span> ignoreSound = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>    {</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>        TooltipManager.Instance.disableTimer = 0.1f;</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        <span class="keywordflow">if</span> (ignoreSound)</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>        {</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>            SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        }</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.layerFloat.AddLayer(<a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a47d3598389275953a2e4a523ac46b9d6">CreatePCBackpack</a>());</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        SoundManager.ignoreSounds = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.widgets.Activate(<span class="stringliteral">&quot;Equip&quot;</span>);</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> a) =&gt; a.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf">IsContainer</a>))</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        {</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>            Window.SaveData c_windowSaveData = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.c_windowSaveData;</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>            <span class="keywordflow">if</span> (!(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait is <a class="code hl_class" href="classTraitToolBelt.html">TraitToolBelt</a>) &amp;&amp; c_windowSaveData != <span class="keyword">null</span> &amp;&amp; c_windowSaveData.open)</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>            {</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>                <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a236c25bffa8fba7846e22317c892f70b">CreateContainer</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>            }</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>        }</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>        SoundManager.ignoreSounds = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>        TooltipManager.Instance.disableTimer = 0f;</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    }</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno"><a class="line" href="classUI.html#ac00ce42a6a899126725eb6692988416f">  667</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#ac00ce42a6a899126725eb6692988416f">ToggleFeedback</a>()</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    {</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        <span class="keywordflow">if</span> (Application.isEditor)</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        {</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>            text = <span class="stringliteral">&quot;Debug&quot;</span>;</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        }</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>        {</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>            {</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>                <span class="keywordflow">if</span> (SteamAPI.IsSteamRunning())</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>                {</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>                    text = SteamFriends.GetPersonaName();</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>                    <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>                    {</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>                        text = <span class="stringliteral">&quot;NULL&quot;</span>;</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>                    }</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>                }</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            }</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            {</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            }</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        }</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>        {</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_needToLogOn&quot;</span>);</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>        }</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>        {</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>.IsEmpty())</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>            {</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>                text2 = <span class="stringliteral">&quot;backer&quot;</span>;</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>                text2 = <a class="code hl_class" href="classElinEncoder.html">ElinEncoder</a>.<a class="code hl_function" href="classElinEncoder.html#a3c48a92d4df406136594e6769f44bb44">GetID</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a497228804eaf78f77ae2054da72f863a">rewardCode</a>);</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>            }</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        }</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        <span class="keywordflow">catch</span> (Exception message)</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>        {</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>            text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        }</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; text2.IsEmpty())</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>        {</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>            <span class="keywordtype">string</span> pchName = <span class="stringliteral">&quot;public&quot;</span>;</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>            {</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                <span class="keywordflow">if</span> (!SteamApps.GetCurrentBetaName(out pchName, 128) || !(pchName == <span class="stringliteral">&quot;nightly&quot;</span>))</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>                {</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                    <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>                }</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(pchName);</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>            }</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>            {</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_feedbackTooMany&quot;</span>);</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>            }</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>        }</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;() &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConHallucination.html">ConHallucination</a>&gt;())</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>        {</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>            SE.Play(<span class="stringliteral">&quot;wow&quot;</span>);</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;bug_hal&quot;</span>);</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        }</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>        <span class="keywordflow">if</span> (!Application.isEditor &amp;&amp; (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a> || (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a0cff1040ff0e51b872785ee541a2430b">flags</a>.<a class="code hl_property" href="classPlayer_1_1Flags.html#acf3dc4c31ea9de11013410ead128b0c8">debugEnabled</a>)))</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        {</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;dialog_debugFeedback&quot;</span>);</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>        }</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>        <span class="keywordtype">string</span> userName = <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>        <span class="keywordtype">string</span>[] array = Application.persistentDataPath.Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>        <span class="keywordflow">if</span> (array.Length &gt; 2)</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>        {</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>            userName = array[2];</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>        }</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>        LayerFeedback.userName = userName;</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>        LayerFeedback.playedHours = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a6ce5e3c8bbab020ab68e9fa4c2d63683">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a13506ba1492b0a68be989876f12c03fb">maxPlayedHours</a>;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>        LayerFeedback.backerId = text2;</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>        LayerFeedback.steamName = text;</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerFeedback.html">LayerFeedback</a>&gt;();</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>        SE.Tab();</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    }</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span> </div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno"><a class="line" href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">  753</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">StartDrag</a>(<a class="code hl_class" href="classDragItem.html">DragItem</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    {</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>        dragDuration = 0f;</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>        {</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>            EndDrag(canceled: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>            <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>            {</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>            }</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>        }</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>        currentDrag = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.OnStartDrag();</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        OnDrag();</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Add(delegate</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        {</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>            TooltipManager.Instance.HideTooltips(immediate: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>        });</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    }</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno"><a class="line" href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">  773</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">OnDrag</a>()</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>    {</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>        dragDuration += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>        currentDrag.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>    }</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span> </div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno"><a class="line" href="classUI.html#a3d26cd8e51ce9b4d576ea2deb298cd48">  779</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a3d26cd8e51ce9b4d576ea2deb298cd48">OnDragSpecial</a>()</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>    {</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>        <span class="keywordflow">if</span> (currentDrag != <span class="keyword">null</span> &amp;&amp; !currentDrag.<a class="code hl_function" href="classDragItem.html#a1534c27bfdc61b2d1a46f3b113c08e22">OnDragSpecial</a>())</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        {</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>            EndDrag(canceled: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>        }</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    }</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span> </div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno"><a class="line" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">  787</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">EndDrag</a>(<span class="keywordtype">bool</span> canceled = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    {</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        <span class="keywordflow">if</span> (currentDrag == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>        {</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        }</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        <span class="keywordtype">bool</span> num = currentDrag.<a class="code hl_function" href="classDragItem.html#adfd723034f1b3b5ad77a223da1144343">OnDrag</a>(execute: <span class="keyword">true</span>, canceled);</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>        EInput.dragHack = 0f;</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>        <span class="keywordflow">if</span> (num)</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        {</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.RemoveLayer&lt;<a class="code hl_class" href="classLayerRegisterHotbar.html">LayerRegisterHotbar</a>&gt;();</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>            currentDrag.<a class="code hl_function" href="classDragItem.html#aabeb1388cfc04ac4e2c52c7c5d5aa79a">OnEndDrag</a>();</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>            currentDrag = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>            <span class="keywordflow">if</span> (nextDrag != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>            {</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                StartDrag(nextDrag);</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>                nextDrag = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>            }</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>            {</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>                hud.<a class="code hl_function" href="classHUD.html#a6f895b1850cfbbaeb4e1ae7949cfa7eb">SetDragImage</a>(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>            }</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>            UIButton.TryShowTip();</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        }</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        {</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>            SE.BeepSmall();</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        }</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>    }</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>}</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aObjValType_8cs_html_a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206"><div class="ttname"><a href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">ObjValType.Material</a></div><div class="ttdeci">@ Material</div></div>
@@ -999,7 +1000,7 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
 <div class="ttc" id="aclassPlayer_1_1Flags_html_acf3dc4c31ea9de11013410ead128b0c8"><div class="ttname"><a href="classPlayer_1_1Flags.html#acf3dc4c31ea9de11013410ead128b0c8">Player.Flags.debugEnabled</a></div><div class="ttdeci">bool debugEnabled</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00386">Player.cs:387</a></div></div>
 <div class="ttc" id="aclassPlayer_html_a0cff1040ff0e51b872785ee541a2430b"><div class="ttname"><a href="classPlayer.html#a0cff1040ff0e51b872785ee541a2430b">Player.flags</a></div><div class="ttdeci">Flags flags</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00879">Player.cs:879</a></div></div>
-<div class="ttc" id="aclassPlayer_html_af48b1b24f3cb69a893417c4a9ea3cab7"><div class="ttname"><a href="classPlayer.html#af48b1b24f3cb69a893417c4a9ea3cab7">Player.queues</a></div><div class="ttdeci">QueueManager queues</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00987">Player.cs:987</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af48b1b24f3cb69a893417c4a9ea3cab7"><div class="ttname"><a href="classPlayer.html#af48b1b24f3cb69a893417c4a9ea3cab7">Player.queues</a></div><div class="ttdeci">QueueManager queues</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00989">Player.cs:989</a></div></div>
 <div class="ttc" id="aclassQueueManager_html_ae837d1941c217da6afcd69f34f323edc"><div class="ttname"><a href="classQueueManager.html#ae837d1941c217da6afcd69f34f323edc">QueueManager.SetOwner</a></div><div class="ttdeci">void SetOwner(Chara _owner)</div><div class="ttdef"><b>Definition:</b> <a href="QueueManager_8cs_source.html#l00080">QueueManager.cs:80</a></div></div>
 <div class="ttc" id="aclassScene_html_a636c0f359588fb403c3460f84bcf45af"><div class="ttname"><a href="classScene.html#a636c0f359588fb403c3460f84bcf45af">Scene.elomapActor</a></div><div class="ttdeci">EloMapActor elomapActor</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00097">Scene.cs:97</a></div></div>
 <div class="ttc" id="aclassScene_html_aa2591cb380db845031700d02565af4e8"><div class="ttname"><a href="classScene.html#aa2591cb380db845031700d02565af4e8">Scene.actionMode</a></div><div class="ttdeci">ActionMode actionMode</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00077">Scene.cs:77</a></div></div>
@@ -1017,7 +1018,7 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="ttc" id="aclassUI_html_a0d550828986d7683f69be6c298651a8c"><div class="ttname"><a href="classUI.html#a0d550828986d7683f69be6c298651a8c">UI.skins</a></div><div class="ttdeci">SkinManager skins</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00085">UI.cs:85</a></div></div>
 <div class="ttc" id="aclassUI_html_a13216d3724efa928e69b93552938d14b"><div class="ttname"><a href="classUI.html#a13216d3724efa928e69b93552938d14b">UI.console</a></div><div class="ttdeci">ReflexConsole console</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00033">UI.cs:33</a></div></div>
 <div class="ttc" id="aclassUI_html_a151895e492ae930882e76ef4745bf81d"><div class="ttname"><a href="classUI.html#a151895e492ae930882e76ef4745bf81d">UI.popSystem</a></div><div class="ttdeci">PopManager popSystem</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00055">UI.cs:55</a></div></div>
-<div class="ttc" id="aclassUI_html_a1591cf4519e26129ac9a82bd73b8b523"><div class="ttname"><a href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UI.UnfreezeScreen</a></div><div class="ttdeci">void UnfreezeScreen()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00571">UI.cs:571</a></div></div>
+<div class="ttc" id="aclassUI_html_a1591cf4519e26129ac9a82bd73b8b523"><div class="ttname"><a href="classUI.html#a1591cf4519e26129ac9a82bd73b8b523">UI.UnfreezeScreen</a></div><div class="ttdeci">void UnfreezeScreen()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00572">UI.cs:572</a></div></div>
 <div class="ttc" id="aclassUI_html_a1947ceda2a068252291a85e0c252b99c"><div class="ttname"><a href="classUI.html#a1947ceda2a068252291a85e0c252b99c">UI.FreezeScreen</a></div><div class="ttdeci">void FreezeScreen(float duration)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00553">UI.cs:553</a></div></div>
 <div class="ttc" id="aclassUI_html_a1b4c3dfce0035bbe8fd26ed790999547"><div class="ttname"><a href="classUI.html#a1b4c3dfce0035bbe8fd26ed790999547">UI.cg</a></div><div class="ttdeci">CanvasGroup cg</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00045">UI.cs:45</a></div></div>
 <div class="ttc" id="aclassUI_html_a24e4edb12d628e7959fd686537aa9afc"><div class="ttname"><a href="classUI.html#a24e4edb12d628e7959fd686537aa9afc">UI.autoTurn</a></div><div class="ttdeci">UIAutoTurn autoTurn</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00051">UI.cs:51</a></div></div>
@@ -1028,24 +1029,24 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="ttc" id="aclassUI_html_a379dfb188d7cd82a4894b14e0a825668"><div class="ttname"><a href="classUI.html#a379dfb188d7cd82a4894b14e0a825668">UI._rectLayers</a></div><div class="ttdeci">RectTransform _rectLayers</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00031">UI.cs:31</a></div></div>
 <div class="ttc" id="aclassUI_html_a38e7403cdc8dbed16b84660544458264"><div class="ttname"><a href="classUI.html#a38e7403cdc8dbed16b84660544458264">UI.blockWidgetClick</a></div><div class="ttdeci">override bool blockWidgetClick</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00157">UI.cs:157</a></div></div>
 <div class="ttc" id="aclassUI_html_a3bf3df3478ac5a19c0caf03390835f00"><div class="ttname"><a href="classUI.html#a3bf3df3478ac5a19c0caf03390835f00">UI.IsPauseGame</a></div><div class="ttdeci">bool IsPauseGame</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00141">UI.cs:142</a></div></div>
-<div class="ttc" id="aclassUI_html_a3d26cd8e51ce9b4d576ea2deb298cd48"><div class="ttname"><a href="classUI.html#a3d26cd8e51ce9b4d576ea2deb298cd48">UI.OnDragSpecial</a></div><div class="ttdeci">void OnDragSpecial()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00778">UI.cs:778</a></div></div>
+<div class="ttc" id="aclassUI_html_a3d26cd8e51ce9b4d576ea2deb298cd48"><div class="ttname"><a href="classUI.html#a3d26cd8e51ce9b4d576ea2deb298cd48">UI.OnDragSpecial</a></div><div class="ttdeci">void OnDragSpecial()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00779">UI.cs:779</a></div></div>
 <div class="ttc" id="aclassUI_html_a3e9b2ca6a6d529abcaf950d54c618d71"><div class="ttname"><a href="classUI.html#a3e9b2ca6a6d529abcaf950d54c618d71">UI.rectDynamicEssential</a></div><div class="ttdeci">RectTransform rectDynamicEssential</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00029">UI.cs:29</a></div></div>
-<div class="ttc" id="aclassUI_html_a41a1a57b2747554d08f05c9d38ffc559"><div class="ttname"><a href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">UI.OpenFloatInv</a></div><div class="ttdeci">void OpenFloatInv(bool ignoreSound=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00644">UI.cs:644</a></div></div>
+<div class="ttc" id="aclassUI_html_a41a1a57b2747554d08f05c9d38ffc559"><div class="ttname"><a href="classUI.html#a41a1a57b2747554d08f05c9d38ffc559">UI.OpenFloatInv</a></div><div class="ttdeci">void OpenFloatInv(bool ignoreSound=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00645">UI.cs:645</a></div></div>
 <div class="ttc" id="aclassUI_html_a42296503b1951a21d5263aed6d0b9f65"><div class="ttname"><a href="classUI.html#a42296503b1951a21d5263aed6d0b9f65">UI.rectDynamic</a></div><div class="ttdeci">RectTransform rectDynamic</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00027">UI.cs:27</a></div></div>
 <div class="ttc" id="aclassUI_html_a441a686337aaa1c820f61c2da8d2d2a1"><div class="ttname"><a href="classUI.html#a441a686337aaa1c820f61c2da8d2d2a1">UI.IsActive</a></div><div class="ttdeci">bool IsActive</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00087">UI.cs:88</a></div></div>
 <div class="ttc" id="aclassUI_html_a4f04da8eeea9eb42ff68a561b1055d4c"><div class="ttname"><a href="classUI.html#a4f04da8eeea9eb42ff68a561b1055d4c">UI.OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00345">UI.cs:345</a></div></div>
 <div class="ttc" id="aclassUI_html_a53fa54b315eafbee9077a41a040be2d5"><div class="ttname"><a href="classUI.html#a53fa54b315eafbee9077a41a040be2d5">UI.BlockActions</a></div><div class="ttdeci">bool BlockActions</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00115">UI.cs:116</a></div></div>
 <div class="ttc" id="aclassUI_html_a56cb0ee79e44bae5a2c5e4d22d7b69ee"><div class="ttname"><a href="classUI.html#a56cb0ee79e44bae5a2c5e4d22d7b69ee">UI.CheckWindowOrder</a></div><div class="ttdeci">void CheckWindowOrder()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00457">UI.cs:457</a></div></div>
-<div class="ttc" id="aclassUI_html_a579396b757c487905778cf48d773e61e"><div class="ttname"><a href="classUI.html#a579396b757c487905778cf48d773e61e">UI.ToggleAbility</a></div><div class="ttdeci">void ToggleAbility(bool delay=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00580">UI.cs:580</a></div></div>
+<div class="ttc" id="aclassUI_html_a579396b757c487905778cf48d773e61e"><div class="ttname"><a href="classUI.html#a579396b757c487905778cf48d773e61e">UI.ToggleAbility</a></div><div class="ttdeci">void ToggleAbility(bool delay=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00581">UI.cs:581</a></div></div>
 <div class="ttc" id="aclassUI_html_a5b3ea66477005df27fc843ec52387e84"><div class="ttname"><a href="classUI.html#a5b3ea66477005df27fc843ec52387e84">UI.widgets</a></div><div class="ttdeci">WidgetManager widgets</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00023">UI.cs:23</a></div></div>
 <div class="ttc" id="aclassUI_html_a5cb9d9e22597497c161b6821dc4fcf09"><div class="ttname"><a href="classUI.html#a5cb9d9e22597497c161b6821dc4fcf09">UI.OnKillGame</a></div><div class="ttdeci">void OnKillGame()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00194">UI.cs:194</a></div></div>
-<div class="ttc" id="aclassUI_html_a62eb916b498c54279db1c59a6fb58b71"><div class="ttname"><a href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">UI.EndDrag</a></div><div class="ttdeci">void EndDrag(bool canceled=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00786">UI.cs:786</a></div></div>
+<div class="ttc" id="aclassUI_html_a62eb916b498c54279db1c59a6fb58b71"><div class="ttname"><a href="classUI.html#a62eb916b498c54279db1c59a6fb58b71">UI.EndDrag</a></div><div class="ttdeci">void EndDrag(bool canceled=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00787">UI.cs:787</a></div></div>
 <div class="ttc" id="aclassUI_html_a630baf3e122583f742e382157d7e26f2"><div class="ttname"><a href="classUI.html#a630baf3e122583f742e382157d7e26f2">UI.ToggleCanvas</a></div><div class="ttdeci">void ToggleCanvas()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00336">UI.cs:336</a></div></div>
 <div class="ttc" id="aclassUI_html_a6494a4b3c42ef6822ed9c5b313688b59"><div class="ttname"><a href="classUI.html#a6494a4b3c42ef6822ed9c5b313688b59">UI.texFreeze</a></div><div class="ttdeci">Texture2D texFreeze</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00059">UI.cs:59</a></div></div>
 <div class="ttc" id="aclassUI_html_a696aa64f163be353920a7b62ac48284c"><div class="ttname"><a href="classUI.html#a696aa64f163be353920a7b62ac48284c">UI.canvas</a></div><div class="ttdeci">Canvas canvas</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00013">UI.cs:13</a></div></div>
 <div class="ttc" id="aclassUI_html_a6b5ab030afb21f194c61824112ea5aed"><div class="ttname"><a href="classUI.html#a6b5ab030afb21f194c61824112ea5aed">UI.FlashCover</a></div><div class="ttdeci">void FlashCover(float durationOut=1f, float duration=1f, float durationIn=1f, Action onFadeOut=null, Action onComplete=null, Color color=default(Color))</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00257">UI.cs:257</a></div></div>
 <div class="ttc" id="aclassUI_html_a6b6e7496905c7f4633543514e0deb9d9"><div class="ttname"><a href="classUI.html#a6b6e7496905c7f4633543514e0deb9d9">UI.hidingCover</a></div><div class="ttdeci">bool hidingCover</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00067">UI.cs:67</a></div></div>
-<div class="ttc" id="aclassUI_html_a7093ae38f6b75a6bd98f778f18d4fdf6"><div class="ttname"><a href="classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6">UI.ToggleInventory</a></div><div class="ttdeci">void ToggleInventory(bool delay=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00607">UI.cs:607</a></div></div>
+<div class="ttc" id="aclassUI_html_a7093ae38f6b75a6bd98f778f18d4fdf6"><div class="ttname"><a href="classUI.html#a7093ae38f6b75a6bd98f778f18d4fdf6">UI.ToggleInventory</a></div><div class="ttdeci">void ToggleInventory(bool delay=false)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00608">UI.cs:608</a></div></div>
 <div class="ttc" id="aclassUI_html_a74adbff574c2e56fdbd3d3593a6ca5d0"><div class="ttname"><a href="classUI.html#a74adbff574c2e56fdbd3d3593a6ca5d0">UI.OnActivateZone</a></div><div class="ttdeci">void OnActivateZone()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00174">UI.cs:174</a></div></div>
 <div class="ttc" id="aclassUI_html_a75c9b36eaeb114aa81f43d5e60a326ca"><div class="ttname"><a href="classUI.html#a75c9b36eaeb114aa81f43d5e60a326ca">UI.blur</a></div><div class="ttdeci">GameObject blur</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00035">UI.cs:35</a></div></div>
 <div class="ttc" id="aclassUI_html_a7629834fc1aab51397f4acf15785b6a5"><div class="ttname"><a href="classUI.html#a7629834fc1aab51397f4acf15785b6a5">UI.ShowSceneSelector</a></div><div class="ttdeci">void ShowSceneSelector()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00481">UI.cs:481</a></div></div>
@@ -1062,7 +1063,7 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="ttc" id="aclassUI_html_a9b02bb27cbbb0f63aeba9e0be03febfb"><div class="ttname"><a href="classUI.html#a9b02bb27cbbb0f63aeba9e0be03febfb">UI.canvasScaler</a></div><div class="ttdeci">CanvasScaler canvasScaler</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00041">UI.cs:41</a></div></div>
 <div class="ttc" id="aclassUI_html_a9c6f553eabd0ee7461f259f07c84cc9b"><div class="ttname"><a href="classUI.html#a9c6f553eabd0ee7461f259f07c84cc9b">UI.ShowBalloon</a></div><div class="ttdeci">void ShowBalloon(bool enable)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00303">UI.cs:303</a></div></div>
 <div class="ttc" id="aclassUI_html_a9c9ad79602bcaa8e44209fa1d2695bd4"><div class="ttname"><a href="classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4">UI.contextMenu</a></div><div class="ttdeci">UIContextMenuManager contextMenu</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00021">UI.cs:21</a></div></div>
-<div class="ttc" id="aclassUI_html_a9ccf309fdc58804b3ebdd06d16788c53"><div class="ttname"><a href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">UI.OnDrag</a></div><div class="ttdeci">void OnDrag()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00772">UI.cs:772</a></div></div>
+<div class="ttc" id="aclassUI_html_a9ccf309fdc58804b3ebdd06d16788c53"><div class="ttname"><a href="classUI.html#a9ccf309fdc58804b3ebdd06d16788c53">UI.OnDrag</a></div><div class="ttdeci">void OnDrag()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00773">UI.cs:773</a></div></div>
 <div class="ttc" id="aclassUI_html_a9d86d8de89361f764b88984f97ce1d3d"><div class="ttname"><a href="classUI.html#a9d86d8de89361f764b88984f97ce1d3d">UI.OnCoreStart</a></div><div class="ttdeci">void OnCoreStart()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00169">UI.cs:169</a></div></div>
 <div class="ttc" id="aclassUI_html_a9ea8a3a5f8ab4a4218bf969babe1eec6"><div class="ttname"><a href="classUI.html#a9ea8a3a5f8ab4a4218bf969babe1eec6">UI.popGame</a></div><div class="ttdeci">PopManager popGame</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00053">UI.cs:53</a></div></div>
 <div class="ttc" id="aclassUI_html_aa3951010c45976cc3e53609a172d82c5"><div class="ttname"><a href="classUI.html#aa3951010c45976cc3e53609a172d82c5">UI.nextDrag</a></div><div class="ttdeci">DragItem nextDrag</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00065">UI.cs:65</a></div></div>
@@ -1072,7 +1073,7 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="ttc" id="aclassUI_html_ab2918c52d64ad106302b4ffba0d39377"><div class="ttname"><a href="classUI.html#ab2918c52d64ad106302b4ffba0d39377">UI.Awake</a></div><div class="ttdeci">override void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00163">UI.cs:163</a></div></div>
 <div class="ttc" id="aclassUI_html_ab731fde3eb6a023293226f53c1bf12ed"><div class="ttname"><a href="classUI.html#ab731fde3eb6a023293226f53c1bf12ed">UI.OnClickAction</a></div><div class="ttdeci">void OnClickAction(string _mode)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00202">UI.cs:202</a></div></div>
 <div class="ttc" id="aclassUI_html_ab7931327fe4dec98f34ede643e384163"><div class="ttname"><a href="classUI.html#ab7931327fe4dec98f34ede643e384163">UI.imageFreeze</a></div><div class="ttdeci">RawImage imageFreeze</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00061">UI.cs:61</a></div></div>
-<div class="ttc" id="aclassUI_html_ac00ce42a6a899126725eb6692988416f"><div class="ttname"><a href="classUI.html#ac00ce42a6a899126725eb6692988416f">UI.ToggleFeedback</a></div><div class="ttdeci">void ToggleFeedback()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00666">UI.cs:666</a></div></div>
+<div class="ttc" id="aclassUI_html_ac00ce42a6a899126725eb6692988416f"><div class="ttname"><a href="classUI.html#ac00ce42a6a899126725eb6692988416f">UI.ToggleFeedback</a></div><div class="ttdeci">void ToggleFeedback()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00667">UI.cs:667</a></div></div>
 <div class="ttc" id="aclassUI_html_ac3a5e7b58f54c58b2752dfd7a007655d"><div class="ttname"><a href="classUI.html#ac3a5e7b58f54c58b2752dfd7a007655d">UI.isPointerOverUI</a></div><div class="ttdeci">bool isPointerOverUI</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00081">UI.cs:81</a></div></div>
 <div class="ttc" id="aclassUI_html_ac5be98c8e745743c7eb1858dbf88bb86"><div class="ttname"><a href="classUI.html#ac5be98c8e745743c7eb1858dbf88bb86">UI.CreateContextMenu</a></div><div class="ttdeci">UIContextMenu CreateContextMenu(string cid=&quot;ContextMenu&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00537">UI.cs:537</a></div></div>
 <div class="ttc" id="aclassUI_html_ac77444d04df4b6888c0063e42c790632"><div class="ttname"><a href="classUI.html#ac77444d04df4b6888c0063e42c790632">UI.durationHideMouseHint</a></div><div class="ttdeci">float durationHideMouseHint</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00083">UI.cs:83</a></div></div>
@@ -1087,7 +1088,7 @@ $(document).ready(function(){initNavTree('UI_8cs_source.html',''); initResizable
 <div class="ttc" id="aclassUI_html_ade5da93235afadf3a65ced62359ec2d6"><div class="ttname"><a href="classUI.html#ade5da93235afadf3a65ced62359ec2d6">UI.dragDuration</a></div><div class="ttdeci">float dragDuration</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00073">UI.cs:73</a></div></div>
 <div class="ttc" id="aclassUI_html_ae541b1d7278ec7cb1abbc088b9bddc6c"><div class="ttname"><a href="classUI.html#ae541b1d7278ec7cb1abbc088b9bddc6c">UI.ShowMouseHint</a></div><div class="ttdeci">void ShowMouseHint()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00398">UI.cs:398</a></div></div>
 <div class="ttc" id="aclassUI_html_ae88cea6e0fbdf6d117c604f06e8f93d4"><div class="ttname"><a href="classUI.html#ae88cea6e0fbdf6d117c604f06e8f93d4">UI.ShowLang</a></div><div class="ttdeci">void ShowLang()</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00504">UI.cs:504</a></div></div>
-<div class="ttc" id="aclassUI_html_aeb0603f798fd20701d7b95490392f8a3"><div class="ttname"><a href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">UI.StartDrag</a></div><div class="ttdeci">void StartDrag(DragItem item)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00752">UI.cs:752</a></div></div>
+<div class="ttc" id="aclassUI_html_aeb0603f798fd20701d7b95490392f8a3"><div class="ttname"><a href="classUI.html#aeb0603f798fd20701d7b95490392f8a3">UI.StartDrag</a></div><div class="ttdeci">void StartDrag(DragItem item)</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00753">UI.cs:753</a></div></div>
 <div class="ttc" id="aclassUI_html_aeb510560116f5667a02b5f782eb63d9c"><div class="ttname"><a href="classUI.html#aeb510560116f5667a02b5f782eb63d9c">UI.lightContrast</a></div><div class="ttdeci">float lightContrast</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00070">UI.cs:70</a></div></div>
 <div class="ttc" id="aclassUI_html_aedaf584f51e744b12c2c8b649c37b5a4"><div class="ttname"><a href="classUI.html#aedaf584f51e744b12c2c8b649c37b5a4">UI.matBlur</a></div><div class="ttdeci">Material matBlur</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00037">UI.cs:37</a></div></div>
 <div class="ttc" id="aclassUI_html_aef2fedb40a84af3f099ada04f4d24f37"><div class="ttname"><a href="classUI.html#aef2fedb40a84af3f099ada04f4d24f37">UI.mouseInfo</a></div><div class="ttdeci">UIMouseInfo mouseInfo</div><div class="ttdef"><b>Definition:</b> <a href="UI_8cs_source.html#l00025">UI.cs:25</a></div></div>

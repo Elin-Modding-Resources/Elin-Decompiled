@@ -1,5 +1,8 @@
 var NAVTREEINDEX57 =
 {
+"classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d":[1,0,467,19],
+"classGameIO.html#a33c393c075f356bdad0d427c1924e0ff":[1,0,467,5],
+"classGameIO.html#a3641078c1136f225277874c099b60179":[1,0,467,2],
 "classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f":[1,0,467,20],
 "classGameIO.html#a41128f17f082ef1ab651945f44fb461b":[1,0,467,0],
 "classGameIO.html#a413757ba7446ce23c83ddc766eb7a986":[1,0,467,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX57 =
 "classGameUpdater.html#ae6d293772c555e2246a6ecea246f0307":[1,0,474,28],
 "classGameUpdater.html#af0555803254c34d2fb76819842efff32":[1,0,474,27],
 "classGameUpdater.html#af8c95dadad5d9580078899dc8c05e674":[1,0,474,29],
-"classGameUpdater_1_1AreaUpdater.html":[1,0,474,0],
-"classGameUpdater_1_1AreaUpdater.html#ac65df547dd0ab377dc852aba38f87c2d":[1,0,474,0,0],
-"classGameUpdater_1_1CharaUpdater.html":[1,0,474,1],
-"classGameUpdater_1_1CharaUpdater.html#a0f8572e10590fe7b4efa595304f18517":[1,0,474,1,0]
+"classGameUpdater_1_1AreaUpdater.html":[1,0,474,0]
 };

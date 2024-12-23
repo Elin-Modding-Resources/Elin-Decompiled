@@ -10,5 +10,6 @@ var classQuestMain =
     [ "CanAutoAdvance", "classQuestMain.html#af81a20fd66115fe5afea2578dc4db154", null ],
     [ "idSource", "classQuestMain.html#abf5da090933129f7c3149d18d4af8440", null ],
     [ "Phase", "classQuestMain.html#a962260767f32466abc424139b88fe7c2", null ],
-    [ "TitlePrefix", "classQuestMain.html#a964cc6de91f50237f731771e8d23c15e", null ]
+    [ "TitlePrefix", "classQuestMain.html#a964cc6de91f50237f731771e8d23c15e", null ],
+    [ "TrackOnStart", "classQuestMain.html#ae2a4bcbf7b80dfcf5f0551eb09f5097d", null ]
 ];

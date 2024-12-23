@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.63 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.65</span>
    </div>
   </td>
  </tr>
@@ -103,14 +103,24 @@ $(document).ready(function(){initNavTree('QuestHome_8cs_source.html',''); initRe
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classQuestHome.html#a7afe6fffdfcb1a8b267c309e68b17dcb">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classQuestHome.html#a7afe6fffdfcb1a8b267c309e68b17dcb">TitlePrefix</a> =&gt; <span class="stringliteral">&quot;★&quot;</span>;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classQuestHome.html#a80acd596baf11d80b802fe1650a2c556">   11</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classQuestHome.html#a80acd596baf11d80b802fe1650a2c556">CanAutoAdvance</a> =&gt; <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classQuestHome.html#a2b742549ddc56b6888aaa1a17e6771c6">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classQuestHome.html#a2b742549ddc56b6888aaa1a17e6771c6">OnChangePhase</a>(<span class="keywordtype">int</span> a)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">if</span> (a == 2)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_variable" href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">track</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
 <div class="ttc" id="aclassQuestHome_html"><div class="ttname"><a href="classQuestHome.html">QuestHome</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00001">QuestHome.cs:2</a></div></div>
 <div class="ttc" id="aclassQuestHome_html_a2875a8e4da29756a1eb6f5bef9a51df8"><div class="ttname"><a href="classQuestHome.html#a2875a8e4da29756a1eb6f5bef9a51df8">QuestHome.AfterReportAsh</a></div><div class="ttdeci">const int AfterReportAsh</div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00007">QuestHome.cs:7</a></div></div>
+<div class="ttc" id="aclassQuestHome_html_a2b742549ddc56b6888aaa1a17e6771c6"><div class="ttname"><a href="classQuestHome.html#a2b742549ddc56b6888aaa1a17e6771c6">QuestHome.OnChangePhase</a></div><div class="ttdeci">override void OnChangePhase(int a)</div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00013">QuestHome.cs:13</a></div></div>
 <div class="ttc" id="aclassQuestHome_html_a7afe6fffdfcb1a8b267c309e68b17dcb"><div class="ttname"><a href="classQuestHome.html#a7afe6fffdfcb1a8b267c309e68b17dcb">QuestHome.TitlePrefix</a></div><div class="ttdeci">override string TitlePrefix</div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00009">QuestHome.cs:9</a></div></div>
 <div class="ttc" id="aclassQuestHome_html_a80acd596baf11d80b802fe1650a2c556"><div class="ttname"><a href="classQuestHome.html#a80acd596baf11d80b802fe1650a2c556">QuestHome.CanAutoAdvance</a></div><div class="ttdeci">override bool CanAutoAdvance</div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00011">QuestHome.cs:11</a></div></div>
 <div class="ttc" id="aclassQuestHome_html_aa0e75043b73e3bd83d4c7de9bb5ff69c"><div class="ttname"><a href="classQuestHome.html#aa0e75043b73e3bd83d4c7de9bb5ff69c">QuestHome.AfterReadDeed</a></div><div class="ttdeci">const int AfterReadDeed</div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00005">QuestHome.cs:5</a></div></div>
 <div class="ttc" id="aclassQuestHome_html_ac1b778cb1fd48765b3fb0d3f99f02da7"><div class="ttname"><a href="classQuestHome.html#ac1b778cb1fd48765b3fb0d3f99f02da7">QuestHome.Started</a></div><div class="ttdeci">const int Started</div><div class="ttdef"><b>Definition:</b> <a href="QuestHome_8cs_source.html#l00003">QuestHome.cs:3</a></div></div>
 <div class="ttc" id="aclassQuestSequence_html"><div class="ttname"><a href="classQuestSequence.html">QuestSequence</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestSequence_8cs_source.html#l00001">QuestSequence.cs:2</a></div></div>
+<div class="ttc" id="aclassQuest_html_aeaa8b4d53768b7c3ecb34c0a78f17b96"><div class="ttname"><a href="classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96">Quest.track</a></div><div class="ttdeci">bool track</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00070">Quest.cs:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

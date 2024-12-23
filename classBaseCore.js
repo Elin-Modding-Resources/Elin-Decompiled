@@ -3,7 +3,7 @@ var classBaseCore =
     [ "_WaitForEndOfFrame", "classBaseCore.html#a38ed8792161d270e375cf63d305c86cc", null ],
     [ "Awake", "classBaseCore.html#a739911b7efc79e2ea38422b21ce53d4d", null ],
     [ "ConsumeInput", "classBaseCore.html#a29c3fddfccd1c56c8bf77ca71ca3b0cc", null ],
-    [ "FreezeScreen", "classBaseCore.html#aa8d97bcac3a5d84a11861697c991d8c2", null ],
+    [ "FreezeScreen", "classBaseCore.html#a4624a1879317b00a7bcf9e8c250b8022", null ],
     [ "RebuildBGMList", "classBaseCore.html#a451a79b24acc438cf6bc56810f022922", null ],
     [ "StopEventSystem", "classBaseCore.html#a70efafa273d391132253cd92b98b162a", null ],
     [ "StopEventSystem", "classBaseCore.html#aeb290858386b0e84a5ae236ed1ff3cd5", null ],

@@ -3,7 +3,7 @@ var classCore =
     [ "ApplySkins", "classCore.html#aa0612b7ca3a9f42af5a2339bfffd11a5", null ],
     [ "Awake", "classCore.html#a8ec098a1649ee7ff7d195d9205ba883b", null ],
     [ "ConsumeInput", "classCore.html#a63525d6965298d0e674f5e297b13f862", null ],
-    [ "FreezeScreen", "classCore.html#a5786d37ea16fed4c26f7b6577143ed76", null ],
+    [ "FreezeScreen", "classCore.html#a4628cc2028f25f32659b0efbf8074ca1", null ],
     [ "GetCurrent", "classCore.html#aedcbed2e921b6b58b6ce5111501c0083", null ],
     [ "GetElement", "classCore.html#a3dc1253c3eba8b4d616506b8d5755438", null ],
     [ "GetElinIni", "classCore.html#a9b8975c24d4c0360504c4689651b7a2e", null ],

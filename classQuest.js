@@ -116,5 +116,6 @@ var classQuest =
     [ "TextExtra", "classQuest.html#ae676a9d88015f1c7ce4c563346c52d46", null ],
     [ "TextExtra2", "classQuest.html#ab1f68720435784b3b1f7ee81d6784a40", null ],
     [ "TitlePrefix", "classQuest.html#af81b809e290fdbe9fbf0d218090403de", null ],
+    [ "TrackOnStart", "classQuest.html#a65986491b342cf417cefa20b1f707e54", null ],
     [ "UseInstanceZone", "classQuest.html#a347099a50318bd78535714f1615845bb", null ]
 ];

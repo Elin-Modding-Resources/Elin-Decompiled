@@ -624,6 +624,7 @@ var hierarchy =
                     [ "TaskBuild", "classTaskBuild.html", null ],
                     [ "TaskMoveInstalled", "classTaskMoveInstalled.html", null ]
                   ] ],
+                  [ "TaskChopWood", "classTaskChopWood.html", null ],
                   [ "TaskChopWoord", "classTaskChopWoord.html", null ],
                   [ "TaskCut", "classTaskCut.html", null ],
                   [ "TaskDrawWater", "classTaskDrawWater.html", null ],
@@ -813,6 +814,7 @@ var hierarchy =
         [ "InvOwnerCopyShop", "classInvOwnerCopyShop.html", null ],
         [ "InvOwnerDraglet", "classInvOwnerDraglet.html", [
           [ "InvOwnerBlend", "classInvOwnerBlend.html", null ],
+          [ "InvOwnerChaosOffering", "classInvOwnerChaosOffering.html", null ],
           [ "InvOwnerCraft", "classInvOwnerCraft.html", null ],
           [ "InvOwnerDeliver", "classInvOwnerDeliver.html", null ],
           [ "InvOwnerDeliverBox", "classInvOwnerDeliverBox.html", null ],

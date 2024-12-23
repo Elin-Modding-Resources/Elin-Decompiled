@@ -1,5 +1,8 @@
 var NAVTREEINDEX59 =
 {
+"classGoalVisitorEnemy.html#a937fed7f366fa8c7343ae110fa40ff28":[1,0,502,1],
+"classGoalVisitorGuest.html":[1,0,503],
+"classGoalVisitorGuest.html#a895f8c814b2a5e83cbc43e6616689a85":[1,0,503,0],
 "classGoalVisitorGuest.html#a9e41d9f41fb4ef67faf08f11662e52b3":[1,0,503,1],
 "classGoalWait.html":[1,0,504],
 "classGoalWait.html#a2693f1b509cfb272f475ee98cb1dcb7d":[1,0,504,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX59 =
 "classHS__ParticleEndSound.html#a44ee781a6b758f616a86fb16d8d97833":[1,0,584,16],
 "classHS__ParticleEndSound.html#a4cd775f107a214371692e76cad2acc48":[1,0,584,7],
 "classHS__ParticleEndSound.html#a626f56b67364f1a5591094a69a63a678":[1,0,584,2],
-"classHS__ParticleEndSound.html#a643a81415c679e726995d58dd0fcc16c":[1,0,584,13],
-"classHS__ParticleEndSound.html#a722069a8546ef999721a8fc87acc1e21":[1,0,584,10],
-"classHS__ParticleEndSound.html#a73310c3a3112fb217346c3c5da592027":[1,0,584,11],
-"classHS__ParticleEndSound.html#a738b06d9def5a3c8978f27ccd20dd39d":[1,0,584,6]
+"classHS__ParticleEndSound.html#a643a81415c679e726995d58dd0fcc16c":[1,0,584,13]
 };

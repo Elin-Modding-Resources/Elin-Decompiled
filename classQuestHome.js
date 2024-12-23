@@ -1,5 +1,6 @@
 var classQuestHome =
 [
+    [ "OnChangePhase", "classQuestHome.html#a2b742549ddc56b6888aaa1a17e6771c6", null ],
     [ "AfterReadDeed", "classQuestHome.html#aa0e75043b73e3bd83d4c7de9bb5ff69c", null ],
     [ "AfterReportAsh", "classQuestHome.html#a2875a8e4da29756a1eb6f5bef9a51df8", null ],
     [ "Started", "classQuestHome.html#ac1b778cb1fd48765b3fb0d3f99f02da7", null ],

@@ -489,7 +489,6 @@ var classCard =
     [ "STR", "classCard.html#a7ff413e88f854a1a457468e7b16d66b6", null ],
     [ "TextRarity", "classCard.html#a3635305597c70f6a747128c497f445a2", null ],
     [ "Thing", "classCard.html#ab8dc572d8ca0cb00f977a916266a7218", null ],
-    [ "ThisOrParentPos", "classCard.html#aa9e9fbda873ff0d8fdce022adf247117", null ],
     [ "Tiles", "classCard.html#a9ed118ebcee7cf26649d6536249d7141", null ],
     [ "TileType", "classCard.html#a7d77dcb1302d78e698ab908f03f339f5", null ],
     [ "Tool", "classCard.html#a425a963bc60ba8e1b76e86db0a89627f", null ],

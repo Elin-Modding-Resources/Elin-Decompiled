@@ -5,6 +5,7 @@ var classLayerDragGrid =
     [ "ClearButtons", "classLayerDragGrid.html#a24882f607033e8e59d05f46879cdee58", null ],
     [ "Create", "classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7", null ],
     [ "CreateChangeMaterial", "classLayerDragGrid.html#a4669d01f952e862df97cd6aadf707876", null ],
+    [ "CreateChaosOffering", "classLayerDragGrid.html#ad43080edc99ba783f5832fcd3eb8237c", null ],
     [ "CreateCraft", "classLayerDragGrid.html#af510c4804d6e05ba552a4bb849ae5098", null ],
     [ "CreateDeliver", "classLayerDragGrid.html#a17e738ba405de5e313b45e3d52dd3b1d", null ],
     [ "CreateEnchant", "classLayerDragGrid.html#a3f01c525684a8660d66b585e39606b14", null ],
