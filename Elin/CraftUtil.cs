@@ -199,25 +199,33 @@ public class CraftUtil : EClass
 		{
 			product.elements.SetTo(2, maxQuality);
 		}
-		if (product.id == "map")
+		string id2 = product.id;
+		if (!(id2 == "zassouni"))
 		{
-			int num3 = 1 + product.Evalue(2) + product.Evalue(751);
-			if (num3 < 1)
+			if (id2 == "map")
 			{
-				num3 = 1;
-			}
-			foreach (Thing ing2 in ings)
-			{
-				if (ing2 != null && ing2.Thing != null && !(ing2.id != "gem"))
+				int num3 = 1 + product.Evalue(2) + product.Evalue(751);
+				if (num3 < 1)
 				{
-					num3 *= ing2.Thing.material.hardness / 20 + 2;
+					num3 = 1;
 				}
+				foreach (Thing ing2 in ings)
+				{
+					if (ing2 != null && ing2.Thing != null && !(ing2.id != "gem"))
+					{
+						num3 *= ing2.Thing.material.hardness / 20 + 2;
+					}
+				}
+				if (num3 > EClass.pc.FameLv + 10 - 1)
+				{
+					num3 = EClass.pc.FameLv + 10 - 1;
+				}
+				product.SetInt(25, num3);
 			}
-			if (num3 > EClass.pc.FameLv + 10 - 1)
-			{
-				num3 = EClass.pc.FameLv + 10 - 1;
-			}
-			product.SetInt(25, num3);
+		}
+		else
+		{
+			product.elements.ModBase(10, 6);
 		}
 		return product;
 		bool IsValidTrait(Element e)

@@ -114,16 +114,24 @@ public class TraitBrewery : TraitContainer
 
 	public virtual string GetProductID(Card c)
 	{
-		string id = c.id;
-		if (id == "crim" || id == "drug_crim")
+		switch (c.id)
 		{
+		case "crim":
+		case "drug_crim":
 			return "crimAle";
+		case "rice_plant":
+		case "rice":
+		case "692":
+		case "719":
+		case "720":
+			return "1134";
+		default:
+			if (c.category.IsChildOf("mushroom") || c.category.IsChildOf("nuts"))
+			{
+				return "54";
+			}
+			return "48";
 		}
-		if (c.category.IsChildOf("mushroom") || c.category.IsChildOf("nuts"))
-		{
-			return "54";
-		}
-		return "48";
 	}
 
 	public virtual void OnProduce(Card c)

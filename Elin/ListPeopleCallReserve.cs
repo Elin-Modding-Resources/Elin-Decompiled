@@ -46,11 +46,10 @@ public class ListPeopleCallReserve : BaseListPeople
 
 	public override void OnClick(Chara c, ItemGeneral i)
 	{
-		GameLang.refDrama1 = "";
-		c.ShowDialog("_chara", "4-1").onKill.AddListener(delegate
-		{
-			list.List();
-		});
+		BaseCore.Instance.FreezeScreen(0.1f);
+		EClass.Branch.Recruit(c);
+		EClass.Sound.Play("good");
+		list.List();
 	}
 
 	public override void OnList()

@@ -2266,6 +2266,10 @@ public class ActEffect : EClass
 					{
 						num = 1;
 					}
+					if (r._origin == "artifact_summon")
+					{
+						num = 1;
+					}
 					thing.SetNum(num);
 					Debug.Log(_s + "/" + num + "/" + score);
 					if (thing.HasTag(CTAG.godArtifact))

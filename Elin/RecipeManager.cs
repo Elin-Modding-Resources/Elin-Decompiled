@@ -123,6 +123,17 @@ public class RecipeManager : EClass
 			EClass.pc.ShowEmo(Emo.idea, 0.5f, skipSame: false);
 		}
 		EClass.pc.Say("learnRecipe" + ((num == 1) ? "New" : ""), dict[id].Name.ToTitleCase(), num.ToString() ?? "");
+		if (num == 1)
+		{
+			if (recipeSource.NeedFactory)
+			{
+				EClass.pc.Say("recipe_factory", recipeSource.NameFactory);
+			}
+			else
+			{
+				EClass.pc.Say("recipe_nofactory");
+			}
+		}
 		if (recipeSource.row.category == "floor")
 		{
 			recipeSource = Get(id + "-b");

@@ -310,13 +310,21 @@ public class ConSleep : BadCondition
 				}
 			}
 		}
-		if (!EClass.pc.isDead && slept)
+		if (EClass.pc.isDead || !slept)
 		{
-			EClass.player.recipes.OnSleep(traitPillow is TraitPillowEhekatl);
-			EClass.player.DreamSpell();
-			if (traitPillow is TraitPillowGod traitPillowGod)
+			return;
+		}
+		EClass.player.recipes.OnSleep(traitPillow is TraitPillowEhekatl);
+		EClass.player.DreamSpell();
+		if (traitPillow is TraitPillowGod traitPillowGod)
+		{
+			traitPillowGod.Deity.Talk("morning");
+		}
+		foreach (Chara member in EClass.pc.party.members)
+		{
+			if (traitPillow is TraitPillowJure)
 			{
-				traitPillowGod.Deity.Talk("morning");
+				member.SAN.Mod(-15);
 			}
 		}
 		static void TryPick(Thing t, ItemPosition pos)

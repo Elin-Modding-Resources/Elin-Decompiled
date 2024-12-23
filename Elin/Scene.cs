@@ -554,6 +554,7 @@ public class Scene : EMono
 			{
 				EMono.player.deathDialog = true;
 				EMono.player.returnInfo = null;
+				EMono.player.ignoreFallOver = 1;
 				Msg.Say("diebye");
 				EMono.Sound.Play("dead_pc2");
 				EMono.Sound.Play("dead_pc");
@@ -707,6 +708,11 @@ public class Scene : EMono
 			if (EMono.player.lastTransition.lastZone is Region)
 			{
 				flag = false;
+			}
+			if (EMono.player.ignoreFallOver > 0)
+			{
+				flag = flag;
+				EMono.player.ignoreFallOver--;
 			}
 			if (flag)
 			{

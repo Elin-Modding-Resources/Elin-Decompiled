@@ -1727,6 +1727,7 @@ public class Trait : EClass
 				{
 					float num = (float)(3 + Mathf.Min(ShopLv / 5, 10)) + Mathf.Sqrt(ShopLv);
 					num = num * (float)(100 + EClass.pc.Evalue(1406) * 5) / 100f;
+					num = Mathf.Min(num, 300f);
 					for (int i = 0; (float)i < num; i++)
 					{
 						Thing thing = CreateStock();
@@ -1838,9 +1839,9 @@ public class Trait : EClass
 				}
 				}
 				ShopType shopType = ShopType;
-				if (shopType == ShopType.General || shopType == ShopType.Food || shopType == ShopType.Festival)
+				if (shopType == ShopType.General || shopType == ShopType.Food)
 				{
-					for (int num9 = 0; num9 < (EClass.debug.enable ? 30 : 3); num9++)
+					for (int num9 = 0; num9 < (EClass.debug.enable ? 3 : 3); num9++)
 					{
 						if (EClass.rnd(3) == 0)
 						{
@@ -2153,7 +2154,7 @@ public class Trait : EClass
 					{
 						if (IsFestival("olvina"))
 						{
-							return Create(new string[2] { "1125", "1126" }.RandomItem());
+							return Create(new string[4] { "1125", "1126", "pillow_truth", "1230" }.RandomItem());
 						}
 						if (IsFestival("yowyn"))
 						{
@@ -2161,7 +2162,7 @@ public class Trait : EClass
 						}
 						if (IsFestival("noyel"))
 						{
-							return Create(new string[2] { "1127", "1128" }.RandomItem());
+							return Create(new string[9] { "1127", "1128", "xmas_sled", "xmas_bigbag", "xmas_bigbox", "xmas_blackcat", "xmas_blackcat", "xmas_jure", "xmas_crown" }.RandomItem());
 						}
 					}
 					if (EClass.rnd(2) == 0)

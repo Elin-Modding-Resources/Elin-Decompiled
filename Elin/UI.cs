@@ -564,6 +564,7 @@ public class UI : ELayer
 			TweenUtil.Tween(duration, null, delegate
 			{
 				UnfreezeScreen();
+				UIButton.TryHihlight();
 			});
 		}
 	}

@@ -9,4 +9,12 @@ public class QuestHome : QuestSequence
 	public override string TitlePrefix => "★";
 
 	public override bool CanAutoAdvance => false;
+
+	public override void OnChangePhase(int a)
+	{
+		if (a == 2)
+		{
+			track = false;
+		}
+	}
 }

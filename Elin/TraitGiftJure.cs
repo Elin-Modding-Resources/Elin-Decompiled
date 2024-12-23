@@ -4,18 +4,15 @@ public class TraitGiftJure : TraitGiftPack
 {
 	public override bool OnUse(Chara c)
 	{
-		if (!EClass.debug.enable)
-		{
-			Msg.SayNothingHappen();
-			return false;
-		}
 		if (EClass._zone.IsRegion)
 		{
 			Msg.SayCannotUseHere();
 			return false;
 		}
 		EClass.pc.Say("openDoor", EClass.pc, owner);
-		SE.Play("dropReward");
+		owner.PlaySound("dropRewardXmas");
+		owner.PlayEffect("revive");
+		owner.PlayEffect("smoke");
 		List<string> list = new List<string> { "hat_santa", "musicbox_jure", "1228", "musicbox_cat", "1229", "holyFeather" };
 		Add(list[EClass.player.giftJure % list.Count], 1);
 		foreach (string item in new List<string> { "xmas_wreath", "xmas_garland", "1232", "xmas_socks", "xmas_boot", "xmas_cane" })

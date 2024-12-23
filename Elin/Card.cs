@@ -2226,18 +2226,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public int QualityLv => Quality / 10;
 
-	public Point ThisOrParentPos
-	{
-		get
-		{
-			if (!(parent is Card))
-			{
-				return pos;
-			}
-			return (parent as Card).pos;
-		}
-	}
-
 	public LightData LightData
 	{
 		get
@@ -4086,10 +4074,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				Chara.AddCondition<ConSleep>(eleP);
 			}
-			if (Chance(50, 100))
-			{
-				Chara.SAN.Mod(EClass.rnd(2));
-			}
 			break;
 		case 917:
 			if (Chance(50 + eleP / 10, 100))
@@ -5149,13 +5133,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public SoundSource PlaySound(string id, float v = 1f, bool spatial = true)
 	{
-		if (IsPC)
+		Card rootCard = GetRootCard();
+		if (rootCard.IsPC)
 		{
 			spatial = false;
 		}
-		if (Dist(EClass.pc) < EClass.player.lightRadius + 1 || !spatial)
+		if (rootCard.Dist(EClass.pc) < EClass.player.lightRadius + 1 || !spatial)
 		{
-			return ThisOrParentPos.PlaySound(id, isSynced || !spatial, v, spatial);
+			return rootCard.pos.PlaySound(id, isSynced || !spatial, v, spatial);
 		}
 		return null;
 	}
@@ -5186,7 +5171,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return null;
 		}
-		return Effect.Get(id)._Play(pos, fix + ((isSynced && useRenderPos) ? renderer.position : pos.Position()) + new Vector3(Rand.Range(0f - range, range), Rand.Range(0f - range, range), 0f));
+		Card rootCard = GetRootCard();
+		return Effect.Get(id)._Play(rootCard.pos, fix + ((isSynced && useRenderPos) ? rootCard.renderer.position : rootCard.pos.Position()) + new Vector3(Rand.Range(0f - range, range), Rand.Range(0f - range, range), 0f));
 	}
 
 	public void PlayEffect(int ele, bool useRenderPos = true, float range = 0f)
@@ -5195,11 +5181,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (effect == null)
 		{
 			Debug.Log(ele);
+			return;
 		}
-		else
-		{
-			effect._Play(pos, ((isSynced && useRenderPos) ? renderer.position : pos.Position()) + new Vector3(Rand.Range(0f - range, range), Rand.Range(0f - range, range), 0f));
-		}
+		Card rootCard = GetRootCard();
+		effect._Play(rootCard.pos, ((isSynced && useRenderPos) ? rootCard.renderer.position : rootCard.pos.Position()) + new Vector3(Rand.Range(0f - range, range), Rand.Range(0f - range, range), 0f));
 	}
 
 	public virtual void SetDir(int d)

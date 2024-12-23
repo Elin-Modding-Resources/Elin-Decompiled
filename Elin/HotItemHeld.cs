@@ -396,7 +396,7 @@ public class HotItemHeld : HotItemThing
 			{
 				return true;
 			}
-			if (thing.HasElement(225) && p.TrySetAct(new TaskChopWoord
+			if (thing.HasElement(225) && p.TrySetAct(new TaskChopWood
 			{
 				pos = pos.Copy()
 			}))

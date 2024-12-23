@@ -1689,7 +1689,7 @@ public class Chara : Card, IPathfindWalker
 				info?.AddFix(EClass.player.lastEmptyAlly * 10 - 10, "exceedParty".lang());
 			}
 		}
-		else if (base.LV >= 1000 && currentZone is Zone_Void)
+		else if (base.LV >= 1000)
 		{
 			num += EClass.curve((base.LV - 900) / 100 * 10, 500, 100);
 			info?.AddFix(EClass.curve((base.LV - 900) / 100 * 10, 500, 100), "enemySpeedBuff".lang());
@@ -8325,7 +8325,7 @@ public class Chara : Card, IPathfindWalker
 			CureCondition<ConBleed>(2 * p / 100 + 10);
 			if (flag)
 			{
-				SAN.Mod(-5);
+				SAN.Mod(-15);
 			}
 			break;
 		case CureType.CureBody:
@@ -8393,6 +8393,10 @@ public class Chara : Card, IPathfindWalker
 			}
 			CureCondition<ConWait>();
 			CureCondition<ConSleep>();
+			if (type == CureType.Death || type == CureType.Boss)
+			{
+				SAN.Mod(-20);
+			}
 			if (type == CureType.Jure)
 			{
 				SAN.Mod(-999);

@@ -972,6 +972,8 @@ public class Player : EClass
 
 	public int lastEmptyAlly;
 
+	public int ignoreFallOver;
+
 	public float lightPower;
 
 	public float baseActTime;

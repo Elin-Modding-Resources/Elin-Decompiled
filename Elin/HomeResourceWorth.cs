@@ -73,10 +73,6 @@ public class HomeResourceWorth : HomeResourceRate
 		list3.Sort((Thing a, Thing b) => b.sortVal - a.sortVal);
 		foreach (Thing item2 in list3)
 		{
-			if (!item2.HasTag(CTAG.tourism))
-			{
-				continue;
-			}
 			bool flag = item2.trait is TraitFigure;
 			if (flag)
 			{

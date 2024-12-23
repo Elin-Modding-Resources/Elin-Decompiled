@@ -119,6 +119,7 @@ public class ActMelee : ActBaseAttack
 		bool usedTalisman = false;
 		int count = 0;
 		int num = Act.CC.Dist(Act.TC);
+		Point obj = Act.TC.pos.Copy();
 		foreach (BodySlot slot in Act.CC.body.slots)
 		{
 			if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
@@ -148,7 +149,6 @@ public class ActMelee : ActBaseAttack
 			Attack(Act.TC, Act.TP);
 			if (num2 > 0)
 			{
-				Point obj = Act.TC.pos.Copy();
 				foreach (Point item in list)
 				{
 					if (!item.Equals(obj))

@@ -146,7 +146,6 @@ public class AI_Fuck : AIAct
 				chara3.ModExp(77, 250);
 				chara3.ModExp(71, 250);
 				chara3.ModExp(75, 250);
-				chara3.SAN.Mod(10);
 			}
 			if (!chara2.HasElement(1216))
 			{

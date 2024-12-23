@@ -184,6 +184,8 @@ public class Quest : EClass
 
 	public virtual bool ForbidTeleport => false;
 
+	public virtual bool TrackOnStart => true;
+
 	public virtual bool RequireClientInSameZone => true;
 
 	public virtual DifficultyType difficultyType => DifficultyType.Default;
@@ -339,7 +341,7 @@ public class Quest : EClass
 		uid = EClass.game.quests.uid;
 		EClass.game.quests.uid++;
 		isNew = true;
-		track = true;
+		track = TrackOnStart;
 		switch (difficultyType)
 		{
 		case DifficultyType.Deliver:

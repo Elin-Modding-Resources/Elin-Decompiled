@@ -100,7 +100,7 @@ public class TaskDig : BaseTaskHarvest
 			{
 				return HitResult.Invalid;
 			}
-			if (pos.IsWater || pos.HasObj || (!EClass._zone.IsPCFaction && pos.HasBlock))
+			if (!pos.IsInBounds || pos.IsWater || pos.HasObj || (!EClass._zone.IsPCFaction && pos.HasBlock))
 			{
 				return HitResult.Invalid;
 			}

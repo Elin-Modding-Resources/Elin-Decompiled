@@ -16,6 +16,8 @@ public class QuestMain : QuestSequence
 
 	public override string TitlePrefix => "★";
 
+	public override bool TrackOnStart => false;
+
 	public override string idSource => id;
 
 	public static int Phase => EClass.game.quests.Get<QuestMain>()?.phase ?? 0;

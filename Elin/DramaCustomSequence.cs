@@ -266,6 +266,13 @@ public class DramaCustomSequence : EClass
 			{
 				Choice2("daExtraTax", "_extraTax");
 			}
+			if ((c.trait is TraitMiko_Mifu || c.trait is TraitMiko_Nefu || c.trait is TraitEureka) && EClass.world.date.IsExpired(c.c_dateStockExpire))
+			{
+				Choice2("daBlessing", "_blessing");
+			}
+		}
+		if (c.IsHomeMember())
+		{
 			if (c.IsMaid)
 			{
 				if (EClass.Branch.meetings.CanStartMeeting)
@@ -275,13 +282,6 @@ public class DramaCustomSequence : EClass
 				Choice2("daBuyLand", "_buyLand");
 				Choice2("daChangeTitle", "_changeTitle");
 			}
-			if ((c.trait is TraitMiko_Mifu || c.trait is TraitMiko_Nefu || c.trait is TraitEureka) && EClass.world.date.IsExpired(c.c_dateStockExpire))
-			{
-				Choice2("daBlessing", "_blessing");
-			}
-		}
-		if (c.IsHomeMember())
-		{
 			if (c.noMove)
 			{
 				Choice2("enableMove", "_enableMove");

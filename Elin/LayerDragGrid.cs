@@ -391,6 +391,15 @@ public class LayerDragGrid : LayerBaseCraft
 		return ELayer.ui.AddLayer<LayerDragGrid>("LayerInventory/LayerDragGrid").SetInv(owner, refuelFromLayerDragGrid);
 	}
 
+	public static LayerDragGrid CreateChaosOffering(TraitAltarChaos altar)
+	{
+		Msg.Say("offer_what");
+		return Create(new InvOwnerChaosOffering(altar.owner)
+		{
+			altar = altar
+		});
+	}
+
 	public static LayerDragGrid CreateOffering(TraitAltar altar)
 	{
 		Msg.Say("offer_what");

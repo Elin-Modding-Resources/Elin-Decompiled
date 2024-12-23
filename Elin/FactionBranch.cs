@@ -1320,7 +1320,10 @@ public class FactionBranch : EClass
 			c.hostility = Hostility.Ally;
 			c.enemy = null;
 			c.orgPos = null;
-			c.memberType = FactionMemberType.Default;
+			if (c.memberType != 0 && c.memberType != FactionMemberType.Livestock)
+			{
+				c.memberType = FactionMemberType.Default;
+			}
 			if (c.hp > c.MaxHP)
 			{
 				c.hp = c.MaxHP;

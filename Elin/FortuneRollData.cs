@@ -174,7 +174,7 @@ public class FortuneRollData : EClass
 			new List<string>
 			{
 				"microchip", "1089", "150", "855", "medal", "water", "goods_charm", "electronicsS", "electronics", "plat",
-				"plat", "ration", "backpack2", "sister", "rp_food", "rp_block", "157"
+				"plat", "ration", "backpack2", "sister", "rp_food", "rp_block", "157", "sleepingbag"
 			},
 			new List<string>
 			{
@@ -223,6 +223,7 @@ public class FortuneRollData : EClass
 					break;
 				case "mathammer":
 					card.ChangeMaterial(prize.idRef);
+					card.noSell = true;
 					break;
 				case "panty":
 					card.c_idRefCard = prize.idRef;

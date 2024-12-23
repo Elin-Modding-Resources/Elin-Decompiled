@@ -905,22 +905,12 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass.pc.Pick(EClass.pc.MakeMilk(effect: true, 10));
-			EClass.pc.Pick(EClass.pc.MakeEgg(effect: true, 10));
-			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
-			if (targetChara != null)
-			{
-				EClass.pc.Pick(targetChara.MakeMilk());
-				EClass.pc.Pick(targetChara.MakeGene());
-				EClass.pc.Pick(targetChara.MakeBraineCell());
-				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
-			}
+			EClass.player.recipes.OnSleep();
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
 			EClass.pc.AddCondition<ConDisease>();
-			(EClass.pc.AddCondition<ConStrife>() as ConStrife).lv = 6;
 			for (int i = 0; i < 10; i++)
 			{
 				Thing thing = ThingGen.Create("egg_fertilized");

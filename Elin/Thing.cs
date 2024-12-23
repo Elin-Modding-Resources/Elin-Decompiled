@@ -1996,7 +1996,7 @@ public class Thing : Card
 				{
 					return true;
 				}
-				if (!Lang.isEN && row.GetName().ToLower().Contains(s))
+				if (row.GetName().ToLower().Contains(s))
 				{
 					return true;
 				}
@@ -2004,6 +2004,10 @@ public class Thing : Card
 		}
 		else
 		{
+			if (!base.IsIdentified)
+			{
+				return false;
+			}
 			foreach (Element value in elements.dict.Values)
 			{
 				if (value.Value != 0)
@@ -2012,7 +2016,7 @@ public class Thing : Card
 					{
 						return true;
 					}
-					if (!Lang.isEN && value.source.GetName().ToLower().Contains(s))
+					if (value.source.GetName().ToLower().Contains(s))
 					{
 						return true;
 					}
