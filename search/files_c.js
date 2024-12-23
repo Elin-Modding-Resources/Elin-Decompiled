@@ -15,10 +15,9 @@ var searchData=
   ['notificationstance_2ecs_12',['NotificationStance.cs',['../NotificationStance_8cs.html',1,'']]],
   ['notificationstats_2ecs_13',['NotificationStats.cs',['../NotificationStats_8cs.html',1,'']]],
   ['notificationstatsmana_2ecs_14',['NotificationStatsMana.cs',['../NotificationStatsMana_8cs.html',1,'']]],
-  ['notificationstockpile_2ecs_15',['NotificationStockpile.cs',['../NotificationStockpile_8cs.html',1,'']]],
-  ['numlog_2ecs_16',['NumLog.cs',['../NumLog_8cs.html',1,'']]],
-  ['numlogcategory_2ecs_17',['NumLogCategory.cs',['../NumLogCategory_8cs.html',1,'']]],
-  ['numlogmanager_2ecs_18',['NumLogManager.cs',['../NumLogManager_8cs.html',1,'']]],
-  ['numlogstability_2ecs_19',['NumLogStability.cs',['../NumLogStability_8cs.html',1,'']]],
-  ['numlogworth_2ecs_20',['NumLogWorth.cs',['../NumLogWorth_8cs.html',1,'']]]
+  ['numlog_2ecs_15',['NumLog.cs',['../NumLog_8cs.html',1,'']]],
+  ['numlogcategory_2ecs_16',['NumLogCategory.cs',['../NumLogCategory_8cs.html',1,'']]],
+  ['numlogmanager_2ecs_17',['NumLogManager.cs',['../NumLogManager_8cs.html',1,'']]],
+  ['numlogstability_2ecs_18',['NumLogStability.cs',['../NumLogStability_8cs.html',1,'']]],
+  ['numlogworth_2ecs_19',['NumLogWorth.cs',['../NumLogWorth_8cs.html',1,'']]]
 ];

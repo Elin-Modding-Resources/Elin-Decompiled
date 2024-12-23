@@ -16,10 +16,9 @@ var searchData=
   ['notificationstance_13',['NotificationStance',['../classNotificationStance.html',1,'']]],
   ['notificationstats_14',['NotificationStats',['../classNotificationStats.html',1,'']]],
   ['notificationstatsmana_15',['NotificationStatsMana',['../classNotificationStatsMana.html',1,'']]],
-  ['notificationstockpile_16',['NotificationStockpile',['../classNotificationStockpile.html',1,'']]],
-  ['numlog_17',['NumLog',['../classNumLog.html',1,'']]],
-  ['numlogcategory_18',['NumLogCategory',['../classNumLogCategory.html',1,'']]],
-  ['numlogmanager_19',['NumLogManager',['../classNumLogManager.html',1,'']]],
-  ['numlogstability_20',['NumLogStability',['../classNumLogStability.html',1,'']]],
-  ['numlogworth_21',['NumLogWorth',['../classNumLogWorth.html',1,'']]]
+  ['numlog_16',['NumLog',['../classNumLog.html',1,'']]],
+  ['numlogcategory_17',['NumLogCategory',['../classNumLogCategory.html',1,'']]],
+  ['numlogmanager_18',['NumLogManager',['../classNumLogManager.html',1,'']]],
+  ['numlogstability_19',['NumLogStability',['../classNumLogStability.html',1,'']]],
+  ['numlogworth_20',['NumLogWorth',['../classNumLogWorth.html',1,'']]]
 ];

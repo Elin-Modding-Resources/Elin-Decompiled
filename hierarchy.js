@@ -343,8 +343,7 @@ var hierarchy =
         [ "NotificationGlobal", "classNotificationGlobal.html", [
           [ "NotificationBattle", "classNotificationBattle.html", null ],
           [ "NotificationGuest", "classNotificationGuest.html", null ],
-          [ "NotificationHome", "classNotificationHome.html", null ],
-          [ "NotificationStockpile", "classNotificationStockpile.html", null ]
+          [ "NotificationHome", "classNotificationHome.html", null ]
         ] ],
         [ "NotificationStats", "classNotificationStats.html", [
           [ "NotificationStatsMana", "classNotificationStatsMana.html", null ]
@@ -625,7 +624,6 @@ var hierarchy =
                     [ "TaskMoveInstalled", "classTaskMoveInstalled.html", null ]
                   ] ],
                   [ "TaskChopWood", "classTaskChopWood.html", null ],
-                  [ "TaskChopWoord", "classTaskChopWoord.html", null ],
                   [ "TaskCut", "classTaskCut.html", null ],
                   [ "TaskDrawWater", "classTaskDrawWater.html", null ],
                   [ "TaskPlow", "classTaskPlow.html", null ],
