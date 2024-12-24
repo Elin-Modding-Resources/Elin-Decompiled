@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -185,28 +184,21 @@ public class LayerDragGrid : LayerBaseCraft
 			uiIngredients.Refresh();
 			RefreshCost();
 		});
-		try
+		if (owner is InvOwnerRefuel)
 		{
-			if (owner is InvOwnerRefuel)
+			if (refuelFromLayerDragGrid)
 			{
-				if (refuelFromLayerDragGrid)
-				{
-					info.SetActive(enable: false);
-				}
-				else
-				{
-					Debug.Log(owner.owner);
-					info.InitFuel(owner.owner);
-				}
+				info.SetActive(enable: false);
 			}
 			else
 			{
-				info.Init(owner.owner);
+				Debug.Log(owner.owner);
+				info.InitFuel(owner.owner);
 			}
 		}
-		catch (Exception ex)
+		else
 		{
-			Debug.LogError(ex.Message);
+			info.Init(owner.owner);
 		}
 		return this;
 	}

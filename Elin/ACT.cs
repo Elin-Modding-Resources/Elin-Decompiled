@@ -359,7 +359,7 @@ public class Act : Element
 						return false;
 					}
 				}
-				else if (!Los.IsVisible(p1, p2))
+				else if ((num != 1 || !CC.IsMultisize) && !Los.IsVisible(p1, p2))
 				{
 					return false;
 				}

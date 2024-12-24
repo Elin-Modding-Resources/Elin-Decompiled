@@ -108,6 +108,8 @@ public class BaseCondition : BaseStats
 
 	public virtual bool SyncRide => false;
 
+	public virtual bool UseElements => base.source.elements.Length != 0;
+
 	public virtual int GainResistFactor => base.source.gainRes;
 
 	public virtual int P2 => 0;
@@ -192,14 +194,21 @@ public class BaseCondition : BaseStats
 		{
 			owner.emoIcon = EmoIcon;
 		}
-		if (base.source.elements.Length != 0)
+		if (UseElements)
 		{
 			elements = new ElementContainer();
-			for (int i = 0; i < base.source.elements.Length; i += 2)
+			if (base.source.elements.Length != 0)
 			{
-				elements.SetBase(GetElementSource(i).id, base.source.elements[i + 1].Calc(power, 0, P2));
+				for (int i = 0; i < base.source.elements.Length; i += 2)
+				{
+					elements.SetBase(GetElementSource(i).id, base.source.elements[i + 1].Calc(power, 0, P2));
+				}
 			}
 			elements.SetParent(owner);
+		}
+		if (onDeserialize)
+		{
+			OnChangePhase(phase, phase);
 		}
 	}
 

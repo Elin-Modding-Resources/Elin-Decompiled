@@ -2266,7 +2266,7 @@ public class ActEffect : EClass
 					{
 						num = 1;
 					}
-					if (r._origin == "artifact_summon")
+					if (thing.source._origin == "artifact_summon")
 					{
 						num = 1;
 					}

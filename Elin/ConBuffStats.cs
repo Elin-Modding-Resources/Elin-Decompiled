@@ -23,6 +23,8 @@ public class ConBuffStats : Condition
 
 	public override bool AllowMultipleInstance => true;
 
+	public override bool UseElements => true;
+
 	public override int EvaluateTurn(int p)
 	{
 		if (base.refVal2 == 266)
@@ -87,7 +89,6 @@ public class ConBuffStats : Condition
 	public override void SetOwner(Chara _owner, bool onDeserialize = false)
 	{
 		base.SetOwner(_owner);
-		elements = new ElementContainer();
 		elements.SetBase(base.refVal, CalcValue() * ((!isDebuff) ? 1 : (-1)));
 		elements.SetParent(owner);
 	}

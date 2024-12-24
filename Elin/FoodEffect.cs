@@ -223,6 +223,25 @@ public class FoodEffect : EClass
 				}
 				switch (foodEffect[0])
 				{
+				case "god":
+				{
+					int int2 = c.GetInt(117);
+					if (int2 < 10)
+					{
+						foreach (Element value2 in c.elements.dict.Values)
+						{
+							if (value2.IsMainAttribute)
+							{
+								c.elements.ModPotential(value2.id, 2);
+							}
+						}
+					}
+					c.Say("little_eat", c);
+					c.PlaySound("ding_potential");
+					c.elements.ModExp(306, -1000);
+					c.SetInt(117, int2 + 1);
+					break;
+				}
 				case "exp":
 				{
 					id = ((foodEffect.Length > 1) ? EClass.sources.elements.alias[foodEffect[1]].id : value.id);
@@ -272,11 +291,11 @@ public class FoodEffect : EClass
 					c.PlaySound("ding_potential");
 					int v = Mathf.Max(5 - @int / 2, 1);
 					Debug.Log("sister eaten:" + @int + "/" + v);
-					foreach (Element value2 in c.elements.dict.Values)
+					foreach (Element value3 in c.elements.dict.Values)
 					{
-						if (value2.IsMainAttribute)
+						if (value3.IsMainAttribute)
 						{
-							c.elements.ModPotential(value2.id, v);
+							c.elements.ModPotential(value3.id, v);
 						}
 					}
 					if (c.race.id == "mutant" && c.elements.Base(1230) < 10)

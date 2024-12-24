@@ -67,6 +67,10 @@ public class AI_Trolley : AIAct
 			{
 				yield return Stop();
 			}
+			if (owner.rarity >= Rarity.Legendary && owner.FindNearestNewEnemy())
+			{
+				yield return Stop();
+			}
 			trolley.owner.dir = nextDir;
 			Point point = GetPoint(dir);
 			owner.SetDir(nextDir);

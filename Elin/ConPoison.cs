@@ -2,14 +2,9 @@ public class ConPoison : BadCondition
 {
 	public override Emo2 EmoIcon => Emo2.poison;
 
-	public override bool PreventRegen => true;
+	public override bool UseElements => true;
 
-	public override void SetOwner(Chara _owner, bool onDeserialize = false)
-	{
-		base.SetOwner(_owner);
-		elements = new ElementContainer();
-		elements.SetParent(owner);
-	}
+	public override bool PreventRegen => true;
 
 	public override void OnChangePhase(int lastPhase, int newPhase)
 	{

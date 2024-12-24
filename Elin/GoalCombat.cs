@@ -82,7 +82,7 @@ public class GoalCombat : Goal
 			{
 				tc = (owner.enemy = null);
 			}
-			if (tc != null && !tc.isDead && tc.ExistsOnMap && tc.pos.IsInBounds && lostCount < 5)
+			if (tc != null && !tc.isDead && tc.ExistsOnMap && tc.pos.IsInBounds && lostCount < (owner.IsPowerful ? 50 : 5))
 			{
 				lostCount = ((!owner.CanSeeLos(tc)) ? (lostCount + 1) : 0);
 			}
@@ -830,6 +830,7 @@ public class GoalCombat : Goal
 				continue;
 			}
 			Chara chara = owner;
+			Debug.Log(ability2.act.Name + ":" + ability2.act.CanPerform(owner, ability2.tg ?? tc));
 			if (ability2.act.CanPerform(owner, ability2.tg ?? tc) && owner.UseAbility(ability2.act, ability2.tg ?? tc, null, (ability2.act.HaveLongPressAction && ability2.pt) || ability2.aiPt))
 			{
 				if (EClass.debug.logCombat)
@@ -845,7 +846,7 @@ public class GoalCombat : Goal
 			Debug.Log(owner.Name + "/" + abilities.Count);
 			foreach (ItemAbility ability3 in abilities)
 			{
-				Debug.Log(ability3.act.Name);
+				Debug.Log(ability3.act.Name + "/" + ability3.priority);
 			}
 		}
 		return false;

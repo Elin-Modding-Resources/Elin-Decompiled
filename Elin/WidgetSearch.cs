@@ -120,23 +120,23 @@ public class WidgetSearch : WidgetCodex
 			}
 			if (EMono._zone.IsPCFaction || EMono._zone is Zone_Tent)
 			{
-				foreach (Thing thing in EMono._map.things)
+				foreach (Thing thing2 in EMono._map.things)
 				{
 					if (encSearch)
 					{
-						if (thing.MatchEncSearch(s))
+						if (thing2.MatchEncSearch(s))
 						{
-							newCards.Add(thing);
+							newCards.Add(thing2);
 						}
 					}
-					else if (thing.Name.ToLower().Contains(s) || thing.sourceCard.GetSearchName(jp: false).Contains(s))
+					else if (thing2.Name.ToLower().Contains(s) || thing2.sourceCard.GetSearchName(jp: false).Contains(s))
 					{
-						newCards.Add(thing);
+						newCards.Add(thing2);
 					}
 				}
 				foreach (Card value in EMono._map.props.stocked.all.Values)
 				{
-					if (!(value.parent is Thing) || (value.parent as Thing).c_lockLv > 0)
+					if (!(value.parent is Thing { c_lockLv: <=0, IsContainer: not false }))
 					{
 						continue;
 					}

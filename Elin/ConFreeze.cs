@@ -1,11 +1,6 @@
 public class ConFreeze : Condition
 {
-	public override void SetOwner(Chara _owner, bool onDeserialize = false)
-	{
-		base.SetOwner(_owner);
-		elements = new ElementContainer();
-		elements.SetParent(owner);
-	}
+	public override bool UseElements => true;
 
 	public override void OnChangePhase(int lastPhase, int newPhase)
 	{

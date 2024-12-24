@@ -1896,7 +1896,7 @@ public class Trait : EClass
 						}
 						if (thing9.IsFood && owner.id == "rodwyn")
 						{
-							SourceElement.Row row = EClass.sources.elements.rows.Where((SourceElement.Row e) => !e.foodEffect.IsEmpty() && e.category != "feat").RandomItem();
+							SourceElement.Row row = EClass.sources.elements.rows.Where((SourceElement.Row e) => !e.foodEffect.IsEmpty() && e.category != "feat" && e.chance > 0).RandomItem();
 							thing9.elements.SetBase(row.id, 10 + EClass.rnd(10));
 						}
 					}

@@ -824,18 +824,7 @@ public class Point : EClass
 					}
 					break;
 				case WitnessType.crime:
-					if (criminal == null || item2.isBlind || item2.isConfused || (criminal.IsPCParty && (item2.IsPCFaction || item2.IsPCFactionMinion)))
-					{
-						continue;
-					}
-					if (target == null)
-					{
-						if (item2.OriginalHostility < Hostility.Neutral)
-						{
-							continue;
-						}
-					}
-					else if (!target.IsFriendOrAbove(item2))
+					if (criminal == null || item2.isBlind || item2.isConfused || (criminal.IsPCParty && (item2.IsPCFaction || item2.IsPCFactionMinion)) || (target == null && item2.OriginalHostility < Hostility.Neutral))
 					{
 						continue;
 					}

@@ -4465,7 +4465,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isBackerContent && !flag)
 			{
-				int num2 = 1;
+				int num2 = ((this.rarity >= Rarity.Legendary) ? 1 : 0);
+				if (EClass.rnd(20) == 0)
+				{
+					num2++;
+				}
+				string text2 = id;
+				if (text2 == "big_daddy" || text2 == "santa")
+				{
+					num2++;
+				}
 				List<Thing> list2 = new List<Thing>();
 				foreach (Thing thing4 in things)
 				{
@@ -4473,7 +4482,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					{
 						continue;
 					}
-					if (thing4.isGifted || thing4.rarity >= Rarity.Artifact)
+					if (thing4.isGifted || thing4.rarity >= Rarity.Artifact || thing4.trait.DropChance > EClass.rndf(1f))
 					{
 						list.Add(thing4);
 					}
@@ -4483,7 +4492,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						{
 							list2.Add(thing4);
 						}
-						else if (EClass.rnd(200) == 0)
+						else if (EClass.rnd(150) == 0)
 						{
 							list.Add(thing4);
 						}
@@ -4501,65 +4510,43 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						list.Add(list2[j]);
 					}
 				}
-			}
-			if (!isBackerContent && id != "big_sister")
-			{
-				foreach (Thing thing5 in things)
+				if (this.rarity >= Rarity.Legendary && !IsUnique && c_bossType != BossType.Evolved)
 				{
-					if (thing5.HasTag(CTAG.gift) || thing5.trait is TraitChestMerchant)
+					int num3 = 0;
+					foreach (Card item3 in list)
 					{
-						continue;
-					}
-					if (thing5.isGifted || thing5.rarity >= Rarity.Legendary || thing5.trait.DropChance > EClass.rndf(1f))
-					{
-						list.Add(thing5);
-					}
-					else if (thing5.IsEquipmentOrRanged)
-					{
-						if (EClass.rnd(200) == 0)
+						if (item3.rarity >= Rarity.Legendary || item3.IsContainer)
 						{
-							list.Add(thing5);
+							num3++;
 						}
 					}
-					else if (EClass.rnd(5) == 0)
+					if (num3 == 0)
 					{
-						list.Add(thing5);
+						Rand.SetSeed(uid);
+						if (EClass.rnd((EClass._zone.events.GetEvent<ZoneEventDefenseGame>() != null) ? 3 : 2) == 0)
+						{
+							Rarity rarity = ((EClass.rnd(20) == 0) ? Rarity.Mythical : Rarity.Legendary);
+							CardBlueprint.Set(new CardBlueprint
+							{
+								rarity = rarity
+							});
+							Thing item = ThingGen.CreateFromFilter("eq", LV);
+							list.Add(item);
+						}
+						else if (EClass.rnd(3) == 0)
+						{
+							list.Add(ThingGen.Create("medal"));
+						}
+						Rand.SetSeed();
 					}
 				}
 			}
-			int num3 = 0;
-			foreach (Card item3 in list)
-			{
-				if (item3.rarity >= Rarity.Legendary || item3.IsContainer)
-				{
-					num3++;
-				}
-			}
-			Rand.SetSeed(uid);
-			if (num3 == 0 && !isBackerContent && !flag && this.rarity >= Rarity.Legendary && !IsUnique && c_bossType != BossType.Evolved)
-			{
-				if (EClass.rnd((EClass._zone.events.GetEvent<ZoneEventDefenseGame>() != null) ? 3 : 2) == 0)
-				{
-					Rarity rarity = ((EClass.rnd(20) == 0) ? Rarity.Mythical : Rarity.Legendary);
-					CardBlueprint.Set(new CardBlueprint
-					{
-						rarity = rarity
-					});
-					Thing item = ThingGen.CreateFromFilter("eq", LV);
-					list.Add(item);
-				}
-				else if (EClass.rnd(3) == 0)
-				{
-					list.Add(ThingGen.Create("medal"));
-				}
-			}
-			Rand.SetSeed();
 		}
-		foreach (Thing thing6 in things)
+		foreach (Thing thing5 in things)
 		{
-			if (thing6.GetInt(116) != 0)
+			if (thing5.GetInt(116) != 0)
 			{
-				list.Add(thing6);
+				list.Add(thing5);
 			}
 		}
 		Point nearestPoint = GetRootCard().pos;
@@ -4569,6 +4556,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		foreach (Card item4 in list)
 		{
+			if (item4.parent == EClass._zone)
+			{
+				continue;
+			}
 			item4.isHidden = false;
 			item4.SetInt(116);
 			EClass._zone.AddCard(item4, nearestPoint);

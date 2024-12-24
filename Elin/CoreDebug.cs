@@ -905,6 +905,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
+			EClass._zone.SpawnMob(EClass.pc.pos.GetNearestPoint(), SpawnSetting.Boss(EClass._zone.DangerLv));
 			EClass.player.recipes.OnSleep();
 			return;
 		}

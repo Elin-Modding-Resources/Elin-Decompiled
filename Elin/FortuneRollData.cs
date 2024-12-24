@@ -71,6 +71,10 @@ public class FortuneRollData : EClass
 			{
 				if (text3 == "mathammer")
 				{
+					if (idRef.IsEmpty())
+					{
+						idRef = "iron";
+					}
 					text2 = "_of".lang(EClass.sources.materials.alias[idRef].GetName(), text2);
 				}
 			}
@@ -220,6 +224,10 @@ public class FortuneRollData : EClass
 					break;
 				case "goods_coin":
 					EClass.player.luckycoin++;
+					if (EClass.player.luckycoin >= 10)
+					{
+						prize.claimed = true;
+					}
 					break;
 				case "mathammer":
 					card.ChangeMaterial(prize.idRef);

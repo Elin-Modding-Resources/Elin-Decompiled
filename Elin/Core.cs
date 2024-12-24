@@ -746,9 +746,9 @@ public class Core : BaseCore
 	public static IniData GetElinIni()
 	{
 		string pathIni = CorePath.PathIni;
+		string ie = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		try
 		{
-			string ie = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			FileIniDataParser fileIniDataParser = new FileIniDataParser();
 			if (!File.Exists(pathIni))
 			{
@@ -771,6 +771,8 @@ public class Core : BaseCore
 		{
 			Debug.Log(message);
 			Debug.Log("exception: Failed to parse:" + pathIni);
+			IO.DeleteFile(pathIni);
+			File.CreateText(pathIni).Close();
 			return null;
 		}
 	}

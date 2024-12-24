@@ -2128,37 +2128,40 @@ public class Chara : Card, IPathfindWalker
 		{
 			return true;
 		}
-		int num = ((p.z >= pos.z) ? ((p.x > pos.x) ? 1 : ((p.z > pos.z) ? 2 : 3)) : 0);
-		if (EClass._map.cells[pos.x, pos.z].weights[num] == 0)
+		if (!IsMultisize)
 		{
-			return false;
-		}
-		if (p.x != pos.x && p.z != pos.z)
-		{
-			Cell[,] cells = EClass._map.cells;
-			int x = p.x;
-			int z = pos.z;
-			int num2 = ((z >= pos.z) ? ((x > pos.x) ? 1 : ((z > pos.z) ? 2 : 3)) : 0);
-			if (cells[pos.x, pos.z].weights[num2] == 0)
+			int num = ((p.z >= pos.z) ? ((p.x > pos.x) ? 1 : ((p.z > pos.z) ? 2 : 3)) : 0);
+			if (EClass._map.cells[pos.x, pos.z].weights[num] == 0)
 			{
 				return false;
 			}
-			num2 = ((z >= p.z) ? ((x > p.x) ? 1 : ((z > p.z) ? 2 : 3)) : 0);
-			if (cells[p.x, p.z].weights[num2] == 0)
+			if (p.x != pos.x && p.z != pos.z)
 			{
-				return false;
-			}
-			x = pos.x;
-			z = p.z;
-			num2 = ((z >= pos.z) ? ((x > pos.x) ? 1 : ((z > pos.z) ? 2 : 3)) : 0);
-			if (cells[pos.x, pos.z].weights[num2] == 0)
-			{
-				return false;
-			}
-			num2 = ((z >= p.z) ? ((x > p.x) ? 1 : ((z > p.z) ? 2 : 3)) : 0);
-			if (cells[p.x, p.z].weights[num2] == 0)
-			{
-				return false;
+				Cell[,] cells = EClass._map.cells;
+				int x = p.x;
+				int z = pos.z;
+				int num2 = ((z >= pos.z) ? ((x > pos.x) ? 1 : ((z > pos.z) ? 2 : 3)) : 0);
+				if (cells[pos.x, pos.z].weights[num2] == 0)
+				{
+					return false;
+				}
+				num2 = ((z >= p.z) ? ((x > p.x) ? 1 : ((z > p.z) ? 2 : 3)) : 0);
+				if (cells[p.x, p.z].weights[num2] == 0)
+				{
+					return false;
+				}
+				x = pos.x;
+				z = p.z;
+				num2 = ((z >= pos.z) ? ((x > pos.x) ? 1 : ((z > pos.z) ? 2 : 3)) : 0);
+				if (cells[pos.x, pos.z].weights[num2] == 0)
+				{
+					return false;
+				}
+				num2 = ((z >= p.z) ? ((x > p.x) ? 1 : ((z > p.z) ? 2 : 3)) : 0);
+				if (cells[p.x, p.z].weights[num2] == 0)
+				{
+					return false;
+				}
 			}
 		}
 		return true;
@@ -2218,9 +2221,14 @@ public class Chara : Card, IPathfindWalker
 		bool flag = true;
 		Point point = null;
 		_sharedPos.Set(p);
-		if (CanDestroyPath() && TryMove(pos.GetPointTowards(_sharedPos)) == MoveResult.Success)
+		if (CanDestroyPath())
 		{
-			return MoveResult.Success;
+			if (TryMove(pos.GetPointTowards(_sharedPos)) == MoveResult.Success)
+			{
+				return MoveResult.Success;
+			}
+			Debug.Log(CanMoveTo(pos));
+			Debug.Log(pos.GetPointTowards(_sharedPos));
 		}
 		int num = pos.Distance(p);
 		PathProgress pathProgress = PathManager.Instance.RequestPathImmediate(pos, p, this, PathManager.MoveType.Default, num + 4, 1);
@@ -2736,6 +2744,11 @@ public class Chara : Card, IPathfindWalker
 					{
 						EClass._map.MineObj(_p, null, this);
 					}
+					broke = true;
+				}
+				if (_p.HasBridge)
+				{
+					EClass._map.MineFloor(_p);
 					broke = true;
 				}
 				if (_p.HasObj && _p.IsBlocked)

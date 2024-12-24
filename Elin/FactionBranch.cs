@@ -811,6 +811,10 @@ public class FactionBranch : EClass
 							Thing thing3 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[j], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
 							if (thing3 != null)
 							{
+								if (!thing3.trait.CanStack)
+								{
+									num6 = 1;
+								}
 								thing3.SetNum(thing3.trait.CraftNum * num6);
 								thing3.SetBlessedState(BlessedState.Normal);
 								thing3.TryMakeRandomItem(num4);

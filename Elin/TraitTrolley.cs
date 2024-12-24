@@ -28,7 +28,7 @@ public class TraitTrolley : TraitFloorSwitch
 
 	public bool CanActivate(Chara c)
 	{
-		if (c.host != null)
+		if (c.host != null || c.IsInCombat)
 		{
 			return false;
 		}

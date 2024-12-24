@@ -277,7 +277,7 @@ public class ElementContainer : EClass
 			return;
 		}
 		int value = (element.UsePotential ? element.Potential : 100);
-		if (element.UseExpMod)
+		if (element.UseExpMod && a >= 0)
 		{
 			a = a * Mathf.Clamp(value, 10, 1000) / (100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
 			if (a >= 0 && EClass.rnd(element.ValueWithoutLink + 1) < 10)

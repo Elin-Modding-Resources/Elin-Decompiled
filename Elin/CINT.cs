@@ -136,6 +136,8 @@ public class CINT
 
 	public const int isStolenFromPC = 116;
 
+	public const int godEaten = 117;
+
 	public const int isTrained = 120;
 
 	public const int isPrayed = 121;
