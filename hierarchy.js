@@ -1407,6 +1407,9 @@ var hierarchy =
               [ "TraitNola", "classTraitNola.html", null ],
               [ "TraitSeeker", "classTraitSeeker.html", null ]
             ] ]
+          ] ],
+          [ "TraitUniqueMonster", "classTraitUniqueMonster.html", [
+            [ "TraitUniqueMonsterAdv", "classTraitUniqueMonsterAdv.html", null ]
           ] ]
         ] ],
         [ "TraitClock", "classTraitClock.html", null ],

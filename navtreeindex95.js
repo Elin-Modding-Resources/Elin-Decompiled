@@ -1,5 +1,14 @@
 var NAVTREEINDEX95 =
 {
+"classTaskDesignation.html#a895ce6b1a39cbde958be4dffd4ba40be":[1,0,1146,8],
+"classTaskDesignation.html#aaa77c04e476fca434b72abe2483ee7c3":[1,0,1146,1],
+"classTaskDesignation.html#aba8e325d1d947ae34b6363fcae02a13f":[1,0,1146,14],
+"classTaskDesignation.html#abd0db3364a44feedf964f44c620fa3c8":[1,0,1146,13],
+"classTaskDesignation.html#acf64275d30f74e27a621fe62fc888cff":[1,0,1146,20],
+"classTaskDesignation.html#ad66910ea18e782bf789667eca043ecfa":[1,0,1146,4],
+"classTaskDesignation.html#ad672983d3aa118c741ec14de746f798b":[1,0,1146,19],
+"classTaskDesignation.html#ad753400e8d8dfde7c5ca7fd05cfca3fd":[1,0,1146,10],
+"classTaskDesignation.html#adaf43c1a50a86f061893397f770924a6":[1,0,1146,5],
 "classTaskDesignation.html#af2ff9f20274bc47c529962be4a305383":[1,0,1146,0],
 "classTaskDesignation.html#af39fc5000ec00773b4bda2539ebdb181":[1,0,1146,16],
 "classTaskDesignation.html#af443400ea3f79bdd71f56a26bbae07f4":[1,0,1146,17],
@@ -240,14 +249,5 @@ var NAVTREEINDEX95 =
 "classTextureData_1_1Date.html#a87b9e971c088670e54162ffc180a1b9a":[1,0,1177,0,1],
 "classTextureImportSetting.html":[1,0,1178],
 "classTextureImportSetting.html#a1bb3efbba43f8e7ff32e812df7df6a63":[1,0,1178,1],
-"classTextureImportSetting.html#a4faf559aa61ef08e28563a3d9fff1edd":[1,0,1178,3],
-"classTextureImportSetting.html#ae9e07b0a5fd6cd92a2a53aec94ac7774":[1,0,1178,2],
-"classTextureImportSetting_1_1Data.html":[1,0,1178,0],
-"classTextureImportSetting_1_1Data.html#a15b1dbcd3c555a25b7b0d30ce91c1240":[1,0,1178,0,5],
-"classTextureImportSetting_1_1Data.html#a34de7f30b62ebf0b2ce405a4c2a4a7e3":[1,0,1178,0,0],
-"classTextureImportSetting_1_1Data.html#a3b1aa2e7c6d8980a2620ef88d52859bb":[1,0,1178,0,2],
-"classTextureImportSetting_1_1Data.html#a50c71dfe7de2926aa0cac9ab447e9416":[1,0,1178,0,6],
-"classTextureImportSetting_1_1Data.html#aa176ad0118a718bf1f079badf0c9e518":[1,0,1178,0,4],
-"classTextureImportSetting_1_1Data.html#ab79fac5967baecf05655fcc6e0a35159":[1,0,1178,0,7],
-"classTextureImportSetting_1_1Data.html#ad4b458ffa1fda8d063ce89ba0d88b407":[1,0,1178,0,8]
+"classTextureImportSetting.html#a4faf559aa61ef08e28563a3d9fff1edd":[1,0,1178,3]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.65</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.66 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -235,25 +235,29 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   71</span>            {</div>
 <div class="line"><span class="lineno">   72</span>                <span class="keywordflow">if</span> (text3 == <span class="stringliteral">&quot;mathammer&quot;</span>)</div>
 <div class="line"><span class="lineno">   73</span>                {</div>
-<div class="line"><span class="lineno">   74</span>                    text2 = <span class="stringliteral">&quot;_of&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">idRef</a>].GetName(), text2);</div>
-<div class="line"><span class="lineno">   75</span>                }</div>
-<div class="line"><span class="lineno">   76</span>            }</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   78</span>            {</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordtype">string</span> name = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">idRef</a>].GetName();</div>
-<div class="line"><span class="lineno">   80</span>                text2 = <span class="stringliteral">&quot;_of&quot;</span>.lang(name, text2);</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">int</span> num = <a class="code hl_function" href="classFortuneRollData_1_1Prize.html#a26fde4131c2f3a19ea18dd742e9f047f">GetNum</a>();</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (num &gt; 1)</div>
-<div class="line"><span class="lineno">   84</span>            {</div>
-<div class="line"><span class="lineno">   85</span>                text2 = text2 + <span class="stringliteral">&quot; x &quot;</span> + num;</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#a032c73bc3fd549abf7e8e2e449be9170">claimed</a>)</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">idRef</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   75</span>                    {</div>
+<div class="line"><span class="lineno">   76</span>                        <a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">idRef</a> = <span class="stringliteral">&quot;iron&quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>                    }</div>
+<div class="line"><span class="lineno">   78</span>                    text2 = <span class="stringliteral">&quot;_of&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">idRef</a>].GetName(), text2);</div>
+<div class="line"><span class="lineno">   79</span>                }</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordtype">string</span> name = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">idRef</a>].GetName();</div>
+<div class="line"><span class="lineno">   84</span>                text2 = <span class="stringliteral">&quot;_of&quot;</span>.lang(name, text2);</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordtype">int</span> num = <a class="code hl_function" href="classFortuneRollData_1_1Prize.html#a26fde4131c2f3a19ea18dd742e9f047f">GetNum</a>();</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (num &gt; 1)</div>
 <div class="line"><span class="lineno">   88</span>            {</div>
-<div class="line"><span class="lineno">   89</span>                text2 = <span class="stringliteral">&quot;fortuneroll_claimed&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   89</span>                text2 = text2 + <span class="stringliteral">&quot; x &quot;</span> + num;</div>
 <div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>            n.AddTopic(<span class="stringliteral">&quot;TopicDomain&quot;</span>, text, text2.ToTitleCase().TagColor(<a class="code hl_property" href="classFortuneRollData_1_1Prize.html#a4958542f4dc5399e696e9b9eb3bdbc13">model</a>.<a class="code hl_property" href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">IsUnique</a> ? FontColor.Great : FontColor.Good));</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFortuneRollData_1_1Prize.html#a032c73bc3fd549abf7e8e2e449be9170">claimed</a>)</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                text2 = <span class="stringliteral">&quot;fortuneroll_claimed&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            n.AddTopic(<span class="stringliteral">&quot;TopicDomain&quot;</span>, text, text2.ToTitleCase().TagColor(<a class="code hl_property" href="classFortuneRollData_1_1Prize.html#a4958542f4dc5399e696e9b9eb3bdbc13">model</a>.<a class="code hl_property" href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">IsUnique</a> ? FontColor.Great : FontColor.Good));</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
 <div class="ttc" id="aclassCard_html_a273e02936a4fd9011e84fdef0bd1189d"><div class="ttname"><a href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">Card.IsUnique</a></div><div class="ttdeci">bool IsUnique</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01919">Card.cs:1919</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
@@ -263,16 +267,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassFortuneRollData_1_1Prize_html_a4958542f4dc5399e696e9b9eb3bdbc13"><div class="ttname"><a href="classFortuneRollData_1_1Prize.html#a4958542f4dc5399e696e9b9eb3bdbc13">FortuneRollData.Prize.model</a></div><div class="ttdeci">Card model</div><div class="ttdef"><b>Definition:</b> <a href="FortuneRollData_8cs_source.html#l00022">FortuneRollData.cs:22</a></div></div>
 <div class="ttc" id="aclassFortuneRollData_1_1Prize_html_ab3ad6e7372e28eda08884cd160b1f004"><div class="ttname"><a href="classFortuneRollData_1_1Prize.html#ab3ad6e7372e28eda08884cd160b1f004">FortuneRollData.Prize.grade</a></div><div class="ttdeci">int grade</div><div class="ttdef"><b>Definition:</b> <a href="FortuneRollData_8cs_source.html#l00011">FortuneRollData.cs:11</a></div></div>
 <div class="ttc" id="aclassFortuneRollData_1_1Prize_html_ae43f758c559397f54481064041656267"><div class="ttname"><a href="classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267">FortuneRollData.Prize.idRef</a></div><div class="ttdeci">string idRef</div><div class="ttdef"><b>Definition:</b> <a href="FortuneRollData_8cs_source.html#l00017">FortuneRollData.cs:17</a></div></div>
-<div class="ttc" id="aclassFortuneRollData_html_aa8a67c206994db0250ddc0bf128c2f98"><div class="ttname"><a href="classFortuneRollData.html#aa8a67c206994db0250ddc0bf128c2f98">FortuneRollData.mats</a></div><div class="ttdeci">static string[] mats</div><div class="ttdef"><b>Definition:</b> <a href="FortuneRollData_8cs_source.html#l00095">FortuneRollData.cs:95</a></div></div>
+<div class="ttc" id="aclassFortuneRollData_html_aa8a67c206994db0250ddc0bf128c2f98"><div class="ttname"><a href="classFortuneRollData.html#aa8a67c206994db0250ddc0bf128c2f98">FortuneRollData.mats</a></div><div class="ttdeci">static string[] mats</div><div class="ttdef"><b>Definition:</b> <a href="FortuneRollData_8cs_source.html#l00099">FortuneRollData.cs:99</a></div></div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_aa34e85634a016f6f433868d7d697904b"><div class="ttname"><a href="classLang.html#aa34e85634a016f6f433868d7d697904b">Lang.GetList</a></div><div class="ttdeci">static string[] GetList(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00114">Lang.cs:114</a></div></div>
 <div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00020">FortuneRollData.Prize.claimed</a>, <a class="el" href="Lang_8cs_source.html#l00114">Lang.GetList()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00024">FortuneRollData.Prize.GetNum()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00011">FortuneRollData.Prize.grade</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00014">FortuneRollData.Prize.id</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00017">FortuneRollData.Prize.idRef</a>, <a class="el" href="Card_8cs_source.html#l01919">Card.IsUnique</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00095">FortuneRollData.mats</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00022">FortuneRollData.Prize.model</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00020">FortuneRollData.Prize.claimed</a>, <a class="el" href="Lang_8cs_source.html#l00114">Lang.GetList()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00024">FortuneRollData.Prize.GetNum()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00011">FortuneRollData.Prize.grade</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00014">FortuneRollData.Prize.id</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00017">FortuneRollData.Prize.idRef</a>, <a class="el" href="Card_8cs_source.html#l01919">Card.IsUnique</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00099">FortuneRollData.mats</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00022">FortuneRollData.Prize.model</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00255">FortuneRollData.WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00263">FortuneRollData.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +346,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="FortuneRollData_8cs_source.html#l00011">FortuneRollData.Prize.grade</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00196">FortuneRollData.GetPrize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00200">FortuneRollData.GetPrize()</a>.</p>
 
 </div>
 </div>
@@ -361,7 +365,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FortuneRollData_8cs_source.html#l00020">20</a> of file <a class="el" href="FortuneRollData_8cs_source.html">FortuneRollData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00196">FortuneRollData.GetPrize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00200">FortuneRollData.GetPrize()</a>.</p>
 
 </div>
 </div>
@@ -379,7 +383,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FortuneRollData_8cs_source.html#l00011">11</a> of file <a class="el" href="FortuneRollData_8cs_source.html">FortuneRollData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00024">FortuneRollData.Prize.GetNum()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00196">FortuneRollData.GetPrize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00024">FortuneRollData.Prize.GetNum()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00200">FortuneRollData.GetPrize()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +401,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FortuneRollData_8cs_source.html#l00014">14</a> of file <a class="el" href="FortuneRollData_8cs_source.html">FortuneRollData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00196">FortuneRollData.GetPrize()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00126">FortuneRollData.RefreshPrize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00200">FortuneRollData.GetPrize()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00130">FortuneRollData.RefreshPrize()</a>.</p>
 
 </div>
 </div>
@@ -415,7 +419,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="FortuneRollData_8cs_source.html#l00017">17</a> of file <a class="el" href="FortuneRollData_8cs_source.html">FortuneRollData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00196">FortuneRollData.GetPrize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00200">FortuneRollData.GetPrize()</a>.</p>
 
 </div>
 </div>

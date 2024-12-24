@@ -1,5 +1,13 @@
 var NAVTREEINDEX81 =
 {
+"classRecipe.html#a401875a1ce83863eb92494c8a0e6b7fb":[1,0,945,9],
+"classRecipe.html#a4da3ef98794b2c739ae5b184a10ec071":[1,0,945,50],
+"classRecipe.html#a4ede4204d045163da8f0146087ac9417":[1,0,945,31],
+"classRecipe.html#a58c867733119103d5db73b6024f65b15":[1,0,945,61],
+"classRecipe.html#a5f08d818d63873d378c3b87bd5f04934":[1,0,945,69],
+"classRecipe.html#a6396a9c9f2cb2bd60fff52a91e0d2323":[1,0,945,44],
+"classRecipe.html#a64cba6b9b821d7650e1974b045f095b6":[1,0,945,71],
+"classRecipe.html#a69fbb91fe1d63d180871e4d94aa6cbfc":[1,0,945,23],
 "classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb":[1,0,945,47],
 "classRecipe.html#a6c4de8a34ebd058c25c879f2a306a466":[1,0,945,3],
 "classRecipe.html#a6d007bf1eb74069f643227a978bcd9d4":[1,0,945,60],
@@ -241,13 +249,5 @@ var NAVTREEINDEX81 =
 "classRegionPoint.html#abb4ce514d41bfd37f82562a0d4bccb73":[1,0,960,1],
 "classRegionPoint.html#ac744f9fd799652e9ee3a3e8b147cbab5":[1,0,960,0],
 "classRelation.html":[1,0,961],
-"classRelation.html#a58eb4372b410914ba5581ab6064c9fa2":[1,0,961,1],
-"classRelation.html#a6c0009055d8494d0ef886ef2b12586e2":[1,0,961,0],
-"classRelation.html#ae5f4a3401fc5f37f606c328e4d5a3b9e":[1,0,961,2],
-"classRelationManager.html":[1,0,962],
-"classRelationManager.html#a9356a0891c12e1cdda68cb366eef0ca1":[1,0,962,0],
-"classRelationManager.html#abf2799cf8d3701859972bd4c91aeddcf":[1,0,962,1],
-"classRelationManager.html#ac04421b2b113ba0d0f25a228fa7a27df":[1,0,962,2],
-"classReligion.html":[1,0,963],
-"classReligion.html#a04afdf1f175dda7105994797d9e2975b":[1,0,963,37]
+"classRelation.html#a58eb4372b410914ba5581ab6064c9fa2":[1,0,961,1]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX101 =
 {
+"classTraitContainer.html#aa5c0f23169a185c1604f46194357006d":[1,0,1331,3],
+"classTraitContainer.html#abdc11f2fb221ac9d4d03f8fc368664d3":[1,0,1331,1],
+"classTraitContainer.html#afaedc61d74d0e1ac9886c0e6f1fe6dd2":[1,0,1331,2],
+"classTraitContainer.html#afbb44fbd55aecfeb76df1bce4a363cea":[1,0,1331,6],
+"classTraitContainerBook.html":[1,0,1332],
+"classTraitContainerBook.html#ac19bdaddbfbf9f4035ab4314d5e05c49":[1,0,1332,0],
+"classTraitContainerBurnable.html":[1,0,1333],
+"classTraitContainerCompost.html":[1,0,1334],
+"classTraitContainerCompost.html#a0be6317217c5debd87ce1c36394215e1":[1,0,1334,1],
 "classTraitContainerCompost.html#a5b4a67a4a23d4dda0ea44411dda071e5":[1,0,1334,3],
 "classTraitContainerCompost.html#aed2a8003a7930422ea7899658f7347fd":[1,0,1334,0],
 "classTraitContainerCompost.html#afb9bdd7f54292c14235380bd61f90649":[1,0,1334,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX101 =
 "classTraitDrink.html":[1,0,1377],
 "classTraitDrink.html#a0bf4419114e2e584a1e8f59c122a2cc9":[1,0,1377,0],
 "classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1377,9],
-"classTraitDrink.html#a56ee9dafa7d55b6b8e22e307b637b416":[1,0,1377,5],
-"classTraitDrink.html#a6068c08dba4621b9c437ecf4dd8ca80e":[1,0,1377,10],
-"classTraitDrink.html#a6f961b99b7206af0591187f7ca7b00af":[1,0,1377,13],
-"classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796":[1,0,1377,15],
-"classTraitDrink.html#a79a7994ae5c96c13dfd79126692854ec":[1,0,1377,16],
-"classTraitDrink.html#a7fb1ac5d9691764a0359512f6b612150":[1,0,1377,14],
-"classTraitDrink.html#a9280301ca2bf185a8618d464d04973d6":[1,0,1377,12],
-"classTraitDrink.html#a9d8c11ed801f1209ee12913ed177e1da":[1,0,1377,6],
-"classTraitDrink.html#ac81b93ab0ed253932f4229fb0744186a":[1,0,1377,4],
-"classTraitDrink.html#ac9316effb1a1788edbd7f22da1483e31":[1,0,1377,7]
+"classTraitDrink.html#a56ee9dafa7d55b6b8e22e307b637b416":[1,0,1377,5]
 };

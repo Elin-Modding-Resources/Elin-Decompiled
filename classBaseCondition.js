@@ -61,6 +61,7 @@ var classBaseCondition =
     [ "sourceElement", "classBaseCondition.html#ad2f34cf2c29285ac42d83439fdea5a2e", null ],
     [ "SyncRide", "classBaseCondition.html#a1621edf4ea484f2bb5b489f3390c8d0f", null ],
     [ "TimeBased", "classBaseCondition.html#a8a8aa6f3dfaacc8a78ced74b5358f648", null ],
+    [ "UseElements", "classBaseCondition.html#a58bc98ffc4938eef9a0c1d95438e055f", null ],
     [ "value", "classBaseCondition.html#a7db823617df39785cbb80d25728ff46b", null ],
     [ "WillOverride", "classBaseCondition.html#a0e12433f33d10e9e0903cd53fc94ae73", null ]
 ];

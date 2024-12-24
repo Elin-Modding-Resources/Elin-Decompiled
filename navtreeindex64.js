@@ -1,5 +1,13 @@
 var NAVTREEINDEX64 =
 {
+"classInvOwner_1_1ErrorMessage.html#ad48a969cd50b06b068ca14f1f43c5646":[1,0,605,0,3],
+"classInvOwner_1_1ForceGiveData.html":[1,0,605,1],
+"classInvOwner_1_1ForceGiveData.html#ab4cf57772d86144d2e44850db2391875":[1,0,605,1,0],
+"classInvOwner_1_1ForceGiveData.html#adbd6cda38f6abc8f0f0f89153dd443e1":[1,0,605,1,1],
+"classInvOwner_1_1Interaction.html":[1,0,605,2],
+"classInvOwner_1_1Interaction.html#a1b4198bdaf3dab724835a93b7709eaa8":[1,0,605,2,0],
+"classInvOwner_1_1Interaction.html#a3e56bf1a137d48e6e3891e50c25a001c":[1,0,605,2,4],
+"classInvOwner_1_1Interaction.html#a9b4600cc1041ca7c052b97b92d1d41bc":[1,0,605,2,1],
 "classInvOwner_1_1Interaction.html#ac360cca750b5dbc2a9872a86c29bbde3":[1,0,605,2,2],
 "classInvOwner_1_1Interaction.html#afddcc6cbe2a6e00b1596961e9a15eaa5":[1,0,605,2,3],
 "classInvOwner_1_1ListInteraction.html":[1,0,605,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX64 =
 "classLangGame_1_1Row.html#ae9a4837bb8f1626c287d4870285f95ea":[1,0,668,0,1],
 "classLangGeneral.html":[1,0,669],
 "classLangGeneral.html#a07d10a40271a28ad68e56a2881ac9b66":[1,0,669,1],
-"classLangGeneral.html#a6ef75e8468da1bb21518a46fb1dc8c24":[1,0,669,2],
-"classLangGeneral_1_1Row.html":[1,0,669,0],
-"classLangGeneral_1_1Row.html#a6d3cd38f27556ce0dacd6130f9c7ce7a":[1,0,669,0,0],
-"classLangGeneral_1_1Row.html#aa0b98dcf071999aabf8b76ca44509ac1":[1,0,669,0,2],
-"classLangGeneral_1_1Row.html#acc848d4cdf6110544b80fb6b01a8ee96":[1,0,669,0,1],
-"classLangList.html":[1,0,670],
-"classLangList.html#a28a98edb0d9d38963dad6cb62ef8d9ff":[1,0,670,1],
-"classLangList.html#a35a3dae99f44523516dc705e32c99fc2":[1,0,670,2],
-"classLangList.html#adc2511062f800c7c17d875834d2295b2":[1,0,670,3]
+"classLangGeneral.html#a6ef75e8468da1bb21518a46fb1dc8c24":[1,0,669,2]
 };

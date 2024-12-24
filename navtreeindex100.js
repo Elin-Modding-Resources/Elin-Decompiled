@@ -1,5 +1,14 @@
 var NAVTREEINDEX100 =
 {
+"classTraitBaseSpellbook.html#ab88e783f03c314e47d4d029af226a6d6":[1,0,1276,8],
+"classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5":[1,0,1276,12],
+"classTraitBaseSpellbook.html#ad11ef848ff01b61b036d24f744b39b24":[1,0,1276,5],
+"classTraitBaseSpellbook.html#ad4db6e1d234810149a1ea4ef33b597f4":[1,0,1276,14],
+"classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551":[1,0,1276,2],
+"classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e":[1,0,1276,7],
+"classTraitBasketGame.html":[1,0,1277],
+"classTraitBasketGame.html#a25bbd4def567fde1fc68d5c017d129bd":[1,0,1277,0],
+"classTraitBath.html":[1,0,1278],
 "classTraitBath.html#a1fc2fd5db5f5966c5b1c4ded93794d37":[1,0,1278,0],
 "classTraitBed.html":[1,0,1280],
 "classTraitBed.html#a08547dc3eb39076ea1208a52790e84d4":[1,0,1280,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX100 =
 "classTraitContainer.html":[1,0,1331],
 "classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1331,5],
 "classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1331,0],
-"classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1331,4],
-"classTraitContainer.html#aa5c0f23169a185c1604f46194357006d":[1,0,1331,3],
-"classTraitContainer.html#abdc11f2fb221ac9d4d03f8fc368664d3":[1,0,1331,1],
-"classTraitContainer.html#afaedc61d74d0e1ac9886c0e6f1fe6dd2":[1,0,1331,2],
-"classTraitContainer.html#afbb44fbd55aecfeb76df1bce4a363cea":[1,0,1331,6],
-"classTraitContainerBook.html":[1,0,1332],
-"classTraitContainerBook.html#ac19bdaddbfbf9f4035ab4314d5e05c49":[1,0,1332,0],
-"classTraitContainerBurnable.html":[1,0,1333],
-"classTraitContainerCompost.html":[1,0,1334],
-"classTraitContainerCompost.html#a0be6317217c5debd87ce1c36394215e1":[1,0,1334,1]
+"classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1331,4]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX93 =
 {
+"classSpriteData.html#a2bb56554ce16f0af909b235b83215517":[1,0,1100,11],
+"classSpriteData.html#a81fe21e2f728eac5c0e9d5f030f344b1":[1,0,1100,12],
+"classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38":[1,0,1100,7],
+"classSpriteData.html#a9610c941e83f99180123ba77377656bc":[1,0,1100,4],
+"classSpriteData.html#aa80b10d37115b754b7a57721af581e11":[1,0,1100,8],
+"classSpriteData.html#aaac9e5cf21d768861d5bea79f4bfbeb0":[1,0,1100,5],
+"classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9":[1,0,1100,6],
+"classSpriteData.html#ac960964b75a86380055b2d6cd42ab220":[1,0,1100,13],
+"classSpriteData.html#adbedf9a97764bc7bdcf20b0bfc472dab":[1,0,1100,0],
 "classSpriteData.html#adf8ba462c11d8df4f83c557ea9cc727d":[1,0,1100,14],
 "classSpriteData.html#aea2bc3f3454486ceffeb94a39217ee7b":[1,0,1100,3],
 "classSpriteData.html#affb1b500f1881b419332e6e306c03030":[1,0,1100,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX93 =
 "classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1166,0],
 "classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1166,6],
 "classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1166,5],
-"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1166,7],
-"classTCOrbitChara.html#ada37c4ed77cb850ac2235b10e83101cf":[1,0,1166,8],
-"classTCOrbitTask.html":[1,0,1167],
-"classTCOrbitTask.html#a18d4b927fa246e20c01900f95add6ced":[1,0,1167,3],
-"classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1167,1],
-"classTCOrbitTask.html#acad24d37c6aa8e407a69477b3be57cc2":[1,0,1167,5],
-"classTCOrbitTask.html#af3fd86e7fd1c7ce663b350e9763f0178":[1,0,1167,2],
-"classTCOrbitTask.html#af5b8d1edeafe3bd971a4eb83cf24693f":[1,0,1167,4],
-"classTCOrbitTask.html#af882c4b90fa624857157a01978aec95e":[1,0,1167,0],
-"classTCOrbitThing.html":[1,0,1168]
+"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1166,7]
 };

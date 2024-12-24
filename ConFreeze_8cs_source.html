@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.65</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.66 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -94,35 +94,26 @@ $(document).ready(function(){initNavTree('ConFreeze_8cs_source.html',''); initRe
 <div class="contents">
 <a href="ConFreeze_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classConFreeze.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classConFreeze.html">ConFreeze</a> : <a class="code hl_class" href="classCondition.html">Condition</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classConFreeze.html#a492af5fa6640804d05552ae475bf1804">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConFreeze.html#a492af5fa6640804d05552ae475bf1804">SetOwner</a>(<a class="code hl_class" href="classChara.html">Chara</a> _owner, <span class="keywordtype">bool</span> onDeserialize = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        base.SetOwner(_owner);</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a> = <span class="keyword">new</span> <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>();</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">SetParent</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>);</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    }</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classConFreeze.html#af47c38b0cd70513a2360f9703cba800f">   10</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConFreeze.html#af47c38b0cd70513a2360f9703cba800f">OnChangePhase</a>(<span class="keywordtype">int</span> lastPhase, <span class="keywordtype">int</span> newPhase)</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">switch</span> (newPhase)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(79, -25);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(79, -50);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classConFreeze.html#abdca2a6dcaea4b67ff81e06ec1548391">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classConFreeze.html#abdca2a6dcaea4b67ff81e06ec1548391">UseElements</a> =&gt; <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classConFreeze.html#af47c38b0cd70513a2360f9703cba800f">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConFreeze.html#af47c38b0cd70513a2360f9703cba800f">OnChangePhase</a>(<span class="keywordtype">int</span> lastPhase, <span class="keywordtype">int</span> newPhase)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">switch</span> (newPhase)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(79, -25);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(79, -50);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 <div class="ttc" id="aclassBaseCondition_html_ae298dc6f6177eb07f0aa01f7422532f5"><div class="ttname"><a href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">BaseCondition.elements</a></div><div class="ttdeci">ElementContainer elements</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00013">BaseCondition.cs:13</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassConFreeze_html"><div class="ttname"><a href="classConFreeze.html">ConFreeze</a></div><div class="ttdef"><b>Definition:</b> <a href="ConFreeze_8cs_source.html#l00001">ConFreeze.cs:2</a></div></div>
-<div class="ttc" id="aclassConFreeze_html_a492af5fa6640804d05552ae475bf1804"><div class="ttname"><a href="classConFreeze.html#a492af5fa6640804d05552ae475bf1804">ConFreeze.SetOwner</a></div><div class="ttdeci">override void SetOwner(Chara _owner, bool onDeserialize=false)</div><div class="ttdef"><b>Definition:</b> <a href="ConFreeze_8cs_source.html#l00003">ConFreeze.cs:3</a></div></div>
-<div class="ttc" id="aclassConFreeze_html_af47c38b0cd70513a2360f9703cba800f"><div class="ttname"><a href="classConFreeze.html#af47c38b0cd70513a2360f9703cba800f">ConFreeze.OnChangePhase</a></div><div class="ttdeci">override void OnChangePhase(int lastPhase, int newPhase)</div><div class="ttdef"><b>Definition:</b> <a href="ConFreeze_8cs_source.html#l00010">ConFreeze.cs:10</a></div></div>
+<div class="ttc" id="aclassConFreeze_html_abdca2a6dcaea4b67ff81e06ec1548391"><div class="ttname"><a href="classConFreeze.html#abdca2a6dcaea4b67ff81e06ec1548391">ConFreeze.UseElements</a></div><div class="ttdeci">override bool UseElements</div><div class="ttdef"><b>Definition:</b> <a href="ConFreeze_8cs_source.html#l00003">ConFreeze.cs:3</a></div></div>
+<div class="ttc" id="aclassConFreeze_html_af47c38b0cd70513a2360f9703cba800f"><div class="ttname"><a href="classConFreeze.html#af47c38b0cd70513a2360f9703cba800f">ConFreeze.OnChangePhase</a></div><div class="ttdeci">override void OnChangePhase(int lastPhase, int newPhase)</div><div class="ttdef"><b>Definition:</b> <a href="ConFreeze_8cs_source.html#l00005">ConFreeze.cs:5</a></div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
-<div class="ttc" id="aclassElementContainer_html"><div class="ttname"><a href="classElementContainer.html">ElementContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00009">ElementContainer.cs:10</a></div></div>
-<div class="ttc" id="aclassElementContainer_html_a1612076673169f97fcfabf021eee2f20"><div class="ttname"><a href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">ElementContainer.SetParent</a></div><div class="ttdeci">void SetParent(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00520">ElementContainer.cs:520</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_acc8918541c5d18ee2741762a612487b5"><div class="ttname"><a href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">ElementContainer.SetBase</a></div><div class="ttdeci">Element SetBase(string alias, int v, int potential=0)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00351">ElementContainer.cs:351</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

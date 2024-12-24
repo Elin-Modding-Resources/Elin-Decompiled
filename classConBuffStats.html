@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.65</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.66 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -259,6 +259,8 @@ Properties</h2></td></tr>
 <tr class="separator:a05abf0a207f4f2a4e24d9feb16a6336d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af11facc3c065d7a72b0d2b70851ead63"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConBuffStats.html#af11facc3c065d7a72b0d2b70851ead63">AllowMultipleInstance</a><code> [get]</code></td></tr>
 <tr class="separator:af11facc3c065d7a72b0d2b70851ead63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6611b71184e12cc13e5eb74d70200cbe"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConBuffStats.html#a6611b71184e12cc13e5eb74d70200cbe">UseElements</a><code> [get]</code></td></tr>
+<tr class="separator:a6611b71184e12cc13e5eb74d70200cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classCondition"><td colspan="2" onclick="javascript:toggleInherit('properties_classCondition')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classCondition.html">Condition</a></td></tr>
 <tr class="memitem:a3cae0da067003b05fe8b315948664bfb inherit properties_classCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a3cae0da067003b05fe8b315948664bfb">IsKilled</a><code> [get]</code></td></tr>
 <tr class="separator:a3cae0da067003b05fe8b315948664bfb inherit properties_classCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,6 +301,8 @@ Properties</h2></td></tr>
 <tr class="separator:a8a8aa6f3dfaacc8a78ced74b5358f648 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1621edf4ea484f2bb5b489f3390c8d0f inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a1621edf4ea484f2bb5b489f3390c8d0f">SyncRide</a><code> [get]</code></td></tr>
 <tr class="separator:a1621edf4ea484f2bb5b489f3390c8d0f inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bc98ffc4938eef9a0c1d95438e055f inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a58bc98ffc4938eef9a0c1d95438e055f">UseElements</a><code> [get]</code></td></tr>
+<tr class="separator:a58bc98ffc4938eef9a0c1d95438e055f inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed342f7a43b5d20affd6fbbe8f88155 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a5ed342f7a43b5d20affd6fbbe8f88155">GainResistFactor</a><code> [get]</code></td></tr>
 <tr class="separator:a5ed342f7a43b5d20affd6fbbe8f88155 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84faa4d75f092fa823d264c46e10c46c inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a84faa4d75f092fa823d264c46e10c46c">P2</a><code> [get]</code></td></tr>
@@ -445,20 +449,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00095">95</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (base.refVal2 == 266)</div>
-<div class="line"><span class="lineno">   98</span>        {</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">return</span> 100 + (int)Mathf.Sqrt(base.power) * 2;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (base.refVal == 79)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(5f, Mathf.Sqrt(base.power) * 1.5f + 20f);</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(5f, Mathf.Sqrt(base.power) * 2f - 15f);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00096">96</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (base.refVal2 == 266)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> 100 + (int)Mathf.Sqrt(base.power) * 2;</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (base.refVal == 79)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(5f, Mathf.Sqrt(base.power) * 1.5f + 20f);</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(5f, Mathf.Sqrt(base.power) * 2f - 15f);</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ConBuffStats_8cs_source.html#l00108">OnWriteNote()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00087">SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConBuffStats_8cs_source.html#l00109">OnWriteNote()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00089">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -488,14 +492,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a15631ed2272e1ae304dd7e173ef6dfcc">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00078">78</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (c is <a class="code hl_class" href="classConBuffStats.html">ConBuffStats</a> conBuffStats)</div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> conBuffStats.refVal == base.refVal;</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   85</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00080">80</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (c is <a class="code hl_class" href="classConBuffStats.html">ConBuffStats</a> conBuffStats)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> conBuffStats.refVal == base.refVal;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 <div class="ttc" id="aclassConBuffStats_html"><div class="ttname"><a href="classConBuffStats.html">ConBuffStats</a></div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00004">ConBuffStats.cs:5</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -526,14 +530,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00026">26</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (base.refVal2 == 266)</div>
-<div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> 7;</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> base.EvaluateTurn(p) * ((base.refVal == 79) ? 50 : 100) / 100;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00028">28</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (base.refVal2 == 266)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> 7;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> base.EvaluateTurn(p) * ((base.refVal == 79) ? 50 : 100) / 100;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -563,14 +567,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseStats.html#ae0d925132e2c835f21ea29ff01c71fb3">BaseStats</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00040">40</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a>)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> c.textGood;</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> c.textBad;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00042">42</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> c.textGood;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> c.textBad;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 <div class="ttc" id="aclassConBuffStats_html_a963134f5f8e6d294ffb1231dddf2eee5"><div class="ttname"><a href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">ConBuffStats.isDebuff</a></div><div class="ttdeci">bool isDebuff</div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00020">ConBuffStats.cs:20</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>.</p>
@@ -602,10 +606,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af424fbf8c5f20a671768732269a12794">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00035">35</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00037">37</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -634,13 +638,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a839c744cb3666c758862845d49b1447c">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00049">49</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classConBuffStats.html#aeb332106512f4814085c3f06d7930637">GetText</a>();</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aclassConBuffStats_html_aeb332106512f4814085c3f06d7930637"><div class="ttname"><a href="classConBuffStats.html#aeb332106512f4814085c3f06d7930637">ConBuffStats.GetText</a></div><div class="ttdeci">override string GetText()</div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00054">ConBuffStats.cs:54</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00051">51</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classConBuffStats.html#aeb332106512f4814085c3f06d7930637">GetText</a>();</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassConBuffStats_html_aeb332106512f4814085c3f06d7930637"><div class="ttname"><a href="classConBuffStats.html#aeb332106512f4814085c3f06d7930637">ConBuffStats.GetText</a></div><div class="ttdeci">override string GetText()</div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00056">ConBuffStats.cs:56</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00054">GetText()</a>.</p>
+<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00056">GetText()</a>.</p>
 
 </div>
 </div>
@@ -669,19 +673,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a3e5e9a7a73db7f67b2e94ffd06d83758">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00054">54</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">string</span>[] list = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;buff_&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[base.refVal].alias);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (list != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a>)</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> list[0];</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> list[1];</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> base.GetText();</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00056">56</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">string</span>[] list = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;buff_&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[base.refVal].alias);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (list != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a>)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">return</span> list[0];</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> list[1];</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> base.GetText();</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
@@ -690,7 +694,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Lang_8cs_source.html#l00114">Lang.GetList()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConBuffStats_8cs_source.html#l00049">GetPhaseStr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConBuffStats_8cs_source.html#l00051">GetPhaseStr()</a>.</p>
 
 </div>
 </div>
@@ -720,14 +724,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a03adf0ba13c3fb24ce688e9efd41eaab">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00108">108</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        list.Add((<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;hintDebuffStats&quot;</span> : <span class="stringliteral">&quot;hintBuffStats&quot;</span>).lang(base.sourceElement.GetName(), <a class="code hl_function" href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">CalcValue</a>().<a class="code hl_function" href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">ToString</a>() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00163">BaseCondition.cs:163</a></div></div>
-<div class="ttc" id="aclassConBuffStats_html_ab6f75831ff23bb346c6511979b5282e1"><div class="ttname"><a href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">ConBuffStats.CalcValue</a></div><div class="ttdeci">int CalcValue()</div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00095">ConBuffStats.cs:95</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00109">109</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        list.Add((<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;hintDebuffStats&quot;</span> : <span class="stringliteral">&quot;hintBuffStats&quot;</span>).lang(base.sourceElement.GetName(), <a class="code hl_function" href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">CalcValue</a>().<a class="code hl_function" href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">ToString</a>() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00165">BaseCondition.cs:165</a></div></div>
+<div class="ttc" id="aclassConBuffStats_html_ab6f75831ff23bb346c6511979b5282e1"><div class="ttname"><a href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">ConBuffStats.CalcValue</a></div><div class="ttdeci">int CalcValue()</div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00096">ConBuffStats.cs:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00095">CalcValue()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00163">BaseCondition.ToString()</a>.</p>
+<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00096">CalcValue()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00165">BaseCondition.ToString()</a>.</p>
 
 </div>
 </div>
@@ -756,23 +760,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a4727ef4556b886b91eec62a3f3585fbc">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00068">68</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classCondition.html">Condition</a>.<a class="code hl_variable" href="classCondition.html#af8cb90dd6a953a82fe961d90ac7dfc7d">ignoreEffect</a>)</div>
-<div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;debuff&quot;</span> : <span class="stringliteral">&quot;buff&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;debuff&quot;</span> : <span class="stringliteral">&quot;buff&quot;</span>);</div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;buffStats_curse&quot;</span> : <span class="stringliteral">&quot;buffStats&quot;</span>, <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[base.refVal].GetName().ToLower());</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00070">70</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classCondition.html">Condition</a>.<a class="code hl_variable" href="classCondition.html#af8cb90dd6a953a82fe961d90ac7dfc7d">ignoreEffect</a>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;debuff&quot;</span> : <span class="stringliteral">&quot;buff&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;debuff&quot;</span> : <span class="stringliteral">&quot;buff&quot;</span>);</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;buffStats_curse&quot;</span> : <span class="stringliteral">&quot;buffStats&quot;</span>, <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[base.refVal].GetName().ToLower());</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
 <div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05134">Card.cs:5134</a></div></div>
-<div class="ttc" id="aclassCard_html_a8e3d176eebbdd8df4f5868aa199d488a"><div class="ttname"><a href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">Card.PlayEffect</a></div><div class="ttdeci">Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05168">Card.cs:5168</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05769">Card.cs:5769</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05125">Card.cs:5125</a></div></div>
+<div class="ttc" id="aclassCard_html_a8e3d176eebbdd8df4f5868aa199d488a"><div class="ttname"><a href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">Card.PlayEffect</a></div><div class="ttdeci">Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05159">Card.cs:5159</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05760">Card.cs:5760</a></div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
 <div class="ttc" id="aclassCondition_html_af8cb90dd6a953a82fe961d90ac7dfc7d"><div class="ttname"><a href="classCondition.html#af8cb90dd6a953a82fe961d90ac7dfc7d">Condition.ignoreEffect</a></div><div class="ttdeci">static bool ignoreEffect</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00005">Condition.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Condition_8cs_source.html#l00005">Condition.ignoreEffect</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Card_8cs_source.html#l05168">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l05134">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l05769">Card.Say()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Condition_8cs_source.html#l00005">Condition.ignoreEffect</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Card_8cs_source.html#l05159">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l05125">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l05760">Card.Say()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -812,19 +816,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00087">87</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
-<div class="line"><span class="lineno">   89</span>        base.SetOwner(_owner);</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a> = <span class="keyword">new</span> <a class="code hl_class" href="classElementContainer.html">ElementContainer</a>();</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(base.refVal, <a class="code hl_function" href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">CalcValue</a>() * ((!<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a>) ? 1 : (-1)));</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">SetParent</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>);</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00089">89</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        base.SetOwner(_owner);</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(base.refVal, <a class="code hl_function" href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">CalcValue</a>() * ((!<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a>) ? 1 : (-1)));</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">SetParent</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
 <div class="ttc" id="aclassBaseCondition_html_ae298dc6f6177eb07f0aa01f7422532f5"><div class="ttname"><a href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">BaseCondition.elements</a></div><div class="ttdeci">ElementContainer elements</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00013">BaseCondition.cs:13</a></div></div>
-<div class="ttc" id="aclassElementContainer_html"><div class="ttname"><a href="classElementContainer.html">ElementContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00009">ElementContainer.cs:10</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_a1612076673169f97fcfabf021eee2f20"><div class="ttname"><a href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">ElementContainer.SetParent</a></div><div class="ttdeci">void SetParent(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00520">ElementContainer.cs:520</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_acc8918541c5d18ee2741762a612487b5"><div class="ttname"><a href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">ElementContainer.SetBase</a></div><div class="ttdeci">Element SetBase(string alias, int v, int potential=0)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00351">ElementContainer.cs:351</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00095">CalcValue()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00013">BaseCondition.elements</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="ElementContainer_8cs_source.html#l00351">ElementContainer.SetBase()</a>, and <a class="el" href="ElementContainer_8cs_source.html#l00520">ElementContainer.SetParent()</a>.</p>
+<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00096">CalcValue()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00013">BaseCondition.elements</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="ElementContainer_8cs_source.html#l00351">ElementContainer.SetBase()</a>, and <a class="el" href="ElementContainer_8cs_source.html#l00520">ElementContainer.SetParent()</a>.</p>
 
 </div>
 </div>
@@ -875,7 +877,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00020">20</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConBuffStats_8cs_source.html#l00040">GetColor()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00054">GetText()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00108">OnWriteNote()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00068">PlayEffect()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00087">SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConBuffStats_8cs_source.html#l00042">GetColor()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00056">GetText()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00109">OnWriteNote()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00070">PlayEffect()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00089">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -936,6 +938,30 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   18</span>    }</div>
 <div class="ttc" id="aConditionType_8cs_html_a8fc1b7d50bd342b43d026ee18bece446"><div class="ttname"><a href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a></div><div class="ttdeci">ConditionType</div><div class="ttdef"><b>Definition:</b> <a href="ConditionType_8cs_source.html#l00001">ConditionType.cs:2</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a6611b71184e12cc13e5eb74d70200cbe" name="a6611b71184e12cc13e5eb74d70200cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6611b71184e12cc13e5eb74d70200cbe">&#9670;&#160;</a></span>UseElements</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ConBuffStats.UseElements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConBuffStats_8cs_source.html#l00026">26</a> of file <a class="el" href="ConBuffStats_8cs_source.html">ConBuffStats.cs</a>.</p>
+
 </div>
 </div>
 <a id="a05abf0a207f4f2a4e24d9feb16a6336d" name="a05abf0a207f4f2a4e24d9feb16a6336d"></a>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.65</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.66 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -840,9 +840,9 @@ $(document).ready(function(){initNavTree('Core_8cs_source.html',''); initResizab
 <div class="line"><a id="l00746" name="l00746"></a><span class="lineno"><a class="line" href="classCore.html#a9b8975c24d4c0360504c4689651b7a2e">  746</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> IniData <a class="code hl_function" href="classCore.html#a9b8975c24d4c0360504c4689651b7a2e">GetElinIni</a>()</div>
 <div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>    {</div>
 <div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>        <span class="keywordtype">string</span> pathIni = <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a04e3995d5c70ce695d1f01f93d14c4dd">PathIni</a>;</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>        {</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>            <span class="keywordtype">string</span> ie = <span class="stringliteral">&quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>        <span class="keywordtype">string</span> ie = <span class="stringliteral">&quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>        {</div>
 <div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>            FileIniDataParser fileIniDataParser = <span class="keyword">new</span> FileIniDataParser();</div>
 <div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            <span class="keywordflow">if</span> (!File.Exists(pathIni))</div>
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>            {</div>
@@ -865,72 +865,74 @@ $(document).ready(function(){initNavTree('Core_8cs_source.html',''); initResizab
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>        {</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
 <div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;exception: Failed to parse:&quot;</span> + pathIni);</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>        }</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    }</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span> </div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno"><a class="line" href="classCore.html#a42579ff1e548c5563ea99642cb9536a8">  778</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCore.html#a42579ff1e548c5563ea99642cb9536a8">SaveElinIni</a>(IniData ini)</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    {</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>        <span class="keyword">new</span> FileIniDataParser().WriteFile(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a04e3995d5c70ce695d1f01f93d14c4dd">PathIni</a>, ini);</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    }</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span> </div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno"><a class="line" href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">  783</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">TryWarnMod</a>(Action action, <span class="keywordtype">bool</span> warn = <span class="keyword">true</span>)</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    {</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>        <span class="keywordflow">if</span> (warn)</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>        {</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>            IniData ini = GetElinIni();</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>            <span class="keywordflow">if</span> (ini.Global[<span class="stringliteral">&quot;agreed_usercontens_usage_terms&quot;</span>] != <span class="stringliteral">&quot;yes&quot;</span>)</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            {</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>                <span class="keywordtype">string</span>[] items = <span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;readTerms&quot;</span>, <span class="stringliteral">&quot;agree&quot;</span>, <span class="stringliteral">&quot;disagree&quot;</span> };</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.List(<span class="stringliteral">&quot;dialogTermsOfUseUGC&quot;</span>.lang(), items, (<span class="keywordtype">string</span> j) =&gt; j, delegate(<span class="keywordtype">int</span> c, <span class="keywordtype">string</span> d)</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                {</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                    <span class="keywordflow">switch</span> (c)</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                    {</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                        <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;custom&quot;</span>, <span class="stringliteral">&quot;terms2&quot;</span>);</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>                    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>                        ini.Global[<span class="stringliteral">&quot;agreed_usercontens_usage_terms&quot;</span>] = <span class="stringliteral">&quot;yes&quot;</span>;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>                        SaveElinIni(ini);</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>                        action();</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                    }</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>                }, canCancel: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>            }</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        }</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        action();</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    }</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span> </div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno"><a class="line" href="classCore.html#a6727eea2fb2fd79527e35ab71b79a08f">  812</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCore.html#a6727eea2fb2fd79527e35ab71b79a08f">TryWarnUpload</a>(Action action)</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    {</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>        IniData ini = GetElinIni();</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        <span class="keywordflow">if</span> (ini.Global[<span class="stringliteral">&quot;agreed_usercontents_upload_terms&quot;</span>] != <span class="stringliteral">&quot;yes&quot;</span>)</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>        {</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>            <span class="keywordtype">string</span>[] items = <span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;readTerms&quot;</span>, <span class="stringliteral">&quot;agree&quot;</span>, <span class="stringliteral">&quot;disagree&quot;</span> };</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.List(<span class="stringliteral">&quot;dialogTermsOfUse&quot;</span>.lang(), items, (<span class="keywordtype">string</span> j) =&gt; j, delegate(<span class="keywordtype">int</span> c, <span class="keywordtype">string</span> d)</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>            {</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>                <span class="keywordflow">switch</span> (c)</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>                {</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>                    <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;custom&quot;</span>, <span class="stringliteral">&quot;terms&quot;</span>);</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                    ini.Global[<span class="stringliteral">&quot;agreed_usercontents_upload_terms&quot;</span>] = <span class="stringliteral">&quot;yes&quot;</span>;</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                    SaveElinIni(ini);</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                    action();</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                }</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>            }, canCancel: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        }</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        {</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>            action();</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>        }</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>    }</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>}</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>            IO.DeleteFile(pathIni);</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>            File.CreateText(pathIni).Close();</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>        }</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    }</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno"><a class="line" href="classCore.html#a42579ff1e548c5563ea99642cb9536a8">  780</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCore.html#a42579ff1e548c5563ea99642cb9536a8">SaveElinIni</a>(IniData ini)</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    {</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        <span class="keyword">new</span> FileIniDataParser().WriteFile(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a04e3995d5c70ce695d1f01f93d14c4dd">PathIni</a>, ini);</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    }</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span> </div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno"><a class="line" href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">  785</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">TryWarnMod</a>(Action action, <span class="keywordtype">bool</span> warn = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    {</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>        <span class="keywordflow">if</span> (warn)</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>        {</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            IniData ini = GetElinIni();</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            <span class="keywordflow">if</span> (ini.Global[<span class="stringliteral">&quot;agreed_usercontens_usage_terms&quot;</span>] != <span class="stringliteral">&quot;yes&quot;</span>)</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>            {</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                <span class="keywordtype">string</span>[] items = <span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;readTerms&quot;</span>, <span class="stringliteral">&quot;agree&quot;</span>, <span class="stringliteral">&quot;disagree&quot;</span> };</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.List(<span class="stringliteral">&quot;dialogTermsOfUseUGC&quot;</span>.lang(), items, (<span class="keywordtype">string</span> j) =&gt; j, delegate(<span class="keywordtype">int</span> c, <span class="keywordtype">string</span> d)</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                {</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                    <span class="keywordflow">switch</span> (c)</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                    {</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>                        <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;custom&quot;</span>, <span class="stringliteral">&quot;terms2&quot;</span>);</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>                        ini.Global[<span class="stringliteral">&quot;agreed_usercontens_usage_terms&quot;</span>] = <span class="stringliteral">&quot;yes&quot;</span>;</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>                        SaveElinIni(ini);</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                        action();</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>                    }</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>                }, canCancel: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>            }</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        }</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        action();</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    }</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span> </div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno"><a class="line" href="classCore.html#a6727eea2fb2fd79527e35ab71b79a08f">  814</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCore.html#a6727eea2fb2fd79527e35ab71b79a08f">TryWarnUpload</a>(Action action)</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    {</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>        IniData ini = GetElinIni();</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>        <span class="keywordflow">if</span> (ini.Global[<span class="stringliteral">&quot;agreed_usercontents_upload_terms&quot;</span>] != <span class="stringliteral">&quot;yes&quot;</span>)</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        {</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>            <span class="keywordtype">string</span>[] items = <span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;readTerms&quot;</span>, <span class="stringliteral">&quot;agree&quot;</span>, <span class="stringliteral">&quot;disagree&quot;</span> };</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.List(<span class="stringliteral">&quot;dialogTermsOfUse&quot;</span>.lang(), items, (<span class="keywordtype">string</span> j) =&gt; j, delegate(<span class="keywordtype">int</span> c, <span class="keywordtype">string</span> d)</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>            {</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>                <span class="keywordflow">switch</span> (c)</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>                {</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>                    <a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>.<a class="code hl_function" href="classLayerHelp.html#a8c2b68bab7fee455dcd42a72525d2799">Toggle</a>(<span class="stringliteral">&quot;custom&quot;</span>, <span class="stringliteral">&quot;terms&quot;</span>);</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                    ini.Global[<span class="stringliteral">&quot;agreed_usercontents_upload_terms&quot;</span>] = <span class="stringliteral">&quot;yes&quot;</span>;</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                    SaveElinIni(ini);</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                    action();</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>                }</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>            }, canCancel: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        }</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>        {</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>            action();</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>        }</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    }</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>}</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aObjValType_8cs_html_a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206"><div class="ttname"><a href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">ObjValType.Material</a></div><div class="ttdeci">@ Material</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52db"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52db">ReleaseMode</a></div><div class="ttdeci">ReleaseMode</div><div class="ttdef"><b>Definition:</b> <a href="ReleaseMode_8cs_source.html#l00001">ReleaseMode.cs:2</a></div></div>
@@ -959,7 +961,7 @@ $(document).ready(function(){initNavTree('Core_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassBaseTileMap_html_af2f27b63b7d3cbd869e0cf76d7fc063c"><div class="ttname"><a href="classBaseTileMap.html#af2f27b63b7d3cbd869e0cf76d7fc063c">BaseTileMap.passBlock</a></div><div class="ttdeci">MeshPass passBlock</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00147">BaseTileMap.cs:147</a></div></div>
 <div class="ttc" id="aclassCameraSupport_html_a4960d89790b6001f79a60a3d158d1285"><div class="ttname"><a href="classCameraSupport.html#a4960d89790b6001f79a60a3d158d1285">CameraSupport.OnChangeResolution</a></div><div class="ttdeci">void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00051">CameraSupport.cs:51</a></div></div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05134">Card.cs:5134</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05125">Card.cs:5125</a></div></div>
 <div class="ttc" id="aclassCharaActorPCC_html"><div class="ttname"><a href="classCharaActorPCC.html">CharaActorPCC</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaActorPCC_8cs_source.html#l00003">CharaActorPCC.cs:4</a></div></div>
 <div class="ttc" id="aclassCharaActorPCC_html_aed4022487f3a8c672a36b5d67948a5e0"><div class="ttname"><a href="classCharaActorPCC.html#aed4022487f3a8c672a36b5d67948a5e0">CharaActorPCC.provider</a></div><div class="ttdeci">SpriteProvider provider</div><div class="ttdef"><b>Definition:</b> <a href="CharaActorPCC_8cs_source.html#l00009">CharaActorPCC.cs:9</a></div></div>
 <div class="ttc" id="aclassClassCache_html"><div class="ttname"><a href="classClassCache.html">ClassCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00006">ClassCache.cs:7</a></div></div>
@@ -1023,7 +1025,7 @@ $(document).ready(function(){initNavTree('Core_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassCore_html_a39bfb0096dac177b2b41abf6fc61a6d7"><div class="ttname"><a href="classCore.html#a39bfb0096dac177b2b41abf6fc61a6d7">Core.effects</a></div><div class="ttdeci">EffectManager effects</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00035">Core.cs:35</a></div></div>
 <div class="ttc" id="aclassCore_html_a3a9b5073a28ef569c3f9707e4bc30e3d"><div class="ttname"><a href="classCore.html#a3a9b5073a28ef569c3f9707e4bc30e3d">Core.avgDelta</a></div><div class="ttdeci">static float avgDelta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00019">Core.cs:19</a></div></div>
 <div class="ttc" id="aclassCore_html_a3dc1253c3eba8b4d616506b8d5755438"><div class="ttname"><a href="classCore.html#a3dc1253c3eba8b4d616506b8d5755438">Core.GetElement</a></div><div class="ttdeci">static int GetElement(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00718">Core.cs:718</a></div></div>
-<div class="ttc" id="aclassCore_html_a42579ff1e548c5563ea99642cb9536a8"><div class="ttname"><a href="classCore.html#a42579ff1e548c5563ea99642cb9536a8">Core.SaveElinIni</a></div><div class="ttdeci">static void SaveElinIni(IniData ini)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00778">Core.cs:778</a></div></div>
+<div class="ttc" id="aclassCore_html_a42579ff1e548c5563ea99642cb9536a8"><div class="ttname"><a href="classCore.html#a42579ff1e548c5563ea99642cb9536a8">Core.SaveElinIni</a></div><div class="ttdeci">static void SaveElinIni(IniData ini)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00780">Core.cs:780</a></div></div>
 <div class="ttc" id="aclassCore_html_a4628cc2028f25f32659b0efbf8074ca1"><div class="ttname"><a href="classCore.html#a4628cc2028f25f32659b0efbf8074ca1">Core.FreezeScreen</a></div><div class="ttdeci">override void FreezeScreen(float duration=0.3f)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00647">Core.cs:647</a></div></div>
 <div class="ttc" id="aclassCore_html_a47331fd958351023e3f154c8cf7cfc08"><div class="ttname"><a href="classCore.html#a47331fd958351023e3f154c8cf7cfc08">Core.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00514">Core.cs:514</a></div></div>
 <div class="ttc" id="aclassCore_html_a4e138fb2ad0159c2b7c1ec6fb009a4b1"><div class="ttname"><a href="classCore.html#a4e138fb2ad0159c2b7c1ec6fb009a4b1">Core.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00292">Core.cs:292</a></div></div>
@@ -1032,7 +1034,7 @@ $(document).ready(function(){initNavTree('Core_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassCore_html_a58bee3d68d4be80c1e02e9d2be0ab06c"><div class="ttname"><a href="classCore.html#a58bee3d68d4be80c1e02e9d2be0ab06c">Core.SetCurrent</a></div><div class="ttdeci">static Core SetCurrent(Core _current=null)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00566">Core.cs:566</a></div></div>
 <div class="ttc" id="aclassCore_html_a5b0d9e66d212fe14e4f39b59c149b17d"><div class="ttname"><a href="classCore.html#a5b0d9e66d212fe14e4f39b59c149b17d">Core.skinTimer</a></div><div class="ttdeci">float skinTimer</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00079">Core.cs:79</a></div></div>
 <div class="ttc" id="aclassCore_html_a63525d6965298d0e674f5e297b13f862"><div class="ttname"><a href="classCore.html#a63525d6965298d0e674f5e297b13f862">Core.ConsumeInput</a></div><div class="ttdeci">override void ConsumeInput()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00561">Core.cs:561</a></div></div>
-<div class="ttc" id="aclassCore_html_a6727eea2fb2fd79527e35ab71b79a08f"><div class="ttname"><a href="classCore.html#a6727eea2fb2fd79527e35ab71b79a08f">Core.TryWarnUpload</a></div><div class="ttdeci">static void TryWarnUpload(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00812">Core.cs:812</a></div></div>
+<div class="ttc" id="aclassCore_html_a6727eea2fb2fd79527e35ab71b79a08f"><div class="ttname"><a href="classCore.html#a6727eea2fb2fd79527e35ab71b79a08f">Core.TryWarnUpload</a></div><div class="ttdeci">static void TryWarnUpload(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00814">Core.cs:814</a></div></div>
 <div class="ttc" id="aclassCore_html_a6e11d8c1b9f97aae05c0c72bcf490cc4"><div class="ttname"><a href="classCore.html#a6e11d8c1b9f97aae05c0c72bcf490cc4">Core.debug</a></div><div class="ttdeci">CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00029">Core.cs:29</a></div></div>
 <div class="ttc" id="aclassCore_html_a6e24c18d286a3018ed7cea74c8c62f4c"><div class="ttname"><a href="classCore.html#a6e24c18d286a3018ed7cea74c8c62f4c">Core.skins</a></div><div class="ttdeci">SkinManager skins</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00041">Core.cs:41</a></div></div>
 <div class="ttc" id="aclassCore_html_a7103d2867587f5aa8743d27a7ab2df78"><div class="ttname"><a href="classCore.html#a7103d2867587f5aa8743d27a7ab2df78">Core.steam</a></div><div class="ttdeci">Steam steam</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00055">Core.cs:55</a></div></div>
@@ -1063,7 +1065,7 @@ $(document).ready(function(){initNavTree('Core_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassCore_html_acfcdec21b8065bc6731db8ac33904feb"><div class="ttname"><a href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">Core.ui</a></div><div class="ttdeci">UI ui</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00061">Core.cs:61</a></div></div>
 <div class="ttc" id="aclassCore_html_addb7a6f655c0e106e16b03991892ca98"><div class="ttname"><a href="classCore.html#addb7a6f655c0e106e16b03991892ca98">Core.pccs</a></div><div class="ttdeci">PCCManager pccs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00039">Core.cs:39</a></div></div>
 <div class="ttc" id="aclassCore_html_ae2428059ecf3fc37afd4069dbdc6c3b5"><div class="ttname"><a href="classCore.html#ae2428059ecf3fc37afd4069dbdc6c3b5">Core.SetLang</a></div><div class="ttdeci">void SetLang(string langCode, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00684">Core.cs:684</a></div></div>
-<div class="ttc" id="aclassCore_html_ae3107026cb0aee74afb00590d1ed9cb9"><div class="ttname"><a href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">Core.TryWarnMod</a></div><div class="ttdeci">static void TryWarnMod(Action action, bool warn=true)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00783">Core.cs:783</a></div></div>
+<div class="ttc" id="aclassCore_html_ae3107026cb0aee74afb00590d1ed9cb9"><div class="ttname"><a href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">Core.TryWarnMod</a></div><div class="ttdeci">static void TryWarnMod(Action action, bool warn=true)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00785">Core.cs:785</a></div></div>
 <div class="ttc" id="aclassCore_html_ae6b458db81005f1edb123b33cf565b48"><div class="ttname"><a href="classCore.html#ae6b458db81005f1edb123b33cf565b48">Core.trial</a></div><div class="ttdeci">bool trial</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00059">Core.cs:59</a></div></div>
 <div class="ttc" id="aclassCore_html_ae788cd24238994318d2c10d0deb32ce8"><div class="ttname"><a href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">Core.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00017">Core.cs:17</a></div></div>
 <div class="ttc" id="aclassCore_html_aedcbed2e921b6b58b6ce5111501c0083"><div class="ttname"><a href="classCore.html#aedcbed2e921b6b58b6ce5111501c0083">Core.GetCurrent</a></div><div class="ttdeci">static Core GetCurrent()</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00581">Core.cs:581</a></div></div>

@@ -14,5 +14,6 @@ var classConBuffStats =
     [ "isDebuff", "classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5", null ],
     [ "Name", "classConBuffStats.html#a2f2d9a660d1aa7c8483993c1d5010a70", null ],
     [ "Type", "classConBuffStats.html#a89aa2540012608c39824505a1ba5c378", null ],
+    [ "UseElements", "classConBuffStats.html#a6611b71184e12cc13e5eb74d70200cbe", null ],
     [ "WillOverride", "classConBuffStats.html#a05abf0a207f4f2a4e24d9feb16a6336d", null ]
 ];

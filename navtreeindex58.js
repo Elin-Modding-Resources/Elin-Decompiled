@@ -1,5 +1,13 @@
 var NAVTREEINDEX58 =
 {
+"classGameUpdater.html#ae6d293772c555e2246a6ecea246f0307":[1,0,474,28],
+"classGameUpdater.html#af0555803254c34d2fb76819842efff32":[1,0,474,27],
+"classGameUpdater.html#af8c95dadad5d9580078899dc8c05e674":[1,0,474,29],
+"classGameUpdater_1_1AreaUpdater.html":[1,0,474,0],
+"classGameUpdater_1_1AreaUpdater.html#ac65df547dd0ab377dc852aba38f87c2d":[1,0,474,0,0],
+"classGameUpdater_1_1CharaUpdater.html":[1,0,474,1],
+"classGameUpdater_1_1CharaUpdater.html#a0f8572e10590fe7b4efa595304f18517":[1,0,474,1,0],
+"classGameUpdater_1_1ConditionUpdater.html":[1,0,474,2],
 "classGameUpdater_1_1ConditionUpdater.html#ab95f7689cc4ce2f76bae6f977ac7df36":[1,0,474,2,0],
 "classGameUpdater_1_1FastSurfaceUpdater.html":[1,0,474,3],
 "classGameUpdater_1_1FastSurfaceUpdater.html#a63bd3f00695a8ced2deaa4e21c281ac0":[1,0,474,3,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX58 =
 "classGoalTask.html#a792fc8f65915232cd39a51253ca34c51":[1,0,501,4],
 "classGoalTask.html#a7c2500dfc889c770053da616cfe9e36c":[1,0,501,3],
 "classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68":[1,0,501,5],
-"classGoalTask.html#aadcc28cc698b209fe142fc6614b71037":[1,0,501,10],
-"classGoalTask.html#ac50abab5c540b60e25b744f39f67e116":[1,0,501,1],
-"classGoalTask.html#ad0a2f8ac0a5beeb5b047bbe36c899118":[1,0,501,0],
-"classGoalVisitorEnemy.html":[1,0,502],
-"classGoalVisitorEnemy.html#a183b253b2a55ceefe985919842bbebd0":[1,0,502,0],
-"classGoalVisitorEnemy.html#a937fed7f366fa8c7343ae110fa40ff28":[1,0,502,1],
-"classGoalVisitorGuest.html":[1,0,503],
-"classGoalVisitorGuest.html#a895f8c814b2a5e83cbc43e6616689a85":[1,0,503,0],
-"classGoalVisitorGuest.html#a9e41d9f41fb4ef67faf08f11662e52b3":[1,0,503,1]
+"classGoalTask.html#aadcc28cc698b209fe142fc6614b71037":[1,0,501,10]
 };

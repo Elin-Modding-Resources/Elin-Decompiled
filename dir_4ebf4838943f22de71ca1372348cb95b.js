@@ -1699,6 +1699,8 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitUniqueChara.cs", "TraitUniqueChara_8cs.html", "TraitUniqueChara_8cs" ],
     [ "TraitUniqueGuildPersonnel.cs", "TraitUniqueGuildPersonnel_8cs.html", "TraitUniqueGuildPersonnel_8cs" ],
     [ "TraitUniqueMerchant.cs", "TraitUniqueMerchant_8cs.html", "TraitUniqueMerchant_8cs" ],
+    [ "TraitUniqueMonster.cs", "TraitUniqueMonster_8cs.html", "TraitUniqueMonster_8cs" ],
+    [ "TraitUniqueMonsterAdv.cs", "TraitUniqueMonsterAdv_8cs.html", "TraitUniqueMonsterAdv_8cs" ],
     [ "TraitUsuihon.cs", "TraitUsuihon_8cs.html", "TraitUsuihon_8cs" ],
     [ "TraitVendingMachine.cs", "TraitVendingMachine_8cs.html", "TraitVendingMachine_8cs" ],
     [ "TraitViewMap.cs", "TraitViewMap_8cs.html", "TraitViewMap_8cs" ],
