@@ -25,6 +25,7 @@ var classCorePath =
     [ "Map", "classCorePath.html#a334ccf635afe31af0d5c671768b08b38", null ],
     [ "MapGen", "classCorePath.html#a71872b44a406e0fd1a8bbe6e3ea1d82c", null ],
     [ "Media", "classCorePath.html#ab8fa0d3ff5f24277233cb661c3c3f6fa", null ],
+    [ "modData", "classCorePath.html#ad0b98610666b3a6b67e5e142dbc75641", null ],
     [ "News", "classCorePath.html#aff6716175165fac476bf75a2366e9ff2", null ],
     [ "packageCore", "classCorePath.html#a7b6aa77a287630c4a6000cdcea156118", null ],
     [ "Particle", "classCorePath.html#a917ab7446aefdf556a41d78a7ca7d058", null ],

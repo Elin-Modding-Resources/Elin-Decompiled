@@ -1,5 +1,11 @@
 var NAVTREEINDEX107 =
 {
+"classTraitTicketArmPillow.html":[1,0,1675],
+"classTraitTicketChampagne.html":[1,0,1676],
+"classTraitTicketFurniture.html":[1,0,1677],
+"classTraitTicketFurniture.html#a96306db452cd06ecd5623c3d3e414244":[1,0,1677,2],
+"classTraitTicketFurniture.html#aa79abe574ba219d7ddf31ecaae48810b":[1,0,1677,1],
+"classTraitTicketFurniture.html#ada74a4ace463f5923278d818f7cfecbf":[1,0,1677,3],
 "classTraitTicketFurniture.html#adf26d3791bd374d651c28c4e43d0275c":[1,0,1677,0],
 "classTraitTicketFurniture.html#ae04c967da650a7d7cb9ff368dbdbda5c":[1,0,1677,5],
 "classTraitTicketFurniture.html#afc196e658ba172b5492d740cc0c8dd69":[1,0,1677,4],
@@ -155,8 +161,8 @@ var NAVTREEINDEX107 =
 "classTraitUniqueMonster.html":[1,0,1719],
 "classTraitUniqueMonster.html#a27500a006751d229648de78e79756fb0":[1,0,1719,0],
 "classTraitUniqueMonsterAdv.html":[1,0,1720],
+"classTraitUniqueMonsterAdv.html#a04fbe84ed5fc45dc54fe70dec34ceef3":[1,0,1720,1],
 "classTraitUniqueMonsterAdv.html#a1ded442faefb7b57de27858e77fcfd1d":[1,0,1720,2],
-"classTraitUniqueMonsterAdv.html#a22fe4edc9c4db28999136b99bab52d9a":[1,0,1720,1],
 "classTraitUniqueMonsterAdv.html#a3e5f2dd493a5b4d356273079602aaa20":[1,0,1720,0],
 "classTraitUsuihon.html":[1,0,1721],
 "classTraitUsuihon.html#a5f8fb26257cfdeb2d813d39037cbffde":[1,0,1721,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX107 =
 "classTransAnimeData.html#a82bcd5ba3043a2ab66aef4cc5155f4fa":[1,0,1735,5],
 "classTransAnimeData.html#a849622a1402f9af368e0c70cfea861a9":[1,0,1735,21],
 "classTransAnimeData.html#a888f1e5a027ed4147fe55f0b595f3015":[1,0,1735,2],
-"classTransAnimeData.html#a906b2728e2360672ccd4451878786801":[1,0,1735,3],
-"classTransAnimeData.html#a9092ac3201fcca7159dcbeb5afb44836":[1,0,1735,6],
-"classTransAnimeData.html#aa720b0635966caa9b268bd10efb30a90":[1,0,1735,12],
-"classTransAnimeData.html#ab12a7e105fd10fdc2caed01801bda9e7":[1,0,1735,7],
-"classTransAnimeData.html#abab3d3a27445d39c2c8976578cdf0cf9":[1,0,1735,4],
-"classTransAnimeData.html#ac33fcc847580605554b86b8a9e8ddb4c":[1,0,1735,9],
-"classTransAnimeData.html#ac4c4acba36ab6e2d0500e00f0e83f12a":[1,0,1735,0]
+"classTransAnimeData.html#a906b2728e2360672ccd4451878786801":[1,0,1735,3]
 };

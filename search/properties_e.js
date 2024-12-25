@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['n1_0',['n1',['../classTraitItemProc.html#a2bff6aad8b590965d2578ef609b3de3c',1,'TraitItemProc']]],
-  ['n1_1',['N1',['../classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796',1,'TraitDrink.N1()'],['../classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83',1,'TraitPotionRandom.N1()'],['../classTraitRod.html#af52a1245a56862d67b8714fec9a2fba6',1,'TraitRod.N1()'],['../classTraitRodRandom.html#ac49e68a738c706fed4ac3938afa63bec',1,'TraitRodRandom.N1()'],['../classTraitScrollRandom.html#a08b514b9e11ff796bc1684237c39b766',1,'TraitScrollRandom.N1()'],['../classTraitScrollStatic.html#a4bbedef9161fa79f6d2c0b4ff44c1fe9',1,'TraitScrollStatic.N1()']]],
-  ['n1_2',['n1',['../classCellEffect.html#a54e1a4d337ce20b591256682d5f864cf',1,'CellEffect']]],
+  ['n1_0',['N1',['../classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83',1,'TraitPotionRandom.N1()'],['../classTraitRod.html#af52a1245a56862d67b8714fec9a2fba6',1,'TraitRod.N1()'],['../classTraitRodRandom.html#ac49e68a738c706fed4ac3938afa63bec',1,'TraitRodRandom.N1()'],['../classTraitScrollRandom.html#a08b514b9e11ff796bc1684237c39b766',1,'TraitScrollRandom.N1()'],['../classTraitScrollStatic.html#a4bbedef9161fa79f6d2c0b4ff44c1fe9',1,'TraitScrollStatic.N1()']]],
+  ['n1_1',['n1',['../classCellEffect.html#a54e1a4d337ce20b591256682d5f864cf',1,'CellEffect.n1()'],['../classTraitItemProc.html#a2bff6aad8b590965d2578ef609b3de3c',1,'TraitItemProc.n1()']]],
+  ['n1_2',['N1',['../classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796',1,'TraitDrink']]],
   ['name_3',['Name',['../classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774',1,'Recipe.Name()'],['../classHotItemToggleLog.html#ad8b5312d094203919b8bca67a647d8ee',1,'HotItemToggleLog.Name()'],['../classRankedZone.html#a36f64a25e78ed426219474558fb361cf',1,'RankedZone.Name()'],['../classPolicy.html#a19649b133ce3076a1bb18eaa44088ed8',1,'Policy.Name()'],['../classPerson.html#a0d6be70593995cc5124b92117e4a80b0',1,'Person.Name()'],['../classNumLogWorth.html#aaab5a17b53fe0722653e6a0503331cf5',1,'NumLogWorth.Name()'],['../classNumLogStability.html#a974a0a4de907cd62b67f31b8e8a73e82',1,'NumLogStability.Name()'],['../classNumLogCategory.html#a2738385a2c7b12a1b959139afc7190bf',1,'NumLogCategory.Name()'],['../classNumLog.html#a3c55bd90fe559f33c2137650b48aefe8',1,'NumLog.Name()'],['../classHotItemWidget.html#aedc56450cd1fdd50712816452a46114b',1,'HotItemWidget.Name()'],['../classHotItemToggleWidget.html#a80d359c62e65380b0c78b5c3e46fab6b',1,'HotItemToggleWidget.Name()'],['../classHotItemToggleVisible.html#a13eadd07f8698d8b526395993954715e',1,'HotItemToggleVisible.Name()'],['../classHotItemTogglePage.html#a4f3bb13ba02914b62d48bab157aded17',1,'HotItemTogglePage.Name()']]],
   ['name_4',['name',['../classUndoManager_1_1Item.html#a6d5a931d585e00b808661db5ae633e16',1,'UndoManager::Item']]],
   ['name_5',['Name',['../classRecipeSource.html#af505d7e0a3fd033fa5a0c4723681ec13',1,'RecipeSource.Name()'],['../classReligion.html#a0e19eeccc662ba4eab5ce7fbd47a67f5',1,'Religion.Name()'],['../classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a',1,'ResearchPlan.Name()'],['../classSourceBacker_1_1Row.html#a02612a48f4b2fefa94fdfcb5b4ad1cd7',1,'SourceBacker.Row.Name()'],['../classSpatial.html#a8667078305385c64b1209db11f6462c9',1,'Spatial.Name()'],['../classTrait.html#afab0127cca1275cfacbc10e629be18f0',1,'Trait.Name()'],['../classZoneEvent.html#a44bf8211a1324cb77317ace0a195412d',1,'ZoneEvent.Name()']]],
@@ -41,8 +41,8 @@ var searchData=
   ['nosell_38',['noSell',['../classCard.html#a397032484c590be1da2571c303f95a6a',1,'Card']]],
   ['noshadow_39',['noShadow',['../classCard.html#add97121acfb867a3ff23f28eb3da5149',1,'Card']]],
   ['nosnow_40',['noSnow',['../classCard.html#ad8e7e9f614a6f0e61e09240f099e8f00',1,'Card']]],
-  ['num_41',['Num',['../classCard.html#ae1041fe18950e805e2e9db00d64108fd',1,'Card']]],
-  ['num_42',['num',['../classHoard_1_1Item.html#a3d44c8f8269138297711345a790f79c3',1,'Hoard::Item']]],
+  ['num_41',['num',['../classHoard_1_1Item.html#a3d44c8f8269138297711345a790f79c3',1,'Hoard::Item']]],
+  ['num_42',['Num',['../classCard.html#ae1041fe18950e805e2e9db00d64108fd',1,'Card']]],
   ['numbackup_43',['NumBackup',['../classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d',1,'GameIO']]],
   ['numcard_44',['numCard',['../classCodexCreature.html#a53fc120a115da7361e65f8df05ada451',1,'CodexCreature']]],
   ['numcopyitem_45',['NumCopyItem',['../classTrait.html#aeaf83db7916e730b6b27066c133b240c',1,'Trait.NumCopyItem()'],['../classTraitDemitas.html#af401e4c1f2378c214d501d5203dcfc06',1,'TraitDemitas.NumCopyItem()']]],

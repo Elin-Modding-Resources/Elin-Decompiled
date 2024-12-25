@@ -45,9 +45,9 @@ var classTraitChara =
     [ "IsCountAsResident", "classTraitChara.html#a8ef368d3c80cc1f7251c7d59c13d0b45", null ],
     [ "IsUnique", "classTraitChara.html#a77d9f3fbc66790b72fc5f0a5d99d9465", null ],
     [ "IsWearingPanty", "classTraitChara.html#aa1a54866d923a0e55a28f5d57b18227c", null ],
+    [ "MaxRandomAbility", "classTraitChara.html#adea1e51b32083ed2907dfc4ecc0b7c17", null ],
     [ "owner", "classTraitChara.html#acd41bf1785e6918b297a392c75f7befc", null ],
     [ "ShowAdvRank", "classTraitChara.html#af7fa7f221aa381be2ee34dd822ef25d3", null ],
     [ "UseGlobalGoal", "classTraitChara.html#abe2d33e9e462de7c1dc61406cba841d7", null ],
-    [ "UseRandomAbility", "classTraitChara.html#ac5d19e8a42694d88bee194184a4a33a5", null ],
     [ "UseRandomAlias", "classTraitChara.html#a993b1d313f028c65c8f2d580fc6b0579", null ]
 ];

@@ -1,5 +1,10 @@
 var NAVTREEINDEX98 =
 {
+"classTileTypeRoof.html#a9c514fed43f142b65d6b5b7dfccac158":[1,0,1224,0],
+"classTileTypeRoof.html#aa9341bc1181c6d6f2196eaa8b518fcc6":[1,0,1224,2],
+"classTileTypeRoof.html#ab49536a783b2d7825efa4d2fcf08b24e":[1,0,1224,3],
+"classTileTypeRooftop.html":[1,0,1225],
+"classTileTypeScaffold.html":[1,0,1226],
 "classTileTypeScaffold.html#a06590c71fcb15f7c85aa549fc01ab5f5":[1,0,1226,4],
 "classTileTypeScaffold.html#a20a0d04cb2c7fc55bd6eeeffa0f4058a":[1,0,1226,0],
 "classTileTypeScaffold.html#a5a91eed6f7bbabf745899c235f5ef289":[1,0,1226,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX98 =
 "classTrait.html#a7f74a25c8a341831b16cc0e844367a8a":[1,0,1248,77],
 "classTrait.html#a7ff7a8bde8c8843f172e97f169d865c2":[1,0,1248,64],
 "classTrait.html#a802f79d608e7d42e6e9d9ec36b9ea1cd":[1,0,1248,143],
-"classTrait.html#a827c6d1b5b63023d6413e724bac4a584":[1,0,1248,160],
-"classTrait.html#a828119de5defe5508d1552e59bcbc5d1":[1,0,1248,8],
-"classTrait.html#a8451f8b80b1634c825470138ad9e91eb":[1,0,1248,125],
-"classTrait.html#a8469cbf006d45ccf79d0002535bc60b1":[1,0,1248,195],
-"classTrait.html#a8471909c042646f522c65a8333832253":[1,0,1248,0],
-"classTrait.html#a8471909c042646f522c65a8333832253a3833206c4acb4ea74dca7699dbaef446":[1,0,1248,0,2]
+"classTrait.html#a827c6d1b5b63023d6413e724bac4a584":[1,0,1248,160]
 };
