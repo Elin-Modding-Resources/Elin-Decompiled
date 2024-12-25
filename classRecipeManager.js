@@ -19,6 +19,7 @@ var classRecipeManager =
     [ "hoveredRecipes", "classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703", null ],
     [ "knownIngredients", "classRecipeManager.html#a5da142696079aedce2d43e94e76b964c", null ],
     [ "knownRecipes", "classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58", null ],
+    [ "lastIngredients", "classRecipeManager.html#a037a25d5cfdb8fb716e03c46c49b9be1", null ],
     [ "list", "classRecipeManager.html#a25ab43108db349acf1928eeaafd0759a", null ],
     [ "newRecipes", "classRecipeManager.html#afc7f69001a0268922b380bc78f8f6477", null ],
     [ "rebuild", "classRecipeManager.html#a02cb83c92b5674b13bb030c2f2f3c097", null ]

@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68":[1,0,501,5],
+"classGoalTask.html#aadcc28cc698b209fe142fc6614b71037":[1,0,501,10],
 "classGoalTask.html#ac50abab5c540b60e25b744f39f67e116":[1,0,501,1],
 "classGoalTask.html#ad0a2f8ac0a5beeb5b047bbe36c899118":[1,0,501,0],
 "classGoalVisitorEnemy.html":[1,0,502],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "classGuildThief.html#a5b8f5bd873fc29bca4c3b2c8f493da41":[1,0,532,1],
 "classGuildThief.html#ae9b6267201bb3a46f474bef14da48001":[1,0,532,2],
 "classHS__ParticleEndSound.html":[1,0,584],
-"classHS__ParticleEndSound.html#a0fabfbb7d3d68cd08da03e3277b8a1f1":[1,0,584,18],
-"classHS__ParticleEndSound.html#a161d8bc315e52954eb36c5e42fdd799f":[1,0,584,3],
-"classHS__ParticleEndSound.html#a40a2ab1fed57740c8808a8610eb735cf":[1,0,584,19]
+"classHS__ParticleEndSound.html#a0fabfbb7d3d68cd08da03e3277b8a1f1":[1,0,584,18]
 };

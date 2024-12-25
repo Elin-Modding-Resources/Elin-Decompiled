@@ -1,5 +1,11 @@
 var NAVTREEINDEX120 =
 {
+"interfaceIPrefImage.html":[1,0,638],
+"interfaceIPrefImage.html#a2c86a22d6c0f62fbd2e96ec7c9c6a765":[1,0,638,0],
+"interfaceIPrefImage.html#a625400950be55397dd62bfd2f3939af3":[1,0,638,1],
+"interfaceIRenderSource.html":[1,0,640],
+"interfaceIRenderer.html":[1,0,639],
+"interfaceIRenderer.html#a8b9fbc5eecbf05b0215a84458881bfd9":[1,0,639,0],
 "interfaceIRenderer.html#aa04de23bb6fc061cbc8f3301b09c75ea":[1,0,639,1],
 "interfaceIReservable.html":[1,0,641],
 "interfaceISyncScreen.html":[1,0,642],
@@ -243,11 +249,5 @@ var NAVTREEINDEX120 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac194ba30def0f6dbf1990a2d64e49570":[0,4,2,0,8,64],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac26450441b4379e581ad1a6693b94d1d":[0,4,2,0,8,199],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac39aa6dbe619bb8ef8187b00b686df6a":[0,4,2,0,8,2],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac9c9c146c630ca5ef9197c73c032f4a6":[0,4,2,0,8,54],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daca7163bd3e992d9f5b0ec0024c092fc2":[0,4,2,0,8,196],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dacee7fd6b791b2751c26f1eb4078fad74":[0,4,2,0,8,80],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad104b77eb1b8269d6ad67c55fea641f2":[0,4,2,0,8,44],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad2222ddc18747e01a7f1049a389ef4ee":[0,4,2,0,8,225],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad23c607e300445f857d4da1ef37fc81e":[0,4,2,0,8,45],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad27a84713a758d1ac105af3d7cdb849c":[0,4,2,0,8,98]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac9c9c146c630ca5ef9197c73c032f4a6":[0,4,2,0,8,54]
 };

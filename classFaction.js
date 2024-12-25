@@ -25,6 +25,7 @@ var classFaction =
     [ "HasMember", "classFaction.html#a689b2278be1ded0fce3a9d259d6ccb2b", null ],
     [ "Init", "classFaction.html#a2a06b735d8b8c27d8de94199c78608d6", null ],
     [ "IsGlobalPolicyActive", "classFaction.html#a3406b4e7a0b4b83ecae859c13933d2cd", null ],
+    [ "IsWearingPanty", "classFaction.html#a3c53e98d39c5978c240b899ff471dd90", null ],
     [ "ModRelation", "classFaction.html#a7ff0e056d635226581689967a106635b", null ],
     [ "OnAdvanceDay", "classFaction.html#aaae8fd59688be3cccc6e171abfd2e7f6", null ],
     [ "OnAdvanceMonth", "classFaction.html#ab4b8dab37486678258c88686273fc8ab", null ],

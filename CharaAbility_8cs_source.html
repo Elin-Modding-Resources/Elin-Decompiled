@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.66 Hotfix 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.67 Hotfix 2</span>
    </div>
   </td>
  </tr>
@@ -123,9 +123,9 @@ $(document).ready(function(){initNavTree('CharaAbility_8cs_source.html',''); ini
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                pt = (array.Length &gt; 2)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            });</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCharaAbility.html#a1447c2476bd31b14ffb45414bedb6bb2">owner</a>.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#ac5d19e8a42694d88bee194184a4a33a5">UseRandomAbility</a> &amp;&amp; <a class="code hl_variable" href="classCharaAbility.html#a1447c2476bd31b14ffb45414bedb6bb2">owner</a>.<a class="code hl_variable" href="classChara.html#ae69ae4ae4ea0f6b179c35b01669c8816">_listAbility</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCharaAbility.html#a1447c2476bd31b14ffb45414bedb6bb2">owner</a>.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#adea1e51b32083ed2907dfc4ecc0b7c17">MaxRandomAbility</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="classCharaAbility.html#a1447c2476bd31b14ffb45414bedb6bb2">owner</a>.<a class="code hl_variable" href="classChara.html#ae69ae4ae4ea0f6b179c35b01669c8816">_listAbility</a> == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">int</span> num = 3 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) - <a class="code hl_variable" href="classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa">list</a>.<a class="code hl_variable" href="classActList.html#aa6343ddc5220ff66102e85e468712071">items</a>.Count;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">int</span> num = owner.trait.MaxRandomAbility + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) - <a class="code hl_variable" href="classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa">list</a>.<a class="code hl_variable" href="classActList.html#aa6343ddc5220ff66102e85e468712071">items</a>.Count;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> (num &gt; 1)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCharaAbility.html#a00b0205367206ad515802036a4e8c24e">randomAbilities</a>.Count == 0)</div>
@@ -252,7 +252,7 @@ $(document).ready(function(){initNavTree('CharaAbility_8cs_source.html',''); ini
 <div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00010">SourceElement.cs:11</a></div></div>
 <div class="ttc" id="aclassSourceElement_html"><div class="ttname"><a href="classSourceElement.html">SourceElement</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00007">SourceElement.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
-<div class="ttc" id="aclassTraitChara_html_ac5d19e8a42694d88bee194184a4a33a5"><div class="ttname"><a href="classTraitChara.html#ac5d19e8a42694d88bee194184a4a33a5">TraitChara.UseRandomAbility</a></div><div class="ttdeci">virtual bool UseRandomAbility</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00087">TraitChara.cs:87</a></div></div>
+<div class="ttc" id="aclassTraitChara_html_adea1e51b32083ed2907dfc4ecc0b7c17"><div class="ttname"><a href="classTraitChara.html#adea1e51b32083ed2907dfc4ecc0b7c17">TraitChara.MaxRandomAbility</a></div><div class="ttdeci">virtual int MaxRandomAbility</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00087">TraitChara.cs:87</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
