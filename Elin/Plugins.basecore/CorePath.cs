@@ -163,6 +163,9 @@ public class CorePath
 	public static string custom;
 
 	[NonSerialized]
+	public static string modData;
+
+	[NonSerialized]
 	public static string rootMod;
 
 	[NonSerialized]
@@ -226,6 +229,7 @@ public class CorePath
 		packageCore = rootMod + "_Elona/";
 		user = Application.persistentDataPath + "/User/";
 		custom = Application.persistentDataPath + "/Custom/";
+		modData = Application.persistentDataPath + "/Mod/";
 		if (!Application.isPlaying)
 		{
 			return;
