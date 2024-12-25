@@ -1,7 +1,5 @@
 var NAVTREEINDEX60 =
 {
-"classHS__ParticleEndSound.html#a161d8bc315e52954eb36c5e42fdd799f":[1,0,584,3],
-"classHS__ParticleEndSound.html#a40a2ab1fed57740c8808a8610eb735cf":[1,0,584,19],
 "classHS__ParticleEndSound.html#a44ee781a6b758f616a86fb16d8d97833":[1,0,584,16],
 "classHS__ParticleEndSound.html#a4cd775f107a214371692e76cad2acc48":[1,0,584,7],
 "classHS__ParticleEndSound.html#a626f56b67364f1a5591094a69a63a678":[1,0,584,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX60 =
 "classHomeResourceSkill.html#a928477e0ee666ba8031fc0b00d550cf2":[1,0,555,3],
 "classHomeResourceSkill.html#ad4be4a8c38d606066a60f05251d2db58":[1,0,555,7],
 "classHomeResourceSkill.html#af4b4cd0cf6f23c9a2fffab4a6f1b888d":[1,0,555,5],
-"classHomeResourceSkill.html#af5165193af5dc75edd887a0703ea58ff":[1,0,555,6]
+"classHomeResourceSkill.html#af5165193af5dc75edd887a0703ea58ff":[1,0,555,6],
+"classHomeResourceWorth.html":[1,0,556],
+"classHomeResourceWorth.html#a02fd799d799bc659406b6c4b871f6721":[1,0,556,3]
 };

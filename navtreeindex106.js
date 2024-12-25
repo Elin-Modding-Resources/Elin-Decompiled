@@ -1,11 +1,5 @@
 var NAVTREEINDEX106 =
 {
-"classTraitScrollStatic.html#a9cbbe914b4ae4aa0041672ae6e05b646":[1,0,1614,6],
-"classTraitScrollStatic.html#a9e01940fa32300d27a385f9c23872960":[1,0,1614,0],
-"classTraitScrollStatic.html#afe20ba20c3509dd52b314b300fc71d4f":[1,0,1614,2],
-"classTraitSculpture.html":[1,0,1615],
-"classTraitSculpture.html#a11c9397c46d08a30050c7985340f336b":[1,0,1615,1],
-"classTraitSculpture.html#a2f529009ac3f323b1112e3806487d5e7":[1,0,1615,3],
 "classTraitSculpture.html#a4dd65adb7742ffb16d054061bba3f848":[1,0,1615,2],
 "classTraitSculpture.html#a4fa1e452ad8812fe9d6470487ac96fca":[1,0,1615,0],
 "classTraitSecretary.html":[1,0,1616],
@@ -249,5 +243,11 @@ var NAVTREEINDEX106 =
 "classTraitThrown.html#ac7f8523e6f0db3812f77e20e6d359a8d":[1,0,1673,1],
 "classTraitThrownExplosive.html":[1,0,1674],
 "classTraitThrownExplosive.html#a5c0197caa76da42e635848ca65439097":[1,0,1674,0],
-"classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,1674,1]
+"classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,1674,1],
+"classTraitTicketArmPillow.html":[1,0,1675],
+"classTraitTicketChampagne.html":[1,0,1676],
+"classTraitTicketFurniture.html":[1,0,1677],
+"classTraitTicketFurniture.html#a96306db452cd06ecd5623c3d3e414244":[1,0,1677,2],
+"classTraitTicketFurniture.html#aa79abe574ba219d7ddf31ecaae48810b":[1,0,1677,1],
+"classTraitTicketFurniture.html#ada74a4ace463f5923278d818f7cfecbf":[1,0,1677,3]
 };

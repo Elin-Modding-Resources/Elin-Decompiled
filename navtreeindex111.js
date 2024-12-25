@@ -1,11 +1,5 @@
 var NAVTREEINDEX111 =
 {
-"classUIRecipeInfo.html#a5e371098e8bb23cd6d4ccdf107187e3b":[1,0,1770,17],
-"classUIRecipeInfo.html#a6850eeb4238c88acca3317f129a8faa4":[1,0,1770,29],
-"classUIRecipeInfo.html#a696f29c50bee37ef9fc8f7067f9c1b7c":[1,0,1770,3],
-"classUIRecipeInfo.html#a72385d0d64adcb99514d1c50bca4b6eb":[1,0,1770,37],
-"classUIRecipeInfo.html#a783be2ff486ea799497e0aa194c41c55":[1,0,1770,11],
-"classUIRecipeInfo.html#a7e411494f1926d7aa3596fdc957abe92":[1,0,1770,25],
 "classUIRecipeInfo.html#a8cf57d0e9a62342b8ac6f749233ad989":[1,0,1770,18],
 "classUIRecipeInfo.html#a919cc4139315ffe0d8d59dec4cbf97db":[1,0,1770,36],
 "classUIRecipeInfo.html#a9242feaf759fdfecc5b816464a25c1b9":[1,0,1770,22],
@@ -249,5 +243,11 @@ var NAVTREEINDEX111 =
 "classWidget.html#ad609d2633bca92b69f91569c9a7e5c07":[1,0,1788,22],
 "classWidget.html#ad8fe1c734b47957816912262c78a5b38":[1,0,1788,23],
 "classWidget.html#adc7edf86fd522a256f2879971f83e73d":[1,0,1788,53],
-"classWidget.html#ae0c5df8474492431c11f08c1c84d4992":[1,0,1788,48]
+"classWidget.html#ae0c5df8474492431c11f08c1c84d4992":[1,0,1788,48],
+"classWidget.html#ae58236bb2c28725755f72903c44a1f0e":[1,0,1788,67],
+"classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1":[1,0,1788,34],
+"classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb":[1,0,1788,16],
+"classWidget.html#ae8941ab8ab9b18849eb7a78d82037b66":[1,0,1788,13],
+"classWidget.html#ae96c97d6d615735b7e0448a19d8900be":[1,0,1788,60],
+"classWidget.html#ae9ece0be9b4ac277401b430d7f7b9f92":[1,0,1788,33]
 };

@@ -1,10 +1,5 @@
 var NAVTREEINDEX93 =
 {
-"classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036":[1,0,1099,23],
-"classSpriteData.html":[1,0,1100],
-"classSpriteData.html#a067129c7182d547ab1b051543814d315":[1,0,1100,2],
-"classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5":[1,0,1100,9],
-"classSpriteData.html#a2418e7613134aad4c224a6681a029930":[1,0,1100,10],
 "classSpriteData.html#a2bb56554ce16f0af909b235b83215517":[1,0,1100,11],
 "classSpriteData.html#a81fe21e2f728eac5c0e9d5f030f344b1":[1,0,1100,12],
 "classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38":[1,0,1100,7],
@@ -249,5 +244,10 @@ var NAVTREEINDEX93 =
 "classTCOrbitChara.html#a5d15423ac081ebce2421a736ab86dc5f":[1,0,1166,12],
 "classTCOrbitChara.html#a652b278ffdef9c2294c68d5b737756a7":[1,0,1166,11],
 "classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69":[1,0,1166,3],
-"classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1166,4]
+"classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1166,4],
+"classTCOrbitChara.html#ab81202f1b685bc12aab5d3dac00ecac8":[1,0,1166,14],
+"classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1166,0],
+"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1166,6],
+"classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1166,5],
+"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1166,7]
 };

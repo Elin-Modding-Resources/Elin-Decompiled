@@ -1,10 +1,5 @@
 var NAVTREEINDEX95 =
 {
-"classTaskDesignation.html#a3e24872d059e332b7f978ef3c50fc7f6":[1,0,1146,7],
-"classTaskDesignation.html#a5c0f50410827dce3f162e6cb43d9ef67":[1,0,1146,11],
-"classTaskDesignation.html#a5d2e671ad9bed3ac8bf9a014af8dd4e6":[1,0,1146,3],
-"classTaskDesignation.html#a6e87daa0d6ed8c56f184edb33f131bc9":[1,0,1146,2],
-"classTaskDesignation.html#a87d43aaae3064dbee9e452b4dcc7e8ba":[1,0,1146,6],
 "classTaskDesignation.html#a895ce6b1a39cbde958be4dffd4ba40be":[1,0,1146,8],
 "classTaskDesignation.html#aaa77c04e476fca434b72abe2483ee7c3":[1,0,1146,1],
 "classTaskDesignation.html#aba8e325d1d947ae34b6363fcae02a13f":[1,0,1146,14],
@@ -249,5 +244,10 @@ var NAVTREEINDEX95 =
 "classTextureData.html#ae80b7f3bdcbea253581d4a06065c16ab":[1,0,1177,17],
 "classTextureData.html#aeb4aa3810bbbd55b2a7bee1db411ae03":[1,0,1177,22],
 "classTextureData.html#af3def33233af7e6ff313d4291d53cde3":[1,0,1177,9],
-"classTextureData_1_1Date.html":[1,0,1177,0]
+"classTextureData_1_1Date.html":[1,0,1177,0],
+"classTextureData_1_1Date.html#a14b2c0157ef560cf1a31d5767f255821":[1,0,1177,0,0],
+"classTextureData_1_1Date.html#a87b9e971c088670e54162ffc180a1b9a":[1,0,1177,0,1],
+"classTextureImportSetting.html":[1,0,1178],
+"classTextureImportSetting.html#a1bb3efbba43f8e7ff32e812df7df6a63":[1,0,1178,1],
+"classTextureImportSetting.html#a4faf559aa61ef08e28563a3d9fff1edd":[1,0,1178,3]
 };

@@ -11,7 +11,6 @@ var classPOLICY =
     [ "energy_conservation", "classPOLICY.html#ab744cf4dd679319bfa64eab117272c26", null ],
     [ "faith_tax", "classPOLICY.html#a48aa431438fafc7c3e653533ec79e617", null ],
     [ "food_for_people", "classPOLICY.html#ac86b04ba5084d833f27c9fccc73adc9d", null ],
-    [ "forcePanty", "classPOLICY.html#af321f186fa52b987a0df023acadacfae", null ],
     [ "home_discount", "classPOLICY.html#a64a9ce8c23ac84b7fab11853870f4d9b", null ],
     [ "human_right", "classPOLICY.html#a325475163e2e86960f0a73f2945d762f", null ],
     [ "IDS", "classPOLICY.html#ad59ecba0db5d2c474172e1087dbe9856", null ],

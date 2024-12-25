@@ -36,7 +36,6 @@ var classRecipe =
     [ "OnRenderMarker", "classRecipe.html#a26d659bbb40ad8f2b48a337c6a56e60e", null ],
     [ "OnSelected", "classRecipe.html#a4ede4204d045163da8f0146087ac9417", null ],
     [ "Rotate", "classRecipe.html#a39d1201966828b2a7620f1e12ee1bc4d", null ],
-    [ "SaveLastIngredients", "classRecipe.html#a661158b83eea3aa2f70719dd5621b5e9", null ],
     [ "SetDir", "classRecipe.html#a3bad84524be99444eebaf403108e4bda", null ],
     [ "SetImage", "classRecipe.html#adf2f22ef81aa80565e53fb84decdab94", null ],
     [ "SetTextDifficulty", "classRecipe.html#a123d8acc734e50c7c492c141eddf2680", null ],
