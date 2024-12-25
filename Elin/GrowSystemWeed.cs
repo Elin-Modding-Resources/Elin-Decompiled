@@ -13,7 +13,7 @@ public class GrowSystemWeed : GrowSystem
 
 	public override void OnMineObj(Chara c = null)
 	{
-		TryPick(GrowSystem.cell, "grass", EClass.sources.materials.alias["grass"].id, EClass.rnd(5));
+		PopHarvest(c ?? EClass.pc, ThingGen.Create("grass", EClass.sources.materials.alias["grass"].id), EClass.rnd(5));
 		base.OnMineObj(c);
 	}
 }

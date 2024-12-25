@@ -181,6 +181,7 @@ public class LayerCraft : LayerBaseCraft
 			pickaxeCrafted = true;
 			break;
 		}
+		recipe.SaveLastIngredients();
 		ELayer.pc.SetAI(new AI_UseCrafter
 		{
 			crafter = traitCrafter,
@@ -285,6 +286,10 @@ public class LayerCraft : LayerBaseCraft
 		{
 			onClick = delegate(Recipe a, ButtonGrid b)
 			{
+				if (recipe != null)
+				{
+					recipe.SaveLastIngredients();
+				}
 				recipe = a;
 				SE.Play("click_recipe");
 				RefreshRecipe(first: true);

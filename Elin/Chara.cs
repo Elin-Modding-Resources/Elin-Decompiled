@@ -2746,11 +2746,6 @@ public class Chara : Card, IPathfindWalker
 					}
 					broke = true;
 				}
-				if (_p.HasBridge)
-				{
-					EClass._map.MineFloor(_p);
-					broke = true;
-				}
 				if (_p.HasObj && _p.IsBlocked)
 				{
 					EClass._map.MineObj(_p, null, this);

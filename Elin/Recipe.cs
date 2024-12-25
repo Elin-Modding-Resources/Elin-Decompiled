@@ -926,4 +926,15 @@ public class Recipe : EClass
 			EClass.pc.Pick(ThingGen.Create("ticket_fortune").SetNum(num));
 		}
 	}
+
+	public void SaveLastIngredients()
+	{
+		List<int> list = new List<int>();
+		foreach (Ingredient ingredient in ingredients)
+		{
+			int item = ((ingredient.thing != null) ? ingredient.thing.uid : 0);
+			list.Add(item);
+		}
+		EClass.player.recipes.lastIngredients[id] = list;
+	}
 }

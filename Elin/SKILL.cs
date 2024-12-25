@@ -1,26 +1,26 @@
 public class SKILL
 {
-	public const int shield = 123;
-
-	public const int tactics = 132;
-
-	public const int twowield = 131;
-
-	public const int twohand = 130;
-
 	public const int fireproof = 50;
-
-	public const int armorLight = 120;
-
-	public const int weaponBlunt = 111;
-
-	public const int weaponScythe = 110;
-
-	public const int weaponCrossbow = 109;
 
 	public const int marksman = 133;
 
+	public const int weaponCrossbow = 109;
+
+	public const int weaponScythe = 110;
+
+	public const int weaponBlunt = 111;
+
+	public const int armorLight = 120;
+
 	public const int armorHeavy = 122;
+
+	public const int shield = 123;
+
+	public const int twohand = 130;
+
+	public const int twowield = 131;
+
+	public const int tactics = 132;
 
 	public const int eyeofmind = 134;
 
@@ -120,7 +120,7 @@ public class SKILL
 
 	public const int weaponPolearm = 106;
 
-	public const int throwing = 108;
+	public const int weaponDagger = 107;
 
 	public const int mana = 61;
 
@@ -130,7 +130,7 @@ public class SKILL
 
 	public const int gathering = 250;
 
-	public const int weaponDagger = 107;
+	public const int throwing = 108;
 
 	public const int blacksmith = 256;
 
@@ -264,13 +264,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[131]
 	{
-		123, 132, 131, 130, 50, 120, 111, 110, 109, 133,
-		122, 134, 227, 150, 242, 241, 240, 237, 235, 230,
+		50, 133, 109, 110, 111, 120, 122, 123, 130, 131,
+		132, 134, 227, 150, 242, 241, 240, 237, 235, 230,
 		51, 226, 225, 220, 210, 207, 200, 152, 151, 135,
 		55, 102, 57, 245, 62, 64, 65, 66, 67, 68,
 		70, 71, 72, 73, 74, 75, 76, 56, 77, 79,
 		80, 90, 91, 92, 100, 101, 103, 104, 105, 106,
-		108, 61, 60, 78, 250, 107, 256, 916, 917, 918,
+		107, 61, 60, 78, 250, 108, 256, 916, 917, 918,
 		919, 920, 921, 922, 923, 924, 925, 950, 951, 952,
 		953, 954, 955, 956, 957, 958, 959, 960, 961, 962,
 		963, 964, 970, 971, 972, 255, 915, 914, 965, 912,

@@ -319,7 +319,7 @@ public class RecipeCard : Recipe
 		if (EClass.pc.HasElement(1658))
 		{
 			t.elements.SetBase(757, 1);
-			t.c_dateCooked = EClass.world.date.GetRaw() + (EClass.pc.Evalue(1658) - 1) * 24 * 60;
+			t.c_dateCooked = EClass.world.date.GetRaw() + (EClass.pc.Evalue(1658) - 1) * 48 * 60;
 		}
 	}
 

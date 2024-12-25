@@ -172,7 +172,7 @@ public class FortuneRollData : EClass
 
 	public List<List<string>> GetPrizeList()
 	{
-		return new List<List<string>>
+		List<List<string>> list = new List<List<string>>
 		{
 			new List<string> { "scrubber", "tissue", "plat" },
 			new List<string>
@@ -195,6 +195,14 @@ public class FortuneRollData : EClass
 				"medal"
 			}
 		};
+		if (EClass.pc.faction.IsGlobalPolicyActive(2712))
+		{
+			for (int i = 0; i < (EClass.debug.enable ? 50 : 5); i++)
+			{
+				list[2].Add("panty");
+			}
+		}
+		return list;
 	}
 
 	public void GetPrize(int grade, int seed)

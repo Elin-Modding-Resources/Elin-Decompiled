@@ -607,26 +607,29 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 
 	public void SetBaseContextMenu(UIContextMenu m)
 	{
-		UIContextMenu uIContextMenu = m.AddChild("anchor");
 		SkinConfig cfg = config.skin;
-		foreach (RectPosition p2 in Util.EnumToList<RectPosition>())
+		if (!(this is WidgetSideScreen))
 		{
-			uIContextMenu.AddButton(((config.userAnchor == p2) ? "★ " : "") + p2.ToString().lang(), delegate
+			UIContextMenu uIContextMenu = m.AddChild("anchor");
+			foreach (RectPosition p2 in Util.EnumToList<RectPosition>())
 			{
-				SetAnchor(p2);
-				SE.ClickGeneral();
-				m.Hide();
-			});
-		}
-		uIContextMenu = m.AddChild("pivot");
-		foreach (RectPosition p in Util.EnumToList<RectPosition>())
-		{
-			uIContextMenu.AddButton(((config.pivot == p) ? "★ " : "") + p.ToString().lang(), delegate
+				uIContextMenu.AddButton(((config.userAnchor == p2) ? "★ " : "") + p2.ToString().lang(), delegate
+				{
+					SetAnchor(p2);
+					SE.ClickGeneral();
+					m.Hide();
+				});
+			}
+			uIContextMenu = m.AddChild("pivot");
+			foreach (RectPosition p in Util.EnumToList<RectPosition>())
 			{
-				SetPivot(p);
-				SE.ClickGeneral();
-				m.Hide();
-			});
+				uIContextMenu.AddButton(((config.pivot == p) ? "★ " : "") + p.ToString().lang(), delegate
+				{
+					SetPivot(p);
+					SE.ClickGeneral();
+					m.Hide();
+				});
+			}
 		}
 		UIContextMenuItem sliderB = null;
 		Action Refresh = delegate

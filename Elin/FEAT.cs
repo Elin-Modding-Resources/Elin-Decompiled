@@ -301,7 +301,7 @@ public class Feat : Element
 		if (base.source.req.Length != 0)
 		{
 			Element element = owner.GetElement(base.source.req[0]);
-			if (element == null || element.ValueWithoutLink < ((base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp((lv == -1) ? (owner.Value(id) + 1) : lv, 1, base.source.req.Length - 1)].ToInt()))
+			if (element == null || element.ValueWithoutLink < ((base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp(((lv == -1 && owner != null) ? owner.Value(id) : lv) + 1, 1, base.source.req.Length - 1)].ToInt()))
 			{
 				return false;
 			}
@@ -311,11 +311,9 @@ public class Feat : Element
 
 	public override void WritePurchaseReq(UINote n, int lv = -1)
 	{
-		Debug.Log("a");
 		if (base.source.req.Length != 0)
 		{
-			Element element = Element.Create(base.source.req[0], (base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp((lv == -1) ? (owner.Value(id) + 1) : lv, 1, base.source.req.Length - 1)].ToInt());
-			Debug.Log(element);
+			Element element = Element.Create(base.source.req[0], (base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp(((lv == -1 && owner != null) ? owner.Value(id) : lv) + 1, 1, base.source.req.Length - 1)].ToInt());
 			if (element != null)
 			{
 				n.AddHeader("featReq");

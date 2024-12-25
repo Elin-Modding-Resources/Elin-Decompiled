@@ -680,10 +680,15 @@ public class FactionBranch : EClass
 	public void DailyOutcome(VirtualDate date)
 	{
 		Thing thing = null;
-		Chara i;
 		foreach (Chara member in members)
 		{
-			i = member;
+			Chara i = member;
+			if (EClass.rnd(EClass.debug.enable ? 2 : (360 * members.Count)) == 0 && !i.IsPC && EClass.pc.faction.IsGlobalPolicyActive(2712) && i.things.Find((Thing t) => t.id == "panty" && t.c_idRefCard == i.id) == null && !i.things.IsFull())
+			{
+				Thing thing2 = ThingGen.Create("panty");
+				thing2.c_idRefCard = i.id;
+				i.AddThing(thing2);
+			}
 			if (i.IsPCParty || !i.ExistsOnMap)
 			{
 				continue;
@@ -737,6 +742,129 @@ public class FactionBranch : EClass
 			{
 				GetOutcome(item2);
 			}
+			void GetOutcome(Hobby h)
+			{
+				int num3 = h.GetEfficiency(i) * GetProductBonus(i) / 100;
+				int num4 = h.GetLv(i);
+				int id = EClass.sources.elements.alias[h.source.skill].id;
+				if (!i.elements.HasBase(id))
+				{
+					i.elements.SetBase(id, 1);
+				}
+				i.ModExp(id, 100);
+				for (int j = 0; j < h.source.things.Length; j += 2)
+				{
+					string text = h.source.things[j];
+					int num5 = Mathf.Max(1, h.source.things[j + 1].ToInt() * num3 / 1000);
+					int num6 = num5 / 1000;
+					if (num5 % 1000 > EClass.rnd(1000))
+					{
+						num6++;
+					}
+					if (num6 != 0)
+					{
+						if (!(text == "_egg"))
+						{
+							if (text == "milk")
+							{
+								i.MakeMilk(date.IsRealTime, num6);
+							}
+							else
+							{
+								Thing thing4 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[j], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
+								if (thing4 != null)
+								{
+									if (!thing4.trait.CanStack)
+									{
+										num6 = 1;
+									}
+									thing4.SetNum(thing4.trait.CraftNum * num6);
+									thing4.SetBlessedState(BlessedState.Normal);
+									thing4.TryMakeRandomItem(num4);
+									if (thing4.IsAmmo)
+									{
+										thing4.ChangeMaterial("iron");
+										thing4.c_IDTState = 0;
+									}
+									bool flag = thing4.category.id == "garbage";
+									if (thing4.trait is TraitFoodMeal)
+									{
+										if (thing4.HasTag(CTAG.dish_fail))
+										{
+											flag = true;
+										}
+										else
+										{
+											CraftUtil.MakeDish(thing4, num4 + 10, i);
+										}
+									}
+									if (flag)
+									{
+										TryTrash(thing4);
+									}
+									else
+									{
+										i.TryPutShared(thing4);
+									}
+								}
+							}
+						}
+						else
+						{
+							i.MakeEgg(date.IsRealTime, num6);
+						}
+					}
+				}
+				switch (h.source.alias)
+				{
+				case "Nurse":
+				{
+					foreach (Chara member2 in members)
+					{
+						if (!member2.IsPCParty)
+						{
+							if (member2.isDead && EClass.rnd(num3) > EClass.rnd(100))
+							{
+								Log("bNurse", i, member2);
+								member2.Revive(member2.pos, msg: true);
+								break;
+							}
+							if (EClass.rnd(num3) > EClass.rnd(100))
+							{
+								member2.CureHost(CureType.HealComplete);
+							}
+						}
+					}
+					break;
+				}
+				case "Chore":
+				case "Clean":
+				{
+					for (int k = 0; k < num3 / 2; k++)
+					{
+						Point randomPoint = EClass._map.bounds.GetRandomPoint();
+						if (randomPoint.HasDecal)
+						{
+							EClass._map.SetDecal(randomPoint.x, randomPoint.z);
+						}
+					}
+					break;
+				}
+				case "TreasureHunt":
+					if (EClass.rnd(num3) > EClass.rnd(EClass.debug.enable ? 100 : 5000))
+					{
+						Thing thing5 = EClass._zone.TryGetThingFromSharedContainer((Thing t) => t.trait is TraitScrollMapTreasure);
+						if (thing5 != null)
+						{
+							Thing thing6 = ThingGen.CreateTreasure("chest_treasure", thing5.LV);
+							i.TryPutShared(thing6);
+							thing5.Destroy();
+							WidgetPopText.Say("foundTreasure".lang(thing6.Name));
+						}
+					}
+					break;
+				}
+			}
 		}
 		int soilCost = EClass._zone.GetSoilCost();
 		int num = Mathf.Min(100, 70 + (MaxSoil - soilCost));
@@ -760,9 +888,9 @@ public class FactionBranch : EClass
 		});
 		lv /= flower;
 		int num2 = 0;
-		foreach (Thing thing6 in EClass._map.things)
+		foreach (Thing thing7 in EClass._map.things)
 		{
-			if (thing6.IsInstalled && thing6.trait is TraitBeekeep && !thing6.things.IsFull())
+			if (thing7.IsInstalled && thing7.trait is TraitBeekeep && !thing7.things.IsFull())
 			{
 				flower -= 3 + EClass.rnd(5 + num2 * 4);
 				num2++;
@@ -772,134 +900,11 @@ public class FactionBranch : EClass
 				}
 				if (EClass.rnd(100) <= num)
 				{
-					Thing thing2 = ThingGen.Create("honey");
-					thing2.SetEncLv(lv / 10);
-					thing2.elements.SetBase(2, EClass.curve(lv, 50, 10, 80));
-					thing6.AddThing(thing2);
+					Thing thing3 = ThingGen.Create("honey");
+					thing3.SetEncLv(lv / 10);
+					thing3.elements.SetBase(2, EClass.curve(lv, 50, 10, 80));
+					thing7.AddThing(thing3);
 				}
-			}
-		}
-		void GetOutcome(Hobby h)
-		{
-			int num3 = h.GetEfficiency(i) * GetProductBonus(i) / 100;
-			int num4 = h.GetLv(i);
-			int id = EClass.sources.elements.alias[h.source.skill].id;
-			if (!i.elements.HasBase(id))
-			{
-				i.elements.SetBase(id, 1);
-			}
-			i.ModExp(id, 100);
-			for (int j = 0; j < h.source.things.Length; j += 2)
-			{
-				string text = h.source.things[j];
-				int num5 = Mathf.Max(1, h.source.things[j + 1].ToInt() * num3 / 1000);
-				int num6 = num5 / 1000;
-				if (num5 % 1000 > EClass.rnd(1000))
-				{
-					num6++;
-				}
-				if (num6 != 0)
-				{
-					if (!(text == "_egg"))
-					{
-						if (text == "milk")
-						{
-							i.MakeMilk(date.IsRealTime, num6);
-						}
-						else
-						{
-							Thing thing3 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[j], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
-							if (thing3 != null)
-							{
-								if (!thing3.trait.CanStack)
-								{
-									num6 = 1;
-								}
-								thing3.SetNum(thing3.trait.CraftNum * num6);
-								thing3.SetBlessedState(BlessedState.Normal);
-								thing3.TryMakeRandomItem(num4);
-								if (thing3.IsAmmo)
-								{
-									thing3.ChangeMaterial("iron");
-									thing3.c_IDTState = 0;
-								}
-								bool flag = thing3.category.id == "garbage";
-								if (thing3.trait is TraitFoodMeal)
-								{
-									if (thing3.HasTag(CTAG.dish_fail))
-									{
-										flag = true;
-									}
-									else
-									{
-										CraftUtil.MakeDish(thing3, num4 + 10, i);
-									}
-								}
-								if (flag)
-								{
-									TryTrash(thing3);
-								}
-								else
-								{
-									i.TryPutShared(thing3);
-								}
-							}
-						}
-					}
-					else
-					{
-						i.MakeEgg(date.IsRealTime, num6);
-					}
-				}
-			}
-			switch (h.source.alias)
-			{
-			case "Nurse":
-			{
-				foreach (Chara member2 in members)
-				{
-					if (!member2.IsPCParty)
-					{
-						if (member2.isDead && EClass.rnd(num3) > EClass.rnd(100))
-						{
-							Log("bNurse", i, member2);
-							member2.Revive(member2.pos, msg: true);
-							break;
-						}
-						if (EClass.rnd(num3) > EClass.rnd(100))
-						{
-							member2.CureHost(CureType.HealComplete);
-						}
-					}
-				}
-				break;
-			}
-			case "Chore":
-			case "Clean":
-			{
-				for (int k = 0; k < num3 / 2; k++)
-				{
-					Point randomPoint = EClass._map.bounds.GetRandomPoint();
-					if (randomPoint.HasDecal)
-					{
-						EClass._map.SetDecal(randomPoint.x, randomPoint.z);
-					}
-				}
-				break;
-			}
-			case "TreasureHunt":
-				if (EClass.rnd(num3) > EClass.rnd(EClass.debug.enable ? 100 : 5000))
-				{
-					Thing thing4 = EClass._zone.TryGetThingFromSharedContainer((Thing t) => t.trait is TraitScrollMapTreasure);
-					if (thing4 != null)
-					{
-						Thing thing5 = ThingGen.CreateTreasure("chest_treasure", thing4.LV);
-						i.TryPutShared(thing5);
-						thing4.Destroy();
-						WidgetPopText.Say("foundTreasure".lang(thing5.Name));
-					}
-				}
-				break;
 			}
 		}
 	}

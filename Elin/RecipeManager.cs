@@ -25,6 +25,9 @@ public class RecipeManager : EClass
 	[JsonProperty]
 	public HashSet<string> newRecipes = new HashSet<string>();
 
+	[JsonProperty]
+	public Dictionary<string, List<int>> lastIngredients = new Dictionary<string, List<int>>();
+
 	public static void BuildList()
 	{
 		if (!rebuild && list.Count > 0)

@@ -1,6 +1,6 @@
 public class TraitUniqueMonsterAdv : TraitUniqueMonster
 {
-	public override bool UseRandomAbility => true;
+	public override int MaxRandomAbility => 4;
 
 	public override bool UseRandomAlias => true;
 

@@ -630,7 +630,7 @@ public class GrowSystem : EClass
 		{
 			Debug.Log("harvest count not set:" + source.id + "/" + source.alias);
 		}
-		if (num != -1)
+		if (num > 0)
 		{
 			t.SetNum(num);
 		}
@@ -656,9 +656,10 @@ public class GrowSystem : EClass
 			return;
 		}
 		int encLv = thing.encLV / 10 + ((thing.encLV > 0) ? 1 : 0);
+		bool flag = t.IsFood || t.Evalue(10) > 0 || t.id == "grass";
 		foreach (Element value in thing.elements.dict.Values)
 		{
-			if ((!value.IsFoodTrait || t.IsFood) && (value.IsFoodTrait || value.id == 2))
+			if ((!value.IsFoodTrait || flag) && (value.IsFoodTrait || value.id == 2))
 			{
 				t.elements.ModBase(value.id, value.Value / 10 * 10);
 			}

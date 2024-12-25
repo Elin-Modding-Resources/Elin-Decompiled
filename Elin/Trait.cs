@@ -1869,6 +1869,7 @@ public class Trait : EClass
 					AddThing(ThingGen.CreateRecipe("detector").SetPriceFix(700));
 					AddThing(ThingGen.CreatePlan(2710)).SetPriceFix(-100);
 					AddThing(ThingGen.CreatePlan(2711)).SetPriceFix(-100);
+					AddThing(ThingGen.CreatePlan(2712)).SetPriceFix(200);
 					break;
 				}
 				if (Guild.Thief.IsCurrentZone)

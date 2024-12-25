@@ -294,6 +294,25 @@ public class Faction : EClass
 		return false;
 	}
 
+	public bool IsWearingPanty(Chara c)
+	{
+		if ((!c.IsUnique || c.bio.gender != 2) && (c.race.IsHuman || c.race.IsFairy) && !(c.trait is TraitMerchant))
+		{
+			return true;
+		}
+		if (IsGlobalPolicyActive(2712))
+		{
+			foreach (Chara value in EClass.game.cards.globalCharas.Values)
+			{
+				if (value.id == c.id && value.IsHomeMember())
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 	public void AddContribution(int a)
 	{
 		if (a != 0 && relation.type == FactionRelation.RelationType.Member)

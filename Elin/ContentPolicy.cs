@@ -74,6 +74,10 @@ public class ContentPolicy : EContent
 					{
 						EClass.pc.faction.SetGlobalPolicyActive(2711, a.active);
 					}
+					if (a.id == 2712)
+					{
+						EClass.pc.faction.SetGlobalPolicyActive(2712, a.active);
+					}
 					EClass.Branch.policies.RefreshEffects();
 					RefreshPolicyIcons();
 				});

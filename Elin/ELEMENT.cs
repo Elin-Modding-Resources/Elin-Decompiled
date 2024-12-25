@@ -560,7 +560,7 @@ public class Element : EClass
 		}
 		if (!IsPurchaseFeatReqMet(owner))
 		{
-			WritePurchaseReq(n);
+			WritePurchaseReq(n, owner.Value(id));
 		}
 		n.Build();
 	}

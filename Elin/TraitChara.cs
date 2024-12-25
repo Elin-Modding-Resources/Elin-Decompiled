@@ -84,7 +84,7 @@ public class TraitChara : Trait
 
 	public virtual bool ShowAdvRank => owner.IsPC;
 
-	public virtual bool UseRandomAbility => false;
+	public virtual int MaxRandomAbility => 0;
 
 	public virtual Adv_Type AdvType => Adv_Type.None;
 
@@ -118,17 +118,7 @@ public class TraitChara : Trait
 
 	public virtual bool UseRandomAlias => false;
 
-	public virtual bool IsWearingPanty
-	{
-		get
-		{
-			if ((!IsUnique || owner.bio.gender != 2) && (owner.race.IsHuman || owner.race.IsFairy))
-			{
-				return !(this is TraitMerchant);
-			}
-			return false;
-		}
-	}
+	public virtual bool IsWearingPanty => EClass.pc.faction.IsWearingPanty(owner);
 
 	public override string IDInvStyle => "backpack";
 

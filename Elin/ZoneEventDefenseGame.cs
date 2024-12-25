@@ -53,7 +53,7 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 		}
 	}
 
-	public override string TextWidgetDate => "defenseWave".lang(wave.ToString() ?? "", kills.ToString() ?? "") + ((instance != null && retreated) ? "defenseRetreating" : (CanRetreat ? "defenseRetreat" : "")).lang() + (CanCallAlly ? "defenseAlly" : "").lang();
+	public override string TextWidgetDate => "defenseWave".lang(wave.ToString() ?? "", kills.ToString() ?? "", EClass._zone.DangerLv.ToString() ?? "") + ((instance != null && retreated) ? "defenseRetreating" : (CanRetreat ? "defenseRetreat" : "")).lang() + (CanCallAlly ? "defenseAlly" : "").lang();
 
 	public virtual Chara CreateChara()
 	{

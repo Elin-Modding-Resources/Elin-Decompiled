@@ -2006,7 +2006,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		get
 		{
-			if (!IsFood && !category.IsChildOf("seed") && !(id == "pasture"))
+			if (!IsFood && Evalue(10) <= 0 && !category.IsChildOf("seed") && !(id == "pasture") && !(id == "grass"))
 			{
 				return category.IsChildOf("drug");
 			}
@@ -4465,15 +4465,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isBackerContent && !flag)
 			{
-				int num2 = ((this.rarity >= Rarity.Legendary) ? 1 : 0);
-				if (EClass.rnd(20) == 0)
+				int num2 = ((EClass._zone.Boss == this) ? 2 : ((this.rarity >= Rarity.Legendary) ? 1 : 0));
+				if (EClass._zone is Zone_Void)
+				{
+					num2++;
+				}
+				if (EClass.rnd(5) == 0)
 				{
 					num2++;
 				}
 				string text2 = id;
 				if (text2 == "big_daddy" || text2 == "santa")
 				{
-					num2++;
+					num2 += 2;
 				}
 				List<Thing> list2 = new List<Thing>();
 				foreach (Thing thing4 in things)
@@ -4492,7 +4496,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						{
 							list2.Add(thing4);
 						}
-						else if (EClass.rnd(150) == 0)
+						else if (EClass.rnd(100) == 0)
 						{
 							list.Add(thing4);
 						}
@@ -4508,6 +4512,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					for (int j = 0; j < list2.Count && j < num2; j++)
 					{
 						list.Add(list2[j]);
+						num2--;
 					}
 				}
 				if (this.rarity >= Rarity.Legendary && !IsUnique && c_bossType != BossType.Evolved)
@@ -4522,22 +4527,30 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					}
 					if (num3 == 0)
 					{
-						Rand.SetSeed(uid);
-						if (EClass.rnd((EClass._zone.events.GetEvent<ZoneEventDefenseGame>() != null) ? 3 : 2) == 0)
+						int num4 = ((!(EClass._zone is Zone_Void)) ? 1 : 2);
+						if (num2 < num4)
 						{
-							Rarity rarity = ((EClass.rnd(20) == 0) ? Rarity.Mythical : Rarity.Legendary);
-							CardBlueprint.Set(new CardBlueprint
+							num2 = num4;
+						}
+						for (int k = 0; k < num2; k++)
+						{
+							Rand.SetSeed(uid + k);
+							if (EClass.rnd((EClass._zone.events.GetEvent<ZoneEventDefenseGame>() != null) ? 3 : 2) == 0)
 							{
-								rarity = rarity
-							});
-							Thing item = ThingGen.CreateFromFilter("eq", LV);
-							list.Add(item);
+								Rarity rarity = ((EClass.rnd(20) == 0) ? Rarity.Mythical : Rarity.Legendary);
+								CardBlueprint.Set(new CardBlueprint
+								{
+									rarity = rarity
+								});
+								Thing item = ThingGen.CreateFromFilter("eq", LV);
+								list.Add(item);
+							}
+							else if (EClass.rnd(3) == 0)
+							{
+								list.Add(ThingGen.Create("medal"));
+							}
+							Rand.SetSeed();
 						}
-						else if (EClass.rnd(3) == 0)
-						{
-							list.Add(ThingGen.Create("medal"));
-						}
-						Rand.SetSeed();
 					}
 				}
 			}

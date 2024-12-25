@@ -905,8 +905,16 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass._zone.SpawnMob(EClass.pc.pos.GetNearestPoint(), SpawnSetting.Boss(EClass._zone.DangerLv));
-			EClass.player.recipes.OnSleep();
+			EClass.pc.Pick(EClass.pc.MakeMilk(effect: true, 10));
+			EClass.pc.Pick(EClass.pc.MakeEgg(effect: true, 10));
+			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
+			if (targetChara != null)
+			{
+				EClass.pc.Pick(targetChara.MakeMilk());
+				EClass.pc.Pick(targetChara.MakeGene());
+				EClass.pc.Pick(targetChara.MakeBraineCell());
+				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
+			}
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F3))

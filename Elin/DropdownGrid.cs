@@ -106,74 +106,93 @@ public class DropdownGrid : EMono
 				}
 				else
 				{
-					List<Thing> things = ListIngredients(ingredient, searchMode);
-					if (things.Count == 0)
+					bool flag = false;
+					List<int> list = EMono.player.recipes.lastIngredients.TryGetValue(recipe.id);
+					int num = recipe.ingredients.IndexOf(ingredient);
+					if (num != -1 && list != null && list.Count > num)
 					{
-						if (EMono.debug.godBuild && ingredient.thing == null)
+						int uid = list[num];
+						if (uid != 0)
 						{
-							Thing thing = ThingGen.Create(ingredient.IdThing, recipe.DefaultMaterial.alias).SetNum(99);
-							things.Add(thing);
-							ingredient.SetThing(thing);
-						}
-						else
-						{
-							ingredient.SetThing();
-							things.Insert(0, null);
+							Thing thing = EMono.pc.things.Find((Thing t) => t.uid == uid) ?? EMono._map.Stocked.Find(uid);
+							if (thing != null)
+							{
+								ingredient.SetThing(thing);
+								flag = true;
+							}
 						}
 					}
-					else if (!ingredient.optional)
+					if (!flag)
 					{
-						if (ingredient.thing == null)
+						List<Thing> list2 = ListIngredients(ingredient, searchMode);
+						if (list2.Count == 0)
 						{
-							int num = lastMats.TryGetValue(recipe.id, -1);
-							if (num != -1)
+							if (EMono.debug.godBuild && ingredient.thing == null)
 							{
-								foreach (Thing item in things)
-								{
-									if (item.material.id == num && item.Num >= ingredient.req)
-									{
-										ingredient.SetThing(item);
-										break;
-									}
-								}
+								Thing thing2 = ThingGen.Create(ingredient.IdThing, recipe.DefaultMaterial.alias).SetNum(99);
+								list2.Add(thing2);
+								ingredient.SetThing(thing2);
 							}
-							if (ingredient.thing == null)
+							else
 							{
-								SourceMaterial.Row defaultMaterial = recipe.DefaultMaterial;
-								foreach (Thing item2 in things)
-								{
-									if (item2.material.id == defaultMaterial.id && item2.Num >= ingredient.req)
-									{
-										ingredient.SetThing(item2);
-										break;
-									}
-								}
-								if (EMono.debug.godBuild && ingredient.thing == null)
-								{
-									Thing thing2 = (ingredient.useCat ? ThingGen.CreateFromCategory(ingredient.id) : ThingGen.Create(ingredient.id, defaultMaterial.alias)).SetNum(99);
-									things.Add(thing2);
-									ingredient.SetThing(thing2);
-								}
-							}
-							if (ingredient.thing == null)
-							{
-								ingredient.SetThing(things[0]);
+								ingredient.SetThing();
+								list2.Insert(0, null);
 							}
 						}
-						else
+						else if (!ingredient.optional)
 						{
-							bool flag = true;
-							foreach (Thing item3 in things)
+							if (ingredient.thing == null)
 							{
-								if (ingredient.thing == item3)
+								int num2 = lastMats.TryGetValue(recipe.id, -1);
+								if (num2 != -1)
 								{
-									flag = false;
-									break;
+									foreach (Thing item in list2)
+									{
+										if (item.material.id == num2 && item.Num >= ingredient.req)
+										{
+											ingredient.SetThing(item);
+											break;
+										}
+									}
+								}
+								if (ingredient.thing == null)
+								{
+									SourceMaterial.Row defaultMaterial = recipe.DefaultMaterial;
+									foreach (Thing item2 in list2)
+									{
+										if (item2.material.id == defaultMaterial.id && item2.Num >= ingredient.req)
+										{
+											ingredient.SetThing(item2);
+											break;
+										}
+									}
+									if (EMono.debug.godBuild && ingredient.thing == null)
+									{
+										Thing thing3 = (ingredient.useCat ? ThingGen.CreateFromCategory(ingredient.id) : ThingGen.Create(ingredient.id, defaultMaterial.alias)).SetNum(99);
+										list2.Add(thing3);
+										ingredient.SetThing(thing3);
+									}
+								}
+								if (ingredient.thing == null)
+								{
+									ingredient.SetThing(list2[0]);
 								}
 							}
-							if (flag)
+							else
 							{
-								ingredient.SetThing(things[0]);
+								bool flag2 = true;
+								foreach (Thing item3 in list2)
+								{
+									if (ingredient.thing == item3)
+									{
+										flag2 = false;
+										break;
+									}
+								}
+								if (flag2)
+								{
+									ingredient.SetThing(list2[0]);
+								}
 							}
 						}
 					}
@@ -181,10 +200,10 @@ public class DropdownGrid : EMono
 					b.onClick.RemoveAllListeners();
 					b.onClick.AddListener(delegate
 					{
-						things = ListIngredients(ingredient, searchMode);
+						List<Thing> list3 = ListIngredients(ingredient, searchMode);
 						if (ingredient.optional)
 						{
-							if (things.Count == 0 || things[0] == null)
+							if (list3.Count == 0 || list3[0] == null)
 							{
 								SE.Beep();
 								return;
@@ -197,7 +216,7 @@ public class DropdownGrid : EMono
 						}
 						if ((bool)rectDrop)
 						{
-							Activate(ingredient, things);
+							Activate(ingredient, list3);
 						}
 					});
 				}
@@ -241,6 +260,7 @@ public class DropdownGrid : EMono
 			{
 				SE.Resource();
 				ingredient.SetThing(a);
+				recipe.SaveLastIngredients();
 				OnChangeIngredient();
 				if (onValueChange != null)
 				{

@@ -70,10 +70,13 @@ public class UIMagicChest : EMono
 			int _i = i;
 			b.SetOnClick(delegate
 			{
-				page = _i;
-				groupPage.Select(b);
-				SE.Tab();
-				Redraw();
+				if (!UIContextMenu.Current)
+				{
+					page = _i;
+					groupPage.Select(b);
+					SE.Tab();
+					Redraw();
+				}
 			});
 		}
 		groupPage.Init();
@@ -109,16 +112,19 @@ public class UIMagicChest : EMono
 			string _c = cat;
 			uIButton.SetOnClick(delegate
 			{
-				SE.Tab();
-				if (idCat == _c)
+				if (!UIContextMenu.Current)
 				{
-					idCat = "";
+					SE.Tab();
+					if (idCat == _c)
+					{
+						idCat = "";
+					}
+					else
+					{
+						idCat = _c;
+					}
+					Redraw();
 				}
-				else
-				{
-					idCat = _c;
-				}
-				Redraw();
 			});
 		}
 		foreach (KeyValuePair<string, UIButton> item in catButton)
@@ -150,7 +156,7 @@ public class UIMagicChest : EMono
 				Search(inputSearch.text);
 			}
 		}
-		if (EInput.wheel != 0)
+		if (EInput.wheel != 0 && !UIContextMenu.Current)
 		{
 			SE.Tab();
 			page -= EInput.wheel;

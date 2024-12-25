@@ -29,9 +29,9 @@ public class CharaAbility : EClass
 				pt = (array.Length > 2)
 			});
 		}
-		if (owner.trait.UseRandomAbility && owner._listAbility == null)
+		if (owner.trait.MaxRandomAbility > 0 && owner._listAbility == null)
 		{
-			int num = 3 + EClass.rnd(2) - list.items.Count;
+			int num = owner.trait.MaxRandomAbility + EClass.rnd(2) - list.items.Count;
 			if (num > 1)
 			{
 				if (randomAbilities.Count == 0)
