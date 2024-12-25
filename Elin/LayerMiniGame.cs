@@ -22,6 +22,12 @@ public class LayerMiniGame : ELayer
 		{
 			WidgetEquip.Instance.SetActive(enable: false);
 		}
+		if ((bool)WidgetSideScreen.Instance)
+		{
+			Canvas canvas = WidgetSideScreen.Instance.gameObject.AddComponent<Canvas>();
+			canvas.overrideSorting = true;
+			canvas.sortingOrder = -1;
+		}
 	}
 
 	public override void OnUpdateInput()
@@ -59,10 +65,6 @@ public class LayerMiniGame : ELayer
 			mini.balance.lastCoin = ELayer.pc.GetCurrency("casino_coin");
 			mini.balance.changeCoin = 0;
 			mini.OnActivate();
-			if ((bool)WidgetSideScreen.Instance)
-			{
-				WidgetSideScreen.Instance.OnChangeResolution();
-			}
 		}
 	}
 
@@ -80,6 +82,10 @@ public class LayerMiniGame : ELayer
 		if ((bool)WidgetEquip.Instance)
 		{
 			WidgetEquip.Instance.SetActive(enable: true);
+		}
+		if ((bool)WidgetSideScreen.Instance)
+		{
+			Object.Destroy(WidgetSideScreen.Instance.gameObject.GetComponent<Canvas>());
 		}
 	}
 }

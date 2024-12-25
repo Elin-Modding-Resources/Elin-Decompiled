@@ -417,7 +417,7 @@ public class InvOwner : EClass
 							return false;
 						}
 					}
-					else if (EClass.pc.GetCurrency(IDCurrency) < price)
+					else if (EClass.pc.GetCurrency(IDCurrency) < price || price < 0 || (price == 0 && Trader.GetPrice(thing, currency, 1, sell) > 0))
 					{
 						return false;
 					}

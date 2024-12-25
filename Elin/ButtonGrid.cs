@@ -461,6 +461,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 				SE.Trash();
 				ing.thing = null;
 				SetIngredient(r, _ing);
+				r.SaveLastIngredients();
 				r.OnChangeIngredient();
 				if ((bool)LayerCraft.Instance)
 				{
