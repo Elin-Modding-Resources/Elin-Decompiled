@@ -1124,6 +1124,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TaskBaseBuild.cs", "TaskBaseBuild_8cs.html", "TaskBaseBuild_8cs" ],
     [ "TaskBuild.cs", "TaskBuild_8cs.html", "TaskBuild_8cs" ],
     [ "TaskChopWood.cs", "TaskChopWood_8cs.html", "TaskChopWood_8cs" ],
+    [ "TaskClean.cs", "TaskClean_8cs.html", "TaskClean_8cs" ],
     [ "TaskCraft.cs", "TaskCraft_8cs.html", "TaskCraft_8cs" ],
     [ "TaskCullLife.cs", "TaskCullLife_8cs.html", "TaskCullLife_8cs" ],
     [ "TaskCut.cs", "TaskCut_8cs.html", "TaskCut_8cs" ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"classCoreConfig.html#aa6d85dfd1337be8d169f75f081275853":[1,0,343,45],
+"classCoreConfig.html#aacfb79ec5c6e9fa278ec39e047ad79f2":[1,0,343,49],
 "classCoreConfig.html#aae007e38b62657c302497feedbc22240":[1,0,343,58],
 "classCoreConfig.html#aaf97e864945409d10bcb60c21f911ce9":[1,0,343,31],
 "classCoreConfig.html#ab58606cb626ed12304fd82020d759d59":[1,0,343,77],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "classCoreConfig_1_1UISetting.html#a11b5c179326dcf16849a58946661ab01":[1,0,343,12,4],
 "classCoreConfig_1_1UISetting.html#a1910f238c7a657d899096e24eb178338":[1,0,343,12,11],
 "classCoreConfig_1_1UISetting.html#a1a496712bbae62495e0eda86669b05e4":[1,0,343,12,13],
-"classCoreConfig_1_1UISetting.html#a2374b60e26ce8dd95be2768eb31e553e":[1,0,343,12,14],
-"classCoreConfig_1_1UISetting.html#a31f5cc07d64d5859fcb869d2c801d4ac":[1,0,343,12,7],
-"classCoreConfig_1_1UISetting.html#a3ed0ae929a1d2254b3dc855fe097dfec":[1,0,343,12,1]
+"classCoreConfig_1_1UISetting.html#a2374b60e26ce8dd95be2768eb31e553e":[1,0,343,12,14]
 };

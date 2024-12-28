@@ -10,7 +10,7 @@ var searchData=
   ['whore_7',['Whore',['../classCalcMoney.html#a9ea51b5553a37974bfd91db5de6b247e',1,'CalcMoney']]],
   ['willconsumeturn_8',['WillConsumeTurn',['../classChara.html#af906e8ef6b0b5ac4599561f36427d2d2',1,'Chara']]],
   ['windowwrapper_9',['WindowWrapper',['../classSFB_1_1WindowWrapper.html#aa5c8842d18cd697d278bd8312f6be947',1,'SFB::WindowWrapper']]],
-  ['wish_10',['Wish',['../classActEffect.html#af0a12faa8a339ae864d2a64f2ed54901',1,'ActEffect']]],
+  ['wish_10',['Wish',['../classActEffect.html#ab9e1bd8f93d0c192aeec75e5f67554c7',1,'ActEffect']]],
   ['within_11',['Within',['../classClassExtension.html#a5c1f832891a69241762398a1cd4775fe',1,'ClassExtension.Within(this int v, int v2, int range)'],['../classClassExtension.html#a4b966c59f0e8f6dda154f6149b56b985',1,'ClassExtension.Within(this byte v, byte v2, byte range)'],['../classPoint.html#ab3d03009ba72a935354c5dfe2a720145',1,'Point.Within()']]],
   ['worldtouipos_12',['WorldToUIPos',['../classUtil.html#a468eb2396a73646f326a13defce77418',1,'Util']]],
   ['writecell_13',['WriteCell',['../classLangExporter.html#ad648b66c386e1b78e83307cc07adfb3b',1,'LangExporter.WriteCell(int x, int y, string value)'],['../classLangExporter.html#a6a180e494411b1e689133eae9acd7b71',1,'LangExporter.WriteCell(int x, int y, double value)']]],

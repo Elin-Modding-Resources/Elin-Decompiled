@@ -1,5 +1,8 @@
 var NAVTREEINDEX74 =
 {
+"classNewsList_1_1Item.html#a7f83538511f68c4d604c7c3929a7d6f2":[1,0,807,0,1],
+"classNoGoal.html":[1,0,808],
+"classNoGoal.html#a3493d69722efc6c556c99d8a7fdecf9a":[1,0,808,4],
 "classNoGoal.html#a43a20e7b9e1dfcbab413b72d4a1ec115":[1,0,808,2],
 "classNoGoal.html#ab8d7e57274279da9a456e7a308489cbe":[1,0,808,1],
 "classNoGoal.html#ad50b5b49bf723ae83bae49714ac5039c":[1,0,808,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX74 =
 "classPartialMap.html#af292a7590cb9a03c6a502719ec8d5f58":[1,0,828,33],
 "classPartialMap.html#af6c9dd82e473b8c2e59a2760c53949da":[1,0,828,21],
 "classPartialMap.html#af7837bd52224e4782a423d7833a89949":[1,0,828,11],
-"classPartialMap.html#af8a4681a802bca817214c19a0cd445a1":[1,0,828,10],
-"classPartialMap.html#af913c6bbc4b90b16a470d4164b15e2ba":[1,0,828,32],
-"classPartialMap.html#af95b6ebc505e1211f59634a8cfbf74e8":[1,0,828,20],
-"classPartialMapMenu.html":[1,0,829]
+"classPartialMap.html#af8a4681a802bca817214c19a0cd445a1":[1,0,828,10]
 };

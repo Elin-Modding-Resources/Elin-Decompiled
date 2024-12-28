@@ -10,7 +10,7 @@ var classActEffect =
     [ "Proc", "classActEffect.html#a39e42ac0f851b751eea933f9b08fedd2", null ],
     [ "ProcAt", "classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43", null ],
     [ "TryDelay", "classActEffect.html#a85f65a7ddf8e893ea91e3a73b73c2238", null ],
-    [ "Wish", "classActEffect.html#af0a12faa8a339ae864d2a64f2ed54901", null ],
+    [ "Wish", "classActEffect.html#ab9e1bd8f93d0c192aeec75e5f67554c7", null ],
     [ "angle", "classActEffect.html#a594863b22de8c76526687843994af0c4", null ],
     [ "RapidCount", "classActEffect.html#a8280731f2f44db2f3aba79caac1db23b", null ],
     [ "RapidDelay", "classActEffect.html#a7582951cd6f93d08e7ebe20e020a6095", null ]

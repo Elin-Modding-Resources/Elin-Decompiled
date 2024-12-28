@@ -16,6 +16,7 @@ var classLayerFeedback =
     [ "collector", "classLayerFeedback.html#ab96bd1b6210ca7d8cd6c9f0179f34ae0", null ],
     [ "ddSave", "classLayerFeedback.html#a1ea99394568f669217fe0fb110574e19", null ],
     [ "form", "classLayerFeedback.html#acda012f00f94545c3a82dbcf651ae3b6", null ],
+    [ "header", "classLayerFeedback.html#ad7bef55c98ba06deee466e8a2cbd81fb", null ],
     [ "inputDetail", "classLayerFeedback.html#a918d1752edbdd8e216c37594b76a1a0a", null ],
     [ "inputEmail", "classLayerFeedback.html#a4801f6c6c3801ec979e6b39b4ca243a5", null ],
     [ "inputLang", "classLayerFeedback.html#a4d20817f3a958a608aec30871ee52abd", null ],

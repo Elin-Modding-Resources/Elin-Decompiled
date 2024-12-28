@@ -606,6 +606,7 @@ var hierarchy =
               [ "NoGoal", "classNoGoal.html", null ]
             ] ],
             [ "Task", "classTask.html", [
+              [ "TaskClean", "classTaskClean.html", null ],
               [ "TaskCraft", "classTaskCraft.html", null ],
               [ "TaskCullLife", "classTaskCullLife.html", null ],
               [ "TaskDump", "classTaskDump.html", null ],

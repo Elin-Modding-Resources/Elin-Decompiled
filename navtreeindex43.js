@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"classConWeakResEle.html":[1,0,338],
+"classConWeakness.html":[1,0,337],
 "classConWeapon.html":[1,0,339],
 "classConWeapon.html#a67f041b4924a9b7714b9f6c23f5f71df":[1,0,339,2],
 "classConWeapon.html#a83c2446cdf2064c5a5024bff09a8bfea":[1,0,339,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "classContentGallery_1_1Page_1_1Item.html#a73e61fa288b3b092876a163d1df7858c":[1,0,318,0,0,0],
 "classContentGallery_1_1Page_1_1Item.html#a9c9a5a39b4b6e97d0b769860b068f5c9":[1,0,318,0,0,1],
 "classContentHallOfFame.html":[1,0,319],
-"classContentHallOfFame.html#a003154a145678cceddce88a3db761ada":[1,0,319,0],
-"classContentHallOfFame.html#a2ac3171209495f2704927cc6b39c9d32":[1,0,319,3],
-"classContentHallOfFame.html#a2d3d1df6e302a9c6b79d999f99b29c2b":[1,0,319,8]
+"classContentHallOfFame.html#a003154a145678cceddce88a3db761ada":[1,0,319,0]
 };

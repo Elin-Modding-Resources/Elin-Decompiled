@@ -1,5 +1,7 @@
 var NAVTREEINDEX65 =
 {
+"classLangGame_1_1Row.html#ae9a4837bb8f1626c287d4870285f95ea":[1,0,668,0,1],
+"classLangGeneral.html":[1,0,669],
 "classLangGeneral.html#a07d10a40271a28ad68e56a2881ac9b66":[1,0,669,1],
 "classLangGeneral.html#a6ef75e8468da1bb21518a46fb1dc8c24":[1,0,669,2],
 "classLangGeneral_1_1Row.html":[1,0,669,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX65 =
 "classLayerCover.html#ab8ff572e8b819974f58b5044974e245d":[1,0,686,3],
 "classLayerCraft.html":[1,0,687],
 "classLayerCraft.html#a00421a8253c1f1821ba83f303d44346a":[1,0,687,45],
-"classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3":[1,0,687,15],
-"classLayerCraft.html#a125eeeb6c1079aa49b67850e878bd285":[1,0,687,6],
-"classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f":[1,0,687,32]
+"classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3":[1,0,687,15]
 };
