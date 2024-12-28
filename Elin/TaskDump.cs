@@ -173,6 +173,17 @@ public class TaskDump : Task
 			{
 				if (!ExcludeDump(t))
 				{
+					if (data.userFilter)
+					{
+						switch (data.IsFilterPass(t.GetName(NameStyle.Full, 1)))
+						{
+						case Window.SaveData.FilterResult.Block:
+							return;
+						case Window.SaveData.FilterResult.PassWithoutFurtherTest:
+							list.Add(t);
+							return;
+						}
+					}
 					if (data.advDistribution)
 					{
 						foreach (int cat in data.cats)
@@ -202,9 +213,23 @@ public class TaskDump : Task
 			{
 				EClass.pc.things.Foreach(delegate(Thing t)
 				{
-					if (!ExcludeDump(t) && t.CanStackTo(ct))
+					if (!ExcludeDump(t))
 					{
-						list.Add(t);
+						if (data.userFilter)
+						{
+							switch (data.IsFilterPass(t.GetName(NameStyle.Full, 1)))
+							{
+							case Window.SaveData.FilterResult.Block:
+								return;
+							case Window.SaveData.FilterResult.PassWithoutFurtherTest:
+								list.Add(t);
+								return;
+							}
+						}
+						if (t.CanStackTo(ct))
+						{
+							list.Add(t);
+						}
 					}
 				});
 			}
@@ -222,9 +247,23 @@ public class TaskDump : Task
 			}
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
-				if (!ExcludeDump(t) && cats.Contains(t.category))
+				if (!ExcludeDump(t))
 				{
-					list.Add(t);
+					if (data.userFilter)
+					{
+						switch (data.IsFilterPass(t.GetName(NameStyle.Full, 1)))
+						{
+						case Window.SaveData.FilterResult.Block:
+							return;
+						case Window.SaveData.FilterResult.PassWithoutFurtherTest:
+							list.Add(t);
+							return;
+						}
+					}
+					if (cats.Contains(t.category))
+					{
+						list.Add(t);
+					}
 				}
 			});
 			break;
@@ -246,10 +285,6 @@ public class TaskDump : Task
 				return true;
 			}
 			if (data.onlyRottable && t.trait.Decay == 0)
-			{
-				return true;
-			}
-			if (data.userFilter && !data.IsFilterPass(t.GetName(NameStyle.Full, 1)))
 			{
 				return true;
 			}

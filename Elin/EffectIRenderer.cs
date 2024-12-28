@@ -119,6 +119,7 @@ public class EffectIRenderer : Effect
 		if ((bool)card.renderer.actor)
 		{
 			card.renderer.actor.OnRender(renderParam);
+			card.renderer.isSynced = false;
 		}
 	}
 }

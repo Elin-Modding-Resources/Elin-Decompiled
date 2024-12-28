@@ -2626,9 +2626,20 @@ public class Chara : Card, IPathfindWalker
 						{
 							containerFlag = ContainerFlag.other;
 						}
-						if ((dataPick.noRotten && item.IsDecayed) || (dataPick.onlyRottable && item.trait.Decay == 0) || (dataPick.userFilter && !dataPick.IsFilterPass(item.GetName(NameStyle.Full, 1))))
+						if ((dataPick.noRotten && item.IsDecayed) || (dataPick.onlyRottable && item.trait.Decay == 0))
 						{
 							continue;
+						}
+						if (dataPick.userFilter)
+						{
+							switch (dataPick.IsFilterPass(item.GetName(NameStyle.Full, 1)))
+							{
+							case Window.SaveData.FilterResult.PassWithoutFurtherTest:
+								Pick(item.Thing);
+								continue;
+							case Window.SaveData.FilterResult.Block:
+								continue;
+							}
 						}
 						if (dataPick.advDistribution)
 						{

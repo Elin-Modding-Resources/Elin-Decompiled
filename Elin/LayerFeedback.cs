@@ -22,6 +22,8 @@ public class LayerFeedback : ELayer
 
 	public static string backerId = "";
 
+	public static string header = "";
+
 	public static int playedHours;
 
 	public UIText textProgress;
@@ -219,9 +221,10 @@ public class LayerFeedback : ELayer
 		{
 			num += CountString(text4, c2);
 		}
+		ReportTitle.strAdd = header ?? "";
 		if (num > 0)
 		{
-			ReportTitle.strAdd = "[ignore:" + num + "]";
+			ReportTitle.strAdd = ReportTitle.strAdd + "[ignore:" + num + "]";
 			ReportTitle.strAdd = ReportTitle.strAdd + " " + steamName + "/" + userName + "/" + backerId;
 			ReportTitle.ignore = true;
 		}

@@ -2024,29 +2024,41 @@ public class Zone : Spatial, ICardParent, IInspect
 						Window.SaveData windowSaveData = thing.GetWindowSaveData();
 						if (windowSaveData != null)
 						{
-							if (windowSaveData.priority <= priority || (windowSaveData.noRotten && t.IsDecayed) || (windowSaveData.onlyRottable && t.trait.Decay == 0) || (windowSaveData.userFilter && !windowSaveData.IsFilterPass(t.GetName(NameStyle.Full, 1))))
+							if (windowSaveData.priority <= priority || (windowSaveData.noRotten && t.IsDecayed) || (windowSaveData.onlyRottable && t.trait.Decay == 0))
 							{
 								continue;
 							}
-							if (windowSaveData.advDistribution)
+							Window.SaveData.FilterResult filterResult = Window.SaveData.FilterResult.Pass;
+							if (windowSaveData.userFilter)
 							{
-								bool flag2 = false;
-								foreach (int cat in windowSaveData.cats)
-								{
-									if (t.category.uid == cat)
-									{
-										flag2 = true;
-										break;
-									}
-								}
-								if (!flag2)
+								filterResult = windowSaveData.IsFilterPass(t.GetName(NameStyle.Full, 1));
+								if (filterResult == Window.SaveData.FilterResult.Block)
 								{
 									continue;
 								}
 							}
-							else if (windowSaveData.flag.HasFlag(flag))
+							if (filterResult != Window.SaveData.FilterResult.PassWithoutFurtherTest)
 							{
-								continue;
+								if (windowSaveData.advDistribution)
+								{
+									bool flag2 = false;
+									foreach (int cat in windowSaveData.cats)
+									{
+										if (t.category.uid == cat)
+										{
+											flag2 = true;
+											break;
+										}
+									}
+									if (!flag2)
+									{
+										continue;
+									}
+								}
+								else if (windowSaveData.flag.HasFlag(flag))
+								{
+									continue;
+								}
 							}
 							priority = windowSaveData.priority;
 						}

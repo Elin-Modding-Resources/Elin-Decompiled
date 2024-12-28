@@ -399,7 +399,7 @@ public class AI_Idle : AIAct
 			}
 			else if (EClass.player.stats.turns > owner.turnLastSeen + 50 && Los.IsVisible(EClass.pc, owner) && owner.CanSee(EClass.pc))
 			{
-				if (EClass.rnd(5) == 0 && owner.hostility >= Hostility.Neutral && EClass.pc.IsPCC && EClass.pc.pccData.state == PCCState.Undie && EClass.pc.pos.cell.IsTopWaterAndNoSnow)
+				if (EClass.rnd(5) == 0 && owner.hostility >= Hostility.Neutral && EClass.pc.IsPCC && EClass.pc.pccData.state == PCCState.Undie && !EClass.pc.pos.cell.IsTopWaterAndNoSnow)
 				{
 					owner.Talk("pervert3");
 				}

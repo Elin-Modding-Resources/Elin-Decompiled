@@ -693,21 +693,22 @@ public class UI : ELayer
 			Dialog.Ok("dialog_needToLogOn");
 			return;
 		}
-		string text2 = "";
+		string backerId = "";
 		try
 		{
 			if (!ELayer.config.rewardCode.IsEmpty())
 			{
-				text2 = "backer";
-				text2 = ElinEncoder.GetID(ELayer.config.rewardCode);
+				backerId = "backer";
+				backerId = ElinEncoder.GetID(ELayer.config.rewardCode);
 			}
 		}
 		catch (Exception message)
 		{
-			text2 = "";
+			backerId = "";
 			Debug.Log(message);
 		}
-		if (!Application.isEditor && text2.IsEmpty())
+		bool flag = false;
+		if (!Application.isEditor)
 		{
 			string pchName = "public";
 			try
@@ -717,6 +718,7 @@ public class UI : ELayer
 					Dialog.Ok("dialog_feedbackTooMany");
 					return;
 				}
+				flag = true;
 				Debug.Log(pchName);
 			}
 			catch
@@ -742,9 +744,10 @@ public class UI : ELayer
 		{
 			userName = array[2];
 		}
+		LayerFeedback.header = (flag ? "" : "(!)");
 		LayerFeedback.userName = userName;
 		LayerFeedback.playedHours = ELayer.config.maxPlayedHours;
-		LayerFeedback.backerId = text2;
+		LayerFeedback.backerId = backerId;
 		LayerFeedback.steamName = text;
 		ELayer.ui.ToggleLayer<LayerFeedback>();
 		SE.Tab();

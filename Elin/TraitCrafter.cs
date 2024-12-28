@@ -307,7 +307,7 @@ public class TraitCrafter : Trait
 			List<CardRow> list = EClass.player.codex.ListKills();
 			list.Add(EClass.sources.cards.map["putty"]);
 			list.Add(EClass.sources.cards.map["snail"]);
-			CardRow cardRow = list.RandomItemWeighted((CardRow a) => Mathf.Max(50 - a.LV, 1));
+			CardRow cardRow = list.RandomItemWeighted((CardRow a) => Mathf.Max(50 - a.LV, Mathf.Clamp(EClass.pc.Evalue(258) / 2, 1, a.LV * 2)));
 			t.c_idRefCard = cardRow.id;
 			t.ChangeMaterial(thing.material);
 			t.SetEncLv(Mathf.Min(EClass.rnd(EClass.rnd(Mathf.Max(5 + EClass.pc.Evalue(258) - cardRow.LV, 1))), 12));

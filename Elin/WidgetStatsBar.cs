@@ -348,11 +348,6 @@ public class WidgetStatsBar : Widget
 			extra.medal = a;
 			Build();
 		});
-		uIContextMenu.AddToggle("influence", extra.influence, delegate(bool a)
-		{
-			extra.influence = a;
-			Build();
-		});
 		uIContextMenu.AddToggle("karma", extra.karma, delegate(bool a)
 		{
 			extra.karma = a;
@@ -361,6 +356,11 @@ public class WidgetStatsBar : Widget
 		uIContextMenu.AddToggle("fame", extra.fame, delegate(bool a)
 		{
 			extra.fame = a;
+			Build();
+		});
+		uIContextMenu.AddToggle("influence", extra.influence, delegate(bool a)
+		{
+			extra.influence = a;
 			Build();
 		});
 		if ((bool)EMono.debug)

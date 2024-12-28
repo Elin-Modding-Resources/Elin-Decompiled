@@ -369,14 +369,7 @@ public class CardRenderer : RenderObject
 		isSynced = true;
 		if (!usePass)
 		{
-			if (hasActor)
-			{
-				if (!data.persistActor)
-				{
-					Debug.LogError("renderer alraedy have actor:" + owner);
-				}
-			}
-			else
+			if (!hasActor)
 			{
 				actor = data.CreateActor();
 				if (actor == null)

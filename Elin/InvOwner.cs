@@ -938,6 +938,10 @@ public class InvOwner : EClass
 	{
 		InvOwner shitDestOwner = GetShitDestOwner(b, rightMouse);
 		Thing thing = b.card.Thing;
+		if (thing == null || thing.isDestroyed)
+		{
+			return;
+		}
 		Card container = shitDestOwner.Container;
 		if (rightMouse && !owner.IsPC)
 		{

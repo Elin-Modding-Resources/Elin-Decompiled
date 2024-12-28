@@ -476,8 +476,19 @@ public class ThingContainer : List<Thing>
 			if (c.things != this)
 			{
 				Window.SaveData windowSaveData = c.GetWindowSaveData();
-				if (windowSaveData != null && (!windowSaveData.noRotten || !t.IsDecayed) && (!windowSaveData.onlyRottable || t.trait.Decay != 0) && (!windowSaveData.userFilter || windowSaveData.IsFilterPass(t.GetName(NameStyle.Full, 1))))
+				if (windowSaveData != null && (!windowSaveData.noRotten || !t.IsDecayed) && (!windowSaveData.onlyRottable || t.trait.Decay != 0))
 				{
+					if (windowSaveData.userFilter)
+					{
+						switch (windowSaveData.IsFilterPass(t.GetName(NameStyle.Full, 1)))
+						{
+						case Window.SaveData.FilterResult.Block:
+							return;
+						case Window.SaveData.FilterResult.PassWithoutFurtherTest:
+							_listContainers.Add(c.things);
+							return;
+						}
+					}
 					if (windowSaveData.advDistribution)
 					{
 						foreach (int cat in windowSaveData.cats)

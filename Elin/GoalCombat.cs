@@ -521,6 +521,10 @@ public class GoalCombat : Goal
 					{
 						continue;
 					}
+					if (!owner.IsPCFaction && num < 10)
+					{
+						num = 10;
+					}
 				}
 				break;
 			case "range":

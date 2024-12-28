@@ -1006,8 +1006,9 @@ public class FactionBranch : EClass
 		{
 			if (thing.IsInstalled && thing.trait is TraitBed traitBed && traitBed.owner.c_bedType == BedType.guest)
 			{
-				num2++;
-				num3 += traitBed.owner.LV;
+				int maxHolders = traitBed.MaxHolders;
+				num2 += maxHolders;
+				num3 += traitBed.owner.LV * (100 + traitBed.owner.Quality / 2 + traitBed.owner.Evalue(750) / 2) / 100 * maxHolders;
 			}
 		}
 		num = Mathf.Min(num, num2);

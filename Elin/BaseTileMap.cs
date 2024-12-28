@@ -2566,6 +2566,11 @@ public class BaseTileMap : EMono
 						_actorPos.y += thingPos.y;
 						if (t.trait.IgnoreLastStackHeight && (thing == null || !thing.trait.IgnoreLastStackHeight))
 						{
+							thingPos.y -= num20;
+							if (thing != null)
+							{
+								_actorPos.z -= 0.2f;
+							}
 							_actorPos.y -= num20;
 						}
 						_actorPos.z += renderSetting.thingZ + (float)m * -0.01f + zSetting.mod1 * thingPos.y;
@@ -3185,6 +3190,7 @@ public class BaseTileMap : EMono
 		float num3 = 0f;
 		if (detail != null && detail.things.Count > 0)
 		{
+			Card card = null;
 			for (int i = 0; i < detail.things.Count; i++)
 			{
 				Thing thing = detail.things[i];
@@ -3216,12 +3222,17 @@ public class BaseTileMap : EMono
 						zero += altitudeFix * thing.altitude;
 						num4 += altitudeFix.y * (float)thing.altitude;
 					}
+					if (thing.trait.IgnoreLastStackHeight && (card == null || !card.trait.IgnoreLastStackHeight))
+					{
+						zero.y -= num3;
+					}
 					num3 = num4;
 					zero.z += renderSetting.thingZ + num + (float)i * -0.01f + zSetting.mod1 * zero.y;
 					if (thing.sourceCard.multisize)
 					{
 						num += zSetting.multiZ;
 					}
+					card = thing;
 				}
 			}
 		}

@@ -3044,7 +3044,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public bool TryStackTo(Thing to)
 	{
-		if (!CanStackTo(to))
+		if (isDestroyed || to.isDestroyed || !CanStackTo(to))
 		{
 			return false;
 		}
@@ -3229,15 +3229,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (num != 0)
 			{
 				Thing thing = ThingGen.Create(isCopy ? "ash3" : "mod_ranged");
-				int num2 = num / 100;
-				int num3 = num % 100;
+				int ele = num / 100;
+				int num2 = num % 100;
+				elements.ModBase(ele, -num2);
 				if (!isCopy)
 				{
-					thing.refVal = num2;
-					thing.encLV = num3;
+					thing.refVal = ele;
+					thing.encLV = num2;
 				}
 				EClass._map.TrySmoothPick(pos.IsBlocked ? EClass.pc.pos : pos, thing, EClass.pc);
-				elements.ModBase(thing.refVal, -thing.encLV);
 				sockets[i] = 0;
 			}
 		}
