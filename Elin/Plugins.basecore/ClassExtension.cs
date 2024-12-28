@@ -493,6 +493,10 @@ public static class ClassExtension
 
 	public static TValue FirstItem<TKey, TValue>(this IDictionary<TKey, TValue> source)
 	{
+		if (source == null)
+		{
+			return default(TValue);
+		}
 		return source[source.First().Key];
 	}
 
