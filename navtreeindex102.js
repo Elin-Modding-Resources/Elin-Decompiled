@@ -1,5 +1,10 @@
 var NAVTREEINDEX102 =
 {
+"classTraitDoorman__Mage.html":[1,0,1371],
+"classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1371,0],
+"classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1371,1],
+"classTraitDoorman__Thief.html":[1,0,1372],
+"classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1372,0],
 "classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1372,1],
 "classTraitDrawingPaper.html":[1,0,1375],
 "classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1375,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX102 =
 "classTraitGemCutter.html#a52e9b307ebc7ed32c541113c4a898965":[1,0,1431,3],
 "classTraitGemCutter.html#a72e42b90159f991187240f2075e47512":[1,0,1431,1],
 "classTraitGemCutter.html#a785ab711675b3b95e1fc3a4fb9d1ffd7":[1,0,1431,5],
-"classTraitGemCutter.html#ac1c1cd18138413fcfc05f88efbb3b6d8":[1,0,1431,2],
-"classTraitGemCutter.html#ad4c678718199490197cc863c8df758da":[1,0,1431,4],
-"classTraitGemCutter.html#ae2be1a78267a99786d8530c23fc9cce7":[1,0,1431,0],
-"classTraitGene.html":[1,0,1432],
-"classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1432,3],
-"classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1432,0]
+"classTraitGemCutter.html#ac1c1cd18138413fcfc05f88efbb3b6d8":[1,0,1431,2]
 };

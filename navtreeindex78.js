@@ -1,5 +1,9 @@
 var NAVTREEINDEX78 =
 {
+"classProgress__Custom.html#a0019507f4da1250617c0f0438c193128":[1,0,854,0],
+"classProgress__Custom.html#a03ad598f3fc07d37861ae540a86beac0":[1,0,854,21],
+"classProgress__Custom.html#a0def6c44c654e86e3704aa9162dcde3c":[1,0,854,13],
+"classProgress__Custom.html#a16119402328d6696e6ff010770ce965f":[1,0,854,3],
 "classProgress__Custom.html#a180aee1eea56965f7dd0efa4e3cd1c3c":[1,0,854,16],
 "classProgress__Custom.html#a21a9bbd98677b5fa23b08ee95d9e94dd":[1,0,854,20],
 "classProgress__Custom.html#a22adbd51efeff474c1a98cddbdf01547":[1,0,854,18],
@@ -245,9 +249,5 @@ var NAVTREEINDEX78 =
 "classQuestCraft_1_1Req.html#af769acbc82faf22ef62213d979d53612":[1,0,866,0,2],
 "classQuestCraft_1_1Req.html#afcb4d5eebbb33b29e77b3b4c96ab5db4":[1,0,866,0,1],
 "classQuestCrafter.html":[1,0,867],
-"classQuestCrafter.html#a27e7ccdd053b70ef96915ca712eedb02":[1,0,867,1],
-"classQuestCrafter.html#aa698c4059f13ba031888324e6e6bcb8d":[1,0,867,0],
-"classQuestCursedManor.html":[1,0,868],
-"classQuestCursedManor.html#acd173b4aaa88555c56d4331893485e94":[1,0,868,0],
-"classQuestCursedManor.html#ad474b52b0cb4fceee391e459a77c3a47":[1,0,868,1]
+"classQuestCrafter.html#a27e7ccdd053b70ef96915ca712eedb02":[1,0,867,1]
 };

@@ -146,6 +146,7 @@ var classZone =
     [ "CanInspect", "classZone.html#affe48dfc6a861e5c5b32a1fb6c36e6ae", null ],
     [ "CanUnlockExit", "classZone.html#a74db1061279893a8b0637b63784b598d", null ],
     [ "ChanceSpawnNeutral", "classZone.html#a8715f785f6a1375df105b25698ce5140", null ],
+    [ "ContentLv", "classZone.html#a15cbd0f49e1a92fd599b20dc5d8f8d7b", null ],
     [ "CountDeepestLevel", "classZone.html#a43e1da1e2d5d573f726ef82f25727d05", null ],
     [ "DangerLv", "classZone.html#ac539719d05a3d41d2d23d60d2df22aff", null ],
     [ "DefaultActionMode", "classZone.html#a95ecce34e3e024a220a49114b052e76f", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"classConWardMonster.html":[1,0,336],
 "classConWeakResEle.html":[1,0,338],
 "classConWeakness.html":[1,0,337],
 "classConWeapon.html":[1,0,339],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "classContentGallery_1_1Page_1_1Item.html":[1,0,318,0,0],
 "classContentGallery_1_1Page_1_1Item.html#a73e61fa288b3b092876a163d1df7858c":[1,0,318,0,0,0],
 "classContentGallery_1_1Page_1_1Item.html#a9c9a5a39b4b6e97d0b769860b068f5c9":[1,0,318,0,0,1],
-"classContentHallOfFame.html":[1,0,319],
-"classContentHallOfFame.html#a003154a145678cceddce88a3db761ada":[1,0,319,0]
+"classContentHallOfFame.html":[1,0,319]
 };

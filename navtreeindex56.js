@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"classFactionBranch_1_1Statistics.html#a506c4b5e7166b706436cad3e8011fd54":[1,0,445,0,4],
+"classFactionBranch_1_1Statistics.html#a6906cfb5377d932f82c25fd54e0e719d":[1,0,445,0,0],
 "classFactionBranch_1_1Statistics.html#aa09f5187e9c5ec092e0f210b0591d7bc":[1,0,445,0,6],
 "classFactionBranch_1_1Statistics.html#aae03a01d2aaccb6497cd390d8dbe035c":[1,0,445,0,2],
 "classFactionGroup.html":[1,0,446],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "classGameDate.html#ae445863035cd10ca7d2061955859ae48":[1,0,464,1],
 "classGameDate.html#afa808c482a5ed0ccd1b8ab6bf2d6fb7f":[1,0,464,5],
 "classGameDifficulty.html":[1,0,465],
-"classGameDifficulty.html#a0c27298b1c055478277e79375be581cc":[1,0,465,2],
-"classGameDifficulty.html#a844fbd81a17b45b5267a6819f2dab80a":[1,0,465,3],
-"classGameDifficulty.html#a8c406140d90f3f02415d90d177b9b513":[1,0,465,4]
+"classGameDifficulty.html#a0c27298b1c055478277e79375be581cc":[1,0,465,2]
 };

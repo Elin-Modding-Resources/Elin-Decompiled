@@ -1,5 +1,10 @@
 var NAVTREEINDEX107 =
 {
+"classTraitTeleporter.html#ac640175e9667a4a9572ee4d239acd0a9":[1,0,1672,10],
+"classTraitTeleporter.html#ad3defe9a22e6e69fec6d3d6142b3fded":[1,0,1672,6],
+"classTraitTeleporter.html#adeddf623e217fb8bcb0fef2b9513a38c":[1,0,1672,5],
+"classTraitTent.html":[1,0,1673],
+"classTraitTent.html#a0cdccdd19e7972858217c5d15f71fa40":[1,0,1673,1],
 "classTraitTent.html#a34802ba35986bc444ad3b39a2934678f":[1,0,1673,0],
 "classTraitTent.html#a35b02de0afea36d3402d6d96599ff6f1":[1,0,1673,2],
 "classTraitTent.html#a7ec5517cfd11495cda5fcd94dff7390d":[1,0,1673,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX107 =
 "classTransAnime.html#a328885c138faee502b107ef7ef5ddcb8":[1,0,1735,12],
 "classTransAnime.html#a548c4715b6b74b300b95ac62f62b0b0d":[1,0,1735,7],
 "classTransAnime.html#a621577762485ad28fd2464ab74bcaa15":[1,0,1735,2],
-"classTransAnime.html#a6606f1cffb35baca6dfc4bca8b21ef9e":[1,0,1735,6],
-"classTransAnime.html#a7e7cd0c85295eefdb77efd75eb58db22":[1,0,1735,11],
-"classTransAnime.html#a9b8609cdf144945fdd9180c3a031f3f9":[1,0,1735,5],
-"classTransAnime.html#ac16a6da37149c9e159dcd47132f1ba1d":[1,0,1735,0],
-"classTransAnime.html#ac2a5decd5b41ffbb15c922d87d26f260":[1,0,1735,1],
-"classTransAnimeData.html":[1,0,1736]
+"classTransAnime.html#a6606f1cffb35baca6dfc4bca8b21ef9e":[1,0,1735,6]
 };

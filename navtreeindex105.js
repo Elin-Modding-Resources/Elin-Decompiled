@@ -1,5 +1,10 @@
 var NAVTREEINDEX105 =
 {
+"classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1554,5],
+"classTraitPainter.html":[1,0,1555],
+"classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea":[1,0,1555,1],
+"classTraitPainter.html#a676298524aad36fa4b67bfd137c69a12":[1,0,1555,3],
+"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747":[1,0,1555,0],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a4802a5ac6005a6ab9c68a2fb29e30a3e":[1,0,1555,0,0],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a967d35e40f3f95b1f538bd248640bf3b":[1,0,1555,0,1],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747ad0a662a5235ecde30739fe50cf0de830":[1,0,1555,0,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX105 =
 "classTraitScrollMapTreasure.html":[1,0,1613],
 "classTraitScrollMapTreasure.html#a1995c5acd5192cac67f6bc017bc842d3":[1,0,1613,0],
 "classTraitScrollMapTreasure.html#a21189aac7c81b30dc0aed8f1427fd8a9":[1,0,1613,2],
-"classTraitScrollMapTreasure.html#aeb51ec3c61228f5bff891adb5c018597":[1,0,1613,3],
-"classTraitScrollMapTreasure.html#af245a67d8ce512e3782a88bd23660eb7":[1,0,1613,4],
-"classTraitScrollMapTreasure.html#af38bfbf4f2ddaba9ed132d105c072f45":[1,0,1613,1],
-"classTraitScrollRandom.html":[1,0,1614],
-"classTraitScrollRandom.html#a08b514b9e11ff796bc1684237c39b766":[1,0,1614,5],
-"classTraitScrollRandom.html#a255d6649635ecb3991ab2016bc0f018e":[1,0,1614,6]
+"classTraitScrollMapTreasure.html#aeb51ec3c61228f5bff891adb5c018597":[1,0,1613,3]
 };

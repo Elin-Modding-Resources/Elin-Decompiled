@@ -1,5 +1,10 @@
 var NAVTREEINDEX101 =
 {
+"classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1322,2],
+"classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1322,1],
+"classTraitCitizen.html":[1,0,1323],
+"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1323,0],
+"classTraitClerk__Casino.html":[1,0,1324],
 "classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1324,0],
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1324,1],
 "classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1324,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX101 =
 "classTraitDoorman__Fighter.html":[1,0,1370],
 "classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1370,1],
 "classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1370,2],
-"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1370,0],
-"classTraitDoorman__Mage.html":[1,0,1371],
-"classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1371,0],
-"classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1371,1],
-"classTraitDoorman__Thief.html":[1,0,1372],
-"classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1372,0]
+"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1370,0]
 };

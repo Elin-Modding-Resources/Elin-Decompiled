@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"classGoalTask.html#a3cb6f6da58ea95eacadbacdfd87b19de":[1,0,501,7],
+"classGoalTask.html#a633e9ccf86a101e0ece8629d228db970":[1,0,501,9],
 "classGoalTask.html#a792fc8f65915232cd39a51253ca34c51":[1,0,501,4],
 "classGoalTask.html#a7c2500dfc889c770053da616cfe9e36c":[1,0,501,3],
 "classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68":[1,0,501,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "classGuildRankData.html#acd460ee5840491cac11074c18d9ea07d":[1,0,531,2],
 "classGuildRankData.html#af424e08454994b0c714f4f6ce58ef695":[1,0,531,1],
 "classGuildThief.html":[1,0,532],
-"classGuildThief.html#a1fee21b6fd1926733ab0bb0472d5e6c0":[1,0,532,0],
-"classGuildThief.html#a5b8f5bd873fc29bca4c3b2c8f493da41":[1,0,532,1],
-"classGuildThief.html#ae9b6267201bb3a46f474bef14da48001":[1,0,532,2]
+"classGuildThief.html#a1fee21b6fd1926733ab0bb0472d5e6c0":[1,0,532,0]
 };

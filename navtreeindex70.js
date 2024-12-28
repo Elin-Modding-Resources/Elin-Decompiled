@@ -1,5 +1,9 @@
 var NAVTREEINDEX70 =
 {
+"classLayerTitle.html":[1,0,743],
+"classLayerTitle.html#a0848e6cd2272207bedb71e7bc9803e19":[1,0,743,1],
+"classLayerTitle.html#a0958163bb12598c5f99dfbfb78a96a07":[1,0,743,27],
+"classLayerTitle.html#a1d85614ccacf9b72d1d8b1e64e4bf9fa":[1,0,743,16],
 "classLayerTitle.html#a1e94e46288618631f2c4ffb0f0203f73":[1,0,743,22],
 "classLayerTitle.html#a375eac8e2d9cf348052ed5e0c7a0112c":[1,0,743,20],
 "classLayerTitle.html#a3e5848bbb443d8e36000f756ca27e041":[1,0,743,24],
@@ -245,9 +249,5 @@ var NAVTREEINDEX70 =
 "classLogicalPoint.html#afb1b909492286e80078b233327c47132":[1,0,767,5],
 "classLogicalPointManager.html":[1,0,768],
 "classLogicalPointManager.html#a0a39e14ce6b24939f6324b7c8d14af6d":[1,0,768,2],
-"classLogicalPointManager.html#a4c29d11855b7b7d394c1938b2e7b702d":[1,0,768,4],
-"classLogicalPointManager.html#aa408174f45c7312c12351d55864bd455":[1,0,768,7],
-"classLogicalPointManager.html#abbd320e7462cab76a0539f192b8680aa":[1,0,768,6],
-"classLogicalPointManager.html#ad2fcc4c7996dacce504eecb4ae12b843":[1,0,768,0],
-"classLogicalPointManager.html#ae46c342ea7f5a60fc29326235545b680":[1,0,768,5]
+"classLogicalPointManager.html#a4c29d11855b7b7d394c1938b2e7b702d":[1,0,768,4]
 };

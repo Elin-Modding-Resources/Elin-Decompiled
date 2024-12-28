@@ -1,5 +1,9 @@
 var NAVTREEINDEX79 =
 {
+"classQuestCrafter.html#aa698c4059f13ba031888324e6e6bcb8d":[1,0,867,0],
+"classQuestCursedManor.html":[1,0,868],
+"classQuestCursedManor.html#acd173b4aaa88555c56d4331893485e94":[1,0,868,0],
+"classQuestCursedManor.html#ad474b52b0cb4fceee391e459a77c3a47":[1,0,868,1],
 "classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,868,2],
 "classQuestDebt.html":[1,0,869],
 "classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,869,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX79 =
 "classQuestMeal__fruit.html#a5c8a51598aae6c96335ad33879976be7":[1,0,908,0],
 "classQuestMeal__meat.html":[1,0,909],
 "classQuestMeal__meat.html#a35404e9faea0dcaaca47c4a0e75b4b04":[1,0,909,0],
-"classQuestMeal__noodle.html":[1,0,910],
-"classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,910,0],
-"classQuestMeal__rice.html":[1,0,911],
-"classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,911,0],
-"classQuestMeal__soup.html":[1,0,912]
+"classQuestMeal__noodle.html":[1,0,910]
 };

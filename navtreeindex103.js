@@ -1,5 +1,10 @@
 var NAVTREEINDEX103 =
 {
+"classTraitGemCutter.html#ad4c678718199490197cc863c8df758da":[1,0,1431,4],
+"classTraitGemCutter.html#ae2be1a78267a99786d8530c23fc9cce7":[1,0,1431,0],
+"classTraitGene.html":[1,0,1432],
+"classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1432,3],
+"classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1432,0],
 "classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1432,4],
 "classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1432,1],
 "classTraitGene.html#a8e6b1c7317611d1cf438e56d285a37af":[1,0,1432,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX103 =
 "classTraitMagicChest.html":[1,0,1490],
 "classTraitMagicChest.html#a0736e3bf06a16e5ce69336ee2553301d":[1,0,1490,9],
 "classTraitMagicChest.html#a31e5a90eb8e0c2878af32d7a140207ec":[1,0,1490,6],
-"classTraitMagicChest.html#a374c84d6ee8fd4b303002cce39310071":[1,0,1490,1],
-"classTraitMagicChest.html#a48d4cc922d03e7fff2a2122aa3ecffb4":[1,0,1490,4],
-"classTraitMagicChest.html#a4f5af16cef8f4b7cd634815df07ff21c":[1,0,1490,0],
-"classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1490,8],
-"classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1490,7],
-"classTraitMagicChest.html#ab53e0156b91e51e21f943b2a8667a156":[1,0,1490,3]
+"classTraitMagicChest.html#a374c84d6ee8fd4b303002cce39310071":[1,0,1490,1]
 };

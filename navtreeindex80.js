@@ -1,5 +1,9 @@
 var NAVTREEINDEX80 =
 {
+"classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,910,0],
+"classQuestMeal__rice.html":[1,0,911],
+"classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,911,0],
+"classQuestMeal__soup.html":[1,0,912],
 "classQuestMeal__soup.html#aa386e62112c0a240762e780650fdeee6":[1,0,912,0],
 "classQuestMeal__vegi.html":[1,0,913],
 "classQuestMeal__vegi.html#a7d25a63c94b9906488f96bd1362edc72":[1,0,913,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX80 =
 "classRecipe.html#a21dd69360b93de59b5308d7db36b9559":[1,0,945,50],
 "classRecipe.html#a26d659bbb40ad8f2b48a337c6a56e60e":[1,0,945,30],
 "classRecipe.html#a279d730fc3c5a87840cecbfd3f8aabb1":[1,0,945,71],
-"classRecipe.html#a28da28557b2edc52979be0b8f061bcfb":[1,0,945,17],
-"classRecipe.html#a2d8a4c729f584be34db82fd54d858fa0":[1,0,945,15],
-"classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29":[1,0,945,25],
-"classRecipe.html#a2f06ae614a1b3efab9a86a3bd4cfe4ce":[1,0,945,22],
-"classRecipe.html#a32ea83feab1dd425947e10577121c615":[1,0,945,66]
+"classRecipe.html#a28da28557b2edc52979be0b8f061bcfb":[1,0,945,17]
 };

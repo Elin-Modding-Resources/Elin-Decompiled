@@ -1,5 +1,7 @@
 var NAVTREEINDEX65 =
 {
+"classLangGame_1_1Row.html#ad651e729b1d410c645d0a4ebfc9a4a7c":[1,0,668,0,4],
+"classLangGame_1_1Row.html#ad77a2bbc1c8aa6a5b12023ef2cc6c7ba":[1,0,668,0,2],
 "classLangGame_1_1Row.html#ae9a4837bb8f1626c287d4870285f95ea":[1,0,668,0,1],
 "classLangGeneral.html":[1,0,669],
 "classLangGeneral.html#a07d10a40271a28ad68e56a2881ac9b66":[1,0,669,1],
@@ -108,8 +110,10 @@ var NAVTREEINDEX65 =
 "classLayerAbility.html#ae02d0c2a293eaa6beecd9a729b800b12":[1,0,676,17],
 "classLayerAbility.html#ae1d61d07b1b38780b8888e7ac0599f5e":[1,0,676,20],
 "classLayerAbility_1_1Config.html":[1,0,676,0],
+"classLayerAbility_1_1Config.html#a21ecf4b9fd6cdd078306057c73f44b68":[1,0,676,0,2],
 "classLayerAbility_1_1Config.html#a8d01dbeb56230f965ee1952598e6ec43":[1,0,676,0,1],
-"classLayerAbility_1_1Config.html#ae7d7ef647882571dca1d7296f551f7be":[1,0,676,0,2],
+"classLayerAbility_1_1Config.html#abdad293d44dd8ae3cfe1c7c5fc91e0ff":[1,0,676,0,3],
+"classLayerAbility_1_1Config.html#ae7d7ef647882571dca1d7296f551f7be":[1,0,676,0,4],
 "classLayerAbility_1_1Config.html#af5d33bae8b387a6ea7eb33f7053941fc":[1,0,676,0,0],
 "classLayerAdmin.html":[1,0,677],
 "classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6":[1,0,677,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX65 =
 "classLayerCover.html":[1,0,686],
 "classLayerCover.html#a1bbea883b3a0547c14578725709e52e4":[1,0,686,1],
 "classLayerCover.html#a49b6fb7dee7b26f1ab0fbef534282557":[1,0,686,0],
-"classLayerCover.html#a72e8ae8e24f2dc6739a0aace8d368df1":[1,0,686,2],
-"classLayerCover.html#ab8ff572e8b819974f58b5044974e245d":[1,0,686,3],
-"classLayerCraft.html":[1,0,687],
-"classLayerCraft.html#a00421a8253c1f1821ba83f303d44346a":[1,0,687,45],
-"classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3":[1,0,687,15]
+"classLayerCover.html#a72e8ae8e24f2dc6739a0aace8d368df1":[1,0,686,2]
 };

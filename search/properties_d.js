@@ -89,6 +89,6 @@ var searchData=
   ['mtpvalue_86',['MTPValue',['../classTraitBaseSpellbook.html#ad4db6e1d234810149a1ea4ef33b597f4',1,'TraitBaseSpellbook.MTPValue()'],['../classTraitScroll.html#afd7a0040e801c53bac9e70d29fd078e2',1,'TraitScroll.MTPValue()']]],
   ['multiname_87',['MultiName',['../classInspectGroup.html#a6132c025ce3f11d36157c5132c6f5cd5',1,'InspectGroup.MultiName()'],['../classInspectGroupThing.html#a2c249737802f724ccff3e2d74fbac73b',1,'InspectGroupThing.MultiName()'],['../classInspectGroupTask.html#abaac66d0868765138fbc197c9715fc39',1,'InspectGroupTask.MultiName()'],['../classInspectGroupObj.html#a00efe62da38f50784e64f8a0454565c9',1,'InspectGroupObj.MultiName()'],['../classInspectGroupChara.html#adc214c1e08d6b710ef9a50dc19061555',1,'InspectGroupChara.MultiName()'],['../classInspectGroupBlock.html#aa6f1eb7ab59edd95c9f923b6d26ed28a',1,'InspectGroupBlock.MultiName()'],['../classInspectGroupArea.html#ad5bae8d20dde83d1125c0ef341979ce5',1,'InspectGroupArea.MultiName()']]],
   ['multisize_88',['Multisize',['../classActionMode.html#afb50ea2d063d3287939e55698a6aeef9',1,'ActionMode']]],
-  ['multisize_89',['MultiSize',['../classRecipe.html#aafb5390a0ac2628926555cd006229cde',1,'Recipe']]],
-  ['multisize_90',['multisize',['../classBaseTileSelector.html#acfe05c08408ba7dbe70173019dcc49e9',1,'BaseTileSelector']]]
+  ['multisize_89',['multisize',['../classBaseTileSelector.html#acfe05c08408ba7dbe70173019dcc49e9',1,'BaseTileSelector']]],
+  ['multisize_90',['MultiSize',['../classRecipe.html#aafb5390a0ac2628926555cd006229cde',1,'Recipe']]]
 ];

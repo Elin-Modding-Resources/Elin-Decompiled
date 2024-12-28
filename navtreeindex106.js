@@ -1,5 +1,10 @@
 var NAVTREEINDEX106 =
 {
+"classTraitScrollMapTreasure.html#af245a67d8ce512e3782a88bd23660eb7":[1,0,1613,4],
+"classTraitScrollMapTreasure.html#af38bfbf4f2ddaba9ed132d105c072f45":[1,0,1613,1],
+"classTraitScrollRandom.html":[1,0,1614],
+"classTraitScrollRandom.html#a08b514b9e11ff796bc1684237c39b766":[1,0,1614,5],
+"classTraitScrollRandom.html#a255d6649635ecb3991ab2016bc0f018e":[1,0,1614,6],
 "classTraitScrollRandom.html#a2a25d812c94df25815c40afa56a64e72":[1,0,1614,2],
 "classTraitScrollRandom.html#a62c3d173f9c602db12758a35833dfeb8":[1,0,1614,4],
 "classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33":[1,0,1614,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX106 =
 "classTraitTeleporter.html#a6fa4e2b8c6b3de9b28945570e1924561":[1,0,1672,8],
 "classTraitTeleporter.html#a77cd454a972c0519c9f10b83622fb236":[1,0,1672,2],
 "classTraitTeleporter.html#a85b6f65d9f8b96139c21a3b03ad6dc14":[1,0,1672,4],
-"classTraitTeleporter.html#a91f2defe17affc5b2a09a427fbaf8677":[1,0,1672,7],
-"classTraitTeleporter.html#ac640175e9667a4a9572ee4d239acd0a9":[1,0,1672,10],
-"classTraitTeleporter.html#ad3defe9a22e6e69fec6d3d6142b3fded":[1,0,1672,6],
-"classTraitTeleporter.html#adeddf623e217fb8bcb0fef2b9513a38c":[1,0,1672,5],
-"classTraitTent.html":[1,0,1673],
-"classTraitTent.html#a0cdccdd19e7972858217c5d15f71fa40":[1,0,1673,1]
+"classTraitTeleporter.html#a91f2defe17affc5b2a09a427fbaf8677":[1,0,1672,7]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX104 =
 {
+"classTraitMagicChest.html#a48d4cc922d03e7fff2a2122aa3ecffb4":[1,0,1490,4],
+"classTraitMagicChest.html#a4f5af16cef8f4b7cd634815df07ff21c":[1,0,1490,0],
+"classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1490,8],
+"classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1490,7],
+"classTraitMagicChest.html#ab53e0156b91e51e21f943b2a8667a156":[1,0,1490,3],
 "classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1490,2],
 "classTraitMagicChest.html#ad29543aa0f1c1c56d6c973b27d296a49":[1,0,1490,5],
 "classTraitMahjong.html":[1,0,1491],
@@ -244,10 +249,5 @@ var NAVTREEINDEX104 =
 "classTraitPaintBoard.html#a2246016312bcd9dd29eace932f52f6e9":[1,0,1554,4],
 "classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1554,0],
 "classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1554,2],
-"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1554,1],
-"classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1554,5],
-"classTraitPainter.html":[1,0,1555],
-"classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea":[1,0,1555,1],
-"classTraitPainter.html#a676298524aad36fa4b67bfd137c69a12":[1,0,1555,3],
-"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747":[1,0,1555,0]
+"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1554,1]
 };

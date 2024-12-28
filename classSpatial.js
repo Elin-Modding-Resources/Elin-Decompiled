@@ -50,6 +50,7 @@ var classSpatial =
     [ "_dangerLv", "classSpatial.html#a0acfe59475a875ecfaf22c8dc2173262", null ],
     [ "CanFastTravel", "classSpatial.html#abf78a8bb67dc8737af244ba0a434e054", null ],
     [ "CanSpawnAdv", "classSpatial.html#a1f15d296e55384bc44361e2cef2e8fae", null ],
+    [ "ContentLv", "classSpatial.html#a410d73fe510cc502216125e48cc85d52", null ],
     [ "DangerLv", "classSpatial.html#ab005f3e3fcd24905d112de51b9d2d138", null ],
     [ "DangerLvFix", "classSpatial.html#a70184c59fc39eccddf9036a599a398e8", null ],
     [ "dateExpire", "classSpatial.html#ad173f964691aecf8564f9363e0961263", null ],
