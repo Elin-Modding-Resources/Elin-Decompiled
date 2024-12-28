@@ -33,8 +33,7 @@ public class TraitAbility : TraitCatalyst
 		}
 		else
 		{
-			string text = element.vPotential.ToString() ?? "";
-			t.SetText(text ?? "", FontColor.Charge);
+			t.SetText(element.vPotential.ToShortNumber(), FontColor.Charge);
 			t.SetActive(element is Spell);
 		}
 	}

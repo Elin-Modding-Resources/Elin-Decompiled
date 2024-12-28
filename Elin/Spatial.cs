@@ -468,6 +468,8 @@ public class Spatial : EClass
 		}
 	}
 
+	public virtual int ContentLv => DangerLv;
+
 	public virtual int DangerLv => _dangerLv;
 
 	public virtual int DangerLvFix => 0;

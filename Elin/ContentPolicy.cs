@@ -25,7 +25,7 @@ public class ContentPolicy : EContent
 		RefreshPolicyList(listPolicyEconomy, "economy", "department_economy");
 		RefreshPolicyList(listPolicyLife, "life", "department_life");
 		RefreshPolicyList(listUtility, "utility", "department_utility");
-		listUtility.SetActive(EClass.Branch.lv >= 2);
+		listUtility.SetActive(EClass.Branch.lv >= 2 || EClass.debug.enable);
 		RefreshPolicyIcons();
 		GetComponentInParent<Layer>().RebuildLayout(recursive: true);
 		this.RebuildLayout(recursive: true);

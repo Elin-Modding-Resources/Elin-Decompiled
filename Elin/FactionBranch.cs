@@ -127,9 +127,9 @@ public class FactionBranch : EClass
 
 	public int MaxSoil => ((int)(Mathf.Sqrt(EClass._map.bounds.Width * EClass._map.bounds.Height) * 3f) + Evalue(2200) * 5) * (100 + Evalue(3700) * 25) / 100;
 
-	public int ContentLV => Mathf.Max(1, lv * 4 + EClass.scene.elomap.GetRoadDist(EClass._zone.x, EClass._zone.y) - 4);
+	public int ContentLV => Mathf.Max(1, lv * 4 + EClass.scene.elomap.GetRoadDist(EClass._zone.x, EClass._zone.y) - 4 + (int)Mathf.Sqrt(Evalue(2706)) * 4);
 
-	public int DangerLV => Mathf.Max(1, ContentLV - (int)Mathf.Sqrt(Evalue(2704)) * 2 + (int)Mathf.Sqrt(Evalue(2706)) * 4);
+	public int DangerLV => Mathf.Max(1, ContentLV - (int)Mathf.Sqrt(Evalue(2704)) * 2);
 
 	public bool HasItemProtection => lv >= 3;
 

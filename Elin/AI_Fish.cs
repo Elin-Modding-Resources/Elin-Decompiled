@@ -329,7 +329,7 @@ public class AI_Fish : AIAct
 		}
 		if (text != "")
 		{
-			thing = ThingGen.Create(text);
+			thing = ThingGen.Create(text, -1, EClass._zone.ContentLv);
 		}
 		else if (EClass.rnd(5 + num / 3) == 0)
 		{

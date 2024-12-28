@@ -862,88 +862,95 @@ public class Thing : Card
 		}
 		if (mode != IInspect.NoteMode.Recipe)
 		{
-			UIItem uIItem = n.AddHeaderCard(text);
-			SetImage(uIItem.image2);
-			uIItem.image2.Rect().pivot = new Vector2(0.5f, 0.5f);
-			string text3 = base.Num.ToFormat() ?? "";
-			string text4 = (Mathf.Ceil(0.01f * (float)base.ChildrenAndSelfWeight) * 0.1f).ToString("F1") + "s";
-			if (things.Count > 0)
+			if (trait is TraitAbility)
 			{
-				text3 = text3 + " (" + things.Count + ")";
-			}
-			if (base.ChildrenAndSelfWeight != SelfWeight)
-			{
-				text4 = text4 + " (" + (Mathf.Ceil(0.01f * (float)SelfWeight) * 0.1f).ToString("F1") + "s)";
-			}
-			text = "_quantity".lang(text3 ?? "", text4);
-			if (flag && recipe != null && (bool)LayerCraft.Instance)
-			{
-				text = text + "  " + "_recipe_lv".lang(recipe.RecipeLv.ToString() ?? "");
-			}
-			uIItem.text2.SetText(text);
-			if (showEQStats && flag2)
-			{
-				if (!flag)
-				{
-					text = "";
-					if (DV != 0 || PV != 0 || base.HIT != 0 || base.DMG != 0 || Penetration != 0)
-					{
-						if (base.DMG != 0)
-						{
-							text = text + "DMG".lang() + ((base.DMG > 0) ? "+" : "") + base.DMG + ", ";
-						}
-						if (base.HIT != 0)
-						{
-							text = text + "HIT".lang() + ((base.HIT > 0) ? "+" : "") + base.HIT + ", ";
-						}
-						if (DV != 0)
-						{
-							text = text + "DV".lang() + ((DV > 0) ? "+" : "") + DV + ", ";
-						}
-						if (PV != 0)
-						{
-							text = text + "PV".lang() + ((PV > 0) ? "+" : "") + PV + ", ";
-						}
-						if (Penetration != 0)
-						{
-							text = text + "PEN".lang() + ((Penetration > 0) ? "+" : "") + Penetration + "%, ";
-						}
-						text = text.TrimEnd(' ').TrimEnd(',');
-					}
-					if (!text.IsEmpty())
-					{
-						n.AddText("NoteText_eqstats", text);
-					}
-				}
-				if (trait is TraitToolRange traitToolRange)
-				{
-					n.AddText("NoteText_eqstats", "tip_range".lang(traitToolRange.BestDist.ToString() ?? ""));
-				}
+				EClass.pc.elements.GetOrCreateElement((trait as TraitAbility).act.id).AddHeaderAbility(n);
 			}
 			else
 			{
-				string text5 = "";
-				if (EClass.debug.showExtra)
+				UIItem uIItem = n.AddHeaderCard(text);
+				SetImage(uIItem.image2);
+				uIItem.image2.Rect().pivot = new Vector2(0.5f, 0.5f);
+				string text3 = base.Num.ToFormat() ?? "";
+				string text4 = (Mathf.Ceil(0.01f * (float)base.ChildrenAndSelfWeight) * 0.1f).ToString("F1") + "s";
+				if (things.Count > 0)
 				{
-					int totalQuality = GetTotalQuality();
-					int totalQuality2 = GetTotalQuality(applyBonus: false);
-					text5 = text5 + "Lv. " + base.LV + " TQ. " + GetTotalQuality() + ((totalQuality == totalQuality2) ? "" : (" (" + totalQuality2 + ")"));
+					text3 = text3 + " (" + things.Count + ")";
 				}
-				if (HasElement(10))
+				if (base.ChildrenAndSelfWeight != SelfWeight)
 				{
-					text5 = text5 + (text5.IsEmpty() ? "" : "  ") + "_nutrition".lang(Evalue(10).ToFormat() ?? "");
+					text4 = text4 + " (" + (Mathf.Ceil(0.01f * (float)SelfWeight) * 0.1f).ToString("F1") + "s)";
 				}
-				if ((base.category.IsChildOf("resource") || trait.IsTool) && !(trait is TraitAbility))
-				{
-					text5 = text5 + (text5.IsEmpty() ? "" : "  ") + "_hardness".lang(base.material.hardness.ToString() ?? "");
-				}
+				text = "_quantity".lang(text3 ?? "", text4);
 				if (flag && recipe != null && (bool)LayerCraft.Instance)
 				{
-					text5 = text5 + (text5.IsEmpty() ? "" : "  ") + "_max_quality".lang(recipe.GetQualityBonus().ToString() ?? "");
+					text = text + "  " + "_recipe_lv".lang(recipe.RecipeLv.ToString() ?? "");
 				}
-				if (!text5.IsEmpty())
+				uIItem.text2.SetText(text);
+				if (showEQStats && flag2)
 				{
-					n.AddText("NoteText_eqstats", text5);
+					if (!flag)
+					{
+						text = "";
+						if (DV != 0 || PV != 0 || base.HIT != 0 || base.DMG != 0 || Penetration != 0)
+						{
+							if (base.DMG != 0)
+							{
+								text = text + "DMG".lang() + ((base.DMG > 0) ? "+" : "") + base.DMG + ", ";
+							}
+							if (base.HIT != 0)
+							{
+								text = text + "HIT".lang() + ((base.HIT > 0) ? "+" : "") + base.HIT + ", ";
+							}
+							if (DV != 0)
+							{
+								text = text + "DV".lang() + ((DV > 0) ? "+" : "") + DV + ", ";
+							}
+							if (PV != 0)
+							{
+								text = text + "PV".lang() + ((PV > 0) ? "+" : "") + PV + ", ";
+							}
+							if (Penetration != 0)
+							{
+								text = text + "PEN".lang() + ((Penetration > 0) ? "+" : "") + Penetration + "%, ";
+							}
+							text = text.TrimEnd(' ').TrimEnd(',');
+						}
+						if (!text.IsEmpty())
+						{
+							n.AddText("NoteText_eqstats", text);
+						}
+					}
+					if (trait is TraitToolRange traitToolRange)
+					{
+						n.AddText("NoteText_eqstats", "tip_range".lang(traitToolRange.BestDist.ToString() ?? ""));
+					}
+				}
+				else
+				{
+					string text5 = "";
+					if (EClass.debug.showExtra)
+					{
+						int totalQuality = GetTotalQuality();
+						int totalQuality2 = GetTotalQuality(applyBonus: false);
+						text5 = text5 + "Lv. " + base.LV + " TQ. " + GetTotalQuality() + ((totalQuality == totalQuality2) ? "" : (" (" + totalQuality2 + ")"));
+					}
+					if (HasElement(10))
+					{
+						text5 = text5 + (text5.IsEmpty() ? "" : "  ") + "_nutrition".lang(Evalue(10).ToFormat() ?? "");
+					}
+					if ((base.category.IsChildOf("resource") || trait.IsTool) && !(trait is TraitAbility))
+					{
+						text5 = text5 + (text5.IsEmpty() ? "" : "  ") + "_hardness".lang(base.material.hardness.ToString() ?? "");
+					}
+					if (flag && recipe != null && (bool)LayerCraft.Instance)
+					{
+						text5 = text5 + (text5.IsEmpty() ? "" : "  ") + "_max_quality".lang(recipe.GetQualityBonus().ToString() ?? "");
+					}
+					if (!text5.IsEmpty())
+					{
+						n.AddText("NoteText_eqstats", text5);
+					}
 				}
 			}
 			string detail = GetDetail();

@@ -44,7 +44,7 @@ public class ButtonAbility : UIButton, IMouseHint
 		if (EClass.game.altAbility)
 		{
 			textStock.SetActive(e is Spell);
-			textStock.text = e.vPotential.ToString() ?? "";
+			textStock.text = e.vPotential.ToShortNumber();
 			onRightClick = delegate
 			{
 				if (EClass.ui.IsActive)

@@ -1373,8 +1373,7 @@ public class Trait : EClass
 	{
 		if (owner.isThing && !owner.Thing.source.attackType.IsEmpty() && owner.ammoData != null)
 		{
-			string text = owner.c_ammo.ToString() ?? "";
-			t.SetText(text ?? "", FontColor.Charge);
+			t.SetText(owner.c_ammo.ToString() ?? "", FontColor.Charge);
 			t.SetActive(enable: true);
 		}
 		else if (owner.Num == 1 && ShowCharges && owner.IsIdentified)
@@ -1384,8 +1383,7 @@ public class Trait : EClass
 		}
 		else
 		{
-			string text2 = ((owner.Num >= 1000000) ? (owner.Num / 1000000 + "M") : ((owner.Num >= 1000) ? (owner.Num / 1000 + "K") : (owner.Num.ToString() ?? "")));
-			t.SetText(text2 ?? "", FontColor.ButtonGrid);
+			t.SetText(owner.Num.ToShortNumber(), FontColor.ButtonGrid);
 			t.SetActive(owner.Num > 1);
 		}
 	}

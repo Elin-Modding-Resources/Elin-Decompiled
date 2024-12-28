@@ -91,6 +91,18 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 	}
 
+	public override int ContentLv
+	{
+		get
+		{
+			if (branch == null)
+			{
+				return DangerLv;
+			}
+			return branch.ContentLV;
+		}
+	}
+
 	public override int DangerLv
 	{
 		get
@@ -1107,9 +1119,9 @@ public class Zone : Spatial, ICardParent, IInspect
 				{
 					Msg.ignoreAll = true;
 					chara2.Cure(CureType.Boss, 20 + num * 10);
-					chara2.HealHP(Mathf.Max(1, chara2.MaxHP) * num / 20);
-					chara2.mana.Mod(Mathf.Max(1, chara2.mana.max) * num / 20);
-					chara2.stamina.Mod(Mathf.Max(1, chara2.stamina.max) * num / 20);
+					chara2.HealHP(Mathf.Max(1, chara2.MaxHP) * Mathf.Min(num, 20) / 20);
+					chara2.mana.Mod(Mathf.Max(1, chara2.mana.max) * Mathf.Min(num, 20) / 20);
+					chara2.stamina.Mod(Mathf.Max(1, chara2.stamina.max) * Mathf.Min(num, 20) / 20);
 					Msg.ignoreAll = false;
 				}
 			}
@@ -1695,6 +1707,14 @@ public class Zone : Spatial, ICardParent, IInspect
 		if (EClass.pc.currentZone == null || EClass.pc.currentZone is Zone_Tent || topZone == EClass.pc.currentZone.GetTopZone() || (EClass.player.nextZone != null && topZone == EClass.player.nextZone.GetTopZone()))
 		{
 			return false;
+		}
+		if (EClass.pc.currentZone.IsInstance)
+		{
+			Zone zone = EClass.game.spatials.Find(EClass.pc.currentZone.instance.uidZone);
+			if (zone != null && zone.GetTopZone() == this)
+			{
+				return false;
+			}
 		}
 		return true;
 	}

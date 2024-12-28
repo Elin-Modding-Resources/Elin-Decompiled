@@ -11,6 +11,10 @@ public class LayerAbility : ELayer, IDragParent
 
 		public bool hideDepletedSpell;
 
+		public bool fixedSize;
+
+		public bool fixedPos;
+
 		public int bgAlpha;
 	}
 
@@ -77,6 +81,16 @@ public class LayerAbility : ELayer, IDragParent
 					config.hideDepletedSpell = a;
 					list.List();
 				});
+				uIContextMenu3.AddToggle("fixedSize", config.fixedSize, delegate(bool a)
+				{
+					config.fixedSize = a;
+					RefreshConfig();
+				});
+				uIContextMenu3.AddToggle("fixedPos", config.fixedPos, delegate(bool a)
+				{
+					config.fixedPos = a;
+					RefreshConfig();
+				});
 				uIContextMenu.Show();
 			});
 		}
@@ -94,6 +108,8 @@ public class LayerAbility : ELayer, IDragParent
 			window.listCgFloat.Add(window.cgBG);
 		}
 		window.cgBG.enabled = config.autoHideBG;
+		window.setting.allowMove = !config.fixedPos;
+		window.setting.allowResize = !config.fixedSize;
 	}
 
 	public static void SetDirty(Element a)

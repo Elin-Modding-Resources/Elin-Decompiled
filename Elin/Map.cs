@@ -1827,7 +1827,7 @@ public class Map : MapBounds, IPathfindGrid
 				{
 					Msg.Say("seedSpoiled", cell.GetObjName());
 				}
-				else
+				else if (!EClass._zone.IsUserZone)
 				{
 					Thing t2 = TraitSeed.MakeSeed(sourceObj, TryGetPlant(cell)).SetNum(num2);
 					EClass.pc.PickOrDrop(point, t2);

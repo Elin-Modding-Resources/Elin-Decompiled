@@ -233,8 +233,8 @@ public class AI_Fuck : AIAct
 			}
 			if (chara.IsPCParty || chara2.IsPCParty)
 			{
-				chara.stamina.Mod(-5 - EClass.rnd(chara.stamina.max / 10 + (succubus ? chara2.LV : 0) + 1));
-				chara2.stamina.Mod(-5 - EClass.rnd(chara2.stamina.max / 20 + (succubus ? chara.LV : 0) + 1));
+				chara.stamina.Mod(-5 - EClass.rnd(chara.stamina.max / 10 + (succubus ? StaminaCost(chara2, chara) : 0) + 1));
+				chara2.stamina.Mod(-5 - EClass.rnd(chara2.stamina.max / 20 + (succubus ? StaminaCost(chara, chara2) : 0) + 1));
 			}
 			SuccubusExp(chara, chara2);
 			SuccubusExp(chara2, chara);
@@ -261,6 +261,10 @@ public class AI_Fuck : AIAct
 			break;
 		}
 		chara2.ModAffinity(chara, flag ? 10 : (-5));
+		static int StaminaCost(Chara c1, Chara c2)
+		{
+			return (int)Mathf.Max(10f * (float)c1.END / (float)Mathf.Max(c2.END, 1), 0f);
+		}
 		static void SuccubusExp(Chara c, Chara tg)
 		{
 			if (!c.HasElement(1216))

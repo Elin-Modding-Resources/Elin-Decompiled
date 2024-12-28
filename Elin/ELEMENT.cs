@@ -645,6 +645,13 @@ public class Element : EClass
 		}
 	}
 
+	public void AddHeaderAbility(UINote n)
+	{
+		UIItem uIItem = n.AddHeader("HeaderAbility", FullName.ToTitleCase(wholeText: true), GetSprite());
+		uIItem.text2.text = ((this is Spell) ? (vPotential.ToString() ?? "") : "-");
+		(this as Act)?.SetImage(uIItem.image1);
+	}
+
 	public void _WriteNote(UINote n, ElementContainer owner, Action<UINote> onWriteNote, bool isRef, bool addHeader = true)
 	{
 		if (addHeader)
@@ -653,6 +660,11 @@ public class Element : EClass
 			{
 				UIText.globalSizeMod = -2;
 				n.AddHeader("prevElement".lang(FullName));
+			}
+			else if (this is Act)
+			{
+				AddHeaderAbility(n);
+				n.Space(8);
 			}
 			else
 			{

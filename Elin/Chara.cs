@@ -2920,7 +2920,7 @@ public class Chara : Card, IPathfindWalker
 			if (currentZone.instance != null)
 			{
 				ZoneInstance instance = currentZone.instance;
-				z = EClass.game.spatials.Find(instance.uidZone);
+				z = EClass.game.spatials.Find(instance.uidZone) ?? EClass.pc.homeZone;
 				transition = new ZoneTransition
 				{
 					state = instance.ReturnState,

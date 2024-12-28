@@ -515,7 +515,7 @@ public class ActPlan : EClass
 							}
 							if (flag5 || altAction)
 							{
-								if (EClass.pc.HasElement(1216) && c2.HasCondition<ConSleep>())
+								if (EClass.pc.HasElement(1216) && (c2.HasCondition<ConSleep>() || EClass.debug.enable))
 								{
 									TrySetAct(new AI_Fuck
 									{
