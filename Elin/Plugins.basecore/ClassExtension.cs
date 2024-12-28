@@ -800,6 +800,28 @@ public static class ClassExtension
 		return array[(int)Mathf.Clamp((float)(array.Length - 1) * val, 0f, array.Length - 1)];
 	}
 
+	public static string ToShortNumber(this int a)
+	{
+		string text;
+		if (a < 1000000)
+		{
+			if (a >= 1000)
+			{
+				return a / 1000 + "K";
+			}
+			text = a.ToString();
+			if (text == null)
+			{
+				return "";
+			}
+		}
+		else
+		{
+			text = a / 1000000 + "M";
+		}
+		return text;
+	}
+
 	public static string ToFormat(this int a)
 	{
 		return $"{a:#,0}";
