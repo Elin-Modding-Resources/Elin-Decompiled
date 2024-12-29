@@ -571,6 +571,7 @@ var hierarchy =
             [ "AI_Shopping", "classAI__Shopping.html", null ],
             [ "AI_TargetCard", "classAI__TargetCard.html", [
               [ "AI_Shear", "classAI__Shear.html", null ],
+              [ "AI_Slaughter", "classAI__Slaughter.html", null ],
               [ "AI_Steal", "classAI__Steal.html", null ],
               [ "AI_TargetChara", "classAI__TargetChara.html", null ],
               [ "AI_TargetThing", "classAI__TargetThing.html", [
@@ -726,6 +727,7 @@ var hierarchy =
       [ "Game.Config", "classGame_1_1Config.html", null ],
       [ "Game.Flags", "classGame_1_1Flags.html", null ],
       [ "GameDifficulty", "classGameDifficulty.html", null ],
+      [ "GameDifficultySetting", "classGameDifficultySetting.html", null ],
       [ "GameIO", "classGameIO.html", null ],
       [ "GameIndex", "classGameIndex.html", null ],
       [ "GameLang", "classGameLang.html", null ],
@@ -1461,7 +1463,8 @@ var hierarchy =
           [ "TraitSmelter", "classTraitSmelter.html", null ],
           [ "TraitSpinner", "classTraitSpinner.html", null ],
           [ "TraitStoneCutter", "classTraitStoneCutter.html", null ],
-          [ "TraitToolTalisman", "classTraitToolTalisman.html", null ]
+          [ "TraitToolTalisman", "classTraitToolTalisman.html", null ],
+          [ "TraitWoodMill", "classTraitWoodMill.html", null ]
         ] ],
         [ "TraitCurrency", "classTraitCurrency.html", [
           [ "TraitCurrencyMedal", "classTraitCurrencyMedal.html", null ]
@@ -1774,6 +1777,7 @@ var hierarchy =
           ] ],
           [ "TraitStethoscope", "classTraitStethoscope.html", null ],
           [ "TraitToolBuild", "classTraitToolBuild.html", null ],
+          [ "TraitToolButcher", "classTraitToolButcher.html", null ],
           [ "TraitToolHammer", "classTraitToolHammer.html", null ],
           [ "TraitToolMusic", "classTraitToolMusic.html", [
             [ "TraitToolMusicBig", "classTraitToolMusicBig.html", null ],

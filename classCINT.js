@@ -11,6 +11,7 @@ var classCINT =
     [ "dateBout", "classCINT.html#abb3c2a3c2471a0adde325bbcbd4de229", null ],
     [ "dateCannibalEnd", "classCINT.html#a3755fa9aae603ded66b382f6c56e2fe0", null ],
     [ "dateCooked", "classCINT.html#a4831436850fd817c608e461e7232070f", null ],
+    [ "dateDeathLock", "classCINT.html#a11f03a2d0c15fb17e165e481394d77f6", null ],
     [ "dateGuestArrived", "classCINT.html#affd0a688a5b8a138429d716dc1a87198", null ],
     [ "dateLastSeen", "classCINT.html#ae0a511a784f87155118d70d7a99f7749", null ],
     [ "dateLayHandDay", "classCINT.html#a82a817417b8a0a11c34b0df1809c0d41", null ],

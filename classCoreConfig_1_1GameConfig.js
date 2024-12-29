@@ -25,6 +25,7 @@ var classCoreConfig_1_1GameConfig =
     [ "ignoreWarnCrime", "classCoreConfig_1_1GameConfig.html#ad7511766afc944becfa1ac16f93c23c8", null ],
     [ "ignoreWarnDisassemble", "classCoreConfig_1_1GameConfig.html#adbf18e576c9c9d12f78014fa204c0ae6", null ],
     [ "ignoreWarnMana", "classCoreConfig_1_1GameConfig.html#ab18006cdd748f69c9aa06f92f1b9a7ed", null ],
+    [ "ignoreWarnSlaughter", "classCoreConfig_1_1GameConfig.html#af7407d9619f1186fc7bc319ff29b9508", null ],
     [ "markStack", "classCoreConfig_1_1GameConfig.html#a55704c405c8da231e0510a28014819ea", null ],
     [ "newlineCount", "classCoreConfig_1_1GameConfig.html#a6da4b53e7ed719855282b3e04f9f2336", null ],
     [ "numBackup", "classCoreConfig_1_1GameConfig.html#a3a8fb7a21661b622d451fee8db75fbd8", null ],

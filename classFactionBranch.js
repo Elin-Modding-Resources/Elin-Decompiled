@@ -6,7 +6,7 @@ var classFactionBranch =
     [ "AddMemeber", "classFactionBranch.html#af46ece49058e8d974d0b0044b948014e", null ],
     [ "AddRecruit", "classFactionBranch.html#a16b5fb63bc6550fbbfb88316c9707d7d", null ],
     [ "AutoClean", "classFactionBranch.html#acfa523306d6dfdc1caae615dfb2a5750", null ],
-    [ "BanishMember", "classFactionBranch.html#a9d7df20d03d6f275ca6aaf8c4a8b4aba", null ],
+    [ "BanishMember", "classFactionBranch.html#af3e0056cddbc23577321456176f5de3f", null ],
     [ "CalcInnIncome", "classFactionBranch.html#a53ad731cdd146a2cb48f5e1e8c6f2dfa", null ],
     [ "CalcTourismIncome", "classFactionBranch.html#a91b44dfa88a42e73df3bdd86538e4952", null ],
     [ "CanUpgrade", "classFactionBranch.html#af7c531edafe2a33ec3f2483a67d6ee25", null ],

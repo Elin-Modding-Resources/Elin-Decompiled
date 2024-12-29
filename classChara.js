@@ -34,6 +34,7 @@ var classChara =
     [ "CanMoveTo", "classChara.html#a6bef9290f4567abbf7f6745052b8fc4a", null ],
     [ "CanPick", "classChara.html#a2b9fec0f8805196e0ae358be35fdca90", null ],
     [ "CanReplace", "classChara.html#a8ed26e43e0e7b2e90933dc223fbabac7", null ],
+    [ "CanRevive", "classChara.html#a2951652ea4655bcc345330960b538a91", null ],
     [ "CanSee", "classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d", null ],
     [ "CanSeeLos", "classChara.html#a41a79e668cde53cefaf4e93e879e1032", null ],
     [ "CanSeeLos", "classChara.html#ad013d30ce697f392ded19f40a7184742", null ],

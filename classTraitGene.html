@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.67 Hotfix 8</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.68 Nightly</span>
    </div>
   </td>
  </tr>
@@ -274,6 +274,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3d7c708e6d4de364a10d7f3c4ee9fce4 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bd8f3a886ad660345993fb574c37767 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7bd8f3a886ad660345993fb574c37767">Toggle</a> (bool on, bool silent=false)</td></tr>
 <tr class="separator:a7bd8f3a886ad660345993fb574c37767 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c7071919279552c1882df28b9d8fd6 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a70c7071919279552c1882df28b9d8fd6">PlayToggleEffect</a> (bool silent)</td></tr>
+<tr class="separator:a70c7071919279552c1882df28b9d8fd6 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26650d0511331a631199bde2c56ba2a inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ad26650d0511331a631199bde2c56ba2a">OnToggle</a> ()</td></tr>
 <tr class="separator:ad26650d0511331a631199bde2c56ba2a inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e08f38c87008bfa5a64a7997b5d070d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a6e08f38c87008bfa5a64a7997b5d070d">TrySetToggleAct</a> (<a class="el" href="classActPlan.html">ActPlan</a> p)</td></tr>
@@ -354,6 +356,8 @@ Properties</h2></td></tr>
 <tr class="separator:a17786edaad5750bdf1424cf6dc8877b1 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3a2395462bdb3aa3f70fba7155a66d1 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ad3a2395462bdb3aa3f70fba7155a66d1">ShouldTryRefreshRoom</a><code> [get]</code></td></tr>
 <tr class="separator:ad3a2395462bdb3aa3f70fba7155a66d1 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af466418d509592443c205b58ec8edbf4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af466418d509592443c205b58ec8edbf4">InstallBottomPriority</a><code> [get]</code></td></tr>
+<tr class="separator:af466418d509592443c205b58ec8edbf4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2948e3ea8576c642174fd741968f227c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2948e3ea8576c642174fd741968f227c">CanHarvest</a><code> [get]</code></td></tr>
 <tr class="separator:a2948e3ea8576c642174fd741968f227c inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0caa424c507858d532c559d32dbde569 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0caa424c507858d532c559d32dbde569">radius</a><code> [get]</code></td></tr>
@@ -703,15 +707,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>        }</div>
 <div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> (<span class="stringliteral">&quot;dna_&quot;</span> + <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#adef26c6f05f6a84f211af6330f5e2700">c_DNA</a>.<a class="code hl_property" href="classDNA.html#a1a70e7426ec87aeadc9dcb344aef99be">type</a>).lang() + Lang.space + <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>();</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassCard_html_ad9d564e3ce51804be4c393b6d0534168"><div class="ttname"><a href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">Card.sourceCard</a></div><div class="ttdeci">virtual CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01959">Card.cs:1959</a></div></div>
-<div class="ttc" id="aclassCard_html_adef26c6f05f6a84f211af6330f5e2700"><div class="ttname"><a href="classCard.html#adef26c6f05f6a84f211af6330f5e2700">Card.c_DNA</a></div><div class="ttdeci">DNA c_DNA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01732">Card.cs:1733</a></div></div>
+<div class="ttc" id="aclassCard_html_ad9d564e3ce51804be4c393b6d0534168"><div class="ttname"><a href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">Card.sourceCard</a></div><div class="ttdeci">virtual CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01971">Card.cs:1971</a></div></div>
+<div class="ttc" id="aclassCard_html_adef26c6f05f6a84f211af6330f5e2700"><div class="ttname"><a href="classCard.html#adef26c6f05f6a84f211af6330f5e2700">Card.c_DNA</a></div><div class="ttdeci">DNA c_DNA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01744">Card.cs:1745</a></div></div>
 <div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00007">DNA.cs:8</a></div></div>
 <div class="ttc" id="aclassDNA_html_a1a70e7426ec87aeadc9dcb344aef99be"><div class="ttname"><a href="classDNA.html#a1a70e7426ec87aeadc9dcb344aef99be">DNA.type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00028">DNA.cs:29</a></div></div>
 <div class="ttc" id="aclassDNA_html_a6c24861a5030f44db8c5093699cbbf35"><div class="ttname"><a href="classDNA.html#a6c24861a5030f44db8c5093699cbbf35">DNA.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00009">DNA.cs:10</a></div></div>
 <div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00556">SourceData.cs:556</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01733">Card.c_DNA</a>, <a class="el" href="SourceData_8cs_source.html#l00556">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l01959">Card.sourceCard</a>, and <a class="el" href="DNA_8cs_source.html#l00029">DNA.type</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01745">Card.c_DNA</a>, <a class="el" href="SourceData_8cs_source.html#l00556">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l01971">Card.sourceCard</a>, and <a class="el" href="DNA_8cs_source.html#l00029">DNA.type</a>.</p>
 
 </div>
 </div>
@@ -746,7 +750,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   39</span>    }</div>
 <div class="ttc" id="aclassDNA_html_a283f5abff7ec3fcf6d7494dc8c954e4d"><div class="ttname"><a href="classDNA.html#a283f5abff7ec3fcf6d7494dc8c954e4d">DNA.cost</a></div><div class="ttdeci">int cost</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00040">DNA.cs:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01733">Card.c_DNA</a>, <a class="el" href="DNA_8cs_source.html#l00041">DNA.cost</a>, and <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01745">Card.c_DNA</a>, <a class="el" href="DNA_8cs_source.html#l00041">DNA.cost</a>, and <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -807,7 +811,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01733">Card.c_DNA</a>, <a class="el" href="DNA_8cs_source.html#l00041">DNA.cost</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="DNA_8cs_source.html#l00472">DNA.GetDurationHour()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, and <a class="el" href="DNA_8cs_source.html#l00495">DNA.WriteNote()</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01745">Card.c_DNA</a>, <a class="el" href="DNA_8cs_source.html#l00041">DNA.cost</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="DNA_8cs_source.html#l00472">DNA.GetDurationHour()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, and <a class="el" href="DNA_8cs_source.html#l00495">DNA.WriteNote()</a>.</p>
 
 </div>
 </div>

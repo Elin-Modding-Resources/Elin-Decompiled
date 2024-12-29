@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.67 Hotfix 8</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.68 Nightly</span>
    </div>
   </td>
  </tr>
@@ -288,6 +288,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3d7c708e6d4de364a10d7f3c4ee9fce4 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bd8f3a886ad660345993fb574c37767 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7bd8f3a886ad660345993fb574c37767">Toggle</a> (bool on, bool silent=false)</td></tr>
 <tr class="separator:a7bd8f3a886ad660345993fb574c37767 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c7071919279552c1882df28b9d8fd6 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a70c7071919279552c1882df28b9d8fd6">PlayToggleEffect</a> (bool silent)</td></tr>
+<tr class="separator:a70c7071919279552c1882df28b9d8fd6 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26650d0511331a631199bde2c56ba2a inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ad26650d0511331a631199bde2c56ba2a">OnToggle</a> ()</td></tr>
 <tr class="separator:ad26650d0511331a631199bde2c56ba2a inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e08f38c87008bfa5a64a7997b5d070d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a6e08f38c87008bfa5a64a7997b5d070d">TrySetToggleAct</a> (<a class="el" href="classActPlan.html">ActPlan</a> p)</td></tr>
@@ -377,6 +379,8 @@ Properties</h2></td></tr>
 <tr class="separator:a17786edaad5750bdf1424cf6dc8877b1 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3a2395462bdb3aa3f70fba7155a66d1 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ad3a2395462bdb3aa3f70fba7155a66d1">ShouldTryRefreshRoom</a><code> [get]</code></td></tr>
 <tr class="separator:ad3a2395462bdb3aa3f70fba7155a66d1 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af466418d509592443c205b58ec8edbf4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af466418d509592443c205b58ec8edbf4">InstallBottomPriority</a><code> [get]</code></td></tr>
+<tr class="separator:af466418d509592443c205b58ec8edbf4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2948e3ea8576c642174fd741968f227c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2948e3ea8576c642174fd741968f227c">CanHarvest</a><code> [get]</code></td></tr>
 <tr class="separator:a2948e3ea8576c642174fd741968f227c inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0caa424c507858d532c559d32dbde569 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0caa424c507858d532c559d32dbde569">radius</a><code> [get]</code></td></tr>
@@ -732,12 +736,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   22</span>        }</div>
 <div class="line"><span class="lineno">   23</span>        c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(flag ? <span class="stringliteral">&quot;cloth_remove&quot;</span> : <span class="stringliteral">&quot;cloth_wear&quot;</span>, c);</div>
 <div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05138">Card.cs:5138</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05773">Card.cs:5773</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05163">Card.cs:5163</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05798">Card.cs:5798</a></div></div>
 <div class="ttc" id="aclassChara_html_aec77afc7be7a3a9811822ad9924234ea"><div class="ttname"><a href="classChara.html#aec77afc7be7a3a9811822ad9924234ea">Chara.IsPCC</a></div><div class="ttdeci">override bool IsPCC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00667">Chara.cs:667</a></div></div>
-<div class="ttc" id="aclassChara_html_aff10de8b44df6d76c6e79ea358029a46"><div class="ttname"><a href="classChara.html#aff10de8b44df6d76c6e79ea358029a46">Chara.SetPCCState</a></div><div class="ttdeci">void SetPCCState(PCCState state)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05803">Chara.cs:5803</a></div></div>
+<div class="ttc" id="aclassChara_html_aff10de8b44df6d76c6e79ea358029a46"><div class="ttname"><a href="classChara.html#aff10de8b44df6d76c6e79ea358029a46">Chara.SetPCCState</a></div><div class="ttdeci">void SetPCCState(PCCState state)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05808">Chara.cs:5808</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00667">Chara.IsPCC</a>, <a class="el" href="Card_8cs_source.html#l05138">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l05773">Card.Say()</a>, and <a class="el" href="Chara_8cs_source.html#l05803">Chara.SetPCCState()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00667">Chara.IsPCC</a>, <a class="el" href="Card_8cs_source.html#l05163">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l05798">Card.Say()</a>, and <a class="el" href="Chara_8cs_source.html#l05808">Chara.SetPCCState()</a>.</p>
 
 </div>
 </div>
@@ -773,7 +777,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   12</span>        }</div>
 <div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01913">Card.cs:1913</a></div></div>
+<div class="ttc" id="aclassCard_html_a600593316390a7d873cb5ff53f269517"><div class="ttname"><a href="classCard.html#a600593316390a7d873cb5ff53f269517">Card.ExistsOnMap</a></div><div class="ttdeci">bool ExistsOnMap</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01925">Card.cs:1925</a></div></div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00055">Card.cs:55</a></div></div>
 <div class="ttc" id="aclassPoint_html_af4f53c5ef543798320ca855aa873dc46"><div class="ttname"><a href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">Point.HasChara</a></div><div class="ttdeci">bool HasChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00225">Point.cs:226</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>

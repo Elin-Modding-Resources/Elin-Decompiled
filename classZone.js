@@ -50,6 +50,7 @@ var classZone =
     [ "IsCrime", "classZone.html#aea5e9ee4a39d295c4b86be353ca64799", null ],
     [ "IsImportValid", "classZone.html#a396a513549363c88e5b3d864367a41d5", null ],
     [ "ListLandFeats", "classZone.html#ac30bd9c8feb9e1cff0c8758838ce41ab", null ],
+    [ "ListMinions", "classZone.html#a1448504a948a14c51b22eba0d52b65d7", null ],
     [ "ModDevelopment", "classZone.html#ae07e53724d35953cc743c5bf387335f0", null ],
     [ "ModInfluence", "classZone.html#ab864eb4a164bf0657c39a99cc3192f83", null ],
     [ "OnActivate", "classZone.html#a9a76eb1513f018d620bd11877c548d3d", null ],

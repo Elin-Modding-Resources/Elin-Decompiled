@@ -16,5 +16,6 @@ var classTraitSeed =
     [ "CanExtendBuild", "classTraitSeed.html#a85279e59d5cff2e8a59a052dfb40146f", null ],
     [ "CanName", "classTraitSeed.html#a346a08c0db4fdbb57b8086666608db8e", null ],
     [ "DefaultStock", "classTraitSeed.html#a502a7261aa65ae535c1d8299f74d353e", null ],
+    [ "InstallBottomPriority", "classTraitSeed.html#a2fd15c009c1b0ffaf779cdeb47b687e4", null ],
     [ "row", "classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95", null ]
 ];

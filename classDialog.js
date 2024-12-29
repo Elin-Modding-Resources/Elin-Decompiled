@@ -29,6 +29,7 @@ var classDialog =
     [ "TryWarnCrime", "classDialog.html#aaec971ae4a50064f72b54fd99db8c48e", null ],
     [ "TryWarnDisassemble", "classDialog.html#a8ba44a1f9ead2832edfe62e439a96fd1", null ],
     [ "TryWarnMana", "classDialog.html#aaf2f87fb54da1c5a4e6005c0aaa8a1bf", null ],
+    [ "TryWarnSlaughter", "classDialog.html#a7a07aac8a8ac3f241f1a712c01f0adf9", null ],
     [ "Update", "classDialog.html#a04df6ec6e41dfa9e17788f3c220050d0", null ],
     [ "YesNo", "classDialog.html#a43dffec293c2834cd969332a080c1133", null ],
     [ "effect", "classDialog.html#a25dfc8584a99f41c7e14d90ce1f1e84e", null ],

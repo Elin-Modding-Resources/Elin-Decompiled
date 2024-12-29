@@ -270,6 +270,7 @@ var classCard =
     [ "c_copyContainer", "classCard.html#ad662f3dee3843da44c59958a2414c33a", null ],
     [ "c_corruptionHistory", "classCard.html#a913cc418ff5f10e54763c3f49cfe6f3a", null ],
     [ "c_dateCooked", "classCard.html#a51d1072972c19e3f3fc814ee2a794b6b", null ],
+    [ "c_dateDeathLock", "classCard.html#a556ad6cce0cf7c4a63ab0c720b956787", null ],
     [ "c_dateStockExpire", "classCard.html#aa59df174a7bfdb6f3f5117282989287f", null ],
     [ "c_daysWithGod", "classCard.html#a7c4d2e9813f67688ac7e81758f8157a5", null ],
     [ "c_diceDim", "classCard.html#a9d7beab8429e6201b241022d6dd310ee", null ],
