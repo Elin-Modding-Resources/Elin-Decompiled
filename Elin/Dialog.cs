@@ -318,6 +318,9 @@ public class Dialog : ELayer
 				case "warn_disassemble":
 					ELayer.core.config.game.ignoreWarnDisassemble = true;
 					break;
+				case "warn_slaughter":
+					ELayer.core.config.game.ignoreWarnSlaughter = true;
+					break;
 				}
 				d.Close();
 				Commit();
@@ -352,6 +355,21 @@ public class Dialog : ELayer
 			warned = true;
 			action();
 			warned = false;
+		}
+	}
+
+	public static void TryWarnSlaughter(Action action)
+	{
+		if (ELayer.core.config.game.ignoreWarnSlaughter)
+		{
+			warned = true;
+			action();
+			warned = false;
+			ActPlan.warning = false;
+		}
+		else
+		{
+			TryWarn("warn_slaughter", action);
 		}
 	}
 

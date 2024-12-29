@@ -864,7 +864,7 @@ public class Chara : Card, IPathfindWalker
 
 	public FactionBranch homeBranch => homeZone?.branch;
 
-	public int MaxGeneSlot => race.geneCap;
+	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0);
 
 	public int CurrentGeneSlot
 	{
@@ -4467,6 +4467,11 @@ public class Chara : Card, IPathfindWalker
 		_ = IsPC;
 	}
 
+	public bool CanRevive()
+	{
+		return EClass.world.date.IsExpired(base.c_dateDeathLock);
+	}
+
 	public void GetRevived()
 	{
 		Revive(EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false), msg: true);
@@ -4673,7 +4678,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				Effect.Get("blood").Play((parent is Chara) ? (parent as Chara).pos : pos).SetParticleColor(EClass.Colors.matColors[base.material.alias].main)
 					.Emit(50);
-				AddBlood(2 + EClass.rnd(2));
+				AddBlood(AI_Slaughter.slaughtering ? 12 : (2 + EClass.rnd(2)));
 				PlaySound(base.material.GetSoundDead(source));
 			}
 			renderer.RefreshSprite();

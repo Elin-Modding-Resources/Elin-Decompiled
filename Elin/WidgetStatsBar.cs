@@ -273,17 +273,14 @@ public class WidgetStatsBar : Widget
 				{
 					text2 = text2 + " (" + ele.ValueWithoutLink + ")";
 				}
-				if (ele.DisplayValue < ele.ValueWithoutLink)
+				int num = ((EMono.pc.tempElements != null) ? EMono.pc.tempElements.Value(ele.id) : 0);
+				if (ele.DisplayValue < ele.ValueWithoutLink || num < 0)
 				{
 					fontColor = FontColor.Bad;
 				}
-				else if (EMono.pc.tempElements != null)
+				else if (num > 0)
 				{
-					Element element = EMono.pc.tempElements.GetElement(ele.id);
-					if (element != null && element.vBase > 0)
-					{
-						fontColor = FontColor.Good;
-					}
+					fontColor = FontColor.Good;
 				}
 			}
 			if (text2 != text || item.lastColor != fontColor)

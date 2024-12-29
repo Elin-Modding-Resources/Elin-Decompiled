@@ -406,15 +406,20 @@ public class FactionBranch : EClass
 		}
 		foreach (Chara chara3 in EClass._map.charas)
 		{
-			if (chara3.memberType == FactionMemberType.Guest && ((chara3.c_allowance <= 0 && EClass.rnd(2) == 0) || chara3.GetInt(34) + 10080 < EClass.world.date.GetRaw()))
+			if (chara3.memberType != FactionMemberType.Guest || ((chara3.c_allowance > 0 || EClass.rnd(2) != 0) && chara3.GetInt(34) + 10080 >= EClass.world.date.GetRaw()))
 			{
-				if (!chara3.IsGlobal)
-				{
-					chara3.Destroy();
-				}
-				chara3.ClearBed();
-				break;
+				continue;
 			}
+			foreach (Chara item in EClass._zone.ListMinions(chara3))
+			{
+				item.Destroy();
+			}
+			if (!chara3.IsGlobal)
+			{
+				chara3.Destroy();
+			}
+			chara3.ClearBed();
+			break;
 		}
 		if (date.hour == 5)
 		{
@@ -437,11 +442,11 @@ public class FactionBranch : EClass
 		}
 		if (!date.IsRealTime && date.hour % 8 == 0)
 		{
-			foreach (Chara item in EClass._map.charas.Where((Chara c) => c.memberType == FactionMemberType.Guest).ToList())
+			foreach (Chara item2 in EClass._map.charas.Where((Chara c) => c.memberType == FactionMemberType.Guest).ToList())
 			{
 				for (int j = 0; j < 3; j++)
 				{
-					AI_Shopping.TryShop(item, realtime: false);
+					AI_Shopping.TryShop(item2, realtime: false);
 				}
 			}
 			AI_Shopping.TryRestock(EClass.pc, realtime: false);
@@ -823,7 +828,7 @@ public class FactionBranch : EClass
 					{
 						if (!member2.IsPCParty)
 						{
-							if (member2.isDead && EClass.rnd(num3) > EClass.rnd(100))
+							if (member2.isDead && member2.CanRevive() && EClass.rnd(num3) > EClass.rnd(100))
 							{
 								Log("bNurse", i, member2);
 								member2.Revive(member2.pos, msg: true);
@@ -1366,10 +1371,10 @@ public class FactionBranch : EClass
 		policies.Validate();
 	}
 
-	public void BanishMember(Chara c, bool sell = false)
+	public void BanishMember(Chara c, bool skipMsg = false)
 	{
 		RemoveMemeber(c);
-		if (!sell)
+		if (!skipMsg)
 		{
 			Msg.Say("banish", c, EClass._zone.Name);
 		}

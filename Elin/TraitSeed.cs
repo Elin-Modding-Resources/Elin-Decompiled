@@ -8,6 +8,8 @@ public class TraitSeed : Trait
 
 	public SourceObj.Row row => EClass.sources.objs.map[owner.refVal];
 
+	public override int InstallBottomPriority => 10000;
+
 	public override bool CanExtendBuild => true;
 
 	public override bool CanChangeHeight => false;

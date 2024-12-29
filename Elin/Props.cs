@@ -214,6 +214,7 @@ public class Props : EClass
 			{
 				FindCat(item);
 			}
+			stack.list.Sort((Thing a, Thing b) => b.Num - a.Num);
 			return stack;
 		}
 		Find(id2);
@@ -221,6 +222,7 @@ public class Props : EClass
 		{
 			Find(item2);
 		}
+		stack.list.Sort((Thing a, Thing b) => b.Num - a.Num);
 		return stack;
 		void Find(string id)
 		{

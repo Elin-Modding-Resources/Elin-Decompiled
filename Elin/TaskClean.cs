@@ -46,29 +46,25 @@ public class TaskClean : Task
 			{
 				yield return Success();
 			}
-			bool fail = false;
-			yield return DoGoto(dest, 0, ignoreConnection: false, delegate
+			yield return DoGoto(dest, 1);
+			for (int i = 0; i < ((!dest.cell.HasLiquid) ? 1 : 5); i++)
 			{
-				fail = true;
-				return Status.Running;
-			});
-			yield return KeepRunning();
-			if (!fail && CanClean(dest))
-			{
-				if (owner.Dist(dest) > 1)
-				{
-					yield return Cancel();
-				}
-				Point point = dest;
-				EClass._map.SetDecal(point.x, point.z);
-				EClass._map.SetLiquid(point.x, point.z, 0, 0);
-				point.PlayEffect("vanish");
-				EClass.pc.Say("clean", owner);
-				EClass.pc.PlaySound("clean_floor");
-				EClass.pc.stamina.Mod(-1);
-				EClass.pc.ModExp(293, 30);
+				owner.LookAt(dest);
+				owner.renderer.NextFrame();
 				yield return KeepRunning();
 			}
+			if (!CanClean(dest) || owner.Dist(dest) > 1)
+			{
+				yield return Cancel();
+			}
+			EClass._map.SetDecal(dest.x, dest.z);
+			EClass._map.SetLiquid(dest.x, dest.z, 0, 0);
+			dest.PlayEffect("vanish");
+			EClass.pc.Say("clean", owner);
+			EClass.pc.PlaySound("clean_floor");
+			EClass.pc.stamina.Mod(-1);
+			EClass.pc.ModExp(293, 30);
+			yield return KeepRunning();
 		}
 	}
 

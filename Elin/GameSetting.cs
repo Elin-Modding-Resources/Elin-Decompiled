@@ -239,7 +239,7 @@ public class GameSetting : ScriptableObject
 	{
 		public List<Prologue> prologues;
 
-		public List<GameDifficulty> difficulties;
+		public List<GameDifficultySetting> difficulties;
 	}
 
 	[Serializable]

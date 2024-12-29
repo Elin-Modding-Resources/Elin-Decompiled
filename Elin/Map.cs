@@ -2002,7 +2002,7 @@ public class Map : MapBounds, IPathfindGrid
 
 	public void SetDecal(int x, int z, int id = 0, int amount = 1, bool refresh = true)
 	{
-		cells[x, z].decal = (byte)(id * 8 + ((id != 0) ? amount : 0));
+		cells[x, z].decal = (byte)((id != 0 && amount != 0) ? ((uint)(id * 8 + amount)) : 0u);
 		if (refresh)
 		{
 			RefreshNeighborTiles(x, z);

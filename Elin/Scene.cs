@@ -217,7 +217,7 @@ public class Scene : EMono
 				Zone zone = (EMono.pc.currentZone = EMono.pc.homeZone);
 				obj.zone = zone;
 			}
-			EMono.core.config.game.ignoreWarnCrime = (EMono.core.config.game.ignoreWarnMana = (EMono.core.config.game.ignoreWarnDisassemble = false));
+			EMono.core.config.game.ignoreWarnCrime = (EMono.core.config.game.ignoreWarnMana = (EMono.core.config.game.ignoreWarnDisassemble = (EMono.core.config.game.ignoreWarnSlaughter = false)));
 			EMono.game.updater.Reset();
 			CellDetail.count = 0;
 			skipAnime = true;

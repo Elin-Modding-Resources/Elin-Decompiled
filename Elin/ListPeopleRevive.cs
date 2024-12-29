@@ -26,7 +26,7 @@ public class ListPeopleRevive : BaseListPeople
 
 	public override void OnList()
 	{
-		foreach (KeyValuePair<int, Chara> item in EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon))
+		foreach (KeyValuePair<int, Chara> item in EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon))
 		{
 			list.Add(item.Value);
 		}

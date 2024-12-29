@@ -111,7 +111,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				return GetTopZone().DangerLv + Mathf.Abs(base.lv) - 1;
 			}
-			return (int)Mathf.Max(1f, (float)base._dangerLv + MathF.Abs(base.lv) + (float)DangerLvFix);
+			return (int)Mathf.Max(1f, (branch != null) ? ((float)branch.DangerLV) : ((float)base._dangerLv + MathF.Abs(base.lv) + (float)DangerLvFix));
 		}
 	}
 
@@ -1024,7 +1024,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			foreach (Chara deadChara in map.deadCharas)
 			{
-				if (deadChara.trait.CanAutoRevive)
+				if (deadChara.trait.CanAutoRevive && deadChara.CanRevive())
 				{
 					deadChara.Revive();
 					if (deadChara.isBackerContent && EClass.player.doneBackers.Contains(deadChara.c_idBacker) && !EClass.core.config.test.ignoreBackerDestoryFlag)
@@ -1037,7 +1037,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		foreach (Chara value in EClass.game.cards.globalCharas.Values)
 		{
-			if (value.isDead && value.homeZone == this)
+			if (value.isDead && value.CanRevive() && value.homeZone == this)
 			{
 				value.Revive();
 				Point point = GetSpawnPos(value);
@@ -2021,7 +2021,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				{
 					thing = EClass.game.cards.container_shipping;
 				}
-				if (!sharedOnly || thing.IsSharedContainer)
+				if ((!sharedOnly || thing.IsSharedContainer) && thing.c_lockLv <= 0)
 				{
 					if (add)
 					{
@@ -3346,6 +3346,19 @@ public class Zone : Spatial, ICardParent, IInspect
 				num++;
 			}
 		}
+	}
+
+	public List<Chara> ListMinions(Chara c)
+	{
+		List<Chara> list = new List<Chara>();
+		foreach (Chara chara in EClass._map.charas)
+		{
+			if (chara.c_uidMaster == c.uid && chara.c_minionType == MinionType.Default)
+			{
+				list.Add(chara);
+			}
+		}
+		return list;
 	}
 
 	public int CountMinions(Chara c)

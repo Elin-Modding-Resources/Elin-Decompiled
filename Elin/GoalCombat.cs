@@ -834,7 +834,6 @@ public class GoalCombat : Goal
 				continue;
 			}
 			Chara chara = owner;
-			Debug.Log(ability2.act.Name + ":" + ability2.act.CanPerform(owner, ability2.tg ?? tc));
 			if (ability2.act.CanPerform(owner, ability2.tg ?? tc) && owner.UseAbility(ability2.act, ability2.tg ?? tc, null, (ability2.act.HaveLongPressAction && ability2.pt) || ability2.aiPt))
 			{
 				if (EClass.debug.logCombat)

@@ -205,6 +205,10 @@ public class CoreConfig : EClass
 		[NonSerialized]
 		[JsonIgnore]
 		public bool ignoreWarnDisassemble;
+
+		[NonSerialized]
+		[JsonIgnore]
+		public bool ignoreWarnSlaughter;
 	}
 
 	[Serializable]

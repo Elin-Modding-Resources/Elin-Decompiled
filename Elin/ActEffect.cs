@@ -1679,7 +1679,7 @@ public class ActEffect : EClass
 			{
 				if (TC.IsPC && list3.Count == 0)
 				{
-					list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
+					list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
 				}
 				if (list3.Count > 0)
 				{

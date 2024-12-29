@@ -1024,7 +1024,7 @@ public class DramaManager : EMono
 			{
 				foreach (Chara member in EMono.pc.homeBranch.members)
 				{
-					if (member.isDead && member.GetInt(100) != 0)
+					if (member.isDead && member.CanRevive() && member.GetInt(100) != 0)
 					{
 						return true;
 					}

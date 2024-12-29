@@ -253,7 +253,7 @@ public class Game : EClass
 
 	public Prologue Prologue => EClass.setting.start.prologues[idPrologue];
 
-	public GameDifficulty Difficulty => EClass.setting.start.difficulties[idDifficulty];
+	public GameDifficultySetting Difficulty => EClass.setting.start.difficulties[idDifficulty];
 
 	public bool UseGrid => EClass.core.config.game.useGrid;
 

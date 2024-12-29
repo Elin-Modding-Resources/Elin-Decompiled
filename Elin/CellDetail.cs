@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class CellDetail
 {
@@ -48,9 +49,10 @@ public class CellDetail
 		{
 			things.Remove(t);
 			things.Insert(0, t);
-			for (int i = 0; i < things.Count - 1 && things[i].IsInstalled; i++)
+			for (int i = 0; i < things.Count && things[i].IsInstalled; i++)
 			{
-				t.stackOrder = i;
+				things[i].stackOrder = i;
+				Debug.Log(things[i].Name + "/" + things[i].stackOrder);
 			}
 		}
 	}
@@ -60,7 +62,7 @@ public class CellDetail
 		if (things.Count != 1)
 		{
 			int num = 0;
-			for (int i = 0; i < things.Count - 1 && things[i].IsInstalled; i++)
+			for (int i = 0; i < things.Count && things[i].IsInstalled; i++)
 			{
 				num = i + 1;
 			}

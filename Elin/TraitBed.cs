@@ -91,7 +91,7 @@ public class TraitBed : Trait
 		data.list.ForeachReverse(delegate(int i)
 		{
 			Chara chara = EClass._map.FindChara(i) ?? EClass.game.cards.globalCharas.Find(i);
-			if (chara == null || (chara.IsPCFaction && chara.homeBranch != EClass._zone.branch))
+			if (chara == null || (chara.IsPCFaction && !chara.IsPCParty && chara.homeBranch != EClass._zone.branch))
 			{
 				data.list.Remove(i);
 			}

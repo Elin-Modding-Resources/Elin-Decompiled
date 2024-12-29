@@ -145,4 +145,6 @@ public class CINT
 	public const int isDisableStockUse = 122;
 
 	public const int isSleepBeside = 123;
+
+	public const int dateDeathLock = 130;
 }

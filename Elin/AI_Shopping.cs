@@ -142,7 +142,7 @@ public class AI_Shopping : AIAct
 	public static void SellChara(Chara c)
 	{
 		Msg.Say("sell_resident", c);
-		c.homeBranch.BanishMember(c, sell: true);
+		c.homeBranch.BanishMember(c, skipMsg: true);
 		EClass.player.ModKarma(-1);
 	}
 

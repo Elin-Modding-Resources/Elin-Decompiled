@@ -81,6 +81,8 @@ public class Trait : EClass
 
 	public virtual bool ShouldTryRefreshRoom => IsDoor;
 
+	public virtual int InstallBottomPriority => -1;
+
 	public virtual bool CanHarvest => true;
 
 	public virtual int radius => 0;
@@ -1115,7 +1117,14 @@ public class Trait : EClass
 			}
 		}
 		owner.isOn = on;
+		PlayToggleEffect(silent);
+		OnToggle();
+	}
+
+	public virtual void PlayToggleEffect(bool silent)
+	{
 		bool flag = ToggleType == ToggleType.Fire;
+		bool isOn = owner.isOn;
 		switch (ToggleType)
 		{
 		case ToggleType.Lever:
@@ -1124,49 +1133,46 @@ public class Trait : EClass
 				owner.Say("lever", EClass.pc, owner);
 				owner.PlaySound("switch_lever");
 			}
-			break;
+			return;
 		case ToggleType.Curtain:
 			if (!silent)
 			{
-				owner.Say(on ? "close" : "open", EClass.pc, owner);
+				owner.Say(isOn ? "close" : "open", EClass.pc, owner);
 				owner.PlaySound("Material/leather_drop");
 			}
 			owner.pos.RefreshNeighborTiles();
 			EClass.pc.RecalculateFOV();
-			break;
-		default:
-			if (on)
-			{
-				if (!silent)
-				{
-					owner.Say(flag ? "toggle_fire" : "toggle_ele", EClass.pc, owner);
-					string id = ((Electricity < 0) ? "switch_on_electricity" : (flag ? "torch_lit" : "switch_on"));
-					if (this is TraitMusicBox)
-					{
-						id = "switch_on_musicbox";
-					}
-					owner.PlaySound(id);
-				}
-				RefreshRenderer();
-				owner.RecalculateFOV();
-				break;
-			}
+			return;
+		case ToggleType.None:
+			return;
+		}
+		if (isOn)
+		{
 			if (!silent)
 			{
-				string id2 = ((Electricity < 0) ? "switch_off_electricity" : (flag ? "torch_unlit" : "switch_off"));
+				owner.Say(flag ? "toggle_fire" : "toggle_ele", EClass.pc, owner);
+				string id = ((Electricity < 0) ? "switch_on_electricity" : (flag ? "torch_lit" : "switch_on"));
 				if (this is TraitMusicBox)
 				{
-					id2 = "switch_off_musicbox";
+					id = "switch_on_musicbox";
 				}
-				owner.PlaySound(id2);
+				owner.PlaySound(id);
 			}
 			RefreshRenderer();
 			owner.RecalculateFOV();
-			break;
-		case ToggleType.None:
-			break;
+			return;
 		}
-		OnToggle();
+		if (!silent)
+		{
+			string id2 = ((Electricity < 0) ? "switch_off_electricity" : (flag ? "torch_unlit" : "switch_off"));
+			if (this is TraitMusicBox)
+			{
+				id2 = "switch_off_musicbox";
+			}
+			owner.PlaySound(id2);
+		}
+		RefreshRenderer();
+		owner.RecalculateFOV();
 	}
 
 	public virtual void OnToggle()
@@ -1907,7 +1913,7 @@ public class Trait : EClass
 					{
 						thing9.isStolen = true;
 					}
-					if (CurrencyType == CurrencyType.Money || !thing9.IsUnique)
+					if (!(thing9.trait is TraitErohon))
 					{
 						thing9.c_IDTState = 0;
 					}

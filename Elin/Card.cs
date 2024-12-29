@@ -1153,6 +1153,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_dateDeathLock
+	{
+		get
+		{
+			return GetInt(130);
+		}
+		set
+		{
+			SetInt(130, value);
+		}
+	}
+
 	public int c_IDTState
 	{
 		get
@@ -2693,7 +2705,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			a *= 2;
 			if (IsPCFaction)
 			{
-				a = a * Mathf.Clamp(100 + Chara.affinity.value / 10, 50, 100) / 100;
+				a = a * Mathf.Clamp(100 + Chara.affinity.value / 10, 50, 200) / 100;
 			}
 		}
 		a = a * (100 + Evalue(1237) * 30) / 100;
@@ -3314,7 +3326,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				if (isThing)
 				{
-					pos.detail.MoveThingToTop(Thing);
+					if (trait.InstallBottomPriority != -1)
+					{
+						pos.detail.MoveThingToBottom(Thing);
+					}
+					else
+					{
+						pos.detail.MoveThingToTop(Thing);
+					}
 				}
 				area?.OnInstallCard(this);
 				isRoofItem = false;
@@ -4381,9 +4400,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 		}
 		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood;
+		int num = 1;
 		if (Chara.race.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
 		{
 			flag2 = true;
+		}
+		if (AI_Slaughter.slaughtering)
+		{
+			flag2 = true;
+			num = EClass.rndHalf(4 + 5 * Chara.race.food[0].ToInt() / 100);
 		}
 		if (origin != null && origin.HasElement(290))
 		{
@@ -4404,7 +4429,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				text = "meat_marble";
 			}
-			Thing thing3 = ThingGen.Create(text);
+			Thing thing3 = ThingGen.Create(text).SetNum(num);
 			if (thing3.source._origin == "meat")
 			{
 				thing3.MakeFoodFrom(this);
@@ -4424,10 +4449,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			foreach (string item2 in sourceCard.loot.Concat(Chara.race.loot).ToList())
 			{
 				string[] array = item2.Split('/');
-				int num = array[1].ToInt();
-				if (num >= 1000 || num > EClass.rnd(1000) || EClass.debug.godMode)
+				int num2 = array[1].ToInt();
+				if (num2 >= 1000 || num2 > EClass.rnd(1000) || EClass.debug.godMode)
 				{
-					list.Add(ThingGen.Create(array[0]).SetNum((num < 1000) ? 1 : (num / 1000 + ((EClass.rnd(1000) > num % 1000) ? 1 : 0))));
+					list.Add(ThingGen.Create(array[0]).SetNum((num2 < 1000) ? 1 : (num2 / 1000 + ((EClass.rnd(1000) > num2 % 1000) ? 1 : 0))));
 				}
 			}
 			if (race.IsMachine)
@@ -4465,19 +4490,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isBackerContent && !flag)
 			{
-				int num2 = ((EClass._zone.Boss == this) ? 2 : ((this.rarity >= Rarity.Legendary) ? 1 : 0));
+				int num3 = ((EClass._zone.Boss == this) ? 2 : ((this.rarity >= Rarity.Legendary) ? 1 : 0));
 				if (EClass._zone is Zone_Void)
 				{
-					num2++;
+					num3++;
 				}
 				if (EClass.rnd(5) == 0)
 				{
-					num2++;
+					num3++;
 				}
 				string text2 = id;
 				if (text2 == "big_daddy" || text2 == "santa")
 				{
-					num2 += 2;
+					num3 += 2;
 				}
 				List<Thing> list2 = new List<Thing>();
 				foreach (Thing thing4 in things)
@@ -4506,33 +4531,33 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						list.Add(thing4);
 					}
 				}
-				if (num2 > 0 && list2.Count > 0)
+				if (num3 > 0 && list2.Count > 0)
 				{
 					list2.Shuffle();
-					for (int j = 0; j < list2.Count && j < num2; j++)
+					for (int j = 0; j < list2.Count && j < num3; j++)
 					{
 						list.Add(list2[j]);
-						num2--;
+						num3--;
 					}
 				}
 				if (this.rarity >= Rarity.Legendary && !IsUnique && c_bossType != BossType.Evolved)
 				{
-					int num3 = 0;
+					int num4 = 0;
 					foreach (Card item3 in list)
 					{
 						if (item3.rarity >= Rarity.Legendary || item3.IsContainer)
 						{
-							num3++;
+							num4++;
 						}
 					}
-					if (num3 == 0)
+					if (num4 == 0)
 					{
-						int num4 = ((!(EClass._zone is Zone_Void)) ? 1 : 2);
-						if (num2 < num4)
+						int num5 = ((!(EClass._zone is Zone_Void)) ? 1 : 2);
+						if (num3 < num5)
 						{
-							num2 = num4;
+							num3 = num5;
 						}
-						for (int k = 0; k < num2; k++)
+						for (int k = 0; k < num3; k++)
 						{
 							Rand.SetSeed(uid + k);
 							if (EClass.rnd((EClass._zone.events.GetEvent<ZoneEventDefenseGame>() != null) ? 3 : 2) == 0)

@@ -1,17 +1,41 @@
-using System;
+using Newtonsoft.Json;
 
-[Serializable]
 public class GameDifficulty : EClass
 {
-	public int tier;
+	[JsonProperty]
+	public int socre;
 
-	public bool allowManualSave;
+	[JsonProperty]
+	public int minScore;
 
-	public bool allowRevive;
+	[JsonProperty]
+	public int bonusLoot;
 
-	public bool deleteGameOnDeath;
+	[JsonProperty]
+	public bool deathPenalty;
 
-	public int ID => EClass.setting.start.difficulties.IndexOf(this);
+	[JsonProperty]
+	public bool economy;
 
-	public string Name => Lang.GetList("difficulties")[ID];
+	[JsonProperty]
+	public bool manualSave;
+
+	[JsonProperty]
+	public bool ironMode;
+
+	[JsonProperty]
+	public bool moreFood;
+
+	[JsonProperty]
+	public bool moreReward;
+
+	public int GetGrade(int v)
+	{
+		return 0;
+	}
+
+	public int CalculateScore()
+	{
+		return 0;
+	}
 }

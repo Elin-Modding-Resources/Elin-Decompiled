@@ -215,12 +215,12 @@ public class UICharaMaker : EMono
 		TooltipManager.Instance.disableHide = "note";
 		bool first = true;
 		EMono.ui.AddLayer<LayerList>().SetPivot(0.5f, 0.2f).SetSize(260f)
-			.SetList2(EMono.setting.start.difficulties, (GameDifficulty a) => a.Name, delegate(GameDifficulty a, ItemGeneral b)
+			.SetList2(EMono.setting.start.difficulties, (GameDifficultySetting a) => a.Name, delegate(GameDifficultySetting a, ItemGeneral b)
 			{
 				EMono.game.idDifficulty = a.ID;
 				textDifficulty.SetText(listDifficulties[EMono.game.idDifficulty]);
 				Refresh();
-			}, delegate(GameDifficulty a, ItemGeneral item)
+			}, delegate(GameDifficultySetting a, ItemGeneral item)
 			{
 				UIButton b2 = item.button1;
 				b2.SetTooltip(delegate(UITooltip t)
