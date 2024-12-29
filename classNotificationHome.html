@@ -132,7 +132,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a7198d2b2277afd033bac1f1f65d4fab2"><td class="memItemLeft" align="right" valign="top">override Action&lt; UITooltip &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNotificationHome.html#a7198d2b2277afd033bac1f1f65d4fab2">onShowTooltip</a><code> [get]</code></td></tr>
+<tr class="memitem:a7198d2b2277afd033bac1f1f65d4fab2"><td class="memItemLeft" align="right" valign="top">override Action&lt; <a class="el" href="classUITooltip.html">UITooltip</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNotificationHome.html#a7198d2b2277afd033bac1f1f65d4fab2">onShowTooltip</a><code> [get]</code></td></tr>
 <tr class="separator:a7198d2b2277afd033bac1f1f65d4fab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classNotificationGlobal"><td colspan="2" onclick="javascript:toggleInherit('properties_classNotificationGlobal')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classNotificationGlobal.html">NotificationGlobal</a></td></tr>
 <tr class="memitem:a6b88fe8999fa5eb2ed56acdf4e125ef4 inherit properties_classNotificationGlobal"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classWidgetNotice.html">WidgetNotice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNotificationGlobal.html#a6b88fe8999fa5eb2ed56acdf4e125ef4">widget</a><code> [get]</code></td></tr>
@@ -146,7 +146,7 @@ Properties</h2></td></tr>
 <tr class="separator:ad4ced56eb92c1bfe96d7cb99c6f12d84 inherit properties_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8706df2ff2222543f7a9dad37a32374 inherit properties_classBaseNotification"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#ac8706df2ff2222543f7a9dad37a32374">Interactable</a><code> [get]</code></td></tr>
 <tr class="separator:ac8706df2ff2222543f7a9dad37a32374 inherit properties_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a663b56beb5d31fbc16d127190f5c7a36 inherit properties_classBaseNotification"><td class="memItemLeft" align="right" valign="top">virtual Action&lt; UITooltip &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#a663b56beb5d31fbc16d127190f5c7a36">onShowTooltip</a><code> [get]</code></td></tr>
+<tr class="memitem:a663b56beb5d31fbc16d127190f5c7a36 inherit properties_classBaseNotification"><td class="memItemLeft" align="right" valign="top">virtual Action&lt; <a class="el" href="classUITooltip.html">UITooltip</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#a663b56beb5d31fbc16d127190f5c7a36">onShowTooltip</a><code> [get]</code></td></tr>
 <tr class="separator:a663b56beb5d31fbc16d127190f5c7a36 inherit properties_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classEClass"><td colspan="2" onclick="javascript:toggleInherit('properties_classEClass')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a012d65ced13d1cf54c6776a5d29df3c3 inherit properties_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGame.html">Game</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a><code> [get]</code></td></tr>
@@ -292,13 +292,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="NotificationHome_8cs_source.html#l00015">15</a> of file <a class="el" href="NotificationHome_8cs_source.html">NotificationHome.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = <span class="stringliteral">&quot;1.&quot;</span>.TagSize(<span class="stringliteral">&quot;00&quot;</span>, <a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.mainText.fontSize - 2);</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = <span class="stringliteral">&quot;1.&quot;</span>.TagSize(<span class="stringliteral">&quot;00&quot;</span>, <a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.fontSize - 2);</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
 <div class="ttc" id="aclassBaseNotification_html_aa8f147285c7f23a0e53b81e3fa033c40"><div class="ttname"><a href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">BaseNotification.item</a></div><div class="ttdeci">ItemNotice item</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00007">BaseNotification.cs:7</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_af66eccd33a7fa678c344a71f6612939a"><div class="ttname"><a href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">BaseNotification.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00009">BaseNotification.cs:9</a></div></div>
 <div class="ttc" id="aclassItemNotice_html_a281b58b4cd46a352ad804f727f5bc747"><div class="ttname"><a href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">ItemNotice.button</a></div><div class="ttdeci">UIButton button</div><div class="ttdef"><b>Definition:</b> <a href="ItemNotice_8cs_source.html#l00011">ItemNotice.cs:11</a></div></div>
+<div class="ttc" id="aclassUIButton_html_a2c91e2485c1dea09ccf8cf5865e4c4dd"><div class="ttname"><a href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">UIButton.mainText</a></div><div class="ttdeci">UIText mainText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00102">UIButton.cs:102</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00007">BaseNotification.item</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00009">BaseNotification.text</a>.</p>
+<p class="reference">References <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00007">BaseNotification.item</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00009">BaseNotification.text</a>.</p>
 
 </div>
 </div>
@@ -313,7 +314,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override Action&lt;UITooltip&gt; NotificationHome.onShowTooltip</td>
+          <td class="memname">override Action&lt;<a class="el" href="classUITooltip.html">UITooltip</a>&gt; NotificationHome.onShowTooltip</td>
         </tr>
       </table>
   </td>

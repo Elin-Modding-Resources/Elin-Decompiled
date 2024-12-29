@@ -105,6 +105,7 @@ Inheritance diagram for WidgetSceneCustomizer:</div>
 <area href="classWidget.html" alt="Widget" shape="rect" coords="158,112,306,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,148,80"/>
 <area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="158,56,306,80"/>
+<area href="interfaceISkinRoot.html" alt="ISkinRoot" shape="rect" coords="316,56,464,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -169,13 +170,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afabface3017c9537ea076b0fb0fdf9d3 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b">IsAlignTop</a> ()</td></tr>
 <tr class="separator:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">Layer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (Layer l, Transform trans)</td></tr>
+<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (<a class="el" href="classLayer.html">Layer</a> l, Transform trans)</td></tr>
 <tr class="separator:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a> ()</td></tr>
 <tr class="separator:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
+<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
 <tr class="separator:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
+<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
 <tr class="separator:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a> (int id, int v=0)</td></tr>
 <tr class="separator:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,36 +186,40 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a115d938794f34d1eb29d44aae622c29b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a> ()</td></tr>
 <tr class="separator:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">CanShowContextMenu</a> ()</td></tr>
 <tr class="separator:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a> ()</td></tr>
 <tr class="separator:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4295c8036903342ae9e8b4722d3d82fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">GetSkin</a> ()</td></tr>
+<tr class="separator:a4295c8036903342ae9e8b4722d3d82fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aef6e38eb8a3dce387211ededc5de08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">GetSkinConfig</a> ()</td></tr>
+<tr class="separator:a0aef6e38eb8a3dce387211ededc5de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a58c0933d2b429b1b269098655c9a869a"><td class="memItemLeft" align="right" valign="top">UIDropdown&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a58c0933d2b429b1b269098655c9a869a">ddLiquid</a></td></tr>
+<tr class="memitem:a58c0933d2b429b1b269098655c9a869a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDropdown.html">UIDropdown</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a58c0933d2b429b1b269098655c9a869a">ddLiquid</a></td></tr>
 <tr class="separator:a58c0933d2b429b1b269098655c9a869a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a860608498af73c607b7a667ef887f040"><td class="memItemLeft" align="right" valign="top">UIDropdown&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a860608498af73c607b7a667ef887f040">ddRefraction</a></td></tr>
+<tr class="memitem:a860608498af73c607b7a667ef887f040"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDropdown.html">UIDropdown</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a860608498af73c607b7a667ef887f040">ddRefraction</a></td></tr>
 <tr class="separator:a860608498af73c607b7a667ef887f040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56d8728cb6d0b1e9637f77ec1207b933"><td class="memItemLeft" align="right" valign="top">UIDropdown&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a56d8728cb6d0b1e9637f77ec1207b933">ddOverlay</a></td></tr>
+<tr class="memitem:a56d8728cb6d0b1e9637f77ec1207b933"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDropdown.html">UIDropdown</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a56d8728cb6d0b1e9637f77ec1207b933">ddOverlay</a></td></tr>
 <tr class="separator:a56d8728cb6d0b1e9637f77ec1207b933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2120e070aa065e41fc4c0b44afb6d4e9"><td class="memItemLeft" align="right" valign="top">UIDropdown&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a2120e070aa065e41fc4c0b44afb6d4e9">ddLut</a></td></tr>
+<tr class="memitem:a2120e070aa065e41fc4c0b44afb6d4e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDropdown.html">UIDropdown</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a2120e070aa065e41fc4c0b44afb6d4e9">ddLut</a></td></tr>
 <tr class="separator:a2120e070aa065e41fc4c0b44afb6d4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9211e14cb23573047c3f3d8d6fe68c0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classLiquidProfile.html">LiquidProfile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#ac9211e14cb23573047c3f3d8d6fe68c0">liquids</a></td></tr>
 <tr class="separator:ac9211e14cb23573047c3f3d8d6fe68c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,9 +229,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac95bad3e7fec681132119ba6bee9e5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa68c48ff412170cfc3cfc7b04fc601e4"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#aa68c48ff412170cfc3cfc7b04fc601e4">luts</a></td></tr>
 <tr class="separator:aa68c48ff412170cfc3cfc7b04fc601e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0a4ba5f654d6a359b72188516f137d2"><td class="memItemLeft" align="right" valign="top">UIButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#ad0a4ba5f654d6a359b72188516f137d2">toggleGradientWater</a></td></tr>
+<tr class="memitem:ad0a4ba5f654d6a359b72188516f137d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#ad0a4ba5f654d6a359b72188516f137d2">toggleGradientWater</a></td></tr>
 <tr class="separator:ad0a4ba5f654d6a359b72188516f137d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46bde2fdce39a065e3d011557ba73e7f"><td class="memItemLeft" align="right" valign="top">UIButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a46bde2fdce39a065e3d011557ba73e7f">buttonColorPicker</a></td></tr>
+<tr class="memitem:a46bde2fdce39a065e3d011557ba73e7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a46bde2fdce39a065e3d011557ba73e7f">buttonColorPicker</a></td></tr>
 <tr class="separator:a46bde2fdce39a065e3d011557ba73e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fdbcfca315e90797b218202b8727243"><td class="memItemLeft" align="right" valign="top">Slider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a7fdbcfca315e90797b218202b8727243">sliderLutBlend</a></td></tr>
 <tr class="separator:a7fdbcfca315e90797b218202b8727243"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,14 +239,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5e424966973dd0195cd1be50e57075af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4586280acae1bbda085185ac93a3c959"><td class="memItemLeft" align="right" valign="top">Slider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#a4586280acae1bbda085185ac93a3c959">sliderLutContrast</a></td></tr>
 <tr class="separator:a4586280acae1bbda085185ac93a3c959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcab1945fc7edd2dde4e223f55b5f028"><td class="memItemLeft" align="right" valign="top">UISlider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#adcab1945fc7edd2dde4e223f55b5f028">sliderLut</a></td></tr>
+<tr class="memitem:adcab1945fc7edd2dde4e223f55b5f028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUISlider.html">UISlider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetSceneCustomizer.html#adcab1945fc7edd2dde4e223f55b5f028">sliderLut</a></td></tr>
 <tr class="separator:adcab1945fc7edd2dde4e223f55b5f028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classWidget')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#adc7edf86fd522a256f2879971f83e73d">imageBG</a></td></tr>
 <tr class="separator:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32">soundActivate</a></td></tr>
 <tr class="separator:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">UIDragPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
+<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDragPanel.html">UIDragPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
 <tr class="separator:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2845d6ff2975f55feb970632c99405d1">tipPivotLeft</a></td></tr>
 <tr class="separator:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,7 +283,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
 <tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
+<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
 <tr class="separator:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -485,13 +490,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  135</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_function" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a>(delegate</div>
 <div class="line"><span class="lineno">  136</span>        {</div>
 <div class="line"><span class="lineno">  137</span>            <span class="keywordtype">string</span>[] array = <a class="code hl_class" href="classSFB_1_1StandaloneFileBrowser.html">StandaloneFileBrowser</a>.<a class="code hl_function" href="classSFB_1_1StandaloneFileBrowser.html#a871e7e04541bd40aa520e4ac175861f5">OpenFilePanel</a>(<span class="stringliteral">&quot;Load Zone Config&quot;</span>, <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#aa9b830a7d68c2eb585c6f0087a6d5fb9">SceneCustomizerSave</a>, <span class="stringliteral">&quot;json&quot;</span>, multiselect: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  138</span>            if (array.Length != 0)</div>
+<div class="line"><span class="lineno">  138</span>            <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (array.Length != 0)</div>
 <div class="line"><span class="lineno">  139</span>            {</div>
 <div class="line"><span class="lineno">  140</span>                EMono._map.config = IO.LoadFile&lt;MapConfig&gt;(array[0]);</div>
 <div class="line"><span class="lineno">  141</span>                Reactivate();</div>
 <div class="line"><span class="lineno">  142</span>            }</div>
 <div class="line"><span class="lineno">  143</span>        });</div>
 <div class="line"><span class="lineno">  144</span>    }</div>
+<div class="ttc" id="aUIBook_8cs_html_a7a84b28e36fc5c8b0594d31d7e8d7808"><div class="ttname"><a href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a></div><div class="ttdeci">if(item3.idFile==idFirstFile &amp;&amp;item3.id==idFirstTopic)</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00620">UIBook.cs:620</a></div></div>
 <div class="ttc" id="aclassBaseCore_html_a5755e1f33429715944ea9afeda8b1472"><div class="ttname"><a href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">BaseCore.WaitForEndOfFrame</a></div><div class="ttdeci">void WaitForEndOfFrame(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00061">BaseCore.cs:61</a></div></div>
 <div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
 <div class="ttc" id="aclassCorePath_html_aa9b830a7d68c2eb585c6f0087a6d5fb9"><div class="ttname"><a href="classCorePath.html#aa9b830a7d68c2eb585c6f0087a6d5fb9">CorePath.SceneCustomizerSave</a></div><div class="ttdeci">static string SceneCustomizerSave</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00194">CorePath.cs:194</a></div></div>
@@ -499,7 +505,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSFB_1_1StandaloneFileBrowser_html"><div class="ttname"><a href="classSFB_1_1StandaloneFileBrowser.html">SFB.StandaloneFileBrowser</a></div><div class="ttdef"><b>Definition:</b> <a href="StandaloneFileBrowser_8cs_source.html#l00005">StandaloneFileBrowser.cs:6</a></div></div>
 <div class="ttc" id="aclassSFB_1_1StandaloneFileBrowser_html_a871e7e04541bd40aa520e4ac175861f5"><div class="ttname"><a href="classSFB_1_1StandaloneFileBrowser.html#a871e7e04541bd40aa520e4ac175861f5">SFB.StandaloneFileBrowser.OpenFilePanel</a></div><div class="ttdeci">static string[] OpenFilePanel(string title, string directory, string extension, bool multiselect)</div><div class="ttdef"><b>Definition:</b> <a href="StandaloneFileBrowser_8cs_source.html#l00014">StandaloneFileBrowser.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="StandaloneFileBrowser_8cs_source.html#l00014">SFB.StandaloneFileBrowser.OpenFilePanel()</a>, <a class="el" href="CorePath_8cs_source.html#l00194">CorePath.SceneCustomizerSave</a>, and <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="UIBook_8cs_source.html#l00620">if()</a>, <a class="el" href="StandaloneFileBrowser_8cs_source.html#l00014">SFB.StandaloneFileBrowser.OpenFilePanel()</a>, <a class="el" href="CorePath_8cs_source.html#l00194">CorePath.SceneCustomizerSave</a>, and <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>.</p>
 
 </div>
 </div>
@@ -565,7 +571,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  123</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_function" href="classBaseCore.html#a5755e1f33429715944ea9afeda8b1472">WaitForEndOfFrame</a>(delegate</div>
 <div class="line"><span class="lineno">  124</span>        {</div>
 <div class="line"><span class="lineno">  125</span>            <span class="keywordtype">string</span> text = <a class="code hl_class" href="classSFB_1_1StandaloneFileBrowser.html">StandaloneFileBrowser</a>.<a class="code hl_function" href="classSFB_1_1StandaloneFileBrowser.html#adca7d6cba7ff4f3f4f00f5e79e7aad57">SaveFilePanel</a>(<span class="stringliteral">&quot;Save Zone Config&quot;</span>, <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#aa9b830a7d68c2eb585c6f0087a6d5fb9">SceneCustomizerSave</a>, <span class="stringliteral">&quot;new zone config&quot;</span>, <span class="stringliteral">&quot;json&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>            if (!<span class="keywordtype">string</span>.IsNullOrEmpty(text))</div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (!<span class="keywordtype">string</span>.IsNullOrEmpty(text))</div>
 <div class="line"><span class="lineno">  127</span>            {</div>
 <div class="line"><span class="lineno">  128</span>                <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">SaveFile</a>(text, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>);</div>
 <div class="line"><span class="lineno">  129</span>            }</div>
@@ -575,7 +581,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassIO_html_ac15051fb75be08e9ff3dd16de65959b3"><div class="ttname"><a href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">IO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj, bool compress=false, JsonSerializerSettings setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00087">IO.cs:87</a></div></div>
 <div class="ttc" id="aclassSFB_1_1StandaloneFileBrowser_html_adca7d6cba7ff4f3f4f00f5e79e7aad57"><div class="ttname"><a href="classSFB_1_1StandaloneFileBrowser.html#adca7d6cba7ff4f3f4f00f5e79e7aad57">SFB.StandaloneFileBrowser.SaveFilePanel</a></div><div class="ttdeci">static string SaveFilePanel(string title, string directory, string defaultName, string extension)</div><div class="ttdef"><b>Definition:</b> <a href="StandaloneFileBrowser_8cs_source.html#l00052">StandaloneFileBrowser.cs:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="Map_8cs_source.html#l00037">Map.config</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="StandaloneFileBrowser_8cs_source.html#l00052">SFB.StandaloneFileBrowser.SaveFilePanel()</a>, <a class="el" href="CorePath_8cs_source.html#l00194">CorePath.SceneCustomizerSave</a>, and <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="Map_8cs_source.html#l00037">Map.config</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="UIBook_8cs_source.html#l00620">if()</a>, <a class="el" href="StandaloneFileBrowser_8cs_source.html#l00052">SFB.StandaloneFileBrowser.SaveFilePanel()</a>, <a class="el" href="CorePath_8cs_source.html#l00194">CorePath.SceneCustomizerSave</a>, and <a class="el" href="BaseCore_8cs_source.html#l00061">BaseCore.WaitForEndOfFrame()</a>.</p>
 
 </div>
 </div>
@@ -681,7 +687,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIButton WidgetSceneCustomizer.buttonColorPicker</td>
+          <td class="memname"><a class="el" href="classUIButton.html">UIButton</a> WidgetSceneCustomizer.buttonColorPicker</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -697,7 +703,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIDropdown WidgetSceneCustomizer.ddLiquid</td>
+          <td class="memname"><a class="el" href="classUIDropdown.html">UIDropdown</a> WidgetSceneCustomizer.ddLiquid</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -715,7 +721,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIDropdown WidgetSceneCustomizer.ddLut</td>
+          <td class="memname"><a class="el" href="classUIDropdown.html">UIDropdown</a> WidgetSceneCustomizer.ddLut</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -733,7 +739,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIDropdown WidgetSceneCustomizer.ddOverlay</td>
+          <td class="memname"><a class="el" href="classUIDropdown.html">UIDropdown</a> WidgetSceneCustomizer.ddOverlay</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -749,7 +755,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIDropdown WidgetSceneCustomizer.ddRefraction</td>
+          <td class="memname"><a class="el" href="classUIDropdown.html">UIDropdown</a> WidgetSceneCustomizer.ddRefraction</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -837,7 +843,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UISlider WidgetSceneCustomizer.sliderLut</td>
+          <td class="memname"><a class="el" href="classUISlider.html">UISlider</a> WidgetSceneCustomizer.sliderLut</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -909,7 +915,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIButton WidgetSceneCustomizer.toggleGradientWater</td>
+          <td class="memname"><a class="el" href="classUIButton.html">UIButton</a> WidgetSceneCustomizer.toggleGradientWater</td>
         </tr>
       </table>
 </div><div class="memdoc">

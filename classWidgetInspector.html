@@ -110,6 +110,7 @@ Inheritance diagram for WidgetInspector:</div>
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
 <area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
+<area href="interfaceISkinRoot.html" alt="ISkinRoot" shape="rect" coords="254,56,371,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -138,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a33b981d859d55445e61736132c71ed7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5b84e49a4308831b0219bae9b2ad355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#af5b84e49a4308831b0219bae9b2ad355">AddButton</a> (string id=&quot;test&quot;, Action action=null)</td></tr>
 <tr class="separator:af5b84e49a4308831b0219bae9b2ad355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af331a652e007b88cdf7dd3631af65df6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#af331a652e007b88cdf7dd3631af65df6">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:af331a652e007b88cdf7dd3631af65df6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#af331a652e007b88cdf7dd3631af65df6">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:af331a652e007b88cdf7dd3631af65df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classWidget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:ac34647c88d9a1a38402cd20a0c13a236 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac34647c88d9a1a38402cd20a0c13a236">Test</a> ()</td></tr>
@@ -187,13 +188,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afabface3017c9537ea076b0fb0fdf9d3 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b">IsAlignTop</a> ()</td></tr>
 <tr class="separator:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">Layer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (Layer l, Transform trans)</td></tr>
+<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (<a class="el" href="classLayer.html">Layer</a> l, Transform trans)</td></tr>
 <tr class="separator:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a> ()</td></tr>
 <tr class="separator:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
+<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
 <tr class="separator:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
+<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
 <tr class="separator:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a> (int id, int v=0)</td></tr>
 <tr class="separator:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,26 +204,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a115d938794f34d1eb29d44aae622c29b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a> ()</td></tr>
 <tr class="separator:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">CanShowContextMenu</a> ()</td></tr>
 <tr class="separator:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a> ()</td></tr>
 <tr class="separator:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4295c8036903342ae9e8b4722d3d82fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">GetSkin</a> ()</td></tr>
+<tr class="separator:a4295c8036903342ae9e8b4722d3d82fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aef6e38eb8a3dce387211ededc5de08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">GetSkinConfig</a> ()</td></tr>
+<tr class="separator:a0aef6e38eb8a3dce387211ededc5de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -242,7 +247,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a7b935fe7e155873ffe5b2a6369e563b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee3cbf10eea323716cc20a0568efa82c"><td class="memItemLeft" align="right" valign="top">LayoutGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c">layoutLog</a></td></tr>
 <tr class="separator:aee3cbf10eea323716cc20a0568efa82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaade40b06b1e32b167277dfe62c0428"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#aaaade40b06b1e32b167277dfe62c0428">textTitle</a></td></tr>
+<tr class="memitem:aaaade40b06b1e32b167277dfe62c0428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#aaaade40b06b1e32b167277dfe62c0428">textTitle</a></td></tr>
 <tr class="separator:aaaade40b06b1e32b167277dfe62c0428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdf71046ad360b6cc1c45f22b0779f84"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#abdf71046ad360b6cc1c45f22b0779f84">iconCard</a></td></tr>
 <tr class="separator:abdf71046ad360b6cc1c45f22b0779f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,7 +270,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32">soundActivate</a></td></tr>
 <tr class="separator:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">UIDragPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
+<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDragPanel.html">UIDragPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
 <tr class="separator:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2845d6ff2975f55feb970632c99405d1">tipPivotLeft</a></td></tr>
 <tr class="separator:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,7 +298,7 @@ Properties</h2></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
 <tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
+<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
 <tr class="separator:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -357,11 +362,11 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a67a4f9a55247afa920b587e17922ecbc"><td class="memItemLeft" align="right" valign="top">List&lt; UIText &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a> = new List&lt;UIText&gt;()</td></tr>
+<tr class="memitem:a67a4f9a55247afa920b587e17922ecbc"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classUIText.html">UIText</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a> = new List&lt;<a class="el" href="classUIText.html">UIText</a>&gt;()</td></tr>
 <tr class="separator:a67a4f9a55247afa920b587e17922ecbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15357311cfd150da30224059618dd6f5"><td class="memItemLeft" align="right" valign="top">UIButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">moldButton</a></td></tr>
+<tr class="memitem:a15357311cfd150da30224059618dd6f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">moldButton</a></td></tr>
 <tr class="separator:a15357311cfd150da30224059618dd6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c34d2c04c25861f849d308335fcb8bf"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">moldText</a></td></tr>
+<tr class="memitem:a8c34d2c04c25861f849d308335fcb8bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">moldText</a></td></tr>
 <tr class="separator:a8c34d2c04c25861f849d308335fcb8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -472,9 +477,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetInspector_8cs_source.html#l00176">176</a> of file <a class="el" href="WidgetInspector_8cs_source.html">WidgetInspector.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
-<div class="line"><span class="lineno">  178</span>        UIButton uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">moldButton</a>, <a class="code hl_variable" href="classWidgetInspector.html#a7b935fe7e155873ffe5b2a6369e563b1">layoutButton</a>);</div>
-<div class="line"><span class="lineno">  179</span>        uIButton.icon.sprite = <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">Get</a>(<span class="stringliteral">&quot;icon_&quot;</span> + <span class="keywordtype">id</span>) ?? uIButton.icon.sprite;</div>
-<div class="line"><span class="lineno">  180</span>        uIButton.mainText.SetText(<span class="keywordtype">id</span>.lang());</div>
+<div class="line"><span class="lineno">  178</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">moldButton</a>, <a class="code hl_variable" href="classWidgetInspector.html#a7b935fe7e155873ffe5b2a6369e563b1">layoutButton</a>);</div>
+<div class="line"><span class="lineno">  179</span>        uIButton.icon.sprite = <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">Get</a>(<span class="stringliteral">&quot;icon_&quot;</span> + <span class="keywordtype">id</span>) ?? uIButton.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.sprite;</div>
+<div class="line"><span class="lineno">  180</span>        uIButton.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(<span class="keywordtype">id</span>.lang());</div>
 <div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (action != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  182</span>        {</div>
 <div class="line"><span class="lineno">  183</span>            uIButton.onClick.AddListener(delegate</div>
@@ -485,12 +490,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  188</span>    }</div>
 <div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
 <div class="ttc" id="aclassSpriteSheet_html_a3ba485078c417ef19ea17e2f624dba02"><div class="ttname"><a href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">SpriteSheet.Get</a></div><div class="ttdeci">static Sprite Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.cs:28</a></div></div>
+<div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
+<div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
+<div class="ttc" id="aclassUIButton_html_a2c91e2485c1dea09ccf8cf5865e4c4dd"><div class="ttname"><a href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">UIButton.mainText</a></div><div class="ttdeci">UIText mainText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00102">UIButton.cs:102</a></div></div>
+<div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00159">UIText.cs:159</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_a15357311cfd150da30224059618dd6f5"><div class="ttname"><a href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">WidgetInspector.moldButton</a></div><div class="ttdeci">UIButton moldButton</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00043">WidgetInspector.cs:43</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_a7b935fe7e155873ffe5b2a6369e563b1"><div class="ttname"><a href="classWidgetInspector.html#a7b935fe7e155873ffe5b2a6369e563b1">WidgetInspector.layoutButton</a></div><div class="ttdeci">LayoutGroup layoutButton</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00019">WidgetInspector.cs:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.Get()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00019">layoutButton</a>, and <a class="el" href="WidgetInspector_8cs_source.html#l00043">moldButton</a>.</p>
+<p class="reference">References <a class="el" href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.Get()</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00019">layoutButton</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00043">moldButton</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetInspector_8cs_source.html#l00112">SwitchPage()</a>.</p>
 
@@ -532,21 +541,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetInspector_8cs_source.html#l00164">164</a> of file <a class="el" href="WidgetInspector_8cs_source.html">WidgetInspector.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  165</span>    {</div>
-<div class="line"><span class="lineno">  166</span>        UIText uIText = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">moldText</a>, <a class="code hl_variable" href="classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c">layoutLog</a>);</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_class" href="classUIText.html">UIText</a> uIText = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">moldText</a>, <a class="code hl_variable" href="classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c">layoutLog</a>);</div>
 <div class="line"><span class="lineno">  167</span>        <a class="code hl_variable" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a>.Add(uIText);</div>
-<div class="line"><span class="lineno">  168</span>        uIText.SetText(text);</div>
+<div class="line"><span class="lineno">  168</span>        uIText.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(text);</div>
 <div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a>.Count &gt; <a class="code hl_variable" href="classWidgetInspector.html#a87a17d4ebb55a7d46bc1e5b4a22d6841">maxLog</a>)</div>
 <div class="line"><span class="lineno">  170</span>        {</div>
 <div class="line"><span class="lineno">  171</span>            UnityEngine.Object.DestroyImmediate(<a class="code hl_variable" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a>[0].gameObject);</div>
 <div class="line"><span class="lineno">  172</span>            <a class="code hl_variable" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a>.Remove(<a class="code hl_variable" href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">texts</a>[0]);</div>
 <div class="line"><span class="lineno">  173</span>        }</div>
 <div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassUIText_html"><div class="ttname"><a href="classUIText.html">UIText</a></div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00005">UIText.cs:6</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_a67a4f9a55247afa920b587e17922ecbc"><div class="ttname"><a href="classWidgetInspector.html#a67a4f9a55247afa920b587e17922ecbc">WidgetInspector.texts</a></div><div class="ttdeci">List&lt; UIText &gt; texts</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00041">WidgetInspector.cs:41</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_a87a17d4ebb55a7d46bc1e5b4a22d6841"><div class="ttname"><a href="classWidgetInspector.html#a87a17d4ebb55a7d46bc1e5b4a22d6841">WidgetInspector.maxLog</a></div><div class="ttdeci">int maxLog</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00029">WidgetInspector.cs:29</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_a8c34d2c04c25861f849d308335fcb8bf"><div class="ttname"><a href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">WidgetInspector.moldText</a></div><div class="ttdeci">UIText moldText</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00045">WidgetInspector.cs:45</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_aee3cbf10eea323716cc20a0568efa82c"><div class="ttname"><a href="classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c">WidgetInspector.layoutLog</a></div><div class="ttdeci">LayoutGroup layoutLog</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00021">WidgetInspector.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetInspector_8cs_source.html#l00021">layoutLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00029">maxLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00045">moldText</a>, and <a class="el" href="WidgetInspector_8cs_source.html#l00041">texts</a>.</p>
+<p class="reference">References <a class="el" href="WidgetInspector_8cs_source.html#l00021">layoutLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00029">maxLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00045">moldText</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00041">texts</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetInspector_8cs_source.html#l00112">SwitchPage()</a>.</p>
 
@@ -651,8 +661,8 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="WidgetInspector_8cs_source.html#l00072">72</a> of file <a class="el" href="WidgetInspector_8cs_source.html">WidgetInspector.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
 <div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="classWidgetInspector.html#aafbf06e0097d7992e69be4b57fe18eec">Instance</a> = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">moldButton</a> = <a class="code hl_variable" href="classWidgetInspector.html#a7b935fe7e155873ffe5b2a6369e563b1">layoutButton</a>.CreateMold&lt;UIButton&gt;();</div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">moldText</a> = <a class="code hl_variable" href="classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c">layoutLog</a>.CreateMold&lt;UIText&gt;();</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="classWidgetInspector.html#a15357311cfd150da30224059618dd6f5">moldButton</a> = <a class="code hl_variable" href="classWidgetInspector.html#a7b935fe7e155873ffe5b2a6369e563b1">layoutButton</a>.CreateMold&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;();</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classWidgetInspector.html#a8c34d2c04c25861f849d308335fcb8bf">moldText</a> = <a class="code hl_variable" href="classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c">layoutLog</a>.CreateMold&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;();</div>
 <div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="WidgetInspector_8cs_source.html#l00015">Instance</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00019">layoutButton</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00021">layoutLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00043">moldButton</a>, and <a class="el" href="WidgetInspector_8cs_source.html#l00045">moldText</a>.</p>
@@ -735,7 +745,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">override void WidgetInspector.OnSetContextMenu </td>
           <td>(</td>
-          <td class="paramtype">UIContextMenu&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIContextMenu.html">UIContextMenu</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -751,21 +761,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetInspector_8cs_source.html#l00190">190</a> of file <a class="el" href="WidgetInspector_8cs_source.html">WidgetInspector.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  191</span>    {</div>
-<div class="line"><span class="lineno">  192</span>        m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>).AddToggle(<span class="stringliteral">&quot;moveToMouse&quot;</span>, <a class="code hl_property" href="classWidgetInspector.html#a62a0bd7c9f7d3e37e6d5bf7f755d85ae">extra</a>.<a class="code hl_variable" href="classWidgetInspector_1_1Extra.html#af64754ff290907e126a5c5552345f119">moveToMouse</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  192</span>        m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;setting&quot;</span>).<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;moveToMouse&quot;</span>, <a class="code hl_property" href="classWidgetInspector.html#a62a0bd7c9f7d3e37e6d5bf7f755d85ae">extra</a>.<a class="code hl_variable" href="classWidgetInspector_1_1Extra.html#af64754ff290907e126a5c5552345f119">moveToMouse</a>, delegate(<span class="keywordtype">bool</span> a)</div>
 <div class="line"><span class="lineno">  193</span>        {</div>
 <div class="line"><span class="lineno">  194</span>            extra.moveToMouse = a;</div>
 <div class="line"><span class="lineno">  195</span>        });</div>
-<div class="line"><span class="lineno">  196</span>        m.AddChild(<span class="stringliteral">&quot;style&quot;</span>).AddSlider(<span class="stringliteral">&quot;toggleButtonBG&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, base.config.skin.button, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  196</span>        m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;style&quot;</span>).<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;toggleButtonBG&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, base.config.skin.button, delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">  197</span>        {</div>
 <div class="line"><span class="lineno">  198</span>            base.config.skin.button = (int)a;</div>
 <div class="line"><span class="lineno">  199</span>            <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  200</span>        }, 0f, base.config.skin.Skin.buttons.Count - 1, isInt: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  201</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
 <div class="line"><span class="lineno">  202</span>    }</div>
+<div class="ttc" id="aclassUIContextMenu_html_a4822a3bf50f2729f3c6cb666a85cc88a"><div class="ttname"><a href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">UIContextMenu.AddToggle</a></div><div class="ttdeci">UIContextMenuItem AddToggle(string idLang=&quot;&quot;, bool isOn=false, UnityAction&lt; bool &gt; action=null)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00316">UIContextMenu.cs:316</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_a75c796a9dd17902e8a8f710e8c8760f6"><div class="ttname"><a href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">UIContextMenu.AddSlider</a></div><div class="ttdeci">UIContextMenuItem AddSlider(string text, Func&lt; float, string &gt; textFunc, float value, Action&lt; float &gt; action, float min=0f, float max=1f, bool isInt=false, bool hideOther=true, bool useInput=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.cs:329</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_afa1c5174bdbdf88aeacd6407a9840b1f"><div class="ttname"><a href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">UIContextMenu.AddChild</a></div><div class="ttdeci">UIContextMenu AddChild(string idLang, TextAnchor anchor)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.cs:496</a></div></div>
 <div class="ttc" id="aclassWidget_html_a115d938794f34d1eb29d44aae622c29b"><div class="ttname"><a href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">Widget.ApplySkin</a></div><div class="ttdeci">virtual void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00556">Widget.cs:556</a></div></div>
 <div class="ttc" id="aclassWidget_html_a1566722a39d0cce11507c43b3737df1a"><div class="ttname"><a href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">Widget.SetBaseContextMenu</a></div><div class="ttdeci">void SetBaseContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00608">Widget.cs:608</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00556">Widget.ApplySkin()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00049">extra</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00012">WidgetInspector.Extra.moveToMouse</a>, and <a class="el" href="Widget_8cs_source.html#l00608">Widget.SetBaseContextMenu()</a>.</p>
+<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.AddChild()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00316">UIContextMenu.AddToggle()</a>, <a class="el" href="Widget_8cs_source.html#l00556">Widget.ApplySkin()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00049">extra</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00012">WidgetInspector.Extra.moveToMouse</a>, and <a class="el" href="Widget_8cs_source.html#l00608">Widget.SetBaseContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -946,7 +959,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="classWidgetInspector.html#abdf71046ad360b6cc1c45f22b0779f84">iconCard</a>.SetActive(<a class="code hl_variable" href="classWidgetInspector.html#a49fa644d988258e919edf987b449d5e9">target</a> is <a class="code hl_class" href="classCard.html">Card</a>);</div>
 <div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="classWidgetInspector.html#a983688d2350e95442a1e3fb0f426a4e0">iconArea</a>.SetActive(<a class="code hl_variable" href="classWidgetInspector.html#a49fa644d988258e919edf987b449d5e9">target</a> is <a class="code hl_class" href="classArea.html">Area</a>);</div>
 <div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="classWidgetInspector.html#a33b981d859d55445e61736132c71ed7f">AddLog</a>(<a class="code hl_variable" href="classWidgetInspector.html#a49fa644d988258e919edf987b449d5e9">target</a>.ToString());</div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="classWidgetInspector.html#aaaade40b06b1e32b167277dfe62c0428">textTitle</a>.SetText(text);</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="classWidgetInspector.html#aaaade40b06b1e32b167277dfe62c0428">textTitle</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(text);</div>
 <div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="classWidgetInspector.html#ab6baf59847c3db7d29f7fab20da9eeae">Refresh</a>();</div>
 <div class="line"><span class="lineno">  153</span>        this.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  154</span>    }</div>
@@ -968,7 +981,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidgetInspector_html_abdf71046ad360b6cc1c45f22b0779f84"><div class="ttname"><a href="classWidgetInspector.html#abdf71046ad360b6cc1c45f22b0779f84">WidgetInspector.iconCard</a></div><div class="ttdeci">Image iconCard</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00025">WidgetInspector.cs:25</a></div></div>
 <div class="ttc" id="aclassWidgetInspector_html_af5b84e49a4308831b0219bae9b2ad355"><div class="ttname"><a href="classWidgetInspector.html#af5b84e49a4308831b0219bae9b2ad355">WidgetInspector.AddButton</a></div><div class="ttdeci">void AddButton(string id=&quot;test&quot;, Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetInspector_8cs_source.html#l00176">WidgetInspector.cs:176</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetInspector_8cs_source.html#l00176">AddButton()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00164">AddLog()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00027">iconArea</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00025">iconCard</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00031">index</a>, <a class="el" href="Chara_8cs_source.html#l05721">Chara.IsHomeMember()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00019">layoutButton</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00021">layoutLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00035">list</a>, <a class="el" href="Card_8cs_source.html#l01977">Card.Name</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00156">Refresh()</a>, <a class="el" href="Card_8cs_source.html#l05114">Card.SetImage()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00017">target</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00041">texts</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00023">textTitle</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
+<p class="reference">References <a class="el" href="WidgetInspector_8cs_source.html#l00176">AddButton()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00164">AddLog()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00027">iconArea</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00025">iconCard</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00031">index</a>, <a class="el" href="Chara_8cs_source.html#l05721">Chara.IsHomeMember()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00019">layoutButton</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00021">layoutLog</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00035">list</a>, <a class="el" href="Card_8cs_source.html#l01977">Card.Name</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00156">Refresh()</a>, <a class="el" href="Card_8cs_source.html#l05114">Card.SetImage()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00017">target</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00041">texts</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00023">textTitle</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetInspector_8cs_source.html#l00100">_Show()</a>.</p>
 
@@ -1137,7 +1150,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UIButton WidgetInspector.moldButton</td>
+          <td class="memname"><a class="el" href="classUIButton.html">UIButton</a> WidgetInspector.moldButton</td>
         </tr>
       </table>
   </td>
@@ -1163,7 +1176,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UIText WidgetInspector.moldText</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> WidgetInspector.moldText</td>
         </tr>
       </table>
   </td>
@@ -1267,7 +1280,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;UIText&gt; WidgetInspector.texts = new List&lt;UIText&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="classUIText.html">UIText</a>&gt; WidgetInspector.texts = new List&lt;<a class="el" href="classUIText.html">UIText</a>&gt;()</td>
         </tr>
       </table>
   </td>
@@ -1290,7 +1303,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText WidgetInspector.textTitle</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> WidgetInspector.textTitle</td>
         </tr>
       </table>
 </div><div class="memdoc">

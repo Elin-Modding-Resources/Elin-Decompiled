@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad3a7d956ed41dabdec12e41419427df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e4876c20ed409237662a43522ef860"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseHomeResource.html#a57e4876c20ed409237662a43522ef860">OnAdvanceDay</a> ()</td></tr>
 <tr class="separator:a57e4876c20ed409237662a43522ef860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a314a464faf27b5dc5efe2ba47c84c0da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseHomeResource.html#a314a464faf27b5dc5efe2ba47c84c0da">WriteNote</a> (UINote n)</td></tr>
+<tr class="memitem:a314a464faf27b5dc5efe2ba47c84c0da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseHomeResource.html#a314a464faf27b5dc5efe2ba47c84c0da">WriteNote</a> (<a class="el" href="classUINote.html">UINote</a> n)</td></tr>
 <tr class="separator:a314a464faf27b5dc5efe2ba47c84c0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -521,7 +521,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">virtual void BaseHomeResource.WriteNote </td>
           <td>(</td>
-          <td class="paramtype">UINote&#160;</td>
+          <td class="paramtype"><a class="el" href="classUINote.html">UINote</a>&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -537,14 +537,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseHomeResource_8cs_source.html#l00074">74</a> of file <a class="el" href="BaseHomeResource_8cs_source.html">BaseHomeResource.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        n.Clear();</div>
-<div class="line"><span class="lineno">   77</span>        n.AddHeader(<a class="code hl_property" href="classBaseHomeResource.html#ac462dbdc1d459c8904d26d6ee5121301">Name</a>);</div>
-<div class="line"><span class="lineno">   78</span>        n.AddTopic(<span class="stringliteral">&quot;TopicLeft&quot;</span>, <span class="stringliteral">&quot;vCurrent&quot;</span>.lang(), <a class="code hl_variable" href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">value</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>        n.Build();</div>
+<div class="line"><span class="lineno">   76</span>        n.<a class="code hl_function" href="classUINote.html#a201293c027e2d754b95366702087b081">Clear</a>();</div>
+<div class="line"><span class="lineno">   77</span>        n.<a class="code hl_function" href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">AddHeader</a>(<a class="code hl_property" href="classBaseHomeResource.html#ac462dbdc1d459c8904d26d6ee5121301">Name</a>);</div>
+<div class="line"><span class="lineno">   78</span>        n.<a class="code hl_function" href="classUINote.html#ac475bcb8899c4336580b9fbc8671bfb0">AddTopic</a>(<span class="stringliteral">&quot;TopicLeft&quot;</span>, <span class="stringliteral">&quot;vCurrent&quot;</span>.lang(), <a class="code hl_variable" href="classBaseHomeResource.html#ab597696a062aed674dccc8c4882d56be">value</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>        n.<a class="code hl_function" href="classUINote.html#ae74cd5d02ecb155823a55d182817f3f3">Build</a>();</div>
 <div class="line"><span class="lineno">   80</span>    }</div>
 <div class="ttc" id="aclassBaseHomeResource_html_ac462dbdc1d459c8904d26d6ee5121301"><div class="ttname"><a href="classBaseHomeResource.html#ac462dbdc1d459c8904d26d6ee5121301">BaseHomeResource.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="BaseHomeResource_8cs_source.html#l00043">BaseHomeResource.cs:43</a></div></div>
+<div class="ttc" id="aclassUINote_html_a201293c027e2d754b95366702087b081"><div class="ttname"><a href="classUINote.html#a201293c027e2d754b95366702087b081">UINote.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00035">UINote.cs:35</a></div></div>
+<div class="ttc" id="aclassUINote_html_a910af6ff3f10be0cdc3705c8e376ee25"><div class="ttname"><a href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">UINote.AddHeader</a></div><div class="ttdeci">UIItem AddHeader(string text, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00079">UINote.cs:79</a></div></div>
+<div class="ttc" id="aclassUINote_html_ac475bcb8899c4336580b9fbc8671bfb0"><div class="ttname"><a href="classUINote.html#ac475bcb8899c4336580b9fbc8671bfb0">UINote.AddTopic</a></div><div class="ttdeci">UIItem AddTopic(string id, string text, string value=null)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00144">UINote.cs:144</a></div></div>
+<div class="ttc" id="aclassUINote_html_ae74cd5d02ecb155823a55d182817f3f3"><div class="ttname"><a href="classUINote.html#ae74cd5d02ecb155823a55d182817f3f3">UINote.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00049">UINote.cs:49</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseHomeResource_8cs_source.html#l00043">Name</a>, and <a class="el" href="BaseHomeResource_8cs_source.html#l00018">value</a>.</p>
+<p class="reference">References <a class="el" href="UINote_8cs_source.html#l00079">UINote.AddHeader()</a>, <a class="el" href="UINote_8cs_source.html#l00144">UINote.AddTopic()</a>, <a class="el" href="UINote_8cs_source.html#l00049">UINote.Build()</a>, <a class="el" href="UINote_8cs_source.html#l00035">UINote.Clear()</a>, <a class="el" href="BaseHomeResource_8cs_source.html#l00043">Name</a>, and <a class="el" href="BaseHomeResource_8cs_source.html#l00018">value</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ItemHomeResource_8cs_source.html#l00009">ItemHomeResource.SetResource()</a>.</p>
 

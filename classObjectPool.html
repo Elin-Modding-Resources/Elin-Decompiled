@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elin Decompiled Documentation: ObjectPool Class Reference</title>
+<title>Elin Decompiled Documentation: ObjectPool&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,16 +91,19 @@ $(document).ready(function(){initNavTree('classObjectPool.html',''); initResizab
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classObjectPool-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ObjectPool Class Reference</div></div>
+  <div class="headertitle"><div class="title">ObjectPool&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Inheritance diagram for ObjectPool:</div>
+Inheritance diagram for ObjectPool&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classObjectPool.png" alt=""/>
@@ -113,34 +116,69 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool_1_1Item.html">Item</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac7f7c5e592e12b2b9d7ed59ec64a2d6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#ac7f7c5e592e12b2b9d7ed59ec64a2d6d">ObjectPool</a> (UnityAction&lt; T &gt; actionOnGet, UnityAction&lt; T &gt; actionOnRelease)</td></tr>
+<tr class="separator:ac7f7c5e592e12b2b9d7ed59ec64a2d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b7e503afcecfb7f8ae7647c7efdff8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a28b7e503afcecfb7f8ae7647c7efdff8">Get</a> ()</td></tr>
+<tr class="separator:a28b7e503afcecfb7f8ae7647c7efdff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85041dbe64efa883573f2ad8e24f852"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#af85041dbe64efa883573f2ad8e24f852">Release</a> (T element)</td></tr>
+<tr class="separator:af85041dbe64efa883573f2ad8e24f852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad19f14d23ee57bd67a2f70209ae9da17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classObjectPool_1_1Item.html">Item</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#ad19f14d23ee57bd67a2f70209ae9da17">Create&lt; T &gt;</a> (int max=100, int addsPerUpdate=10, Action&lt; T &gt; _onCreate=null)</td></tr>
-<tr class="separator:ad19f14d23ee57bd67a2f70209ae9da17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e9b6d5762b9193cffeb12dd8336477"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classObjectPool_1_1Item.html">Item</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a22e9b6d5762b9193cffeb12dd8336477">Create&lt; T &gt;</a> (int max=100, int addsPerUpdate=10, Action&lt; T &gt; _onCreate=null)</td></tr>
+<tr class="separator:a22e9b6d5762b9193cffeb12dd8336477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5e282231f7924f200cc5a7c8af3f65f6"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a5e282231f7924f200cc5a7c8af3f65f6">items</a> = new List&lt;<a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a>&gt;()</td></tr>
-<tr class="separator:a5e282231f7924f200cc5a7c8af3f65f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd793a3b653ccde5196995fe3611712"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#adbd793a3b653ccde5196995fe3611712">items</a> = new List&lt;<a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a>&gt;()</td></tr>
+<tr class="separator:adbd793a3b653ccde5196995fe3611712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aee89d9bd96afeaa9af2d94bc19929c2f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classObjectPool.html">ObjectPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#aee89d9bd96afeaa9af2d94bc19929c2f">Instance</a></td></tr>
-<tr class="separator:aee89d9bd96afeaa9af2d94bc19929c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d08fe8ce12a934f410de58fef956a4a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classObjectPool.html">ObjectPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a7d08fe8ce12a934f410de58fef956a4a">Instance</a></td></tr>
+<tr class="separator:a7d08fe8ce12a934f410de58fef956a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a8a492d46b6230a2afe750a843e05a148"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a8a492d46b6230a2afe750a843e05a148">countAll</a><code> [get, private set]</code></td></tr>
+<tr class="separator:a8a492d46b6230a2afe750a843e05a148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7d97c9434247225b9d887072110c8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a1c7d97c9434247225b9d887072110c8f">countActive</a><code> [get]</code></td></tr>
+<tr class="separator:a1c7d97c9434247225b9d887072110c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6b674fd2d20832cf244c2804e1df9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#afd6b674fd2d20832cf244c2804e1df9a">countInactive</a><code> [get]</code></td></tr>
+<tr class="separator:afd6b674fd2d20832cf244c2804e1df9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ad028c2868cb113568b77988a2fa06abe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#ad028c2868cb113568b77988a2fa06abe">Awake</a> ()</td></tr>
-<tr class="separator:ad028c2868cb113568b77988a2fa06abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bb9848b3ece0db4e6978edf0524731"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#af0bb9848b3ece0db4e6978edf0524731">Update</a> ()</td></tr>
-<tr class="separator:af0bb9848b3ece0db4e6978edf0524731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5e0393b0eed7360bf12aa8ac7afe85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a0c5e0393b0eed7360bf12aa8ac7afe85">Awake</a> ()</td></tr>
+<tr class="separator:a0c5e0393b0eed7360bf12aa8ac7afe85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d53fdd0a977a395ffc42e69ed99309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a34d53fdd0a977a395ffc42e69ed99309">Update</a> ()</td></tr>
+<tr class="separator:a34d53fdd0a977a395ffc42e69ed99309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4a92449c643fea22b9504ae9c9ebb78b"><td class="memItemLeft" align="right" valign="top">readonly Stack&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a> = new Stack&lt;T&gt;()</td></tr>
+<tr class="separator:a4a92449c643fea22b9504ae9c9ebb78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a9570454ef24ea17880b822ab3f1a9"><td class="memItemLeft" align="right" valign="top">readonly UnityAction&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a05a9570454ef24ea17880b822ab3f1a9">m_ActionOnGet</a></td></tr>
+<tr class="separator:a05a9570454ef24ea17880b822ab3f1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538d3af9420f0d116d9d564da9be33f0"><td class="memItemLeft" align="right" valign="top">readonly UnityAction&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0">m_ActionOnRelease</a></td></tr>
+<tr class="separator:a538d3af9420f0d116d9d564da9be33f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ObjectPool_8cs_source.html#l00005">5</a> of file <a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad028c2868cb113568b77988a2fa06abe" name="ad028c2868cb113568b77988a2fa06abe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad028c2868cb113568b77988a2fa06abe">&#9670;&#160;</a></span>Awake()</h2>
+<div class="textblock"><div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00005">5</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac7f7c5e592e12b2b9d7ed59ec64a2d6d" name="ac7f7c5e592e12b2b9d7ed59ec64a2d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f7c5e592e12b2b9d7ed59ec64a2d6d">&#9670;&#160;</a></span>ObjectPool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +187,54 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ObjectPool.Awake </td>
+          <td class="memname"><a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.<a class="el" href="classObjectPool.html">ObjectPool</a> </td>
+          <td>(</td>
+          <td class="paramtype">UnityAction&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>actionOnGet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnityAction&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>actionOnRelease</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00019">19</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="classObjectPool.html#a05a9570454ef24ea17880b822ab3f1a9">m_ActionOnGet</a> = actionOnGet;</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0">m_ActionOnRelease</a> = actionOnRelease;</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclassObjectPool_html_a05a9570454ef24ea17880b822ab3f1a9"><div class="ttname"><a href="classObjectPool.html#a05a9570454ef24ea17880b822ab3f1a9">ObjectPool.m_ActionOnGet</a></div><div class="ttdeci">readonly UnityAction&lt; T &gt; m_ActionOnGet</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2ObjectPool_8cs_source.html#l00009">ObjectPool.cs:9</a></div></div>
+<div class="ttc" id="aclassObjectPool_html_a538d3af9420f0d116d9d564da9be33f0"><div class="ttname"><a href="classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0">ObjectPool.m_ActionOnRelease</a></div><div class="ttdeci">readonly UnityAction&lt; T &gt; m_ActionOnRelease</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2ObjectPool_8cs_source.html#l00011">ObjectPool.cs:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00009">ObjectPool&lt; T &gt;.m_ActionOnGet</a>, and <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00011">ObjectPool&lt; T &gt;.m_ActionOnRelease</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c5e0393b0eed7360bf12aa8ac7afe85" name="a0c5e0393b0eed7360bf12aa8ac7afe85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5e0393b0eed7360bf12aa8ac7afe85">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.Awake </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -162,18 +247,18 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjectPool_8cs_source.html#l00100">100</a> of file <a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00100">100</a> of file <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="classObjectPool.html#aee89d9bd96afeaa9af2d94bc19929c2f">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="classObjectPool.html#a7d08fe8ce12a934f410de58fef956a4a">Instance</a> = <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  103</span>    }</div>
-<div class="ttc" id="aclassObjectPool_html_aee89d9bd96afeaa9af2d94bc19929c2f"><div class="ttname"><a href="classObjectPool.html#aee89d9bd96afeaa9af2d94bc19929c2f">ObjectPool.Instance</a></div><div class="ttdeci">static ObjectPool Instance</div><div class="ttdef"><b>Definition:</b> <a href="ObjectPool_8cs_source.html#l00096">ObjectPool.cs:96</a></div></div>
+<div class="ttc" id="aclassObjectPool_html_a7d08fe8ce12a934f410de58fef956a4a"><div class="ttname"><a href="classObjectPool.html#a7d08fe8ce12a934f410de58fef956a4a">ObjectPool.Instance</a></div><div class="ttdeci">static ObjectPool Instance</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00096">ObjectPool.cs:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ObjectPool_8cs_source.html#l00096">Instance</a>.</p>
+<p class="reference">References <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00096">ObjectPool&lt; T &gt;.Instance</a>.</p>
 
 </div>
 </div>
-<a id="ad19f14d23ee57bd67a2f70209ae9da17" name="ad19f14d23ee57bd67a2f70209ae9da17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad19f14d23ee57bd67a2f70209ae9da17">&#9670;&#160;</a></span>Create&lt; T &gt;()</h2>
+<a id="a22e9b6d5762b9193cffeb12dd8336477" name="a22e9b6d5762b9193cffeb12dd8336477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e9b6d5762b9193cffeb12dd8336477">&#9670;&#160;</a></span>Create&lt; T &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,7 +267,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classObjectPool_1_1Item.html">Item</a>&lt; T &gt; ObjectPool.Create&lt; T &gt; </td>
+          <td class="memname">static <a class="el" href="classObjectPool_1_1Item.html">Item</a>&lt; T &gt; <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.Create&lt; T &gt; </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>max</em> = <code>100</code>, </td>
@@ -220,24 +305,24 @@ Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="ObjectPool_8cs_source.html#l00113">113</a> of file <a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00113">113</a> of file <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  113</span>                                                                                                               : <span class="keyword">new</span>()</div>
 <div class="line"><span class="lineno">  114</span>    {</div>
 <div class="line"><span class="lineno">  115</span>        Item&lt;T&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <span class="keyword">new</span> Item&lt;T&gt;();</div>
 <div class="line"><span class="lineno">  116</span>        <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Create(max, addsPerUpdate);</div>
 <div class="line"><span class="lineno">  117</span>        item.onCreate = _onCreate;</div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_variable" href="classObjectPool.html#aee89d9bd96afeaa9af2d94bc19929c2f">Instance</a>.<a class="code hl_variable" href="classObjectPool.html#a5e282231f7924f200cc5a7c8af3f65f6">items</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_variable" href="classObjectPool.html#a7d08fe8ce12a934f410de58fef956a4a">Instance</a>.<a class="code hl_variable" href="classObjectPool.html#adbd793a3b653ccde5196995fe3611712">items</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
 <div class="line"><span class="lineno">  120</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
-<div class="ttc" id="aclassObjectPool_html_a5e282231f7924f200cc5a7c8af3f65f6"><div class="ttname"><a href="classObjectPool.html#a5e282231f7924f200cc5a7c8af3f65f6">ObjectPool.items</a></div><div class="ttdeci">List&lt; IItem &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="ObjectPool_8cs_source.html#l00098">ObjectPool.cs:98</a></div></div>
+<div class="ttc" id="aclassObjectPool_html_adbd793a3b653ccde5196995fe3611712"><div class="ttname"><a href="classObjectPool.html#adbd793a3b653ccde5196995fe3611712">ObjectPool.items</a></div><div class="ttdeci">List&lt; IItem &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00098">ObjectPool.cs:98</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ObjectPool_8cs_source.html#l00096">Instance</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="ObjectPool_8cs_source.html#l00098">items</a>.</p>
+<p class="reference">References <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00096">ObjectPool&lt; T &gt;.Instance</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00098">ObjectPool&lt; T &gt;.items</a>.</p>
 
 </div>
 </div>
-<a id="af0bb9848b3ece0db4e6978edf0524731" name="af0bb9848b3ece0db4e6978edf0524731"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0bb9848b3ece0db4e6978edf0524731">&#9670;&#160;</a></span>Update()</h2>
+<a id="a28b7e503afcecfb7f8ae7647c7efdff8" name="a28b7e503afcecfb7f8ae7647c7efdff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b7e503afcecfb7f8ae7647c7efdff8">&#9670;&#160;</a></span>Get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +331,101 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ObjectPool.Update </td>
+          <td class="memname">T <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00025">25</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        T val;</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            val = <span class="keyword">new</span> T();</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_property" href="classObjectPool.html#a8a492d46b6230a2afe750a843e05a148">countAll</a>++;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            val = <a class="code hl_variable" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a>.Pop();</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classObjectPool.html#a05a9570454ef24ea17880b822ab3f1a9">m_ActionOnGet</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="classObjectPool.html#a05a9570454ef24ea17880b822ab3f1a9">m_ActionOnGet</a>(val);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> val;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclassObjectPool_html_a4a92449c643fea22b9504ae9c9ebb78b"><div class="ttname"><a href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">ObjectPool.m_Stack</a></div><div class="ttdeci">readonly Stack&lt; T &gt; m_Stack</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2ObjectPool_8cs_source.html#l00007">ObjectPool.cs:7</a></div></div>
+<div class="ttc" id="aclassObjectPool_html_a8a492d46b6230a2afe750a843e05a148"><div class="ttname"><a href="classObjectPool.html#a8a492d46b6230a2afe750a843e05a148">ObjectPool.countAll</a></div><div class="ttdeci">int countAll</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2ObjectPool_8cs_source.html#l00013">ObjectPool.cs:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00013">ObjectPool&lt; T &gt;.countAll</a>, <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00009">ObjectPool&lt; T &gt;.m_ActionOnGet</a>, and <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00007">ObjectPool&lt; T &gt;.m_Stack</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ListPool_8cs_source.html#l00010">ListPool&lt; T &gt;.Get()</a>.</p>
+
+</div>
+</div>
+<a id="af85041dbe64efa883573f2ad8e24f852" name="af85041dbe64efa883573f2ad8e24f852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85041dbe64efa883573f2ad8e24f852">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.Release </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00044">44</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a>.Count &gt; 0 &amp;&amp; (<span class="keywordtype">object</span>)<a class="code hl_variable" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a>.Peek() == (<span class="keywordtype">object</span>)element)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;Internal error. Trying to destroy object that is already released to pool.&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0">m_ActionOnRelease</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <a class="code hl_variable" href="classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0">m_ActionOnRelease</a>(element);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a>.Push(element);</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00011">ObjectPool&lt; T &gt;.m_ActionOnRelease</a>, and <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00007">ObjectPool&lt; T &gt;.m_Stack</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ListPool_8cs_source.html#l00015">ListPool&lt; T &gt;.Release()</a>.</p>
+
+</div>
+</div>
+<a id="a34d53fdd0a977a395ffc42e69ed99309" name="a34d53fdd0a977a395ffc42e69ed99309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d53fdd0a977a395ffc42e69ed99309">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.Update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -259,21 +438,21 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjectPool_8cs_source.html#l00105">105</a> of file <a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00105">105</a> of file <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">foreach</span> (IItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classObjectPool.html#a5e282231f7924f200cc5a7c8af3f65f6">items</a>)</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">foreach</span> (IItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classObjectPool.html#adbd793a3b653ccde5196995fe3611712">items</a>)</div>
 <div class="line"><span class="lineno">  108</span>        {</div>
 <div class="line"><span class="lineno">  109</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Update();</div>
 <div class="line"><span class="lineno">  110</span>        }</div>
 <div class="line"><span class="lineno">  111</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="ObjectPool_8cs_source.html#l00098">items</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00098">ObjectPool&lt; T &gt;.items</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aee89d9bd96afeaa9af2d94bc19929c2f" name="aee89d9bd96afeaa9af2d94bc19929c2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee89d9bd96afeaa9af2d94bc19929c2f">&#9670;&#160;</a></span>Instance</h2>
+<a id="a7d08fe8ce12a934f410de58fef956a4a" name="a7d08fe8ce12a934f410de58fef956a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d08fe8ce12a934f410de58fef956a4a">&#9670;&#160;</a></span>Instance</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +461,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classObjectPool.html">ObjectPool</a> ObjectPool.Instance</td>
+          <td class="memname"><a class="el" href="classObjectPool.html">ObjectPool</a> <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.Instance</td>
         </tr>
       </table>
   </td>
@@ -292,32 +471,187 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjectPool_8cs_source.html#l00096">96</a> of file <a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00096">96</a> of file <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ObjectPool_8cs_source.html#l00100">Awake()</a>, <a class="el" href="ObjectPool_8cs_source.html#l00065">ObjectPool.Item&lt; T &gt;.Create()</a>, and <a class="el" href="ObjectPool_8cs_source.html#l00113">Create&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00100">ObjectPool&lt; T &gt;.Awake()</a>, <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00065">ObjectPool&lt; T &gt;.Item&lt; T &gt;.Create()</a>, and <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00113">ObjectPool&lt; T &gt;.Create&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
-<a id="a5e282231f7924f200cc5a7c8af3f65f6" name="a5e282231f7924f200cc5a7c8af3f65f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e282231f7924f200cc5a7c8af3f65f6">&#9670;&#160;</a></span>items</h2>
+<a id="adbd793a3b653ccde5196995fe3611712" name="adbd793a3b653ccde5196995fe3611712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd793a3b653ccde5196995fe3611712">&#9670;&#160;</a></span>items</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a>&gt; ObjectPool.items = new List&lt;<a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a>&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a>&gt; <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.items = new List&lt;<a class="el" href="interfaceObjectPool_1_1IItem.html">IItem</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ObjectPool_8cs_source.html#l00098">98</a> of file <a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00098">98</a> of file <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ObjectPool_8cs_source.html#l00113">Create&lt; T &gt;()</a>, and <a class="el" href="ObjectPool_8cs_source.html#l00105">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00113">ObjectPool&lt; T &gt;.Create&lt; T &gt;()</a>, and <a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html#l00105">ObjectPool&lt; T &gt;.Update()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Elin/Plugins.basecore/<a class="el" href="ObjectPool_8cs_source.html">ObjectPool.cs</a></li>
+<a id="a05a9570454ef24ea17880b822ab3f1a9" name="a05a9570454ef24ea17880b822ab3f1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a9570454ef24ea17880b822ab3f1a9">&#9670;&#160;</a></span>m_ActionOnGet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly UnityAction&lt;T&gt; <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.m_ActionOnGet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00009">9</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00025">ObjectPool&lt; T &gt;.Get()</a>, and <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00019">ObjectPool&lt; T &gt;.ObjectPool()</a>.</p>
+
+</div>
+</div>
+<a id="a538d3af9420f0d116d9d564da9be33f0" name="a538d3af9420f0d116d9d564da9be33f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538d3af9420f0d116d9d564da9be33f0">&#9670;&#160;</a></span>m_ActionOnRelease</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly UnityAction&lt;T&gt; <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.m_ActionOnRelease</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00011">11</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00019">ObjectPool&lt; T &gt;.ObjectPool()</a>, and <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00044">ObjectPool&lt; T &gt;.Release()</a>.</p>
+
+</div>
+</div>
+<a id="a4a92449c643fea22b9504ae9c9ebb78b" name="a4a92449c643fea22b9504ae9c9ebb78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a92449c643fea22b9504ae9c9ebb78b">&#9670;&#160;</a></span>m_Stack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Stack&lt;T&gt; <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.m_Stack = new Stack&lt;T&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00007">7</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00025">ObjectPool&lt; T &gt;.Get()</a>, and <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00044">ObjectPool&lt; T &gt;.Release()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a1c7d97c9434247225b9d887072110c8f" name="a1c7d97c9434247225b9d887072110c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7d97c9434247225b9d887072110c8f">&#9670;&#160;</a></span>countActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.countActive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00015">15</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8a492d46b6230a2afe750a843e05a148" name="a8a492d46b6230a2afe750a843e05a148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a492d46b6230a2afe750a843e05a148">&#9670;&#160;</a></span>countAll</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.countAll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00013">13</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00025">ObjectPool&lt; T &gt;.Get()</a>.</p>
+
+</div>
+</div>
+<a id="afd6b674fd2d20832cf244c2804e1df9a" name="afd6b674fd2d20832cf244c2804e1df9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6b674fd2d20832cf244c2804e1df9a">&#9670;&#160;</a></span>countInactive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classObjectPool.html">ObjectPool</a>&lt; T &gt;.countInactive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html#l00017">17</a> of file <a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Elin/Plugins.basecore/<a class="el" href="Plugins_8basecore_2ObjectPool_8cs_source.html">ObjectPool.cs</a></li>
+<li>Elin/Plugins.UI/<a class="el" href="Plugins_8UI_2ObjectPool_8cs_source.html">ObjectPool.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

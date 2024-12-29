@@ -110,6 +110,7 @@ Inheritance diagram for Widget:</div>
   <map id="Widget_map" name="Widget_map">
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,148,80"/>
 <area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="158,56,306,80"/>
+<area href="interfaceISkinRoot.html" alt="ISkinRoot" shape="rect" coords="316,56,464,80"/>
 <area href="classBaseWidgetNotice.html" alt="BaseWidgetNotice" shape="rect" coords="316,168,464,192"/>
 <area href="classWidgetArtTool.html" alt="WidgetArtTool" shape="rect" coords="316,224,464,248"/>
 <area href="classWidgetBottomBar.html" alt="WidgetBottomBar" shape="rect" coords="316,280,464,304"/>
@@ -215,13 +216,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afabface3017c9537ea076b0fb0fdf9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a482a1fcd10d2a8c77f7ea75c83b55b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b">IsAlignTop</a> ()</td></tr>
 <tr class="separator:a1a482a1fcd10d2a8c77f7ea75c83b55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9"><td class="memItemLeft" align="right" valign="top">Layer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (Layer l, Transform trans)</td></tr>
+<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (<a class="el" href="classLayer.html">Layer</a> l, Transform trans)</td></tr>
 <tr class="separator:a4a8e9d9b04888546bdbf338d5b7679a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5aad627d1b7ca8ad5f526acbe99eaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a> ()</td></tr>
 <tr class="separator:ae5aad627d1b7ca8ad5f526acbe99eaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2"><td class="memItemLeft" align="right" valign="top">SkinSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
+<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
 <tr class="separator:af6693681e109d517e6c2a0d6dc68bfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb"><td class="memItemLeft" align="right" valign="top">SkinConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
+<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
 <tr class="separator:ae60aa3a23d80586ad42e9dc2bbd4e7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa473f5a767300ec3eab172b477465bec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a> (int id, int v=0)</td></tr>
 <tr class="separator:aa473f5a767300ec3eab172b477465bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,26 +232,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a115d938794f34d1eb29d44aae622c29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4cbf38e8aadee76c0a6da309ce80d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a> ()</td></tr>
 <tr class="separator:ace4cbf38e8aadee76c0a6da309ce80d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:aa1bc3bba48a44aa10e0e70ff2fcbd271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a14d3ca9a9c9b1081dc5371a38774e640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a0469638a88c98fa33fbc8e9d2713d404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337395ff179624b2e16a1b4e40de7f6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">CanShowContextMenu</a> ()</td></tr>
 <tr class="separator:ad337395ff179624b2e16a1b4e40de7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5655bef2d0773efbcfc065b4abbca7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a> ()</td></tr>
 <tr class="separator:a0e5655bef2d0773efbcfc065b4abbca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566722a39d0cce11507c43b3737df1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1566722a39d0cce11507c43b3737df1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1566722a39d0cce11507c43b3737df1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2732b674b864ef872b939069ac321bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:ad2732b674b864ef872b939069ac321bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:ad2732b674b864ef872b939069ac321bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4295c8036903342ae9e8b4722d3d82fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">GetSkin</a> ()</td></tr>
+<tr class="separator:a4295c8036903342ae9e8b4722d3d82fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aef6e38eb8a3dce387211ededc5de08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">GetSkinConfig</a> ()</td></tr>
+<tr class="separator:a0aef6e38eb8a3dce387211ededc5de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -258,7 +263,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adc7edf86fd522a256f2879971f83e73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753dcd1375c7e557b42cd3aa4ba62e32"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32">soundActivate</a></td></tr>
 <tr class="separator:a753dcd1375c7e557b42cd3aa4ba62e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283"><td class="memItemLeft" align="right" valign="top">UIDragPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
+<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDragPanel.html">UIDragPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
 <tr class="separator:a6f9bd9c1778330918d9ca31abda28283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2845d6ff2975f55feb970632c99405d1"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2845d6ff2975f55feb970632c99405d1">tipPivotLeft</a></td></tr>
 <tr class="separator:a2845d6ff2975f55feb970632c99405d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,7 +288,7 @@ Properties</h2></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96c97d6d615735b7e0448a19d8900be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
 <tr class="separator:ae96c97d6d615735b7e0448a19d8900be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
+<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
 <tr class="separator:a2d7a3a96406bd5abac6506e510e5596f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -353,7 +358,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab17eabc78640eeed97eff044be9d78c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c5df8474492431c11f08c1c84d4992"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae0c5df8474492431c11f08c1c84d4992">_rect</a></td></tr>
 <tr class="separator:ae0c5df8474492431c11f08c1c84d4992"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a779dce634f408c6ab3777d39fb2f7723"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a779dce634f408c6ab3777d39fb2f7723">_skinRoot</a></td></tr>
+<tr class="memitem:a779dce634f408c6ab3777d39fb2f7723"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a779dce634f408c6ab3777d39fb2f7723">_skinRoot</a></td></tr>
 <tr class="separator:a779dce634f408c6ab3777d39fb2f7723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06f29238fc7dc03af09de72da73fd615"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a></td></tr>
 <tr class="separator:a06f29238fc7dc03af09de72da73fd615"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -487,13 +492,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  262</span>        <a class="code hl_function" href="classWidget.html#afabface3017c9537ea076b0fb0fdf9d3">OnFlip</a>();</div>
 <div class="line"><span class="lineno">  263</span>        <a class="code hl_function" href="classWidget.html#a5e1fe26459166e4a8423656a7e5ce48b">OnChangePosition</a>();</div>
 <div class="line"><span class="lineno">  264</span>        <a class="code hl_function" href="classWidget.html#ad079af82fc1bf8225c36fc277e93c926">ClampToScreen</a>();</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">foreach</span> (SkinDeco deco <span class="keywordflow">in</span> <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.decos)</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSkinDeco.html">SkinDeco</a> deco <span class="keywordflow">in</span> <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.<a class="code hl_variable" href="classSkinConfig.html#aa25890e42cc5503d573edb2b7f75182d">decos</a>)</div>
 <div class="line"><span class="lineno">  266</span>        {</div>
 <div class="line"><span class="lineno">  267</span>            <a class="code hl_function" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a>(deco);</div>
 <div class="line"><span class="lineno">  268</span>        }</div>
 <div class="line"><span class="lineno">  269</span>        <a class="code hl_function" href="classWidget.html#ae9ece0be9b4ac277401b430d7f7b9f92">RefreshOrder</a>();</div>
 <div class="line"><span class="lineno">  270</span>    }</div>
 <div class="ttc" id="aRectPosition_8cs_html_a3710d51f7d4efe0dcd0dc570ee11f623"><div class="ttname"><a href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a></div><div class="ttdeci">RectPosition</div><div class="ttdef"><b>Definition:</b> <a href="RectPosition_8cs_source.html#l00001">RectPosition.cs:2</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_aa25890e42cc5503d573edb2b7f75182d"><div class="ttname"><a href="classSkinConfig.html#aa25890e42cc5503d573edb2b7f75182d">SkinConfig.decos</a></div><div class="ttdeci">List&lt; SkinDeco &gt; decos</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00009">SkinConfig.cs:9</a></div></div>
+<div class="ttc" id="aclassSkinDeco_html"><div class="ttname"><a href="classSkinDeco.html">SkinDeco</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00006">SkinDeco.cs:7</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a08531cdd93e83f8a4d989c317b723687"><div class="ttname"><a href="classWidget_1_1Config.html#a08531cdd93e83f8a4d989c317b723687">Widget.Config.anchor</a></div><div class="ttdeci">RectPosition anchor</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00041">Widget.cs:41</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a51618db074e0b8b7c8f8120f09a66224"><div class="ttname"><a href="classWidget_1_1Config.html#a51618db074e0b8b7c8f8120f09a66224">Widget.Config.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00053">Widget.cs:53</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a5f86598db1c8b868e34b5d88688841b0"><div class="ttname"><a href="classWidget_1_1Config.html#a5f86598db1c8b868e34b5d88688841b0">Widget.Config.extra</a></div><div class="ttdeci">object extra</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00059">Widget.cs:59</a></div></div>
@@ -516,7 +523,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidget_html_ae9ece0be9b4ac277401b430d7f7b9f92"><div class="ttname"><a href="classWidget.html#ae9ece0be9b4ac277401b430d7f7b9f92">Widget.RefreshOrder</a></div><div class="ttdeci">void RefreshOrder()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00272">Widget.cs:272</a></div></div>
 <div class="ttc" id="aclassWidget_html_afabface3017c9537ea076b0fb0fdf9d3"><div class="ttname"><a href="classWidget.html#afabface3017c9537ea076b0fb0fdf9d3">Widget.OnFlip</a></div><div class="ttdeci">virtual void OnFlip()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00478">Widget.cs:478</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00156">_rect</a>, <a class="el" href="Widget_8cs_source.html#l00041">Widget.Config.anchor</a>, <a class="el" href="Widget_8cs_source.html#l00437">ClampToScreen()</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="Widget_8cs_source.html#l00302">CreateExtra()</a>, <a class="el" href="Widget_8cs_source.html#l00154">dragPanel</a>, <a class="el" href="Widget_8cs_source.html#l00059">Widget.Config.extra</a>, <a class="el" href="Widget_8cs_source.html#l00164">flip</a>, <a class="el" href="Widget_8cs_source.html#l00575">InstantiateDeco()</a>, <a class="el" href="Widget_8cs_source.html#l00200">IsStaticPosition</a>, <a class="el" href="Widget_8cs_source.html#l00298">OnActivate()</a>, <a class="el" href="Widget_8cs_source.html#l00462">OnChangePosition()</a>, <a class="el" href="Widget_8cs_source.html#l00478">OnFlip()</a>, <a class="el" href="Widget_8cs_source.html#l00045">Widget.Config.pivot</a>, <a class="el" href="Widget_8cs_source.html#l00272">RefreshOrder()</a>, <a class="el" href="Widget_8cs_source.html#l00368">SetPivot()</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, <a class="el" href="Widget_8cs_source.html#l00043">Widget.Config.userAnchor</a>, <a class="el" href="Widget_8cs_source.html#l00051">Widget.Config.x</a>, and <a class="el" href="Widget_8cs_source.html#l00053">Widget.Config.y</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00156">_rect</a>, <a class="el" href="Widget_8cs_source.html#l00041">Widget.Config.anchor</a>, <a class="el" href="Widget_8cs_source.html#l00437">ClampToScreen()</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="Widget_8cs_source.html#l00302">CreateExtra()</a>, <a class="el" href="SkinConfig_8cs_source.html#l00009">SkinConfig.decos</a>, <a class="el" href="Widget_8cs_source.html#l00154">dragPanel</a>, <a class="el" href="Widget_8cs_source.html#l00059">Widget.Config.extra</a>, <a class="el" href="Widget_8cs_source.html#l00164">flip</a>, <a class="el" href="Widget_8cs_source.html#l00575">InstantiateDeco()</a>, <a class="el" href="Widget_8cs_source.html#l00200">IsStaticPosition</a>, <a class="el" href="Widget_8cs_source.html#l00298">OnActivate()</a>, <a class="el" href="Widget_8cs_source.html#l00462">OnChangePosition()</a>, <a class="el" href="Widget_8cs_source.html#l00478">OnFlip()</a>, <a class="el" href="Widget_8cs_source.html#l00045">Widget.Config.pivot</a>, <a class="el" href="Widget_8cs_source.html#l00272">RefreshOrder()</a>, <a class="el" href="Widget_8cs_source.html#l00368">SetPivot()</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, <a class="el" href="Widget_8cs_source.html#l00043">Widget.Config.userAnchor</a>, <a class="el" href="Widget_8cs_source.html#l00051">Widget.Config.x</a>, and <a class="el" href="Widget_8cs_source.html#l00053">Widget.Config.y</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00185">WidgetManager.ActivateWidget()</a>.</p>
 
@@ -534,7 +541,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.AddDeco </td>
           <td>(</td>
-          <td class="paramtype">SkinDeco&#160;</td>
+          <td class="paramtype"><a class="el" href="classSkinDeco.html">SkinDeco</a>&#160;</td>
           <td class="paramname"><em>deco</em></td><td>)</td>
           <td></td>
         </tr>
@@ -548,11 +555,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00584">584</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  585</span>    {</div>
-<div class="line"><span class="lineno">  586</span>        <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.decos.Add(deco);</div>
+<div class="line"><span class="lineno">  586</span>        <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.<a class="code hl_variable" href="classSkinConfig.html#aa25890e42cc5503d573edb2b7f75182d">decos</a>.Add(deco);</div>
 <div class="line"><span class="lineno">  587</span>        <a class="code hl_function" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a>(deco);</div>
 <div class="line"><span class="lineno">  588</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="Widget_8cs_source.html#l00575">InstantiateDeco()</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="SkinConfig_8cs_source.html#l00009">SkinConfig.decos</a>, <a class="el" href="Widget_8cs_source.html#l00575">InstantiateDeco()</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerSkinDeco_8cs_source.html#l00031">LayerSkinDeco.OnUpdateInput()</a>.</p>
 
@@ -568,9 +575,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Layer Widget.AddLayer </td>
+          <td class="memname"><a class="el" href="classLayer.html">Layer</a> Widget.AddLayer </td>
           <td>(</td>
-          <td class="paramtype">Layer&#160;</td>
+          <td class="paramtype"><a class="el" href="classLayer.html">Layer</a>&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
@@ -594,26 +601,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00492">492</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  493</span>    {</div>
-<div class="line"><span class="lineno">  494</span>        l.OnBeforeAddLayer();</div>
+<div class="line"><span class="lineno">  494</span>        l.<a class="code hl_function" href="classLayer.html#acbd23d8f3601156c30243e3be97eb4b1">OnBeforeAddLayer</a>();</div>
 <div class="line"><span class="lineno">  495</span>        l.gameObject.SetActive(value: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  496</span>        l.transform.SetParent(trans, worldPositionStays: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  497</span>        l.Init();</div>
-<div class="line"><span class="lineno">  498</span>        l.OnAfterAddLayer();</div>
-<div class="line"><span class="lineno">  499</span>        Window window = l.windows[0];</div>
+<div class="line"><span class="lineno">  497</span>        l.<a class="code hl_function" href="classLayer.html#ac7fa06b63b85d358e5057717bf245072">Init</a>();</div>
+<div class="line"><span class="lineno">  498</span>        l.<a class="code hl_function" href="classLayer.html#a87c75ba7e80a20f02fa5e2ea77724a86">OnAfterAddLayer</a>();</div>
+<div class="line"><span class="lineno">  499</span>        <a class="code hl_class" href="classWindow.html">Window</a> window = l.<a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[0];</div>
 <div class="line"><span class="lineno">  500</span>        RectTransform rectTransform = l.Rect();</div>
 <div class="line"><span class="lineno">  501</span>        RectTransform rectTransform2 = window.Rect();</div>
 <div class="line"><span class="lineno">  502</span>        rectTransform.sizeDelta = window.Rect().sizeDelta;</div>
 <div class="line"><span class="lineno">  503</span>        rectTransform.SetPivot(0.5f, 0.5f);</div>
-<div class="line"><span class="lineno">  504</span>        rectTransform.SetAnchor(0.5f, 0.5f, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">  504</span>        rectTransform.<a class="code hl_function" href="classWindow.html#ab04af95392867137b9418fa662eb11c9">SetAnchor</a>(0.5f, 0.5f, 0.5f, 0.5f);</div>
 <div class="line"><span class="lineno">  505</span>        rectTransform2.SetPivot(0.5f, 0.5f);</div>
 <div class="line"><span class="lineno">  506</span>        rectTransform2.SetAnchor(0.5f, 0.5f, 0.5f, 0.5f);</div>
 <div class="line"><span class="lineno">  507</span>        rectTransform2.anchoredPosition = Vector2.zero;</div>
 <div class="line"><span class="lineno">  508</span>        window.setting.allowMove = (window.setting.allowResize = <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  509</span>        window.setting.saveWindow = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  510</span>        window.bgCollider.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  510</span>        window.<a class="code hl_variable" href="classWindow.html#a8d4d264cb2ffca90995f810895547eb0">bgCollider</a>.SetActive(enable: <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  511</span>        <span class="keywordflow">return</span> l;</div>
 <div class="line"><span class="lineno">  512</span>    }</div>
+<div class="ttc" id="aclassLayer_html_a87c75ba7e80a20f02fa5e2ea77724a86"><div class="ttname"><a href="classLayer.html#a87c75ba7e80a20f02fa5e2ea77724a86">Layer.OnAfterAddLayer</a></div><div class="ttdeci">virtual void OnAfterAddLayer()</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00379">Layer.cs:379</a></div></div>
+<div class="ttc" id="aclassLayer_html_ac7fa06b63b85d358e5057717bf245072"><div class="ttname"><a href="classLayer.html#ac7fa06b63b85d358e5057717bf245072">Layer.Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00163">Layer.cs:163</a></div></div>
+<div class="ttc" id="aclassLayer_html_acbd23d8f3601156c30243e3be97eb4b1"><div class="ttname"><a href="classLayer.html#acbd23d8f3601156c30243e3be97eb4b1">Layer.OnBeforeAddLayer</a></div><div class="ttdeci">virtual void OnBeforeAddLayer()</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00375">Layer.cs:375</a></div></div>
+<div class="ttc" id="aclassLayer_html_adcabbb5f9207fa402487950097b491cd"><div class="ttname"><a href="classLayer.html#adcabbb5f9207fa402487950097b491cd">Layer.windows</a></div><div class="ttdeci">List&lt; Window &gt; windows</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00116">Layer.cs:116</a></div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00012">Window.cs:13</a></div></div>
+<div class="ttc" id="aclassWindow_html_a8d4d264cb2ffca90995f810895547eb0"><div class="ttname"><a href="classWindow.html#a8d4d264cb2ffca90995f810895547eb0">Window.bgCollider</a></div><div class="ttdeci">UICollider bgCollider</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00658">Window.cs:658</a></div></div>
+<div class="ttc" id="aclassWindow_html_ab04af95392867137b9418fa662eb11c9"><div class="ttname"><a href="classWindow.html#ab04af95392867137b9418fa662eb11c9">Window.SetAnchor</a></div><div class="ttdeci">void SetAnchor()</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l01582">Window.cs:1582</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00658">Window.bgCollider</a>, <a class="el" href="Layer_8cs_source.html#l00163">Layer.Init()</a>, <a class="el" href="Layer_8cs_source.html#l00379">Layer.OnAfterAddLayer()</a>, <a class="el" href="Layer_8cs_source.html#l00375">Layer.OnBeforeAddLayer()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01582">Window.SetAnchor()</a>, and <a class="el" href="Layer_8cs_source.html#l00116">Layer.windows</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="WidgetEquip_8cs_source.html#l00039">WidgetEquip.OnActivate()</a>.</p>
 
 </div>
@@ -643,21 +659,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00556">556</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  557</span>    {</div>
-<div class="line"><span class="lineno">  558</span>        SkinRoot component = GetComponent&lt;SkinRoot&gt;();</div>
+<div class="line"><span class="lineno">  558</span>        <a class="code hl_class" href="classSkinRoot.html">SkinRoot</a> component = GetComponent&lt;SkinRoot&gt;();</div>
 <div class="line"><span class="lineno">  559</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)component)</div>
 <div class="line"><span class="lineno">  560</span>        {</div>
 <div class="line"><span class="lineno">  561</span>            component.Reset();</div>
-<div class="line"><span class="lineno">  562</span>            IUISkin[] componentsInChildren = GetComponentsInChildren&lt;IUISkin&gt;(includeInactive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  562</span>            <a class="code hl_interface" href="interfaceIUISkin.html">IUISkin</a>[] componentsInChildren = GetComponentsInChildren&lt;IUISkin&gt;(includeInactive: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  563</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
 <div class="line"><span class="lineno">  564</span>            {</div>
-<div class="line"><span class="lineno">  565</span>                componentsInChildren[i].ApplySkin();</div>
+<div class="line"><span class="lineno">  565</span>                componentsInChildren[i].<a class="code hl_function" href="interfaceIUISkin.html#a1b1b48cfe0e22d8ff38483e165208242">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  566</span>            }</div>
 <div class="line"><span class="lineno">  567</span>            <a class="code hl_function" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a>();</div>
 <div class="line"><span class="lineno">  568</span>        }</div>
 <div class="line"><span class="lineno">  569</span>    }</div>
+<div class="ttc" id="aclassSkinRoot_html"><div class="ttname"><a href="classSkinRoot.html">SkinRoot</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinRoot_8cs_source.html#l00005">SkinRoot.cs:6</a></div></div>
 <div class="ttc" id="aclassWidget_html_ace4cbf38e8aadee76c0a6da309ce80d7"><div class="ttname"><a href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">Widget.OnApplySkin</a></div><div class="ttdeci">virtual void OnApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00571">Widget.cs:571</a></div></div>
+<div class="ttc" id="ainterfaceIUISkin_html"><div class="ttname"><a href="interfaceIUISkin.html">IUISkin</a></div><div class="ttdef"><b>Definition:</b> <a href="IUISkin_8cs_source.html#l00001">IUISkin.cs:2</a></div></div>
+<div class="ttc" id="ainterfaceIUISkin_html_a1b1b48cfe0e22d8ff38483e165208242"><div class="ttname"><a href="interfaceIUISkin.html#a1b1b48cfe0e22d8ff38483e165208242">IUISkin.ApplySkin</a></div><div class="ttdeci">void ApplySkin()</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00571">OnApplySkin()</a>.</p>
+<p class="reference">References <a class="el" href="interfaceIUISkin.html#a1b1b48cfe0e22d8ff38483e165208242">IUISkin.ApplySkin()</a>, <a class="el" href="Widget_8cs_source.html#l00571">OnApplySkin()</a>, and <a class="el" href="SkinRoot_8cs_source.html#l00076">SkinRoot.Reset()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">WidgetCurrentTool.OnActivate()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00133">BaseWidgetNotice.OnSetContextMenu()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00190">WidgetInspector.OnSetContextMenu()</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00121">WidgetMenuPanel.OnSetContextMenu()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00171">WidgetRoster.OnSetContextMenu()</a>, <a class="el" href="WidgetSideMenu_8cs_source.html#l00035">WidgetSideMenu.OnSetContextMenu()</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00105">WidgetSticky.OnSetContextMenu()</a>, <a class="el" href="Widget_8cs_source.html#l00608">SetBaseContextMenu()</a>, <a class="el" href="Widget_8cs_source.html#l00709">SetGridContextMenu()</a>, <a class="el" href="Widget_8cs_source.html#l00537">SetSkin()</a>, and <a class="el" href="Widget_8cs_source.html#l00550">TestSkin()</a>.</p>
 
@@ -956,7 +975,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SkinSet Widget.GetSkin </td>
+          <td class="memname"><a class="el" href="classSkinSet.html">SkinSet</a> Widget.GetSkin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -969,12 +988,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implements <a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">ISkinRoot</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00527">527</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  528</span>    {</div>
-<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">return</span> SkinManager.Instance.skinSets[<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.id];</div>
+<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classSkinManager.html">SkinManager</a>.<a class="code hl_property" href="classSkinManager.html#a54f9dd1918044e2558a1ce9635aa421c">Instance</a>.<a class="code hl_variable" href="classSkinManager.html#a4dc1e680117062491ca5bb320b5935fe">skinSets</a>[<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>];</div>
 <div class="line"><span class="lineno">  530</span>    }</div>
+<div class="ttc" id="aclassSkinConfig_html_aeabda63759124619e50a87053dd976db"><div class="ttname"><a href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">SkinConfig.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00014">SkinConfig.cs:14</a></div></div>
+<div class="ttc" id="aclassSkinManager_html"><div class="ttname"><a href="classSkinManager.html">SkinManager</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00006">SkinManager.cs:7</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_a4dc1e680117062491ca5bb320b5935fe"><div class="ttname"><a href="classSkinManager.html#a4dc1e680117062491ca5bb320b5935fe">SkinManager.skinSets</a></div><div class="ttdeci">List&lt; SkinSet &gt; skinSets</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00047">SkinManager.cs:47</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_a54f9dd1918044e2558a1ce9635aa421c"><div class="ttname"><a href="classSkinManager.html#a54f9dd1918044e2558a1ce9635aa421c">SkinManager.Instance</a></div><div class="ttdeci">static SkinManager Instance</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00076">SkinManager.cs:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00180">config</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="SkinConfig_8cs_source.html#l00014">SkinConfig.id</a>, <a class="el" href="SkinManager_8cs_source.html#l00076">SkinManager.Instance</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, and <a class="el" href="SkinManager_8cs_source.html#l00047">SkinManager.skinSets</a>.</p>
 
 </div>
 </div>
@@ -988,7 +1013,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SkinConfig Widget.GetSkinConfig </td>
+          <td class="memname"><a class="el" href="classSkinConfig.html">SkinConfig</a> Widget.GetSkinConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1000,6 +1025,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">ISkinRoot</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00532">532</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  533</span>    {</div>
@@ -1022,7 +1049,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.InstantiateDeco </td>
           <td>(</td>
-          <td class="paramtype">SkinDeco&#160;</td>
+          <td class="paramtype"><a class="el" href="classSkinDeco.html">SkinDeco</a>&#160;</td>
           <td class="paramname"><em>deco</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1036,16 +1063,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00575">575</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  576</span>    {</div>
-<div class="line"><span class="lineno">  577</span>        SkinDecoActor skinDecoActor = (deco.actor = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;SkinDecoActor&gt;(<span class="stringliteral">&quot;UI/Widget/SkinDecoActor&quot;</span>, base.transform));</div>
+<div class="line"><span class="lineno">  577</span>        <a class="code hl_class" href="classSkinDecoActor.html">SkinDecoActor</a> skinDecoActor = (deco.actor = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classSkinDecoActor.html">SkinDecoActor</a>&gt;(<span class="stringliteral">&quot;UI/Widget/SkinDecoActor&quot;</span>, base.transform));</div>
 <div class="line"><span class="lineno">  578</span>        skinDecoActor.owner = deco;</div>
-<div class="line"><span class="lineno">  579</span>        skinDecoActor.image.sprite = <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Deco/deco&quot;</span> + deco.id);</div>
-<div class="line"><span class="lineno">  580</span>        skinDecoActor.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(deco.x, deco.y);</div>
-<div class="line"><span class="lineno">  581</span>        skinDecoActor.Refresh();</div>
+<div class="line"><span class="lineno">  579</span>        skinDecoActor.image.sprite = <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Deco/deco&quot;</span> + deco.<a class="code hl_property" href="classSkinDeco.html#a1b0533890bc487f9005d3d3821e1615c">id</a>);</div>
+<div class="line"><span class="lineno">  580</span>        skinDecoActor.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(deco.<a class="code hl_property" href="classSkinDeco.html#a1f4b0f3682698541033025d2cd645544">x</a>, deco.<a class="code hl_property" href="classSkinDeco.html#a999f5e0e020ef8a8b4708bf51d16a5d6">y</a>);</div>
+<div class="line"><span class="lineno">  581</span>        skinDecoActor.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">  582</span>    }</div>
 <div class="ttc" id="aclassResourceCache_html"><div class="ttname"><a href="classResourceCache.html">ResourceCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceCache_8cs_source.html#l00019">ResourceCache.cs:20</a></div></div>
+<div class="ttc" id="aclassSkinDecoActor_html"><div class="ttname"><a href="classSkinDecoActor.html">SkinDecoActor</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinDecoActor_8cs_source.html#l00004">SkinDecoActor.cs:5</a></div></div>
+<div class="ttc" id="aclassSkinDecoActor_html_a44e92b17ef80a85b173769d610007920"><div class="ttname"><a href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">SkinDecoActor.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="SkinDecoActor_8cs_source.html#l00012">SkinDecoActor.cs:12</a></div></div>
+<div class="ttc" id="aclassSkinDeco_html_a1b0533890bc487f9005d3d3821e1615c"><div class="ttname"><a href="classSkinDeco.html#a1b0533890bc487f9005d3d3821e1615c">SkinDeco.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00015">SkinDeco.cs:16</a></div></div>
+<div class="ttc" id="aclassSkinDeco_html_a1f4b0f3682698541033025d2cd645544"><div class="ttname"><a href="classSkinDeco.html#a1f4b0f3682698541033025d2cd645544">SkinDeco.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00027">SkinDeco.cs:28</a></div></div>
+<div class="ttc" id="aclassSkinDeco_html_a999f5e0e020ef8a8b4708bf51d16a5d6"><div class="ttname"><a href="classSkinDeco.html#a999f5e0e020ef8a8b4708bf51d16a5d6">SkinDeco.y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00039">SkinDeco.cs:40</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="SkinDeco_8cs_source.html#l00016">SkinDeco.id</a>, <a class="el" href="SkinDecoActor_8cs_source.html#l00012">SkinDecoActor.Refresh()</a>, <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>, <a class="el" href="SkinDeco_8cs_source.html#l00028">SkinDeco.x</a>, and <a class="el" href="SkinDeco_8cs_source.html#l00040">SkinDeco.y</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00225">Activate()</a>, and <a class="el" href="Widget_8cs_source.html#l00584">AddDeco()</a>.</p>
 
 </div>
@@ -1288,16 +1322,17 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00462">462</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  463</span>    {</div>
 <div class="line"><span class="lineno">  464</span>        <span class="keywordtype">bool</span> flag = this.Rect().position.x &gt; (float)Screen.width * 0.5f;</div>
-<div class="line"><span class="lineno">  465</span>        if (<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> != flag)</div>
+<div class="line"><span class="lineno">  465</span>        <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> != flag)</div>
 <div class="line"><span class="lineno">  466</span>        {</div>
 <div class="line"><span class="lineno">  467</span>            <a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> = flag;</div>
 <div class="line"><span class="lineno">  468</span>            <a class="code hl_function" href="classWidget.html#afabface3017c9537ea076b0fb0fdf9d3">OnFlip</a>();</div>
 <div class="line"><span class="lineno">  469</span>        }</div>
 <div class="line"><span class="lineno">  470</span>        <a class="code hl_function" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a>();</div>
 <div class="line"><span class="lineno">  471</span>    }</div>
+<div class="ttc" id="aUIBook_8cs_html_a7a84b28e36fc5c8b0594d31d7e8d7808"><div class="ttname"><a href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a></div><div class="ttdeci">if(item3.idFile==idFirstFile &amp;&amp;item3.id==idFirstTopic)</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00620">UIBook.cs:620</a></div></div>
 <div class="ttc" id="aclassWidget_html_ae5aad627d1b7ca8ad5f526acbe99eaf1"><div class="ttname"><a href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">Widget.RefreshTipPivotPosition</a></div><div class="ttdeci">void RefreshTipPivotPosition()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00514">Widget.cs:514</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00164">flip</a>, <a class="el" href="Widget_8cs_source.html#l00478">OnFlip()</a>, and <a class="el" href="Widget_8cs_source.html#l00514">RefreshTipPivotPosition()</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00164">flip</a>, <a class="el" href="UIBook_8cs_source.html#l00620">if()</a>, <a class="el" href="Widget_8cs_source.html#l00478">OnFlip()</a>, and <a class="el" href="Widget_8cs_source.html#l00514">RefreshTipPivotPosition()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00225">Activate()</a>, <a class="el" href="Widget_8cs_source.html#l00330">OnManagerActivate()</a>, and <a class="el" href="WidgetMascot_8cs_source.html#l00058">WidgetMascot.Update()</a>.</p>
 
@@ -1445,23 +1480,28 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  340</span>            rectTransform.anchoredPosition = rectTransform2.anchoredPosition;</div>
 <div class="line"><span class="lineno">  341</span>            rectTransform.sizeDelta = rectTransform2.sizeDelta;</div>
 <div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>        UIDragPanel componentInChildren = <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a>.GetComponentInChildren&lt;UIDragPanel&gt;();</div>
+<div class="line"><span class="lineno">  343</span>        <a class="code hl_class" href="classUIDragPanel.html">UIDragPanel</a> componentInChildren = <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a>.GetComponentInChildren&lt;<a class="code hl_class" href="classUIDragPanel.html">UIDragPanel</a>&gt;();</div>
 <div class="line"><span class="lineno">  344</span>        componentInChildren.autoAnchor = config.userAnchor == <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto;</div>
 <div class="line"><span class="lineno">  345</span>        componentInChildren.onDrag = <a class="code hl_function" href="classWidget.html#a5e1fe26459166e4a8423656a7e5ce48b">OnChangePosition</a>;</div>
-<div class="line"><span class="lineno">  346</span>        componentInChildren.container = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.container;</div>
-<div class="line"><span class="lineno">  347</span>        componentInChildren.target = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.target;</div>
-<div class="line"><span class="lineno">  348</span>        componentInChildren.bound = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.bound;</div>
+<div class="line"><span class="lineno">  346</span>        componentInChildren.container = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.<a class="code hl_variable" href="classUIDragPanel.html#adeca8ea504abc6ecc6373f158a773dac">container</a>;</div>
+<div class="line"><span class="lineno">  347</span>        componentInChildren.target = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.<a class="code hl_variable" href="classUIDragPanel.html#ac60e8408156d7ec16d9f6d944e6ed00a">target</a>;</div>
+<div class="line"><span class="lineno">  348</span>        componentInChildren.bound = <a class="code hl_variable" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a>.<a class="code hl_variable" href="classUIDragPanel.html#a5d505ef39436354da4432e747de27f64">bound</a>;</div>
 <div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classWidgetSideScreen.html">WidgetSideScreen</a>)</div>
 <div class="line"><span class="lineno">  350</span>        {</div>
 <div class="line"><span class="lineno">  351</span>            componentInChildren.enable = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  352</span>        }</div>
-<div class="line"><span class="lineno">  353</span>        <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a>.GetComponentInChildren&lt;UIText&gt;().SetText((<span class="stringliteral">&quot;Widget&quot;</span> + <a class="code hl_property" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a>).lang());</div>
+<div class="line"><span class="lineno">  353</span>        <a class="code hl_variable" href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">goCover</a>.GetComponentInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;().SetText((<span class="stringliteral">&quot;Widget&quot;</span> + <a class="code hl_property" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a>).lang());</div>
 <div class="line"><span class="lineno">  354</span>    }</div>
+<div class="ttc" id="aclassUIDragPanel_html"><div class="ttname"><a href="classUIDragPanel.html">UIDragPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="UIDragPanel_8cs_source.html#l00005">UIDragPanel.cs:6</a></div></div>
+<div class="ttc" id="aclassUIDragPanel_html_a5d505ef39436354da4432e747de27f64"><div class="ttname"><a href="classUIDragPanel.html#a5d505ef39436354da4432e747de27f64">UIDragPanel.bound</a></div><div class="ttdeci">RectTransform bound</div><div class="ttdef"><b>Definition:</b> <a href="UIDragPanel_8cs_source.html#l00013">UIDragPanel.cs:13</a></div></div>
+<div class="ttc" id="aclassUIDragPanel_html_ac60e8408156d7ec16d9f6d944e6ed00a"><div class="ttname"><a href="classUIDragPanel.html#ac60e8408156d7ec16d9f6d944e6ed00a">UIDragPanel.target</a></div><div class="ttdeci">RectTransform target</div><div class="ttdef"><b>Definition:</b> <a href="UIDragPanel_8cs_source.html#l00011">UIDragPanel.cs:11</a></div></div>
+<div class="ttc" id="aclassUIDragPanel_html_adeca8ea504abc6ecc6373f158a773dac"><div class="ttname"><a href="classUIDragPanel.html#adeca8ea504abc6ecc6373f158a773dac">UIDragPanel.container</a></div><div class="ttdeci">RectTransform container</div><div class="ttdef"><b>Definition:</b> <a href="UIDragPanel_8cs_source.html#l00015">UIDragPanel.cs:15</a></div></div>
+<div class="ttc" id="aclassUIText_html"><div class="ttname"><a href="classUIText.html">UIText</a></div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00005">UIText.cs:6</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_html"><div class="ttname"><a href="classWidgetSideScreen.html">WidgetSideScreen</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00004">WidgetSideScreen.cs:5</a></div></div>
 <div class="ttc" id="aclassWidget_html_a06f29238fc7dc03af09de72da73fd615"><div class="ttname"><a href="classWidget.html#a06f29238fc7dc03af09de72da73fd615">Widget.goCover</a></div><div class="ttdeci">GameObject goCover</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00166">Widget.cs:166</a></div></div>
 <div class="ttc" id="aclassWidget_html_a1e513e72af2c666eaa400a0b42bffc92"><div class="ttname"><a href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">Widget.ID</a></div><div class="ttdeci">string ID</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00168">Widget.cs:169</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00154">dragPanel</a>, <a class="el" href="Widget_8cs_source.html#l00166">goCover</a>, <a class="el" href="Widget_8cs_source.html#l00169">ID</a>, and <a class="el" href="Widget_8cs_source.html#l00462">OnChangePosition()</a>.</p>
+<p class="reference">References <a class="el" href="UIDragPanel_8cs_source.html#l00013">UIDragPanel.bound</a>, <a class="el" href="UIDragPanel_8cs_source.html#l00015">UIDragPanel.container</a>, <a class="el" href="Widget_8cs_source.html#l00154">dragPanel</a>, <a class="el" href="Widget_8cs_source.html#l00166">goCover</a>, <a class="el" href="Widget_8cs_source.html#l00169">ID</a>, <a class="el" href="Widget_8cs_source.html#l00462">OnChangePosition()</a>, <a class="el" href="UIDragPanel_8cs_source.html#l00011">UIDragPanel.target</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetManager_8cs_source.html#l00185">WidgetManager.ActivateWidget()</a>.</p>
 
@@ -1513,7 +1553,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">virtual void Widget.OnSetContextMenu </td>
           <td>(</td>
-          <td class="paramtype">UIContextMenu&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIContextMenu.html">UIContextMenu</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1722,7 +1762,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.RemoveDeco </td>
           <td>(</td>
-          <td class="paramtype">SkinDeco&#160;</td>
+          <td class="paramtype"><a class="el" href="classSkinDeco.html">SkinDeco</a>&#160;</td>
           <td class="paramname"><em>deco</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1736,11 +1776,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00590">590</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  591</span>    {</div>
-<div class="line"><span class="lineno">  592</span>        <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.decos.Remove(deco);</div>
-<div class="line"><span class="lineno">  593</span>        UnityEngine.Object.DestroyImmediate(deco.actor.gameObject);</div>
+<div class="line"><span class="lineno">  592</span>        <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.<a class="code hl_variable" href="classSkinConfig.html#aa25890e42cc5503d573edb2b7f75182d">decos</a>.Remove(deco);</div>
+<div class="line"><span class="lineno">  593</span>        UnityEngine.Object.DestroyImmediate(deco.<a class="code hl_variable" href="classSkinDeco.html#a9525f1986ac2fd668129c7025b3e3a84">actor</a>.gameObject);</div>
 <div class="line"><span class="lineno">  594</span>    }</div>
+<div class="ttc" id="aclassSkinDeco_html_a9525f1986ac2fd668129c7025b3e3a84"><div class="ttname"><a href="classSkinDeco.html#a9525f1986ac2fd668129c7025b3e3a84">SkinDeco.actor</a></div><div class="ttdeci">SkinDecoActor actor</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00008">SkinDeco.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00180">config</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
+<p class="reference">References <a class="el" href="SkinDeco_8cs_source.html#l00008">SkinDeco.actor</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="SkinConfig_8cs_source.html#l00009">SkinConfig.decos</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerSkinDeco_8cs_source.html#l00031">LayerSkinDeco.OnUpdateInput()</a>.</p>
 
@@ -1793,7 +1834,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.SetBaseContextMenu </td>
           <td>(</td>
-          <td class="paramtype">UIContextMenu&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIContextMenu.html">UIContextMenu</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1807,23 +1848,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00608">608</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  609</span>    {</div>
-<div class="line"><span class="lineno">  610</span>        SkinConfig cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
+<div class="line"><span class="lineno">  610</span>        <a class="code hl_class" href="classSkinConfig.html">SkinConfig</a> cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
 <div class="line"><span class="lineno">  611</span>        <span class="keywordflow">if</span> (!(<span class="keyword">this</span> is <a class="code hl_class" href="classWidgetSideScreen.html">WidgetSideScreen</a>))</div>
 <div class="line"><span class="lineno">  612</span>        {</div>
-<div class="line"><span class="lineno">  613</span>            UIContextMenu uIContextMenu = m.AddChild(<span class="stringliteral">&quot;anchor&quot;</span>);</div>
+<div class="line"><span class="lineno">  613</span>            <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;anchor&quot;</span>);</div>
 <div class="line"><span class="lineno">  614</span>            <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p2 <span class="keywordflow">in</span> <a class="code hl_class" href="classUtil.html">Util</a>.EnumToList&lt;<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>&gt;())</div>
 <div class="line"><span class="lineno">  615</span>            {</div>
-<div class="line"><span class="lineno">  616</span>                uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
+<div class="line"><span class="lineno">  616</span>                uIContextMenu.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#ad104ae3569d4436e106fdb0c61e1d14b">userAnchor</a> == p2) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p2.ToString().lang(), delegate</div>
 <div class="line"><span class="lineno">  617</span>                {</div>
 <div class="line"><span class="lineno">  618</span>                    SetAnchor(p2);</div>
 <div class="line"><span class="lineno">  619</span>                    SE.ClickGeneral();</div>
 <div class="line"><span class="lineno">  620</span>                    m.Hide();</div>
 <div class="line"><span class="lineno">  621</span>                });</div>
 <div class="line"><span class="lineno">  622</span>            }</div>
-<div class="line"><span class="lineno">  623</span>            uIContextMenu = m.AddChild(<span class="stringliteral">&quot;pivot&quot;</span>);</div>
+<div class="line"><span class="lineno">  623</span>            uIContextMenu = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;pivot&quot;</span>);</div>
 <div class="line"><span class="lineno">  624</span>            <span class="keywordflow">foreach</span> (<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a> p <span class="keywordflow">in</span> <a class="code hl_class" href="classUtil.html">Util</a>.EnumToList&lt;<a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>&gt;())</div>
 <div class="line"><span class="lineno">  625</span>            {</div>
-<div class="line"><span class="lineno">  626</span>                uIContextMenu.AddButton(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
+<div class="line"><span class="lineno">  626</span>                uIContextMenu.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(((<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#afd75a55b3c46aba7f5826049f79216cb">pivot</a> == p) ? <span class="stringliteral">&quot;★ &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + p.ToString().lang(), delegate</div>
 <div class="line"><span class="lineno">  627</span>                {</div>
 <div class="line"><span class="lineno">  628</span>                    SetPivot(p);</div>
 <div class="line"><span class="lineno">  629</span>                    SE.ClickGeneral();</div>
@@ -1831,80 +1872,93 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  631</span>                });</div>
 <div class="line"><span class="lineno">  632</span>            }</div>
 <div class="line"><span class="lineno">  633</span>        }</div>
-<div class="line"><span class="lineno">  634</span>        UIContextMenuItem sliderB = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  635</span>        Action Refresh = delegate</div>
+<div class="line"><span class="lineno">  634</span>        <a class="code hl_class" href="classUIContextMenuItem.html">UIContextMenuItem</a> sliderB = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  635</span>        Action <a class="code hl_function" href="UIBook_8cs.html#a04d075dfee36a0163dc203b3994501a1">Refresh</a> = delegate</div>
 <div class="line"><span class="lineno">  636</span>        {</div>
-<div class="line"><span class="lineno">  637</span>            <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs.Count - 1;</div>
+<div class="line"><span class="lineno">  637</span>            <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>].bgs.Count - 1;</div>
 <div class="line"><span class="lineno">  638</span>            sliderB.slider.maxValue = num;</div>
-<div class="line"><span class="lineno">  639</span>            sliderB.slider.value = cfg.bg;</div>
-<div class="line"><span class="lineno">  640</span>            sliderB.textSlider.text = cfg.bg + <span class="stringliteral">&quot;/&quot;</span> + (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs.Count - 1);</div>
+<div class="line"><span class="lineno">  639</span>            sliderB.slider.value = cfg.<a class="code hl_property" href="classSkinConfig.html#a65d26b4e33804f397715490256278a21">bg</a>;</div>
+<div class="line"><span class="lineno">  640</span>            sliderB.textSlider.text = cfg.bg + <span class="stringliteral">&quot;/&quot;</span> + (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>].bgs.Count - 1);</div>
 <div class="line"><span class="lineno">  641</span>        };</div>
 <div class="line"><span class="lineno">  642</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidget.html#ae58236bb2c28725755f72903c44a1f0e">ShowStyleMenu</a>)</div>
 <div class="line"><span class="lineno">  643</span>        {</div>
-<div class="line"><span class="lineno">  644</span>            UIContextMenu uIContextMenu2 = m.AddOrGetChild(<span class="stringliteral">&quot;style&quot;</span>);</div>
-<div class="line"><span class="lineno">  645</span>            sliderB = uIContextMenu2.AddSlider(<span class="stringliteral">&quot;changeBG&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n + <span class="stringliteral">&quot;/&quot;</span> + (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs.Count - 1), cfg.bg, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  644</span>            <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu2 = m.<a class="code hl_function" href="classUIContextMenu.html#a765dd318f1cdda12fa5b3cd8cede3764">AddOrGetChild</a>(<span class="stringliteral">&quot;style&quot;</span>);</div>
+<div class="line"><span class="lineno">  645</span>            sliderB = uIContextMenu2.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;changeBG&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n + <span class="stringliteral">&quot;/&quot;</span> + (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>].bgs.Count - 1), cfg.<a class="code hl_property" href="classSkinConfig.html#a65d26b4e33804f397715490256278a21">bg</a>, delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">  646</span>            {</div>
-<div class="line"><span class="lineno">  647</span>                <a class="code hl_function" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a>(cfg.id, (<span class="keywordtype">int</span>)a);</div>
-<div class="line"><span class="lineno">  648</span>                Refresh();</div>
-<div class="line"><span class="lineno">  649</span>            }, 0f, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs.Count - 1, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  650</span>            uIContextMenu2.AddSlider(<span class="stringliteral">&quot;bgSize&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, cfg.bgSize, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  647</span>                <a class="code hl_function" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a>(cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>, (<span class="keywordtype">int</span>)a);</div>
+<div class="line"><span class="lineno">  648</span>                <a class="code hl_function" href="UIBook_8cs.html#a04d075dfee36a0163dc203b3994501a1">Refresh</a>();</div>
+<div class="line"><span class="lineno">  649</span>            }, 0f, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>].bgs.Count - 1, isInt: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  650</span>            uIContextMenu2.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;bgSize&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, cfg.<a class="code hl_property" href="classSkinConfig.html#aae97ff5af836671f6a8cdbc8cc30054e">bgSize</a>, delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">  651</span>            {</div>
 <div class="line"><span class="lineno">  652</span>                cfg.bgSize = (int)a;</div>
 <div class="line"><span class="lineno">  653</span>                <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  654</span>            }, -50f, 50f, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  655</span>            uIContextMenu2.AddButton(<span class="stringliteral">&quot;colorBG&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  655</span>            uIContextMenu2.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;colorBG&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">  656</span>            {</div>
-<div class="line"><span class="lineno">  657</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs[cfg.bg].redirect != 0)</div>
+<div class="line"><span class="lineno">  657</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>].bgs[cfg.<a class="code hl_property" href="classSkinConfig.html#a65d26b4e33804f397715490256278a21">bg</a>].redirect != 0)</div>
 <div class="line"><span class="lineno">  658</span>                {</div>
 <div class="line"><span class="lineno">  659</span>                    SE.Beep();</div>
 <div class="line"><span class="lineno">  660</span>                }</div>
 <div class="line"><span class="lineno">  661</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  662</span>                {</div>
-<div class="line"><span class="lineno">  663</span>                    <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(cfg.bgColor, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.id].bgs[cfg.bg].color, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">  663</span>                    <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(cfg.<a class="code hl_property" href="classSkinConfig.html#a641a0a225c5dd7b9070c8857cc4315f7">bgColor</a>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.skins.skinSets[cfg.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a>].bgs[cfg.<a class="code hl_property" href="classSkinConfig.html#a65d26b4e33804f397715490256278a21">bg</a>].color, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
 <div class="line"><span class="lineno">  664</span>                    {</div>
 <div class="line"><span class="lineno">  665</span>                        cfg.bgColor = _c;</div>
 <div class="line"><span class="lineno">  666</span>                        <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  667</span>                    });</div>
 <div class="line"><span class="lineno">  668</span>                }</div>
 <div class="line"><span class="lineno">  669</span>            });</div>
-<div class="line"><span class="lineno">  670</span>            uIContextMenu2.AddButton(<span class="stringliteral">&quot;editDeco&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  670</span>            uIContextMenu2.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;editDeco&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">  671</span>            {</div>
 <div class="line"><span class="lineno">  672</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerSkinDeco.html">LayerSkinDeco</a>&gt;().SetWidget(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  673</span>            });</div>
 <div class="line"><span class="lineno">  674</span>        }</div>
 <div class="line"><span class="lineno">  675</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidget.html#ab9eebb37a542c9a24238b3ab73ab32dc">AllowRightClickToClose</a>)</div>
 <div class="line"><span class="lineno">  676</span>        {</div>
-<div class="line"><span class="lineno">  677</span>            m.AddToggle(<span class="stringliteral">&quot;RC_widget&quot;</span>, <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a2928df5428315792929d02d2b3c1eccf">RC</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  677</span>            m.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;RC_widget&quot;</span>, <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a2928df5428315792929d02d2b3c1eccf">RC</a>, delegate(<span class="keywordtype">bool</span> a)</div>
 <div class="line"><span class="lineno">  678</span>            {</div>
 <div class="line"><span class="lineno">  679</span>                config.RC = a;</div>
 <div class="line"><span class="lineno">  680</span>            });</div>
 <div class="line"><span class="lineno">  681</span>        }</div>
-<div class="line"><span class="lineno">  682</span>        m.AddButton(() =&gt; (config.locked ? <span class="stringliteral">&quot;unlockWidget&quot;</span> : <span class="stringliteral">&quot;lockWidget&quot;</span>).lang(), delegate</div>
+<div class="line"><span class="lineno">  682</span>        m.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(() =&gt; (config.locked ? <span class="stringliteral">&quot;unlockWidget&quot;</span> : <span class="stringliteral">&quot;lockWidget&quot;</span>).lang(), delegate</div>
 <div class="line"><span class="lineno">  683</span>        {</div>
 <div class="line"><span class="lineno">  684</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.ToggleLock(<a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>);</div>
 <div class="line"><span class="lineno">  685</span>            SE.ClickGeneral();</div>
-<div class="line"><span class="lineno">  686</span>            m.Hide();</div>
-<div class="line"><span class="lineno">  687</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;()?.Refresh();</div>
+<div class="line"><span class="lineno">  686</span>            m.<a class="code hl_function" href="classUIContextMenu.html#ab93ef9591bfe1425601a9aaab7c94132">Hide</a>();</div>
+<div class="line"><span class="lineno">  687</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;()?.<a class="code hl_function" href="UIBook_8cs.html#a04d075dfee36a0163dc203b3994501a1">Refresh</a>();</div>
 <div class="line"><span class="lineno">  688</span>        });</div>
 <div class="line"><span class="lineno">  689</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a>)</div>
 <div class="line"><span class="lineno">  690</span>        {</div>
 <div class="line"><span class="lineno">  691</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  692</span>        }</div>
-<div class="line"><span class="lineno">  693</span>        m.AddButton(<span class="stringliteral">&quot;closeWidget&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  693</span>        m.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;closeWidget&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">  694</span>        {</div>
 <div class="line"><span class="lineno">  695</span>            <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classWidgetQuestTracker.html">WidgetQuestTracker</a>)</div>
 <div class="line"><span class="lineno">  696</span>            {</div>
 <div class="line"><span class="lineno">  697</span>                EMono.player.questTracker = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  698</span>            }</div>
 <div class="line"><span class="lineno">  699</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.widgets.DeactivateWidget(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  700</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;()?.Refresh();</div>
+<div class="line"><span class="lineno">  700</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerWidget.html">LayerWidget</a>&gt;()?.<a class="code hl_function" href="UIBook_8cs.html#a04d075dfee36a0163dc203b3994501a1">Refresh</a>();</div>
 <div class="line"><span class="lineno">  701</span>        });</div>
 <div class="line"><span class="lineno">  702</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00001">PickerState.cs:2</a></div></div>
+<div class="ttc" id="aUIBook_8cs_html_a04d075dfee36a0163dc203b3994501a1"><div class="ttname"><a href="UIBook_8cs.html#a04d075dfee36a0163dc203b3994501a1">Refresh</a></div><div class="ttdeci">list. Refresh()</div></div>
 <div class="ttc" id="aclassLayerColorPicker_html"><div class="ttname"><a href="classLayerColorPicker.html">LayerColorPicker</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerColorPicker_8cs_source.html#l00005">LayerColorPicker.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerSkinDeco_html"><div class="ttname"><a href="classLayerSkinDeco.html">LayerSkinDeco</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerSkinDeco_8cs_source.html#l00005">LayerSkinDeco.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerWidget_html"><div class="ttname"><a href="classLayerWidget.html">LayerWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerWidget_8cs_source.html#l00003">LayerWidget.cs:4</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html"><div class="ttname"><a href="classSkinConfig.html">SkinConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00006">SkinConfig.cs:7</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_a641a0a225c5dd7b9070c8857cc4315f7"><div class="ttname"><a href="classSkinConfig.html#a641a0a225c5dd7b9070c8857cc4315f7">SkinConfig.bgColor</a></div><div class="ttdeci">Color bgColor</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00066">SkinConfig.cs:67</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_a65d26b4e33804f397715490256278a21"><div class="ttname"><a href="classSkinConfig.html#a65d26b4e33804f397715490256278a21">SkinConfig.bg</a></div><div class="ttdeci">int bg</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00018">SkinConfig.cs:19</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_aae97ff5af836671f6a8cdbc8cc30054e"><div class="ttname"><a href="classSkinConfig.html#aae97ff5af836671f6a8cdbc8cc30054e">SkinConfig.bgSize</a></div><div class="ttdeci">int bgSize</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00030">SkinConfig.cs:31</a></div></div>
+<div class="ttc" id="aclassUIContextMenuItem_html"><div class="ttname"><a href="classUIContextMenuItem.html">UIContextMenuItem</a></div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenuItem_8cs_source.html#l00004">UIContextMenuItem.cs:5</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html"><div class="ttname"><a href="classUIContextMenu.html">UIContextMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00008">UIContextMenu.cs:9</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_a4822a3bf50f2729f3c6cb666a85cc88a"><div class="ttname"><a href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">UIContextMenu.AddToggle</a></div><div class="ttdeci">UIContextMenuItem AddToggle(string idLang=&quot;&quot;, bool isOn=false, UnityAction&lt; bool &gt; action=null)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00316">UIContextMenu.cs:316</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_a75c796a9dd17902e8a8f710e8c8760f6"><div class="ttname"><a href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">UIContextMenu.AddSlider</a></div><div class="ttdeci">UIContextMenuItem AddSlider(string text, Func&lt; float, string &gt; textFunc, float value, Action&lt; float &gt; action, float min=0f, float max=1f, bool isInt=false, bool hideOther=true, bool useInput=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.cs:329</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_a765dd318f1cdda12fa5b3cd8cede3764"><div class="ttname"><a href="classUIContextMenu.html#a765dd318f1cdda12fa5b3cd8cede3764">UIContextMenu.AddOrGetChild</a></div><div class="ttdeci">UIContextMenu AddOrGetChild(string idLang=&quot;Child&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00484">UIContextMenu.cs:484</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_ab93ef9591bfe1425601a9aaab7c94132"><div class="ttname"><a href="classUIContextMenu.html#ab93ef9591bfe1425601a9aaab7c94132">UIContextMenu.Hide</a></div><div class="ttdeci">void Hide()</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00226">UIContextMenu.cs:226</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_aeaebfa725324dc28ca41babf4a8e429a"><div class="ttname"><a href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">UIContextMenu.AddButton</a></div><div class="ttdeci">void AddButton(Func&lt; string &gt; funcText, UnityAction action=null)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00273">UIContextMenu.cs:273</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_afa1c5174bdbdf88aeacd6407a9840b1f"><div class="ttname"><a href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">UIContextMenu.AddChild</a></div><div class="ttdeci">UIContextMenu AddChild(string idLang, TextAnchor anchor)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.cs:496</a></div></div>
 <div class="ttc" id="aclassWidgetQuestTracker_html"><div class="ttname"><a href="classWidgetQuestTracker.html">WidgetQuestTracker</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetQuestTracker_8cs_source.html#l00004">WidgetQuestTracker.cs:5</a></div></div>
 <div class="ttc" id="aclassWidget_1_1Config_html_a2928df5428315792929d02d2b3c1eccf"><div class="ttname"><a href="classWidget_1_1Config.html#a2928df5428315792929d02d2b3c1eccf">Widget.Config.RC</a></div><div class="ttdeci">bool RC</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00057">Widget.cs:57</a></div></div>
 <div class="ttc" id="aclassWidget_html_a115d938794f34d1eb29d44aae622c29b"><div class="ttname"><a href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">Widget.ApplySkin</a></div><div class="ttdeci">virtual void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00556">Widget.cs:556</a></div></div>
@@ -1913,7 +1967,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidget_html_ab9eebb37a542c9a24238b3ab73ab32dc"><div class="ttname"><a href="classWidget.html#ab9eebb37a542c9a24238b3ab73ab32dc">Widget.AllowRightClickToClose</a></div><div class="ttdeci">virtual bool AllowRightClickToClose</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00210">Widget.cs:210</a></div></div>
 <div class="ttc" id="aclassWidget_html_ae58236bb2c28725755f72903c44a1f0e"><div class="ttname"><a href="classWidget.html#ae58236bb2c28725755f72903c44a1f0e">Widget.ShowStyleMenu</a></div><div class="ttdeci">virtual bool ShowStyleMenu</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00196">Widget.cs:196</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00210">AllowRightClickToClose</a>, <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="Widget_8cs_source.html#l00185">IsSealed</a>, <a class="el" href="Widget_8cs_source.html#l00045">Widget.Config.pivot</a>, <a class="el" href="Widget_8cs_source.html#l00057">Widget.Config.RC</a>, <a class="el" href="Widget_8cs_source.html#l00537">SetSkin()</a>, <a class="el" href="Widget_8cs_source.html#l00196">ShowStyleMenu</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, and <a class="el" href="Widget_8cs_source.html#l00043">Widget.Config.userAnchor</a>.</p>
+<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00273">UIContextMenu.AddButton()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.AddChild()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00484">UIContextMenu.AddOrGetChild()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00316">UIContextMenu.AddToggle()</a>, <a class="el" href="Widget_8cs_source.html#l00210">AllowRightClickToClose</a>, <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="SkinConfig_8cs_source.html#l00019">SkinConfig.bg</a>, <a class="el" href="SkinConfig_8cs_source.html#l00067">SkinConfig.bgColor</a>, <a class="el" href="SkinConfig_8cs_source.html#l00031">SkinConfig.bgSize</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00226">UIContextMenu.Hide()</a>, <a class="el" href="SkinConfig_8cs_source.html#l00014">SkinConfig.id</a>, <a class="el" href="Widget_8cs_source.html#l00185">IsSealed</a>, <a class="el" href="Widget_8cs_source.html#l00045">Widget.Config.pivot</a>, <a class="el" href="Widget_8cs_source.html#l00057">Widget.Config.RC</a>, <a class="el" href="UIBook_8cs.html#a04d075dfee36a0163dc203b3994501a1">Refresh()</a>, <a class="el" href="Widget_8cs_source.html#l00537">SetSkin()</a>, <a class="el" href="Widget_8cs_source.html#l00196">ShowStyleMenu</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, <a class="el" href="Widget_8cs_source.html#l00043">Widget.Config.userAnchor</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00133">BaseWidgetNotice.OnSetContextMenu()</a>, <a class="el" href="Widget_8cs_source.html#l00704">OnSetContextMenu()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00318">WidgetCurrentTool.OnSetContextMenu()</a>, <a class="el" href="WidgetDate_8cs_source.html#l00151">WidgetDate.OnSetContextMenu()</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00144">WidgetEquip.OnSetContextMenu()</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00106">WidgetFeed.OnSetContextMenu()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00230">WidgetHotbar.OnSetContextMenu()</a>, <a class="el" href="WidgetHP_8cs_source.html#l00094">WidgetHP.OnSetContextMenu()</a>, <a class="el" href="WidgetInspector_8cs_source.html#l00190">WidgetInspector.OnSetContextMenu()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00212">WidgetMainText.OnSetContextMenu()</a>, <a class="el" href="WidgetMascot_8cs_source.html#l00126">WidgetMascot.OnSetContextMenu()</a>, <a class="el" href="WidgetMenuPanel_8cs_source.html#l00121">WidgetMenuPanel.OnSetContextMenu()</a>, <a class="el" href="WidgetMinimap_8cs_source.html#l00181">WidgetMinimap.OnSetContextMenu()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00171">WidgetRoster.OnSetContextMenu()</a>, <a class="el" href="WidgetSideMenu_8cs_source.html#l00035">WidgetSideMenu.OnSetContextMenu()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">WidgetSideScreen.OnSetContextMenu()</a>, <a class="el" href="WidgetSticky_8cs_source.html#l00105">WidgetSticky.OnSetContextMenu()</a>, <a class="el" href="WidgetTracker_8cs_source.html#l00118">WidgetTracker.OnSetContextMenu()</a>, and <a class="el" href="WidgetUnityChan_8cs_source.html#l00040">WidgetUnityChan.OnSetContextMenu()</a>.</p>
 
@@ -1931,7 +1985,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Widget.SetGridContextMenu </td>
           <td>(</td>
-          <td class="paramtype">UIContextMenu&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIContextMenu.html">UIContextMenu</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1945,24 +1999,28 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00709">709</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  710</span>    {</div>
-<div class="line"><span class="lineno">  711</span>        SkinConfig cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
-<div class="line"><span class="lineno">  712</span>        m.AddSlider(<span class="stringliteral">&quot;skinGrid&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, cfg.grid, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  711</span>        <a class="code hl_class" href="classSkinConfig.html">SkinConfig</a> cfg = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
+<div class="line"><span class="lineno">  712</span>        m.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;skinGrid&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, cfg.<a class="code hl_property" href="classSkinConfig.html#a2956d12069c475a9c3ce77a0034f631c">grid</a>, delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">  713</span>        {</div>
 <div class="line"><span class="lineno">  714</span>            cfg.grid = (int)a;</div>
-<div class="line"><span class="lineno">  715</span>            cfg.gridColor = cfg.Grid.color;</div>
+<div class="line"><span class="lineno">  715</span>            cfg.gridColor = cfg.<a class="code hl_property" href="classSkinConfig.html#a34a9ab69fd4b5a66e460305915a75e8b">Grid</a>.<a class="code hl_variable" href="classSpriteAsset.html#ae1944cbe4e830bd5746c6b4364a7242f">color</a>;</div>
 <div class="line"><span class="lineno">  716</span>            <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  717</span>        }, 0f, cfg.Skin.bgGrid.Count - 1, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  718</span>        m.AddButton(<span class="stringliteral">&quot;colorGrid&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  718</span>        m.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;colorGrid&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">  719</span>        {</div>
-<div class="line"><span class="lineno">  720</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(cfg.gridColor, cfg.Grid.color, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">  720</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(cfg.<a class="code hl_property" href="classSkinConfig.html#ac4880944b3189aad1016d78445ceace6">gridColor</a>, cfg.<a class="code hl_property" href="classSkinConfig.html#a34a9ab69fd4b5a66e460305915a75e8b">Grid</a>.<a class="code hl_variable" href="classSpriteAsset.html#ae1944cbe4e830bd5746c6b4364a7242f">color</a>, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
 <div class="line"><span class="lineno">  721</span>            {</div>
 <div class="line"><span class="lineno">  722</span>                cfg.gridColor = _c;</div>
 <div class="line"><span class="lineno">  723</span>                <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  724</span>            });</div>
 <div class="line"><span class="lineno">  725</span>        });</div>
 <div class="line"><span class="lineno">  726</span>    }</div>
+<div class="ttc" id="aclassSkinConfig_html_a2956d12069c475a9c3ce77a0034f631c"><div class="ttname"><a href="classSkinConfig.html#a2956d12069c475a9c3ce77a0034f631c">SkinConfig.grid</a></div><div class="ttdeci">int grid</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00042">SkinConfig.cs:43</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_a34a9ab69fd4b5a66e460305915a75e8b"><div class="ttname"><a href="classSkinConfig.html#a34a9ab69fd4b5a66e460305915a75e8b">SkinConfig.Grid</a></div><div class="ttdeci">SpriteAsset Grid</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00106">SkinConfig.cs:106</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_ac4880944b3189aad1016d78445ceace6"><div class="ttname"><a href="classSkinConfig.html#ac4880944b3189aad1016d78445ceace6">SkinConfig.gridColor</a></div><div class="ttdeci">Color gridColor</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00078">SkinConfig.cs:79</a></div></div>
+<div class="ttc" id="aclassSpriteAsset_html_ae1944cbe4e830bd5746c6b4364a7242f"><div class="ttname"><a href="classSpriteAsset.html#ae1944cbe4e830bd5746c6b4364a7242f">SpriteAsset.color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="SpriteAsset_8cs_source.html#l00007">SpriteAsset.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
+<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00273">UIContextMenu.AddButton()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="SpriteAsset_8cs_source.html#l00007">SpriteAsset.color</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="SkinConfig_8cs_source.html#l00043">SkinConfig.grid</a>, <a class="el" href="SkinConfig_8cs_source.html#l00106">SkinConfig.Grid</a>, <a class="el" href="SkinConfig_8cs_source.html#l00079">SkinConfig.gridColor</a>, <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00318">WidgetCurrentTool.OnSetContextMenu()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00230">WidgetHotbar.OnSetContextMenu()</a>, and <a class="el" href="WidgetMenuPanel_8cs_source.html#l00121">WidgetMenuPanel.OnSetContextMenu()</a>.</p>
 
@@ -2075,18 +2133,21 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00537">537</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  538</span>    {</div>
-<div class="line"><span class="lineno">  539</span>        SkinConfig skin = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
-<div class="line"><span class="lineno">  540</span>        <span class="keywordflow">if</span> (skin.id != <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  539</span>        <a class="code hl_class" href="classSkinConfig.html">SkinConfig</a> skin = <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>;</div>
+<div class="line"><span class="lineno">  540</span>        <span class="keywordflow">if</span> (skin.<a class="code hl_variable" href="classSkinConfig.html#aeabda63759124619e50a87053dd976db">id</a> != <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">  541</span>        {</div>
-<div class="line"><span class="lineno">  542</span>            skin.SetID(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  542</span>            skin.<a class="code hl_function" href="classSkinConfig.html#aea74d29c5bf37b654ea106b95960c417">SetID</a>(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">  543</span>        }</div>
 <div class="line"><span class="lineno">  544</span>        skin.id = id;</div>
 <div class="line"><span class="lineno">  545</span>        skin.bg = v;</div>
-<div class="line"><span class="lineno">  546</span>        skin.bgColor = skin.BG.color;</div>
+<div class="line"><span class="lineno">  546</span>        skin.bgColor = skin.<a class="code hl_property" href="classSkinConfig.html#a564d2da27f86701d95a028cdae05b207">BG</a>.<a class="code hl_variable" href="classSkinAsset__Sprite.html#ae4b80c7ef5936b62435cbe0b3c89c960">color</a>;</div>
 <div class="line"><span class="lineno">  547</span>        <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  548</span>    }</div>
+<div class="ttc" id="aclassSkinAsset__Sprite_html_ae4b80c7ef5936b62435cbe0b3c89c960"><div class="ttname"><a href="classSkinAsset__Sprite.html#ae4b80c7ef5936b62435cbe0b3c89c960">SkinAsset_Sprite.color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="SkinAsset__Sprite_8cs_source.html#l00005">SkinAsset_Sprite.cs:5</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_a564d2da27f86701d95a028cdae05b207"><div class="ttname"><a href="classSkinConfig.html#a564d2da27f86701d95a028cdae05b207">SkinConfig.BG</a></div><div class="ttdeci">SkinAsset_BG BG</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00092">SkinConfig.cs:93</a></div></div>
+<div class="ttc" id="aclassSkinConfig_html_aea74d29c5bf37b654ea106b95960c417"><div class="ttname"><a href="classSkinConfig.html#aea74d29c5bf37b654ea106b95960c417">SkinConfig.SetID</a></div><div class="ttdeci">void SetID(int _id)</div><div class="ttdef"><b>Definition:</b> <a href="SkinConfig_8cs_source.html#l00133">SkinConfig.cs:133</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="SkinConfig_8cs_source.html#l00093">SkinConfig.BG</a>, <a class="el" href="SkinAsset__Sprite_8cs_source.html#l00005">SkinAsset_Sprite.color</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="SkinConfig_8cs_source.html#l00014">SkinConfig.id</a>, <a class="el" href="SkinConfig_8cs_source.html#l00133">SkinConfig.SetID()</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Widget_8cs_source.html#l00608">SetBaseContextMenu()</a>.</p>
 
@@ -2117,13 +2178,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00601">601</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  602</span>    {</div>
-<div class="line"><span class="lineno">  603</span>        UIContextMenu uIContextMenu = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.CreateContextMenu();</div>
+<div class="line"><span class="lineno">  603</span>        <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.CreateContextMenu();</div>
 <div class="line"><span class="lineno">  604</span>        <a class="code hl_function" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a>(uIContextMenu);</div>
-<div class="line"><span class="lineno">  605</span>        uIContextMenu.Show();</div>
+<div class="line"><span class="lineno">  605</span>        uIContextMenu.<a class="code hl_function" href="classUIContextMenu.html#a5afad4580b1ab1aecc9f0f607170ec37">Show</a>();</div>
 <div class="line"><span class="lineno">  606</span>    }</div>
+<div class="ttc" id="aclassUIContextMenu_html_a5afad4580b1ab1aecc9f0f607170ec37"><div class="ttname"><a href="classUIContextMenu.html#a5afad4580b1ab1aecc9f0f607170ec37">UIContextMenu.Show</a></div><div class="ttdeci">void Show(UIItem i)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00175">UIContextMenu.cs:175</a></div></div>
 <div class="ttc" id="aclassWidget_html_ad2732b674b864ef872b939069ac321bc"><div class="ttname"><a href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget.OnSetContextMenu</a></div><div class="ttdeci">virtual void OnSetContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00704">Widget.cs:704</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00704">OnSetContextMenu()</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00704">OnSetContextMenu()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00175">UIContextMenu.Show()</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="HotItem_8cs_source.html#l00069">HotItem.OnRightClick()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00230">WidgetHotbar.OnSetContextMenu()</a>, <a class="el" href="LayerWidget_8cs_source.html#l00112">LayerWidget.OnUpdateInput()</a>, and <a class="el" href="ActionMode_8cs_source.html#l01211">ActionMode.TryShowWidgetMenu()</a>.</p>
 
@@ -2219,11 +2281,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Widget_8cs_source.html#l00550">550</a> of file <a class="el" href="Widget_8cs_source.html">Widget.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  551</span>    {</div>
-<div class="line"><span class="lineno">  552</span>        <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.SetID();</div>
+<div class="line"><span class="lineno">  552</span>        <a class="code hl_property" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a>.<a class="code hl_variable" href="classWidget_1_1Config.html#a78ae707ae1b1c34feac36a51b980866e">skin</a>.<a class="code hl_function" href="classSkinConfig.html#aea74d29c5bf37b654ea106b95960c417">SetID</a>();</div>
 <div class="line"><span class="lineno">  553</span>        <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
 <div class="line"><span class="lineno">  554</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
+<p class="reference">References <a class="el" href="Widget_8cs_source.html#l00556">ApplySkin()</a>, <a class="el" href="Widget_8cs_source.html#l00180">config</a>, <a class="el" href="SkinConfig_8cs_source.html#l00133">SkinConfig.SetID()</a>, and <a class="el" href="Widget_8cs_source.html#l00061">Widget.Config.skin</a>.</p>
 
 </div>
 </div>
@@ -2350,7 +2412,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SkinRoot Widget._skinRoot</td>
+          <td class="memname"><a class="el" href="classSkinRoot.html">SkinRoot</a> Widget._skinRoot</td>
         </tr>
       </table>
   </td>
@@ -2371,7 +2433,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIDragPanel Widget.dragPanel</td>
+          <td class="memname"><a class="el" href="classUIDragPanel.html">UIDragPanel</a> Widget.dragPanel</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2828,7 +2890,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SkinRoot Widget.skinRoot</td>
+          <td class="memname"><a class="el" href="classSkinRoot.html">SkinRoot</a> Widget.skinRoot</td>
         </tr>
       </table>
   </td>

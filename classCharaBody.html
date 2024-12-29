@@ -149,7 +149,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa64f88c9b72bea695db0108ce9a8020e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9ff820ba11082738c171b45e8f1287b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharaBody.html#aa9ff820ba11082738c171b45e8f1287b">GetSortVal</a> (<a class="el" href="classBodySlot.html">BodySlot</a> slot)</td></tr>
 <tr class="separator:aa9ff820ba11082738c171b45e8f1287b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a989d1b2482ccce7fd7d2c3282bbaeb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharaBody.html#a989d1b2482ccce7fd7d2c3282bbaeb08">SetBodyIndexText</a> (<a class="el" href="classBodySlot.html">BodySlot</a> b, UIText t)</td></tr>
+<tr class="memitem:a989d1b2482ccce7fd7d2c3282bbaeb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharaBody.html#a989d1b2482ccce7fd7d2c3282bbaeb08">SetBodyIndexText</a> (<a class="el" href="classBodySlot.html">BodySlot</a> b, <a class="el" href="classUIText.html">UIText</a> t)</td></tr>
 <tr class="separator:a989d1b2482ccce7fd7d2c3282bbaeb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -1176,7 +1176,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">UIText&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIText.html">UIText</a>&#160;</td>
           <td class="paramname"><em>t</em>&#160;</td>
         </tr>
         <tr>
@@ -1216,7 +1216,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  491</span>        }</div>
 <div class="line"><span class="lineno">  492</span>        <span class="keywordflow">if</span> (b.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> == 35)</div>
 <div class="line"><span class="lineno">  493</span>        {</div>
-<div class="line"><span class="lineno">  494</span>            t.SetText(b.<a class="code hl_variable" href="classBodySlot.html#a6b62ce7239de2c0d7c08cea211f7189a">indexPart</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  494</span>            t.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(b.<a class="code hl_variable" href="classBodySlot.html#a6b62ce7239de2c0d7c08cea211f7189a">indexPart</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">  495</span>            t.SetActive(enable: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  496</span>        }</div>
 <div class="line"><span class="lineno">  497</span>        <span class="keywordflow">else</span></div>
@@ -1225,8 +1225,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  500</span>        }</div>
 <div class="line"><span class="lineno">  501</span>    }</div>
 <div class="ttc" id="aclassBodySlot_html_a6b62ce7239de2c0d7c08cea211f7189a"><div class="ttname"><a href="classBodySlot.html#a6b62ce7239de2c0d7c08cea211f7189a">BodySlot.indexPart</a></div><div class="ttdeci">int indexPart</div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00012">BodySlot.cs:12</a></div></div>
+<div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00159">UIText.cs:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BodySlot_8cs_source.html#l00016">BodySlot.element</a>, <a class="el" href="BodySlot_8cs_source.html#l00006">BodySlot.elementId</a>, <a class="el" href="BodySlot_8cs_source.html#l00012">BodySlot.indexPart</a>, and <a class="el" href="CharaBody_8cs_source.html#l00008">slots</a>.</p>
+<p class="reference">References <a class="el" href="BodySlot_8cs_source.html#l00016">BodySlot.element</a>, <a class="el" href="BodySlot_8cs_source.html#l00006">BodySlot.elementId</a>, <a class="el" href="BodySlot_8cs_source.html#l00012">BodySlot.indexPart</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="CharaBody_8cs_source.html#l00008">slots</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ButtonGrid_8cs_source.html#l00121">ButtonGrid.SetBodySlot()</a>.</p>
 

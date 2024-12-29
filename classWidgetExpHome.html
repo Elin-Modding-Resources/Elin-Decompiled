@@ -107,6 +107,7 @@ Inheritance diagram for WidgetExpHome:</div>
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
 <area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
+<area href="interfaceISkinRoot.html" alt="ISkinRoot" shape="rect" coords="254,56,371,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -174,13 +175,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afabface3017c9537ea076b0fb0fdf9d3 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b">IsAlignTop</a> ()</td></tr>
 <tr class="separator:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">Layer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (Layer l, Transform trans)</td></tr>
+<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (<a class="el" href="classLayer.html">Layer</a> l, Transform trans)</td></tr>
 <tr class="separator:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a> ()</td></tr>
 <tr class="separator:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
+<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
 <tr class="separator:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
+<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
 <tr class="separator:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a> (int id, int v=0)</td></tr>
 <tr class="separator:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,45 +191,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a115d938794f34d1eb29d44aae622c29b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a> ()</td></tr>
 <tr class="separator:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">CanShowContextMenu</a> ()</td></tr>
 <tr class="separator:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a> ()</td></tr>
 <tr class="separator:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4295c8036903342ae9e8b4722d3d82fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">GetSkin</a> ()</td></tr>
+<tr class="separator:a4295c8036903342ae9e8b4722d3d82fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aef6e38eb8a3dce387211ededc5de08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">GetSkinConfig</a> ()</td></tr>
+<tr class="separator:a0aef6e38eb8a3dce387211ededc5de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9d4621f83067c47dfccd701012d05376"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#a9d4621f83067c47dfccd701012d05376">goLv</a></td></tr>
 <tr class="separator:a9d4621f83067c47dfccd701012d05376"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed388a70e11be95c4424a6e1c75e7d41"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#aed388a70e11be95c4424a6e1c75e7d41">textLv</a></td></tr>
+<tr class="memitem:aed388a70e11be95c4424a6e1c75e7d41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#aed388a70e11be95c4424a6e1c75e7d41">textLv</a></td></tr>
 <tr class="separator:aed388a70e11be95c4424a6e1c75e7d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4677416c51d9e9c374abcd66d6daf91"><td class="memItemLeft" align="right" valign="top">UIItem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#ae4677416c51d9e9c374abcd66d6daf91">itemExp</a></td></tr>
+<tr class="memitem:ae4677416c51d9e9c374abcd66d6daf91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIItem.html">UIItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#ae4677416c51d9e9c374abcd66d6daf91">itemExp</a></td></tr>
 <tr class="separator:ae4677416c51d9e9c374abcd66d6daf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e0b5753fb7f70a023c4d6c15ed29cec"><td class="memItemLeft" align="right" valign="top">UIItem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#a7e0b5753fb7f70a023c4d6c15ed29cec">itemKnowledge</a></td></tr>
+<tr class="memitem:a7e0b5753fb7f70a023c4d6c15ed29cec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIItem.html">UIItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#a7e0b5753fb7f70a023c4d6c15ed29cec">itemKnowledge</a></td></tr>
 <tr class="separator:a7e0b5753fb7f70a023c4d6c15ed29cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5644bf5efb2b467635c5d8a485dccb70"><td class="memItemLeft" align="right" valign="top">UIItem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#a5644bf5efb2b467635c5d8a485dccb70">itemInfluence</a></td></tr>
+<tr class="memitem:a5644bf5efb2b467635c5d8a485dccb70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIItem.html">UIItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetExpHome.html#a5644bf5efb2b467635c5d8a485dccb70">itemInfluence</a></td></tr>
 <tr class="separator:a5644bf5efb2b467635c5d8a485dccb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classWidget')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#adc7edf86fd522a256f2879971f83e73d">imageBG</a></td></tr>
 <tr class="separator:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32">soundActivate</a></td></tr>
 <tr class="separator:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">UIDragPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
+<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDragPanel.html">UIDragPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
 <tr class="separator:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2845d6ff2975f55feb970632c99405d1">tipPivotLeft</a></td></tr>
 <tr class="separator:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,7 +249,7 @@ Properties</h2></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
 <tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
+<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
 <tr class="separator:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -473,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   50</span>        <a class="code hl_class" href="classLayerChara.html">LayerChara</a> layerChara = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.ToggleLayer&lt;<a class="code hl_class" href="classLayerChara.html">LayerChara</a>&gt;();</div>
 <div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)layerChara)</div>
 <div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            layerChara.<a class="code hl_function" href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">SetChara</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>).windows[0].SwitchContent(2);</div>
+<div class="line"><span class="lineno">   53</span>            layerChara.<a class="code hl_function" href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">SetChara</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>).<a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[0].SwitchContent(2);</div>
 <div class="line"><span class="lineno">   54</span>            layerChara.<a class="code hl_variable" href="classLayerChara.html#a756d9de6f937621249d42f612cbb8414">windowChara</a>.<a class="code hl_function" href="classWindowChara.html#a4bfe7ba6d0dc8b0476e5c31f8002460f">ToggleFeatMode</a>();</div>
 <div class="line"><span class="lineno">   55</span>        }</div>
 <div class="line"><span class="lineno">   56</span>    }</div>
@@ -483,9 +488,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLayerChara_html"><div class="ttname"><a href="classLayerChara.html">LayerChara</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00001">LayerChara.cs:2</a></div></div>
 <div class="ttc" id="aclassLayerChara_html_a2a490d43095c16f39501945d9879e97d"><div class="ttname"><a href="classLayerChara.html#a2a490d43095c16f39501945d9879e97d">LayerChara.SetChara</a></div><div class="ttdeci">LayerChara SetChara(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00009">LayerChara.cs:9</a></div></div>
 <div class="ttc" id="aclassLayerChara_html_a756d9de6f937621249d42f612cbb8414"><div class="ttname"><a href="classLayerChara.html#a756d9de6f937621249d42f612cbb8414">LayerChara.windowChara</a></div><div class="ttdeci">WindowChara windowChara</div><div class="ttdef"><b>Definition:</b> <a href="LayerChara_8cs_source.html#l00005">LayerChara.cs:5</a></div></div>
+<div class="ttc" id="aclassLayer_html_adcabbb5f9207fa402487950097b491cd"><div class="ttname"><a href="classLayer.html#adcabbb5f9207fa402487950097b491cd">Layer.windows</a></div><div class="ttdeci">List&lt; Window &gt; windows</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00116">Layer.cs:116</a></div></div>
 <div class="ttc" id="aclassWindowChara_html_a4bfe7ba6d0dc8b0476e5c31f8002460f"><div class="ttname"><a href="classWindowChara.html#a4bfe7ba6d0dc8b0476e5c31f8002460f">WindowChara.ToggleFeatMode</a></div><div class="ttdeci">void ToggleFeatMode()</div><div class="ttdef"><b>Definition:</b> <a href="WindowChara_8cs_source.html#l00237">WindowChara.cs:237</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="LayerChara_8cs_source.html#l00009">LayerChara.SetChara()</a>, <a class="el" href="WindowChara_8cs_source.html#l00237">WindowChara.ToggleFeatMode()</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, and <a class="el" href="LayerChara_8cs_source.html#l00005">LayerChara.windowChara</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="LayerChara_8cs_source.html#l00009">LayerChara.SetChara()</a>, <a class="el" href="WindowChara_8cs_source.html#l00237">WindowChara.ToggleFeatMode()</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, <a class="el" href="LayerChara_8cs_source.html#l00005">LayerChara.windowChara</a>, and <a class="el" href="Layer_8cs_source.html#l00116">Layer.windows</a>.</p>
 
 </div>
 </div>
@@ -556,7 +562,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIItem WidgetExpHome.itemExp</td>
+          <td class="memname"><a class="el" href="classUIItem.html">UIItem</a> WidgetExpHome.itemExp</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -572,7 +578,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIItem WidgetExpHome.itemInfluence</td>
+          <td class="memname"><a class="el" href="classUIItem.html">UIItem</a> WidgetExpHome.itemInfluence</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -588,7 +594,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIItem WidgetExpHome.itemKnowledge</td>
+          <td class="memname"><a class="el" href="classUIItem.html">UIItem</a> WidgetExpHome.itemKnowledge</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -604,7 +610,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText WidgetExpHome.textLv</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> WidgetExpHome.textLv</td>
         </tr>
       </table>
 </div><div class="memdoc">

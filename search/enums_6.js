@@ -5,5 +5,8 @@ var searchData=
   ['gamefuncbuild_2',['GameFuncBuild',['../classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8',1,'CoreConfig']]],
   ['gamemode_3',['GameMode',['../GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589de',1,'GameMode.cs']]],
   ['gentype_4',['GenType',['../classZoneProfile.html#aa8ccbe63c907c9f1cc65efe7ed6cc76a',1,'ZoneProfile']]],
-  ['goallisttype_5',['GoalListType',['../GoalListType_8cs.html#acc2c91e20349cba5b506a76e93e038b9',1,'GoalListType.cs']]]
+  ['goallisttype_5',['GoalListType',['../GoalListType_8cs.html#acc2c91e20349cba5b506a76e93e038b9',1,'GoalListType.cs']]],
+  ['gradientdir_6',['GradientDir',['../GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4ea',1,'GradientDir.cs']]],
+  ['gradientdirection_7',['GradientDirection',['../classGradientColor.html#ab79b86c28507431398dff10faa0b817a',1,'GradientColor']]],
+  ['gradientmode_8',['GradientMode',['../classGradientColor.html#abca4107c73318e3a29b433631446fddd',1,'GradientColor.GradientMode()'],['../GradientMode_8cs.html#a94a975398c0d3b00005d2e1ac48998f5',1,'GradientMode():&#160;GradientMode.cs']]]
 ];

@@ -101,8 +101,12 @@ $(document).ready(function(){initNavTree('classButtonChara.html',''); initResiza
 Inheritance diagram for ButtonChara:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classButtonChara.png" alt=""/>
- </div></div>
+  <img src="classButtonChara.png" usemap="#ButtonChara_map" alt=""/>
+  <map id="ButtonChara_map" name="ButtonChara_map">
+<area href="classUIButton.html" alt="UIButton" shape="rect" coords="213,56,345,80"/>
+<area href="interfaceIUISkin.html" alt="IUISkin" shape="rect" coords="142,0,274,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -121,29 +125,208 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ce28c533429364b5e4c59f058867378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a6ce28c533429364b5e4c59f058867378">SetChara</a> (<a class="el" href="classChara.html">Chara</a> c, <a class="el" href="classButtonChara.html#a910f9c2897788e2034c98b3a04396ecb">Mode</a> m)</td></tr>
 <tr class="separator:a6ce28c533429364b5e4c59f058867378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classUIButton"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUIButton')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUIButton.html">UIButton</a></td></tr>
+<tr class="memitem:a672763e1f861c409e3a0540baf2a76c0 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a672763e1f861c409e3a0540baf2a76c0">CanMiddleClick</a> ()</td></tr>
+<tr class="separator:a672763e1f861c409e3a0540baf2a76c0 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc734e4d75bb8511fcf170192096df78 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#afc734e4d75bb8511fcf170192096df78">OnMiddleClick</a> (bool forceClick)</td></tr>
+<tr class="separator:afc734e4d75bb8511fcf170192096df78 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a82ce5c8a72a456e56fe924e902e4fe inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a7a82ce5c8a72a456e56fe924e902e4fe">SetItem</a> (<a class="el" href="classUIButton_1_1Item.html">Item</a> i)</td></tr>
+<tr class="separator:a7a82ce5c8a72a456e56fe924e902e4fe inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7068a144685a5aff309ccd184cb236 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a7b7068a144685a5aff309ccd184cb236">RefreshItem</a> ()</td></tr>
+<tr class="separator:a7b7068a144685a5aff309ccd184cb236 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cf75c4b55a6d799851ab66aea62d47 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ae1cf75c4b55a6d799851ab66aea62d47">OnHover</a> ()</td></tr>
+<tr class="separator:ae1cf75c4b55a6d799851ab66aea62d47 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9121676994cc5bef844a454f43d72dd6 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a9121676994cc5bef844a454f43d72dd6">Toggle</a> ()</td></tr>
+<tr class="separator:a9121676994cc5bef844a454f43d72dd6 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e76daa56ca8cca110c6152d54d0919d inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1e76daa56ca8cca110c6152d54d0919d">ToggleCheck</a> ()</td></tr>
+<tr class="separator:a1e76daa56ca8cca110c6152d54d0919d inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165c1955683017cb8a98b26f1b14ff7f inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a165c1955683017cb8a98b26f1b14ff7f">SetCheck</a> (bool check)</td></tr>
+<tr class="separator:a165c1955683017cb8a98b26f1b14ff7f inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1a44b498c1ae1d46325d7d53a9fb52 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52">SetToggle</a> (bool isOn, Action&lt; bool &gt; onToggle=null)</td></tr>
+<tr class="separator:aaf1a44b498c1ae1d46325d7d53a9fb52 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6736e16f32684c87b44bef2263f10692 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a6736e16f32684c87b44bef2263f10692">SetTooltip</a> (Action&lt; <a class="el" href="classUITooltip.html">UITooltip</a> &gt; onShowTooltip=null, bool enable=true)</td></tr>
+<tr class="separator:a6736e16f32684c87b44bef2263f10692 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb5602522d8df297c4e397ffa336628 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a7fb5602522d8df297c4e397ffa336628">SetTooltip</a> (string id, Action&lt; <a class="el" href="classUITooltip.html">UITooltip</a> &gt; onShowTooltip=null, bool enable=true)</td></tr>
+<tr class="separator:a7fb5602522d8df297c4e397ffa336628 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a16ea2188a92160e7b6a5c54206689 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a95a16ea2188a92160e7b6a5c54206689">SetTooltipLang</a> (string lang=null)</td></tr>
+<tr class="separator:a95a16ea2188a92160e7b6a5c54206689 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba55ef8ccbf52be7cfda09cb4c42009b inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aba55ef8ccbf52be7cfda09cb4c42009b">ShowTooltip</a> ()</td></tr>
+<tr class="separator:aba55ef8ccbf52be7cfda09cb4c42009b inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d774402a15b25d5301fb7b359771e37 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a6d774402a15b25d5301fb7b359771e37">ShowTooltipForced</a> (bool ignoreWhenRightClick=true)</td></tr>
+<tr class="separator:a6d774402a15b25d5301fb7b359771e37 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30fb584ca20e5d7c6d4f0add776518e inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ad30fb584ca20e5d7c6d4f0add776518e">OnPointerDown</a> (PointerEventData eventData)</td></tr>
+<tr class="separator:ad30fb584ca20e5d7c6d4f0add776518e inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa763c7330c514ba94b14e0a89b4a1d52 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aa763c7330c514ba94b14e0a89b4a1d52">OnPointerClick</a> (PointerEventData eventData)</td></tr>
+<tr class="separator:aa763c7330c514ba94b14e0a89b4a1d52 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7435332eb77b0e6f2783c0fe94d89410 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a7435332eb77b0e6f2783c0fe94d89410">OnPointerUp</a> (PointerEventData eventData)</td></tr>
+<tr class="separator:a7435332eb77b0e6f2783c0fe94d89410 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5e249c90a44fb5c9dafc5b8b48c58d inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#afe5e249c90a44fb5c9dafc5b8b48c58d">OnPointerUpOnDrag</a> (PointerEventData eventData)</td></tr>
+<tr class="separator:afe5e249c90a44fb5c9dafc5b8b48c58d inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0f4d01e75ad360b6f2da508ef8cdb3 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aef0f4d01e75ad360b6f2da508ef8cdb3">_OnPress</a> ()</td></tr>
+<tr class="separator:aef0f4d01e75ad360b6f2da508ef8cdb3 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a4ecfebab23337606053d061c8ea47 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a35a4ecfebab23337606053d061c8ea47">OnPress</a> ()</td></tr>
+<tr class="separator:a35a4ecfebab23337606053d061c8ea47 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a393c1e92d784357e189b18587a7e3 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a50a393c1e92d784357e189b18587a7e3">AddHighlight</a> (Func&lt; bool &gt; killCondition)</td></tr>
+<tr class="separator:a50a393c1e92d784357e189b18587a7e3 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdc66c2d5c8fe44728cb8b6dd4e592b inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1bdc66c2d5c8fe44728cb8b6dd4e592b">DoHighlightTransition</a> (bool instant=false)</td></tr>
+<tr class="separator:a1bdc66c2d5c8fe44728cb8b6dd4e592b inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d9161a76d6a8973fe99c290333c50f inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#af7d9161a76d6a8973fe99c290333c50f">DoNormalTransition</a> (bool instant=true)</td></tr>
+<tr class="separator:af7d9161a76d6a8973fe99c290333c50f inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfed7f33cfd0350e41c62969e517c850 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override Selectable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#adfed7f33cfd0350e41c62969e517c850">FindSelectableOnDown</a> ()</td></tr>
+<tr class="separator:adfed7f33cfd0350e41c62969e517c850 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4563020af61caf75d1a49254095f6a0 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override Selectable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aa4563020af61caf75d1a49254095f6a0">FindSelectableOnUp</a> ()</td></tr>
+<tr class="separator:aa4563020af61caf75d1a49254095f6a0 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae111c4aecca4575cc96c76b78204f4c7 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override Selectable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ae111c4aecca4575cc96c76b78204f4c7">FindSelectableOnLeft</a> ()</td></tr>
+<tr class="separator:ae111c4aecca4575cc96c76b78204f4c7 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6128c7d4c392e423a0f59c086be20c6 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override Selectable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ac6128c7d4c392e423a0f59c086be20c6">FindSelectableOnRight</a> ()</td></tr>
+<tr class="separator:ac6128c7d4c392e423a0f59c086be20c6 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79aa51b802c914b99daa84b67faf774 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ab79aa51b802c914b99daa84b67faf774">SetNavigation</a> (<a class="el" href="classUIButton.html">UIButton</a> <a class="el" href="VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a46c48bec0d282018b9d167eef7711b2c">up</a>, <a class="el" href="classUIButton.html">UIButton</a> <a class="el" href="VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a74e8333ad11685ff3bdae589c8f6e34d">down</a>=null, <a class="el" href="classUIButton.html">UIButton</a> <a class="el" href="VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a811882fecd5c7618d7099ebbd39ea254">left</a>=null, <a class="el" href="classUIButton.html">UIButton</a> <a class="el" href="VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a7c4f29407893c334a6cb7a87bf045c0d">right</a>=null)</td></tr>
+<tr class="separator:ab79aa51b802c914b99daa84b67faf774 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2704848a23c1d1832960d4d4ef96791a inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a2704848a23c1d1832960d4d4ef96791a">IsActive</a> ()</td></tr>
+<tr class="separator:a2704848a23c1d1832960d4d4ef96791a inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a19f92cd6909a232d1546cd3623e60 inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ab2a19f92cd6909a232d1546cd3623e60">SetInteractableWithAlpha</a> (bool enable)</td></tr>
+<tr class="separator:ab2a19f92cd6909a232d1546cd3623e60 inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae4b66f1b04f52a4323ac71275def7a inherit pub_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aaae4b66f1b04f52a4323ac71275def7a">ApplySkin</a> ()</td></tr>
+<tr class="separator:aaae4b66f1b04f52a4323ac71275def7a inherit pub_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1b48cfe0e22d8ff38483e165208242"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIUISkin.html#a1b1b48cfe0e22d8ff38483e165208242">ApplySkin</a> ()</td></tr>
+<tr class="separator:a1b1b48cfe0e22d8ff38483e165208242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a706197cae193aa46c3ccf58d66782c5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPortrait.html">Portrait</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a706197cae193aa46c3ccf58d66782c5e">portrait</a></td></tr>
 <tr class="separator:a706197cae193aa46c3ccf58d66782c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8729eb49f3aa42907ebbae8f7baa81a"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#af8729eb49f3aa42907ebbae8f7baa81a">textName</a></td></tr>
+<tr class="memitem:af8729eb49f3aa42907ebbae8f7baa81a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#af8729eb49f3aa42907ebbae8f7baa81a">textName</a></td></tr>
 <tr class="separator:af8729eb49f3aa42907ebbae8f7baa81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a735386dffa250f6440308bbbd9000c41"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a735386dffa250f6440308bbbd9000c41">textAlias</a></td></tr>
+<tr class="memitem:a735386dffa250f6440308bbbd9000c41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a735386dffa250f6440308bbbd9000c41">textAlias</a></td></tr>
 <tr class="separator:a735386dffa250f6440308bbbd9000c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ace60bb4a5288a58429e058e8c67ccf"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a2ace60bb4a5288a58429e058e8c67ccf">textBio</a></td></tr>
+<tr class="memitem:a2ace60bb4a5288a58429e058e8c67ccf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a2ace60bb4a5288a58429e058e8c67ccf">textBio</a></td></tr>
 <tr class="separator:a2ace60bb4a5288a58429e058e8c67ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae159340164e231e0ff1f1a644e196866"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#ae159340164e231e0ff1f1a644e196866">textWork</a></td></tr>
+<tr class="memitem:ae159340164e231e0ff1f1a644e196866"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#ae159340164e231e0ff1f1a644e196866">textWork</a></td></tr>
 <tr class="separator:ae159340164e231e0ff1f1a644e196866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05da6aa6b513738286c7a0cd43f4a125"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a05da6aa6b513738286c7a0cd43f4a125">textHobby</a></td></tr>
+<tr class="memitem:a05da6aa6b513738286c7a0cd43f4a125"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a05da6aa6b513738286c7a0cd43f4a125">textHobby</a></td></tr>
 <tr class="separator:a05da6aa6b513738286c7a0cd43f4a125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7fef7514bf4f1180ba03e757e61d9fa"><td class="memItemLeft" align="right" valign="top">UIText&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#ac7fef7514bf4f1180ba03e757e61d9fa">textLifeStyle</a></td></tr>
+<tr class="memitem:ac7fef7514bf4f1180ba03e757e61d9fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#ac7fef7514bf4f1180ba03e757e61d9fa">textLifeStyle</a></td></tr>
 <tr class="separator:ac7fef7514bf4f1180ba03e757e61d9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a640570b1bbb06ce8c1e4b24aa0bb9998"><td class="memItemLeft" align="right" valign="top">new UIItem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a640570b1bbb06ce8c1e4b24aa0bb9998">item</a></td></tr>
+<tr class="memitem:a640570b1bbb06ce8c1e4b24aa0bb9998"><td class="memItemLeft" align="right" valign="top">new <a class="el" href="classUIItem.html">UIItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a640570b1bbb06ce8c1e4b24aa0bb9998">item</a></td></tr>
 <tr class="separator:a640570b1bbb06ce8c1e4b24aa0bb9998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e342fb420632b166b30177d76ee690a"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a0e342fb420632b166b30177d76ee690a">transDefeated</a></td></tr>
 <tr class="separator:a0e342fb420632b166b30177d76ee690a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97302fb0db136dcf190e2061b11ce59a"><td class="memItemLeft" align="right" valign="top">LayoutGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a">layoutTag</a></td></tr>
 <tr class="separator:a97302fb0db136dcf190e2061b11ce59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classUIButton"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classUIButton')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classUIButton.html">UIButton</a></td></tr>
+<tr class="memitem:a2c91e2485c1dea09ccf8cf5865e4c4dd inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a></td></tr>
+<tr class="separator:a2c91e2485c1dea09ccf8cf5865e4c4dd inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05da21944bfa6651769a168d0460ce7d inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a05da21944bfa6651769a168d0460ce7d">subText</a></td></tr>
+<tr class="separator:a05da21944bfa6651769a168d0460ce7d inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d9b2234ef2845d7bc51720a01d98cd inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a05d9b2234ef2845d7bc51720a01d98cd">subText2</a></td></tr>
+<tr class="separator:a05d9b2234ef2845d7bc51720a01d98cd inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d82e6a67f2a2ea13c73d95675dc2bf inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIText.html">UIText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a26d82e6a67f2a2ea13c73d95675dc2bf">keyText</a></td></tr>
+<tr class="separator:a26d82e6a67f2a2ea13c73d95675dc2bf inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3f3d8365203e634319910616ad5b72 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a></td></tr>
+<tr class="separator:a1a3f3d8365203e634319910616ad5b72 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1abcb01c5f425cc31ed94e5813a7e81c inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1abcb01c5f425cc31ed94e5813a7e81c">imageCheck</a></td></tr>
+<tr class="separator:a1abcb01c5f425cc31ed94e5813a7e81c inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2682b5519f052bcff716fe894201f67a inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Graphic[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a2682b5519f052bcff716fe894201f67a">targetGraphics</a></td></tr>
+<tr class="separator:a2682b5519f052bcff716fe894201f67a inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1188c396c36f292441b7db8ee38d550 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ae1188c396c36f292441b7db8ee38d550">scaleIcon</a> = 1f</td></tr>
+<tr class="separator:ae1188c396c36f292441b7db8ee38d550 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d140ee1fd3969884c4a67a150fd9d98 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a9d140ee1fd3969884c4a67a150fd9d98">slideX</a></td></tr>
+<tr class="separator:a9d140ee1fd3969884c4a67a150fd9d98 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127ce3736e48fd7eb777f9e758d0db97 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a127ce3736e48fd7eb777f9e758d0db97">navigationFix</a></td></tr>
+<tr class="separator:a127ce3736e48fd7eb777f9e758d0db97 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e88b4387e035ab59b036ecd0673918 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a50e88b4387e035ab59b036ecd0673918">isChecked</a></td></tr>
+<tr class="separator:a50e88b4387e035ab59b036ecd0673918 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1232f1811bf52d198ef400c06e830853 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1232f1811bf52d198ef400c06e830853">instantClick</a> = true</td></tr>
+<tr class="separator:a1232f1811bf52d198ef400c06e830853 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12090c952bafe5df0ca3de243c6ea95 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUISelectableGroup.html">UISelectableGroup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ad12090c952bafe5df0ca3de243c6ea95">group</a></td></tr>
+<tr class="separator:ad12090c952bafe5df0ca3de243c6ea95 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cd38b6d9abad1bb22d7cdb45fd06a6 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTooltipData.html">TooltipData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ac9cd38b6d9abad1bb22d7cdb45fd06a6">tooltip</a></td></tr>
+<tr class="separator:ac9cd38b6d9abad1bb22d7cdb45fd06a6 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa59426d795625c60ca13d3017e097f inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#abfa59426d795625c60ca13d3017e097f">soundClick</a></td></tr>
+<tr class="separator:abfa59426d795625c60ca13d3017e097f inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a46f30d1fbc4c2ebce8246c17a8d5d8 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1a46f30d1fbc4c2ebce8246c17a8d5d8">soundHighlight</a></td></tr>
+<tr class="separator:a1a46f30d1fbc4c2ebce8246c17a8d5d8 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cab47b9793067eb7d47f889d3acd8ef inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a2cab47b9793067eb7d47f889d3acd8ef">animeTarget</a></td></tr>
+<tr class="separator:a2cab47b9793067eb7d47f889d3acd8ef inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca782993c0335205f4f6f9c60efccd6 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAnime.html">Anime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1ca782993c0335205f4f6f9c60efccd6">animeClick</a></td></tr>
+<tr class="separator:a1ca782993c0335205f4f6f9c60efccd6 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e811d338aa50933a6819a04e215d26c inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAnime.html">Anime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a4e811d338aa50933a6819a04e215d26c">animeHold</a></td></tr>
+<tr class="separator:a4e811d338aa50933a6819a04e215d26c inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a031d81e5abb2cdeb473d524b8b134 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ButtonType_8cs.html#ae2d5c50fae96a83cc4f5974af78e6943">ButtonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a83a031d81e5abb2cdeb473d524b8b134">buttonType</a></td></tr>
+<tr class="separator:a83a031d81e5abb2cdeb473d524b8b134 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9521a13a59f1cdfc54b9298dbd1dbb37 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBaseSkinRoot.html">BaseSkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a9521a13a59f1cdfc54b9298dbd1dbb37">skinRoot</a></td></tr>
+<tr class="separator:a9521a13a59f1cdfc54b9298dbd1dbb37 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4318758b958f1e1da931fd3a141a71 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aab4318758b958f1e1da931fd3a141a71">onDoubleClick</a></td></tr>
+<tr class="separator:aab4318758b958f1e1da931fd3a141a71 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae581e18a54dcc7504eb441eb611912e3 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ae581e18a54dcc7504eb441eb611912e3">onRightClick</a></td></tr>
+<tr class="separator:ae581e18a54dcc7504eb441eb611912e3 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a33652c12cc33c49293dc6367145b7 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Action&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a47a33652c12cc33c49293dc6367145b7">onInputWheel</a></td></tr>
+<tr class="separator:a47a33652c12cc33c49293dc6367145b7 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3a1c77102d1298f2e8953ecccaabb7 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#abe3a1c77102d1298f2e8953ecccaabb7">refObj</a></td></tr>
+<tr class="separator:abe3a1c77102d1298f2e8953ecccaabb7 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf28162348f744f2192e06c603b08bc inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a4cf28162348f744f2192e06c603b08bc">refInt</a></td></tr>
+<tr class="separator:a4cf28162348f744f2192e06c603b08bc inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c8024d7b4108abfdabe45ac7c28005 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ac3c8024d7b4108abfdabe45ac7c28005">refStr</a></td></tr>
+<tr class="separator:ac3c8024d7b4108abfdabe45ac7c28005 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127a2bd3117fb1d537725fd823ee4dff inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a127a2bd3117fb1d537725fd823ee4dff">animating</a></td></tr>
+<tr class="separator:a127a2bd3117fb1d537725fd823ee4dff inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7292c8afce53e6c5c0fc5ef8180cbbe inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ab7292c8afce53e6c5c0fc5ef8180cbbe">selected</a></td></tr>
+<tr class="separator:ab7292c8afce53e6c5c0fc5ef8180cbbe inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5be4be2bc3719b951c514b30e2dc43 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a5e5be4be2bc3719b951c514b30e2dc43">originalIconScale</a> = Vector3.one</td></tr>
+<tr class="separator:a5e5be4be2bc3719b951c514b30e2dc43 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8612e135651e46630682cdc4e660e88a inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a8612e135651e46630682cdc4e660e88a">highlightTarget</a></td></tr>
+<tr class="separator:a8612e135651e46630682cdc4e660e88a inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa913c0d00a0816f0fea174f9cfe5025 inherit pub_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton_1_1Item.html">Item</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#afa913c0d00a0816f0fea174f9cfe5025">item</a></td></tr>
+<tr class="separator:afa913c0d00a0816f0fea174f9cfe5025 inherit pub_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classUIButton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classUIButton')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classUIButton.html">UIButton</a></td></tr>
+<tr class="memitem:a7905c31717074433fd2562bf9de1a472 inherit pub_static_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a7905c31717074433fd2562bf9de1a472">UpdateButtons</a> ()</td></tr>
+<tr class="separator:a7905c31717074433fd2562bf9de1a472 inherit pub_static_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a927977176e63b3ccb02bcfea548c0 inherit pub_static_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a83a927977176e63b3ccb02bcfea548c0">TryHihlight</a> ()</td></tr>
+<tr class="separator:a83a927977176e63b3ccb02bcfea548c0 inherit pub_static_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af235c51f6c1cf671bb71bbdd7567668c inherit pub_static_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#af235c51f6c1cf671bb71bbdd7567668c">TryShowTip</a> (Transform root=null, bool highlight=true, bool ignoreWhenRightClick=true)</td></tr>
+<tr class="separator:af235c51f6c1cf671bb71bbdd7567668c inherit pub_static_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2424ee615466342224fbd9e03568fe inherit pub_static_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1d2424ee615466342224fbd9e03568fe">TryShowTip&lt; T &gt;</a> (Transform root=null, bool highlight=true, bool ignoreWhenRightClick=true)</td></tr>
+<tr class="separator:a1d2424ee615466342224fbd9e03568fe inherit pub_static_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classUIButton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classUIButton')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classUIButton.html">UIButton</a></td></tr>
+<tr class="memitem:a91a368738da7f159d873778a0b1d3a1e inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a91a368738da7f159d873778a0b1d3a1e">DoSlide</a></td></tr>
+<tr class="separator:a91a368738da7f159d873778a0b1d3a1e inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaee05779d7db00b5cf46381545df825 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aeaee05779d7db00b5cf46381545df825">locked</a></td></tr>
+<tr class="separator:aeaee05779d7db00b5cf46381545df825 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c739e1f27c8c01b92b0efed31fcea45 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a4c739e1f27c8c01b92b0efed31fcea45">lastButton</a></td></tr>
+<tr class="separator:a4c739e1f27c8c01b92b0efed31fcea45 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62487a03ab858040d6775235b47ccb80 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a62487a03ab858040d6775235b47ccb80">lastHovered</a></td></tr>
+<tr class="separator:a62487a03ab858040d6775235b47ccb80 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092454eddffc65b8ebb050e6c98157f0 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a092454eddffc65b8ebb050e6c98157f0">currentHighlight</a></td></tr>
+<tr class="separator:a092454eddffc65b8ebb050e6c98157f0 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab577e7e7464ef7d5a6b95ab4e8ac6a2e inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#ab577e7e7464ef7d5a6b95ab4e8ac6a2e">currentPressedButton</a></td></tr>
+<tr class="separator:ab577e7e7464ef7d5a6b95ab4e8ac6a2e inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f03e949f411746a64b75a808c6c5fc inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a28f03e949f411746a64b75a808c6c5fc">lastClicked</a></td></tr>
+<tr class="separator:a28f03e949f411746a64b75a808c6c5fc inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d47388df36b3b54a2c39740d878798f inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a4d47388df36b3b54a2c39740d878798f">doubleClickTime</a> = 0.4f</td></tr>
+<tr class="separator:a4d47388df36b3b54a2c39740d878798f inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edbb644e932f15a582047703c434444 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a7edbb644e932f15a582047703c434444">buttonPos</a></td></tr>
+<tr class="separator:a7edbb644e932f15a582047703c434444 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edce17ebfc851661e2ad98a9ead689b inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a8edce17ebfc851661e2ad98a9ead689b">onPressed</a></td></tr>
+<tr class="separator:a8edce17ebfc851661e2ad98a9ead689b inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cfc41981260c576bf3d8610c1f91131 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classUIButton.html">UIButton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a1cfc41981260c576bf3d8610c1f91131">buttons</a> = new List&lt;<a class="el" href="classUIButton.html">UIButton</a>&gt;()</td></tr>
+<tr class="separator:a1cfc41981260c576bf3d8610c1f91131 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2414942e46ead2318cad6de141b5c3 inherit pub_static_attribs_classUIButton"><td class="memItemLeft" align="right" valign="top">static Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#abf2414942e46ead2318cad6de141b5c3">actionTooltip</a></td></tr>
+<tr class="separator:abf2414942e46ead2318cad6de141b5c3 inherit pub_static_attribs_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classUIButton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUIButton')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUIButton.html">UIButton</a></td></tr>
+<tr class="memitem:a9c25b15d133a74030333b23bd05b01d0 inherit pro_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a9c25b15d133a74030333b23bd05b01d0">Awake</a> ()</td></tr>
+<tr class="separator:a9c25b15d133a74030333b23bd05b01d0 inherit pro_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a189da2de1337343a7d5d999a01719 inherit pro_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a58a189da2de1337343a7d5d999a01719">OnEnable</a> ()</td></tr>
+<tr class="separator:a58a189da2de1337343a7d5d999a01719 inherit pro_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a4a23f8ba9ba48bbc816473430a424 inherit pro_methods_classUIButton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a10a4a23f8ba9ba48bbc816473430a424">DoStateTransition</a> (SelectionState state, bool instant)</td></tr>
+<tr class="separator:a10a4a23f8ba9ba48bbc816473430a424 inherit pro_methods_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_classUIButton"><td colspan="2" onclick="javascript:toggleInherit('properties_classUIButton')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classUIButton.html">UIButton</a></td></tr>
+<tr class="memitem:aa50c9da2457a418d2ea516471a386804 inherit properties_classUIButton"><td class="memItemLeft" align="right" valign="top">List&lt; Graphic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#aa50c9da2457a418d2ea516471a386804">Graphics</a><code> [get]</code></td></tr>
+<tr class="separator:aa50c9da2457a418d2ea516471a386804 inherit properties_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62db444c2741e898a2b66f41a1c2016b inherit properties_classUIButton"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIButton.html#a62db444c2741e898a2b66f41a1c2016b">CanDragLeftButton</a><code> [get]</code></td></tr>
+<tr class="separator:a62db444c2741e898a2b66f41a1c2016b inherit properties_classUIButton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -241,8 +424,8 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a">layoutTag</a>)</div>
 <div class="line"><span class="lineno">   55</span>        {</div>
 <div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a">layoutTag</a>.DestroyChildren();</div>
-<div class="line"><span class="lineno">   57</span>            HintIcon hintIcon = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;HintIcon&gt;(<span class="stringliteral">&quot;UI/Element/Item/Tag General&quot;</span>, <a class="code hl_variable" href="classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a">layoutTag</a>);</div>
-<div class="line"><span class="lineno">   58</span>            hintIcon.text.SetText(c.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetName().ToTitleCase(wholeText: <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="classHintIcon.html">HintIcon</a> hintIcon = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classHintIcon.html">HintIcon</a>&gt;(<span class="stringliteral">&quot;UI/Element/Item/Tag General&quot;</span>, <a class="code hl_variable" href="classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a">layoutTag</a>);</div>
+<div class="line"><span class="lineno">   58</span>            hintIcon.<a class="code hl_variable" href="classHintIcon.html#a57a0a6937dbe4c2a93b402409890ca14">text</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(c.<a class="code hl_property" href="classChara.html#a3fcffc5bb69dd24fc61adeb87ac9a282">job</a>.GetName().ToTitleCase(wholeText: <span class="keyword">true</span>));</div>
 <div class="line"><span class="lineno">   59</span>            hintIcon.RebuildLayout();</div>
 <div class="line"><span class="lineno">   60</span>            <a class="code hl_variable" href="classButtonChara.html#a97302fb0db136dcf190e2061b11ce59a">layoutTag</a>.RebuildLayout();</div>
 <div class="line"><span class="lineno">   61</span>        }</div>
@@ -259,15 +442,18 @@ Public Attributes</h2></td></tr>
 <div class="ttc" id="aclassChara_html_a8a784acd6e00f9e0e01888de2292601b"><div class="ttname"><a href="classChara.html#a8a784acd6e00f9e0e01888de2292601b">Chara.currentZone</a></div><div class="ttdeci">Zone currentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00239">Chara.cs:240</a></div></div>
 <div class="ttc" id="aclassChara_html_a8d4d12cb1ff927b90512ff98e14d1ec5"><div class="ttname"><a href="classChara.html#a8d4d12cb1ff927b90512ff98e14d1ec5">Chara.Aka</a></div><div class="ttdeci">string Aka</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00201">Chara.cs:201</a></div></div>
 <div class="ttc" id="aclassChara_html_aff51c1a00af6403830b9d32980033a66"><div class="ttname"><a href="classChara.html#aff51c1a00af6403830b9d32980033a66">Chara.race</a></div><div class="ttdeci">SourceRace.Row race</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00449">Chara.cs:449</a></div></div>
+<div class="ttc" id="aclassHintIcon_html"><div class="ttname"><a href="classHintIcon.html">HintIcon</a></div><div class="ttdef"><b>Definition:</b> <a href="HintIcon_8cs_source.html#l00005">HintIcon.cs:6</a></div></div>
+<div class="ttc" id="aclassHintIcon_html_a57a0a6937dbe4c2a93b402409890ca14"><div class="ttname"><a href="classHintIcon.html#a57a0a6937dbe4c2a93b402409890ca14">HintIcon.text</a></div><div class="ttdeci">UIText text</div><div class="ttdef"><b>Definition:</b> <a href="HintIcon_8cs_source.html#l00009">HintIcon.cs:9</a></div></div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_a6e0870ce9c216c1469b3354e47524442"><div class="ttname"><a href="classLang.html#a6e0870ce9c216c1469b3354e47524442">Lang._gender</a></div><div class="ttdeci">static string _gender(int id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00177">Lang.cs:177</a></div></div>
 <div class="ttc" id="aclassLang_html_af887d535fa835b69d8cc340132257e74"><div class="ttname"><a href="classLang.html#af887d535fa835b69d8cc340132257e74">Lang.Parse</a></div><div class="ttdeci">static string Parse(string idLang, string val1, string val2=null, string val3=null, string val4=null, string val5=null)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00147">Lang.cs:147</a></div></div>
 <div class="ttc" id="aclassPortrait_html_a91e34bfdc436df25a78dfab00bc0c5d4"><div class="ttname"><a href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">Portrait.SetChara</a></div><div class="ttdeci">void SetChara(Chara c, PCCData pccData=null)</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00138">Portrait.cs:138</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a8667078305385c64b1209db11f6462c9"><div class="ttname"><a href="classSpatial.html#a8667078305385c64b1209db11f6462c9">Spatial.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00495">Spatial.cs:495</a></div></div>
+<div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00159">UIText.cs:159</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00177">Lang._gender()</a>, <a class="el" href="Chara_8cs_source.html#l00201">Chara.Aka</a>, <a class="el" href="Card_8cs_source.html#l00040">Card.bio</a>, <a class="el" href="Chara_8cs_source.html#l00240">Chara.currentZone</a>, <a class="el" href="Biography_8cs_source.html#l00029">Biography.gender</a>, <a class="el" href="Chara_8cs_source.html#l00451">Chara.job</a>, <a class="el" href="ButtonChara_8cs_source.html#l00033">layoutTag</a>, <a class="el" href="Card_8cs_source.html#l01977">Card.Name</a>, <a class="el" href="Spatial_8cs_source.html#l00495">Spatial.Name</a>, <a class="el" href="Lang_8cs_source.html#l00147">Lang.Parse()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00015">portrait</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, <a class="el" href="Biography_8cs_source.html#l00280">Biography.TextAge()</a>, and <a class="el" href="ButtonChara_8cs_source.html#l00021">textBio</a>.</p>
+<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00177">Lang._gender()</a>, <a class="el" href="Chara_8cs_source.html#l00201">Chara.Aka</a>, <a class="el" href="Card_8cs_source.html#l00040">Card.bio</a>, <a class="el" href="Chara_8cs_source.html#l00240">Chara.currentZone</a>, <a class="el" href="Biography_8cs_source.html#l00029">Biography.gender</a>, <a class="el" href="Chara_8cs_source.html#l00451">Chara.job</a>, <a class="el" href="ButtonChara_8cs_source.html#l00033">layoutTag</a>, <a class="el" href="Card_8cs_source.html#l01977">Card.Name</a>, <a class="el" href="Spatial_8cs_source.html#l00495">Spatial.Name</a>, <a class="el" href="Lang_8cs_source.html#l00147">Lang.Parse()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00015">portrait</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Portrait_8cs_source.html#l00138">Portrait.SetChara()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="HintIcon_8cs_source.html#l00009">HintIcon.text</a>, <a class="el" href="Biography_8cs_source.html#l00280">Biography.TextAge()</a>, <a class="el" href="ButtonChara_8cs_source.html#l00021">textBio</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerHire_8cs_source.html#l00010">LayerHire.Refresh()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00113">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerEmbark_8cs_source.html#l00213">LayerEmbark.RefreshMembers()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00159">LayerQuestBoard.RefreshRanking()</a>, and <a class="el" href="ContentRanking_8cs_source.html#l00022">ContentRanking.SwitchRanking()</a>.</p>
 
@@ -281,7 +467,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">new UIItem ButtonChara.item</td>
+          <td class="memname">new <a class="el" href="classUIItem.html">UIItem</a> ButtonChara.item</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -335,7 +521,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText ButtonChara.textAlias</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> ButtonChara.textAlias</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -353,7 +539,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText ButtonChara.textBio</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> ButtonChara.textBio</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -371,7 +557,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText ButtonChara.textHobby</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> ButtonChara.textHobby</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -387,7 +573,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText ButtonChara.textLifeStyle</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> ButtonChara.textLifeStyle</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -403,7 +589,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText ButtonChara.textName</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> ButtonChara.textName</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -419,7 +605,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIText ButtonChara.textWork</td>
+          <td class="memname"><a class="el" href="classUIText.html">UIText</a> ButtonChara.textWork</td>
         </tr>
       </table>
 </div><div class="memdoc">

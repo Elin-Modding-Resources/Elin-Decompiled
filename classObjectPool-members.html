@@ -89,17 +89,26 @@ $(document).ready(function(){initNavTree('classObjectPool.html',''); initResizab
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ObjectPool Member List</div></div>
+  <div class="headertitle"><div class="title">ObjectPool&lt; T &gt; Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classObjectPool.html">ObjectPool</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#ad028c2868cb113568b77988a2fa06abe">Awake</a>()</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#ad19f14d23ee57bd67a2f70209ae9da17">Create&lt; T &gt;</a>(int max=100, int addsPerUpdate=10, Action&lt; T &gt; _onCreate=null)</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#aee89d9bd96afeaa9af2d94bc19929c2f">Instance</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#a5e282231f7924f200cc5a7c8af3f65f6">items</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#af0bb9848b3ece0db4e6978edf0524731">Update</a>()</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#a0c5e0393b0eed7360bf12aa8ac7afe85">Awake</a>()</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#a1c7d97c9434247225b9d887072110c8f">countActive</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#a8a492d46b6230a2afe750a843e05a148">countAll</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#afd6b674fd2d20832cf244c2804e1df9a">countInactive</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#a22e9b6d5762b9193cffeb12dd8336477">Create&lt; T &gt;</a>(int max=100, int addsPerUpdate=10, Action&lt; T &gt; _onCreate=null)</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#a28b7e503afcecfb7f8ae7647c7efdff8">Get</a>()</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#a7d08fe8ce12a934f410de58fef956a4a">Instance</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#adbd793a3b653ccde5196995fe3611712">items</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#a05a9570454ef24ea17880b822ab3f1a9">m_ActionOnGet</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0">m_ActionOnRelease</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b">m_Stack</a></td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#ac7f7c5e592e12b2b9d7ed59ec64a2d6d">ObjectPool</a>(UnityAction&lt; T &gt; actionOnGet, UnityAction&lt; T &gt; actionOnRelease)</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classObjectPool.html#af85041dbe64efa883573f2ad8e24f852">Release</a>(T element)</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classObjectPool.html#a34d53fdd0a977a395ffc42e69ed99309">Update</a>()</td><td class="entry"><a class="el" href="classObjectPool.html">ObjectPool&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

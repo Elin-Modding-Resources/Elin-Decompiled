@@ -109,6 +109,7 @@ Inheritance diagram for WidgetCodex:</div>
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
 <area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
+<area href="interfaceISkinRoot.html" alt="ISkinRoot" shape="rect" coords="254,56,371,80"/>
 <area href="classWidgetSearch.html" alt="WidgetSearch" shape="rect" coords="127,224,244,248"/>
   </map>
 </div></div>
@@ -188,13 +189,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afabface3017c9537ea076b0fb0fdf9d3 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b">IsAlignTop</a> ()</td></tr>
 <tr class="separator:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">Layer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (Layer l, Transform trans)</td></tr>
+<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (<a class="el" href="classLayer.html">Layer</a> l, Transform trans)</td></tr>
 <tr class="separator:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a> ()</td></tr>
 <tr class="separator:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
+<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
 <tr class="separator:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
+<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
 <tr class="separator:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a> (int id, int v=0)</td></tr>
 <tr class="separator:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,26 +205,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a115d938794f34d1eb29d44aae622c29b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a> ()</td></tr>
 <tr class="separator:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">CanShowContextMenu</a> ()</td></tr>
 <tr class="separator:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a> ()</td></tr>
 <tr class="separator:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4295c8036903342ae9e8b4722d3d82fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">GetSkin</a> ()</td></tr>
+<tr class="separator:a4295c8036903342ae9e8b4722d3d82fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aef6e38eb8a3dce387211ededc5de08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">GetSkinConfig</a> ()</td></tr>
+<tr class="separator:a0aef6e38eb8a3dce387211ededc5de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -231,13 +236,13 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8484bcf8e505aef3f432d70e532026e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a606fd6d85a98649c4f7d4d160946cc2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWordSearch.html">WordSearch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#a606fd6d85a98649c4f7d4d160946cc2c">search</a> = new <a class="el" href="classWordSearch.html">WordSearch</a>()</td></tr>
 <tr class="separator:a606fd6d85a98649c4f7d4d160946cc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1420a518676d8e32f0712cbbd4752af"><td class="memItemLeft" align="right" valign="top">UIDynamicList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a></td></tr>
+<tr class="memitem:ad1420a518676d8e32f0712cbbd4752af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDynamicList.html">UIDynamicList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a></td></tr>
 <tr class="separator:ad1420a518676d8e32f0712cbbd4752af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0671e710267d2b4dd33245e34885c04b"><td class="memItemLeft" align="right" valign="top">HashSet&lt; <a class="el" href="classRecipe.html">Recipe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">recipes</a> = new HashSet&lt;<a class="el" href="classRecipe.html">Recipe</a>&gt;()</td></tr>
 <tr class="separator:a0671e710267d2b4dd33245e34885c04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927601397b91bbd91243ec379830052b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#a927601397b91bbd91243ec379830052b">lastSearch</a></td></tr>
 <tr class="separator:a927601397b91bbd91243ec379830052b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca0ddf3f004fedb3bc45b75f3bb996b5"><td class="memItemLeft" align="right" valign="top">UIButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#aca0ddf3f004fedb3bc45b75f3bb996b5">buttonClear</a></td></tr>
+<tr class="memitem:aca0ddf3f004fedb3bc45b75f3bb996b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#aca0ddf3f004fedb3bc45b75f3bb996b5">buttonClear</a></td></tr>
 <tr class="separator:aca0ddf3f004fedb3bc45b75f3bb996b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a747a77750b4ab4cfda48cde025cf52cf"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetCodex.html#a747a77750b4ab4cfda48cde025cf52cf">transResult</a></td></tr>
 <tr class="separator:a747a77750b4ab4cfda48cde025cf52cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,7 +251,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32">soundActivate</a></td></tr>
 <tr class="separator:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">UIDragPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
+<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDragPanel.html">UIDragPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
 <tr class="separator:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2845d6ff2975f55feb970632c99405d1">tipPivotLeft</a></td></tr>
 <tr class="separator:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,7 +277,7 @@ Properties</h2></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
 <tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
+<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
 <tr class="separator:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -521,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00086">86</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        list.callbacks = <span class="keyword">new</span> UIList.Callback&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;</div>
+<div class="line"><span class="lineno">   88</span>        list.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;</div>
 <div class="line"><span class="lineno">   89</span>        {</div>
 <div class="line"><span class="lineno">   90</span>            onClick = delegate</div>
 <div class="line"><span class="lineno">   91</span>            {</div>
@@ -534,21 +539,26 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   98</span>            {</div>
 <div class="line"><span class="lineno">   99</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a> recipe <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">recipes</a>)</div>
 <div class="line"><span class="lineno">  100</span>                {</div>
-<div class="line"><span class="lineno">  101</span>                    <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.Add(recipe);</div>
+<div class="line"><span class="lineno">  101</span>                    <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_function" href="classUIDynamicList.html#a81d537e8c205fab96932ea7c844da05b">Add</a>(recipe);</div>
 <div class="line"><span class="lineno">  102</span>                }</div>
 <div class="line"><span class="lineno">  103</span>            }</div>
 <div class="line"><span class="lineno">  104</span>        };</div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.List();</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.dsv.OnResize();</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_function" href="classUIDynamicList.html#a456b025d96191ccbf7f453e702e4840a">List</a>();</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_variable" href="classUIDynamicList.html#ab8e9849e481c21724ed219d7cb2c0fec">dsv</a>.OnResize();</div>
 <div class="line"><span class="lineno">  107</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
 <div class="ttc" id="aclassButtonGrid_html_a3fcedfa5c87142133676def09a0fbc07"><div class="ttname"><a href="classButtonGrid.html#a3fcedfa5c87142133676def09a0fbc07">ButtonGrid.SetCraftRecipe</a></div><div class="ttdeci">void SetCraftRecipe(Recipe r, Mode mode, bool tooltip=false)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00584">ButtonGrid.cs:584</a></div></div>
 <div class="ttc" id="aclassButtonGrid_html_a7c813d5ada0a86d8447be38224802048"><div class="ttname"><a href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">ButtonGrid.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00008">ButtonGrid.cs:9</a></div></div>
 <div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00006">Recipe.cs:7</a></div></div>
+<div class="ttc" id="aclassUIDynamicList_html_a456b025d96191ccbf7f453e702e4840a"><div class="ttname"><a href="classUIDynamicList.html#a456b025d96191ccbf7f453e702e4840a">UIDynamicList.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="UIDynamicList_8cs_source.html#l00235">UIDynamicList.cs:235</a></div></div>
+<div class="ttc" id="aclassUIDynamicList_html_a81d537e8c205fab96932ea7c844da05b"><div class="ttname"><a href="classUIDynamicList.html#a81d537e8c205fab96932ea7c844da05b">UIDynamicList.Add</a></div><div class="ttdeci">override void Add(object o)</div><div class="ttdef"><b>Definition:</b> <a href="UIDynamicList_8cs_source.html#l00068">UIDynamicList.cs:68</a></div></div>
+<div class="ttc" id="aclassUIDynamicList_html_ab8e9849e481c21724ed219d7cb2c0fec"><div class="ttname"><a href="classUIDynamicList.html#ab8e9849e481c21724ed219d7cb2c0fec">UIDynamicList.dsv</a></div><div class="ttdeci">DynamicScrollView dsv</div><div class="ttdef"><b>Definition:</b> <a href="UIDynamicList_8cs_source.html#l00018">UIDynamicList.cs:18</a></div></div>
+<div class="ttc" id="aclassUIList_1_1Callback_html"><div class="ttname"><a href="classUIList_1_1Callback.html">UIList.Callback</a></div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00052">UIList.cs:53</a></div></div>
+<div class="ttc" id="aclassUIList_html"><div class="ttname"><a href="classUIList.html">UIList</a></div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00008">UIList.cs:9</a></div></div>
 <div class="ttc" id="aclassWidgetCodex_html_a0671e710267d2b4dd33245e34885c04b"><div class="ttname"><a href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">WidgetCodex.recipes</a></div><div class="ttdeci">HashSet&lt; Recipe &gt; recipes</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00019">WidgetCodex.cs:19</a></div></div>
 <div class="ttc" id="aclassWidgetCodex_html_ad1420a518676d8e32f0712cbbd4752af"><div class="ttname"><a href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">WidgetCodex.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00017">WidgetCodex.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetCodex_8cs_source.html#l00017">list</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00019">recipes</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00584">ButtonGrid.SetCraftRecipe()</a>.</p>
+<p class="reference">References <a class="el" href="UIDynamicList_8cs_source.html#l00068">UIDynamicList.Add()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00018">UIDynamicList.dsv</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00235">UIDynamicList.List()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00017">list</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00019">recipes</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00584">ButtonGrid.SetCraftRecipe()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00048">Search()</a>.</p>
 
@@ -711,7 +721,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIButton WidgetCodex.buttonClear</td>
+          <td class="memname"><a class="el" href="classUIButton.html">UIButton</a> WidgetCodex.buttonClear</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -791,7 +801,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UIDynamicList WidgetCodex.list</td>
+          <td class="memname"><a class="el" href="classUIDynamicList.html">UIDynamicList</a> WidgetCodex.list</td>
         </tr>
       </table>
 </div><div class="memdoc">

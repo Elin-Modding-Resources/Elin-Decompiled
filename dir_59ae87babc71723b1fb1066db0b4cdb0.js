@@ -60,7 +60,7 @@ var dir_59ae87babc71723b1fb1066db0b4cdb0 =
     [ "MOD.cs", "MOD_8cs.html", "MOD_8cs" ],
     [ "ModItem.cs", "ModItem_8cs.html", "ModItem_8cs" ],
     [ "ModItemList.cs", "ModItemList_8cs.html", "ModItemList_8cs" ],
-    [ "ObjectPool.cs", "ObjectPool_8cs.html", "ObjectPool_8cs" ],
+    [ "ObjectPool.cs", "Plugins_8basecore_2ObjectPool_8cs.html", "Plugins_8basecore_2ObjectPool_8cs" ],
     [ "PaintPosition.cs", "PaintPosition_8cs.html", "PaintPosition_8cs" ],
     [ "PoolManager.cs", "PoolManager_8cs.html", "PoolManager_8cs" ],
     [ "PrefabFix.cs", "PrefabFix_8cs.html", "PrefabFix_8cs" ],

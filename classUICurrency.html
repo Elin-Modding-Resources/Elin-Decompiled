@@ -153,7 +153,7 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af36466a3f6ade1468ecfd212c01ae0ba"><td class="memItemLeft" align="right" valign="top">UIButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">mold</a></td></tr>
+<tr class="memitem:af36466a3f6ade1468ecfd212c01ae0ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">mold</a></td></tr>
 <tr class="separator:af36466a3f6ade1468ecfd212c01ae0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -252,26 +252,30 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UICurrency_8cs_source.html#l00154">154</a> of file <a class="el" href="UICurrency_8cs_source.html">UICurrency.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  155</span>    {</div>
-<div class="line"><span class="lineno">  156</span>        UIButton uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">mold</a>, <a class="code hl_variable" href="classUICurrency.html#a85d803ce42e79ed8dbcb46b0499cf86f">layout</a>);</div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">mold</a>, <a class="code hl_variable" href="classUICurrency.html#a85d803ce42e79ed8dbcb46b0499cf86f">layout</a>);</div>
 <div class="line"><span class="lineno">  157</span>        uIButton.icon.sprite = icon;</div>
-<div class="line"><span class="lineno">  158</span>        uIButton.icon.SetNativeSize();</div>
+<div class="line"><span class="lineno">  158</span>        uIButton.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetNativeSize();</div>
 <div class="line"><span class="lineno">  159</span>        uIButton.tooltip.lang = lang.lang().ToTitleCase(wholeText: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="classUICurrency.html#a7e129bc549344c10f984055f4b84c243">items</a>.Add(<span class="keyword">new</span> Item</div>
 <div class="line"><span class="lineno">  161</span>        {</div>
 <div class="line"><span class="lineno">  162</span>            func = func,</div>
 <div class="line"><span class="lineno">  163</span>            text = uIButton.mainText</div>
 <div class="line"><span class="lineno">  164</span>        });</div>
-<div class="line"><span class="lineno">  165</span>        uIButton.mainText.SetText(func());</div>
-<div class="line"><span class="lineno">  166</span>        uIButton.mainText.RebuildLayout();</div>
+<div class="line"><span class="lineno">  165</span>        uIButton.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(func());</div>
+<div class="line"><span class="lineno">  166</span>        uIButton.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.RebuildLayout();</div>
 <div class="line"><span class="lineno">  167</span>        uIButton.RebuildLayout();</div>
 <div class="line"><span class="lineno">  168</span>    }</div>
+<div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
+<div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
+<div class="ttc" id="aclassUIButton_html_a2c91e2485c1dea09ccf8cf5865e4c4dd"><div class="ttname"><a href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">UIButton.mainText</a></div><div class="ttdeci">UIText mainText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00102">UIButton.cs:102</a></div></div>
 <div class="ttc" id="aclassUICurrency_html_a7e129bc549344c10f984055f4b84c243"><div class="ttname"><a href="classUICurrency.html#a7e129bc549344c10f984055f4b84c243">UICurrency.items</a></div><div class="ttdeci">List&lt; Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="UICurrency_8cs_source.html#l00049">UICurrency.cs:49</a></div></div>
 <div class="ttc" id="aclassUICurrency_html_a85d803ce42e79ed8dbcb46b0499cf86f"><div class="ttname"><a href="classUICurrency.html#a85d803ce42e79ed8dbcb46b0499cf86f">UICurrency.layout</a></div><div class="ttdeci">LayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="UICurrency_8cs_source.html#l00059">UICurrency.cs:59</a></div></div>
 <div class="ttc" id="aclassUICurrency_html_af36466a3f6ade1468ecfd212c01ae0ba"><div class="ttname"><a href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">UICurrency.mold</a></div><div class="ttdeci">UIButton mold</div><div class="ttdef"><b>Definition:</b> <a href="UICurrency_8cs_source.html#l00063">UICurrency.cs:63</a></div></div>
+<div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00159">UIText.cs:159</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UICurrency_8cs_source.html#l00049">items</a>, <a class="el" href="UICurrency_8cs_source.html#l00059">layout</a>, and <a class="el" href="UICurrency_8cs_source.html#l00063">mold</a>.</p>
+<p class="reference">References <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="UICurrency_8cs_source.html#l00049">items</a>, <a class="el" href="UICurrency_8cs_source.html#l00059">layout</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="UICurrency_8cs_source.html#l00063">mold</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UICurrency_8cs_source.html#l00085">Build()</a>.</p>
 
@@ -341,7 +345,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="UICurrency_8cs_source.html#l00085">85</a> of file <a class="el" href="UICurrency_8cs_source.html">UICurrency.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
 <div class="line"><span class="lineno">   87</span>        <a class="code hl_variable" href="classUICurrency.html#a7e129bc549344c10f984055f4b84c243">items</a>.Clear();</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">mold</a> = <a class="code hl_variable" href="classUICurrency.html#a85d803ce42e79ed8dbcb46b0499cf86f">layout</a>.CreateMold&lt;UIButton&gt;();</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="classUICurrency.html#af36466a3f6ade1468ecfd212c01ae0ba">mold</a> = <a class="code hl_variable" href="classUICurrency.html#a85d803ce42e79ed8dbcb46b0499cf86f">layout</a>.CreateMold&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;();</div>
 <div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUICurrency.html#a1571ca93116d71c39810b80a7ffdc4be">options</a>.<a class="code hl_variable" href="classUICurrency_1_1Options.html#a82d6d6f53efb6d1b32a58e77462329d4">plat</a>)</div>
 <div class="line"><span class="lineno">   90</span>        {</div>
 <div class="line"><span class="lineno">   91</span>            <a class="code hl_function" href="classUICurrency.html#aeae395b03277a61bceb2abb354093ee0">Add</a>(<a class="code hl_variable" href="classUICurrency.html#a308dbb0131f30172770317d12fce4719">icons</a>[1], <span class="stringliteral">&quot;plat&quot;</span>, () =&gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>(<span class="stringliteral">&quot;plat&quot;</span>).ToString(<span class="stringliteral">&quot;#,0&quot;</span>) ?? <span class="stringliteral">&quot;&quot;</span>);</div>
@@ -670,7 +674,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UIButton UICurrency.mold</td>
+          <td class="memname"><a class="el" href="classUIButton.html">UIButton</a> UICurrency.mold</td>
         </tr>
       </table>
   </td>

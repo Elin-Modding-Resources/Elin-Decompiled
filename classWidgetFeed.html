@@ -108,6 +108,7 @@ Inheritance diagram for WidgetFeed:</div>
 <area href="classWidget.html" alt="Widget" shape="rect" coords="127,112,244,136"/>
 <area href="classEMono.html" alt="EMono" shape="rect" coords="0,56,117,80"/>
 <area href="interfaceIChangeResolution.html" alt="IChangeResolution" shape="rect" coords="127,56,244,80"/>
+<area href="interfaceISkinRoot.html" alt="ISkinRoot" shape="rect" coords="254,56,371,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -126,7 +127,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab9195b62251f1996008e4e4c99db34d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa372f72be387b8025e42df447d1a7a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#aa372f72be387b8025e42df447d1a7a93">Talk</a> (<a class="el" href="classCard.html">Card</a> c, string id)</td></tr>
 <tr class="separator:aa372f72be387b8025e42df447d1a7a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a619e479dd796dca1f24b510b5d8a7531"><td class="memItemLeft" align="right" valign="top">PopItem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a619e479dd796dca1f24b510b5d8a7531">SayRaw</a> (<a class="el" href="classCard.html">Card</a> c, string text)</td></tr>
+<tr class="memitem:a619e479dd796dca1f24b510b5d8a7531"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPopItem.html">PopItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a619e479dd796dca1f24b510b5d8a7531">SayRaw</a> (<a class="el" href="classCard.html">Card</a> c, string text)</td></tr>
 <tr class="separator:a619e479dd796dca1f24b510b5d8a7531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a620458d38a50a5103ceab91ef08cd471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a620458d38a50a5103ceab91ef08cd471">SayRaw</a> (string idPortrait, string text, string _idPop)</td></tr>
 <tr class="separator:a620458d38a50a5103ceab91ef08cd471"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,7 +135,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98ff2b6e0fb5e09c7833a603a000fafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a172f5149bfb57117d7f12c2b2900cff9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a172f5149bfb57117d7f12c2b2900cff9">System</a> (string text)</td></tr>
 <tr class="separator:a172f5149bfb57117d7f12c2b2900cff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a262323bbd84039d555c3b604921ec408"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a262323bbd84039d555c3b604921ec408">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a262323bbd84039d555c3b604921ec408"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a262323bbd84039d555c3b604921ec408">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a262323bbd84039d555c3b604921ec408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classWidget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:ac34647c88d9a1a38402cd20a0c13a236 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac34647c88d9a1a38402cd20a0c13a236">Test</a> ()</td></tr>
@@ -183,13 +184,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afabface3017c9537ea076b0fb0fdf9d3 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b">IsAlignTop</a> ()</td></tr>
 <tr class="separator:a1a482a1fcd10d2a8c77f7ea75c83b55b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">Layer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (Layer l, Transform trans)</td></tr>
+<tr class="memitem:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer.html">Layer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9">AddLayer</a> (<a class="el" href="classLayer.html">Layer</a> l, Transform trans)</td></tr>
 <tr class="separator:a4a8e9d9b04888546bdbf338d5b7679a9 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae5aad627d1b7ca8ad5f526acbe99eaf1">RefreshTipPivotPosition</a> ()</td></tr>
 <tr class="separator:ae5aad627d1b7ca8ad5f526acbe99eaf1 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
+<tr class="memitem:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2">GetSkin</a> ()</td></tr>
 <tr class="separator:af6693681e109d517e6c2a0d6dc68bfa2 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">SkinConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
+<tr class="memitem:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae60aa3a23d80586ad42e9dc2bbd4e7eb">GetSkinConfig</a> ()</td></tr>
 <tr class="separator:ae60aa3a23d80586ad42e9dc2bbd4e7eb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa473f5a767300ec3eab172b477465bec">SetSkin</a> (int id, int v=0)</td></tr>
 <tr class="separator:aa473f5a767300ec3eab172b477465bec inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,32 +200,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a115d938794f34d1eb29d44aae622c29b inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">OnApplySkin</a> ()</td></tr>
 <tr class="separator:ace4cbf38e8aadee76c0a6da309ce80d7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#aa1bc3bba48a44aa10e0e70ff2fcbd271">InstantiateDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:aa1bc3bba48a44aa10e0e70ff2fcbd271 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640">AddDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a14d3ca9a9c9b1081dc5371a38774e640 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (SkinDeco deco)</td></tr>
+<tr class="memitem:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a> (<a class="el" href="classSkinDeco.html">SkinDeco</a> deco)</td></tr>
 <tr class="separator:a0469638a88c98fa33fbc8e9d2713d404 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">CanShowContextMenu</a> ()</td></tr>
 <tr class="separator:ad337395ff179624b2e16a1b4e40de7f6 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a0e5655bef2d0773efbcfc065b4abbca7">ShowContextMenu</a> ()</td></tr>
 <tr class="separator:a0e5655bef2d0773efbcfc065b4abbca7 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1566722a39d0cce11507c43b3737df1a inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">OnSetContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:ad2732b674b864ef872b939069ac321bc inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (UIContextMenu m)</td></tr>
+<tr class="memitem:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a> (<a class="el" href="classUIContextMenu.html">UIContextMenu</a> m)</td></tr>
 <tr class="separator:a1ad7837f095382884364ecba60c0a4cb inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ac6533dcab2a91d1122bc393e017d9f44">SoundActivate</a> ()</td></tr>
 <tr class="separator:ac6533dcab2a91d1122bc393e017d9f44 inherit pub_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d">OnChangeResolution</a> ()</td></tr>
 <tr class="separator:a96eb6faf64a5ddb49d52fbea2279634d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4295c8036903342ae9e8b4722d3d82fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinSet.html">SkinSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe">GetSkin</a> ()</td></tr>
+<tr class="separator:a4295c8036903342ae9e8b4722d3d82fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aef6e38eb8a3dce387211ededc5de08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinConfig.html">SkinConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08">GetSkinConfig</a> ()</td></tr>
+<tr class="separator:a0aef6e38eb8a3dce387211ededc5de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac677d17f28eacd11aa76a2fca07a5137"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#ac677d17f28eacd11aa76a2fca07a5137">goDummy</a></td></tr>
 <tr class="separator:ac677d17f28eacd11aa76a2fca07a5137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498a84266c404980276c8509b31f14c5"><td class="memItemLeft" align="right" valign="top">PopManager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a></td></tr>
+<tr class="memitem:a498a84266c404980276c8509b31f14c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPopManager.html">PopManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a></td></tr>
 <tr class="separator:a498a84266c404980276c8509b31f14c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade90a3b32ad119d54c2f9eb27d4597ef"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a></td></tr>
 <tr class="separator:ade90a3b32ad119d54c2f9eb27d4597ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,7 +242,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adc7edf86fd522a256f2879971f83e73d inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a753dcd1375c7e557b42cd3aa4ba62e32">soundActivate</a></td></tr>
 <tr class="separator:a753dcd1375c7e557b42cd3aa4ba62e32 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">UIDragPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
+<tr class="memitem:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIDragPanel.html">UIDragPanel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a6f9bd9c1778330918d9ca31abda28283">dragPanel</a></td></tr>
 <tr class="separator:a6f9bd9c1778330918d9ca31abda28283 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2845d6ff2975f55feb970632c99405d1">tipPivotLeft</a></td></tr>
 <tr class="separator:a2845d6ff2975f55feb970632c99405d1 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,7 +274,7 @@ Properties</h2></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWidget_1_1Config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#ae96c97d6d615735b7e0448a19d8900be">config</a><code> [get]</code></td></tr>
 <tr class="separator:ae96c97d6d615735b7e0448a19d8900be inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">SkinRoot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
+<tr class="memitem:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSkinRoot.html">SkinRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706">skinRoot</a><code> [get]</code></td></tr>
 <tr class="separator:af8da22b9a0963fc8f4611fd7d4dce706 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a2d7a3a96406bd5abac6506e510e5596f">IsSealed</a><code> [get]</code></td></tr>
 <tr class="separator:a2d7a3a96406bd5abac6506e510e5596f inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -528,7 +533,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">override void WidgetFeed.OnSetContextMenu </td>
           <td>(</td>
-          <td class="paramtype">UIContextMenu&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIContextMenu.html">UIContextMenu</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -544,7 +549,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetFeed_8cs_source.html#l00106">106</a> of file <a class="el" href="WidgetFeed_8cs_source.html">WidgetFeed.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
-<div class="line"><span class="lineno">  108</span>        m.AddChild(<span class="stringliteral">&quot;setting&quot;</span>).AddSlider(<span class="stringliteral">&quot;style&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; <a class="code hl_variable" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a>[(<span class="keywordtype">int</span>)a], <a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">style</a>, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  108</span>        m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;setting&quot;</span>).<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;style&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; <a class="code hl_variable" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a>[(<span class="keywordtype">int</span>)a], <a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">style</a>, delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">  109</span>        {</div>
 <div class="line"><span class="lineno">  110</span>            extra.style = (int)a;</div>
 <div class="line"><span class="lineno">  111</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Nerun</a>(<span class="stringliteral">&quot;this&quot;</span>);</div>
@@ -553,12 +558,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  114</span>    }</div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_ae11b2b472e2b195c160f2a611701b22c"><div class="ttname"><a href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Msg.Nerun</a></div><div class="ttdeci">static void Nerun(string lang, string idPortrait=&quot;UN_nerun&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00145">Msg.cs:145</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_a75c796a9dd17902e8a8f710e8c8760f6"><div class="ttname"><a href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">UIContextMenu.AddSlider</a></div><div class="ttdeci">UIContextMenuItem AddSlider(string text, Func&lt; float, string &gt; textFunc, float value, Action&lt; float &gt; action, float min=0f, float max=1f, bool isInt=false, bool hideOther=true, bool useInput=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.cs:329</a></div></div>
+<div class="ttc" id="aclassUIContextMenu_html_afa1c5174bdbdf88aeacd6407a9840b1f"><div class="ttname"><a href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">UIContextMenu.AddChild</a></div><div class="ttdeci">UIContextMenu AddChild(string idLang, TextAnchor anchor)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.cs:496</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_1_1Extra_html_a5a35996e95224820504bcc9b7f7e8af0"><div class="ttname"><a href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">WidgetFeed.Extra.style</a></div><div class="ttdeci">int style</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.cs:11</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_html_ad41770d8ffc701a3cbfeba695edc20b7"><div class="ttname"><a href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">WidgetFeed.extra</a></div><div class="ttdeci">Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00038">WidgetFeed.cs:38</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_html_ade90a3b32ad119d54c2f9eb27d4597ef"><div class="ttname"><a href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">WidgetFeed.idPop</a></div><div class="ttdeci">string[] idPop</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00020">WidgetFeed.cs:20</a></div></div>
 <div class="ttc" id="aclassWidget_html_a1566722a39d0cce11507c43b3737df1a"><div class="ttname"><a href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">Widget.SetBaseContextMenu</a></div><div class="ttdeci">void SetBaseContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00608">Widget.cs:608</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00020">idPop</a>, <a class="el" href="Msg_8cs_source.html#l00145">Msg.Nerun()</a>, <a class="el" href="Widget_8cs_source.html#l00608">Widget.SetBaseContextMenu()</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.Extra.style</a>.</p>
+<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.AddChild()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00020">idPop</a>, <a class="el" href="Msg_8cs_source.html#l00145">Msg.Nerun()</a>, <a class="el" href="Widget_8cs_source.html#l00608">Widget.SetBaseContextMenu()</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.Extra.style</a>.</p>
 
 </div>
 </div>
@@ -572,7 +579,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">PopItem WidgetFeed.SayRaw </td>
+          <td class="memname"><a class="el" href="classPopItem.html">PopItem</a> WidgetFeed.SayRaw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classCard.html">Card</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -598,15 +605,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetFeed_8cs_source.html#l00081">81</a> of file <a class="el" href="WidgetFeed_8cs_source.html">WidgetFeed.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
-<div class="line"><span class="lineno">   83</span>        PopItemText popItemText = <a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.PopText(text, <span class="keyword">null</span>, <a class="code hl_variable" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a>[<a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">style</a>]);</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_class" href="classPopItemText.html">PopItemText</a> popItemText = <a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.<a class="code hl_function" href="classPopManager.html#ab891935a89e4119544eb12e00b235d74">PopText</a>(text, <span class="keyword">null</span>, <a class="code hl_variable" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a>[<a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">style</a>]);</div>
 <div class="line"><span class="lineno">   84</span>        popItemText.GetComponentInChildren&lt;<a class="code hl_class" href="classPortrait.html">Portrait</a>&gt;().SetChara(c as <a class="code hl_class" href="classChara.html">Chara</a>);</div>
 <div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> popItemText;</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassPopItemText_html"><div class="ttname"><a href="classPopItemText.html">PopItemText</a></div><div class="ttdef"><b>Definition:</b> <a href="PopItemText_8cs_source.html#l00004">PopItemText.cs:5</a></div></div>
+<div class="ttc" id="aclassPopManager_html_ab891935a89e4119544eb12e00b235d74"><div class="ttname"><a href="classPopManager.html#ab891935a89e4119544eb12e00b235d74">PopManager.PopText</a></div><div class="ttdeci">PopItemText PopText(string text, Sprite sprite=null, string id=&quot;PopText&quot;, Color c=default(Color), Vector3 destPos=default(Vector3), float duration=0f)</div><div class="ttdef"><b>Definition:</b> <a href="PopManager_8cs_source.html#l00041">PopManager.cs:41</a></div></div>
 <div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00006">Portrait.cs:7</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_html_a498a84266c404980276c8509b31f14c5"><div class="ttname"><a href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">WidgetFeed.pop</a></div><div class="ttdeci">PopManager pop</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00018">WidgetFeed.cs:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00020">idPop</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00018">pop</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.Extra.style</a>.</p>
+<p class="reference">References <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00020">idPop</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00018">pop</a>, <a class="el" href="PopManager_8cs_source.html#l00041">PopManager.PopText()</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.Extra.style</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetFeed_8cs_source.html#l00093">Nerun()</a>, <a class="el" href="Msg_8cs_source.html#l00171">Msg.SayPic()</a>, <a class="el" href="Msg_8cs_source.html#l00200">Msg.Talk()</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00075">Talk()</a>.</p>
 
@@ -654,10 +663,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetFeed_8cs_source.html#l00088">88</a> of file <a class="el" href="WidgetFeed_8cs_source.html">WidgetFeed.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.PopText(text, <span class="keyword">null</span>, _idPop.IsEmpty(<a class="code hl_variable" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a>[<a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">style</a>])).GetComponentInChildren&lt;<a class="code hl_class" href="classPortrait.html">Portrait</a>&gt;().SetPortrait(idPortrait);</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.<a class="code hl_function" href="classPopManager.html#ab891935a89e4119544eb12e00b235d74">PopText</a>(text, <span class="keyword">null</span>, _idPop.IsEmpty(<a class="code hl_variable" href="classWidgetFeed.html#ade90a3b32ad119d54c2f9eb27d4597ef">idPop</a>[<a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a5a35996e95224820504bcc9b7f7e8af0">style</a>])).GetComponentInChildren&lt;<a class="code hl_class" href="classPortrait.html">Portrait</a>&gt;().SetPortrait(idPortrait);</div>
 <div class="line"><span class="lineno">   91</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00020">idPop</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00018">pop</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.Extra.style</a>.</p>
+<p class="reference">References <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00020">idPop</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00018">pop</a>, <a class="el" href="PopManager_8cs_source.html#l00041">PopManager.PopText()</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00011">WidgetFeed.Extra.style</a>.</p>
 
 </div>
 </div>
@@ -689,14 +698,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
 <div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetFeed.html#ad41770d8ffc701a3cbfeba695edc20b7">extra</a>.<a class="code hl_variable" href="classWidgetFeed_1_1Extra.html#a3572aa8c8001554665f294c0a3c10e5c">intercept</a>)</div>
 <div class="line"><span class="lineno">  101</span>        {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.PopText(text, <span class="keyword">null</span>, <a class="code hl_variable" href="classWidgetFeed.html#a6fccc07d6f59da3ae1614fa14c875712">idPopSystem</a>, <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_variable" href="classMsg.html#a63f4f046d36b1492a027f92ed0362aa4">currentColor</a>);</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classWidgetFeed.html#a498a84266c404980276c8509b31f14c5">pop</a>.<a class="code hl_function" href="classPopManager.html#ab891935a89e4119544eb12e00b235d74">PopText</a>(text, <span class="keyword">null</span>, <a class="code hl_variable" href="classWidgetFeed.html#a6fccc07d6f59da3ae1614fa14c875712">idPopSystem</a>, <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_variable" href="classMsg.html#a63f4f046d36b1492a027f92ed0362aa4">currentColor</a>);</div>
 <div class="line"><span class="lineno">  103</span>        }</div>
 <div class="line"><span class="lineno">  104</span>    }</div>
 <div class="ttc" id="aclassMsg_html_a63f4f046d36b1492a027f92ed0362aa4"><div class="ttname"><a href="classMsg.html#a63f4f046d36b1492a027f92ed0362aa4">Msg.currentColor</a></div><div class="ttdeci">static Color currentColor</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00010">Msg.cs:10</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_1_1Extra_html_a3572aa8c8001554665f294c0a3c10e5c"><div class="ttname"><a href="classWidgetFeed_1_1Extra.html#a3572aa8c8001554665f294c0a3c10e5c">WidgetFeed.Extra.intercept</a></div><div class="ttdeci">bool intercept</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00009">WidgetFeed.cs:9</a></div></div>
 <div class="ttc" id="aclassWidgetFeed_html_a6fccc07d6f59da3ae1614fa14c875712"><div class="ttname"><a href="classWidgetFeed.html#a6fccc07d6f59da3ae1614fa14c875712">WidgetFeed.idPopSystem</a></div><div class="ttdeci">string idPopSystem</div><div class="ttdef"><b>Definition:</b> <a href="WidgetFeed_8cs_source.html#l00024">WidgetFeed.cs:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00010">Msg.currentColor</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00024">idPopSystem</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00009">WidgetFeed.Extra.intercept</a>, and <a class="el" href="WidgetFeed_8cs_source.html#l00018">pop</a>.</p>
+<p class="reference">References <a class="el" href="Msg_8cs_source.html#l00010">Msg.currentColor</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00038">extra</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00024">idPopSystem</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00009">WidgetFeed.Extra.intercept</a>, <a class="el" href="WidgetFeed_8cs_source.html#l00018">pop</a>, and <a class="el" href="PopManager_8cs_source.html#l00041">PopManager.PopText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetFeed_8cs_source.html#l00061">OnActivate()</a>, and <a class="el" href="Msg_8cs_source.html#l00113">Msg.SayRaw()</a>.</p>
 
@@ -851,7 +860,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">PopManager WidgetFeed.pop</td>
+          <td class="memname"><a class="el" href="classPopManager.html">PopManager</a> WidgetFeed.pop</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -939,11 +948,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   47</span>        {</div>
 <div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>)</div>
 <div class="line"><span class="lineno">   49</span>            {</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.isShowingLog;</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_variable" href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">box</a>.<a class="code hl_variable" href="classMsgBox.html#a978cff9beab5d07b6ea4097d46bbaf1d">isShowingLog</a>;</div>
 <div class="line"><span class="lineno">   51</span>            }</div>
 <div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   53</span>        }</div>
 <div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassMsgBox_html_a978cff9beab5d07b6ea4097d46bbaf1d"><div class="ttname"><a href="classMsgBox.html#a978cff9beab5d07b6ea4097d46bbaf1d">MsgBox.isShowingLog</a></div><div class="ttdeci">bool isShowingLog</div><div class="ttdef"><b>Definition:</b> <a href="MsgBox_8cs_source.html#l00055">MsgBox.cs:55</a></div></div>
 <div class="ttc" id="aclassWidgetMainText_html_a0f86d5516c5bb3ad7b294150899c5213"><div class="ttname"><a href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">WidgetMainText.Instance</a></div><div class="ttdeci">static WidgetMainText Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00017">WidgetMainText.cs:17</a></div></div>
 <div class="ttc" id="aclassWidgetMainText_html_a6ef77e94f8aed018c8f93bfb4c64bfe6"><div class="ttname"><a href="classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6">WidgetMainText.box</a></div><div class="ttdeci">MsgBox box</div><div class="ttdef"><b>Definition:</b> <a href="WidgetMainText_8cs_source.html#l00021">WidgetMainText.cs:21</a></div></div>
 </div><!-- fragment -->

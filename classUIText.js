@@ -1,0 +1,26 @@
+var classUIText =
+[
+    [ "ApplySkin", "classUIText.html#a1163a1672b1b67321171376d326a3401", null ],
+    [ "Awake", "classUIText.html#a977f823671475e2e64569a5bc5a13e3c", null ],
+    [ "OnChangeLanguage", "classUIText.html#a8fd9d0016615f23926adb2da804a011e", null ],
+    [ "OnEnable", "classUIText.html#ac34527635461d202fd0a03cea0e00bf5", null ],
+    [ "OnSetText", "classUIText.html#a61a2b015a8f17de497c1cca1c3337d82", null ],
+    [ "SetColor", "classUIText.html#a69a1059f6237078f7c5b63e228202e3b", null ],
+    [ "SetLang", "classUIText.html#aa5ff6881dd2d765a6322893c1e5866d8", null ],
+    [ "SetSize", "classUIText.html#a9c6fee809fbd3d368f238c6faa39b388", null ],
+    [ "SetText", "classUIText.html#a46e587cdfc8870d9e88cca27a620505b", null ],
+    [ "SetText", "classUIText.html#a07435f587d14fe48572f478350085fec", null ],
+    [ "SetText", "classUIText.html#aadcf19524972444db0296912e78d5389", null ],
+    [ "button", "classUIText.html#a18095fefd43f4a4022cc0074456e3c70", null ],
+    [ "fontColor", "classUIText.html#ae2bdc2afabc4b0887280d07f28c6d6f4", null ],
+    [ "fontType", "classUIText.html#a367696af9351277a7a393a741377ee54", null ],
+    [ "globalSizeMod", "classUIText.html#a6d482e61da1ee75f2303a28d68a1cb73", null ],
+    [ "hyphenation", "classUIText.html#a58e5e88cf5ffb954cdd86db91904b8ef", null ],
+    [ "lang", "classUIText.html#a27925d9d037d3be267ef11b25eb6c481", null ],
+    [ "orgColor", "classUIText.html#a170d3a498d1e4ed6a8065d11796e8f73", null ],
+    [ "orgSpacing", "classUIText.html#a978123cc84a5ccdddafc2af64e257056", null ],
+    [ "size", "classUIText.html#a005e5d0643acb271e250c80424e8980b", null ],
+    [ "skinRoot", "classUIText.html#aa4a55d996f941a7ab47f0ddbf84bac36", null ],
+    [ "skinType", "classUIText.html#a5498779153462ae07aa2a966facc6bc4", null ],
+    [ "typewriter", "classUIText.html#abfeedc55cf0e5442084ce4c136489d06", null ]
+];

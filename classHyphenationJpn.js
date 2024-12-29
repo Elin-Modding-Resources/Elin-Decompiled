@@ -1,0 +1,28 @@
+var classHyphenationJpn =
+[
+    [ "_SetText", "classHyphenationJpn.html#a4ed61ffcfd1801a41cce99770a616f6f", null ],
+    [ "CHECK_HYP_BACK", "classHyphenationJpn.html#a28fd421b5da319b764b36b2c6bbaae03", null ],
+    [ "CHECK_HYP_FRONT", "classHyphenationJpn.html#a79278e78493294b5950ea2cc31826398", null ],
+    [ "GetFormatedText", "classHyphenationJpn.html#aa6ea7ff78dc608e7fd41a974cf2172e0", null ],
+    [ "GetSpaceWidth", "classHyphenationJpn.html#a7522e8fac8ca902759bf52a1e50684a9", null ],
+    [ "GetTextWidth", "classHyphenationJpn.html#a5a726174cc686269ea9fae2df36f6ead", null ],
+    [ "GetWidth", "classHyphenationJpn.html#a00bc0611e1a45d8ca6e7451bd716815e", null ],
+    [ "GetWordList", "classHyphenationJpn.html#a03a9c265cee040c08f9276d7971e3eb7", null ],
+    [ "IsLatin", "classHyphenationJpn.html#a6d27cf755e812fd2877b78a6686203c2", null ],
+    [ "UpdateText", "classHyphenationJpn.html#ad510c17b2bf37a55dec1cbed076684a6", null ],
+    [ "_rectTransform", "classHyphenationJpn.html#a12be1c4c1c8e33c219f7214bc559aca6", null ],
+    [ "_text", "classHyphenationJpn.html#a8389e5aec7c9d1106c12766605db3e66", null ],
+    [ "evaluateLate", "classHyphenationJpn.html#ade5d331277a58febca65826bd2426727", null ],
+    [ "HYP_BACK", "classHyphenationJpn.html#ad60ea4f5a6385192305a27a3b6237f8f", null ],
+    [ "HYP_FRONT", "classHyphenationJpn.html#ace0cbd15f2b3ade1d301c3c70a9792d0", null ],
+    [ "HYP_LATIN", "classHyphenationJpn.html#ae0fd5dc6db3cfdb3c02774e0435e1736", null ],
+    [ "padding", "classHyphenationJpn.html#ae31cb9a081488960ac00e00e8d7cc1bf", null ],
+    [ "RITCH_TEXT_REPLACE", "classHyphenationJpn.html#acd3a22835cf63235256cef1a4b4651db", null ],
+    [ "text", "classHyphenationJpn.html#a472fa31e83ece609cf1e26170b4a6887", null ],
+    [ "useHypenation", "classHyphenationJpn.html#a0eaff9b68d92cc4cd01dcdbf8f80ce7b", null ],
+    [ "useParentWidth", "classHyphenationJpn.html#ac5338770261a5dd5f779666b9cf00f1f", null ],
+    [ "usePreferredWidth", "classHyphenationJpn.html#a1c33972cd4b0fa4d02b70c91f6996b5e", null ],
+    [ "width", "classHyphenationJpn.html#a4d853088f934146e0f68b5f4e5ce5d01", null ],
+    [ "_RectTransform", "classHyphenationJpn.html#acb14316340a2a96d32f6c39650e42ce4", null ],
+    [ "_Text", "classHyphenationJpn.html#ab5814e772c2e232fa9a10f687ac9fa18", null ]
+];

@@ -9,6 +9,6 @@ var dir_d8ad36fa258f736d3c0778cae02cb231 =
     [ "RECT.cs", "RECT_8cs.html", "RECT_8cs" ],
     [ "UnityDragAndDropHook.cs", "UnityDragAndDropHook_8cs.html", "UnityDragAndDropHook_8cs" ],
     [ "WinAPI.cs", "WinAPI_8cs.html", "WinAPI_8cs" ],
-    [ "Window.cs", "Window_8cs.html", "Window_8cs" ],
+    [ "Window.cs", "Plugins_8basecore_2B83_2Win32_2Window_8cs.html", "Plugins_8basecore_2B83_2Win32_2Window_8cs" ],
     [ "WM.cs", "WM_8cs.html", "WM_8cs" ]
 ];

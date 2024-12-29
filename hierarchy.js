@@ -24,7 +24,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "AnimationFrame", "classAnimationFrame.html", null ],
+    [ "AnimeItem", "classAnimeItem.html", null ],
     [ "GameSetting.RenderSetting.AnimeSetting", "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html", null ],
+    [ "SkinRootStatic.Assets", "classSkinRootStatic_1_1Assets.html", null ],
     [ "Attribute", null, [
       [ "Algorithms.AuthorAttribute", "classAlgorithms_1_1AuthorAttribute.html", null ]
     ] ],
@@ -32,6 +34,21 @@ var hierarchy =
     [ "CoreConfig.BackerContentConfig", "classCoreConfig_1_1BackerContentConfig.html", null ],
     [ "MiniGame.Balance", "classMiniGame_1_1Balance.html", null ],
     [ "GameSetting.BalanceSetting", "classGameSetting_1_1BalanceSetting.html", null ],
+    [ "BalloonData", "classBalloonData.html", null ],
+    [ "BaseMeshEffect", null, [
+      [ "Bevel", "classBevel.html", null ],
+      [ "CharacterSpacing", "classCharacterSpacing.html", null ],
+      [ "CurveEffect", "classCurveEffect.html", null ],
+      [ "DepthEffect", "classDepthEffect.html", null ],
+      [ "GradientColor", "classGradientColor.html", null ],
+      [ "GradientEffect", "classGradientEffect.html", null ],
+      [ "InnerBevel", "classInnerBevel.html", null ],
+      [ "InnerOutline", "classInnerOutline.html", null ],
+      [ "LimitVisibleCharacters", "classLimitVisibleCharacters.html", null ],
+      [ "OverlayTexture", "classOverlayTexture.html", null ],
+      [ "SkewEffect", "classSkewEffect.html", null ],
+      [ "ToJShadow", "classToJShadow.html", null ]
+    ] ],
     [ "BaseModManager", "classBaseModManager.html", [
       [ "ModManager", "classModManager.html", null ]
     ] ],
@@ -109,13 +126,38 @@ var hierarchy =
       ] ]
     ] ],
     [ "HoardActor.BG", "classHoardActor_1_1BG.html", null ],
+    [ "SkinRootStatic.BG", "classSkinRootStatic_1_1BG.html", null ],
     [ "CoreRef.Biomes", "classCoreRef_1_1Biomes.html", null ],
     [ "BLOCK", "classBLOCK.html", null ],
     [ "ColorProfile.BlockColors", "classColorProfile_1_1BlockColors.html", null ],
     [ "Element.BonusInfo", "classElement_1_1BonusInfo.html", null ],
+    [ "BookList", "classBookList.html", null ],
+    [ "Window.Setting.BottomAction", "classWindow_1_1Setting_1_1BottomAction.html", null ],
+    [ "Button", null, [
+      [ "UIButton", "classUIButton.html", [
+        [ "ButtonAbility", "classButtonAbility.html", null ],
+        [ "ButtonCategory", "classButtonCategory.html", null ],
+        [ "ButtonChara", "classButtonChara.html", null ],
+        [ "ButtonElement", "classButtonElement.html", null ],
+        [ "ButtonGeneral", "classButtonGeneral.html", [
+          [ "ButtonRecipe", "classButtonRecipe.html", null ]
+        ] ],
+        [ "ButtonGrid", "classButtonGrid.html", [
+          [ "ButtonGridDrag", "classButtonGridDrag.html", [
+            [ "ButtonHotItem", "classButtonHotItem.html", null ]
+          ] ]
+        ] ],
+        [ "ButtonResourceTrack", "classButtonResourceTrack.html", null ],
+        [ "ButtonRoster", "classButtonRoster.html", null ],
+        [ "Portrait", "classPortrait.html", null ],
+        [ "UIButtonLR", "classUIButtonLR.html", null ]
+      ] ]
+    ] ],
     [ "CoreRef.ButtonAssets", "classCoreRef_1_1ButtonAssets.html", null ],
+    [ "UIList.ButtonPair", "structUIList_1_1ButtonPair.html", null ],
     [ "ButtonState", "classButtonState.html", null ],
     [ "CoreConfig.CameraConfig", "classCoreConfig_1_1CameraConfig.html", null ],
+    [ "CanvasExt", "classCanvasExt.html", null ],
     [ "CardBlueprint", "classCardBlueprint.html", null ],
     [ "EloMap.Cell", "classEloMap_1_1Cell.html", null ],
     [ "POIMap.Cell", "classPOIMap_1_1Cell.html", null ],
@@ -134,6 +176,9 @@ var hierarchy =
     [ "BiomeProfile.Clusters", "classBiomeProfile_1_1Clusters.html", null ],
     [ "COBJ", "classCOBJ.html", null ],
     [ "TableData.Col", "classTableData_1_1Col.html", null ],
+    [ "ColorComparer", "classColorComparer.html", null ],
+    [ "ColorConverter", "classColorConverter.html", null ],
+    [ "Empyrean.Utils.Colorist", "classEmpyrean_1_1Utils_1_1Colorist.html", null ],
     [ "ColorUtil", "classColorUtil.html", null ],
     [ "LayerAbility.Config", "classLayerAbility_1_1Config.html", null ],
     [ "Widget.Config", "classWidget_1_1Config.html", null ],
@@ -150,6 +195,7 @@ var hierarchy =
     [ "CoreRef.Crawlers", "classCoreRef_1_1Crawlers.html", null ],
     [ "CSTR", "classCSTR.html", null ],
     [ "Currency", "classCurrency.html", null ],
+    [ "CursorInfo", "classCursorInfo.html", null ],
     [ "CoreConfig.CustomFont", "classCoreConfig_1_1CustomFont.html", null ],
     [ "LayerList.CustomItem", "classLayerList_1_1CustomItem.html", null ],
     [ "B83.Win32.CWPSTRUCT", "structB83_1_1Win32_1_1CWPSTRUCT.html", null ],
@@ -191,11 +237,17 @@ var hierarchy =
     [ "DragItemCard.DragInfo", "classDragItemCard_1_1DragInfo.html", null ],
     [ "DramaChoice", "classDramaChoice.html", null ],
     [ "DramaSetup", "classDramaSetup.html", null ],
+    [ "Dropdown", null, [
+      [ "UIDropdown", "classUIDropdown.html", [
+        [ "DropdownRecipe", "classDropdownRecipe.html", null ]
+      ] ]
+    ] ],
     [ "ImageExample.DropInfo", "classImageExample_1_1DropInfo.html", null ],
     [ "DynamicAsset< T >", "classDynamicAsset.html", null ],
     [ "DynamicAsset< Effect >", "classDynamicAsset.html", [
       [ "EffectManager.EffectList", "classEffectManager_1_1EffectList.html", null ]
     ] ],
+    [ "Mosframe.DynamicScrollViewExtention", "classMosframe_1_1DynamicScrollViewExtention.html", null ],
     [ "EClass", "classEClass.html", [
       [ "InspectGroup< Area >", "classInspectGroup.html", [
         [ "InspectGroupArea", "classInspectGroupArea.html", null ]
@@ -1895,6 +1947,7 @@ var hierarchy =
     [ "ExcelParser", "classExcelParser.html", null ],
     [ "ExcelSheetImportSetting", "classExcelSheetImportSetting.html", null ],
     [ "SFB.ExtensionFilter", "structSFB_1_1ExtensionFilter.html", null ],
+    [ "Empyrean.Utils.Extensions", "classEmpyrean_1_1Utils_1_1Extensions.html", null ],
     [ "WidgetBottomBar.Extra", "classWidgetBottomBar_1_1Extra.html", null ],
     [ "WidgetCurrentTool.Extra", "classWidgetCurrentTool_1_1Extra.html", null ],
     [ "WidgetDate.Extra", "classWidgetDate_1_1Extra.html", null ],
@@ -1925,6 +1978,9 @@ var hierarchy =
     [ "CardFilter.FilterItem", "classCardFilter_1_1FilterItem.html", null ],
     [ "CoreConfig.Fix", "classCoreConfig_1_1Fix.html", null ],
     [ "BaseGameScreen.FocusOption", "classBaseGameScreen_1_1FocusOption.html", null ],
+    [ "SkinManager.FontData", "classSkinManager_1_1FontData.html", null ],
+    [ "SkinManager.FontSaveData", "classSkinManager_1_1FontSaveData.html", null ],
+    [ "SkinManager.FontSet", "classSkinManager_1_1FontSet.html", null ],
     [ "CoreConfig.FontSetting", "classCoreConfig_1_1FontSetting.html", null ],
     [ "LangSetting.FontSetting", "classLangSetting_1_1FontSetting.html", null ],
     [ "FOOD", "classFOOD.html", null ],
@@ -1937,11 +1993,22 @@ var hierarchy =
     [ "GameSetting.GenSetting", "classGameSetting_1_1GenSetting.html", null ],
     [ "GoalList", "classGoalList.html", null ],
     [ "Graphic", null, [
-      [ "EGraphic", "classEGraphic.html", null ]
+      [ "EGraphic", "classEGraphic.html", null ],
+      [ "UICollider", "classUICollider.html", null ]
     ] ],
     [ "CoreConfig.GraphicSetting", "classCoreConfig_1_1GraphicSetting.html", null ],
+    [ "SkinColorProfileEx.GroupColors", "classSkinColorProfileEx_1_1GroupColors.html", null ],
     [ "HashSet", null, [
       [ "KnowledgeList< T >", "classKnowledgeList.html", null ]
+    ] ],
+    [ "UIHighlight.Highlight", "classUIHighlight_1_1Highlight.html", null ],
+    [ "HSLColor", "structHSLColor.html", null ],
+    [ "HSVColor", "structHSVColor.html", null ],
+    [ "UIList.ICallback", "interfaceUIList_1_1ICallback.html", [
+      [ "UIList.Callback< T1, T2 >", "classUIList_1_1Callback.html", null ]
+    ] ],
+    [ "ICanvasRaycastFilter", null, [
+      [ "UIIgnoreHit", "classUIIgnoreHit.html", null ]
     ] ],
     [ "ICardParent", "interfaceICardParent.html", [
       [ "Card", "classCard.html", null ],
@@ -1952,6 +2019,8 @@ var hierarchy =
     ] ],
     [ "IChangeResolution", "interfaceIChangeResolution.html", [
       [ "LayerTitle", "classLayerTitle.html", null ],
+      [ "RenderCamUpscaler", "classRenderCamUpscaler.html", null ],
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "Widget", "classWidget.html", [
         [ "BaseWidgetNotice", "classBaseWidgetNotice.html", [
           [ "WidgetNotice", "classWidgetNotice.html", null ],
@@ -1994,7 +2063,8 @@ var hierarchy =
         [ "WidgetTracker", "classWidgetTracker.html", null ],
         [ "WidgetTutorial", "classWidgetTutorial.html", null ],
         [ "WidgetUnityChan", "classWidgetUnityChan.html", null ]
-      ] ]
+      ] ],
+      [ "Window", "classWindow.html", null ]
     ] ],
     [ "ICollection", null, [
       [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
@@ -2013,12 +2083,12 @@ var hierarchy =
       [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
     ] ],
     [ "IDragHandler", null, [
-      [ "ButtonGridDrag", "classButtonGridDrag.html", [
-        [ "ButtonHotItem", "classButtonHotItem.html", null ]
-      ] ],
+      [ "ButtonGridDrag", "classButtonGridDrag.html", null ],
+      [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
-    [ "IDragParent", null, [
+    [ "IDragParent", "interfaceIDragParent.html", [
       [ "LayerAbility", "classLayerAbility.html", null ],
       [ "WidgetHotbar", "classWidgetHotbar.html", null ]
     ] ],
@@ -2031,6 +2101,12 @@ var hierarchy =
     [ "IEventSystemHandler", null, [
       [ "ButtonGridDrag", "classButtonGridDrag.html", null ],
       [ "ButtonRoster", "classButtonRoster.html", null ],
+      [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
+      [ "UIButton", "classUIButton.html", null ],
+      [ "UIContextMenu", "classUIContextMenu.html", null ],
+      [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
+      [ "UIEventUtil", "classUIEventUtil.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
     [ "IFloodCell", null, [
@@ -2040,6 +2116,8 @@ var hierarchy =
       [ "Card", "classCard.html", null ]
     ] ],
     [ "IInitializePotentialDragHandler", null, [
+      [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
     [ "IInspect", "interfaceIInspect.html", [
@@ -2053,16 +2131,33 @@ var hierarchy =
       [ "TaskPoint", "classTaskPoint.html", null ],
       [ "Zone", "classZone.html", null ]
     ] ],
-    [ "ObjectPool.IItem", "interfaceObjectPool_1_1IItem.html", [
-      [ "ObjectPool.Item< T >", "classObjectPool_1_1Item.html", null ]
+    [ "ObjectPool< T >.IItem", "interfaceObjectPool_1_1IItem.html", [
+      [ "ObjectPool< T >.Item< T >", "classObjectPool_1_1Item.html", null ]
+    ] ],
+    [ "Image", null, [
+      [ "UIImage", "classUIImage.html", null ]
+    ] ],
+    [ "IMaterialModifier", null, [
+      [ "Applibot.CustomImageBase", "classApplibot_1_1CustomImageBase.html", [
+        [ "Applibot.DissolveImage", "classApplibot_1_1DissolveImage.html", null ],
+        [ "Applibot.Glitch", "classApplibot_1_1Glitch.html", null ],
+        [ "Applibot.NormalDissolve", "classApplibot_1_1NormalDissolve.html", null ],
+        [ "Applibot.OutlineImage", "classApplibot_1_1OutlineImage.html", null ],
+        [ "Applibot.RadialBlurImage", "classApplibot_1_1RadialBlurImage.html", null ],
+        [ "Applibot.UICustomBlend", "classApplibot_1_1UICustomBlend.html", null ]
+      ] ],
+      [ "InnerBevel", "classInnerBevel.html", null ],
+      [ "InnerOutline", "classInnerOutline.html", null ],
+      [ "OverlayTexture", "classOverlayTexture.html", null ]
     ] ],
     [ "IMouseHint", "interfaceIMouseHint.html", [
       [ "ButtonAbility", "classButtonAbility.html", null ],
-      [ "ButtonGrid", "classButtonGrid.html", [
-        [ "ButtonGridDrag", "classButtonGridDrag.html", null ]
-      ] ]
+      [ "ButtonGrid", "classButtonGrid.html", null ]
     ] ],
     [ "IngredientAndRecipe", "classIngredientAndRecipe.html", null ],
+    [ "InputField", null, [
+      [ "UiInputField", "classUiInputField.html", null ]
+    ] ],
     [ "CoreConfig.InputSetting", "classCoreConfig_1_1InputSetting.html", null ],
     [ "Int3", "classInt3.html", null ],
     [ "IntColor", "classIntColor.html", null ],
@@ -2080,15 +2175,25 @@ var hierarchy =
       [ "Chara", "classChara.html", null ]
     ] ],
     [ "IPointerDownHandler", null, [
+      [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
+      [ "UIButton", "classUIButton.html", null ],
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
     [ "IPointerEnterHandler", null, [
-      [ "ButtonRoster", "classButtonRoster.html", null ]
+      [ "ButtonRoster", "classButtonRoster.html", null ],
+      [ "UIContextMenu", "classUIContextMenu.html", null ],
+      [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
+      [ "UIEventUtil", "classUIEventUtil.html", null ]
     ] ],
     [ "IPointerExitHandler", null, [
-      [ "ButtonRoster", "classButtonRoster.html", null ]
+      [ "ButtonRoster", "classButtonRoster.html", null ],
+      [ "UIContextMenu", "classUIContextMenu.html", null ],
+      [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
+      [ "UIEventUtil", "classUIEventUtil.html", null ]
     ] ],
     [ "IPointerUpHandler", null, [
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
     [ "IPoolObject", "interfaceIPoolObject.html", null ],
@@ -2141,7 +2246,7 @@ var hierarchy =
       [ "SourcePref", "classSourcePref.html", null ],
       [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
     ] ],
-    [ "ISkinRoot", null, [
+    [ "ISkinRoot", "interfaceISkinRoot.html", [
       [ "Widget", "classWidget.html", null ]
     ] ],
     [ "SFB.IStandaloneFileBrowser", "interfaceSFB_1_1IStandaloneFileBrowser.html", [
@@ -2153,7 +2258,9 @@ var hierarchy =
     ] ],
     [ "ActList.Item", "classActList_1_1Item.html", null ],
     [ "ActPlan.Item", "classActPlan_1_1Item.html", null ],
+    [ "BookList.Item", "classBookList_1_1Item.html", null ],
     [ "ContentGallery.Page.Item", "classContentGallery_1_1Page_1_1Item.html", null ],
+    [ "DSVRow.Item", "classDSVRow_1_1Item.html", null ],
     [ "HotItemEQSet.Item", "classHotItemEQSet_1_1Item.html", null ],
     [ "InspectGroup< T >.Item", "classInspectGroup_1_1Item.html", null ],
     [ "LayerInteraction.Item", "classLayerInteraction_1_1Item.html", null ],
@@ -2161,12 +2268,14 @@ var hierarchy =
     [ "PopupManager.Item", "classPopupManager_1_1Item.html", null ],
     [ "QuickMenu.Item", "classQuickMenu_1_1Item.html", null ],
     [ "Schedule.Item", "classSchedule_1_1Item.html", null ],
+    [ "SearchContext.Item", "classSearchContext_1_1Item.html", null ],
     [ "ShadowData.Item", "classShadowData_1_1Item.html", null ],
     [ "ShippingResult.Item", "classShippingResult_1_1Item.html", null ],
     [ "ShopTransaction.Item", "classShopTransaction_1_1Item.html", null ],
     [ "SpriteAnimation.Item", "classSpriteAnimation_1_1Item.html", null ],
     [ "TextConv.Item", "classTextConv_1_1Item.html", null ],
-    [ "UIButton.Item", null, [
+    [ "UIBook.Item", "classUIBook_1_1Item.html", null ],
+    [ "UIButton.Item", "classUIButton_1_1Item.html", [
       [ "HotItem", "classHotItem.html", [
         [ "HotAction", "classHotAction.html", [
           [ "HotItemActionAudoDump", "classHotItemActionAudoDump.html", null ],
@@ -2202,6 +2311,96 @@ var hierarchy =
     [ "UndoManager.Item", "classUndoManager_1_1Item.html", null ],
     [ "WidgetStatsBar.Item", "classWidgetStatsBar_1_1Item.html", null ],
     [ "GoalCombat.ItemAbility", "classGoalCombat_1_1ItemAbility.html", null ],
+    [ "IUISkin", "interfaceIUISkin.html", [
+      [ "Layer", "classLayer.html", [
+        [ "ELayer", "classELayer.html", [
+          [ "Dialog", "classDialog.html", null ],
+          [ "LayerAbility", "classLayerAbility.html", null ],
+          [ "LayerAdmin", "classLayerAdmin.html", null ],
+          [ "LayerArea", "classLayerArea.html", null ],
+          [ "LayerBaseCraft", "classLayerBaseCraft.html", [
+            [ "LayerCraft", "classLayerCraft.html", null ],
+            [ "LayerDragGrid", "classLayerDragGrid.html", null ]
+          ] ],
+          [ "LayerBuild", "classLayerBuild.html", null ],
+          [ "LayerChara", "classLayerChara.html", null ],
+          [ "LayerCollectible", "classLayerCollectible.html", null ],
+          [ "LayerColorPicker", "classLayerColorPicker.html", null ],
+          [ "LayerConfig", "classLayerConfig.html", null ],
+          [ "LayerConsole", "classLayerConsole.html", null ],
+          [ "LayerCover", "classLayerCover.html", null ],
+          [ "LayerCraftFloat", "classLayerCraftFloat.html", null ],
+          [ "LayerCredit", "classLayerCredit.html", null ],
+          [ "LayerDebug", "classLayerDebug.html", null ],
+          [ "LayerDistribution", "classLayerDistribution.html", null ],
+          [ "LayerDrama", "classLayerDrama.html", null ],
+          [ "LayerEditBio", "classLayerEditBio.html", null ],
+          [ "LayerEditHouse", "classLayerEditHouse.html", null ],
+          [ "LayerEditPCC", "classLayerEditPCC.html", null ],
+          [ "LayerEditPlaylist", "classLayerEditPlaylist.html", null ],
+          [ "LayerEditPortrait", "classLayerEditPortrait.html", null ],
+          [ "LayerEmbark", "classLayerEmbark.html", null ],
+          [ "LayerEquip", "classLayerEquip.html", null ],
+          [ "LayerFactions", "classLayerFactions.html", null ],
+          [ "LayerFaith", "classLayerFaith.html", null ],
+          [ "LayerFeedback", "classLayerFeedback.html", null ],
+          [ "LayerGacha", "classLayerGacha.html", null ],
+          [ "LayerGachaResult", "classLayerGachaResult.html", null ],
+          [ "LayerGlobalMap", "classLayerGlobalMap.html", null ],
+          [ "LayerHelp", "classLayerHelp.html", null ],
+          [ "LayerHire", "classLayerHire.html", null ],
+          [ "LayerHoard", "classLayerHoard.html", null ],
+          [ "LayerHome", "classLayerHome.html", null ],
+          [ "LayerHomeReport", "classLayerHomeReport.html", null ],
+          [ "LayerImage", "classLayerImage.html", null ],
+          [ "LayerInfo", "classLayerInfo.html", null ],
+          [ "LayerInspect", "classLayerInspect.html", null ],
+          [ "LayerInteraction", "classLayerInteraction.html", null ],
+          [ "LayerInventory", "classLayerInventory.html", null ],
+          [ "LayerJournal", "classLayerJournal.html", null ],
+          [ "LayerList", "classLayerList.html", null ],
+          [ "LayerLoadGame", "classLayerLoadGame.html", null ],
+          [ "LayerLocation", "classLayerLocation.html", null ],
+          [ "LayerMapList", "classLayerMapList.html", null ],
+          [ "LayerMiniGame", "classLayerMiniGame.html", null ],
+          [ "LayerMod", "classLayerMod.html", null ],
+          [ "LayerNewZone", "classLayerNewZone.html", null ],
+          [ "LayerNewspaper", "classLayerNewspaper.html", null ],
+          [ "LayerPause", "classLayerPause.html", null ],
+          [ "LayerPauseMenu", "classLayerPauseMenu.html", null ],
+          [ "LayerPeople", "classLayerPeople.html", null ],
+          [ "LayerPixelPaint", "classLayerPixelPaint.html", null ],
+          [ "LayerPolicy", "classLayerPolicy.html", null ],
+          [ "LayerProgress", "classLayerProgress.html", null ],
+          [ "LayerQuestBoard", "classLayerQuestBoard.html", null ],
+          [ "LayerQuickMenu", "classLayerQuickMenu.html", null ],
+          [ "LayerRegisterHotbar", "classLayerRegisterHotbar.html", null ],
+          [ "LayerResource", "classLayerResource.html", null ],
+          [ "LayerShippingResult", "classLayerShippingResult.html", null ],
+          [ "LayerSkinDeco", "classLayerSkinDeco.html", null ],
+          [ "LayerSleep", "classLayerSleep.html", null ],
+          [ "LayerStockpile", "classLayerStockpile.html", null ],
+          [ "LayerTactics", "classLayerTactics.html", null ],
+          [ "LayerTech", "classLayerTech.html", null ],
+          [ "LayerTextureViewer", "classLayerTextureViewer.html", null ],
+          [ "LayerTitle", "classLayerTitle.html", null ],
+          [ "LayerTravel", "classLayerTravel.html", null ],
+          [ "LayerTreasureMap", "classLayerTreasureMap.html", null ],
+          [ "LayerUploader", "classLayerUploader.html", null ],
+          [ "LayerWidget", "classLayerWidget.html", null ],
+          [ "UI", "classUI.html", null ],
+          [ "UIInspector", "classUIInspector.html", null ]
+        ] ]
+      ] ],
+      [ "UIButton", "classUIButton.html", null ],
+      [ "UIHighlight", "classUIHighlight.html", null ],
+      [ "UIImage", "classUIImage.html", null ],
+      [ "UIRawImage", "classUIRawImage.html", null ],
+      [ "UISelectableGroup", "classUISelectableGroup.html", null ],
+      [ "UIText", "classUIText.html", null ],
+      [ "Window", "classWindow.html", null ],
+      [ "WindowInner", "classWindowInner.html", null ]
+    ] ],
     [ "IWin32Window", null, [
       [ "SFB.WindowWrapper", "classSFB_1_1WindowWrapper.html", null ]
     ] ],
@@ -2211,89 +2410,13 @@ var hierarchy =
     [ "KnowledgeList< KnowledgeFaction >", "classKnowledgeList.html", null ],
     [ "KnowledgeList< KnowledgeRecipe >", "classKnowledgeList.html", null ],
     [ "KnowledgeList< KnowledgeResearch >", "classKnowledgeList.html", null ],
+    [ "Lab", "classLab.html", null ],
     [ "Lang", "classLang.html", null ],
     [ "LangSetting", "classLangSetting.html", null ],
-    [ "Layer", null, [
-      [ "ELayer", "classELayer.html", [
-        [ "Dialog", "classDialog.html", null ],
-        [ "LayerAbility", "classLayerAbility.html", null ],
-        [ "LayerAdmin", "classLayerAdmin.html", null ],
-        [ "LayerArea", "classLayerArea.html", null ],
-        [ "LayerBaseCraft", "classLayerBaseCraft.html", [
-          [ "LayerCraft", "classLayerCraft.html", null ],
-          [ "LayerDragGrid", "classLayerDragGrid.html", null ]
-        ] ],
-        [ "LayerBuild", "classLayerBuild.html", null ],
-        [ "LayerChara", "classLayerChara.html", null ],
-        [ "LayerCollectible", "classLayerCollectible.html", null ],
-        [ "LayerColorPicker", "classLayerColorPicker.html", null ],
-        [ "LayerConfig", "classLayerConfig.html", null ],
-        [ "LayerConsole", "classLayerConsole.html", null ],
-        [ "LayerCover", "classLayerCover.html", null ],
-        [ "LayerCraftFloat", "classLayerCraftFloat.html", null ],
-        [ "LayerCredit", "classLayerCredit.html", null ],
-        [ "LayerDebug", "classLayerDebug.html", null ],
-        [ "LayerDistribution", "classLayerDistribution.html", null ],
-        [ "LayerDrama", "classLayerDrama.html", null ],
-        [ "LayerEditBio", "classLayerEditBio.html", null ],
-        [ "LayerEditHouse", "classLayerEditHouse.html", null ],
-        [ "LayerEditPCC", "classLayerEditPCC.html", null ],
-        [ "LayerEditPlaylist", "classLayerEditPlaylist.html", null ],
-        [ "LayerEditPortrait", "classLayerEditPortrait.html", null ],
-        [ "LayerEmbark", "classLayerEmbark.html", null ],
-        [ "LayerEquip", "classLayerEquip.html", null ],
-        [ "LayerFactions", "classLayerFactions.html", null ],
-        [ "LayerFaith", "classLayerFaith.html", null ],
-        [ "LayerFeedback", "classLayerFeedback.html", null ],
-        [ "LayerGacha", "classLayerGacha.html", null ],
-        [ "LayerGachaResult", "classLayerGachaResult.html", null ],
-        [ "LayerGlobalMap", "classLayerGlobalMap.html", null ],
-        [ "LayerHelp", "classLayerHelp.html", null ],
-        [ "LayerHire", "classLayerHire.html", null ],
-        [ "LayerHoard", "classLayerHoard.html", null ],
-        [ "LayerHome", "classLayerHome.html", null ],
-        [ "LayerHomeReport", "classLayerHomeReport.html", null ],
-        [ "LayerImage", "classLayerImage.html", null ],
-        [ "LayerInfo", "classLayerInfo.html", null ],
-        [ "LayerInspect", "classLayerInspect.html", null ],
-        [ "LayerInteraction", "classLayerInteraction.html", null ],
-        [ "LayerInventory", "classLayerInventory.html", null ],
-        [ "LayerJournal", "classLayerJournal.html", null ],
-        [ "LayerList", "classLayerList.html", null ],
-        [ "LayerLoadGame", "classLayerLoadGame.html", null ],
-        [ "LayerLocation", "classLayerLocation.html", null ],
-        [ "LayerMapList", "classLayerMapList.html", null ],
-        [ "LayerMiniGame", "classLayerMiniGame.html", null ],
-        [ "LayerMod", "classLayerMod.html", null ],
-        [ "LayerNewZone", "classLayerNewZone.html", null ],
-        [ "LayerNewspaper", "classLayerNewspaper.html", null ],
-        [ "LayerPause", "classLayerPause.html", null ],
-        [ "LayerPauseMenu", "classLayerPauseMenu.html", null ],
-        [ "LayerPeople", "classLayerPeople.html", null ],
-        [ "LayerPixelPaint", "classLayerPixelPaint.html", null ],
-        [ "LayerPolicy", "classLayerPolicy.html", null ],
-        [ "LayerProgress", "classLayerProgress.html", null ],
-        [ "LayerQuestBoard", "classLayerQuestBoard.html", null ],
-        [ "LayerQuickMenu", "classLayerQuickMenu.html", null ],
-        [ "LayerRegisterHotbar", "classLayerRegisterHotbar.html", null ],
-        [ "LayerResource", "classLayerResource.html", null ],
-        [ "LayerShippingResult", "classLayerShippingResult.html", null ],
-        [ "LayerSkinDeco", "classLayerSkinDeco.html", null ],
-        [ "LayerSleep", "classLayerSleep.html", null ],
-        [ "LayerStockpile", "classLayerStockpile.html", null ],
-        [ "LayerTactics", "classLayerTactics.html", null ],
-        [ "LayerTech", "classLayerTech.html", null ],
-        [ "LayerTextureViewer", "classLayerTextureViewer.html", null ],
-        [ "LayerTitle", "classLayerTitle.html", null ],
-        [ "LayerTravel", "classLayerTravel.html", null ],
-        [ "LayerTreasureMap", "classLayerTreasureMap.html", null ],
-        [ "LayerUploader", "classLayerUploader.html", null ],
-        [ "LayerWidget", "classLayerWidget.html", null ],
-        [ "UI", "classUI.html", null ],
-        [ "UIInspector", "classUIInspector.html", null ]
-      ] ]
-    ] ],
     [ "HotItemLayout.Layout", "classHotItemLayout_1_1Layout.html", null ],
+    [ "LayoutElement", null, [
+      [ "LayoutMaxSize", "classLayoutMaxSize.html", null ]
+    ] ],
     [ "Fov.LevelPoint", "structFov_1_1LevelPoint.html", null ],
     [ "LightData", "classLightData.html", null ],
     [ "LIQUID", "classLIQUID.html", null ],
@@ -2306,10 +2429,17 @@ var hierarchy =
     [ "ActPlan.List< Thing >", "classActPlan_1_1List.html", [
       [ "ThingContainer", "classThingContainer.html", null ]
     ] ],
+    [ "ListPool< T >", "classListPool.html", null ],
     [ "Log", "classLog.html", null ],
+    [ "ManlySingleton< InputFieldsTabSwitcher >", "classManlySingleton.html", [
+      [ "InputFieldsTabSwitcher", "classInputFieldsTabSwitcher.html", null ]
+    ] ],
     [ "GameSetting.RenderSetting.MapBGSetting", "classGameSetting_1_1RenderSetting_1_1MapBGSetting.html", null ],
     [ "ZoneBlueprint.MapGenSetting", "structZoneBlueprint_1_1MapGenSetting.html", null ],
     [ "MapPiece.MapPath", "classMapPiece_1_1MapPath.html", null ],
+    [ "MaskableGraphic", null, [
+      [ "PrimitiveUI.PrimitiveCanvas", "classPrimitiveUI_1_1PrimitiveCanvas.html", null ]
+    ] ],
     [ "MatColors", "classMatColors.html", null ],
     [ "CoreDebug.MatColorTest", "classCoreDebug_1_1MatColorTest.html", null ],
     [ "Crawler.Member", "classCrawler_1_1Member.html", null ],
@@ -2334,13 +2464,35 @@ var hierarchy =
       [ "MiniGame_Basket", "classMiniGame__Basket.html", null ]
     ] ],
     [ "MonoBehaviour", null, [
+      [ "ObjectPool< List< T > >", "classObjectPool.html", null ],
+      [ "Anime", "classAnime.html", [
+        [ "AnimeTween", "classAnimeTween.html", null ]
+      ] ],
+      [ "Applibot.CustomImageBase", "classApplibot_1_1CustomImageBase.html", null ],
+      [ "Applibot.SpriteVertexPositionChanger", "classApplibot_1_1SpriteVertexPositionChanger.html", null ],
       [ "BaseCore", "classBaseCore.html", [
         [ "Core", "classCore.html", null ],
         [ "CoreEmu", "classCoreEmu.html", null ]
       ] ],
+      [ "BaseList", "classBaseList.html", [
+        [ "UIDynamicList", "classUIDynamicList.html", null ],
+        [ "UIList", "classUIList.html", [
+          [ "UIListEx< T >", "classUIListEx.html", null ]
+        ] ]
+      ] ],
+      [ "BaseSkinRoot", "classBaseSkinRoot.html", [
+        [ "SkinRoot", "classSkinRoot.html", [
+          [ "SkinRootRedirect", "classSkinRootRedirect.html", null ]
+        ] ],
+        [ "SkinRootStatic", "classSkinRootStatic.html", null ]
+      ] ],
+      [ "BuruBuru", "classBuruBuru.html", null ],
       [ "ButtonGridExt", "classButtonGridExt.html", null ],
       [ "CameraFilterPack_Atmosphere_Rain", "classCameraFilterPack__Atmosphere__Rain.html", null ],
       [ "CameraSupport", "classCameraSupport.html", null ],
+      [ "CircularRadialButton", "classCircularRadialButton.html", null ],
+      [ "CursorSystem", "classCursorSystem.html", null ],
+      [ "DSVRow", "classDSVRow.html", null ],
       [ "EInput", "classEInput.html", null ],
       [ "EMono", "classEMono.html", [
         [ "ActionHint", "classActionHint.html", null ],
@@ -2469,20 +2621,57 @@ var hierarchy =
         [ "WorldInspector", "classWorldInspector.html", null ],
         [ "ZoneInspector", "classZoneInspector.html", null ]
       ] ],
+      [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
+      [ "Empyrean.ColorPicker.ColorPicker", "classEmpyrean_1_1ColorPicker_1_1ColorPicker.html", null ],
+      [ "Empyrean.ColorPicker.Dropper", "classEmpyrean_1_1ColorPicker_1_1Dropper.html", null ],
+      [ "Empyrean.ColorPicker.HueSlider", "classEmpyrean_1_1ColorPicker_1_1HueSlider.html", null ],
+      [ "Empyrean.ColorPicker.LabeledColorSlider", "classEmpyrean_1_1ColorPicker_1_1LabeledColorSlider.html", null ],
+      [ "Empyrean.ColorPicker.SliderBackgroundController", "classEmpyrean_1_1ColorPicker_1_1SliderBackgroundController.html", null ],
       [ "FileDragAndDrop", "classFileDragAndDrop.html", null ],
+      [ "Gauge", "classGauge.html", null ],
       [ "HS_ParticleEndSound", "classHS__ParticleEndSound.html", null ],
+      [ "HexInput", "classHexInput.html", null ],
+      [ "HintIcon", "classHintIcon.html", null ],
       [ "ImageExample", "classImageExample.html", null ],
       [ "ItemKeymap", "classItemKeymap.html", null ],
+      [ "Layer", "classLayer.html", null ],
       [ "LightControl", "classLightControl.html", null ],
       [ "LightControl2", "classLightControl2.html", null ],
       [ "LoadingScreen", "classLoadingScreen.html", null ],
+      [ "MsgBlock", "classMsgBlock.html", null ],
+      [ "MsgBox", "classMsgBox.html", null ],
+      [ "MsgLine", "classMsgLine.html", null ],
       [ "Net", "classNet.html", null ],
-      [ "ObjectPool", "classObjectPool.html", null ],
+      [ "ObjectPool< T >", "classObjectPool.html", null ],
       [ "PathManager", "classPathManager.html", null ],
+      [ "PixelPaint", "classPixelPaint.html", null ],
       [ "PoolManager", "classPoolManager.html", null ],
+      [ "PopItem", "classPopItem.html", [
+        [ "PopItemText", "classPopItemText.html", null ]
+      ] ],
+      [ "PopManager", "classPopManager.html", null ],
+      [ "Popfab", "classPopfab.html", null ],
+      [ "PopfabItem", "classPopfabItem.html", [
+        [ "PopfabText", "classPopfabText.html", null ],
+        [ "elona.MsgPlain", "classelona_1_1MsgPlain.html", null ]
+      ] ],
+      [ "Popper", "classPopper.html", null ],
+      [ "PopperManager", "classPopperManager.html", null ],
       [ "PrefabFix", "classPrefabFix.html", null ],
+      [ "PrimitiveUI.Examples.ControlBoxScaler", "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html", null ],
+      [ "PrimitiveUI.Examples.PUIExampleCharts", "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html", null ],
+      [ "PrimitiveUI.Examples.PUIExampleRPGStats", "classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html", null ],
+      [ "PrimitiveUI.Examples.PUIExampleSineWaves", "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html", null ],
       [ "RandomPositionMover", "classRandomPositionMover.html", null ],
+      [ "RenderCamUpscaler", "classRenderCamUpscaler.html", null ],
+      [ "SelectedColorController", "classSelectedColorController.html", null ],
+      [ "Shaker", "classShaker.html", null ],
       [ "SingleContent", "classSingleContent.html", null ],
+      [ "SingletonBase", "classSingletonBase.html", [
+        [ "ManlySingleton< T >", "classManlySingleton.html", null ]
+      ] ],
+      [ "SkinDecoActor", "classSkinDecoActor.html", null ],
+      [ "SkinManager", "classSkinManager.html", null ],
       [ "SplashText", "classSplashText.html", null ],
       [ "SpriteAnimation", "classSpriteAnimation.html", null ],
       [ "SpriteBasedLaser", "classSpriteBasedLaser.html", null ],
@@ -2490,8 +2679,79 @@ var hierarchy =
       [ "SpriteSheet", "classSpriteSheet.html", null ],
       [ "Steam", "classSteam.html", null ],
       [ "TextureImportSetting", "classTextureImportSetting.html", null ],
+      [ "TooltipManager", "classTooltipManager.html", null ],
       [ "TwoDLaserPack.LineBasedLaser", "classTwoDLaserPack_1_1LineBasedLaser.html", null ],
-      [ "UIMultiList", "classUIMultiList.html", null ]
+      [ "Typewriter", "classTypewriter.html", null ],
+      [ "UIAnchor", "classUIAnchor.html", null ],
+      [ "UIAnime", "classUIAnime.html", [
+        [ "UIAnimeGroup", "classUIAnimeGroup.html", null ],
+        [ "UIAnimeSequence", "classUIAnimeSequence.html", null ]
+      ] ],
+      [ "UIBar", "classUIBar.html", null ],
+      [ "UIBook", "classUIBook.html", null ],
+      [ "UIButtonHighlighter", "classUIButtonHighlighter.html", null ],
+      [ "UIContextMenu", "classUIContextMenu.html", null ],
+      [ "UIContextMenuItem", "classUIContextMenuItem.html", [
+        [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ]
+      ] ],
+      [ "UIContextMenuManager", "classUIContextMenuManager.html", null ],
+      [ "UIDragPanel", "classUIDragPanel.html", null ],
+      [ "UIEventUtil", "classUIEventUtil.html", null ],
+      [ "UIFollow", "classUIFollow.html", null ],
+      [ "UIHeader", "classUIHeader.html", null ],
+      [ "UIHighlight", "classUIHighlight.html", null ],
+      [ "UIHighlightObject", "classUIHighlightObject.html", null ],
+      [ "UIIgnoreHit", "classUIIgnoreHit.html", null ],
+      [ "UIInputText", "classUIInputText.html", null ],
+      [ "UIItem", "classUIItem.html", [
+        [ "ItemCulture", "classItemCulture.html", null ],
+        [ "ItemGeneral", "classItemGeneral.html", null ],
+        [ "ItemResearch", "classItemResearch.html", null ]
+      ] ],
+      [ "UIListTopbar", "classUIListTopbar.html", null ],
+      [ "UIMouseInfo", "classUIMouseInfo.html", null ],
+      [ "UIMultiList", "classUIMultiList.html", null ],
+      [ "UINote", "classUINote.html", [
+        [ "UIContent", "classUIContent.html", [
+          [ "Content", "classContent.html", [
+            [ "ContentHomeReport", "classContentHomeReport.html", null ]
+          ] ],
+          [ "EContent", "classEContent.html", [
+            [ "ContentChronicle", "classContentChronicle.html", null ],
+            [ "ContentCodex", "classContentCodex.html", null ],
+            [ "ContentConfig", "classContentConfig.html", [
+              [ "ContentConfigGame", "classContentConfigGame.html", [
+                [ "ContentConfigInput", "classContentConfigInput.html", null ]
+              ] ],
+              [ "ContentConfigGeneral", "classContentConfigGeneral.html", null ],
+              [ "ContentConfigOther", "classContentConfigOther.html", null ],
+              [ "ContentConfigTest", "classContentConfigTest.html", null ],
+              [ "ContentTactics", "classContentTactics.html", null ]
+            ] ],
+            [ "ContentFaction", "classContentFaction.html", null ],
+            [ "ContentGallery", "classContentGallery.html", null ],
+            [ "ContentHallOfFame", "classContentHallOfFame.html", null ],
+            [ "ContentHomeLog", "classContentHomeLog.html", null ],
+            [ "ContentHomeRanking", "classContentHomeRanking.html", null ],
+            [ "ContentKeyItem", "classContentKeyItem.html", null ],
+            [ "ContentPolicy", "classContentPolicy.html", null ],
+            [ "ContentPopulation", "classContentPopulation.html", null ],
+            [ "ContentQuest", "classContentQuest.html", null ],
+            [ "ContentRanking", "classContentRanking.html", null ],
+            [ "ContentStatistics", "classContentStatistics.html", null ],
+            [ "ContentTop", "classContentTop.html", null ]
+          ] ],
+          [ "UIContentView", "classUIContentView.html", null ]
+        ] ]
+      ] ],
+      [ "UISelectableGroup", "classUISelectableGroup.html", null ],
+      [ "UITooltip", "classUITooltip.html", null ],
+      [ "Window", "classWindow.html", null ],
+      [ "WindowController", "classWindowController.html", [
+        [ "WindowChara", "classWindowChara.html", null ],
+        [ "WindowCharaMini", "classWindowCharaMini.html", null ]
+      ] ],
+      [ "WindowInner", "classWindowInner.html", null ]
     ] ],
     [ "B83.Win32.MSG", "structB83_1_1Win32_1_1MSG.html", null ],
     [ "MultiSprite", "classMultiSprite.html", null ],
@@ -2502,11 +2762,12 @@ var hierarchy =
     [ "Object", null, [
       [ "TextData", "classTextData.html", null ]
     ] ],
+    [ "Layer.Option", "classLayer_1_1Option.html", null ],
     [ "UICurrency.Options", "classUICurrency_1_1Options.html", null ],
     [ "CoreRef.OrbitIcons", "classCoreRef_1_1OrbitIcons.html", null ],
     [ "CoreConfig.OtherSetting", "classCoreConfig_1_1OtherSetting.html", null ],
     [ "LayerInteraction.Page", "classLayerInteraction_1_1Page.html", null ],
-    [ "UIBook.Page", null, [
+    [ "UIBook.Page", "classUIBook_1_1Page.html", [
       [ "ContentGallery.Page", "classContentGallery_1_1Page.html", null ]
     ] ],
     [ "PaintPosition", "classPaintPosition.html", null ],
@@ -2525,7 +2786,9 @@ var hierarchy =
     [ "PoolManager.PoolGroup", "classPoolManager_1_1PoolGroup.html", null ],
     [ "CoreRef.PopperSprites", "classCoreRef_1_1PopperSprites.html", null ],
     [ "Zone.PortalReturnData", "classZone_1_1PortalReturnData.html", null ],
+    [ "SkinRootStatic.Positions", "classSkinRootStatic_1_1Positions.html", null ],
     [ "Player.Pref", "classPlayer_1_1Pref.html", null ],
+    [ "MsgBox.Prefabs", "classMsgBox_1_1Prefabs.html", null ],
     [ "SourceAsset.PrefData", "classSourceAsset_1_1PrefData.html", null ],
     [ "SourceAsset.Prefs", "classSourceAsset_1_1Prefs.html", null ],
     [ "AM_Adv.PressedAction", "classAM__Adv_1_1PressedAction.html", null ],
@@ -2534,16 +2797,28 @@ var hierarchy =
     [ "PropertyAttribute", null, [
       [ "Hide", "classHide.html", null ]
     ] ],
+    [ "PrimitiveUI.PrimitiveCanvas.PUIElement", "classPrimitiveUI_1_1PrimitiveCanvas_1_1PUIElement.html", [
+      [ "PrimitiveUI.PrimitiveCanvas.PUIFillElement", "classPrimitiveUI_1_1PrimitiveCanvas_1_1PUIFillElement.html", null ],
+      [ "PrimitiveUI.PrimitiveCanvas.PUIStrokeElement", "classPrimitiveUI_1_1PrimitiveCanvas_1_1PUIStrokeElement.html", null ]
+    ] ],
+    [ "PrimitiveUI.PrimitiveCanvas.PUIUtils", "classPrimitiveUI_1_1PrimitiveCanvas_1_1PUIUtils.html", null ],
     [ "LayerDragGrid.PutbackInfo", "classLayerDragGrid_1_1PutbackInfo.html", null ],
     [ "Queue", "classQueue.html", null ],
     [ "QueueList< TaskCraft >", "classQueueList.html", null ],
     [ "QuickMenu", "classQuickMenu.html", null ],
     [ "Rand", "classRand.html", null ],
     [ "ColorProfile.RarityColors", "classColorProfile_1_1RarityColors.html", null ],
+    [ "RawImage", null, [
+      [ "UIRawImage", "classUIRawImage.html", null ]
+    ] ],
     [ "UIRecipeInfo.RecipeVariation", "classUIRecipeInfo_1_1RecipeVariation.html", null ],
     [ "B83.Win32.RECT", "structB83_1_1Win32_1_1RECT.html", null ],
     [ "RectData", "classRectData.html", null ],
     [ "CoreRef.Rects", "classCoreRef_1_1Rects.html", null ],
+    [ "RectTransformExt", "classRectTransformExt.html", null ],
+    [ "UIList.RefObject", "classUIList_1_1RefObject.html", [
+      [ "UIListEx< T >.RefObjectEx", "classUIListEx_1_1RefObjectEx.html", null ]
+    ] ],
     [ "CoreRef.Renderers", "classCoreRef_1_1Renderers.html", null ],
     [ "GameSetting.RenderSetting", "classGameSetting_1_1RenderSetting.html", null ],
     [ "UIHomeInfo.ReportData", "classUIHomeInfo_1_1ReportData.html", null ],
@@ -2558,7 +2833,9 @@ var hierarchy =
     [ "RoofStyle", "classRoofStyle.html", null ],
     [ "SourceLiquid.Row", "classSourceLiquid_1_1Row.html", null ],
     [ "SourceSupplyType.Row", "classSourceSupplyType_1_1Row.html", null ],
+    [ "UIDynamicList.Row", "classUIDynamicList_1_1Row.html", null ],
     [ "WidgetManager.SaveData", "classWidgetManager_1_1SaveData.html", null ],
+    [ "Window.SaveData", "classWindow_1_1SaveData.html", null ],
     [ "Schedule", "classSchedule.html", null ],
     [ "ScriptableObject", null, [
       [ "SourceData< T, int >", "classSourceData.html", [
@@ -2588,27 +2865,59 @@ var hierarchy =
         [ "TextureData", "classTextureData.html", null ],
         [ "ZoneProfile", "classZoneProfile.html", null ]
       ] ],
+      [ "FontSource", "classFontSource.html", null ],
       [ "FowProfile", "classFowProfile.html", null ],
       [ "GameSetting", "classGameSetting.html", null ],
       [ "MapGenVariation", "classMapGenVariation.html", null ],
       [ "MapHeight", "classMapHeight.html", null ],
       [ "MeshPass", "classMeshPass.html", null ],
+      [ "MsgColors", "classMsgColors.html", null ],
       [ "ProceduralMesh", "classProceduralMesh.html", null ],
       [ "SceneColorProfile", "classSceneColorProfile.html", null ],
       [ "SceneLightProfile", "classSceneLightProfile.html", null ],
       [ "SceneProfile", "classSceneProfile.html", null ],
       [ "ScreenFlash", "classScreenFlash.html", null ],
+      [ "ShakerProfile", "classShakerProfile.html", null ],
+      [ "SkinAsset", "classSkinAsset.html", [
+        [ "SkinAsset_Button", "classSkinAsset__Button.html", null ],
+        [ "SkinAsset_Sprite", "classSkinAsset__Sprite.html", [
+          [ "SkinAsset_BG", "classSkinAsset__BG.html", null ]
+        ] ]
+      ] ],
+      [ "SkinColorProfile", "classSkinColorProfile.html", null ],
+      [ "SkinColorProfileEx", "classSkinColorProfileEx.html", null ],
+      [ "SkinSet", "classSkinSet.html", null ],
       [ "SourceData< T, T2 >", "classSourceData.html", null ],
       [ "TableData", "classTableData.html", null ],
-      [ "TransAnimeData", "classTransAnimeData.html", null ]
+      [ "TransAnimeData", "classTransAnimeData.html", null ],
+      [ "UINoteProfile", "classUINoteProfile.html", null ]
     ] ],
+    [ "ScrollRect", null, [
+      [ "UIScrollView", "classUIScrollView.html", null ]
+    ] ],
+    [ "SearchContext", "classSearchContext.html", null ],
     [ "ZoneProfile.Seeds", "classZoneProfile_1_1Seeds.html", null ],
     [ "SerializableColor", "classSerializableColor.html", null ],
+    [ "Window.Setting", "classWindow_1_1Setting.html", null ],
+    [ "Shadow", null, [
+      [ "BetterOutline", "classBetterOutline.html", null ],
+      [ "ModifiedShadow", "classModifiedShadow.html", [
+        [ "BoxOutline", "classBoxOutline.html", null ],
+        [ "CircleOutline", "classCircleOutline.html", null ],
+        [ "Outline8", "classOutline8.html", null ]
+      ] ],
+      [ "SoftShadow", "classSoftShadow.html", null ],
+      [ "ToJOutline", "classToJOutline.html", null ]
+    ] ],
     [ "ExcelData.Sheet", "classExcelData_1_1Sheet.html", null ],
     [ "ModManager.SheetIndex", "structModManager_1_1SheetIndex.html", null ],
     [ "SKILL", "classSKILL.html", null ],
-    [ "SkinRoot", null, [
-      [ "SkinRootRedirect", "classSkinRootRedirect.html", null ]
+    [ "SkinRootStatic.SkinColors", "classSkinRootStatic_1_1SkinColors.html", null ],
+    [ "SkinConfig", "classSkinConfig.html", null ],
+    [ "SkinDeco", "classSkinDeco.html", null ],
+    [ "Slider", null, [
+      [ "EventAwareSlider", "classEventAwareSlider.html", null ],
+      [ "UISlider", "classUISlider.html", null ]
     ] ],
     [ "LayerFaith.Slot", "classLayerFaith_1_1Slot.html", null ],
     [ "SLOT", "classSLOT.html", null ],
@@ -2737,18 +3046,24 @@ var hierarchy =
     [ "BiomeProfile.Spawns", "classBiomeProfile_1_1Spawns.html", null ],
     [ "SpawnSetting", "classSpawnSetting.html", null ],
     [ "SPELL", "classSPELL.html", null ],
+    [ "SpriteAsset", "classSpriteAsset.html", null ],
     [ "SpriteData", "classSpriteData.html", null ],
     [ "SpriteLoadOption", "classSpriteLoadOption.html", null ],
     [ "SpriteReplacer", "classSpriteReplacer.html", null ],
     [ "GrowSystem.Stage", "classGrowSystem_1_1Stage.html", null ],
     [ "SourceObj.Stage", "classSourceObj_1_1Stage.html", null ],
     [ "SFB.StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ],
+    [ "StandaloneInputModule", null, [
+      [ "InputModuleEX", "classInputModuleEX.html", null ]
+    ] ],
     [ "CoreDebug.StartSetting", "classCoreDebug_1_1StartSetting.html", null ],
     [ "GameSetting.StartSetting", "classGameSetting_1_1StartSetting.html", null ],
     [ "CoreRef.StateIcons", "classCoreRef_1_1StateIcons.html", null ],
     [ "Player.Stats", "classPlayer_1_1Stats.html", null ],
+    [ "PrimitiveUI.StrokeStyle", "classPrimitiveUI_1_1StrokeStyle.html", null ],
     [ "SubPassData", "classSubPassData.html", null ],
     [ "UIInventory.Tab", "classUIInventory_1_1Tab.html", null ],
+    [ "Window.Setting.Tab", "classWindow_1_1Setting_1_1Tab.html", null ],
     [ "CoreRef.TCs", "classCoreRef_1_1TCs.html", null ],
     [ "GameSetting.RenderSetting.TCSetting", "classGameSetting_1_1RenderSetting_1_1TCSetting.html", null ],
     [ "CoreConfig.Test", "classCoreConfig_1_1Test.html", null ],
@@ -2762,6 +3077,7 @@ var hierarchy =
     [ "BiomeProfile.TileGroup", "classBiomeProfile_1_1TileGroup.html", null ],
     [ "EloMap.TileInfo", "classEloMap_1_1TileInfo.html", null ],
     [ "LayerTitle.TitleType", "classLayerTitle_1_1TitleType.html", null ],
+    [ "TooltipData", "classTooltipData.html", null ],
     [ "ContentPopulation.Topic", "classContentPopulation_1_1Topic.html", null ],
     [ "InvOwner.Transaction", "classInvOwner_1_1Transaction.html", null ],
     [ "UIInventory.Transaction", "classUIInventory_1_1Transaction.html", null ],
@@ -2816,55 +3132,19 @@ var hierarchy =
       [ "CoreRef.UDIconWeather", "classCoreRef_1_1UDIconWeather.html", null ]
     ] ],
     [ "CorePath.UI", "classCorePath_1_1UI.html", null ],
-    [ "UIButton", null, [
-      [ "ButtonAbility", "classButtonAbility.html", null ],
-      [ "ButtonChara", "classButtonChara.html", null ],
-      [ "ButtonElement", "classButtonElement.html", null ],
-      [ "ButtonGeneral", "classButtonGeneral.html", [
-        [ "ButtonRecipe", "classButtonRecipe.html", null ]
+    [ "UIBehaviour", null, [
+      [ "HyphenationJpn", "classHyphenationJpn.html", null ],
+      [ "Mosframe.DynamicScrollView", "classMosframe_1_1DynamicScrollView.html", [
+        [ "Mosframe.DynamicHScrollView", "classMosframe_1_1DynamicHScrollView.html", null ],
+        [ "Mosframe.DynamicVScrollView", "classMosframe_1_1DynamicVScrollView.html", null ]
       ] ],
-      [ "ButtonGrid", "classButtonGrid.html", null ],
-      [ "ButtonResourceTrack", "classButtonResourceTrack.html", null ],
-      [ "ButtonRoster", "classButtonRoster.html", null ],
-      [ "Portrait", "classPortrait.html", null ]
+      [ "Mosframe.ScrollbarHandleSize", "classMosframe_1_1ScrollbarHandleSize.html", null ]
     ] ],
-    [ "UIContent", null, [
-      [ "Content", "classContent.html", [
-        [ "ContentHomeReport", "classContentHomeReport.html", null ]
-      ] ],
-      [ "EContent", "classEContent.html", [
-        [ "ContentChronicle", "classContentChronicle.html", null ],
-        [ "ContentCodex", "classContentCodex.html", null ],
-        [ "ContentConfig", "classContentConfig.html", [
-          [ "ContentConfigGame", "classContentConfigGame.html", [
-            [ "ContentConfigInput", "classContentConfigInput.html", null ]
-          ] ],
-          [ "ContentConfigGeneral", "classContentConfigGeneral.html", null ],
-          [ "ContentConfigOther", "classContentConfigOther.html", null ],
-          [ "ContentConfigTest", "classContentConfigTest.html", null ],
-          [ "ContentTactics", "classContentTactics.html", null ]
-        ] ],
-        [ "ContentFaction", "classContentFaction.html", null ],
-        [ "ContentGallery", "classContentGallery.html", null ],
-        [ "ContentHallOfFame", "classContentHallOfFame.html", null ],
-        [ "ContentHomeLog", "classContentHomeLog.html", null ],
-        [ "ContentHomeRanking", "classContentHomeRanking.html", null ],
-        [ "ContentKeyItem", "classContentKeyItem.html", null ],
-        [ "ContentPolicy", "classContentPolicy.html", null ],
-        [ "ContentPopulation", "classContentPopulation.html", null ],
-        [ "ContentQuest", "classContentQuest.html", null ],
-        [ "ContentRanking", "classContentRanking.html", null ],
-        [ "ContentStatistics", "classContentStatistics.html", null ],
-        [ "ContentTop", "classContentTop.html", null ]
-      ] ]
+    [ "UIListEx< UIButton >", "classUIListEx.html", [
+      [ "UIButtonList", "classUIButtonList.html", null ]
     ] ],
-    [ "UIDropdown", null, [
-      [ "DropdownRecipe", "classDropdownRecipe.html", null ]
-    ] ],
-    [ "UIItem", null, [
-      [ "ItemCulture", "classItemCulture.html", null ],
-      [ "ItemGeneral", "classItemGeneral.html", null ],
-      [ "ItemResearch", "classItemResearch.html", null ]
+    [ "UIListEx< UIItem >", "classUIListEx.html", [
+      [ "UIItemList", "classUIItemList.html", null ]
     ] ],
     [ "CoreConfig.UISetting", "classCoreConfig_1_1UISetting.html", null ],
     [ "GameSetting.UISetting", "classGameSetting_1_1UISetting.html", null ],
@@ -2885,15 +3165,16 @@ var hierarchy =
     ] ],
     [ "B83.Win32.WinAPI", "classB83_1_1Win32_1_1WinAPI.html", null ],
     [ "B83.Win32.Window", "classB83_1_1Win32_1_1Window.html", null ],
-    [ "WindowController", null, [
-      [ "WindowChara", "classWindowChara.html", null ],
-      [ "WindowCharaMini", "classWindowCharaMini.html", null ]
-    ] ],
+    [ "WindowMenu", "classWindowMenu.html", null ],
     [ "ActEffect.WishItem", "classActEffect_1_1WishItem.html", null ],
     [ "WidgetSearch.Word", "classWidgetSearch_1_1Word.html", null ],
     [ "Lang.Words", "classLang_1_1Words.html", null ],
     [ "XY", "structXY.html", null ],
+    [ "Xyz", "classXyz.html", null ],
     [ "ZINT", "classZINT.html", null ],
     [ "ZoneUtil", "classZoneUtil.html", null ],
-    [ "GameSetting.RenderSetting.ZSetting", "classGameSetting_1_1RenderSetting_1_1ZSetting.html", null ]
+    [ "GameSetting.RenderSetting.ZSetting", "classGameSetting_1_1RenderSetting_1_1ZSetting.html", null ],
+    [ "Text", null, [
+      [ "UIText", "classUIText.html", null ]
+    ] ]
 ];

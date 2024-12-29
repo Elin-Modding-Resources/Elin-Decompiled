@@ -273,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
 <div class="line"><span class="lineno">  110</span>        List&lt;int&gt; list = <span class="keyword">new</span> List&lt;int&gt;(c.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>);</div>
 <div class="line"><span class="lineno">  111</span>        Row2 row = _r as Row2;</div>
-<div class="line"><span class="lineno">  112</span>        Add(10, row.NUT);</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(10, row.NUT);</div>
 <div class="line"><span class="lineno">  113</span>        Parse(row.STR, 70, row.STR2, 440);</div>
 <div class="line"><span class="lineno">  114</span>        Parse(row.END, 71, row.END2, 441);</div>
 <div class="line"><span class="lineno">  115</span>        Parse(row.DEX, 72, row.DEX2, 442);</div>
@@ -284,7 +284,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  120</span>        Parse(row.CHA, 77, row.CHA2, 447);</div>
 <div class="line"><span class="lineno">  121</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; row.elements.Length; i += 2)</div>
 <div class="line"><span class="lineno">  122</span>        {</div>
-<div class="line"><span class="lineno">  123</span>            Add(_r.elements[i], row.elements[i + 1]);</div>
+<div class="line"><span class="lineno">  123</span>            <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(_r.elements[i], row.elements[i + 1]);</div>
 <div class="line"><span class="lineno">  124</span>        }</div>
 <div class="line"><span class="lineno">  125</span>        c.elements = list.ToArray();</div>
 <div class="line"><span class="lineno">  126</span>        c.name2 = row.name2;</div>
@@ -293,7 +293,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  129</span>        {</div>
 <div class="line"><span class="lineno">  130</span>            c.unit_JP = row.unit_JP;</div>
 <div class="line"><span class="lineno">  131</span>        }</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">void</span> Add(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
 <div class="line"><span class="lineno">  133</span>        {</div>
 <div class="line"><span class="lineno">  134</span>            list.Add(ele);</div>
 <div class="line"><span class="lineno">  135</span>            list.Add(a);</div>
@@ -302,17 +302,18 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  138</span>        {</div>
 <div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (raw != 0)</div>
 <div class="line"><span class="lineno">  140</span>            {</div>
-<div class="line"><span class="lineno">  141</span>                Add(ele, raw);</div>
+<div class="line"><span class="lineno">  141</span>                <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(ele, raw);</div>
 <div class="line"><span class="lineno">  142</span>            }</div>
 <div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (raw2 != 0)</div>
 <div class="line"><span class="lineno">  144</span>            {</div>
-<div class="line"><span class="lineno">  145</span>                Add(ele2, raw2);</div>
+<div class="line"><span class="lineno">  145</span>                <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(ele2, raw2);</div>
 <div class="line"><span class="lineno">  146</span>            }</div>
 <div class="line"><span class="lineno">  147</span>        }</div>
 <div class="line"><span class="lineno">  148</span>    }</div>
+<div class="ttc" id="aUIBook_8cs_html_afffba82c830716c9f14305e33e94b4d2"><div class="ttname"><a href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a></div><div class="ttdeci">list. Add(item3)</div></div>
 <div class="ttc" id="aclassCardRow_html_a43b9c7857c1d3a76e37178bdeed9e502"><div class="ttname"><a href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">CardRow.elements</a></div><div class="ttdeci">int[] elements</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00021">CardRow.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceFood_8cs_source.html#l00043">SourceFood.Row2.CHA</a>, <a class="el" href="SourceFood_8cs_source.html#l00045">SourceFood.Row2.CHA2</a>, <a class="el" href="SourceFood_8cs_source.html#l00023">SourceFood.Row2.DEX</a>, <a class="el" href="SourceFood_8cs_source.html#l00025">SourceFood.Row2.DEX2</a>, <a class="el" href="CardRow_8cs_source.html#l00021">CardRow.elements</a>, <a class="el" href="SourceFood_8cs_source.html#l00019">SourceFood.Row2.END</a>, <a class="el" href="SourceFood_8cs_source.html#l00021">SourceFood.Row2.END2</a>, <a class="el" href="SourceFood_8cs_source.html#l00031">SourceFood.Row2.LER</a>, <a class="el" href="SourceFood_8cs_source.html#l00033">SourceFood.Row2.LER2</a>, <a class="el" href="SourceFood_8cs_source.html#l00039">SourceFood.Row2.MAG</a>, <a class="el" href="SourceFood_8cs_source.html#l00041">SourceFood.Row2.MAG2</a>, <a class="el" href="CardRow_8cs_source.html#l00039">CardRow.name2</a>, <a class="el" href="CardRow_8cs_source.html#l00041">CardRow.name2_JP</a>, <a class="el" href="SourceFood_8cs_source.html#l00013">SourceFood.Row2.NUT</a>, <a class="el" href="SourceFood_8cs_source.html#l00027">SourceFood.Row2.PER</a>, <a class="el" href="SourceFood_8cs_source.html#l00029">SourceFood.Row2.PER2</a>, <a class="el" href="SourceFood_8cs_source.html#l00015">SourceFood.Row2.STR</a>, <a class="el" href="SourceFood_8cs_source.html#l00017">SourceFood.Row2.STR2</a>, <a class="el" href="SourceThing_8cs_source.html#l00011">SourceThing.Row.unit_JP</a>, <a class="el" href="SourceFood_8cs_source.html#l00035">SourceFood.Row2.WIL</a>, and <a class="el" href="SourceFood_8cs_source.html#l00037">SourceFood.Row2.WIL2</a>.</p>
+<p class="reference">References <a class="el" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add()</a>, <a class="el" href="SourceFood_8cs_source.html#l00043">SourceFood.Row2.CHA</a>, <a class="el" href="SourceFood_8cs_source.html#l00045">SourceFood.Row2.CHA2</a>, <a class="el" href="SourceFood_8cs_source.html#l00023">SourceFood.Row2.DEX</a>, <a class="el" href="SourceFood_8cs_source.html#l00025">SourceFood.Row2.DEX2</a>, <a class="el" href="CardRow_8cs_source.html#l00021">CardRow.elements</a>, <a class="el" href="SourceFood_8cs_source.html#l00019">SourceFood.Row2.END</a>, <a class="el" href="SourceFood_8cs_source.html#l00021">SourceFood.Row2.END2</a>, <a class="el" href="SourceFood_8cs_source.html#l00031">SourceFood.Row2.LER</a>, <a class="el" href="SourceFood_8cs_source.html#l00033">SourceFood.Row2.LER2</a>, <a class="el" href="SourceFood_8cs_source.html#l00039">SourceFood.Row2.MAG</a>, <a class="el" href="SourceFood_8cs_source.html#l00041">SourceFood.Row2.MAG2</a>, <a class="el" href="CardRow_8cs_source.html#l00039">CardRow.name2</a>, <a class="el" href="CardRow_8cs_source.html#l00041">CardRow.name2_JP</a>, <a class="el" href="SourceFood_8cs_source.html#l00013">SourceFood.Row2.NUT</a>, <a class="el" href="SourceFood_8cs_source.html#l00027">SourceFood.Row2.PER</a>, <a class="el" href="SourceFood_8cs_source.html#l00029">SourceFood.Row2.PER2</a>, <a class="el" href="SourceFood_8cs_source.html#l00015">SourceFood.Row2.STR</a>, <a class="el" href="SourceFood_8cs_source.html#l00017">SourceFood.Row2.STR2</a>, <a class="el" href="SourceThing_8cs_source.html#l00011">SourceThing.Row.unit_JP</a>, <a class="el" href="SourceFood_8cs_source.html#l00035">SourceFood.Row2.WIL</a>, and <a class="el" href="SourceFood_8cs_source.html#l00037">SourceFood.Row2.WIL2</a>.</p>
 
 </div>
 </div>

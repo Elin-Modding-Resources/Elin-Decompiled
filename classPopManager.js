@@ -1,0 +1,25 @@
+var classPopManager =
+[
+    [ "_Kill", "classPopManager.html#afc027eeef2ce53a8c7685281b5e4a2f5", null ],
+    [ "CopyAll", "classPopManager.html#a4387d0d38840e96c5fe95c552fae6482", null ],
+    [ "Get< T >", "classPopManager.html#a5d3430c235547c74408cefb3947b68de", null ],
+    [ "Kill", "classPopManager.html#a28f76668b82e348344a7a8129ac0e5e8", null ],
+    [ "KillAll", "classPopManager.html#ac31fa09a706c6ed9c5b0136ce8a0befc", null ],
+    [ "Pop", "classPopManager.html#ad937b046dea36469ff8c0f53222bc0ca", null ],
+    [ "PopText", "classPopManager.html#ab891935a89e4119544eb12e00b235d74", null ],
+    [ "Update", "classPopManager.html#a779dce9178096576bebbba8c75bfb257", null ],
+    [ "UpdateDestPos", "classPopManager.html#a0b84d5dc300abc1dd9058385c1a89b86", null ],
+    [ "align", "classPopManager.html#ad2db532336aa739bb6ac352eaf30ab75", null ],
+    [ "dir", "classPopManager.html#aebca2b1c2408da4f13931b9b3e9982c6", null ],
+    [ "durationActive", "classPopManager.html#a17a102593850972400a5760e5370ad9e", null ],
+    [ "durationMove", "classPopManager.html#a5f1309967a6c825014d4cb84814592a0", null ],
+    [ "ease", "classPopManager.html#a3653bee590c2c8ddb5e14363ef1d5972", null ],
+    [ "ignoreDestPos", "classPopManager.html#a742b01f4fd30dd9540e9e04200f9e5f1", null ],
+    [ "insert", "classPopManager.html#ad889a1148887fbaf2ba0b19d7c7c4353", null ],
+    [ "items", "classPopManager.html#a1d7eb103d3e73791b634e324aaae700f", null ],
+    [ "maxLines", "classPopManager.html#ab1238d696c4a038336f8a5d17b946472", null ],
+    [ "outlineAlpha", "classPopManager.html#a9afdf3b9f744503b8c36bd25f0e1474a", null ],
+    [ "spacing", "classPopManager.html#a06bc39945a48e87cc129d64abdae5f4a", null ],
+    [ "startAtDestPos", "classPopManager.html#a9c287a0d62ddc0ae90e4f4807061393d", null ],
+    [ "startPos", "classPopManager.html#a8f2a9a46b22e09ea8343aa453d727db6", null ]
+];

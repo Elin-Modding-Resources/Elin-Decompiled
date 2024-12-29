@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a90f18d2ff0c1a532a4518848329d3012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classElement.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement_1_1BonusInfo.html#a90f18d2ff0c1a532a4518848329d3012">ele</a></td></tr>
 <tr class="separator:a90f18d2ff0c1a532a4518848329d3012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5980f1f6546b0acd9622a13436326e4"><td class="memItemLeft" align="right" valign="top">UINote&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a></td></tr>
+<tr class="memitem:af5980f1f6546b0acd9622a13436326e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUINote.html">UINote</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a></td></tr>
 <tr class="separator:af5980f1f6546b0acd9622a13436326e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122f94169d0e7366544e165b9ba5d40d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement_1_1BonusInfo.html#a122f94169d0e7366544e165b9ba5d40d">c</a></td></tr>
 <tr class="separator:a122f94169d0e7366544e165b9ba5d40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,13 +166,15 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (v != 0)</div>
 <div class="line"><span class="lineno">  122</span>            {</div>
 <div class="line"><span class="lineno">  123</span>                <a class="code hl_function" href="classElement_1_1BonusInfo.html#ad4d65d92fdcceb9d51f2c9ea10849864">CheckFirst</a>();</div>
-<div class="line"><span class="lineno">  124</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.AddText(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + text + <span class="stringliteral">&quot; &quot;</span> + ((v &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + v + <span class="stringliteral">&quot;%&quot;</span>, (v &gt; 0) ? FontColor.Good : FontColor.Bad);</div>
+<div class="line"><span class="lineno">  124</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + text + <span class="stringliteral">&quot; &quot;</span> + ((v &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + v + <span class="stringliteral">&quot;%&quot;</span>, (v &gt; 0) ? <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Good : <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Bad);</div>
 <div class="line"><span class="lineno">  125</span>            }</div>
 <div class="line"><span class="lineno">  126</span>        }</div>
+<div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a></div><div class="ttdeci">FontColor</div><div class="ttdef"><b>Definition:</b> <a href="FontColor_8cs_source.html#l00001">FontColor.cs:2</a></div></div>
 <div class="ttc" id="aclassElement_1_1BonusInfo_html_ad4d65d92fdcceb9d51f2c9ea10849864"><div class="ttname"><a href="classElement_1_1BonusInfo.html#ad4d65d92fdcceb9d51f2c9ea10849864">Element.BonusInfo.CheckFirst</a></div><div class="ttdeci">void CheckFirst()</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00089">ELEMENT.cs:89</a></div></div>
 <div class="ttc" id="aclassElement_1_1BonusInfo_html_af5980f1f6546b0acd9622a13436326e4"><div class="ttname"><a href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">Element.BonusInfo.n</a></div><div class="ttdeci">UINote n</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00081">ELEMENT.cs:81</a></div></div>
+<div class="ttc" id="aclassUINote_html_ac98d4745e050d794de75189eb678e1a0"><div class="ttname"><a href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">UINote.AddText</a></div><div class="ttdeci">UIItem AddText(string text, FontColor color=FontColor.DontChange)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00113">UINote.cs:113</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELEMENT_8cs_source.html#l00089">Element.BonusInfo.CheckFirst()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>.</p>
+<p class="reference">References <a class="el" href="UINote_8cs_source.html#l00113">UINote.AddText()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00089">Element.BonusInfo.CheckFirst()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00128">Element.BonusInfo.WriteNote()</a>.</p>
 
@@ -229,12 +231,12 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  112</span>                }</div>
 <div class="line"><span class="lineno">  113</span>                <a class="code hl_function" href="classElement_1_1BonusInfo.html#ad4d65d92fdcceb9d51f2c9ea10849864">CheckFirst</a>();</div>
 <div class="line"><span class="lineno">  114</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#aa115f801c90f1adcce4a4ab781f42f14">total</a> += v;</div>
-<div class="line"><span class="lineno">  115</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.AddText(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + text2 + <span class="stringliteral">&quot; &quot;</span> + ((v &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + v, (v &gt; 0) ? FontColor.Good : FontColor.Bad);</div>
+<div class="line"><span class="lineno">  115</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + text2 + <span class="stringliteral">&quot; &quot;</span> + ((v &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + v, (v &gt; 0) ? <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Good : <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Bad);</div>
 <div class="line"><span class="lineno">  116</span>            }</div>
 <div class="line"><span class="lineno">  117</span>        }</div>
 <div class="ttc" id="aclassElement_1_1BonusInfo_html_aa115f801c90f1adcce4a4ab781f42f14"><div class="ttname"><a href="classElement_1_1BonusInfo.html#aa115f801c90f1adcce4a4ab781f42f14">Element.BonusInfo.total</a></div><div class="ttdeci">int total</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00087">ELEMENT.cs:87</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELEMENT_8cs_source.html#l00089">Element.BonusInfo.CheckFirst()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00087">Element.BonusInfo.total</a>.</p>
+<p class="reference">References <a class="el" href="UINote_8cs_source.html#l00113">UINote.AddText()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00089">Element.BonusInfo.CheckFirst()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00087">Element.BonusInfo.total</a>.</p>
 
 </div>
 </div>
@@ -265,10 +267,10 @@ Public Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ELEMENT_8cs_source.html#l00098">98</a> of file <a class="el" href="ELEMENT_8cs_source.html">ELEMENT.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   99</span>        {</div>
 <div class="line"><span class="lineno">  100</span>            <a class="code hl_function" href="classElement_1_1BonusInfo.html#ad4d65d92fdcceb9d51f2c9ea10849864">CheckFirst</a>();</div>
-<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.AddText(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + text, FontColor.Warning);</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + text, <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Warning);</div>
 <div class="line"><span class="lineno">  102</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELEMENT_8cs_source.html#l00089">Element.BonusInfo.CheckFirst()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>.</p>
+<p class="reference">References <a class="el" href="UINote_8cs_source.html#l00113">UINote.AddText()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00089">Element.BonusInfo.CheckFirst()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00128">Element.BonusInfo.WriteNote()</a>.</p>
 
@@ -302,12 +304,13 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classElement_1_1BonusInfo.html#a769456e1abb9958b69401cb5d2c4ac65">first</a>)</div>
 <div class="line"><span class="lineno">   92</span>            {</div>
 <div class="line"><span class="lineno">   93</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#a769456e1abb9958b69401cb5d2c4ac65">first</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   94</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.Space(8);</div>
+<div class="line"><span class="lineno">   94</span>                <a class="code hl_variable" href="classElement_1_1BonusInfo.html#af5980f1f6546b0acd9622a13436326e4">n</a>.<a class="code hl_function" href="classUINote.html#adc2532479d9a890d8dac8543d8f35619">Space</a>(8);</div>
 <div class="line"><span class="lineno">   95</span>            }</div>
 <div class="line"><span class="lineno">   96</span>        }</div>
 <div class="ttc" id="aclassElement_1_1BonusInfo_html_a769456e1abb9958b69401cb5d2c4ac65"><div class="ttname"><a href="classElement_1_1BonusInfo.html#a769456e1abb9958b69401cb5d2c4ac65">Element.BonusInfo.first</a></div><div class="ttdeci">bool first</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00085">ELEMENT.cs:85</a></div></div>
+<div class="ttc" id="aclassUINote_html_adc2532479d9a890d8dac8543d8f35619"><div class="ttname"><a href="classUINote.html#adc2532479d9a890d8dac8543d8f35619">UINote.Space</a></div><div class="ttdeci">void Space(int sizeY=0, int sizeX=1)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00062">UINote.cs:62</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELEMENT_8cs_source.html#l00085">Element.BonusInfo.first</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>.</p>
+<p class="reference">References <a class="el" href="ELEMENT_8cs_source.html#l00085">Element.BonusInfo.first</a>, <a class="el" href="ELEMENT_8cs_source.html#l00081">Element.BonusInfo.n</a>, and <a class="el" href="UINote_8cs_source.html#l00062">UINote.Space()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00119">Element.BonusInfo.AddFix()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00098">Element.BonusInfo.AddText()</a>.</p>
 
@@ -526,7 +529,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UINote Element.BonusInfo.n</td>
+          <td class="memname"><a class="el" href="classUINote.html">UINote</a> Element.BonusInfo.n</td>
         </tr>
       </table>
 </div><div class="memdoc">

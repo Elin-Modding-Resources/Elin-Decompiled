@@ -114,13 +114,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1fb8a32cda913c4d462ba581a812dddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a955b74f680a1bbd826b71d163c3701ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#a955b74f680a1bbd826b71d163c3701ed">GainExp</a> (int a)</td></tr>
 <tr class="separator:a955b74f680a1bbd826b71d163c3701ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8561dc7f7a186de3b5cd04df50a262b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#ae8561dc7f7a186de3b5cd04df50a262b">GetSortVal</a> (UIList.SortMode m)</td></tr>
+<tr class="memitem:ae8561dc7f7a186de3b5cd04df50a262b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#ae8561dc7f7a186de3b5cd04df50a262b">GetSortVal</a> (<a class="el" href="classUIList.html#ab6830a3f19955c15f58839b55702ed49">UIList.SortMode</a> m)</td></tr>
 <tr class="separator:ae8561dc7f7a186de3b5cd04df50a262b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b52c7ccb84fc5d63b7e9bb83050bb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9">WriteNote</a> (UINote n)</td></tr>
+<tr class="memitem:a06b52c7ccb84fc5d63b7e9bb83050bb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9">WriteNote</a> (<a class="el" href="classUINote.html">UINote</a> n)</td></tr>
 <tr class="separator:a06b52c7ccb84fc5d63b7e9bb83050bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3ee9e393de279b97fd3c5a9ccf6f8fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#ac3ee9e393de279b97fd3c5a9ccf6f8fd">OnComplete</a> ()</td></tr>
 <tr class="separator:ac3ee9e393de279b97fd3c5a9ccf6f8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a454e0eeec8637a381bbda4076d8b5916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#a454e0eeec8637a381bbda4076d8b5916">ParseReward</a> (UINote n=null)</td></tr>
+<tr class="memitem:a454e0eeec8637a381bbda4076d8b5916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResearchPlan.html#a454e0eeec8637a381bbda4076d8b5916">ParseReward</a> (<a class="el" href="classUINote.html">UINote</a> n=null)</td></tr>
 <tr class="separator:a454e0eeec8637a381bbda4076d8b5916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -312,7 +312,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">int ResearchPlan.GetSortVal </td>
           <td>(</td>
-          <td class="paramtype">UIList::SortMode&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIList.html#ab6830a3f19955c15f58839b55702ed49">UIList::SortMode</a>&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -387,7 +387,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void ResearchPlan.ParseReward </td>
           <td>(</td>
-          <td class="paramtype">UINote&#160;</td>
+          <td class="paramtype"><a class="el" href="classUINote.html">UINote</a>&#160;</td>
           <td class="paramname"><em>n</em> = <code>null</code></td><td>)</td>
           <td></td>
         </tr>
@@ -455,7 +455,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  123</span>            }</div>
 <div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (n != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  125</span>            {</div>
-<div class="line"><span class="lineno">  126</span>                n.AddText(text3);</div>
+<div class="line"><span class="lineno">  126</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(text3);</div>
 <div class="line"><span class="lineno">  127</span>            }</div>
 <div class="line"><span class="lineno">  128</span>        }</div>
 <div class="line"><span class="lineno">  129</span>    }</div>
@@ -478,6 +478,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
+<div class="ttc" id="aclassUINote_html_ac98d4745e050d794de75189eb678e1a0"><div class="ttname"><a href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">UINote.AddText</a></div><div class="ttdeci">UIItem AddText(string text, FontColor color=FontColor.DontChange)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00113">UINote.cs:113</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01316">FactionBranch.AddFeat()</a>, <a class="el" href="PolicyManager_8cs_source.html#l00021">PolicyManager.AddPolicy()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00021">branch</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="ELEMENT_8cs_source.html#l00875">Element.Create()</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="ELEMENT_8cs_source.html#l00225">Element.id</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="FactionBranch_8cs_source.html#l00070">FactionBranch.policies</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00019">rank</a>, <a class="el" href="Player_8cs_source.html#l00882">Player.recipes</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00023">source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00267">Element.Value</a>.</p>
 
@@ -532,7 +533,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void ResearchPlan.WriteNote </td>
           <td>(</td>
-          <td class="paramtype">UINote&#160;</td>
+          <td class="paramtype"><a class="el" href="classUINote.html">UINote</a>&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -546,17 +547,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ResearchPlan_8cs_source.html#l00054">54</a> of file <a class="el" href="ResearchPlan_8cs_source.html">ResearchPlan.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        n.Clear();</div>
-<div class="line"><span class="lineno">   57</span>        n.AddHeader(<a class="code hl_property" href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">Name</a>);</div>
-<div class="line"><span class="lineno">   58</span>        n.AddText(<span class="stringliteral">&quot;vRank&quot;</span>.lang() + <a class="code hl_variable" href="classResearchPlan.html#af3a1199945f5d9ca9a3323f01960b72c">rank</a> + <span class="stringliteral">&quot; (&quot;</span> + Mathf.Clamp(<a class="code hl_variable" href="classResearchPlan.html#a3605f36b2d66c7ee747c2dca219b0510">exp</a> * 100 / <a class="code hl_property" href="classResearchPlan.html#a22a51126d0a142d902cc67e16f140f4c">MaxExp</a>, 0, 100) + <span class="stringliteral">&quot;%)&quot;</span>);</div>
-<div class="line"><span class="lineno">   59</span>        n.AddText(<span class="stringliteral">&quot;vMaxRank&quot;</span>.lang() + <a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.maxLv);</div>
-<div class="line"><span class="lineno">   60</span>        n.AddHeader(<span class="stringliteral">&quot;researchEffect&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>        n.<a class="code hl_function" href="classUINote.html#a201293c027e2d754b95366702087b081">Clear</a>();</div>
+<div class="line"><span class="lineno">   57</span>        n.<a class="code hl_function" href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">AddHeader</a>(<a class="code hl_property" href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">Name</a>);</div>
+<div class="line"><span class="lineno">   58</span>        n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;vRank&quot;</span>.lang() + <a class="code hl_variable" href="classResearchPlan.html#af3a1199945f5d9ca9a3323f01960b72c">rank</a> + <span class="stringliteral">&quot; (&quot;</span> + Mathf.Clamp(<a class="code hl_variable" href="classResearchPlan.html#a3605f36b2d66c7ee747c2dca219b0510">exp</a> * 100 / <a class="code hl_property" href="classResearchPlan.html#a22a51126d0a142d902cc67e16f140f4c">MaxExp</a>, 0, 100) + <span class="stringliteral">&quot;%)&quot;</span>);</div>
+<div class="line"><span class="lineno">   59</span>        n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;vMaxRank&quot;</span>.lang() + <a class="code hl_property" href="classResearchPlan.html#aba4d54a4726b097a85b1896147e65260">source</a>.maxLv);</div>
+<div class="line"><span class="lineno">   60</span>        n.<a class="code hl_function" href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">AddHeader</a>(<span class="stringliteral">&quot;researchEffect&quot;</span>);</div>
 <div class="line"><span class="lineno">   61</span>        <a class="code hl_function" href="classResearchPlan.html#a454e0eeec8637a381bbda4076d8b5916">ParseReward</a>(n);</div>
-<div class="line"><span class="lineno">   62</span>        n.Build();</div>
+<div class="line"><span class="lineno">   62</span>        n.<a class="code hl_function" href="classUINote.html#ae74cd5d02ecb155823a55d182817f3f3">Build</a>();</div>
 <div class="line"><span class="lineno">   63</span>    }</div>
 <div class="ttc" id="aclassResearchPlan_html_aba7f3a94a7cb52306ffeb7de8ca99c5a"><div class="ttname"><a href="classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a">ResearchPlan.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="ResearchPlan_8cs_source.html#l00025">ResearchPlan.cs:25</a></div></div>
+<div class="ttc" id="aclassUINote_html_a201293c027e2d754b95366702087b081"><div class="ttname"><a href="classUINote.html#a201293c027e2d754b95366702087b081">UINote.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00035">UINote.cs:35</a></div></div>
+<div class="ttc" id="aclassUINote_html_a910af6ff3f10be0cdc3705c8e376ee25"><div class="ttname"><a href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">UINote.AddHeader</a></div><div class="ttdeci">UIItem AddHeader(string text, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00079">UINote.cs:79</a></div></div>
+<div class="ttc" id="aclassUINote_html_ae74cd5d02ecb155823a55d182817f3f3"><div class="ttname"><a href="classUINote.html#ae74cd5d02ecb155823a55d182817f3f3">UINote.Build</a></div><div class="ttdeci">void Build()</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00049">UINote.cs:49</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ResearchPlan_8cs_source.html#l00013">exp</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00027">MaxExp</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00025">Name</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00070">ParseReward()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00019">rank</a>, and <a class="el" href="ResearchPlan_8cs_source.html#l00023">source</a>.</p>
+<p class="reference">References <a class="el" href="UINote_8cs_source.html#l00079">UINote.AddHeader()</a>, <a class="el" href="UINote_8cs_source.html#l00113">UINote.AddText()</a>, <a class="el" href="UINote_8cs_source.html#l00049">UINote.Build()</a>, <a class="el" href="UINote_8cs_source.html#l00035">UINote.Clear()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00013">exp</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00027">MaxExp</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00025">Name</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00070">ParseReward()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00019">rank</a>, and <a class="el" href="ResearchPlan_8cs_source.html#l00023">source</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ItemResearch_8cs_source.html#l00011">ItemResearch.SetPlan()</a>.</p>
 

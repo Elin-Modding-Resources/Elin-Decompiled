@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad55ad706b18bfc0d008c4c5beae0e455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73fc849d7918d90c1461a0ebe34212c9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFactionRelation.html#a73fc849d7918d90c1461a0ebe34212c9">GetTextRelation</a> ()</td></tr>
 <tr class="separator:a73fc849d7918d90c1461a0ebe34212c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20706db6b4a20214f86003c57b80d8cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFactionRelation.html#a20706db6b4a20214f86003c57b80d8cd">SetTextHostility</a> (UIText text)</td></tr>
+<tr class="memitem:a20706db6b4a20214f86003c57b80d8cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFactionRelation.html#a20706db6b4a20214f86003c57b80d8cd">SetTextHostility</a> (<a class="el" href="classUIText.html">UIText</a> text)</td></tr>
 <tr class="separator:a20706db6b4a20214f86003c57b80d8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae35f73ae532810c1cb789c462741c13a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFactionRelation.html#ae35f73ae532810c1cb789c462741c13a">IsMember</a> ()</td></tr>
 <tr class="separator:ae35f73ae532810c1cb789c462741c13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -419,7 +419,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void FactionRelation.SetTextHostility </td>
           <td>(</td>
-          <td class="paramtype">UIText&#160;</td>
+          <td class="paramtype"><a class="el" href="classUIText.html">UIText</a>&#160;</td>
           <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
@@ -435,21 +435,23 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
 <div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classFactionRelation.html#ae35f73ae532810c1cb789c462741c13a">IsMember</a>() || <a class="code hl_variable" href="classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153">affinity</a> &gt; 100)</div>
 <div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            text.SetText(<span class="stringliteral">&quot;reFriend&quot;</span>.lang(), FontColor.Good);</div>
+<div class="line"><span class="lineno">   51</span>            text.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(<span class="stringliteral">&quot;reFriend&quot;</span>.lang(), <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Good);</div>
 <div class="line"><span class="lineno">   52</span>        }</div>
 <div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153">affinity</a> &lt; -100)</div>
 <div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            text.SetText(<span class="stringliteral">&quot;reEnemy&quot;</span>.lang(), FontColor.Bad);</div>
+<div class="line"><span class="lineno">   55</span>            text.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(<span class="stringliteral">&quot;reEnemy&quot;</span>.lang(), <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Bad);</div>
 <div class="line"><span class="lineno">   56</span>        }</div>
 <div class="line"><span class="lineno">   57</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            text.SetText(<span class="stringliteral">&quot;reNeutral&quot;</span>.lang(), FontColor.Passive);</div>
+<div class="line"><span class="lineno">   59</span>            text.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(<span class="stringliteral">&quot;reNeutral&quot;</span>.lang(), <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Passive);</div>
 <div class="line"><span class="lineno">   60</span>        }</div>
 <div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a></div><div class="ttdeci">FontColor</div><div class="ttdef"><b>Definition:</b> <a href="FontColor_8cs_source.html#l00001">FontColor.cs:2</a></div></div>
 <div class="ttc" id="aclassFactionRelation_html_a98730c36ad216a1eebc6c2b7e9215153"><div class="ttname"><a href="classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153">FactionRelation.affinity</a></div><div class="ttdeci">int affinity</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00014">FactionRelation.cs:14</a></div></div>
 <div class="ttc" id="aclassFactionRelation_html_ae35f73ae532810c1cb789c462741c13a"><div class="ttname"><a href="classFactionRelation.html#ae35f73ae532810c1cb789c462741c13a">FactionRelation.IsMember</a></div><div class="ttdeci">bool IsMember()</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00063">FactionRelation.cs:63</a></div></div>
+<div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00159">UIText.cs:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00014">affinity</a>, and <a class="el" href="FactionRelation_8cs_source.html#l00063">IsMember()</a>.</p>
+<p class="reference">References <a class="el" href="FactionRelation_8cs_source.html#l00014">affinity</a>, <a class="el" href="FactionRelation_8cs_source.html#l00063">IsMember()</a>, and <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, and <a class="el" href="ContentFaction_8cs_source.html#l00029">ContentFaction.RefreshFactions()</a>.</p>
 
