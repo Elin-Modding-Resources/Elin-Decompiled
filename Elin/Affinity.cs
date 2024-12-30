@@ -60,6 +60,28 @@ public class Affinity : EClass
 		return true;
 	}
 
+	public Sprite GetIcon()
+	{
+		int affinity = CC._affinity;
+		if (affinity <= -100)
+		{
+			return EClass.core.refs.icons.affnity.hate;
+		}
+		if (affinity <= -10)
+		{
+			return EClass.core.refs.icons.affnity.dontLike;
+		}
+		if (affinity >= 100)
+		{
+			return EClass.core.refs.icons.affnity.love;
+		}
+		if (affinity >= 10)
+		{
+			return EClass.core.refs.icons.affnity.like;
+		}
+		return null;
+	}
+
 	public Thing OnGift(Thing t)
 	{
 		t.CheckJustCooked();

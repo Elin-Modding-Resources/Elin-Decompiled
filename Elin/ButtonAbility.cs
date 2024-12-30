@@ -26,6 +26,8 @@ public class ButtonAbility : UIButton, IMouseHint
 	[NonSerialized]
 	public bool dragged;
 
+	public static Act hotkeyAct;
+
 	public static float hotkeyTimer;
 
 	public void SetAct(Chara _chara, Element e)
@@ -131,13 +133,17 @@ public class ButtonAbility : UIButton, IMouseHint
 		{
 			pos = EClass.pc.pos.Copy();
 		}
+		if (first)
+		{
+			hotkeyAct = act;
+		}
 		if (first && EInput.GetHotkey() != -1)
 		{
 			mouse = false;
 			hotkeyTimer = 0f;
 			Debug.Log(EInput.GetHotkey());
 		}
-		if (act.HaveLongPressAction)
+		if (act.HaveLongPressAction && act == hotkeyAct)
 		{
 			if ((mouse && EInput.rightMouse.pressedLong) || (!mouse && hotkeyTimer >= 0.45f))
 			{

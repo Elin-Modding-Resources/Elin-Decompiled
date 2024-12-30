@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TraitGodStatue : TraitPowerStatue
 {
 	public Religion Religion => EClass.game.religions.dictAll[GetParam(1)];
@@ -21,27 +19,12 @@ public class TraitGodStatue : TraitPowerStatue
 		owner.rarity = (owner.isOn ? Rarity.Artifact : Rarity.Normal);
 		if (Religion.id == "machine")
 		{
-			owner.AddCard(GetManiGene());
+			owner.AddCard(DNA.GenerateManiGene(owner));
 		}
 		if (owner.placeState == PlaceState.installed)
 		{
 			owner.renderer.RefreshExtra();
 		}
-	}
-
-	public Thing GetManiGene()
-	{
-		owner.things.DestroyAll();
-		Debug.Log("Mani:" + owner.c_seed);
-		Rand.SetSeed(owner.c_seed);
-		CardRow r = SpawnList.Get("chara").Select(100);
-		Rand.SetSeed(owner.c_seed);
-		Thing thing = DNA.GenerateGene(r, DNA.Type.Superior, owner.LV, owner.c_seed);
-		thing.c_DNA.cost = thing.c_DNA.cost / 2;
-		thing.MakeRefFrom("mani");
-		Rand.SetSeed();
-		owner.c_seed++;
-		return thing;
 	}
 
 	public override void _OnUse(Chara c)
@@ -57,7 +40,7 @@ public class TraitGodStatue : TraitPowerStatue
 		}
 		case "machine":
 		{
-			Thing t = owner.things.Find("gene") ?? GetManiGene();
+			Thing t = owner.things.Find("gene") ?? DNA.GenerateManiGene(owner);
 			EClass.pc.Pick(t);
 			break;
 		}

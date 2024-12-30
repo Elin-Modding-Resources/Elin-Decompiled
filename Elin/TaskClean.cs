@@ -12,24 +12,16 @@ public class TaskClean : Task
 
 	public static bool CanClean(Point p)
 	{
-		if (!p.IsBlocked)
+		if (!p.HasDirt)
 		{
-			if (!p.HasDirt)
-			{
-				return p.cell.HasLiquid;
-			}
-			return true;
+			return p.cell.HasLiquid;
 		}
-		return false;
+		return true;
 	}
 
 	public override bool CanPerform()
 	{
-		if (CanProgress())
-		{
-			return CanClean(dest);
-		}
-		return false;
+		return CanClean(dest);
 	}
 
 	public override bool CanManualCancel()
@@ -71,7 +63,7 @@ public class TaskClean : Task
 	public static Point GetTarget(Point dest)
 	{
 		List<Point> list = new List<Point>();
-		foreach (Point item in EClass._map.ListPointsInCircle(dest, 3f))
+		foreach (Point item in EClass._map.ListPointsInCircle(dest, 3f, mustBeWalkable: false))
 		{
 			if (CanClean(item))
 			{

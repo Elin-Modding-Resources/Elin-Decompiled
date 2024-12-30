@@ -330,7 +330,7 @@ public class TileType : EClass
 		}
 		if (pos.HasBlock)
 		{
-			if (!CanBuiltOnBlock && pos.sourceBlock.tileType.IsOccupyCell)
+			if (!CanBuiltOnBlock && pos.sourceBlock.tileType.IsOccupyCell && !EClass.core.config.test.allowBlockOnItem)
 			{
 				return HitResult.Invalid;
 			}

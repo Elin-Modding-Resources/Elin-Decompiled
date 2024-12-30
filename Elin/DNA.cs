@@ -127,6 +127,41 @@ public class DNA : EClass
 		return thing;
 	}
 
+	public static Thing CopyDNA(Thing from, Thing to)
+	{
+		to.c_DNA = from.c_DNA;
+		to.c_idRefCard = from.c_idRefCard;
+		to.ChangeMaterial(from.material);
+		return to;
+	}
+
+	public static Thing GenerateRandomGene(int lv = -1, int seed = -1)
+	{
+		if (lv == -1)
+		{
+			lv = EClass._zone.ContentLv;
+		}
+		Rand.SetSeed(seed);
+		CardRow r = SpawnList.Get("chara").Select(100);
+		Rand.SetSeed();
+		return GenerateGene(r, Type.Superior, lv, seed);
+	}
+
+	public static Thing GenerateManiGene(Card owner)
+	{
+		owner.things.DestroyAll();
+		Debug.Log("Mani:" + owner.c_seed);
+		Rand.SetSeed(owner.c_seed);
+		CardRow r = SpawnList.Get("chara").Select(100);
+		Rand.SetSeed(owner.c_seed);
+		Thing thing = GenerateGene(r, Type.Superior, owner.LV, owner.c_seed);
+		thing.c_DNA.cost = thing.c_DNA.cost / 2;
+		thing.MakeRefFrom("mani");
+		Rand.SetSeed();
+		owner.c_seed++;
+		return thing;
+	}
+
 	public void Apply(Chara c)
 	{
 		if (c.c_genes == null)

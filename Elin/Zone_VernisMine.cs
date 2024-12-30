@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class Zone_VernisMine : Zone_Dungeon
 {
 	public const int LvBoss = -8;
@@ -29,6 +31,10 @@ public class Zone_VernisMine : Zone_Dungeon
 			return "vernis_mine_boss";
 		}
 	}
+
+	public override int ContentLv => DangerLv;
+
+	public override int DangerLv => 5 + Mathf.Abs(base.lv);
 
 	public override string GetDungenID()
 	{

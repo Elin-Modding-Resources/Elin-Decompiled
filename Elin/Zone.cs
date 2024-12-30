@@ -1456,7 +1456,6 @@ public class Zone : Spatial, ICardParent, IInspect
 			spawnPosPC = spawnPosPC.GetNearestPoint();
 		}
 		spawnPosPC = spawnPosPC.Clamp(useBounds: true).GetNearestPoint();
-		Debug.Log(spawnPosPC);
 		foreach (Chara c in EClass.game.cards.globalCharas.Values)
 		{
 			if (c.currentZone != this)

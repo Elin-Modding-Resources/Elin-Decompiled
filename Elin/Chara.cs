@@ -6892,7 +6892,7 @@ public class Chara : Card, IPathfindWalker
 		return FindBed()?.owner.pos.cell.room;
 	}
 
-	public void ModAffinity(Chara c, int a, bool show = true)
+	public void ModAffinity(Chara c, int a, bool show = true, bool showOnlyEmo = false)
 	{
 		if (c == this)
 		{
@@ -6908,15 +6908,22 @@ public class Chara : Card, IPathfindWalker
 			a = affinity.Mod(a);
 		}
 		bool flag = a > 0;
-		if (show)
+		if (!show)
 		{
-			if (a == 0)
+			return;
+		}
+		if (a == 0)
+		{
+			if (!showOnlyEmo)
 			{
 				Say("affinityNone", this, c);
-				return;
 			}
-			ShowEmo((!flag) ? Emo.angry : Emo.love);
-			c.ShowEmo(flag ? Emo.love : Emo.sad);
+			return;
+		}
+		ShowEmo((!flag) ? Emo.angry : Emo.love);
+		c.ShowEmo(flag ? Emo.love : Emo.sad);
+		if (!showOnlyEmo)
+		{
 			Say(flag ? "affinityPlus" : "affinityMinus", this, c);
 		}
 	}

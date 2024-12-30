@@ -42,17 +42,22 @@ public class LayerInventory : ELayer
 		return result;
 	}
 
-	public static LayerInventory GetPCLayer()
+	public static LayerInventory GetLayer(Card t)
 	{
 		LayerInventory result = null;
 		foreach (LayerInventory item in listInv)
 		{
-			if (item.Inv.Container.IsPC)
+			if (item.Inv.Container == t)
 			{
 				return item;
 			}
 		}
 		return result;
+	}
+
+	public static LayerInventory GetPCLayer()
+	{
+		return GetLayer(ELayer.pc);
 	}
 
 	public static void Close(Thing t)

@@ -4408,9 +4408,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (AI_Slaughter.slaughtering)
 		{
 			flag2 = true;
-			num = EClass.rndHalf(4 + 5 * Chara.race.food[0].ToInt() / 100);
+			num = EClass.rndHalf(4 + 10 * (50 + Mathf.Max(0, (int)MathF.Sqrt(EClass.pc.Evalue(290) * 10))) / 100);
 		}
-		if (origin != null && origin.HasElement(290))
+		else if (origin != null && origin.HasElement(290))
 		{
 			if (!flag2 && Chara.race.corpse[1].ToInt() > EClass.rnd(150000 / (100 + (int)Mathf.Sqrt(origin.Evalue(290)) * 5)))
 			{
@@ -4641,6 +4641,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		switch (id)
 		{
+		case "gene":
+			DNA.CopyDNA(DNA.GenerateRandomGene(lv), Thing);
+			break;
 		case "log":
 			ChangeMaterial(EClass.sources.materials.rows.Where((SourceMaterial.Row m) => m.category == "wood").RandomItem());
 			break;
@@ -5457,9 +5460,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (IsPCFaction)
 		{
 			Thing equippedThing = Chara.body.GetEquippedThing(45);
-			if (equippedThing != null)
+			if (equippedThing != null && equippedThing.trait is TraitLightSource traitLightSource)
 			{
-				num2 = (equippedThing.trait as TraitLightSource).LightRadius;
+				num2 = traitLightSource.LightRadius;
 			}
 			if (Chara.held != null && IsPC)
 			{

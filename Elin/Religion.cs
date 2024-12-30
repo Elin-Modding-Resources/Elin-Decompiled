@@ -164,6 +164,11 @@ public class Religion : EClass
 		return EClass.sources.dataGodTalk.GetText(id, suffix).Split(Environment.NewLine.ToCharArray()).RandomItem();
 	}
 
+	public virtual int GetOfferingMtp(Thing t)
+	{
+		return 0;
+	}
+
 	public int GetOfferingValue(Thing t, int num = -1)
 	{
 		t.CheckJustCooked();
@@ -171,14 +176,18 @@ public class Religion : EClass
 		{
 			num = t.Num;
 		}
-		int num2 = 0;
+		int v = 0;
 		if (t.source._origin == "meat")
 		{
-			num2 = Mathf.Clamp(t.SelfWeight / 10, 1, 1000);
+			v = Mathf.Clamp(t.SelfWeight / 10, 1, 1000);
 			if (t.refCard == null)
 			{
-				num2 /= 10;
+				v /= 10;
 			}
+		}
+		else if (GetOfferingMtp(t) > 0)
+		{
+			SetValue(t.category, GetOfferingMtp(t));
 		}
 		else
 		{
@@ -187,22 +196,27 @@ public class Religion : EClass
 			{
 				if (t.category.IsChildOf(key))
 				{
-					num2 = Mathf.Clamp(t.SelfWeight / 10, 50, 1000);
-					num2 *= EClass.sources.categories.map[key].offer / 100;
+					SetValue(EClass.sources.categories.map[key], 1);
 					break;
 				}
 			}
 		}
-		if (num2 == 0)
+		if (v == 0)
 		{
 			return 0;
 		}
 		if (t.IsDecayed)
 		{
-			num2 /= 10;
+			v /= 10;
 		}
-		num2 = num2 * (100 + Mathf.Min(t.LV * 2, 100) + (t.HasElement(757) ? 50 : 0)) / 100;
-		return Mathf.Max(num2, 1) * num;
+		v = v * (100 + Mathf.Min(t.LV * 2, 100) + (t.HasElement(757) ? 50 : 0)) / 100;
+		v = Mathf.Max(v, 1) * num;
+		return v;
+		void SetValue(SourceCategory.Row cat, int mtp)
+		{
+			v = Mathf.Clamp(t.SelfWeight / 10, 50, 1000);
+			v *= cat.offer * mtp / 100;
+		}
 	}
 
 	public bool TryGetGift()

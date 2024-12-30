@@ -4,9 +4,18 @@ public class InvOwnerMod : InvOwnerDraglet
 
 	public override string langTransfer => "invMod";
 
-	public static bool IsValidMod(Thing t, SourceElement.Row row)
+	public static bool IsValidRuneMod(Thing t, SourceElement.Row row, string idMat)
 	{
-		if (t.trait is TraitToolRangeCane && !row.tag.Contains("cane"))
+		if (idMat == "adamantite")
+		{
+			return t.category.slot == 35;
+		}
+		return false;
+	}
+
+	public static bool IsValidRangedMod(Thing t, SourceElement.Row row)
+	{
+		if (t.trait is TraitToolRangeCane && !row.tag.Contains("modCane"))
 		{
 			return false;
 		}
@@ -26,7 +35,14 @@ public class InvOwnerMod : InvOwnerDraglet
 	public override bool ShouldShowGuide(Thing t)
 	{
 		TraitMod traitMod = owner.trait as TraitMod;
-		if (!IsValidMod(t, traitMod.source))
+		if (traitMod is TraitRune)
+		{
+			if (!IsValidRuneMod(t, traitMod.source, owner.material.alias))
+			{
+				return false;
+			}
+		}
+		else if (!IsValidRangedMod(t, traitMod.source))
 		{
 			return false;
 		}

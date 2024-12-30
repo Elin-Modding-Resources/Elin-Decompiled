@@ -14,7 +14,7 @@ public class AI_Slaughter : AI_TargetCard
 	{
 		string[] list = Lang.GetList("fur");
 		string text = list[Mathf.Clamp(target.c_fur / 10, 0, list.Length - 1)];
-		return "AI_Shear".lang() + "(" + text + ")";
+		return "AI_Slaughter".lang() + "(" + text + ")";
 	}
 
 	public override bool IsValidTC(Card c)
@@ -39,7 +39,7 @@ public class AI_Slaughter : AI_TargetCard
 			{
 				target.PlaySound("slaughter");
 				target.SetCensored(enable: true);
-				owner.Say("disassemble_start", owner, target);
+				owner.Say("disassemble_start", owner, owner.Tool, target.Name);
 			},
 			onProgress = delegate(Progress_Custom p)
 			{
@@ -62,7 +62,10 @@ public class AI_Slaughter : AI_TargetCard
 			},
 			onProgressComplete = delegate
 			{
-				target.Chara.ModAffinity(owner, 1);
+				bool num = target.HasElement(1237) || target.HasElement(701);
+				target.pos.PlayEffect("revive");
+				target.Chara.ModAffinity(owner, -50);
+				owner.ShowEmo(Emo.love);
 				target.SetCensored(enable: false);
 				if (target.HaveFur())
 				{
@@ -71,6 +74,7 @@ public class AI_Slaughter : AI_TargetCard
 				}
 				slaughtering = true;
 				target.Die();
+				Msg.Say("goto_heaven", target);
 				slaughtering = false;
 				if (target.Chara.trait.IsUnique)
 				{
@@ -81,10 +85,15 @@ public class AI_Slaughter : AI_TargetCard
 					target.Chara.homeBranch.BanishMember(target.Chara, skipMsg: true);
 				}
 				owner.elements.ModExp(237, 250);
-				owner.elements.ModExp(290, 100);
+				owner.elements.ModExp(290, 250);
 				EClass.pc.stamina.Mod(-3);
+				if (num)
+				{
+					Msg.Say("killcat");
+					EClass.player.ModKarma(-3);
+				}
 			}
-		}.SetDuration(5000 / (100 + owner.Tool.material.hardness * 2), 3);
+		}.SetDuration(6000 / (100 + owner.Tool.material.hardness * 2), 3);
 		yield return Do(seq);
 	}
 

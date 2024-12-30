@@ -2570,6 +2570,7 @@ public class BaseTileMap : EMono
 							if (thing != null)
 							{
 								_actorPos.z -= 0.2f;
+								thingPos.z -= 0.2f;
 							}
 							_actorPos.y -= num20;
 						}

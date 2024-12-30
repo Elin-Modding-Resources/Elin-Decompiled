@@ -625,29 +625,30 @@ public class ActionMode : EClass
 			hotElementTimer = 0f;
 		}
 		focusTimer += Core.delta;
-		if (EClass.ui.isPointerOverUI && (EInput.leftMouse.down || EInput.rightMouse.down || (EClass.core.config.ui.autoFocusWindow && !Input.GetMouseButton(0) && focusTimer > 0.2f)))
+		if (EClass.ui.isPointerOverUI && (EInput.leftMouse.down || EInput.rightMouse.down || (EClass.core.config.ui.autoFocusWindow && !Input.GetMouseButton(0))))
 		{
 			LayerInventory componentOf2 = InputModuleEX.GetComponentOf<LayerInventory>();
-			if (componentOf2 != null && EClass.ui.layerFloat.layers.Contains(componentOf2))
+			if (componentOf2 != null)
 			{
-				if (EInput.rightMouse.down)
+				LayerInventory layerInventory = LayerInventory.GetLayer(InputModuleEX.GetComponentOf<ButtonGrid>()?.card);
+				if ((bool)layerInventory)
 				{
-					if (!componentOf2.mainInv && !InputModuleEX.GetComponentOf<UIButton>() && !componentOf2.windows[0].saveData.noRightClickClose)
+					LayerInventory.highlightInv = layerInventory.invs[0].owner;
+				}
+				if (focusTimer > 0.1f)
+				{
+					if (EClass.ui.layerFloat.layers.Contains(componentOf2) && !layerInventory)
 					{
-						componentOf2.Close();
+						componentOf2.transform.SetAsLastSibling();
 					}
-				}
-				else
-				{
-					componentOf2.transform.SetAsLastSibling();
+					LayerAbility componentOf3 = InputModuleEX.GetComponentOf<LayerAbility>();
+					if (componentOf3 != null && EClass.ui.layerFloat.layers.Contains(componentOf3))
+					{
+						componentOf3.transform.SetAsLastSibling();
+					}
+					focusTimer = 0f;
 				}
 			}
-			LayerAbility componentOf3 = InputModuleEX.GetComponentOf<LayerAbility>();
-			if (componentOf3 != null && EClass.ui.layerFloat.layers.Contains(componentOf3))
-			{
-				componentOf3.transform.SetAsLastSibling();
-			}
-			focusTimer = 0f;
 		}
 		if ((EInput.isShiftDown && Input.GetMouseButton(0)) || (EInput.rightMouse.dragging2 && !Input.GetMouseButtonDown(1) && Input.GetMouseButton(1)))
 		{
@@ -660,6 +661,11 @@ public class ActionMode : EClass
 		}
 		if (EInput.rightMouse.down)
 		{
+			LayerInventory componentOf5 = InputModuleEX.GetComponentOf<LayerInventory>();
+			if (componentOf5 != null && EClass.ui.layerFloat.layers.Contains(componentOf5) && EInput.rightMouse.down && !componentOf5.mainInv && !InputModuleEX.GetComponentOf<UIButton>() && !componentOf5.windows[0].saveData.noRightClickClose)
+			{
+				componentOf5.Close();
+			}
 			if (EClass.ui.contextMenu.isActive)
 			{
 				EClass.ui.contextMenu.currentMenu.Hide();
@@ -681,10 +687,10 @@ public class ActionMode : EClass
 		bool flag = (EInput.mouse3.clicked && input.mouse3Click == CoreConfig.GameFunc.AllAction) || (EInput.mouse4.clicked && input.mouse4Click == CoreConfig.GameFunc.AllAction) || (EInput.mouse3.pressedLong && input.mouse3PressLong == CoreConfig.GameFunc.AllAction) || (EInput.mouse4.pressedLong && input.mouse4PressLong == CoreConfig.GameFunc.AllAction);
 		if (flag || EInput.middleMouse.down || EInput.middleMouse.clicked || EInput.middleMouse.pressedLong)
 		{
-			UIButton componentOf5 = InputModuleEX.GetComponentOf<UIButton>();
-			if ((bool)componentOf5 && componentOf5.CanMiddleClick() && (flag || EInput.middleMouse.clicked || EInput.middleMouse.pressedLong))
+			UIButton componentOf6 = InputModuleEX.GetComponentOf<UIButton>();
+			if ((bool)componentOf6 && componentOf6.CanMiddleClick() && (flag || EInput.middleMouse.clicked || EInput.middleMouse.pressedLong))
 			{
-				componentOf5.OnMiddleClick(flag);
+				componentOf6.OnMiddleClick(flag);
 			}
 		}
 		if ((bool)EClass.ui.contextMenu.currentMenu)
@@ -772,18 +778,18 @@ public class ActionMode : EClass
 		}
 		if (EInput.action == EAction.Examine && !IsBuildMode)
 		{
-			ButtonGrid componentOf6 = InputModuleEX.GetComponentOf<ButtonGrid>();
+			ButtonGrid componentOf7 = InputModuleEX.GetComponentOf<ButtonGrid>();
 			Card card = null;
-			if ((bool)componentOf6 && componentOf6.card != null)
+			if ((bool)componentOf7 && componentOf7.card != null)
 			{
-				card = componentOf6.card;
+				card = componentOf7.card;
 			}
 			if (card == null)
 			{
-				UIItem componentOf7 = InputModuleEX.GetComponentOf<UIItem>();
-				if ((bool)componentOf7 && componentOf7.refObj is Thing)
+				UIItem componentOf8 = InputModuleEX.GetComponentOf<UIItem>();
+				if ((bool)componentOf8 && componentOf8.refObj is Thing)
 				{
-					card = (Thing)componentOf7.refObj;
+					card = (Thing)componentOf8.refObj;
 				}
 			}
 			if (card == null)

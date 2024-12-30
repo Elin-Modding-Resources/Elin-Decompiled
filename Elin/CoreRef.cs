@@ -41,6 +41,18 @@ public class CoreRef : ScriptableObject
 	[Serializable]
 	public class Icons
 	{
+		[Serializable]
+		public class Affinity
+		{
+			public Sprite hate;
+
+			public Sprite dontLike;
+
+			public Sprite like;
+
+			public Sprite love;
+		}
+
 		public Sprite suspend;
 
 		public Sprite resume;
@@ -90,6 +102,8 @@ public class CoreRef : ScriptableObject
 		public Sprite shared;
 
 		public Sprite personal;
+
+		public Affinity affnity;
 
 		public UDInvTab invTab;
 

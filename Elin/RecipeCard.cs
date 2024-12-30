@@ -86,6 +86,7 @@ public class RecipeCard : Recipe
 			ingredients.Add(new Ingredient
 			{
 				id = "seasoning",
+				useCat = true,
 				optional = true,
 				req = 1
 			});

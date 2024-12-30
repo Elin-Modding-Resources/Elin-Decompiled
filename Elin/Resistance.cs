@@ -6,7 +6,7 @@ public class Resistance : Element
 
 	public override bool ShowXP => false;
 
-	public override string ShortName => EClass.sources.elements.alias[base.source.aliasParent].GetName();
+	public override string ShortName => EClass.sources.elements.alias.TryGetValue(base.source.aliasParent)?.GetName() ?? base.source.aliasParent;
 
 	public override bool CanLink(ElementContainer owner)
 	{

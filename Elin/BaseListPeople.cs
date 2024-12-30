@@ -84,6 +84,14 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					break;
 				}
 			}
+			if (a.IsPCFaction)
+			{
+				Sprite icon = a.affinity.GetIcon();
+				if ((bool)icon)
+				{
+					Util.Instantiate<UIItem>("UI/Element/Grid/Attach/affinity", b).image1.sprite = icon;
+				}
+			}
 			b.AddSubButton(EClass.core.refs.icons.work, delegate
 			{
 				if (roomWork == null)

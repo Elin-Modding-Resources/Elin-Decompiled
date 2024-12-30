@@ -252,7 +252,7 @@ public class Thing : Card
 					for (int k = 0; k < EClass.rnd(num2 + 1); k++)
 					{
 						Tuple<SourceElement.Row, int> enchant = GetEnchant(genLv, (SourceElement.Row r) => r.tag.Contains("modRanged"), neg: false);
-						if (enchant != null && InvOwnerMod.IsValidMod(this, enchant.Item1))
+						if (enchant != null && InvOwnerMod.IsValidRangedMod(this, enchant.Item1))
 						{
 							ApplySocket(enchant.Item1.id, enchant.Item2);
 						}
@@ -570,7 +570,7 @@ public class Thing : Card
 			}
 			if (!(text7 == "*r"))
 			{
-				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard != null) ? base.refCard.GetName() : text7)).Replace("#1", base.c_extraNameRef.IsEmpty(text7)) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
+				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard == null) ? text7 : (base.refCard.isChara ? base.refCard.GetName() : base.refCard.GetText()))).Replace("#1", base.c_extraNameRef.IsEmpty(text7)) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
 			}
 			else
 			{

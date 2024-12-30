@@ -58,6 +58,15 @@ public class Hobby : EClass
 			num = num * c.race.breeder / 100;
 		}
 		num += GetLv(c);
-		return num * (100 + c.homeBranch.Evalue(3708) * 10) / 100;
+		if (c.affinity.value < 0)
+		{
+			num += c.affinity.value;
+		}
+		num = num * (100 + c.homeBranch.Evalue(3708) * 10) / 100;
+		if (num >= 0)
+		{
+			return num;
+		}
+		return 0;
 	}
 }

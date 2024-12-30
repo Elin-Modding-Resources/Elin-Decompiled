@@ -2,13 +2,15 @@ using System;
 
 public class TraitMod : TraitItem
 {
+	public virtual string Tag => "mod";
+
 	public override bool CanStack => false;
 
 	public SourceElement.Row source => EClass.sources.elements.map[owner.refVal];
 
 	public override void OnCreate(int lv)
 	{
-		Tuple<SourceElement.Row, int> tuple = Thing.GetEnchant(lv, (SourceElement.Row r) => r.tag.Contains("modRanged"), neg: false);
+		Tuple<SourceElement.Row, int> tuple = Thing.GetEnchant(lv, (SourceElement.Row r) => r.tag.Contains(Tag), neg: false);
 		if (tuple == null)
 		{
 			tuple = new Tuple<SourceElement.Row, int>(EClass.sources.elements.map[600], EClass.rnd(10) + 1);
