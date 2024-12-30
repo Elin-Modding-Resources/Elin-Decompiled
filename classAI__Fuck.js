@@ -14,6 +14,7 @@ var classAI__Fuck =
     [ "sell", "classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95", null ],
     [ "succubus", "classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea", null ],
     [ "target", "classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360", null ],
+    [ "totalAffinity", "classAI__Fuck.html#a24a2dff894bd2174895fdcfd73e36e6d", null ],
     [ "CancelOnAggro", "classAI__Fuck.html#a56998c6c4cbbaba0cc6a559ac8b59279", null ],
     [ "CancelWhenDamaged", "classAI__Fuck.html#a0e8f832ee8fb7893761d1437af94ccf7", null ],
     [ "CurrentProgress", "classAI__Fuck.html#a6d056d125a3cc691fc94e90565ae7b11", null ],

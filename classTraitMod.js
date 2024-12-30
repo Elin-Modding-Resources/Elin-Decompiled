@@ -5,5 +5,6 @@ var classTraitMod =
     [ "OnUse", "classTraitMod.html#a2b44eb936aeb4b0137ba8b0945c11495", null ],
     [ "SetName", "classTraitMod.html#a81a22e6a18c4ea46fbbfca3ba72b159e", null ],
     [ "CanStack", "classTraitMod.html#a4564679c4ac8ff13184513e0dde71b1a", null ],
-    [ "source", "classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d", null ]
+    [ "source", "classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d", null ],
+    [ "Tag", "classTraitMod.html#a31702dae2356e7a939e6647db0fd9482", null ]
 ];

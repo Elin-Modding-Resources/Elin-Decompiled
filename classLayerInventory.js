@@ -11,6 +11,7 @@ var classLayerInventory =
     [ "CreateContainerAlly", "classLayerInventory.html#a3fc9b8cb828ef708b4229d1d0f62c59c", null ],
     [ "CreateContainerPC", "classLayerInventory.html#af181b311a953995b8a66e8c1b7e7f2ee", null ],
     [ "CreatePCBackpack", "classLayerInventory.html#a47d3598389275953a2e4a523ac46b9d6", null ],
+    [ "GetLayer", "classLayerInventory.html#a7b6d8b9341184dd77c8d7f7572563c63", null ],
     [ "GetPCLayer", "classLayerInventory.html#aa568e0991e7090868bd14c5ddc44d648", null ],
     [ "GetPlayerContainer", "classLayerInventory.html#a88bc694144048fc127e8d1409764c33b", null ],
     [ "GetTopLayer", "classLayerInventory.html#abea507ed297c7656997f16c71af9971b", null ],

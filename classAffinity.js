@@ -5,6 +5,7 @@ var classAffinity =
     [ "CanMarry", "classAffinity.html#a533cb348ce85f47aee44e84b29ded024", null ],
     [ "CanSleepBeside", "classAffinity.html#a5f97a015c302041be4cb6140b2f92b89", null ],
     [ "Get", "classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a", null ],
+    [ "GetIcon", "classAffinity.html#a67c6e61ff82d8dd9585cda2cb4d65b8a", null ],
     [ "Mod", "classAffinity.html#a1cc035137bc7dddcfca8b9afbeba4ac3", null ],
     [ "OnGift", "classAffinity.html#aeebc41560bd44b3d5f57bd617bb8ce33", null ],
     [ "OnTalkRumor", "classAffinity.html#a19e2f81de3cca811f77553b318986011", null ],

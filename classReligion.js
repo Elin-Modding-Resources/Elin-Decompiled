@@ -6,6 +6,7 @@ var classReligion =
     ] ],
     [ "GetFeat", "classReligion.html#a478a09bb7605f21efdd4b0017a7d8c2f", null ],
     [ "GetGodTalk", "classReligion.html#a3660c094a3499a71f47913645d74271a", null ],
+    [ "GetOfferingMtp", "classReligion.html#a2ef23d6b84414b974d5ee47ddc532682", null ],
     [ "GetOfferingValue", "classReligion.html#a1ccfce72109bf80853a297cca61e25bf", null ],
     [ "GetSprite", "classReligion.html#aa33fae656eeba673f7276f240fddc01b", null ],
     [ "GetTextBenefit", "classReligion.html#a2879222c42fb02b12f1028dfc5f0df7a", null ],

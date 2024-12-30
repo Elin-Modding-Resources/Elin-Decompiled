@@ -159,7 +159,7 @@ var classChara =
     [ "MakeMilk", "classChara.html#adce25b7da1f716a40d7cb9e1d842594f", null ],
     [ "MakeMinion", "classChara.html#a7603e689da29d72012f8cfcd4dd9f893", null ],
     [ "MakePartyMemeber", "classChara.html#a868468b249c3278c6ac614ed5f2ab51f", null ],
-    [ "ModAffinity", "classChara.html#a17934e5b66698a9797c867e898f4e97c", null ],
+    [ "ModAffinity", "classChara.html#a354698fe941b9ea8554d778d0e14e3be", null ],
     [ "ModCorruption", "classChara.html#abfd27f6b05d775c38d1bc1cdd23b9db0", null ],
     [ "ModHeight", "classChara.html#a4d9b35cb943467d48b8f655745d83b62", null ],
     [ "ModTempElement", "classChara.html#a0f717ad71f4b3e87d6e46bb4ef04479d", null ],

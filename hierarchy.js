@@ -3,6 +3,7 @@ var hierarchy =
     [ "ABILITY", "classABILITY.html", null ],
     [ "GameSetting.RenderSetting.ActorSetting", "classGameSetting_1_1RenderSetting_1_1ActorSetting.html", null ],
     [ "ActRef", "structActRef.html", null ],
+    [ "CoreRef.Icons.Affinity", "classCoreRef_1_1Icons_1_1Affinity.html", null ],
     [ "AM_Designation< TaskBuild >", "classAM__Designation.html", [
       [ "AM_Build", "classAM__Build.html", null ]
     ] ],
@@ -1639,7 +1640,8 @@ var hierarchy =
           [ "TraitItemProc", "classTraitItemProc.html", null ],
           [ "TraitMaterialHammer", "classTraitMaterialHammer.html", null ],
           [ "TraitMod", "classTraitMod.html", [
-            [ "TraitModRanged", "classTraitModRanged.html", null ]
+            [ "TraitModRanged", "classTraitModRanged.html", null ],
+            [ "TraitRune", "classTraitRune.html", null ]
           ] ],
           [ "TraitPaintBoard", "classTraitPaintBoard.html", null ],
           [ "TraitPainter", "classTraitPainter.html", [
@@ -1828,6 +1830,7 @@ var hierarchy =
             [ "TraitRodRandom", "classTraitRodRandom.html", null ]
           ] ],
           [ "TraitStethoscope", "classTraitStethoscope.html", null ],
+          [ "TraitToolBrush", "classTraitToolBrush.html", null ],
           [ "TraitToolBuild", "classTraitToolBuild.html", null ],
           [ "TraitToolButcher", "classTraitToolButcher.html", null ],
           [ "TraitToolHammer", "classTraitToolHammer.html", null ],

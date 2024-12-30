@@ -1,5 +1,7 @@
 var classCoreRef_1_1Icons =
 [
+    [ "Affinity", "classCoreRef_1_1Icons_1_1Affinity.html", "classCoreRef_1_1Icons_1_1Affinity" ],
+    [ "affnity", "classCoreRef_1_1Icons.html#afbb5a47da23ece3ea1f84c13df70b9cd", null ],
     [ "bed", "classCoreRef_1_1Icons.html#af73c420bed60717a9c9bcd82aa5e36c3", null ],
     [ "caste", "classCoreRef_1_1Icons.html#aed98f3cb4cb6b061a8476fd276271a49", null ],
     [ "defaultAbility", "classCoreRef_1_1Icons.html#a5732fe0109865f65a8ac54f1763f5bfe", null ],

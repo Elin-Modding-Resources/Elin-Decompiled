@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.68 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.69 Nightly</span>
    </div>
   </td>
  </tr>
@@ -117,8 +117,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a915731cb4559dcb14b1af938120f54f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f5dfdfdcbaa412a21eb5a33ee11a836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836">OnChangeMaterial</a> ()</td></tr>
 <tr class="separator:a8f5dfdfdcbaa412a21eb5a33ee11a836"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4704751ae5f2412a3ec147ee9d1520fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classThing.html">Thing</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitGodStatue.html#a4704751ae5f2412a3ec147ee9d1520fc">GetManiGene</a> ()</td></tr>
-<tr class="separator:a4704751ae5f2412a3ec147ee9d1520fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1590a2af361a881d0e32aeb5793dbc2e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e">_OnUse</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
 <tr class="separator:a1590a2af361a881d0e32aeb5793dbc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTraitPowerStatue"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTraitPowerStatue')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTraitPowerStatue.html">TraitPowerStatue</a></td></tr>
@@ -700,7 +698,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00001">1</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1590a2af361a881d0e32aeb5793dbc2e" name="a1590a2af361a881d0e32aeb5793dbc2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1590a2af361a881d0e32aeb5793dbc2e">&#9670;&#160;</a></span>_OnUse()</h2>
@@ -728,53 +726,55 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitPowerStatue.html#a7875940fd840ee1f9a491e61234594a8">TraitPowerStatue</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00047">47</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_function" href="classReligion.html#ac2a9ca18679e95f70e3d63dda911a2ef">Talk</a>(<span class="stringliteral">&quot;shrine&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">switch</span> (<a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a>)</div>
-<div class="line"><span class="lineno">   51</span>        {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;harvest&quot;</span>:</div>
-<div class="line"><span class="lineno">   53</span>        {</div>
-<div class="line"><span class="lineno">   54</span>            <a class="code hl_class" href="classThing.html">Thing</a> t2 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;book_kumiromi&quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(t2);</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;machine&quot;</span>:</div>
-<div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            <a class="code hl_class" href="classThing.html">Thing</a> t = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;gene&quot;</span>) ?? <a class="code hl_function" href="classTraitGodStatue.html#a4704751ae5f2412a3ec147ee9d1520fc">GetManiGene</a>();</div>
-<div class="line"><span class="lineno">   61</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(t);</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;healing&quot;</span>:</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;jure_hug&quot;</span>);</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#aa4cfd402ffbe2b9ccb042a93b6dea315">ModKeyItem</a>(<span class="stringliteral">&quot;jure_feather&quot;</span>);</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;jure_hug2&quot;</span>);</div>
+<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00030">30</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_function" href="classReligion.html#ac2a9ca18679e95f70e3d63dda911a2ef">Talk</a>(<span class="stringliteral">&quot;shrine&quot;</span>);</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">switch</span> (<a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a>)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;harvest&quot;</span>:</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="classThing.html">Thing</a> t2 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;book_kumiromi&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(t2);</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;machine&quot;</span>:</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="classThing.html">Thing</a> t = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;gene&quot;</span>) ?? <a class="code hl_class" href="classDNA.html">DNA</a>.<a class="code hl_function" href="classDNA.html#ab3cc3e3e9678f0d7f51b6693cfea8d60">GenerateManiGene</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(t);</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;healing&quot;</span>:</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;jure_hug&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#aa4cfd402ffbe2b9ccb042a93b6dea315">ModKeyItem</a>(<span class="stringliteral">&quot;jure_feather&quot;</span>);</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;jure_hug2&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;luck&quot;</span>:</div>
+<div class="line"><span class="lineno">   53</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#aa4cfd402ffbe2b9ccb042a93b6dea315">ModKeyItem</a>((!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a61969a4ade79b2dfe141815b9c1b7491">wellWished</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">CountKeyItem</a>(<span class="stringliteral">&quot;well_wish&quot;</span>) == 0) ? <span class="stringliteral">&quot;well_wish&quot;</span> : <span class="stringliteral">&quot;well_enhance&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;wind&quot;</span>:</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;blood_angel&quot;</span>));</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;earth&quot;</span>:</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;element&quot;</span>:</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>);</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> randomMaterial = <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_function" href="classMATERIAL.html#a03fd2332ff1c8ddcf33126770d68a9b7">GetRandomMaterial</a>(((<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> &lt; 200) ? (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> / 2) : (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> % 50 * 2)) + 10, (<a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a> == <span class="stringliteral">&quot;earth&quot;</span>) ? <span class="stringliteral">&quot;metal&quot;</span> : <span class="stringliteral">&quot;leather&quot;</span>, tryLevelMatTier: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;mathammer&quot;</span>);</div>
+<div class="line"><span class="lineno">   64</span>            thing.<a class="code hl_function" href="classCard.html#aca629319c0060497dea0b3fb95b4e516">ChangeMaterial</a>(randomMaterial);</div>
+<div class="line"><span class="lineno">   65</span>            thing.noSell = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
+<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(thing);</div>
 <div class="line"><span class="lineno">   68</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;luck&quot;</span>:</div>
-<div class="line"><span class="lineno">   70</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#aa4cfd402ffbe2b9ccb042a93b6dea315">ModKeyItem</a>((!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a61969a4ade79b2dfe141815b9c1b7491">wellWished</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">CountKeyItem</a>(<span class="stringliteral">&quot;well_wish&quot;</span>) == 0) ? <span class="stringliteral">&quot;well_wish&quot;</span> : <span class="stringliteral">&quot;well_enhance&quot;</span>);</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;wind&quot;</span>:</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;blood_angel&quot;</span>));</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;earth&quot;</span>:</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;element&quot;</span>:</div>
-<div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>);</div>
-<div class="line"><span class="lineno">   79</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> randomMaterial = <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_function" href="classMATERIAL.html#a03fd2332ff1c8ddcf33126770d68a9b7">GetRandomMaterial</a>(((<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> &lt; 200) ? (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> / 2) : (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> % 50 * 2)) + 10, (<a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a> == <span class="stringliteral">&quot;earth&quot;</span>) ? <span class="stringliteral">&quot;metal&quot;</span> : <span class="stringliteral">&quot;leather&quot;</span>, tryLevelMatTier: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;mathammer&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>            thing.<a class="code hl_function" href="classCard.html#aca629319c0060497dea0b3fb95b4e516">ChangeMaterial</a>(randomMaterial);</div>
-<div class="line"><span class="lineno">   82</span>            thing.noSell = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ae543d364c9735273f1fc52d6585df722">Pick</a>(thing);</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
 <div class="ttc" id="aclassCard_html_a5cdca84470e3deb7067bff632665c789"><div class="ttname"><a href="classCard.html#a5cdca84470e3deb7067bff632665c789">Card.c_seed</a></div><div class="ttdeci">int c_seed</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01216">Card.cs:1217</a></div></div>
 <div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00034">Card.cs:34</a></div></div>
 <div class="ttc" id="aclassCard_html_aca629319c0060497dea0b3fb95b4e516"><div class="ttname"><a href="classCard.html#aca629319c0060497dea0b3fb95b4e516">Card.ChangeMaterial</a></div><div class="ttdeci">Card ChangeMaterial(int idNew)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02768">Card.cs:2768</a></div></div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00369">Card.cs:370</a></div></div>
 <div class="ttc" id="aclassChara_html_ae543d364c9735273f1fc52d6585df722"><div class="ttname"><a href="classChara.html#ae543d364c9735273f1fc52d6585df722">Chara.Pick</a></div><div class="ttdeci">Thing Pick(Thing t, bool msg=true, bool tryStack=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03772">Chara.cs:3772</a></div></div>
+<div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00007">DNA.cs:8</a></div></div>
+<div class="ttc" id="aclassDNA_html_ab3cc3e3e9678f0d7f51b6693cfea8d60"><div class="ttname"><a href="classDNA.html#ab3cc3e3e9678f0d7f51b6693cfea8d60">DNA.GenerateManiGene</a></div><div class="ttdeci">static Thing GenerateManiGene(Card owner)</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00150">DNA.cs:150</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00012">EClass.cs:12</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
@@ -795,64 +795,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00004">ThingGen.cs:5</a></div></div>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
-<div class="ttc" id="aclassTraitGodStatue_html_a4704751ae5f2412a3ec147ee9d1520fc"><div class="ttname"><a href="classTraitGodStatue.html#a4704751ae5f2412a3ec147ee9d1520fc">TraitGodStatue.GetManiGene</a></div><div class="ttdeci">Thing GetManiGene()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGodStatue_8cs_source.html#l00032">TraitGodStatue.cs:32</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01217">Card.c_seed</a>, <a class="el" href="Card_8cs_source.html#l02768">Card.ChangeMaterial()</a>, <a class="el" href="Player_8cs_source.html#l01929">Player.CountKeyItem()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00578">ThingContainer.Find()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00032">GetManiGene()</a>, <a class="el" href="MATERIAL_8cs_source.html#l00043">MATERIAL.GetRandomMaterial()</a>, <a class="el" href="Religion_8cs_source.html#l00026">Religion.id</a>, <a class="el" href="Card_8cs_source.html#l00370">Card.LV</a>, <a class="el" href="Player_8cs_source.html#l01897">Player.ModKeyItem()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l03772">Chara.Pick()</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>, <a class="el" href="Religion_8cs_source.html#l00153">Religion.Talk()</a>, <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>, and <a class="el" href="Player_8cs_source.html#l00774">Player.wellWished</a>.</p>
-
-</div>
-</div>
-<a id="a4704751ae5f2412a3ec147ee9d1520fc" name="a4704751ae5f2412a3ec147ee9d1520fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4704751ae5f2412a3ec147ee9d1520fc">&#9670;&#160;</a></span>GetManiGene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classThing.html">Thing</a> TraitGodStatue.GetManiGene </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00032">32</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a1619498597f2aa66645335e507f8ff96">DestroyAll</a>();</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Mani:&quot;</span> + <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>);</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>);</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> r = <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_function" href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">Get</a>(<span class="stringliteral">&quot;chara&quot;</span>).<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>(100);</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>);</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classDNA.html">DNA</a>.<a class="code hl_function" href="classDNA.html#ae75a8e273cf8a03dfa71e229761e6360">GenerateGene</a>(r, <a class="code hl_class" href="classDNA.html">DNA</a>.<a class="code hl_enumeration" href="classDNA.html#a6c24861a5030f44db8c5093699cbbf35">Type</a>.Superior, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>);</div>
-<div class="line"><span class="lineno">   40</span>        thing.c_DNA.cost = thing.c_DNA.cost / 2;</div>
-<div class="line"><span class="lineno">   41</span>        thing.<a class="code hl_function" href="classCard.html#a19e66c4b67a3d4cb2d8b6d6af91fd015">MakeRefFrom</a>(<span class="stringliteral">&quot;mani&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a5cdca84470e3deb7067bff632665c789">c_seed</a>++;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> thing;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
-<div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
-<div class="ttc" id="aclassCard_html_a19e66c4b67a3d4cb2d8b6d6af91fd015"><div class="ttname"><a href="classCard.html#a19e66c4b67a3d4cb2d8b6d6af91fd015">Card.MakeRefFrom</a></div><div class="ttdeci">void MakeRefFrom(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04858">Card.cs:4858</a></div></div>
-<div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00007">DNA.cs:8</a></div></div>
-<div class="ttc" id="aclassDNA_html_a6c24861a5030f44db8c5093699cbbf35"><div class="ttname"><a href="classDNA.html#a6c24861a5030f44db8c5093699cbbf35">DNA.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00009">DNA.cs:10</a></div></div>
-<div class="ttc" id="aclassDNA_html_ae75a8e273cf8a03dfa71e229761e6360"><div class="ttname"><a href="classDNA.html#ae75a8e273cf8a03dfa71e229761e6360">DNA.GenerateGene</a></div><div class="ttdeci">static Thing GenerateGene(Chara c, Type? type=null)</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00104">DNA.cs:104</a></div></div>
-<div class="ttc" id="aclassSpawnList_html"><div class="ttname"><a href="classSpawnList.html">SpawnList</a></div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00004">SpawnList.cs:5</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a12952fcdea83c02e6751bcf16b0660d8"><div class="ttname"><a href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">SpawnList.Get</a></div><div class="ttdeci">static SpawnList Get(string id, string parent=null, CardFilter filter=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00018">SpawnList.cs:18</a></div></div>
-<div class="ttc" id="aclassSpawnList_html_a39d702c255e5e5ab91401a6bf62a7b8b"><div class="ttname"><a href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">SpawnList.Select</a></div><div class="ttdeci">CardRow Select(int lv=-1, int levelRange=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnList_8cs_source.html#l00139">SpawnList.cs:139</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_a1619498597f2aa66645335e507f8ff96"><div class="ttname"><a href="classThingContainer.html#a1619498597f2aa66645335e507f8ff96">ThingContainer.DestroyAll</a></div><div class="ttdeci">void DestroyAll(Func&lt; Thing, bool &gt; funcExclude=null)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00559">ThingContainer.cs:559</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01217">Card.c_seed</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ThingContainer_8cs_source.html#l00559">ThingContainer.DestroyAll()</a>, <a class="el" href="DNA_8cs_source.html#l00104">DNA.GenerateGene()</a>, <a class="el" href="SpawnList_8cs_source.html#l00018">SpawnList.Get()</a>, <a class="el" href="Card_8cs_source.html#l00370">Card.LV</a>, <a class="el" href="Card_8cs_source.html#l04858">Card.MakeRefFrom()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="SpawnList_8cs_source.html#l00139">SpawnList.Select()</a>, <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>, and <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="TraitGodStatue_8cs_source.html#l00047">_OnUse()</a>, and <a class="el" href="TraitGodStatue_8cs_source.html#l00018">OnChangeMaterial()</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01217">Card.c_seed</a>, <a class="el" href="Card_8cs_source.html#l02768">Card.ChangeMaterial()</a>, <a class="el" href="Player_8cs_source.html#l01929">Player.CountKeyItem()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00578">ThingContainer.Find()</a>, <a class="el" href="DNA_8cs_source.html#l00150">DNA.GenerateManiGene()</a>, <a class="el" href="MATERIAL_8cs_source.html#l00043">MATERIAL.GetRandomMaterial()</a>, <a class="el" href="Religion_8cs_source.html#l00026">Religion.id</a>, <a class="el" href="Card_8cs_source.html#l00370">Card.LV</a>, <a class="el" href="Player_8cs_source.html#l01897">Player.ModKeyItem()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l03772">Chara.Pick()</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>, <a class="el" href="Religion_8cs_source.html#l00153">Religion.Talk()</a>, <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>, and <a class="el" href="Player_8cs_source.html#l00774">Player.wellWished</a>.</p>
 
 </div>
 </div>
@@ -881,10 +826,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18">TraitPowerStatue</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   10</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -911,19 +856,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00018">18</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
-<div class="line"><span class="lineno">   20</span>        owner.isOn = owner.material.alias == <span class="stringliteral">&quot;gold&quot;</span>;</div>
-<div class="line"><span class="lineno">   21</span>        owner.rarity = (owner.isOn ? Rarity.Artifact : <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Normal);</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a> == <span class="stringliteral">&quot;machine&quot;</span>)</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">AddCard</a>(<a class="code hl_function" href="classTraitGodStatue.html#a4704751ae5f2412a3ec147ee9d1520fc">GetManiGene</a>());</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">placeState</a> == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#ab5f21d53cd13924f94f29c6ad4053bfc">RefreshExtra</a>();</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00016">16</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        owner.isOn = owner.material.alias == <span class="stringliteral">&quot;gold&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>        owner.rarity = (owner.isOn ? Rarity.Artifact : <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Normal);</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classReligion.html">Religion</a>.<a class="code hl_property" href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">id</a> == <span class="stringliteral">&quot;machine&quot;</span>)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">AddCard</a>(<a class="code hl_class" href="classDNA.html">DNA</a>.<a class="code hl_function" href="classDNA.html#ab3cc3e3e9678f0d7f51b6693cfea8d60">GenerateManiGene</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>));</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">placeState</a> == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#ab5f21d53cd13924f94f29c6ad4053bfc">RefreshExtra</a>();</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
 <div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00001">PlaceState.cs:2</a></div></div>
 <div class="ttc" id="aRarity_8cs_html_a6c4fc244cdc975f7fd572fa614617600"><div class="ttname"><a href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a></div><div class="ttdeci">Rarity</div><div class="ttdef"><b>Definition:</b> <a href="Rarity_8cs_source.html#l00001">Rarity.cs:2</a></div></div>
 <div class="ttc" id="aclassCardRenderer_html_ab5f21d53cd13924f94f29c6ad4053bfc"><div class="ttname"><a href="classCardRenderer.html#ab5f21d53cd13924f94f29c6ad4053bfc">CardRenderer.RefreshExtra</a></div><div class="ttdeci">void RefreshExtra()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00412">CardRenderer.cs:412</a></div></div>
@@ -931,9 +876,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCard_html_a77dc3446a7564c5ec837ac0033f6a313"><div class="ttname"><a href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">Card.placeState</a></div><div class="ttdeci">PlaceState placeState</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:79</a></div></div>
 <div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00057">Card.cs:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02817">Card.AddCard()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00032">GetManiGene()</a>, <a class="el" href="Religion_8cs_source.html#l00026">Religion.id</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00079">Card.placeState</a>, <a class="el" href="CardRenderer_8cs_source.html#l00412">CardRenderer.RefreshExtra()</a>, and <a class="el" href="Card_8cs_source.html#l00057">Card.renderer</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02817">Card.AddCard()</a>, <a class="el" href="DNA_8cs_source.html#l00150">DNA.GenerateManiGene()</a>, <a class="el" href="Religion_8cs_source.html#l00026">Religion.id</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00079">Card.placeState</a>, <a class="el" href="CardRenderer_8cs_source.html#l00412">CardRenderer.RefreshExtra()</a>, and <a class="el" href="Card_8cs_source.html#l00057">Card.renderer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitGodStatue_8cs_source.html#l00012">OnCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitGodStatue_8cs_source.html#l00010">OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -963,14 +908,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00012">12</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        base.OnCreate(lv);</div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_function" href="classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836">OnChangeMaterial</a>();</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
-<div class="ttc" id="aclassTraitGodStatue_html_a8f5dfdfdcbaa412a21eb5a33ee11a836"><div class="ttname"><a href="classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836">TraitGodStatue.OnChangeMaterial</a></div><div class="ttdeci">void OnChangeMaterial()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGodStatue_8cs_source.html#l00018">TraitGodStatue.cs:18</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00010">10</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        base.OnCreate(lv);</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_function" href="classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836">OnChangeMaterial</a>();</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="ttc" id="aclassTraitGodStatue_html_a8f5dfdfdcbaa412a21eb5a33ee11a836"><div class="ttname"><a href="classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836">TraitGodStatue.OnChangeMaterial</a></div><div class="ttdeci">void OnChangeMaterial()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGodStatue_8cs_source.html#l00016">TraitGodStatue.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitGodStatue_8cs_source.html#l00018">OnChangeMaterial()</a>.</p>
+<p class="reference">References <a class="el" href="TraitGodStatue_8cs_source.html#l00016">OnChangeMaterial()</a>.</p>
 
 </div>
 </div>
@@ -995,7 +940,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitGodStatue_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitGodStatue_8cs_source.html">TraitGodStatue.cs</a>.</p>
 
 </div>
 </div>

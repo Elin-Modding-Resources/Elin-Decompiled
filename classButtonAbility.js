@@ -21,6 +21,7 @@ var classButtonAbility =
     [ "chara", "classButtonAbility.html#aea3202bdc4850af691f71f72cbbc832b", null ],
     [ "dragged", "classButtonAbility.html#ab2c6b4fbb4addbc5f27314bfaf69cbbd", null ],
     [ "dragParent", "classButtonAbility.html#a824f8581d48e424ab5c10fb77415301e", null ],
+    [ "hotkeyAct", "classButtonAbility.html#a07afc23f0c014e2648b162006951c998", null ],
     [ "hotkeyTimer", "classButtonAbility.html#a22a75fea4856ce1626e29ff516a53758", null ],
     [ "imageFav", "classButtonAbility.html#aef9b2e4fbb772c54436f2f0d292a4154", null ],
     [ "imageType", "classButtonAbility.html#a27f2ea4d22788e6fea2055cbc1c06869", null ],

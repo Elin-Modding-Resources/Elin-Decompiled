@@ -1,5 +1,12 @@
 var NAVTREEINDEX45 =
 {
+"classClassWithBits.html#a88ffe814fac844b728c7948fded533ff":[1,0,268,3],
+"classClassWithBits.html#aa4dd1436ff6cc3975605464f90eb4861":[1,0,268,2],
+"classCodexCreature.html":[1,0,270],
+"classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411":[1,0,270,1],
+"classCodexCreature.html#a53fc120a115da7361e65f8df05ada451":[1,0,270,8],
+"classCodexCreature.html#a58063c13c4320af8195fa35419d55d01":[1,0,270,5],
+"classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b":[1,0,270,9],
 "classCodexCreature.html#a7c4ffca759757b23c56ba8680a5f8d27":[1,0,270,10],
 "classCodexCreature.html#a81ac7ba6c24ffae71af742eb5f6d22d0":[1,0,270,3],
 "classCodexCreature.html#a8f278f37a2e35c847d54cf3a925a29fd":[1,0,270,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX45 =
 "classConMiasma.html#af8d2f9c3fe00e2c54842693a05990307":[1,0,316,2],
 "classConNightVision.html":[1,0,317],
 "classConNightVision.html#a27f5772feb74dbfe689fc8c8bd672944":[1,0,317,2],
-"classConNightVision.html#a35845c11a51a895fd4c65c2c4280087d":[1,0,317,0],
-"classConNightVision.html#aceb298b00d9f17d1ac2ac1f322c77d1d":[1,0,317,1],
-"classConParalyze.html":[1,0,318],
-"classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7":[1,0,318,1],
-"classConParalyze.html#a60689a1be70ade8522f6b6a3b3656cdd":[1,0,318,5],
-"classConParalyze.html#a9c87701d6e6e375336388d0bcd4044d3":[1,0,318,4],
-"classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792":[1,0,318,0],
-"classConParalyze.html#ac00d042177ea4661b0bbd36bcab711ec":[1,0,318,6]
+"classConNightVision.html#a35845c11a51a895fd4c65c2c4280087d":[1,0,317,0]
 };
