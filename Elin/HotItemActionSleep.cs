@@ -11,7 +11,7 @@ public class HotItemActionSleep : HotAction
 			Msg.Say((EClass._zone.events.GetEvent<ZoneEventQuest>() != null) ? "badidea" : "notSleepy");
 			return;
 		}
-		if (EClass.player.returnInfo != null)
+		if (EClass.player.returnInfo != null || EClass.pc.isRestrained)
 		{
 			Msg.Say("badidea");
 			return;

@@ -131,6 +131,11 @@ public class AIAct : Act
 		return (child ?? this).stateIcon;
 	}
 
+	public virtual bool ShouldAllyAttack(Chara tg)
+	{
+		return child?.ShouldAllyAttack(tg) ?? true;
+	}
+
 	public virtual Point GetDestination()
 	{
 		if (!IsChildRunning)

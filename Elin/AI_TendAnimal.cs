@@ -2,16 +2,8 @@ public class AI_TendAnimal : AI_Fuck
 {
 	public override FuckType Type => FuckType.tame;
 
-	public override bool CanTame()
+	public override bool ShouldAllyAttack(Chara tg)
 	{
-		if (target == null || target.isDead)
-		{
-			return false;
-		}
-		if (!target.trait.CanBeTamed)
-		{
-			return false;
-		}
-		return true;
+		return tg != target;
 	}
 }

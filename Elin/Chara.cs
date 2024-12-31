@@ -5635,7 +5635,7 @@ public class Chara : Card, IPathfindWalker
 				}
 				stealthSeen++;
 			}
-			else if (Los.IsVisible(pos.x, chara.pos.x, pos.z, chara.pos.z) && (!flag2 || EClass.pc.isBlind || EClass.pc.CanSeeLos(chara)) && (!IsPCFaction || !(EClass.pc.ai is AI_Shear aI_Shear) || aI_Shear.target != chara))
+			else if (Los.IsVisible(pos.x, chara.pos.x, pos.z, chara.pos.z) && (!flag2 || EClass.pc.isBlind || EClass.pc.CanSeeLos(chara)) && (!IsPCFaction || EClass.pc.ai.ShouldAllyAttack(chara)))
 			{
 				DoHostileAction(chara);
 				enemy = chara;

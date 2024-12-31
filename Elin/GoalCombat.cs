@@ -78,7 +78,7 @@ public class GoalCombat : Goal
 				}
 			}
 			tc = owner.enemy;
-			if (tc != null && owner.IsPCFaction && EClass.pc.ai is AI_Shear aI_Shear && aI_Shear.target == tc)
+			if (tc != null && owner.IsPCFaction && !EClass.pc.ai.ShouldAllyAttack(tc))
 			{
 				tc = (owner.enemy = null);
 			}

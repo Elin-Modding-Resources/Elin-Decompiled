@@ -905,6 +905,10 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
+			foreach (Chara chara in EClass._map.charas)
+			{
+				chara.ModAffinity(EClass.pc, EScriptable.rnd(300));
+			}
 			Thing to = ThingGen.Create("gene");
 			to = DNA.CopyDNA(DNA.GenerateRandomGene(), to);
 			EClass.pc.Pick(to);

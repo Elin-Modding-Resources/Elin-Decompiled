@@ -5,6 +5,22 @@ using UnityEngine;
 [Serializable]
 public class Affinity : EClass
 {
+	public enum Stage
+	{
+		Foe,
+		Hate,
+		Annoying,
+		Normal,
+		Approved,
+		Friendly,
+		Respected,
+		Intimate,
+		Fond,
+		Love,
+		LoveLove,
+		LoveLoveLove
+	}
+
 	public static Chara CC;
 
 	public int value;
@@ -13,7 +29,9 @@ public class Affinity : EClass
 
 	public static List<Affinity> list => EClass.gamedata.affinities;
 
-	public string Name => Lang.GetList("affinity")[list.IndexOf(this)];
+	public Stage CurrentStage => list.IndexOf(this).ToEnum<Stage>();
+
+	public string Name => Lang.GetList("affinity").TryGet(list.IndexOf(this), list.Count - 1);
 
 	public static Affinity Get(Chara c)
 	{
@@ -30,14 +48,14 @@ public class Affinity : EClass
 
 	public bool CanForceTradeEquip()
 	{
-		return list.IndexOf(this) >= 6;
+		return CurrentStage >= Stage.Respected;
 	}
 
 	public bool CanInvite()
 	{
 		if (!EClass.debug.inviteAnytime)
 		{
-			return list.IndexOf(this) >= 6;
+			return CurrentStage >= Stage.Respected;
 		}
 		return true;
 	}
@@ -46,7 +64,7 @@ public class Affinity : EClass
 	{
 		if (!EClass.debug.marryAnytime)
 		{
-			return list.IndexOf(this) >= 8;
+			return CurrentStage >= Stage.Love;
 		}
 		return true;
 	}
@@ -55,7 +73,7 @@ public class Affinity : EClass
 	{
 		if (!EClass.debug.marryAnytime)
 		{
-			return list.IndexOf(this) >= 8;
+			return CurrentStage >= Stage.Fond;
 		}
 		return true;
 	}
@@ -71,11 +89,11 @@ public class Affinity : EClass
 		{
 			return EClass.core.refs.icons.affnity.dontLike;
 		}
-		if (affinity >= 100)
+		if (CurrentStage >= Stage.Love)
 		{
 			return EClass.core.refs.icons.affnity.love;
 		}
-		if (affinity >= 10)
+		if (CurrentStage >= Stage.Respected)
 		{
 			return EClass.core.refs.icons.affnity.like;
 		}
@@ -122,12 +140,23 @@ public class Affinity : EClass
 	public void OnTalkRumor()
 	{
 		bool flag = EClass.rnd(60 + EClass.pc.CHA * 2 + EClass.pc.Evalue(291) * 3) > 50 + difficulty + EClass.rnd(CC.CHA + 1);
-		CC.ModAffinity(EClass.pc, flag ? (EClass.rnd(4) + 1) : (-EClass.rnd(4) - 1), show: false);
 		if (!EClass.debug.unlimitedInterest)
 		{
 			CC.interest -= 10 + EClass.rnd(10);
 		}
-		EClass.pc.ModExp(291, 20);
+		if (CC.IsPCFactionOrMinion && CurrentStage >= Stage.Intimate)
+		{
+			if (EClass.rnd(4) == 0)
+			{
+				CC.ModAffinity(EClass.pc, flag ? 1 : 0, show: false);
+				EClass.pc.ModExp(291, 5);
+			}
+		}
+		else
+		{
+			CC.ModAffinity(EClass.pc, flag ? (EClass.rnd(4) + 1) : (-EClass.rnd(4) - 1), show: false);
+			EClass.pc.ModExp(291, 20);
+		}
 	}
 
 	public int Mod(int a)

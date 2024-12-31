@@ -41,11 +41,6 @@ public class AI_Fuck : AIAct
 
 	public override bool CancelWhenDamaged => !ntr;
 
-	public virtual bool CanTame()
-	{
-		return false;
-	}
-
 	public override IEnumerable<Status> Run()
 	{
 		if (target == null)
@@ -109,26 +104,47 @@ public class AI_Fuck : AIAct
 				}
 				break;
 			case FuckType.tame:
-				if (EClass.rnd(8) == 0)
+			{
+				int num = 100;
+				if (!tc.race.IsAnimal)
 				{
-					tc.AddCondition<ConFear>(50);
+					num += 50;
+				}
+				if (tc.race.IsHuman)
+				{
+					num += 50;
+				}
+				if (tc.IsInCombat)
+				{
+					num += 100;
+				}
+				if (tc.affinity.CurrentStage < Affinity.Stage.Intimate && EClass.rnd(6 * num / 100) == 0)
+				{
+					tc.AddCondition<ConFear>(60);
 				}
 				if (i % 5 == 0)
 				{
 					tc.PlaySound("brushing");
-					int num = cc.CHA + cc.Evalue(237) - tc.CHA * 2;
-					int num2 = ((EClass.rnd(cc.CHA + cc.Evalue(237)) <= EClass.rnd(tc.CHA)) ? (-5 + Mathf.Clamp(num / 10, -30, 0)) : (5 + Mathf.Clamp(num / 10, 0, 20)));
-					totalAffinity += num2;
-					tc.ModAffinity(EClass.pc, num2, show: true, showOnlyEmo: true);
-					Debug.Log(num2 + "/" + tc._affinity);
+					int num2 = cc.CHA / 2 + cc.Evalue(237) - tc.CHA * 2;
+					int num3 = ((EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) <= EClass.rnd(tc.CHA * num / 100)) ? (-5 + Mathf.Clamp(num2 / 10, -30, 0)) : (5 + Mathf.Clamp(num2 / 15, 0, 20)));
+					int a = 15;
+					if (tc.IsPCFactionOrMinion && tc.affinity.CurrentStage >= Affinity.Stage.Fond)
+					{
+						num3 = ((EClass.rnd(3) == 0) ? 4 : 0);
+						a = 10;
+					}
+					totalAffinity += num3;
+					tc.ModAffinity(EClass.pc, num3, show: true, showOnlyEmo: true);
+					cc.elements.ModExp(237, a);
+					Debug.Log(num3 + "/" + tc._affinity);
 				}
-				tc.interest -= (tc.IsPCFaction ? 20 : (tc.IsHuman ? 6 : 2));
+				tc.interest -= (tc.IsPCFaction ? 20 : (2 * num / 100));
 				if (i == 0 || i == 10)
 				{
 					cc.Talk("goodBoy");
 				}
-				cc.elements.ModExp(237, 15);
 				break;
+			}
 			}
 		}
 		Finish();
@@ -143,10 +159,6 @@ public class AI_Fuck : AIAct
 			return;
 		}
 		bool flag = EClass.rnd(2) == 0;
-		int num;
-		int num2;
-		int num3;
-		bool flag3;
 		switch (Type)
 		{
 		case FuckType.fuck:
@@ -174,9 +186,9 @@ public class AI_Fuck : AIAct
 					chara2.AddCondition<ConInsane>(100 + EClass.rnd(100));
 				}
 			}
-			int num4 = CalcMoney.Whore(chara2, chara);
+			int num3 = CalcMoney.Whore(chara2, chara);
 			chara.Talk("tail_after");
-			bool flag2 = false;
+			bool flag3 = false;
 			if (succubus)
 			{
 				chara.ShowEmo(Emo.love);
@@ -193,57 +205,57 @@ public class AI_Fuck : AIAct
 					chara = chara5;
 					chara2 = chara4;
 				}
-				Debug.Log("buyer:" + chara.Name + " seller:" + chara2.Name + " money:" + num4);
+				Debug.Log("buyer:" + chara.Name + " seller:" + chara2.Name + " money:" + num3);
 				if (!chara.IsPC)
 				{
-					chara.ModCurrency(EClass.rndHalf(num4));
+					chara.ModCurrency(EClass.rndHalf(num3));
 				}
-				if (!chara2.IsPC && chara.GetCurrency() < num4 && EClass.rnd(2) == 0)
+				if (!chara2.IsPC && chara.GetCurrency() < num3 && EClass.rnd(2) == 0)
 				{
-					num4 = chara.GetCurrency();
+					num3 = chara.GetCurrency();
 				}
-				Debug.Log("money:" + num4 + " buyer:" + chara.GetCurrency());
-				if (chara.GetCurrency() >= num4)
+				Debug.Log("money:" + num3 + " buyer:" + chara.GetCurrency());
+				if (chara.GetCurrency() >= num3)
 				{
 					chara.Talk("tail_pay");
 				}
 				else
 				{
 					chara.Talk("tail_nomoney");
-					num4 = chara.GetCurrency();
+					num3 = chara.GetCurrency();
 					chara2.Say("angry", chara2);
 					chara2.Talk("angry");
 					flag = (sell ? true : false);
 					if (EClass.rnd(chara.IsPC ? 2 : 20) == 0)
 					{
-						flag2 = true;
+						flag3 = true;
 					}
 				}
-				chara.ModCurrency(-num4);
+				chara.ModCurrency(-num3);
 				if (chara2 == EClass.pc)
 				{
-					if (num4 > 0)
+					if (num3 > 0)
 					{
-						EClass.player.DropReward(ThingGen.Create("money").SetNum(num4));
+						EClass.player.DropReward(ThingGen.Create("money").SetNum(num3));
 						EClass.player.ModKarma(-1);
 					}
 				}
 				else
 				{
-					int num5 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction && chara2.memberType == FactionMemberType.Default) ? 1 : 10);
-					if (chara2.GetCurrency() - num5 > 0)
+					int num4 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction && chara2.memberType == FactionMemberType.Default) ? 1 : 10);
+					if (chara2.GetCurrency() - num4 > 0)
 					{
-						chara2.c_allowance += num4;
+						chara2.c_allowance += num3;
 					}
 					else
 					{
-						chara2.ModCurrency(num4);
+						chara2.ModCurrency(num3);
 					}
 				}
 				chara = chara4;
 				chara2 = chara5;
 			}
-			if (flag2)
+			if (flag3)
 			{
 				chara2.DoHostileAction(chara);
 			}
@@ -258,38 +270,22 @@ public class AI_Fuck : AIAct
 			break;
 		}
 		case FuckType.tame:
+		{
+			int num = ((!chara2.IsPCFaction) ? (chara2.IsHuman ? 10 : 5) : (chara2.IsHuman ? 5 : 0));
+			if (totalAffinity > 0)
 			{
-				num = ((!chara2.IsPCFaction) ? (chara2.IsHuman ? 10 : 5) : (chara2.IsHuman ? 5 : 0));
-				if (totalAffinity > 0)
-				{
-					chara.Say("brush_success", target, owner);
-				}
-				else
-				{
-					chara.Say("brush_fail", target, owner);
-					num *= 5;
-				}
-				if (CanTame() && !EClass._zone.IsInstance && chara2.c_bossType == BossType.none)
-				{
-					num2 = (chara2.trait.CanInvite ? 1 : 0);
-					if (num2 != 0 && chara2.affinity.CanInvite())
-					{
-						num3 = ((EClass.pc.GetBestAttribute() > chara2.CHA) ? 1 : 0);
-						goto IL_04ad;
-					}
-				}
-				else
-				{
-					num2 = 0;
-				}
-				num3 = 0;
-				goto IL_04ad;
+				chara.Say("brush_success", target, owner);
 			}
-			IL_04ad:
-			flag3 = (byte)num3 != 0;
-			if (num2 != 0)
+			else
 			{
-				if (flag3)
+				chara.Say("brush_fail", target, owner);
+				num *= 5;
+			}
+			bool num2 = TraitToolBrush.IsTamePossible(target.Chara);
+			bool flag2 = num2 && chara2.affinity.CanInvite() && chara2.GetBestAttribute() < EClass.pc.CHA;
+			if (num2)
+			{
+				if (flag2)
 				{
 					chara.Say("tame_success", owner, target);
 					chara2.MakeAlly();
@@ -305,6 +301,7 @@ public class AI_Fuck : AIAct
 				chara2.calmCheckTurn *= 3;
 			}
 			break;
+		}
 		}
 		static int StaminaCost(Chara c1, Chara c2)
 		{

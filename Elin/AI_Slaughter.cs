@@ -62,7 +62,7 @@ public class AI_Slaughter : AI_TargetCard
 			},
 			onProgressComplete = delegate
 			{
-				bool num = target.HasElement(1237) || target.HasElement(701);
+				bool num = target.HasElement(1237) || target.Chara.race.id == "cat";
 				target.pos.PlayEffect("revive");
 				target.Chara.ModAffinity(owner, -50);
 				owner.ShowEmo(Emo.love);
@@ -84,8 +84,7 @@ public class AI_Slaughter : AI_TargetCard
 				{
 					target.Chara.homeBranch.BanishMember(target.Chara, skipMsg: true);
 				}
-				owner.elements.ModExp(237, 250);
-				owner.elements.ModExp(290, 250);
+				owner.elements.ModExp(290, 200);
 				EClass.pc.stamina.Mod(-3);
 				if (num)
 				{

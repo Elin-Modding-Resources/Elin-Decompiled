@@ -16,5 +16,9 @@ public enum Emo2
 	fur,
 	hint,
 	fur2,
-	baby
+	baby,
+	brush_hate,
+	brush_like,
+	brush_like2,
+	brush_like3
 }

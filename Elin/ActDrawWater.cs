@@ -27,7 +27,7 @@ public class ActDrawWater : Act
 	{
 		foreach (Thing thing in p.Things)
 		{
-			if (thing.trait is TraitWell && thing.c_charges > 0)
+			if ((thing.trait is TraitWell && thing.c_charges > 0) || thing.trait is TraitBath || thing.id == "387" || thing.id == "486" || thing.id == "876" || thing.id == "867" || thing.id == "1158")
 			{
 				return true;
 			}

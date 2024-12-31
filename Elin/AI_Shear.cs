@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class AI_Shear : AI_TargetCard
 {
+	public override bool ShouldAllyAttack(Chara tg)
+	{
+		return tg != target;
+	}
+
 	public override string GetText(string str = "")
 	{
 		string[] list = Lang.GetList("fur");
