@@ -46,6 +46,7 @@ var classAIAct =
     [ "Run", "classAIAct.html#a95c411b9e44463b061c832cedc7a12ea", null ],
     [ "SetChild", "classAIAct.html#add1fe45123dd4160e01c386332a3ad9b", null ],
     [ "SetOwner", "classAIAct.html#ac490ff4e1802fb910f4037ff586ef8ed", null ],
+    [ "ShouldAllyAttack", "classAIAct.html#a85147d7713b246ae83426801e6a83715", null ],
     [ "SimulateZone", "classAIAct.html#af086f76099c1ba065ed3cc6ad9ef6ed2", null ],
     [ "Start", "classAIAct.html#a33a2ef02b06cd4a02377089b51e03867", null ],
     [ "Success", "classAIAct.html#a301097efd98a7533fcc39d6450eb43e5", null ],

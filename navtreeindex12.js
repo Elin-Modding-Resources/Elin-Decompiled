@@ -1,5 +1,9 @@
 var NAVTREEINDEX12 =
 {
+"RefReligion_8cs_source.html":[2,0,0,950],
+"RefZone_8cs.html":[2,0,0,951],
+"RefZone_8cs_source.html":[2,0,0,951],
+"RefractionProfile_8cs.html":[2,0,0,949],
 "RefractionProfile_8cs_source.html":[2,0,0,949],
 "RegionPoint_8cs.html":[2,0,0,953],
 "RegionPoint_8cs_source.html":[2,0,0,953],
@@ -245,9 +249,5 @@ var NAVTREEINDEX12 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae89b2cbb7d11825a67459af2249064de":[2,0,0,1023,0,42],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaee6085db6c9b85f45fd9b9b31b020f8d":[2,0,0,1023,0,7],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe0619d5f4999e09c622e32da7e7566a":[2,0,0,1023,0,41],
-"ShopType_8cs_source.html":[2,0,0,1023],
-"ShouldSerializeContractResolver_8cs.html":[2,0,0,2,71],
-"ShouldSerializeContractResolver_8cs_source.html":[2,0,0,2,71],
-"ShrineData_8cs.html":[2,0,0,1024],
-"ShrineData_8cs_source.html":[2,0,0,1024]
+"ShopType_8cs_source.html":[2,0,0,1023]
 };

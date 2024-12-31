@@ -17,6 +17,10 @@ var Emo2_8cs =
       [ "fur", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a40bc2c3326dcc0c9ea95f303f2165aa0", null ],
       [ "hint", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9", null ],
       [ "fur2", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac6eac6d335664c1738761f747081fccc", null ],
-      [ "baby", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6848d756da66e55b42f79c0728e351ad", null ]
+      [ "baby", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6848d756da66e55b42f79c0728e351ad", null ],
+      [ "brush_hate", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088afe6e31a8aae3a19ca53be63cee8a2c73", null ],
+      [ "brush_like", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a66126f61c9e618297a559c08ed29894a", null ],
+      [ "brush_like2", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a9076b177927e40e81c779c41ace60dc4", null ],
+      [ "brush_like3", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aa8ef8de53d6ca526834d088ac2365bdd", null ]
     ] ]
 ];

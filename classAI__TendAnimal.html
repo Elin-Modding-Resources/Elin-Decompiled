@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.69 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.70 Nightly</span>
    </div>
   </td>
  </tr>
@@ -112,11 +112,9 @@ Inheritance diagram for AI_TendAnimal:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c019728bce98dfbffdafdc56ab0544b"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAI__TendAnimal.html#a1c019728bce98dfbffdafdc56ab0544b">CanTame</a> ()</td></tr>
-<tr class="separator:a1c019728bce98dfbffdafdc56ab0544b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac2a48f58affdf083f01fedb78bfcac"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac">ShouldAllyAttack</a> (<a class="el" href="classChara.html">Chara</a> tg)</td></tr>
+<tr class="separator:a7ac2a48f58affdf083f01fedb78bfcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAI__Fuck"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAI__Fuck')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAI__Fuck.html">AI_Fuck</a></td></tr>
-<tr class="memitem:a3ea545b46befe7f014f28f4f45243c1d inherit pub_methods_classAI__Fuck"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAI__Fuck.html#a3ea545b46befe7f014f28f4f45243c1d">CanTame</a> ()</td></tr>
-<tr class="separator:a3ea545b46befe7f014f28f4f45243c1d inherit pub_methods_classAI__Fuck"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c79902b65680ac0345ea3d263905678 inherit pub_methods_classAI__Fuck"><td class="memItemLeft" align="right" valign="top">override IEnumerable&lt; <a class="el" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAI__Fuck.html#a2c79902b65680ac0345ea3d263905678">Run</a> ()</td></tr>
 <tr class="separator:a2c79902b65680ac0345ea3d263905678 inherit pub_methods_classAI__Fuck"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1079aecc7edc9692d84ac0b03d284449 inherit pub_methods_classAI__Fuck"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449">Finish</a> ()</td></tr>
@@ -126,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac4dbf95639d8ead3488ad1481de9f98f inherit pub_methods_classAIAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaedd9923fc3703e8e973adc7ee0e453 inherit pub_methods_classAIAct"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classMultiSprite.html">MultiSprite</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAIAct.html#abaedd9923fc3703e8e973adc7ee0e453">GetStateIcon</a> ()</td></tr>
 <tr class="separator:abaedd9923fc3703e8e973adc7ee0e453 inherit pub_methods_classAIAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85147d7713b246ae83426801e6a83715 inherit pub_methods_classAIAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAIAct.html#a85147d7713b246ae83426801e6a83715">ShouldAllyAttack</a> (<a class="el" href="classChara.html">Chara</a> tg)</td></tr>
+<tr class="separator:a85147d7713b246ae83426801e6a83715 inherit pub_methods_classAIAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6602b11673920207abb838724799900 inherit pub_methods_classAIAct"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAIAct.html#af6602b11673920207abb838724799900">GetDestination</a> ()</td></tr>
 <tr class="separator:af6602b11673920207abb838724799900 inherit pub_methods_classAIAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3538bc0553d901b97900b18f09783176 inherit pub_methods_classAIAct"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAIProgress.html">AIProgress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAIAct.html#a3538bc0553d901b97900b18f09783176">GetProgress</a> ()</td></tr>
@@ -716,8 +716,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="AI__TendAnimal_8cs_source.html#l00001">1</a> of file <a class="el" href="AI__TendAnimal_8cs_source.html">AI_TendAnimal.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1c019728bce98dfbffdafdc56ab0544b" name="a1c019728bce98dfbffdafdc56ab0544b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c019728bce98dfbffdafdc56ab0544b">&#9670;&#160;</a></span>CanTame()</h2>
+<a id="a7ac2a48f58affdf083f01fedb78bfcac" name="a7ac2a48f58affdf083f01fedb78bfcac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac2a48f58affdf083f01fedb78bfcac">&#9670;&#160;</a></span>ShouldAllyAttack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,9 +726,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override bool AI_TendAnimal.CanTame </td>
+          <td class="memname">override bool AI_TendAnimal.ShouldAllyAttack </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classChara.html">Chara</a>&#160;</td>
+          <td class="paramname"><em>tg</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -739,26 +740,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classAI__Fuck.html#a3ea545b46befe7f014f28f4f45243c1d">AI_Fuck</a>.</p>
+<p>Reimplemented from <a class="el" href="classAIAct.html#a85147d7713b246ae83426801e6a83715">AIAct</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AI__TendAnimal_8cs_source.html#l00005">5</a> of file <a class="el" href="AI__TendAnimal_8cs_source.html">AI_TendAnimal.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#a44f05aa73755a6598345089f4317a0fb">CanBeTamed</a>)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   14</span>        }</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> tg != <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>;</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
 <div class="ttc" id="aclassAI__Fuck_html_ac1aa5b5f48572cad2673101e29e8d360"><div class="ttname"><a href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">AI_Fuck.target</a></div><div class="ttdeci">Chara target</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00012">AI_Fuck.cs:12</a></div></div>
-<div class="ttc" id="aclassChara_html_a16699a6f035a4c14d4c846f48be7b850"><div class="ttname"><a href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">Chara.trait</a></div><div class="ttdeci">new TraitChara trait</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00487">Chara.cs:488</a></div></div>
-<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00373">Chara.cs:374</a></div></div>
-<div class="ttc" id="aclassTraitChara_html_a44f05aa73755a6598345089f4317a0fb"><div class="ttname"><a href="classTraitChara.html#a44f05aa73755a6598345089f4317a0fb">TraitChara.CanBeTamed</a></div><div class="ttdeci">virtual bool CanBeTamed</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00093">TraitChara.cs:94</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitChara_8cs_source.html#l00094">TraitChara.CanBeTamed</a>, <a class="el" href="Chara_8cs_source.html#l00374">Chara.isDead</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00012">AI_Fuck.target</a>, and <a class="el" href="Chara_8cs_source.html#l00488">Chara.trait</a>.</p>
+<p class="reference">References <a class="el" href="AI__Fuck_8cs_source.html#l00012">AI_Fuck.target</a>.</p>
 
 </div>
 </div>

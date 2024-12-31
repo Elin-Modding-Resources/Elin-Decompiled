@@ -4,7 +4,6 @@ var classAI__Fuck =
       [ "fuck", "classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073a99754106633f94d350db34d548d6091a", null ],
       [ "tame", "classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073a789d9a06ca24c82106a0329240878f66", null ]
     ] ],
-    [ "CanTame", "classAI__Fuck.html#a3ea545b46befe7f014f28f4f45243c1d", null ],
     [ "Finish", "classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449", null ],
     [ "Run", "classAI__Fuck.html#a2c79902b65680ac0345ea3d263905678", null ],
     [ "bitch", "classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81", null ],

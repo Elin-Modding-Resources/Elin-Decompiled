@@ -1,5 +1,9 @@
 var NAVTREEINDEX24 =
 {
+"classAI__Grab.html#aa10254646df9062544e226c399899d02":[1,0,69,2],
+"classAI__Grab.html#aaeba67bb02870805e00a64480e13811c":[1,0,69,3],
+"classAI__Grab.html#abe398991232e5af51265eef2b36dd24c":[1,0,69,7],
+"classAI__Grab.html#af85d41622889e37bb64d2d823f39c653":[1,0,69,1],
 "classAI__Haul.html":[1,0,70],
 "classAI__Haul.html#a0b7bd40eb94e405aad8c2bcb86adab71":[1,0,70,2],
 "classAI__Haul.html#a4d132958a29eca32c0ee77cfff37a8d8":[1,0,70,3],
@@ -134,6 +138,7 @@ var NAVTREEINDEX24 =
 "classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d":[1,0,86,2],
 "classAI__Shear.html":[1,0,87],
 "classAI__Shear.html#a4ab4cab7cdd941b674944fe2ab02c27c":[1,0,87,5],
+"classAI__Shear.html#a4ee49ecd9ffa4e4a7f78ce90bca5e57b":[1,0,87,6],
 "classAI__Shear.html#a7a248f30aa4fd497a644edfbed45f538":[1,0,87,4],
 "classAI__Shear.html#a9931fc56ba6e57e83eaceaec5978fa06":[1,0,87,1],
 "classAI__Shear.html#ac070fc80712bac5ef985de4691a4f519":[1,0,87,0],
@@ -178,8 +183,8 @@ var NAVTREEINDEX24 =
 "classAI__TargetThing.html":[1,0,94],
 "classAI__TargetThing.html#ad28b07f72052e88f5d7dbe3d75d31c06":[1,0,94,0],
 "classAI__TendAnimal.html":[1,0,95],
-"classAI__TendAnimal.html#a1c019728bce98dfbffdafdc56ab0544b":[1,0,95,0],
 "classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7":[1,0,95,1],
+"classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac":[1,0,95,0],
 "classAI__Torture.html":[1,0,96],
 "classAI__Torture.html#a2b1313f9ad04927a973dfbe065a29277":[1,0,96,8],
 "classAI__Torture.html#a5040dcfb96a85fcdab262e30f0a92e4f":[1,0,96,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX24 =
 "classAM__Adv.html#a165d8bfe7ae23d366163fa471fa12201":[1,0,111,1],
 "classAM__Adv.html#a1d4f95c451e22ee38d7a33f82c428e54":[1,0,111,7],
 "classAM__Adv.html#a1f11ac4ec658095c6bc19ce942ce218b":[1,0,111,12],
-"classAM__Adv.html#a205d30aca1bed4992436b23a81dbe2bf":[1,0,111,47],
-"classAM__Adv.html#a2980b33d253c94125498c52140a34973":[1,0,111,11],
-"classAM__Adv.html#a2ac6f4a7351f98d1de83fef29411db3a":[1,0,111,50],
-"classAM__Adv.html#a2d16d3f5ef346cd3d3337c7f4684ac92":[1,0,111,60],
-"classAM__Adv.html#a346b7edc2cf4efba4ff89580c8d58355":[1,0,111,21],
-"classAM__Adv.html#a34754dd19d37733926386d964adf1a33":[1,0,111,29]
+"classAM__Adv.html#a205d30aca1bed4992436b23a81dbe2bf":[1,0,111,47]
 };

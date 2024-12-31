@@ -1,5 +1,9 @@
 var NAVTREEINDEX18 =
 {
+"TraitQuru_8cs.html":[2,0,0,1571],
+"TraitQuru_8cs_source.html":[2,0,0,1571],
+"TraitRadio_8cs.html":[2,0,0,1572],
+"TraitRadio_8cs_source.html":[2,0,0,1572],
 "TraitRadiusType_8cs.html":[2,0,0,1573],
 "TraitRadiusType_8cs.html#a65ffdf8b4cd97ac0bec509cd364cbcc3":[2,0,0,1573,0],
 "TraitRadiusType_8cs.html#a65ffdf8b4cd97ac0bec509cd364cbcc3a7a1920d61156abc05a60135aefe8bc67":[2,0,0,1573,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX18 =
 "TraitTrainer_8cs_source.html":[2,0,0,1691],
 "TraitTrainingDummyArmor_8cs.html":[2,0,0,1693],
 "TraitTrainingDummyArmor_8cs_source.html":[2,0,0,1693],
-"TraitTrainingDummy_8cs.html":[2,0,0,1692],
-"TraitTrainingDummy_8cs_source.html":[2,0,0,1692],
-"TraitTrapMine_8cs.html":[2,0,0,1695],
-"TraitTrapMine_8cs_source.html":[2,0,0,1695],
-"TraitTrapSister_8cs.html":[2,0,0,1696]
+"TraitTrainingDummy_8cs.html":[2,0,0,1692]
 };

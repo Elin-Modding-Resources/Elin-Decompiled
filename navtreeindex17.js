@@ -1,5 +1,9 @@
 var NAVTREEINDEX17 =
 {
+"TraitHouseBoard_8cs.html":[2,0,0,1446],
+"TraitHouseBoard_8cs_source.html":[2,0,0,1446],
+"TraitIllumination_8cs.html":[2,0,0,1447],
+"TraitIllumination_8cs_source.html":[2,0,0,1447],
 "TraitIncinerator_8cs.html":[2,0,0,1448],
 "TraitIncinerator_8cs_source.html":[2,0,0,1448],
 "TraitIncubator_8cs.html":[2,0,0,1449],
@@ -245,9 +249,5 @@ var NAVTREEINDEX17 =
 "TraitQuestBoard_8cs.html":[2,0,0,1569],
 "TraitQuestBoard_8cs_source.html":[2,0,0,1569],
 "TraitQuiver_8cs.html":[2,0,0,1570],
-"TraitQuiver_8cs_source.html":[2,0,0,1570],
-"TraitQuru_8cs.html":[2,0,0,1571],
-"TraitQuru_8cs_source.html":[2,0,0,1571],
-"TraitRadio_8cs.html":[2,0,0,1572],
-"TraitRadio_8cs_source.html":[2,0,0,1572]
+"TraitQuiver_8cs_source.html":[2,0,0,1570]
 };

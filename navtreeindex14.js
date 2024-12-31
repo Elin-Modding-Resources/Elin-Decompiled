@@ -1,5 +1,9 @@
 var NAVTREEINDEX14 =
 {
+"Steam_8cs_source.html":[2,0,0,1098],
+"StickyDate_8cs.html":[2,0,0,1099],
+"StickyDate_8cs_source.html":[2,0,0,1099],
+"StickyGacha_8cs.html":[2,0,0,1100],
 "StickyGacha_8cs_source.html":[2,0,0,1100],
 "StickyHomeReport_8cs.html":[2,0,0,1101],
 "StickyHomeReport_8cs_source.html":[2,0,0,1101],
@@ -245,9 +249,5 @@ var NAVTREEINDEX14 =
 "TileTypeObj_8cs.html":[2,0,0,1197],
 "TileTypeObj_8cs_source.html":[2,0,0,1197],
 "TileTypePaint_8cs.html":[2,0,0,1204],
-"TileTypePaint_8cs_source.html":[2,0,0,1204],
-"TileTypePillar_8cs.html":[2,0,0,1205],
-"TileTypePillar_8cs_source.html":[2,0,0,1205],
-"TileTypeRoad_8cs.html":[2,0,0,1206],
-"TileTypeRoad_8cs_source.html":[2,0,0,1206]
+"TileTypePaint_8cs_source.html":[2,0,0,1204]
 };

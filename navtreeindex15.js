@@ -1,5 +1,9 @@
 var NAVTREEINDEX15 =
 {
+"TileTypePillar_8cs.html":[2,0,0,1205],
+"TileTypePillar_8cs_source.html":[2,0,0,1205],
+"TileTypeRoad_8cs.html":[2,0,0,1206],
+"TileTypeRoad_8cs_source.html":[2,0,0,1206],
 "TileTypeRoof_8cs.html":[2,0,0,1207],
 "TileTypeRoof_8cs_source.html":[2,0,0,1207],
 "TileTypeRooftop_8cs.html":[2,0,0,1208],
@@ -245,9 +249,5 @@ var NAVTREEINDEX15 =
 "TraitContainerShared_8cs.html":[2,0,0,1320],
 "TraitContainerShared_8cs_source.html":[2,0,0,1320],
 "TraitContainerShop_8cs.html":[2,0,0,1321],
-"TraitContainerShop_8cs_source.html":[2,0,0,1321],
-"TraitContainerUnburnable_8cs.html":[2,0,0,1322],
-"TraitContainerUnburnable_8cs_source.html":[2,0,0,1322],
-"TraitContainer_8cs.html":[2,0,0,1314],
-"TraitContainer_8cs_source.html":[2,0,0,1314]
+"TraitContainerShop_8cs_source.html":[2,0,0,1321]
 };

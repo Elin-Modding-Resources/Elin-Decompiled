@@ -1,5 +1,9 @@
 var NAVTREEINDEX9 =
 {
+"LangTalk_8cs.html":[2,0,0,2,51],
+"LangTalk_8cs_source.html":[2,0,0,2,51],
+"LangWord_8cs.html":[2,0,0,2,52],
+"LangWord_8cs_source.html":[2,0,0,2,52],
 "Lang_8cs.html":[2,0,0,2,44],
 "Lang_8cs_source.html":[2,0,0,2,44],
 "LayerAbility_8cs.html":[2,0,0,671],
@@ -245,9 +249,5 @@ var NAVTREEINDEX9 =
 "MapPiece_8cs_source.html":[2,0,0,774],
 "MapSubset_8cs.html":[2,0,0,775],
 "MapSubset_8cs_source.html":[2,0,0,775],
-"Map_8cs.html":[2,0,0,764],
-"Map_8cs_source.html":[2,0,0,764],
-"MatColors_8cs.html":[2,0,0,2,56],
-"MatColors_8cs_source.html":[2,0,0,2,56],
-"MeetingFarris_8cs.html":[2,0,0,778]
+"Map_8cs.html":[2,0,0,764]
 };

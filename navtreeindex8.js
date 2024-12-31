@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"IDTLevel_8cs_source.html":[2,0,0,592],
+"IDTSource_8cs.html":[2,0,0,593],
+"IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88a":[2,0,0,593,0],
+"IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88aa68a150133c9d9fdd80bb03c42e046a00":[2,0,0,593,0,3],
 "IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88aa7bcfe161475420ff72ebd7cb10cd8951":[2,0,0,593,0,2],
 "IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88aa88bb766f0cc321759ed2eeb0bc06be5d":[2,0,0,593,0,0],
 "IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88aa907396997c77fece588eefb3b45bfa54":[2,0,0,593,0,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "LangRow_8cs.html":[2,0,0,2,49],
 "LangRow_8cs_source.html":[2,0,0,2,49],
 "LangSetting_8cs.html":[2,0,0,2,50],
-"LangSetting_8cs_source.html":[2,0,0,2,50],
-"LangTalk_8cs.html":[2,0,0,2,51],
-"LangTalk_8cs_source.html":[2,0,0,2,51],
-"LangWord_8cs.html":[2,0,0,2,52],
-"LangWord_8cs_source.html":[2,0,0,2,52]
+"LangSetting_8cs_source.html":[2,0,0,2,50]
 };

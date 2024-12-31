@@ -1,5 +1,10 @@
 var NAVTREEINDEX28 =
 {
+"classActPray.html#afd81a647a671bba5ebfd4bf600301860":[1,0,40,2],
+"classActPray.html#aff54cfcf9f76a2c16db38007a3808d69":[1,0,40,0],
+"classActQuickCraft.html":[1,0,41],
+"classActQuickCraft.html#aad6033f738a9b7850dfe6333c402ef59":[1,0,41,0],
+"classActRanged.html":[1,0,42],
 "classActRanged.html#a49e18d617477d5a0f8c15f144f246cc9":[1,0,42,2],
 "classActRanged.html#a7acc60b2677bb55608c9c3bd22489c26":[1,0,42,6],
 "classActRanged.html#a83a06ed0196067b53fcdf25cd818a736":[1,0,42,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX28 =
 "classActionMode.html#afb50ea2d063d3287939e55698a6aeef9":[1,0,27,138],
 "classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3":[1,0,27,61],
 "classActionMode.html#afdba5ef3a1ea3b111b32e46ecfe5eaa8":[1,0,27,31],
-"classActionMode.html#aff574bd3035d7c6383b24c68511f4b0f":[1,0,27,131],
-"classActor.html":[1,0,35],
-"classActorEx.html":[1,0,36],
-"classActorEx.html#a08672f80bd657495bf0d3e12c3739c3a":[1,0,36,4],
-"classActorEx.html#a098eb9a80c94345150d480f2e712ef7b":[1,0,36,3],
-"classActorEx.html#a23d0b0c958b76eacc23b9fd5b93222d3":[1,0,36,10]
+"classActionMode.html#aff574bd3035d7c6383b24c68511f4b0f":[1,0,27,131]
 };

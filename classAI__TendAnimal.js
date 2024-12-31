@@ -1,5 +1,5 @@
 var classAI__TendAnimal =
 [
-    [ "CanTame", "classAI__TendAnimal.html#a1c019728bce98dfbffdafdc56ab0544b", null ],
+    [ "ShouldAllyAttack", "classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac", null ],
     [ "Type", "classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7", null ]
 ];

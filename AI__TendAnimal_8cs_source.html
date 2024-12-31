@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.69 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.70 Nightly</span>
    </div>
   </td>
  </tr>
@@ -96,28 +96,18 @@ $(document).ready(function(){initNavTree('AI__TendAnimal_8cs_source.html',''); i
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a> <a class="code hl_property" href="classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7">Type</a> =&gt; <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classAI__TendAnimal.html#a1c019728bce98dfbffdafdc56ab0544b">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classAI__TendAnimal.html#a1c019728bce98dfbffdafdc56ab0544b">CanTame</a>()</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac">ShouldAllyAttack</a>(<a class="code hl_class" href="classChara.html">Chara</a> tg)</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#a44f05aa73755a6598345089f4317a0fb">CanBeTamed</a>)</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">return</span> tg != <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
 <div class="ttc" id="aclassAI__Fuck_html"><div class="ttname"><a href="classAI__Fuck.html">AI_Fuck</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00004">AI_Fuck.cs:5</a></div></div>
 <div class="ttc" id="aclassAI__Fuck_html_ac1aa5b5f48572cad2673101e29e8d360"><div class="ttname"><a href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">AI_Fuck.target</a></div><div class="ttdeci">Chara target</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00012">AI_Fuck.cs:12</a></div></div>
 <div class="ttc" id="aclassAI__Fuck_html_ada3bbaf792c5bd31716f8fc5263b0073"><div class="ttname"><a href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">AI_Fuck.FuckType</a></div><div class="ttdeci">FuckType</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00006">AI_Fuck.cs:7</a></div></div>
 <div class="ttc" id="aclassAI__TendAnimal_html"><div class="ttname"><a href="classAI__TendAnimal.html">AI_TendAnimal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00001">AI_TendAnimal.cs:2</a></div></div>
-<div class="ttc" id="aclassAI__TendAnimal_html_a1c019728bce98dfbffdafdc56ab0544b"><div class="ttname"><a href="classAI__TendAnimal.html#a1c019728bce98dfbffdafdc56ab0544b">AI_TendAnimal.CanTame</a></div><div class="ttdeci">override bool CanTame()</div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00005">AI_TendAnimal.cs:5</a></div></div>
 <div class="ttc" id="aclassAI__TendAnimal_html_a7180121574dcfa92ba514735a2b971e7"><div class="ttname"><a href="classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7">AI_TendAnimal.Type</a></div><div class="ttdeci">override FuckType Type</div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00003">AI_TendAnimal.cs:3</a></div></div>
-<div class="ttc" id="aclassChara_html_a16699a6f035a4c14d4c846f48be7b850"><div class="ttname"><a href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">Chara.trait</a></div><div class="ttdeci">new TraitChara trait</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00487">Chara.cs:488</a></div></div>
-<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00373">Chara.cs:374</a></div></div>
-<div class="ttc" id="aclassTraitChara_html_a44f05aa73755a6598345089f4317a0fb"><div class="ttname"><a href="classTraitChara.html#a44f05aa73755a6598345089f4317a0fb">TraitChara.CanBeTamed</a></div><div class="ttdeci">virtual bool CanBeTamed</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00093">TraitChara.cs:94</a></div></div>
+<div class="ttc" id="aclassAI__TendAnimal_html_a7ac2a48f58affdf083f01fedb78bfcac"><div class="ttname"><a href="classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac">AI_TendAnimal.ShouldAllyAttack</a></div><div class="ttdeci">override bool ShouldAllyAttack(Chara tg)</div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00005">AI_TendAnimal.cs:5</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
