@@ -24,7 +24,7 @@ public class NotificationStats : BaseNotification
 	public override void OnRefresh()
 	{
 		BaseStats baseStats = stats();
-		text = baseStats.GetText();
+		text = baseStats.GetText() + ((EClass.debug.showExtra && !baseStats.GetText().IsEmpty()) ? ("(" + baseStats.GetValue() + ")") : "");
 		item.button.mainText.color = baseStats.GetColor(item.button.skinRoot.GetButton().colorProf);
 	}
 }

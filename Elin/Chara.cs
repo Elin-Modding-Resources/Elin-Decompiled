@@ -3274,6 +3274,17 @@ public class Chara : Card, IPathfindWalker
 				ModExp(226, (EClass._zone.IsRegion ? 5 : 40) * 100 / Mathf.Max(100, 100 + (elements.Base(226) - ride.LV) * 25));
 			}
 			break;
+		case 3:
+		{
+			int phase = hygiene.GetPhase();
+			int num = 0;
+			num = ((!IsPC) ? ((phase > 3) ? 50 : 0) : ((phase > 3) ? 50 : 10));
+			if (num > EClass.rnd(100))
+			{
+				hygiene.Mod(-1);
+			}
+			break;
+		}
 		}
 		if (turn % 500 == 0)
 		{
@@ -3285,13 +3296,13 @@ public class Chara : Card, IPathfindWalker
 			{
 				CalcBurden();
 			}
-			int phase = burden.GetPhase();
-			int phase2 = hunger.GetPhase();
-			if (phase2 >= 4)
+			int phase2 = burden.GetPhase();
+			int phase3 = hunger.GetPhase();
+			if (phase3 >= 4)
 			{
 				preventRegen = true;
 			}
-			if (EClass.rnd(EClass._zone.IsRegion ? 100 : 30) == 0 && phase >= 3)
+			if (EClass.rnd(EClass._zone.IsRegion ? 100 : 30) == 0 && phase2 >= 3)
 			{
 				Say("dmgBurden", this);
 				DamageHP(MaxHP * (base.ChildrenWeight * 100 / WeightLimit) / 1000 + 1, AttackSource.Burden);
@@ -3304,9 +3315,9 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (IsPC)
 				{
-					if (phase > 0)
+					if (phase2 > 0)
 					{
-						ModExp(207, 1 + phase * phase);
+						ModExp(207, 1 + phase2 * phase2);
 					}
 				}
 				else
@@ -3316,7 +3327,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (IsPC)
 			{
-				if (phase2 >= 5)
+				if (phase3 >= 5)
 				{
 					if (!(ai is AI_Eat) && EClass.rnd(5) == 0)
 					{
@@ -3331,8 +3342,8 @@ public class Chara : Card, IPathfindWalker
 				{
 					return;
 				}
-				phase2 = stamina.GetPhase();
-				if (phase2 <= 0)
+				phase3 = stamina.GetPhase();
+				if (phase3 <= 0)
 				{
 					preventRegen = true;
 				}
@@ -3357,17 +3368,17 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (!IsPC)
 		{
-			int num = Evalue(409);
-			if (num > 0 && turn % 2000 * (100 + Evalue(412) * 2) / (100 + num * 10) == 0)
+			int num2 = Evalue(409);
+			if (num2 > 0 && turn % 2000 * (100 + Evalue(412) * 2) / (100 + num2 * 10) == 0)
 			{
 				ModCorruption(1);
 			}
 		}
-		for (int num2 = conditions.Count - 1; num2 >= 0; num2--)
+		for (int num3 = conditions.Count - 1; num3 >= 0; num3--)
 		{
-			if (num2 < conditions.Count)
+			if (num3 < conditions.Count)
 			{
-				Condition condition = conditions[num2];
+				Condition condition = conditions[num3];
 				if (!condition.TimeBased)
 				{
 					condition.Tick();
@@ -3653,6 +3664,10 @@ public class Chara : Card, IPathfindWalker
 		if (cell.IsTopWaterAndNoSnow && !cell.isFloating)
 		{
 			AddCondition<ConWet>(50);
+			if (pos.IsHotSpring)
+			{
+				hygiene.Mod(2);
+			}
 		}
 		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate())
 		{
@@ -4487,9 +4502,9 @@ public class Chara : Card, IPathfindWalker
 				MoveZone(homeZone);
 			}
 		}
-		else if (!EClass._zone.IsPCFaction || homeBranch != EClass.Branch || GetInt(103) != 0)
+		else if (!EClass._zone.IsPCFaction || homeBranch != EClass.Branch || base.c_wasInPcParty)
 		{
-			EClass.pc.party.AddMemeber(this);
+			EClass.pc.party.AddMemeber(this, showMsg: true);
 		}
 	}
 
@@ -4876,12 +4891,12 @@ public class Chara : Card, IPathfindWalker
 		{
 			EClass.player.doneBackers.Add(base.sourceBacker.id);
 		}
-		SetInt(103, IsPCParty ? 1 : 0);
 		if (IsPCParty)
 		{
 			if (!IsPC)
 			{
 				EClass.pc.party.RemoveMember(this);
+				base.c_wasInPcParty = true;
 				EClass.pc.Say("allyDead");
 				if (EClass.game.config.autoCombat.abortOnAllyDead && EClass.player.TryAbortAutoCombat())
 				{
@@ -6907,7 +6922,16 @@ public class Chara : Card, IPathfindWalker
 		{
 			a = affinity.Mod(a);
 		}
+		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase());
+		if (IsPCFaction && homeBranch != null)
+		{
+			num += (int)Mathf.Sqrt(homeBranch.Evalue(2117)) * 5;
+		}
 		bool flag = a > 0;
+		if (flag)
+		{
+			a = a * num / 100;
+		}
 		if (!show)
 		{
 			return;
@@ -8549,7 +8573,10 @@ public class Chara : Card, IPathfindWalker
 			hunger.Mod(20);
 		}
 		sleepiness.Set(0);
-		interest = 100;
+		if (!IsMinion)
+		{
+			interest = 100;
+		}
 		Cure(CureType.Sleep, power);
 	}
 

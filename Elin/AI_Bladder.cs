@@ -34,7 +34,12 @@ public class AI_Bladder : AIAct
 			{
 				if (toilet == null || !toilet.ExistsOnMap || !toilet.owner.pos.Equals(owner.pos))
 				{
+					owner.hygiene.Mod(-30);
 					EClass._map.SetLiquid(owner.pos.x, owner.pos.z, 1, 3);
+				}
+				else
+				{
+					owner.hygiene.Mod(10);
 				}
 				owner.ShowEmo(Emo.happy);
 			}

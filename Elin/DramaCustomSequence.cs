@@ -368,7 +368,7 @@ public class DramaCustomSequence : EClass
 			}
 			else
 			{
-				EClass.pc.party.AddMemeber(c);
+				EClass.pc.party.AddMemeber(c, showMsg: true);
 			}
 		});
 		Talk("hired", StepEnd);

@@ -16,6 +16,8 @@ public class BaseWidgetNotice : Widget
 
 	private bool activating = true;
 
+	protected bool dirty;
+
 	public sealed override void OnActivate()
 	{
 		if (!mold)
@@ -50,7 +52,6 @@ public class BaseWidgetNotice : Widget
 	public void _RefreshAll()
 	{
 		OnRefresh();
-		bool rebuild = false;
 		foreach (BaseNotification i in list)
 		{
 			i.Refresh();
@@ -60,16 +61,17 @@ public class BaseWidgetNotice : Widget
 				{
 					i.item.button.RebuildLayout(recursive: true);
 				}
-				rebuild = true;
+				dirty = true;
 			});
 		}
-		if (rebuild)
+		if (dirty)
 		{
 			layout.RebuildLayout();
 			if ((bool)layout2)
 			{
 				layout2.RebuildLayout(recursive: true);
 			}
+			dirty = false;
 		}
 	}
 

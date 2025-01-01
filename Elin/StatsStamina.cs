@@ -22,11 +22,19 @@ public class StatsStamina : Stats
 		}
 		if (a < 0 && BaseStats.CC.HasElement(1330))
 		{
+			if (a == -1 && EClass.rnd(4) == 0)
+			{
+				return;
+			}
 			a = -EClass.rnd(-a * 130 / 100 + 2);
 		}
 		int num = BaseStats.CC.Evalue(1403);
 		if (a < 0 && num > 0)
 		{
+			if (a == -1 && num > EClass.rnd(3))
+			{
+				return;
+			}
 			a = a * 100 / (100 + EClass.rnd(num + 1) * 20);
 			if (a == 0)
 			{

@@ -55,6 +55,9 @@ public class FactionBranch : EClass
 	public int incomeShop;
 
 	[JsonProperty]
+	public bool luckyDay;
+
+	[JsonProperty]
 	public GStability stability = new GStability
 	{
 		value = 1
@@ -287,9 +290,16 @@ public class FactionBranch : EClass
 		}
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (!chara.IsPCParty && !chara.noMove && (chara.pos.cell.HasBlock || chara.pos.cell.hasDoor) && !chara.isRestrained && !chara.HasCondition<ConSuspend>())
+			if (!chara.IsPCParty && !chara.noMove)
 			{
-				chara.MoveImmediate(chara.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? chara.pos);
+				if ((chara.pos.cell.HasBlock || chara.pos.cell.hasDoor) && !chara.isRestrained && !chara.HasCondition<ConSuspend>())
+				{
+					chara.MoveImmediate(chara.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? chara.pos);
+				}
+				if (!EClass.player.simulatingZone && chara.c_wasInPcParty)
+				{
+					EClass.pc.party.AddMemeber(chara, showMsg: true);
+				}
 			}
 		}
 	}
@@ -520,6 +530,17 @@ public class FactionBranch : EClass
 		{
 			member2.c_isPrayed = false;
 			member2.c_isTrained = false;
+		}
+		luckyDay = (float)((EClass.pc.faith == EClass.game.religions.Luck) ? 50 : 10) + Mathf.Sqrt(Evalue(2118)) * 5f > (float)EClass.rnd(2000);
+		if (EClass.debug.enable)
+		{
+			luckyDay = true;
+		}
+		Log("lucky_day", EClass._zone.Name);
+		if (luckyDay && date.IsRealTime)
+		{
+			Msg.Say("lucky_day", EClass._zone.Name);
+			SE.Play("godbless");
 		}
 	}
 
@@ -832,6 +853,10 @@ public class FactionBranch : EClass
 							{
 								Log("bNurse", i, member2);
 								member2.Revive(member2.pos, msg: true);
+								if (date.IsRealTime && member2.c_wasInPcParty)
+								{
+									EClass.pc.party.AddMemeber(member2, showMsg: true);
+								}
 								break;
 							}
 							if (EClass.rnd(num3) > EClass.rnd(100))

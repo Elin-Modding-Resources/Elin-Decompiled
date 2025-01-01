@@ -117,6 +117,10 @@ public class WidgetDate : Widget
 		{
 			text += item2.TextWidgetDate;
 		}
+		if (EMono.Branch != null && EMono.Branch.luckyDay)
+		{
+			text = text + " " + "lucky_day".lang().TagColor(Msg.colors.colors["save"]);
+		}
 		if (EMono.debug.enable)
 		{
 			text += " *DEBUG MODE*";

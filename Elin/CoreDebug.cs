@@ -907,7 +907,8 @@ public class CoreDebug : EScriptable
 		{
 			foreach (Chara chara in EClass._map.charas)
 			{
-				chara.ModAffinity(EClass.pc, EScriptable.rnd(300));
+				chara.ModAffinity(EClass.pc, -100 + EScriptable.rnd(200));
+				chara.hygiene.Mod(-50 + EScriptable.rnd(100));
 			}
 			Thing to = ThingGen.Create("gene");
 			to = DNA.CopyDNA(DNA.GenerateRandomGene(), to);

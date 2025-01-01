@@ -48,7 +48,7 @@ public class Party : EClass
 		return _members;
 	}
 
-	public void AddMemeber(Chara c)
+	public void AddMemeber(Chara c, bool showMsg = false)
 	{
 		if (c.party == this)
 		{
@@ -73,6 +73,11 @@ public class Party : EClass
 				c.homeBranch.owner.map.props.sales.Remove(c);
 			}
 		}
+		if (showMsg)
+		{
+			Msg.Say("party_join", c.Name);
+			SE.Play("party_join");
+		}
 		WidgetRoster.SetDirty();
 	}
 
@@ -85,6 +90,7 @@ public class Party : EClass
 		members.Remove(c);
 		uidMembers.Remove(c.uid);
 		c.party = null;
+		c.c_wasInPcParty = false;
 		c.SetDirtySpeed();
 		if (c.homeBranch != null)
 		{

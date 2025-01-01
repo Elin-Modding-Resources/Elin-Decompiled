@@ -33,7 +33,7 @@ public class Stats : BaseStats
 		id = 6
 	};
 
-	public static Stats Hygiene = new Stats
+	public static StatsHygiene Hygiene = new StatsHygiene
 	{
 		id = 7
 	};

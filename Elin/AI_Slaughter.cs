@@ -73,6 +73,7 @@ public class AI_Slaughter : AI_TargetCard
 					EClass._zone.AddCard(fur, target.pos);
 				}
 				slaughtering = true;
+				target.SetSale(sale: false);
 				target.Die();
 				Msg.Say("goto_heaven", target);
 				slaughtering = false;

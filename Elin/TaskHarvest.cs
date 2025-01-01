@@ -6,6 +6,8 @@ public class TaskHarvest : BaseTaskHarvest
 
 	public bool wasCrime;
 
+	public bool harvestingCrop;
+
 	public HarvestType mode = HarvestType.Obj;
 
 	public bool IsObj => mode == HarvestType.Obj;
@@ -205,6 +207,10 @@ public class TaskHarvest : BaseTaskHarvest
 
 	public override HitResult GetHitResult()
 	{
+		if (harvestingCrop && !base.IsHarvest)
+		{
+			return HitResult.Default;
+		}
 		if (IsObj)
 		{
 			if (base.IsHarvest)
@@ -324,6 +330,10 @@ public class TaskHarvest : BaseTaskHarvest
 				{
 					if (base.IsHarvest && !IsReapSeed)
 					{
+						if (pos.growth.CanHarvest())
+						{
+							harvestingCrop = true;
+						}
 						pos.growth.Harvest(owner);
 					}
 					else if (growth != null && !IsReapSeed)

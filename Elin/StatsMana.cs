@@ -14,6 +14,10 @@ public class StatsMana : Stats
 		}
 		if (a < 0 && BaseStats.CC.HasElement(1330))
 		{
+			if (a == -1 && EClass.rnd(4) == 0)
+			{
+				return;
+			}
 			a = -EClass.rnd(-a * 130 / 100 + 2);
 		}
 		base.Mod(a);

@@ -539,6 +539,11 @@ public class ActEffect : EClass
 				{
 					chara2.SetLv(num6);
 				}
+				chara2.interest = 0;
+				if (chara2.HaveFur())
+				{
+					chara2.c_fur = -1;
+				}
 				string n = actRef.n1;
 				if (!(n == "shadow"))
 				{
@@ -1674,7 +1679,7 @@ public class ActEffect : EClass
 			break;
 		case EffectId.Revive:
 		{
-			List<KeyValuePair<int, Chara>> list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.GetInt(103) != 0).ToList();
+			List<KeyValuePair<int, Chara>> list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList();
 			if (TC.IsPCFaction || TC.IsPCFactionMinion)
 			{
 				if (TC.IsPC && list3.Count == 0)

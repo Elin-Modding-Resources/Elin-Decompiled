@@ -86,9 +86,9 @@ public class CharaBody : EClass
 			{
 				LayerChara.Refresh();
 			}
-			LayerInventory.SetDirty(thing);
 			WidgetEquip.SetDirty();
 		}
+		LayerInventory.SetDirty(thing);
 		if (slot.elementId == 45 && EClass.core.IsGameStarted)
 		{
 			owner.RecalculateFOV();

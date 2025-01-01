@@ -60,6 +60,7 @@ public class WidgetStats : BaseWidgetNotice
 			{
 				conditions.Remove(a);
 				Remove(a);
+				dirty = true;
 			}
 		});
 		foreach (Condition condition in EMono.pc.conditions)

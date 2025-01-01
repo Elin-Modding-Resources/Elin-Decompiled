@@ -491,6 +491,16 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public Vector3 InspectPosition => default(Vector3);
 
+	public int Evalue(int ele)
+	{
+		return elements.Value(ele);
+	}
+
+	public int Evalue(string alias)
+	{
+		return elements.Value(EClass.sources.elements.alias[alias].id);
+	}
+
 	public virtual string GetDungenID()
 	{
 		return null;
@@ -1919,7 +1929,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				foreach (Card item2 in item.ListCards())
 				{
-					if (item2.IsContainer)
+					if (item2.IsContainer && !item2.trait.IsSpecialContainer)
 					{
 						list.Add(item2.Thing);
 					}
@@ -2020,77 +2030,58 @@ public class Zone : Spatial, ICardParent, IInspect
 				{
 					thing = EClass.game.cards.container_shipping;
 				}
-				if ((!sharedOnly || thing.IsSharedContainer) && thing.c_lockLv <= 0)
+				if ((!sharedOnly || thing.IsSharedContainer) && thing.c_lockLv <= 0 && (thing.things.Count < thing.things.MaxCapacity || thing.things.CanStack(t) != null))
 				{
-					if (add)
+					Window.SaveData windowSaveData = thing.GetWindowSaveData();
+					if (windowSaveData != null)
 					{
-						Thing thing2 = thing.things.TryStack(t.Thing);
-						if (thing2 != t)
+						if (windowSaveData.priority <= priority || (windowSaveData.noRotten && t.IsDecayed) || (windowSaveData.onlyRottable && t.trait.Decay == 0))
 						{
-							if (msg)
-							{
-								chara.Say("putSharedItem", chara, thing, thing2.GetName(NameStyle.Full));
-							}
-							return thing2;
+							continue;
 						}
-					}
-					else if (thing.things.CanStack(t) != t)
-					{
-						return thing;
-					}
-					if (thing.things.Count < thing.things.MaxCapacity)
-					{
-						Window.SaveData windowSaveData = thing.GetWindowSaveData();
-						if (windowSaveData != null)
+						Window.SaveData.FilterResult filterResult = Window.SaveData.FilterResult.Pass;
+						if (windowSaveData.userFilter)
 						{
-							if (windowSaveData.priority <= priority || (windowSaveData.noRotten && t.IsDecayed) || (windowSaveData.onlyRottable && t.trait.Decay == 0))
+							filterResult = windowSaveData.IsFilterPass(t.GetName(NameStyle.Full, 1));
+							if (filterResult == Window.SaveData.FilterResult.Block)
 							{
 								continue;
 							}
-							Window.SaveData.FilterResult filterResult = Window.SaveData.FilterResult.Pass;
-							if (windowSaveData.userFilter)
+						}
+						if (filterResult != Window.SaveData.FilterResult.PassWithoutFurtherTest)
+						{
+							if (windowSaveData.advDistribution)
 							{
-								filterResult = windowSaveData.IsFilterPass(t.GetName(NameStyle.Full, 1));
-								if (filterResult == Window.SaveData.FilterResult.Block)
+								bool flag2 = false;
+								foreach (int cat in windowSaveData.cats)
+								{
+									if (t.category.uid == cat)
+									{
+										flag2 = true;
+										break;
+									}
+								}
+								if (!flag2)
 								{
 									continue;
 								}
 							}
-							if (filterResult != Window.SaveData.FilterResult.PassWithoutFurtherTest)
-							{
-								if (windowSaveData.advDistribution)
-								{
-									bool flag2 = false;
-									foreach (int cat in windowSaveData.cats)
-									{
-										if (t.category.uid == cat)
-										{
-											flag2 = true;
-											break;
-										}
-									}
-									if (!flag2)
-									{
-										continue;
-									}
-								}
-								else if (windowSaveData.flag.HasFlag(flag))
-								{
-									continue;
-								}
-							}
-							priority = windowSaveData.priority;
-						}
-						else
-						{
-							if (priority != -1)
+							else if (windowSaveData.flag.HasFlag(flag))
 							{
 								continue;
 							}
-							priority = 0;
 						}
-						dest = thing;
+						priority = windowSaveData.priority;
 					}
+					else
+					{
+						if (priority != -1)
+						{
+							continue;
+						}
+						priority = 0;
+					}
+					dest = thing;
 				}
 			}
 			return null;

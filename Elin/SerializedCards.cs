@@ -368,6 +368,18 @@ public class SerializedCards : EClass
 				_bits1[0] = value;
 			}
 		}
+
+		public bool isEmpty
+		{
+			get
+			{
+				return _bits1[1];
+			}
+			set
+			{
+				_bits1[1] = value;
+			}
+		}
 	}
 
 	[JsonProperty]
@@ -404,7 +416,8 @@ public class SerializedCards : EClass
 			idRender = c.sourceCard.idRenderData,
 			refVal = c.refVal,
 			idSkin = c.idSkin,
-			idDeity = c.c_idDeity
+			idDeity = c.c_idDeity,
+			isEmpty = (c.things.Count == 0)
 		};
 		if (c.c_idBacker != 0)
 		{
@@ -731,6 +744,10 @@ public class SerializedCards : EClass
 				{
 					Debug.LogWarning("Could not convert editor tag:" + card2.Name + "/" + card4.tags);
 				}
+			}
+			if (isUserZone && card2.IsContainer && card4.isEmpty)
+			{
+				card2.things.DestroyAll();
 			}
 			if (card2.isChara)
 			{

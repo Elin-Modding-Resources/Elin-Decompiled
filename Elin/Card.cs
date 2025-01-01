@@ -956,6 +956,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public bool c_wasInPcParty
+	{
+		get
+		{
+			return GetInt(103) != 0;
+		}
+		set
+		{
+			SetInt(103, value ? 1 : 0);
+		}
+	}
+
 	public bool c_isImportant
 	{
 		get

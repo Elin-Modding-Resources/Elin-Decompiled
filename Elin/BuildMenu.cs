@@ -570,7 +570,7 @@ public class BuildMenu : EMono
 				}
 				foreach (RecipeSource item in RecipeManager.list)
 				{
-					if (EMono.debug.godBuild || (!item.noListing && !item.row.tileType.EditorTile && EMono.player.recipes.IsKnown(item.id) && (item.row.factory.Length == 0 || !(item.row.factory[0] == "none"))))
+					if (EMono.debug.godBuild || !(item.row.GetAlias != "block_invisi") || (!item.noListing && !item.row.tileType.EditorTile && EMono.player.recipes.IsKnown(item.id) && (item.row.factory.Length == 0 || !(item.row.factory[0] == "none"))))
 					{
 						counts[item.recipeCat]++;
 						if (!(item.recipeCat != cat))

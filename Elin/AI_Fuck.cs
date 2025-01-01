@@ -118,16 +118,25 @@ public class AI_Fuck : AIAct
 				{
 					num += 100;
 				}
-				if (tc.affinity.CurrentStage < Affinity.Stage.Intimate && EClass.rnd(6 * num / 100) == 0)
+				if (tc == cc)
+				{
+					num = 50;
+				}
+				else if (tc.affinity.CurrentStage < Affinity.Stage.Intimate && EClass.rnd(6 * num / 100) == 0)
 				{
 					tc.AddCondition<ConFear>(60);
+				}
+				tc.interest -= (tc.IsPCFaction ? 20 : (2 * num / 100));
+				if (i == 0 || i == 10)
+				{
+					cc.Talk("goodBoy");
 				}
 				if (i % 5 == 0)
 				{
 					tc.PlaySound("brushing");
 					int num2 = cc.CHA / 2 + cc.Evalue(237) - tc.CHA * 2;
-					int num3 = ((EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) <= EClass.rnd(tc.CHA * num / 100)) ? (-5 + Mathf.Clamp(num2 / 10, -30, 0)) : (5 + Mathf.Clamp(num2 / 15, 0, 20)));
-					int a = 15;
+					int num3 = ((EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) <= EClass.rnd(tc.CHA * num / 100)) ? (-5 + Mathf.Clamp(num2 / 10, -30, 0)) : (5 + Mathf.Clamp(num2 / 20, 0, 20)));
+					int a = 20;
 					if (tc.IsPCFactionOrMinion && tc.affinity.CurrentStage >= Affinity.Stage.Fond)
 					{
 						num3 = ((EClass.rnd(3) == 0) ? 4 : 0);
@@ -136,12 +145,10 @@ public class AI_Fuck : AIAct
 					totalAffinity += num3;
 					tc.ModAffinity(EClass.pc, num3, show: true, showOnlyEmo: true);
 					cc.elements.ModExp(237, a);
-					Debug.Log(num3 + "/" + tc._affinity);
-				}
-				tc.interest -= (tc.IsPCFaction ? 20 : (2 * num / 100));
-				if (i == 0 || i == 10)
-				{
-					cc.Talk("goodBoy");
+					if (EClass.rnd(4) == 0)
+					{
+						cc.stamina.Mod(-1);
+					}
 				}
 				break;
 			}
@@ -272,6 +279,14 @@ public class AI_Fuck : AIAct
 		case FuckType.tame:
 		{
 			int num = ((!chara2.IsPCFaction) ? (chara2.IsHuman ? 10 : 5) : (chara2.IsHuman ? 5 : 0));
+			Msg.Say("tame_end", target);
+			target.PlaySound("groomed");
+			target.PlayEffect("heal_tick");
+			target.hygiene.Mod(15);
+			if (target == owner)
+			{
+				break;
+			}
 			if (totalAffinity > 0)
 			{
 				chara.Say("brush_success", target, owner);

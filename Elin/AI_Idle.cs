@@ -135,7 +135,7 @@ public class AI_Idle : AIAct
 						}
 					}
 				}
-				if (actRevive != null && EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.GetInt(103) != 0).ToList().Count > 0 && owner.UseAbility(actRevive.source.alias, owner))
+				if (actRevive != null && EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList().Count > 0 && owner.UseAbility(actRevive.source.alias, owner))
 				{
 					yield return KeepRunning();
 				}
@@ -592,7 +592,7 @@ public class AI_Idle : AIAct
 			});
 			yield return Restart();
 		}
-		if (!owner.IsPCFactionOrMinion && EClass.rnd(owner.isSynced ? 50 : 2000) == 0 && owner.hostility == Hostility.Neutral && EClass.pc.party.HasElement(1563) && !owner.race.tag.Contains("animal") && EClass._zone.IsTown && !EClass._zone.IsPCFaction)
+		if (!owner.IsPCFactionOrMinion && EClass.rnd(owner.isSynced ? 50 : 2000) == 0 && owner.hostility == Hostility.Neutral && EClass.pc.party.HasElement(1563) && !owner.race.tag.Contains("animal") && EClass._zone.IsTown && !EClass._zone.IsPCFaction && !owner.HasCondition<ConIncognito>())
 		{
 			EClass.pc.DoHostileAction(owner);
 		}
