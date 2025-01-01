@@ -324,6 +324,7 @@ var classCard =
     [ "c_uniqueData", "classCard.html#ae728471111fcea240ded7ed7e410888d", null ],
     [ "c_upgrades", "classCard.html#a784b52abe62d4ceae4f7974c5b673839", null ],
     [ "c_vomit", "classCard.html#a59ac8c19bbd1b00c6b32d7663470b82b", null ],
+    [ "c_wasInPcParty", "classCard.html#a220ad12e0935829440dc044940869015", null ],
     [ "c_weight", "classCard.html#a41bb65f3fd92777da0db96c7a818d1bb", null ],
     [ "c_windowSaveData", "classCard.html#ac711a2542eacf6fd8a38ec1bece4c65f", null ],
     [ "CanInspect", "classCard.html#a39fc426455760b38c12b8e644545b661", null ],

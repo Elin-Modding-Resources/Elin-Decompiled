@@ -9,6 +9,7 @@ var classTaskHarvest =
     [ "HaveHarvestThing", "classTaskHarvest.html#a0910b02ce883c7d735c1426622aa5430", null ],
     [ "OnCreateProgress", "classTaskHarvest.html#ae3991861532772da43493337e5a18f35", null ],
     [ "TryGetAct", "classTaskHarvest.html#aba8cf8f311e6cfe665c21a63315574a5", null ],
+    [ "harvestingCrop", "classTaskHarvest.html#a89ea79e7e2841f34528ab33b85ce8385", null ],
     [ "mode", "classTaskHarvest.html#a695e8406de9c15931315290d86c161d3", null ],
     [ "wasCrime", "classTaskHarvest.html#a9e2a3472b6348abb2400ab70c9619edc", null ],
     [ "wasReapSeed", "classTaskHarvest.html#a29e2c879c63a74f87999c30a1e0dd7d1", null ],

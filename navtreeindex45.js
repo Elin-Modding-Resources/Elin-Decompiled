@@ -1,5 +1,9 @@
 var NAVTREEINDEX45 =
 {
+"classClassExtension.html#ae77f80ee620f68a0814f2204598ac485":[1,0,267,176],
+"classClassExtension.html#ae90c3e0b57a1c4b5fcd6e53aa0832b25":[1,0,267,34],
+"classClassExtension.html#ae97157871849fa2e7ef2c92a615fc9f4":[1,0,267,140],
+"classClassExtension.html#aeacadd60897e94ff228c08819c4b3712":[1,0,267,100],
 "classClassExtension.html#aeb742267ddb4d1dcd293f19658523aca":[1,0,267,152],
 "classClassExtension.html#aeb8570fdc38f17859b40a5ca9761eabb":[1,0,267,120],
 "classClassExtension.html#af0badbec5a412d30eefe663e67d129eb":[1,0,267,144],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "classConHallucination.html#a829965949dee7153dde60bfa5ce1be8b":[1,0,306,1],
 "classConHero.html":[1,0,307],
 "classConHolyVeil.html":[1,0,308],
-"classConHotspring.html":[1,0,310],
-"classConHotspring.html#aab8a03aa74e2f885a0819da3ef48f7ab":[1,0,310,0],
-"classConIncognito.html":[1,0,311],
-"classConIncognito.html#a96ec991c84d3614b0db47de69b2b27af":[1,0,311,0],
-"classConIncognito.html#ac3b6f4eedc529569734c6f6861a3dfce":[1,0,311,1]
+"classConHotspring.html":[1,0,310]
 };

@@ -22,6 +22,8 @@ var classZone =
     [ "CreatePlaylist", "classZone.html#a370027d5f82532f3b25e93319c8edaa6", null ],
     [ "Deactivate", "classZone.html#a6224526120c61a76f86cecae06bb8a8a", null ],
     [ "Destroy", "classZone.html#aa06e2ecb59baeec61b28ec8779d2449f", null ],
+    [ "Evalue", "classZone.html#af4e6165ac8e6e4a9c0e2358a77a7fa1e", null ],
+    [ "Evalue", "classZone.html#a76d1630152dc1877d7542cee54171496", null ],
     [ "Export", "classZone.html#ac024ea05a21302a0c25996005ae633a5", null ],
     [ "Export", "classZone.html#ad18ee11f00945b841b72e41c814ed1c8", null ],
     [ "ExportDialog", "classZone.html#a6c5fd16cca942316394c7bbcf380d758", null ],

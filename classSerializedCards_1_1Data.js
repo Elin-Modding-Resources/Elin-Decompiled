@@ -24,6 +24,7 @@ var classSerializedCards_1_1Data =
     [ "idTrait", "classSerializedCards_1_1Data.html#ad3e94505c4b25058c4e1cdb606b5ad5e", null ],
     [ "idV", "classSerializedCards_1_1Data.html#a09c7927e3ba2577a9021410cd8166c4c", null ],
     [ "isDead", "classSerializedCards_1_1Data.html#ae7557cc0225e3b3a093025c80c692779", null ],
+    [ "isEmpty", "classSerializedCards_1_1Data.html#a1aafed58625fe7730555b973cdfdbca8", null ],
     [ "lightColor", "classSerializedCards_1_1Data.html#a28388a51e1c41b04b467c3392abffaee", null ],
     [ "lv", "classSerializedCards_1_1Data.html#a6e94e8e92c5bc226ec3c55bd6b90555c", null ],
     [ "placeState", "classSerializedCards_1_1Data.html#a8a73f6d3879c5453ccceba09bc9e254c", null ],

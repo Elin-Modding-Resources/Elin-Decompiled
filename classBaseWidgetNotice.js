@@ -13,6 +13,7 @@ var classBaseWidgetNotice =
     [ "RefreshLayout", "classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8", null ],
     [ "Remove", "classBaseWidgetNotice.html#adaea889fb21fa11dcd17203c92f674b3", null ],
     [ "activating", "classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8", null ],
+    [ "dirty", "classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b", null ],
     [ "layout", "classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d", null ],
     [ "layout2", "classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56", null ],
     [ "list", "classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35", null ],

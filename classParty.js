@@ -1,6 +1,6 @@
 var classParty =
 [
-    [ "AddMemeber", "classParty.html#ac08a11cd4fc95d4c68584dfded84ed02", null ],
+    [ "AddMemeber", "classParty.html#ac7adae19004adcdb2507606ec961fb6f", null ],
     [ "Count", "classParty.html#a804ec2bc141e603e8000aade968debde", null ],
     [ "EValue", "classParty.html#ab89b5f09c0633ec2e091739c1c29492a", null ],
     [ "GetBestSkill", "classParty.html#a1b25b9ccc945c897859be453b38ff8ea", null ],

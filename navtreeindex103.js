@@ -1,5 +1,11 @@
 var NAVTREEINDEX103 =
 {
+"classSpatial.html#a3db7b7309c0983a22e7a652b28ecfd2f":[1,0,1178,68],
+"classSpatial.html#a410d73fe510cc502216125e48cc85d52":[1,0,1178,50],
+"classSpatial.html#a442dbfc6d6a43b82769b03f0635e5806":[1,0,1178,91],
+"classSpatial.html#a44feda905985f4043b4d0ed65814156b":[1,0,1178,4],
+"classSpatial.html#a48aab101430d3a0427076bcca68ea6f7":[1,0,1178,63],
+"classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e":[1,0,1178,45],
 "classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce":[1,0,1178,60],
 "classSpatial.html#a4f667a3a67c68668dc513c8ccb4acd83":[1,0,1178,24],
 "classSpatial.html#a4f6c96d31ec7c12004d5d9831228c597":[1,0,1178,17],
@@ -142,8 +148,8 @@ var NAVTREEINDEX103 =
 "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e":[1,0,1185,10],
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1185,5],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1185,3],
-"classSpell.html":[1,0,1187],
-"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1187,0],
+"classSpell.html":[1,0,1186],
+"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1186,0],
 "classSplashText.html":[1,0,1188],
 "classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1188,3],
 "classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1188,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX103 =
 "classSpriteReplacer.html#aba2d4c6e09ec89e50d42afc05bbf6fc4":[1,0,1194,3],
 "classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e":[1,0,1194,0],
 "classSpriteReplacerAnimation.html":[1,0,1195],
-"classSpriteReplacerAnimation.html#a0a178b33ca500c108ddbc35db7be3685":[1,0,1195,4],
-"classSpriteReplacerAnimation.html#a21d5036fdbd4877031ec1d7bc4676538":[1,0,1195,5],
-"classSpriteReplacerAnimation.html#a43452a9098cce9c27158367920da081f":[1,0,1195,9],
-"classSpriteReplacerAnimation.html#a4c5d962cd32d286f7f8fd1a7f3162811":[1,0,1195,2],
-"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eaf":[1,0,1195,0],
-"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eafa7a1920d61156abc05a60135aefe8bc67":[1,0,1195,0,0],
-"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eafaf769aafbc2b8929829c52f0df81f6421":[1,0,1195,0,1]
+"classSpriteReplacerAnimation.html#a0a178b33ca500c108ddbc35db7be3685":[1,0,1195,4]
 };

@@ -13,7 +13,7 @@ var classStats =
     [ "Burden", "classStats.html#a2fd603d82369cb63e193b53225a59b7c", null ],
     [ "Depression", "classStats.html#ac7a09b91e697ac88ddf21570adeb4b6c", null ],
     [ "Hunger", "classStats.html#aebdc96e3a2ce1408d6164cca6b443785", null ],
-    [ "Hygiene", "classStats.html#a4fa58c0d35ce6e38a14f6d81ba171fb2", null ],
+    [ "Hygiene", "classStats.html#a2cb20076257f94455dac63674bf53902", null ],
     [ "Mana", "classStats.html#aacb9126f3f066a64d9f6715f4a214494", null ],
     [ "raw", "classStats.html#a65151cfb68d3fb89796f768153e64f8d", null ],
     [ "rawIndex", "classStats.html#a98d344bdca880ed7469785085fd3dcd8", null ],

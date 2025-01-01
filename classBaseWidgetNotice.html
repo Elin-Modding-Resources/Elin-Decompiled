@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.70 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.71 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('classBaseWidgetNotice.html',''); initR
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classBaseWidgetNotice-members.html">List of all members</a>  </div>
@@ -247,6 +248,14 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4d3d093d6b995d5dabd3c78d86f271e1 inherit pub_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a4d3d093d6b995d5dabd3c78d86f271e1">tipPivotRight</a></td></tr>
 <tr class="separator:a4d3d093d6b995d5dabd3c78d86f271e1 inherit pub_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a40372d9ac62e3280f93f8b27b21d8e0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b">dirty</a></td></tr>
+<tr class="separator:a40372d9ac62e3280f93f8b27b21d8e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classWidget"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classWidget')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
+<tr class="memitem:a5e6d7a7341b7010f6b7d0a1717ae3365 inherit pro_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a></td></tr>
+<tr class="separator:a5e6d7a7341b7010f6b7d0a1717ae3365 inherit pro_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a35857ace33736bdf25d4a5a35c0ab3df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseWidgetNotice.html#a35857ace33736bdf25d4a5a35c0ab3df">OnEnable</a> ()</td></tr>
@@ -281,9 +290,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a6cc36f1dcf9b6b370884ca1ae864cdfd inherit pro_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af29235617cbca615df9192b8dadcefaa inherit pro_methods_classWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#af29235617cbca615df9192b8dadcefaa">ClampToScreen</a> (RectTransform rect, float margin=10f)</td></tr>
 <tr class="separator:af29235617cbca615df9192b8dadcefaa inherit pro_methods_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classWidget"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classWidget')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
-<tr class="memitem:a5e6d7a7341b7010f6b7d0a1717ae3365 inherit pro_attribs_classWidget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a></td></tr>
-<tr class="separator:a5e6d7a7341b7010f6b7d0a1717ae3365 inherit pro_attribs_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classWidget"><td colspan="2" onclick="javascript:toggleInherit('properties_classWidget')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classWidget.html">Widget</a></td></tr>
 <tr class="memitem:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWidget.html#a1e513e72af2c666eaa400a0b42bffc92">ID</a><code> [get]</code></td></tr>
 <tr class="separator:a1e513e72af2c666eaa400a0b42bffc92 inherit properties_classWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,11 +386,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classWidgetNotice.html#ab1a6e906ae32a564bc965baa8d299edf">WidgetNotice</a>, and <a class="el" href="classWidgetStats.html#a644187cb9a03c4bd6c93a12e658fbb1b">WidgetStats</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00036">36</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00038">38</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -411,44 +417,45 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">50</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab">OnRefresh</a>();</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">bool</span> rebuild = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> i <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            i.<a class="code hl_function" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a>();</div>
-<div class="line"><span class="lineno">   57</span>            i.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.SetActive(i.<a class="code hl_property" href="classBaseNotification.html#ad4ced56eb92c1bfe96d7cb99c6f12d84">Visible</a>, delegate(<span class="keywordtype">bool</span> enabled)</div>
-<div class="line"><span class="lineno">   58</span>            {</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (enabled)</div>
-<div class="line"><span class="lineno">   60</span>                {</div>
-<div class="line"><span class="lineno">   61</span>                    i.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   62</span>                }</div>
-<div class="line"><span class="lineno">   63</span>                rebuild = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   64</span>            });</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (rebuild)</div>
-<div class="line"><span class="lineno">   67</span>        {</div>
-<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>)</div>
-<div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">52</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab">OnRefresh</a>();</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> i <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            i.<a class="code hl_function" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a>();</div>
+<div class="line"><span class="lineno">   58</span>            i.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.SetActive(i.<a class="code hl_property" href="classBaseNotification.html#ad4ced56eb92c1bfe96d7cb99c6f12d84">Visible</a>, delegate(<span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span> (enabled)</div>
+<div class="line"><span class="lineno">   61</span>                {</div>
+<div class="line"><span class="lineno">   62</span>                    i.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   63</span>                }</div>
+<div class="line"><span class="lineno">   64</span>                <a class="code hl_variable" href="classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b">dirty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   65</span>            });</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b">dirty</a>)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>)</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                <a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b">dirty</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
 <div class="ttc" id="aclassBaseNotification_html"><div class="ttname"><a href="classBaseNotification.html">BaseNotification</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00005">BaseNotification.cs:6</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_aa8f147285c7f23a0e53b81e3fa033c40"><div class="ttname"><a href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">BaseNotification.item</a></div><div class="ttdeci">ItemNotice item</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00007">BaseNotification.cs:7</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_ad4ced56eb92c1bfe96d7cb99c6f12d84"><div class="ttname"><a href="classBaseNotification.html#ad4ced56eb92c1bfe96d7cb99c6f12d84">BaseNotification.Visible</a></div><div class="ttdeci">virtual bool Visible</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00017">BaseNotification.cs:17</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_ae2ac4b1fd52f50ce6cd54ccd6d466331"><div class="ttname"><a href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">BaseNotification.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00033">BaseNotification.cs:33</a></div></div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_a40372d9ac62e3280f93f8b27b21d8e0b"><div class="ttname"><a href="classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b">BaseWidgetNotice.dirty</a></div><div class="ttdeci">bool dirty</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00019">BaseWidgetNotice.cs:19</a></div></div>
 <div class="ttc" id="aclassBaseWidgetNotice_html_a568ea714f69d9f976bc2e241f4974a56"><div class="ttname"><a href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">BaseWidgetNotice.layout2</a></div><div class="ttdeci">VerticalLayoutGroup layout2</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00013">BaseWidgetNotice.cs:13</a></div></div>
-<div class="ttc" id="aclassBaseWidgetNotice_html_a56a1ac88905109c610a592e15ab541ab"><div class="ttname"><a href="classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab">BaseWidgetNotice.OnRefresh</a></div><div class="ttdeci">virtual void OnRefresh()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00076">BaseWidgetNotice.cs:76</a></div></div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_a56a1ac88905109c610a592e15ab541ab"><div class="ttname"><a href="classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab">BaseWidgetNotice.OnRefresh</a></div><div class="ttdeci">virtual void OnRefresh()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00078">BaseWidgetNotice.cs:78</a></div></div>
 <div class="ttc" id="aclassBaseWidgetNotice_html_ac37c9a489ea5f2176d50fb116c0d7e8d"><div class="ttname"><a href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">BaseWidgetNotice.layout</a></div><div class="ttdeci">VerticalLayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00011">BaseWidgetNotice.cs:11</a></div></div>
 <div class="ttc" id="aclassBaseWidgetNotice_html_ae22f0fa68d6f84ed409bd43219fd8b35"><div class="ttname"><a href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">BaseWidgetNotice.list</a></div><div class="ttdeci">List&lt; BaseNotification &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00009">BaseWidgetNotice.cs:9</a></div></div>
 <div class="ttc" id="aclassItemNotice_html_a281b58b4cd46a352ad804f727f5bc747"><div class="ttname"><a href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">ItemNotice.button</a></div><div class="ttdeci">UIButton button</div><div class="ttdef"><b>Definition:</b> <a href="ItemNotice_8cs_source.html#l00011">ItemNotice.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00007">BaseNotification.item</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">layout</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00013">layout2</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00076">OnRefresh()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00033">BaseNotification.Refresh()</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00017">BaseNotification.Visible</a>.</p>
+<p class="reference">References <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">dirty</a>, <a class="el" href="BaseNotification_8cs_source.html#l00007">BaseNotification.item</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">layout</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00013">layout2</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00078">OnRefresh()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00033">BaseNotification.Refresh()</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00017">BaseNotification.Visible</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>, <a class="el" href="WidgetNotice_8cs_source.html#l00038">WidgetNotice.RefreshAll()</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00013">WidgetStats.RefreshAll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>, <a class="el" href="WidgetNotice_8cs_source.html#l00038">WidgetNotice.RefreshAll()</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00013">WidgetStats.RefreshAll()</a>.</p>
 
 </div>
 </div>
@@ -486,43 +493,43 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">80</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Add(n);</div>
-<div class="line"><span class="lineno">   83</span>        LayoutGroup layoutGroup = n.<a class="code hl_function" href="classBaseNotification.html#aadaf2a55ea4e15bf578129b267562574">GetLayoutGroup</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>;</div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="classItemNotice.html">ItemNotice</a> itemNotice = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(n.<a class="code hl_function" href="classBaseNotification.html#a03ad07673672207ae93f4d7a3bfa6b1f">GetMold</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a>, parent ?? layoutGroup.transform);</div>
-<div class="line"><span class="lineno">   85</span>        itemNotice.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.onClick.AddListener(delegate</div>
-<div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a> == <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">NoMap</a>)</div>
-<div class="line"><span class="lineno">   88</span>            {</div>
-<div class="line"><span class="lineno">   89</span>                BaseCore.Instance.WaitForEndOfFrame(n.OnClick);</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   92</span>            {</div>
-<div class="line"><span class="lineno">   93</span>                n.OnClick();</div>
-<div class="line"><span class="lineno">   94</span>            }</div>
-<div class="line"><span class="lineno">   95</span>        });</div>
-<div class="line"><span class="lineno">   96</span>        Sprite sprite = n.<a class="code hl_property" href="classBaseNotification.html#aeb6732d534724b679cf8aa6428d1d0b4">Sprite</a>;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (n.<a class="code hl_property" href="classBaseNotification.html#a1707563acf7468621ae429867c23a252">idSprite</a> != -1)</div>
-<div class="line"><span class="lineno">   98</span>        {</div>
-<div class="line"><span class="lineno">   99</span>            sprite = <a class="code hl_variable" href="classBaseWidgetNotice.html#aa7e208b176c451a6ff8e0c80009cea52">sprites</a>[n.<a class="code hl_property" href="classBaseNotification.html#a1707563acf7468621ae429867c23a252">idSprite</a>];</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            itemNotice.button.icon.sprite = sprite;</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        itemNotice.button.image.raycastTarget = n.<a class="code hl_property" href="classBaseNotification.html#ac8706df2ff2222543f7a9dad37a32374">Interactable</a>;</div>
-<div class="line"><span class="lineno">  106</span>        itemNotice.button.tooltip.enable = n.onShowTooltip != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  107</span>        itemNotice.button.tooltip.onShowTooltip = n.<a class="code hl_property" href="classBaseNotification.html#a663b56beb5d31fbc16d127190f5c7a36">onShowTooltip</a>;</div>
-<div class="line"><span class="lineno">  108</span>        n.item = itemNotice;</div>
-<div class="line"><span class="lineno">  109</span>        n.<a class="code hl_function" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a>();</div>
-<div class="line"><span class="lineno">  110</span>        n.<a class="code hl_function" href="classBaseNotification.html#a8d57859dd350557885d1519c058eddac">OnInstantiate</a>();</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8">activating</a>)</div>
-<div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            layoutGroup.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> itemNotice;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">82</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Add(n);</div>
+<div class="line"><span class="lineno">   85</span>        LayoutGroup layoutGroup = n.<a class="code hl_function" href="classBaseNotification.html#aadaf2a55ea4e15bf578129b267562574">GetLayoutGroup</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>;</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_class" href="classItemNotice.html">ItemNotice</a> itemNotice = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(n.<a class="code hl_function" href="classBaseNotification.html#a03ad07673672207ae93f4d7a3bfa6b1f">GetMold</a>() ?? <a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a>, parent ?? layoutGroup.transform);</div>
+<div class="line"><span class="lineno">   87</span>        itemNotice.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a9916c61944ad1e7568a4ad90832675a3">scene</a>.<a class="code hl_variable" href="classScene.html#aa2591cb380db845031700d02565af4e8">actionMode</a> == <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">NoMap</a>)</div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                BaseCore.Instance.WaitForEndOfFrame(n.OnClick);</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                n.OnClick();</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>        });</div>
+<div class="line"><span class="lineno">   98</span>        Sprite sprite = n.<a class="code hl_property" href="classBaseNotification.html#aeb6732d534724b679cf8aa6428d1d0b4">Sprite</a>;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (n.<a class="code hl_property" href="classBaseNotification.html#a1707563acf7468621ae429867c23a252">idSprite</a> != -1)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            sprite = <a class="code hl_variable" href="classBaseWidgetNotice.html#aa7e208b176c451a6ff8e0c80009cea52">sprites</a>[n.<a class="code hl_property" href="classBaseNotification.html#a1707563acf7468621ae429867c23a252">idSprite</a>];</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            itemNotice.button.icon.sprite = sprite;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        itemNotice.button.image.raycastTarget = n.<a class="code hl_property" href="classBaseNotification.html#ac8706df2ff2222543f7a9dad37a32374">Interactable</a>;</div>
+<div class="line"><span class="lineno">  108</span>        itemNotice.button.tooltip.enable = n.onShowTooltip != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  109</span>        itemNotice.button.tooltip.onShowTooltip = n.<a class="code hl_property" href="classBaseNotification.html#a663b56beb5d31fbc16d127190f5c7a36">onShowTooltip</a>;</div>
+<div class="line"><span class="lineno">  110</span>        n.item = itemNotice;</div>
+<div class="line"><span class="lineno">  111</span>        n.<a class="code hl_function" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a>();</div>
+<div class="line"><span class="lineno">  112</span>        n.<a class="code hl_function" href="classBaseNotification.html#a8d57859dd350557885d1519c058eddac">OnInstantiate</a>();</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8">activating</a>)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            layoutGroup.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> itemNotice;</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
 <div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00005">ActionMode.cs:6</a></div></div>
 <div class="ttc" id="aclassActionMode_html_ae5d90cff3ad7cbe237a0b149c7742386"><div class="ttname"><a href="classActionMode.html#ae5d90cff3ad7cbe237a0b149c7742386">ActionMode.NoMap</a></div><div class="ttdeci">static AM_NoMap NoMap</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00025">ActionMode.cs:25</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_a03ad07673672207ae93f4d7a3bfa6b1f"><div class="ttname"><a href="classBaseNotification.html#a03ad07673672207ae93f4d7a3bfa6b1f">BaseNotification.GetMold</a></div><div class="ttdeci">virtual ItemNotice GetMold()</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00023">BaseNotification.cs:23</a></div></div>
@@ -573,27 +580,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">19</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a>)</div>
-<div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a> = <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.CreateMold&lt;<a class="code hl_class" href="classItemNotice.html">ItemNotice</a>&gt;();</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad78ebc6f8637a748dd29adcc8d27f37c">_OnActivate</a>();</div>
-<div class="line"><span class="lineno">   26</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8">RefreshLayout</a>();</div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>)</div>
-<div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8">activating</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">_RefreshAll</a>();</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclassBaseWidgetNotice_html_a540c6d843e4ff2b1834448b495d83bcc"><div class="ttname"><a href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">BaseWidgetNotice._RefreshAll</a></div><div class="ttdeci">void _RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00050">BaseWidgetNotice.cs:50</a></div></div>
-<div class="ttc" id="aclassBaseWidgetNotice_html_ad78ebc6f8637a748dd29adcc8d27f37c"><div class="ttname"><a href="classBaseWidgetNotice.html#ad78ebc6f8637a748dd29adcc8d27f37c">BaseWidgetNotice._OnActivate</a></div><div class="ttdeci">virtual void _OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00036">BaseWidgetNotice.cs:36</a></div></div>
-<div class="ttc" id="aclassBaseWidgetNotice_html_afbe5dad9401d76e4b83a9e62cacae1d8"><div class="ttname"><a href="classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8">BaseWidgetNotice.RefreshLayout</a></div><div class="ttdeci">void RefreshLayout()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00143">BaseWidgetNotice.cs:143</a></div></div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">21</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c">mold</a> = <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.CreateMold&lt;<a class="code hl_class" href="classItemNotice.html">ItemNotice</a>&gt;();</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#ad78ebc6f8637a748dd29adcc8d27f37c">_OnActivate</a>();</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8">RefreshLayout</a>();</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56">layout2</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8">activating</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">_RefreshAll</a>();</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_a540c6d843e4ff2b1834448b495d83bcc"><div class="ttname"><a href="classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc">BaseWidgetNotice._RefreshAll</a></div><div class="ttdeci">void _RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00052">BaseWidgetNotice.cs:52</a></div></div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_ad78ebc6f8637a748dd29adcc8d27f37c"><div class="ttname"><a href="classBaseWidgetNotice.html#ad78ebc6f8637a748dd29adcc8d27f37c">BaseWidgetNotice._OnActivate</a></div><div class="ttdeci">virtual void _OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00038">BaseWidgetNotice.cs:38</a></div></div>
+<div class="ttc" id="aclassBaseWidgetNotice_html_afbe5dad9401d76e4b83a9e62cacae1d8"><div class="ttname"><a href="classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8">BaseWidgetNotice.RefreshLayout</a></div><div class="ttdeci">void RefreshLayout()</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00145">BaseWidgetNotice.cs:145</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00036">_OnActivate()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">_RefreshAll()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00017">activating</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">layout</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00013">layout2</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00015">mold</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00143">RefreshLayout()</a>.</p>
+<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00038">_OnActivate()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">_RefreshAll()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00017">activating</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">layout</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00013">layout2</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00015">mold</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00145">RefreshLayout()</a>.</p>
 
 </div>
 </div>
@@ -622,12 +629,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ace4cbf38e8aadee76c0a6da309ce80d7">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00155">155</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8">RefreshLayout</a>();</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00157">157</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8">RefreshLayout</a>();</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00143">RefreshLayout()</a>.</p>
+<p class="reference">References <a class="el" href="BaseWidgetNotice_8cs_source.html#l00145">RefreshLayout()</a>.</p>
 
 </div>
 </div>
@@ -654,10 +661,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00045">45</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        CancelInvoke();</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00047">47</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        CancelInvoke();</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -684,10 +691,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00040">40</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        InvokeRepeating(<span class="stringliteral">&quot;_RefreshAll&quot;</span>, 0.1f, 0.2f);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00042">42</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        InvokeRepeating(<span class="stringliteral">&quot;_RefreshAll&quot;</span>, 0.1f, 0.2f);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -716,11 +723,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#afabface3017c9537ea076b0fb0fdf9d3">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00127">127</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>        layout.childAlignment = (<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> ? TextAnchor.MiddleRight : TextAnchor.MiddleLeft);</div>
-<div class="line"><span class="lineno">  130</span>        this.Rect().pivot = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> ? 1 : 0, this.Rect().pivot.y);</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00129">129</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        layout.childAlignment = (<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> ? TextAnchor.MiddleRight : TextAnchor.MiddleLeft);</div>
+<div class="line"><span class="lineno">  132</span>        this.Rect().pivot = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">flip</a> ? 1 : 0, this.Rect().pivot.y);</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
 <div class="ttc" id="aclassWidget_html_a5e6d7a7341b7010f6b7d0a1717ae3365"><div class="ttname"><a href="classWidget.html#a5e6d7a7341b7010f6b7d0a1717ae3365">Widget.flip</a></div><div class="ttdeci">bool flip</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00164">Widget.cs:164</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Widget_8cs_source.html#l00164">Widget.flip</a>.</p>
@@ -752,11 +759,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classWidgetNotice.html#a4bf5b239379f9ba77d7684887a531064">WidgetNotice</a>, and <a class="el" href="classWidgetStats.html#ae69f7695725a01fdf427c68d7587e433">WidgetStats</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00076">76</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00078">78</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">_RefreshAll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">_RefreshAll()</a>.</p>
 
 </div>
 </div>
@@ -788,15 +795,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classWidgetNotice.html#a3cd5dd67e8a4e43fd5d7d0c50fff096f">WidgetNotice</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00133">133</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>    {</div>
-<div class="line"><span class="lineno">  135</span>        m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;style&quot;</span>).<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;toggleButtonBG&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, base.config.skin.button, delegate(<span class="keywordtype">float</span> a)</div>
-<div class="line"><span class="lineno">  136</span>        {</div>
-<div class="line"><span class="lineno">  137</span>            base.config.skin.button = (int)a;</div>
-<div class="line"><span class="lineno">  138</span>            <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
-<div class="line"><span class="lineno">  139</span>        }, 0f, base.config.skin.Skin.buttons.Count - 1, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00135">135</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span>        m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;style&quot;</span>).<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;toggleButtonBG&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, base.config.skin.button, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            base.config.skin.button = (int)a;</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_function" href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">ApplySkin</a>();</div>
+<div class="line"><span class="lineno">  141</span>        }, 0f, base.config.skin.Skin.buttons.Count - 1, isInt: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 <div class="ttc" id="aclassUIContextMenu_html_a75c796a9dd17902e8a8f710e8c8760f6"><div class="ttname"><a href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">UIContextMenu.AddSlider</a></div><div class="ttdeci">UIContextMenuItem AddSlider(string text, Func&lt; float, string &gt; textFunc, float value, Action&lt; float &gt; action, float min=0f, float max=1f, bool isInt=false, bool hideOther=true, bool useInput=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.cs:329</a></div></div>
 <div class="ttc" id="aclassUIContextMenu_html_afa1c5174bdbdf88aeacd6407a9840b1f"><div class="ttname"><a href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">UIContextMenu.AddChild</a></div><div class="ttdeci">UIContextMenu AddChild(string idLang, TextAnchor anchor)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.cs:496</a></div></div>
 <div class="ttc" id="aclassWidget_html_a115d938794f34d1eb29d44aae622c29b"><div class="ttname"><a href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">Widget.ApplySkin</a></div><div class="ttdeci">virtual void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00556">Widget.cs:556</a></div></div>
@@ -829,17 +836,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00143">143</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
-<div class="line"><span class="lineno">  145</span>        <a class="code hl_class" href="classSkinAsset__Button.html">SkinAsset_Button</a> button = GetComponent&lt;SkinRoot&gt;().Config.Button;</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordtype">int</span> y = button.<a class="code hl_variable" href="classSkinAsset__Button.html#a0cfe86b1151b0ead41346f9cb374b78a">size</a>.y;</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
-<div class="line"><span class="lineno">  148</span>        {</div>
-<div class="line"><span class="lineno">  149</span>            RectTransform rectTransform = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.item.Rect();</div>
-<div class="line"><span class="lineno">  150</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x, y);</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        layout.spacing = button.<a class="code hl_variable" href="classSkinAsset__Button.html#a4758d7af869643e7c4f79e6181149aee">spacing</a>.y;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00145">145</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_class" href="classSkinAsset__Button.html">SkinAsset_Button</a> button = GetComponent&lt;SkinRoot&gt;().Config.Button;</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordtype">int</span> y = button.<a class="code hl_variable" href="classSkinAsset__Button.html#a0cfe86b1151b0ead41346f9cb374b78a">size</a>.y;</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
+<div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            RectTransform rectTransform = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.item.Rect();</div>
+<div class="line"><span class="lineno">  152</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x, y);</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        layout.spacing = button.<a class="code hl_variable" href="classSkinAsset__Button.html#a4758d7af869643e7c4f79e6181149aee">spacing</a>.y;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassSkinAsset__Button_html"><div class="ttname"><a href="classSkinAsset__Button.html">SkinAsset_Button</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinAsset__Button_8cs_source.html#l00004">SkinAsset_Button.cs:5</a></div></div>
 <div class="ttc" id="aclassSkinAsset__Button_html_a0cfe86b1151b0ead41346f9cb374b78a"><div class="ttname"><a href="classSkinAsset__Button.html#a0cfe86b1151b0ead41346f9cb374b78a">SkinAsset_Button.size</a></div><div class="ttdeci">Vector2Int size</div><div class="ttdef"><b>Definition:</b> <a href="SkinAsset__Button_8cs_source.html#l00024">SkinAsset_Button.cs:24</a></div></div>
@@ -847,7 +854,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>, and <a class="el" href="SkinAsset__Button_8cs_source.html#l00024">SkinAsset_Button.size</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00155">OnApplySkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00157">OnApplySkin()</a>.</p>
 
 </div>
 </div>
@@ -875,14 +882,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00118">118</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Remove(n);</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)n.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>)</div>
-<div class="line"><span class="lineno">  122</span>        {</div>
-<div class="line"><span class="lineno">  123</span>            Object.DestroyImmediate(n.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.gameObject);</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00120">120</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Remove(n);</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)n.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            Object.DestroyImmediate(n.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.gameObject);</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="BaseNotification_8cs_source.html#l00007">BaseNotification.item</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">list</a>.</p>
 
@@ -911,7 +918,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00017">17</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">Add()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">Add()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>.</p>
+
+</div>
+</div>
+<a id="a40372d9ac62e3280f93f8b27b21d8e0b" name="a40372d9ac62e3280f93f8b27b21d8e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40372d9ac62e3280f93f8b27b21d8e0b">&#9670;&#160;</a></span>dirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BaseWidgetNotice.dirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">19</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">_RefreshAll()</a>.</p>
 
 </div>
 </div>
@@ -929,7 +962,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">11</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">_RefreshAll()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">Add()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>, and <a class="el" href="NotificationCondition_8cs_source.html#l00032">NotificationCondition.OnClick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">_RefreshAll()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">Add()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>, and <a class="el" href="NotificationCondition_8cs_source.html#l00032">NotificationCondition.OnClick()</a>.</p>
 
 </div>
 </div>
@@ -947,7 +980,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00013">13</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">_RefreshAll()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00014">NotificationBuff.GetLayoutGroup()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">_RefreshAll()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00014">NotificationBuff.GetLayoutGroup()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -965,7 +998,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">9</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00050">_RefreshAll()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">Add()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00143">RefreshLayout()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00118">Remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">_RefreshAll()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">Add()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00145">RefreshLayout()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00120">Remove()</a>.</p>
 
 </div>
 </div>
@@ -983,7 +1016,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00015">15</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">Add()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00019">OnActivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">Add()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00021">OnActivate()</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1034,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseWidgetNotice_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseWidgetNotice_8cs_source.html">BaseWidgetNotice.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00080">Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">Add()</a>.</p>
 
 </div>
 </div>

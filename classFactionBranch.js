@@ -78,6 +78,7 @@ var classFactionBranch =
     [ "lastUpdateReqruit", "classFactionBranch.html#a123e27efc2506649226565ade06fa6f3", null ],
     [ "listRecruit", "classFactionBranch.html#aa5fab5f7e4f559a2403cea7345910044", null ],
     [ "log", "classFactionBranch.html#a035d377632c16860b1fb757e6d905400", null ],
+    [ "luckyDay", "classFactionBranch.html#a5fbc76e1d48e53ccb9eea545da8c2cb6", null ],
     [ "lv", "classFactionBranch.html#a4322facc3ab9b2901aa2cb266e3b899d", null ],
     [ "meetings", "classFactionBranch.html#a02254a7af1e1daeca363225270f9dde6", null ],
     [ "members", "classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b", null ],

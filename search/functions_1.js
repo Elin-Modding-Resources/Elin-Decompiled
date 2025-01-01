@@ -107,7 +107,7 @@ var searchData=
   ['addlocalscalez_104',['AddLocalScaleZ',['../classClassExtension.html#a75c5360c0d554235ac2762f8c6681d01',1,'ClassExtension']]],
   ['addlog_105',['AddLog',['../classMsgBox.html#a353202ba6f8ff17ebd3cd642ed82fe51',1,'MsgBox.AddLog()'],['../classWidgetInspector.html#a33b981d859d55445e61736132c71ed7f',1,'WidgetInspector.AddLog()']]],
   ['addmaid_106',['AddMaid',['../classDramaOutcome.html#a04a5af1a4117ece4cbbe439e04df17a9',1,'DramaOutcome']]],
-  ['addmemeber_107',['AddMemeber',['../classFactionBranch.html#af46ece49058e8d974d0b0044b948014e',1,'FactionBranch.AddMemeber()'],['../classParty.html#ac08a11cd4fc95d4c68584dfded84ed02',1,'Party.AddMemeber()']]],
+  ['addmemeber_107',['AddMemeber',['../classFactionBranch.html#af46ece49058e8d974d0b0044b948014e',1,'FactionBranch.AddMemeber()'],['../classParty.html#ac7adae19004adcdb2507606ec961fb6f',1,'Party.AddMemeber()']]],
   ['addmerchant_108',['AddMerchant',['../classZoneUtil.html#a5fd8fa71f8d18eccd6d64c18db502687',1,'ZoneUtil']]],
   ['addmonth_109',['AddMonth',['../classDate.html#a516b6cc39cf6112303cef8719b00ee03',1,'Date']]],
   ['addneeds_110',['AddNeeds',['../classWindowChara.html#abeaea5f7d59db700be694f9bcb9e2dd9',1,'WindowChara']]],

@@ -486,6 +486,7 @@ var hierarchy =
         [ "Stats", "classStats.html", [
           [ "StatsBurden", "classStatsBurden.html", null ],
           [ "StatsHunger", "classStatsHunger.html", null ],
+          [ "StatsHygiene", "classStatsHygiene.html", null ],
           [ "StatsMana", "classStatsMana.html", null ],
           [ "StatsSAN", "classStatsSAN.html", null ],
           [ "StatsSleepiness", "classStatsSleepiness.html", null ],

@@ -1094,6 +1094,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "Stats.cs", "Stats_8cs.html", "Stats_8cs" ],
     [ "StatsBurden.cs", "StatsBurden_8cs.html", "StatsBurden_8cs" ],
     [ "StatsHunger.cs", "StatsHunger_8cs.html", "StatsHunger_8cs" ],
+    [ "StatsHygiene.cs", "StatsHygiene_8cs.html", "StatsHygiene_8cs" ],
     [ "StatsMana.cs", "StatsMana_8cs.html", "StatsMana_8cs" ],
     [ "StatsSAN.cs", "StatsSAN_8cs.html", "StatsSAN_8cs" ],
     [ "StatsSleepiness.cs", "StatsSleepiness_8cs.html", "StatsSleepiness_8cs" ],

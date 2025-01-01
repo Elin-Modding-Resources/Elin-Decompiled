@@ -1,5 +1,10 @@
 var NAVTREEINDEX62 =
 {
+"classFoodEffect.html#aeb5359261ce5eb0480f91c3d01467536":[1,0,487,1],
+"classFootmark.html":[1,0,488],
+"classFootmark.html#a046967b8ceccd3e42d36ec594136c552":[1,0,488,1],
+"classFootmark.html#a404f6ab25809b84b2174e40d3c42ba24":[1,0,488,2],
+"classFootmark.html#a67511ba7dafbc8828a0dc622aadcf34e":[1,0,488,0],
 "classFortuneRollData.html":[1,0,489],
 "classFortuneRollData.html#a1956b0bf333501bda7ed6f028f9df12b":[1,0,489,8],
 "classFortuneRollData.html#a22ecdc0077174b49bead2ef0adf932c3":[1,0,489,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX62 =
 "classGameSerializationBinder.html":[1,0,504],
 "classGameSerializationBinder.html#a36917781927c2601774a580d7f7fe82d":[1,0,504,0],
 "classGameSerializationBinder.html#a40986e40aa5235b1a918ded11e92cc9a":[1,0,504,1],
-"classGameSetting.html":[1,0,505],
-"classGameSetting.html#a02eff0a48b11e983f71eb91a52bb0a78":[1,0,505,34],
-"classGameSetting.html#a203996622993c5e8ee52e7dfe564a379":[1,0,505,22],
-"classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67":[1,0,505,27],
-"classGameSetting.html#a2662889350c1ac541e4a13aa7a5fa846":[1,0,505,12],
-"classGameSetting.html#a2a1efd1771b87a1aeb21068a8e834c91":[1,0,505,25]
+"classGameSetting.html":[1,0,505]
 };

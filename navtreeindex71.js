@@ -1,5 +1,10 @@
 var NAVTREEINDEX71 =
 {
+"classItemStatistics.html#a83b6995ea39658cc473f99b69501f9f8":[1,0,702,2],
+"classItemStatistics.html#aa946fa4fa5e04bb50bf791f6782550bd":[1,0,702,6],
+"classItemStatistics.html#abdf05ff2ae599dd03ea4f99a9f018cbe":[1,0,702,1],
+"classItemStatistics.html#ad58544b2e09db945494100038ba2b370":[1,0,702,3],
+"classItemStatistics.html#af4dfd5b12c40c4aff24ebf6fe784e247":[1,0,702,0],
 "classItemWidget.html":[1,0,703],
 "classItemWidget.html#a3ec423545495f555fe65b8c96ba12d3d":[1,0,703,5],
 "classItemWidget.html#a4d6424c36ecf144da89b80babc0fb2af":[1,0,703,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX71 =
 "classLayer.html#ad16c6486b0cfb697ef28d3599d7b4db3":[1,0,724,66],
 "classLayer.html#ad2414260ee46b801ed11f837a026a606":[1,0,724,8],
 "classLayer.html#ad68fcb43d0e1b002c29d518f262e5dbf":[1,0,724,7],
-"classLayer.html#ad7841de7af9acef53cf3fa503ba9eae2":[1,0,724,52],
-"classLayer.html#adcabbb5f9207fa402487950097b491cd":[1,0,724,77],
-"classLayer.html#ae3fef4099c96846533f426342585d51e":[1,0,724,26],
-"classLayer.html#ae48ab5d11ec32d6f2c39446da54afad5":[1,0,724,60],
-"classLayer.html#ae5ca8ebf19ac3003c95e3b494fd4c5b8":[1,0,724,80],
-"classLayer.html#ae6cdce87138abe0c65972dc6d0e56fc6":[1,0,724,22]
+"classLayer.html#ad7841de7af9acef53cf3fa503ba9eae2":[1,0,724,52]
 };
