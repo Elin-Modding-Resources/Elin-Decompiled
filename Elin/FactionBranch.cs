@@ -536,11 +536,14 @@ public class FactionBranch : EClass
 		{
 			luckyDay = true;
 		}
-		Log("lucky_day", EClass._zone.Name);
-		if (luckyDay && date.IsRealTime)
+		if (luckyDay)
 		{
-			Msg.Say("lucky_day", EClass._zone.Name);
-			SE.Play("godbless");
+			Log("lucky_day", EClass._zone.Name);
+			if (date.IsRealTime)
+			{
+				Msg.Say("lucky_day", EClass._zone.Name);
+				SE.Play("godbless");
+			}
 		}
 	}
 

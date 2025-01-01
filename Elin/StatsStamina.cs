@@ -29,26 +29,21 @@ public class StatsStamina : Stats
 			a = -EClass.rnd(-a * 130 / 100 + 2);
 		}
 		int num = BaseStats.CC.Evalue(1403);
-		if (a < 0 && num > 0)
+		if (a < 0 && num > 0 && (a != -1 || EClass.rnd(num + 1) != 0))
 		{
-			if (a == -1 && num > EClass.rnd(3))
-			{
-				return;
-			}
 			a = a * 100 / (100 + EClass.rnd(num + 1) * 20);
-			if (a == 0)
+		}
+		if (a != 0)
+		{
+			base.Mod(a);
+			if (a < 0)
 			{
-				return;
+				_ = BaseStats.CC.ShouldShowMsg;
 			}
-		}
-		base.Mod(a);
-		if (a < 0)
-		{
-			_ = BaseStats.CC.ShouldShowMsg;
-		}
-		if (a < 0 && value < 0)
-		{
-			BaseStats.CC.DamageHP(-value, AttackSource.Fatigue);
+			if (a < 0 && value < 0)
+			{
+				BaseStats.CC.DamageHP(-value, AttackSource.Fatigue);
+			}
 		}
 	}
 

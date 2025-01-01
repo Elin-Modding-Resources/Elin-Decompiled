@@ -440,6 +440,16 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.IsBelow(0, 23, 72))
+		{
+			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
+			{
+				if (!value2.isDead)
+				{
+					value2.c_wasInPcParty = false;
+				}
+			}
+		}
 		if (version.IsBelow(0, 23, 59))
 		{
 			while (TryDestroy())
@@ -452,11 +462,11 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 51))
 		{
-			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
+			foreach (Chara value3 in EClass.game.cards.globalCharas.Values)
 			{
-				if (!(value2.id != "adv") && value2.IsPCFaction)
+				if (!(value3.id != "adv") && value3.IsPCFaction)
 				{
-					value2.idSkin = value2.uid % (value2.source._tiles.Length - 4) / 2 * 2 + ((!value2.IsMale) ? 1 : 0);
+					value3.idSkin = value3.uid % (value3.source._tiles.Length - 4) / 2 * 2 + ((!value3.IsMale) ? 1 : 0);
 				}
 			}
 		}
@@ -522,9 +532,9 @@ public class Game : EClass
 		});
 		if (version.IsBelow(0, 22, 20))
 		{
-			foreach (Chara value3 in cards.globalCharas.Values)
+			foreach (Chara value4 in cards.globalCharas.Values)
 			{
-				value3.SetBool(18, enable: false);
+				value4.SetBool(18, enable: false);
 			}
 		}
 		if (version.IsBelow(0, 22, 22))

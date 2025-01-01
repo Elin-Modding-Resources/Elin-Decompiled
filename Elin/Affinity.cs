@@ -144,7 +144,7 @@ public class Affinity : EClass
 		{
 			CC.interest -= 10 + EClass.rnd(10);
 		}
-		if (CC.IsPCFactionOrMinion && CurrentStage >= Stage.Intimate)
+		if (CC.IsPCFactionOrMinion && CurrentStage >= Stage.Love)
 		{
 			if (EClass.rnd(4) == 0)
 			{

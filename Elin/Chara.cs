@@ -3278,7 +3278,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			int phase = hygiene.GetPhase();
 			int num = 0;
-			num = ((!IsPC) ? ((phase > 3) ? 50 : 0) : ((phase > 3) ? 50 : 10));
+			num = ((!IsPC) ? ((phase > 3) ? 50 : 0) : ((phase > 3) ? 50 : 0));
 			if (num > EClass.rnd(100))
 			{
 				hygiene.Mod(-1);

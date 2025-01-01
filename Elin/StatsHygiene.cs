@@ -12,7 +12,7 @@ public class StatsHygiene : Stats
 
 	public const int Garbage = 0;
 
-	public static int[] listMod = new int[6] { 125, 110, 100, 80, 50, 10 };
+	public static int[] listMod = new int[6] { 10, 50, 80, 100, 110, 120 };
 
 	public override int max => 100;
 
