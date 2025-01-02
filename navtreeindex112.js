@@ -1,5 +1,9 @@
 var NAVTREEINDEX112 =
 {
+"classTraitChef.html":[1,0,1415],
+"classTraitChef.html#a0cb367e1a36ee27848151015571b0967":[1,0,1415,0],
+"classTraitChef.html#aabf5e2cf6a203954522b31e5398ee049":[1,0,1415,1],
+"classTraitChest.html":[1,0,1416],
 "classTraitChest.html#a844ef34ac1868307a3b79a00864d30b6":[1,0,1416,0],
 "classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1416,1],
 "classTraitChestMerchant.html":[1,0,1417],
@@ -245,9 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitDoorBoat.html#a854673d89d37cd7ba135e68b7f7278b8":[1,0,1463,1],
 "classTraitDoorBoat.html#aa179b47b8fecd0d10accd386d4012494":[1,0,1463,0],
 "classTraitDoorCurtain.html":[1,0,1464],
-"classTraitDoorCurtain.html#a2afacb16aa5d5ef62f7c093981328ca8":[1,0,1464,0],
-"classTraitDoorCurtain.html#a6fe7f911c184a7ccbc01324566486227":[1,0,1464,2],
-"classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e":[1,0,1464,1],
-"classTraitDoorFence.html":[1,0,1465],
-"classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1465,0]
+"classTraitDoorCurtain.html#a2afacb16aa5d5ef62f7c093981328ca8":[1,0,1464,0]
 };

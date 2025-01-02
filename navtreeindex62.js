@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"classFoodEffect.html#ac9e168b0f422757e969e8e23aaac16de":[1,0,487,3],
 "classFoodEffect.html#aeb5359261ce5eb0480f91c3d01467536":[1,0,487,1],
 "classFootmark.html":[1,0,488],
 "classFootmark.html#a046967b8ceccd3e42d36ec594136c552":[1,0,488,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "classGameScreenNoMap.html#aae5fc6597cc05895ac584580b7f4d9ea":[1,0,503,0],
 "classGameSerializationBinder.html":[1,0,504],
 "classGameSerializationBinder.html#a36917781927c2601774a580d7f7fe82d":[1,0,504,0],
-"classGameSerializationBinder.html#a40986e40aa5235b1a918ded11e92cc9a":[1,0,504,1],
-"classGameSetting.html":[1,0,505]
+"classGameSerializationBinder.html#a40986e40aa5235b1a918ded11e92cc9a":[1,0,504,1]
 };

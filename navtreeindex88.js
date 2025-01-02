@@ -1,5 +1,9 @@
 var NAVTREEINDEX88 =
 {
+"classPropsStocked.html#adb70821a020c6bcb98ef5bb94c868bcd":[1,0,931,0],
+"classQuest.html":[1,0,932],
+"classQuest.html#a0279f7e227ffe094a7219f78c10ec4df":[1,0,932,5],
+"classQuest.html#a08321d242042882c411d5c7678a2a7aa":[1,0,932,57],
 "classQuest.html#a090fd8b5f245ecb9ba21e0cc9dce4978":[1,0,932,30],
 "classQuest.html#a14a357f3949714e4cdad890ae074aaa2":[1,0,932,1],
 "classQuest.html#a14a357f3949714e4cdad890ae074aaa2a072f2184f07fc315bbc1009984014609":[1,0,932,1,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX88 =
 "classQuestExploration.html#a9433991f51d54e81c6eb3b1130a16a72":[1,0,946,6],
 "classQuestExploration.html#a953f4ea887504aca3143b274c4a27448":[1,0,946,4],
 "classQuestExploration.html#aac1f0b889fb96c4b0704d6dcce9467ab":[1,0,946,8],
-"classQuestExploration.html#af05c362547863b2d52385ca56e30093f":[1,0,946,7],
-"classQuestFarrisSister.html":[1,0,947],
-"classQuestFarrisSister.html#a889fd39e8b2c3fa57595f9288b77130f":[1,0,947,0],
-"classQuestFiamaLock.html":[1,0,948],
-"classQuestFiamaLock.html#a34943052fe9042089c74d24672f860e4":[1,0,948,1]
+"classQuestExploration.html#af05c362547863b2d52385ca56e30093f":[1,0,946,7]
 };

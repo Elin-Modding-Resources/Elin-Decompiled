@@ -1,5 +1,9 @@
 var NAVTREEINDEX116 =
 {
+"classTraitNola.html#a7ab27b3957b1cb0c6e9d21616f9dce30":[1,0,1645,3],
+"classTraitNola.html#ae6222b9c6697d78a3afc2e25a0769477":[1,0,1645,0],
+"classTraitNote.html":[1,0,1646],
+"classTraitNote.html#a1bf55d03433108430137e481eb6b94d6":[1,0,1646,2],
 "classTraitNote.html#ae64a3732578342315cb31685ec9c6d27":[1,0,1646,0],
 "classTraitNote.html#af5b43b9758d75717f8002291d2ac2628":[1,0,1646,1],
 "classTraitObj.html":[1,0,1647],
@@ -245,9 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitScratchMachine.html#a07ffdf52fc643dc776ed37719159f4a4":[1,0,1708,4],
 "classTraitScratchMachine.html#a1e300ed5e281053a560c503b6c162582":[1,0,1708,0],
 "classTraitScratchMachine.html#a72df852eba74fe1aa8bd21edaa934784":[1,0,1708,1],
-"classTraitScratchMachine.html#ac416bde38f24b7c8d3288c117d819393":[1,0,1708,2],
-"classTraitScratchMachine.html#afd1c86f4c7b5d3f00009927806cdfc44":[1,0,1708,3],
-"classTraitScroll.html":[1,0,1709],
-"classTraitScroll.html#a0e073abdcec7d8ab46d4835511d90bc0":[1,0,1709,1],
-"classTraitScroll.html#a1373d9916e36ca2f4d2e64e9ca16261b":[1,0,1709,6]
+"classTraitScratchMachine.html#ac416bde38f24b7c8d3288c117d819393":[1,0,1708,2]
 };

@@ -85,7 +85,7 @@ var searchData=
   ['addint_82',['AddInt',['../classBaseCard.html#a3da44bdae90493bcf4eb21aa96c08ef9',1,'BaseCard.AddInt()'],['../classSpatial.html#a44feda905985f4043b4d0ed65814156b',1,'Spatial.AddInt()']]],
   ['addinventory_83',['AddInventory',['../classPlayer.html#a5c86bc09de450fe0e3bd756fe0da981c',1,'Player']]],
   ['additem_84',['AddItem',['../classUIItemList.html#aff9ce2e5f5caf034ad2c78a4d19e397b',1,'UIItemList.AddItem()'],['../classUINote.html#a8a25d45903bd5450ef6af108da51a614',1,'UINote.AddItem()'],['../classWidgetPopup.html#a80945800eade10c7a0e17f7987a41bbc',1,'WidgetPopup.AddItem()']]],
-  ['addkill_85',['AddKill',['../classCodexManager.html#af422093e0282cbe750a69bb3aaf4adf9',1,'CodexManager.AddKill()'],['../classConStrife.html#af1003bbf54993bc57e028e3ba8e62586',1,'ConStrife.AddKill()']]],
+  ['addkill_85',['AddKill',['../classCodexManager.html#af422093e0282cbe750a69bb3aaf4adf9',1,'CodexManager.AddKill()'],['../classConStrife.html#a3ecda945e3a9e93ecf891ac781bc65e3',1,'ConStrife.AddKill()']]],
   ['addlayer_86',['AddLayer',['../classEUtil.html#ada0e9b1b93a6f9c2fdb79f81c62e206c',1,'EUtil.AddLayer()'],['../classLayer.html#a8f3352f9d82ea51dd18490338991e819',1,'Layer.AddLayer(string id)'],['../classLayer.html#ac2413f28518c733699fd1d09917a51cd',1,'Layer.AddLayer(Layer l)'],['../classWidget.html#a4a8e9d9b04888546bdbf338d5b7679a9',1,'Widget.AddLayer()']]],
   ['addlayer_3c_20t_20_3e_87',['AddLayer&lt; T &gt;',['../classLayer.html#a899ed3b204d754165bd3083b9bb38000',1,'Layer.AddLayer&lt; T &gt;()'],['../classLayer.html#ad68fcb43d0e1b002c29d518f262e5dbf',1,'Layer.AddLayer&lt; T &gt;(string id)']]],
   ['addlayerdontcloseothers_88',['AddLayerDontCloseOthers',['../classLayer.html#ad2414260ee46b801ed11f837a026a606',1,'Layer']]],

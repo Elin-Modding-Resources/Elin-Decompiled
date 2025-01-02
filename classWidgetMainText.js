@@ -18,6 +18,7 @@ var classWidgetMainText =
     [ "box", "classWidgetMainText.html#a6ef77e94f8aed018c8f93bfb4c64bfe6", null ],
     [ "boxBk", "classWidgetMainText.html#af151464838f04a8493e1fd7cde7fcf1f", null ],
     [ "currentItem", "classWidgetMainText.html#ae61018c3f547c4a70afdd1f419119523", null ],
+    [ "ignoreStack", "classWidgetMainText.html#a7dfba55f7c0d612f3018ea66b2cafdc7", null ],
     [ "Instance", "classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213", null ],
     [ "layout", "classWidgetMainText.html#ada163ae2a172e3a4616bdcfd98bb32c9", null ],
     [ "moldLine", "classWidgetMainText.html#ae3566b7a5553d7f2352683ce4571e88f", null ],

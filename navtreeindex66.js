@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"classHUD.html":[1,0,624],
 "classHUD.html#a0c9bf2c9a82a63f33c2be5082ef4606d":[1,0,624,19],
 "classHUD.html#a0dfdd43f0a6b16dfcaed94982366a000":[1,0,624,15],
 "classHUD.html#a102a2c869a94e978003ef49e98281d17":[1,0,624,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "classHomeResourceSkill.html#a928477e0ee666ba8031fc0b00d550cf2":[1,0,592,3],
 "classHomeResourceSkill.html#ad4be4a8c38d606066a60f05251d2db58":[1,0,592,7],
 "classHomeResourceSkill.html#af4b4cd0cf6f23c9a2fffab4a6f1b888d":[1,0,592,5],
-"classHomeResourceSkill.html#af5165193af5dc75edd887a0703ea58ff":[1,0,592,6],
-"classHomeResourceWorth.html":[1,0,593]
+"classHomeResourceSkill.html#af5165193af5dc75edd887a0703ea58ff":[1,0,592,6]
 };

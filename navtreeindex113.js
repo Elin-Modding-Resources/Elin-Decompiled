@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTraitDoorCurtain.html#a6fe7f911c184a7ccbc01324566486227":[1,0,1464,2],
+"classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e":[1,0,1464,1],
+"classTraitDoorFence.html":[1,0,1465],
+"classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1465,0],
 "classTraitDoorFrame.html":[1,0,1466],
 "classTraitDoorFrame.html#ab343e2af0b44daf071a0bbc7535dc5c5":[1,0,1466,0],
 "classTraitDoorSwing.html":[1,0,1470],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitGainPrecious.html#aaf4de6e5938f0def1751c3b72fdbb97d":[1,0,1523,0],
 "classTraitGallows.html":[1,0,1524],
 "classTraitGallows.html#a0ded69d79de1041a109a0a649861d915":[1,0,1524,0],
-"classTraitGamble.html":[1,0,1525],
-"classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950":[1,0,1525,5],
-"classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec":[1,0,1525,3],
-"classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1525,2],
-"classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d":[1,0,1525,1]
+"classTraitGamble.html":[1,0,1525]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX118 =
 {
+"classTraitSyringeGene.html":[1,0,1766],
+"classTraitSyringeGene.html#a179a76a02db2b362ce90fd20eab454e3":[1,0,1766,1],
+"classTraitSyringeGene.html#ab1f4770127aaf0bbf84eb7428a1258bb":[1,0,1766,0],
+"classTraitSyringeHeaven.html":[1,0,1767],
 "classTraitSyringeHeaven.html#a6a425d99bf997b603378092c768b36d1":[1,0,1767,0],
 "classTraitSyringeHeaven.html#ae116be70d6483b666e6ec18323d1b57f":[1,0,1767,1],
 "classTraitTV.html":[1,0,1816],
@@ -245,9 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitWhipLove.html":[1,0,1829],
 "classTraitWhipLove.html#a11614644a618aa6bd7adab84ea63ed26":[1,0,1829,1],
 "classTraitWhipLove.html#a448accef964c73a7cfd4fc7565c69370":[1,0,1829,0],
-"classTraitWhipLove.html#ae46661061bbfd94fc8380c2f39b89b44":[1,0,1829,2],
-"classTraitWhistlePeace.html":[1,0,1830],
-"classTraitWhistlePeace.html#a4361b8d1c18544bdfc53d83e6d122591":[1,0,1830,0],
-"classTraitWhistlePeace.html#aac8be37376522065fd73e92110963bad":[1,0,1830,1],
-"classTraitWhistlePeace.html#abed2bfb734498ed0371f0c28dfbecb09":[1,0,1830,2]
+"classTraitWhipLove.html#ae46661061bbfd94fc8380c2f39b89b44":[1,0,1829,2]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX96 =
 {
+"classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c":[1,0,1090,5],
+"classScreenFlash.html":[1,0,1091],
+"classScreenFlash.html#a198d9d42465af3fa45cdbb7eecc211ce":[1,0,1091,2],
+"classScreenFlash.html#a2f8e2013530ba78c0da69688ecb057ff":[1,0,1091,8],
 "classScreenFlash.html#a627478f53312f17362f84d0d5c7fbe29":[1,0,1091,7],
 "classScreenFlash.html#a6c6f12e000b505c9137b082e5a59ee96":[1,0,1091,3],
 "classScreenFlash.html#a7af86090114e4b5131a36fe0dbb4a2e8":[1,0,1091,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX96 =
 "classSkinColorProfile.html#a0ffa5cf630c406efc9d665699fed996e":[1,0,1117,24],
 "classSkinColorProfile.html#a11a53e0aa6532a64faf9ba19b288e646":[1,0,1117,27],
 "classSkinColorProfile.html#a1cd2fdcf23dac73a37557f181058ae58":[1,0,1117,28],
-"classSkinColorProfile.html#a1f51bc894dc73d0b584208311193688e":[1,0,1117,9],
-"classSkinColorProfile.html#a24e33b456009b2e42ed8ae450e40649f":[1,0,1117,19],
-"classSkinColorProfile.html#a33162ef1f1d639011507b4c00713558e":[1,0,1117,4],
-"classSkinColorProfile.html#a3405806f4da291972664bc86d2a0eb51":[1,0,1117,29],
-"classSkinColorProfile.html#a3594f42032b8321ccb5b9351838a2a10":[1,0,1117,2]
+"classSkinColorProfile.html#a1f51bc894dc73d0b584208311193688e":[1,0,1117,9]
 };

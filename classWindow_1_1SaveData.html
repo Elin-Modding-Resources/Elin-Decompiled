@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.71 Nightly hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
    </div>
   </td>
  </tr>
@@ -200,6 +200,8 @@ Properties</h2></td></tr>
 <tr class="separator:a8802b29ac4fa1b6b105290535ba6ceda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0feba8777383bef50ec218d91d116176"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow_1_1SaveData.html#a0feba8777383bef50ec218d91d116176">sort_ascending</a><code> [get, set]</code></td></tr>
 <tr class="separator:a0feba8777383bef50ec218d91d116176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a1200a76ae8530b20711fad8ef9414"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow_1_1SaveData.html#a04a1200a76ae8530b20711fad8ef9414">shiftToShowMenu</a><code> [get, set]</code></td></tr>
+<tr class="separator:a04a1200a76ae8530b20711fad8ef9414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -298,14 +300,14 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00557">557</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  558</span>        {</div>
-<div class="line"><span class="lineno">  559</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>.Length &lt; 20)</div>
-<div class="line"><span class="lineno">  560</span>            {</div>
-<div class="line"><span class="lineno">  561</span>                Array.Resize(ref <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>, 20);</div>
-<div class="line"><span class="lineno">  562</span>            }</div>
-<div class="line"><span class="lineno">  563</span>            b1.Bits = (uint)<a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[0];</div>
-<div class="line"><span class="lineno">  564</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00569">569</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  570</span>        {</div>
+<div class="line"><span class="lineno">  571</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>.Length &lt; 20)</div>
+<div class="line"><span class="lineno">  572</span>            {</div>
+<div class="line"><span class="lineno">  573</span>                Array.Resize(ref <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>, 20);</div>
+<div class="line"><span class="lineno">  574</span>            }</div>
+<div class="line"><span class="lineno">  575</span>            b1.Bits = (uint)<a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[0];</div>
+<div class="line"><span class="lineno">  576</span>        }</div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_af599801dd339d292094a5dda55d69d91"><div class="ttname"><a href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">Window.SaveData.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00116">Window.cs:116</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00116">Window.SaveData.ints</a>.</p>
@@ -335,33 +337,33 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00522">522</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  523</span>        {</div>
-<div class="line"><span class="lineno">  524</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a> = <a class="code hl_variable" href="classWindow_1_1SaveData.html#a28e991d56126ab57200d8f8eef9c77c5">filter</a>.Replace(<span class="stringliteral">&#39;、&#39;</span>, <span class="charliteral">&#39;,&#39;</span>).Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  525</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>.Length];</div>
-<div class="line"><span class="lineno">  526</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>.Length; i++)</div>
-<div class="line"><span class="lineno">  527</span>            {</div>
-<div class="line"><span class="lineno">  528</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Length != 0)</div>
-<div class="line"><span class="lineno">  529</span>                {</div>
-<div class="line"><span class="lineno">  530</span>                    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i][0])</div>
-<div class="line"><span class="lineno">  531</span>                    {</div>
-<div class="line"><span class="lineno">  532</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:</div>
-<div class="line"><span class="lineno">  533</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a>[i] = 1;</div>
-<div class="line"><span class="lineno">  534</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i] = <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Replace(<span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  535</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  536</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:</div>
-<div class="line"><span class="lineno">  537</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a>[i] = 2;</div>
-<div class="line"><span class="lineno">  538</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i] = <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Replace(<span class="stringliteral">&quot;+&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  539</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  540</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;&quot;&#39;</span>:</div>
-<div class="line"><span class="lineno">  541</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;\&#39;&#39;</span>:</div>
-<div class="line"><span class="lineno">  542</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i] = <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  543</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  544</span>                    }</div>
-<div class="line"><span class="lineno">  545</span>                }</div>
-<div class="line"><span class="lineno">  546</span>            }</div>
-<div class="line"><span class="lineno">  547</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>;</div>
-<div class="line"><span class="lineno">  548</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00534">534</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  535</span>        {</div>
+<div class="line"><span class="lineno">  536</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a> = <a class="code hl_variable" href="classWindow_1_1SaveData.html#a28e991d56126ab57200d8f8eef9c77c5">filter</a>.Replace(<span class="stringliteral">&#39;、&#39;</span>, <span class="charliteral">&#39;,&#39;</span>).Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  537</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>.Length];</div>
+<div class="line"><span class="lineno">  538</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>.Length; i++)</div>
+<div class="line"><span class="lineno">  539</span>            {</div>
+<div class="line"><span class="lineno">  540</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Length != 0)</div>
+<div class="line"><span class="lineno">  541</span>                {</div>
+<div class="line"><span class="lineno">  542</span>                    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i][0])</div>
+<div class="line"><span class="lineno">  543</span>                    {</div>
+<div class="line"><span class="lineno">  544</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:</div>
+<div class="line"><span class="lineno">  545</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a>[i] = 1;</div>
+<div class="line"><span class="lineno">  546</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i] = <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Replace(<span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  547</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  548</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:</div>
+<div class="line"><span class="lineno">  549</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a>[i] = 2;</div>
+<div class="line"><span class="lineno">  550</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i] = <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Replace(<span class="stringliteral">&quot;+&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  551</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  552</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;&quot;&#39;</span>:</div>
+<div class="line"><span class="lineno">  553</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;\&#39;&#39;</span>:</div>
+<div class="line"><span class="lineno">  554</span>                        <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i] = <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>[i].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  555</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  556</span>                    }</div>
+<div class="line"><span class="lineno">  557</span>                }</div>
+<div class="line"><span class="lineno">  558</span>            }</div>
+<div class="line"><span class="lineno">  559</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>;</div>
+<div class="line"><span class="lineno">  560</span>        }</div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_a28e991d56126ab57200d8f8eef9c77c5"><div class="ttname"><a href="classWindow_1_1SaveData.html#a28e991d56126ab57200d8f8eef9c77c5">Window.SaveData.filter</a></div><div class="ttdeci">string filter</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00122">Window.cs:122</a></div></div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_a620110a7fe35b2d18c7511f5e5ede10c"><div class="ttname"><a href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">Window.SaveData.filterOptions</a></div><div class="ttdeci">int[] filterOptions</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00128">Window.cs:128</a></div></div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_abe5a61305a41eaf07edc1869813794fc"><div class="ttname"><a href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">Window.SaveData._filterStrs</a></div><div class="ttdeci">string[] _filterStrs</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00125">Window.cs:125</a></div></div>
@@ -395,20 +397,20 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00566">566</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  567</span>        {</div>
-<div class="line"><span class="lineno">  568</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>.Length; i++)</div>
-<div class="line"><span class="lineno">  569</span>            {</div>
-<div class="line"><span class="lineno">  570</span>                <span class="keywordflow">if</span> (i != 1 &amp;&amp; i != 2)</div>
-<div class="line"><span class="lineno">  571</span>                {</div>
-<div class="line"><span class="lineno">  572</span>                    <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[i] = data.ints[i];</div>
-<div class="line"><span class="lineno">  573</span>                }</div>
-<div class="line"><span class="lineno">  574</span>            }</div>
-<div class="line"><span class="lineno">  575</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#a3bd5ec1db37acbed802fb0d860b890ac">cats</a> = <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(data.cats);</div>
-<div class="line"><span class="lineno">  576</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#a28e991d56126ab57200d8f8eef9c77c5">filter</a> = data.filter;</div>
-<div class="line"><span class="lineno">  577</span>            b1.Bits = (uint)<a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[0];</div>
-<div class="line"><span class="lineno">  578</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  579</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00578">578</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  579</span>        {</div>
+<div class="line"><span class="lineno">  580</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>.Length; i++)</div>
+<div class="line"><span class="lineno">  581</span>            {</div>
+<div class="line"><span class="lineno">  582</span>                <span class="keywordflow">if</span> (i != 1 &amp;&amp; i != 2)</div>
+<div class="line"><span class="lineno">  583</span>                {</div>
+<div class="line"><span class="lineno">  584</span>                    <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[i] = data.ints[i];</div>
+<div class="line"><span class="lineno">  585</span>                }</div>
+<div class="line"><span class="lineno">  586</span>            }</div>
+<div class="line"><span class="lineno">  587</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#a3bd5ec1db37acbed802fb0d860b890ac">cats</a> = <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(data.cats);</div>
+<div class="line"><span class="lineno">  588</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#a28e991d56126ab57200d8f8eef9c77c5">filter</a> = data.filter;</div>
+<div class="line"><span class="lineno">  589</span>            b1.Bits = (uint)<a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[0];</div>
+<div class="line"><span class="lineno">  590</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  591</span>        }</div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00008">IO.cs:9</a></div></div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_a3bd5ec1db37acbed802fb0d860b890ac"><div class="ttname"><a href="classWindow_1_1SaveData.html#a3bd5ec1db37acbed802fb0d860b890ac">Window.SaveData.cats</a></div><div class="ttdeci">HashSet&lt; int &gt; cats</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00119">Window.cs:119</a></div></div>
 </div><!-- fragment -->
@@ -440,41 +442,41 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00486">486</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  487</span>        {</div>
-<div class="line"><span class="lineno">  488</span>            <span class="keywordtype">bool</span> <a class="code hl_property" href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">flag</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  489</span>            <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  490</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>.Length; i++)</div>
-<div class="line"><span class="lineno">  491</span>            {</div>
-<div class="line"><span class="lineno">  492</span>                <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a>[i])</div>
-<div class="line"><span class="lineno">  493</span>                {</div>
-<div class="line"><span class="lineno">  494</span>                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">  495</span>                    <span class="keywordflow">if</span> (text.Contains(<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>[i]))</div>
-<div class="line"><span class="lineno">  496</span>                    {</div>
-<div class="line"><span class="lineno">  497</span>                        <a class="code hl_property" href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">flag</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  498</span>                    }</div>
-<div class="line"><span class="lineno">  499</span>                    flag2 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  500</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">  502</span>                    <span class="keywordflow">if</span> (text.Contains(<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>[i]))</div>
-<div class="line"><span class="lineno">  503</span>                    {</div>
-<div class="line"><span class="lineno">  504</span>                        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Block;</div>
-<div class="line"><span class="lineno">  505</span>                    }</div>
-<div class="line"><span class="lineno">  506</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  507</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  508</span>                    <span class="keywordflow">if</span> (text.Contains(<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>[i]))</div>
-<div class="line"><span class="lineno">  509</span>                    {</div>
-<div class="line"><span class="lineno">  510</span>                        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.PassWithoutFurtherTest;</div>
-<div class="line"><span class="lineno">  511</span>                    }</div>
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00498">498</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  499</span>        {</div>
+<div class="line"><span class="lineno">  500</span>            <span class="keywordtype">bool</span> <a class="code hl_property" href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">flag</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  501</span>            <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  502</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>.Length; i++)</div>
+<div class="line"><span class="lineno">  503</span>            {</div>
+<div class="line"><span class="lineno">  504</span>                <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classWindow_1_1SaveData.html#a620110a7fe35b2d18c7511f5e5ede10c">filterOptions</a>[i])</div>
+<div class="line"><span class="lineno">  505</span>                {</div>
+<div class="line"><span class="lineno">  506</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  507</span>                    <span class="keywordflow">if</span> (text.Contains(<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>[i]))</div>
+<div class="line"><span class="lineno">  508</span>                    {</div>
+<div class="line"><span class="lineno">  509</span>                        <a class="code hl_property" href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">flag</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  510</span>                    }</div>
+<div class="line"><span class="lineno">  511</span>                    flag2 = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  512</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  513</span>                }</div>
-<div class="line"><span class="lineno">  514</span>            }</div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">flag</a> &amp;&amp; flag2)</div>
-<div class="line"><span class="lineno">  516</span>            {</div>
-<div class="line"><span class="lineno">  517</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Block;</div>
-<div class="line"><span class="lineno">  518</span>            }</div>
-<div class="line"><span class="lineno">  519</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Pass;</div>
-<div class="line"><span class="lineno">  520</span>        }</div>
+<div class="line"><span class="lineno">  513</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  514</span>                    <span class="keywordflow">if</span> (text.Contains(<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>[i]))</div>
+<div class="line"><span class="lineno">  515</span>                    {</div>
+<div class="line"><span class="lineno">  516</span>                        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Block;</div>
+<div class="line"><span class="lineno">  517</span>                    }</div>
+<div class="line"><span class="lineno">  518</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  519</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  520</span>                    <span class="keywordflow">if</span> (text.Contains(<a class="code hl_property" href="classWindow_1_1SaveData.html#af284d753879867275d5005631e47d9d4">filterStrs</a>[i]))</div>
+<div class="line"><span class="lineno">  521</span>                    {</div>
+<div class="line"><span class="lineno">  522</span>                        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.PassWithoutFurtherTest;</div>
+<div class="line"><span class="lineno">  523</span>                    }</div>
+<div class="line"><span class="lineno">  524</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  525</span>                }</div>
+<div class="line"><span class="lineno">  526</span>            }</div>
+<div class="line"><span class="lineno">  527</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">flag</a> &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno">  528</span>            {</div>
+<div class="line"><span class="lineno">  529</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Block;</div>
+<div class="line"><span class="lineno">  530</span>            }</div>
+<div class="line"><span class="lineno">  531</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Pass;</div>
+<div class="line"><span class="lineno">  532</span>        }</div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_a204a9ffea263f94b419c3d2654cf5a63"><div class="ttname"><a href="classWindow_1_1SaveData.html#a204a9ffea263f94b419c3d2654cf5a63">Window.SaveData.flag</a></div><div class="ttdeci">ContainerFlag flag</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00266">Window.cs:267</a></div></div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_ab53756696fc8cdb01ffe31f1e9a09df8"><div class="ttname"><a href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">Window.SaveData.FilterResult</a></div><div class="ttdeci">FilterResult</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00108">Window.cs:109</a></div></div>
 </div><!-- fragment -->
@@ -508,10 +510,10 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00551">551</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  552</span>        {</div>
-<div class="line"><span class="lineno">  553</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[0] = (int)<a class="code hl_variable" href="classWindow_1_1SaveData.html#aa238f63173be7843f7de10b3685eaf3f">b1</a>.<a class="code hl_variable" href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">Bits</a>;</div>
-<div class="line"><span class="lineno">  554</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00563">563</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  564</span>        {</div>
+<div class="line"><span class="lineno">  565</span>            <a class="code hl_variable" href="classWindow_1_1SaveData.html#af599801dd339d292094a5dda55d69d91">ints</a>[0] = (int)<a class="code hl_variable" href="classWindow_1_1SaveData.html#aa238f63173be7843f7de10b3685eaf3f">b1</a>.<a class="code hl_variable" href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">Bits</a>;</div>
+<div class="line"><span class="lineno">  566</span>        }</div>
 <div class="ttc" id="aclassWindow_1_1SaveData_html_aa238f63173be7843f7de10b3685eaf3f"><div class="ttname"><a href="classWindow_1_1SaveData.html#aa238f63173be7843f7de10b3685eaf3f">Window.SaveData.b1</a></div><div class="ttdeci">BitArray32 b1</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00130">Window.cs:130</a></div></div>
 <div class="ttc" id="astructBitArray32_html_a83496c94eb91a5bb1d40d561f8fdf479"><div class="ttname"><a href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">BitArray32.Bits</a></div><div class="ttdeci">uint Bits</div><div class="ttdef"><b>Definition:</b> <a href="BitArray32_8cs_source.html#l00006">BitArray32.cs:6</a></div></div>
 </div><!-- fragment -->
@@ -534,7 +536,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00125">125</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00522">Window.SaveData.BuildFilter()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00566">Window.SaveData.CopyFrom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00534">Window.SaveData.BuildFilter()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00578">Window.SaveData.CopyFrom()</a>.</p>
 
 </div>
 </div>
@@ -552,7 +554,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00130">130</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00551">Window.SaveData.OnSerializing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00563">Window.SaveData.OnSerializing()</a>.</p>
 
 </div>
 </div>
@@ -570,7 +572,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00119">119</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02337">Chara._Move()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00566">Window.SaveData.CopyFrom()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">ThingContainer.GetDest()</a>, and <a class="el" href="Zone_8cs_source.html#l01994">Zone.TryAddThingInSharedContainer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02337">Chara._Move()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00578">Window.SaveData.CopyFrom()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">ThingContainer.GetDest()</a>, and <a class="el" href="Zone_8cs_source.html#l01994">Zone.TryAddThingInSharedContainer()</a>.</p>
 
 </div>
 </div>
@@ -588,7 +590,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00122">122</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00522">Window.SaveData.BuildFilter()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00566">Window.SaveData.CopyFrom()</a>, and <a class="el" href="UIInventory_8cs_source.html#l00450">UIInventory.RefreshMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00534">Window.SaveData.BuildFilter()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00578">Window.SaveData.CopyFrom()</a>, and <a class="el" href="UIInventory_8cs_source.html#l00450">UIInventory.RefreshMenu()</a>.</p>
 
 </div>
 </div>
@@ -606,7 +608,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00128">128</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00522">Window.SaveData.BuildFilter()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00486">Window.SaveData.IsFilterPass()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00534">Window.SaveData.BuildFilter()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00498">Window.SaveData.IsFilterPass()</a>.</p>
 
 </div>
 </div>
@@ -624,7 +626,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00116">116</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00557">Window.SaveData._OnDeserialized()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00566">Window.SaveData.CopyFrom()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00551">Window.SaveData.OnSerializing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00569">Window.SaveData._OnDeserialized()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00578">Window.SaveData.CopyFrom()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00563">Window.SaveData.OnSerializing()</a>.</p>
 
 </div>
 </div>
@@ -734,7 +736,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  204</span>        }</div>
 <div class="ttc" id="aRectPosition_8cs_html_a3710d51f7d4efe0dcd0dc570ee11f623"><div class="ttname"><a href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a></div><div class="ttdeci">RectPosition</div><div class="ttdef"><b>Definition:</b> <a href="RectPosition_8cs_source.html#l00001">RectPosition.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00958">Window.Init()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01081">Window.UpdateSaveData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01093">Window.UpdateSaveData()</a>.</p>
 
 </div>
 </div>
@@ -955,7 +957,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  299</span>            }</div>
 <div class="line"><span class="lineno">  300</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00958">Window.Init()</a>, <a class="el" href="UIInventory_8cs_source.html#l00450">UIInventory.RefreshMenu()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01582">Window.SetAnchor()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01081">Window.UpdateSaveData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>, <a class="el" href="UIInventory_8cs_source.html#l00450">UIInventory.RefreshMenu()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01594">Window.SetAnchor()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01093">Window.UpdateSaveData()</a>.</p>
 
 </div>
 </div>
@@ -1062,9 +1064,9 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  142</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classWindow_1_1SaveData.html#abe5a61305a41eaf07edc1869813794fc">_filterStrs</a>;</div>
 <div class="line"><span class="lineno">  143</span>            }</div>
 <div class="line"><span class="lineno">  144</span>        }</div>
-<div class="ttc" id="aclassWindow_1_1SaveData_html_a1f259837b501869f9fba38e3a18b600c"><div class="ttname"><a href="classWindow_1_1SaveData.html#a1f259837b501869f9fba38e3a18b600c">Window.SaveData.BuildFilter</a></div><div class="ttdeci">string[] BuildFilter()</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00522">Window.cs:522</a></div></div>
+<div class="ttc" id="aclassWindow_1_1SaveData_html_a1f259837b501869f9fba38e3a18b600c"><div class="ttname"><a href="classWindow_1_1SaveData.html#a1f259837b501869f9fba38e3a18b600c">Window.SaveData.BuildFilter</a></div><div class="ttdeci">string[] BuildFilter()</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00534">Window.cs:534</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00522">Window.SaveData.BuildFilter()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00486">Window.SaveData.IsFilterPass()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00534">Window.SaveData.BuildFilter()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00498">Window.SaveData.IsFilterPass()</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1173,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  276</span>        }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85b"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85b">ContainerFlag</a></div><div class="ttdeci">ContainerFlag</div><div class="ttdef"><b>Definition:</b> <a href="ContainerFlag_8cs_source.html#l00004">ContainerFlag.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02337">Chara._Move()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">ThingContainer.GetDest()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00486">Window.SaveData.IsFilterPass()</a>, <a class="el" href="TaskDump_8cs_source.html#l00157">TaskDump.ListThingsToPut()</a>, and <a class="el" href="Zone_8cs_source.html#l01994">Zone.TryAddThingInSharedContainer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02337">Chara._Move()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">ThingContainer.GetDest()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00498">Window.SaveData.IsFilterPass()</a>, <a class="el" href="TaskDump_8cs_source.html#l00157">TaskDump.ListThingsToPut()</a>, and <a class="el" href="Zone_8cs_source.html#l01994">Zone.TryAddThingInSharedContainer()</a>.</p>
 
 </div>
 </div>
@@ -1207,7 +1209,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  191</span>            }</div>
 <div class="line"><span class="lineno">  192</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00958">Window.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>.</p>
 
 </div>
 </div>
@@ -1426,6 +1428,42 @@ Private Member Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a04a1200a76ae8530b20711fad8ef9414" name="a04a1200a76ae8530b20711fad8ef9414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a1200a76ae8530b20711fad8ef9414">&#9670;&#160;</a></span>shiftToShowMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Window.SaveData.shiftToShowMenu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00486">486</a> of file <a class="el" href="Plugins_8UI_2Window_8cs_source.html">Window.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  487</span>        {</div>
+<div class="line"><span class="lineno">  488</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  489</span>            {</div>
+<div class="line"><span class="lineno">  490</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classWindow_1_1SaveData.html#aa238f63173be7843f7de10b3685eaf3f">b1</a>[13];</div>
+<div class="line"><span class="lineno">  491</span>            }</div>
+<div class="line"><span class="lineno">  492</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  493</span>            {</div>
+<div class="line"><span class="lineno">  494</span>                <a class="code hl_variable" href="classWindow_1_1SaveData.html#aa238f63173be7843f7de10b3685eaf3f">b1</a>[13] = value;</div>
+<div class="line"><span class="lineno">  495</span>            }</div>
+<div class="line"><span class="lineno">  496</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="UIInventory_8cs_source.html#l00450">UIInventory.RefreshMenu()</a>.</p>
+
+</div>
+</div>
 <a id="a8e09d465c2e9570b9229f9fe91d2bf5f" name="a8e09d465c2e9570b9229f9fe91d2bf5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e09d465c2e9570b9229f9fe91d2bf5f">&#9670;&#160;</a></span>size</h2>
 
@@ -1632,7 +1670,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  179</span>            }</div>
 <div class="line"><span class="lineno">  180</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00958">Window.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>.</p>
 
 </div>
 </div>
@@ -1668,7 +1706,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  155</span>            }</div>
 <div class="line"><span class="lineno">  156</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00386">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00431">LayerInventory.CreateContainerPC()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00958">Window.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerInventory_8cs_source.html#l00386">LayerInventory.CreateContainerAlly()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00431">LayerInventory.CreateContainerPC()</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>.</p>
 
 </div>
 </div>
@@ -1704,7 +1742,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  167</span>            }</div>
 <div class="line"><span class="lineno">  168</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00958">Window.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>.</p>
 
 </div>
 </div>

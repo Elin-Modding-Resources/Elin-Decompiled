@@ -1,5 +1,6 @@
 var NAVTREEINDEX63 =
 {
+"classGameSetting.html":[1,0,505],
 "classGameSetting.html#a02eff0a48b11e983f71eb91a52bb0a78":[1,0,505,34],
 "classGameSetting.html#a203996622993c5e8ee52e7dfe564a379":[1,0,505,22],
 "classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67":[1,0,505,27],
@@ -248,6 +249,5 @@ var NAVTREEINDEX63 =
 "classGauge.html#a110cf1f7bed9cc59da2dabe51aec0323":[1,0,507,0],
 "classGauge.html#a141ddfea6150f21af106aaa3c41b3029":[1,0,507,3],
 "classGauge.html#a163ecdc667c5f09aa030072d9cef6397":[1,0,507,7],
-"classGauge.html#a315f5c92134a16df813fb5df505db53e":[1,0,507,1],
-"classGauge.html#a34b419cd84810594f07b84a39931c2d9":[1,0,507,15]
+"classGauge.html#a315f5c92134a16df813fb5df505db53e":[1,0,507,1]
 };

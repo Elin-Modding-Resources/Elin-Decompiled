@@ -44,6 +44,7 @@ var classWindow_1_1SaveData =
     [ "open", "classWindow_1_1SaveData.html#abf3682047ad49809238948df84a18890", null ],
     [ "priority", "classWindow_1_1SaveData.html#a7caa433f2f132e06a053e365c17402ec", null ],
     [ "sharedType", "classWindow_1_1SaveData.html#a0267cb7ac45c8bb1620e9c8506867f62", null ],
+    [ "shiftToShowMenu", "classWindow_1_1SaveData.html#a04a1200a76ae8530b20711fad8ef9414", null ],
     [ "size", "classWindow_1_1SaveData.html#a8e09d465c2e9570b9229f9fe91d2bf5f", null ],
     [ "sort_ascending", "classWindow_1_1SaveData.html#a0feba8777383bef50ec218d91d116176", null ],
     [ "sortMode", "classWindow_1_1SaveData.html#a5da5b0aa636e8e0ba37ca14e70b54420", null ],

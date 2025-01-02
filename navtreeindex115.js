@@ -1,5 +1,9 @@
 var NAVTREEINDEX115 =
 {
+"classTraitLoytel.html#ac53844a5ad9188df790abc3ad4db7441":[1,0,1585,1],
+"classTraitLoytel.html#ad7f4e03ba1079b4bd6cc36e55d4ce73d":[1,0,1585,0],
+"classTraitLoytelMart.html":[1,0,1586],
+"classTraitLoytelMart.html#a029e6a9a12587279c405edfd8ab22402":[1,0,1586,3],
 "classTraitLoytelMart.html#a0c82ada3b22c9c9aa0413fb104e7ebc1":[1,0,1586,4],
 "classTraitLoytelMart.html#a2c3f989012a1bbbabc467c7794e66c6c":[1,0,1586,5],
 "classTraitLoytelMart.html#a3a3cb3daed684b4a9afd4bb9c6d3cbf8":[1,0,1586,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitNola.html":[1,0,1645],
 "classTraitNola.html#a2d3973f59a50ca94708145aa5a20e545":[1,0,1645,1],
 "classTraitNola.html#a376fa5937ae4878a433ad8b1c02e8947":[1,0,1645,2],
-"classTraitNola.html#a694337ae9d9513218531d20abf7c6ad4":[1,0,1645,4],
-"classTraitNola.html#a7ab27b3957b1cb0c6e9d21616f9dce30":[1,0,1645,3],
-"classTraitNola.html#ae6222b9c6697d78a3afc2e25a0769477":[1,0,1645,0],
-"classTraitNote.html":[1,0,1646],
-"classTraitNote.html#a1bf55d03433108430137e481eb6b94d6":[1,0,1646,2]
+"classTraitNola.html#a694337ae9d9513218531d20abf7c6ad4":[1,0,1645,4]
 };

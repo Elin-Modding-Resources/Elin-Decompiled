@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"classGauge.html#a34b419cd84810594f07b84a39931c2d9":[1,0,507,15],
 "classGauge.html#a36034b60b7f8164dd0625448920fd0d5":[1,0,507,2],
 "classGauge.html#a40facaa1259c3ffd4ee32063991142f5":[1,0,507,9],
 "classGauge.html#a5a41185a0cf4d6d3fa5cae2d9d412894":[1,0,507,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "classGradientEffect.html#a399d0bce1c7f19a31b46943956e90b15":[1,0,541,8],
 "classGradientEffect.html#a3fdd0e6b754d0cb7c994cc88f962ac95":[1,0,541,4],
 "classGradientEffect.html#a574655a56da1f8c4792fc09234253722":[1,0,541,1],
-"classGradientEffect.html#a5cd2fb271f3a7bd2ebb53a4d80db35a8":[1,0,541,3],
-"classGradientEffect.html#a78e89801cae0fe981c77920abfeeece0":[1,0,541,0]
+"classGradientEffect.html#a5cd2fb271f3a7bd2ebb53a4d80db35a8":[1,0,541,3]
 };
