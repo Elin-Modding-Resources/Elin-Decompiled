@@ -483,6 +483,18 @@ public class Window : MonoBehaviour, IChangeResolution, IUISkin
 			}
 		}
 
+		public bool shiftToShowMenu
+		{
+			get
+			{
+				return b1[13];
+			}
+			set
+			{
+				b1[13] = value;
+			}
+		}
+
 		public FilterResult IsFilterPass(string text)
 		{
 			bool flag = false;
@@ -1610,7 +1622,7 @@ public class Window : MonoBehaviour, IChangeResolution, IUISkin
 		isTop = InputModuleEX.GetComponentOf<Window>() == this;
 		if (isFloat && (bool)cgFloatMenu && cgFloatMenu.enabled)
 		{
-			bool flag = InputModuleEX.IsPointerOver(this);
+			bool flag = InputModuleEX.IsPointerOver(this) && (saveData == null || !saveData.shiftToShowMenu || Input.GetKey(KeyCode.LeftShift));
 			floatAlpha = Mathf.Clamp(floatAlpha + (flag ? 2f : (-2f)) * Time.deltaTime * 1.5f, 0.5f, 1f);
 			if ((bool)cgBG)
 			{
