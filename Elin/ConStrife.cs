@@ -19,12 +19,26 @@ public class ConStrife : BaseBuff
 
 	public int ExpToNext => (lv + 1) * (lv + 1);
 
-	public void AddKill()
+	public void AddKill(Chara c)
 	{
-		exp++;
-		if (exp >= ExpToNext)
+		if (c.IsPCFactionOrMinion)
 		{
-			exp = 0;
+			if (c.IsMinion)
+			{
+				exp += 2;
+			}
+			else
+			{
+				exp += 30;
+			}
+		}
+		else
+		{
+			exp++;
+		}
+		while (exp >= ExpToNext)
+		{
+			exp -= ExpToNext;
 			lv++;
 		}
 		SetTurn();
@@ -32,7 +46,7 @@ public class ConStrife : BaseBuff
 
 	public Dice GetDice()
 	{
-		return new Dice(1, 1 + lv * 2);
+		return new Dice(1, 1 + Mathf.Min(lv, 10) * 2);
 	}
 
 	public void SetTurn()

@@ -675,6 +675,14 @@ public class UIInventory : EMono
 							data.compress = a;
 							SE.ClickOk();
 						});
+						if (!con2.IsPC)
+						{
+							uIContextMenu5.AddToggle("toggleShiftToShowMenu", data.shiftToShowMenu, delegate(bool a)
+							{
+								data.shiftToShowMenu = a;
+								SE.ClickOk();
+							});
+						}
 					}
 					if (con2.IsPC)
 					{

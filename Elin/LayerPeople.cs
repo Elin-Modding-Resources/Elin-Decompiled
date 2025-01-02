@@ -41,17 +41,14 @@ public class LayerPeople : ELayer
 		{
 			multi.AddOwner(0, new ListPeople
 			{
-				textTab = "residents",
 				memberType = FactionMemberType.Default
 			});
 			multi.AddOwner(0, new ListPeople
 			{
-				textTab = "livestock",
 				memberType = FactionMemberType.Livestock
 			});
 			multi.AddOwner(0, new ListPeople
 			{
-				textTab = "guests",
 				memberType = FactionMemberType.Guest
 			});
 			langHint = "h_residents";

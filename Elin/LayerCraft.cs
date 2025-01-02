@@ -322,6 +322,15 @@ public class LayerCraft : LayerBaseCraft
 					{
 						Recipe o2 = Recipe.Create(item);
 						list.Add(o2);
+						if (item.row.skins != null && item.row.skins.Length != 0)
+						{
+							for (int j = 0; j < item.row.skins.Length; j++)
+							{
+								o2 = Recipe.Create(item);
+								o2.idSkin = j + 1;
+								list.Add(o2);
+							}
+						}
 					}
 					SourceCategory.Row row = item.row.Category.GetSecondRoot();
 					if (row.id != "lightsource" && row.IsChildOf("armor"))

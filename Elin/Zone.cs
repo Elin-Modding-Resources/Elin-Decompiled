@@ -1929,7 +1929,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				foreach (Card item2 in item.ListCards())
 				{
-					if (item2.IsContainer && !item2.trait.IsSpecialContainer)
+					if (item2.IsContainer && !(item2.trait is TraitDeliveryChest))
 					{
 						list.Add(item2.Thing);
 					}
@@ -2030,7 +2030,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				{
 					thing = EClass.game.cards.container_shipping;
 				}
-				if ((!sharedOnly || thing.IsSharedContainer) && thing.c_lockLv <= 0 && (thing.things.Count < thing.things.MaxCapacity || thing.things.CanStack(t) != null))
+				if ((!sharedOnly || thing.IsSharedContainer) && thing.c_lockLv <= 0 && (thing.things.Count < thing.things.MaxCapacity || thing.things.CanStack(t) != t))
 				{
 					Window.SaveData windowSaveData = thing.GetWindowSaveData();
 					if (windowSaveData != null)

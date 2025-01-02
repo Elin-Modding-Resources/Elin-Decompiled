@@ -40,7 +40,7 @@ public class HomeResourceWorth : HomeResourceRate
 		}
 		if (top && branch.policies.IsActive(2821))
 		{
-			num = num * (150 + (int)Mathf.Sqrt(branch.Evalue(2821)) * 5) / 100;
+			num = (int)((long)num * (long)(150 + (int)Mathf.Sqrt(branch.Evalue(2821)) * 5) / 100);
 		}
 		return num;
 	}
@@ -120,7 +120,8 @@ public class HomeResourceWorth : HomeResourceRate
 			}
 		}
 		int num7 = branch.Evalue(3780) + branch.Evalue(3781) + branch.Evalue(3782) + branch.Evalue(3783) + branch.Evalue(3784);
-		branch.tourism = (int)((100 + num) * (100 + num7 * 15) / 100);
+		num = (100 + num) * (100 + num7 * 15) / 100;
+		branch.tourism = (int)num;
 		list2.Sort((Thing a, Thing b) => GetPrice(b) - GetPrice(a));
 		for (int i = 0; i < branch.NumHeirloom && i < list2.Count; i++)
 		{

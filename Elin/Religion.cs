@@ -362,7 +362,7 @@ public class Religion : EClass
 				thing.c_idDeity = EClass.game.religions.Trickery.id;
 				break;
 			case "warmonger":
-				if (value.id == 423 || value.id == 463 || value.id == 460 || value.id == 464 || value.id == 465)
+				if (value.id == 468 || value.id == 423 || value.id == 463 || value.id == 460 || value.id == 464 || value.id == 465)
 				{
 					value.vExp = -1;
 				}

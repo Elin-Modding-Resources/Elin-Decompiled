@@ -117,9 +117,9 @@ public class WidgetDate : Widget
 		{
 			text += item2.TextWidgetDate;
 		}
-		if (EMono.Branch != null && EMono.Branch.luckyDay)
+		if (EMono.Branch != null && EMono.Branch.luckyMonth)
 		{
-			text = text + " " + "lucky_day".lang().TagColor(Msg.colors.colors["save"]);
+			text = text + " " + "lucky_month".lang().TagColor(Msg.colors.colors["save"]);
 		}
 		if (EMono.debug.enable)
 		{

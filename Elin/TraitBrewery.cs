@@ -107,7 +107,7 @@ public class TraitBrewery : TraitContainer
 			c.c_priceAdd = thing.GetValue() * 125 / 100;
 		}
 		OnProduce(c);
-		owner.AddThing(c.Thing, tryStack: false);
+		owner.AddThing(c.Thing);
 		owner.GetRootCard().Say(idMsg, thing, c);
 		return false;
 	}

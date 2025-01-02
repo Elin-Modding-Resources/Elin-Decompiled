@@ -905,6 +905,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
+			EClass.pc.SetFeat(1355);
 			foreach (Chara chara in EClass._map.charas)
 			{
 				chara.ModAffinity(EClass.pc, -100 + EScriptable.rnd(200));

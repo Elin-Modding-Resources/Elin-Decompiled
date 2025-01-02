@@ -55,7 +55,10 @@ public class FactionBranch : EClass
 	public int incomeShop;
 
 	[JsonProperty]
-	public bool luckyDay;
+	public bool luckyMonth;
+
+	[JsonProperty]
+	public bool luckyMonthDone;
 
 	[JsonProperty]
 	public GStability stability = new GStability
@@ -376,10 +379,14 @@ public class FactionBranch : EClass
 			int num8 = 3 + lv + Evalue(2206) / 5 + Evalue(3702) * 2 + Evalue(2202) / 2;
 			num8 = num8 * (100 + Evalue(3702) * 20 + Evalue(2206)) / 100;
 			num8 = num8 * (100 + (int)Mathf.Sqrt(Evalue(2811)) * 3) / 100;
+			if (luckyMonth)
+			{
+				num8 = num8 * 2 + 5;
+			}
 			if (EClass._map.CountGuest() < num8)
 			{
 				Chara chara;
-				if (policies.IsActive(2822) && Mathf.Sqrt(Evalue(2822) / 2) + 5f >= (float)EClass.rnd(100))
+				if (luckyMonth || (policies.IsActive(2822) && Mathf.Sqrt(Evalue(2822) / 2) + 5f >= (float)EClass.rnd(100)))
 				{
 					chara = CharaGen.CreateWealthy(ContentLV);
 					EClass._zone.AddCard(chara, EClass._zone.GetSpawnPos(SpawnPosition.Random) ?? EClass._map.GetRandomSurface());
@@ -433,7 +440,10 @@ public class FactionBranch : EClass
 		}
 		if (date.hour == 5)
 		{
-			DailyOutcome(date);
+			for (int j = 0; j < ((!luckyMonth) ? 1 : 2); j++)
+			{
+				DailyOutcome(date);
+			}
 			GenerateGarbage(date);
 			if (!date.IsRealTime)
 			{
@@ -454,7 +464,7 @@ public class FactionBranch : EClass
 		{
 			foreach (Chara item2 in EClass._map.charas.Where((Chara c) => c.memberType == FactionMemberType.Guest).ToList())
 			{
-				for (int j = 0; j < 3; j++)
+				for (int k = 0; k < 3; k++)
 				{
 					AI_Shopping.TryShop(item2, realtime: false);
 				}
@@ -531,18 +541,31 @@ public class FactionBranch : EClass
 			member2.c_isPrayed = false;
 			member2.c_isTrained = false;
 		}
-		luckyDay = (float)((EClass.pc.faith == EClass.game.religions.Luck) ? 50 : 10) + Mathf.Sqrt(Evalue(2118)) * 5f > (float)EClass.rnd(2000);
-		if (EClass.debug.enable)
+		if (date.day != 1)
 		{
-			luckyDay = true;
+			return;
 		}
-		if (luckyDay)
+		luckyMonth = false;
+		if (date.month == 1)
 		{
-			Log("lucky_day", EClass._zone.Name);
-			if (date.IsRealTime)
+			luckyMonthDone = false;
+		}
+		if (!luckyMonthDone)
+		{
+			bool flag = EClass.pc.faith == EClass.game.religions.Luck;
+			luckyMonth = (float)(flag ? 30 : 5) + Mathf.Sqrt(Evalue(2118)) * (float)(flag ? 4 : 2) > (float)EClass.rnd(720);
+			if (EClass.debug.enable)
 			{
-				Msg.Say("lucky_day", EClass._zone.Name);
+				luckyMonth = true;
+			}
+			if (luckyMonth)
+			{
+				Log("lucky_month", EClass._zone.Name);
+				Msg.Say("lucky_month", EClass._zone.Name);
+				Msg.Say("umi");
 				SE.Play("godbless");
+				EClass.world.SendPackage(ThingGen.Create("book_kumiromi"));
+				luckyMonthDone = true;
 			}
 		}
 	}
@@ -1499,7 +1522,7 @@ public class FactionBranch : EClass
 		int num = 0;
 		foreach (Chara member in members)
 		{
-			if (member.memberType == type && member.trait.IsCountAsResident && (!onlyAlive || !member.isDead))
+			if (member.memberType == type && (!onlyAlive || !member.isDead) && (type != 0 || member.trait.IsCountAsResident))
 			{
 				num++;
 			}

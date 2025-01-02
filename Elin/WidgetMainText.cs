@@ -18,6 +18,8 @@ public class WidgetMainText : Widget
 
 	public static MsgBox boxBk;
 
+	public static bool ignoreStack;
+
 	public MsgBox box;
 
 	private UIItem currentItem;
@@ -122,7 +124,7 @@ public class WidgetMainText : Widget
 		{
 			s += " ";
 		}
-		if (MsgBlock.lastBlock != null && MsgBlock.lastText == s)
+		if (MsgBlock.lastBlock != null && MsgBlock.lastText == s && !ignoreStack)
 		{
 			MsgBlock lastBlock = MsgBlock.lastBlock;
 			if (lastBlock.txt != null)

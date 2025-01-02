@@ -380,6 +380,10 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 								c.SetInt(36, EClass.world.date.GetRaw() + 14400);
 							}
 							EClass.Branch.ChangeMemberType(c, (c.memberType != FactionMemberType.Livestock) ? FactionMemberType.Livestock : FactionMemberType.Default);
+							foreach (ListOwner owner in layer.multi.owners)
+							{
+								owner.RefreshTab();
+							}
 							List();
 							SE.Click();
 						}
@@ -390,12 +394,14 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						{
 							SE.Beep();
 							Msg.Say("reserveLimit");
+							return;
 						}
-						else
+						SE.MoveZone();
+						EClass.Home.AddReserve(c);
+						list.List();
+						foreach (ListOwner owner2 in layer.multi.owners)
 						{
-							SE.MoveZone();
-							EClass.Home.AddReserve(c);
-							list.List();
+							owner2.RefreshTab();
 						}
 					});
 				}

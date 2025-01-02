@@ -33,7 +33,7 @@ public class UIMultiList : MonoBehaviour
 		o.main = i == 0;
 		if (!Double && addTab)
 		{
-			o.window.AddTab(o.TextTab);
+			o.tab = o.window.AddTab(o.TextTab);
 		}
 		o.OnCreate();
 	}

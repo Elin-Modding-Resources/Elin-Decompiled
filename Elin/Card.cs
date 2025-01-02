@@ -3915,6 +3915,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!isDestroyed)
 			{
 				Die(e, origin, attackSource);
+				if (EClass.pc.Evalue(1355) > 0 && (IsPCFactionOrMinion || (origin != null && origin.IsPCParty)))
+				{
+					ConStrife conStrife = (EClass.pc.AddCondition<ConStrife>() as ConStrife) ?? EClass.pc.GetCondition<ConStrife>();
+					if (conStrife != null && isChara)
+					{
+						conStrife.AddKill(Chara);
+					}
+				}
 			}
 			if (origin != null && origin.isChara)
 			{
@@ -3937,10 +3945,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						EClass.pc.ModCurrency(a2);
 						SE.Pay();
 					}
-				}
-				if (origin.IsPCParty && EClass.pc.Evalue(1355) > 0)
-				{
-					((EClass.pc.AddCondition<ConStrife>() as ConStrife) ?? EClass.pc.GetCondition<ConStrife>())?.AddKill();
 				}
 				if (origin.GetInt(106) == 0)
 				{
@@ -4437,7 +4441,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (flag2 && !isUserZone)
 		{
 			string text = Chara.race.corpse[0];
-			if (text == "_meat" && EClass.rnd(10) == 0)
+			bool num2 = text == "_meat";
+			int num3 = 10;
+			if (AI_Slaughter.slaughtering)
+			{
+				num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
+			}
+			if (num2 && num3 > EClass.rnd(100))
 			{
 				text = "meat_marble";
 			}
@@ -4461,10 +4471,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			foreach (string item2 in sourceCard.loot.Concat(Chara.race.loot).ToList())
 			{
 				string[] array = item2.Split('/');
-				int num2 = array[1].ToInt();
-				if (num2 >= 1000 || num2 > EClass.rnd(1000) || EClass.debug.godMode)
+				int num4 = array[1].ToInt();
+				if (num4 >= 1000 || num4 > EClass.rnd(1000) || EClass.debug.godMode)
 				{
-					list.Add(ThingGen.Create(array[0]).SetNum((num2 < 1000) ? 1 : (num2 / 1000 + ((EClass.rnd(1000) > num2 % 1000) ? 1 : 0))));
+					list.Add(ThingGen.Create(array[0]).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) > num4 % 1000) ? 1 : 0))));
 				}
 			}
 			if (race.IsMachine)
@@ -4502,19 +4512,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isBackerContent && !flag)
 			{
-				int num3 = ((EClass._zone.Boss == this) ? 2 : ((this.rarity >= Rarity.Legendary) ? 1 : 0));
+				int num5 = ((EClass._zone.Boss == this) ? 2 : ((this.rarity >= Rarity.Legendary) ? 1 : 0));
 				if (EClass._zone is Zone_Void)
 				{
-					num3++;
+					num5++;
 				}
 				if (EClass.rnd(5) == 0)
 				{
-					num3++;
+					num5++;
 				}
 				string text2 = id;
 				if (text2 == "big_daddy" || text2 == "santa")
 				{
-					num3 += 2;
+					num5 += 2;
 				}
 				List<Thing> list2 = new List<Thing>();
 				foreach (Thing thing4 in things)
@@ -4543,33 +4553,33 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						list.Add(thing4);
 					}
 				}
-				if (num3 > 0 && list2.Count > 0)
+				if (num5 > 0 && list2.Count > 0)
 				{
 					list2.Shuffle();
-					for (int j = 0; j < list2.Count && j < num3; j++)
+					for (int j = 0; j < list2.Count && j < num5; j++)
 					{
 						list.Add(list2[j]);
-						num3--;
+						num5--;
 					}
 				}
 				if (this.rarity >= Rarity.Legendary && !IsUnique && c_bossType != BossType.Evolved)
 				{
-					int num4 = 0;
+					int num6 = 0;
 					foreach (Card item3 in list)
 					{
 						if (item3.rarity >= Rarity.Legendary || item3.IsContainer)
 						{
-							num4++;
+							num6++;
 						}
 					}
-					if (num4 == 0)
+					if (num6 == 0)
 					{
-						int num5 = ((!(EClass._zone is Zone_Void)) ? 1 : 2);
-						if (num3 < num5)
+						int num7 = ((!(EClass._zone is Zone_Void)) ? 1 : 2);
+						if (num5 < num7)
 						{
-							num3 = num5;
+							num5 = num7;
 						}
-						for (int k = 0; k < num3; k++)
+						for (int k = 0; k < num5; k++)
 						{
 							Rand.SetSeed(uid + k);
 							if (EClass.rnd((EClass._zone.events.GetEvent<ZoneEventDefenseGame>() != null) ? 3 : 2) == 0)

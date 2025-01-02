@@ -26,6 +26,8 @@ public class ListOwner : EClass
 
 	public WindowMenu menu;
 
+	public Window.Setting.Tab tab;
+
 	public string textTab;
 
 	public string textHeader;
@@ -90,6 +92,11 @@ public class ListOwner : EClass
 	{
 		window.menuLeft.Clear();
 		window.menuRight.Clear();
+	}
+
+	public void RefreshTab()
+	{
+		tab.button.mainText.SetText(TextTab);
 	}
 
 	public void MoveToOther(object c)

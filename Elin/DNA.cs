@@ -255,6 +255,7 @@ public class DNA : EClass
 	{
 		type = _type;
 		cost = 0;
+		slot = 0;
 		vals.Clear();
 		Debug.Log(seed);
 		Rand.SetSeed(seed);
