@@ -15,6 +15,11 @@ public class GameSerializationBinder : DefaultSerializationBinder, ISerializatio
 		catch (Exception ex)
 		{
 			Debug.LogError(ex.Message);
+			Debug.LogError(assemblyName + "/" + typeName);
+			if (typeName.Contains("Quest"))
+			{
+				return typeof(QuestDummy);
+			}
 			return typeof(object);
 		}
 	}

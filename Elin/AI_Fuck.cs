@@ -135,7 +135,7 @@ public class AI_Fuck : AIAct
 				{
 					tc.PlaySound("brushing");
 					int num2 = cc.CHA / 2 + cc.Evalue(237) - tc.CHA * 2;
-					int num3 = ((EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) <= EClass.rnd(tc.CHA * num / 100)) ? (-5 + Mathf.Clamp(num2 / 10, -30, 0)) : (5 + Mathf.Clamp(num2 / 20, 0, 20)));
+					int num3 = ((EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) <= EClass.rnd(tc.CHA * num / 100)) ? (-5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num2 / 10, -30, 0) : 0)) : (5 + Mathf.Clamp(num2 / 20, 0, 20)));
 					int a = 20;
 					if (tc.IsPCFactionOrMinion && tc.affinity.CurrentStage >= Affinity.Stage.Love)
 					{

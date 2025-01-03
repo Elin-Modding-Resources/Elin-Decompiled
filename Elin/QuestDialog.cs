@@ -17,7 +17,7 @@ public class QuestDialog : QuestProgression
 
 	public override bool CanStartQuest()
 	{
-		if (base.source.id == "farris_tulip")
+		if (source.id == "farris_tulip")
 		{
 			return EClass.pc.faction.HasMember("farris");
 		}
@@ -26,7 +26,7 @@ public class QuestDialog : QuestProgression
 
 	public override void OnDropReward()
 	{
-		switch (base.source.id)
+		switch (source.id)
 		{
 		case "pre_debt":
 		{

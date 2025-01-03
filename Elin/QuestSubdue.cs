@@ -4,7 +4,7 @@ public class QuestSubdue : QuestInstance
 
 	public override bool FameContent => true;
 
-	public override int BaseMoney => base.source.money + EClass.curve(DangerLv, 20, 15) * 10;
+	public override int BaseMoney => source.money + EClass.curve(DangerLv, 20, 15) * 10;
 
 	public override ZoneEventQuest CreateEvent()
 	{

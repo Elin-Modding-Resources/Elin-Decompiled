@@ -7122,9 +7122,9 @@ public class Chara : Card, IPathfindWalker
 		Thing thing = ThingGen.Create("milk").SetNum(num);
 		thing.MakeRefFrom(this);
 		int num2 = base.LV - source.LV;
-		if (EClass._zone.IsUserZone && !base.IsPCFactionOrMinion)
+		if (!IsPCFaction)
 		{
-			num2 = 0;
+			num2 = ((!EClass._zone.IsUserZone) ? (num2 / 10) : 0);
 		}
 		if (num2 >= 10)
 		{

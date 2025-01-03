@@ -208,11 +208,7 @@ public class LayerLoadGame : ELayer
 							foreach (GameIndex game in GameIO.GetGameList(((!cloud) ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id + "/"))
 							{
 								Debug.Log("Processing:" + game.id + ": " + game.path);
-								if (cloud)
-								{
-									IO.DeleteFile(game.path + "/cloud.zip");
-								}
-								else
+								if (!cloud)
 								{
 									GameIO.PrepareSteamCloud(game.id, game.path);
 								}
@@ -226,10 +222,6 @@ public class LayerLoadGame : ELayer
 						if (i.cloud)
 						{
 							GameIO.PrepareSteamCloud(i.id);
-						}
-						else
-						{
-							IO.DeleteFile(i.path + "/cloud.zip");
 						}
 					}
 					catch (Exception ex)

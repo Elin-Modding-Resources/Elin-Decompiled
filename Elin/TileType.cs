@@ -79,6 +79,8 @@ public class TileType : EClass
 
 	public static TileTypeIllumination Illumination = new TileTypeIllumination();
 
+	public static TileTypeTent Tent = new TileTypeTent();
+
 	public static TileTypeSeed Seed = new TileTypeSeed();
 
 	public static TileTypeTree Tree = new TileTypeTree();

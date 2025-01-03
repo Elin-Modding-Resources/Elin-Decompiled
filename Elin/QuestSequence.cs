@@ -6,7 +6,7 @@ public class QuestSequence : Quest
 
 	public override string GetTitle()
 	{
-		string text = base.source.GetText("name", returnNull: true);
+		string text = source.GetText("name", returnNull: true);
 		if (!text.IsEmpty())
 		{
 			return text;

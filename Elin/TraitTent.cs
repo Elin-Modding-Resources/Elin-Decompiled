@@ -6,6 +6,8 @@ public class TraitTent : TraitNewZone
 
 	public override bool CreateExternalZone => true;
 
+	public override bool CanExtendBuild => true;
+
 	public override bool CanBeHeld => true;
 
 	public override int UseDist => 1;

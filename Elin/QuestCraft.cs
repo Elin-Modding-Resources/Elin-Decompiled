@@ -154,7 +154,7 @@ public class QuestCraft : Quest
 
 	public override string GetDetailText(bool onJournal = false)
 	{
-		return base.source.GetDetail().Split('|')[progress];
+		return source.GetDetail().Split('|')[progress];
 	}
 
 	public override string GetTalkProgress()
@@ -166,7 +166,7 @@ public class QuestCraft : Quest
 	{
 		if (progress != 1 || !hasSecondReq)
 		{
-			return Parse(base.source.GetText("talkComplete"));
+			return Parse(source.GetText("talkComplete"));
 		}
 		return GetDetailText();
 	}

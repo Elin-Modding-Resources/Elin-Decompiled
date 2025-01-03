@@ -4,7 +4,7 @@ public class QuestProgression : QuestSequence
 
 	public override string GetDetail(bool onJournal = false)
 	{
-		string text = base.source.GetDetail().Split('|').TryGet(onJournal ? 1 : 0);
+		string text = source.GetDetail().Split('|').TryGet(onJournal ? 1 : 0);
 		string text2 = GetTextProgress();
 		if (!text2.IsEmpty())
 		{

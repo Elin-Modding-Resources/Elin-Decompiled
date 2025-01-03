@@ -38,11 +38,12 @@ public class Steam : MonoBehaviour
 
 	public static bool HasDLC(ID_DLC id)
 	{
-		if (id != ID_DLC.BackerReward)
+		return id switch
 		{
-			_ = 2504360;
-		}
-		return EClass.core.config.HasBackerRewardCode();
+			ID_DLC.CursedManor => true, 
+			ID_DLC.BackerReward => EClass.core.config.HasBackerRewardCode(), 
+			_ => EClass.core.config.HasBackerRewardCode(), 
+		};
 	}
 
 	public static void GetAchievement(ID_Achievement id)

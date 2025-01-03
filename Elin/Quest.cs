@@ -104,7 +104,7 @@ public class Quest : EClass
 
 	public Chara chara => person.chara;
 
-	public SourceQuest.Row source => EClass.sources.quests.map[idSource];
+	public virtual SourceQuest.Row source => EClass.sources.quests.map[idSource];
 
 	public bool Confetti => false;
 

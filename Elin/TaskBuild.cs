@@ -148,7 +148,7 @@ public class TaskBuild : TaskBaseBuild
 			{
 				return HitResult.Invalid;
 			}
-			if (EClass.pc.held.TileType.IsBlockPass && pos.HasChara)
+			if (EClass.pc.held.TileType.IsBlockPass && pos.HasChara && pos.FirstChara.IsHostile(EClass.pc))
 			{
 				return HitResult.Invalid;
 			}

@@ -586,6 +586,7 @@ public class ActEffect : EClass
 			chara.SetMainElement(element.source.alias, element.Value, elemental: true);
 			chara.SetSummon(20 + power / 20 + EClass.rnd(10));
 			chara.SetLv(power / 15);
+			chara.interest = 0;
 			EClass._zone.AddCard(chara, tp.GetNearestPoint(allowBlock: false, allowChara: false));
 			chara.PlayEffect("teleport");
 			chara.MakeMinion(CC);

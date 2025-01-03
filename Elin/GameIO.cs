@@ -151,12 +151,16 @@ public class GameIO : EClass
 	{
 		Game.id = id;
 		GameIndex gameIndex = IO.LoadFile<GameIndex>(root + "/index.txt");
+		string path = root + "/game.txt";
 		if (cloud)
 		{
 			gameIndex.cloud = true;
-			Debug.Log(TryLoadSteamCloud());
+			Debug.Log(TryLoadSteamCloud(root));
 		}
-		string path = root + "/game.txt";
+		else if (!File.Exists(path))
+		{
+			Debug.Log(TryLoadSteamCloud(root));
+		}
 		return JsonConvert.DeserializeObject<Game>(IO.IsCompressed(path) ? IO.Decompress(path) : File.ReadAllText(path), jsReadGame);
 	}
 
@@ -192,34 +196,33 @@ public class GameIO : EClass
 		}
 	}
 
-	public static bool TryLoadSteamCloud()
+	public static bool TryLoadSteamCloud(string pathSave)
 	{
 		Debug.Log("LoadGame using cloud save");
-		string text = CorePath.RootSaveCloud + Game.id;
-		string text2 = text + "/cloud.zip";
-		string text3 = CorePath.RootSaveCloud + "/cloud.zip";
+		string text = pathSave + "/cloud.zip";
+		string text2 = CorePath.RootSaveCloud + "/cloud.zip";
 		bool flag = false;
 		try
 		{
-			if (!File.Exists(text2))
+			if (!File.Exists(text))
 			{
-				EClass.ui.Say("Steam Cloud save not found:" + text2);
+				EClass.ui.Say("Steam Cloud save not found:" + text);
 				return true;
 			}
-			if (File.Exists(text3))
-			{
-				File.Delete(text3);
-			}
-			File.Move(text2, text3);
-			IO.DeleteDirectory(text);
-			flag = true;
-			Directory.CreateDirectory(text);
-			ZipFile.ExtractToDirectory(text3, text);
 			if (File.Exists(text2))
 			{
 				File.Delete(text2);
 			}
-			File.Move(text3, text2);
+			File.Move(text, text2);
+			IO.DeleteDirectory(pathSave);
+			flag = true;
+			Directory.CreateDirectory(pathSave);
+			ZipFile.ExtractToDirectory(text2, pathSave);
+			if (File.Exists(text))
+			{
+				File.Delete(text);
+			}
+			File.Move(text2, text);
 		}
 		catch (Exception ex)
 		{
@@ -227,11 +230,11 @@ public class GameIO : EClass
 			if (flag)
 			{
 				Debug.Log("Try restore backup:");
-				if (Directory.Exists(text))
+				if (Directory.Exists(pathSave))
 				{
-					Directory.Delete(text);
+					Directory.Delete(pathSave);
 				}
-				File.Move(text3, text2);
+				File.Move(text2, text);
 				return true;
 			}
 			return false;
