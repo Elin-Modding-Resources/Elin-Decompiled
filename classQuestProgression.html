@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -247,8 +247,8 @@ Properties</h2></td></tr>
 <tr class="separator:a76a73ee0029b9e424237432d3600e125 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d65a4a00b2267ae5e44527dabb37643 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a><code> [get]</code></td></tr>
 <tr class="separator:a7d65a4a00b2267ae5e44527dabb37643 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb3bf5e8dca000f28bf64c8ad02308e0 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceQuest_1_1Row.html">SourceQuest.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">source</a><code> [get]</code></td></tr>
-<tr class="separator:aeb3bf5e8dca000f28bf64c8ad02308e0 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d4b1838e2ff8298b458352da6ce89b inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSourceQuest_1_1Row.html">SourceQuest.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a><code> [get]</code></td></tr>
+<tr class="separator:af5d4b1838e2ff8298b458352da6ce89b inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab69581222e68c8f86bfbfdb9adb6c2a7 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#ab69581222e68c8f86bfbfdb9adb6c2a7">Confetti</a><code> [get]</code></td></tr>
 <tr class="separator:ab69581222e68c8f86bfbfdb9adb6c2a7 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1943af00af484e18698696bc9e3afc61 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a1943af00af484e18698696bc9e3afc61">IsExpired</a><code> [get]</code></td></tr>
@@ -475,7 +475,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestProgression_8cs_source.html#l00005">5</a> of file <a class="el" href="QuestProgression_8cs_source.html">QuestProgression.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">string</span> text = base.source.GetDetail().Split(<span class="charliteral">&#39;|&#39;</span>).TryGet(onJournal ? 1 : 0);</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">string</span> text = <a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.GetDetail().Split(<span class="charliteral">&#39;|&#39;</span>).TryGet(onJournal ? 1 : 0);</div>
 <div class="line"><span class="lineno">    8</span>        <span class="keywordtype">string</span> text2 = <a class="code hl_function" href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">GetTextProgress</a>();</div>
 <div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!text2.IsEmpty())</div>
 <div class="line"><span class="lineno">   10</span>        {</div>
@@ -486,8 +486,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassGameLang_html"><div class="ttname"><a href="classGameLang.html">GameLang</a></div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00004">GameLang.cs:5</a></div></div>
 <div class="ttc" id="aclassGameLang_html_a5f9ec2b9809b7c775f07fa5bb4e126e0"><div class="ttname"><a href="classGameLang.html#a5f9ec2b9809b7c775f07fa5bb4e126e0">GameLang.Convert</a></div><div class="ttdeci">static string Convert(string text)</div><div class="ttdef"><b>Definition:</b> <a href="GameLang_8cs_source.html#l00106">GameLang.cs:106</a></div></div>
 <div class="ttc" id="aclassQuest_html_ac7af8abe8814309a575f78ba4cefef14"><div class="ttname"><a href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">Quest.GetTextProgress</a></div><div class="ttdeci">virtual string GetTextProgress()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00656">Quest.cs:656</a></div></div>
+<div class="ttc" id="aclassQuest_html_af5d4b1838e2ff8298b458352da6ce89b"><div class="ttname"><a href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">Quest.source</a></div><div class="ttdeci">virtual SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GameLang_8cs_source.html#l00106">GameLang.Convert()</a>, and <a class="el" href="Quest_8cs_source.html#l00656">Quest.GetTextProgress()</a>.</p>
+<p class="reference">References <a class="el" href="GameLang_8cs_source.html#l00106">GameLang.Convert()</a>, <a class="el" href="Quest_8cs_source.html#l00656">Quest.GetTextProgress()</a>, and <a class="el" href="Quest_8cs_source.html#l00107">Quest.source</a>.</p>
 
 </div>
 </div>

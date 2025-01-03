@@ -1,5 +1,9 @@
 var NAVTREEINDEX64 =
 {
+"classGauge.html#a110cf1f7bed9cc59da2dabe51aec0323":[1,0,507,0],
+"classGauge.html#a141ddfea6150f21af106aaa3c41b3029":[1,0,507,3],
+"classGauge.html#a163ecdc667c5f09aa030072d9cef6397":[1,0,507,7],
+"classGauge.html#a315f5c92134a16df813fb5df505db53e":[1,0,507,1],
 "classGauge.html#a34b419cd84810594f07b84a39931c2d9":[1,0,507,15],
 "classGauge.html#a36034b60b7f8164dd0625448920fd0d5":[1,0,507,2],
 "classGauge.html#a40facaa1259c3ffd4ee32063991142f5":[1,0,507,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX64 =
 "classGradientColor.html#adfad48061f2695e1dc3de28a14906c95ae257376d913f3b53cbb4a9b19d770648":[1,0,540,0,2],
 "classGradientColor.html#adffe5e9e34f579284ba8663ddf8e2be5":[1,0,540,10],
 "classGradientEffect.html":[1,0,541],
-"classGradientEffect.html#a28fa83f5c98caa4a71baa149ba9036c7":[1,0,541,5],
-"classGradientEffect.html#a399d0bce1c7f19a31b46943956e90b15":[1,0,541,8],
-"classGradientEffect.html#a3fdd0e6b754d0cb7c994cc88f962ac95":[1,0,541,4],
-"classGradientEffect.html#a574655a56da1f8c4792fc09234253722":[1,0,541,1],
-"classGradientEffect.html#a5cd2fb271f3a7bd2ebb53a4d80db35a8":[1,0,541,3]
+"classGradientEffect.html#a28fa83f5c98caa4a71baa149ba9036c7":[1,0,541,5]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -7216,9 +7216,9 @@ $(document).ready(function(){initNavTree('Chara_8cs_source.html',''); initResiza
 <div class="line"><a id="l07122" name="l07122"></a><span class="lineno"> 7122</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;milk&quot;</span>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num);</div>
 <div class="line"><a id="l07123" name="l07123"></a><span class="lineno"> 7123</span>        thing.<a class="code hl_function" href="classCard.html#a19e66c4b67a3d4cb2d8b6d6af91fd015">MakeRefFrom</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l07124" name="l07124"></a><span class="lineno"> 7124</span>        <span class="keywordtype">int</span> num2 = base.LV - source.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a>;</div>
-<div class="line"><a id="l07125" name="l07125"></a><span class="lineno"> 7125</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a> &amp;&amp; !base.IsPCFactionOrMinion)</div>
+<div class="line"><a id="l07125" name="l07125"></a><span class="lineno"> 7125</span>        <span class="keywordflow">if</span> (!IsPCFaction)</div>
 <div class="line"><a id="l07126" name="l07126"></a><span class="lineno"> 7126</span>        {</div>
-<div class="line"><a id="l07127" name="l07127"></a><span class="lineno"> 7127</span>            num2 = 0;</div>
+<div class="line"><a id="l07127" name="l07127"></a><span class="lineno"> 7127</span>            num2 = ((!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a>) ? (num2 / 10) : 0);</div>
 <div class="line"><a id="l07128" name="l07128"></a><span class="lineno"> 7128</span>        }</div>
 <div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>        <span class="keywordflow">if</span> (num2 &gt;= 10)</div>
 <div class="line"><a id="l07130" name="l07130"></a><span class="lineno"> 7130</span>        {</div>
@@ -10431,7 +10431,7 @@ $(document).ready(function(){initNavTree('Chara_8cs_source.html',''); initResiza
 <div class="ttc" id="aclassTileRow_html"><div class="ttname"><a href="classTileRow.html">TileRow</a></div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00003">TileRow.cs:4</a></div></div>
 <div class="ttc" id="aclassTileRow_html_a2b91024d771c3b36647342e5a3112d9f"><div class="ttname"><a href="classTileRow.html#a2b91024d771c3b36647342e5a3112d9f">TileRow.ignoreSnow</a></div><div class="ttdeci">bool ignoreSnow</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00006">TileRow.cs:6</a></div></div>
 <div class="ttc" id="aclassTileRow_html_af25eb59aa737f21fe5b650afbbb1a77a"><div class="ttname"><a href="classTileRow.html#af25eb59aa737f21fe5b650afbbb1a77a">TileRow.soundFoot</a></div><div class="ttdeci">string soundFoot</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00014">TileRow.cs:14</a></div></div>
-<div class="ttc" id="aclassTileType_html_af8c4f3bc2bb4282854d6cb982d2e608c"><div class="ttname"><a href="classTileType.html#af8c4f3bc2bb4282854d6cb982d2e608c">TileType.IsWater</a></div><div class="ttdeci">virtual bool IsWater</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00154">TileType.cs:154</a></div></div>
+<div class="ttc" id="aclassTileType_html_af8c4f3bc2bb4282854d6cb982d2e608c"><div class="ttname"><a href="classTileType.html#af8c4f3bc2bb4282854d6cb982d2e608c">TileType.IsWater</a></div><div class="ttdeci">virtual bool IsWater</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00156">TileType.cs:156</a></div></div>
 <div class="ttc" id="aclassTimeTable_html"><div class="ttname"><a href="classTimeTable.html">TimeTable</a></div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00003">TimeTable.cs:4</a></div></div>
 <div class="ttc" id="aclassTimeTable_html_a5dd8c28515bb20af039e10adc2198fa0"><div class="ttname"><a href="classTimeTable.html#a5dd8c28515bb20af039e10adc2198fa0">TimeTable.GetSpan</a></div><div class="ttdeci">static Span GetSpan(string id, int hour)</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00045">TimeTable.cs:45</a></div></div>
 <div class="ttc" id="aclassTimeTable_html_a5dfca6cd01d10eff1082af7ac6ede158"><div class="ttname"><a href="classTimeTable.html#a5dfca6cd01d10eff1082af7ac6ede158">TimeTable.Span</a></div><div class="ttdeci">Span</div><div class="ttdef"><b>Definition:</b> <a href="TimeTable_8cs_source.html#l00005">TimeTable.cs:6</a></div></div>

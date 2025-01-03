@@ -1,5 +1,9 @@
 var NAVTREEINDEX61 =
 {
+"classFaction.html#a5ffb86a22f0bdca1b0efa71d0bb3d21e":[1,0,473,36],
+"classFaction.html#a6694bb5bb34a1518821e566446ffc3e6":[1,0,473,40],
+"classFaction.html#a689b2278be1ded0fce3a9d259d6ccb2b":[1,0,473,22],
+"classFaction.html#a68b943cbe2a8a8f2816b37a720417226":[1,0,473,3],
 "classFaction.html#a68c25eb74760ce369874b698579ee1c7":[1,0,473,37],
 "classFaction.html#a69acebee7fa06e42b99f28d147dbddef":[1,0,473,2],
 "classFaction.html#a7240c1aaa22259a1efba8fd0f3967a67":[1,0,473,39],
@@ -245,9 +249,5 @@ var NAVTREEINDEX61 =
 "classFontSource.html#ade9d74b132cc3b7dc64a4da2109c14d6":[1,0,485,2],
 "classFontSource.html#ae1185416a8d5703566834260555c11c6":[1,0,485,5],
 "classFontSource.html#afa5282da8ea2e7a01335cdb53604062a":[1,0,485,4],
-"classFoodEffect.html":[1,0,487],
-"classFoodEffect.html#a2e8ea64a39532e5ac6567c109d494a22":[1,0,487,2],
-"classFoodEffect.html#a34c6134defc57bd53abad7b144babd58":[1,0,487,0],
-"classFoodEffect.html#a65b400d17658cdb8b6a9f6d7291975cd":[1,0,487,4],
-"classFoodEffect.html#a89d18d770af1efce970a01d8544465b9":[1,0,487,5]
+"classFoodEffect.html":[1,0,487]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX62 =
 {
+"classFoodEffect.html#a2e8ea64a39532e5ac6567c109d494a22":[1,0,487,2],
+"classFoodEffect.html#a34c6134defc57bd53abad7b144babd58":[1,0,487,0],
+"classFoodEffect.html#a65b400d17658cdb8b6a9f6d7291975cd":[1,0,487,4],
+"classFoodEffect.html#a89d18d770af1efce970a01d8544465b9":[1,0,487,5],
 "classFoodEffect.html#ac9e168b0f422757e969e8e23aaac16de":[1,0,487,3],
 "classFoodEffect.html#aeb5359261ce5eb0480f91c3d01467536":[1,0,487,1],
 "classFootmark.html":[1,0,488],
@@ -178,7 +182,6 @@ var NAVTREEINDEX62 =
 "classGameIO.html#a3641078c1136f225277874c099b60179":[1,0,499,2],
 "classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f":[1,0,499,20],
 "classGameIO.html#a41128f17f082ef1ab651945f44fb461b":[1,0,499,0],
-"classGameIO.html#a413757ba7446ce23c83ddc766eb7a986":[1,0,499,13],
 "classGameIO.html#a472e51294a31ce7706182f850aabaa5e":[1,0,499,17],
 "classGameIO.html#a4fb7c20872f155827f9b2ada4b215202":[1,0,499,14],
 "classGameIO.html#a5422e6cfccdb3834126b407f625294b7":[1,0,499,12],
@@ -187,6 +190,7 @@ var NAVTREEINDEX62 =
 "classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8":[1,0,499,16],
 "classGameIO.html#a9ca0d21de188a86eec9cd75e968070b8":[1,0,499,7],
 "classGameIO.html#aa9b974d115b51a7a1205d669f579603b":[1,0,499,9],
+"classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea":[1,0,499,13],
 "classGameIO.html#ae74458c2df2444d74127d927a4af828f":[1,0,499,4],
 "classGameIO.html#aef1620f3b5ef554fe1f19364ae46f71d":[1,0,499,10],
 "classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b":[1,0,499,21],
@@ -245,9 +249,5 @@ var NAVTREEINDEX62 =
 "classGameScreenElona.html#aba0125cfc7824f989400bdf0bc62d7b5":[1,0,502,4],
 "classGameScreenElona.html#aead7fe8000698fddac7904765dcc874b":[1,0,502,1],
 "classGameScreenElona.html#af030d2e6165bccd32325dbc7d32d65b3":[1,0,502,10],
-"classGameScreenNoMap.html":[1,0,503],
-"classGameScreenNoMap.html#aae5fc6597cc05895ac584580b7f4d9ea":[1,0,503,0],
-"classGameSerializationBinder.html":[1,0,504],
-"classGameSerializationBinder.html#a36917781927c2601774a580d7f7fe82d":[1,0,504,0],
-"classGameSerializationBinder.html#a40986e40aa5235b1a918ded11e92cc9a":[1,0,504,1]
+"classGameScreenNoMap.html":[1,0,503]
 };

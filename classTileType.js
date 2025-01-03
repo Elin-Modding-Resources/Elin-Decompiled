@@ -53,6 +53,7 @@ var classTileType =
     [ "Slope", "classTileType.html#a5fb9d9984fdf9601c53ba0dd921987f5", null ],
     [ "Stairs", "classTileType.html#af7a4c27969fd129853729ae637b770ca", null ],
     [ "StairsHalf", "classTileType.html#a60ba40e57b12a7d031a8058db602d623", null ],
+    [ "Tent", "classTileType.html#ab1eb14f2067cf9560a3f14baeb8e542a", null ],
     [ "Tree", "classTileType.html#a0aa1d91bd05bcfb931025c0b4886db4e", null ],
     [ "Vine", "classTileType.html#af064dae52d854368357682dbbc415783", null ],
     [ "Wall", "classTileType.html#a248ce43c5477b50c1b3a7aeea68ff789", null ],

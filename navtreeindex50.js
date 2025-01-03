@@ -1,5 +1,9 @@
 var NAVTREEINDEX50 =
 {
+"classCoreDebug.html#a8eb6d46e28d17b9b61718196c3b14774":[1,0,368,118],
+"classCoreDebug.html#a90cb48b410d8c797be76734f7f202ecc":[1,0,368,90],
+"classCoreDebug.html#a93cf0191c7f99abd464fc86a24bbcc2a":[1,0,368,12],
+"classCoreDebug.html#a949fcfd47f30a97d24e26df26c8a8642":[1,0,368,130],
 "classCoreDebug.html#a94aa171b61a43308ea106830dd8e623a":[1,0,368,144],
 "classCoreDebug.html#a99e74e3dfcf30cda81a051a8984752db":[1,0,368,109],
 "classCoreDebug.html#a9b492ac9cf032070718d5b665c045f56":[1,0,368,131],
@@ -245,9 +249,5 @@ var NAVTREEINDEX50 =
 "classCoreRef_1_1Biomes.html#acc770985d1ab4ae10cdc194d09da7c16":[1,0,372,0,2],
 "classCoreRef_1_1ButtonAssets.html":[1,0,372,1],
 "classCoreRef_1_1ButtonAssets.html#a1e41b3fd13a988af3f0e216eb525ea81":[1,0,372,1,2],
-"classCoreRef_1_1ButtonAssets.html#a546613bdd0337f3c185ca40f09ad89b0":[1,0,372,1,3],
-"classCoreRef_1_1ButtonAssets.html#aaab07c8e7ce6ecf2bcbf52142c82a827":[1,0,372,1,0],
-"classCoreRef_1_1ButtonAssets.html#abc2aaee8582256c0a1134f5fb46eb383":[1,0,372,1,4],
-"classCoreRef_1_1ButtonAssets.html#adae1c42b762ca3848081e9bbdff01758":[1,0,372,1,5],
-"classCoreRef_1_1ButtonAssets.html#aef31978ca318e37fd965a8da0089e23a":[1,0,372,1,1]
+"classCoreRef_1_1ButtonAssets.html#a546613bdd0337f3c185ca40f09ad89b0":[1,0,372,1,3]
 };

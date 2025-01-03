@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -245,198 +245,201 @@ $(document).ready(function(){initNavTree('GameIO_8cs_source.html',''); initResiz
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        Game.id = id;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_class" href="classGameIndex.html">GameIndex</a> gameIndex = IO.LoadFile&lt;<a class="code hl_class" href="classGameIndex.html">GameIndex</a>&gt;(root + <span class="stringliteral">&quot;/index.txt&quot;</span>);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">if</span> (cloud)</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            gameIndex.cloud = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classGameIO.html#a413757ba7446ce23c83ddc766eb7a986">TryLoadSteamCloud</a>());</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordtype">string</span> path = root + <span class="stringliteral">&quot;/game.txt&quot;</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;<a class="code hl_class" href="classGame.html">Game</a>&gt;(IO.IsCompressed(path) ? IO.Decompress(path) : File.ReadAllText(path), <a class="code hl_variable" href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">jsReadGame</a>);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classGameIO.html#aa9b974d115b51a7a1205d669f579603b">  163</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#aa9b974d115b51a7a1205d669f579603b">PrepareSteamCloud</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> path = <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span> (path.IsEmpty())</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            path = CorePath.RootSaveCloud + <span class="stringliteral">&quot;/&quot;</span> + id;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Prepareing Steam Cloud:&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;: &quot;</span> + path);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordtype">string</span> text = CorePath.RootSaveCloud + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordtype">string</span> text2 = path + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="keywordflow">if</span> (File.Exists(text))</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                File.Delete(text);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">if</span> (File.Exists(text2))</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordtype">string</span> path = root + <span class="stringliteral">&quot;/game.txt&quot;</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">if</span> (cloud)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            gameIndex.cloud = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea">TryLoadSteamCloud</a>(root));</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!File.Exists(path))</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea">TryLoadSteamCloud</a>(root));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;<a class="code hl_class" href="classGame.html">Game</a>&gt;(IO.IsCompressed(path) ? IO.Decompress(path) : File.ReadAllText(path), <a class="code hl_variable" href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">jsReadGame</a>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classGameIO.html#aa9b974d115b51a7a1205d669f579603b">  167</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#aa9b974d115b51a7a1205d669f579603b">PrepareSteamCloud</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> path = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">if</span> (path.IsEmpty())</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            path = CorePath.RootSaveCloud + <span class="stringliteral">&quot;/&quot;</span> + id;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Prepareing Steam Cloud:&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;: &quot;</span> + path);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordtype">string</span> text = CorePath.RootSaveCloud + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordtype">string</span> text2 = path + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">if</span> (File.Exists(text))</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                File.Delete(text2);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                File.Delete(text);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            ZipFile.CreateFromDirectory(path, text);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">if</span> (File.Exists(text2))</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                File.Delete(text2);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            }</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            File.Move(text, text2);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        {</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordflow">if</span> (File.Exists(text2))</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                File.Delete(text2);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            ZipFile.CreateFromDirectory(path, text);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keywordflow">if</span> (File.Exists(text2))</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                File.Delete(text2);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            File.Move(text, text2);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classGameIO.html#a413757ba7446ce23c83ddc766eb7a986">  195</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGameIO.html#a413757ba7446ce23c83ddc766eb7a986">TryLoadSteamCloud</a>()</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;LoadGame using cloud save&quot;</span>);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordtype">string</span> text = CorePath.RootSaveCloud + <a class="code hl_class" href="classGame.html">Game</a>.<a class="code hl_variable" href="classGame.html#a5863738013b90cbe2e863df446667210">id</a>;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordtype">string</span> text2 = text + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordtype">string</span> text3 = CorePath.RootSaveCloud + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">if</span> (!File.Exists(text2))</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;Steam Cloud save not found:&quot;</span> + text2);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            }</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">if</span> (File.Exists(text3))</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                File.Delete(text3);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            }</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            File.Move(text2, text3);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            IO.DeleteDirectory(text);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            Directory.CreateDirectory(text);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            ZipFile.ExtractToDirectory(text3, text);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordflow">if</span> (File.Exists(text2))</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                File.Delete(text2);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            }</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            File.Move(text3, text2);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        }</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Try restore backup:&quot;</span>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <span class="keywordflow">if</span> (Directory.Exists(text))</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                    Directory.Delete(text);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                }</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                File.Move(text3, text2);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            }</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    }</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classGameIO.html#a4fb7c20872f155827f9b2ada4b215202">  242</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a4fb7c20872f155827f9b2ada4b215202">UpdateGameIndex</a>(<a class="code hl_class" href="classGameIndex.html">GameIndex</a> i)</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        IO.SaveFile(i.<a class="code hl_variable" href="classGameIndex.html#ad1a11a204404a1bcfe8536e69866e701">path</a> + <span class="stringliteral">&quot;/index.txt&quot;</span>, i);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="classGameIO.html#a01833daf0214d812ec629467fa441202">  247</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a01833daf0214d812ec629467fa441202">SaveFile</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">object</span> obj)</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        IO.SaveFile(path, obj, <a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>, <a class="code hl_variable" href="classGameIO.html#a472e51294a31ce7706182f850aabaa5e">jsWriteGame</a>);</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d">  252</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d">LoadFile&lt;T&gt;</a>(<span class="keywordtype">string</span> path) where T : <span class="keyword">new</span>()</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">return</span> IO.LoadFile&lt;T&gt;(path, <a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>, <a class="code hl_variable" href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">jsReadGame</a>);</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="classGameIO.html#a038c8c9ec58cd95871110de3e0afb483">  257</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a038c8c9ec58cd95871110de3e0afb483">DeleteGame</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> cloud, <span class="keywordtype">bool</span> deleteBackup = <span class="keyword">true</span>)</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    {</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordtype">string</span> path = (cloud ? CorePath.RootSaveCloud : <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">RootSave</a>) + <span class="keywordtype">id</span>;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">if</span> (!Directory.Exists(path))</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        {</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (deleteBackup)</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            directoryInfo = <span class="keyword">new</span> DirectoryInfo((cloud ? <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#acfb2421158015d8415024f55e9fdf2e0">PathBackupCloud</a> : <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>) + <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            }</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">  279</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;GameIndex&gt; <a class="code hl_function" href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">GetGameList</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">bool</span> sortByName = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        List&lt;GameIndex&gt; list = <span class="keyword">new</span> List&lt;GameIndex&gt;();</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">if</span> (!directoryInfo.Exists)</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keywordflow">return</span> list;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        DirectoryInfo[] directories = directoryInfo.GetDirectories();</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo2 <span class="keywordflow">in</span> directories)</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">if</span> (File.Exists(directoryInfo2?.ToString() + <span class="stringliteral">&quot;/index.txt&quot;</span>))</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                    <a class="code hl_class" href="classGameIndex.html">GameIndex</a> gameIndex = IO.LoadFile&lt;<a class="code hl_class" href="classGameIndex.html">GameIndex</a>&gt;(directoryInfo2?.ToString() + <span class="stringliteral">&quot;/index.txt&quot;</span>);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                    gameIndex.id = directoryInfo2.Name;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                    gameIndex.path = directoryInfo2.FullName;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    list.Add(gameIndex);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">catch</span> (Exception)</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea">  199</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea">TryLoadSteamCloud</a>(<span class="keywordtype">string</span> pathSave)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;LoadGame using cloud save&quot;</span>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordtype">string</span> text = pathSave + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordtype">string</span> text2 = CorePath.RootSaveCloud + <span class="stringliteral">&quot;/cloud.zip&quot;</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">if</span> (!File.Exists(text))</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;Steam Cloud save not found:&quot;</span> + text);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">if</span> (File.Exists(text2))</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                File.Delete(text2);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            File.Move(text, text2);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            IO.DeleteDirectory(pathSave);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            Directory.CreateDirectory(pathSave);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            ZipFile.ExtractToDirectory(text2, pathSave);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordflow">if</span> (File.Exists(text))</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                File.Delete(text);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            File.Move(text2, text);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Try restore backup:&quot;</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="keywordflow">if</span> (Directory.Exists(pathSave))</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                    Directory.Delete(pathSave);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                File.Move(text2, text);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="classGameIO.html#a4fb7c20872f155827f9b2ada4b215202">  245</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a4fb7c20872f155827f9b2ada4b215202">UpdateGameIndex</a>(<a class="code hl_class" href="classGameIndex.html">GameIndex</a> i)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        IO.SaveFile(i.<a class="code hl_variable" href="classGameIndex.html#ad1a11a204404a1bcfe8536e69866e701">path</a> + <span class="stringliteral">&quot;/index.txt&quot;</span>, i);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="classGameIO.html#a01833daf0214d812ec629467fa441202">  250</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a01833daf0214d812ec629467fa441202">SaveFile</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">object</span> obj)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        IO.SaveFile(path, obj, <a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>, <a class="code hl_variable" href="classGameIO.html#a472e51294a31ce7706182f850aabaa5e">jsWriteGame</a>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d">  255</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d">LoadFile&lt;T&gt;</a>(<span class="keywordtype">string</span> path) where T : <span class="keyword">new</span>()</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">return</span> IO.LoadFile&lt;T&gt;(path, <a class="code hl_property" href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">compressSave</a>, <a class="code hl_variable" href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">jsReadGame</a>);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="classGameIO.html#a038c8c9ec58cd95871110de3e0afb483">  260</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a038c8c9ec58cd95871110de3e0afb483">DeleteGame</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> cloud, <span class="keywordtype">bool</span> deleteBackup = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordtype">string</span> path = (cloud ? CorePath.RootSaveCloud : <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">RootSave</a>) + <span class="keywordtype">id</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">if</span> (!Directory.Exists(path))</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">if</span> (deleteBackup)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            directoryInfo = <span class="keyword">new</span> DirectoryInfo((cloud ? <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#acfb2421158015d8415024f55e9fdf2e0">PathBackupCloud</a> : <a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>) + <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">  282</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;GameIndex&gt; <a class="code hl_function" href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">GetGameList</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">bool</span> sortByName = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        List&lt;GameIndex&gt; list = <span class="keyword">new</span> List&lt;GameIndex&gt;();</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">if</span> (!directoryInfo.Exists)</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        DirectoryInfo[] directories = directoryInfo.GetDirectories();</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo2 <span class="keywordflow">in</span> directories)</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">if</span> (File.Exists(directoryInfo2?.ToString() + <span class="stringliteral">&quot;/index.txt&quot;</span>))</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    <a class="code hl_class" href="classGameIndex.html">GameIndex</a> gameIndex = IO.LoadFile&lt;<a class="code hl_class" href="classGameIndex.html">GameIndex</a>&gt;(directoryInfo2?.ToString() + <span class="stringliteral">&quot;/index.txt&quot;</span>);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                    gameIndex.id = directoryInfo2.Name;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                    gameIndex.path = directoryInfo2.FullName;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                    list.Add(gameIndex);</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                }</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            }</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        }</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">if</span> (sortByName)</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        {</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            list.Sort(delegate(<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b)</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            {</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                <span class="keywordtype">int</span>.TryParse(a.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>, out var result);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                <span class="keywordtype">int</span>.TryParse(b.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>, out var result2);</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                <span class="keywordflow">return</span> result2 - result;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            });</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            list.Sort((<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b) =&gt; b.<a class="code hl_variable" href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">real</a>.<a class="code hl_function" href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">GetRawReal</a>() - a.<a class="code hl_variable" href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">real</a>.<a class="code hl_function" href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">GetRawReal</a>());</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="classGameIO.html#a3641078c1136f225277874c099b60179">  320</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a3641078c1136f225277874c099b60179">DeleteEmptyGameFolders</a>(<span class="keywordtype">string</span> path)</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    {</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        DirectoryInfo[] directories = <span class="keyword">new</span> DirectoryInfo(path).GetDirectories();</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <span class="keywordflow">if</span> (!File.Exists(directoryInfo?.ToString() + <span class="stringliteral">&quot;/game.txt&quot;</span>))</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            {</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        }</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    }</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">  332</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">GetNewId</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">string</span> prefix = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> start = 1)</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = start; i &lt; 999999; i++)</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            text = prefix + i;</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            <span class="keywordflow">if</span> (!Directory.Exists(path + text))</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            {</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            }</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">return</span> text;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="keywordflow">catch</span> (Exception)</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        }</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keywordflow">if</span> (sortByName)</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            list.Sort(delegate(<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b)</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                <span class="keywordtype">int</span>.TryParse(a.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>, out var result);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                <span class="keywordtype">int</span>.TryParse(b.<a class="code hl_variable" href="classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9">id</a>, out var result2);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                <span class="keywordflow">return</span> result2 - result;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            });</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            list.Sort((<a class="code hl_class" href="classGameIndex.html">GameIndex</a> a, <a class="code hl_class" href="classGameIndex.html">GameIndex</a> b) =&gt; b.<a class="code hl_variable" href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">real</a>.<a class="code hl_function" href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">GetRawReal</a>() - a.<a class="code hl_variable" href="classGameIndex.html#a82da8f243b0ad86ae2f3443209d7f4cc">real</a>.<a class="code hl_function" href="classDate.html#aa982f31616d3a2dfb5261592f83feb1f">GetRawReal</a>());</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="classGameIO.html#a3641078c1136f225277874c099b60179">  323</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameIO.html#a3641078c1136f225277874c099b60179">DeleteEmptyGameFolders</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    {</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        DirectoryInfo[] directories = <span class="keyword">new</span> DirectoryInfo(path).GetDirectories();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">if</span> (!File.Exists(directoryInfo?.ToString() + <span class="stringliteral">&quot;/game.txt&quot;</span>))</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">  335</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">GetNewId</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">string</span> prefix = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> start = 1)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = start; i &lt; 999999; i++)</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            text = prefix + i;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">if</span> (!Directory.Exists(path + text))</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>}</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassBaseCore_html_aa560bb8f25eb2a78768fe250b772c470"><div class="ttname"><a href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">BaseCore.version</a></div><div class="ttdeci">Version version</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00017">BaseCore.cs:17</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1GameConfig_html_a3a8fb7a21661b622d451fee8db75fbd8"><div class="ttname"><a href="classCoreConfig_1_1GameConfig.html#a3a8fb7a21661b622d451fee8db75fbd8">CoreConfig.GameConfig.numBackup</a></div><div class="ttdeci">int numBackup</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00105">CoreConfig.cs:105</a></div></div>
@@ -457,25 +460,25 @@ $(document).ready(function(){initNavTree('GameIO_8cs_source.html',''); initResiz
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
 <div class="ttc" id="aclassGameIO_html"><div class="ttname"><a href="classGameIO.html">GameIO</a></div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00009">GameIO.cs:10</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a01833daf0214d812ec629467fa441202"><div class="ttname"><a href="classGameIO.html#a01833daf0214d812ec629467fa441202">GameIO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00247">GameIO.cs:247</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a038c8c9ec58cd95871110de3e0afb483"><div class="ttname"><a href="classGameIO.html#a038c8c9ec58cd95871110de3e0afb483">GameIO.DeleteGame</a></div><div class="ttdeci">static void DeleteGame(string id, bool cloud, bool deleteBackup=true)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00257">GameIO.cs:257</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a0d7e1032464fc7f6f21d627a55782f2d"><div class="ttname"><a href="classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d">GameIO.LoadFile&lt; T &gt;</a></div><div class="ttdeci">static T LoadFile&lt; T &gt;(string path)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00252">GameIO.cs:252</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a01833daf0214d812ec629467fa441202"><div class="ttname"><a href="classGameIO.html#a01833daf0214d812ec629467fa441202">GameIO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00250">GameIO.cs:250</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a038c8c9ec58cd95871110de3e0afb483"><div class="ttname"><a href="classGameIO.html#a038c8c9ec58cd95871110de3e0afb483">GameIO.DeleteGame</a></div><div class="ttdeci">static void DeleteGame(string id, bool cloud, bool deleteBackup=true)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00260">GameIO.cs:260</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a0d7e1032464fc7f6f21d627a55782f2d"><div class="ttname"><a href="classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d">GameIO.LoadFile&lt; T &gt;</a></div><div class="ttdeci">static T LoadFile&lt; T &gt;(string path)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00255">GameIO.cs:255</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a1d658b737ddb54b05671416aa1321217"><div class="ttname"><a href="classGameIO.html#a1d658b737ddb54b05671416aa1321217">GameIO.compressSave</a></div><div class="ttdeci">static bool compressSave</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00039">GameIO.cs:40</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a26c1b96af10f68ff67c262a31d542d0d"><div class="ttname"><a href="classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d">GameIO.NumBackup</a></div><div class="ttdeci">static int NumBackup</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00037">GameIO.cs:37</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a33c393c075f356bdad0d427c1924e0ff"><div class="ttname"><a href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">GameIO.GetNewId</a></div><div class="ttdeci">static string GetNewId(string path, string prefix=&quot;&quot;, int start=1)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00332">GameIO.cs:332</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a3641078c1136f225277874c099b60179"><div class="ttname"><a href="classGameIO.html#a3641078c1136f225277874c099b60179">GameIO.DeleteEmptyGameFolders</a></div><div class="ttdeci">static void DeleteEmptyGameFolders(string path)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00320">GameIO.cs:320</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a33c393c075f356bdad0d427c1924e0ff"><div class="ttname"><a href="classGameIO.html#a33c393c075f356bdad0d427c1924e0ff">GameIO.GetNewId</a></div><div class="ttdeci">static string GetNewId(string path, string prefix=&quot;&quot;, int start=1)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00335">GameIO.cs:335</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a3641078c1136f225277874c099b60179"><div class="ttname"><a href="classGameIO.html#a3641078c1136f225277874c099b60179">GameIO.DeleteEmptyGameFolders</a></div><div class="ttdeci">static void DeleteEmptyGameFolders(string path)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00323">GameIO.cs:323</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a3d95322fcd775b6675b6f5195ca0643f"><div class="ttname"><a href="classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f">GameIO.pathCurrentSave</a></div><div class="ttdeci">static string pathCurrentSave</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00033">GameIO.cs:33</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a41128f17f082ef1ab651945f44fb461b"><div class="ttname"><a href="classGameIO.html#a41128f17f082ef1ab651945f44fb461b">GameIO.CanLoad</a></div><div class="ttdeci">static bool CanLoad(string root)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00144">GameIO.cs:144</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a413757ba7446ce23c83ddc766eb7a986"><div class="ttname"><a href="classGameIO.html#a413757ba7446ce23c83ddc766eb7a986">GameIO.TryLoadSteamCloud</a></div><div class="ttdeci">static bool TryLoadSteamCloud()</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00195">GameIO.cs:195</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a472e51294a31ce7706182f850aabaa5e"><div class="ttname"><a href="classGameIO.html#a472e51294a31ce7706182f850aabaa5e">GameIO.jsWriteGame</a></div><div class="ttdeci">static JsonSerializerSettings jsWriteGame</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00021">GameIO.cs:21</a></div></div>
-<div class="ttc" id="aclassGameIO_html_a4fb7c20872f155827f9b2ada4b215202"><div class="ttname"><a href="classGameIO.html#a4fb7c20872f155827f9b2ada4b215202">GameIO.UpdateGameIndex</a></div><div class="ttdeci">static void UpdateGameIndex(GameIndex i)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00242">GameIO.cs:242</a></div></div>
+<div class="ttc" id="aclassGameIO_html_a4fb7c20872f155827f9b2ada4b215202"><div class="ttname"><a href="classGameIO.html#a4fb7c20872f155827f9b2ada4b215202">GameIO.UpdateGameIndex</a></div><div class="ttdeci">static void UpdateGameIndex(GameIndex i)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00245">GameIO.cs:245</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a5422e6cfccdb3834126b407f625294b7"><div class="ttname"><a href="classGameIO.html#a5422e6cfccdb3834126b407f625294b7">GameIO.SaveGame</a></div><div class="ttdeci">static GameIndex SaveGame()</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00079">GameIO.cs:79</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a59fefb2d671a202312d30e9d1ba03140"><div class="ttname"><a href="classGameIO.html#a59fefb2d671a202312d30e9d1ba03140">GameIO.formatting</a></div><div class="ttdeci">static Formatting formatting</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00031">GameIO.cs:31</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a64c870593f1e4353c5e8eb1e5e7bc3c5"><div class="ttname"><a href="classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5">GameIO.ClearTemp</a></div><div class="ttdeci">static void ClearTemp()</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00061">GameIO.cs:61</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a8ac1d1a919de145a5cf5fd40fcf5b5e8"><div class="ttname"><a href="classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8">GameIO.jsReadGame</a></div><div class="ttdeci">static JsonSerializerSettings jsReadGame</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00011">GameIO.cs:11</a></div></div>
 <div class="ttc" id="aclassGameIO_html_a9ca0d21de188a86eec9cd75e968070b8"><div class="ttname"><a href="classGameIO.html#a9ca0d21de188a86eec9cd75e968070b8">GameIO.LoadGame</a></div><div class="ttdeci">static Game LoadGame(string id, string root, bool cloud)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00150">GameIO.cs:150</a></div></div>
-<div class="ttc" id="aclassGameIO_html_aa9b974d115b51a7a1205d669f579603b"><div class="ttname"><a href="classGameIO.html#aa9b974d115b51a7a1205d669f579603b">GameIO.PrepareSteamCloud</a></div><div class="ttdeci">static void PrepareSteamCloud(string id, string path=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00163">GameIO.cs:163</a></div></div>
-<div class="ttc" id="aclassGameIO_html_ae74458c2df2444d74127d927a4af828f"><div class="ttname"><a href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">GameIO.GetGameList</a></div><div class="ttdeci">static List&lt; GameIndex &gt; GetGameList(string path, bool sortByName=false)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00279">GameIO.cs:279</a></div></div>
+<div class="ttc" id="aclassGameIO_html_aa9b974d115b51a7a1205d669f579603b"><div class="ttname"><a href="classGameIO.html#aa9b974d115b51a7a1205d669f579603b">GameIO.PrepareSteamCloud</a></div><div class="ttdeci">static void PrepareSteamCloud(string id, string path=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00167">GameIO.cs:167</a></div></div>
+<div class="ttc" id="aclassGameIO_html_ad7589836bc7a84cf144f13bbb60738ea"><div class="ttname"><a href="classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea">GameIO.TryLoadSteamCloud</a></div><div class="ttdeci">static bool TryLoadSteamCloud(string pathSave)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00199">GameIO.cs:199</a></div></div>
+<div class="ttc" id="aclassGameIO_html_ae74458c2df2444d74127d927a4af828f"><div class="ttname"><a href="classGameIO.html#ae74458c2df2444d74127d927a4af828f">GameIO.GetGameList</a></div><div class="ttdeci">static List&lt; GameIndex &gt; GetGameList(string path, bool sortByName=false)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00282">GameIO.cs:282</a></div></div>
 <div class="ttc" id="aclassGameIO_html_aef1620f3b5ef554fe1f19364ae46f71d"><div class="ttname"><a href="classGameIO.html#aef1620f3b5ef554fe1f19364ae46f71d">GameIO.ResetTemp</a></div><div class="ttdeci">static void ResetTemp()</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00051">GameIO.cs:51</a></div></div>
 <div class="ttc" id="aclassGameIO_html_aef236f0db1092bfdb7867749f09f9e3b"><div class="ttname"><a href="classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b">GameIO.pathTemp</a></div><div class="ttdeci">static string pathTemp</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00035">GameIO.cs:35</a></div></div>
 <div class="ttc" id="aclassGameIO_html_afe3f94aea9b1a5099d199bc6f7fe44fa"><div class="ttname"><a href="classGameIO.html#afe3f94aea9b1a5099d199bc6f7fe44fa">GameIO.MakeBackup</a></div><div class="ttdeci">static void MakeBackup(GameIndex index, string suffix=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="GameIO_8cs_source.html#l00112">GameIO.cs:112</a></div></div>

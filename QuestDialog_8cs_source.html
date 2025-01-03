@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('QuestDialog_8cs_source.html',''); init
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classQuestDialog.html#ae7224165f209219a3b85fbff25f8ab90">   18</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classQuestDialog.html#ae7224165f209219a3b85fbff25f8ab90">CanStartQuest</a>()</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (base.source.id == <span class="stringliteral">&quot;farris_tulip&quot;</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.id == <span class="stringliteral">&quot;farris_tulip&quot;</span>)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classChara.html#a34adc7979fac5d829240e53c7da2e5b8">faction</a>.<a class="code hl_function" href="classFaction.html#a689b2278be1ded0fce3a9d259d6ccb2b">HasMember</a>(<span class="stringliteral">&quot;farris&quot;</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('QuestDialog_8cs_source.html',''); init
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classQuestDialog.html#a09436b53d302a25aa780fc7cf5871d10">   27</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classQuestDialog.html#a09436b53d302a25aa780fc7cf5871d10">OnDropReward</a>()</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">switch</span> (base.source.id)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.id)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;pre_debt&quot;</span>:</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
@@ -228,6 +228,7 @@ $(document).ready(function(){initNavTree('QuestDialog_8cs_source.html',''); init
 <div class="ttc" id="aclassQuest_html_a7d65a4a00b2267ae5e44527dabb37643"><div class="ttname"><a href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">Quest.chara</a></div><div class="ttdeci">Chara chara</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00105">Quest.cs:105</a></div></div>
 <div class="ttc" id="aclassQuest_html_a838757ef59c19e36004864b5a9eb81d0"><div class="ttname"><a href="classQuest.html#a838757ef59c19e36004864b5a9eb81d0">Quest.DropReward</a></div><div class="ttdeci">Thing DropReward(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00506">Quest.cs:506</a></div></div>
 <div class="ttc" id="aclassQuest_html_ad045ae343fd7941a61152f2491c530e6"><div class="ttname"><a href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">Quest.SetClient</a></div><div class="ttdeci">Quest SetClient(Chara c, bool assignQuest=true)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00380">Quest.cs:380</a></div></div>
+<div class="ttc" id="aclassQuest_html_af5d4b1838e2ff8298b458352da6ce89b"><div class="ttname"><a href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">Quest.source</a></div><div class="ttdeci">virtual SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
 <div class="ttc" id="aclassQuest_html_af77068e8fb1546a55b985b222ad255b4"><div class="ttname"><a href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Quest.Create</a></div><div class="ttdeci">static Quest Create(string _id, string _idPerson=null, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00241">Quest.cs:241</a></div></div>
 <div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00004">ThingGen.cs:5</a></div></div>
 <div class="ttc" id="aclassThingGen_html_aa30e2786f0bd455873b1e6930db41d8b"><div class="ttname"><a href="classThingGen.html#aa30e2786f0bd455873b1e6930db41d8b">ThingGen.CreateRecipe</a></div><div class="ttdeci">static Thing CreateRecipe(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00144">ThingGen.cs:144</a></div></div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -249,8 +249,8 @@ Properties</h2></td></tr>
 <tr class="separator:a76a73ee0029b9e424237432d3600e125 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d65a4a00b2267ae5e44527dabb37643 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChara.html">Chara</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a7d65a4a00b2267ae5e44527dabb37643">chara</a><code> [get]</code></td></tr>
 <tr class="separator:a7d65a4a00b2267ae5e44527dabb37643 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb3bf5e8dca000f28bf64c8ad02308e0 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceQuest_1_1Row.html">SourceQuest.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#aeb3bf5e8dca000f28bf64c8ad02308e0">source</a><code> [get]</code></td></tr>
-<tr class="separator:aeb3bf5e8dca000f28bf64c8ad02308e0 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d4b1838e2ff8298b458352da6ce89b inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSourceQuest_1_1Row.html">SourceQuest.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a><code> [get]</code></td></tr>
+<tr class="separator:af5d4b1838e2ff8298b458352da6ce89b inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab69581222e68c8f86bfbfdb9adb6c2a7 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#ab69581222e68c8f86bfbfdb9adb6c2a7">Confetti</a><code> [get]</code></td></tr>
 <tr class="separator:ab69581222e68c8f86bfbfdb9adb6c2a7 inherit properties_classQuest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1943af00af484e18698696bc9e3afc61 inherit properties_classQuest"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuest.html#a1943af00af484e18698696bc9e3afc61">IsExpired</a><code> [get]</code></td></tr>
@@ -476,7 +476,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="QuestSequence_8cs_source.html#l00007">7</a> of file <a class="el" href="QuestSequence_8cs_source.html">QuestSequence.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">string</span> text = base.source.GetText(<span class="stringliteral">&quot;name&quot;</span>, returnNull: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">string</span> text = <a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.GetText(<span class="stringliteral">&quot;name&quot;</span>, returnNull: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (!text.IsEmpty())</div>
 <div class="line"><span class="lineno">   11</span>        {</div>
 <div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> text;</div>
@@ -496,9 +496,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassQuestSequence_html_a6bd1da0ee4941e2e988100ceae3213e3"><div class="ttname"><a href="classQuestSequence.html#a6bd1da0ee4941e2e988100ceae3213e3">QuestSequence.originalSource</a></div><div class="ttdeci">SourceQuest.Row originalSource</div><div class="ttdef"><b>Definition:</b> <a href="QuestSequence_8cs_source.html#l00003">QuestSequence.cs:3</a></div></div>
 <div class="ttc" id="aclassQuest_html_a7c3d9b46c57169e31f72a42ff9dd0574"><div class="ttname"><a href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">Quest.phase</a></div><div class="ttdeci">int phase</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00040">Quest.cs:40</a></div></div>
 <div class="ttc" id="aclassQuest_html_aca0a4b1a83c6772d5e50c636caba08ef"><div class="ttname"><a href="classQuest.html#aca0a4b1a83c6772d5e50c636caba08ef">Quest.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00031">Quest.cs:31</a></div></div>
+<div class="ttc" id="aclassQuest_html_af5d4b1838e2ff8298b458352da6ce89b"><div class="ttname"><a href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">Quest.source</a></div><div class="ttdeci">virtual SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_ae13e44c82dc0772f87c1ad21b9c653f8"><div class="ttname"><a href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">SourceManager.quests</a></div><div class="ttdeci">SourceQuest quests</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00058">SourceManager.cs:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00031">Quest.id</a>, <a class="el" href="QuestSequence_8cs_source.html#l00003">originalSource</a>, <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="Quest_8cs_source.html#l00031">Quest.id</a>, <a class="el" href="QuestSequence_8cs_source.html#l00003">originalSource</a>, <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, <a class="el" href="Quest_8cs_source.html#l00107">Quest.source</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="QuestDialog_8cs_source.html#l00005">QuestDialog.ShowCompleteText()</a>.</p>
 

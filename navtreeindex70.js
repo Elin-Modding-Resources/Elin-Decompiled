@@ -1,5 +1,9 @@
 var NAVTREEINDEX70 =
 {
+"classInvOwnerGene.html":[1,0,665],
+"classInvOwnerGene.html#a0ba8687c8cadb41aef0cba1d52c8b99c":[1,0,665,5],
+"classInvOwnerGene.html#a658043ed408f878b1f59d2b8555dc935":[1,0,665,6],
+"classInvOwnerGene.html#a6e694cb44d3593e74c2b590d8398527c":[1,0,665,2],
 "classInvOwnerGene.html#aa1bb5348178cf77b55df68908de4274f":[1,0,665,0],
 "classInvOwnerGene.html#aaf53f10e73a3353c9a4f4bb02a266ba8":[1,0,665,1],
 "classInvOwnerGene.html#aed12a70e220a15cebc04f90e16f45676":[1,0,665,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX70 =
 "classItemQuestTracker.html#af0b8b2d68ed9489c792912ac4ae6e7c9":[1,0,700,4],
 "classItemResearch.html":[1,0,701],
 "classItemResearch.html#a2dac9538028d9f677d57001776a6de94":[1,0,701,0],
-"classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd":[1,0,701,3],
-"classItemResearch.html#a6a7aaaaa4dc831dd162f90a0344f1d7d":[1,0,701,2],
-"classItemResearch.html#aa22d5c9c26283f9b8139b43cfde5d87f":[1,0,701,1],
-"classItemStatistics.html":[1,0,702],
-"classItemStatistics.html#a657db406cbb708e56385240db74f30c8":[1,0,702,5]
+"classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd":[1,0,701,3]
 };

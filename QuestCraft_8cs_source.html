@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('QuestCraft_8cs_source.html',''); initR
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021">  155</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021">GetDetailText</a>(<span class="keywordtype">bool</span> onJournal = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> base.source.GetDetail().Split(<span class="charliteral">&#39;|&#39;</span>)[<a class="code hl_variable" href="classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36">progress</a>];</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.GetDetail().Split(<span class="charliteral">&#39;|&#39;</span>)[<a class="code hl_variable" href="classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36">progress</a>];</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408">  160</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408">GetTalkProgress</a>()</div>
@@ -260,7 +260,7 @@ $(document).ready(function(){initNavTree('QuestCraft_8cs_source.html',''); initR
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    {</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36">progress</a> != 1 || !<a class="code hl_property" href="classQuestCraft.html#ad07345ad6920b9ffa60372337f47c1a5">hasSecondReq</a>)</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classQuest.html#abadc7dbd005ead5d571cc7a3f5b7b864">Parse</a>(base.source.GetText(<span class="stringliteral">&quot;talkComplete&quot;</span>));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classQuest.html#abadc7dbd005ead5d571cc7a3f5b7b864">Parse</a>(<a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.GetText(<span class="stringliteral">&quot;talkComplete&quot;</span>));</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021">GetDetailText</a>();</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
@@ -305,6 +305,7 @@ $(document).ready(function(){initNavTree('QuestCraft_8cs_source.html',''); initR
 <div class="ttc" id="aclassQuest_html_aca0a4b1a83c6772d5e50c636caba08ef"><div class="ttname"><a href="classQuest.html#aca0a4b1a83c6772d5e50c636caba08ef">Quest.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00031">Quest.cs:31</a></div></div>
 <div class="ttc" id="aclassQuest_html_ad045ae343fd7941a61152f2491c530e6"><div class="ttname"><a href="classQuest.html#ad045ae343fd7941a61152f2491c530e6">Quest.SetClient</a></div><div class="ttdeci">Quest SetClient(Chara c, bool assignQuest=true)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00380">Quest.cs:380</a></div></div>
 <div class="ttc" id="aclassQuest_html_adcd454b2defd9a23d3021dd03d3afa2f"><div class="ttname"><a href="classQuest.html#adcd454b2defd9a23d3021dd03d3afa2f">Quest.UpdateJournal</a></div><div class="ttdeci">void UpdateJournal()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00685">Quest.cs:685</a></div></div>
+<div class="ttc" id="aclassQuest_html_af5d4b1838e2ff8298b458352da6ce89b"><div class="ttname"><a href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">Quest.source</a></div><div class="ttdeci">virtual SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
 <div class="ttc" id="aclassQuest_html_af77068e8fb1546a55b985b222ad255b4"><div class="ttname"><a href="classQuest.html#af77068e8fb1546a55b985b222ad255b4">Quest.Create</a></div><div class="ttdeci">static Quest Create(string _id, string _idPerson=null, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00241">Quest.cs:241</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00026">SourceManager.cs:26</a></div></div>
 <div class="ttc" id="aclassThingContainer_html_a203972cb9293020b40d298d968d79a52"><div class="ttname"><a href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">ThingContainer.Find</a></div><div class="ttdeci">Thing Find(int uid)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00578">ThingContainer.cs:578</a></div></div>

@@ -13,7 +13,7 @@ var classGameIO =
     [ "ResetTemp", "classGameIO.html#aef1620f3b5ef554fe1f19364ae46f71d", null ],
     [ "SaveFile", "classGameIO.html#a01833daf0214d812ec629467fa441202", null ],
     [ "SaveGame", "classGameIO.html#a5422e6cfccdb3834126b407f625294b7", null ],
-    [ "TryLoadSteamCloud", "classGameIO.html#a413757ba7446ce23c83ddc766eb7a986", null ],
+    [ "TryLoadSteamCloud", "classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea", null ],
     [ "UpdateGameIndex", "classGameIO.html#a4fb7c20872f155827f9b2ada4b215202", null ],
     [ "formatting", "classGameIO.html#a59fefb2d671a202312d30e9d1ba03140", null ],
     [ "jsReadGame", "classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8", null ],

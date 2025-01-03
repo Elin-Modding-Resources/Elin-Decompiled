@@ -957,6 +957,7 @@ var hierarchy =
       [ "PropsManager", "classPropsManager.html", null ],
       [ "Quest", "classQuest.html", [
         [ "QuestCraft", "classQuestCraft.html", null ],
+        [ "QuestDummy", "classQuestDummy.html", null ],
         [ "QuestLumiest", "classQuestLumiest.html", null ],
         [ "QuestRandom", "classQuestRandom.html", [
           [ "QuestDestZone", "classQuestDestZone.html", [
@@ -1261,7 +1262,8 @@ var hierarchy =
           [ "TileTypeObjBig", "classTileTypeObjBig.html", [
             [ "TileTypeObjHuge", "classTileTypeObjHuge.html", [
               [ "TileTypeTree", "classTileTypeTree.html", null ]
-            ] ]
+            ] ],
+            [ "TileTypeTent", "classTileTypeTent.html", null ]
           ] ],
           [ "TileTypeObjCeil", "classTileTypeObjCeil.html", null ],
           [ "TileTypeObjFloat", "classTileTypeObjFloat.html", [

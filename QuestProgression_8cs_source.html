@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.72 Nightly Hotfix 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
    </div>
   </td>
  </tr>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('QuestProgression_8cs_source.html','');
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classQuestProgression.html#a4f9c868cd12c3938138e02095412aaef">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classQuestProgression.html#a4f9c868cd12c3938138e02095412aaef">GetDetail</a>(<span class="keywordtype">bool</span> onJournal = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordtype">string</span> text = base.source.GetDetail().Split(<span class="charliteral">&#39;|&#39;</span>).TryGet(onJournal ? 1 : 0);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordtype">string</span> text = <a class="code hl_property" href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">source</a>.GetDetail().Split(<span class="charliteral">&#39;|&#39;</span>).TryGet(onJournal ? 1 : 0);</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordtype">string</span> text2 = <a class="code hl_function" href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">GetTextProgress</a>();</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!text2.IsEmpty())</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
@@ -114,6 +114,7 @@ $(document).ready(function(){initNavTree('QuestProgression_8cs_source.html','');
 <div class="ttc" id="aclassQuestProgression_html_a4f9c868cd12c3938138e02095412aaef"><div class="ttname"><a href="classQuestProgression.html#a4f9c868cd12c3938138e02095412aaef">QuestProgression.GetDetail</a></div><div class="ttdeci">override string GetDetail(bool onJournal=false)</div><div class="ttdef"><b>Definition:</b> <a href="QuestProgression_8cs_source.html#l00005">QuestProgression.cs:5</a></div></div>
 <div class="ttc" id="aclassQuestSequence_html"><div class="ttname"><a href="classQuestSequence.html">QuestSequence</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestSequence_8cs_source.html#l00001">QuestSequence.cs:2</a></div></div>
 <div class="ttc" id="aclassQuest_html_ac7af8abe8814309a575f78ba4cefef14"><div class="ttname"><a href="classQuest.html#ac7af8abe8814309a575f78ba4cefef14">Quest.GetTextProgress</a></div><div class="ttdeci">virtual string GetTextProgress()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00656">Quest.cs:656</a></div></div>
+<div class="ttc" id="aclassQuest_html_af5d4b1838e2ff8298b458352da6ce89b"><div class="ttname"><a href="classQuest.html#af5d4b1838e2ff8298b458352da6ce89b">Quest.source</a></div><div class="ttdeci">virtual SourceQuest.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00107">Quest.cs:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
