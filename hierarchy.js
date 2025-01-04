@@ -1531,7 +1531,8 @@ var hierarchy =
           [ "TraitDoorFence", "classTraitDoorFence.html", null ],
           [ "TraitDoorSwing", "classTraitDoorSwing.html", [
             [ "TraitDoorAuto", "classTraitDoorAuto.html", [
-              [ "TraitDoorAutoShoji", "classTraitDoorAutoShoji.html", null ]
+              [ "TraitDoorAutoShoji", "classTraitDoorAutoShoji.html", null ],
+              [ "TraitDoorCurtain2", "classTraitDoorCurtain2.html", null ]
             ] ],
             [ "TraitDoorSwingGrass", "classTraitDoorSwingGrass.html", null ]
           ] ]

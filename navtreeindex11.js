@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"PriceType_8cs.html#a482277e66af02c7d65679d7485095573aa759948facc4ab91bca7bc6bbe5c06ff":[2,0,0,845,0,2],
 "PriceType_8cs.html#a482277e66af02c7d65679d7485095573ae8dce7b4099904dc5fa328c2606e0fcd":[2,0,0,845,0,4],
 "PriceType_8cs.html#a482277e66af02c7d65679d7485095573aea9cf7e47ff33b2be14e6dd07cbcefc6":[2,0,0,845,0,1],
 "PriceType_8cs_source.html":[2,0,0,845],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bfa7a1920d61156abc05a60135aefe8bc67":[2,0,0,947,0,0],
 "RefCardName_8cs_source.html":[2,0,0,947],
 "RefChara_8cs.html":[2,0,0,948],
-"RefChara_8cs_source.html":[2,0,0,948],
-"RefFaction_8cs.html":[2,0,0,949]
+"RefChara_8cs_source.html":[2,0,0,948]
 };

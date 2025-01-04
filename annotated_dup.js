@@ -1544,6 +1544,7 @@ var annotated_dup =
     [ "TraitDoorBell", "classTraitDoorBell.html", "classTraitDoorBell" ],
     [ "TraitDoorBoat", "classTraitDoorBoat.html", "classTraitDoorBoat" ],
     [ "TraitDoorCurtain", "classTraitDoorCurtain.html", "classTraitDoorCurtain" ],
+    [ "TraitDoorCurtain2", "classTraitDoorCurtain2.html", "classTraitDoorCurtain2" ],
     [ "TraitDoorFence", "classTraitDoorFence.html", "classTraitDoorFence" ],
     [ "TraitDoorFrame", "classTraitDoorFrame.html", "classTraitDoorFrame" ],
     [ "TraitDoorman_Fighter", "classTraitDoorman__Fighter.html", "classTraitDoorman__Fighter" ],

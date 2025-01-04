@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"RefFaction_8cs.html":[2,0,0,949],
 "RefFaction_8cs_source.html":[2,0,0,949],
 "RefReligion_8cs.html":[2,0,0,951],
 "RefReligion_8cs_source.html":[2,0,0,951],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbadba005190e58b252f9b5375cdf5655d9":[2,0,0,1024,0,34],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae4120fc5cb9df630d2f54ee644faafa7":[2,0,0,1024,0,31],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae4b662d3892f8c0c86801919f979467f":[2,0,0,1024,0,16],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae89b2cbb7d11825a67459af2249064de":[2,0,0,1024,0,42],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaee6085db6c9b85f45fd9b9b31b020f8d":[2,0,0,1024,0,7]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae89b2cbb7d11825a67459af2249064de":[2,0,0,1024,0,42]
 };

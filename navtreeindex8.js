@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"IDTLevel_8cs.html#a66623f98fb27a22b62d4066dfd3f8319abf48cbc0f8cd26309b393f20f72e60d8":[2,0,0,592,0,2],
 "IDTLevel_8cs_source.html":[2,0,0,592],
 "IDTSource_8cs.html":[2,0,0,593],
 "IDTSource_8cs.html#abe011efb6145f161e76d10ea112ea88a":[2,0,0,593,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "LangNote_8cs_source.html":[2,0,0,2,48],
 "LangRow_8cs.html":[2,0,0,2,49],
 "LangRow_8cs_source.html":[2,0,0,2,49],
-"LangSetting_8cs.html":[2,0,0,2,50],
-"LangSetting_8cs_source.html":[2,0,0,2,50]
+"LangSetting_8cs.html":[2,0,0,2,50]
 };

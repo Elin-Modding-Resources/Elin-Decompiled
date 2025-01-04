@@ -16,6 +16,7 @@ var classABILITY =
     [ "ActFear", "classABILITY.html#a113e09d796ece705d392046df1001c55", null ],
     [ "ActGazeDim", "classABILITY.html#a80b868c9bce245253821b5c40a4f189f", null ],
     [ "ActGazeInsane", "classABILITY.html#ad3abf96885733f57329f61081edd23ad", null ],
+    [ "ActGazeMana", "classABILITY.html#ae32712cf7c3fbd1d0dca4068fa97c43a", null ],
     [ "ActGazeMutation", "classABILITY.html#a0d2a226e7719a01d95543053070e1166", null ],
     [ "ActHeadpat", "classABILITY.html#ab70fa31f12f4e3265b1b9ebaa1bd01d1", null ],
     [ "ActInstall", "classABILITY.html#aafd756d8fcc9bd77a02390c735ca8bcc", null ],

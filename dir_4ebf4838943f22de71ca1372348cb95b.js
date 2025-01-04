@@ -1353,6 +1353,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitDoorBell.cs", "TraitDoorBell_8cs.html", "TraitDoorBell_8cs" ],
     [ "TraitDoorBoat.cs", "TraitDoorBoat_8cs.html", "TraitDoorBoat_8cs" ],
     [ "TraitDoorCurtain.cs", "TraitDoorCurtain_8cs.html", "TraitDoorCurtain_8cs" ],
+    [ "TraitDoorCurtain2.cs", "TraitDoorCurtain2_8cs.html", "TraitDoorCurtain2_8cs" ],
     [ "TraitDoorFence.cs", "TraitDoorFence_8cs.html", "TraitDoorFence_8cs" ],
     [ "TraitDoorFrame.cs", "TraitDoorFrame_8cs.html", "TraitDoorFrame_8cs" ],
     [ "TraitDoorman_Fighter.cs", "TraitDoorman__Fighter_8cs.html", "TraitDoorman__Fighter_8cs" ],

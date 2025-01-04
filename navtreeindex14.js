@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"StatsStamina_8cs.html":[2,0,0,1099],
 "StatsStamina_8cs_source.html":[2,0,0,1099],
 "Stats_8cs.html":[2,0,0,1092],
 "Stats_8cs_source.html":[2,0,0,1092],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "TileTypeObjHuge_8cs_source.html":[2,0,0,1203],
 "TileTypeObjWaterTop_8cs.html":[2,0,0,1205],
 "TileTypeObjWaterTop_8cs_source.html":[2,0,0,1205],
-"TileTypeObjWater_8cs.html":[2,0,0,1204],
-"TileTypeObjWater_8cs_source.html":[2,0,0,1204]
+"TileTypeObjWater_8cs.html":[2,0,0,1204]
 };

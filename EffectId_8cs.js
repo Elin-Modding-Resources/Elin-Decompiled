@@ -112,6 +112,7 @@ var EffectId_8cs =
       [ "Steal", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02adf2da70719acb96b4702c5abf1ffc993", null ],
       [ "Scream", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa8ae3ea8d3880644ab6f2512a184f124", null ],
       [ "DropMine", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a181df47f6025b892c6d8f9177efde2ca", null ],
-      [ "ThrowPotion", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa710ce528a653d4b7bd825ae7c21f557", null ]
+      [ "ThrowPotion", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa710ce528a653d4b7bd825ae7c21f557", null ],
+      [ "DrainMana", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a25745ebba006d6bf56137d85693a34c7", null ]
     ] ]
 ];

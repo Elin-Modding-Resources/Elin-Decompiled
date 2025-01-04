@@ -1,5 +1,9 @@
 var NAVTREEINDEX88 =
 {
+"classPropsManager.html#acef3d60fb0706c1e737bce2a21f776c1":[1,0,929,3],
+"classPropsManager.html#af12189144ef000658610c2a0d4d79384":[1,0,929,2],
+"classPropsManager.html#affc144d2bf2202851afbe9efee336f0e":[1,0,929,7],
+"classPropsRoaming.html":[1,0,930],
 "classPropsRoaming.html#a19cfa8f79539b84357a1e2a2cad1b3ac":[1,0,930,1],
 "classPropsRoaming.html#a71e96642752d2283db0fa190e403c795":[1,0,930,0],
 "classPropsStocked.html":[1,0,931],
@@ -245,9 +249,5 @@ var NAVTREEINDEX88 =
 "classQuestEscort.html#acbc60325f77dfde637101926c1d53f4d":[1,0,946,4],
 "classQuestEscort.html#ad3129d33f2ce289389f2caf9d78b4d7f":[1,0,946,8],
 "classQuestEscort.html#ae221c4d3e02bad3ddef6004f44215edc":[1,0,946,10],
-"classQuestEscort.html#aec284a8bdfeb4af972b3c87f8684e956":[1,0,946,2],
-"classQuestEscort.html#af490541613a4a21e4edcb975cc5b926d":[1,0,946,5],
-"classQuestExploration.html":[1,0,947],
-"classQuestExploration.html#a06dfb808ab050bd4cf772df50226f465":[1,0,947,1],
-"classQuestExploration.html#a375875d658581ac4a7b47933a9bc5a6e":[1,0,947,2]
+"classQuestEscort.html#aec284a8bdfeb4af972b3c87f8684e956":[1,0,946,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaee6085db6c9b85f45fd9b9b31b020f8d":[2,0,0,1024,0,7],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe0619d5f4999e09c622e32da7e7566a":[2,0,0,1024,0,41],
 "ShopType_8cs_source.html":[2,0,0,1024],
 "ShouldSerializeContractResolver_8cs.html":[2,0,0,2,71],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "StatsSAN_8cs.html":[2,0,0,1097],
 "StatsSAN_8cs_source.html":[2,0,0,1097],
 "StatsSleepiness_8cs.html":[2,0,0,1098],
-"StatsSleepiness_8cs_source.html":[2,0,0,1098],
-"StatsStamina_8cs.html":[2,0,0,1099]
+"StatsSleepiness_8cs_source.html":[2,0,0,1098]
 };

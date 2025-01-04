@@ -196,6 +196,7 @@ var classZone =
     [ "MakeTownProperties", "classZone.html#a3cda434ba6ada73e70ab2753a8e0ff7b", null ],
     [ "MaxLv", "classZone.html#a9f4599436db0671c8fb00f3eebf446de", null ],
     [ "MaxRespawn", "classZone.html#afcf1346579cec5656b61a0de52724b47", null ],
+    [ "MaxSoil", "classZone.html#a775b8399d0c98af9cf54d2d0e3d03a7f", null ],
     [ "MaxSpawn", "classZone.html#a26f38bc78aa5ce5c22bc03e726ea1238", null ],
     [ "MinLv", "classZone.html#ac7983bde4e6127a4e12206c82d1b8102", null ],
     [ "MinsSinceLastActive", "classZone.html#a2cefd18c830c1c76f6f958e4d9dab98f", null ],

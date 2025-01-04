@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"LangSetting_8cs_source.html":[2,0,0,2,50],
 "LangTalk_8cs.html":[2,0,0,2,51],
 "LangTalk_8cs_source.html":[2,0,0,2,51],
 "LangWord_8cs.html":[2,0,0,2,52],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "MapPiece_8cs.html":[2,0,0,774],
 "MapPiece_8cs_source.html":[2,0,0,774],
 "MapSubset_8cs.html":[2,0,0,775],
-"MapSubset_8cs_source.html":[2,0,0,775],
-"Map_8cs.html":[2,0,0,764]
+"MapSubset_8cs_source.html":[2,0,0,775]
 };

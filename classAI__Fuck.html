@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.73 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.74</span>
    </div>
   </td>
  </tr>
@@ -766,188 +766,188 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00160">160</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> : <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
-<div class="line"><span class="lineno">  163</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara2 = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> : <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a> || chara2.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
-<div class="line"><span class="lineno">  165</span>        {</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0;</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a>)</div>
-<div class="line"><span class="lineno">  170</span>        {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.fuck:</div>
-<div class="line"><span class="lineno">  172</span>        {</div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
-<div class="line"><span class="lineno">  174</span>            {</div>
-<div class="line"><span class="lineno">  175</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara3 = ((i == 0) ? chara : chara2);</div>
-<div class="line"><span class="lineno">  176</span>                chara3.RemoveCondition&lt;<a class="code hl_class" href="classConDrunk.html">ConDrunk</a>&gt;();</div>
-<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(15) == 0 &amp;&amp; !chara3.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1216))</div>
-<div class="line"><span class="lineno">  178</span>                {</div>
-<div class="line"><span class="lineno">  179</span>                    chara3.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConDisease.html">ConDisease</a>&gt;(200);</div>
-<div class="line"><span class="lineno">  180</span>                }</div>
-<div class="line"><span class="lineno">  181</span>                chara3.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(77, 250);</div>
-<div class="line"><span class="lineno">  182</span>                chara3.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(71, 250);</div>
-<div class="line"><span class="lineno">  183</span>                chara3.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(75, 250);</div>
-<div class="line"><span class="lineno">  184</span>            }</div>
-<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">if</span> (!chara2.HasElement(1216))</div>
-<div class="line"><span class="lineno">  186</span>            {</div>
-<div class="line"><span class="lineno">  187</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(5) == 0)</div>
-<div class="line"><span class="lineno">  188</span>                {</div>
-<div class="line"><span class="lineno">  189</span>                    chara2.AddCondition&lt;<a class="code hl_class" href="classConParalyze.html">ConParalyze</a>&gt;(500);</div>
-<div class="line"><span class="lineno">  190</span>                }</div>
-<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
-<div class="line"><span class="lineno">  192</span>                {</div>
-<div class="line"><span class="lineno">  193</span>                    chara2.AddCondition&lt;<a class="code hl_class" href="classConInsane.html">ConInsane</a>&gt;(100 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100));</div>
-<div class="line"><span class="lineno">  194</span>                }</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span>            <span class="keywordtype">int</span> num3 = <a class="code hl_class" href="classCalcMoney.html">CalcMoney</a>.<a class="code hl_function" href="classCalcMoney.html#a9ea51b5553a37974bfd91db5de6b247e">Whore</a>(chara2, chara);</div>
-<div class="line"><span class="lineno">  197</span>            chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail_after&quot;</span>);</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordtype">bool</span> flag3 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a>)</div>
-<div class="line"><span class="lineno">  200</span>            {</div>
-<div class="line"><span class="lineno">  201</span>                chara.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.love);</div>
-<div class="line"><span class="lineno">  202</span>                chara2.ShowEmo(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.love);</div>
-<div class="line"><span class="lineno">  203</span>                EClass.player.forceTalk = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  204</span>                chara2.Talk(<span class="stringliteral">&quot;seduced&quot;</span>);</div>
-<div class="line"><span class="lineno">  205</span>            }</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chara != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>)</div>
-<div class="line"><span class="lineno">  207</span>            {</div>
-<div class="line"><span class="lineno">  208</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara4 = chara;</div>
-<div class="line"><span class="lineno">  209</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara5 = chara2;</div>
-<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81">bitch</a>)</div>
-<div class="line"><span class="lineno">  211</span>                {</div>
-<div class="line"><span class="lineno">  212</span>                    chara = chara5;</div>
-<div class="line"><span class="lineno">  213</span>                    chara2 = chara4;</div>
-<div class="line"><span class="lineno">  214</span>                }</div>
-<div class="line"><span class="lineno">  215</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;buyer:&quot;</span> + chara.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a> + <span class="stringliteral">&quot; seller:&quot;</span> + chara2.Name + <span class="stringliteral">&quot; money:&quot;</span> + num3);</div>
-<div class="line"><span class="lineno">  216</span>                <span class="keywordflow">if</span> (!chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
-<div class="line"><span class="lineno">  217</span>                {</div>
-<div class="line"><span class="lineno">  218</span>                    chara.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a>(num3));</div>
-<div class="line"><span class="lineno">  219</span>                }</div>
-<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">if</span> (!chara2.IsPC &amp;&amp; chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>() &lt; num3 &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
-<div class="line"><span class="lineno">  221</span>                {</div>
-<div class="line"><span class="lineno">  222</span>                    num3 = chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>();</div>
-<div class="line"><span class="lineno">  223</span>                }</div>
-<div class="line"><span class="lineno">  224</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;money:&quot;</span> + num3 + <span class="stringliteral">&quot; buyer:&quot;</span> + chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>());</div>
-<div class="line"><span class="lineno">  225</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>() &gt;= num3)</div>
-<div class="line"><span class="lineno">  226</span>                {</div>
-<div class="line"><span class="lineno">  227</span>                    chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail_pay&quot;</span>);</div>
-<div class="line"><span class="lineno">  228</span>                }</div>
-<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  230</span>                {</div>
-<div class="line"><span class="lineno">  231</span>                    chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail_nomoney&quot;</span>);</div>
-<div class="line"><span class="lineno">  232</span>                    num3 = chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>();</div>
-<div class="line"><span class="lineno">  233</span>                    chara2.Say(<span class="stringliteral">&quot;angry&quot;</span>, chara2);</div>
-<div class="line"><span class="lineno">  234</span>                    chara2.Talk(<span class="stringliteral">&quot;angry&quot;</span>);</div>
-<div class="line"><span class="lineno">  235</span>                    flag = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? true : <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  236</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> ? 2 : 20) == 0)</div>
-<div class="line"><span class="lineno">  237</span>                    {</div>
-<div class="line"><span class="lineno">  238</span>                        flag3 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  239</span>                    }</div>
-<div class="line"><span class="lineno">  240</span>                }</div>
-<div class="line"><span class="lineno">  241</span>                chara.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(-num3);</div>
-<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> (chara2 == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>)</div>
-<div class="line"><span class="lineno">  243</span>                {</div>
-<div class="line"><span class="lineno">  244</span>                    <span class="keywordflow">if</span> (num3 &gt; 0)</div>
-<div class="line"><span class="lineno">  245</span>                    {</div>
-<div class="line"><span class="lineno">  246</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">DropReward</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;money&quot;</span>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num3));</div>
-<div class="line"><span class="lineno">  247</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a3a7361209d6c489bc52cfadf55ec933f">ModKarma</a>(-1);</div>
-<div class="line"><span class="lineno">  248</span>                    }</div>
-<div class="line"><span class="lineno">  249</span>                }</div>
-<div class="line"><span class="lineno">  250</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  251</span>                {</div>
-<div class="line"><span class="lineno">  252</span>                    <span class="keywordtype">int</span> num4 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction &amp;&amp; chara2.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default) ? 1 : 10);</div>
-<div class="line"><span class="lineno">  253</span>                    <span class="keywordflow">if</span> (chara2.GetCurrency() - num4 &gt; 0)</div>
-<div class="line"><span class="lineno">  254</span>                    {</div>
-<div class="line"><span class="lineno">  255</span>                        chara2.c_allowance += num3;</div>
-<div class="line"><span class="lineno">  256</span>                    }</div>
-<div class="line"><span class="lineno">  257</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  258</span>                    {</div>
-<div class="line"><span class="lineno">  259</span>                        chara2.ModCurrency(num3);</div>
-<div class="line"><span class="lineno">  260</span>                    }</div>
-<div class="line"><span class="lineno">  261</span>                }</div>
-<div class="line"><span class="lineno">  262</span>                chara = chara4;</div>
-<div class="line"><span class="lineno">  263</span>                chara2 = chara5;</div>
-<div class="line"><span class="lineno">  264</span>            }</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (flag3)</div>
-<div class="line"><span class="lineno">  266</span>            {</div>
-<div class="line"><span class="lineno">  267</span>                chara2.<a class="code hl_function" href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">DoHostileAction</a>(chara);</div>
-<div class="line"><span class="lineno">  268</span>            }</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a> || chara2.IsPCParty)</div>
-<div class="line"><span class="lineno">  270</span>            {</div>
-<div class="line"><span class="lineno">  271</span>                chara.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-5 - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a> / 10 + (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a> ? StaminaCost(chara2, chara) : 0) + 1));</div>
-<div class="line"><span class="lineno">  272</span>                chara2.stamina.Mod(-5 - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara2.stamina.max / 20 + (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a> ? StaminaCost(chara, chara2) : 0) + 1));</div>
-<div class="line"><span class="lineno">  273</span>            }</div>
-<div class="line"><span class="lineno">  274</span>            SuccubusExp(chara, chara2);</div>
-<div class="line"><span class="lineno">  275</span>            SuccubusExp(chara2, chara);</div>
-<div class="line"><span class="lineno">  276</span>            chara2.ModAffinity(chara, flag ? 10 : (-5));</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame:</div>
-<div class="line"><span class="lineno">  280</span>        {</div>
-<div class="line"><span class="lineno">  281</span>            <span class="keywordtype">int</span> num = ((!chara2.IsPCFaction) ? (chara2.IsHuman ? 10 : 5) : (chara2.IsHuman ? 5 : 0));</div>
-<div class="line"><span class="lineno">  282</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;tame_end&quot;</span>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
-<div class="line"><span class="lineno">  283</span>            <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;groomed&quot;</span>);</div>
-<div class="line"><span class="lineno">  284</span>            <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<span class="stringliteral">&quot;heal_tick&quot;</span>);</div>
-<div class="line"><span class="lineno">  285</span>            <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">hygiene</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(15);</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> == <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>)</div>
-<div class="line"><span class="lineno">  287</span>            {</div>
-<div class="line"><span class="lineno">  288</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  289</span>            }</div>
-<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#a24a2dff894bd2174895fdcfd73e36e6d">totalAffinity</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  291</span>            {</div>
-<div class="line"><span class="lineno">  292</span>                chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;brush_success&quot;</span>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>, <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
-<div class="line"><span class="lineno">  293</span>            }</div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  295</span>            {</div>
-<div class="line"><span class="lineno">  296</span>                chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;brush_fail&quot;</span>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>, <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
-<div class="line"><span class="lineno">  297</span>                num *= 5;</div>
-<div class="line"><span class="lineno">  298</span>            }</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordtype">bool</span> num2 = <a class="code hl_class" href="classTraitToolBrush.html">TraitToolBrush</a>.<a class="code hl_function" href="classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4">IsTamePossible</a>(<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>);</div>
-<div class="line"><span class="lineno">  300</span>            <span class="keywordtype">bool</span> flag2 = num2 &amp;&amp; chara2.affinity.CanInvite() &amp;&amp; chara2.GetBestAttribute() &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a>;</div>
-<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">if</span> (num2)</div>
-<div class="line"><span class="lineno">  302</span>            {</div>
-<div class="line"><span class="lineno">  303</span>                <span class="keywordflow">if</span> (flag2)</div>
-<div class="line"><span class="lineno">  304</span>                {</div>
-<div class="line"><span class="lineno">  305</span>                    chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;tame_success&quot;</span>, <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
-<div class="line"><span class="lineno">  306</span>                    chara2.MakeAlly();</div>
-<div class="line"><span class="lineno">  307</span>                }</div>
-<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  309</span>                {</div>
-<div class="line"><span class="lineno">  310</span>                    chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;tame_fail&quot;</span>, chara, chara2);</div>
-<div class="line"><span class="lineno">  311</span>                }</div>
-<div class="line"><span class="lineno">  312</span>            }</div>
-<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">if</span> (num &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100))</div>
-<div class="line"><span class="lineno">  314</span>            {</div>
-<div class="line"><span class="lineno">  315</span>                chara2.DoHostileAction(chara);</div>
-<div class="line"><span class="lineno">  316</span>                chara2.calmCheckTurn *= 3;</div>
-<div class="line"><span class="lineno">  317</span>            }</div>
-<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  319</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00161">161</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> : <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara2 = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> : <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a> || chara2.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a>)</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0;</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a>)</div>
+<div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.fuck:</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara3 = ((i == 0) ? chara : chara2);</div>
+<div class="line"><span class="lineno">  177</span>                chara3.RemoveCondition&lt;<a class="code hl_class" href="classConDrunk.html">ConDrunk</a>&gt;();</div>
+<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(15) == 0 &amp;&amp; !chara3.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1216))</div>
+<div class="line"><span class="lineno">  179</span>                {</div>
+<div class="line"><span class="lineno">  180</span>                    chara3.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConDisease.html">ConDisease</a>&gt;(200);</div>
+<div class="line"><span class="lineno">  181</span>                }</div>
+<div class="line"><span class="lineno">  182</span>                chara3.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(77, 250);</div>
+<div class="line"><span class="lineno">  183</span>                chara3.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(71, 250);</div>
+<div class="line"><span class="lineno">  184</span>                chara3.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(75, 250);</div>
+<div class="line"><span class="lineno">  185</span>            }</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">if</span> (!chara2.HasElement(1216))</div>
+<div class="line"><span class="lineno">  187</span>            {</div>
+<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(5) == 0)</div>
+<div class="line"><span class="lineno">  189</span>                {</div>
+<div class="line"><span class="lineno">  190</span>                    chara2.AddCondition&lt;<a class="code hl_class" href="classConParalyze.html">ConParalyze</a>&gt;(500);</div>
+<div class="line"><span class="lineno">  191</span>                }</div>
+<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">  193</span>                {</div>
+<div class="line"><span class="lineno">  194</span>                    chara2.AddCondition&lt;<a class="code hl_class" href="classConInsane.html">ConInsane</a>&gt;(100 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100));</div>
+<div class="line"><span class="lineno">  195</span>                }</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">int</span> num3 = <a class="code hl_class" href="classCalcMoney.html">CalcMoney</a>.<a class="code hl_function" href="classCalcMoney.html#a9ea51b5553a37974bfd91db5de6b247e">Whore</a>(chara2, chara);</div>
+<div class="line"><span class="lineno">  198</span>            chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail_after&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordtype">bool</span> flag3 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a>)</div>
+<div class="line"><span class="lineno">  201</span>            {</div>
+<div class="line"><span class="lineno">  202</span>                chara.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.love);</div>
+<div class="line"><span class="lineno">  203</span>                chara2.ShowEmo(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.love);</div>
+<div class="line"><span class="lineno">  204</span>                EClass.player.forceTalk = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  205</span>                chara2.Talk(<span class="stringliteral">&quot;seduced&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>            }</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chara != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>)</div>
+<div class="line"><span class="lineno">  208</span>            {</div>
+<div class="line"><span class="lineno">  209</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara4 = chara;</div>
+<div class="line"><span class="lineno">  210</span>                <a class="code hl_class" href="classChara.html">Chara</a> chara5 = chara2;</div>
+<div class="line"><span class="lineno">  211</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81">bitch</a>)</div>
+<div class="line"><span class="lineno">  212</span>                {</div>
+<div class="line"><span class="lineno">  213</span>                    chara = chara5;</div>
+<div class="line"><span class="lineno">  214</span>                    chara2 = chara4;</div>
+<div class="line"><span class="lineno">  215</span>                }</div>
+<div class="line"><span class="lineno">  216</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;buyer:&quot;</span> + chara.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a> + <span class="stringliteral">&quot; seller:&quot;</span> + chara2.Name + <span class="stringliteral">&quot; money:&quot;</span> + num3);</div>
+<div class="line"><span class="lineno">  217</span>                <span class="keywordflow">if</span> (!chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  218</span>                {</div>
+<div class="line"><span class="lineno">  219</span>                    chara.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a>(num3));</div>
+<div class="line"><span class="lineno">  220</span>                }</div>
+<div class="line"><span class="lineno">  221</span>                <span class="keywordflow">if</span> (!chara2.IsPC &amp;&amp; chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>() &lt; num3 &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  222</span>                {</div>
+<div class="line"><span class="lineno">  223</span>                    num3 = chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>();</div>
+<div class="line"><span class="lineno">  224</span>                }</div>
+<div class="line"><span class="lineno">  225</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;money:&quot;</span> + num3 + <span class="stringliteral">&quot; buyer:&quot;</span> + chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>());</div>
+<div class="line"><span class="lineno">  226</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>() &gt;= num3)</div>
+<div class="line"><span class="lineno">  227</span>                {</div>
+<div class="line"><span class="lineno">  228</span>                    chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail_pay&quot;</span>);</div>
+<div class="line"><span class="lineno">  229</span>                }</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  231</span>                {</div>
+<div class="line"><span class="lineno">  232</span>                    chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail_nomoney&quot;</span>);</div>
+<div class="line"><span class="lineno">  233</span>                    num3 = chara.<a class="code hl_function" href="classCard.html#a6b8ed8f4280ec4fde249ed153321db75">GetCurrency</a>();</div>
+<div class="line"><span class="lineno">  234</span>                    chara2.Say(<span class="stringliteral">&quot;angry&quot;</span>, chara2);</div>
+<div class="line"><span class="lineno">  235</span>                    chara2.Talk(<span class="stringliteral">&quot;angry&quot;</span>);</div>
+<div class="line"><span class="lineno">  236</span>                    flag = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? true : <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  237</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> ? 2 : 20) == 0)</div>
+<div class="line"><span class="lineno">  238</span>                    {</div>
+<div class="line"><span class="lineno">  239</span>                        flag3 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  240</span>                    }</div>
+<div class="line"><span class="lineno">  241</span>                }</div>
+<div class="line"><span class="lineno">  242</span>                chara.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(-num3);</div>
+<div class="line"><span class="lineno">  243</span>                <span class="keywordflow">if</span> (chara2 == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>)</div>
+<div class="line"><span class="lineno">  244</span>                {</div>
+<div class="line"><span class="lineno">  245</span>                    <span class="keywordflow">if</span> (num3 &gt; 0)</div>
+<div class="line"><span class="lineno">  246</span>                    {</div>
+<div class="line"><span class="lineno">  247</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">DropReward</a>(<a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;money&quot;</span>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(num3));</div>
+<div class="line"><span class="lineno">  248</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a3a7361209d6c489bc52cfadf55ec933f">ModKarma</a>(-1);</div>
+<div class="line"><span class="lineno">  249</span>                    }</div>
+<div class="line"><span class="lineno">  250</span>                }</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  252</span>                {</div>
+<div class="line"><span class="lineno">  253</span>                    <span class="keywordtype">int</span> num4 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction &amp;&amp; chara2.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default) ? 1 : 10);</div>
+<div class="line"><span class="lineno">  254</span>                    <span class="keywordflow">if</span> (chara2.GetCurrency() - num4 &gt; 0)</div>
+<div class="line"><span class="lineno">  255</span>                    {</div>
+<div class="line"><span class="lineno">  256</span>                        chara2.c_allowance += num3;</div>
+<div class="line"><span class="lineno">  257</span>                    }</div>
+<div class="line"><span class="lineno">  258</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  259</span>                    {</div>
+<div class="line"><span class="lineno">  260</span>                        chara2.ModCurrency(num3);</div>
+<div class="line"><span class="lineno">  261</span>                    }</div>
+<div class="line"><span class="lineno">  262</span>                }</div>
+<div class="line"><span class="lineno">  263</span>                chara = chara4;</div>
+<div class="line"><span class="lineno">  264</span>                chara2 = chara5;</div>
+<div class="line"><span class="lineno">  265</span>            }</div>
+<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">if</span> (flag3)</div>
+<div class="line"><span class="lineno">  267</span>            {</div>
+<div class="line"><span class="lineno">  268</span>                chara2.<a class="code hl_function" href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">DoHostileAction</a>(chara);</div>
+<div class="line"><span class="lineno">  269</span>            }</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a> || chara2.IsPCParty)</div>
+<div class="line"><span class="lineno">  271</span>            {</div>
+<div class="line"><span class="lineno">  272</span>                chara.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-5 - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a> / 10 + (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a> ? StaminaCost(chara2, chara) : 0) + 1));</div>
+<div class="line"><span class="lineno">  273</span>                chara2.stamina.Mod(-5 - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(chara2.stamina.max / 20 + (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a> ? StaminaCost(chara, chara2) : 0) + 1));</div>
+<div class="line"><span class="lineno">  274</span>            }</div>
+<div class="line"><span class="lineno">  275</span>            SuccubusExp(chara, chara2);</div>
+<div class="line"><span class="lineno">  276</span>            SuccubusExp(chara2, chara);</div>
+<div class="line"><span class="lineno">  277</span>            chara2.ModAffinity(chara, flag ? 10 : (-5));</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame:</div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            <span class="keywordtype">int</span> num = ((!chara2.IsPCFaction) ? (chara2.IsHuman ? 10 : 5) : (chara2.IsHuman ? 5 : 0));</div>
+<div class="line"><span class="lineno">  283</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;tame_end&quot;</span>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
+<div class="line"><span class="lineno">  284</span>            <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;groomed&quot;</span>);</div>
+<div class="line"><span class="lineno">  285</span>            <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<span class="stringliteral">&quot;heal_tick&quot;</span>);</div>
+<div class="line"><span class="lineno">  286</span>            <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">hygiene</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(15);</div>
+<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> == <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>)</div>
+<div class="line"><span class="lineno">  288</span>            {</div>
+<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  290</span>            }</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#a24a2dff894bd2174895fdcfd73e36e6d">totalAffinity</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  292</span>            {</div>
+<div class="line"><span class="lineno">  293</span>                chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;brush_success&quot;</span>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>, <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">  294</span>            }</div>
+<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  296</span>            {</div>
+<div class="line"><span class="lineno">  297</span>                chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;brush_fail&quot;</span>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>, <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
+<div class="line"><span class="lineno">  298</span>                num *= 5;</div>
+<div class="line"><span class="lineno">  299</span>            }</div>
+<div class="line"><span class="lineno">  300</span>            <span class="keywordtype">bool</span> num2 = <a class="code hl_class" href="classTraitToolBrush.html">TraitToolBrush</a>.<a class="code hl_function" href="classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4">IsTamePossible</a>(<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>);</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordtype">bool</span> flag2 = num2 &amp;&amp; chara2.affinity.CanInvite() &amp;&amp; chara2.GetBestAttribute() &lt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a>;</div>
+<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">if</span> (num2)</div>
+<div class="line"><span class="lineno">  303</span>            {</div>
+<div class="line"><span class="lineno">  304</span>                <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">  305</span>                {</div>
+<div class="line"><span class="lineno">  306</span>                    chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;tame_success&quot;</span>, <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>, <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
+<div class="line"><span class="lineno">  307</span>                    chara2.MakeAlly();</div>
+<div class="line"><span class="lineno">  308</span>                }</div>
+<div class="line"><span class="lineno">  309</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  310</span>                {</div>
+<div class="line"><span class="lineno">  311</span>                    chara.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;tame_fail&quot;</span>, chara, chara2);</div>
+<div class="line"><span class="lineno">  312</span>                }</div>
+<div class="line"><span class="lineno">  313</span>            }</div>
+<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">if</span> (num &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100))</div>
+<div class="line"><span class="lineno">  315</span>            {</div>
+<div class="line"><span class="lineno">  316</span>                chara2.DoHostileAction(chara);</div>
+<div class="line"><span class="lineno">  317</span>                chara2.calmCheckTurn *= 3;</div>
+<div class="line"><span class="lineno">  318</span>            }</div>
+<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  320</span>        }</div>
-<div class="line"><span class="lineno">  321</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> StaminaCost(<a class="code hl_class" href="classChara.html">Chara</a> c1, <a class="code hl_class" href="classChara.html">Chara</a> c2)</div>
-<div class="line"><span class="lineno">  322</span>        {</div>
-<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(10f * (<span class="keywordtype">float</span>)c1.<a class="code hl_property" href="classCard.html#a2120b85826b9a180bf28b74baa03082d">END</a> / (<span class="keywordtype">float</span>)Mathf.Max(c2.<a class="code hl_property" href="classCard.html#a2120b85826b9a180bf28b74baa03082d">END</a>, 1), 0f);</div>
-<div class="line"><span class="lineno">  324</span>        }</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SuccubusExp(<a class="code hl_class" href="classChara.html">Chara</a> c, <a class="code hl_class" href="classChara.html">Chara</a> tg)</div>
-<div class="line"><span class="lineno">  326</span>        {</div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">if</span> (!c.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1216))</div>
-<div class="line"><span class="lineno">  328</span>            {</div>
-<div class="line"><span class="lineno">  329</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  330</span>            }</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> tg.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ac62364ea18c1b7d47a5a843035470bec">ListBestAttributes</a>())</div>
-<div class="line"><span class="lineno">  332</span>            {</div>
-<div class="line"><span class="lineno">  333</span>                <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a9733e2947b8fbfd0f38af08c184a792d">ValueWithoutLink</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) &lt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ValueWithoutLink)</div>
-<div class="line"><span class="lineno">  334</span>                {</div>
-<div class="line"><span class="lineno">  335</span>                    c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a56e96745b1ef51d616e34379a670c585">ModTempPotential</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id, 1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ValueWithoutLink - c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a9733e2947b8fbfd0f38af08c184a792d">ValueWithoutLink</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) / 5 + 1));</div>
-<div class="line"><span class="lineno">  336</span>                    c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;succubus_exp&quot;</span>, c, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Name.ToLower());</div>
-<div class="line"><span class="lineno">  337</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  338</span>                }</div>
-<div class="line"><span class="lineno">  339</span>            }</div>
-<div class="line"><span class="lineno">  340</span>        }</div>
-<div class="line"><span class="lineno">  341</span>    }</div>
+<div class="line"><span class="lineno">  321</span>        }</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> StaminaCost(<a class="code hl_class" href="classChara.html">Chara</a> c1, <a class="code hl_class" href="classChara.html">Chara</a> c2)</div>
+<div class="line"><span class="lineno">  323</span>        {</div>
+<div class="line"><span class="lineno">  324</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)Mathf.Max(10f * (<span class="keywordtype">float</span>)c1.<a class="code hl_property" href="classCard.html#a2120b85826b9a180bf28b74baa03082d">END</a> / (<span class="keywordtype">float</span>)Mathf.Max(c2.<a class="code hl_property" href="classCard.html#a2120b85826b9a180bf28b74baa03082d">END</a>, 1), 0f);</div>
+<div class="line"><span class="lineno">  325</span>        }</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SuccubusExp(<a class="code hl_class" href="classChara.html">Chara</a> c, <a class="code hl_class" href="classChara.html">Chara</a> tg)</div>
+<div class="line"><span class="lineno">  327</span>        {</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">if</span> (!c.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1216))</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  331</span>            }</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> tg.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ac62364ea18c1b7d47a5a843035470bec">ListBestAttributes</a>())</div>
+<div class="line"><span class="lineno">  333</span>            {</div>
+<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a9733e2947b8fbfd0f38af08c184a792d">ValueWithoutLink</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) &lt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ValueWithoutLink)</div>
+<div class="line"><span class="lineno">  335</span>                {</div>
+<div class="line"><span class="lineno">  336</span>                    c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a56e96745b1ef51d616e34379a670c585">ModTempPotential</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id, 1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ValueWithoutLink - c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#a9733e2947b8fbfd0f38af08c184a792d">ValueWithoutLink</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) / 5 + 1));</div>
+<div class="line"><span class="lineno">  337</span>                    c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;succubus_exp&quot;</span>, c, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Name.ToLower());</div>
+<div class="line"><span class="lineno">  338</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  339</span>                }</div>
+<div class="line"><span class="lineno">  340</span>            }</div>
+<div class="line"><span class="lineno">  341</span>        }</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aEmo_8cs_html_a3a776133b1ce94bdc19666187232d047"><div class="ttname"><a href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a></div><div class="ttdeci">Emo</div><div class="ttdef"><b>Definition:</b> <a href="Emo_8cs_source.html#l00001">Emo.cs:2</a></div></div>
 <div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00001">FactionMemberType.cs:2</a></div></div>
@@ -978,7 +978,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02458">Card.cs:2458</a></div></div>
 <div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05823">Card.cs:5823</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
-<div class="ttc" id="aclassChara_html_a31d9d4007deda6846d34ae070a3efaae"><div class="ttname"><a href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">Chara.AddCondition</a></div><div class="ttdeci">Condition AddCondition(string id, int p=100, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08136">Chara.cs:8136</a></div></div>
+<div class="ttc" id="aclassChara_html_a31d9d4007deda6846d34ae070a3efaae"><div class="ttname"><a href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">Chara.AddCondition</a></div><div class="ttdeci">Condition AddCondition(string id, int p=100, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08145">Chara.cs:8145</a></div></div>
 <div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00597">Chara.cs:597</a></div></div>
 <div class="ttc" id="aclassChara_html_a4312c7c0a71d9e4709fdfa8b163ebda1"><div class="ttname"><a href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">Chara.IsPCParty</a></div><div class="ttdeci">override bool IsPCParty</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00599">Chara.cs:600</a></div></div>
 <div class="ttc" id="aclassChara_html_a4a3317f33313bbcc61849fe5ef604d71"><div class="ttname"><a href="classChara.html#a4a3317f33313bbcc61849fe5ef604d71">Chara.hygiene</a></div><div class="ttdeci">Stats hygiene</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00937">Chara.cs:937</a></div></div>
@@ -1009,7 +1009,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTraitToolBrush_html"><div class="ttname"><a href="classTraitToolBrush.html">TraitToolBrush</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitToolBrush_8cs_source.html#l00001">TraitToolBrush.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitToolBrush_html_a398f096eeaeafa6136a87bf26d9e63c4"><div class="ttname"><a href="classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4">TraitToolBrush.IsTamePossible</a></div><div class="ttdeci">static bool IsTamePossible(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitToolBrush_8cs_source.html#l00040">TraitToolBrush.cs:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08136">Chara.AddCondition()</a>, <a class="el" href="Chara_8cs_source.html#l00299">Chara.affinity</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00016">bitch</a>, <a class="el" href="Affinity_8cs_source.html#l00054">Affinity.CanInvite()</a>, <a class="el" href="Card_8cs_source.html#l02171">Card.CHA</a>, <a class="el" href="Card_8cs_source.html#l01922">Card.Chara</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Chara_8cs_source.html#l05522">Chara.DoHostileAction()</a>, <a class="el" href="Player_8cs_source.html#l02296">Player.DropReward()</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02161">Card.END</a>, <a class="el" href="Card_8cs_source.html#l02440">Card.GetBestAttribute()</a>, <a class="el" href="Card_8cs_source.html#l03483">Card.GetCurrency()</a>, <a class="el" href="Card_8cs_source.html#l05003">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00937">Chara.hygiene</a>, <a class="el" href="Chara_8cs_source.html#l00374">Chara.isDead</a>, <a class="el" href="Chara_8cs_source.html#l00811">Chara.IsHuman</a>, <a class="el" href="Chara_8cs_source.html#l00597">Chara.IsPC</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l00600">Chara.IsPCParty</a>, <a class="el" href="TraitToolBrush_8cs_source.html#l00040">TraitToolBrush.IsTamePossible()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ElementContainer_8cs_source.html#l00607">ElementContainer.ListBestAttributes()</a>, <a class="el" href="Chara_8cs_source.html#l01895">Chara.MakeAlly()</a>, <a class="el" href="Stats_8cs_source.html#l00068">Stats.max</a>, <a class="el" href="Chara_8cs_source.html#l00046">Chara.memberType</a>, <a class="el" href="Stats_8cs_source.html#l00135">Stats.Mod()</a>, <a class="el" href="Chara_8cs_source.html#l06910">Chara.ModAffinity()</a>, <a class="el" href="Card_8cs_source.html#l03469">Card.ModCurrency()</a>, <a class="el" href="Card_8cs_source.html#l02458">Card.ModExp()</a>, <a class="el" href="Player_8cs_source.html#l02265">Player.ModKarma()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00433">ElementContainer.ModTempPotential()</a>, <a class="el" href="Card_8cs_source.html#l01989">Card.Name</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05222">Card.PlayEffect()</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l05188">Card.PlaySound()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00074">EClass.rndHalf()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l05823">Card.Say()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00014">sell</a>, <a class="el" href="Card_8cs_source.html#l03167">Card.SetNum()</a>, <a class="el" href="Card_8cs_source.html#l05156">Card.ShowEmo()</a>, <a class="el" href="Chara_8cs_source.html#l00931">Chara.stamina</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00018">succubus</a>, <a class="el" href="Card_8cs_source.html#l05733">Card.Talk()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00012">target</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00026">totalAffinity</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00028">Type</a>, <a class="el" href="ElementContainer_8cs_source.html#l00184">ElementContainer.ValueWithoutLink()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00050">CalcMoney.Whore()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08145">Chara.AddCondition()</a>, <a class="el" href="Chara_8cs_source.html#l00299">Chara.affinity</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00016">bitch</a>, <a class="el" href="Affinity_8cs_source.html#l00054">Affinity.CanInvite()</a>, <a class="el" href="Card_8cs_source.html#l02171">Card.CHA</a>, <a class="el" href="Card_8cs_source.html#l01922">Card.Chara</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Chara_8cs_source.html#l05522">Chara.DoHostileAction()</a>, <a class="el" href="Player_8cs_source.html#l02296">Player.DropReward()</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02161">Card.END</a>, <a class="el" href="Card_8cs_source.html#l02440">Card.GetBestAttribute()</a>, <a class="el" href="Card_8cs_source.html#l03483">Card.GetCurrency()</a>, <a class="el" href="Card_8cs_source.html#l05003">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00937">Chara.hygiene</a>, <a class="el" href="Chara_8cs_source.html#l00374">Chara.isDead</a>, <a class="el" href="Chara_8cs_source.html#l00811">Chara.IsHuman</a>, <a class="el" href="Chara_8cs_source.html#l00597">Chara.IsPC</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l00600">Chara.IsPCParty</a>, <a class="el" href="TraitToolBrush_8cs_source.html#l00040">TraitToolBrush.IsTamePossible()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ElementContainer_8cs_source.html#l00607">ElementContainer.ListBestAttributes()</a>, <a class="el" href="Chara_8cs_source.html#l01895">Chara.MakeAlly()</a>, <a class="el" href="Stats_8cs_source.html#l00068">Stats.max</a>, <a class="el" href="Chara_8cs_source.html#l00046">Chara.memberType</a>, <a class="el" href="Stats_8cs_source.html#l00135">Stats.Mod()</a>, <a class="el" href="Chara_8cs_source.html#l06919">Chara.ModAffinity()</a>, <a class="el" href="Card_8cs_source.html#l03469">Card.ModCurrency()</a>, <a class="el" href="Card_8cs_source.html#l02458">Card.ModExp()</a>, <a class="el" href="Player_8cs_source.html#l02265">Player.ModKarma()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00433">ElementContainer.ModTempPotential()</a>, <a class="el" href="Card_8cs_source.html#l01989">Card.Name</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05222">Card.PlayEffect()</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l05188">Card.PlaySound()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00074">EClass.rndHalf()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l05823">Card.Say()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00014">sell</a>, <a class="el" href="Card_8cs_source.html#l03167">Card.SetNum()</a>, <a class="el" href="Card_8cs_source.html#l05156">Card.ShowEmo()</a>, <a class="el" href="Chara_8cs_source.html#l00931">Chara.stamina</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00018">succubus</a>, <a class="el" href="Card_8cs_source.html#l05733">Card.Talk()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00012">target</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00026">totalAffinity</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00028">Type</a>, <a class="el" href="ElementContainer_8cs_source.html#l00184">ElementContainer.ValueWithoutLink()</a>, and <a class="el" href="CalcMoney_8cs_source.html#l00050">CalcMoney.Whore()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
 
@@ -1059,107 +1059,108 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   60</span>        }</div>
 <div class="line"><span class="lineno">   61</span>        <a class="code hl_class" href="classChara.html">Chara</a> cc = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a> : <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>);</div>
 <div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classChara.html">Chara</a> tc = (<a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a> ? <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> : <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>);</div>
-<div class="line"><span class="lineno">   63</span>        cc.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a>.ToString() + <span class="stringliteral">&quot;_start&quot;</span>, cc, tc);</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="classAIAct.html#aa5d0f85974b41ac8e5f85cb63b5cee8f">isFail</a> = () =&gt; !tc.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a> || tc.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>) &gt; 3;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a> == <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            cc.<a class="code hl_function" href="classChara.html#aa5d23539c607ca814ba0c64a5ccf7322">SetTempHand</a>(1104, -1);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> destDist = ((<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a> == <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.fuck) ? 1 : 1);</div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d">maxProgress</a> = 25;</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a>)</div>
-<div class="line"><span class="lineno">   72</span>        {</div>
-<div class="line"><span class="lineno">   73</span>            cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;seduce&quot;</span>);</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d">maxProgress</a>; i++)</div>
-<div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="classAI__Fuck.html#a522e11c5668254f1829cce8fdf594e02">progress</a> = i;</div>
-<div class="line"><span class="lineno">   78</span>            yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad69a96ace451443057c8db17179025fa">DoGoto</a>(<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, destDist);</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">switch</span> (<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a>)</div>
-<div class="line"><span class="lineno">   80</span>            {</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.fuck:</div>
-<div class="line"><span class="lineno">   82</span>                cc.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(tc);</div>
-<div class="line"><span class="lineno">   83</span>                tc.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(cc);</div>
-<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">switch</span> (i % 4)</div>
-<div class="line"><span class="lineno">   85</span>                {</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">   87</span>                    cc.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Attack, tc);</div>
-<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0 || <a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a>)</div>
-<div class="line"><span class="lineno">   89</span>                    {</div>
-<div class="line"><span class="lineno">   90</span>                        cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>                    }</div>
-<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">   94</span>                    tc.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver);</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
-<div class="line"><span class="lineno">   96</span>                    {</div>
-<div class="line"><span class="lineno">   97</span>                        tc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tailed&quot;</span>);</div>
-<div class="line"><span class="lineno">   98</span>                    }</div>
-<div class="line"><span class="lineno">   99</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  100</span>                }</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0 || <a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a>)</div>
-<div class="line"><span class="lineno">  102</span>                {</div>
-<div class="line"><span class="lineno">  103</span>                    <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConWait.html">ConWait</a>&gt;(50, force: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  104</span>                }</div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame:</div>
-<div class="line"><span class="lineno">  107</span>            {</div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordtype">int</span> num = 100;</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">if</span> (!tc.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.IsAnimal)</div>
-<div class="line"><span class="lineno">  110</span>                {</div>
-<div class="line"><span class="lineno">  111</span>                    num += 50;</div>
-<div class="line"><span class="lineno">  112</span>                }</div>
-<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.IsHuman)</div>
-<div class="line"><span class="lineno">  114</span>                {</div>
-<div class="line"><span class="lineno">  115</span>                    num += 50;</div>
-<div class="line"><span class="lineno">  116</span>                }</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classChara.html#a4ffdc6e8db1ff1f0dbefe4979299b8dc">IsInCombat</a>)</div>
-<div class="line"><span class="lineno">  118</span>                {</div>
-<div class="line"><span class="lineno">  119</span>                    num += 100;</div>
-<div class="line"><span class="lineno">  120</span>                }</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">if</span> (tc == cc)</div>
-<div class="line"><span class="lineno">  122</span>                {</div>
-<div class="line"><span class="lineno">  123</span>                    num = 50;</div>
-<div class="line"><span class="lineno">  124</span>                }</div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classChara.html#abdf36cb2a3aa876f9d93cfc0f7b79e61">affinity</a>.<a class="code hl_property" href="classAffinity.html#a300c0a95fb0cbc9508498686ede22e62">CurrentStage</a> &lt; <a class="code hl_class" href="classAffinity.html">Affinity</a>.<a class="code hl_enumeration" href="classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58">Stage</a>.Intimate &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6 * num / 100) == 0)</div>
-<div class="line"><span class="lineno">  126</span>                {</div>
-<div class="line"><span class="lineno">  127</span>                    tc.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConFear.html">ConFear</a>&gt;(60);</div>
-<div class="line"><span class="lineno">  128</span>                }</div>
-<div class="line"><span class="lineno">  129</span>                tc.interest -= (tc.IsPCFaction ? 20 : (2 * num / 100));</div>
-<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">if</span> (i == 0 || i == 10)</div>
-<div class="line"><span class="lineno">  131</span>                {</div>
-<div class="line"><span class="lineno">  132</span>                    cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;goodBoy&quot;</span>);</div>
-<div class="line"><span class="lineno">  133</span>                }</div>
-<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">if</span> (i % 5 == 0)</div>
-<div class="line"><span class="lineno">  135</span>                {</div>
-<div class="line"><span class="lineno">  136</span>                    tc.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;brushing&quot;</span>);</div>
-<div class="line"><span class="lineno">  137</span>                    <span class="keywordtype">int</span> num2 = cc.CHA / 2 + cc.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(237) - tc.CHA * 2;</div>
-<div class="line"><span class="lineno">  138</span>                    <span class="keywordtype">int</span> num3 = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(cc.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> / 2 + cc.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(237)) &lt;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(tc.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * num / 100)) ? (-5 + ((!tc.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a>) ? Mathf.Clamp(num2 / 10, -30, 0) : 0)) : (5 + Mathf.Clamp(num2 / 20, 0, 20)));</div>
-<div class="line"><span class="lineno">  139</span>                    <span class="keywordtype">int</span> a = 20;</div>
-<div class="line"><span class="lineno">  140</span>                    <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; tc.<a class="code hl_property" href="classChara.html#abdf36cb2a3aa876f9d93cfc0f7b79e61">affinity</a>.<a class="code hl_property" href="classAffinity.html#a300c0a95fb0cbc9508498686ede22e62">CurrentStage</a> &gt;= <a class="code hl_class" href="classAffinity.html">Affinity</a>.<a class="code hl_enumeration" href="classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58">Stage</a>.Love)</div>
-<div class="line"><span class="lineno">  141</span>                    {</div>
-<div class="line"><span class="lineno">  142</span>                        num3 = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? 4 : 0);</div>
-<div class="line"><span class="lineno">  143</span>                        a = 10;</div>
-<div class="line"><span class="lineno">  144</span>                    }</div>
-<div class="line"><span class="lineno">  145</span>                    <a class="code hl_variable" href="classAI__Fuck.html#a24a2dff894bd2174895fdcfd73e36e6d">totalAffinity</a> += num3;</div>
-<div class="line"><span class="lineno">  146</span>                    tc.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, num3, show: <span class="keyword">true</span>, showOnlyEmo: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  147</span>                    cc.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ModExp</a>(237, a);</div>
-<div class="line"><span class="lineno">  148</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4) == 0)</div>
-<div class="line"><span class="lineno">  149</span>                    {</div>
-<div class="line"><span class="lineno">  150</span>                        cc.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-1);</div>
-<div class="line"><span class="lineno">  151</span>                    }</div>
-<div class="line"><span class="lineno">  152</span>                }</div>
-<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  154</span>            }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">int</span> destDist = ((<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a> == <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.fuck) ? 1 : 1);</div>
+<div class="line"><span class="lineno">   64</span>        yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad69a96ace451443057c8db17179025fa">DoGoto</a>(<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, destDist);</div>
+<div class="line"><span class="lineno">   65</span>        cc.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a>.ToString() + <span class="stringliteral">&quot;_start&quot;</span>, cc, tc);</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="classAIAct.html#aa5d0f85974b41ac8e5f85cb63b5cee8f">isFail</a> = () =&gt; !tc.<a class="code hl_property" href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">IsAliveInCurrentZone</a> || tc.<a class="code hl_function" href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Dist</a>(<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>) &gt; 3;</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a> == <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            cc.<a class="code hl_function" href="classChara.html#aa5d23539c607ca814ba0c64a5ccf7322">SetTempHand</a>(1104, -1);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d">maxProgress</a> = 25;</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAI__Fuck.html#a7eb78525f27dd8c6f10bc945eeb847ea">succubus</a>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;seduce&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d">maxProgress</a>; i++)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="classAI__Fuck.html#a522e11c5668254f1829cce8fdf594e02">progress</a> = i;</div>
+<div class="line"><span class="lineno">   79</span>            yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad69a96ace451443057c8db17179025fa">DoGoto</a>(<a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, destDist);</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">switch</span> (<a class="code hl_property" href="classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c">Type</a>)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.fuck:</div>
+<div class="line"><span class="lineno">   83</span>                cc.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(tc);</div>
+<div class="line"><span class="lineno">   84</span>                tc.<a class="code hl_function" href="classChara.html#adfc4e346a21e435fbd52582af3788692">LookAt</a>(cc);</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">switch</span> (i % 4)</div>
+<div class="line"><span class="lineno">   86</span>                {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   88</span>                    cc.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Attack, tc);</div>
+<div class="line"><span class="lineno">   89</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0 || <a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a>)</div>
+<div class="line"><span class="lineno">   90</span>                    {</div>
+<div class="line"><span class="lineno">   91</span>                        cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tail&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>                    }</div>
+<div class="line"><span class="lineno">   93</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   95</span>                    tc.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a06d351f92c327d70f1ae22553c1d0ace">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Shiver);</div>
+<div class="line"><span class="lineno">   96</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">   97</span>                    {</div>
+<div class="line"><span class="lineno">   98</span>                        tc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;tailed&quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span>                    }</div>
+<div class="line"><span class="lineno">  100</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  101</span>                }</div>
+<div class="line"><span class="lineno">  102</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0 || <a class="code hl_variable" href="classAI__Fuck.html#a245f62b986d5cc0da0730765c5375b95">sell</a>)</div>
+<div class="line"><span class="lineno">  103</span>                {</div>
+<div class="line"><span class="lineno">  104</span>                    <a class="code hl_variable" href="classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360">target</a>.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConWait.html">ConWait</a>&gt;(50, force: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  105</span>                }</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073">FuckType</a>.tame:</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordtype">int</span> num = 100;</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (!tc.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.IsAnimal)</div>
+<div class="line"><span class="lineno">  111</span>                {</div>
+<div class="line"><span class="lineno">  112</span>                    num += 50;</div>
+<div class="line"><span class="lineno">  113</span>                }</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.IsHuman)</div>
+<div class="line"><span class="lineno">  115</span>                {</div>
+<div class="line"><span class="lineno">  116</span>                    num += 50;</div>
+<div class="line"><span class="lineno">  117</span>                }</div>
+<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classChara.html#a4ffdc6e8db1ff1f0dbefe4979299b8dc">IsInCombat</a>)</div>
+<div class="line"><span class="lineno">  119</span>                {</div>
+<div class="line"><span class="lineno">  120</span>                    num += 100;</div>
+<div class="line"><span class="lineno">  121</span>                }</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (tc == cc)</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    num = 50;</div>
+<div class="line"><span class="lineno">  125</span>                }</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classChara.html#abdf36cb2a3aa876f9d93cfc0f7b79e61">affinity</a>.<a class="code hl_property" href="classAffinity.html#a300c0a95fb0cbc9508498686ede22e62">CurrentStage</a> &lt; <a class="code hl_class" href="classAffinity.html">Affinity</a>.<a class="code hl_enumeration" href="classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58">Stage</a>.Intimate &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(6 * num / 100) == 0)</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    tc.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConFear.html">ConFear</a>&gt;(60);</div>
+<div class="line"><span class="lineno">  129</span>                }</div>
+<div class="line"><span class="lineno">  130</span>                tc.interest -= (tc.IsPCFaction ? 20 : (2 * num / 100));</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (i == 0 || i == 10)</div>
+<div class="line"><span class="lineno">  132</span>                {</div>
+<div class="line"><span class="lineno">  133</span>                    cc.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;goodBoy&quot;</span>);</div>
+<div class="line"><span class="lineno">  134</span>                }</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">if</span> (i % 5 == 0)</div>
+<div class="line"><span class="lineno">  136</span>                {</div>
+<div class="line"><span class="lineno">  137</span>                    tc.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;brushing&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>                    <span class="keywordtype">int</span> num2 = cc.CHA / 2 + cc.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(237) - tc.CHA * 2;</div>
+<div class="line"><span class="lineno">  139</span>                    <span class="keywordtype">int</span> num3 = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(cc.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> / 2 + cc.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(237)) &lt;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(tc.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * num / 100)) ? (-5 + ((!tc.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a>) ? Mathf.Clamp(num2 / 10, -30, 0) : 0)) : (5 + Mathf.Clamp(num2 / 20, 0, 20)));</div>
+<div class="line"><span class="lineno">  140</span>                    <span class="keywordtype">int</span> a = 20;</div>
+<div class="line"><span class="lineno">  141</span>                    <span class="keywordflow">if</span> (tc.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; tc.<a class="code hl_property" href="classChara.html#abdf36cb2a3aa876f9d93cfc0f7b79e61">affinity</a>.<a class="code hl_property" href="classAffinity.html#a300c0a95fb0cbc9508498686ede22e62">CurrentStage</a> &gt;= <a class="code hl_class" href="classAffinity.html">Affinity</a>.<a class="code hl_enumeration" href="classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58">Stage</a>.Love)</div>
+<div class="line"><span class="lineno">  142</span>                    {</div>
+<div class="line"><span class="lineno">  143</span>                        num3 = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0) ? 4 : 0);</div>
+<div class="line"><span class="lineno">  144</span>                        a = 10;</div>
+<div class="line"><span class="lineno">  145</span>                    }</div>
+<div class="line"><span class="lineno">  146</span>                    <a class="code hl_variable" href="classAI__Fuck.html#a24a2dff894bd2174895fdcfd73e36e6d">totalAffinity</a> += num3;</div>
+<div class="line"><span class="lineno">  147</span>                    tc.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, num3, show: <span class="keyword">true</span>, showOnlyEmo: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  148</span>                    cc.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ModExp</a>(237, a);</div>
+<div class="line"><span class="lineno">  149</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4) == 0)</div>
+<div class="line"><span class="lineno">  150</span>                    {</div>
+<div class="line"><span class="lineno">  151</span>                        cc.<a class="code hl_property" href="classChara.html#a9bccf140db2350e950b81890925868a9">stamina</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-1);</div>
+<div class="line"><span class="lineno">  152</span>                    }</div>
+<div class="line"><span class="lineno">  153</span>                }</div>
+<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_function" href="classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449">Finish</a>();</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        <a class="code hl_function" href="classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449">Finish</a>();</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
 <div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00001">AnimeID.cs:2</a></div></div>
 <div class="ttc" id="aclassAIAct_html_a777d866b1a82a1f50b42af428c33887f"><div class="ttname"><a href="classAIAct.html#a777d866b1a82a1f50b42af428c33887f">AIAct.Cancel</a></div><div class="ttdeci">virtual Status Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00291">AIAct.cs:291</a></div></div>
 <div class="ttc" id="aclassAIAct_html_aa5d0f85974b41ac8e5f85cb63b5cee8f"><div class="ttname"><a href="classAIAct.html#aa5d0f85974b41ac8e5f85cb63b5cee8f">AIAct.isFail</a></div><div class="ttdeci">Func&lt; bool &gt; isFail</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00028">AIAct.cs:28</a></div></div>
 <div class="ttc" id="aclassAIAct_html_ad69a96ace451443057c8db17179025fa"><div class="ttname"><a href="classAIAct.html#ad69a96ace451443057c8db17179025fa">AIAct.DoGoto</a></div><div class="ttdeci">Status DoGoto(Point pos, int dist=0, bool ignoreConnection=false, Func&lt; Status &gt; _onChildFail=null)</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00432">AIAct.cs:432</a></div></div>
-<div class="ttc" id="aclassAI__Fuck_html_a1079aecc7edc9692d84ac0b03d284449"><div class="ttname"><a href="classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449">AI_Fuck.Finish</a></div><div class="ttdeci">void Finish()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00160">AI_Fuck.cs:160</a></div></div>
+<div class="ttc" id="aclassAI__Fuck_html_a1079aecc7edc9692d84ac0b03d284449"><div class="ttname"><a href="classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449">AI_Fuck.Finish</a></div><div class="ttdeci">void Finish()</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00161">AI_Fuck.cs:161</a></div></div>
 <div class="ttc" id="aclassAI__Fuck_html_a522e11c5668254f1829cce8fdf594e02"><div class="ttname"><a href="classAI__Fuck.html#a522e11c5668254f1829cce8fdf594e02">AI_Fuck.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00024">AI_Fuck.cs:24</a></div></div>
 <div class="ttc" id="aclassAI__Fuck_html_aa63879736f2fca33309e58ad13dfbf5d"><div class="ttname"><a href="classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d">AI_Fuck.maxProgress</a></div><div class="ttdeci">int maxProgress</div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00022">AI_Fuck.cs:22</a></div></div>
 <div class="ttc" id="aclassAffinity_html"><div class="ttname"><a href="classAffinity.html">Affinity</a></div><div class="ttdef"><b>Definition:</b> <a href="Affinity_8cs_source.html#l00006">Affinity.cs:7</a></div></div>
@@ -1172,7 +1173,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCard_html_abd6b223dc61955d492fc2c2e17f3cf61"><div class="ttname"><a href="classCard.html#abd6b223dc61955d492fc2c2e17f3cf61">Card.Dist</a></div><div class="ttdeci">int Dist(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06551">Card.cs:6551</a></div></div>
 <div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00057">Card.cs:57</a></div></div>
 <div class="ttc" id="aclassChara_html_a1302b8a7d86d3b8f62d46272264a4eb6"><div class="ttname"><a href="classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6">Chara.IsAliveInCurrentZone</a></div><div class="ttdeci">override bool IsAliveInCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00545">Chara.cs:546</a></div></div>
-<div class="ttc" id="aclassChara_html_a354698fe941b9ea8554d778d0e14e3be"><div class="ttname"><a href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">Chara.ModAffinity</a></div><div class="ttdeci">void ModAffinity(Chara c, int a, bool show=true, bool showOnlyEmo=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06910">Chara.cs:6910</a></div></div>
+<div class="ttc" id="aclassChara_html_a354698fe941b9ea8554d778d0e14e3be"><div class="ttname"><a href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">Chara.ModAffinity</a></div><div class="ttdeci">void ModAffinity(Chara c, int a, bool show=true, bool showOnlyEmo=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06919">Chara.cs:6919</a></div></div>
 <div class="ttc" id="aclassChara_html_a4ffdc6e8db1ff1f0dbefe4979299b8dc"><div class="ttname"><a href="classChara.html#a4ffdc6e8db1ff1f0dbefe4979299b8dc">Chara.IsInCombat</a></div><div class="ttdeci">bool IsInCombat</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00793">Chara.cs:793</a></div></div>
 <div class="ttc" id="aclassChara_html_a71660401378323eae2838aee20ec92c0"><div class="ttname"><a href="classChara.html#a71660401378323eae2838aee20ec92c0">Chara.IsPCFaction</a></div><div class="ttdeci">override bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00655">Chara.cs:656</a></div></div>
 <div class="ttc" id="aclassChara_html_a8d5d9a7d9eeaee31ed0efed30fedc4e6"><div class="ttname"><a href="classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6">Chara.IsDeadOrSleeping</a></div><div class="ttdeci">override bool IsDeadOrSleeping</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00557">Chara.cs:558</a></div></div>
@@ -1187,7 +1188,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElementContainer_html_aa1c3ae499520ab53bda341dd23fa0702"><div class="ttname"><a href="classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702">ElementContainer.ModExp</a></div><div class="ttdeci">void ModExp(int ele, int a, bool chain=false)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00268">ElementContainer.cs:268</a></div></div>
 <div class="ttc" id="aclassMap_html_ae3bc115de6330bc4b6c7cb6ce4519c30"><div class="ttname"><a href="classMap.html#ae3bc115de6330bc4b6c7cb6ce4519c30">Map.charas</a></div><div class="ttdeci">List&lt; Chara &gt; charas</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00078">Map.cs:78</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Chara_8cs_source.html#l08136">Chara.AddCondition()</a>, <a class="el" href="Chara_8cs_source.html#l00299">Chara.affinity</a>, <a class="el" href="AIAct_8cs_source.html#l00291">AIAct.Cancel()</a>, <a class="el" href="Card_8cs_source.html#l02171">Card.CHA</a>, <a class="el" href="Map_8cs_source.html#l00078">Map.charas</a>, <a class="el" href="Affinity_8cs_source.html#l00032">Affinity.CurrentStage</a>, <a class="el" href="Card_8cs_source.html#l06551">Card.Dist()</a>, <a class="el" href="AIAct_8cs_source.html#l00432">AIAct.DoGoto()</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02395">Card.Evalue()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>, <a class="el" href="Chara_8cs_source.html#l00546">Chara.IsAliveInCurrentZone</a>, <a class="el" href="Chara_8cs_source.html#l00558">Chara.IsDeadOrSleeping</a>, <a class="el" href="AIAct_8cs_source.html#l00028">AIAct.isFail</a>, <a class="el" href="Chara_8cs_source.html#l05736">Chara.IsHomeMember()</a>, <a class="el" href="Chara_8cs_source.html#l00793">Chara.IsInCombat</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l02096">Card.IsPCFactionOrMinion</a>, <a class="el" href="Chara_8cs_source.html#l03086">Chara.LookAt()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00022">maxProgress</a>, <a class="el" href="Stats_8cs_source.html#l00135">Stats.Mod()</a>, <a class="el" href="Chara_8cs_source.html#l06910">Chara.ModAffinity()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00268">ElementContainer.ModExp()</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="CardRenderer_8cs_source.html#l00474">CardRenderer.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l05188">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00024">progress</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Card_8cs_source.html#l00057">Card.renderer</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l05823">Card.Say()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00014">sell</a>, <a class="el" href="Chara_8cs_source.html#l05842">Chara.SetTempHand()</a>, <a class="el" href="Chara_8cs_source.html#l00931">Chara.stamina</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00018">succubus</a>, <a class="el" href="Card_8cs_source.html#l05733">Card.Talk()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00012">target</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00026">totalAffinity</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00028">Type</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Chara_8cs_source.html#l08145">Chara.AddCondition()</a>, <a class="el" href="Chara_8cs_source.html#l00299">Chara.affinity</a>, <a class="el" href="AIAct_8cs_source.html#l00291">AIAct.Cancel()</a>, <a class="el" href="Card_8cs_source.html#l02171">Card.CHA</a>, <a class="el" href="Map_8cs_source.html#l00078">Map.charas</a>, <a class="el" href="Affinity_8cs_source.html#l00032">Affinity.CurrentStage</a>, <a class="el" href="Card_8cs_source.html#l06551">Card.Dist()</a>, <a class="el" href="AIAct_8cs_source.html#l00432">AIAct.DoGoto()</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02395">Card.Evalue()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>, <a class="el" href="Chara_8cs_source.html#l00546">Chara.IsAliveInCurrentZone</a>, <a class="el" href="Chara_8cs_source.html#l00558">Chara.IsDeadOrSleeping</a>, <a class="el" href="AIAct_8cs_source.html#l00028">AIAct.isFail</a>, <a class="el" href="Chara_8cs_source.html#l05736">Chara.IsHomeMember()</a>, <a class="el" href="Chara_8cs_source.html#l00793">Chara.IsInCombat</a>, <a class="el" href="Chara_8cs_source.html#l00656">Chara.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l02096">Card.IsPCFactionOrMinion</a>, <a class="el" href="Chara_8cs_source.html#l03086">Chara.LookAt()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00022">maxProgress</a>, <a class="el" href="Stats_8cs_source.html#l00135">Stats.Mod()</a>, <a class="el" href="Chara_8cs_source.html#l06919">Chara.ModAffinity()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00268">ElementContainer.ModExp()</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="CardRenderer_8cs_source.html#l00474">CardRenderer.PlayAnime()</a>, <a class="el" href="Card_8cs_source.html#l05188">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00024">progress</a>, <a class="el" href="Chara_8cs_source.html#l00449">Chara.race</a>, <a class="el" href="Card_8cs_source.html#l00057">Card.renderer</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l05823">Card.Say()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00014">sell</a>, <a class="el" href="Chara_8cs_source.html#l05842">Chara.SetTempHand()</a>, <a class="el" href="Chara_8cs_source.html#l00931">Chara.stamina</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00018">succubus</a>, <a class="el" href="Card_8cs_source.html#l05733">Card.Talk()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00012">target</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00026">totalAffinity</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00028">Type</a>.</p>
 
 </div>
 </div>
@@ -1206,7 +1207,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00016">16</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1277,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00014">14</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -1294,7 +1295,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00018">18</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -1312,7 +1313,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00012">12</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>, <a class="el" href="AI__TendAnimal_8cs_source.html#l00005">AI_TendAnimal.ShouldAllyAttack()</a>, and <a class="el" href="ConSleep_8cs_source.html#l00214">ConSleep.SuccubusSleep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>, <a class="el" href="AI__TendAnimal_8cs_source.html#l00005">AI_TendAnimal.ShouldAllyAttack()</a>, and <a class="el" href="ConSleep_8cs_source.html#l00214">ConSleep.SuccubusSleep()</a>.</p>
 
 </div>
 </div>
@@ -1330,7 +1331,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00026">26</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1526,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AI__Fuck_8cs_source.html#l00028">28</a> of file <a class="el" href="AI__Fuck_8cs_source.html">AI_Fuck.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00160">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00161">Finish()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00044">Run()</a>.</p>
 
 </div>
 </div>

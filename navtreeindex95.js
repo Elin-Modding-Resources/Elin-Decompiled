@@ -1,5 +1,9 @@
 var NAVTREEINDEX95 =
 {
+"classSPELL.html#a8a9d36c7163d0ade9c74fbfe3da28335":[1,0,1187,108],
+"classSPELL.html#a8eefee5e9c23d1af8bea7d952ae6e452":[1,0,1187,58],
+"classSPELL.html#a8fa36fbb8029a76f317c19cd45047c1e":[1,0,1187,41],
+"classSPELL.html#a90f1db9ddddb6ffb49449941eee88490":[1,0,1187,21],
 "classSPELL.html#a92c5a5e3c25f840b229593e8dd6eda18":[1,0,1187,90],
 "classSPELL.html#a94c3fa413433a54c285b73f578ba6954":[1,0,1187,133],
 "classSPELL.html#a95bb1243733779b0ecd0e36651eee766":[1,0,1187,180],
@@ -245,9 +249,5 @@ var NAVTREEINDEX95 =
 "classSceneTemplate.html#ada8e69ce3f23212cb5fed61101074f4b":[1,0,1089,0],
 "classSchedule.html":[1,0,1090],
 "classSchedule.html#ae0a4a4df663b9423ddc6359613dce3f9":[1,0,1090,1],
-"classSchedule_1_1Item.html":[1,0,1090,0],
-"classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d":[1,0,1090,0,1],
-"classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead":[1,0,1090,0,0],
-"classScreenEffect.html":[1,0,1091],
-"classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1":[1,0,1091,4]
+"classSchedule_1_1Item.html":[1,0,1090,0]
 };

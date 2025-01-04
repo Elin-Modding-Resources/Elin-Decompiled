@@ -1,5 +1,9 @@
 var NAVTREEINDEX71 =
 {
+"classItemQuestTracker.html#af0b8b2d68ed9489c792912ac4ae6e7c9":[1,0,700,4],
+"classItemResearch.html":[1,0,701],
+"classItemResearch.html#a2dac9538028d9f677d57001776a6de94":[1,0,701,0],
+"classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd":[1,0,701,3],
 "classItemResearch.html#a6a7aaaaa4dc831dd162f90a0344f1d7d":[1,0,701,2],
 "classItemResearch.html#aa22d5c9c26283f9b8139b43cfde5d87f":[1,0,701,1],
 "classItemStatistics.html":[1,0,702],
@@ -245,9 +249,5 @@ var NAVTREEINDEX71 =
 "classLayer.html#ac0b45048b9aea860606679e4b1c5333c":[1,0,724,13],
 "classLayer.html#ac2413f28518c733699fd1d09917a51cd":[1,0,724,4],
 "classLayer.html#ac5d7fb02457a9afe367d55cd32283a7a":[1,0,724,9],
-"classLayer.html#ac7fa06b63b85d358e5057717bf245072":[1,0,724,25],
-"classLayer.html#ac92f51c3c0bb7c7a8c3ed91dd5f9b3d9":[1,0,724,55],
-"classLayer.html#ac9839e25d00519467f9a67b4e9040ca9":[1,0,724,34],
-"classLayer.html#acb7ce17b4d7135ca830b2d4b235c40fe":[1,0,724,61],
-"classLayer.html#acbd23d8f3601156c30243e3be97eb4b1":[1,0,724,35]
+"classLayer.html#ac7fa06b63b85d358e5057717bf245072":[1,0,724,25]
 };

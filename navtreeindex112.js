@@ -1,5 +1,8 @@
 var NAVTREEINDEX112 =
 {
+"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a563fb5522ca0956b09befe841375ef7e":[1,0,1416,0,2],
+"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a6adf97f83acf6453d4a6a4b1070f3754":[1,0,1416,0,0],
+"classTraitChara.html#acd41bf1785e6918b297a392c75f7befc":[1,0,1416,41],
 "classTraitChara.html#ace611e0fe5d161c8864fb87ed0235174":[1,0,1416,10],
 "classTraitChara.html#ace7150ea9c28b1453f967f6d2fc2c809":[1,0,1416,23],
 "classTraitChara.html#ad48e72e12c1f6f8d871a505cda74abcd":[1,0,1416,26],
@@ -246,8 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitDoor.html#ae97feebb4cd06140e4b276757ee8170c":[1,0,1461,12],
 "classTraitDoor.html#aefdf075fedcd96d092297ef79a8fce98":[1,0,1461,18],
 "classTraitDoorAuto.html":[1,0,1462],
-"classTraitDoorAuto.html#a421ee44da149ef2a08b3fbfa85a3e2ca":[1,0,1462,0],
-"classTraitDoorAuto.html#a7148a84f436620e642691776018b42f4":[1,0,1462,1],
-"classTraitDoorAutoShoji.html":[1,0,1463],
-"classTraitDoorAutoShoji.html#a6e3209cbb2b148f8073cfaccd5980424":[1,0,1463,1]
+"classTraitDoorAuto.html#a421ee44da149ef2a08b3fbfa85a3e2ca":[1,0,1462,0]
 };

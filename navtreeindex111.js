@@ -1,5 +1,9 @@
 var NAVTREEINDEX111 =
 {
+"classTraitBanker.html#aec6a26b14dd11051efd045692b0b9f79":[1,0,1371,1],
+"classTraitBard.html":[1,0,1372],
+"classTraitBarrelMaker.html":[1,0,1373],
+"classTraitBarrelMaker.html#a16727b219882a850fe1eccf9cc3b1cc9":[1,0,1373,5],
 "classTraitBarrelMaker.html#a4f5a157f88e21caf1204543b7cfffada":[1,0,1373,0],
 "classTraitBarrelMaker.html#a93088d0ec064de45c08e9ff4b70a5afb":[1,0,1373,6],
 "classTraitBarrelMaker.html#a96bd2b9600019e91e01c6df811a3c7d8":[1,0,1373,8],
@@ -112,11 +116,10 @@ var NAVTREEINDEX111 =
 "classTraitBoard.html#a407b7284961e1471d7c5bbbd3e7f31e1":[1,0,1394,1],
 "classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1394,0],
 "classTraitBoat.html":[1,0,1395],
-"classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1395,6],
-"classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1395,5],
+"classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1395,5],
+"classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1395,4],
 "classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb":[1,0,1395,0],
 "classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1395,2],
-"classTraitBoat.html#ac4a4d9183adf31358d84e42304140adf":[1,0,1395,4],
 "classTraitBoat.html#ac63976c5747b30504ceb563902e8f276":[1,0,1395,3],
 "classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6":[1,0,1395,1],
 "classTraitBook.html":[1,0,1396],
@@ -246,8 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitChara.html#abe2d33e9e462de7c1dc61406cba841d7":[1,0,1416,43],
 "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000":[1,0,1416,0],
 "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a181634470467a8f1a9b41cbee362451b":[1,0,1416,0,1],
-"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a4f9d0921d220f6b660454a303e79fc73":[1,0,1416,0,3],
-"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a563fb5522ca0956b09befe841375ef7e":[1,0,1416,0,2],
-"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a6adf97f83acf6453d4a6a4b1070f3754":[1,0,1416,0,0],
-"classTraitChara.html#acd41bf1785e6918b297a392c75f7befc":[1,0,1416,41]
+"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a4f9d0921d220f6b660454a303e79fc73":[1,0,1416,0,3]
 };
