@@ -310,7 +310,7 @@ public class LayerCraft : LayerBaseCraft
 				}
 				if (a.HasFirstTimeBonus())
 				{
-					b.Attach("recipe_firstTime", rightAttach: false);
+					b.Attach("recipe_firstTime", rightAttach: false).GetComponent<Image>().SetAlpha((a.idSkin == 0) ? 1f : 0.5f);
 				}
 			},
 			onList = delegate

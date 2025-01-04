@@ -69,7 +69,7 @@ public class TraitDetector : TraitItem
 		{
 			EClass.pc.PlaySound("detect_" + ((num <= 1) ? "detected" : ((num < 5) ? "near" : ((num < 15) ? "medium" : ((num < 30) ? "far" : ((num < 50) ? "veryFar" : "superFar"))))));
 			interval = ((num <= 1) ? 1 : ((num < 5) ? 2 : ((num < 15) ? 4 : ((num < 30) ? 7 : 10))));
-			if (EClass.core.config.sound.volumeSFX < 0.1f)
+			if (EClass.core.config.sound.volumeSFX < 0.1f || EClass.core.config.sound.volumeMaster < 0.1f)
 			{
 				WidgetMainText.ignoreStack = true;
 				Msg.Say("beep".lang());

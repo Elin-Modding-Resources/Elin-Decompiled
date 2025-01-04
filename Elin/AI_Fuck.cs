@@ -60,13 +60,14 @@ public class AI_Fuck : AIAct
 		}
 		Chara cc = (sell ? target : owner);
 		Chara tc = (sell ? owner : target);
+		int destDist = ((Type == FuckType.fuck) ? 1 : 1);
+		yield return DoGoto(target.pos, destDist);
 		cc.Say(Type.ToString() + "_start", cc, tc);
 		isFail = () => !tc.IsAliveInCurrentZone || tc.Dist(owner) > 3;
 		if (Type == FuckType.tame)
 		{
 			cc.SetTempHand(1104, -1);
 		}
-		int destDist = ((Type == FuckType.fuck) ? 1 : 1);
 		maxProgress = 25;
 		if (succubus)
 		{

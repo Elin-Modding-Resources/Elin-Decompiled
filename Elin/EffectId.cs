@@ -111,5 +111,6 @@ public enum EffectId
 	Steal = 287,
 	Scream = 288,
 	DropMine = 289,
-	ThrowPotion = 290
+	ThrowPotion = 290,
+	DrainMana = 291
 }

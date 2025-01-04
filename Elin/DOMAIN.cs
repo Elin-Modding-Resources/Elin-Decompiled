@@ -14,7 +14,7 @@ public class DOMAIN
 
 	public const int domComm = 805;
 
-	public const int domEarth = 812;
+	public const int domEyth = 814;
 
 	public const int domWind = 807;
 
@@ -26,9 +26,9 @@ public class DOMAIN
 
 	public const int domHealing = 811;
 
-	public const int domEyth = 814;
-
 	public const int domOblivion = 813;
+
+	public const int domEarth = 812;
 
 	public const int domElement = 806;
 
@@ -36,8 +36,8 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		804, 800, 801, 802, 803, 805, 812, 807, 808, 809,
-		810, 811, 814, 813, 806, 815
+		804, 800, 801, 802, 803, 805, 814, 807, 808, 809,
+		810, 811, 813, 812, 806, 815
 	};
 }
 public class Domain : EClass

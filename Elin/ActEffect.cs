@@ -307,6 +307,13 @@ public class ActEffect : EClass
 				}
 				num4 = num4 * Act.powerMod / 100;
 				c.DamageHP(num4, e.id, power * num / 100, AttackSource.None, chara ?? CC);
+				if (c.IsAliveInCurrentZone && CC.IsAliveInCurrentZone && id == EffectId.DrainMana && c.isChara && CC.isChara)
+				{
+					int num6 = num4 * power * num / 10000;
+					Debug.Log(num4 + " v:" + num6 + " evalue:" + e.Value + " power:" + power + " elepMod:" + num);
+					c.Chara.mana.Mod(-num6);
+					CC.Chara.mana.Mod(num6);
+				}
 				if (id == EffectId.Explosive && CC.trait is TraitCookerMicrowave)
 				{
 					chara = EClass.pc;
@@ -319,14 +326,14 @@ public class ActEffect : EClass
 			}
 			if ((id == EffectId.Explosive || id == EffectId.Suicide) && ((id != EffectId.Suicide && id != EffectId.Meteor) || !EClass._zone.IsPCFaction))
 			{
-				int num6 = id switch
+				int num7 = id switch
 				{
 					EffectId.Suicide => CC.LV / 3 + 40, 
 					EffectId.Meteor => 50 + power / 20, 
 					_ => (actref.refThing != null) ? actref.refThing.material.hardness : (30 + power / 20), 
 				};
 				bool flag5 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
-				if (p.HasObj && p.cell.matObj.hardness <= num6)
+				if (p.HasObj && p.cell.matObj.hardness <= num7)
 				{
 					EClass._map.MineObj(p);
 					if (flag5)
@@ -334,7 +341,7 @@ public class ActEffect : EClass
 						EClass.player.ModKarma(-1);
 					}
 				}
-				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num6)
+				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num7)
 				{
 					EClass._map.MineBlock(p);
 					if (flag5)
@@ -345,16 +352,16 @@ public class ActEffect : EClass
 			}
 			if (e.id == 910)
 			{
-				int num7 = 0;
+				int num8 = 0;
 				if (id == EffectId.Meteor)
 				{
-					num7 = 2;
+					num8 = 2;
 				}
 				if (EClass._zone.IsPCFaction && EClass._zone.branch.HasItemProtection)
 				{
-					num7 = 0;
+					num8 = 0;
 				}
-				if (num7 > EClass.rnd(10))
+				if (num8 > EClass.rnd(10))
 				{
 					p.ModFire(4 + EClass.rnd(10));
 				}
@@ -440,6 +447,7 @@ public class ActEffect : EClass
 		}
 		case EffectId.Hand:
 		case EffectId.DrainBlood:
+		case EffectId.DrainMana:
 		{
 			List<Point> list5 = new List<Point>();
 			list5.Add(tp.Copy());
@@ -448,7 +456,7 @@ public class ActEffect : EClass
 			{
 				CC.PlaySound("spell_hand");
 			});
-			if (!DamageEle(CC, id, power, element, list5, actRef, (id == EffectId.DrainBlood) ? "" : "spell_hand"))
+			if (!DamageEle(CC, id, power, element, list5, actRef, (id == EffectId.DrainBlood || id == EffectId.DrainMana) ? "" : "spell_hand"))
 			{
 				CC.Say("spell_hand_miss", CC, element.Name.ToLower());
 			}

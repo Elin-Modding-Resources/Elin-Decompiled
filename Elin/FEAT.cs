@@ -63,7 +63,7 @@ public class FEAT
 
 	public const int featScavenger = 1656;
 
-	public const int featModelBeliever = 1655;
+	public const int featHeavyCasting = 1654;
 
 	public const int featDreamWaker = 1653;
 
@@ -103,7 +103,7 @@ public class FEAT
 
 	public const int featReboot = 1410;
 
-	public const int featHeavyCasting = 1654;
+	public const int featModelBeliever = 1655;
 
 	public const int featPaladin2 = 1408;
 
@@ -125,9 +125,9 @@ public class FEAT
 
 	public const int featCosmicHorror = 1233;
 
-	public const int featAcidBody = 1223;
-
 	public const int featHeavyEater = 1234;
+
+	public const int featLightEater = 1235;
 
 	public const int featNorland = 1236;
 
@@ -147,11 +147,13 @@ public class FEAT
 
 	public const int featGod_luck1 = 1330;
 
-	public const int featLightEater = 1235;
+	public const int featGod_harmony1 = 1335;
+
+	public const int featAcidBody = 1223;
+
+	public const int featGod_oblivion1 = 1340;
 
 	public const int featSplit = 1222;
-
-	public const int featSpike = 1221;
 
 	public const int featFate = 1220;
 
@@ -197,15 +199,13 @@ public class FEAT
 
 	public const int featElderCrab = 1219;
 
-	public const int featGod_harmony1 = 1335;
+	public const int featSpike = 1221;
 
-	public const int featGod_oblivion1 = 1340;
+	public const int featGod_trickery1 = 1345;
 
 	public const int featBaby = 1232;
 
 	public const int featGod_moonshadow1 = 1350;
-
-	public const int featGod_trickery1 = 1345;
 
 	public const int featGod_strife1 = 1355;
 
@@ -230,14 +230,14 @@ public class FEAT
 		1612, 1627, 1626, 1625, 1624, 1623, 1622, 1621, 1620, 1628,
 		1418, 1610, 1421, 1420, 1419, 1417, 1416, 1415, 1414, 1413,
 		1412, 1629, 1611, 1630, 1646, 1632, 1411, 1658, 1657, 1656,
-		1655, 1653, 1652, 1651, 1650, 1649, 1631, 1648, 1645, 1644,
+		1654, 1653, 1652, 1651, 1650, 1649, 1631, 1648, 1645, 1644,
 		1643, 1642, 1641, 1640, 1636, 1635, 1634, 1633, 1647, 1410,
-		1654, 1408, 1224, 1225, 1226, 1227, 1228, 1229, 1230, 1231,
-		1233, 1223, 1234, 1236, 1237, 1300, 1305, 1310, 1315, 1320,
-		1325, 1330, 1235, 1222, 1221, 1220, 1409, 1200, 1201, 1202,
-		1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211, 1212,
-		1213, 1214, 1215, 1216, 1217, 1218, 1219, 1335, 1340, 1232,
-		1350, 1345, 1355, 1400, 1401, 1403, 1404, 1405, 1406, 1402,
+		1655, 1408, 1224, 1225, 1226, 1227, 1228, 1229, 1230, 1231,
+		1233, 1234, 1235, 1236, 1237, 1300, 1305, 1310, 1315, 1320,
+		1325, 1330, 1335, 1223, 1340, 1222, 1220, 1409, 1200, 1201,
+		1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211,
+		1212, 1213, 1214, 1215, 1216, 1217, 1218, 1219, 1221, 1345,
+		1232, 1350, 1355, 1400, 1401, 1403, 1404, 1405, 1406, 1402,
 		1407
 	};
 }

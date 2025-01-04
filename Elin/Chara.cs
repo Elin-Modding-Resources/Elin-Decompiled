@@ -5933,6 +5933,15 @@ public class Chara : Card, IPathfindWalker
 		text2 = (" (" + text2 + ") ").TagSize(14).TagColor(EClass.Colors.gradientLVComparison.Evaluate(0.25f * (float)num));
 		string s = (IsFriendOrAbove() ? "HostilityAlly" : (IsNeutral() ? "HostilityNeutral" : "HostilityEnemy"));
 		s = (" (" + s.lang() + ") ").TagSize(14);
+		s = "";
+		if (memberType == FactionMemberType.Guest)
+		{
+			s += (" (" + "guest".lang() + ") ").TagSize(14);
+		}
+		else if (memberType == FactionMemberType.Livestock)
+		{
+			s += (" (" + "livestock".lang() + ") ").TagSize(14);
+		}
 		if (!EClass.pc.IsMoving)
 		{
 			if (EClass.pc.HasHigherGround(this))
@@ -5956,7 +5965,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			text2 += ("( " + faith.Name + ")").TagSize(14);
 		}
-		return text + text2;
+		return text + text2 + s;
 	}
 
 	public override string GetHoverText2()
@@ -7122,9 +7131,9 @@ public class Chara : Card, IPathfindWalker
 		Thing thing = ThingGen.Create("milk").SetNum(num);
 		thing.MakeRefFrom(this);
 		int num2 = base.LV - source.LV;
-		if (!IsPCFaction)
+		if (!IsPCFaction && EClass._zone.IsUserZone)
 		{
-			num2 = ((!EClass._zone.IsUserZone) ? (num2 / 10) : 0);
+			num2 = 0;
 		}
 		if (num2 >= 10)
 		{

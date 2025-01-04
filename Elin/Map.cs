@@ -1814,14 +1814,11 @@ public class Map : MapBounds, IPathfindGrid
 			if (task is TaskHarvest { IsReapSeed: not false })
 			{
 				int num2 = 1 + EClass.rnd(2) + ((EClass.rnd(3) == 0) ? 1 : 0);
-				if (EClass._zone.IsPCFaction)
+				int soilCost = EClass._zone.GetSoilCost();
+				int maxSoil = EClass._zone.MaxSoil;
+				if (soilCost > maxSoil)
 				{
-					int soilCost = EClass._zone.GetSoilCost();
-					int maxSoil = EClass.Branch.MaxSoil;
-					if (soilCost > maxSoil)
-					{
-						num2 -= EClass.rnd(2 + (soilCost - maxSoil) / 10);
-					}
+					num2 -= EClass.rnd(2 + (soilCost - maxSoil) / 10);
 				}
 				if (num2 <= 0)
 				{

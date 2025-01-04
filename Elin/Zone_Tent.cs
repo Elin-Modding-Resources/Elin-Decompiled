@@ -8,6 +8,8 @@ public class Zone_Tent : Zone
 
 	public override bool GrowPlant => true;
 
+	public override int MaxSoil => 50;
+
 	public override ZoneTransition.EnterState RegionEnterState => ZoneTransition.EnterState.Bottom;
 
 	public override void OnBeforeDeactivate()

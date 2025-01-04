@@ -479,7 +479,10 @@ public class AttackProcess : EClass
 		{
 			foreach (Element value in EClass.pc.faction.charaElements.dict.Values)
 			{
-				list2.Add(value);
+				if (value.Value > 0)
+				{
+					list2.Add(value);
+				}
 			}
 		}
 		if (hit && num3 > EClass.rnd(100))

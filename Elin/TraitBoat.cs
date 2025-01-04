@@ -6,8 +6,6 @@ public class TraitBoat : Trait
 
 	public override bool IsGround => true;
 
-	public override bool CanExtendBuild => true;
-
 	public override void OnChangePlaceState(PlaceState state)
 	{
 		if (state == PlaceState.installed)

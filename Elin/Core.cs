@@ -518,6 +518,10 @@ public class Core : BaseCore
 		InvokeRepeating("Update100ms", 0.1f, 0.1f);
 		UnityEngine.Object.DestroyImmediate(ui.layoutLang.gameObject);
 		CoreConfig.Init();
+		if (config.lang.IsEmpty())
+		{
+			config.lang = "EN";
+		}
 		SetLang(config.lang);
 		refs.Init();
 		debug.Init();

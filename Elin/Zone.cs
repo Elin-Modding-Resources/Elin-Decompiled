@@ -491,6 +491,18 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public Vector3 InspectPosition => default(Vector3);
 
+	public virtual int MaxSoil
+	{
+		get
+		{
+			if (branch == null)
+			{
+				return 99999;
+			}
+			return branch.MaxSoil;
+		}
+	}
+
 	public int Evalue(int ele)
 	{
 		return elements.Value(ele);

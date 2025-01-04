@@ -550,14 +550,11 @@ public class GrowSystem : EClass
 		if (source.HasTag(CTAG.seed))
 		{
 			int num = (cell.IsFarmField ? 400 : 1000);
-			if (EClass._zone.IsPCFaction)
+			int soilCost = EClass._zone.GetSoilCost();
+			int maxSoil = EClass._zone.MaxSoil;
+			if (soilCost > maxSoil)
 			{
-				int soilCost = EClass._zone.GetSoilCost();
-				int maxSoil = EClass.Branch.MaxSoil;
-				if (soilCost > maxSoil)
-				{
-					num += (soilCost - maxSoil) * 10;
-				}
+				num += (soilCost - maxSoil) * 10;
 			}
 			if (IsWithered())
 			{
@@ -607,14 +604,11 @@ public class GrowSystem : EClass
 		if (source._growth.Length > 4)
 		{
 			int num2 = EClass.rnd(source._growth[4].ToInt()) + 1;
-			if (EClass._zone.IsPCFaction)
+			int soilCost = EClass._zone.GetSoilCost();
+			int maxSoil = EClass._zone.MaxSoil;
+			if (soilCost > maxSoil && EClass.player.stats.days >= 5)
 			{
-				int soilCost = EClass._zone.GetSoilCost();
-				int maxSoil = EClass.Branch.MaxSoil;
-				if (soilCost > maxSoil && EClass.player.stats.days >= 5)
-				{
-					num2 -= EClass.rnd(2 + (soilCost - maxSoil) / 20);
-				}
+				num2 -= EClass.rnd(2 + (soilCost - maxSoil) / 20);
 			}
 			if (num2 <= 0)
 			{
