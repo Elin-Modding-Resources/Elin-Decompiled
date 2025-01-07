@@ -81,7 +81,13 @@ public class TCExtra : TC
 			flag4 = !flag4;
 		}
 		bool flag5 = useOffsetBack && data.useOffsetBack && flag;
-		if (dirPos.Length == 0)
+		if (base.owner.renderer.hasActor)
+		{
+			v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.offset.x);
+			v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.offset.y);
+			v.z = base.owner.renderer.position.z + (flag5 ? data.offsetBack.z : data.offset.z) + FixPos.z + (flag2 ? (-0.5f) : 0f) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.z : heldPos.z));
+		}
+		else if (dirPos.Length == 0)
 		{
 			v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.offset.x) * (float)((!flag4) ? 1 : (-1)) + FixPos.x + flipFixX * (float)((!flag4) ? 1 : (-1)) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.x : heldPos.x));
 			v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.offset.y) + FixPos.y + ((!flag2) ? 0f : (flag3 ? heldPosFlip.y : heldPos.y));

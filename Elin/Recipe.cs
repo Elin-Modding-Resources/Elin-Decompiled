@@ -857,13 +857,23 @@ public class Recipe : EClass
 	{
 		foreach (Ingredient ingredient in ingredients)
 		{
-			if (!ingredient.optional)
+			if (ingredient.optional)
 			{
-				ThingStack thingStack = EClass._map.Stocked.ListThingStack(ingredient, StockSearchMode.AroundPC);
-				if (thingStack.list.Count == 0 || thingStack.list[0].Num < ingredient.req)
+				continue;
+			}
+			ThingStack thingStack = EClass._map.Stocked.ListThingStack(ingredient, StockSearchMode.AroundPC);
+			bool flag = false;
+			foreach (Thing item in thingStack.list)
+			{
+				if (item.Num >= ingredient.req)
 				{
-					return false;
+					flag = true;
+					break;
 				}
+			}
+			if (!flag)
+			{
+				return false;
 			}
 		}
 		return true;

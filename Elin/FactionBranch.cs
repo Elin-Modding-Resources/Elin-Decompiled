@@ -192,13 +192,9 @@ public class FactionBranch : EClass
 		int ration = 0;
 		foreach (Chara member in members)
 		{
-			if (member.memberType != 0)
+			if (member.memberType != 0 || member.IsPCParty || member.homeBranch == null || member.homeBranch.owner == null)
 			{
 				continue;
-			}
-			if (member.IsPCParty || member.homeBranch == null || member.homeBranch.owner == null)
-			{
-				return;
 			}
 			foreach (Hobby item in member.ListHobbies())
 			{
@@ -212,6 +208,10 @@ public class FactionBranch : EClass
 		if (num2 > MaxPopulation)
 		{
 			num -= (num2 - MaxPopulation) * 20 * 100 / (100 + 20 * (int)Mathf.Sqrt(ration));
+		}
+		if (efficiency < 0)
+		{
+			efficiency = 0;
 		}
 		efficiency = num;
 		void TryAdd(Hobby h)

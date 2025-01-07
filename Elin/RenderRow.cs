@@ -63,6 +63,8 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 
 	public bool multisize;
 
+	public bool fixedMaterial;
+
 	public SourcePref pref;
 
 	[NonSerialized]
@@ -79,9 +81,6 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 
 	[NonSerialized]
 	public bool useRandomColor;
-
-	[NonSerialized]
-	public bool fixedMaterial;
 
 	[NonSerialized]
 	public SourceMaterial.Row DefaultMaterial;
@@ -156,6 +155,15 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		base.OnImportData(data);
 		_tiles = new int[0];
 		SetTiles();
+		if (defMat.Length > 0 && defMat[0] == '!')
+		{
+			fixedMaterial = true;
+			defMat = defMat.Substring(1, defMat.Length - 1);
+		}
+		else
+		{
+			fixedMaterial = false;
+		}
 	}
 
 	public void SetRenderData()
@@ -229,19 +237,6 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		else
 		{
 			useAltColor = true;
-		}
-		if (defMat[0] == '!')
-		{
-			fixedMaterial = true;
-			defMat = defMat.Substring(1, defMat.Length - 1);
-		}
-		else
-		{
-			fixedMaterial = false;
-		}
-		if (!sources.materials.alias.ContainsKey(defMat))
-		{
-			Debug.Log(defMat);
 		}
 		DefaultMaterial = sources.materials.alias[defMat];
 	}

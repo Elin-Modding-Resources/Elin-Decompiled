@@ -859,10 +859,10 @@ public class Game : EClass
 		{
 			Dialog.YesNo("dialog_gotoTitle", delegate
 			{
-				EClass.game.Save(isAutoSave: true, delegate
+				if (EClass.game.Save(isAutoSave: true))
 				{
 					EClass.scene.Init(Scene.Mode.Title);
-				});
+				}
 			});
 		}
 		else
@@ -875,40 +875,27 @@ public class Game : EClass
 	{
 		Dialog.YesNo("dialog_quit", delegate
 		{
-			EClass.game.Save(isAutoSave: true, delegate
+			if (EClass.game.Save())
 			{
 				EClass.core.Quit();
-			});
+			}
 		});
 	}
 
-	public void Save(bool isAutoSave = false, Action onComplete = null, bool silent = false)
+	public bool Save(bool isAutoSave = false, bool silent = false)
 	{
 		if (EClass.ui.IsDragging)
 		{
 			EClass.ui.EndDrag(canceled: true);
 		}
-		if (!isAutoSave && !silent)
-		{
-			SE.WriteJournal();
-		}
 		if (isAutoSave && EClass.debug.ignoreAutoSave)
 		{
-			onComplete?.Invoke();
-			return;
+			return true;
 		}
-		int num;
-		if (EClass.core.config.game.autoBackup)
+		bool flag = EClass.core.config.game.autoBackup && backupTime >= (double)(EClass.core.config.game.backupInterval * 60 * 30);
+		if (flag)
 		{
-			num = ((backupTime >= (double)(EClass.core.config.game.backupInterval * 60 * 30)) ? 1 : 0);
-			if (num != 0)
-			{
-				backupTime = 0.0;
-			}
-		}
-		else
-		{
-			num = 0;
+			backupTime = 0.0;
 		}
 		EClass.core.config.TryUpdatePlayedHour();
 		countLoadedMaps = 0;
@@ -921,19 +908,34 @@ public class Game : EClass
 		player.angle = EClass.pc.angle;
 		version = EClass.core.version;
 		EClass.ui.widgets.UpdateConfigs();
-		OnBeforeSave();
-		GameIndex index = GameIO.SaveGame();
-		if (num != 0)
+		GameIndex gameIndex = null;
+		try
 		{
-			GameIO.MakeBackup(index);
+			OnBeforeSave();
+			gameIndex = GameIO.SaveGame();
+		}
+		catch (Exception ex)
+		{
+			EClass.ui.Say(ex.Message);
+			SE.Beep();
+			Msg.Say("error_save");
+			return false;
+		}
+		if (flag)
+		{
+			GameIO.MakeBackup(gameIndex);
 			EClass.ui.Say("backupDone");
 		}
 		if (!silent)
 		{
+			if (!isAutoSave)
+			{
+				SE.WriteJournal();
+			}
 			Msg.Say("saved");
 		}
 		saveCount++;
-		onComplete?.Invoke();
+		return true;
 	}
 
 	public void OnBeforeSave()

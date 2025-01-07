@@ -307,10 +307,14 @@ public class ActEffect : EClass
 				}
 				num4 = num4 * Act.powerMod / 100;
 				c.DamageHP(num4, e.id, power * num / 100, AttackSource.None, chara ?? CC);
-				if (c.IsAliveInCurrentZone && CC.IsAliveInCurrentZone && id == EffectId.DrainMana && c.isChara && CC.isChara)
+				if (c.IsAliveInCurrentZone && CC.IsAliveInCurrentZone && id == EffectId.DrainMana && c.isChara && CC.isChara && c.Chara.mana.value > 0)
 				{
-					int num6 = num4 * power * num / 10000;
+					int num6 = num4 * num / 100;
 					Debug.Log(num4 + " v:" + num6 + " evalue:" + e.Value + " power:" + power + " elepMod:" + num);
+					if (num6 > c.Chara.mana.value)
+					{
+						num6 = c.Chara.mana.value;
+					}
 					c.Chara.mana.Mod(-num6);
 					CC.Chara.mana.Mod(num6);
 				}

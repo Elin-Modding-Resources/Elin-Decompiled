@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class CoreExtension
@@ -53,5 +54,29 @@ public static class CoreExtension
 	{
 		SkinColorProfile skinColorProfile = colors ?? SkinManager.CurrentColors;
 		return text.TagColor(funcGood() ? skinColorProfile.textGood : ((funcBad != null && funcBad()) ? skinColorProfile.textBad : skinColorProfile.textDefault));
+	}
+
+	public static void Sort(this List<Thing> things, UIList.SortMode m, bool ascending = false)
+	{
+		foreach (Thing thing in things)
+		{
+			thing.SetSortVal(m);
+		}
+		things.Sort(delegate(Thing a, Thing b)
+		{
+			if (m == UIList.SortMode.ByName)
+			{
+				if (ascending)
+				{
+					return string.Compare(a.GetName(NameStyle.FullNoArticle, 1), b.GetName(NameStyle.FullNoArticle, 1));
+				}
+				return string.Compare(b.GetName(NameStyle.FullNoArticle, 1), a.GetName(NameStyle.FullNoArticle, 1));
+			}
+			if (a.sortVal == b.sortVal)
+			{
+				return b.SecondaryCompare(m, a);
+			}
+			return (!ascending) ? (a.sortVal - b.sortVal) : (b.sortVal - a.sortVal);
+		});
 	}
 }

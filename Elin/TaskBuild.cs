@@ -353,14 +353,20 @@ public class TaskBuild : TaskBaseBuild
 				_ = (item.trait as TraitNewZone).IsDownstairs;
 			}
 		}
-		if (!pos.IsBlocked || !pos.HasChara)
+		if (ActionMode.Build.IsActive && ActionMode.Build.IsRoofEditMode())
 		{
 			return;
 		}
-		foreach (Chara item2 in pos.ListCharas())
+		pos.ForeachMultiSize(recipe.W, recipe.H, delegate(Point p, bool center)
 		{
-			EClass.pc.Kick(item2, ignoreSelf: true, karmaLoss: false, show: false);
-		}
+			if (p.IsBlocked && p.HasChara)
+			{
+				foreach (Chara item2 in p.ListCharas())
+				{
+					EClass.pc.Kick(item2, ignoreSelf: true, karmaLoss: false, show: false);
+				}
+			}
+		});
 	}
 
 	public override void OnDestroy()

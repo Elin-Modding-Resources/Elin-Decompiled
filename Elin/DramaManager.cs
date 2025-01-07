@@ -894,7 +894,7 @@ public class DramaManager : EMono
 		case "save":
 			AddEvent(delegate
 			{
-				EMono.game.Save(isAutoSave: false, null, silent: true);
+				EMono.game.Save(isAutoSave: false, silent: true);
 			});
 			break;
 		case "setHour":

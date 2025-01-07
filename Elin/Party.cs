@@ -95,8 +95,8 @@ public class Party : EClass
 		if (c.homeBranch != null)
 		{
 			c.homeBranch.RefreshEfficiency();
+			c.RefreshWorkElements(c.homeBranch.elements);
 		}
-		c.RefreshWorkElements();
 		WidgetRoster.SetDirty();
 	}
 

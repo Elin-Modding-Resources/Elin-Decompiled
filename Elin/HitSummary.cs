@@ -55,7 +55,7 @@ public class HitSummary : EClass
 		{
 			return true;
 		}
-		if (recipe != null)
+		if (recipe != null && !recipe.UseStock)
 		{
 			foreach (Recipe.Ingredient ingredient in recipe.ingredients)
 			{

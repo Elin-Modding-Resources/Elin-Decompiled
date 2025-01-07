@@ -100,6 +100,7 @@ public class DropdownGrid : EMono
 		{
 			onInstantiate = delegate(Recipe.Ingredient ingredient, ButtonGrid b)
 			{
+				List<Thing> things;
 				if (ingredient.id.IsEmpty())
 				{
 					b.SetIngredient(recipe, ingredient);
@@ -124,19 +125,19 @@ public class DropdownGrid : EMono
 					}
 					if (!flag)
 					{
-						List<Thing> list2 = ListIngredients(ingredient, searchMode);
-						if (list2.Count == 0)
+						things = ListIngredients(ingredient, searchMode);
+						if (things.Count == 0)
 						{
 							if (EMono.debug.godBuild && ingredient.thing == null)
 							{
 								Thing thing2 = ThingGen.Create(ingredient.IdThing, recipe.DefaultMaterial.alias).SetNum(99);
-								list2.Add(thing2);
+								things.Add(thing2);
 								ingredient.SetThing(thing2);
 							}
 							else
 							{
 								ingredient.SetThing();
-								list2.Insert(0, null);
+								things.Insert(0, null);
 							}
 						}
 						else if (!ingredient.optional)
@@ -146,7 +147,7 @@ public class DropdownGrid : EMono
 								int num2 = lastMats.TryGetValue(recipe.id, -1);
 								if (num2 != -1)
 								{
-									foreach (Thing item in list2)
+									foreach (Thing item in things)
 									{
 										if (item.material.id == num2 && item.Num >= ingredient.req)
 										{
@@ -158,7 +159,7 @@ public class DropdownGrid : EMono
 								if (ingredient.thing == null)
 								{
 									SourceMaterial.Row defaultMaterial = recipe.DefaultMaterial;
-									foreach (Thing item2 in list2)
+									foreach (Thing item2 in things)
 									{
 										if (item2.material.id == defaultMaterial.id && item2.Num >= ingredient.req)
 										{
@@ -169,19 +170,19 @@ public class DropdownGrid : EMono
 									if (EMono.debug.godBuild && ingredient.thing == null)
 									{
 										Thing thing3 = (ingredient.useCat ? ThingGen.CreateFromCategory(ingredient.id) : ThingGen.Create(ingredient.id, defaultMaterial.alias)).SetNum(99);
-										list2.Add(thing3);
+										things.Add(thing3);
 										ingredient.SetThing(thing3);
 									}
 								}
 								if (ingredient.thing == null)
 								{
-									ingredient.SetThing(list2[0]);
+									ingredient.SetThing(FindMax());
 								}
 							}
 							else
 							{
 								bool flag2 = true;
-								foreach (Thing item3 in list2)
+								foreach (Thing item3 in things)
 								{
 									if (ingredient.thing == item3)
 									{
@@ -189,9 +190,9 @@ public class DropdownGrid : EMono
 										break;
 									}
 								}
-								if (flag2)
+								if (flag2 && ingredient.thing == null)
 								{
-									ingredient.SetThing(list2[0]);
+									ingredient.SetThing(FindMax());
 								}
 							}
 						}
@@ -200,10 +201,10 @@ public class DropdownGrid : EMono
 					b.onClick.RemoveAllListeners();
 					b.onClick.AddListener(delegate
 					{
-						List<Thing> list3 = ListIngredients(ingredient, searchMode);
+						List<Thing> list2 = ListIngredients(ingredient, searchMode);
 						if (ingredient.optional)
 						{
-							if (list3.Count == 0 || list3[0] == null)
+							if (list2.Count == 0 || list2[0] == null)
 							{
 								SE.Beep();
 								return;
@@ -216,9 +217,27 @@ public class DropdownGrid : EMono
 						}
 						if ((bool)rectDrop)
 						{
-							Activate(ingredient, list3);
+							Activate(ingredient, list2);
 						}
 					});
+				}
+				Thing FindMax()
+				{
+					if (things.Count == 0)
+					{
+						return null;
+					}
+					int num3 = 0;
+					Thing result = null;
+					foreach (Thing item4 in things)
+					{
+						if (item4.Num > num3)
+						{
+							num3 = item4.Num;
+							result = item4;
+						}
+					}
+					return result;
 				}
 			},
 			onRedraw = delegate(Recipe.Ingredient a, ButtonGrid b, int i)

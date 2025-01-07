@@ -704,7 +704,7 @@ public class ActionMode : EClass
 		if (EClass.ui.currentDrag != null)
 		{
 			EClass.ui.OnDrag();
-			if (EInput.leftMouse.down || EInput.rightMouse.down)
+			if (EInput.leftMouse.down || EInput.rightMouse.down || EInput.isCancel)
 			{
 				if (Input.GetMouseButton(0) && EInput.rightMouse.down)
 				{
@@ -712,7 +712,7 @@ public class ActionMode : EClass
 				}
 				else
 				{
-					EClass.ui.EndDrag(EInput.rightMouse.down);
+					EClass.ui.EndDrag(EInput.rightMouse.down || EInput.isCancel);
 				}
 			}
 		}

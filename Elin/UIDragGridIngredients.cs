@@ -55,11 +55,10 @@ public class UIDragGridIngredients : EMono
 					if (windowSaveData == null || !windowSaveData.excludeCraft)
 					{
 						list.Add(thing);
-						thing.SetSortVal(UIList.SortMode.ByCategory);
 					}
 				}
 			}
-			list.Sort((Thing a, Thing b) => b.sortVal - a.sortVal);
+			list.Sort(UIList.SortMode.ByCategory);
 		}
 		this.list.callbacks = new UIList.Callback<Thing, ButtonGrid>
 		{

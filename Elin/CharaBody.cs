@@ -305,10 +305,15 @@ public class CharaBody : EClass
 
 	public void RemoveBodyPart(int ele)
 	{
-		int num = slots.FindIndex((BodySlot a) => a.elementId == ele);
-		if (num != -1)
+		int idx = slots.FindIndex((BodySlot a) => a.elementId == ele);
+		RemoveBodyPartAt(idx);
+	}
+
+	public void RemoveBodyPartAt(int idx)
+	{
+		if (idx != -1)
 		{
-			BodySlot bodySlot = slots[num];
+			BodySlot bodySlot = slots[idx];
 			if (bodySlot.thing != null)
 			{
 				Unequip(bodySlot);
@@ -325,7 +330,7 @@ public class CharaBody : EClass
 			{
 				slotRange = null;
 			}
-			slots.RemoveAt(num);
+			slots.RemoveAt(idx);
 		}
 	}
 

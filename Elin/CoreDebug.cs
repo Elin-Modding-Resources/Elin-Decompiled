@@ -905,16 +905,14 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass.pc.SetFeat(1355);
-			foreach (Chara chara in EClass._map.charas)
+			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
+			if (targetChara != null)
 			{
-				chara.ModAffinity(EClass.pc, -100 + EScriptable.rnd(200));
-				chara.hygiene.Mod(-50 + EScriptable.rnd(100));
+				EClass.pc.Pick(targetChara.MakeMilk());
+				EClass.pc.Pick(targetChara.MakeGene());
+				EClass.pc.Pick(targetChara.MakeBraineCell());
+				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
 			}
-			Thing to = ThingGen.Create("gene");
-			to = DNA.CopyDNA(DNA.GenerateRandomGene(), to);
-			EClass.pc.Pick(to);
-			EClass.pc.Pick(ThingGen.Create("rune"));
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
@@ -942,9 +940,9 @@ public class CoreDebug : EScriptable
 			{
 				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
 			}
-			foreach (Chara member in EClass.pc.party.members)
+			foreach (Chara chara in EClass._map.charas)
 			{
-				member.AddExp(member.ExpToNext);
+				chara.AddExp(chara.ExpToNext);
 			}
 			EClass.pc.PlayEffect("boost");
 			EClass.pc.PlaySound("boost");
@@ -1855,6 +1853,21 @@ public class CoreDebug : EScriptable
 			EClass.pc.elements.SetBase(row.id, value, potential);
 		}
 		return "Done.";
+	}
+
+	[ConsoleCommand("")]
+	public static string SpawnBoss(string id)
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		if (EClass.sources.charas.map.ContainsKey(id))
+		{
+			Chara chara = EClass._zone.SpawnMob(EClass.pc.pos.GetNearestPoint(), SpawnSetting.Boss(id));
+			return "Spawned " + chara.Name;
+		}
+		return "'" + id + "' does not exist in the database.";
 	}
 
 	[ConsoleCommand("")]

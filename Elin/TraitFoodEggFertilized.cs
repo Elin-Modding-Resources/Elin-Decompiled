@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class TraitFoodEggFertilized : TraitFoodEgg
 {
 	public override int DecaySpeed => 1;
@@ -25,6 +27,15 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 		chara.SetMainElement(egg.c_idMainElement, 10, elemental: true);
 		chara.SetFeat(1232, (incubator != null) ? 3 : 2, msg: true);
 		chara.things.DestroyAll();
+		if (chara.Evalue(1644) > 0)
+		{
+			for (int i = 0; i < chara.Evalue(1644); i++)
+			{
+				chara.RemoveLastBodyPart();
+				Debug.Log(i + "/" + chara.body.slots.Count);
+			}
+			chara.elements.SetBase(1644, 0);
+		}
 		foreach (Element value in chara.elements.dict.Values)
 		{
 			if ((!(value.source.category != "attribute") || !(value.source.category != "skill")) && (!(value.source.category == "attribute") || value.source.tag.Contains("primary")) && value.ValueWithoutLink != 0)

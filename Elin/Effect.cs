@@ -240,6 +240,7 @@ public class Effect : SceneObject
 		TweenUtil.KillTween(ref killTimer);
 		TweenUtil.KillTween(ref moveTween);
 		killed = true;
+		OnKill();
 		manager.Remove(this);
 		if (pool && manager.effects.usePool)
 		{
@@ -249,6 +250,10 @@ public class Effect : SceneObject
 		{
 			UnityEngine.Object.Destroy(base.gameObject);
 		}
+	}
+
+	public virtual void OnKill()
+	{
 	}
 
 	public void OnDisable()

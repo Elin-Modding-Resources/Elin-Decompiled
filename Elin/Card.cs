@@ -2575,6 +2575,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			LV = bp.lv;
 		}
+		if (id == "microchip")
+		{
+			Debug.Log(id + "/" + _idMat + "/" + sourceCard.fixedMaterial);
+		}
 		if (sourceCard.fixedMaterial)
 		{
 			_material = EClass.sources.materials.alias[AliasMaterialOnCreate];
@@ -6685,6 +6689,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (num == 0)
 		{
 			num = encLV - c.encLV;
+		}
+		if (num == 0)
+		{
+			num = Num - c.Num;
 		}
 		if (num == 0)
 		{

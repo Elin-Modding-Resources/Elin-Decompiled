@@ -122,4 +122,12 @@ public class EffectIRenderer : Effect
 			card.renderer.isSynced = false;
 		}
 	}
+
+	public override void OnKill()
+	{
+		if (card != null && card.renderer.hasActor)
+		{
+			card.renderer.KillActor();
+		}
+	}
 }

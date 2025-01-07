@@ -432,9 +432,17 @@ public class Feat : Element
 			break;
 		case 1644:
 			featRef[0] = a.ToString() ?? "";
-			if (!hint && a > 0)
+			if (!hint)
 			{
-				owner.Chara.AddRandomBodyPart(owner.Chara.IsPC);
+				if (a > 0)
+				{
+					owner.Chara.AddRandomBodyPart(owner.Chara.IsPC);
+				}
+				else
+				{
+					_ = a;
+					_ = 0;
+				}
 				if (owner.Chara.IsPC && (bool)WidgetEquip.Instance)
 				{
 					WidgetEquip.Instance.Rebuild();

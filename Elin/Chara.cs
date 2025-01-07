@@ -1856,6 +1856,43 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public void RemoveLastBodyPart(bool msg = false)
+	{
+		if (body.slots.Count != 0)
+		{
+			BodySlot bodySlot = body.slots.LastItem();
+			body.RemoveBodyPartAt(body.slots.Count - 1);
+			if (msg)
+			{
+				Say("lose_bodyparts", this, Element.Get(bodySlot.elementId).GetName().ToLower());
+				PlaySound("offering");
+			}
+		}
+	}
+
+	public void ResetBody()
+	{
+		for (int num = body.slots.Count - 1; num >= 0; num--)
+		{
+			BodySlot bodySlot = body.slots[num];
+			if (bodySlot.elementId == 45 || bodySlot.elementId == 40)
+			{
+				return;
+			}
+			body.RemoveBodyPart(num);
+		}
+		string[] array = race.figure.Split('|');
+		foreach (string s in array)
+		{
+			int num2 = ParseBodySlot(s);
+			if (num2 != -1)
+			{
+				body.AddBodyPart(num2);
+			}
+		}
+		body.RefreshBodyParts();
+	}
+
 	public void ApplyRace(bool remove = false)
 	{
 		string[] array = race.figure.Split('|');
@@ -5595,6 +5632,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					Thing t = ThingGen.Create("49");
 					ActThrow.Throw(chara, pos, t);
+					Act.TC = chara;
 				}
 			}
 		}
@@ -5990,9 +6028,9 @@ public class Chara : Card, IPathfindWalker
 		IEnumerable<BaseStats> enumerable = conditions.Concat((!IsPCFaction) ? new BaseStats[0] : new BaseStats[2] { hunger, stamina });
 		if (enumerable.Count() > 0)
 		{
-			text = "";
 			text3 += Environment.NewLine;
 			text3 += "<size=14>";
+			int num = 0;
 			foreach (BaseStats item in enumerable)
 			{
 				string text4 = item.GetPhaseStr();
@@ -6020,9 +6058,18 @@ public class Chara : Card, IPathfindWalker
 						text4 = text4 + "{" + resistCon[item.id] + "}";
 					}
 				}
+				num++;
 				text3 = text3 + text4.TagColor(c) + ", ";
 			}
-			text3 = text3.TrimEnd(", ".ToCharArray()) + "</size>";
+			if (num == 0)
+			{
+				text3 = "";
+			}
+			else
+			{
+				text = "";
+				text3 = text3.TrimEnd(", ".ToCharArray()) + "</size>";
+			}
 		}
 		return text + text2 + text3;
 	}

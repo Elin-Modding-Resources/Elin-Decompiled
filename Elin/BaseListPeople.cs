@@ -196,7 +196,8 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					{
 						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[j]];
 						int num2 = h.source.elements[j + 1];
-						P_2.t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + ((num2 < 0) ? (num2 / 10) : Mathf.Max(1, num2 * h.GetEfficiency(a) / 1000))) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
+						int num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? (num2 / 10) : Mathf.Max(0, num2 * h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
+						P_2.t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
 					}
 				}
 				string[] array2 = h.source.GetDetail().SplitNewline();

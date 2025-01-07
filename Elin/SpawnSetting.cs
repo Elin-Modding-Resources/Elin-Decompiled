@@ -56,6 +56,19 @@ public class SpawnSetting
 		};
 	}
 
+	public static SpawnSetting Boss(string id, string idEle = null, int fixedLv = -1)
+	{
+		return new SpawnSetting
+		{
+			id = id,
+			idEle = idEle,
+			fixedLv = fixedLv,
+			rarity = Rarity.Legendary,
+			isBoss = true,
+			tries = 10000
+		};
+	}
+
 	public static SpawnSetting Encounter(int lv)
 	{
 		return new SpawnSetting

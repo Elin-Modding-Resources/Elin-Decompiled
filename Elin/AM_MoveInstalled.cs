@@ -305,6 +305,19 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 				{
 					target.SetPlaceState(PlaceState.roaming);
 				}
+				if (!target.isRoofItem)
+				{
+					target.ForeachPoint(delegate(Point p, bool center)
+					{
+						if (p.IsBlocked && p.HasChara)
+						{
+							foreach (Chara item in p.ListCharas())
+							{
+								EClass.pc.Kick(item, ignoreSelf: true, karmaLoss: false, show: false);
+							}
+						}
+					});
+				}
 			}
 			SE.Click();
 			if (target.renderer.hasActor)

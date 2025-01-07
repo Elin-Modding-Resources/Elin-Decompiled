@@ -410,7 +410,8 @@ public class UIHomeInfo : EMono
 		});
 		if (EMono.debug.showExtra)
 		{
-			AddReport("efficiency:" + branch.efficiency);
+			branch.RefreshEfficiency();
+			AddReport("Efficiency:" + branch.efficiency);
 		}
 		reports.Sort((ReportData a, ReportData b) => b.type - a.type);
 		listReport.Clear();

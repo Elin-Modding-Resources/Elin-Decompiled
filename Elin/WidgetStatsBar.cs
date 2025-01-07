@@ -191,9 +191,9 @@ public class WidgetStatsBar : Widget
 			Add(null, "fertility", iconFertility, delegate
 			{
 				object obj;
-				if (EMono.Branch != null)
+				if (EMono.Branch != null || EMono._zone is Zone_Tent)
 				{
-					obj = (EMono.Branch.MaxSoil - EMono._zone.GetSoilCost()).ToString();
+					obj = (EMono._zone.MaxSoil - EMono._zone.GetSoilCost()).ToString();
 					if (obj == null)
 					{
 						return "";
@@ -204,7 +204,7 @@ public class WidgetStatsBar : Widget
 					obj = "";
 				}
 				return (string)obj;
-			}, () => (EMono.Branch == null || EMono.Branch.MaxSoil - EMono._zone.GetSoilCost() >= 0) ? FontColor.Default : FontColor.Bad, () => EMono._zone.IsPCFaction);
+			}, () => ((EMono.Branch == null && !(EMono._zone is Zone_Tent)) || EMono._zone.MaxSoil - EMono._zone.GetSoilCost() >= 0) ? FontColor.Default : FontColor.Bad, () => EMono._zone.IsPCFaction || EMono._zone is Zone_Tent);
 		}
 		if (extra.weight)
 		{

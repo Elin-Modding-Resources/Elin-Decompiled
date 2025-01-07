@@ -45,6 +45,10 @@ public class ACT : EClass
 
 	public static Act Create(SourceElement.Row row)
 	{
+		if (row == null)
+		{
+			row = EClass.sources.elements.alias["AI_SelfHarm"];
+		}
 		Act act = ClassCache.Create<Act>(row.type.IsEmpty(row.alias), "Elin") ?? new Act();
 		if (act != null)
 		{

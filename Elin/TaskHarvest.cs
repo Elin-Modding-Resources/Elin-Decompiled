@@ -491,6 +491,11 @@ public class TaskHarvest : BaseTaskHarvest
 		{
 			num2 = 2.1999998f;
 		}
+		string text2 = target.id;
+		if (text2 == "glass" || text2 == "brick")
+		{
+			num2 = 2.1999998f;
+		}
 		if (target.trait is TraitAmmo)
 		{
 			num2 = 50f;

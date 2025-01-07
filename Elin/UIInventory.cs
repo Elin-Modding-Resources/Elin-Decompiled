@@ -1007,7 +1007,7 @@ public class UIInventory : EMono
 
 	public void Sort(bool redraw = true)
 	{
-		UIList.SortMode i = (IsShop ? EMono.player.pref.sortInvShop : (IsAdvSort ? window.saveData.sortMode : EMono.player.pref.sortInv));
+		UIList.SortMode m = (IsShop ? EMono.player.pref.sortInvShop : (IsAdvSort ? window.saveData.sortMode : EMono.player.pref.sortInv));
 		bool flag = true;
 		while (flag)
 		{
@@ -1040,26 +1040,9 @@ public class UIInventory : EMono
 				thing3.invY = 0;
 				thing3.invX = -1;
 			}
-			thing3.SetSortVal(i, owner.currency);
 			num++;
 		}
-		owner.Container.things.Sort(delegate(Thing a, Thing b)
-		{
-			bool flag2 = (IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? window.saveData.sort_ascending : EMono.player.pref.sort_ascending));
-			if (i == UIList.SortMode.ByName)
-			{
-				if (flag2)
-				{
-					return string.Compare(a.GetName(NameStyle.FullNoArticle, 1), b.GetName(NameStyle.FullNoArticle, 1));
-				}
-				return string.Compare(b.GetName(NameStyle.FullNoArticle, 1), a.GetName(NameStyle.FullNoArticle, 1));
-			}
-			if (a.sortVal == b.sortVal)
-			{
-				return b.SecondaryCompare(i, a);
-			}
-			return (!flag2) ? (a.sortVal - b.sortVal) : (b.sortVal - a.sortVal);
-		});
+		owner.Container.things.Sort(m, IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? window.saveData.sort_ascending : EMono.player.pref.sort_ascending));
 		if (!UseGrid)
 		{
 			int num2 = 0;

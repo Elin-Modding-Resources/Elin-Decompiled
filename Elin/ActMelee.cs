@@ -153,11 +153,7 @@ public class ActMelee : ActBaseAttack
 				{
 					if (!item.Equals(obj))
 					{
-						Chara firstChara = item.FirstChara;
-						if (firstChara != null && firstChara.IsHostile(Act.CC))
-						{
-							Attack(item.FirstChara, item);
-						}
+						item.FirstChara?.IsHostile(Act.CC);
 					}
 				}
 			}
@@ -183,7 +179,6 @@ public class ActMelee : ActBaseAttack
 						{
 							Act act = Act.CC.elements.GetElement(traitAmmoTalisman.owner.refVal)?.act ?? ACT.Create(traitAmmoTalisman.owner.refVal);
 							Act.powerMod = traitAmmo.owner.encLV;
-							Card tC = Act.TC;
 							if (act.Perform(Act.CC, Act.TC, Act.TP))
 							{
 								usedTalisman = true;
@@ -191,7 +186,6 @@ public class ActMelee : ActBaseAttack
 								int spellExp = Act.CC.elements.GetSpellExp(Act.CC, act, 200);
 								Act.CC.ModExp(act.id, spellExp);
 							}
-							Act.TC = tC;
 							Act.powerMod = 100;
 						}
 					}
@@ -210,6 +204,7 @@ public class ActMelee : ActBaseAttack
 						LayerInventory.SetDirty(w);
 					}
 				}
+				Act.TC = _tc;
 				Act.CC.DoHostileAction(Act.TC);
 			}
 		}
