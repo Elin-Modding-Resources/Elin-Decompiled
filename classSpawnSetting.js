@@ -1,6 +1,7 @@
 var classSpawnSetting =
 [
     [ "Boss", "classSpawnSetting.html#a3e9c654b0589c2f09c6b493758268039", null ],
+    [ "Boss", "classSpawnSetting.html#a341d37c61d56574fcd04fd1e751e88d9", null ],
     [ "DefenseEnemy", "classSpawnSetting.html#ad0b09c0647d774fc82deace7d2932f6b", null ],
     [ "Encounter", "classSpawnSetting.html#a0cb6358dbdc2a78e6b0d794701da5b0e", null ],
     [ "Evolved", "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a", null ],

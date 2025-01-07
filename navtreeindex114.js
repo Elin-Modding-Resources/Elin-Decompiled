@@ -1,5 +1,14 @@
 var NAVTREEINDEX114 =
 {
+"classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1542,0],
+"classTraitGM__Fighter.html":[1,0,1543],
+"classTraitGM__Mage.html":[1,0,1544],
+"classTraitGM__Merchant.html":[1,0,1545],
+"classTraitGM__Thief.html":[1,0,1546],
+"classTraitGacha.html":[1,0,1524],
+"classTraitGacha.html#a105f89d64e5997d0e6a706688b0d120b":[1,0,1524,3],
+"classTraitGacha.html#a1db11aa432c9bd42cec71f6fb6447158":[1,0,1524,1],
+"classTraitGacha.html#a2dc893f597a04a16f6bd9c1efb9b20e0":[1,0,1524,5],
 "classTraitGacha.html#a4809775ed4c5c7a53bc0479ad1312e69":[1,0,1524,6],
 "classTraitGacha.html#a5ce8ca8716b11e9534475f9d495d8ab1":[1,0,1524,2],
 "classTraitGacha.html#ac12e98eec74d5b2aa7e4c467d82d3c48":[1,0,1524,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitLicense.html#aa3b45b7734a06ebafb558853a858f2fe":[1,0,1580,0],
 "classTraitLight.html":[1,0,1581],
 "classTraitLight.html#a0c609f40f20874d1cdaee1cfa81c86c3":[1,0,1581,1],
-"classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1581,0],
-"classTraitLightSource.html":[1,0,1582],
-"classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1582,0],
-"classTraitLightSun.html":[1,0,1583],
-"classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1583,2],
-"classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1583,1],
-"classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1583,3],
-"classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1583,4],
-"classTraitLightSun.html#aff2a91bfa08afa9a8013938b7e09d6b7":[1,0,1583,0],
-"classTraitLittleBall.html":[1,0,1584]
+"classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1581,0]
 };

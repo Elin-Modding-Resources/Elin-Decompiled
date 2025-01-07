@@ -1,5 +1,14 @@
 var NAVTREEINDEX128 =
 {
+"classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c":[1,0,1951,19],
+"classWidgetInspector.html#af331a652e007b88cdf7dd3631af65df6":[1,0,1951,9],
+"classWidgetInspector.html#af5b84e49a4308831b0219bae9b2ad355":[1,0,1951,2],
+"classWidgetInspector_1_1Extra.html":[1,0,1951,0],
+"classWidgetInspector_1_1Extra.html#af64754ff290907e126a5c5552345f119":[1,0,1951,0,0],
+"classWidgetMainText.html":[1,0,1952],
+"classWidgetMainText.html#a007d463ccdc77a58083e86390f613fff":[1,0,1952,3],
+"classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213":[1,0,1952,19],
+"classWidgetMainText.html#a107d83c032d34115817e24d87da37b2b":[1,0,1952,24],
 "classWidgetMainText.html#a1e78e5c7d44ced2eb9770115a3b5652a":[1,0,1952,14],
 "classWidgetMainText.html#a386395593032ba460d80c6c14fad0833":[1,0,1952,8],
 "classWidgetMainText.html#a56ad6b9746847a0364ad44ca04147252":[1,0,1952,12],
@@ -240,14 +249,5 @@ var NAVTREEINDEX128 =
 "classWidgetQuestTracker.html#a3075df3911a3770f0f26ee0315359659":[1,0,1963,1],
 "classWidgetQuestTracker.html#a3635d3d3260eaddb80ef6ada3a10dbd9":[1,0,1963,9],
 "classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435":[1,0,1963,6],
-"classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5":[1,0,1963,3],
-"classWidgetQuestTracker.html#a9923ea0b27ee4c78f7c23eb98574061f":[1,0,1963,5],
-"classWidgetQuestTracker.html#aa74500e4c09b5bf844dac272d72436eb":[1,0,1963,8],
-"classWidgetQuestTracker.html#ad61c1f15ea3da92debcb30fddcb30fb3":[1,0,1963,2],
-"classWidgetQuestTracker.html#adf2c9e8b3e026efe66e6d2b64ce03103":[1,0,1963,4],
-"classWidgetRoster.html":[1,0,1964],
-"classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15":[1,0,1964,13],
-"classWidgetRoster.html#a1cb8d04f5e4a8df78508a85fbc6e612a":[1,0,1964,17],
-"classWidgetRoster.html#a501082b328c01d9f021b0a611312e3dc":[1,0,1964,2],
-"classWidgetRoster.html#a5424b57c0f12c7a6c71dc5a07735bcaa":[1,0,1964,8]
+"classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5":[1,0,1963,3]
 };

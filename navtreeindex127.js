@@ -1,5 +1,14 @@
 var NAVTREEINDEX127 =
 {
+"classWidgetCurrentTool.html#a87243dc00b55a8c2d8d3f9cbe1259869":[1,0,1941,32],
+"classWidgetCurrentTool.html#a893ef1bd8cfb576a0a9125b7b9db0ef2":[1,0,1941,25],
+"classWidgetCurrentTool.html#aa007901d68665fea54589a99c7d0364f":[1,0,1941,7],
+"classWidgetCurrentTool.html#aa116dbaf6eee1901a28a168d575be5ef":[1,0,1941,11],
+"classWidgetCurrentTool.html#aa51e823be57d28842978868ac6184958":[1,0,1941,2],
+"classWidgetCurrentTool.html#aa615af0cb0e0a2fdace0387cdbf75fef":[1,0,1941,12],
+"classWidgetCurrentTool.html#ab47ffe2ccc3c611ccfb29fb593b0ac3b":[1,0,1941,1],
+"classWidgetCurrentTool.html#ac841b79f588f2a3f21360749afe49db0":[1,0,1941,14],
+"classWidgetCurrentTool.html#acd7b1926d4c3eb87558992cabc5eecae":[1,0,1941,4],
 "classWidgetCurrentTool.html#ad1c39b06027cc40c6893ee630f586b2b":[1,0,1941,29],
 "classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea":[1,0,1941,13],
 "classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356":[1,0,1941,18],
@@ -240,14 +249,5 @@ var NAVTREEINDEX127 =
 "classWidgetInspector.html#abce20c1093224f0cf9f0a3928d9c3336":[1,0,1951,1],
 "classWidgetInspector.html#abdf71046ad360b6cc1c45f22b0779f84":[1,0,1951,15],
 "classWidgetInspector.html#ac902c5218518f34cc507a3d0479426e7":[1,0,1951,6],
-"classWidgetInspector.html#ae43b42d5fdc5b016c2c505ccecad4783":[1,0,1951,12],
-"classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c":[1,0,1951,19],
-"classWidgetInspector.html#af331a652e007b88cdf7dd3631af65df6":[1,0,1951,9],
-"classWidgetInspector.html#af5b84e49a4308831b0219bae9b2ad355":[1,0,1951,2],
-"classWidgetInspector_1_1Extra.html":[1,0,1951,0],
-"classWidgetInspector_1_1Extra.html#af64754ff290907e126a5c5552345f119":[1,0,1951,0,0],
-"classWidgetMainText.html":[1,0,1952],
-"classWidgetMainText.html#a007d463ccdc77a58083e86390f613fff":[1,0,1952,3],
-"classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213":[1,0,1952,19],
-"classWidgetMainText.html#a107d83c032d34115817e24d87da37b2b":[1,0,1952,24]
+"classWidgetInspector.html#ae43b42d5fdc5b016c2c505ccecad4783":[1,0,1951,12]
 };

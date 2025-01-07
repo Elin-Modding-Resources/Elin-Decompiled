@@ -1,5 +1,6 @@
 var classEffectIRenderer =
 [
+    [ "OnKill", "classEffectIRenderer.html#a98102adace64c9f04796307b859abd06", null ],
     [ "OnUpdate", "classEffectIRenderer.html#a028ff3b142d4e15d7e81b9284eb3385d", null ],
     [ "Play", "classEffectIRenderer.html#ad581f929fbc2ce2564b05881344cc46e", null ],
     [ "Play", "classEffectIRenderer.html#aca45e94486f165f495628016ff3de839", null ],

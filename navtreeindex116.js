@@ -1,5 +1,14 @@
 var NAVTREEINDEX116 =
 {
+"classTraitNewZone.html#ac01e05ddac5e41b530840b966a74d34f":[1,0,1646,7],
+"classTraitNewZone.html#acaa1d4dfbee3d5fd8953e698fa0e1b82":[1,0,1646,2],
+"classTraitNewZone.html#ad3ef2288dca8c3423c6b3abaab2b25c9":[1,0,1646,13],
+"classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1646,22],
+"classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1646,1],
+"classTraitNewZone.html#ae002023845fe236526177b3d14615923":[1,0,1646,4],
+"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1646,18],
+"classTraitNewZone.html#ae0df02573fce410f2e3dab1fc991c1fe":[1,0,1646,5],
+"classTraitNewZone.html#aeebced4525b68749edc9e0296611c84e":[1,0,1646,10],
 "classTraitNewZone.html#af6a94cc31b5243bbf11e53a4804924e6":[1,0,1646,23],
 "classTraitNewZone.html#af9f61a07745ed9036244dc2ac4522938":[1,0,1646,17],
 "classTraitNewZone.html#afc72378e91e49dc9fbf792ebb54f040d":[1,0,1646,8],
@@ -240,14 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitRoomPlate.html#a738261f447a82cdb204add9779035832":[1,0,1705,6],
 "classTraitRoomPlate.html#a829e280297a537dd0e26212fa263f882":[1,0,1705,2],
 "classTraitRoomPlate.html#ab17dd62bedd1048338b1f14b2c46e345":[1,0,1705,4],
-"classTraitRope.html":[1,0,1706],
-"classTraitRope.html#a9cb7af347d972444df31f3c6b598bcd7":[1,0,1706,0],
-"classTraitRune.html":[1,0,1707],
-"classTraitRune.html#a3ef4e57dd7b4f5ccefcd30f71a65985f":[1,0,1707,1],
-"classTraitRune.html#ad1d7c2da5c25bbce6d814883e67850f8":[1,0,1707,0],
-"classTraitSalaryChest.html":[1,0,1708],
-"classTraitSalaryChest.html#a04617e0bc88d81de8892425be3753925":[1,0,1708,1],
-"classTraitSalaryChest.html#a0c24817e7280837e708d252f51490260":[1,0,1708,0],
-"classTraitSalesTag.html":[1,0,1709],
-"classTraitSalesTag.html#a1847e16f59895662a5404130593c0aab":[1,0,1709,3]
+"classTraitRope.html":[1,0,1706]
 };

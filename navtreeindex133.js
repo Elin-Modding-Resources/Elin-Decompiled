@@ -1,5 +1,14 @@
 var NAVTREEINDEX133 =
 {
+"classZoneEventDefenseGame.html#a53419b139c7b1ad82c248fdf54f44b34":[1,0,2064,16],
+"classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f":[1,0,2064,9],
+"classZoneEventDefenseGame.html#a8555887b6caf6d0618649cf32f9f5628":[1,0,2064,0],
+"classZoneEventDefenseGame.html#a8fe36a57970f2948e10137f3d90322a8":[1,0,2064,8],
+"classZoneEventDefenseGame.html#aa10e5c9847a181482a46d14fff899551":[1,0,2064,17],
+"classZoneEventDefenseGame.html#aa8e916b4dcc227757e330a7cc194b096":[1,0,2064,18],
+"classZoneEventDefenseGame.html#aa991cb02751f0d532feb2fe3925a4747":[1,0,2064,2],
+"classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0":[1,0,2064,13],
+"classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6":[1,0,2064,15],
 "classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607":[1,0,2064,14],
 "classZoneEventDefenseGame.html#addfa0bee9b80661ff5142bc06d2e491d":[1,0,2064,5],
 "classZoneEventDefenseGame.html#af3423c12780ba49e2512c1442c69f9e6":[1,0,2064,12],
@@ -240,14 +249,5 @@ var NAVTREEINDEX133 =
 "classZoneUtil.html#aeaedc9e09ae81fcc7293ab9ee288538f":[1,0,2090,0],
 "classZoneUtil.html#af29d6a7357ef6c78766fb01f69ac5355":[1,0,2090,3],
 "classZone_1_1PortalReturnData.html":[1,0,1993,0],
-"classZone_1_1PortalReturnData.html#a24fb367c5b7cbb7c5b21a4b0110a0553":[1,0,1993,0,0],
-"classZone_1_1PortalReturnData.html#a527b9c31a24b489b8d0cb110a3f17a3a":[1,0,1993,0,1],
-"classZone_1_1PortalReturnData.html#ae10f37390562c87054b5a9641d5b1807":[1,0,1993,0,2],
-"classZone__Aquli.html":[1,0,1994],
-"classZone__Arena.html":[1,0,1995],
-"classZone__Arena.html#a23f93026eb8b48371b37ca1c5d5644b3":[1,0,1995,1],
-"classZone__Arena.html#a34a1cd9398e8fb458e0a3ba38fc50907":[1,0,1995,0],
-"classZone__Arena.html#a5b657d752ffb0416861456d6ed94b93d":[1,0,1995,4],
-"classZone__Arena.html#a7b031408533c6fa2374f687f3a23242a":[1,0,1995,2],
-"classZone__Arena.html#afcf94016ad1b8c971ce6a2a4fa5dafb6":[1,0,1995,3]
+"classZone_1_1PortalReturnData.html#a24fb367c5b7cbb7c5b21a4b0110a0553":[1,0,1993,0,0]
 };

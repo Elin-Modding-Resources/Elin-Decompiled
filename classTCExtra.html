@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.74</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.74 Hotfix 4</span>
    </div>
   </td>
  </tr>
@@ -403,80 +403,86 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   81</span>            flag4 = !flag4;</div>
 <div class="line"><span class="lineno">   82</span>        }</div>
 <div class="line"><span class="lineno">   83</span>        <span class="keywordtype">bool</span> flag5 = <a class="code hl_variable" href="classTCExtra.html#afa897efdbfcd97301f4b311c8ccc8e87">useOffsetBack</a> &amp;&amp; data.useOffsetBack &amp;&amp; flag;</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length == 0)</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (base.owner.renderer.hasActor)</div>
 <div class="line"><span class="lineno">   85</span>        {</div>
-<div class="line"><span class="lineno">   86</span>            v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x) * (<span class="keywordtype">float</span>)((!flag4) ? 1 : (-1)) + <a class="code hl_property" href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">FixPos</a>.x + <a class="code hl_variable" href="classTCExtra.html#a877d6d186c6a246451634ea2ef167e34">flipFixX</a> * (<span class="keywordtype">float</span>)((!flag4) ? 1 : (-1)) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.x : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.x));</div>
-<div class="line"><span class="lineno">   87</span>            v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y) + <a class="code hl_property" href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">FixPos</a>.y + ((!flag2) ? 0f : (flag3 ? heldPosFlip.y : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.y));</div>
+<div class="line"><span class="lineno">   86</span>            v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x);</div>
+<div class="line"><span class="lineno">   87</span>            v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y);</div>
 <div class="line"><span class="lineno">   88</span>            v.z = base.owner.renderer.position.z + (flag5 ? data.offsetBack.z : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z) + <a class="code hl_property" href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">FixPos</a>.z + (flag2 ? (-0.5f) : 0f) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.z : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.z));</div>
 <div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length == 0)</div>
 <div class="line"><span class="lineno">   91</span>        {</div>
-<div class="line"><span class="lineno">   92</span>            v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x) + <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>[base.owner.dir % <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length].x + ((!flag2) ? 0f : (flag3 ? heldPosFlip.x : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.x));</div>
-<div class="line"><span class="lineno">   93</span>            v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y) + <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>[base.owner.dir % <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length].y + ((!flag2) ? 0f : (flag3 ? heldPosFlip.y : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.y));</div>
-<div class="line"><span class="lineno">   94</span>            v.z = base.owner.renderer.position.z + (flag5 ? data.offsetBack.z : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z) + <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>[base.owner.dir % <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length].z + (flag2 ? (-0.5f) : 0f) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.z : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.z));</div>
+<div class="line"><span class="lineno">   92</span>            v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x) * (<span class="keywordtype">float</span>)((!flag4) ? 1 : (-1)) + <a class="code hl_property" href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">FixPos</a>.x + <a class="code hl_variable" href="classTCExtra.html#a877d6d186c6a246451634ea2ef167e34">flipFixX</a> * (<span class="keywordtype">float</span>)((!flag4) ? 1 : (-1)) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.x : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.x));</div>
+<div class="line"><span class="lineno">   93</span>            v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y) + <a class="code hl_property" href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">FixPos</a>.y + ((!flag2) ? 0f : (flag3 ? heldPosFlip.y : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.y));</div>
+<div class="line"><span class="lineno">   94</span>            v.z = base.owner.renderer.position.z + (flag5 ? data.offsetBack.z : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z) + <a class="code hl_property" href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">FixPos</a>.z + (flag2 ? (-0.5f) : 0f) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.z : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.z));</div>
 <div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span>        base.transform.position = <a class="code hl_variable" href="classTCExtra.html#a4a01c41f3a7c66b8ec2fa0cc39276f12">v</a>;</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a1b257e7706b27ca66550f5e18659a2b7">flipSR</a> &amp;&amp; <a class="code hl_variable" href="classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463">sr</a>.flipX != flag4)</div>
-<div class="line"><span class="lineno">   98</span>        {</div>
-<div class="line"><span class="lineno">   99</span>            sr.flipX = flag4;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a4cfb4eec10e38e1c1d737b1fb653d0c6">flipSelf</a>)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            base.transform.localScale = (flag4 ? <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>.x * -1f, <a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>.y, <a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>.z) : <a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>);</div>
-<div class="line"><span class="lineno">  104</span>            base.transform.localEulerAngles = (flag4 ? <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>.x * -1f, <a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>.y, <a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>.z) : <a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>);</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordtype">bool</span> flag6 = (!<a class="code hl_variable" href="classTCExtra.html#a7eb19573aac5fc18c6bc88c69fa36fa2">onlyInstalled</a> || base.owner.IsInstalled || base.owner.isRoofItem) &amp;&amp; base.owner.trait.UseExtra;</div>
-<div class="line"><span class="lineno">  107</span>        switch (<a class="code hl_variable" href="classTCExtra.html#a3b6f04cc2db460ad23231187ea0fa0fa">type</a>)</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.x) + <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>[base.owner.dir % <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length].x + ((!flag2) ? 0f : (flag3 ? heldPosFlip.x : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.x));</div>
+<div class="line"><span class="lineno">   99</span>            v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.y) + <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>[base.owner.dir % <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length].y + ((!flag2) ? 0f : (flag3 ? heldPosFlip.y : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.y));</div>
+<div class="line"><span class="lineno">  100</span>            v.z = base.owner.renderer.position.z + (flag5 ? data.offsetBack.z : data.<a class="code hl_variable" href="classRenderData.html#ab0c24dab311f1c22c8b109f201135029">offset</a>.z) + <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>[base.owner.dir % <a class="code hl_variable" href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">dirPos</a>.Length].z + (flag2 ? (-0.5f) : 0f) + ((!flag2) ? 0f : (flag3 ? heldPosFlip.z : <a class="code hl_variable" href="classTCExtra.html#a4f95ead048d1ff1e886952a2c8a039a0">heldPos</a>.z));</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>        base.transform.position = <a class="code hl_variable" href="classTCExtra.html#a4a01c41f3a7c66b8ec2fa0cc39276f12">v</a>;</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a1b257e7706b27ca66550f5e18659a2b7">flipSR</a> &amp;&amp; <a class="code hl_variable" href="classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463">sr</a>.flipX != flag4)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            sr.flipX = flag4;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a4cfb4eec10e38e1c1d737b1fb653d0c6">flipSelf</a>)</div>
 <div class="line"><span class="lineno">  108</span>        {</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9">Type</a>.QuestBoard:</div>
-<div class="line"><span class="lineno">  110</span>            flag6 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classQuest.html">Quest</a> global <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e">globalList</a>)</div>
-<div class="line"><span class="lineno">  112</span>            {</div>
-<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">if</span> (global.<a class="code hl_function" href="classQuest.html#ac6c1e6c3a2f9b07ff30afdde79a9f6a2">IsVisibleOnQuestBoard</a>() &amp;&amp; global.<a class="code hl_variable" href="classQuest.html#aa1269d9a9d9a1a09abb72c823baff5b5">isNew</a>)</div>
-<div class="line"><span class="lineno">  114</span>                {</div>
-<div class="line"><span class="lineno">  115</span>                    flag6 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  116</span>                }</div>
-<div class="line"><span class="lineno">  117</span>            }</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9">Type</a>.Effect:</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (flag6)</div>
-<div class="line"><span class="lineno">  121</span>            {</div>
-<div class="line"><span class="lineno">  122</span>                <a class="code hl_class" href="classTraitEffect.html">TraitEffect</a> traitEffect = base.owner.trait as <a class="code hl_class" href="classTraitEffect.html">TraitEffect</a>;</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">if</span> (traitEffect.<a class="code hl_variable" href="classTraitEffect.html#aaeeba5ee4f7bac0f3962584c2337e013">timer</a> &lt; Time.realtimeSinceStartup)</div>
-<div class="line"><span class="lineno">  124</span>                {</div>
-<div class="line"><span class="lineno">  125</span>                    traitEffect.timer = Time.realtimeSinceStartup - Time.realtimeSinceStartup % traitEffect.Interval + traitEffect.Interval + traitEffect.<a class="code hl_property" href="classTraitEffect.html#a5759212af372e9e407f76931f8659818">data</a>.<a class="code hl_variable" href="classTraitEffect_1_1Data.html#aa0f85ef2bd036e2b9821ea9aa7dacdd7">delay</a>;</div>
-<div class="line"><span class="lineno">  126</span>                    traitEffect.<a class="code hl_function" href="classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138">Proc</a>(<a class="code hl_variable" href="classTCExtra.html#a4a01c41f3a7c66b8ec2fa0cc39276f12">v</a>);</div>
-<div class="line"><span class="lineno">  127</span>                }</div>
-<div class="line"><span class="lineno">  128</span>            }</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#acd53fc7cb96769da28d1babb50dc37d8">hack</a> == <a class="code hl_enumeration" href="classTCExtra.html#a542badc9619e3a198c8ae1938f5420cf">Hack</a>.Candle)</div>
-<div class="line"><span class="lineno">  132</span>        {</div>
-<div class="line"><span class="lineno">  133</span>            Transform[] array = <a class="code hl_variable" href="classTCExtra.html#a58cb34d392b024ff9a510370b4589949">listTrans</a>;</div>
-<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">foreach</span> (Transform transform <span class="keywordflow">in</span> array)</div>
-<div class="line"><span class="lineno">  135</span>            {</div>
-<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">if</span> (flag4)</div>
-<div class="line"><span class="lineno">  137</span>                {</div>
-<div class="line"><span class="lineno">  138</span>                    <span class="keywordflow">if</span> (transform.localPosition.z &gt; 0f)</div>
-<div class="line"><span class="lineno">  139</span>                    {</div>
-<div class="line"><span class="lineno">  140</span>                        transform.localPosition = transform.localPosition.SetZ(0f - transform.localPosition.z);</div>
-<div class="line"><span class="lineno">  141</span>                    }</div>
-<div class="line"><span class="lineno">  142</span>                }</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (transform.localPosition.z &lt; 0f)</div>
-<div class="line"><span class="lineno">  144</span>                {</div>
-<div class="line"><span class="lineno">  145</span>                    transform.localPosition = transform.localPosition.SetZ(0f - transform.localPosition.z);</div>
-<div class="line"><span class="lineno">  146</span>                }</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (base.owner.isHidden &amp;&amp; base.owner.isChara &amp;&amp; !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(base.owner.Chara))</div>
-<div class="line"><span class="lineno">  150</span>        {</div>
-<div class="line"><span class="lineno">  151</span>            flag6 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (base.gameObject.activeSelf != flag6)</div>
-<div class="line"><span class="lineno">  154</span>        {</div>
-<div class="line"><span class="lineno">  155</span>            base.gameObject.SetActive(flag6);</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="line"><span class="lineno">  109</span>            base.transform.localScale = (flag4 ? <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>.x * -1f, <a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>.y, <a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>.z) : <a class="code hl_variable" href="classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a">originalScale</a>);</div>
+<div class="line"><span class="lineno">  110</span>            base.transform.localEulerAngles = (flag4 ? <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>.x * -1f, <a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>.y, <a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>.z) : <a class="code hl_variable" href="classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c">originalAngle</a>);</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">bool</span> flag6 = (!<a class="code hl_variable" href="classTCExtra.html#a7eb19573aac5fc18c6bc88c69fa36fa2">onlyInstalled</a> || base.owner.IsInstalled || base.owner.isRoofItem) &amp;&amp; base.owner.trait.UseExtra;</div>
+<div class="line"><span class="lineno">  113</span>        switch (<a class="code hl_variable" href="classTCExtra.html#a3b6f04cc2db460ad23231187ea0fa0fa">type</a>)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9">Type</a>.QuestBoard:</div>
+<div class="line"><span class="lineno">  116</span>            flag6 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classQuest.html">Quest</a> global <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e">globalList</a>)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">if</span> (global.<a class="code hl_function" href="classQuest.html#ac6c1e6c3a2f9b07ff30afdde79a9f6a2">IsVisibleOnQuestBoard</a>() &amp;&amp; global.<a class="code hl_variable" href="classQuest.html#aa1269d9a9d9a1a09abb72c823baff5b5">isNew</a>)</div>
+<div class="line"><span class="lineno">  120</span>                {</div>
+<div class="line"><span class="lineno">  121</span>                    flag6 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  122</span>                }</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9">Type</a>.Effect:</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (flag6)</div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                <a class="code hl_class" href="classTraitEffect.html">TraitEffect</a> traitEffect = base.owner.trait as <a class="code hl_class" href="classTraitEffect.html">TraitEffect</a>;</div>
+<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">if</span> (traitEffect.<a class="code hl_variable" href="classTraitEffect.html#aaeeba5ee4f7bac0f3962584c2337e013">timer</a> &lt; Time.realtimeSinceStartup)</div>
+<div class="line"><span class="lineno">  130</span>                {</div>
+<div class="line"><span class="lineno">  131</span>                    traitEffect.timer = Time.realtimeSinceStartup - Time.realtimeSinceStartup % traitEffect.Interval + traitEffect.Interval + traitEffect.<a class="code hl_property" href="classTraitEffect.html#a5759212af372e9e407f76931f8659818">data</a>.<a class="code hl_variable" href="classTraitEffect_1_1Data.html#aa0f85ef2bd036e2b9821ea9aa7dacdd7">delay</a>;</div>
+<div class="line"><span class="lineno">  132</span>                    traitEffect.<a class="code hl_function" href="classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138">Proc</a>(<a class="code hl_variable" href="classTCExtra.html#a4a01c41f3a7c66b8ec2fa0cc39276f12">v</a>);</div>
+<div class="line"><span class="lineno">  133</span>                }</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#acd53fc7cb96769da28d1babb50dc37d8">hack</a> == <a class="code hl_enumeration" href="classTCExtra.html#a542badc9619e3a198c8ae1938f5420cf">Hack</a>.Candle)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            Transform[] array = <a class="code hl_variable" href="classTCExtra.html#a58cb34d392b024ff9a510370b4589949">listTrans</a>;</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">foreach</span> (Transform transform <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">if</span> (flag4)</div>
+<div class="line"><span class="lineno">  143</span>                {</div>
+<div class="line"><span class="lineno">  144</span>                    <span class="keywordflow">if</span> (transform.localPosition.z &gt; 0f)</div>
+<div class="line"><span class="lineno">  145</span>                    {</div>
+<div class="line"><span class="lineno">  146</span>                        transform.localPosition = transform.localPosition.SetZ(0f - transform.localPosition.z);</div>
+<div class="line"><span class="lineno">  147</span>                    }</div>
+<div class="line"><span class="lineno">  148</span>                }</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (transform.localPosition.z &lt; 0f)</div>
+<div class="line"><span class="lineno">  150</span>                {</div>
+<div class="line"><span class="lineno">  151</span>                    transform.localPosition = transform.localPosition.SetZ(0f - transform.localPosition.z);</div>
+<div class="line"><span class="lineno">  152</span>                }</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (base.owner.isHidden &amp;&amp; base.owner.isChara &amp;&amp; !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(base.owner.Chara))</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            flag6 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (base.gameObject.activeSelf != flag6)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            base.gameObject.SetActive(flag6);</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
 <div class="ttc" id="aclassCard_html_acead09796e17d25d2c320e10c7da820a"><div class="ttname"><a href="classCard.html#acead09796e17d25d2c320e10c7da820a">Card.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00141">Card.cs:142</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01003">Chara.cs:1003</a></div></div>
@@ -502,7 +508,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTCExtra_html_a58cb34d392b024ff9a510370b4589949"><div class="ttname"><a href="classTCExtra.html#a58cb34d392b024ff9a510370b4589949">TCExtra.listTrans</a></div><div class="ttdeci">Transform[] listTrans</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00047">TCExtra.cs:47</a></div></div>
 <div class="ttc" id="aclassTCExtra_html_a7eb19573aac5fc18c6bc88c69fa36fa2"><div class="ttname"><a href="classTCExtra.html#a7eb19573aac5fc18c6bc88c69fa36fa2">TCExtra.onlyInstalled</a></div><div class="ttdeci">bool onlyInstalled</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00035">TCExtra.cs:35</a></div></div>
 <div class="ttc" id="aclassTCExtra_html_a82f6c0d074fa1832e847015d75c9ee26"><div class="ttname"><a href="classTCExtra.html#a82f6c0d074fa1832e847015d75c9ee26">TCExtra.dirPos</a></div><div class="ttdeci">Vector3[] dirPos</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00049">TCExtra.cs:49</a></div></div>
-<div class="ttc" id="aclassTCExtra_html_a86a5868b912a3da68dba036d99b29435"><div class="ttname"><a href="classTCExtra.html#a86a5868b912a3da68dba036d99b29435">TCExtra.RefreshColor</a></div><div class="ttdeci">void RefreshColor()</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00165">TCExtra.cs:165</a></div></div>
+<div class="ttc" id="aclassTCExtra_html_a86a5868b912a3da68dba036d99b29435"><div class="ttname"><a href="classTCExtra.html#a86a5868b912a3da68dba036d99b29435">TCExtra.RefreshColor</a></div><div class="ttdeci">void RefreshColor()</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00171">TCExtra.cs:171</a></div></div>
 <div class="ttc" id="aclassTCExtra_html_a877d6d186c6a246451634ea2ef167e34"><div class="ttname"><a href="classTCExtra.html#a877d6d186c6a246451634ea2ef167e34">TCExtra.flipFixX</a></div><div class="ttdeci">float flipFixX</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00029">TCExtra.cs:29</a></div></div>
 <div class="ttc" id="aclassTCExtra_html_aaadba122a3e0913c400fd15aad69a022"><div class="ttname"><a href="classTCExtra.html#aaadba122a3e0913c400fd15aad69a022">TCExtra.flipBack</a></div><div class="ttdeci">bool flipBack</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00041">TCExtra.cs:41</a></div></div>
 <div class="ttc" id="aclassTCExtra_html_ab6896b1cc1195994baf7a50203db8cdd"><div class="ttname"><a href="classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd">TCExtra.FixPos</a></div><div class="ttdeci">override Vector3 FixPos</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00059">TCExtra.cs:59</a></div></div>
@@ -515,7 +521,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTraitEffect_html_a5759212af372e9e407f76931f8659818"><div class="ttname"><a href="classTraitEffect.html#a5759212af372e9e407f76931f8659818">TraitEffect.data</a></div><div class="ttdeci">Data data</div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00055">TraitEffect.cs:56</a></div></div>
 <div class="ttc" id="aclassTraitEffect_html_aaeeba5ee4f7bac0f3962584c2337e013"><div class="ttname"><a href="classTraitEffect.html#aaeeba5ee4f7bac0f3962584c2337e013">TraitEffect.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="TraitEffect_8cs_source.html#l00021">TraitEffect.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TCExtra_8cs_source.html#l00051">_mat</a>, <a class="el" href="TCExtra_8cs_source.html#l00039">alwaysFlip</a>, <a class="el" href="Chara_8cs_source.html#l01003">Chara.CanSee()</a>, <a class="el" href="TraitEffect_8cs_source.html#l00056">TraitEffect.data</a>, <a class="el" href="TraitEffect_8cs_source.html#l00015">TraitEffect.Data.delay</a>, <a class="el" href="Card_8cs_source.html#l00142">Card.dir</a>, <a class="el" href="TCExtra_8cs_source.html#l00049">dirPos</a>, <a class="el" href="TCExtra_8cs_source.html#l00059">FixPos</a>, <a class="el" href="TCExtra_8cs_source.html#l00041">flipBack</a>, <a class="el" href="TCExtra_8cs_source.html#l00029">flipFixX</a>, <a class="el" href="TCExtra_8cs_source.html#l00033">flipSelf</a>, <a class="el" href="TCExtra_8cs_source.html#l00031">flipSR</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00014">QuestManager.globalList</a>, <a class="el" href="TCExtra_8cs_source.html#l00021">hack</a>, <a class="el" href="TCExtra_8cs_source.html#l00025">heldPos</a>, <a class="el" href="Quest_8cs_source.html#l00064">Quest.isNew</a>, <a class="el" href="Quest_8cs_source.html#l00292">Quest.IsVisibleOnQuestBoard()</a>, <a class="el" href="TCExtra_8cs_source.html#l00047">listTrans</a>, <a class="el" href="RenderData_8cs_source.html#l00018">RenderData.offset</a>, <a class="el" href="TCExtra_8cs_source.html#l00035">onlyInstalled</a>, <a class="el" href="TCExtra_8cs_source.html#l00057">originalAngle</a>, <a class="el" href="TCExtra_8cs_source.html#l00055">originalScale</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="TraitEffect_8cs_source.html#l00076">TraitEffect.Proc()</a>, <a class="el" href="Game_8cs_source.html#l00179">Game.quests</a>, <a class="el" href="TCExtra_8cs_source.html#l00165">RefreshColor()</a>, <a class="el" href="TCExtra_8cs_source.html#l00045">sr</a>, <a class="el" href="TraitEffect_8cs_source.html#l00021">TraitEffect.timer</a>, <a class="el" href="TCExtra_8cs_source.html#l00019">type</a>, <a class="el" href="TCExtra_8cs_source.html#l00037">useOffsetBack</a>, and <a class="el" href="TCExtra_8cs_source.html#l00053">v</a>.</p>
+<p class="reference">References <a class="el" href="TCExtra_8cs_source.html#l00051">_mat</a>, <a class="el" href="TCExtra_8cs_source.html#l00039">alwaysFlip</a>, <a class="el" href="Chara_8cs_source.html#l01003">Chara.CanSee()</a>, <a class="el" href="TraitEffect_8cs_source.html#l00056">TraitEffect.data</a>, <a class="el" href="TraitEffect_8cs_source.html#l00015">TraitEffect.Data.delay</a>, <a class="el" href="Card_8cs_source.html#l00142">Card.dir</a>, <a class="el" href="TCExtra_8cs_source.html#l00049">dirPos</a>, <a class="el" href="TCExtra_8cs_source.html#l00059">FixPos</a>, <a class="el" href="TCExtra_8cs_source.html#l00041">flipBack</a>, <a class="el" href="TCExtra_8cs_source.html#l00029">flipFixX</a>, <a class="el" href="TCExtra_8cs_source.html#l00033">flipSelf</a>, <a class="el" href="TCExtra_8cs_source.html#l00031">flipSR</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00014">QuestManager.globalList</a>, <a class="el" href="TCExtra_8cs_source.html#l00021">hack</a>, <a class="el" href="TCExtra_8cs_source.html#l00025">heldPos</a>, <a class="el" href="Quest_8cs_source.html#l00064">Quest.isNew</a>, <a class="el" href="Quest_8cs_source.html#l00292">Quest.IsVisibleOnQuestBoard()</a>, <a class="el" href="TCExtra_8cs_source.html#l00047">listTrans</a>, <a class="el" href="RenderData_8cs_source.html#l00018">RenderData.offset</a>, <a class="el" href="TCExtra_8cs_source.html#l00035">onlyInstalled</a>, <a class="el" href="TCExtra_8cs_source.html#l00057">originalAngle</a>, <a class="el" href="TCExtra_8cs_source.html#l00055">originalScale</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="TraitEffect_8cs_source.html#l00076">TraitEffect.Proc()</a>, <a class="el" href="Game_8cs_source.html#l00179">Game.quests</a>, <a class="el" href="TCExtra_8cs_source.html#l00171">RefreshColor()</a>, <a class="el" href="TCExtra_8cs_source.html#l00045">sr</a>, <a class="el" href="TraitEffect_8cs_source.html#l00021">TraitEffect.timer</a>, <a class="el" href="TCExtra_8cs_source.html#l00019">type</a>, <a class="el" href="TCExtra_8cs_source.html#l00037">useOffsetBack</a>, and <a class="el" href="TCExtra_8cs_source.html#l00053">v</a>.</p>
 
 </div>
 </div>
@@ -544,13 +550,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTC.html#a9aa3a15b464bde8c046510c0bc070c3e">TC</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TCExtra_8cs_source.html#l00159">159</a> of file <a class="el" href="TCExtra_8cs_source.html">TCExtra.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
-<div class="line"><span class="lineno">  161</span>        base.OnSetOwner();</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_function" href="classTCExtra.html#a86a5868b912a3da68dba036d99b29435">RefreshColor</a>();</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TCExtra_8cs_source.html#l00165">165</a> of file <a class="el" href="TCExtra_8cs_source.html">TCExtra.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        base.OnSetOwner();</div>
+<div class="line"><span class="lineno">  168</span>        <a class="code hl_function" href="classTCExtra.html#a86a5868b912a3da68dba036d99b29435">RefreshColor</a>();</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TCExtra_8cs_source.html#l00165">RefreshColor()</a>.</p>
+<p class="reference">References <a class="el" href="TCExtra_8cs_source.html#l00171">RefreshColor()</a>.</p>
 
 </div>
 </div>
@@ -577,30 +583,30 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TCExtra_8cs_source.html#l00165">165</a> of file <a class="el" href="TCExtra_8cs_source.html">TCExtra.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463">sr</a>)</div>
-<div class="line"><span class="lineno">  168</span>        {</div>
-<div class="line"><span class="lineno">  169</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = base.owner.trait.ColorExtra ?? <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white;</div>
-<div class="line"><span class="lineno">  170</span>            color.a = <a class="code hl_variable" href="classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463">sr</a>.color.a;</div>
-<div class="line"><span class="lineno">  171</span>            sr.color = color;</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a1609f9e81708a327639afe524676872c">colorParticle</a>)</div>
+<p class="definition">Definition at line <a class="el" href="TCExtra_8cs_source.html#l00171">171</a> of file <a class="el" href="TCExtra_8cs_source.html">TCExtra.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463">sr</a>)</div>
 <div class="line"><span class="lineno">  174</span>        {</div>
-<div class="line"><span class="lineno">  175</span>            ParticleSystem[] componentsInChildren = GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
-<div class="line"><span class="lineno">  177</span>            {</div>
-<div class="line"><span class="lineno">  178</span>                ParticleSystem.MainModule main = componentsInChildren[i].main;</div>
-<div class="line"><span class="lineno">  179</span>                main.startColor = (base.owner.isDyed ? base.owner.DyeMat : base.owner.material).GetColor().SetAlpha(main.startColor.color.a);</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>        }</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  175</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = base.owner.trait.ColorExtra ?? <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white;</div>
+<div class="line"><span class="lineno">  176</span>            color.a = <a class="code hl_variable" href="classTCExtra.html#a0fe8aceb0968270fa9e08534bbd57463">sr</a>.color.a;</div>
+<div class="line"><span class="lineno">  177</span>            sr.color = color;</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTCExtra.html#a1609f9e81708a327639afe524676872c">colorParticle</a>)</div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            ParticleSystem[] componentsInChildren = GetComponentsInChildren&lt;ParticleSystem&gt;();</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">  183</span>            {</div>
+<div class="line"><span class="lineno">  184</span>                ParticleSystem.MainModule main = componentsInChildren[i].main;</div>
+<div class="line"><span class="lineno">  185</span>                main.startColor = (base.owner.isDyed ? base.owner.DyeMat : base.owner.material).GetColor().SetAlpha(main.startColor.color.a);</div>
+<div class="line"><span class="lineno">  186</span>            }</div>
+<div class="line"><span class="lineno">  187</span>        }</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aclassTCExtra_html_a1609f9e81708a327639afe524676872c"><div class="ttname"><a href="classTCExtra.html#a1609f9e81708a327639afe524676872c">TCExtra.colorParticle</a></div><div class="ttdeci">bool colorParticle</div><div class="ttdef"><b>Definition:</b> <a href="TCExtra_8cs_source.html#l00043">TCExtra.cs:43</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="TCExtra_8cs_source.html#l00043">colorParticle</a>, and <a class="el" href="TCExtra_8cs_source.html#l00045">sr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00067">OnDraw()</a>, and <a class="el" href="TCExtra_8cs_source.html#l00159">OnSetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00067">OnDraw()</a>, and <a class="el" href="TCExtra_8cs_source.html#l00165">OnSetOwner()</a>.</p>
 
 </div>
 </div>
@@ -663,7 +669,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TCExtra_8cs_source.html#l00043">43</a> of file <a class="el" href="TCExtra_8cs_source.html">TCExtra.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00165">RefreshColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00171">RefreshColor()</a>.</p>
 
 </div>
 </div>
@@ -927,7 +933,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TCExtra_8cs_source.html#l00045">45</a> of file <a class="el" href="TCExtra_8cs_source.html">TCExtra.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00067">OnDraw()</a>, and <a class="el" href="TCExtra_8cs_source.html#l00165">RefreshColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TCExtra_8cs_source.html#l00067">OnDraw()</a>, and <a class="el" href="TCExtra_8cs_source.html#l00171">RefreshColor()</a>.</p>
 
 </div>
 </div>

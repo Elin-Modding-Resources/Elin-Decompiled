@@ -1,7 +1,7 @@
 var searchData=
 [
   ['backupcolor_0',['BackupColor',['../classHexInput.html#a575f8fff0fc3f4b0e25af210dba994d5',1,'HexInput']]],
-  ['backuppref_1',['BackupPref',['../classSourceData.html#acef2b3deb03da333ac3c68beeb8603c6',1,'SourceData.BackupPref()'],['../classSourceThing.html#a86055a026555b69b93b3fcf88cca28e7',1,'SourceThing.BackupPref()'],['../classSourceObj.html#ab96d959e9160c0399fe5752ff117d314',1,'SourceObj.BackupPref()'],['../classSourceFloor.html#af716021e48e987eaaf157361dd2f55f9',1,'SourceFloor.BackupPref()'],['../classSourceChara.html#a14796a21d6ffdb9ad4dae79075aaa878',1,'SourceChara.BackupPref()'],['../classSourceBlock.html#a58c15e1e95b0c4ac1cbe61688542501c',1,'SourceBlock.BackupPref()']]],
+  ['backuppref_1',['BackupPref',['../classSourceData.html#acef2b3deb03da333ac3c68beeb8603c6',1,'SourceData.BackupPref()'],['../classSourceThing.html#a86055a026555b69b93b3fcf88cca28e7',1,'SourceThing.BackupPref()'],['../classSourceObj.html#ab96d959e9160c0399fe5752ff117d314',1,'SourceObj.BackupPref()'],['../classSourceChara.html#a14796a21d6ffdb9ad4dae79075aaa878',1,'SourceChara.BackupPref()'],['../classSourceFloor.html#af716021e48e987eaaf157361dd2f55f9',1,'SourceFloor.BackupPref()'],['../classSourceBlock.html#a58c15e1e95b0c4ac1cbe61688542501c',1,'SourceBlock.BackupPref()']]],
   ['backupsource_2',['BackupSource',['../classSourceData.html#a51ea452838ecd2bdfb1145213658ff9e',1,'SourceData.BackupSource()'],['../classSourceData.html#a37a05430ff654270940b087e508934e5',1,'SourceData.BackupSource()']]],
   ['badeffect_3',['BadEffect',['../classTraitWell.html#a227abc4c403af92c9f4495bb61c2c538',1,'TraitWell']]],
   ['banishmember_4',['BanishMember',['../classFactionBranch.html#af3e0056cddbc23577321456176f5de3f',1,'FactionBranch']]],
@@ -16,7 +16,7 @@ var searchData=
   ['blockpass_13',['BlockPass',['../classGrowSystem.html#aefb91fe072895fd6ef08bb6b3dc73e23',1,'GrowSystem.BlockPass()'],['../classGrowSystemTree.html#a2b4eb4c0ec319e6051747cceda47ee12',1,'GrowSystemTree.BlockPass()']]],
   ['blockrows_14',['BlockRows',['../classBiomeProfile_1_1BaseTile.html#ab7e1e767bcd3956542941125d229ada7',1,'BiomeProfile::BaseTile']]],
   ['blocksight_15',['BlockSight',['../classGrowSystem.html#ad2a474240347fdf1f78c4198d1cce587',1,'GrowSystem.BlockSight()'],['../classGrowSystemTree.html#ae6239a2f6b839c2ae56b1cd66094cccd',1,'GrowSystemTree.BlockSight()']]],
-  ['boss_16',['Boss',['../classSpawnSetting.html#a3e9c654b0589c2f09c6b493758268039',1,'SpawnSetting']]],
+  ['boss_16',['Boss',['../classSpawnSetting.html#a3e9c654b0589c2f09c6b493758268039',1,'SpawnSetting.Boss(int filterLv, int fixedLv=-1)'],['../classSpawnSetting.html#a341d37c61d56574fcd04fd1e751e88d9',1,'SpawnSetting.Boss(string id, string idEle=null, int fixedLv=-1)']]],
   ['bracket_17',['Bracket',['../classClassExtension.html#ad58e3cbfd32dd184b79d365327ef89bb',1,'ClassExtension']]],
   ['bringtotop_18',['BringToTop',['../classWindow.html#acc7089a9f8d67901378c8af197e59c0a',1,'Window']]],
   ['broadcastnext_19',['BroadcastNext',['../classCoreDebug.html#aed1f72ea9715661b52928b37dc9d212c',1,'CoreDebug']]],

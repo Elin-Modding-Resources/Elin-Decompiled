@@ -17,7 +17,7 @@ var classGame =
     [ "OnUpdate", "classGame.html#a9b9247f3b710c3ca35c2c4ad34ccd83e", null ],
     [ "Pause", "classGame.html#a90d4eb47250a3ee9c51e1d4e802ef16d", null ],
     [ "Quit", "classGame.html#ad8df470c569d4ed80aa973fd08e6efac", null ],
-    [ "Save", "classGame.html#adddd2df9e4f107f00e9b7b380ff6ef42", null ],
+    [ "Save", "classGame.html#a6623ff6933813f2174fc7894237deaf4", null ],
     [ "StartNewGame", "classGame.html#ae7423b49e135bc598a7aabc1e0fc3da6", null ],
     [ "TryLoad", "classGame.html#a510195b4944121851c862985745d8ee8", null ],
     [ "Wait", "classGame.html#ae4b1668508e5b5b8854bd1fb309a2562", null ],

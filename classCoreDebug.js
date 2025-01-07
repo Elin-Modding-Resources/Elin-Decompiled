@@ -74,6 +74,7 @@ var classCoreDebug =
     [ "SetElement", "classCoreDebug.html#a68a8792ea19e2cab21d8b2997277901b", null ],
     [ "SetStartStockpile", "classCoreDebug.html#a67119fab3e23ff06d668cfa05803e99d", null ],
     [ "Spawn", "classCoreDebug.html#a710080962de63085be3884177bad6e16", null ],
+    [ "SpawnBoss", "classCoreDebug.html#adf46e253b79065cecd1500cc45ffb977", null ],
     [ "SpawnCheatContainer", "classCoreDebug.html#ae513c73abecea8acf9b064dd6cdb5c2d", null ],
     [ "Test_Filter", "classCoreDebug.html#a3cb0d4364a0c8b5156ac890f10ecdb13", null ],
     [ "Test_GodTalk", "classCoreDebug.html#aaeff154d80b13414a94f4c38c175fb53", null ],

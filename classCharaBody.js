@@ -15,6 +15,7 @@ var classCharaBody =
     [ "IsTooHeavyToEquip", "classCharaBody.html#a915feb6e7e9b73b18fd2330f5c1eacae", null ],
     [ "RefreshBodyParts", "classCharaBody.html#af159453fd2a08c8c6e5521b812c6ce21", null ],
     [ "RemoveBodyPart", "classCharaBody.html#afef2f98cc3b880f00ae4c9c7c9ec7c96", null ],
+    [ "RemoveBodyPartAt", "classCharaBody.html#a09414c28013c184efc50e2050d9d33aa", null ],
     [ "SetBodyIndexText", "classCharaBody.html#a989d1b2482ccce7fd7d2c3282bbaeb08", null ],
     [ "SetOwner", "classCharaBody.html#a34826fa73d23b01754eeefd5e8802803", null ],
     [ "Unequip", "classCharaBody.html#a88ae84f7700e38c6aa4317a764161cd1", null ],

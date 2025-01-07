@@ -1,5 +1,13 @@
 var NAVTREEINDEX111 =
 {
+"classTraitBananaPeel.html#a693332211aa44d8fa431813a0e52f2cb":[1,0,1369,1],
+"classTraitBananaPeel.html#ae543ae587c520f715a768884cf96bb49":[1,0,1369,0],
+"classTraitBananaPeel.html#af627480fad2384e3ff463de101b8c474":[1,0,1369,2],
+"classTraitBank.html":[1,0,1370],
+"classTraitBank.html#a6aac890589392f8f052ed3df63dc57eb":[1,0,1370,1],
+"classTraitBank.html#ac5a210f7b83e9778db4b194d3869499f":[1,0,1370,0],
+"classTraitBanker.html":[1,0,1371],
+"classTraitBanker.html#ad5ed997437ec14e1c1e12abcc4edf112":[1,0,1371,0],
 "classTraitBanker.html#aec6a26b14dd11051efd045692b0b9f79":[1,0,1371,1],
 "classTraitBard.html":[1,0,1372],
 "classTraitBarrelMaker.html":[1,0,1373],
@@ -89,8 +97,9 @@ var NAVTREEINDEX111 =
 "classTraitBill.html#a17591b4bb29e6fb0d26f6e7c6fc2d64c":[1,0,1384,1],
 "classTraitBill.html#a3c97a6202f16d622d01ef1d8050ecc2f":[1,0,1384,0],
 "classTraitBinocular.html":[1,0,1385],
-"classTraitBinocular.html#a3b5c8c0f8d6890a013ce77a26ee94079":[1,0,1385,0],
-"classTraitBinocular.html#a46a3ece4b05416679f5908918d675d56":[1,0,1385,1],
+"classTraitBinocular.html#a3b5c8c0f8d6890a013ce77a26ee94079":[1,0,1385,1],
+"classTraitBinocular.html#a46a3ece4b05416679f5908918d675d56":[1,0,1385,2],
+"classTraitBinocular.html#a7e33b7814533e1e666e5e9623509efd2":[1,0,1385,0],
 "classTraitBitch.html":[1,0,1386],
 "classTraitBitch.html#a0229b481536a7dc8ab0f33f98c8cfcef":[1,0,1386,0],
 "classTraitBitch.html#ab408dea815eb741838f705f5702046f7":[1,0,1386,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitChara.html#a993b1d313f028c65c8f2d580fc6b0579":[1,0,1416,44],
 "classTraitChara.html#a9b232d96239ea131a2cdfcd93447dd1f":[1,0,1416,8],
 "classTraitChara.html#aa1a54866d923a0e55a28f5d57b18227c":[1,0,1416,39],
-"classTraitChara.html#aa5f6cea5a8b978621195da121fd22a0c":[1,0,1416,13],
-"classTraitChara.html#aa8acc03026142a26aa61aca0e8d060ab":[1,0,1416,2],
-"classTraitChara.html#aa8b742c242e488b36fb4347f10ad5e48":[1,0,1416,36],
-"classTraitChara.html#aaef443538554e3085ff0e7ba7497de95":[1,0,1416,25],
-"classTraitChara.html#ab272d6e7385371505f00ab2644b3b222":[1,0,1416,35],
-"classTraitChara.html#abd56a42ddfe5c600fe57f9081aa5182a":[1,0,1416,20],
-"classTraitChara.html#abe2d33e9e462de7c1dc61406cba841d7":[1,0,1416,43],
-"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000":[1,0,1416,0],
-"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a181634470467a8f1a9b41cbee362451b":[1,0,1416,0,1],
-"classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a4f9d0921d220f6b660454a303e79fc73":[1,0,1416,0,3]
+"classTraitChara.html#aa5f6cea5a8b978621195da121fd22a0c":[1,0,1416,13]
 };

@@ -14,6 +14,7 @@ var classEffect =
     [ "Kill", "classEffect.html#a87814d9ad1a11712ee253bf82cd38a78", null ],
     [ "OnDestroy", "classEffect.html#afcb32aebbc057690a0fbc870676c2c3e", null ],
     [ "OnDisable", "classEffect.html#aaec45375c8bc27e50c11558d7842ddba", null ],
+    [ "OnKill", "classEffect.html#abd0b6f46b318ce3992820da09bb741dc", null ],
     [ "OnPlay", "classEffect.html#a3f6c8742317b14c5ac4dc815ef528d6f", null ],
     [ "OnUpdate", "classEffect.html#a1c9a0aa3aa7c33ac7b1ec8a96acbf301", null ],
     [ "Play", "classEffect.html#a7fc23b7447649119c0b7497c4218d792", null ],

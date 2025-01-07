@@ -1,5 +1,12 @@
 var NAVTREEINDEX62 =
 {
+"classFontSource.html#a5f8b13f7034dc11ab14960612b6099e9":[1,0,485,1],
+"classFontSource.html#a619ddbc547b167088103524f0ce92046":[1,0,485,8],
+"classFontSource.html#a767ef109701608f061d1d6e0b2f8d403":[1,0,485,3],
+"classFontSource.html#aa2c51f18e94bb62955fcbf8fa1c7cca5":[1,0,485,10],
+"classFontSource.html#aa5d3fd84deab798168bf42fbba8b1871":[1,0,485,6],
+"classFontSource.html#adb24c080f3e1937549f5f249b7d652e7":[1,0,485,7],
+"classFontSource.html#ade0ecf392e53cdfb12eb5d0736691d7a":[1,0,485,0],
 "classFontSource.html#ade9d74b132cc3b7dc64a4da2109c14d6":[1,0,485,2],
 "classFontSource.html#ae1185416a8d5703566834260555c11c6":[1,0,485,5],
 "classFontSource.html#afa5282da8ea2e7a01335cdb53604062a":[1,0,485,4],
@@ -93,6 +100,7 @@ var NAVTREEINDEX62 =
 "classGame.html#a56d338c712cda2cd40b20031f177410f":[1,0,492,30],
 "classGame.html#a5863738013b90cbe2e863df446667210":[1,0,492,34],
 "classGame.html#a5e3ca3abf508a285d06b39b2f732b77b":[1,0,492,5],
+"classGame.html#a6623ff6933813f2174fc7894237deaf4":[1,0,492,17],
 "classGame.html#a66686ed40b2f75c85ad2a7a84f839c09":[1,0,492,56],
 "classGame.html#a678bda9cd7e60cd719852efe7febf5fe":[1,0,492,59],
 "classGame.html#a69977c67b81e6e151a516876c77361a4":[1,0,492,57],
@@ -127,7 +135,6 @@ var NAVTREEINDEX62 =
 "classGame.html#adc4fcdf04bc0105799d51b1e009a3c8d":[1,0,492,66],
 "classGame.html#adc92d63408af2aa22665fb6affc300e4":[1,0,492,69],
 "classGame.html#add1c4d804bf54ef2718272d5c5261141":[1,0,492,58],
-"classGame.html#adddd2df9e4f107f00e9b7b380ff6ef42":[1,0,492,17],
 "classGame.html#ade9ad14fdc23297b2803bb988cd2a401":[1,0,492,11],
 "classGame.html#ae12b72a9348adf2fac318a403394f9be":[1,0,492,54],
 "classGame.html#ae4b1668508e5b5b8854bd1fb309a2562":[1,0,492,20],
@@ -242,12 +249,5 @@ var NAVTREEINDEX62 =
 "classGameScreen.html#adf782a75518942ce303a22216c9ae1ea":[1,0,501,2],
 "classGameScreenElona.html":[1,0,502],
 "classGameScreenElona.html#a3410a10bdc80308d1e2c43db7afb1a3f":[1,0,502,5],
-"classGameScreenElona.html#a4d423e8df1990a981499b182ab57b79a":[1,0,502,7],
-"classGameScreenElona.html#a4fa72af0bded008d5bfb7f6a03893a18":[1,0,502,6],
-"classGameScreenElona.html#a666971f675a30b35dcbd3e1fd86a3a49":[1,0,502,9],
-"classGameScreenElona.html#a74404ed62d6c7d461add72044df180b6":[1,0,502,0],
-"classGameScreenElona.html#a7df891f73e6c06a1062ea5831fb85076":[1,0,502,3],
-"classGameScreenElona.html#a834ad2227fc4e98735e98f36f07a3de9":[1,0,502,11],
-"classGameScreenElona.html#a8852f94f6bae41dbf52bb423b08cf7c5":[1,0,502,8],
-"classGameScreenElona.html#a9c22f3b53b91a7448ac24ebf60bd0058":[1,0,502,2]
+"classGameScreenElona.html#a4d423e8df1990a981499b182ab57b79a":[1,0,502,7]
 };

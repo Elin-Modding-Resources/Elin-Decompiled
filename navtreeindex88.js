@@ -1,5 +1,12 @@
 var NAVTREEINDEX88 =
 {
+"classPropsManager.html":[1,0,929],
+"classPropsManager.html#a0c5a47eaa47ab2bd2b8347e3ff3437a3":[1,0,929,4],
+"classPropsManager.html#a252eb48a13e330c55d5fea897fe10465":[1,0,929,6],
+"classPropsManager.html#a588cdfa97c852be622323e96d2d81945":[1,0,929,5],
+"classPropsManager.html#a62335779e5e3ef519b5d6a5d11baa6c2":[1,0,929,0],
+"classPropsManager.html#a68dcaad94831ab42f5e9b5a8f4c442d8":[1,0,929,8],
+"classPropsManager.html#ac22e5a152c6ffab82b4dfb4af1cdca8b":[1,0,929,1],
 "classPropsManager.html#acef3d60fb0706c1e737bce2a21f776c1":[1,0,929,3],
 "classPropsManager.html#af12189144ef000658610c2a0d4d79384":[1,0,929,2],
 "classPropsManager.html#affc144d2bf2202851afbe9efee336f0e":[1,0,929,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX88 =
 "classQuestEscort.html":[1,0,946],
 "classQuestEscort.html#a1b15c44c5825de775519686480c60c51":[1,0,946,6],
 "classQuestEscort.html#a34a5fac00141fb6e2a40e9bd5426ab27":[1,0,946,3],
-"classQuestEscort.html#a449b6f0adac6eb77d6e46a1075e00c57":[1,0,946,1],
-"classQuestEscort.html#a533012513bfee3ab6705621e89c54a19":[1,0,946,0],
-"classQuestEscort.html#a70416e2b58cb2ef5d8f031e172a97688":[1,0,946,9],
-"classQuestEscort.html#ac53306b38cafbaa27fec0670c98551f4":[1,0,946,7],
-"classQuestEscort.html#acbc60325f77dfde637101926c1d53f4d":[1,0,946,4],
-"classQuestEscort.html#ad3129d33f2ce289389f2caf9d78b4d7f":[1,0,946,8],
-"classQuestEscort.html#ae221c4d3e02bad3ddef6004f44215edc":[1,0,946,10],
-"classQuestEscort.html#aec284a8bdfeb4af972b3c87f8684e956":[1,0,946,2]
+"classQuestEscort.html#a449b6f0adac6eb77d6e46a1075e00c57":[1,0,946,1]
 };

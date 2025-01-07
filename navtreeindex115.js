@@ -1,5 +1,14 @@
 var NAVTREEINDEX115 =
 {
+"classTraitLightSource.html":[1,0,1582],
+"classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1582,0],
+"classTraitLightSun.html":[1,0,1583],
+"classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1583,2],
+"classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1583,1],
+"classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1583,3],
+"classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1583,4],
+"classTraitLightSun.html#aff2a91bfa08afa9a8013938b7e09d6b7":[1,0,1583,0],
+"classTraitLittleBall.html":[1,0,1584],
 "classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1584,0],
 "classTraitLittleOne.html":[1,0,1585],
 "classTraitLittleOne.html#a196d3faedc31a553cf60e02e07ec8eb1":[1,0,1585,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitNewZone.html#a5ec3b0aa83460646d6c6c283b1d8a384":[1,0,1646,16],
 "classTraitNewZone.html#a6d51d58a5467a29e9e731ef2ae798066":[1,0,1646,19],
 "classTraitNewZone.html#a9a63a7b8b415c696689644ae43329e6f":[1,0,1646,6],
-"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1646,25],
-"classTraitNewZone.html#ac01e05ddac5e41b530840b966a74d34f":[1,0,1646,7],
-"classTraitNewZone.html#acaa1d4dfbee3d5fd8953e698fa0e1b82":[1,0,1646,2],
-"classTraitNewZone.html#ad3ef2288dca8c3423c6b3abaab2b25c9":[1,0,1646,13],
-"classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1646,22],
-"classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1646,1],
-"classTraitNewZone.html#ae002023845fe236526177b3d14615923":[1,0,1646,4],
-"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1646,18],
-"classTraitNewZone.html#ae0df02573fce410f2e3dab1fc991c1fe":[1,0,1646,5],
-"classTraitNewZone.html#aeebced4525b68749edc9e0296611c84e":[1,0,1646,10]
+"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1646,25]
 };
