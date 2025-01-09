@@ -1,5 +1,8 @@
 var NAVTREEINDEX135 =
 {
+"classZone__VernisMine.html#a2c181f9f8c8a6a2e535cbe4ac70ec7d1":[1,0,2056,3],
+"classZone__VernisMine.html#a63c463f18bc711a12c656f96a36d4a08":[1,0,2056,5],
+"classZone__VernisMine.html#a79a271dbee384036b45e78371c1f8005":[1,0,2056,0],
 "classZone__VernisMine.html#aa9fb168e9543ffcc707cb938654a8bfc":[1,0,2056,8],
 "classZone__VernisMine.html#ab31bc5282028394deab8598b5a08cb72":[1,0,2056,6],
 "classZone__VernisMine.html#afb7b59097abbc9ce7540153503f12c61":[1,0,2056,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX135 =
 "interfaceSFB_1_1IStandaloneFileBrowser.html":[0,4,8,1],
 "interfaceSFB_1_1IStandaloneFileBrowser.html#a0562573c818a6f48c37b2963e3a7b748":[0,4,8,1,4],
 "interfaceSFB_1_1IStandaloneFileBrowser.html#a0562573c818a6f48c37b2963e3a7b748":[1,0,8,1,4],
-"interfaceSFB_1_1IStandaloneFileBrowser.html#a112db8b391e2026b461426f30f09e8fa":[0,4,8,1,5],
-"interfaceSFB_1_1IStandaloneFileBrowser.html#a112db8b391e2026b461426f30f09e8fa":[1,0,8,1,5],
-"interfaceSFB_1_1IStandaloneFileBrowser.html#a1ac00f91d78216c802bac22df3832777":[0,4,8,1,1],
-"interfaceSFB_1_1IStandaloneFileBrowser.html#a1ac00f91d78216c802bac22df3832777":[1,0,8,1,1]
+"interfaceSFB_1_1IStandaloneFileBrowser.html#a112db8b391e2026b461426f30f09e8fa":[0,4,8,1,5]
 };

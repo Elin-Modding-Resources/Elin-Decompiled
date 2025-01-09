@@ -1,5 +1,8 @@
 var NAVTREEINDEX108 =
 {
+"classTileType.html#a1d0a35452ba4fc878b50fd4181045199":[1,0,1288,86],
+"classTileType.html#a1f55d5fd61bde40e0256453979a05d23":[1,0,1288,39],
+"classTileType.html#a1f57f8425c92d5b5b7bac21cac1f224f":[1,0,1288,24],
 "classTileType.html#a2092765e232ee79e9c4517a79dfaf4ba":[1,0,1288,114],
 "classTileType.html#a22bfb39845fe0852d2a95f1e93e7970b":[1,0,1288,26],
 "classTileType.html#a248ce43c5477b50c1b3a7aeea68ff789":[1,0,1288,52],
@@ -246,8 +249,5 @@ var NAVTREEINDEX108 =
 "classTileTypeObjWater.html":[1,0,1314],
 "classTileTypeObjWater.html#ab2144541492c5cd46c2d6e56cb973b9d":[1,0,1314,0],
 "classTileTypeObjWaterTop.html":[1,0,1315],
-"classTileTypeObjWaterTop.html#a8d6293fcd44af3ff4ecbed64048446e4":[1,0,1315,0],
-"classTileTypeObjWaterTop.html#a9e9cc92f923cf09f49d6b609fc3811f4":[1,0,1315,1],
-"classTileTypePaint.html":[1,0,1316],
-"classTileTypePillar.html":[1,0,1317]
+"classTileTypeObjWaterTop.html#a8d6293fcd44af3ff4ecbed64048446e4":[1,0,1315,0]
 };

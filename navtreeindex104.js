@@ -1,5 +1,6 @@
 var NAVTREEINDEX104 =
 {
+"classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5":[1,0,1193,9],
 "classSpriteData.html#a2418e7613134aad4c224a6681a029930":[1,0,1193,10],
 "classSpriteData.html#a2bb56554ce16f0af909b235b83215517":[1,0,1193,11],
 "classSpriteData.html#a81fe21e2f728eac5c0e9d5f030f344b1":[1,0,1193,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX104 =
 "classTCOrbit.html#a31d1630788c38e82d1004040c15ffa0a":[1,0,1260,0],
 "classTCOrbitChara.html":[1,0,1261],
 "classTCOrbitChara.html#a07328f0dedbf3fea135eee217dfe16be":[1,0,1261,9],
-"classTCOrbitChara.html#a1842d0bf68c64882ec730d68ace4839f":[1,0,1261,13],
-"classTCOrbitChara.html#a34c1fc086a84fc890aa0e8dee5352ea7":[1,0,1261,1]
+"classTCOrbitChara.html#a1842d0bf68c64882ec730d68ace4839f":[1,0,1261,13]
 };

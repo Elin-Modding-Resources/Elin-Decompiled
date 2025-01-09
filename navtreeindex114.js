@@ -1,5 +1,8 @@
 var NAVTREEINDEX114 =
 {
+"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1523,0],
+"classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1523,2],
+"classTraitGM.html":[1,0,1542],
 "classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1542,0],
 "classTraitGM__Fighter.html":[1,0,1543],
 "classTraitGM__Mage.html":[1,0,1544],
@@ -246,8 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitLeverBreaker.html#a4e5109c00fc272febff90aa2c012922c":[1,0,1579,1],
 "classTraitLeverBreaker.html#adbdbfa139e50e89bb679d0c80fcd9936":[1,0,1579,0],
 "classTraitLicense.html":[1,0,1580],
-"classTraitLicense.html#aa3b45b7734a06ebafb558853a858f2fe":[1,0,1580,0],
-"classTraitLight.html":[1,0,1581],
-"classTraitLight.html#a0c609f40f20874d1cdaee1cfa81c86c3":[1,0,1581,1],
-"classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1581,0]
+"classTraitLicense.html#aa3b45b7734a06ebafb558853a858f2fe":[1,0,1580,0]
 };

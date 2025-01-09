@@ -1,5 +1,8 @@
 var NAVTREEINDEX128 =
 {
+"classWidgetInspector.html#abdf71046ad360b6cc1c45f22b0779f84":[1,0,1951,15],
+"classWidgetInspector.html#ac902c5218518f34cc507a3d0479426e7":[1,0,1951,6],
+"classWidgetInspector.html#ae43b42d5fdc5b016c2c505ccecad4783":[1,0,1951,12],
 "classWidgetInspector.html#aee3cbf10eea323716cc20a0568efa82c":[1,0,1951,19],
 "classWidgetInspector.html#af331a652e007b88cdf7dd3631af65df6":[1,0,1951,9],
 "classWidgetInspector.html#af5b84e49a4308831b0219bae9b2ad355":[1,0,1951,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX128 =
 "classWidgetQuestTracker.html":[1,0,1963],
 "classWidgetQuestTracker.html#a00e241b660fe2a5517062ab370ff4cd1":[1,0,1963,7],
 "classWidgetQuestTracker.html#a02c37205b8393da83a2d1f6efa9ff7b6":[1,0,1963,0],
-"classWidgetQuestTracker.html#a3075df3911a3770f0f26ee0315359659":[1,0,1963,1],
-"classWidgetQuestTracker.html#a3635d3d3260eaddb80ef6ada3a10dbd9":[1,0,1963,9],
-"classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435":[1,0,1963,6],
-"classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5":[1,0,1963,3]
+"classWidgetQuestTracker.html#a3075df3911a3770f0f26ee0315359659":[1,0,1963,1]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX118 =
 {
+"classTraitStove.html":[1,0,1765],
+"classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a":[1,0,1765,0],
+"classTraitStrangeGirl.html":[1,0,1766],
 "classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8":[1,0,1766,0],
 "classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,1766,1],
 "classTraitSwing.html":[1,0,1767],
@@ -246,8 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitVendingMachine.html#a4254b5be98a12a2d09c39e1e9dc9e411":[1,0,1826,1],
 "classTraitVendingMachine.html#ab466c22e9734fc8ef713a6679e0ad1d6":[1,0,1826,3],
 "classTraitVendingMachine.html#ad895e9e7d4ed9691d63b363ee1bb5be7":[1,0,1826,0],
-"classTraitVendingMachine.html#ae1aba46863971c17f143c85fe8774f15":[1,0,1826,2],
-"classTraitViewMap.html":[1,0,1827],
-"classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1":[1,0,1827,0],
-"classTraitWaystone.html":[1,0,1828]
+"classTraitVendingMachine.html#ae1aba46863971c17f143c85fe8774f15":[1,0,1826,2]
 };

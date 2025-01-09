@@ -2,6 +2,7 @@ var classRecipeManager =
 [
     [ "Add", "classRecipeManager.html#abfdac34700a6d0361b304d8be7008850", null ],
     [ "BuildList", "classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f", null ],
+    [ "CanCeomUpWithRecipe", "classRecipeManager.html#a4f3e0e42268a7e779205d5c4f3d07a99", null ],
     [ "ComeUpWithRandomRecipe", "classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab", null ],
     [ "ComeUpWithRecipe", "classRecipeManager.html#a26f4ff13eeb57ea9765a5c3d95eb0e88", null ],
     [ "Create", "classRecipeManager.html#a63f5bd20a49c7a39dd04505922ba8fa3", null ],
