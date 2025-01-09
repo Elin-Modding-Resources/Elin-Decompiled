@@ -453,17 +453,16 @@ public class GoalCombat : Goal
 		bool flag4 = owner.HasCondition<ConDim>();
 		foreach (ItemAbility ability in abilities)
 		{
-			if (EClass.rnd(100) >= ability.chance)
-			{
-				ability.priority = 0;
-				continue;
-			}
 			Act act = ability.act;
-			int num = 0;
-			SourceElement.Row s = act.source;
 			ability.priority = 0;
 			ability.tg = null;
 			ability.pt = false;
+			if (EClass.rnd(100) >= ability.chance || (isBlind && ability.act.HasTag("reqSight")))
+			{
+				continue;
+			}
+			int num = 0;
+			SourceElement.Row s = act.source;
 			if (s.abilityType.Length == 0 || (owner.IsPC && flag2 && act is Spell) || (beforeMove && !act.HasTag("before_move")))
 			{
 				continue;

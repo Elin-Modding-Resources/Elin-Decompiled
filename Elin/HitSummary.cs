@@ -55,21 +55,28 @@ public class HitSummary : EClass
 		{
 			return true;
 		}
-		if (recipe != null && !recipe.UseStock)
+		if (recipe != null)
 		{
-			foreach (Recipe.Ingredient ingredient in recipe.ingredients)
+			if (!recipe.UseStock)
 			{
-				if (!ingredient.optional)
+				foreach (Recipe.Ingredient ingredient in recipe.ingredients)
 				{
-					if (ingredient.thing == null)
+					if (!ingredient.optional)
 					{
-						return false;
-					}
-					if (ingredient.thing.Num < ingredient.req * countValid)
-					{
-						return false;
+						if (ingredient.thing == null)
+						{
+							return false;
+						}
+						if (ingredient.thing.Num < ingredient.req * countValid)
+						{
+							return false;
+						}
 					}
 				}
+			}
+			else if (recipe.ingredients[0].thing == null || recipe.ingredients[0].thing.Num < countValid)
+			{
+				return false;
 			}
 		}
 		return true;

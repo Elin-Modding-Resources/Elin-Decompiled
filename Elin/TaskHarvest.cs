@@ -77,19 +77,25 @@ public class TaskHarvest : BaseTaskHarvest
 
 	public override string GetBaseText(string str)
 	{
-		if (!IsReapSeed)
+		if (IsReapSeed)
 		{
-			if (mode != HarvestType.Disassemble)
-			{
-				if (!base.IsHarvest)
-				{
-					return base.GetBaseText(str);
-				}
-				return "actHarvest".lang();
-			}
-			return (HaveHarvestThing() ? "TaskDisassemble" : "TaskDisassemble_destroy").lang();
+			return "TaskHarvestSeed".lang();
 		}
-		return "TaskHarvestSeed".lang();
+		if (mode == HarvestType.Disassemble)
+		{
+			string text = (HaveHarvestThing() ? "TaskDisassemble" : "TaskDisassemble_destroy").lang();
+			string idRecipe = (IsObj ? pos.sourceObj.RecipeID : ((target != null) ? target.source.RecipeID : ""));
+			if (EClass.debug.enable && EClass.player.recipes.CanCeomUpWithRecipe(idRecipe))
+			{
+				text = text + " " + "TaskDisassemble_newrecipe".lang();
+			}
+			return text;
+		}
+		if (!base.IsHarvest)
+		{
+			return base.GetBaseText(str);
+		}
+		return "actHarvest".lang();
 	}
 
 	public override string GetTextSmall(Card c)
@@ -452,22 +458,27 @@ public class TaskHarvest : BaseTaskHarvest
 		};
 	}
 
-	public bool HaveHarvestThing()
+	public string GetIdDismantled()
 	{
-		string text = target.source.components[0].Split('|')[0].Split('/')[0];
+		string result = target.source.components[0].Split('|')[0].Split('/')[0];
 		if (target.IsEquipmentOrRanged || target.IsAmmo)
 		{
-			text = target.material.thing;
+			result = target.material.thing;
 		}
+		return result;
+	}
+
+	public bool ShouldGenerateDismantled(string dest)
+	{
 		if (target.trait is TraitGrave)
 		{
 			return false;
 		}
-		if (text.Contains("$") || text.Contains("#") || text.Contains("@") || text.Contains("-"))
+		if (dest.Contains("$") || dest.Contains("#") || dest.Contains("@") || dest.Contains("-"))
 		{
 			return false;
 		}
-		if (text == target.id || !EClass.sources.cards.map.ContainsKey(text))
+		if (dest == target.id || !EClass.sources.cards.map.ContainsKey(dest))
 		{
 			return false;
 		}
@@ -478,13 +489,15 @@ public class TaskHarvest : BaseTaskHarvest
 		return true;
 	}
 
+	public bool HaveHarvestThing()
+	{
+		string idDismantled = GetIdDismantled();
+		return ShouldGenerateDismantled(idDismantled);
+	}
+
 	public void HarvestThing()
 	{
-		string text = target.source.components[0].Split('|')[0].Split('/')[0];
-		if (target.IsEquipmentOrRanged || target.IsAmmo)
-		{
-			text = target.material.thing;
-		}
+		string text = GetIdDismantled();
 		float num = target.Num;
 		float num2 = 1.0999999f;
 		if (text == "log" || text == "rock")
@@ -514,7 +527,7 @@ public class TaskHarvest : BaseTaskHarvest
 		int decay = target.decay;
 		int lV = target.LV;
 		target.Die(null, EClass.pc);
-		if (target.trait is TraitGrave || text.Contains("$") || text.Contains("#") || text.Contains("@") || text.Contains("-") || text == target.id || !EClass.sources.cards.map.ContainsKey(text) || (int)num <= 0 || target.source.components.IsEmpty())
+		if ((int)num <= 0 || !ShouldGenerateDismantled(text))
 		{
 			return;
 		}

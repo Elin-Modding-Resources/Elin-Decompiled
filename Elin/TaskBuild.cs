@@ -77,9 +77,24 @@ public class TaskBuild : TaskBaseBuild
 		{
 			disableRotateBlock = false;
 		}
-		if (useHeld && EClass.pc.held != null && EClass.pc.held.trait is TraitBlock && pos.HasBlock && !EClass.pc.held.trait.IsDoor && !disableRotateBlock)
+		if (useHeld && EClass.pc.held != null)
 		{
-			return true;
+			if (EClass._zone.IsRegion)
+			{
+				return false;
+			}
+			if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFaction && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
+			{
+				return false;
+			}
+			if (EClass._zone.RestrictBuild && !EClass.pc.held.trait.CanBuildInTown)
+			{
+				return false;
+			}
+			if (EClass.pc.held.trait is TraitBlock && pos.HasBlock && !EClass.pc.held.trait.IsDoor && !disableRotateBlock)
+			{
+				return true;
+			}
 		}
 		return false;
 	}

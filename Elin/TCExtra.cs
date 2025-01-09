@@ -81,7 +81,7 @@ public class TCExtra : TC
 			flag4 = !flag4;
 		}
 		bool flag5 = useOffsetBack && data.useOffsetBack && flag;
-		if (base.owner.renderer.hasActor)
+		if (base.owner.renderer.hasActor && base.owner.isChara)
 		{
 			v.x = base.owner.renderer.position.x + (flag5 ? data.offsetBack.x : data.offset.x);
 			v.y = base.owner.renderer.position.y + (flag5 ? data.offsetBack.y : data.offset.y);

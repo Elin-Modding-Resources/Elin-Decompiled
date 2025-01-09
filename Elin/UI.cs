@@ -744,7 +744,7 @@ public class UI : ELayer
 		{
 			userName = array[2];
 		}
-		LayerFeedback.header = (flag ? "" : "(!)");
+		LayerFeedback.header = (flag ? "" : "(!?)");
 		LayerFeedback.userName = userName;
 		LayerFeedback.playedHours = ELayer.config.maxPlayedHours;
 		LayerFeedback.backerId = backerId;

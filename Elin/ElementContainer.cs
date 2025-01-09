@@ -279,8 +279,9 @@ public class ElementContainer : EClass
 		int value = (element.UsePotential ? element.Potential : 100);
 		if (element.UseExpMod && a >= 0)
 		{
-			a = a * Mathf.Clamp(value, 10, 1000) / (100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
-			if (a >= 0 && EClass.rnd(element.ValueWithoutLink + 1) < 10)
+			float num = (float)a * (float)Mathf.Clamp(value, 10, 1000) / (float)(100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
+			a = (int)num;
+			if (EClass.rndf(1f) < num % 1f)
 			{
 				a++;
 			}
@@ -296,11 +297,11 @@ public class ElementContainer : EClass
 		}
 		if (element.vExp >= element.ExpToNext)
 		{
-			int num = element.vExp - element.ExpToNext;
+			int num2 = element.vExp - element.ExpToNext;
 			int vBase = element.vBase;
 			ModBase(ele, 1);
 			OnLevelUp(element, vBase);
-			element.vExp = Mathf.Clamp(num / 2, 0, element.ExpToNext / 2);
+			element.vExp = Mathf.Clamp(num2 / 2, 0, element.ExpToNext / 2);
 			if (element.vTempPotential > 0)
 			{
 				element.vTempPotential -= element.vTempPotential / 4 + EClass.rnd(5) + 5;

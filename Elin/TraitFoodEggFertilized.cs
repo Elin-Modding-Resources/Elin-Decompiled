@@ -27,6 +27,10 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 		chara.SetMainElement(egg.c_idMainElement, 10, elemental: true);
 		chara.SetFeat(1232, (incubator != null) ? 3 : 2, msg: true);
 		chara.things.DestroyAll();
+		if (chara.id == "putty_snow" && chara.idSkin == 0)
+		{
+			chara.idSkin = 4 + EClass.rnd(2);
+		}
 		if (chara.Evalue(1644) > 0)
 		{
 			for (int i = 0; i < chara.Evalue(1644); i++)

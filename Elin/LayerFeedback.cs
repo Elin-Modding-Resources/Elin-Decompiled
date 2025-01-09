@@ -221,7 +221,7 @@ public class LayerFeedback : ELayer
 		{
 			num += CountString(text4, c2);
 		}
-		ReportTitle.strAdd = header ?? "";
+		ReportTitle.strAdd = header + ReportTitle.strAdd;
 		if (num > 0)
 		{
 			ReportTitle.strAdd = ReportTitle.strAdd + "[ignore:" + num + "]";

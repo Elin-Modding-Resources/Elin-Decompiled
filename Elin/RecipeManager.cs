@@ -231,6 +231,23 @@ public class RecipeManager : EClass
 		}
 	}
 
+	public bool CanCeomUpWithRecipe(string idRecipe)
+	{
+		if (idRecipe.IsEmpty())
+		{
+			return false;
+		}
+		RecipeSource recipeSource = Get(idRecipe);
+		if (recipeSource == null || EClass.player.recipes.knownRecipes.ContainsKey(idRecipe) || (!recipeSource.NeedFactory && !recipeSource.IsQuickCraft))
+		{
+			return false;
+		}
+		int id = recipeSource.GetReqSkill().id;
+		_ = EClass.pc.Evalue(id) + 5;
+		_ = recipeSource.row.LV;
+		return false;
+	}
+
 	public void ComeUpWithRecipe(string idRecipe, int chanceForRandomRecipe = 0)
 	{
 		if (idRecipe.IsEmpty())

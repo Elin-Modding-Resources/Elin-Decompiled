@@ -778,10 +778,13 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				map.AddCardOnActivate(thing5);
 			}
-			foreach (Chara serializedChara2 in map.serializedCharas)
+			foreach (Chara c3 in map.serializedCharas)
 			{
-				map.charas.Add(serializedChara2);
-				map.AddCardOnActivate(serializedChara2);
+				if (c3.c_uidMaster == 0 || EClass.player.listSummon.Find((Chara c2) => c2.uid == c3.uid) == null)
+				{
+					map.charas.Add(c3);
+					map.AddCardOnActivate(c3);
+				}
 			}
 			map.serializedCharas.Clear();
 			if (isImported && IsTown)
