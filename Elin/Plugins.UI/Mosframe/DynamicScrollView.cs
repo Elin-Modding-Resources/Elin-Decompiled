@@ -69,10 +69,10 @@ public abstract class DynamicScrollView : UIBehaviour
 		}
 		foreach (DSVRow container in containers)
 		{
-			if (!(container == null) && !(container._rect == null))
+			if (!(container == null) && !(container.Rect() == null))
 			{
 				float num2 = itemSize * (float)num;
-				container._rect.anchoredPosition = ((direction == Direction.Vertical) ? new Vector2(0f, 0f - num2) : new Vector2(num2, 0f));
+				container.Rect().anchoredPosition = ((direction == Direction.Vertical) ? new Vector2(0f, 0f - num2) : new Vector2(num2, 0f));
 				updateItem(num, container);
 				num++;
 			}
@@ -139,7 +139,7 @@ public abstract class DynamicScrollView : UIBehaviour
 			containers.RemoveFirst();
 			containers.AddLast(value);
 			float num = itemSize * (float)(containers.Count + nextInsertItemNo);
-			value._rect.anchoredPosition = ((direction == Direction.Vertical) ? new Vector2(0f, 0f - num) : new Vector2(num, 0f));
+			value.Rect().anchoredPosition = ((direction == Direction.Vertical) ? new Vector2(0f, 0f - num) : new Vector2(num, 0f));
 			updateItem(containers.Count + nextInsertItemNo, value);
 			nextInsertItemNo++;
 		}
@@ -154,7 +154,7 @@ public abstract class DynamicScrollView : UIBehaviour
 				containers.AddFirst(value2);
 				nextInsertItemNo--;
 				float num2 = itemSize * (float)nextInsertItemNo;
-				value2._rect.anchoredPosition = ((direction == Direction.Vertical) ? new Vector2(0f, 0f - num2) : new Vector2(num2, 0f));
+				value2.Rect().anchoredPosition = ((direction == Direction.Vertical) ? new Vector2(0f, 0f - num2) : new Vector2(num2, 0f));
 				updateItem(nextInsertItemNo, value2);
 				continue;
 			}
