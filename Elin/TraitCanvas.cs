@@ -17,4 +17,18 @@ public class TraitCanvas : Trait
 			b.Attach<Image>("canvas", rightAttach: false).sprite = paintSprite;
 		}
 	}
+
+	public override void TrySetAct(ActPlan p)
+	{
+		if (EClass._zone.IsUserZone && owner.Num == 1 && owner.c_textureData != null && owner.IsInstalled)
+		{
+			p.TrySetAct("actTakeOut", delegate
+			{
+				owner.noSell = true;
+				owner.isNPCProperty = false;
+				EClass.pc.PickOrDrop(owner.pos, owner.Thing);
+				return true;
+			}, owner);
+		}
+	}
 }

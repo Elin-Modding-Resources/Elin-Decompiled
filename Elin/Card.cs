@@ -2397,6 +2397,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return elements.Value(ele);
 	}
 
+	public int EvalueMax(int ele, int min = 0)
+	{
+		return Mathf.Max(elements.Value(ele), min);
+	}
+
 	public int Evalue(string alias)
 	{
 		return elements.Value(EClass.sources.elements.alias[alias].id);
@@ -5751,17 +5756,24 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		GameLang.refDrama1 = ref1;
 		GameLang.refDrama2 = ref2;
 		string text = GetTalkText(idTopic, stripPun: true);
-		string text2 = id;
-		if (!(text2 == "adv_gaki"))
+		if (HasElement(1232) && idTopic != "baby")
 		{
-			if (text2 == "corgon")
-			{
-				BackerContent.GakiConvert(ref text, "mokyu");
-			}
+			BackerContent.GakiConvert(ref text, "babu");
 		}
 		else
 		{
-			BackerContent.GakiConvert(ref text);
+			string text2 = id;
+			if (!(text2 == "adv_gaki"))
+			{
+				if (text2 == "corgon")
+				{
+					BackerContent.GakiConvert(ref text, "mokyu");
+				}
+			}
+			else
+			{
+				BackerContent.GakiConvert(ref text);
+			}
 		}
 		TalkRaw(text, ref1, ref2, forceSync);
 	}
@@ -6263,6 +6275,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "container_magic":
 					return 20;
 				case "wrench_tent_elec":
+					return 3;
+				case "wrench_tent_soil":
 					return 3;
 				case "wrench_bed":
 					return 3;

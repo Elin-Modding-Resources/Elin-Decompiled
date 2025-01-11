@@ -2417,7 +2417,7 @@ public class Chara : Card, IPathfindWalker
 					num2 += 20;
 					num *= 1.8f;
 				}
-				num2 = num2 * 100 / (100 + Evalue(240) + Evalue(407) * 5);
+				num2 = num2 * 100 / (100 + EvalueMax(240, -20) + EvalueMax(407, -5) * 5);
 				EClass.world.date.AdvanceMin(num2 * 6);
 				EClass.player.lastZonePos = null;
 				EClass.player.distanceTravel++;
@@ -2574,6 +2574,16 @@ public class Chara : Card, IPathfindWalker
 			{
 				text = cell.matObj.soundFoot;
 			}
+			if (IsPC)
+			{
+				foreach (Thing thing2 in newPoint.Things)
+				{
+					if (thing2.IsInstalled && (thing2.trait.CanChangeHeight || thing2.Pref.Surface))
+					{
+						text = thing2.material.soundFoot;
+					}
+				}
+			}
 			if (!text.IsEmpty())
 			{
 				SoundManager.altLastData = IsPC;
@@ -2620,9 +2630,9 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (cell.hasDoor)
 		{
-			foreach (Thing thing2 in newPoint.Things)
+			foreach (Thing thing3 in newPoint.Things)
 			{
-				if (thing2.trait is TraitDoor traitDoor2)
+				if (thing3.trait is TraitDoor traitDoor2)
 				{
 					traitDoor2.TryOpen(this);
 				}
@@ -6510,7 +6520,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void TryTakeSharedItems(IEnumerable<Thing> containers, bool msg = true, bool shouldEat = true)
 	{
-		if (base.isSummon)
+		if (base.isSummon || (memberType == FactionMemberType.Livestock && homeBranch != null && !homeBranch.policies.IsActive(2715)))
 		{
 			return;
 		}
@@ -6974,10 +6984,6 @@ public class Chara : Card, IPathfindWalker
 			c.ModAffinity(EClass.pc, a, show);
 			return;
 		}
-		if (c.IsPC)
-		{
-			a = affinity.Mod(a);
-		}
 		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase());
 		if (IsPCFaction && homeBranch != null)
 		{
@@ -6987,6 +6993,10 @@ public class Chara : Card, IPathfindWalker
 		if (flag)
 		{
 			a = a * num / 100;
+		}
+		if (c.IsPC)
+		{
+			a = affinity.Mod(a);
 		}
 		if (!show)
 		{
@@ -8566,7 +8576,7 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (con.power > 0 && resistCon != null)
 		{
-			int a = resistCon.TryGetValue(con.id, 0);
+			int a = ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)resistCon, con.id, 0);
 			if (1000 < EClass.rnd(a))
 			{
 				con.power = 0;

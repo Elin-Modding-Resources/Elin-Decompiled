@@ -12,6 +12,19 @@ public class TraitWrench : Trait
 		}
 		switch (ID)
 		{
+		case "tent_soil":
+		{
+			if (!(t.trait is TraitTent))
+			{
+				return false;
+			}
+			Zone zone = (t.trait as TraitTent).zone;
+			if (zone == null)
+			{
+				return false;
+			}
+			return zone.Evalue(2200) < 10;
+		}
 		case "tent_elec":
 			if (t.trait is TraitTent)
 			{
@@ -45,6 +58,9 @@ public class TraitWrench : Trait
 		{
 		case "tent_elec":
 			(t.trait as TraitTent).zone.elements.ModBase(2201, 2);
+			break;
+		case "tent_soil":
+			(t.trait as TraitTent).zone.elements.ModBase(2200, 5);
 			break;
 		case "bed":
 			t.c_containerSize++;

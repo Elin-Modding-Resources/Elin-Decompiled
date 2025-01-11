@@ -153,7 +153,11 @@ public class ActMelee : ActBaseAttack
 				{
 					if (!item.Equals(obj))
 					{
-						item.FirstChara?.IsHostile(Act.CC);
+						Chara firstChara = item.FirstChara;
+						if (firstChara != null && firstChara.IsHostile(Act.CC))
+						{
+							Attack(firstChara, item);
+						}
 					}
 				}
 			}

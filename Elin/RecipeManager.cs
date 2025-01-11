@@ -243,9 +243,11 @@ public class RecipeManager : EClass
 			return false;
 		}
 		int id = recipeSource.GetReqSkill().id;
-		_ = EClass.pc.Evalue(id) + 5;
-		_ = recipeSource.row.LV;
-		return false;
+		if (EClass.pc.Evalue(id) + 5 < recipeSource.row.LV)
+		{
+			return false;
+		}
+		return true;
 	}
 
 	public void ComeUpWithRecipe(string idRecipe, int chanceForRandomRecipe = 0)

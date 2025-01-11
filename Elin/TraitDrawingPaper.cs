@@ -8,6 +8,7 @@ public class TraitDrawingPaper : TraitCanvas
 
 	public override void TrySetAct(ActPlan p)
 	{
+		base.TrySetAct(p);
 		if (p.altAction)
 		{
 			p.TrySetAct("actPaint", delegate

@@ -299,10 +299,10 @@ public class CharaRenderer : CardRenderer
 		if (pccData == null || !owner.IsDeadOrSleeping)
 		{
 			CardRow cardRow = Zone.sourceHat ?? owner.hat;
-			SourcePref pref = cardRow.pref;
+			SourcePref pref = GetPref();
 			bool flag = currentDir == 1 || currentDir == 3;
 			int liquidLv = RenderObject.currentParam.liquidLv;
-			float num = ((replacer != null) ? replacer.pref.hatY : owner.Pref.hatY);
+			float num = ((replacer != null) ? replacer.pref.hatY : pref.hatY);
 			if (pccData != null)
 			{
 				num += RenderObject.renderSetting.hatPos[actor.GetFrame()].y;

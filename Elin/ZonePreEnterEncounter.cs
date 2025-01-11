@@ -29,6 +29,10 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 					chara.hostility = hostility2;
 					chara.enemy = EClass.pc.party.members.RandomItem();
 					leader = chara;
+					if (EClass.rnd(5) == 0)
+					{
+						TraitFoodEggFertilized.MakeBaby(chara, 1);
+					}
 					list.Add(chara);
 				}
 			}

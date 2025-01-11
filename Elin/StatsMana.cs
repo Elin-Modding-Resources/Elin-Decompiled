@@ -34,7 +34,7 @@ public class StatsMana : Stats
 		{
 			return;
 		}
-		int num = -value * 400 / (100 + BaseStats.CC.Evalue(303) * 10);
+		int num = -value * 400 / (100 + BaseStats.CC.EvalueMax(303, -5) * 10);
 		if (BaseStats.CC.HasElement(1201))
 		{
 			num /= 3;

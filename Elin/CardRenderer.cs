@@ -154,7 +154,7 @@ public class CardRenderer : RenderObject
 		else
 		{
 			SubPassData.Current = owner.GetSubPassData();
-			SourcePref pref = owner.Pref;
+			SourcePref pref = GetPref();
 			RenderData renderData = data;
 			int prefIndex = owner.PrefIndex;
 			if (Player.seedHallucination != 0 && CanBeHallucinated())
@@ -233,33 +233,17 @@ public class CardRenderer : RenderObject
 				pref = replacer.pref;
 				SubPassData.Current = SubPassData.Default;
 			}
-			int num2 = pref.shadow;
-			bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.race.visibleWithTelepathy);
 			if (isChara)
 			{
 				p.x += pref.x * (float)((!owner.flipX) ? 1 : (-1));
-				if (owner.idSkin > 0)
-				{
-					switch (owner.sourceCard.tiles.TryGet(owner.idSkin))
-					{
-					case 2319:
-						num2 = 33;
-						p.x += 0.04f * (float)((!owner.flipX) ? 1 : (-1));
-						p.y += 0.08f;
-						break;
-					case 2320:
-						num2 = 7;
-						p.x += 0.08f * (float)((!owner.flipX) ? 1 : (-1));
-						p.y += 0.2f;
-						break;
-					}
-				}
 			}
 			p.y += pref.y;
-			if (drawShadow && num2 != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
+			int shadow = pref.shadow;
+			bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.race.visibleWithTelepathy);
+			if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
 			{
 				bool flag3 = ((!isChara) ? (owner.dir % 2 == 1) : (owner.dir == 1 || owner.dir == 2));
-				EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - RenderObject.altitudeFix * (float)owner.altitude, position.z + renderData.offsetShadow.z, ShadowData.Instance.items[num2], pref, prefIndex, p.snow);
+				EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - RenderObject.altitudeFix * (float)owner.altitude, position.z + renderData.offsetShadow.z, ShadowData.Instance.items[shadow], pref, prefIndex, p.snow);
 			}
 			if (usePass)
 			{
@@ -330,9 +314,9 @@ public class CardRenderer : RenderObject
 		{
 			RenderObject.tempV = position;
 			RenderObject.tempV.y += data.offset.y + data.size.y;
-			for (int num3 = listTC.Count - 1; num3 >= 0; num3--)
+			for (int num2 = listTC.Count - 1; num2 >= 0; num2--)
 			{
-				listTC[num3].OnDraw(ref RenderObject.tempV);
+				listTC[num2].OnDraw(ref RenderObject.tempV);
 			}
 		}
 		if (owner.trait.RenderExtra)
@@ -366,6 +350,21 @@ public class CardRenderer : RenderObject
 
 	public virtual void DrawHeld()
 	{
+	}
+
+	public SourcePref GetPref()
+	{
+		if (isChara && owner.idSkin > 0)
+		{
+			switch (owner.sourceCard.tiles.TryGet(owner.idSkin))
+			{
+			case 2319:
+				return EClass.core.refs.prefs.sonwputit1;
+			case 2320:
+				return EClass.core.refs.prefs.snowputit2;
+			}
+		}
+		return owner.Pref;
 	}
 
 	public void RefreshSprite()

@@ -109,11 +109,11 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 				t.note.AddHeader("infoWork".lang((roomWork != null) ? roomWork.Name : "none".lang()));
 				foreach (Hobby item2 in a.ListWorks())
 				{
-					AddText(item2, "work");
+					AddText(item2, "work", a.source.works.Contains(item2.source.alias));
 				}
 				foreach (Hobby item3 in a.ListHobbies())
 				{
-					AddText(item3, "hobby");
+					AddText(item3, "hobby", a.source.hobbies.Contains(item3.source.alias));
 				}
 				t.note.Build();
 				_ = roomWork;
@@ -162,24 +162,29 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 		{
 			b.gameObject.AddComponent<CanvasGroup>().alpha = 0.6f;
 		}
-		void AddText(Hobby h, string lang)
+		void AddText(Hobby h, string lang, bool fix)
 		{
 			int efficiency = h.GetEfficiency(a);
-			string text = h.Name.TagColor((efficiency == 0) ? FontColor.Warning : FontColor.Good);
+			string text = h.Name;
+			if (fix)
+			{
+				text += "*";
+			}
+			text = text.TagColor((efficiency == 0) ? FontColor.Warning : FontColor.Good);
 			string[] array = Lang.GetList("work_lv");
 			string text2 = array[Mathf.Clamp(efficiency / 50, (efficiency != 0) ? 1 : 0, array.Length - 1)];
-			P_2.t.note.AddTopic("TopicLeft", lang.lang(), text + " (" + text2 + ")");
+			P_3.t.note.AddTopic("TopicLeft", lang.lang(), text + " (" + text2 + ")");
 			if (!h.source.destTrait.IsEmpty())
 			{
 				bool flag2 = EClass._map.FindThing(Type.GetType("Trait" + h.source.destTrait + ", Elin"), a) != null;
 				List<CardRow> obj = EClass.sources.cards.rows.Where((CardRow t) => t.trait.Length != 0 && Type.GetType("Trait" + h.source.destTrait).IsAssignableFrom(Type.GetType("Trait" + t.trait[0]))).ToList();
 				obj.Sort((CardRow a, CardRow b) => a.LV - b.LV);
 				CardRow cardRow = obj[0];
-				P_2.t.note.AddText("NoteText_small", "・ " + "workDestTrait".lang(cardRow.GetName().ToTitleCase().TagColor(flag2 ? FontColor.Good : FontColor.Warning)));
+				P_3.t.note.AddText("NoteText_small", "・ " + "workDestTrait".lang(cardRow.GetName().ToTitleCase().TagColor(flag2 ? FontColor.Good : FontColor.Warning)));
 			}
 			if (efficiency == 0)
 			{
-				P_2.t.note.AddText("NoteText_small", "・ " + "workNotActive".lang());
+				P_3.t.note.AddText("NoteText_small", "・ " + "workNotActive".lang());
 			}
 			else
 			{
@@ -188,7 +193,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					int num = Mathf.Max(1, h.source.things[i + 1].ToInt() * efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
 					string text3 = h.source.things[i];
 					string s = (text3.StartsWith("#") ? EClass.sources.categories.map[text3.Replace("#", "")].GetName() : EClass.sources.cards.map[h.source.things[i]].GetName());
-					P_2.t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
+					P_3.t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
 				}
 				if (!h.source.elements.IsEmpty())
 				{
@@ -197,7 +202,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[j]];
 						int num2 = h.source.elements[j + 1];
 						int num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? (num2 / 10) : Mathf.Max(0, num2 * h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
-						P_2.t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
+						P_3.t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
 					}
 				}
 				string[] array2 = h.source.GetDetail().SplitNewline();
@@ -205,11 +210,11 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 				{
 					if (!text4.IsEmpty())
 					{
-						P_2.t.note.AddText("NoteText_small", "・ " + text4);
+						P_3.t.note.AddText("NoteText_small", "・ " + text4);
 					}
 				}
 			}
-			P_2.t.note.Space(1);
+			P_3.t.note.Space(1);
 		}
 	}
 

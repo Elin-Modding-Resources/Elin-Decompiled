@@ -116,7 +116,7 @@ public class DropdownGrid : EMono
 						if (uid != 0)
 						{
 							Thing thing = EMono.pc.things.Find((Thing t) => t.uid == uid) ?? EMono._map.Stocked.Find(uid);
-							if (thing != null && (!(thing.parent is Card card) || card.GetWindowSaveData() == null || !card.GetWindowSaveData().excludeCraft))
+							if (thing != null && ingredient.IsValidIngredient(thing) && (!(thing.parent is Card card) || card.GetWindowSaveData() == null || !card.GetWindowSaveData().excludeCraft))
 							{
 								ingredient.SetThing(thing);
 								flag = true;

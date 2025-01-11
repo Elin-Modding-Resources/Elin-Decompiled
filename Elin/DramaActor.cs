@@ -46,17 +46,24 @@ public class DramaActor : EMono
 		text = GameLang.ConvertDrama(text, owner.chara);
 		if (chara != null)
 		{
-			string text2 = chara.id;
-			if (!(text2 == "adv_gaki"))
+			if (chara.HasElement(1232))
 			{
-				if (text2 == "corgon")
-				{
-					BackerContent.GakiConvert(ref text, "mokyu");
-				}
+				BackerContent.GakiConvert(ref text, "babu");
 			}
 			else
 			{
-				BackerContent.GakiConvert(ref text);
+				string text2 = chara.id;
+				if (!(text2 == "adv_gaki"))
+				{
+					if (text2 == "corgon")
+					{
+						BackerContent.GakiConvert(ref text, "mokyu");
+					}
+				}
+				else
+				{
+					BackerContent.GakiConvert(ref text);
+				}
 			}
 		}
 		text = text.Replace("((", "(").Replace("))", ")").Replace("（（", "（")

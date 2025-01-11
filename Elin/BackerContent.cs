@@ -25,7 +25,7 @@ public class BackerContent : EClass
 			{
 				text = idLang.lang().Split(',').RandomItem() + " (" + text + ")";
 			}
-			else if (idLang == "mokyu")
+			else if (idLang == "mokyu" || idLang == "babu")
 			{
 				text = idLang.lang().Split(',').RandomItem() + " " + text;
 			}

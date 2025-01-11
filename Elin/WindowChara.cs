@@ -481,7 +481,7 @@ public class WindowChara : WindowController
 		textMom.text = chara.bio.nameMom.ToTitleCase();
 		textDad.text = chara.bio.nameDad.ToTitleCase();
 		textBirthplace.text = chara.bio.nameBirthplace.ToTitleCase();
-		textLike.text = EClass.sources.cards.map[bio.idLike].GetName();
+		textLike.text = EClass.sources.cards.map.TryGetValue(bio.idLike, EClass.sources.cards.map["ash"]).GetName();
 		textHobby.text = EClass.sources.elements.map[bio.idHobby].GetText();
 		textFaction.text = ((chara.faction == null) ? "???" : chara.faction.name.ToTitleCase());
 		textFaith.text = chara.faith.Name.ToTitleCase();

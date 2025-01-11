@@ -1721,6 +1721,7 @@ public class Trait : EClass
 					Add("container_magic", 1, 0).ChangeMaterial("iron").idSkin = 1;
 					Add("container_magic", 1, 0).ChangeMaterial("bamboo").idSkin = 2;
 					Add("wrench_tent_elec", 1, 0);
+					Add("wrench_tent_soil", 1, 0);
 					Add("wrench_bed", 1, 0).SetNum(20);
 					Add("wrench_storage", 1, 0).SetNum(10);
 					Add("wrench_fridge", 1, 0).SetNum(1);

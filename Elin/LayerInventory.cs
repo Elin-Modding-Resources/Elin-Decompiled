@@ -149,7 +149,11 @@ public class LayerInventory : ELayer
 	public static void TryShowGuide(List<ButtonGrid> list)
 	{
 		bool flag = InvOwner.HasTrader && InvOwner.Trader.UseGuide;
-		bool flag2 = (bool)WidgetSearch.Instance && WidgetSearch.selected != null;
+		if (flag)
+		{
+			WidgetSearch.selected = null;
+		}
+		bool flag2 = (bool)WidgetSearch.Instance && WidgetSearch.selected != null && !ELayer.ui.IsDragging;
 		if (!flag2 && WidgetEquip.dragEquip == null && LayerAbility.hotElement == null && !flag)
 		{
 			return;

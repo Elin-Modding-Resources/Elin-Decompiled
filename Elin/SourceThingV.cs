@@ -231,6 +231,9 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 								array2[4].ToInt()
 							});
 							break;
+						case "skin":
+							row.skins = new int[1] { array2[1].ToInt() };
+							break;
 						case "alt":
 							row.altTiles = new int[1] { array2[1].ToInt() };
 							row.ignoreAltFix = true;

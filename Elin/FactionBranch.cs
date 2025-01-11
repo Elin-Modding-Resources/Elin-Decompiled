@@ -1219,6 +1219,10 @@ public class FactionBranch : EClass
 			{
 				policies.AddPolicy(2709);
 			}
+			if (!policies.HasPolicy(2715))
+			{
+				policies.AddPolicy(2715);
+			}
 		}
 		foreach (int globalPolicy in EClass.pc.faction.globalPolicies)
 		{

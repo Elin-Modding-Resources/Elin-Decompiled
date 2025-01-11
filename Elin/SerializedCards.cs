@@ -617,7 +617,7 @@ public class SerializedCards : EClass
 						continue;
 					}
 				}
-				if (isUserZone && dictionary.TryGetValue(index, 0) >= 3)
+				if (isUserZone && ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)dictionary, index, 0) >= 3)
 				{
 					continue;
 				}
@@ -643,13 +643,13 @@ public class SerializedCards : EClass
 				}
 				if (isUserZone)
 				{
-					dictionary[index] = dictionary.TryGetValue(index, 0) + 1;
+					dictionary[index] = ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)dictionary, index, 0) + 1;
 				}
 			}
 			else
 			{
 				PlaceState placeState = card4.placeState.ToEnum<PlaceState>();
-				if (isUserZone && ((dictionary2.TryGetValue(index, 0) >= 20 && text != "waystone" && text != "core_zone") || (placeState != PlaceState.installed && !card4.bits1.IsOn(13)) || text == "medal"))
+				if (isUserZone && ((ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)dictionary2, index, 0) >= 20 && text != "waystone" && text != "core_zone") || (placeState != PlaceState.installed && !card4.bits1.IsOn(13)) || text == "medal"))
 				{
 					continue;
 				}
@@ -668,7 +668,7 @@ public class SerializedCards : EClass
 				card2.c_lightColor = card4.lightColor;
 				if (isUserZone)
 				{
-					dictionary2[index] = dictionary2.TryGetValue(index, 0) + 1;
+					dictionary2[index] = ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)dictionary2, index, 0) + 1;
 				}
 			}
 			if (num < 0)
@@ -687,12 +687,6 @@ public class SerializedCards : EClass
 			card2.refVal = card4.refVal;
 			card2.idSkin = card4.idSkin;
 			card2.c_idDeity = card4.idDeity;
-			if (isUserZone && (card2.isHidden || card2.isMasked) && ((card2.TileType.IsBlockPass && card2.IsInstalled) || card2.trait is TraitCoreZone || card2.trait is TraitWaystone))
-			{
-				Card card3 = card2;
-				bool isHidden = (card2.isMasked = false);
-				card3.isHidden = isHidden;
-			}
 			if (card4.idBacker != 0)
 			{
 				Debug.Log(card4.idBacker);
@@ -745,9 +739,18 @@ public class SerializedCards : EClass
 					Debug.LogWarning("Could not convert editor tag:" + card2.Name + "/" + card4.tags);
 				}
 			}
-			if (isUserZone && card2.IsContainer && card4.isEmpty)
+			if (isUserZone)
 			{
-				card2.things.DestroyAll();
+				if ((card2.isHidden || card2.isMasked) && ((card2.TileType.IsBlockPass && card2.IsInstalled) || card2.trait is TraitCoreZone || card2.trait is TraitWaystone))
+				{
+					Card card3 = card2;
+					bool isHidden = (card2.isMasked = false);
+					card3.isHidden = isHidden;
+				}
+				if (card2.IsContainer && card4.isEmpty)
+				{
+					card2.things.DestroyAll();
+				}
 			}
 			if (card2.isChara)
 			{

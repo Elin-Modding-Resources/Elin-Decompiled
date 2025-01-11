@@ -275,7 +275,7 @@ public class TraitBaseSpellbook : TraitScroll
 			string c_idRefName = owner.c_idRefName;
 			if (!c_idRefName.IsEmpty())
 			{
-				string @ref = ((BookType == Type.Dojin) ? EClass.game.religions.dictAll[c_idRefName].Name : EClass.sources.charas.map[c_idRefName].GetName());
+				string @ref = ((BookType == Type.Dojin) ? EClass.game.religions.dictAll[c_idRefName].Name : EClass.sources.charas.map.TryGetValue(c_idRefName, "putty").GetName());
 				s = "_'s".lang(@ref, s);
 			}
 			break;

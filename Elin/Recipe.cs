@@ -122,6 +122,37 @@ public class Recipe : EClass
 				return EClass.sources.categories.map[id].GetName();
 			}
 		}
+
+		public bool IsValidIngredient(Thing t)
+		{
+			if (useCat)
+			{
+				if (t.category.IsChildOf(id))
+				{
+					return true;
+				}
+				foreach (string item in idOther)
+				{
+					if (t.category.IsChildOf(item))
+					{
+						return true;
+					}
+				}
+				return false;
+			}
+			if (t.id == id || t.source._origin == id)
+			{
+				return true;
+			}
+			foreach (string item2 in idOther)
+			{
+				if (t.id == id || t.source._origin == item2)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 	}
 
 	public static Dictionary<string, Recipe> recipeCache = new Dictionary<string, Recipe>();

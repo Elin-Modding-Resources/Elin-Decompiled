@@ -288,6 +288,14 @@ public class CoreRef : ScriptableObject
 		public int idRamp;
 	}
 
+	[Serializable]
+	public class PrefData
+	{
+		public SourcePref sonwputit1;
+
+		public SourcePref snowputit2;
+	}
+
 	public Biomes biomes;
 
 	public Crawlers crawlers;
@@ -361,6 +369,8 @@ public class CoreRef : ScriptableObject
 	public GameObject debugText;
 
 	public UD_Int_String dictSketches;
+
+	public PrefData prefs;
 
 	public float testColor;
 

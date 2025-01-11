@@ -65,7 +65,7 @@ public class AI_PlayMusic : AIAct
 		{
 			yield return DoGoto(tool.pos, tool.pos.IsBlocked ? 1 : 0);
 		}
-		if (owner.IsPCC && EClass.game.config.preference.keepPlayingMusic)
+		if (owner.IsPC && EClass.game.config.preference.keepPlayingMusic)
 		{
 			keepPlaying = true;
 			playingTool = tool;
