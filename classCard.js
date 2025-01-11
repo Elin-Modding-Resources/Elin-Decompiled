@@ -63,6 +63,7 @@ var classCard =
     [ "EjectSockets", "classCard.html#a61e5edf7e0efa862c707985e68a8ec3a", null ],
     [ "Evalue", "classCard.html#abc8aac2488d18ebc899393231f7032c8", null ],
     [ "Evalue", "classCard.html#a3ab334818474d20575bd055a58c03569", null ],
+    [ "EvalueMax", "classCard.html#a1ed5bd5ef0302ee8c4ac9a74f22154b5", null ],
     [ "Explode", "classCard.html#a38ed1a7ef2f5fef77ebd844c82a74f84", null ],
     [ "ForeachFOV", "classCard.html#af8e3d0f29f54ec00e93ebd9f8d59fb63", null ],
     [ "ForeachPoint", "classCard.html#a6c22bc720e969bf7b5160a2b5280951e", null ],

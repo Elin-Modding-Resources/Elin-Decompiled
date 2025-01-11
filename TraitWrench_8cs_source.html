@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.74 Hotfix 5</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.75</span>
    </div>
   </td>
  </tr>
@@ -106,119 +106,135 @@ $(document).ready(function(){initNavTree('TraitWrench_8cs_source.html',''); init
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874">ID</a>)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tent_elec&quot;</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitTent.html">TraitTent</a>)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordflow">return</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as <a class="code hl_class" href="classTraitTent.html">TraitTent</a>).zone != <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;bed&quot;</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">return</span> t.trait is <a class="code hl_class" href="classTraitBed.html">TraitBed</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;storage&quot;</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;fridge&quot;</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> t.trait is <a class="code hl_class" href="classTraitMagicChest.html">TraitMagicChest</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_v&quot;</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_h&quot;</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitMagicChest.html">TraitMagicChest</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitDeliveryChest.html">TraitDeliveryChest</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#aec66c500d685baaf243439d35e918edc">IsSpecialContainer</a>)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">IsContainer</a>)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordflow">return</span> t.trait is <a class="code hl_class" href="classTraitContainer.html">TraitContainer</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0">   42</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0">Upgrade</a>(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874">ID</a>)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tent_elec&quot;</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            (t.trait as <a class="code hl_class" href="classTraitTent.html">TraitTent</a>).zone.elements.ModBase(2201, 2);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;bed&quot;</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            t.<a class="code hl_property" href="classCard.html#a8927a787bf9ee657f04de0d1366bd6ca">c_containerSize</a>++;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                t.c_containerSize += 1000;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;storage&quot;</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            t.c_containerUpgrade.cap += 20;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;fridge&quot;</span>:</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a0dff0f48ba1c9b1422024a29851d981f">c_containerUpgrade</a>.<a class="code hl_variable" href="classContainerUpgrade.html#a969017964cffbab4999cf0ae01c2dde5">cool</a> != 0)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            t.c_containerUpgrade.cool = 1;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            t.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(405, 50);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_v&quot;</span>:</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_h&quot;</span>:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">bool</span> flag = <a class="code hl_property" href="classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874">ID</a> == <span class="stringliteral">&quot;extend_v&quot;</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_class" href="classTraitContainer.html">TraitContainer</a> traitContainer = t.trait as <a class="code hl_class" href="classTraitContainer.html">TraitContainer</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_property" href="classThingContainer.html#a7ebc63db09bdc5eb6b91a90a6075bb03">GridSize</a> == 0)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tent_soil&quot;</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (!(t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitTent.html">TraitTent</a>))</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_class" href="classZone.html">Zone</a> zone = (t.trait as <a class="code hl_class" href="classTraitTent.html">TraitTent</a>).zone;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">if</span> (zone == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">return</span> zone.<a class="code hl_function" href="classZone.html#af4e6165ac8e6e4a9c0e2358a77a7fa1e">Evalue</a>(2200) &lt; 10;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tent_elec&quot;</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitTent.html">TraitTent</a>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <span class="keywordflow">return</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as <a class="code hl_class" href="classTraitTent.html">TraitTent</a>).zone != <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;bed&quot;</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> t.trait is <a class="code hl_class" href="classTraitBed.html">TraitBed</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;storage&quot;</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;fridge&quot;</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> t.trait is <a class="code hl_class" href="classTraitMagicChest.html">TraitMagicChest</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_v&quot;</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_h&quot;</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitMagicChest.html">TraitMagicChest</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitDeliveryChest.html">TraitDeliveryChest</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#aec66c500d685baaf243439d35e918edc">IsSpecialContainer</a>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">IsContainer</a>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">return</span> t.trait is <a class="code hl_class" href="classTraitContainer.html">TraitContainer</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0">   55</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0">Upgrade</a>(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874">ID</a>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tent_elec&quot;</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            (t.trait as <a class="code hl_class" href="classTraitTent.html">TraitTent</a>).zone.elements.ModBase(2201, 2);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tent_soil&quot;</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            (t.trait as <a class="code hl_class" href="classTraitTent.html">TraitTent</a>).zone.elements.ModBase(2200, 5);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;bed&quot;</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            t.<a class="code hl_property" href="classCard.html#a8927a787bf9ee657f04de0d1366bd6ca">c_containerSize</a>++;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                t.c_containerSize += 1000;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;storage&quot;</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            t.c_containerUpgrade.cap += 20;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;fridge&quot;</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a0dff0f48ba1c9b1422024a29851d981f">c_containerUpgrade</a>.<a class="code hl_variable" href="classContainerUpgrade.html#a969017964cffbab4999cf0ae01c2dde5">cool</a> != 0)</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a41559bd5006216b5dbf989fb0c9b7061">height</a> != traitContainer.<a class="code hl_property" href="classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e">Height</a>)</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a85ee83a3a893b3f086cd56ed692b51db">SetSize</a>(t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a>, t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a41559bd5006216b5dbf989fb0c9b7061">height</a> + 1);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a> != traitContainer.<a class="code hl_property" href="classTraitBaseContainer.html#aa5095ee548da9ab01cfa069245ac5941">Width</a>)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a85ee83a3a893b3f086cd56ed692b51db">SetSize</a>(t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a> + 1, t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a41559bd5006216b5dbf989fb0c9b7061">height</a>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            t.c_containerUpgrade.cool = 1;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            t.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(405, 50);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_v&quot;</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;extend_h&quot;</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordtype">bool</span> flag = <a class="code hl_property" href="classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874">ID</a> == <span class="stringliteral">&quot;extend_v&quot;</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_class" href="classTraitContainer.html">TraitContainer</a> traitContainer = t.trait as <a class="code hl_class" href="classTraitContainer.html">TraitContainer</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_property" href="classThingContainer.html#a7ebc63db09bdc5eb6b91a90a6075bb03">GridSize</a> == 0)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_function" href="classHomeResourceManager.html#a3242633e908c805e41c16dbecbc6c143">SetDirty</a>();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classTraitWrench.html#acf628f12a1fabc11907be32583c9280a">  102</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitWrench.html#acf628f12a1fabc11907be32583c9280a">TrySetHeldAct</a>(<a class="code hl_class" href="classActPlan.html">ActPlan</a> p)</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Things</a>.ForEach(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classTraitWrench.html#a39c10b57832b428531006c004c6c3fac">IsValidTarget</a>(t))</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actWrench&quot;</span>.lang(t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>), delegate</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    if (Upgrade(t))</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                    {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                        Msg.Say(<span class="stringliteral">&quot;upgrade&quot;</span>, t, owner.GetName(NameStyle.Full, 1));</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                        SE.Play(<span class="stringliteral">&quot;build_area&quot;</span>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                        t.PlayEffect(<span class="stringliteral">&quot;buff&quot;</span>);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                        owner.ModNum(-1);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                        EClass._zone.RefreshElectricity();</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                        Msg.Say(<span class="stringliteral">&quot;noMoreUpgrade&quot;</span>, t, owner.GetName(NameStyle.Full, 1));</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                });</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        });</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a41559bd5006216b5dbf989fb0c9b7061">height</a> != traitContainer.<a class="code hl_property" href="classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e">Height</a>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a85ee83a3a893b3f086cd56ed692b51db">SetSize</a>(t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a>, t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a41559bd5006216b5dbf989fb0c9b7061">height</a> + 1);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a> != traitContainer.<a class="code hl_property" href="classTraitBaseContainer.html#aa5095ee548da9ab01cfa069245ac5941">Width</a>)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a85ee83a3a893b3f086cd56ed692b51db">SetSize</a>(t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a> + 1, t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_variable" href="classThingContainer.html#a41559bd5006216b5dbf989fb0c9b7061">height</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">Branch</a>.<a class="code hl_variable" href="classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9">resources</a>.<a class="code hl_function" href="classHomeResourceManager.html#a3242633e908c805e41c16dbecbc6c143">SetDirty</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classTraitWrench.html#acf628f12a1fabc11907be32583c9280a">  118</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitWrench.html#acf628f12a1fabc11907be32583c9280a">TrySetHeldAct</a>(<a class="code hl_class" href="classActPlan.html">ActPlan</a> p)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Things</a>.ForEach(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classTraitWrench.html#a39c10b57832b428531006c004c6c3fac">IsValidTarget</a>(t))</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actWrench&quot;</span>.lang(t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>), delegate</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    if (Upgrade(t))</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        Msg.Say(<span class="stringliteral">&quot;upgrade&quot;</span>, t, owner.GetName(NameStyle.Full, 1));</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                        SE.Play(<span class="stringliteral">&quot;build_area&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        t.PlayEffect(<span class="stringliteral">&quot;buff&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                        owner.ModNum(-1);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        EClass._zone.RefreshElectricity();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                        Msg.Say(<span class="stringliteral">&quot;noMoreUpgrade&quot;</span>, t, owner.GetName(NameStyle.Full, 1));</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                });</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        });</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
 <div class="ttc" id="aclassActPlan_html"><div class="ttname"><a href="classActPlan.html">ActPlan</a></div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00007">ActPlan.cs:8</a></div></div>
 <div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00149">ActPlan.cs:149</a></div></div>
 <div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00344">ActPlan.cs:344</a></div></div>
@@ -252,14 +268,16 @@ $(document).ready(function(){initNavTree('TraitWrench_8cs_source.html',''); init
 <div class="ttc" id="aclassTraitMagicChest_html"><div class="ttname"><a href="classTraitMagicChest.html">TraitMagicChest</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMagicChest_8cs_source.html#l00001">TraitMagicChest.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitTent_html"><div class="ttname"><a href="classTraitTent.html">TraitTent</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitTent_8cs_source.html#l00001">TraitTent.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitWrench_html"><div class="ttname"><a href="classTraitWrench.html">TraitWrench</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00001">TraitWrench.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitWrench_html_a0790cb2fa6e4713b792685d718a51db0"><div class="ttname"><a href="classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0">TraitWrench.Upgrade</a></div><div class="ttdeci">bool Upgrade(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00042">TraitWrench.cs:42</a></div></div>
+<div class="ttc" id="aclassTraitWrench_html_a0790cb2fa6e4713b792685d718a51db0"><div class="ttname"><a href="classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0">TraitWrench.Upgrade</a></div><div class="ttdeci">bool Upgrade(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00055">TraitWrench.cs:55</a></div></div>
 <div class="ttc" id="aclassTraitWrench_html_a39c10b57832b428531006c004c6c3fac"><div class="ttname"><a href="classTraitWrench.html#a39c10b57832b428531006c004c6c3fac">TraitWrench.IsValidTarget</a></div><div class="ttdeci">bool IsValidTarget(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00007">TraitWrench.cs:7</a></div></div>
 <div class="ttc" id="aclassTraitWrench_html_a7e708c0bc475689eb7768e05e5fc9874"><div class="ttname"><a href="classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874">TraitWrench.ID</a></div><div class="ttdeci">string ID</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00003">TraitWrench.cs:3</a></div></div>
-<div class="ttc" id="aclassTraitWrench_html_acf628f12a1fabc11907be32583c9280a"><div class="ttname"><a href="classTraitWrench.html#acf628f12a1fabc11907be32583c9280a">TraitWrench.TrySetHeldAct</a></div><div class="ttdeci">override void TrySetHeldAct(ActPlan p)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00102">TraitWrench.cs:102</a></div></div>
+<div class="ttc" id="aclassTraitWrench_html_acf628f12a1fabc11907be32583c9280a"><div class="ttname"><a href="classTraitWrench.html#acf628f12a1fabc11907be32583c9280a">TraitWrench.TrySetHeldAct</a></div><div class="ttdeci">override void TrySetHeldAct(ActPlan p)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00118">TraitWrench.cs:118</a></div></div>
 <div class="ttc" id="aclassTraitWrench_html_ae22cc1eda87da3dd13b1c11456f20532"><div class="ttname"><a href="classTraitWrench.html#ae22cc1eda87da3dd13b1c11456f20532">TraitWrench.IsTool</a></div><div class="ttdeci">override bool IsTool</div><div class="ttdef"><b>Definition:</b> <a href="TraitWrench_8cs_source.html#l00005">TraitWrench.cs:5</a></div></div>
 <div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00006">Trait.cs:7</a></div></div>
 <div class="ttc" id="aclassTrait_html_a7db8c514710fbb74b2f471cf9e6fe0af"><div class="ttname"><a href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">Trait.GetParam</a></div><div class="ttdeci">string GetParam(int i, string def=null)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00499">Trait.cs:499</a></div></div>
 <div class="ttc" id="aclassTrait_html_aec66c500d685baaf243439d35e918edc"><div class="ttname"><a href="classTrait.html#aec66c500d685baaf243439d35e918edc">Trait.IsSpecialContainer</a></div><div class="ttdeci">virtual bool IsSpecialContainer</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00219">Trait.cs:219</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
+<div class="ttc" id="aclassZone_html_af4e6165ac8e6e4a9c0e2358a77a7fa1e"><div class="ttname"><a href="classZone.html#af4e6165ac8e6e4a9c0e2358a77a7fa1e">Zone.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00506">Zone.cs:506</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

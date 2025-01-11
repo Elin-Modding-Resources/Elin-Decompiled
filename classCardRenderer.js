@@ -7,6 +7,7 @@ var classCardRenderer =
     [ "Draw", "classCardRenderer.html#ae9255b49c30b567e899581bf03962b08", null ],
     [ "DrawHeld", "classCardRenderer.html#a169c585c2e45d6d57c8c417439734bef", null ],
     [ "GetOrCreateTC< T >", "classCardRenderer.html#a63bc42bea0bdf67ff8fb8ab7c09b2043", null ],
+    [ "GetPref", "classCardRenderer.html#a316b19298c6c3e422ac1fc812b99bb02", null ],
     [ "GetTC", "classCardRenderer.html#a51f87952ab26dd58a38b2630943bf8be", null ],
     [ "GetTC< T >", "classCardRenderer.html#a93f5d73db035a926d8ee2737d1997ec0", null ],
     [ "IdleFrame", "classCardRenderer.html#aafe3c1d688863af67e89d951cfb5f0ca", null ],

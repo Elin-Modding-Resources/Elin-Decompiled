@@ -26,6 +26,7 @@ var classPOLICY =
     [ "license_general", "classPOLICY.html#a9e059e1a17c7dcd448d8d359af04584a", null ],
     [ "license_slaver", "classPOLICY.html#a499a1963c67cb418c62067d1bb13b3e0", null ],
     [ "license_stolen", "classPOLICY.html#af05aabbd7d781ce4cde56f941662b5bb", null ],
+    [ "livestock_priv", "classPOLICY.html#a44748f71889249747ab3d6133fde25cf", null ],
     [ "mass_exhibition", "classPOLICY.html#aee0116e2536d8b7313f106eda6817571", null ],
     [ "milk_fan", "classPOLICY.html#a98c7436999d04dd43bcbde22d62f295a", null ],
     [ "noAnimal", "classPOLICY.html#a8a6eea4727a4530e812b3f10550bb688", null ],

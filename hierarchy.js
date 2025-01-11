@@ -1580,6 +1580,7 @@ var hierarchy =
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
             [ "TraitFoodMeal", "classTraitFoodMeal.html", null ]
           ] ],
+          [ "TraitFoodPreparedPackage", "classTraitFoodPreparedPackage.html", null ],
           [ "TraitFoodSeasoning", "classTraitFoodSeasoning.html", null ],
           [ "TraitFoodTravel", "classTraitFoodTravel.html", null ],
           [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ]
@@ -2796,6 +2797,7 @@ var hierarchy =
     [ "SkinRootStatic.Positions", "classSkinRootStatic_1_1Positions.html", null ],
     [ "Player.Pref", "classPlayer_1_1Pref.html", null ],
     [ "MsgBox.Prefabs", "classMsgBox_1_1Prefabs.html", null ],
+    [ "CoreRef.PrefData", "classCoreRef_1_1PrefData.html", null ],
     [ "SourceAsset.PrefData", "classSourceAsset_1_1PrefData.html", null ],
     [ "SourceAsset.Prefs", "classSourceAsset_1_1Prefs.html", null ],
     [ "AM_Adv.PressedAction", "classAM__Adv_1_1PressedAction.html", null ],

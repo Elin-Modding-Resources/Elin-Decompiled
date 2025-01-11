@@ -1,5 +1,16 @@
 var NAVTREEINDEX95 =
 {
+"classSPELL.html#a6ad1360e7a7f1e865188a31afb6564c7":[1,0,1187,109],
+"classSPELL.html#a6b73b3ca009ffebb2c4b717b8f940260":[1,0,1187,51],
+"classSPELL.html#a6e1c6f85d8fd655d12e4e5b134538a07":[1,0,1187,54],
+"classSPELL.html#a6e923138cbf078f9458f1517e4b93058":[1,0,1187,2],
+"classSPELL.html#a70b119f952f806e31867fb02f4227083":[1,0,1187,199],
+"classSPELL.html#a74dedef9abde6701ce05a9731bdef329":[1,0,1187,82],
+"classSPELL.html#a75e7fd56e83d3da203e1dacfda0e015b":[1,0,1187,104],
+"classSPELL.html#a78d907bc34a4fb43ad0b3f749b1a3e36":[1,0,1187,185],
+"classSPELL.html#a7923b6a939f9933698ab1a4631ec19b1":[1,0,1187,155],
+"classSPELL.html#a7a40390eca9490bd8f784aa5a2c3a193":[1,0,1187,202],
+"classSPELL.html#a7f45d7356a054954af39ec12626be0dc":[1,0,1187,159],
 "classSPELL.html#a7f8f6e691b4b884bd84243034920bede":[1,0,1187,75],
 "classSPELL.html#a7fa8ab6ded63bf0591dd2b43c5090248":[1,0,1187,48],
 "classSPELL.html#a810d551376cbc15d4fdce23cb70dbe22":[1,0,1187,146],
@@ -238,16 +249,5 @@ var NAVTREEINDEX95 =
 "classSceneLightProfile.html#abcff3c7bfa79bd5e2d3af47912ba6fc2":[1,0,1086,17],
 "classSceneLightProfile.html#aca0486c748a88d01d950d462826c6e8e":[1,0,1086,0],
 "classSceneLightProfile.html#acd27a85683ea128cf10f4ddc1991833c":[1,0,1086,21],
-"classSceneLightProfile.html#ad679f0d9fa2883cbe58361d22bc2b6ae":[1,0,1086,18],
-"classSceneLightProfile.html#ad69fd9935d743056acc2882e3aa941be":[1,0,1086,15],
-"classSceneLightProfile.html#ae2ea77c5bef22dbfa5938a5821737cae":[1,0,1086,12],
-"classSceneLightProfile.html#af56828ad1153048ed7023e4957fb2e9c":[1,0,1086,22],
-"classSceneObject.html":[1,0,1087],
-"classSceneProfile.html":[1,0,1088],
-"classSceneProfile.html#a06115a901e483893afdb3a3c5cab1ca3":[1,0,1088,5],
-"classSceneProfile.html#a31e31a19f021a2304356fbc94c22f507":[1,0,1088,6],
-"classSceneProfile.html#a47c5287accc39b7af6a8e7c9d6c18f64":[1,0,1088,2],
-"classSceneProfile.html#a64ef9a729989c3c6681a99a90250b425":[1,0,1088,1],
-"classSceneProfile.html#a6778ce7f52f41aa2534081a411457f3f":[1,0,1088,0],
-"classSceneProfile.html#ac235af0727e4ceb31a0ad8e0d21d9904":[1,0,1088,4]
+"classSceneLightProfile.html#ad679f0d9fa2883cbe58361d22bc2b6ae":[1,0,1086,18]
 };

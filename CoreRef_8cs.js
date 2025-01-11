@@ -17,5 +17,6 @@ var CoreRef_8cs =
     [ "CoreRef.TCs", "classCoreRef_1_1TCs.html", "classCoreRef_1_1TCs" ],
     [ "CoreRef.TextureDatas", "classCoreRef_1_1TextureDatas.html", "classCoreRef_1_1TextureDatas" ],
     [ "CoreRef.Renderers", "classCoreRef_1_1Renderers.html", "classCoreRef_1_1Renderers" ],
-    [ "CoreRef.DefaultRoof", "classCoreRef_1_1DefaultRoof.html", "classCoreRef_1_1DefaultRoof" ]
+    [ "CoreRef.DefaultRoof", "classCoreRef_1_1DefaultRoof.html", "classCoreRef_1_1DefaultRoof" ],
+    [ "CoreRef.PrefData", "classCoreRef_1_1PrefData.html", "classCoreRef_1_1PrefData" ]
 ];

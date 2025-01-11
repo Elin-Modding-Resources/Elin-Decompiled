@@ -2,6 +2,7 @@ var classRecipe_1_1Ingredient =
 [
     [ "CanSetThing", "classRecipe_1_1Ingredient.html#a940bd08fae5a97096755fcd1d7cc8dfc", null ],
     [ "GetName", "classRecipe_1_1Ingredient.html#a5fa997f2cddce444fed01ac22ef6d9c1", null ],
+    [ "IsValidIngredient", "classRecipe_1_1Ingredient.html#af9e13d7e127e7073edd0a3315e746c95", null ],
     [ "RefreshThing", "classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16", null ],
     [ "SetThing", "classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e", null ],
     [ "dye", "classRecipe_1_1Ingredient.html#ac59bbff1e717359f6bd79a131daad082", null ],

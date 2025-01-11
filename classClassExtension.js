@@ -199,6 +199,7 @@ var classClassExtension =
     [ "TryAddExtension", "classClassExtension.html#a0072ddc2872d11a3eecf9851bf1dd9c3", null ],
     [ "TryGet< TValue >", "classClassExtension.html#a7512519f724851800cba383c0b5dbee4", null ],
     [ "TryGet< TValue >", "classClassExtension.html#a9948a29fe59ca6d51102dfc7579ee94b", null ],
+    [ "TryGetValue< TKey, TValue >", "classClassExtension.html#ab3ac6499a196d4e0df2a56609193b0a9", null ],
     [ "TryGetValue< TKey, TValue >", "classClassExtension.html#a248054c470098935832e74a480ca561c", null ],
     [ "Within", "classClassExtension.html#a4b966c59f0e8f6dda154f6149b56b985", null ],
     [ "Within", "classClassExtension.html#a5c1f832891a69241762398a1cd4775fe", null ],

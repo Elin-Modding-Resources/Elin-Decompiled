@@ -1,5 +1,16 @@
 var NAVTREEINDEX109 =
 {
+"classTileTypeObjFloat.html#a0cc7fb504088bb8de0042231514d91ea":[1,0,1312,4],
+"classTileTypeObjFloat.html#a4405740c8f2aef82ed0866dc3666d7f3":[1,0,1312,1],
+"classTileTypeObjFloat.html#a826d536093919053f59622be446098f1":[1,0,1312,0],
+"classTileTypeObjFloat.html#aa2728d1b2323c193fbf527c56f162d23":[1,0,1312,3],
+"classTileTypeObjFloat.html#aea003124e2651580c1357e6702d013da":[1,0,1312,2],
+"classTileTypeObjHuge.html":[1,0,1313],
+"classTileTypeObjHuge.html#ae1b1912c5e55c7c80a98ecf5ccb14659":[1,0,1313,0],
+"classTileTypeObjWater.html":[1,0,1314],
+"classTileTypeObjWater.html#ab2144541492c5cd46c2d6e56cb973b9d":[1,0,1314,0],
+"classTileTypeObjWaterTop.html":[1,0,1315],
+"classTileTypeObjWaterTop.html#a8d6293fcd44af3ff4ecbed64048446e4":[1,0,1315,0],
 "classTileTypeObjWaterTop.html#a9e9cc92f923cf09f49d6b609fc3811f4":[1,0,1315,1],
 "classTileTypePaint.html":[1,0,1316],
 "classTileTypePillar.html":[1,0,1317],
@@ -238,16 +249,5 @@ var NAVTREEINDEX109 =
 "classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a":[1,0,1348,92],
 "classTrait.html#a4207b40678d774015cf532e1fbfa11f6":[1,0,1348,161],
 "classTrait.html#a465361d0239bbdd1358d35046e4e6c87":[1,0,1348,38],
-"classTrait.html#a4737c1ce5c25f3d2f45ada2cdb1b2f19":[1,0,1348,145],
-"classTrait.html#a47b9ffd55d19fac5985c99d803d7d416":[1,0,1348,4],
-"classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6":[1,0,1348,93],
-"classTrait.html#a4ac641a35b27784da64e13edc433d23b":[1,0,1348,72],
-"classTrait.html#a4aff3c950b25f7b4527c33c3678d3f87":[1,0,1348,202],
-"classTrait.html#a4b04ca74c54bb2fad488c295278265dd":[1,0,1348,18],
-"classTrait.html#a4b2d59088504ce0145c3096fb99645fc":[1,0,1348,11],
-"classTrait.html#a4d20dd4795d1045eba97f315560053b1":[1,0,1348,203],
-"classTrait.html#a4f89efebbdf3bf36c106d69f646853c5":[1,0,1348,108],
-"classTrait.html#a50ebba181dd04ca5ab9622c16c6b824b":[1,0,1348,185],
-"classTrait.html#a50ff3f794150d62da8471d3fb73b77ed":[1,0,1348,10],
-"classTrait.html#a52939bcd3cee8f5f363fdf65226c8c41":[1,0,1348,205]
+"classTrait.html#a4737c1ce5c25f3d2f45ada2cdb1b2f19":[1,0,1348,145]
 };

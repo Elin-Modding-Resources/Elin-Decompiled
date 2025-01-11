@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.74 Hotfix 5</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.75</span>
    </div>
   </td>
  </tr>
@@ -117,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbb3a844a1fd45299a7bd029f4f3b74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa997f2cddce444fed01ac22ef6d9c1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecipe_1_1Ingredient.html#a5fa997f2cddce444fed01ac22ef6d9c1">GetName</a> ()</td></tr>
 <tr class="separator:a5fa997f2cddce444fed01ac22ef6d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e13d7e127e7073edd0a3315e746c95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecipe_1_1Ingredient.html#af9e13d7e127e7073edd0a3315e746c95">IsValidIngredient</a> (<a class="el" href="classThing.html">Thing</a> t)</td></tr>
+<tr class="separator:af9e13d7e127e7073edd0a3315e746c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -329,6 +331,67 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="af9e13d7e127e7073edd0a3315e746c95" name="af9e13d7e127e7073edd0a3315e746c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e13d7e127e7073edd0a3315e746c95">&#9670;&#160;</a></span>IsValidIngredient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Recipe.Ingredient.IsValidIngredient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classThing.html">Thing</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00126">126</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>        {</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a7e3ce82b1ae28b1321238686fbdacfd3">useCat</a>)</div>
+<div class="line"><span class="lineno">  129</span>            {</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>.IsChildOf(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  131</span>                {</div>
+<div class="line"><span class="lineno">  132</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  133</span>                }</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac">idOther</a>)</div>
+<div class="line"><span class="lineno">  135</span>                {</div>
+<div class="line"><span class="lineno">  136</span>                    <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>.IsChildOf(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>))</div>
+<div class="line"><span class="lineno">  137</span>                    {</div>
+<div class="line"><span class="lineno">  138</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  139</span>                    }</div>
+<div class="line"><span class="lineno">  140</span>                }</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="keywordtype">id</span> || t.<a class="code hl_variable" href="classThing.html#a1356967911bd1872c00852223aaebcd7">source</a>._origin == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  144</span>            {</div>
+<div class="line"><span class="lineno">  145</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  146</span>            }</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> item2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac">idOther</a>)</div>
+<div class="line"><span class="lineno">  148</span>            {</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="keywordtype">id</span> || t.<a class="code hl_variable" href="classThing.html#a1356967911bd1872c00852223aaebcd7">source</a>._origin == item2)</div>
+<div class="line"><span class="lineno">  150</span>                {</div>
+<div class="line"><span class="lineno">  151</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  152</span>                }</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="ttc" id="aclassCard_html_ae1dbde98a747856add8519bb4e7cc688"><div class="ttname"><a href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">Card.category</a></div><div class="ttdeci">SourceCategory.Row category</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01901">Card.cs:1901</a></div></div>
+<div class="ttc" id="aclassThing_html_a1356967911bd1872c00852223aaebcd7"><div class="ttname"><a href="classThing.html#a1356967911bd1872c00852223aaebcd7">Thing.source</a></div><div class="ttdeci">SourceThing.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00011">Thing.cs:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01901">Card.category</a>, <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>, <a class="el" href="Recipe_8cs_source.html#l00035">Recipe.Ingredient.idOther</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Thing_8cs_source.html#l00011">Thing.source</a>, and <a class="el" href="Recipe_8cs_source.html#l00043">Recipe.Ingredient.useCat</a>.</p>
+
+</div>
+</div>
 <a id="a02ff2039cd048aaa48058463ad174c16" name="a02ff2039cd048aaa48058463ad174c16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02ff2039cd048aaa48058463ad174c16">&#9670;&#160;</a></span>RefreshThing()</h2>
 
@@ -459,7 +522,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00029">29</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00122">TaskBuild._CanPerformTask()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00065">RecipeCard.BuildIngredientList()</a>, <a class="el" href="Recipe_8cs_source.html#l00317">Recipe.DropIngredients()</a>, and <a class="el" href="Recipe_8cs_source.html#l00096">Recipe.Ingredient.GetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00122">TaskBuild._CanPerformTask()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00065">RecipeCard.BuildIngredientList()</a>, <a class="el" href="Recipe_8cs_source.html#l00348">Recipe.DropIngredients()</a>, and <a class="el" href="Recipe_8cs_source.html#l00096">Recipe.Ingredient.GetName()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +540,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00035">35</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, and <a class="el" href="Recipe_8cs_source.html#l00096">Recipe.Ingredient.GetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">RecipeSource.GetIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00096">Recipe.Ingredient.GetName()</a>, and <a class="el" href="Recipe_8cs_source.html#l00126">Recipe.Ingredient.IsValidIngredient()</a>.</p>
 
 </div>
 </div>
@@ -513,7 +576,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00039">39</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.GetMaxCount()</a>, and <a class="el" href="Recipe_8cs_source.html#l00856">Recipe.IsCraftable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00913">Recipe.GetMaxCount()</a>, and <a class="el" href="Recipe_8cs_source.html#l00887">Recipe.IsCraftable()</a>.</p>
 
 </div>
 </div>
@@ -549,7 +612,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00020">20</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00080">Recipe.Ingredient.CanSetThing()</a>, <a class="el" href="Recipe_8cs_source.html#l00317">Recipe.DropIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.GetMaxCount()</a>, and <a class="el" href="Recipe_8cs_source.html#l00856">Recipe.IsCraftable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00080">Recipe.Ingredient.CanSetThing()</a>, <a class="el" href="Recipe_8cs_source.html#l00348">Recipe.DropIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00913">Recipe.GetMaxCount()</a>, and <a class="el" href="Recipe_8cs_source.html#l00887">Recipe.IsCraftable()</a>.</p>
 
 </div>
 </div>
@@ -585,7 +648,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00037">37</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00122">TaskBuild._CanPerformTask()</a>, <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.GetMaxCount()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00310">RecipeCard.MakeDish()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00327">RecipeCard.MixIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00059">Recipe.Ingredient.RefreshThing()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, <a class="el" href="Recipe_8cs_source.html#l00944">Recipe.SaveLastIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00089">Recipe.Ingredient.SetThing()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00355">DropdownGrid.TrySelect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00122">TaskBuild._CanPerformTask()</a>, <a class="el" href="Recipe_8cs_source.html#l00913">Recipe.GetMaxCount()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00310">RecipeCard.MakeDish()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00327">RecipeCard.MixIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00059">Recipe.Ingredient.RefreshThing()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, <a class="el" href="Recipe_8cs_source.html#l00975">Recipe.SaveLastIngredients()</a>, <a class="el" href="Recipe_8cs_source.html#l00089">Recipe.Ingredient.SetThing()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00355">DropdownGrid.TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -621,7 +684,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Recipe_8cs_source.html#l00043">43</a> of file <a class="el" href="Recipe_8cs_source.html">Recipe.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00096">Recipe.Ingredient.GetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00096">Recipe.Ingredient.GetName()</a>, and <a class="el" href="Recipe_8cs_source.html#l00126">Recipe.Ingredient.IsValidIngredient()</a>.</p>
 
 </div>
 </div>
