@@ -364,6 +364,16 @@ public static class ClassExtension
 		return fallback;
 	}
 
+	public static TValue TryGetValue<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, TKey key_fallback)
+	{
+		TValue value = default(TValue);
+		if (key != null && source.TryGetValue(key, out value))
+		{
+			return value;
+		}
+		return source[key_fallback];
+	}
+
 	public static TValue GetOrCreate<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, Func<TValue> func = null)
 	{
 		TValue val = dict.TryGetValue(key);
