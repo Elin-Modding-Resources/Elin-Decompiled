@@ -83,8 +83,6 @@ public class Player : EClass
 
 		public int shipNum;
 
-		public int shipMoney;
-
 		public int slept;
 
 		public int death;
@@ -97,16 +95,21 @@ public class Player : EClass
 
 		public int gambleChestOpen;
 
+		public long shipMoney;
+
 		[JsonIgnore]
 		public int lastShippingExp;
 
 		[JsonIgnore]
 		public int lastShippingExpMax;
 
-		public int GetShippingBonus(int _a)
+		public int GetShippingBonus(long _a)
 		{
-			int p = 0;
+			long p = 0L;
 			bool first = true;
+			SetBonus(1000000000, 50000);
+			SetBonus(100000000, 20000);
+			SetBonus(10000000, 10000);
 			SetBonus(500000, 5000);
 			SetBonus(250000, 3000);
 			SetBonus(100000, 2000);
@@ -114,7 +117,7 @@ public class Player : EClass
 			SetBonus(6000, 500);
 			SetBonus(2000, 200);
 			SetBonus(0, 100);
-			return p;
+			return (int)p;
 			void SetBonus(int threshold, int div)
 			{
 				if (_a >= threshold)
@@ -122,7 +125,7 @@ public class Player : EClass
 					p += (_a - threshold) / div;
 					if (first)
 					{
-						lastShippingExp = (_a - threshold) % div;
+						lastShippingExp = (int)((_a - threshold) % div);
 						lastShippingExpMax = div;
 						first = false;
 					}
@@ -795,6 +798,9 @@ public class Player : EClass
 	public string memo = "";
 
 	[JsonProperty]
+	public string memo2 = "";
+
+	[JsonProperty]
 	public Pref pref = new Pref();
 
 	[JsonProperty]
@@ -1155,7 +1161,7 @@ public class Player : EClass
 		flags.toggleHotbarHighlightDisabled = true;
 		layerAbilityConfig.hideDepletedSpell = true;
 		layerAbilityConfig.bgAlpha = 70;
-		memo = "memo_blank".lang();
+		memo = (memo2 = "memo_blank".lang());
 	}
 
 	public void OnStartNewGame()

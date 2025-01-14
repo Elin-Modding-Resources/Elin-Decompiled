@@ -168,7 +168,7 @@ public class BaseTileSelector : EMono
 			}
 			EMono.ui.hud.hint.UpdateText();
 		}
-		if (!hitPoint.IsValid || EMono.ui.isPointerOverUI || EMono.ui.wasActive || mode.selectType == SelectType.None || !EMono.pc.ai.ShowCursor)
+		if (!hitPoint.IsValid || EMono.ui.isPointerOverUI || EMono.ui.wasActive || mode.selectType == SelectType.None || !EMono.pc.ai.ShowCursor || (UIDragPanel.dragging && Input.GetMouseButton(0)))
 		{
 			return;
 		}

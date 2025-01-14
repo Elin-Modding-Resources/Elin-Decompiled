@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public class CellDetail
 {
@@ -52,7 +51,6 @@ public class CellDetail
 			for (int i = 0; i < things.Count && things[i].IsInstalled; i++)
 			{
 				things[i].stackOrder = i;
-				Debug.Log(things[i].Name + "/" + things[i].stackOrder);
 			}
 		}
 	}

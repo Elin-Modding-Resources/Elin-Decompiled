@@ -58,6 +58,7 @@ public class GoalCombat : Goal
 		bool dontWander = owner.IsPCParty && !owner.IsPC && EClass.game.config.tactics.dontWander;
 		while (true)
 		{
+			bool canSeeLos = false;
 			if (EClass.debug.logCombat)
 			{
 				Debug.Log("■" + owner.Name + "/" + count + "/" + lostCount);
@@ -78,15 +79,19 @@ public class GoalCombat : Goal
 				}
 			}
 			tc = owner.enemy;
-			if (tc != null && owner.IsPCFaction && !EClass.pc.ai.ShouldAllyAttack(tc))
+			if (tc != null && owner.IsPCFaction)
 			{
-				tc = (owner.enemy = null);
+				if (EClass.pc.isHidden && owner.isHidden)
+				{
+					owner.enemy = null;
+					yield return Success();
+				}
+				if (!EClass.pc.ai.ShouldAllyAttack(tc))
+				{
+					tc = (owner.enemy = null);
+				}
 			}
-			if (tc != null && !tc.isDead && tc.ExistsOnMap && tc.pos.IsInBounds && lostCount < (owner.IsPowerful ? 50 : 5))
-			{
-				lostCount = ((!owner.CanSeeLos(tc)) ? (lostCount + 1) : 0);
-			}
-			else
+			if (tc == null || tc.isDead || !tc.ExistsOnMap || !tc.pos.IsInBounds || lostCount >= (owner.IsPowerful ? 50 : 5))
 			{
 				tc = (owner.enemy = null);
 				if (owner.IsPC && EClass.game.config.autoCombat.abortOnKill)
@@ -100,6 +105,11 @@ public class GoalCombat : Goal
 					yield return Success();
 				}
 				tc = owner.enemy;
+			}
+			else
+			{
+				canSeeLos = owner.CanSeeLos(tc);
+				lostCount = ((!canSeeLos) ? (lostCount + 1) : 0);
 			}
 			if (owner.IsPC && tc.HasEditorTag(EditorTag.Invulnerable))
 			{
@@ -231,7 +241,7 @@ public class GoalCombat : Goal
 					}
 				}
 			}
-			if (owner.IsPC && EClass.game.config.autoCombat.bDontChase)
+			if ((owner.IsPC && EClass.game.config.autoCombat.bDontChase) || (!canSeeLos && tc.isHidden))
 			{
 				move = false;
 				haltSecondMove = true;

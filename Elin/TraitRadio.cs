@@ -5,7 +5,7 @@ public class TraitRadio : TraitItem
 	public List<string> ids = new List<string>
 	{
 		"none", "amb_fire", "amb_bbq", "amb_crowd", "amb_seagull", "amb_horror", "amb_pub", "amb_smelter", "amb_clockwork", "amb_dead",
-		"amb_magic", "amb_fountain", "amb_clock", "amb_boat", "amb_waterfall"
+		"amb_magic", "amb_fountain", "amb_clock", "amb_boat", "amb_waterfall", "amb_rag1", "amb_squeak1"
 	};
 
 	public override string IDActorEx => owner.GetStr(52);

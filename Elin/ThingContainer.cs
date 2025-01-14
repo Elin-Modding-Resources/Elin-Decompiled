@@ -428,12 +428,15 @@ public class ThingContainer : List<Thing>
 		_listContainers.Add(this);
 		TrySearchContainer(owner);
 		_listContainers.Sort((ThingContainer a, ThingContainer b) => (b.owner.GetWindowSaveData()?.priority ?? 0) * 10 + (b.owner.IsPC ? 1 : 0) - ((a.owner.GetWindowSaveData()?.priority ?? 0) * 10 + (a.owner.IsPC ? 1 : 0)));
-		foreach (ThingContainer listContainer in _listContainers)
+		if (tryStack)
 		{
-			SearchDest(listContainer, searchEmpty: false, searchStack: true);
-			if (d.IsValid)
+			foreach (ThingContainer listContainer in _listContainers)
 			{
-				return d;
+				SearchDest(listContainer, searchEmpty: false, searchStack: true);
+				if (d.IsValid)
+				{
+					return d;
+				}
 			}
 		}
 		foreach (ThingContainer listContainer2 in _listContainers)

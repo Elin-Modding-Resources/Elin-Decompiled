@@ -251,11 +251,11 @@ public class LayerHome : ELayer
 			},
 			onList = delegate
 			{
-				foreach (Card value in ELayer._map.Installed.all.Values)
+				foreach (Card item in ELayer._map.Installed.all)
 				{
-					if (value.trait.IsSpot)
+					if (item.trait.IsSpot)
 					{
-						listArea.Add(value.trait);
+						listArea.Add(item.trait);
 					}
 				}
 			},

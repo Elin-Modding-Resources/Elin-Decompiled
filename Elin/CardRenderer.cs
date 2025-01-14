@@ -359,8 +359,16 @@ public class CardRenderer : RenderObject
 			switch (owner.sourceCard.tiles.TryGet(owner.idSkin))
 			{
 			case 2319:
+			case 2619:
+			case 2621:
+			case 2623:
+			case 2625:
 				return EClass.core.refs.prefs.sonwputit1;
 			case 2320:
+			case 2620:
+			case 2622:
+			case 2624:
+			case 2626:
 				return EClass.core.refs.prefs.snowputit2;
 			}
 		}
@@ -455,10 +463,6 @@ public class CardRenderer : RenderObject
 
 	public override void OnLeaveScreen()
 	{
-		if (!isSynced)
-		{
-			Debug.LogWarning("renderer alraedy not synced:" + owner);
-		}
 		isSynced = false;
 		if (hasActor && (!owner.ExistsOnMap || !data.persistActor))
 		{

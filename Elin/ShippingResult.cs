@@ -34,12 +34,12 @@ public class ShippingResult : EClass
 	}
 
 	[JsonProperty]
-	public int[] ints = new int[10];
+	public long[] ints = new long[10];
 
 	[JsonProperty]
 	public List<Item> items = new List<Item>();
 
-	public int total
+	public long total
 	{
 		get
 		{
@@ -55,7 +55,7 @@ public class ShippingResult : EClass
 	{
 		get
 		{
-			return ints[1];
+			return (int)ints[1];
 		}
 		set
 		{
@@ -67,7 +67,7 @@ public class ShippingResult : EClass
 	{
 		get
 		{
-			return ints[2];
+			return (int)ints[2];
 		}
 		set
 		{
@@ -79,7 +79,7 @@ public class ShippingResult : EClass
 	{
 		get
 		{
-			return ints[3];
+			return (int)ints[3];
 		}
 		set
 		{
@@ -91,7 +91,7 @@ public class ShippingResult : EClass
 	{
 		get
 		{
-			return ints[4];
+			return (int)ints[4];
 		}
 		set
 		{
@@ -103,7 +103,7 @@ public class ShippingResult : EClass
 	{
 		get
 		{
-			return ints[5];
+			return (int)ints[5];
 		}
 		set
 		{
@@ -115,7 +115,7 @@ public class ShippingResult : EClass
 	{
 		get
 		{
-			return ints[6];
+			return (int)ints[6];
 		}
 		set
 		{

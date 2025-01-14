@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
@@ -6,9 +7,21 @@ using UnityEngine;
 
 public class ModUtil : EClass
 {
+	public static Dictionary<string, string> fallbackTypes = new Dictionary<string, string>();
+
 	public static void Test()
 	{
 		ImportExcel("", "", EClass.sources.charas);
+	}
+
+	public static void OnModsActivated()
+	{
+		RegisterSerializedTypeFallback("TrueArena", "ArenaWaveEvent", "ZoneEvent");
+	}
+
+	public static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)
+	{
+		fallbackTypes[nameType] = nameFallbackType;
 	}
 
 	public static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)

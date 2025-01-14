@@ -231,7 +231,14 @@ public class InvOwner : EClass
 					{
 						EClass.pc.ModCurrency(-price, IDCurrency);
 					}
-					ShopTransaction.current.Process(thing2, thing2.Num, sell);
+					if (sell && !thing2.IsIdentified)
+					{
+						thing2.Identify(show: true, IDTSource.SuperiorIdentify);
+					}
+					else
+					{
+						ShopTransaction.current.Process(thing2, thing2.Num, sell);
+					}
 					Msg.Say(sell ? "sold" : "bought", thing2, Lang._currency(Mathf.Abs(price), IDCurrency));
 					if (thing2.id == "statue_weird" && sell)
 					{

@@ -226,13 +226,21 @@ public class CardActor : Actor
 		switch (type)
 		{
 		case Type.Canvas:
-			if (owner != null && owner.c_textureData != null && (bool)sr2)
+			if (owner == null || !sr2)
+			{
+				break;
+			}
+			if (owner.c_textureData != null)
 			{
 				sr2.sprite = owner.GetPaintSprite();
 				if (owner.trait is TraitCanvas traitCanvas)
 				{
 					sr2.transform.SetLocalScale(traitCanvas.Scale, traitCanvas.Scale, 1f);
 				}
+			}
+			else
+			{
+				sr2.sprite = null;
 			}
 			break;
 		case Type.Boat:

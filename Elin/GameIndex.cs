@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -41,6 +42,8 @@ public class GameIndex : EClass
 
 	public bool cloud;
 
+	public Dictionary<string, string> fallbackTypes = new Dictionary<string, string>();
+
 	[JsonIgnore]
 	public string path;
 
@@ -67,6 +70,7 @@ public class GameIndex : EClass
 			idJob = EClass.pc.job.id;
 			days = EClass.player.stats.days;
 			deepest = EClass.player.stats.deepest;
+			fallbackTypes = ModUtil.fallbackTypes;
 			Color color = EClass.pc.pccData?.GetHairColor(applyMod: true) ?? Color.white;
 			this.color = ColorUtility.ToHtmlStringRGBA(color);
 		}

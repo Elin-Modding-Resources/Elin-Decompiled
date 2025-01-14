@@ -1503,10 +1503,10 @@ public class Thing : Card
 		}
 		if (trait.IdSkin != 0)
 		{
-			int num6 = trait.IdSkin - 1;
+			int index = trait.IdSkin - 1;
 			if (sourceCard.skins.Length != 0)
 			{
-				p.tile += ((p.tile < 0f) ? (-sourceCard.skins[num6]) : sourceCard.skins[num6]);
+				p.tile += ((p.tile < 0f) ? (-sourceCard.skins.TryGet(index)) : sourceCard.skins.TryGet(index));
 			}
 		}
 	}

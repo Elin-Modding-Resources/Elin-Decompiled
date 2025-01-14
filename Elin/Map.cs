@@ -2631,7 +2631,7 @@ public class Map : MapBounds, IPathfindGrid
 		PropSet orCreate = EClass._map.Installed.workMap.GetOrCreate(workTag);
 		if (area1 != null)
 		{
-			IEnumerable<Card> enumerable = orCreate.Values.Where((Card a) => a.pos.HasRoomOrArea(area1));
+			IEnumerable<Card> enumerable = orCreate.Where((Card a) => a.pos.HasRoomOrArea(area1));
 			if (enumerable.Count() > 0)
 			{
 				thing = enumerable.RandomItem() as Thing;
@@ -2639,7 +2639,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		if (thing == null && area2 != null)
 		{
-			IEnumerable<Card> enumerable2 = orCreate.Values.Where((Card a) => a.pos.HasRoomOrArea(area2));
+			IEnumerable<Card> enumerable2 = orCreate.Where((Card a) => a.pos.HasRoomOrArea(area2));
 			if (enumerable2.Count() > 0)
 			{
 				thing = enumerable2.RandomItem() as Thing;
@@ -2651,7 +2651,9 @@ public class Map : MapBounds, IPathfindGrid
 	public Thing FindThing(string workTag, Chara c)
 	{
 		Thing result = null;
-		IEnumerable<Card> enumerable = EClass._map.Installed.workMap.GetOrCreate(workTag).Values.Where((Card a) => a.pos.IsPublicSpace());
+		IEnumerable<Card> enumerable = from a in EClass._map.Installed.workMap.GetOrCreate(workTag)
+			where a.pos.IsPublicSpace()
+			select a;
 		if (enumerable.Count() > 0)
 		{
 			result = enumerable.RandomItem() as Thing;

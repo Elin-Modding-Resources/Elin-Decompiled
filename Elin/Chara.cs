@@ -3407,7 +3407,7 @@ public class Chara : Card, IPathfindWalker
 						AddCondition<ConBlind>(200);
 					}
 				}
-				if (turn % (2000 * (100 + Evalue(412) * 2) / Mathf.Max(100 + Evalue(409) * 10, 100)) == 0)
+				if (turn % (200000 / Mathf.Max(100 + Evalue(409) * 10, 50)) == 0)
 				{
 					ModCorruption(1);
 				}
@@ -3416,7 +3416,7 @@ public class Chara : Card, IPathfindWalker
 		if (!IsPC)
 		{
 			int num2 = Evalue(409);
-			if (num2 > 0 && turn % 2000 * (100 + Evalue(412) * 2) / (100 + num2 * 10) == 0)
+			if (num2 > 0 && turn % (200000 / Mathf.Max(100 + num2 * 10, 50)) == 0)
 			{
 				ModCorruption(1);
 			}
@@ -4029,7 +4029,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (t.GetRootCard() != this)
 		{
-			t = Pick(t.Thing, msg: false);
+			t = Pick(t.Thing, msg: false, tryStack: false);
 			if (t.GetRootCard() != this)
 			{
 				return;
@@ -5527,7 +5527,14 @@ public class Chara : Card, IPathfindWalker
 	public Chara SetEnemy(Chara c = null)
 	{
 		enemy = c;
-		if (c != null)
+		if (c == null)
+		{
+			if (ai is GoalCombat)
+			{
+				ai.Cancel();
+			}
+		}
+		else
 		{
 			calmCheckTurn = 10 + EClass.rnd(30);
 		}
@@ -5638,7 +5645,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				GoHostile(chara);
 				chara.GoHostile(this);
-				if (base.isHidden && !chara.CanSee(this) && !chara.IsDisabled && !chara.IsPCParty && !chara.IsPCPartyMinion && EClass.rnd(6) == 0)
+				if (base.isHidden && !chara.CanSee(this) && !chara.IsDisabled && !chara.IsPCParty && !chara.IsPCPartyMinion && EClass.rnd(10 + Dist(chara) * 10) == 0)
 				{
 					Thing t = ThingGen.Create("49");
 					ActThrow.Throw(chara, pos, t);
@@ -5670,6 +5677,10 @@ public class Chara : Card, IPathfindWalker
 			enemy = null;
 		}
 		if (enemy != null)
+		{
+			return false;
+		}
+		if (IsPCParty && EClass.pc.isHidden && base.isHidden)
 		{
 			return false;
 		}
@@ -6191,6 +6202,10 @@ public class Chara : Card, IPathfindWalker
 	public void ShowDialog()
 	{
 		Zone_Nymelle zone_Nymelle = EClass._zone as Zone_Nymelle;
+		if (conSuspend != null && IsPCParty)
+		{
+			RemoveCondition<ConSuspend>();
+		}
 		if (IsDeadOrSleeping)
 		{
 			ShowDialog("_chara", "sleep");
@@ -6436,9 +6451,9 @@ public class Chara : Card, IPathfindWalker
 		{
 			map = EClass._map;
 		}
-		foreach (Card value in map.props.installed.all.Values)
+		foreach (Card item in map.props.installed.all)
 		{
-			if (value.trait is TraitBed traitBed && traitBed.IsHolder(this))
+			if (item.trait is TraitBed traitBed && traitBed.IsHolder(this))
 			{
 				traitBed.RemoveHolder(this);
 			}
@@ -6447,9 +6462,9 @@ public class Chara : Card, IPathfindWalker
 
 	public TraitBed FindBed()
 	{
-		foreach (Card value in EClass._map.props.installed.all.Values)
+		foreach (Card item in EClass._map.props.installed.all)
 		{
-			if (value.trait is TraitBed traitBed && traitBed.IsHolder(this))
+			if (item.trait is TraitBed traitBed && traitBed.IsHolder(this))
 			{
 				return traitBed;
 			}
@@ -6463,9 +6478,9 @@ public class Chara : Card, IPathfindWalker
 		{
 			return null;
 		}
-		foreach (Card value in EClass._map.props.installed.all.Values)
+		foreach (Card item in EClass._map.props.installed.all)
 		{
-			if (value.trait is TraitBed traitBed && traitBed.CanAssign(this))
+			if (item.trait is TraitBed traitBed && traitBed.CanAssign(this))
 			{
 				traitBed.AddHolder(this);
 				Msg.Say("claimBed", this);
@@ -8688,32 +8703,45 @@ public class Chara : Card, IPathfindWalker
 
 	public void ModCorruption(int a)
 	{
-		if (a > 0 && ResistLv(962) > 0 && EClass.rnd(ResistLv(962) + 1) != 0)
+		if (a > 0)
+		{
+			if (ResistLv(962) > 0 && EClass.rnd(ResistLv(962) + 1) != 0)
+			{
+				return;
+			}
+			int num = Evalue(412);
+			if (num != 0)
+			{
+				float num2 = (float)a * 100f / (float)Mathf.Max(100 + num * 2, 10);
+				a = (int)num2 + ((EClass.rndf(1f) > num2 % 1f) ? 1 : 0);
+			}
+		}
+		if (a == 0)
 		{
 			return;
 		}
-		int num = (corruption + a) / 100 - corruption / 100;
-		for (int i = 0; i < Mathf.Abs(num); i++)
+		int num3 = (corruption + a) / 100 - corruption / 100;
+		for (int i = 0; i < Mathf.Abs(num3); i++)
 		{
-			if (!MutateRandom((num > 0) ? 1 : (-1), 100, ether: true))
+			if (!MutateRandom((num3 > 0) ? 1 : (-1), 100, ether: true))
 			{
 				break;
 			}
 		}
 		corruption += a;
-		int num2 = 0;
+		int num4 = 0;
 		foreach (Element value in elements.dict.Values)
 		{
 			if (value.source.category == "ether")
 			{
-				num2 += value.Value;
+				num4 += value.Value;
 			}
 		}
-		if (num2 > 0 && IsPC)
+		if (num4 > 0 && IsPC)
 		{
 			Tutorial.Reserve("ether");
 		}
-		corruption = num2 * 100 + corruption % 100;
+		corruption = num4 * 100 + corruption % 100;
 	}
 
 	public List<Element> ListAvailabeFeats(bool pet = false, bool showAll = false)

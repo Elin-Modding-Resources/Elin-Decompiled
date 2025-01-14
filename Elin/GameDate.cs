@@ -252,7 +252,11 @@ public class GameDate : Date
 		ShippingResult shippingResult = new ShippingResult();
 		shippingResult.rawDate = EClass.world.date.GetRaw();
 		shippingResult.uidZone = zone.uid;
-		shippingResult.total = EClass.player.stats.shipMoney;
+		if (EClass.player.stats.shipMoney < 0)
+		{
+			EClass.player.stats.shipMoney = 2147483647L;
+		}
+		shippingResult.total = (int)EClass.player.stats.shipMoney;
 		shippingResult.hearthLv = zone.branch.lv;
 		shippingResult.hearthExp = zone.branch.exp;
 		shippingResult.debt = EClass.player.debt;

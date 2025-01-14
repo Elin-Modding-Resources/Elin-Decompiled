@@ -121,6 +121,10 @@ public class GameUpdater : EClass
 						cell.decal = 0;
 					}
 				}
+				if (EClass.rnd(30) == 0 && cell.decal != 0 && !pos.IsInBounds)
+				{
+					cell.decal = 0;
+				}
 				x++;
 				if (x >= Size)
 				{

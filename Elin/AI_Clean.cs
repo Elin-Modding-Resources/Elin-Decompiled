@@ -25,7 +25,7 @@ public class AI_Clean : AIAct
 				{
 					continue;
 				}
-				if (point.HasDirt || point.cell.HasLiquid)
+				if ((point.HasDirt && !EClass._map.config.retainDecal) || point.cell.HasLiquid)
 				{
 					return point;
 				}

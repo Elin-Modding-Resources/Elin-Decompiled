@@ -5,6 +5,8 @@ public class WidgetMemo : Widget
 {
 	public static WidgetMemo Instance;
 
+	public int id;
+
 	public InputField input;
 
 	public Window window;
@@ -23,7 +25,7 @@ public class WidgetMemo : Widget
 
 	public override void OnActivate()
 	{
-		input.text = EMono.player.memo;
+		input.text = ((id == 0) ? EMono.player.memo : EMono.player.memo2);
 		buttonEdit.SetOnClick(delegate
 		{
 			ToggleInput(!input.isFocused);
@@ -33,7 +35,7 @@ public class WidgetMemo : Widget
 
 	public override void OnDeactivate()
 	{
-		EMono.player.memo = input.text;
+		SaveText();
 	}
 
 	public void ToggleInput(bool enable)
@@ -50,7 +52,19 @@ public class WidgetMemo : Widget
 
 	public override void OnUpdateConfig()
 	{
-		EMono.player.memo = input.text;
+		SaveText();
+	}
+
+	public void SaveText()
+	{
+		if (id == 0)
+		{
+			EMono.player.memo = input.text;
+		}
+		else
+		{
+			EMono.player.memo2 = input.text;
+		}
 	}
 
 	private void Update()

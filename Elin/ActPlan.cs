@@ -740,6 +740,20 @@ public class ActPlan : EClass
 										return true;
 									}, t);
 								}
+								if (t.trait.CanName)
+								{
+									TrySetAct("changeName", delegate
+									{
+										Dialog.InputName("dialogChangeName", t.c_refText.IsEmpty(""), delegate(bool cancel, string text)
+										{
+											if (!cancel)
+											{
+												t.c_refText = text;
+											}
+										});
+										return false;
+									}, t);
+								}
 							}
 						}
 						if (isKey)

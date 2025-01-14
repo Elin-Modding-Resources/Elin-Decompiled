@@ -134,22 +134,22 @@ public class WidgetSearch : WidgetCodex
 						newCards.Add(thing2);
 					}
 				}
-				foreach (Card value in EMono._map.props.stocked.all.Values)
+				foreach (Card item in EMono._map.props.stocked.all)
 				{
-					if (!(value.parent is Thing { c_lockLv: <=0, IsContainer: not false }))
+					if (!(item.parent is Thing { c_lockLv: <=0, IsContainer: not false }))
 					{
 						continue;
 					}
 					if (encSearch)
 					{
-						if (value.MatchEncSearch(s))
+						if (item.MatchEncSearch(s))
 						{
-							newCards.Add(value);
+							newCards.Add(item);
 						}
 					}
-					else if (value.Name.ToLower().Contains(s) || value.sourceCard.GetSearchName(jp: false).Contains(s))
+					else if (item.Name.ToLower().Contains(s) || item.sourceCard.GetSearchName(jp: false).Contains(s))
 					{
-						newCards.Add(value);
+						newCards.Add(item);
 					}
 				}
 			}

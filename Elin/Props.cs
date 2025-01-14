@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -61,6 +62,14 @@ public class Props : EClass
 
 	public void Add(Card t)
 	{
+		if (all.Contains(t))
+		{
+			Debug.Log(t.props);
+			Debug.Log(t.parent);
+			Debug.Log(things.Contains(t) + "/" + cardMap.ContainsKey(t.id));
+			Debug.LogError(t?.ToString() + " alreadin in " + this);
+			return;
+		}
 		if (t.props != null)
 		{
 			t.props.Remove(t);
@@ -78,11 +87,6 @@ public class Props : EClass
 			{
 				EClass._map.Stocked.Add(thing);
 			}
-		}
-		if (all.Contains(t))
-		{
-			Debug.LogError(t?.ToString() + " alreadin in " + this);
-			return;
 		}
 		weight += t.Num;
 		all.Add(t);
@@ -187,11 +191,11 @@ public class Props : EClass
 		{
 			return null;
 		}
-		foreach (Card value in propSet.Values)
+		foreach (Card item in propSet)
 		{
-			if (value.idMaterial == idMat)
+			if (item.idMaterial == idMat)
 			{
-				return value as Thing;
+				return item as Thing;
 			}
 		}
 		return null;
@@ -236,12 +240,12 @@ public class Props : EClass
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
 			{
-				foreach (Card value in cardMap.GetOrCreate(id).Values)
+				foreach (Card item3 in cardMap.GetOrCreate(id))
 				{
-					Card obj = value.parent as Card;
+					Card obj = item3.parent as Card;
 					if (obj != null && obj.c_lockLv == 0)
 					{
-						TryAdd(value.Thing);
+						TryAdd(item3.Thing);
 					}
 				}
 			}
@@ -375,10 +379,10 @@ public class Props : EClass
 
 	public Thing Find(string id, int idMat = -1, int refVal = -1, bool shared = false)
 	{
-		Dictionary<int, Card>.ValueCollection valueCollection = cardMap.TryGetValue(id)?.Values;
-		if (valueCollection != null)
+		PropSet propSet = cardMap.TryGetValue(id);
+		if (propSet != null)
 		{
-			foreach (Card item in valueCollection)
+			foreach (Card item in propSet)
 			{
 				if ((!shared || item.parent is Thing { IsSharedContainer: not false }) && (idMat == -1 || item.material.id == idMat) && (refVal == -1 || item.refVal == refVal))
 				{
@@ -392,11 +396,11 @@ public class Props : EClass
 	public int GetNum(string id, bool onlyShared = false)
 	{
 		int num = 0;
-		foreach (Card value in cardMap.GetOrCreate(id).Values)
+		foreach (Card item in cardMap.GetOrCreate(id))
 		{
-			if (!onlyShared || (value.parentThing != null && value.parentThing.IsSharedContainer))
+			if (!onlyShared || (item.parentThing != null && item.parentThing.IsSharedContainer))
 			{
-				num += value.Num;
+				num += item.Num;
 			}
 		}
 		return num;
@@ -412,9 +416,9 @@ public class Props : EClass
 		foreach (KeyValuePair<string, PropSet> item in cardMap)
 		{
 			int num = 0;
-			foreach (Card value in item.Value.Values)
+			foreach (Card item2 in item.Value)
 			{
-				num += value.Num;
+				num += item2.Num;
 			}
 			if (num != item.Value.num)
 			{

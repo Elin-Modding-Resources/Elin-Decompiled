@@ -114,6 +114,10 @@ public class ZoneEvent : EClass
 
 	public void Kill()
 	{
+		if (zone == null)
+		{
+			zone = EClass._zone;
+		}
 		zone.events.list.Remove(this);
 		OnKill();
 	}

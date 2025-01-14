@@ -203,6 +203,7 @@ public class ModManager : BaseModManager
 				}
 			}
 		}
+		ModUtil.OnModsActivated();
 		BaseModManager.isInitialized = true;
 		yield return new WaitForEndOfFrame();
 		onComplete?.Invoke();
@@ -215,6 +216,10 @@ public class ModManager : BaseModManager
 
 	public void SaveLoadOrder()
 	{
+		if (disableMod)
+		{
+			return;
+		}
 		List<string> list = new List<string>();
 		foreach (BaseModPackage package in packages)
 		{

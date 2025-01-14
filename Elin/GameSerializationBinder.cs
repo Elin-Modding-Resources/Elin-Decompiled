@@ -16,6 +16,11 @@ public class GameSerializationBinder : DefaultSerializationBinder, ISerializatio
 		{
 			Debug.LogError(ex.Message);
 			Debug.LogError(assemblyName + "/" + typeName);
+			if (ModUtil.fallbackTypes.ContainsKey(typeName))
+			{
+				Debug.Log(typeName + "/" + Type.GetType(ModUtil.fallbackTypes[typeName]));
+				return Type.GetType(ModUtil.fallbackTypes[typeName]);
+			}
 			if (typeName.Contains("Quest"))
 			{
 				return typeof(QuestDummy);

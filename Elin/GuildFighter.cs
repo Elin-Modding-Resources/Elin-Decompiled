@@ -38,7 +38,7 @@ public class GuildFighter : Guild
 
 	public bool ShowBounty(Chara c)
 	{
-		return false;
+		return true;
 	}
 
 	public bool HasBounty(Chara c)

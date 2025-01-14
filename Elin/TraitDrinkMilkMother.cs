@@ -64,15 +64,23 @@ public class TraitDrinkMilkMother : TraitDrinkMilk
 				c.Say("grow_adult", c);
 				c.PlaySound("mutation");
 				c.PlayEffect("mutation");
+				string id = c.id;
+				if (!(id == "putty_snow"))
+				{
+					if (id == "putty_snow_gold" && c.idSkin >= 1)
+					{
+						c.idSkin = 0;
+					}
+				}
+				else if (c.idSkin >= 4)
+				{
+					c.idSkin = (c.idSkin - 4) / 2;
+				}
 			}
 			else
 			{
 				c.Say("grow_baby", c);
 				c.PlaySound("ding_potential");
-				if (c.id == "putty_snow" && c.idSkin >= 4)
-				{
-					c.idSkin = 0;
-				}
 			}
 			c.PlayEffect("buff");
 			EClass.pc.ModExp(237, 100);

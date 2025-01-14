@@ -152,6 +152,10 @@ public class GameIO : EClass
 		Game.id = id;
 		GameIndex gameIndex = IO.LoadFile<GameIndex>(root + "/index.txt");
 		string path = root + "/game.txt";
+		foreach (KeyValuePair<string, string> fallbackType in gameIndex.fallbackTypes)
+		{
+			ModUtil.fallbackTypes[fallbackType.Key] = fallbackType.Value;
+		}
 		if (cloud)
 		{
 			gameIndex.cloud = true;

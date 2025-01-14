@@ -336,9 +336,8 @@ public class TileType : EClass
 			{
 				return HitResult.Invalid;
 			}
-			if (IsDoor && pos.HasWallOrFence && pos.cell.blockDir == 2)
+			if (IsDoor && !pos.HasWallOrFence)
 			{
-				return HitResult.Invalid;
 			}
 		}
 		else if (IsDoor)

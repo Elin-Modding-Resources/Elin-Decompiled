@@ -1,24 +1,19 @@
 using System.Collections.Generic;
 
-public class PropSet : Dictionary<int, Card>
+public class PropSet : HashSet<Card>
 {
 	public int num;
 
-	public void Add(Card c)
+	public new void Add(Card c)
 	{
 		ModNum(c.Num);
-		Add(c.uid, c);
+		base.Add(c);
 	}
 
-	public void Remove(Card c)
+	public new void Remove(Card c)
 	{
 		ModNum(-c.Num);
-		Remove(c.uid);
-	}
-
-	public bool Contains(Card c)
-	{
-		return ContainsKey(c.uid);
+		base.Remove(c);
 	}
 
 	public virtual void ModNum(int a)

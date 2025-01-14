@@ -440,6 +440,17 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.IsBelow(0, 23, 76))
+		{
+			QuestDebt questDebt = EClass.game.quests.Get<QuestDebt>();
+			if (questDebt != null && questDebt.stage == 6 && player.debt == 19530000)
+			{
+				EClass.pc.AddCard(ThingGen.Create("loytel_mart"));
+				EClass.pc.AddCard(ThingGen.Create("ticket_massage"));
+				player.debt = 19500000;
+				questDebt.stage = 5;
+			}
+		}
 		if (version.IsBelow(0, 23, 72))
 		{
 			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
