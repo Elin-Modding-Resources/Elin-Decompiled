@@ -8,8 +8,8 @@ var classLang =
       [ "CN", "classLang.html#ad7ad8362b2039eafb6faf37108395afea1c2903397d8833382673bab22aa8b937", null ]
     ] ],
     [ "_ChangeNum", "classLang.html#a66a72d143604f35bb107e8807921da4c", null ],
-    [ "_currency", "classLang.html#a6da9fa9a88fc88541c216e729e62c2a9", null ],
-    [ "_currency", "classLang.html#ac4d351cbb31a75d9f02e41d8e9c6dfb5", null ],
+    [ "_currency", "classLang.html#a42cf0e5de028db2d5a7b80e249575f6f", null ],
+    [ "_currency", "classLang.html#ad22a457cf8e8db9df95fc389e825d528", null ],
     [ "_gender", "classLang.html#a6e0870ce9c216c1469b3354e47524442", null ],
     [ "_Number", "classLang.html#a52e8b95cf3a94311985451a6bfa7475f", null ],
     [ "_rarity", "classLang.html#a39ace10124f41a64b71985a927a29b73", null ],

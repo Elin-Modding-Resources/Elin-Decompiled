@@ -474,7 +474,7 @@ var searchData=
   ['getshared_471',['GetShared',['../classPoint.html#a09e79e56b0410a4592cf0ad9d8389510',1,'Point']]],
   ['getsharedpoint_472',['GetSharedPoint',['../classCell.html#a4124b94883d90159edb1b04b03286a13',1,'Cell']]],
   ['getsheet_473',['GetSheet',['../classExcelBookImportSetting.html#a66fa6d3214f9e6d5e15da9d5711ecf8d',1,'ExcelBookImportSetting']]],
-  ['getshippingbonus_474',['GetShippingBonus',['../classPlayer_1_1Stats.html#aae3232260dc1866f38e3967f267cb9e2',1,'Player::Stats']]],
+  ['getshippingbonus_474',['GetShippingBonus',['../classPlayer_1_1Stats.html#a7ea7dd5fee508438475b04643b52a86d',1,'Player::Stats']]],
   ['getshitdestowner_475',['GetShitDestOwner',['../classInvOwner.html#a2e2a65b691213f0be1deef628ef2608e',1,'InvOwner']]],
   ['getsightradius_476',['GetSightRadius',['../classCard.html#a26e851f88238cf1e3f8deb09c1f3562f',1,'Card']]],
   ['getsimpletext_477',['GetSimpleText',['../classAM__EditMarker.html#a2f997eb0bae80f1111756dafe281291a',1,'AM_EditMarker.GetSimpleText()'],['../classActionMode.html#ac1669532b67eb4c925bef31d94ae05da',1,'ActionMode.GetSimpleText()']]],

@@ -1,5 +1,14 @@
 var NAVTREEINDEX47 =
 {
+"classContentConfigGame.html#a26ec5afb37f94e772074804c26214674":[1,0,336,26],
+"classContentConfigGame.html#a2c7079a8b269f6cc41bc8a41449a6d7d":[1,0,336,7],
+"classContentConfigGame.html#a3469fe6f6ff94ec48c1e317e3635bec2":[1,0,336,35],
+"classContentConfigGame.html#a3c40d2494aed328b8e7e70602047e036":[1,0,336,0],
+"classContentConfigGame.html#a42ee116ef3fd444a810c8d9a1ff1c74a":[1,0,336,15],
+"classContentConfigGame.html#a4634a5c025497cbcfed4613226153383":[1,0,336,10],
+"classContentConfigGame.html#a50328ca664090a34dec47b58ba56e476":[1,0,336,9],
+"classContentConfigGame.html#a54b049bbb2815f9710ce5facf065c7b1":[1,0,336,14],
+"classContentConfigGame.html#a55cdd7d15b503081237ba1c31079067c":[1,0,336,28],
 "classContentConfigGame.html#a5ef6b14da51e36976ea3756d4965c442":[1,0,336,5],
 "classContentConfigGame.html#a6603bf13d93490c525b285290d44b5f1":[1,0,336,32],
 "classContentConfigGame.html#a7664a7569c3886307c2b42d7cd181c14":[1,0,336,13],
@@ -240,14 +249,5 @@ var NAVTREEINDEX47 =
 "classContentRanking.html#af0062cdfc4b9195b869071f26b736590":[1,0,351,3],
 "classContentStatistics.html":[1,0,352],
 "classContentStatistics.html#a90db1d8b680c9cbca0244fb73a835fb3":[1,0,352,1],
-"classContentStatistics.html#abc4c95310fbe0a14b75adc05c522214c":[1,0,352,0],
-"classContentStatistics.html#aef992b109ca4bfa5cf44b5063f2423b1":[1,0,352,2],
-"classContentTactics.html":[1,0,353],
-"classContentTactics.html#a01a22d87c82b29d92061e1841493d056":[1,0,353,2],
-"classContentTactics.html#a03d53418f483f66d64a844f2a02814af":[1,0,353,17],
-"classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629":[1,0,353,11],
-"classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3":[1,0,353,23],
-"classContentTactics.html#a1840d136e97fbbc6311278364b022523":[1,0,353,19],
-"classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137":[1,0,353,18],
-"classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a":[1,0,353,1]
+"classContentStatistics.html#abc4c95310fbe0a14b75adc05c522214c":[1,0,352,0]
 };

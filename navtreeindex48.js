@@ -1,5 +1,14 @@
 var NAVTREEINDEX48 =
 {
+"classContentStatistics.html#aef992b109ca4bfa5cf44b5063f2423b1":[1,0,352,2],
+"classContentTactics.html":[1,0,353],
+"classContentTactics.html#a01a22d87c82b29d92061e1841493d056":[1,0,353,2],
+"classContentTactics.html#a03d53418f483f66d64a844f2a02814af":[1,0,353,17],
+"classContentTactics.html#a108e9d7c9a1f84ebb67d6322f9704629":[1,0,353,11],
+"classContentTactics.html#a11fca6bca66d2586e8a7dd38299ddce3":[1,0,353,23],
+"classContentTactics.html#a1840d136e97fbbc6311278364b022523":[1,0,353,19],
+"classContentTactics.html#a1a55b29d8baefefb744eef1c5ea99137":[1,0,353,18],
+"classContentTactics.html#a28ffab59ea01ac307481d7260ad7383a":[1,0,353,1],
 "classContentTactics.html#a2d740c033cd6ef58fb886f44dde41763":[1,0,353,10],
 "classContentTactics.html#a32d486eef902f2ff5110d0d13d0d5d32":[1,0,353,0],
 "classContentTactics.html#a4412bb4c44ceeb248f2477c42a15cb2c":[1,0,353,13],
@@ -240,14 +249,5 @@ var NAVTREEINDEX48 =
 "classCoreConfig_1_1GameConfig.html#a1485a5fa3e91f101c582082d221afe2a":[1,0,367,5,2],
 "classCoreConfig_1_1GameConfig.html#a15c50ca6a6dbf700cb30eb775d051698":[1,0,367,5,35],
 "classCoreConfig_1_1GameConfig.html#a179de9b21ee9a532f9358234e3669e2b":[1,0,367,5,30],
-"classCoreConfig_1_1GameConfig.html#a1823b4c0766f5fd71266bab513755463":[1,0,367,5,43],
-"classCoreConfig_1_1GameConfig.html#a18e75ca7663f56a932fe44b7c0d133bf":[1,0,367,5,29],
-"classCoreConfig_1_1GameConfig.html#a1d7c4a28696afd9cdb103bfac15c5f4b":[1,0,367,5,45],
-"classCoreConfig_1_1GameConfig.html#a20ae5dd93045d2bffb8b498bfe96cc7d":[1,0,367,5,33],
-"classCoreConfig_1_1GameConfig.html#a241904d9b6248f3731595c70bb257e60":[1,0,367,5,40],
-"classCoreConfig_1_1GameConfig.html#a25a470b11e54b17a01db5c55826e107f":[1,0,367,5,17],
-"classCoreConfig_1_1GameConfig.html#a2ff0d84f1cc4ac9ca107781293d4e951":[1,0,367,5,11],
-"classCoreConfig_1_1GameConfig.html#a33f3a6ccdef384df1758fe995c1985f5":[1,0,367,5,44],
-"classCoreConfig_1_1GameConfig.html#a389b48f450540295cb5e242822b0a915":[1,0,367,5,4],
-"classCoreConfig_1_1GameConfig.html#a3a8fb7a21661b622d451fee8db75fbd8":[1,0,367,5,28]
+"classCoreConfig_1_1GameConfig.html#a1823b4c0766f5fd71266bab513755463":[1,0,367,5,43]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.75</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
    </div>
   </td>
  </tr>
@@ -135,10 +135,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a7be6f383e9d5214b26e23b7d483abe8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e8b95cf3a94311985451a6bfa7475f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a52e8b95cf3a94311985451a6bfa7475f">_Number</a> (int a)</td></tr>
 <tr class="separator:a52e8b95cf3a94311985451a6bfa7475f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4d351cbb31a75d9f02e41d8e9c6dfb5"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#ac4d351cbb31a75d9f02e41d8e9c6dfb5">_currency</a> (int a, string IDCurrency)</td></tr>
-<tr class="separator:ac4d351cbb31a75d9f02e41d8e9c6dfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6da9fa9a88fc88541c216e729e62c2a9"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a6da9fa9a88fc88541c216e729e62c2a9">_currency</a> (int a, bool showUnit=false, int unitSize=14)</td></tr>
-<tr class="separator:a6da9fa9a88fc88541c216e729e62c2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22a457cf8e8db9df95fc389e825d528"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#ad22a457cf8e8db9df95fc389e825d528">_currency</a> (object a, string IDCurrency)</td></tr>
+<tr class="separator:ad22a457cf8e8db9df95fc389e825d528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42cf0e5de028db2d5a7b80e249575f6f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a42cf0e5de028db2d5a7b80e249575f6f">_currency</a> (object a, bool showUnit=false, int unitSize=14)</td></tr>
+<tr class="separator:a42cf0e5de028db2d5a7b80e249575f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14a43d614cfd7b532f5d52113e68d321"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a14a43d614cfd7b532f5d52113e68d321">_weight</a> (int a, int b, bool showUnit=true, int unitSize=0)</td></tr>
 <tr class="separator:a14a43d614cfd7b532f5d52113e68d321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0870ce9c216c1469b3354e47524442"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a6e0870ce9c216c1469b3354e47524442">_gender</a> (int id)</td></tr>
@@ -275,8 +275,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6da9fa9a88fc88541c216e729e62c2a9" name="a6da9fa9a88fc88541c216e729e62c2a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6da9fa9a88fc88541c216e729e62c2a9">&#9670;&#160;</a></span>_currency() <span class="overload">[1/2]</span></h2>
+<a id="a42cf0e5de028db2d5a7b80e249575f6f" name="a42cf0e5de028db2d5a7b80e249575f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42cf0e5de028db2d5a7b80e249575f6f">&#9670;&#160;</a></span>_currency() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +287,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">static string Lang._currency </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">object&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -317,7 +317,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00167">167</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  168</span>    {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{a:#,0}&quot;</span> + ((!showUnit) ? <span class="stringliteral">&quot;&quot;</span> : ((unitSize == 0) ? <span class="stringliteral">&quot;u_money&quot;</span>.lang(a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) : (<span class="stringliteral">&quot;&lt;size=&quot;</span> + unitSize + <span class="stringliteral">&quot;&gt; &quot;</span> + <span class="stringliteral">&quot;u_money&quot;</span>.lang(a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot;&lt;/size&gt;&quot;</span>)));</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{a:#,0}&quot;</span> + ((!showUnit) ? <span class="stringliteral">&quot;&quot;</span> : ((unitSize == 0) ? <span class="stringliteral">&quot;u_money&quot;</span>.lang(a?.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) : (<span class="stringliteral">&quot;&lt;size=&quot;</span> + unitSize + <span class="stringliteral">&quot;&gt; &quot;</span> + <span class="stringliteral">&quot;u_money&quot;</span>.lang(a?.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot;&lt;/size&gt;&quot;</span>)));</div>
 <div class="line"><span class="lineno">  170</span>    }</div>
 <div class="ttc" id="aSearchContext_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="SearchContext_8cs_source.html#l00086">SearchContext.cs:86</a></div></div>
 </div><!-- fragment -->
@@ -325,8 +325,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4d351cbb31a75d9f02e41d8e9c6dfb5" name="ac4d351cbb31a75d9f02e41d8e9c6dfb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4d351cbb31a75d9f02e41d8e9c6dfb5">&#9670;&#160;</a></span>_currency() <span class="overload">[2/2]</span></h2>
+<a id="ad22a457cf8e8db9df95fc389e825d528" name="ad22a457cf8e8db9df95fc389e825d528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22a457cf8e8db9df95fc389e825d528">&#9670;&#160;</a></span>_currency() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +337,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">static string Lang._currency </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">object&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -366,7 +366,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SearchContext_8cs_source.html#l00086">$</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l04644">Chara.ApplyDeathPenalty()</a>, <a class="el" href="AI__Shopping_8cs_source.html#l00149">AI_Shopping.Buy()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01104">FactionBranch.GetDailyIncome()</a>, <a class="el" href="FACTION_8cs_source.html#l00485">Faction.GetFactionSalary()</a>, <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Chara_8cs_source.html#l01142">Chara.GetName()</a>, <a class="el" href="FACTION_8cs_source.html#l00471">Faction.GetRankIncome()</a>, <a class="el" href="FACTION_8cs_source.html#l00457">Faction.GetResidentTax()</a>, <a class="el" href="QuestDebt_8cs_source.html#l00037">QuestDebt.GetTextProgress()</a>, <a class="el" href="FACTION_8cs_source.html#l00370">Faction.OnAdvanceMonth()</a>, <a class="el" href="InvOwner_8cs_source.html#l01733">InvOwner.OnWriteNote()</a>, <a class="el" href="InvOwner_8cs_source.html#l00135">InvOwner.Transaction.Process()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, <a class="el" href="PartialMapMenu_8cs_source.html#l00124">PartialMapMenu.Refresh()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00211">LayerDragGrid.RefreshCost()</a>, <a class="el" href="UIInventory_8cs_source.html#l01079">UIInventory.RefreshList()</a>, <a class="el" href="WindowChara_8cs_source.html#l00364">WindowChara.RefreshProfile()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="FACTION_8cs_source.html#l00531">Faction.SetTaxTooltip()</a>, and <a class="el" href="TraitSalesTag_8cs_source.html#l00045">TraitSalesTag.TrySetHeldAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l04644">Chara.ApplyDeathPenalty()</a>, <a class="el" href="AI__Shopping_8cs_source.html#l00149">AI_Shopping.Buy()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01104">FactionBranch.GetDailyIncome()</a>, <a class="el" href="FACTION_8cs_source.html#l00485">Faction.GetFactionSalary()</a>, <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Chara_8cs_source.html#l01142">Chara.GetName()</a>, <a class="el" href="FACTION_8cs_source.html#l00471">Faction.GetRankIncome()</a>, <a class="el" href="FACTION_8cs_source.html#l00457">Faction.GetResidentTax()</a>, <a class="el" href="QuestDebt_8cs_source.html#l00037">QuestDebt.GetTextProgress()</a>, <a class="el" href="FACTION_8cs_source.html#l00370">Faction.OnAdvanceMonth()</a>, <a class="el" href="InvOwner_8cs_source.html#l01740">InvOwner.OnWriteNote()</a>, <a class="el" href="InvOwner_8cs_source.html#l00135">InvOwner.Transaction.Process()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00085">LayerShippingResult.Refresh()</a>, <a class="el" href="PartialMapMenu_8cs_source.html#l00124">PartialMapMenu.Refresh()</a>, <a class="el" href="LayerDragGrid_8cs_source.html#l00211">LayerDragGrid.RefreshCost()</a>, <a class="el" href="UIInventory_8cs_source.html#l01079">UIInventory.RefreshList()</a>, <a class="el" href="WindowChara_8cs_source.html#l00364">WindowChara.RefreshProfile()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="FACTION_8cs_source.html#l00531">Faction.SetTaxTooltip()</a>, and <a class="el" href="TraitSalesTag_8cs_source.html#l00045">TraitSalesTag.TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -730,7 +730,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00663">SourceData&lt; T, T2 &gt;.GetList()</a>, and <a class="el" href="Lang_8cs_source.html#l00052">List</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00177">_gender()</a>, <a class="el" href="Chara_8cs_source.html#l02374">Chara._Move()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00383">AI_PlayMusic.Evaluate()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00913">AttackProcess.GetAttackText()</a>, <a class="el" href="Chara_8cs_source.html#l05951">Chara.GetHoverText()</a>, <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Cell_8cs_source.html#l01600">Cell.GetObjName()</a>, <a class="el" href="Zone_8cs_source.html#l02195">Zone.GetProfile()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00023">RankedZoneManager.GetRankText()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00056">ConBuffStats.GetText()</a>, <a class="el" href="AI__Shear_8cs_source.html#l00011">AI_Shear.GetText()</a>, <a class="el" href="AI__Slaughter_8cs_source.html#l00013">AI_Slaughter.GetText()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00303">BaseTaskHarvest.GetTextDifficulty()</a>, <a class="el" href="Religion_8cs_source.html#l00107">Religion.GetTextTemper()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00447">UICharaMaker.ListAge()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00431">UICharaMaker.ListGender()</a>, <a class="el" href="BaseArea_8cs_source.html#l00136">BaseArea.ListRoomNames()</a>, <a class="el" href="WidgetSearch_8cs_source.html#l00044">WidgetSearch.OnActivate()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00042">TraitBaseSpellbook.OnCreate()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00441">BaseListPeople.OnRefreshMenu()</a>, <a class="el" href="ActionMode_8cs_source.html#l00326">ActionMode.OnShowExtraHint()</a>, <a class="el" href="ListOwner_8cs_source.html#l00077">ListOwner&lt; T1, T2 &gt;.OnSwitchContent()</a>, <a class="el" href="Scene_8cs_source.html#l00352">Scene.OnUpdate()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="WindowChara_8cs_source.html#l00262">WindowChara.RefreshStatic()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00050">AI_PlayMusic.Run()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00072">UICharaMaker.SetChara()</a>, <a class="el" href="ButtonElement_8cs_source.html#l00166">ButtonElement.SetGrid()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00257">TraitBaseSpellbook.SetName()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01262">Window.SetTitles()</a>, <a class="el" href="Chara_8cs_source.html#l05141">Chara.UseAbility()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00271">FortuneRollData.WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00177">_gender()</a>, <a class="el" href="Chara_8cs_source.html#l02374">Chara._Move()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="GameLang_8cs_source.html#l00014">GameLang.ConvertDrama()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00383">AI_PlayMusic.Evaluate()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00913">AttackProcess.GetAttackText()</a>, <a class="el" href="Chara_8cs_source.html#l05962">Chara.GetHoverText()</a>, <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Cell_8cs_source.html#l01600">Cell.GetObjName()</a>, <a class="el" href="Zone_8cs_source.html#l02195">Zone.GetProfile()</a>, <a class="el" href="RankedZoneManager_8cs_source.html#l00023">RankedZoneManager.GetRankText()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00056">ConBuffStats.GetText()</a>, <a class="el" href="AI__Shear_8cs_source.html#l00011">AI_Shear.GetText()</a>, <a class="el" href="AI__Slaughter_8cs_source.html#l00013">AI_Slaughter.GetText()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00303">BaseTaskHarvest.GetTextDifficulty()</a>, <a class="el" href="Religion_8cs_source.html#l00107">Religion.GetTextTemper()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00970">Window.Init()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00447">UICharaMaker.ListAge()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00431">UICharaMaker.ListGender()</a>, <a class="el" href="BaseArea_8cs_source.html#l00136">BaseArea.ListRoomNames()</a>, <a class="el" href="WidgetSearch_8cs_source.html#l00044">WidgetSearch.OnActivate()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00042">TraitBaseSpellbook.OnCreate()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00441">BaseListPeople.OnRefreshMenu()</a>, <a class="el" href="ActionMode_8cs_source.html#l00326">ActionMode.OnShowExtraHint()</a>, <a class="el" href="ListOwner_8cs_source.html#l00077">ListOwner&lt; T1, T2 &gt;.OnSwitchContent()</a>, <a class="el" href="Scene_8cs_source.html#l00352">Scene.OnUpdate()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00139">UICharaMaker.Refresh()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="WindowChara_8cs_source.html#l00262">WindowChara.RefreshStatic()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00050">AI_PlayMusic.Run()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00072">UICharaMaker.SetChara()</a>, <a class="el" href="ButtonElement_8cs_source.html#l00166">ButtonElement.SetGrid()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00257">TraitBaseSpellbook.SetName()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01262">Window.SetTitles()</a>, <a class="el" href="Chara_8cs_source.html#l05141">Chara.UseAbility()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00271">FortuneRollData.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -863,7 +863,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00305">ModManager.ParseExtra()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00310">ModManager.ParseExtra()</a>.</p>
 
 </div>
 </div>
@@ -1503,7 +1503,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00024">24</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00305">ModManager.ParseExtra()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00310">ModManager.ParseExtra()</a>.</p>
 
 </div>
 </div>

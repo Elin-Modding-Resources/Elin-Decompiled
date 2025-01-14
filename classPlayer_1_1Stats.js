@@ -1,6 +1,6 @@
 var classPlayer_1_1Stats =
 [
-    [ "GetShippingBonus", "classPlayer_1_1Stats.html#aae3232260dc1866f38e3967f267cb9e2", null ],
+    [ "GetShippingBonus", "classPlayer_1_1Stats.html#a7ea7dd5fee508438475b04643b52a86d", null ],
     [ "allyDeath", "classPlayer_1_1Stats.html#ab85ff926e445e3a4aea392a745684295", null ],
     [ "days", "classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde", null ],
     [ "death", "classPlayer_1_1Stats.html#aba555ea8a12aa6e4d618808f692065ef", null ],
@@ -14,7 +14,7 @@ var classPlayer_1_1Stats =
     [ "lastShippingExpMax", "classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007", null ],
     [ "mins", "classPlayer_1_1Stats.html#a33ca9409d32b557741517b2dadbb261b", null ],
     [ "months", "classPlayer_1_1Stats.html#ae4d9783e4b5651150a5bdecf13cfe88a", null ],
-    [ "shipMoney", "classPlayer_1_1Stats.html#a4bbcac4e7aebe3476cb4551dfa1ab18a", null ],
+    [ "shipMoney", "classPlayer_1_1Stats.html#a778758bfa4852628a21aeec96e63aaec", null ],
     [ "shipNum", "classPlayer_1_1Stats.html#a26af85489ec34f4af572f643c8451776", null ],
     [ "sieges", "classPlayer_1_1Stats.html#a1e4e3dc54ded755b8680167260fc2b59", null ],
     [ "slept", "classPlayer_1_1Stats.html#adaca4df27fb8d6d32f47d9c3b579f464", null ],

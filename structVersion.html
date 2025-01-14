@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.75</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
    </div>
   </td>
  </tr>
@@ -329,7 +329,7 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Version_8cs_source.html#l00010">batch</a>, <a class="el" href="Version_8cs_source.html#l00006">major</a>, and <a class="el" href="Version_8cs_source.html#l00008">minor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l00702">Map.ExportMetaData()</a>, <a class="el" href="Version_8cs_source.html#l00096">GetHashCode()</a>, <a class="el" href="Version_8cs_source.html#l00031">IsBelow()</a>, <a class="el" href="Zone_8cs_source.html#l01004">Zone.OnVisit()</a>, <a class="el" href="ModManager_8cs_source.html#l00305">ModManager.ParseExtra()</a>, <a class="el" href="LangSetting_8cs_source.html#l00114">LangSetting.SetVersion()</a>, and <a class="el" href="Net_8cs_source.html#l00097">Net.UploadFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l00702">Map.ExportMetaData()</a>, <a class="el" href="Version_8cs_source.html#l00096">GetHashCode()</a>, <a class="el" href="Version_8cs_source.html#l00031">IsBelow()</a>, <a class="el" href="Zone_8cs_source.html#l01004">Zone.OnVisit()</a>, <a class="el" href="ModManager_8cs_source.html#l00310">ModManager.ParseExtra()</a>, <a class="el" href="LangSetting_8cs_source.html#l00114">LangSetting.SetVersion()</a>, and <a class="el" href="Net_8cs_source.html#l00097">Net.UploadFile()</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Version_8cs_source.html#l00016">16</a> of file <a class="el" href="Version_8cs_source.html">Version.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> ((<a class="code hl_variable" href="structVersion.html#adf377edf131724613b09e32587325479">minor</a> &gt;= 23) ? <span class="stringliteral">&quot;EA&quot;</span> : <span class="stringliteral">&quot;Beta&quot;</span>) + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="structVersion.html#adf377edf131724613b09e32587325479">minor</a> + <span class="stringliteral">&quot;.&quot;</span> + <a class="code hl_variable" href="structVersion.html#a15c79ef52d7a6e998ae1a96e43ab9fff">batch</a> + ((<a class="code hl_variable" href="structVersion.html#ab01dd89bb3e3497c5e7d3f649b22e3a4">fix</a> == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot; fix &quot;</span> + <a class="code hl_variable" href="structVersion.html#ab01dd89bb3e3497c5e7d3f649b22e3a4">fix</a>)) + (<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a> ? <span class="stringliteral">&quot;demo&quot;</span>.lang() : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> ((<a class="code hl_variable" href="structVersion.html#adf377edf131724613b09e32587325479">minor</a> &gt;= 23) ? <span class="stringliteral">&quot;EA&quot;</span> : <span class="stringliteral">&quot;Beta&quot;</span>) + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="structVersion.html#adf377edf131724613b09e32587325479">minor</a> + <span class="stringliteral">&quot;.&quot;</span> + <a class="code hl_variable" href="structVersion.html#a15c79ef52d7a6e998ae1a96e43ab9fff">batch</a> + ((<a class="code hl_variable" href="structVersion.html#ab01dd89bb3e3497c5e7d3f649b22e3a4">fix</a> == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot; Patch &quot;</span> + <a class="code hl_variable" href="structVersion.html#ab01dd89bb3e3497c5e7d3f649b22e3a4">fix</a>)) + (<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a> ? <span class="stringliteral">&quot;demo&quot;</span>.lang() : <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   19</span>    }</div>
 <div class="ttc" id="astructVersion_html_ab01dd89bb3e3497c5e7d3f649b22e3a4"><div class="ttname"><a href="structVersion.html#ab01dd89bb3e3497c5e7d3f649b22e3a4">Version.fix</a></div><div class="ttdeci">int fix</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00012">Version.cs:12</a></div></div>
 <div class="ttc" id="astructVersion_html_ae633012a534a727dfaa4035d90b14c2c"><div class="ttname"><a href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">Version.demo</a></div><div class="ttdeci">bool demo</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00014">Version.cs:14</a></div></div>

@@ -1,5 +1,14 @@
 var NAVTREEINDEX53 =
 {
+"classDepthEffect.html#aaff12c5abf3d48a77e775a942af3685d":[1,0,397,3],
+"classDepthEffect.html#af90f9f1ca323cf31e29a8032cca7f63d":[1,0,397,7],
+"classDepthEffect.html#afdf79abccfe3de57d8a207a64973c798":[1,0,397,0],
+"classDesignationList.html":[1,0,398],
+"classDesignationList.html#a15313adca75d83a5284d6e322dd685b1":[1,0,398,1],
+"classDesignationList.html#a5e197f3e260ea2cea7e03c18fa4c9099":[1,0,398,0],
+"classDesignationList.html#a749bf4c5cd27db3be45cfbf009f37c16":[1,0,398,3],
+"classDesignationList.html#ad088193eeba96130c0b9845a750ec48b":[1,0,398,4],
+"classDesignationList.html#ad20898b43f7c10ca95fbe5f44176031f":[1,0,398,2],
 "classDialog.html":[1,0,399],
 "classDialog.html#a02c03d4a2d3939d7a626729822d7990c":[1,0,399,36],
 "classDialog.html#a04bf9e674e96b5777228c12df85e48c6":[1,0,399,11],
@@ -240,14 +249,5 @@ var NAVTREEINDEX53 =
 "classDramaEventTalk.html#abeb2e80b9d6d34472f7aa5fdcb203cb5":[1,0,416,10],
 "classDramaEventTalk.html#ac5513c2eb5d49110bef39b71fa3eef79":[1,0,416,9],
 "classDramaEventTalk.html#ae471b19a0925d4e0b5ee44711d729e01":[1,0,416,12],
-"classDramaEventTalk.html#af1f366e6438612c3d337775cd14ca690":[1,0,416,4],
-"classDramaEventWait.html":[1,0,417],
-"classDramaEventWait.html#a370015726194526b4dd94d19b4b7f906":[1,0,417,0],
-"classDramaManager.html":[1,0,418],
-"classDramaManager.html#a0a7307506b86f2155c0d7bf151502e50":[1,0,418,26],
-"classDramaManager.html#a126ec4575827e234ecb66a76c4d1703f":[1,0,418,42],
-"classDramaManager.html#a1633b93119f3eda8725dc07a8d6095c2":[1,0,418,41],
-"classDramaManager.html#a190c1661e7e715937ca075f795a9ded6":[1,0,418,22],
-"classDramaManager.html#a19c6f7654a4a873ccb7a760eb36844f7":[1,0,418,36],
-"classDramaManager.html#a1c9c5f10dbb9fc93ed458bf4ccf73fa5":[1,0,418,1]
+"classDramaEventTalk.html#af1f366e6438612c3d337775cd14ca690":[1,0,416,4]
 };

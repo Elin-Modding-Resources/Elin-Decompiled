@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.75</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
    </div>
   </td>
  </tr>
@@ -375,7 +375,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
 <div class="line"><span class="lineno">   88</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00532">CardRenderer.IdleFrame()</a>, <a class="el" href="CharaActor_8cs_source.html#l00012">CharaActor.OnSetOwner()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00110">CharaRenderer.UpdatePosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00536">CardRenderer.IdleFrame()</a>, <a class="el" href="CharaActor_8cs_source.html#l00012">CharaActor.OnSetOwner()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00110">CharaRenderer.UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -404,16 +404,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCharaActorPCC.html#ad3845f60613404739f723751a3999c36">CharaActorPCC</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CardActor_8cs_source.html#l00278">278</a> of file <a class="el" href="CardActor_8cs_source.html">CardActor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>    {</div>
-<div class="line"><span class="lineno">  280</span>        <a class="code hl_class" href="classPoolManager.html">PoolManager</a>.<a class="code hl_function" href="classPoolManager.html#a0a0bb939dc982f63eb5706ce83ddf8c9">Despawn</a>(base.transform);</div>
-<div class="line"><span class="lineno">  281</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CardActor_8cs_source.html#l00286">286</a> of file <a class="el" href="CardActor_8cs_source.html">CardActor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>    {</div>
+<div class="line"><span class="lineno">  288</span>        <a class="code hl_class" href="classPoolManager.html">PoolManager</a>.<a class="code hl_function" href="classPoolManager.html#a0a0bb939dc982f63eb5706ce83ddf8c9">Despawn</a>(base.transform);</div>
+<div class="line"><span class="lineno">  289</span>    }</div>
 <div class="ttc" id="aclassPoolManager_html"><div class="ttname"><a href="classPoolManager.html">PoolManager</a></div><div class="ttdef"><b>Definition:</b> <a href="PoolManager_8cs_source.html#l00004">PoolManager.cs:5</a></div></div>
 <div class="ttc" id="aclassPoolManager_html_a0a0bb939dc982f63eb5706ce83ddf8c9"><div class="ttname"><a href="classPoolManager.html#a0a0bb939dc982f63eb5706ce83ddf8c9">PoolManager.Despawn</a></div><div class="ttdeci">static void Despawn(Component c)</div><div class="ttdef"><b>Definition:</b> <a href="PoolManager_8cs_source.html#l00128">PoolManager.cs:128</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PoolManager_8cs_source.html#l00128">PoolManager.Despawn()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00482">CardRenderer.KillActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00486">CardRenderer.KillActor()</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
 <div class="line"><span class="lineno">   96</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00548">CardRenderer.NextDir()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00552">CardRenderer.NextDir()</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
 <div class="line"><span class="lineno">   92</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00540">CardRenderer.NextFrame()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00110">CharaRenderer.UpdatePosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00544">CardRenderer.NextFrame()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00110">CharaRenderer.UpdatePosition()</a>.</p>
 
 </div>
 </div>
@@ -751,54 +751,62 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  226</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classCardActor.html#a6ec05445061598e0130b0614ff66b55b">type</a>)</div>
 <div class="line"><span class="lineno">  227</span>        {</div>
 <div class="line"><span class="lineno">  228</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCardActor.html#a03ce067a0b44254096b5528256515fbf">Type</a>.Canvas:</div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_property" href="classCard.html#ac0dd12eae6333cdc1cd858f9a3bbbb92">c_textureData</a> != <span class="keyword">null</span> &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>)</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a> == <span class="keyword">null</span> || !<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>)</div>
 <div class="line"><span class="lineno">  230</span>            {</div>
-<div class="line"><span class="lineno">  231</span>                sr2.sprite = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_function" href="classCard.html#a65c29e78e2e4033d7a90e6ac60045ce4">GetPaintSprite</a>();</div>
-<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitCanvas.html">TraitCanvas</a> traitCanvas)</div>
-<div class="line"><span class="lineno">  233</span>                {</div>
-<div class="line"><span class="lineno">  234</span>                    <a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.transform.SetLocalScale(traitCanvas.Scale, traitCanvas.Scale, 1f);</div>
-<div class="line"><span class="lineno">  235</span>                }</div>
-<div class="line"><span class="lineno">  236</span>            }</div>
-<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCardActor.html#a03ce067a0b44254096b5528256515fbf">Type</a>.Boat:</div>
-<div class="line"><span class="lineno">  239</span>            <a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.SetActive(<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_property" href="classCell.html#a4aa6bc692d83b7d516ca0bf55453f82a">IsFloorWater</a>);</div>
-<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCardActor.html#a03ce067a0b44254096b5528256515fbf">Type</a>.MultiSprite:</div>
-<div class="line"><span class="lineno">  242</span>            sr2.sprite = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_function" href="classCard.html#a9425ca0f611875f348af4f663829b963">GetSprite</a>();</div>
-<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  244</span>        }</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordtype">int</span> dir = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
-<div class="line"><span class="lineno">  246</span>        SpriteRenderer spriteRenderer = <a class="code hl_variable" href="classCardActor.html#a3de5f9882941311a771357dc5ec04a35">sr</a>;</div>
-<div class="line"><span class="lineno">  247</span>        Sprite sprite2 = (sr.sprite = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_function" href="classCard.html#a9425ca0f611875f348af4f663829b963">GetSprite</a>(dir));</div>
-<div class="line"><span class="lineno">  248</span>        Sprite sprite4 = (spriteRenderer.sprite = sprite2);</div>
-<div class="line"><span class="lineno">  249</span>        Sprite sprite5 = sprite4;</div>
-<div class="line"><span class="lineno">  250</span>        sr.flipX = dir == 1 || dir == 3;</div>
-<div class="line"><span class="lineno">  251</span>        <a class="code hl_variable" href="classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d">mpb</a>.SetTexture(<span class="stringliteral">&quot;_MainTex&quot;</span>, sprite5.texture);</div>
-<div class="line"><span class="lineno">  252</span>        Vector4 value = <span class="keyword">new</span> Vector4(sprite5.textureRect.min.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.min.y / (<span class="keywordtype">float</span>)sprite5.texture.height, sprite5.textureRect.max.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.max.y / (<span class="keywordtype">float</span>)sprite5.texture.height);</div>
-<div class="line"><span class="lineno">  253</span>        <a class="code hl_variable" href="classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d">mpb</a>.SetVector(<span class="stringliteral">&quot;_Rect&quot;</span>, value);</div>
-<div class="line"><span class="lineno">  254</span>        <a class="code hl_variable" href="classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d">mpb</a>.SetFloat(<span class="stringliteral">&quot;_PixelHeight&quot;</span>, sprite5.rect.height);</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>)</div>
-<div class="line"><span class="lineno">  256</span>        {</div>
-<div class="line"><span class="lineno">  257</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  258</span>        }</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.sprite &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.sprite.texture)</div>
-<div class="line"><span class="lineno">  260</span>        {</div>
-<div class="line"><span class="lineno">  261</span>            sr2.flipX = dir == 1 || dir == 3;</div>
-<div class="line"><span class="lineno">  262</span>            sprite5 = <a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.sprite;</div>
-<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite5)</div>
-<div class="line"><span class="lineno">  264</span>            {</div>
-<div class="line"><span class="lineno">  265</span>                _ = sprite5.textureRect;</div>
-<div class="line"><span class="lineno">  266</span>                value = <span class="keyword">new</span> Vector4(sprite5.textureRect.min.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.min.y / (<span class="keywordtype">float</span>)sprite5.texture.height, sprite5.textureRect.max.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.max.y / (<span class="keywordtype">float</span>)sprite5.texture.height);</div>
-<div class="line"><span class="lineno">  267</span>                <a class="code hl_variable" href="classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090">mpb2</a>.SetTexture(<span class="stringliteral">&quot;_MainTex&quot;</span>, sprite5.texture);</div>
-<div class="line"><span class="lineno">  268</span>                <a class="code hl_variable" href="classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090">mpb2</a>.SetVector(<span class="stringliteral">&quot;_Rect&quot;</span>, value);</div>
-<div class="line"><span class="lineno">  269</span>                <a class="code hl_variable" href="classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090">mpb2</a>.SetFloat(<span class="stringliteral">&quot;_PixelHeight&quot;</span>, sprite5.rect.height);</div>
-<div class="line"><span class="lineno">  270</span>            }</div>
-<div class="line"><span class="lineno">  271</span>        }</div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  273</span>        {</div>
-<div class="line"><span class="lineno">  274</span>            sr2.sprite = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  275</span>        }</div>
-<div class="line"><span class="lineno">  276</span>    }</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  232</span>            }</div>
+<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_property" href="classCard.html#ac0dd12eae6333cdc1cd858f9a3bbbb92">c_textureData</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  234</span>            {</div>
+<div class="line"><span class="lineno">  235</span>                sr2.sprite = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_function" href="classCard.html#a65c29e78e2e4033d7a90e6ac60045ce4">GetPaintSprite</a>();</div>
+<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitCanvas.html">TraitCanvas</a> traitCanvas)</div>
+<div class="line"><span class="lineno">  237</span>                {</div>
+<div class="line"><span class="lineno">  238</span>                    <a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.transform.SetLocalScale(traitCanvas.Scale, traitCanvas.Scale, 1f);</div>
+<div class="line"><span class="lineno">  239</span>                }</div>
+<div class="line"><span class="lineno">  240</span>            }</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                sr2.sprite = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  244</span>            }</div>
+<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCardActor.html#a03ce067a0b44254096b5528256515fbf">Type</a>.Boat:</div>
+<div class="line"><span class="lineno">  247</span>            <a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.SetActive(<a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_property" href="classCard.html#ac8177cb488f20ad46a59a35c19eb1ae2">Cell</a>.<a class="code hl_property" href="classCell.html#a4aa6bc692d83b7d516ca0bf55453f82a">IsFloorWater</a>);</div>
+<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCardActor.html#a03ce067a0b44254096b5528256515fbf">Type</a>.MultiSprite:</div>
+<div class="line"><span class="lineno">  250</span>            sr2.sprite = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_function" href="classCard.html#a9425ca0f611875f348af4f663829b963">GetSprite</a>();</div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">int</span> dir = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
+<div class="line"><span class="lineno">  254</span>        SpriteRenderer spriteRenderer = <a class="code hl_variable" href="classCardActor.html#a3de5f9882941311a771357dc5ec04a35">sr</a>;</div>
+<div class="line"><span class="lineno">  255</span>        Sprite sprite2 = (sr.sprite = <a class="code hl_variable" href="classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8">owner</a>.<a class="code hl_function" href="classCard.html#a9425ca0f611875f348af4f663829b963">GetSprite</a>(dir));</div>
+<div class="line"><span class="lineno">  256</span>        Sprite sprite4 = (spriteRenderer.sprite = sprite2);</div>
+<div class="line"><span class="lineno">  257</span>        Sprite sprite5 = sprite4;</div>
+<div class="line"><span class="lineno">  258</span>        sr.flipX = dir == 1 || dir == 3;</div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_variable" href="classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d">mpb</a>.SetTexture(<span class="stringliteral">&quot;_MainTex&quot;</span>, sprite5.texture);</div>
+<div class="line"><span class="lineno">  260</span>        Vector4 value = <span class="keyword">new</span> Vector4(sprite5.textureRect.min.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.min.y / (<span class="keywordtype">float</span>)sprite5.texture.height, sprite5.textureRect.max.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.max.y / (<span class="keywordtype">float</span>)sprite5.texture.height);</div>
+<div class="line"><span class="lineno">  261</span>        <a class="code hl_variable" href="classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d">mpb</a>.SetVector(<span class="stringliteral">&quot;_Rect&quot;</span>, value);</div>
+<div class="line"><span class="lineno">  262</span>        <a class="code hl_variable" href="classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d">mpb</a>.SetFloat(<span class="stringliteral">&quot;_PixelHeight&quot;</span>, sprite5.rect.height);</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>)</div>
+<div class="line"><span class="lineno">  264</span>        {</div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.sprite &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.sprite.texture)</div>
+<div class="line"><span class="lineno">  268</span>        {</div>
+<div class="line"><span class="lineno">  269</span>            sr2.flipX = dir == 1 || dir == 3;</div>
+<div class="line"><span class="lineno">  270</span>            sprite5 = <a class="code hl_variable" href="classCardActor.html#a64a6e18f6fb7b29aa7c34cc665dbe698">sr2</a>.sprite;</div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite5)</div>
+<div class="line"><span class="lineno">  272</span>            {</div>
+<div class="line"><span class="lineno">  273</span>                _ = sprite5.textureRect;</div>
+<div class="line"><span class="lineno">  274</span>                value = <span class="keyword">new</span> Vector4(sprite5.textureRect.min.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.min.y / (<span class="keywordtype">float</span>)sprite5.texture.height, sprite5.textureRect.max.x / (<span class="keywordtype">float</span>)sprite5.texture.width, sprite5.textureRect.max.y / (<span class="keywordtype">float</span>)sprite5.texture.height);</div>
+<div class="line"><span class="lineno">  275</span>                <a class="code hl_variable" href="classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090">mpb2</a>.SetTexture(<span class="stringliteral">&quot;_MainTex&quot;</span>, sprite5.texture);</div>
+<div class="line"><span class="lineno">  276</span>                <a class="code hl_variable" href="classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090">mpb2</a>.SetVector(<span class="stringliteral">&quot;_Rect&quot;</span>, value);</div>
+<div class="line"><span class="lineno">  277</span>                <a class="code hl_variable" href="classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090">mpb2</a>.SetFloat(<span class="stringliteral">&quot;_PixelHeight&quot;</span>, sprite5.rect.height);</div>
+<div class="line"><span class="lineno">  278</span>            }</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            sr2.sprite = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  283</span>        }</div>
+<div class="line"><span class="lineno">  284</span>    }</div>
 <div class="ttc" id="aclassCard_html_a65c29e78e2e4033d7a90e6ac60045ce4"><div class="ttname"><a href="classCard.html#a65c29e78e2e4033d7a90e6ac60045ce4">Card.GetPaintSprite</a></div><div class="ttdeci">Sprite GetPaintSprite()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06073">Card.cs:6073</a></div></div>
 <div class="ttc" id="aclassCard_html_a9425ca0f611875f348af4f663829b963"><div class="ttname"><a href="classCard.html#a9425ca0f611875f348af4f663829b963">Card.GetSprite</a></div><div class="ttdeci">virtual Sprite GetSprite(int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05134">Card.cs:5134</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00049">Card.cs:49</a></div></div>
@@ -810,7 +818,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l01781">Card.c_textureData</a>, <a class="el" href="Card_8cs_source.html#l01907">Card.Cell</a>, <a class="el" href="Card_8cs_source.html#l00142">Card.dir</a>, <a class="el" href="Card_8cs_source.html#l06073">Card.GetPaintSprite()</a>, <a class="el" href="Card_8cs_source.html#l05134">Card.GetSprite()</a>, <a class="el" href="Cell_8cs_source.html#l00727">Cell.IsFloorWater</a>, <a class="el" href="CardActor_8cs_source.html#l00021">mpb</a>, <a class="el" href="CardActor_8cs_source.html#l00023">mpb2</a>, <a class="el" href="CardActor_8cs_source.html#l00013">owner</a>, <a class="el" href="CardActor_8cs_source.html#l00015">sr</a>, <a class="el" href="CardActor_8cs_source.html#l00017">sr2</a>, <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>, and <a class="el" href="CardActor_8cs_source.html#l00025">type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00370">CardRenderer.RefreshSprite()</a>, <a class="el" href="Card_8cs_source.html#l05345">Card.RenderMarker()</a>, and <a class="el" href="CardActor_8cs_source.html#l00048">SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00378">CardRenderer.RefreshSprite()</a>, <a class="el" href="Card_8cs_source.html#l05345">Card.RenderMarker()</a>, and <a class="el" href="CardActor_8cs_source.html#l00048">SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -884,7 +892,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EMono_8cs_source.html#l00035">EMono.Colors</a>, <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>, <a class="el" href="ColorProfile_8cs_source.html#l00107">ColorProfile.matColors</a>, <a class="el" href="Card_8cs_source.html#l01903">Card.material</a>, <a class="el" href="CardActor_8cs_source.html#l00021">mpb</a>, <a class="el" href="CardActor_8cs_source.html#l00023">mpb2</a>, <a class="el" href="Card_8cs_source.html#l01989">Card.Name</a>, <a class="el" href="CardActor_8cs_source.html#l00082">OnSetOwner()</a>, <a class="el" href="CardActor_8cs_source.html#l00013">owner</a>, <a class="el" href="CardActor_8cs_source.html#l00224">RefreshSprite()</a>, <a class="el" href="SpriteReplacerAnimation_8cs_source.html#l00034">SpriteReplacerAnimation.SetData()</a>, <a class="el" href="CardActor_8cs_source.html#l00015">sr</a>, <a class="el" href="CardActor_8cs_source.html#l00017">sr2</a>, <a class="el" href="CardActor_8cs_source.html#l00019">srAnime</a>, <a class="el" href="UDictionary_8cs_source.html#l00178">UDictionary&lt; TKey, TValue &gt;.TryGetValue()</a>, and <a class="el" href="CardActor_8cs_source.html#l00025">type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00378">CardRenderer.OnEnterScreen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00386">CardRenderer.OnEnterScreen()</a>.</p>
 
 </div>
 </div>

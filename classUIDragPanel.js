@@ -14,6 +14,7 @@ var classUIDragPanel =
     [ "bound", "classUIDragPanel.html#a5d505ef39436354da4432e747de27f64", null ],
     [ "clamp", "classUIDragPanel.html#aec47ee41190f40bd1371c25b9da3af4a", null ],
     [ "container", "classUIDragPanel.html#adeca8ea504abc6ecc6373f158a773dac", null ],
+    [ "dragging", "classUIDragPanel.html#ad3ffe64ca974ff4eabb471fa89b103ee", null ],
     [ "enable", "classUIDragPanel.html#a64043cd70e4554875312b3adf9eb02b1", null ],
     [ "onDrag", "classUIDragPanel.html#a88e008a47d03d5d960c8275cd3aac482", null ],
     [ "originalLocalPointerPosition", "classUIDragPanel.html#ae6bcd7e60d4b538df351ef9b8f3ef2d1", null ],

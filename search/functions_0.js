@@ -12,7 +12,7 @@ var searchData=
   ['_5fcopydir_9',['_CopyDir',['../classIO.html#a6145f8140273a9c90e982bc52aab8851',1,'IO']]],
   ['_5fcreate_10',['_Create',['../classCharaGen.html#afb0b548308406a4b3309b1958723cc6e',1,'CharaGen._Create()'],['../classGame.html#a04c738690a3d2f0105f00fcaa52f1f27',1,'Game._Create()'],['../classLayerInventory.html#a15c6502e5efd90a12eca13ec373cdf4f',1,'LayerInventory._Create()'],['../classThingGen.html#a0692627f83635ee2d88cbc15235ba228',1,'ThingGen._Create()']]],
   ['_5fcreaterenderer_11',['_CreateRenderer',['../classChara.html#a6fb5cf442c222746306ffc3f86030d0f',1,'Chara._CreateRenderer()'],['../classCard.html#a512dd36bae12dc67bfa06a6a69aa51dc',1,'Card._CreateRenderer()']]],
-  ['_5fcurrency_12',['_currency',['../classLang.html#ac4d351cbb31a75d9f02e41d8e9c6dfb5',1,'Lang._currency(int a, string IDCurrency)'],['../classLang.html#a6da9fa9a88fc88541c216e729e62c2a9',1,'Lang._currency(int a, bool showUnit=false, int unitSize=14)']]],
+  ['_5fcurrency_12',['_currency',['../classLang.html#ad22a457cf8e8db9df95fc389e825d528',1,'Lang._currency(object a, string IDCurrency)'],['../classLang.html#a42cf0e5de028db2d5a7b80e249575f6f',1,'Lang._currency(object a, bool showUnit=false, int unitSize=14)']]],
   ['_5ffindpath_13',['_FindPath',['../classAlgorithms_1_1PathFinder.html#aee0064c49dd5a6c7360ba21290218c5d',1,'Algorithms::PathFinder']]],
   ['_5ffindzone_14',['_FindZone',['../classSpatial.html#ad663116f783c57d6757d55b5dd2b50fd',1,'Spatial']]],
   ['_5ffuncworkpoint_15',['_FuncWorkPoint',['../classAIWork.html#a8aa4d29ba23530f00d9251595b23ffa6',1,'AIWork']]],

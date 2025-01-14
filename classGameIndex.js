@@ -9,6 +9,7 @@ var classGameIndex =
     [ "deepest", "classGameIndex.html#a639995b305458f79d7091a9e20dc4555", null ],
     [ "difficulty", "classGameIndex.html#a83ba4f8177faeaa142fb2679094a199a", null ],
     [ "factionName", "classGameIndex.html#a067c1fe807ad4d218d5f22e5fd9757ab", null ],
+    [ "fallbackTypes", "classGameIndex.html#a9ef48ef9b78d2dcafe7e0d62c496d0f8", null ],
     [ "id", "classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9", null ],
     [ "idJob", "classGameIndex.html#a6639d33e2671d8dcdf67a56c294bfaa7", null ],
     [ "idPortrait", "classGameIndex.html#af607534c5c632b2538fe66f6205925be", null ],

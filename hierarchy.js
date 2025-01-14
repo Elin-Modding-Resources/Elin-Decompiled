@@ -209,6 +209,7 @@ var hierarchy =
     [ "DayData", "classDayData.html", null ],
     [ "CoreDebug.DebugCommand", "classCoreDebug_1_1DebugCommand.html", null ],
     [ "DefaultContractResolver", null, [
+      [ "GameContractResolver", "classGameContractResolver.html", null ],
       [ "ShouldSerializeContractResolver", "classShouldSerializeContractResolver.html", null ]
     ] ],
     [ "CoreRef.DefaultRoof", "classCoreRef_1_1DefaultRoof.html", null ],
@@ -225,9 +226,6 @@ var hierarchy =
     [ "Dice", "classDice.html", null ],
     [ "Dictionary", null, [
       [ "CardManager.GlobalCharaList", "classCardManager_1_1GlobalCharaList.html", null ],
-      [ "PropSet", "classPropSet.html", [
-        [ "PropSetCategory", "classPropSetCategory.html", null ]
-      ] ],
       [ "SpatialManager.GlobalSpatialList", "classSpatialManager_1_1GlobalSpatialList.html", null ],
       [ "TraitMap", "classTraitMap.html", null ],
       [ "TraitSet", "classTraitSet.html", null ]
@@ -1141,6 +1139,7 @@ var hierarchy =
               [ "Zone_Olvina", "classZone__Olvina.html", null ],
               [ "Zone_Palmia", "classZone__Palmia.html", null ],
               [ "Zone_SubTown", "classZone__SubTown.html", [
+                [ "Zone_Exile", "classZone__Exile.html", null ],
                 [ "Zone_Mifu", "classZone__Mifu.html", null ],
                 [ "Zone_Nefu", "classZone__Nefu.html", null ],
                 [ "Zone_Specwing", "classZone__Specwing.html", null ],
@@ -1643,6 +1642,7 @@ var hierarchy =
           [ "TraitGoodsCoin", "classTraitGoodsCoin.html", null ],
           [ "TraitHat", "classTraitHat.html", null ],
           [ "TraitItemProc", "classTraitItemProc.html", null ],
+          [ "TraitMannequin", "classTraitMannequin.html", null ],
           [ "TraitMaterialHammer", "classTraitMaterialHammer.html", null ],
           [ "TraitMod", "classTraitMod.html", [
             [ "TraitModRanged", "classTraitModRanged.html", null ],
@@ -1863,6 +1863,7 @@ var hierarchy =
         ] ],
         [ "TraitTorch", "classTraitTorch.html", [
           [ "TraitLight", "classTraitLight.html", [
+            [ "TraitLightAlwaysAnime", "classTraitLightAlwaysAnime.html", null ],
             [ "TraitLightSun", "classTraitLightSun.html", null ],
             [ "TraitSpotLight", "classTraitSpotLight.html", null ]
           ] ],
@@ -2007,7 +2008,10 @@ var hierarchy =
     [ "CoreConfig.GraphicSetting", "classCoreConfig_1_1GraphicSetting.html", null ],
     [ "SkinColorProfileEx.GroupColors", "classSkinColorProfileEx_1_1GroupColors.html", null ],
     [ "HashSet", null, [
-      [ "KnowledgeList< T >", "classKnowledgeList.html", null ]
+      [ "KnowledgeList< T >", "classKnowledgeList.html", null ],
+      [ "PropSet", "classPropSet.html", [
+        [ "PropSetCategory", "classPropSetCategory.html", null ]
+      ] ]
     ] ],
     [ "UIHighlight.Highlight", "classUIHighlight_1_1Highlight.html", null ],
     [ "HSLColor", "structHSLColor.html", null ],

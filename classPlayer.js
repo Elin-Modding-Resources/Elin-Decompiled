@@ -126,6 +126,7 @@ var classPlayer =
     [ "luckycoin", "classPlayer.html#a960909597b2f57b1d8888f52269a3620", null ],
     [ "mainWidgets", "classPlayer.html#ace998cd817f7f40663a1f8883d510953", null ],
     [ "memo", "classPlayer.html#a6cbd253420008666ef350e81e71854e1", null ],
+    [ "memo2", "classPlayer.html#acca637905a73924877bab1127594c2a8", null ],
     [ "nextMove", "classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8", null ],
     [ "nextZone", "classPlayer.html#a900d14e78e748e173d05608e6bf8e596", null ],
     [ "noRestocks", "classPlayer.html#a8b888156c24afecc60100b6c5d2ae27b", null ],
