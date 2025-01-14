@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class UIDragPanel : MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler, IDragHandler, IChangeResolution, IInitializePotentialDragHandler
 {
+	public static bool dragging;
+
 	private Vector2 originalLocalPointerPosition;
 
 	private Vector3 originalPanelLocalPosition;
@@ -58,14 +60,19 @@ public class UIDragPanel : MonoBehaviour, IPointerDownHandler, IEventSystemHandl
 			}
 			originalPanelLocalPosition = target.localPosition;
 			RectTransformUtility.ScreenPointToLocalPointInRectangle(container, data.position, data.pressEventCamera, out originalLocalPointerPosition);
+			dragging = true;
 		}
 	}
 
 	public void OnPointerUp(PointerEventData data)
 	{
-		if (enable && data.button == PointerEventData.InputButton.Left && axisY && axisX && autoAnchor)
+		if (enable && data.button == PointerEventData.InputButton.Left)
 		{
-			target.SetAnchor();
+			if (axisY && axisX && autoAnchor)
+			{
+				target.SetAnchor();
+			}
+			dragging = false;
 		}
 	}
 
