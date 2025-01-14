@@ -159,14 +159,14 @@ public class Lang
 		return $"{a:#,0}";
 	}
 
-	public static string _currency(int a, string IDCurrency)
+	public static string _currency(object a, string IDCurrency)
 	{
 		return ("u_currency_" + IDCurrency).lang($"{a:#,0}");
 	}
 
-	public static string _currency(int a, bool showUnit = false, int unitSize = 14)
+	public static string _currency(object a, bool showUnit = false, int unitSize = 14)
 	{
-		return $"{a:#,0}" + ((!showUnit) ? "" : ((unitSize == 0) ? "u_money".lang(a.ToString() ?? "") : ("<size=" + unitSize + "> " + "u_money".lang(a.ToString() ?? "") + "</size>")));
+		return $"{a:#,0}" + ((!showUnit) ? "" : ((unitSize == 0) ? "u_money".lang(a?.ToString() ?? "") : ("<size=" + unitSize + "> " + "u_money".lang(a?.ToString() ?? "") + "</size>")));
 	}
 
 	public static string _weight(int a, int b, bool showUnit = true, int unitSize = 0)

@@ -15,7 +15,7 @@ public struct Version
 
 	public string GetText()
 	{
-		return ((minor >= 23) ? "EA" : "Beta") + " " + minor + "." + batch + ((fix == 0) ? "" : (" fix " + fix)) + (demo ? "demo".lang() : "");
+		return ((minor >= 23) ? "EA" : "Beta") + " " + minor + "." + batch + ((fix == 0) ? "" : (" Patch " + fix)) + (demo ? "demo".lang() : "");
 	}
 
 	public int GetInt()

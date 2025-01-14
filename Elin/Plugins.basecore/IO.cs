@@ -338,6 +338,7 @@ public class IO
 
 	public static void DeleteDirectory(string path)
 	{
+		path = path.Replace("\\\\?\\", "");
 		if (Directory.Exists(path))
 		{
 			DirectoryInfo directoryInfo = new DirectoryInfo(path);
