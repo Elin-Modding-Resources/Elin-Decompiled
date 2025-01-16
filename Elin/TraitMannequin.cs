@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 public class TraitMannequin : TraitItem
 {
+	public override bool CanStack => false;
+
 	public override bool UseAltTiles => owner.things.Count > 0;
 
 	public override bool CanUseFromInventory => false;
@@ -58,6 +60,7 @@ public class TraitMannequin : TraitItem
 				}
 			}
 		}
+		owner.Dye((owner.things.Count > 0) ? owner.things[0].material : null);
 		SE.Equip();
 		return true;
 	}

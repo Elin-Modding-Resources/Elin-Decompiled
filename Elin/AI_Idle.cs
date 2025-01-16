@@ -626,10 +626,10 @@ public class AI_Idle : AIAct
 			{
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
-					Card card = p.FindThing<TraitBall>()?.owner;
-					if (card != null)
+					Card card2 = p.FindThing<TraitBall>()?.owner;
+					if (card2 != null)
 					{
-						owner.Pick(card.Thing);
+						owner.Pick(card2.Thing);
 					}
 				});
 			}
@@ -755,10 +755,10 @@ public class AI_Idle : AIAct
 		{
 			if (owner.id == "ashland" || owner.id == "fiama")
 			{
-				Trait trait = EClass._map.Installed.traits.restSpots.RandomItem();
-				if (trait != null)
+				Card card = EClass._map.Installed.traits.restSpots.RandomItem();
+				if (card != null)
 				{
-					yield return DoGotoSpot(trait.owner);
+					yield return DoGotoSpot(card);
 				}
 				else
 				{

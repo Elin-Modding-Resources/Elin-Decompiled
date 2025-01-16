@@ -1,5 +1,10 @@
 public class TraitNote : Trait
 {
+	public override bool CanStackTo(Thing to)
+	{
+		return owner.c_note == to.c_note;
+	}
+
 	public override void OnCreate(int lv)
 	{
 		if (GetParam(1) != null)

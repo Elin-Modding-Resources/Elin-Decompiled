@@ -6,7 +6,7 @@ public class TraitToolButcher : TraitTool
 	{
 		foreach (Chara chara in p.pos.Charas)
 		{
-			if (chara.IsPCParty || !chara.IsPCFaction)
+			if (!chara.IsPCFaction || chara.IsPC)
 			{
 				continue;
 			}

@@ -2,18 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class TraitSet : Dictionary<int, Card>
+public class TraitSet : HashSet<Card>
 {
-	public void Add(Card c)
-	{
-		Add(c.uid, c);
-	}
-
-	public void Remove(Card c)
-	{
-		Remove(c.uid);
-	}
-
 	public Trait GetRandom()
 	{
 		return this.RandomItem()?.trait;
@@ -30,11 +20,6 @@ public class TraitSet : Dictionary<int, Card>
 		{
 			return GetRandom();
 		}
-		return base.Values.Where(func).RandomItem()?.trait;
-	}
-
-	public bool Contains(Card c)
-	{
-		return ContainsKey(c.uid);
+		return this.Where(func).RandomItem()?.trait;
 	}
 }

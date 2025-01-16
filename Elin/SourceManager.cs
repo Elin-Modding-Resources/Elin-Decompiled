@@ -166,7 +166,7 @@ public class SourceManager : EMono
 		ACT.Init();
 		TimeTable.Init();
 		Element.ListAttackElements.Clear();
-		for (int j = 910; j < 925; j++)
+		for (int j = 910; j < 926; j++)
 		{
 			Element.ListAttackElements.Add(EMono.sources.elements.map[j]);
 		}

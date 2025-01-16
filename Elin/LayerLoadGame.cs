@@ -241,12 +241,12 @@ public class LayerLoadGame : ELayer
 			{
 				Dialog.YesNo("dialog_restoreWarning", delegate
 				{
+					GameIO.DeleteGame(idDest, cloud, deleteBackup: false);
+					IO.CopyDir(pathRoot + "/" + i.id, (cloud ? CorePath.RootSaveCloud : CorePath.RootSave) + "/" + idDest);
+					SE.WriteJournal();
+					Close();
 					Game.TryLoad(idDest, cloud, delegate
 					{
-						GameIO.DeleteGame(idDest, cloud, deleteBackup: false);
-						IO.CopyDir(pathRoot + "/" + i.id, (cloud ? CorePath.RootSaveCloud : CorePath.RootSave) + "/" + idDest);
-						SE.WriteJournal();
-						Close();
 						Game.Load(idDest, cloud);
 					});
 				});

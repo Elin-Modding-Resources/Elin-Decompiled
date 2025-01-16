@@ -1,16 +1,14 @@
 public class SKILL
 {
-	public const int tactics = 132;
-
-	public const int shield = 123;
-
 	public const int twowield = 131;
 
 	public const int twohand = 130;
 
-	public const int fireproof = 50;
+	public const int shield = 123;
 
-	public const int armorLight = 120;
+	public const int armorHeavy = 122;
+
+	public const int fireproof = 50;
 
 	public const int weaponBlunt = 111;
 
@@ -18,15 +16,17 @@ public class SKILL
 
 	public const int weaponCrossbow = 109;
 
+	public const int acidproof = 51;
+
+	public const int tactics = 132;
+
+	public const int armorLight = 120;
+
 	public const int marksman = 133;
 
-	public const int armorHeavy = 122;
+	public const int fishing = 245;
 
-	public const int eyeofmind = 134;
-
-	public const int parasite = 227;
-
-	public const int evasion = 150;
+	public const int strategy = 135;
 
 	public const int climbing = 242;
 
@@ -39,8 +39,6 @@ public class SKILL
 	public const int milking = 235;
 
 	public const int digging = 230;
-
-	public const int acidproof = 51;
 
 	public const int riding = 226;
 
@@ -58,7 +56,9 @@ public class SKILL
 
 	public const int evasionPlus = 151;
 
-	public const int strategy = 135;
+	public const int evasion = 150;
+
+	public const int eyeofmind = 134;
 
 	public const int PDR = 55;
 
@@ -66,7 +66,7 @@ public class SKILL
 
 	public const int evasionPerfect = 57;
 
-	public const int fishing = 245;
+	public const int life = 60;
 
 	public const int mana = 61;
 
@@ -124,13 +124,13 @@ public class SKILL
 
 	public const int weaponDagger = 107;
 
-	public const int life = 60;
+	public const int throwing = 108;
 
 	public const int CHA = 77;
 
 	public const int gathering = 250;
 
-	public const int throwing = 108;
+	public const int parasite = 227;
 
 	public const int blacksmith = 256;
 
@@ -184,7 +184,7 @@ public class SKILL
 
 	public const int resCut = 964;
 
-	public const int resDecay = 970;
+	public const int resImpact = 965;
 
 	public const int resDamage = 971;
 
@@ -196,7 +196,7 @@ public class SKILL
 
 	public const int eleMind = 914;
 
-	public const int resImpact = 965;
+	public const int resDecay = 970;
 
 	public const int eleLightning = 912;
 
@@ -220,8 +220,6 @@ public class SKILL
 
 	public const int cooking = 287;
 
-	public const int eleDarkness = 913;
-
 	public const int appraising = 289;
 
 	public const int anatomy = 290;
@@ -238,6 +236,8 @@ public class SKILL
 
 	public const int eleFire = 910;
 
+	public const int env = 313;
+
 	public const int disarmTrap = 293;
 
 	public const int fun = 312;
@@ -246,7 +246,7 @@ public class SKILL
 
 	public const int hygine = 310;
 
-	public const int env = 313;
+	public const int eleDarkness = 913;
 
 	public const int faith = 306;
 
@@ -258,26 +258,26 @@ public class SKILL
 
 	public const int controlmana = 302;
 
-	public const int meditation = 301;
-
 	public const int memorization = 307;
+
+	public const int meditation = 301;
 
 	public static readonly int[] IDS = new int[131]
 	{
-		132, 123, 131, 130, 50, 120, 111, 110, 109, 133,
-		122, 134, 227, 150, 242, 241, 240, 237, 235, 230,
-		51, 226, 225, 220, 210, 207, 200, 152, 151, 135,
-		55, 101, 57, 245, 61, 62, 64, 65, 66, 67,
+		131, 130, 123, 122, 50, 111, 110, 109, 51, 132,
+		120, 133, 245, 135, 242, 241, 240, 237, 235, 230,
+		226, 225, 220, 210, 207, 200, 152, 151, 150, 134,
+		55, 101, 57, 60, 61, 62, 64, 65, 66, 67,
 		68, 70, 71, 72, 73, 74, 75, 56, 76, 78,
 		79, 80, 90, 91, 92, 100, 102, 103, 104, 105,
-		106, 107, 60, 77, 250, 108, 256, 916, 917, 918,
+		106, 107, 108, 77, 250, 227, 256, 916, 917, 918,
 		919, 920, 921, 922, 923, 924, 925, 950, 951, 952,
 		953, 954, 955, 956, 957, 958, 959, 960, 961, 962,
-		963, 964, 970, 971, 972, 255, 915, 914, 965, 912,
+		963, 964, 965, 971, 972, 255, 915, 914, 970, 912,
 		257, 258, 259, 260, 261, 280, 281, 285, 286, 287,
-		913, 289, 290, 291, 292, 288, 300, 911, 910, 293,
-		312, 311, 310, 313, 306, 305, 304, 303, 302, 301,
-		307
+		289, 290, 291, 292, 288, 300, 911, 910, 313, 293,
+		312, 311, 310, 913, 306, 305, 304, 303, 302, 307,
+		301
 	};
 }
 public class Skill : Element

@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int hotspring = 756;
-
-	public const int blood = 755;
-
-	public const int nerve = 754;
-
 	public const int antidote = 753;
 
-	public const int cute = 752;
+	public const int blood = 755;
 
 	public const int rare = 751;
 
 	public const int comfort = 750;
+
+	public const int hotspring = 756;
+
+	public const int nerve = 754;
+
+	public const int cute = 752;
 
 	public const int _void = 0;
 
@@ -67,7 +67,7 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[30]
 	{
-		756, 755, 754, 753, 752, 751, 750, 0, 5, 1,
+		753, 755, 751, 750, 756, 754, 752, 0, 5, 1,
 		2, 3, 10, 11, 12, 13, 14, 16, 17, 18,
 		15, 21, 22, 23, 24, 25, 26, 29, 85, 20
 	};
@@ -903,12 +903,17 @@ public class Element : EClass
 		{
 			num = -2;
 		}
+		if (num > 4)
+		{
+			num = 4;
+		}
 		return num;
 	}
 
-	public static int GetResistDamage(int dmg, int v)
+	public static int GetResistDamage(int dmg, int v, int power = 0)
 	{
 		int resistLv = GetResistLv(v);
+		resistLv -= power;
 		if (resistLv >= 4)
 		{
 			return 0;

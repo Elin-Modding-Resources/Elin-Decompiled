@@ -256,7 +256,7 @@ public class GameDate : Date
 		{
 			EClass.player.stats.shipMoney = 2147483647L;
 		}
-		shippingResult.total = (int)EClass.player.stats.shipMoney;
+		shippingResult.total = EClass.player.stats.shipMoney;
 		shippingResult.hearthLv = zone.branch.lv;
 		shippingResult.hearthExp = zone.branch.exp;
 		shippingResult.debt = EClass.player.debt;

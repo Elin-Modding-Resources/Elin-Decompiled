@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ActMelee : ActBaseAttack
 {
@@ -119,7 +120,7 @@ public class ActMelee : ActBaseAttack
 		bool usedTalisman = false;
 		int count = 0;
 		int num = Act.CC.Dist(Act.TC);
-		Point obj = Act.TC.pos.Copy();
+		Point orgPos = Act.TC.pos.Copy();
 		foreach (BodySlot slot in Act.CC.body.slots)
 		{
 			if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
@@ -141,33 +142,73 @@ public class ActMelee : ActBaseAttack
 				ActRanged.TryReload(w);
 			}
 			int num2 = ((w != null) ? w.Evalue(606) : 0);
-			if (w != null)
+			int scatter = ((w != null) ? w.Evalue(607) : 0);
+			int chaser = ((w != null) ? w.Evalue(620) : 0);
+			if (Act.CC.IsPCFaction)
 			{
-				w.Evalue(607);
+				chaser += EClass.pc.faction.charaElements.Value(620);
 			}
 			List<Point> list = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
-			Attack(Act.TC, Act.TP);
+			Attack(Act.TC, Act.TP, 1f);
 			if (num2 > 0)
 			{
 				foreach (Point item in list)
 				{
-					if (!item.Equals(obj))
+					if (!item.Equals(orgPos))
 					{
 						Chara firstChara = item.FirstChara;
 						if (firstChara != null && firstChara.IsHostile(Act.CC))
 						{
-							Attack(firstChara, item);
+							Attack(firstChara, item, 1f);
 						}
 					}
 				}
 			}
-			count++;
-			void Attack(Card _tc, Point _tp)
+			else if (scatter > 0)
+			{
+				Act.TP.ForeachNeighbor(delegate(Point p)
+				{
+					if (!p.Equals(orgPos))
+					{
+						Chara firstChara2 = p.FirstChara;
+						if (firstChara2 != null && firstChara2.IsHostile(Act.CC))
+						{
+							Attack(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)));
+						}
+					}
+				});
+			}
+			int num3 = count;
+			count = num3 + 1;
+			void Attack(Card _tc, Point _tp, float mtp)
 			{
 				Act.TC = _tc;
 				Act.TP = _tp;
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
-				bool flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti, maxRoll);
+				int num4 = 1;
+				if (chaser > 0)
+				{
+					for (int i = 0; i < 10; i++)
+					{
+						if (chaser > EClass.rnd((int)Mathf.Pow(4f, i + 2)))
+						{
+							num4++;
+						}
+					}
+				}
+				bool flag2 = false;
+				for (int j = 0; j < num4; j++)
+				{
+					if (j > 0)
+					{
+						Msg.Say("attack_chaser");
+					}
+					flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll);
+					if (flag2)
+					{
+						break;
+					}
+				}
 				if (flag2)
 				{
 					hasHit = true;

@@ -38,9 +38,9 @@ public class DramaOutcome : EMono
 
 	public void PutOutFire()
 	{
-		foreach (Card value in EMono._map.props.installed.traits.GetTraitSet<TraitHearth>().Values)
+		foreach (Card item in EMono._map.props.installed.traits.GetTraitSet<TraitHearth>())
 		{
-			EMono._zone.AddCard(ThingGen.Create("dish_soup"), value.pos.GetRandomNeighbor());
+			EMono._zone.AddCard(ThingGen.Create("dish_soup"), item.pos.GetRandomNeighbor());
 		}
 	}
 

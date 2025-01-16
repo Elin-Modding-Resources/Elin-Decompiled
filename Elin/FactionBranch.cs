@@ -1421,6 +1421,7 @@ public class FactionBranch : EClass
 	{
 		c.ClearBed();
 		c.memberType = type;
+		c.c_wasInPcParty = false;
 		RefreshEfficiency();
 		c.RefreshWorkElements(elements);
 		policies.Validate();

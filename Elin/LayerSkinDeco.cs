@@ -77,6 +77,11 @@ public class LayerSkinDeco : ELayer
 					deco.reverse = a;
 					selected.Refresh();
 				});
+				i.AddToggle("placeBeforeWidget", deco.bottom, delegate(bool a)
+				{
+					deco.bottom = a;
+					selected.Refresh();
+				});
 				i.AddButton("removeDeco", delegate
 				{
 					widget.RemoveDeco(selected.owner);
@@ -151,6 +156,7 @@ public class LayerSkinDeco : ELayer
 			actor.transform.SetParent(widget.transform, worldPositionStays: true);
 			deco.x = (int)actor.Rect().anchoredPosition.x;
 			deco.y = (int)actor.Rect().anchoredPosition.y;
+			actor.Refresh();
 		}
 	}
 }

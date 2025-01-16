@@ -16,7 +16,17 @@ public class TraitChara : Trait
 
 	public virtual AI_Idle.Behaviour IdleBehaviour => AI_Idle.Behaviour.Default;
 
-	public virtual bool CanAutoRevive => owner.isImported;
+	public virtual bool CanAutoRevive
+	{
+		get
+		{
+			if (owner.isImported && !owner.isDestroyed)
+			{
+				return !owner.IsGlobal;
+			}
+			return false;
+		}
+	}
 
 	public virtual bool IsCitizen => false;
 

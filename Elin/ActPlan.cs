@@ -555,304 +555,313 @@ public class ActPlan : EClass
 					}
 				}
 			});
-			if (_pos.IsHidden || !IsSelfOrNeighbor)
+			if (_pos.IsHidden)
 			{
 				return;
 			}
-			items.ForeachReverse(delegate(Card _c)
+			if (IsSelfOrNeighbor)
 			{
-				Chara c = _c.Chara;
-				if (c != null)
+				items.ForeachReverse(delegate(Card _c)
 				{
-					bool flag3 = EClass.pc.CanSee(c);
-					if (flag3)
+					Chara c = _c.Chara;
+					if (c != null)
 					{
-						if (input == ActInput.LeftMouse && c.IsPCFaction && !c.IsPC && pos.FindThing<TraitHitchingPost>() != null)
+						bool flag3 = EClass.pc.CanSee(c);
+						if (flag3)
 						{
-							Chara ride = c;
-							List<string> list = EClass.core.pccs.sets["ride"].map["body"].map.Keys.ToList();
-							int index = list.IndexOf(ride.c_idRidePCC);
-							if (index == -1)
+							if (input == ActInput.LeftMouse && c.IsPCFaction && !c.IsPC && pos.FindThing<TraitHitchingPost>() != null)
 							{
-								index = 0;
-							}
-							TrySetAct("ActChangeRideSkin", delegate
-							{
-								UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
-								uIContextMenu.AddSlider("rideSkin", (float a) => list[(int)a].Split('-')[0] ?? "", index, delegate(float a)
+								Chara ride = c;
+								List<string> list = EClass.core.pccs.sets["ride"].map["body"].map.Keys.ToList();
+								int index = list.IndexOf(ride.c_idRidePCC);
+								if (index == -1)
 								{
-									ride.c_idRidePCC = list[(int)a];
-									ride._CreateRenderer();
-								}, 0f, list.Count - 1, isInt: true, hideOther: false);
-								uIContextMenu.Show();
-								return false;
-							}, c);
-						}
-						if (!c.IsPC && ((c.IsPCFaction && !c.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
-						{
-							TrySetAct("actTrade", delegate
-							{
-								LayerInventory.CreateContainer(c);
-								return false;
-							}, c);
-						}
-						if (c.host != null && EClass.pc.held != null && altAction)
-						{
-							bool flag4 = true;
-							if ((EClass.pc.held.trait is TraitThrown || EClass.pc.held.trait.IsTool) && !HotItemHeld.disableTool)
-							{
-								flag4 = false;
-							}
-							if (!c.IsDisabled && flag4 && c.CanAcceptGift(EClass.pc, EClass.pc.held))
-							{
-								string lang = "actGive";
-								if (c.Evalue(1232) > 0 && EClass.pc.held.trait is TraitDrinkMilkMother)
-								{
-									lang = "actMilk";
+									index = 0;
 								}
-								TrySetAct(lang, delegate
+								TrySetAct("ActChangeRideSkin", delegate
 								{
-									if (!c.IsValidGiftWeight(EClass.pc.held, 1))
+									UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
+									uIContextMenu.AddSlider("rideSkin", (float a) => list[(int)a].Split('-')[0] ?? "", index, delegate(float a)
 									{
-										c.Talk("tooHeavy");
-										return true;
-									}
-									if (EClass.core.config.game.confirmGive)
-									{
-										Dialog.YesNo("dialogGive".lang(EClass.pc.held.GetName(NameStyle.Full, 1)), func);
-									}
-									else
-									{
-										func();
-									}
-									return true;
-								}, c);
-							}
-						}
-					}
-					if (input == ActInput.AllAction && EClass.pc.held != null && EClass.pc.held.trait is TraitDrink)
-					{
-						TrySetAct(c.IsPC ? "actPour" : "ActThrow", delegate
-						{
-							ActThrow.Throw(EClass.pc, c.pos, c, EClass.pc.held.Split(1));
-							return true;
-						}, (c.host != null) ? c : EClass.pc.held);
-					}
-					if (!c.IsPC && c.host == null && ((!EClass.pc.isBlind && flag3) || input != ActInput.AllAction))
-					{
-						if (c.isRestrained && (input == ActInput.AllAction || (!c.IsRestrainedResident && !c.IsHostile())))
-						{
-							TrySetAct("ActUnrestrain", delegate
-							{
-								c.TryUnrestrain(force: true, EClass.pc);
-								return true;
-							}, c);
-						}
-						if (!EClass.pc.isBlind && flag3 && input == ActInput.AllAction)
-						{
-							TrySetAct(ACT.Kick, c);
-							if (c.IsMofuable)
-							{
-								TrySetAct("ActCuddle", delegate
-								{
-									EClass.pc.Cuddle(c);
-									return true;
-								}, c);
-							}
-							if (EClass.debug.showExtra)
-							{
-								TrySetAct("inspect", delegate
-								{
-									c.Inspect();
+										ride.c_idRidePCC = list[(int)a];
+										ride._CreateRenderer();
+									}, 0f, list.Count - 1, isInt: true, hideOther: false);
+									uIContextMenu.Show();
 									return false;
 								}, c);
 							}
-						}
-					}
-				}
-				else if (_c.isThing)
-				{
-					if (!EClass.pc.isBlind)
-					{
-						Thing t = _c.Thing;
-						if (input == ActInput.AllAction)
-						{
-							if ((EClass.debug.enable || EClass.player.HasKeyItem("license_illumination")) && t.LightData != null)
+							if (!c.IsPC && ((c.IsPCFaction && !c.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
 							{
-								if (t.c_lightColor != 0)
+								TrySetAct("actTrade", delegate
 								{
-									TrySetAct("actClearLight", delegate
-									{
-										t.c_lightColor = 0;
-										t.RecalculateFOV();
-										t.renderer.GetTC<TCExtra>()?.RefreshColor();
-										return false;
-									}, t);
-								}
-								TrySetAct("actSetLight", delegate
-								{
-									Color lightColor = t.LightColor;
-									EClass.ui.AddLayer<LayerColorPicker>().SetColor(lightColor, lightColor, delegate(PickerState state, Color _c)
-									{
-										t.c_lightColor = (byte)Mathf.Clamp(_c.r * 32f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(_c.g * 32f, 1f, 31f) * 32 + (byte)Mathf.Clamp(_c.b * 32f, 1f, 31f);
-										t.RecalculateFOV();
-										t.renderer.GetTC<TCExtra>()?.RefreshColor();
-									});
+									LayerInventory.CreateContainer(c);
 									return false;
-								}, t);
+								}, c);
 							}
-							if (EClass.debug.enable && pos.cell.IsTopWater)
+							if (c.host != null && EClass.pc.held != null && altAction)
 							{
-								TrySetAct("(debug) Toggle Float", delegate
+								bool flag4 = true;
+								if ((EClass.pc.held.trait is TraitThrown || EClass.pc.held.trait.IsTool) && !HotItemHeld.disableTool)
 								{
-									t.isFloating = !t.isFloating;
-									return false;
-								}, t);
-							}
-							if (!EClass._zone.IsUserZone || !t.isNPCProperty)
-							{
-								if (t.trait.CanEat(EClass.pc))
-								{
-									TrySetAct(new AI_Eat
-									{
-										target = t
-									}, t);
+									flag4 = false;
 								}
-								if (t.trait.CanDrink(EClass.pc))
+								if (!c.IsDisabled && flag4 && c.CanAcceptGift(EClass.pc, EClass.pc.held))
 								{
-									TrySetAct(new AI_Drink
+									string lang = "actGive";
+									if (c.Evalue(1232) > 0 && EClass.pc.held.trait is TraitDrinkMilkMother)
 									{
-										target = t
-									}, t);
-								}
-								if (t.trait.CanRead(EClass.pc))
-								{
-									TrySetAct(new AI_Read
+										lang = "actMilk";
+									}
+									TrySetAct(lang, delegate
 									{
-										target = t
-									}, t);
-								}
-								if (t.trait.IsBlendBase)
-								{
-									TrySetAct("invBlend", delegate
-									{
-										LayerDragGrid.Create(new InvOwnerBlend(t));
-										return true;
-									}, t);
-								}
-								if (t.trait.CanName)
-								{
-									TrySetAct("changeName", delegate
-									{
-										Dialog.InputName("dialogChangeName", t.c_refText.IsEmpty(""), delegate(bool cancel, string text)
+										if (!c.IsValidGiftWeight(EClass.pc.held, 1))
 										{
-											if (!cancel)
-											{
-												t.c_refText = text;
-											}
+											c.Talk("tooHeavy");
+											return true;
+										}
+										if (EClass.core.config.game.confirmGive)
+										{
+											Dialog.YesNo("dialogGive".lang(EClass.pc.held.GetName(NameStyle.Full, 1)), func);
+										}
+										else
+										{
+											func();
+										}
+										return true;
+									}, c);
+								}
+							}
+						}
+						if (input == ActInput.AllAction && EClass.pc.held != null && EClass.pc.held.trait is TraitDrink)
+						{
+							TrySetAct(c.IsPC ? "actPour" : "ActThrow", delegate
+							{
+								ActThrow.Throw(EClass.pc, c.pos, c, EClass.pc.held.Split(1));
+								return true;
+							}, (c.host != null) ? c : EClass.pc.held);
+						}
+						if (!c.IsPC && c.host == null && ((!EClass.pc.isBlind && flag3) || input != ActInput.AllAction))
+						{
+							if (c.isRestrained && (input == ActInput.AllAction || (!c.IsRestrainedResident && !c.IsHostile())))
+							{
+								TrySetAct("ActUnrestrain", delegate
+								{
+									c.TryUnrestrain(force: true, EClass.pc);
+									return true;
+								}, c);
+							}
+							if (!EClass.pc.isBlind && flag3 && input == ActInput.AllAction)
+							{
+								TrySetAct(ACT.Kick, c);
+								if (c.IsMofuable)
+								{
+									TrySetAct("ActCuddle", delegate
+									{
+										EClass.pc.Cuddle(c);
+										return true;
+									}, c);
+								}
+								if (EClass.debug.showExtra)
+								{
+									TrySetAct("inspect", delegate
+									{
+										c.Inspect();
+										return false;
+									}, c);
+								}
+							}
+						}
+					}
+					else if (_c.isThing)
+					{
+						if (!EClass.pc.isBlind)
+						{
+							Thing t = _c.Thing;
+							if (input == ActInput.AllAction)
+							{
+								if ((EClass.debug.enable || EClass.player.HasKeyItem("license_illumination")) && t.LightData != null)
+								{
+									if (t.c_lightColor != 0)
+									{
+										TrySetAct("actClearLight", delegate
+										{
+											t.c_lightColor = 0;
+											t.RecalculateFOV();
+											t.renderer.GetTC<TCExtra>()?.RefreshColor();
+											return false;
+										}, t);
+									}
+									TrySetAct("actSetLight", delegate
+									{
+										Color lightColor = t.LightColor;
+										EClass.ui.AddLayer<LayerColorPicker>().SetColor(lightColor, lightColor, delegate(PickerState state, Color _c)
+										{
+											t.c_lightColor = (byte)Mathf.Clamp(_c.r * 32f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(_c.g * 32f, 1f, 31f) * 32 + (byte)Mathf.Clamp(_c.b * 32f, 1f, 31f);
+											t.RecalculateFOV();
+											t.renderer.GetTC<TCExtra>()?.RefreshColor();
 										});
 										return false;
 									}, t);
 								}
+								if (EClass.debug.enable && pos.cell.IsTopWater)
+								{
+									TrySetAct("(debug) Toggle Float", delegate
+									{
+										t.isFloating = !t.isFloating;
+										return false;
+									}, t);
+								}
+								if (!EClass._zone.IsUserZone || !t.isNPCProperty)
+								{
+									if (t.trait.CanEat(EClass.pc))
+									{
+										TrySetAct(new AI_Eat
+										{
+											target = t
+										}, t);
+									}
+									if (t.trait.CanDrink(EClass.pc))
+									{
+										TrySetAct(new AI_Drink
+										{
+											target = t
+										}, t);
+									}
+									if (t.trait.CanRead(EClass.pc))
+									{
+										TrySetAct(new AI_Read
+										{
+											target = t
+										}, t);
+									}
+									if (t.trait.IsBlendBase)
+									{
+										TrySetAct("invBlend", delegate
+										{
+											LayerDragGrid.Create(new InvOwnerBlend(t));
+											return true;
+										}, t);
+									}
+									if (t.trait.CanName)
+									{
+										TrySetAct("changeName", delegate
+										{
+											Dialog.InputName("dialogChangeName", t.c_refText.IsEmpty(""), delegate(bool cancel, string text)
+											{
+												if (!cancel)
+												{
+													t.c_refText = text;
+												}
+											});
+											return false;
+										}, t);
+									}
+								}
 							}
-						}
-						if (isKey)
-						{
-							_ = t.trait.CanBeAttacked;
-						}
-						else
-						{
-							if (t.placeState == PlaceState.roaming && (_pos.cell.blocked || t.ignoreAutoPick || altAction || input == ActInput.AllAction || _pos.Equals(EClass.pc.pos)) && EClass.pc.CanPick(t))
+							if (isKey)
 							{
-								listPick.Add(t);
+								_ = t.trait.CanBeAttacked;
 							}
-							if (t.IsInstalled)
+							else
 							{
-								t.trait.TrySetToggleAct(this);
-								t.trait.TrySetAct(this);
+								if (t.placeState == PlaceState.roaming && (_pos.cell.blocked || t.ignoreAutoPick || altAction || input == ActInput.AllAction || _pos.Equals(EClass.pc.pos)) && EClass.pc.CanPick(t))
+								{
+									listPick.Add(t);
+								}
+								if (t.IsInstalled)
+								{
+									t.trait.TrySetToggleAct(this);
+									t.trait.TrySetAct(this);
+								}
 							}
 						}
 					}
-				}
-				void func()
-				{
-					EClass.pc.GiveGift(c, EClass.pc.SplitHeld(1) as Thing);
-				}
-			});
-			if (listPick.Count > 0)
-			{
-				if (listPick.Count == 1)
-				{
-					Thing _t = listPick[0];
-					if (!EClass._zone.IsRegion || (!_t.ignoreAutoPick && _t.pos.Equals(EClass.pc.pos)) || altAction)
+					void func()
 					{
-						TrySetAct("actPickOne", delegate
+						EClass.pc.GiveGift(c, EClass.pc.SplitHeld(1) as Thing);
+					}
+				});
+				if (listPick.Count > 0)
+				{
+					if (listPick.Count == 1)
+					{
+						Thing _t = listPick[0];
+						if (!EClass._zone.IsRegion || (!_t.ignoreAutoPick && _t.pos.Equals(EClass.pc.pos)) || altAction)
 						{
-							EClass.pc.Pick(_t);
+							TrySetAct("actPickOne", delegate
+							{
+								EClass.pc.Pick(_t);
+								return true;
+							}, listPick[0], CursorSystem.Hand, 1, isHostileAct: false, localAct: false);
+						}
+					}
+					else
+					{
+						IList<Card> _cards = items.Copy();
+						TrySetAct("actPickAll", delegate
+						{
+							foreach (Card item in _cards)
+							{
+								if (item.isThing && item.placeState == PlaceState.roaming)
+								{
+									EClass.pc.Pick(item.Thing);
+								}
+							}
 							return true;
-						}, listPick[0], CursorSystem.Hand, 1, isHostileAct: false, localAct: false);
+						}, null, CursorSystem.Hand, 1, isHostileAct: false, localAct: false);
 					}
 				}
-				else
+				if (input == ActInput.AllAction && pos.IsSky)
 				{
-					IList<Card> _cards = items.Copy();
-					TrySetAct("actPickAll", delegate
+					TrySetAct("actSkyJump", delegate
 					{
-						foreach (Card item in _cards)
+						EClass.pc.FallFromZone();
+						return false;
+					});
+				}
+				if (_pos.Equals(cc.pos))
+				{
+					if (cc.held != null && !cc.held.IsHotItem)
+					{
+						TrySetAct("actPick", delegate
 						{
-							if (item.isThing && item.placeState == PlaceState.roaming)
-							{
-								EClass.pc.Pick(item.Thing);
-							}
-						}
-						return true;
-					}, null, CursorSystem.Hand, 1, isHostileAct: false, localAct: false);
+							_ = cc.held;
+							cc.PickHeld(msg: true);
+							return false;
+						}, cc.held, CursorSystem.Inventory, 1, isHostileAct: false, localAct: false);
+					}
+					else if (!HasAct && !cc.isRestrained)
+					{
+						TrySetAct(ACT.Wait);
+					}
+					if (EClass.pc.party.members.Count > 1)
+					{
+						showOrder = true;
+					}
+					if (input == ActInput.AllAction && EClass.pc.held != null && !EClass.pc.held.trait.CanOnlyCarry)
+					{
+						TrySetAct("actDrop", delegate
+						{
+							EClass.pc.DropThing(EClass.pc.held.Thing);
+							return true;
+						});
+					}
+					if (cc.isRestrained)
+					{
+						TrySetAct("ActUnrestrain", delegate
+						{
+							cc.TryUnrestrain(force: true, EClass.pc);
+							return true;
+						}, cc);
+					}
 				}
 			}
-			if (input == ActInput.AllAction && pos.IsSky)
+			if (list.Count == 0 && input == ActInput.AllAction && pos.cell.IsSnowTile && !pos.IsBlocked && !pos.HasObj && !pos.HasThing)
 			{
-				TrySetAct("actSkyJump", delegate
+				TrySetAct(new AI_Craft_Snowman
 				{
-					EClass.pc.FallFromZone();
-					return false;
+					pos = pos.Copy()
 				});
-			}
-			if (!_pos.Equals(cc.pos))
-			{
-				return;
-			}
-			if (cc.held != null && !cc.held.IsHotItem)
-			{
-				TrySetAct("actPick", delegate
-				{
-					_ = cc.held;
-					cc.PickHeld(msg: true);
-					return false;
-				}, cc.held, CursorSystem.Inventory, 1, isHostileAct: false, localAct: false);
-			}
-			else if (!HasAct && !cc.isRestrained)
-			{
-				TrySetAct(ACT.Wait);
-			}
-			if (EClass.pc.party.members.Count > 1)
-			{
-				showOrder = true;
-			}
-			if (input == ActInput.AllAction && EClass.pc.held != null && !EClass.pc.held.trait.CanOnlyCarry)
-			{
-				TrySetAct("actDrop", delegate
-				{
-					EClass.pc.DropThing(EClass.pc.held.Thing);
-					return true;
-				});
-			}
-			if (cc.isRestrained)
-			{
-				TrySetAct("ActUnrestrain", delegate
-				{
-					cc.TryUnrestrain(force: true, EClass.pc);
-					return true;
-				}, cc);
 			}
 		}
 		else

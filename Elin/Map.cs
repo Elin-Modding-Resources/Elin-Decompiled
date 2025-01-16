@@ -2675,9 +2675,9 @@ public class Map : MapBounds, IPathfindGrid
 			return;
 		}
 		sunMap.Clear();
-		foreach (Trait value in EClass._map.props.installed.traits.suns.Values)
+		foreach (Card sun in EClass._map.props.installed.traits.suns)
 		{
-			foreach (Point item in value.ListPoints(null, onlyPassable: false))
+			foreach (Point item in sun.trait.ListPoints(null, onlyPassable: false))
 			{
 				sunMap.Add(item.index);
 			}

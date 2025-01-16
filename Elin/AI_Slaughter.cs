@@ -31,7 +31,10 @@ public class AI_Slaughter : AI_TargetCard
 	public override IEnumerable<Status> Run()
 	{
 		yield return DoGoto(target);
-		target.Chara.AddCondition<ConWait>(1000, force: true);
+		if (target != owner)
+		{
+			target.Chara.AddCondition<ConWait>(1000, force: true);
+		}
 		Progress_Custom seq = new Progress_Custom
 		{
 			canProgress = () => IsValidTC(target),
@@ -45,7 +48,10 @@ public class AI_Slaughter : AI_TargetCard
 			{
 				owner.LookAt(target);
 				target.renderer.PlayAnime(AnimeID.Shiver);
-				target.Chara.AddCondition<ConWait>(1000, force: true);
+				if (target != owner)
+				{
+					target.Chara.AddCondition<ConWait>(1000, force: true);
+				}
 				if (owner.Dist(target) > 1)
 				{
 					owner.TryMoveTowards(target.pos);
@@ -74,19 +80,36 @@ public class AI_Slaughter : AI_TargetCard
 				}
 				slaughtering = true;
 				target.SetSale(sale: false);
+				if (target.IsPCParty && !target.IsPC)
+				{
+					if (target.Chara.host != null)
+					{
+						ActRide.Unride(target.Chara.host, target.Chara.host.parasite == target.Chara, talk: false);
+					}
+					EClass.pc.party.RemoveMember(target.Chara);
+				}
 				target.Die();
 				Msg.Say("goto_heaven", target);
 				slaughtering = false;
-				if (target.Chara.trait.IsUnique)
+				if (!target.IsPC)
 				{
-					target.c_dateDeathLock = EClass.world.date.GetRaw() + 86400;
+					if (target.Chara.trait.IsUnique)
+					{
+						target.c_dateDeathLock = EClass.world.date.GetRaw() + 86400;
+					}
+					else
+					{
+						target.Chara.homeBranch.BanishMember(target.Chara, skipMsg: true);
+					}
 				}
-				else
+				if (owner != null)
 				{
-					target.Chara.homeBranch.BanishMember(target.Chara, skipMsg: true);
+					owner.elements.ModExp(290, 200);
 				}
-				owner.elements.ModExp(290, 200);
-				EClass.pc.stamina.Mod(-3);
+				if (!EClass.pc.isDead)
+				{
+					EClass.pc.stamina.Mod(-3);
+				}
 				if (num)
 				{
 					Msg.Say("killcat");

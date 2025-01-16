@@ -68,18 +68,18 @@ public class TraitManager : EClass
 		List<T> list = new List<T>();
 		if (func == null)
 		{
-			foreach (Card value in traitSet.Values)
+			foreach (Card item in traitSet)
 			{
-				list.Add(value.trait as T);
+				list.Add(item.trait as T);
 			}
 		}
 		else
 		{
-			foreach (Card value2 in traitSet.Values)
+			foreach (Card item2 in traitSet)
 			{
-				if (func(value2.trait as T))
+				if (func(item2.trait as T))
 				{
-					list.Add(value2.trait as T);
+					list.Add(item2.trait as T);
 				}
 			}
 		}

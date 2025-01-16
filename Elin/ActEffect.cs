@@ -482,7 +482,7 @@ public class ActEffect : EClass
 		case EffectId.Summon:
 		{
 			CC.Say("summon_ally", CC);
-			if (EClass._zone.CountMinions(CC) > CC.MaxSummon || CC.c_uidMaster != 0)
+			if (EClass._zone.CountMinions(CC) >= CC.MaxSummon || CC.c_uidMaster != 0)
 			{
 				CC.Say("summon_ally_fail", CC);
 				return;
@@ -515,7 +515,7 @@ public class ActEffect : EClass
 			}
 			for (int j = 0; j < num3; j++)
 			{
-				if (EClass._zone.CountMinions(CC) > CC.MaxSummon)
+				if (EClass._zone.CountMinions(CC) >= CC.MaxSummon)
 				{
 					break;
 				}

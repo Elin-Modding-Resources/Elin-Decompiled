@@ -3596,7 +3596,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!e.source.aliasRef.IsEmpty() && attackSource != AttackSource.ManaBackfire)
 			{
-				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef));
+				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef), (origin != null) ? origin.Evalue(1238) : 0);
 				dmg = dmg * 100 / (100 + Mathf.Clamp(Evalue(961) * 5, -50, 200));
 			}
 			switch (e.id)
@@ -3821,7 +3821,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0992;
+							goto IL_09ad;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -3833,8 +3833,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0992;
-		IL_0992:
+		goto IL_09ad;
+		IL_09ad:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -5064,8 +5064,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void Dye(SourceMaterial.Row mat)
 	{
-		isDyed = true;
-		c_dyeMat = mat.id;
+		isDyed = mat != null;
+		c_dyeMat = mat?.id ?? 0;
 		_colorInt = 0;
 	}
 

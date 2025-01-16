@@ -2578,7 +2578,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				foreach (Thing thing2 in newPoint.Things)
 				{
-					if (thing2.IsInstalled && (thing2.trait.CanChangeHeight || thing2.Pref.Surface))
+					if (thing2.IsInstalled && (thing2.trait.IsChangeFloorHeight || thing2.Pref.Surface))
 					{
 						text = thing2.material.soundFoot;
 					}
@@ -4571,6 +4571,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		sleepiness.value = 0;
 		hostility = OriginalHostility;
+		RemoveCondition<StanceTaunt>();
 		if (IsPC)
 		{
 			if (EClass.player.preventDeathPenalty)
