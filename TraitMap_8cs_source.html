@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.77 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,64 +92,25 @@ $(document).ready(function(){initNavTree('TraitMap_8cs_source.html',''); initRes
   <div class="headertitle"><div class="title">TraitMap.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitMap_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Linq;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitMap.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitMap.html">TraitMap</a> : Dictionary&lt;int, Trait&gt;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">    7</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>, c.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classTraitMap.html#aa8645133a039e0e9d08c91f961176e2e">   17</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_function" href="classTraitMap.html#aa8645133a039e0e9d08c91f961176e2e">GetRandom</a>()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> this.RandomItem()?.owner;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classTraitMap.html#a104d7d4894d7ac030cf7060e5e0a801a">   22</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_function" href="classTraitMap.html#a104d7d4894d7ac030cf7060e5e0a801a">GetRandom</a>(Func&lt;Trait, bool&gt; func)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (func == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classTraitMap.html#aa8645133a039e0e9d08c91f961176e2e">GetRandom</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> base.Values.Where(func).RandomItem()?.owner;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf">   31</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_function" href="classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf">GetRandomInstalled</a>()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (base.Count == 0)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> base.Values.Where((<a class="code hl_class" href="classTrait.html">Trait</a> a) =&gt; a.<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">placeState</a> == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed).RandomItem()?.owner;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classTraitMap.html#ad09e73493a18edc82cc25df87d8a34e4">   40</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitMap.html#ad09e73493a18edc82cc25df87d8a34e4">Contains</a>(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> ContainsKey(c.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<a href="TraitMap_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classTraitMap.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitMap.html">TraitMap</a> : HashSet&lt;Card&gt;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf">    6</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_function" href="classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf">GetRandomInstalled</a>()</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordflow">if</span> (base.Count == 0)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> this.Where((<a class="code hl_class" href="classCard.html">Card</a> a) =&gt; a.<a class="code hl_variable" href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">placeState</a> == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed).RandomItem();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
 <div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00001">PlaceState.cs:2</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a77dc3446a7564c5ec837ac0033f6a313"><div class="ttname"><a href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">Card.placeState</a></div><div class="ttdeci">PlaceState placeState</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:79</a></div></div>
-<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00117">Card.cs:118</a></div></div>
-<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00049">Card.cs:49</a></div></div>
-<div class="ttc" id="aclassTraitMap_html"><div class="ttname"><a href="classTraitMap.html">TraitMap</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00005">TraitMap.cs:6</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_a0983bfdf5bc39aa857d46fe33c7e1faa"><div class="ttname"><a href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">TraitMap.Remove</a></div><div class="ttdeci">void Remove(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00012">TraitMap.cs:12</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_a104d7d4894d7ac030cf7060e5e0a801a"><div class="ttname"><a href="classTraitMap.html#a104d7d4894d7ac030cf7060e5e0a801a">TraitMap.GetRandom</a></div><div class="ttdeci">Card GetRandom(Func&lt; Trait, bool &gt; func)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00022">TraitMap.cs:22</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_a3038779754ff517b7034eecbfdf13b4e"><div class="ttname"><a href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">TraitMap.Add</a></div><div class="ttdeci">void Add(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00007">TraitMap.cs:7</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_aa8645133a039e0e9d08c91f961176e2e"><div class="ttname"><a href="classTraitMap.html#aa8645133a039e0e9d08c91f961176e2e">TraitMap.GetRandom</a></div><div class="ttdeci">Card GetRandom()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00017">TraitMap.cs:17</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_ad09e73493a18edc82cc25df87d8a34e4"><div class="ttname"><a href="classTraitMap.html#ad09e73493a18edc82cc25df87d8a34e4">TraitMap.Contains</a></div><div class="ttdeci">bool Contains(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00040">TraitMap.cs:40</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_afb99e24a093793f9d727bfa3317fc9bf"><div class="ttname"><a href="classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf">TraitMap.GetRandomInstalled</a></div><div class="ttdeci">Card GetRandomInstalled()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00031">TraitMap.cs:31</a></div></div>
-<div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00006">Trait.cs:7</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
+<div class="ttc" id="aclassTraitMap_html"><div class="ttname"><a href="classTraitMap.html">TraitMap</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00004">TraitMap.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitMap_html_afb99e24a093793f9d727bfa3317fc9bf"><div class="ttname"><a href="classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf">TraitMap.GetRandomInstalled</a></div><div class="ttdeci">Card GetRandomInstalled()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00006">TraitMap.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

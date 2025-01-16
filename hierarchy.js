@@ -226,9 +226,7 @@ var hierarchy =
     [ "Dice", "classDice.html", null ],
     [ "Dictionary", null, [
       [ "CardManager.GlobalCharaList", "classCardManager_1_1GlobalCharaList.html", null ],
-      [ "SpatialManager.GlobalSpatialList", "classSpatialManager_1_1GlobalSpatialList.html", null ],
-      [ "TraitMap", "classTraitMap.html", null ],
-      [ "TraitSet", "classTraitSet.html", null ]
+      [ "SpatialManager.GlobalSpatialList", "classSpatialManager_1_1GlobalSpatialList.html", null ]
     ] ],
     [ "DOMAIN", "classDOMAIN.html", null ],
     [ "Net.DownloadCahce", "classNet_1_1DownloadCahce.html", null ],
@@ -590,6 +588,9 @@ var hierarchy =
             [ "AI_Bladder", "classAI__Bladder.html", null ],
             [ "AI_Clean", "classAI__Clean.html", null ],
             [ "AI_Cook", "classAI__Cook.html", null ],
+            [ "AI_Craft", "classAI__Craft.html", [
+              [ "AI_Craft_Snowman", "classAI__Craft__Snowman.html", null ]
+            ] ],
             [ "AI_Dance", "classAI__Dance.html", null ],
             [ "AI_Deconstruct", "classAI__Deconstruct.html", null ],
             [ "AI_Drink", "classAI__Drink.html", null ],
@@ -2011,7 +2012,9 @@ var hierarchy =
       [ "KnowledgeList< T >", "classKnowledgeList.html", null ],
       [ "PropSet", "classPropSet.html", [
         [ "PropSetCategory", "classPropSetCategory.html", null ]
-      ] ]
+      ] ],
+      [ "TraitMap", "classTraitMap.html", null ],
+      [ "TraitSet", "classTraitSet.html", null ]
     ] ],
     [ "UIHighlight.Highlight", "classUIHighlight_1_1Highlight.html", null ],
     [ "HSLColor", "structHSLColor.html", null ],

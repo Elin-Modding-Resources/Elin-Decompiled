@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.77 Nightly</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,8 @@ Inheritance diagram for TraitNote:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:abd9c08d1cdcd89ce145a1efeda8c9637"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitNote.html#abd9c08d1cdcd89ce145a1efeda8c9637">CanStackTo</a> (<a class="el" href="classThing.html">Thing</a> to)</td></tr>
+<tr class="separator:abd9c08d1cdcd89ce145a1efeda8c9637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae64a3732578342315cb31685ec9c6d27"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:ae64a3732578342315cb31685ec9c6d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5b43b9758d75717f8002291d2ac2628"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitNote.html#af5b43b9758d75717f8002291d2ac2628">OnImportMap</a> ()</td></tr>
@@ -662,6 +664,42 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00001">1</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abd9c08d1cdcd89ce145a1efeda8c9637" name="abd9c08d1cdcd89ce145a1efeda8c9637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9c08d1cdcd89ce145a1efeda8c9637">&#9670;&#160;</a></span>CanStackTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitNote.CanStackTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classThing.html">Thing</a>&#160;</td>
+          <td class="paramname"><em>to</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classTrait.html#a4b2d59088504ce0145c3096fb99645fc">Trait</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">return</span> owner.c_note == to.<a class="code hl_property" href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">c_note</a>;</div>
+<div class="line"><span class="lineno">    6</span>    }</div>
+<div class="ttc" id="aclassCard_html_a17e901e98e4c975eaebdc821caead9c4"><div class="ttname"><a href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">Card.c_note</a></div><div class="ttdeci">string c_note</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01648">Card.cs:1649</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01649">Card.c_note</a>.</p>
+
+</div>
+</div>
 <a id="ae64a3732578342315cb31685ec9c6d27" name="ae64a3732578342315cb31685ec9c6d27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae64a3732578342315cb31685ec9c6d27">&#9670;&#160;</a></span>OnCreate()</h2>
 
@@ -688,18 +726,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
-<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1) != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">    6</span>        {</div>
-<div class="line"><span class="lineno">    7</span>            owner.c_note = <a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1);</div>
-<div class="line"><span class="lineno">    8</span>        }</div>
-<div class="line"><span class="lineno">    9</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00008">8</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            owner.c_note = <a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1);</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
 <div class="ttc" id="aclassTrait_html_a7db8c514710fbb74b2f471cf9e6fe0af"><div class="ttname"><a href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">Trait.GetParam</a></div><div class="ttdeci">string GetParam(int i, string def=null)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00499">Trait.cs:499</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Trait_8cs_source.html#l00499">Trait.GetParam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitNote_8cs_source.html#l00011">OnImportMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitNote_8cs_source.html#l00016">OnImportMap()</a>.</p>
 
 </div>
 </div>
@@ -728,16 +766,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a01114b762877593444f784e64c4421de">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_function" href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">OnCreate</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>);</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00016">16</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_function" href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">OnCreate</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>);</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
-<div class="ttc" id="aclassTraitNote_html_ae64a3732578342315cb31685ec9c6d27"><div class="ttname"><a href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">TraitNote.OnCreate</a></div><div class="ttdeci">override void OnCreate(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="TraitNote_8cs_source.html#l00003">TraitNote.cs:3</a></div></div>
+<div class="ttc" id="aclassTraitNote_html_ae64a3732578342315cb31685ec9c6d27"><div class="ttname"><a href="classTraitNote.html#ae64a3732578342315cb31685ec9c6d27">TraitNote.OnCreate</a></div><div class="ttdeci">override void OnCreate(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="TraitNote_8cs_source.html#l00008">TraitNote.cs:8</a></div></div>
 <div class="ttc" id="aclassZone_html_ac539719d05a3d41d2d23d60d2df22aff"><div class="ttname"><a href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">Zone.DangerLv</a></div><div class="ttdeci">override int DangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00106">Zone.cs:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, and <a class="el" href="TraitNote_8cs_source.html#l00003">OnCreate()</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, and <a class="el" href="TraitNote_8cs_source.html#l00008">OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -767,27 +805,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00016">16</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (!p.<a class="code hl_variable" href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">altAction</a>)</div>
-<div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actWrite&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a6fb1cfeff41e0398c1efb3a50471db68">InputName</a>(<span class="stringliteral">&quot;dialogWriteNote&quot;</span>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">c_note</a>, delegate(<span class="keywordtype">bool</span> cancel, <span class="keywordtype">string</span> text)</div>
-<div class="line"><span class="lineno">   25</span>            {</div>
-<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">if</span> (!cancel)</div>
-<div class="line"><span class="lineno">   27</span>                {</div>
-<div class="line"><span class="lineno">   28</span>                    owner.c_note = text;</div>
-<div class="line"><span class="lineno">   29</span>                }</div>
-<div class="line"><span class="lineno">   30</span>            });</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   32</span>        }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitNote_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitNote_8cs_source.html">TraitNote.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!p.<a class="code hl_variable" href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">altAction</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actWrite&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a6fb1cfeff41e0398c1efb3a50471db68">InputName</a>(<span class="stringliteral">&quot;dialogWriteNote&quot;</span>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">c_note</a>, delegate(<span class="keywordtype">bool</span> cancel, <span class="keywordtype">string</span> text)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">if</span> (!cancel)</div>
+<div class="line"><span class="lineno">   32</span>                {</div>
+<div class="line"><span class="lineno">   33</span>                    owner.c_note = text;</div>
+<div class="line"><span class="lineno">   34</span>                }</div>
+<div class="line"><span class="lineno">   35</span>            });</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   37</span>        }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 <div class="ttc" id="aclassActPlan_html_a2d3f21e64f56c3eb51f0283aecb2916b"><div class="ttname"><a href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">ActPlan.altAction</a></div><div class="ttdeci">bool altAction</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00155">ActPlan.cs:155</a></div></div>
 <div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00344">ActPlan.cs:344</a></div></div>
-<div class="ttc" id="aclassCard_html_a17e901e98e4c975eaebdc821caead9c4"><div class="ttname"><a href="classCard.html#a17e901e98e4c975eaebdc821caead9c4">Card.c_note</a></div><div class="ttdeci">string c_note</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01648">Card.cs:1649</a></div></div>
 <div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
 <div class="ttc" id="aclassDialog_html_a6fb1cfeff41e0398c1efb3a50471db68"><div class="ttname"><a href="classDialog.html#a6fb1cfeff41e0398c1efb3a50471db68">Dialog.InputName</a></div><div class="ttdeci">static Dialog InputName(string langDetail, string text, Action&lt; bool, string &gt; onClose, InputType inputType=InputType.Default)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00528">Dialog.cs:528</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.77 Nightly</span>
    </div>
   </td>
  </tr>
@@ -113,19 +113,19 @@ $(document).ready(function(){initNavTree('TraitManager_8cs_source.html',''); ini
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(trait.GetType()).Add(c);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">IsAltar</a>)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.Add(c);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">IsRestSpot</a>)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.Add(c);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitChair.html">TraitChair</a>)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.Add(c);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitLightSun.html">TraitLightSun</a>)</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.<a class="code hl_function" href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">Add</a>(c);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.Add(c);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -135,19 +135,19 @@ $(document).ready(function(){initNavTree('TraitManager_8cs_source.html',''); ini
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>[trait.GetType()].Remove(c);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a4207b40678d774015cf532e1fbfa11f6">IsAltar</a>)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_variable" href="classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273">altars</a>.Remove(c);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (trait.<a class="code hl_property" href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">IsRestSpot</a>)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="classTraitManager.html#a94e333560c29365f1158f52e7a370ae5">restSpots</a>.Remove(c);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitChair.html">TraitChair</a>)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_variable" href="classTraitManager.html#a5c7be3389262c6008368f88f346b7761">chairs</a>.Remove(c);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (trait is <a class="code hl_class" href="classTraitLightSun.html">TraitLightSun</a>)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.<a class="code hl_function" href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">Remove</a>(c);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">suns</a>.Remove(c);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
@@ -162,18 +162,18 @@ $(document).ready(function(){initNavTree('TraitManager_8cs_source.html',''); ini
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_function" href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">List&lt;T&gt;</a> list = <span class="keyword">new</span> <a class="code hl_function" href="classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606">List&lt;T&gt;</a>();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (func == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> value <span class="keywordflow">in</span> traitSet.Values)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> traitSet)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                list.Add(value.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                list.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait as T);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> value2 <span class="keywordflow">in</span> traitSet.Values)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> item2 <span class="keywordflow">in</span> traitSet)</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (func(value2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T))</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (func(item2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T))</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    list.Add(value2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    list.Add(item2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as T);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
@@ -190,6 +190,7 @@ $(document).ready(function(){initNavTree('TraitManager_8cs_source.html',''); ini
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">typeMap</a>.GetOrCreate(t);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00049">Card.cs:49</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
@@ -208,9 +209,7 @@ $(document).ready(function(){initNavTree('TraitManager_8cs_source.html',''); ini
 <div class="ttc" id="aclassTraitManager_html_ab69deb4557ccae112300fa8eee9a85d8"><div class="ttname"><a href="classTraitManager.html#ab69deb4557ccae112300fa8eee9a85d8">TraitManager.GetTraitSet</a></div><div class="ttdeci">TraitSet GetTraitSet(Type t)</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00094">TraitManager.cs:94</a></div></div>
 <div class="ttc" id="aclassTraitManager_html_ad6340f0bc4e247da25cb0e2a1ddc965f"><div class="ttname"><a href="classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f">TraitManager.suns</a></div><div class="ttdeci">TraitMap suns</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00014">TraitManager.cs:14</a></div></div>
 <div class="ttc" id="aclassTraitManager_html_af88d814dfd0f7667d7d3c5746a78c70e"><div class="ttname"><a href="classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e">TraitManager.typeMap</a></div><div class="ttdeci">Dictionary&lt; Type, TraitSet &gt; typeMap</div><div class="ttdef"><b>Definition:</b> <a href="TraitManager_8cs_source.html#l00006">TraitManager.cs:6</a></div></div>
-<div class="ttc" id="aclassTraitMap_html"><div class="ttname"><a href="classTraitMap.html">TraitMap</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00005">TraitMap.cs:6</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_a0983bfdf5bc39aa857d46fe33c7e1faa"><div class="ttname"><a href="classTraitMap.html#a0983bfdf5bc39aa857d46fe33c7e1faa">TraitMap.Remove</a></div><div class="ttdeci">void Remove(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00012">TraitMap.cs:12</a></div></div>
-<div class="ttc" id="aclassTraitMap_html_a3038779754ff517b7034eecbfdf13b4e"><div class="ttname"><a href="classTraitMap.html#a3038779754ff517b7034eecbfdf13b4e">TraitMap.Add</a></div><div class="ttdeci">void Add(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00007">TraitMap.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitMap_html"><div class="ttname"><a href="classTraitMap.html">TraitMap</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMap_8cs_source.html#l00004">TraitMap.cs:5</a></div></div>
 <div class="ttc" id="aclassTraitSet_html"><div class="ttname"><a href="classTraitSet.html">TraitSet</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSet_8cs_source.html#l00005">TraitSet.cs:6</a></div></div>
 <div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00006">Trait.cs:7</a></div></div>
 <div class="ttc" id="aclassTrait_html_a07686b64eaa110a7fa893adb571251ea"><div class="ttname"><a href="classTrait.html#a07686b64eaa110a7fa893adb571251ea">Trait.IsRestSpot</a></div><div class="ttdeci">virtual bool IsRestSpot</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00231">Trait.cs:231</a></div></div>

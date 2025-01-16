@@ -5,6 +5,7 @@ var classSkinDeco =
     [ "actor", "classSkinDeco.html#a9525f1986ac2fd668129c7025b3e3a84", null ],
     [ "bits", "classSkinDeco.html#a143e922bd14868314bfcbd76594c8c84", null ],
     [ "ints", "classSkinDeco.html#a9316a09ab75e3d6356fd541e73f00f6b", null ],
+    [ "bottom", "classSkinDeco.html#a9612fcf2a1f262d8ad99a740ef344a06", null ],
     [ "cat", "classSkinDeco.html#a9ecbb92f21cb8fbdcf6b02192dfd4fae", null ],
     [ "color", "classSkinDeco.html#a60918eaee8ac86783c29c014d82b7971", null ],
     [ "id", "classSkinDeco.html#a1b0533890bc487f9005d3d3821e1615c", null ],

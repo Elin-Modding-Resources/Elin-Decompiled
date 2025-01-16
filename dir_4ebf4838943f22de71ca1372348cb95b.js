@@ -54,6 +54,8 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "AI_Bladder.cs", "AI__Bladder_8cs.html", "AI__Bladder_8cs" ],
     [ "AI_Clean.cs", "AI__Clean_8cs.html", "AI__Clean_8cs" ],
     [ "AI_Cook.cs", "AI__Cook_8cs.html", "AI__Cook_8cs" ],
+    [ "AI_Craft.cs", "AI__Craft_8cs.html", "AI__Craft_8cs" ],
+    [ "AI_Craft_Snowman.cs", "AI__Craft__Snowman_8cs.html", "AI__Craft__Snowman_8cs" ],
     [ "AI_Dance.cs", "AI__Dance_8cs.html", "AI__Dance_8cs" ],
     [ "AI_Deconstruct.cs", "AI__Deconstruct_8cs.html", "AI__Deconstruct_8cs" ],
     [ "AI_Drink.cs", "AI__Drink_8cs.html", "AI__Drink_8cs" ],

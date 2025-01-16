@@ -18,6 +18,7 @@ var classFEAT =
     [ "featDreamWaker", "classFEAT.html#a663191d71696293163c40b5b06432a33", null ],
     [ "featDwarf", "classFEAT.html#a91bc843f57e6cf073059522328eebf78", null ],
     [ "featEarthStrength", "classFEAT.html#a9a18d11f2883cf72fd18e778d16795e2", null ],
+    [ "featElder", "classFEAT.html#af402d4e0929a7d4e2fd73d4ec3792eb7", null ],
     [ "featElderCrab", "classFEAT.html#add3318862773255912e7ed2b80be3694", null ],
     [ "featElea", "classFEAT.html#a63ffdd8c7e94450a6013e86b5d6369ce", null ],
     [ "featEND", "classFEAT.html#a4917d7c4a36576bc0da5ac95a1d96b4a", null ],

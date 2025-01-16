@@ -33,6 +33,7 @@ var classENC =
     [ "mod_ammo", "classENC.html#ae6075b407708032de2af662101425986", null ],
     [ "mod_ammo_knockback", "classENC.html#ad8de993aefa96fc6d5d051a5fa245c12", null ],
     [ "mod_ammo_recover", "classENC.html#a3d5ce9096acec7eef0d08af110290319", null ],
+    [ "mod_chaser", "classENC.html#ac0a51ae6596cf3d8b9092b0c6a7ba8cc", null ],
     [ "mod_drill", "classENC.html#a2a7e9a3ad4793f3820faa89827eaca4f", null ],
     [ "mod_precision", "classENC.html#a2aef91741d1cb01f647b420fc54c46fe", null ],
     [ "mod_rapid", "classENC.html#a9f049af65ae34d369fdc95d77e62b7bd", null ],

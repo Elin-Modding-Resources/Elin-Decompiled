@@ -80,6 +80,7 @@ var classABILITY =
     [ "breathe_Ether", "classABILITY.html#ac6286ae8cb586b560dd7917a7849aa90", null ],
     [ "breathe_Fire", "classABILITY.html#a85730cc221e783f1fd566a2ff58581b0", null ],
     [ "breathe_Holy", "classABILITY.html#a062bc8adf7ed06a6ed0d4105359a6af6", null ],
+    [ "breathe_Impact", "classABILITY.html#a39edb69846ea31425f09c33c2036a59a", null ],
     [ "breathe_Lightning", "classABILITY.html#ab8709b7674d65ef69c9cb4e24e818194", null ],
     [ "breathe_Magic", "classABILITY.html#a3e7ad2e3c540f72f4da9657572723dc4", null ],
     [ "breathe_Mind", "classABILITY.html#a9c59d89307cb21b3141a2facaa99db71", null ],

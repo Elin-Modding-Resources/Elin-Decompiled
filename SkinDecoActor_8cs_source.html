@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.76 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.77 Nightly</span>
    </div>
   </td>
  </tr>
@@ -113,8 +113,12 @@ $(document).ready(function(){initNavTree('SkinDecoActor_8cs_source.html',''); in
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        base.transform.localScale = <span class="keyword">new</span> Vector3((!<a class="code hl_variable" href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">owner</a>.<a class="code hl_property" href="classSkinDeco.html#a9638b712f910c7db4b4301f04ac37dbb">reverse</a>) ? 1 : (-1), 1f, 1f);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        shadow.enabled = <a class="code hl_variable" href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">owner</a>.<a class="code hl_property" href="classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14">shadow</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        shadow.effectDistance = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">owner</a>.<a class="code hl_property" href="classSkinDeco.html#a9638b712f910c7db4b4301f04ac37dbb">reverse</a> ? (-3) : 3, -3f);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">owner</a>.<a class="code hl_property" href="classSkinDeco.html#a9612fcf2a1f262d8ad99a740ef344a06">bottom</a>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            base.transform.SetSiblingIndex(1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
 <div class="ttc" id="aclassSkinDecoActor_html"><div class="ttname"><a href="classSkinDecoActor.html">SkinDecoActor</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinDecoActor_8cs_source.html#l00004">SkinDecoActor.cs:5</a></div></div>
 <div class="ttc" id="aclassSkinDecoActor_html_a0d5a5367682e22fdc8ef168c177abe1c"><div class="ttname"><a href="classSkinDecoActor.html#a0d5a5367682e22fdc8ef168c177abe1c">SkinDecoActor.image</a></div><div class="ttdeci">Image image</div><div class="ttdef"><b>Definition:</b> <a href="SkinDecoActor_8cs_source.html#l00008">SkinDecoActor.cs:8</a></div></div>
 <div class="ttc" id="aclassSkinDecoActor_html_a174b2974c010ce2963cc79a78a5f066f"><div class="ttname"><a href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">SkinDecoActor.owner</a></div><div class="ttdeci">SkinDeco owner</div><div class="ttdef"><b>Definition:</b> <a href="SkinDecoActor_8cs_source.html#l00006">SkinDecoActor.cs:6</a></div></div>
@@ -124,6 +128,7 @@ $(document).ready(function(){initNavTree('SkinDecoActor_8cs_source.html',''); in
 <div class="ttc" id="aclassSkinDeco_html_a1e4c00947b848bf1ceff8876643f1b98"><div class="ttname"><a href="classSkinDeco.html#a1e4c00947b848bf1ceff8876643f1b98">SkinDeco.sy</a></div><div class="ttdeci">int sy</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00063">SkinDeco.cs:64</a></div></div>
 <div class="ttc" id="aclassSkinDeco_html_a5087c86a1e8b82ec5cccdbdb16ec2ad4"><div class="ttname"><a href="classSkinDeco.html#a5087c86a1e8b82ec5cccdbdb16ec2ad4">SkinDeco.rz</a></div><div class="ttdeci">int rz</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00087">SkinDeco.cs:88</a></div></div>
 <div class="ttc" id="aclassSkinDeco_html_a60918eaee8ac86783c29c014d82b7971"><div class="ttname"><a href="classSkinDeco.html#a60918eaee8ac86783c29c014d82b7971">SkinDeco.color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00075">SkinDeco.cs:76</a></div></div>
+<div class="ttc" id="aclassSkinDeco_html_a9612fcf2a1f262d8ad99a740ef344a06"><div class="ttname"><a href="classSkinDeco.html#a9612fcf2a1f262d8ad99a740ef344a06">SkinDeco.bottom</a></div><div class="ttdeci">bool bottom</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00135">SkinDeco.cs:136</a></div></div>
 <div class="ttc" id="aclassSkinDeco_html_a9638b712f910c7db4b4301f04ac37dbb"><div class="ttname"><a href="classSkinDeco.html#a9638b712f910c7db4b4301f04ac37dbb">SkinDeco.reverse</a></div><div class="ttdeci">bool reverse</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00123">SkinDeco.cs:124</a></div></div>
 <div class="ttc" id="aclassSkinDeco_html_aa3d6568d9ef4d44c5f9d03b736995fe9"><div class="ttname"><a href="classSkinDeco.html#aa3d6568d9ef4d44c5f9d03b736995fe9">SkinDeco.sx</a></div><div class="ttdeci">int sx</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00051">SkinDeco.cs:52</a></div></div>
 <div class="ttc" id="aclassSkinDeco_html_ab0d0f9aad4c4152e76402ec244e04e14"><div class="ttname"><a href="classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14">SkinDeco.shadow</a></div><div class="ttdeci">bool shadow</div><div class="ttdef"><b>Definition:</b> <a href="SkinDeco_8cs_source.html#l00111">SkinDeco.cs:112</a></div></div>
