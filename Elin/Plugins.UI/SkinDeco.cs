@@ -132,6 +132,18 @@ public class SkinDeco
 		}
 	}
 
+	public bool bottom
+	{
+		get
+		{
+			return bits[2];
+		}
+		set
+		{
+			bits[2] = value;
+		}
+	}
+
 	[OnSerializing]
 	internal void OnSerializing(StreamingContext context)
 	{

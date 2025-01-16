@@ -19,5 +19,9 @@ public class SkinDecoActor : MonoBehaviour
 		base.transform.localScale = new Vector3((!owner.reverse) ? 1 : (-1), 1f, 1f);
 		shadow.enabled = owner.shadow;
 		shadow.effectDistance = new Vector2(owner.reverse ? (-3) : 3, -3f);
+		if (owner.bottom)
+		{
+			base.transform.SetSiblingIndex(1);
+		}
 	}
 }
