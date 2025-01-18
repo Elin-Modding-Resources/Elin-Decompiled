@@ -20,6 +20,8 @@ public class LangWord : SourceDataInt<LangWord.Row>
 		public override string GetAlias => "n";
 	}
 
+	public override bool AllowHotInitialization => true;
+
 	public override Row CreateRow()
 	{
 		return new Row

@@ -2,6 +2,8 @@ using System.Text;
 
 public class SourceLang<T> : SourceData<T, string> where T : LangRow
 {
+	public override bool AllowHotInitialization => true;
+
 	public override T GetRow(string id)
 	{
 		return map.TryGetValue(id);

@@ -75,7 +75,7 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 
 	public static ISheet currentSheet;
 
-	public bool CanReset => true;
+	public virtual bool AllowHotInitialization => false;
 
 	public virtual string[] ImportFields => new string[1] { "" };
 
@@ -112,25 +112,22 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 
 	public override void Reset()
 	{
-		if (CanReset)
+		initialized = false;
+		if (!Application.isPlaying)
 		{
-			initialized = false;
-			if (!Application.isPlaying)
-			{
-				BaseCore.resetRuntime = true;
-			}
-			if (map != null)
-			{
-				map.Clear();
-			}
-			if (map != null)
-			{
-				alias.Clear();
-			}
-			if (Application.isPlaying)
-			{
-				Init();
-			}
+			BaseCore.resetRuntime = true;
+		}
+		if (map != null)
+		{
+			map.Clear();
+		}
+		if (alias != null)
+		{
+			alias.Clear();
+		}
+		if (Application.isPlaying && AllowHotInitialization)
+		{
+			Init();
 		}
 	}
 
