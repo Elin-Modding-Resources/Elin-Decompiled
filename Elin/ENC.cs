@@ -1,28 +1,34 @@
 public class ENC
 {
-	public const int noDamage = 654;
-
-	public const int living = 653;
-
 	public const int eco = 652;
 
 	public const int r_PV = 651;
 
+	public const int r_DV = 650;
+
 	public const int r_mana = 641;
-
-	public const int mod_scatter = 607;
-
-	public const int mod_chaser = 620;
 
 	public const int r_life = 640;
 
-	public const int onlyPet = 655;
+	public const int mod_flurry = 621;
 
-	public const int r_DV = 650;
+	public const int mod_chaser = 620;
+
+	public const int mod_feint = 623;
+
+	public const int mod_cleave = 622;
+
+	public const int living = 653;
+
+	public const int mod_frustration = 624;
+
+	public const int noDamage = 654;
+
+	public const int convertCold = 851;
 
 	public const int permaCurse = 656;
 
-	public const int convertCold = 851;
+	public const int absorbHP = 660;
 
 	public const int absorbMP = 661;
 
@@ -38,19 +44,19 @@ public class ENC
 
 	public const int convertFire = 850;
 
-	public const int mod_drill = 606;
+	public const int mod_splash = 608;
 
 	public const int convertImpact = 865;
 
 	public const int convertLightning = 852;
 
-	public const int absorbHP = 660;
+	public const int onlyPet = 655;
+
+	public const int mod_scatter = 607;
+
+	public const int bane_animal = 463;
 
 	public const int mod_precision = 605;
-
-	public const int resWeather = 408;
-
-	public const int mod_ammo_knockback = 603;
 
 	public const int breathing = 429;
 
@@ -62,7 +68,7 @@ public class ENC
 
 	public const int negateConfusion = 425;
 
-	public const int negateSleep = 424;
+	public const int mod_drill = 606;
 
 	public const int negateFear = 423;
 
@@ -74,9 +80,9 @@ public class ENC
 
 	public const int seeInvisible = 416;
 
-	public const int sustain_STR = 440;
-
 	public const int invisibility = 415;
+
+	public const int slowCorruption = 412;
 
 	public const int encSpell = 411;
 
@@ -84,11 +90,13 @@ public class ENC
 
 	public const int corruption = 409;
 
+	public const int resWeather = 408;
+
 	public const int travelSpeed = 407;
 
 	public const int resMutation = 406;
 
-	public const int mod_ammo_recover = 604;
+	public const int slowDecay = 405;
 
 	public const int weightMod = 404;
 
@@ -100,21 +108,25 @@ public class ENC
 
 	public const int negateTeleport = 400;
 
-	public const int slowCorruption = 412;
+	public const int sustain_STR = 440;
 
 	public const int sustain_END = 441;
 
-	public const int slowDecay = 405;
+	public const int negateSleep = 424;
 
-	public const int force_weapon = 482;
+	public const int mod_ammo = 600;
+
+	public const int mod_ammo_recover = 604;
+
+	public const int mod_ammo_knockback = 603;
 
 	public const int mod_rapid = 602;
 
 	public const int mod_reload = 601;
 
-	public const int mod_ammo = 600;
-
 	public const int optimizeMana = 483;
+
+	public const int force_weapon = 482;
 
 	public const int revealFaith = 481;
 
@@ -124,15 +136,13 @@ public class ENC
 
 	public const int bane_fish = 467;
 
-	public const int bane_god = 466;
+	public const int bane_machine = 465;
 
 	public const int bane_man = 464;
 
-	public const int bane_animal = 463;
+	public const int bane_god = 466;
 
-	public const int bane_fairy = 462;
-
-	public const int bane_machine = 465;
+	public const int bane_undead = 461;
 
 	public const int bane_dragon = 460;
 
@@ -144,21 +154,21 @@ public class ENC
 
 	public const int sustain_LER = 444;
 
-	public const int bane_undead = 461;
+	public const int bane_fairy = 462;
 
 	public const int sustain_PER = 443;
 
 	public const int sustain_DEX = 442;
 
-	public static readonly int[] IDS = new int[75]
+	public static readonly int[] IDS = new int[80]
 	{
-		654, 653, 652, 651, 641, 607, 620, 640, 655, 650,
-		656, 851, 661, 662, 663, 664, 665, 666, 850, 606,
-		865, 852, 660, 605, 408, 603, 429, 428, 427, 426,
-		425, 424, 423, 422, 421, 420, 416, 440, 415, 411,
-		410, 409, 407, 406, 604, 404, 403, 402, 401, 400,
-		412, 441, 405, 482, 602, 601, 600, 483, 481, 480,
-		468, 467, 466, 464, 463, 462, 465, 460, 447, 446,
-		445, 444, 461, 443, 442
+		652, 651, 650, 641, 640, 621, 620, 623, 622, 653,
+		624, 654, 851, 656, 660, 661, 662, 663, 664, 665,
+		666, 850, 608, 865, 852, 655, 607, 463, 605, 429,
+		428, 427, 426, 425, 606, 423, 422, 421, 420, 416,
+		415, 412, 411, 410, 409, 408, 407, 406, 405, 404,
+		403, 402, 401, 400, 440, 441, 424, 600, 604, 603,
+		602, 601, 483, 482, 481, 480, 468, 467, 465, 464,
+		466, 461, 460, 447, 446, 445, 444, 462, 443, 442
 	};
 }

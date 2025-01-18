@@ -1514,7 +1514,7 @@ public class Thing : Card
 	public override SubPassData GetSubPassData()
 	{
 		Chara chara = GetRootCard() as Chara;
-		if ((!trait.ShowAsTool || (chara == EClass.pc && HotItemHeld.disableTool)) && (chara?.held == this || (placeState != PlaceState.installed && renderer.data.subCrate.enable && parent is Zone)))
+		if ((!trait.ShowAsTool || (chara == EClass.pc && HotItemHeld.disableTool)) && (chara?.held == this || (!base.isRoofItem && placeState != PlaceState.installed && renderer.data.subCrate.enable && parent is Zone)))
 		{
 			if (!renderer.data.subCrate.enable)
 			{

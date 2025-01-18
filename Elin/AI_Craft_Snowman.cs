@@ -23,6 +23,10 @@ public class AI_Craft_Snowman : AI_Craft
 				owner.PlayAnime(AnimeID.Jump);
 				pos.TalkWitnesses(EClass.pc, (EClass.rnd(2) == 0) ? "nice_statue" : "ding_other", 5);
 				EClass.pc.ModExp(258, 50);
+				if (EClass.rnd(3) != 0)
+				{
+					EClass.pc.stamina.Mod(-1);
+				}
 			}
 		}.SetDuration(25, 5);
 		yield return Do(seq);

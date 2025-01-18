@@ -905,7 +905,14 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass.pc.ModCorruption(1);
+			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
+			if (targetChara != null)
+			{
+				EClass.pc.Pick(targetChara.MakeMilk());
+				EClass.pc.Pick(targetChara.MakeGene());
+				EClass.pc.Pick(targetChara.MakeBraineCell());
+				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
+			}
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
@@ -1804,6 +1811,49 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
+	public static string Fix_LostCore()
+	{
+		if (!EClass._zone.IsPCFaction)
+		{
+			return "Not in base.";
+		}
+		foreach (Thing thing in EClass._map.things)
+		{
+			if (thing.trait is TraitCoreZone)
+			{
+				return "Base already has core.";
+			}
+		}
+		if (EClass.pc.things.Find((Thing t) => t.trait is TraitCoreZone) != null)
+		{
+			return "Player has core.";
+		}
+		EClass._zone.AddCard(ThingGen.Create("core_zone"), EClass._zone.bounds.GetCenterPos().GetNearestPoint());
+		return "Done.";
+	}
+
+	[ConsoleCommand("")]
+	public static string Fix_RemoveDemitas()
+	{
+		List<Chara> list = new List<Chara>();
+		foreach (Chara value in EClass.game.cards.globalCharas.Values)
+		{
+			if (value.id == "demitas" && value.currentZone == EClass._zone)
+			{
+				list.Add(value);
+			}
+		}
+		if (list.Count > 1)
+		{
+			Chara chara = list[1];
+			chara.homeBranch.BanishMember(chara);
+			chara.Destroy();
+			return "Demitas Removed!";
+		}
+		return "Not enough Demitas!";
+	}
+
+	[ConsoleCommand("")]
 	public static string ListChara()
 	{
 		string text = "";
@@ -1978,27 +2028,6 @@ public class CoreDebug : EScriptable
 	{
 		EClass.pc.AddCondition<ConLevitate>();
 		return "I can fly!";
-	}
-
-	[ConsoleCommand("")]
-	public static string RemoveDemitas()
-	{
-		List<Chara> list = new List<Chara>();
-		foreach (Chara value in EClass.game.cards.globalCharas.Values)
-		{
-			if (value.id == "demitas" && value.currentZone == EClass._zone)
-			{
-				list.Add(value);
-			}
-		}
-		if (list.Count > 1)
-		{
-			Chara chara = list[1];
-			chara.homeBranch.BanishMember(chara);
-			chara.Destroy();
-			return "Demitas Removed!";
-		}
-		return "Not enough Demitas!";
 	}
 
 	[ConsoleCommand("")]

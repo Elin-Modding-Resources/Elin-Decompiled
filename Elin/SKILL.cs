@@ -2,19 +2,19 @@ public class SKILL
 {
 	public const int twowield = 131;
 
+	public const int armorHeavy = 122;
+
 	public const int twohand = 130;
 
 	public const int shield = 123;
 
-	public const int armorHeavy = 122;
-
-	public const int fireproof = 50;
+	public const int weaponCrossbow = 109;
 
 	public const int weaponBlunt = 111;
 
 	public const int weaponScythe = 110;
 
-	public const int weaponCrossbow = 109;
+	public const int fireproof = 50;
 
 	public const int acidproof = 51;
 
@@ -24,7 +24,7 @@ public class SKILL
 
 	public const int marksman = 133;
 
-	public const int fishing = 245;
+	public const int riding = 226;
 
 	public const int strategy = 135;
 
@@ -40,7 +40,7 @@ public class SKILL
 
 	public const int digging = 230;
 
-	public const int riding = 226;
+	public const int parasite = 227;
 
 	public const int lumberjack = 225;
 
@@ -65,6 +65,8 @@ public class SKILL
 	public const int weaponSword = 101;
 
 	public const int evasionPerfect = 57;
+
+	public const int fishing = 245;
 
 	public const int life = 60;
 
@@ -92,11 +94,11 @@ public class SKILL
 
 	public const int LER = 74;
 
-	public const int WIL = 75;
-
 	public const int EDR = 56;
 
-	public const int MAG = 76;
+	public const int WIL = 75;
+
+	public const int CHA = 77;
 
 	public const int LUC = 78;
 
@@ -118,19 +120,17 @@ public class SKILL
 
 	public const int weaponBow = 104;
 
-	public const int weaponGun = 105;
-
 	public const int weaponPolearm = 106;
 
 	public const int weaponDagger = 107;
 
 	public const int throwing = 108;
 
-	public const int CHA = 77;
+	public const int MAG = 76;
 
 	public const int gathering = 250;
 
-	public const int parasite = 227;
+	public const int weaponGun = 105;
 
 	public const int blacksmith = 256;
 
@@ -264,13 +264,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[131]
 	{
-		131, 130, 123, 122, 50, 111, 110, 109, 51, 132,
-		120, 133, 245, 135, 242, 241, 240, 237, 235, 230,
-		226, 225, 220, 210, 207, 200, 152, 151, 150, 134,
-		55, 101, 57, 60, 61, 62, 64, 65, 66, 67,
-		68, 70, 71, 72, 73, 74, 75, 56, 76, 78,
-		79, 80, 90, 91, 92, 100, 102, 103, 104, 105,
-		106, 107, 108, 77, 250, 227, 256, 916, 917, 918,
+		131, 122, 130, 123, 109, 111, 110, 50, 51, 132,
+		120, 133, 226, 135, 242, 241, 240, 237, 235, 230,
+		227, 225, 220, 210, 207, 200, 152, 151, 150, 134,
+		55, 101, 57, 245, 60, 61, 62, 64, 65, 66,
+		67, 68, 70, 71, 72, 73, 74, 56, 75, 77,
+		78, 79, 80, 90, 91, 92, 100, 102, 103, 104,
+		106, 107, 108, 76, 250, 105, 256, 916, 917, 918,
 		919, 920, 921, 922, 923, 924, 925, 950, 951, 952,
 		953, 954, 955, 956, 957, 958, 959, 960, 961, 962,
 		963, 964, 965, 971, 972, 255, 915, 914, 970, 912,

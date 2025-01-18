@@ -105,6 +105,12 @@ public class SourceFood : SourceThingV
 		map[r.id] = r;
 	}
 
+	public override void Reset()
+	{
+		base.Reset();
+		EClass.sources.things.Reset();
+	}
+
 	public override void OnImportRow(Row _r, SourceThing.Row c)
 	{
 		List<int> list = new List<int>(c.elements);

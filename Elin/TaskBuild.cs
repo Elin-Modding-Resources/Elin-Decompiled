@@ -127,7 +127,7 @@ public class TaskBuild : TaskBaseBuild
 			ingredient.thing = EClass._map.Stocked.Find(ingredient.id, ingredient.mat, ingredient.refVal);
 			if (ingredient.thing == null)
 			{
-				TryLayer();
+				TryLater();
 				return false;
 			}
 		}

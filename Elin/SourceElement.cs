@@ -386,7 +386,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 		row2.alias = row.alias + ele.alias.Remove(0, 3);
 		row2.aliasRef = ele.alias;
 		row2.aliasParent = ele.aliasParent;
-		row2.chance = row.chance;
+		row2.chance = row.chance * ele.chance / 100;
 		row2.LV = row.LV;
 		row2.OnImportData(EClass.sources.elements);
 		rows.Add(row2);

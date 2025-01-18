@@ -5,9 +5,65 @@ public class CharaAbility : EClass
 {
 	public static List<SourceElement.Row> randomAbilities = new List<SourceElement.Row>();
 
+	public static List<SourceElement.Row> randomAbilitiesAdv = new List<SourceElement.Row>();
+
 	public Chara owner;
 
 	public ActList list = new ActList();
+
+	public static List<SourceElement.Row> BuildRandomAbilityList(bool adv)
+	{
+		List<SourceElement.Row> list = new List<SourceElement.Row>();
+		foreach (SourceElement.Row row in EClass.sources.elements.rows)
+		{
+			if (row.abilityType.Length == 0 || row.aliasRef == "mold")
+			{
+				continue;
+			}
+			switch (row.id)
+			{
+			case 5000:
+			case 5001:
+			case 5005:
+			case 5040:
+			case 5048:
+			case 6400:
+			case 6410:
+			case 8200:
+				continue;
+			}
+			if (row.idMold != 0 && !adv)
+			{
+				switch (row.aliasRef)
+				{
+				case "eleEther":
+				case "eleAcid":
+				case "eleCut":
+				case "eleImpact":
+					continue;
+				}
+			}
+			list.Add(row);
+		}
+		return list;
+	}
+
+	public List<SourceElement.Row> GetRandomAbilityList()
+	{
+		if (randomAbilities.Count == 0)
+		{
+			randomAbilities = BuildRandomAbilityList(adv: false);
+		}
+		if (randomAbilitiesAdv.Count == 0)
+		{
+			randomAbilitiesAdv = BuildRandomAbilityList(adv: true);
+		}
+		if (!(owner.trait is TraitAdventurer))
+		{
+			return randomAbilities;
+		}
+		return randomAbilitiesAdv;
+	}
 
 	public CharaAbility(Chara _owner)
 	{
@@ -34,14 +90,10 @@ public class CharaAbility : EClass
 			int num = owner.trait.MaxRandomAbility + EClass.rnd(2) - list.items.Count;
 			if (num > 1)
 			{
-				if (randomAbilities.Count == 0)
-				{
-					BuildRandomAbilityList();
-				}
 				owner._listAbility = new List<int>();
 				for (int j = 0; j < num; j++)
 				{
-					owner._listAbility.Add(randomAbilities.RandomItemWeighted((SourceElement.Row e) => e.chance).id);
+					owner._listAbility.Add(GetRandomAbilityList().RandomItemWeighted((SourceElement.Row e) => e.chance).id);
 				}
 			}
 		}
@@ -77,22 +129,34 @@ public class CharaAbility : EClass
 	{
 		foreach (SourceElement.Row row in EClass.sources.elements.rows)
 		{
-			if (row.abilityType.Length != 0 && !(row.aliasRef == "mold"))
+			if (row.abilityType.Length == 0 || row.aliasRef == "mold")
 			{
-				switch (row.id)
+				continue;
+			}
+			switch (row.id)
+			{
+			case 5000:
+			case 5001:
+			case 5005:
+			case 5040:
+			case 5048:
+			case 6400:
+			case 6410:
+			case 8200:
+				continue;
+			}
+			if (row.idMold != 0 && !(owner.trait is TraitAdventurer))
+			{
+				switch (row.aliasRef)
 				{
-				case 5000:
-				case 5001:
-				case 5005:
-				case 5040:
-				case 5048:
-				case 6400:
-				case 6410:
-				case 8200:
+				case "eleEther":
+				case "eleAcid":
+				case "eleCut":
+				case "eleImpact":
 					continue;
 				}
-				randomAbilities.Add(row);
 			}
+			randomAbilities.Add(row);
 		}
 	}
 
@@ -112,11 +176,7 @@ public class CharaAbility : EClass
 		{
 			owner._listAbility = new List<int>();
 		}
-		if (randomAbilities.Count == 0)
-		{
-			BuildRandomAbilityList();
-		}
-		owner._listAbility.Add(randomAbilities.RandomItemWeighted((SourceElement.Row e) => e.chance).id);
+		owner._listAbility.Add(GetRandomAbilityList().RandomItemWeighted((SourceElement.Row e) => e.chance).id);
 		Refresh();
 	}
 

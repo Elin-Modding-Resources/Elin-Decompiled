@@ -204,6 +204,18 @@ public class Trait : EClass
 
 	public virtual bool IsContainer => false;
 
+	public virtual bool CanSearchContent
+	{
+		get
+		{
+			if (IsContainer)
+			{
+				return owner.c_lockLv == 0;
+			}
+			return false;
+		}
+	}
+
 	public virtual bool CanOpenContainer
 	{
 		get

@@ -141,25 +141,26 @@ public class ActMelee : ActBaseAttack
 			{
 				ActRanged.TryReload(w);
 			}
-			int num2 = ((w != null) ? w.Evalue(606) : 0);
-			int scatter = ((w != null) ? w.Evalue(607) : 0);
-			int chaser = ((w != null) ? w.Evalue(620) : 0);
-			if (Act.CC.IsPCFaction)
-			{
-				chaser += EClass.pc.faction.charaElements.Value(620);
-			}
-			List<Point> list = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
-			Attack(Act.TC, Act.TP, 1f);
+			int num2 = GetWeaponEnc(606);
+			int scatter = GetWeaponEnc(607);
+			int splash = GetWeaponEnc(608);
+			int chaser = GetWeaponEnc(620);
+			int flurry = GetWeaponEnc(621);
+			int frustration = GetWeaponEnc(624);
+			int num3 = GetWeaponEnc(622);
+			int feint = GetWeaponEnc(623);
+			List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
+			AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
 			if (num2 > 0)
 			{
-				foreach (Point item in list)
+				foreach (Point item in list2)
 				{
 					if (!item.Equals(orgPos))
 					{
 						Chara firstChara = item.FirstChara;
 						if (firstChara != null && firstChara.IsHostile(Act.CC))
 						{
-							Attack(firstChara, item, 1f);
+							AttackWithFlurry(firstChara, item, 1f, subAttack: false);
 						}
 					}
 				}
@@ -173,38 +174,74 @@ public class ActMelee : ActBaseAttack
 						Chara firstChara2 = p.FirstChara;
 						if (firstChara2 != null && firstChara2.IsHostile(Act.CC))
 						{
-							Attack(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)));
+							AttackWithFlurry(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)), subAttack: true);
 						}
 					}
 				});
 			}
-			int num3 = count;
-			count = num3 + 1;
-			void Attack(Card _tc, Point _tp, float mtp)
+			else if (num3 > 0)
+			{
+				List<Point> list = new List<Point>();
+				Act.TP.ForeachNeighbor(delegate(Point p)
+				{
+					list.Add(p.Copy());
+				});
+				list.Shuffle();
+				int num4 = 0;
+				for (int i = 0; i < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, i + 2)); i++)
+				{
+					num4++;
+				}
+				foreach (Point item2 in list)
+				{
+					foreach (Card item3 in item2.ListCards())
+					{
+						if (num4 <= 0 || !Act.CC.IsAliveInCurrentZone)
+						{
+							break;
+						}
+						if (item3.trait.CanBeAttacked || (item3.isChara && item3.Chara.IsHostile(Act.CC)))
+						{
+							Act.CC.Say("attack_cleave");
+							AttackWithFlurry(item3, item2, 1f, subAttack: true);
+							num4--;
+						}
+					}
+				}
+			}
+			int num5 = count;
+			count = num5 + 1;
+			void Attack(Card _tc, Point _tp, float mtp, bool subAttack)
 			{
 				Act.TC = _tc;
 				Act.TP = _tp;
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
-				int num4 = 1;
+				int num6 = 1;
 				if (chaser > 0)
 				{
-					for (int i = 0; i < 10; i++)
+					for (int j = 0; j < 10; j++)
 					{
-						if (chaser > EClass.rnd((int)Mathf.Pow(4f, i + 2)))
+						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
 						{
-							num4++;
+							num6++;
 						}
 					}
 				}
 				bool flag2 = false;
-				for (int j = 0; j < num4; j++)
+				for (int k = 0; k < num6; k++)
 				{
-					if (j > 0)
+					if (k > 0)
 					{
-						Msg.Say("attack_chaser");
+						Act.CC.Say("attack_chaser");
 					}
-					flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll);
-					if (flag2)
+					flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
+					if (!flag2 && frustration > 0 && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))
+					{
+						AttackProcess.Current.critFury = true;
+						flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
+						AttackProcess.Current.critFury = false;
+					}
+					if (flag2 || !Act.CC.IsAliveInCurrentZone || !Act.TC.IsAliveInCurrentZone)
 					{
 						break;
 					}
@@ -250,7 +287,66 @@ public class ActMelee : ActBaseAttack
 					}
 				}
 				Act.TC = _tc;
-				Act.CC.DoHostileAction(Act.TC);
+				if (Act.TC.IsAliveInCurrentZone && Act.TC.isChara)
+				{
+					Act.CC.DoHostileAction(Act.TC);
+					if (feint > 0 && 10f + 4f * Mathf.Sqrt(feint) > (float)EClass.rnd(100))
+					{
+						Act.TC.Chara.AddCondition<ConSupress>(100 + 5 * (int)Mathf.Sqrt(feint));
+					}
+				}
+				if (splash > 0)
+				{
+					Act.TP.ForeachNeighbor(delegate(Point p)
+					{
+						if (p.Equals(Act.TP) || p.Equals(Act.CC.pos))
+						{
+							return;
+						}
+						p.PlayEffect("smoke_shockwave");
+						p.Copy().Animate(AnimeID.QuakeMini, animeBlock: true);
+						foreach (Card item4 in p.ListCards())
+						{
+							if (item4.trait.CanBeAttacked || (item4.isChara && item4.Chara.IsHostile(Act.CC)))
+							{
+								int rawDamage = AttackProcess.Current.GetRawDamage(0.1f + 0.05f * Mathf.Sqrt(splash), crit: false, maxRoll: false);
+								rawDamage = item4.ApplyProtection(rawDamage);
+								item4.DamageHP(rawDamage, 0, 100, AttackSource.Shockwave, Act.CC);
+							}
+						}
+					});
+				}
+			}
+			void AttackWithFlurry(Card _tc, Point _tp, float mtp, bool subAttack)
+			{
+				int num7 = 1;
+				if (flurry > 0)
+				{
+					for (int l = 0; l < 10 && flurry > EClass.rnd(25 + (int)Mathf.Pow(5f, l + 2)); l++)
+					{
+						num7++;
+					}
+				}
+				for (int m = 0; m < num7; m++)
+				{
+					if (!Act.CC.IsAliveInCurrentZone)
+					{
+						break;
+					}
+					if (!_tc.IsAliveInCurrentZone)
+					{
+						break;
+					}
+					if (m > 0)
+					{
+						Act.CC.Say("attack_flurry");
+					}
+					Attack(_tc, _tp, mtp, subAttack);
+				}
+			}
+			int GetWeaponEnc(int ele)
+			{
+				return ((w != null) ? w.Evalue(ele) : 0) + EClass.pc.faction.charaElements.Value(ele);
 			}
 		}
 		if (!flag)

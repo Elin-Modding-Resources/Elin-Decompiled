@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int AI_Drink = 5045;
+	public const int ActChat = 5044;
 
 	public const int ActNoItem = 5037;
 
@@ -18,7 +18,7 @@ public class ABILITY
 
 	public const int AI_TendAnimal = 5043;
 
-	public const int ActChat = 5044;
+	public const int AI_Drink = 5045;
 
 	public const int ActInstall = 5046;
 
@@ -184,9 +184,9 @@ public class ABILITY
 
 	public const int ActLulwyTrick = 6902;
 
-	public const int Melee = 5002;
-
 	public const int ActJureHeal = 6901;
+
+	public const int Melee = 5002;
 
 	public const int ActGazeMutation = 6622;
 
@@ -234,7 +234,7 @@ public class ABILITY
 
 	public static readonly int[] IDS = new int[115]
 	{
-		5045, 5037, 5038, 5039, 5040, 5041, 5042, 5043, 5044, 5046,
+		5044, 5037, 5038, 5039, 5040, 5041, 5042, 5043, 5045, 5046,
 		5047, 5048, 5049, 5050, 5051, 5036, 5052, 5054, 5055, 6001,
 		6003, 6011, 6012, 6013, 6015, 6018, 6019, 6020, 6050, 6400,
 		6410, 5053, 6420, 5035, 5033, 5003, 5004, 5005, 5006, 5007,
@@ -243,7 +243,7 @@ public class ABILITY
 		5028, 5029, 5030, 5031, 5032, 5018, 6500, 6450, 50204, 6903,
 		6904, 7000, 50200, 50201, 50202, 50203, 6600, 50205, 50206, 50207,
 		50208, 50209, 50210, 50211, 50212, 50213, 50214, 50215, 5001, 5000,
-		6902, 5002, 6901, 6622, 6603, 6610, 6611, 6612, 6620, 6621,
+		6902, 6901, 5002, 6622, 6603, 6610, 6611, 6612, 6620, 6621,
 		6900, 6623, 6602, 6626, 6631, 6640, 6641, 6642, 6650, 6660,
 		6661, 6700, 6720, 6630, 6601
 	};

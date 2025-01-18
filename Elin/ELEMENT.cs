@@ -21,13 +21,13 @@ public class ELEMENT
 
 	public const int _void = 0;
 
-	public const int socket = 5;
+	public const int quality = 2;
 
 	public const int lv = 1;
 
-	public const int quality = 2;
-
 	public const int d = 3;
+
+	public const int socket = 5;
 
 	public const int nutrition = 10;
 
@@ -67,8 +67,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[30]
 	{
-		753, 755, 751, 750, 756, 754, 752, 0, 5, 1,
-		2, 3, 10, 11, 12, 13, 14, 16, 17, 18,
+		753, 755, 751, 750, 756, 754, 752, 0, 2, 1,
+		3, 5, 10, 11, 12, 13, 14, 16, 17, 18,
 		15, 21, 22, 23, 24, 25, 26, 29, 85, 20
 	};
 }
@@ -923,9 +923,10 @@ public class Element : EClass
 			3 => dmg / 4, 
 			2 => dmg / 3, 
 			1 => dmg / 2, 
+			0 => dmg, 
 			-1 => dmg * 3 / 2, 
 			-2 => dmg * 2, 
-			_ => dmg, 
+			_ => dmg * 2, 
 		};
 	}
 }

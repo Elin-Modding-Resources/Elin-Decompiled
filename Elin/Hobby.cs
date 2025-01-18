@@ -30,17 +30,18 @@ public class Hobby : EClass
 	public int GetEfficiency(Chara c)
 	{
 		int num = 50;
-		if (c.homeBranch == null || c.currentZone != c.homeBranch.owner)
+		FactionBranch factionBranch = ((c.currentZone == null) ? EClass._zone.branch : c.homeBranch);
+		if (factionBranch == null || (c.currentZone != null && c.currentZone != factionBranch.owner))
 		{
 			return 0;
 		}
-		if (c.currentZone == EClass._zone)
+		if (c.currentZone == null || c.currentZone == EClass._zone)
 		{
 			if ((!source.destTrait.IsEmpty() || !source.workTag.IsEmpty()) && !GetAI(c).SetDestination())
 			{
 				return 0;
 			}
-			if (c.noMove && c.pos.FindThing<TraitGeneratorWheel>() != null)
+			if (c.noMove && c.pos != null && c.pos.FindThing<TraitGeneratorWheel>() != null)
 			{
 				return 0;
 			}
@@ -62,7 +63,7 @@ public class Hobby : EClass
 		{
 			num += c.affinity.value;
 		}
-		num = num * (100 + c.homeBranch.Evalue(3708) * 10) / 100;
+		num = num * (100 + factionBranch.Evalue(3708) * 10) / 100;
 		if (num >= 0)
 		{
 			return num;

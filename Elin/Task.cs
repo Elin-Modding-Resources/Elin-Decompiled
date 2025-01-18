@@ -23,7 +23,7 @@ public class Task : AIAct
 		Destroy();
 	}
 
-	public void TryLayer(int min = 30)
+	public void TryLater(int min = 30)
 	{
 		nextTry = EClass.game.sessionMin + min;
 	}
@@ -53,7 +53,7 @@ public class Task : AIAct
 
 	public override Status Cancel()
 	{
-		TryLayer();
+		TryLater();
 		return base.Cancel();
 	}
 

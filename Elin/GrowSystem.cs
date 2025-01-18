@@ -614,7 +614,7 @@ public class GrowSystem : EClass
 			{
 				if (!EClass.player.isAutoFarming)
 				{
-					c.Say("cropSpoiled", c, cell.GetObjName());
+					c?.Say("cropSpoiled", c, cell.GetObjName());
 				}
 				return;
 			}

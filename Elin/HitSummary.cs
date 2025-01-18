@@ -59,15 +59,34 @@ public class HitSummary : EClass
 		{
 			if (!recipe.UseStock)
 			{
+				Dictionary<Thing, int> dictionary = new Dictionary<Thing, int>();
 				foreach (Recipe.Ingredient ingredient in recipe.ingredients)
 				{
-					if (!ingredient.optional)
+					if (ingredient.thing != null)
 					{
-						if (ingredient.thing == null)
+						if (!dictionary.ContainsKey(ingredient.thing))
+						{
+							dictionary.Add(ingredient.thing, 0);
+						}
+						dictionary[ingredient.thing] += ingredient.req * countValid;
+					}
+				}
+				foreach (KeyValuePair<Thing, int> item in dictionary)
+				{
+					if (item.Key.Num < item.Value)
+					{
+						return false;
+					}
+				}
+				foreach (Recipe.Ingredient ingredient2 in recipe.ingredients)
+				{
+					if (!ingredient2.optional)
+					{
+						if (ingredient2.thing == null)
 						{
 							return false;
 						}
-						if (ingredient.thing.Num < ingredient.req * countValid)
+						if (ingredient2.thing.Num < ingredient2.req * countValid)
 						{
 							return false;
 						}

@@ -588,7 +588,7 @@ public class ActEffect : EClass
 		}
 		case EffectId.Funnel:
 		{
-			if (EClass._zone.CountMinions(CC) > CC.MaxSummon || CC.c_uidMaster != 0)
+			if (EClass._zone.CountMinions(CC) >= CC.MaxSummon || CC.c_uidMaster != 0)
 			{
 				CC.Say("summon_ally_fail", CC);
 				return;
@@ -810,7 +810,7 @@ public class ActEffect : EClass
 		case EffectId.Duplicate:
 		{
 			Point randomPoint = CC.pos.GetRandomPoint(2, requireLos: false, allowChara: false, allowBlocked: false, 200);
-			if (randomPoint == null || randomPoint.Equals(CC.pos) || !randomPoint.IsValid || EClass._zone.IsRegion || CC.HasCondition<ConPoison>() || CC.HasCondition<ConConfuse>() || CC.HasCondition<ConDim>() || CC.HasCondition<ConParalyze>() || CC.HasCondition<ConSleep>() || CC.HasCondition<ConBurning>() || CC.HasCondition<ConFreeze>() || CC.HasCondition<ConMiasma>())
+			if (randomPoint == null || randomPoint.Equals(CC.pos) || !randomPoint.IsValid || EClass._zone.IsRegion || CC.HasCondition<ConPoison>() || CC.HasCondition<ConConfuse>() || CC.HasCondition<ConDim>() || CC.HasCondition<ConParalyze>() || CC.HasCondition<ConSleep>() || CC.HasCondition<ConBurning>() || CC.HasCondition<ConFreeze>() || CC.HasCondition<ConMiasma>() || CC.corruption >= 100)
 			{
 				CC.Say("split_fail", CC);
 				return;

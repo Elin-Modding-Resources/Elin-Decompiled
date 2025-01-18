@@ -641,7 +641,12 @@ public class BaseGameScreen : EMono
 		EMono.scene.rain.SetActive(enable: true);
 		EMono.scene.ether.SetActive(enable: true);
 		EMono.scene.blossom.SetActive(enable: true);
-		float num = ((EMono._zone.lv <= -2) ? 0f : ((EMono._zone.lv <= -1) ? 0.3f : ((flag && !flag2) ? 0.6f : 1f)));
+		Zone zone = EMono._zone;
+		if (EMono._zone is Zone_Tent)
+		{
+			zone = (EMono._zone.parent as Zone) ?? EMono._zone;
+		}
+		float num = ((zone.lv <= -2) ? 0f : ((zone.lv <= -1) ? 0.3f : ((flag && !flag2) ? 0.6f : 1f)));
 		EMono.scene.sfxRain.SetVolume(weather.IsRaining ? num : 0f);
 		EMono.scene.sfxSea.SetVolume(EMono._zone.VolumeSea * num);
 		EMono.scene.camSupport.grading.profile.fog = EMono.setting.render.fogs[EMono._map.config.fog];

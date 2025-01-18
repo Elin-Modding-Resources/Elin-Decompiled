@@ -273,6 +273,10 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		{
 			skin = 0;
 		}
+		if (dir < 0)
+		{
+			dir *= -1;
+		}
 		if (dir >= array.Length)
 		{
 			dir = 0;

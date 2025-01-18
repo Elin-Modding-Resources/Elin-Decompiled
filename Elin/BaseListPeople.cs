@@ -65,25 +65,6 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 		SetSubText(a, b);
 		if (ShowHome)
 		{
-			BaseArea roomWork = null;
-			bool flag = false;
-			foreach (Hobby item in a.ListWorks())
-			{
-				AIWork aI = item.GetAI(a);
-				flag = aI.SetDestination();
-				if (flag)
-				{
-					if (aI.destArea != null)
-					{
-						roomWork = aI.destArea;
-					}
-					else if (aI.destThing != null)
-					{
-						roomWork = aI.destThing.pos.cell.room;
-					}
-					break;
-				}
-			}
 			if (a.IsPCFaction)
 			{
 				Sprite icon = a.affinity.GetIcon();
@@ -92,32 +73,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					Util.Instantiate<UIItem>("UI/Element/Grid/Attach/affinity", b).image1.sprite = icon;
 				}
 			}
-			b.AddSubButton(EClass.core.refs.icons.work, delegate
-			{
-				if (roomWork == null)
-				{
-					SE.BeepSmall();
-				}
-				else
-				{
-					EClass.pc.SetAI(new AI_Goto(roomWork.GetRandomFreePos(), 1));
-					layer.Close();
-				}
-			}, null, delegate(UITooltip t)
-			{
-				t.note.Clear();
-				t.note.AddHeader("infoWork".lang((roomWork != null) ? roomWork.Name : "none".lang()));
-				foreach (Hobby item2 in a.ListWorks())
-				{
-					AddText(item2, "work", a.source.works.Contains(item2.source.alias));
-				}
-				foreach (Hobby item3 in a.ListHobbies())
-				{
-					AddText(item3, "hobby", a.source.hobbies.Contains(item3.source.alias));
-				}
-				t.note.Build();
-				_ = roomWork;
-			}).icon.SetAlpha(flag ? 1f : 0.4f);
+			AddSubButtonWork(b, a);
 			Room room = a.FindRoom();
 			TraitBed bed = a.FindBed();
 			if (a.memberType == FactionMemberType.Default)
@@ -145,7 +101,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						{
 						});
 					}
-				}).icon.SetAlpha((room != null) ? 1f : 0.4f);
+				}).icon.SetAlpha((bed != null) ? 1f : 0.4f);
 			}
 		}
 		if (ShowCharaSheet && EClass.debug.showExtra)
@@ -162,6 +118,71 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 		{
 			b.gameObject.AddComponent<CanvasGroup>().alpha = 0.6f;
 		}
+	}
+
+	public void AddSubButtonWork(ItemGeneral b, Chara a)
+	{
+		BaseArea roomWork = null;
+		bool flag = true;
+		foreach (Hobby item in a.ListWorks())
+		{
+			AIWork aI = item.GetAI(a);
+			if (aI.SetDestination())
+			{
+				if (aI.destArea != null)
+				{
+					roomWork = aI.destArea;
+				}
+				else if (aI.destThing != null)
+				{
+					roomWork = aI.destThing.pos.cell.room;
+				}
+				break;
+			}
+		}
+		foreach (Hobby item2 in a.ListWorks().Concat(a.ListHobbies()))
+		{
+			if (item2.GetEfficiency(a) <= 0)
+			{
+				flag = false;
+				break;
+			}
+		}
+		b.AddSubButton(EClass.core.refs.icons.work, delegate
+		{
+			if (roomWork == null)
+			{
+				SE.BeepSmall();
+			}
+			else
+			{
+				EClass.pc.SetAI(new AI_Goto(roomWork.GetRandomFreePos(), 1));
+				layer.Close();
+			}
+		}, null, delegate(UITooltip t)
+		{
+			WriteHobbies(t, a, roomWork);
+		}).icon.SetAlpha(flag ? 1f : 0.4f);
+	}
+
+	public void WriteHobbies(UITooltip t, Chara a, BaseArea roomWork)
+	{
+		t.note.Clear();
+		t.note.AddHeader("infoWork".lang((roomWork != null) ? roomWork.Name : "none".lang()));
+		foreach (Hobby item in a.ListWorks())
+		{
+			AddText(item, "work", a.source.works.Contains(item.source.alias));
+		}
+		foreach (Hobby item2 in a.ListHobbies())
+		{
+			AddText(item2, "hobby", a.source.hobbies.Contains(item2.source.alias));
+		}
+		if (a.IsPCParty)
+		{
+			t.note.Space(8);
+			t.note.AddText("workNotActive_party".lang(), FontColor.Warning);
+		}
+		t.note.Build();
 		void AddText(Hobby h, string lang, bool fix)
 		{
 			int efficiency = h.GetEfficiency(a);
@@ -173,18 +194,18 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			text = text.TagColor((efficiency == 0) ? FontColor.Warning : FontColor.Good);
 			string[] array = Lang.GetList("work_lv");
 			string text2 = array[Mathf.Clamp(efficiency / 50, (efficiency != 0) ? 1 : 0, array.Length - 1)];
-			P_3.t.note.AddTopic("TopicLeft", lang.lang(), text + " (" + text2 + ")");
+			t.note.AddTopic("TopicLeft", lang.lang(), text + " (" + text2 + ")");
 			if (!h.source.destTrait.IsEmpty())
 			{
-				bool flag2 = EClass._map.FindThing(Type.GetType("Trait" + h.source.destTrait + ", Elin"), a) != null;
+				bool flag = EClass._map.FindThing(Type.GetType("Trait" + h.source.destTrait + ", Elin"), a) != null;
 				List<CardRow> obj = EClass.sources.cards.rows.Where((CardRow t) => t.trait.Length != 0 && Type.GetType("Trait" + h.source.destTrait).IsAssignableFrom(Type.GetType("Trait" + t.trait[0]))).ToList();
 				obj.Sort((CardRow a, CardRow b) => a.LV - b.LV);
 				CardRow cardRow = obj[0];
-				P_3.t.note.AddText("NoteText_small", "・ " + "workDestTrait".lang(cardRow.GetName().ToTitleCase().TagColor(flag2 ? FontColor.Good : FontColor.Warning)));
+				t.note.AddText("NoteText_small", "・ " + "workDestTrait".lang(cardRow.GetName().ToTitleCase().TagColor(flag ? FontColor.Good : FontColor.Warning)));
 			}
 			if (efficiency == 0)
 			{
-				P_3.t.note.AddText("NoteText_small", "・ " + "workNotActive".lang());
+				t.note.AddText("NoteText_small", "・ " + "workNotActive".lang());
 			}
 			else
 			{
@@ -193,7 +214,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					int num = Mathf.Max(1, h.source.things[i + 1].ToInt() * efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
 					string text3 = h.source.things[i];
 					string s = (text3.StartsWith("#") ? EClass.sources.categories.map[text3.Replace("#", "")].GetName() : EClass.sources.cards.map[h.source.things[i]].GetName());
-					P_3.t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
+					t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
 				}
 				if (!h.source.elements.IsEmpty())
 				{
@@ -202,7 +223,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[j]];
 						int num2 = h.source.elements[j + 1];
 						int num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? (num2 / 10) : Mathf.Max(0, num2 * h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
-						P_3.t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
+						t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
 					}
 				}
 				string[] array2 = h.source.GetDetail().SplitNewline();
@@ -210,11 +231,11 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 				{
 					if (!text4.IsEmpty())
 					{
-						P_3.t.note.AddText("NoteText_small", "・ " + text4);
+						t.note.AddText("NoteText_small", "・ " + text4);
 					}
 				}
 			}
-			P_3.t.note.Space(1);
+			t.note.Space(1);
 		}
 	}
 

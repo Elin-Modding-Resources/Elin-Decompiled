@@ -153,8 +153,10 @@ public class TraitAltar : Trait
 		{
 			if (t.HasTag(CTAG.godArtifact) && t.c_idDeity == Deity.id)
 			{
+				int encLV = t.encLV;
 				t.Destroy();
 				Religion.Reforge(t.id);
+				t.SetEncLv(encLV);
 				return;
 			}
 			if (EClass.pc.IsEyth)

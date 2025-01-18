@@ -17,5 +17,6 @@ public enum AttackSource
 	Hang,
 	Wrath,
 	ManaBackfire,
-	DeathSentense
+	DeathSentense,
+	Shockwave
 }

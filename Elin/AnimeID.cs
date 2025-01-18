@@ -23,5 +23,6 @@ public enum AnimeID
 	Hop,
 	Ride,
 	Truck,
-	PlayMusic
+	PlayMusic,
+	QuakeMini
 }

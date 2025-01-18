@@ -461,6 +461,7 @@ public class GoalCombat : Goal
 		bool flag3 = owner.HasCondition<ConFear>();
 		bool isConfused = owner.isConfused;
 		bool flag4 = owner.HasCondition<ConDim>();
+		bool flag5 = owner.HasCondition<ConSupress>();
 		foreach (ItemAbility ability in abilities)
 		{
 			Act act = ability.act;
@@ -478,7 +479,7 @@ public class GoalCombat : Goal
 				continue;
 			}
 			string text = s.abilityType[0];
-			if (id == 6602 && (dist <= 1 || tc.HasCondition<ConEntangle>()))
+			if ((flag5 && !(text == "melee") && !(text == "range") && EClass.rnd(2) == 0) || (id == 6602 && (dist <= 1 || tc.HasCondition<ConEntangle>())))
 			{
 				continue;
 			}
@@ -497,9 +498,9 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag6 = owner.HasCondition<StanceTaunt>();
-				bool flag7 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag6 && !flag7) ? 100 : ((!flag6 && flag7) ? 100 : 0));
+				bool flag7 = owner.HasCondition<StanceTaunt>();
+				bool flag8 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
 				break;
 			}
 			case "melee":
@@ -578,13 +579,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag8 = text == "dot";
-				if (flag8 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag9 = text == "dot";
+				if (flag9 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag8)
+				if (num > 0 && flag9)
 				{
 					num += 10;
 				}
@@ -596,13 +597,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag5 = ability.act is ActBolt;
+				bool flag6 = ability.act is ActBolt;
 				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag5 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag5 ? 6 : 5) > 0))
+				GetNumEnemy(flag6 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag6 ? 6 : 5) > 0))
 				{
 					continue;
 				}

@@ -87,6 +87,12 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 		}
 	}
 
+	public override void Reset()
+	{
+		base.Reset();
+		EClass.sources.things.Reset();
+	}
+
 	public override void OnAfterImportData()
 	{
 		Dictionary<string, SourceThing.Row> dictionary = new Dictionary<string, SourceThing.Row>();

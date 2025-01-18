@@ -136,7 +136,7 @@ public class WidgetSearch : WidgetCodex
 				}
 				foreach (Card item in EMono._map.props.stocked.all)
 				{
-					if (!(item.parent is Thing { c_lockLv: <=0, IsContainer: not false }))
+					if (!(item.parent is Thing thing) || !thing.trait.CanSearchContent)
 					{
 						continue;
 					}

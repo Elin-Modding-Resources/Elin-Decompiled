@@ -77,6 +77,13 @@ public class CardManager : EClass
 
 	public void AssignUID(Card c)
 	{
+		if (globalCharas.ContainsKey(uidNext))
+		{
+			while (globalCharas.ContainsKey(uidNext))
+			{
+				uidNext++;
+			}
+		}
 		c.uid = uidNext;
 		uidNext++;
 	}

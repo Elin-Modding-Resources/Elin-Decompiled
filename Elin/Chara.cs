@@ -6045,6 +6045,7 @@ public class Chara : Card, IPathfindWalker
 			text2 = text2 + "Global:" + IsGlobal + "  AI:" + ai?.ToString() + " " + source.tactics.IsEmpty(EClass.sources.tactics.map.TryGetValue(id)?.id ?? EClass.sources.tactics.map.TryGetValue(job.id)?.id ?? "predator");
 			text2 += Environment.NewLine;
 			text2 = text2 + base.uid + IsMinion + "/" + base.c_uidMaster + "/" + master;
+			text2 = text2 + " dir:" + base.dir + " skin:" + base.idSkin;
 		}
 		string text3 = "";
 		IEnumerable<BaseStats> enumerable = conditions.Concat((!IsPCFaction) ? new BaseStats[0] : new BaseStats[2] { hunger, stamina });
@@ -6092,6 +6093,15 @@ public class Chara : Card, IPathfindWalker
 				text = "";
 				text3 = text3.TrimEnd(", ".ToCharArray()) + "</size>";
 			}
+		}
+		if (EClass.debug.showExtra)
+		{
+			text3 += Environment.NewLine;
+			foreach (ActList.Item item2 in ability.list.items)
+			{
+				text3 = text3 + item2.act.Name + ", ";
+			}
+			text3 = text3.TrimEnd(", ".ToCharArray());
 		}
 		return text + text2 + text3;
 	}

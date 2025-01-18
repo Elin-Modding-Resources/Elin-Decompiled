@@ -4,6 +4,8 @@ public class TraitMannequin : TraitItem
 {
 	public override bool CanStack => false;
 
+	public override bool CanSearchContent => true;
+
 	public override bool UseAltTiles => owner.things.Count > 0;
 
 	public override bool CanUseFromInventory => false;

@@ -276,7 +276,7 @@ public class Religion : EClass
 		};
 	}
 
-	public static void Reforge(string id, Point pos = null, bool first = true)
+	public static Thing Reforge(string id, Point pos = null, bool first = true)
 	{
 		if (pos == null)
 		{
@@ -376,6 +376,7 @@ public class Religion : EClass
 		{
 			pos.PlaySound("godbless");
 		}
+		return thing;
 	}
 
 	public virtual void OnBecomeBranchFaith()
