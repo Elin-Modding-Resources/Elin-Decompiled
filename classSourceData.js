@@ -61,7 +61,7 @@ var classSourceData =
     [ "nameBook", "classSourceData.html#a5c812ca764485c5c1de2e0096b11d2a7", null ],
     [ "nameSheet", "classSourceData.html#a7f61453e176f9ac2895146f83c611653", null ],
     [ "rows", "classSourceData.html#ad0e319d7d5ee512ae3dcd9ee7d2afdec", null ],
-    [ "CanReset", "classSourceData.html#ac1c0b1520b299eb2168c4587a0af3c1d", null ],
+    [ "AllowHotInitialization", "classSourceData.html#af4bca05faf17b0429046370519b6216e", null ],
     [ "ImportFields", "classSourceData.html#a05a4f5dc511dfa38272bd42d4498cc78", null ],
     [ "row", "classSourceData.html#a1188b762baf71923df3cdc92d0abc41d", null ],
     [ "rowDefault", "classSourceData.html#a34240ee771c869320b92e9971c720afc", null ],

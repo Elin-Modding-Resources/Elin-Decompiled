@@ -460,6 +460,7 @@ var hierarchy =
               [ "ConExcommunication", "classConExcommunication.html", null ],
               [ "ConGravity", "classConGravity.html", null ],
               [ "ConSilence", "classConSilence.html", null ],
+              [ "ConSupress", "classConSupress.html", null ],
               [ "ConWeakResEle", "classConWeakResEle.html", null ],
               [ "ConWeakness", "classConWeakness.html", null ],
               [ "ConWrath", "classConWrath.html", null ],
@@ -468,6 +469,8 @@ var hierarchy =
               ] ]
             ] ],
             [ "BaseStance", "classBaseStance.html", [
+              [ "StanceFury", "classStanceFury.html", null ],
+              [ "StanceIai", "classStanceIai.html", null ],
               [ "StanceManaCost", "classStanceManaCost.html", null ],
               [ "StanceTaunt", "classStanceTaunt.html", null ]
             ] ],

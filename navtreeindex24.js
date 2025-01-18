@@ -1,5 +1,13 @@
 var NAVTREEINDEX24 =
 {
+"classAI__Fuck.html#a9873b0b83b8f37c5f0061455e5d00f10":[1,0,68,5],
+"classAI__Fuck.html#aa1e381a6dd59ba7946486f6c7e220059":[1,0,68,17],
+"classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d":[1,0,68,4],
+"classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360":[1,0,68,9],
+"classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073":[1,0,68,0],
+"classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073a789d9a06ca24c82106a0329240878f66":[1,0,68,0,1],
+"classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073a99754106633f94d350db34d548d6091a":[1,0,68,0,0],
+"classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c":[1,0,68,18],
 "classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81":[1,0,68,3],
 "classAI__Goto.html":[1,0,69],
 "classAI__Goto.html#a005341fe7609880dde211d033e869b23":[1,0,69,12],
@@ -241,13 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Trolley.html#af13d6ccc09e491d2fb84103c8ce2dc4b":[1,0,99,8],
 "classAI__Trolley.html#af532579254a78e4c2215866ff991f68c":[1,0,99,11],
 "classAI__UseCrafter.html":[1,0,100],
-"classAI__UseCrafter.html#a53b27b57636b6208744e94692a758281":[1,0,100,6],
-"classAI__UseCrafter.html#a585e85ff22dc7f410238dd3c91678564":[1,0,100,12],
-"classAI__UseCrafter.html#a5d1aeb35d19fe1ae55fdeb8a353fd2eb":[1,0,100,8],
-"classAI__UseCrafter.html#a66cad5cf21f7a1c52c48cd5c463a4a76":[1,0,100,3],
-"classAI__UseCrafter.html#a67186da46cd2f634cebaf89fec8275bb":[1,0,100,9],
-"classAI__UseCrafter.html#a78b3b1991cf08c23435fd571ecd89af1":[1,0,100,10],
-"classAI__UseCrafter.html#a7cabe8769f394002bc83363e1853410b":[1,0,100,0],
-"classAI__UseCrafter.html#a8977c11c44eef948782726852e8dcae0":[1,0,100,7],
-"classAI__UseCrafter.html#a99e44f6eb280ea1c2a95b561a25aaee2":[1,0,100,5]
+"classAI__UseCrafter.html#a53b27b57636b6208744e94692a758281":[1,0,100,6]
 };

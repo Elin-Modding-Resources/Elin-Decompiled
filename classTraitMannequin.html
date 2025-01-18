@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.77 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.78 Nightly</span>
    </div>
   </td>
  </tr>
@@ -319,6 +319,8 @@ Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:ade085d97dce3c7f95d85c701deb30067"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMannequin.html#ade085d97dce3c7f95d85c701deb30067">CanStack</a><code> [get]</code></td></tr>
 <tr class="separator:ade085d97dce3c7f95d85c701deb30067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ebbf82ab1219140cb7656a4e6b76562"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMannequin.html#a8ebbf82ab1219140cb7656a4e6b76562">CanSearchContent</a><code> [get]</code></td></tr>
+<tr class="separator:a8ebbf82ab1219140cb7656a4e6b76562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46dc077526eed5cc8c13690e85909b70"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMannequin.html#a46dc077526eed5cc8c13690e85909b70">UseAltTiles</a><code> [get]</code></td></tr>
 <tr class="separator:a46dc077526eed5cc8c13690e85909b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c9d4666799b2cb4a2b74090d010f9b"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMannequin.html#a51c9d4666799b2cb4a2b74090d010f9b">CanUseFromInventory</a><code> [get]</code></td></tr>
@@ -443,6 +445,8 @@ Properties</h2></td></tr>
 <tr class="separator:ac7ab36c3665e29a4409d9e3390e3f2a3 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1d59c5f590b372a14e5cdebbe4845cf inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf">IsContainer</a><code> [get]</code></td></tr>
 <tr class="separator:af1d59c5f590b372a14e5cdebbe4845cf inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a451845a816deb9740a16121536fcd48e inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a451845a816deb9740a16121536fcd48e">CanSearchContent</a><code> [get]</code></td></tr>
+<tr class="separator:a451845a816deb9740a16121536fcd48e inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a201e322fb1df8940651b4cf50cc9c3 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a6a201e322fb1df8940651b4cf50cc9c3">CanOpenContainer</a><code> [get]</code></td></tr>
 <tr class="separator:a6a201e322fb1df8940651b4cf50cc9c3 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec66c500d685baaf243439d35e918edc inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aec66c500d685baaf243439d35e918edc">IsSpecialContainer</a><code> [get]</code></td></tr>
@@ -709,18 +713,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitItem.html#a02208ed1a7513742a9168c1d82ff04d5">TraitItem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (base.CanUse(c))</div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
-<div class="line"><span class="lineno">   18</span>            {</div>
-<div class="line"><span class="lineno">   19</span>                <span class="keywordflow">return</span> EClass._zone is <a class="code hl_class" href="classZone__Tent.html">Zone_Tent</a>;</div>
-<div class="line"><span class="lineno">   20</span>            }</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (base.CanUse(c))</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">return</span> EClass._zone is <a class="code hl_class" href="classZone__Tent.html">Zone_Tent</a>;</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
 <div class="ttc" id="aclassZone__Tent_html"><div class="ttname"><a href="classZone__Tent.html">Zone_Tent</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Tent_8cs_source.html#l00001">Zone_Tent.cs:2</a></div></div>
@@ -756,47 +760,47 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#ab4602548d26e360ec62a94bbf09e0ba4">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00026">26</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        List&lt;Thing&gt; list = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBodySlot.html">BodySlot</a> slot <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_variable" href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">slots</a>)</div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (slot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> != 44 &amp;&amp; slot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> != 45 &amp;&amp; slot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a> != <span class="keyword">null</span> &amp;&amp; slot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a>.<a class="code hl_property" href="classCard.html#ac999b397842ffd4252e5ae5b406a2746">blessedState</a> &gt;= <a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal)</div>
-<div class="line"><span class="lineno">   32</span>            {</div>
-<div class="line"><span class="lineno">   33</span>                list.Add(slot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a>);</div>
-<div class="line"><span class="lineno">   34</span>            }</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count == 0)</div>
-<div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">   39</span>            {</div>
-<div class="line"><span class="lineno">   40</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">AddCard</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   44</span>        {</div>
-<div class="line"><span class="lineno">   45</span>            List&lt;Thing&gt; list2 = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>)</div>
-<div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                list2.Add(thing);</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item2 <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">   51</span>            {</div>
-<div class="line"><span class="lineno">   52</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">AddCard</a>(item2);</div>
-<div class="line"><span class="lineno">   53</span>            }</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item3 <span class="keywordflow">in</span> list2)</div>
-<div class="line"><span class="lineno">   55</span>            {</div>
-<div class="line"><span class="lineno">   56</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7090c2ec2037f2fad4198f59e9d9a7d4">PickOrDrop</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, item3, msg: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (item3.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>().<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
-<div class="line"><span class="lineno">   58</span>                {</div>
-<div class="line"><span class="lineno">   59</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#ad3696c212b3fbb5b8a71ceec7bd750cb">Equip</a>(item3, <span class="keyword">null</span>, msg: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Dye</a>((<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count &gt; 0) ? <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>[0].material : <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   64</span>        SE.Equip();</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00028">28</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        List&lt;Thing&gt; list = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBodySlot.html">BodySlot</a> slot <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_variable" href="classCharaBody.html#a6c3cd67d9056d79512ab74fa55bf64ba">slots</a>)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (slot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> != 44 &amp;&amp; slot.<a class="code hl_variable" href="classBodySlot.html#a267347d222852c4a9c677c1b46b4987b">elementId</a> != 45 &amp;&amp; slot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a> != <span class="keyword">null</span> &amp;&amp; slot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a>.<a class="code hl_property" href="classCard.html#ac999b397842ffd4252e5ae5b406a2746">blessedState</a> &gt;= <a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                list.Add(slot.<a class="code hl_variable" href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">thing</a>);</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">AddCard</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            List&lt;Thing&gt; list2 = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                list2.Add(thing);</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item2 <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">AddCard</a>(item2);</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item3 <span class="keywordflow">in</span> list2)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7090c2ec2037f2fad4198f59e9d9a7d4">PickOrDrop</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, item3, msg: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (item3.<a class="code hl_function" href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">GetRootCard</a>().<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#ad3696c212b3fbb5b8a71ceec7bd750cb">Equip</a>(item3, <span class="keyword">null</span>, msg: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   62</span>                }</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Dye</a>((<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count &gt; 0) ? <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>[0].material : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   66</span>        SE.Equip();</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 <div class="ttc" id="aBlessedState_8cs_html_aa145ad1e6170ce299d75ff3b3bee93e8"><div class="ttname"><a href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a></div><div class="ttdeci">BlessedState</div><div class="ttdef"><b>Definition:</b> <a href="BlessedState_8cs_source.html#l00001">BlessedState.cs:2</a></div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassBodySlot_html"><div class="ttname"><a href="classBodySlot.html">BodySlot</a></div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00003">BodySlot.cs:4</a></div></div>
@@ -804,7 +808,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassBodySlot_html_aa3a02ef24b88e8c271da0c5cc0dbb2ba"><div class="ttname"><a href="classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba">BodySlot.thing</a></div><div class="ttdeci">Thing thing</div><div class="ttdef"><b>Definition:</b> <a href="BodySlot_8cs_source.html#l00008">BodySlot.cs:8</a></div></div>
 <div class="ttc" id="aclassCard_html_a4e28d8b3db5f7ba77e39e5995667fcc5"><div class="ttname"><a href="classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5">Card.AddCard</a></div><div class="ttdeci">Card AddCard(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02838">Card.cs:2838</a></div></div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00055">Card.cs:55</a></div></div>
-<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05060">Card.cs:5060</a></div></div>
+<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05080">Card.cs:5080</a></div></div>
 <div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00034">Card.cs:34</a></div></div>
 <div class="ttc" id="aclassCard_html_aafbb34c9bea4b056ef8c3e8981604870"><div class="ttname"><a href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">Card.IsPC</a></div><div class="ttdeci">virtual bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01995">Card.cs:1995</a></div></div>
 <div class="ttc" id="aclassCard_html_abb20070dec2a10c2a93d8cc8f5699a3a"><div class="ttname"><a href="classCard.html#abb20070dec2a10c2a93d8cc8f5699a3a">Card.GetRootCard</a></div><div class="ttdeci">Card GetRootCard()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03107">Card.cs:3107</a></div></div>
@@ -817,7 +821,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02838">Card.AddCard()</a>, <a class="el" href="Card_8cs_source.html#l00262">Card.blessedState</a>, <a class="el" href="Chara_8cs_source.html#l00091">Chara.body</a>, <a class="el" href="Card_8cs_source.html#l05060">Card.Dye()</a>, <a class="el" href="BodySlot_8cs_source.html#l00006">BodySlot.elementId</a>, <a class="el" href="CharaBody_8cs_source.html#l00178">CharaBody.Equip()</a>, <a class="el" href="Card_8cs_source.html#l03107">Card.GetRootCard()</a>, <a class="el" href="Card_8cs_source.html#l01995">Card.IsPC</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l03814">Chara.PickOrDrop()</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="CharaBody_8cs_source.html#l00008">CharaBody.slots</a>, <a class="el" href="BodySlot_8cs_source.html#l00008">BodySlot.thing</a>, and <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02838">Card.AddCard()</a>, <a class="el" href="Card_8cs_source.html#l00262">Card.blessedState</a>, <a class="el" href="Chara_8cs_source.html#l00091">Chara.body</a>, <a class="el" href="Card_8cs_source.html#l05080">Card.Dye()</a>, <a class="el" href="BodySlot_8cs_source.html#l00006">BodySlot.elementId</a>, <a class="el" href="CharaBody_8cs_source.html#l00178">CharaBody.Equip()</a>, <a class="el" href="Card_8cs_source.html#l03107">Card.GetRootCard()</a>, <a class="el" href="Card_8cs_source.html#l01995">Card.IsPC</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l03814">Chara.PickOrDrop()</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="CharaBody_8cs_source.html#l00008">CharaBody.slots</a>, <a class="el" href="BodySlot_8cs_source.html#l00008">BodySlot.thing</a>, and <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>.</p>
 
 </div>
 </div>
@@ -842,7 +846,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8ebbf82ab1219140cb7656a4e6b76562" name="a8ebbf82ab1219140cb7656a4e6b76562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebbf82ab1219140cb7656a4e6b76562">&#9670;&#160;</a></span>CanSearchContent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitMannequin.CanSearchContent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
 
 </div>
 </div>
@@ -890,7 +918,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
 
 </div>
 </div>
@@ -914,7 +942,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitMannequin_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitMannequin_8cs_source.html">TraitMannequin.cs</a>.</p>
 
 </div>
 </div>

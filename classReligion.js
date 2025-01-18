@@ -23,7 +23,7 @@ var classReligion =
     [ "OnLoad", "classReligion.html#ac84f29bee5d37085ec7e1bf692c5b9c8", null ],
     [ "Punish", "classReligion.html#a47e69ab1edca251b3489c6530d33441f", null ],
     [ "PunishTakeOver", "classReligion.html#ac115e22432cfedd332f35fd2c7c7e63f", null ],
-    [ "Reforge", "classReligion.html#a46565bbcc7c2a4ad29836628a0eea107", null ],
+    [ "Reforge", "classReligion.html#ab10d9eadc15cd0d52615d6af279b5506", null ],
     [ "Revelation", "classReligion.html#a55ae11f9966f56fcb74c1d2d28df106f", null ],
     [ "SetTextRelation", "classReligion.html#ab5a17f286250aaca687bd57d64292f94", null ],
     [ "Talk", "classReligion.html#ac2a9ca18679e95f70e3d63dda911a2ef", null ],

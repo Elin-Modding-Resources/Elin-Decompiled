@@ -11,7 +11,7 @@ var classTask =
     [ "OnReset", "classTask.html#a851835295fef27feb6695e34ac69c5ee", null ],
     [ "OnSuccess", "classTask.html#a566417e0b3898a00a155880434b5fea8", null ],
     [ "ToggleSuspend", "classTask.html#a096de353bfae1a20e48ce2921e556c63", null ],
-    [ "TryLayer", "classTask.html#a3c25e434eab39eacc6a89f38798879f7", null ],
+    [ "TryLater", "classTask.html#afc96fb713e49a3e7d6d4835b6fd195a2", null ],
     [ "isDestroyed", "classTask.html#a9774966f217d14e6bc8c7715613ddf7a", null ],
     [ "nextTry", "classTask.html#afa177ca848743f73c638928c66f4f1ed", null ],
     [ "suspended", "classTask.html#a1976055cffd440b716da562e0ded2ac0", null ],
