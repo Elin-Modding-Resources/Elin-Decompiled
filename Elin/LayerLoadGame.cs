@@ -12,6 +12,8 @@ public class LayerLoadGame : ELayer
 
 	public GameObject goNoInfo;
 
+	public GameObject goCloudWarn;
+
 	public UINote note;
 
 	public UIButton buttonLoad;
@@ -107,6 +109,7 @@ public class LayerLoadGame : ELayer
 		}
 		pathRoot = (backup ? pathBackup : (cloud ? CorePath.RootSaveCloud : CorePath.RootSave));
 		worlds = GameIO.GetGameList(pathRoot, backup);
+		goCloudWarn.SetActive(cloud && !backup);
 		goInfo.SetActive(value: false);
 		goNoInfo.SetActive(value: true);
 		list.Clear();

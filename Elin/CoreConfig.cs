@@ -308,6 +308,8 @@ public class CoreConfig : EClass
 
 		public bool disableShake;
 
+		public bool noLightning;
+
 		public int fps;
 
 		public int fireflyCount = 150;

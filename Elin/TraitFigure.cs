@@ -32,4 +32,22 @@ public class TraitFigure : Trait
 		}
 		return (base.GetValue() + source.LV * 50) * ((!source.multisize) ? 1 : 2) * ((source.quality < 4) ? 1 : 2);
 	}
+
+	public override void TrySetAct(ActPlan p)
+	{
+		if (p.input != ActInput.AllAction || source.tiles.Length <= 1)
+		{
+			return;
+		}
+		p.TrySetAct("actChangeType", delegate
+		{
+			UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
+			uIContextMenu.AddSlider("actChangeType", (float a) => a.ToString() ?? "", owner.refVal, delegate(float b)
+			{
+				owner.refVal = (int)b;
+			}, 0f, source.tiles.Length - 1, isInt: true);
+			uIContextMenu.Show();
+			return false;
+		}, owner);
+	}
 }

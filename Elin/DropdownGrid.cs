@@ -202,20 +202,11 @@ public class DropdownGrid : EMono
 					b.onClick.AddListener(delegate
 					{
 						List<Thing> list2 = ListIngredients(ingredient, searchMode);
-						if (ingredient.optional)
-						{
-							if (list2.Count == 0 || list2[0] == null)
-							{
-								SE.Beep();
-								return;
-							}
-						}
-						else if (ingredient.thing == null)
+						if (list2.Count == 0 || list2[0] == null)
 						{
 							SE.Beep();
-							return;
 						}
-						if ((bool)rectDrop)
+						else if ((bool)rectDrop)
 						{
 							Activate(ingredient, list2);
 						}

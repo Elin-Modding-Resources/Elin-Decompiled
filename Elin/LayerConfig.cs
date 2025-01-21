@@ -83,6 +83,8 @@ public class LayerConfig : ELayer
 
 	public UIButton toggleFloorEx;
 
+	public UIButton toggleNoLightning;
+
 	public UIItem fontUI;
 
 	public UIItem fontChatbox;
@@ -464,6 +466,10 @@ public class LayerConfig : ELayer
 			{
 				ELayer.screen.RefreshSky();
 			}
+		});
+		toggleNoLightning.SetToggle(ELayer.config.graphic.noLightning, delegate(bool on)
+		{
+			ELayer.config.graphic.noLightning = on;
 		});
 		toggleAllyLight.SetToggle(ELayer.config.graphic.drawAllyLight, delegate(bool on)
 		{

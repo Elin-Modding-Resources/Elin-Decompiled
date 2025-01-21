@@ -3519,7 +3519,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public virtual void HealHP(int a, HealSource origin = HealSource.None)
 	{
-		hp += a * Mathf.Max(100 - Evalue(93), 1) / 100;
+		if (origin == HealSource.Magic)
+		{
+			a = a * Mathf.Max(100 - Evalue(93), 1) / 100;
+		}
+		hp += a;
 		if (hp > MaxHP)
 		{
 			hp = MaxHP;
@@ -3582,6 +3586,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (ele == 0)
 		{
 			e = Element.Void;
+			if (origin != null)
+			{
+				dmg = dmg * Mathf.Max(100 + origin.Evalue(93) / 2, 10) / 100;
+			}
 		}
 		else
 		{
@@ -3826,7 +3834,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0a24;
+							goto IL_0a58;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -3838,8 +3846,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0a24;
-		IL_0a24:
+		goto IL_0a58;
+		IL_0a58:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);

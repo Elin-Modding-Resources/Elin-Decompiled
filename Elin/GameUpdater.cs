@@ -424,7 +424,7 @@ public class GameUpdater : EClass
 		timerThunder += 0.1f;
 		if (timerThunder > EClass.setting.weather.thunerInterval)
 		{
-			if (!EClass._map.IsIndoor)
+			if (!EClass._map.IsIndoor && !EClass.core.config.graphic.noLightning)
 			{
 				ScreenFlash.Play("storm" + (EClass.rnd(2) + 1), (flag2 && !flag3) ? 0.3f : 1f);
 			}
