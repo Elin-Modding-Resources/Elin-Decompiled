@@ -1,5 +1,8 @@
 var NAVTREEINDEX89 =
 {
+"classQuestDefense.html#a6d57887fbc63f1b9afb541d2c458e5fc":[1,0,943,1],
+"classQuestDefense.html#a8df54ea51ec9403136de4056ab0b1f74":[1,0,943,0],
+"classQuestDefenseGame.html":[1,0,944],
 "classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216":[1,0,944,7],
 "classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8":[1,0,944,6],
 "classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,944,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX89 =
 "classQuestMusic.html#aceb52619927f0ad0d7d8cbd06a409dff":[1,0,988,4],
 "classQuestMusic.html#ad6f8b85fd301afbbe0562c303a573e16":[1,0,988,1],
 "classQuestMusic.html#aedcdc849e926a8b3520b5fc3cc84402d":[1,0,988,2],
-"classQuestMusic.html#af0c8e7a2f533e99f1eec42b3fd98b63e":[1,0,988,7],
-"classQuestMusic.html#af36c6da51fff84856e7d2d6dca395298":[1,0,988,8],
-"classQuestProgression.html":[1,0,989],
-"classQuestProgression.html#a2000aa9e33842fd3bf72845ea5152f34":[1,0,989,1]
+"classQuestMusic.html#af0c8e7a2f533e99f1eec42b3fd98b63e":[1,0,988,7]
 };

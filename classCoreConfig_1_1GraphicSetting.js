@@ -23,6 +23,7 @@ var classCoreConfig_1_1GraphicSetting =
     [ "hdr", "classCoreConfig_1_1GraphicSetting.html#a32a0b39e6fbf3896d0f30f1a4b5d895d", null ],
     [ "idPostProfile", "classCoreConfig_1_1GraphicSetting.html#ac8616985dc84361d550ea123d7be11bb", null ],
     [ "kuwahara", "classCoreConfig_1_1GraphicSetting.html#a4784d437212cf83d3d69a0aedf98d755", null ],
+    [ "noLightning", "classCoreConfig_1_1GraphicSetting.html#a7c34d0c1dca1f63ddc6f171fc43cfdd4", null ],
     [ "pixelperfectUI", "classCoreConfig_1_1GraphicSetting.html#ab6c237ca1e7c518c8a105182ca2beffc", null ],
     [ "saturation", "classCoreConfig_1_1GraphicSetting.html#ab0c7d265df45bb8b3197672cb0388954", null ],
     [ "sharpen", "classCoreConfig_1_1GraphicSetting.html#a40902bff58dea171606216550e7aee3c", null ],

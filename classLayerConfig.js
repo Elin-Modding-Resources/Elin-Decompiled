@@ -60,6 +60,7 @@ var classLayerConfig =
     [ "toggleGradientWater", "classLayerConfig.html#a3bdd7b4c6df0a48162481f19ea40e397", null ],
     [ "toggleHDR", "classLayerConfig.html#a2944de64b90ba8201faddde1197f6143", null ],
     [ "toggleKuwahara", "classLayerConfig.html#afce99dfb5f8643464833aced0764e2fe", null ],
+    [ "toggleNoLightning", "classLayerConfig.html#aa3a85e9bf62c48b494b760e901e367e7", null ],
     [ "toggleOpenLastTab", "classLayerConfig.html#a02c2cce8665b7f6b256b03c5c48e72be", null ],
     [ "togglePixelPerfectUI", "classLayerConfig.html#acae05947a69d791a5ca51868a6d5d33f", null ],
     [ "toggleRightClickClose", "classLayerConfig.html#ad1d979415021c98c060fa185a4c1ee9c", null ],

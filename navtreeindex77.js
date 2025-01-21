@@ -1,5 +1,8 @@
 var NAVTREEINDEX77 =
 {
+"classLayerTextureViewer.html#ad2bf9bce8a9cd3a27cf669f698ad77c5":[1,0,795,7],
+"classLayerTextureViewer.html#ae5d414b64d3eab26346c423ef1a55c64":[1,0,795,9],
+"classLayerTextureViewer.html#aee897eee92a2d50824b204181de60e92":[1,0,795,18],
 "classLayerTextureViewer.html#af8a8bef30600384aca456e2dd46ba022":[1,0,795,21],
 "classLayerTitle.html":[1,0,796],
 "classLayerTitle.html#a0848e6cd2272207bedb71e7bc9803e19":[1,0,796,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX77 =
 "classListPeopleEmbark.html#a7548ec22b449cc044c55c9991ca8626c":[1,0,814,4],
 "classListPeopleEmbark.html#a7cd40eea862c0ae6b511e08b7aba4e56":[1,0,814,3],
 "classListPeopleEmbark.html#a8d85cb3f509f94d60ecddc66fc8828ad":[1,0,814,2],
-"classListPeopleEmbark.html#abee9036984a1cdec34938d85256c1ad5":[1,0,814,0],
-"classListPeopleEmbark.html#adad823e4a296f9f2efaea77dd7c070ba":[1,0,814,1],
-"classListPeopleExpedition.html":[1,0,815],
-"classListPeopleExpedition.html#a2b78b11d4fcc625fa6f8341c9e3d672b":[1,0,815,6]
+"classListPeopleEmbark.html#abee9036984a1cdec34938d85256c1ad5":[1,0,814,0]
 };

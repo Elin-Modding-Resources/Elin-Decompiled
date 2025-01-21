@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.79 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.79 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -266,71 +266,71 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00268">268</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>    {</div>
-<div class="line"><span class="lineno">  270</span>        <a class="code hl_variable" href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">IsActive</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  271</span>        <a class="code hl_variable" href="classDropdownGrid.html#aa53b4e0b083143556c6f1ce0d422038c">Instance</a> = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  272</span>        <a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  273</span>        <a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.SetParent(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.transform);</div>
-<div class="line"><span class="lineno">  274</span>        rectDrop.sizeDelta = <span class="keyword">new</span> Vector2(0f, 0f);</div>
-<div class="line"><span class="lineno">  275</span>        rectDrop.anchoredPosition = Vector3.zero;</div>
-<div class="line"><span class="lineno">  276</span>        listDrop.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_class" href="classThing.html">Thing</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;</div>
-<div class="line"><span class="lineno">  277</span>        {</div>
-<div class="line"><span class="lineno">  278</span>            onClick = delegate(<a class="code hl_class" href="classThing.html">Thing</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
-<div class="line"><span class="lineno">  279</span>            {</div>
-<div class="line"><span class="lineno">  280</span>                SE.Resource();</div>
-<div class="line"><span class="lineno">  281</span>                ingredient.<a class="code hl_function" href="classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e">SetThing</a>(a);</div>
-<div class="line"><span class="lineno">  282</span>                <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_function" href="classRecipe.html#a661158b83eea3aa2f70719dd5621b5e9">SaveLastIngredients</a>();</div>
-<div class="line"><span class="lineno">  283</span>                <a class="code hl_function" href="classDropdownGrid.html#a40a6c53180d65ba3d83edeb203f3c368">OnChangeIngredient</a>();</div>
-<div class="line"><span class="lineno">  284</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#a2f2beaefbd33d5358f2c07eb4a1d7baa">onValueChange</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  285</span>                {</div>
-<div class="line"><span class="lineno">  286</span>                    <a class="code hl_variable" href="classDropdownGrid.html#a2f2beaefbd33d5358f2c07eb4a1d7baa">onValueChange</a>();</div>
-<div class="line"><span class="lineno">  287</span>                }</div>
-<div class="line"><span class="lineno">  288</span>                <a class="code hl_function" href="classDropdownGrid.html#aac6f1f8196c87769e1fd92ebe8cef9cc">Deactivate</a>();</div>
-<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>)</div>
-<div class="line"><span class="lineno">  290</span>                {</div>
-<div class="line"><span class="lineno">  291</span>                    <a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>.<a class="code hl_function" href="classLayerCraft.html#a125eeeb6c1079aa49b67850e878bd285">OnChangeIngredient</a>();</div>
-<div class="line"><span class="lineno">  292</span>                }</div>
-<div class="line"><span class="lineno">  293</span>            },</div>
-<div class="line"><span class="lineno">  294</span>            onInstantiate = delegate(<a class="code hl_class" href="classThing.html">Thing</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
-<div class="line"><span class="lineno">  295</span>            {</div>
-<div class="line"><span class="lineno">  296</span>                b.<a class="code hl_function" href="classButtonGrid.html#ae504f466293eefcfa21ffadafef0d15e">SetIngredient</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>, a);</div>
-<div class="line"><span class="lineno">  297</span>                b.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">  298</span>                {</div>
-<div class="line"><span class="lineno">  299</span>                });</div>
-<div class="line"><span class="lineno">  300</span>                b.onRightClick = delegate</div>
-<div class="line"><span class="lineno">  301</span>                {</div>
-<div class="line"><span class="lineno">  302</span>                };</div>
-<div class="line"><span class="lineno">  303</span>            }</div>
-<div class="line"><span class="lineno">  304</span>        };</div>
-<div class="line"><span class="lineno">  305</span>        <a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_function" href="classUIList.html#a445017d68fcd7fb5a8b64bdbefd55126">Clear</a>();</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> things)</div>
-<div class="line"><span class="lineno">  307</span>        {</div>
-<div class="line"><span class="lineno">  308</span>            <a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(thing);</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        <a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
-<div class="line"><span class="lineno">  311</span>        rectDropContent.position = list.transform.position + <a class="code hl_variable" href="classDropdownGrid.html#a596308175ff50f46dab9ffd6b84b512e">fixPos</a>;</div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_variable" href="classUIList.html#a43b800a49704ff1ba9a085f6e3489c03">items</a>.Count == 0)</div>
-<div class="line"><span class="lineno">  313</span>        {</div>
-<div class="line"><span class="lineno">  314</span>            SE.Beep();</div>
-<div class="line"><span class="lineno">  315</span>            <a class="code hl_function" href="classDropdownGrid.html#aac6f1f8196c87769e1fd92ebe8cef9cc">Deactivate</a>();</div>
-<div class="line"><span class="lineno">  316</span>        }</div>
-<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a75142a69f4a559a62a4b9f16eb2292d7">soundPop</a>)</div>
-<div class="line"><span class="lineno">  318</span>        {</div>
-<div class="line"><span class="lineno">  319</span>            <a class="code hl_variable" href="classDropdownGrid.html#a75142a69f4a559a62a4b9f16eb2292d7">soundPop</a>.Play();</div>
-<div class="line"><span class="lineno">  320</span>        }</div>
-<div class="line"><span class="lineno">  321</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00259">259</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>    {</div>
+<div class="line"><span class="lineno">  261</span>        <a class="code hl_variable" href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">IsActive</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  262</span>        <a class="code hl_variable" href="classDropdownGrid.html#aa53b4e0b083143556c6f1ce0d422038c">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  264</span>        <a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.SetParent(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.transform);</div>
+<div class="line"><span class="lineno">  265</span>        rectDrop.sizeDelta = <span class="keyword">new</span> Vector2(0f, 0f);</div>
+<div class="line"><span class="lineno">  266</span>        rectDrop.anchoredPosition = Vector3.zero;</div>
+<div class="line"><span class="lineno">  267</span>        listDrop.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_class" href="classThing.html">Thing</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;</div>
+<div class="line"><span class="lineno">  268</span>        {</div>
+<div class="line"><span class="lineno">  269</span>            onClick = delegate(<a class="code hl_class" href="classThing.html">Thing</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
+<div class="line"><span class="lineno">  270</span>            {</div>
+<div class="line"><span class="lineno">  271</span>                SE.Resource();</div>
+<div class="line"><span class="lineno">  272</span>                ingredient.<a class="code hl_function" href="classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e">SetThing</a>(a);</div>
+<div class="line"><span class="lineno">  273</span>                <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_function" href="classRecipe.html#a661158b83eea3aa2f70719dd5621b5e9">SaveLastIngredients</a>();</div>
+<div class="line"><span class="lineno">  274</span>                <a class="code hl_function" href="classDropdownGrid.html#a40a6c53180d65ba3d83edeb203f3c368">OnChangeIngredient</a>();</div>
+<div class="line"><span class="lineno">  275</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#a2f2beaefbd33d5358f2c07eb4a1d7baa">onValueChange</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  276</span>                {</div>
+<div class="line"><span class="lineno">  277</span>                    <a class="code hl_variable" href="classDropdownGrid.html#a2f2beaefbd33d5358f2c07eb4a1d7baa">onValueChange</a>();</div>
+<div class="line"><span class="lineno">  278</span>                }</div>
+<div class="line"><span class="lineno">  279</span>                <a class="code hl_function" href="classDropdownGrid.html#aac6f1f8196c87769e1fd92ebe8cef9cc">Deactivate</a>();</div>
+<div class="line"><span class="lineno">  280</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>)</div>
+<div class="line"><span class="lineno">  281</span>                {</div>
+<div class="line"><span class="lineno">  282</span>                    <a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>.<a class="code hl_function" href="classLayerCraft.html#a125eeeb6c1079aa49b67850e878bd285">OnChangeIngredient</a>();</div>
+<div class="line"><span class="lineno">  283</span>                }</div>
+<div class="line"><span class="lineno">  284</span>            },</div>
+<div class="line"><span class="lineno">  285</span>            onInstantiate = delegate(<a class="code hl_class" href="classThing.html">Thing</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
+<div class="line"><span class="lineno">  286</span>            {</div>
+<div class="line"><span class="lineno">  287</span>                b.<a class="code hl_function" href="classButtonGrid.html#ae504f466293eefcfa21ffadafef0d15e">SetIngredient</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>, a);</div>
+<div class="line"><span class="lineno">  288</span>                b.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  289</span>                {</div>
+<div class="line"><span class="lineno">  290</span>                });</div>
+<div class="line"><span class="lineno">  291</span>                b.onRightClick = delegate</div>
+<div class="line"><span class="lineno">  292</span>                {</div>
+<div class="line"><span class="lineno">  293</span>                };</div>
+<div class="line"><span class="lineno">  294</span>            }</div>
+<div class="line"><span class="lineno">  295</span>        };</div>
+<div class="line"><span class="lineno">  296</span>        <a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_function" href="classUIList.html#a445017d68fcd7fb5a8b64bdbefd55126">Clear</a>();</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> things)</div>
+<div class="line"><span class="lineno">  298</span>        {</div>
+<div class="line"><span class="lineno">  299</span>            <a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(thing);</div>
+<div class="line"><span class="lineno">  300</span>        }</div>
+<div class="line"><span class="lineno">  301</span>        <a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
+<div class="line"><span class="lineno">  302</span>        rectDropContent.position = list.transform.position + <a class="code hl_variable" href="classDropdownGrid.html#a596308175ff50f46dab9ffd6b84b512e">fixPos</a>;</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">listDrop</a>.<a class="code hl_variable" href="classUIList.html#a43b800a49704ff1ba9a085f6e3489c03">items</a>.Count == 0)</div>
+<div class="line"><span class="lineno">  304</span>        {</div>
+<div class="line"><span class="lineno">  305</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">  306</span>            <a class="code hl_function" href="classDropdownGrid.html#aac6f1f8196c87769e1fd92ebe8cef9cc">Deactivate</a>();</div>
+<div class="line"><span class="lineno">  307</span>        }</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a75142a69f4a559a62a4b9f16eb2292d7">soundPop</a>)</div>
+<div class="line"><span class="lineno">  309</span>        {</div>
+<div class="line"><span class="lineno">  310</span>            <a class="code hl_variable" href="classDropdownGrid.html#a75142a69f4a559a62a4b9f16eb2292d7">soundPop</a>.Play();</div>
+<div class="line"><span class="lineno">  311</span>        }</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
 <div class="ttc" id="aclassButtonGrid_html_ae504f466293eefcfa21ffadafef0d15e"><div class="ttname"><a href="classButtonGrid.html#ae504f466293eefcfa21ffadafef0d15e">ButtonGrid.SetIngredient</a></div><div class="ttdeci">void SetIngredient(Recipe r, Recipe.Ingredient _ing)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.cs:435</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a2f2beaefbd33d5358f2c07eb4a1d7baa"><div class="ttname"><a href="classDropdownGrid.html#a2f2beaefbd33d5358f2c07eb4a1d7baa">DropdownGrid.onValueChange</a></div><div class="ttdeci">Action onValueChange</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00028">DropdownGrid.cs:28</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a2f3d27bf2941335485c83beb0bbe1709"><div class="ttname"><a href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">DropdownGrid.recipe</a></div><div class="ttdeci">Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00022">DropdownGrid.cs:22</a></div></div>
-<div class="ttc" id="aclassDropdownGrid_html_a40a6c53180d65ba3d83edeb203f3c368"><div class="ttname"><a href="classDropdownGrid.html#a40a6c53180d65ba3d83edeb203f3c368">DropdownGrid.OnChangeIngredient</a></div><div class="ttdeci">void OnChangeIngredient()</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00323">DropdownGrid.cs:323</a></div></div>
+<div class="ttc" id="aclassDropdownGrid_html_a40a6c53180d65ba3d83edeb203f3c368"><div class="ttname"><a href="classDropdownGrid.html#a40a6c53180d65ba3d83edeb203f3c368">DropdownGrid.OnChangeIngredient</a></div><div class="ttdeci">void OnChangeIngredient()</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00314">DropdownGrid.cs:314</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a4617eeace7ac341013cc9269ec0d721c"><div class="ttname"><a href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">DropdownGrid.rectDrop</a></div><div class="ttdeci">RectTransform rectDrop</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00016">DropdownGrid.cs:16</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a596308175ff50f46dab9ffd6b84b512e"><div class="ttname"><a href="classDropdownGrid.html#a596308175ff50f46dab9ffd6b84b512e">DropdownGrid.fixPos</a></div><div class="ttdeci">Vector3 fixPos</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00032">DropdownGrid.cs:32</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a75142a69f4a559a62a4b9f16eb2292d7"><div class="ttname"><a href="classDropdownGrid.html#a75142a69f4a559a62a4b9f16eb2292d7">DropdownGrid.soundPop</a></div><div class="ttdeci">SoundData soundPop</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00026">DropdownGrid.cs:26</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a8cc88fde62c14b512261f6edf9ba8d43"><div class="ttname"><a href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">DropdownGrid.IsActive</a></div><div class="ttdeci">static bool IsActive</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00008">DropdownGrid.cs:8</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_aa53b4e0b083143556c6f1ce0d422038c"><div class="ttname"><a href="classDropdownGrid.html#aa53b4e0b083143556c6f1ce0d422038c">DropdownGrid.Instance</a></div><div class="ttdeci">static DropdownGrid Instance</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00010">DropdownGrid.cs:10</a></div></div>
-<div class="ttc" id="aclassDropdownGrid_html_aac6f1f8196c87769e1fd92ebe8cef9cc"><div class="ttname"><a href="classDropdownGrid.html#aac6f1f8196c87769e1fd92ebe8cef9cc">DropdownGrid.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00340">DropdownGrid.cs:340</a></div></div>
+<div class="ttc" id="aclassDropdownGrid_html_aac6f1f8196c87769e1fd92ebe8cef9cc"><div class="ttname"><a href="classDropdownGrid.html#aac6f1f8196c87769e1fd92ebe8cef9cc">DropdownGrid.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00331">DropdownGrid.cs:331</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_ab0a5d25944640528fce3a448a9cd5722"><div class="ttname"><a href="classDropdownGrid.html#ab0a5d25944640528fce3a448a9cd5722">DropdownGrid.listDrop</a></div><div class="ttdeci">UIList listDrop</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00014">DropdownGrid.cs:14</a></div></div>
 <div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
 <div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00015">EMono.cs:15</a></div></div>
@@ -347,7 +347,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUIList_html_ac59eb9491315a616940c5ba77f95f538"><div class="ttname"><a href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">UIList.Add</a></div><div class="ttdeci">override void Add(object item)</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00302">UIList.cs:302</a></div></div>
 <div class="ttc" id="aclassUIList_html_ae79cc2a215910962b9bfd17681dc7664"><div class="ttname"><a href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">UIList.Refresh</a></div><div class="ttdeci">virtual void Refresh(bool highlightLast=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00424">UIList.cs:424</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="UIList_8cs_source.html#l00349">UIList.Clear()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00340">Deactivate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00032">fixPos</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00010">Instance</a>, <a class="el" href="LayerCraft_8cs_source.html#l00008">LayerCraft.Instance</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00008">IsActive</a>, <a class="el" href="UIList_8cs_source.html#l00241">UIList.items</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00014">listDrop</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00323">OnChangeIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00406">LayerCraft.OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00028">onValueChange</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00424">UIList.Refresh()</a>, <a class="el" href="Recipe_8cs_source.html#l00975">Recipe.SaveLastIngredients()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00026">soundPop</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
+<p class="reference">References <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="UIList_8cs_source.html#l00349">UIList.Clear()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00331">Deactivate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00032">fixPos</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00010">Instance</a>, <a class="el" href="LayerCraft_8cs_source.html#l00008">LayerCraft.Instance</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00008">IsActive</a>, <a class="el" href="UIList_8cs_source.html#l00241">UIList.items</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00014">listDrop</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">OnChangeIngredient()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00406">LayerCraft.OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00028">onValueChange</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00424">UIList.Refresh()</a>, <a class="el" href="Recipe_8cs_source.html#l00975">Recipe.SaveLastIngredients()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00026">soundPop</a>, and <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>.</p>
 
@@ -615,63 +615,54 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  202</span>                    b.onClick.AddListener(delegate</div>
 <div class="line"><span class="lineno">  203</span>                    {</div>
 <div class="line"><span class="lineno">  204</span>                        List&lt;Thing&gt; list2 = <a class="code hl_function" href="classDropdownGrid.html#a24325b0b531cd3da45e1fd104cbf121e">ListIngredients</a>(ingredient, <a class="code hl_variable" href="classDropdownGrid.html#a4157be1225d6529e657df5878516add2">searchMode</a>);</div>
-<div class="line"><span class="lineno">  205</span>                        <span class="keywordflow">if</span> (ingredient.optional)</div>
+<div class="line"><span class="lineno">  205</span>                        <span class="keywordflow">if</span> (list2.Count == 0 || list2[0] == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  206</span>                        {</div>
-<div class="line"><span class="lineno">  207</span>                            <span class="keywordflow">if</span> (list2.Count == 0 || list2[0] == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  208</span>                            {</div>
-<div class="line"><span class="lineno">  209</span>                                SE.Beep();</div>
-<div class="line"><span class="lineno">  210</span>                                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  211</span>                            }</div>
+<div class="line"><span class="lineno">  207</span>                            SE.Beep();</div>
+<div class="line"><span class="lineno">  208</span>                        }</div>
+<div class="line"><span class="lineno">  209</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>)</div>
+<div class="line"><span class="lineno">  210</span>                        {</div>
+<div class="line"><span class="lineno">  211</span>                            <a class="code hl_function" href="classDropdownGrid.html#a49c34db626a48d772464ac84755ab77a">Activate</a>(ingredient, list2);</div>
 <div class="line"><span class="lineno">  212</span>                        }</div>
-<div class="line"><span class="lineno">  213</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ingredient.thing == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  214</span>                        {</div>
-<div class="line"><span class="lineno">  215</span>                            SE.Beep();</div>
-<div class="line"><span class="lineno">  216</span>                            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  217</span>                        }</div>
-<div class="line"><span class="lineno">  218</span>                        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>)</div>
-<div class="line"><span class="lineno">  219</span>                        {</div>
-<div class="line"><span class="lineno">  220</span>                            <a class="code hl_function" href="classDropdownGrid.html#a49c34db626a48d772464ac84755ab77a">Activate</a>(ingredient, list2);</div>
-<div class="line"><span class="lineno">  221</span>                        }</div>
-<div class="line"><span class="lineno">  222</span>                    });</div>
-<div class="line"><span class="lineno">  223</span>                }</div>
-<div class="line"><span class="lineno">  224</span>                <a class="code hl_class" href="classThing.html">Thing</a> FindMax()</div>
-<div class="line"><span class="lineno">  225</span>                {</div>
-<div class="line"><span class="lineno">  226</span>                    <span class="keywordflow">if</span> (things.Count == 0)</div>
-<div class="line"><span class="lineno">  227</span>                    {</div>
-<div class="line"><span class="lineno">  228</span>                        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  229</span>                    }</div>
-<div class="line"><span class="lineno">  230</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
-<div class="line"><span class="lineno">  231</span>                    <a class="code hl_class" href="classThing.html">Thing</a> result = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  232</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item4 <span class="keywordflow">in</span> things)</div>
-<div class="line"><span class="lineno">  233</span>                    {</div>
-<div class="line"><span class="lineno">  234</span>                        <span class="keywordflow">if</span> (item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; num3)</div>
-<div class="line"><span class="lineno">  235</span>                        {</div>
-<div class="line"><span class="lineno">  236</span>                            num3 = item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
-<div class="line"><span class="lineno">  237</span>                            result = item4;</div>
-<div class="line"><span class="lineno">  238</span>                        }</div>
-<div class="line"><span class="lineno">  239</span>                    }</div>
-<div class="line"><span class="lineno">  240</span>                    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  241</span>                }</div>
-<div class="line"><span class="lineno">  242</span>            },</div>
-<div class="line"><span class="lineno">  243</span>            onRedraw = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b, <span class="keywordtype">int</span> i)</div>
-<div class="line"><span class="lineno">  244</span>            {</div>
-<div class="line"><span class="lineno">  245</span>                b.<a class="code hl_function" href="classButtonGrid.html#ae504f466293eefcfa21ffadafef0d15e">SetIngredient</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>, a);</div>
-<div class="line"><span class="lineno">  246</span>            }</div>
-<div class="line"><span class="lineno">  247</span>        };</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classDropdownGrid.html#af56c3178a710acc7a14c4f86ddb74405">slots</a>; j++)</div>
-<div class="line"><span class="lineno">  249</span>        {</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">if</span> (j &lt; <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.Count)</div>
-<div class="line"><span class="lineno">  251</span>            {</div>
-<div class="line"><span class="lineno">  252</span>                <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>[j]);</div>
-<div class="line"><span class="lineno">  253</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  254</span>            }</div>
-<div class="line"><span class="lineno">  255</span>            <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a></div>
-<div class="line"><span class="lineno">  256</span>            {</div>
-<div class="line"><span class="lineno">  257</span>                id = <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  258</span>            });</div>
-<div class="line"><span class="lineno">  259</span>        }</div>
-<div class="line"><span class="lineno">  260</span>        <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
-<div class="line"><span class="lineno">  261</span>    }</div>
+<div class="line"><span class="lineno">  213</span>                    });</div>
+<div class="line"><span class="lineno">  214</span>                }</div>
+<div class="line"><span class="lineno">  215</span>                <a class="code hl_class" href="classThing.html">Thing</a> FindMax()</div>
+<div class="line"><span class="lineno">  216</span>                {</div>
+<div class="line"><span class="lineno">  217</span>                    <span class="keywordflow">if</span> (things.Count == 0)</div>
+<div class="line"><span class="lineno">  218</span>                    {</div>
+<div class="line"><span class="lineno">  219</span>                        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  220</span>                    }</div>
+<div class="line"><span class="lineno">  221</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  222</span>                    <a class="code hl_class" href="classThing.html">Thing</a> result = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  223</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item4 <span class="keywordflow">in</span> things)</div>
+<div class="line"><span class="lineno">  224</span>                    {</div>
+<div class="line"><span class="lineno">  225</span>                        <span class="keywordflow">if</span> (item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; num3)</div>
+<div class="line"><span class="lineno">  226</span>                        {</div>
+<div class="line"><span class="lineno">  227</span>                            num3 = item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">  228</span>                            result = item4;</div>
+<div class="line"><span class="lineno">  229</span>                        }</div>
+<div class="line"><span class="lineno">  230</span>                    }</div>
+<div class="line"><span class="lineno">  231</span>                    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  232</span>                }</div>
+<div class="line"><span class="lineno">  233</span>            },</div>
+<div class="line"><span class="lineno">  234</span>            onRedraw = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">  235</span>            {</div>
+<div class="line"><span class="lineno">  236</span>                b.<a class="code hl_function" href="classButtonGrid.html#ae504f466293eefcfa21ffadafef0d15e">SetIngredient</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>, a);</div>
+<div class="line"><span class="lineno">  237</span>            }</div>
+<div class="line"><span class="lineno">  238</span>        };</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classDropdownGrid.html#af56c3178a710acc7a14c4f86ddb74405">slots</a>; j++)</div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (j &lt; <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.Count)</div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>[j]);</div>
+<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>            <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a></div>
+<div class="line"><span class="lineno">  247</span>            {</div>
+<div class="line"><span class="lineno">  248</span>                id = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  249</span>            });</div>
+<div class="line"><span class="lineno">  250</span>        }</div>
+<div class="line"><span class="lineno">  251</span>        <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
+<div class="line"><span class="lineno">  252</span>    }</div>
 <div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
@@ -686,7 +677,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassDropdownGrid_html_a24325b0b531cd3da45e1fd104cbf121e"><div class="ttname"><a href="classDropdownGrid.html#a24325b0b531cd3da45e1fd104cbf121e">DropdownGrid.ListIngredients</a></div><div class="ttdeci">List&lt; Thing &gt; ListIngredients(Recipe.Ingredient ingredient, StockSearchMode searchMode)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00083">DropdownGrid.cs:83</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a3fa90aeba7e13b177fb8b6ff1bf9b103"><div class="ttname"><a href="classDropdownGrid.html#a3fa90aeba7e13b177fb8b6ff1bf9b103">DropdownGrid.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00024">DropdownGrid.cs:24</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a4157be1225d6529e657df5878516add2"><div class="ttname"><a href="classDropdownGrid.html#a4157be1225d6529e657df5878516add2">DropdownGrid.searchMode</a></div><div class="ttdeci">StockSearchMode searchMode</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00034">DropdownGrid.cs:34</a></div></div>
-<div class="ttc" id="aclassDropdownGrid_html_a49c34db626a48d772464ac84755ab77a"><div class="ttname"><a href="classDropdownGrid.html#a49c34db626a48d772464ac84755ab77a">DropdownGrid.Activate</a></div><div class="ttdeci">void Activate(Recipe.Ingredient ingredient, List&lt; Thing &gt; things)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00268">DropdownGrid.cs:268</a></div></div>
+<div class="ttc" id="aclassDropdownGrid_html_a49c34db626a48d772464ac84755ab77a"><div class="ttname"><a href="classDropdownGrid.html#a49c34db626a48d772464ac84755ab77a">DropdownGrid.Activate</a></div><div class="ttdeci">void Activate(Recipe.Ingredient ingredient, List&lt; Thing &gt; things)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00259">DropdownGrid.cs:259</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a5d37922df02d96e813db102b15760856"><div class="ttname"><a href="classDropdownGrid.html#a5d37922df02d96e813db102b15760856">DropdownGrid.lastMats</a></div><div class="ttdeci">Dictionary&lt; string, int &gt; lastMats</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00039">DropdownGrid.cs:39</a></div></div>
 <div class="ttc" id="aclassEMono_html_a29a565a228150eb65835b48506ab6dc1"><div class="ttname"><a href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">EMono.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00013">EMono.cs:13</a></div></div>
 <div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00011">EMono.cs:11</a></div></div>
@@ -709,7 +700,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassThingGen_html_ac4a7ef4a68508b96961ea565b80be7d8"><div class="ttname"><a href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">ThingGen.CreateFromCategory</a></div><div class="ttdeci">static Thing CreateFromCategory(string idCat, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00075">ThingGen.cs:75</a></div></div>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="Card_8cs_source.html#l02829">Card.Add()</a>, <a class="el" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>, <a class="el" href="UIList_8cs_source.html#l00349">UIList.Clear()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00075">ThingGen.CreateFromCategory()</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="Recipe_8cs_source.html#l00189">Recipe.DefaultMaterial</a>, <a class="el" href="Props_8cs_source.html#l00358">Props.Find()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00581">ThingContainer.Find()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00305">CoreDebug.godBuild</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00024">icon</a>, <a class="el" href="Recipe_8cs_source.html#l00161">Recipe.id</a>, <a class="el" href="Recipe_8cs_source.html#l00164">Recipe.ingredients</a>, <a class="el" href="Thing_8cs_source.html#l01656">Thing.IsValidIngredient()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="RecipeManager_8cs_source.html#l00029">RecipeManager.lastIngredients</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00039">lastMats</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00083">ListIngredients()</a>, <a class="el" href="Card_8cs_source.html#l01903">Card.material</a>, <a class="el" href="Card_8cs_source.html#l00154">Card.Num</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00028">onValueChange</a>, <a class="el" href="Card_8cs_source.html#l00051">Card.parent</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="Player_8cs_source.html#l00888">Player.recipes</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00424">UIList.Refresh()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00034">searchMode</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="Card_8cs_source.html#l03176">Card.SetNum()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00030">slots</a>, <a class="el" href="Map_8cs_source.html#l00118">Map.Stocked</a>, <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>, and <a class="el" href="Card_8cs_source.html#l00118">Card.uid</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="Card_8cs_source.html#l02829">Card.Add()</a>, <a class="el" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>, <a class="el" href="UIList_8cs_source.html#l00349">UIList.Clear()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00075">ThingGen.CreateFromCategory()</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="Recipe_8cs_source.html#l00189">Recipe.DefaultMaterial</a>, <a class="el" href="Props_8cs_source.html#l00358">Props.Find()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00581">ThingContainer.Find()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00305">CoreDebug.godBuild</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00024">icon</a>, <a class="el" href="Recipe_8cs_source.html#l00161">Recipe.id</a>, <a class="el" href="Recipe_8cs_source.html#l00164">Recipe.ingredients</a>, <a class="el" href="Thing_8cs_source.html#l01656">Thing.IsValidIngredient()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="RecipeManager_8cs_source.html#l00029">RecipeManager.lastIngredients</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00039">lastMats</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00083">ListIngredients()</a>, <a class="el" href="Card_8cs_source.html#l01903">Card.material</a>, <a class="el" href="Card_8cs_source.html#l00154">Card.Num</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00028">onValueChange</a>, <a class="el" href="Card_8cs_source.html#l00051">Card.parent</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="Player_8cs_source.html#l00888">Player.recipes</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00424">UIList.Refresh()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00034">searchMode</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="Card_8cs_source.html#l03176">Card.SetNum()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00030">slots</a>, <a class="el" href="Map_8cs_source.html#l00118">Map.Stocked</a>, <a class="el" href="Card_8cs_source.html#l00034">Card.things</a>, and <a class="el" href="Card_8cs_source.html#l00118">Card.uid</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>.</p>
 
@@ -738,18 +729,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00340">340</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>    {</div>
-<div class="line"><span class="lineno">  342</span>        <a class="code hl_variable" href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">IsActive</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  344</span>        {</div>
-<div class="line"><span class="lineno">  345</span>            <a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  346</span>        }</div>
-<div class="line"><span class="lineno">  347</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00331">331</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>    {</div>
+<div class="line"><span class="lineno">  333</span>        <a class="code hl_variable" href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">IsActive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  335</span>        {</div>
+<div class="line"><span class="lineno">  336</span>            <a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  337</span>        }</div>
+<div class="line"><span class="lineno">  338</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00008">IsActive</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -823,13 +814,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00392">392</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  393</span>    {</div>
-<div class="line"><span class="lineno">  394</span>        <a class="code hl_function" href="classDropdownGrid.html#a4de46413cf19d6642842b95555d9d351">TrySelect</a>(1);</div>
-<div class="line"><span class="lineno">  395</span>    }</div>
-<div class="ttc" id="aclassDropdownGrid_html_a4de46413cf19d6642842b95555d9d351"><div class="ttname"><a href="classDropdownGrid.html#a4de46413cf19d6642842b95555d9d351">DropdownGrid.TrySelect</a></div><div class="ttdeci">void TrySelect(int a)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00355">DropdownGrid.cs:355</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00383">383</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  384</span>    {</div>
+<div class="line"><span class="lineno">  385</span>        <a class="code hl_function" href="classDropdownGrid.html#a4de46413cf19d6642842b95555d9d351">TrySelect</a>(1);</div>
+<div class="line"><span class="lineno">  386</span>    }</div>
+<div class="ttc" id="aclassDropdownGrid_html_a4de46413cf19d6642842b95555d9d351"><div class="ttname"><a href="classDropdownGrid.html#a4de46413cf19d6642842b95555d9d351">DropdownGrid.TrySelect</a></div><div class="ttdeci">void TrySelect(int a)</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00346">DropdownGrid.cs:346</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00355">TrySelect()</a>.</p>
+<p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00346">TrySelect()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00352">Scene.OnUpdate()</a>.</p>
 
@@ -858,22 +849,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00323">323</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  324</span>    {</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  326</span>        {</div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">return</span>;</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00314">314</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  315</span>    {</div>
+<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  317</span>        {</div>
+<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  319</span>        }</div>
+<div class="line"><span class="lineno">  320</span>        <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_function" href="classRecipe.html#ab7f17efd21d15719d981bf94113edd46">OnChangeIngredient</a>();</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>)</div>
+<div class="line"><span class="lineno">  322</span>        {</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a3fa90aeba7e13b177fb8b6ff1bf9b103">icon</a>)</div>
+<div class="line"><span class="lineno">  324</span>            {</div>
+<div class="line"><span class="lineno">  325</span>                <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a>.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(<a class="code hl_variable" href="classDropdownGrid.html#a3fa90aeba7e13b177fb8b6ff1bf9b103">icon</a>, <span class="keyword">null</span>, <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a>.<a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_function" href="classRecipe.html#ae065d37514f42d028eedfcba6c0de001">GetColorMaterial</a>()), setNativeSize: <span class="keyword">true</span>, 0, <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#adc6002906f12f842e136a8da29fa72fd">idSkin</a>);</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span>            <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">Redraw</a>();</div>
 <div class="line"><span class="lineno">  328</span>        }</div>
-<div class="line"><span class="lineno">  329</span>        <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_function" href="classRecipe.html#ab7f17efd21d15719d981bf94113edd46">OnChangeIngredient</a>();</div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>)</div>
-<div class="line"><span class="lineno">  331</span>        {</div>
-<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a3fa90aeba7e13b177fb8b6ff1bf9b103">icon</a>)</div>
-<div class="line"><span class="lineno">  333</span>            {</div>
-<div class="line"><span class="lineno">  334</span>                <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a>.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(<a class="code hl_variable" href="classDropdownGrid.html#a3fa90aeba7e13b177fb8b6ff1bf9b103">icon</a>, <span class="keyword">null</span>, <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_property" href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">renderRow</a>.<a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_function" href="classRecipe.html#ae065d37514f42d028eedfcba6c0de001">GetColorMaterial</a>()), setNativeSize: <span class="keyword">true</span>, 0, <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#adc6002906f12f842e136a8da29fa72fd">idSkin</a>);</div>
-<div class="line"><span class="lineno">  335</span>            }</div>
-<div class="line"><span class="lineno">  336</span>            <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">Redraw</a>();</div>
-<div class="line"><span class="lineno">  337</span>        }</div>
-<div class="line"><span class="lineno">  338</span>    }</div>
+<div class="line"><span class="lineno">  329</span>    }</div>
 <div class="ttc" id="aclassRecipe_html_a5f08d818d63873d378c3b87bd5f04934"><div class="ttname"><a href="classRecipe.html#a5f08d818d63873d378c3b87bd5f04934">Recipe.renderRow</a></div><div class="ttdeci">virtual RenderRow renderRow</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00193">Recipe.cs:193</a></div></div>
 <div class="ttc" id="aclassRecipe_html_ab7f17efd21d15719d981bf94113edd46"><div class="ttname"><a href="classRecipe.html#ab7f17efd21d15719d981bf94113edd46">Recipe.OnChangeIngredient</a></div><div class="ttdeci">virtual void OnChangeIngredient()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00532">Recipe.cs:532</a></div></div>
 <div class="ttc" id="aclassRecipe_html_adc6002906f12f842e136a8da29fa72fd"><div class="ttname"><a href="classRecipe.html#adc6002906f12f842e136a8da29fa72fd">Recipe.idSkin</a></div><div class="ttdeci">int idSkin</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00181">Recipe.cs:181</a></div></div>
@@ -884,7 +875,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00417">RenderRow.GetColorInt()</a>, <a class="el" href="Recipe_8cs_source.html#l00481">Recipe.GetColorMaterial()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00024">icon</a>, <a class="el" href="Recipe_8cs_source.html#l00181">Recipe.idSkin</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="Recipe_8cs_source.html#l00532">Recipe.OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00740">UIList.Redraw()</a>, <a class="el" href="Recipe_8cs_source.html#l00193">Recipe.renderRow</a>, and <a class="el" href="RenderRow_8cs_source.html#l00346">RenderRow.SetImage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00355">TrySelect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00346">TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -911,11 +902,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00349">349</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  350</span>    {</div>
-<div class="line"><span class="lineno">  351</span>        <a class="code hl_variable" href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">IsActive</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  352</span>        UnityEngine.Object.DestroyImmediate(<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.gameObject);</div>
-<div class="line"><span class="lineno">  353</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00340">340</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>        <a class="code hl_variable" href="classDropdownGrid.html#a8cc88fde62c14b512261f6edf9ba8d43">IsActive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  343</span>        UnityEngine.Object.DestroyImmediate(<a class="code hl_variable" href="classDropdownGrid.html#a4617eeace7ac341013cc9269ec0d721c">rectDrop</a>.gameObject);</div>
+<div class="line"><span class="lineno">  344</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00008">IsActive</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>.</p>
 
@@ -944,12 +935,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00397">397</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  398</span>    {</div>
-<div class="line"><span class="lineno">  399</span>        <a class="code hl_function" href="classDropdownGrid.html#a4de46413cf19d6642842b95555d9d351">TrySelect</a>(-1);</div>
-<div class="line"><span class="lineno">  400</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00388">388</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  389</span>    {</div>
+<div class="line"><span class="lineno">  390</span>        <a class="code hl_function" href="classDropdownGrid.html#a4de46413cf19d6642842b95555d9d351">TrySelect</a>(-1);</div>
+<div class="line"><span class="lineno">  391</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00355">TrySelect()</a>.</p>
+<p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00346">TrySelect()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Scene_8cs_source.html#l00352">Scene.OnUpdate()</a>.</p>
 
@@ -978,10 +969,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00263">263</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  264</span>    {</div>
-<div class="line"><span class="lineno">  265</span>        <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">Redraw</a>();</div>
-<div class="line"><span class="lineno">  266</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00254">254</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  255</span>    {</div>
+<div class="line"><span class="lineno">  256</span>        <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">Redraw</a>();</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, and <a class="el" href="UIList_8cs_source.html#l00740">UIList.Redraw()</a>.</p>
 
@@ -1013,42 +1004,42 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00355">355</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  356</span>    {</div>
-<div class="line"><span class="lineno">  357</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> componentOf = <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (!componentOf || componentOf.<a class="code hl_variable" href="classButtonGrid.html#af8b5f69de9474caa70f7dc3177b22059">ing</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  359</span>        {</div>
-<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  361</span>        }</div>
-<div class="line"><span class="lineno">  362</span>        <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a> ing = componentOf.<a class="code hl_variable" href="classButtonGrid.html#af8b5f69de9474caa70f7dc3177b22059">ing</a>;</div>
-<div class="line"><span class="lineno">  363</span>        List&lt;Thing&gt; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a> = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_property" href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Stocked</a>.<a class="code hl_function" href="classProps.html#aed1de55a86964048f4268ffcc3a39a74">ListThingStack</a>(ing, <a class="code hl_variable" href="classDropdownGrid.html#a4157be1225d6529e657df5878516add2">searchMode</a>).<a class="code hl_variable" href="classThingStack.html#aa7d61e8c8d0f2e4707a1774363596a00">list</a>;</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.IndexOf(ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">thing</a>);</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (num != -1)</div>
-<div class="line"><span class="lineno">  366</span>        {</div>
-<div class="line"><span class="lineno">  367</span>            SE.Resource();</div>
-<div class="line"><span class="lineno">  368</span>            num += a;</div>
-<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">if</span> (num &lt; 0)</div>
-<div class="line"><span class="lineno">  370</span>            {</div>
-<div class="line"><span class="lineno">  371</span>                num = 0;</div>
-<div class="line"><span class="lineno">  372</span>            }</div>
-<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">if</span> (num &gt;= <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.Count)</div>
-<div class="line"><span class="lineno">  374</span>            {</div>
-<div class="line"><span class="lineno">  375</span>                num = list.Count - 1;</div>
-<div class="line"><span class="lineno">  376</span>            }</div>
-<div class="line"><span class="lineno">  377</span>            ing.<a class="code hl_function" href="classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e">SetThing</a>(<a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>[num]);</div>
-<div class="line"><span class="lineno">  378</span>            <a class="code hl_function" href="classDropdownGrid.html#a40a6c53180d65ba3d83edeb203f3c368">OnChangeIngredient</a>();</div>
-<div class="line"><span class="lineno">  379</span>            <a class="code hl_class" href="classTooltipManager.html">TooltipManager</a>.<a class="code hl_variable" href="classTooltipManager.html#a827860af7a7443920bed563e47b8a475">Instance</a>.<a class="code hl_function" href="classTooltipManager.html#a1a9ce528a95fea6d0a96c296ddd4738b">ResetTooltips</a>();</div>
-<div class="line"><span class="lineno">  380</span>            componentOf.<a class="code hl_function" href="classUIButton.html#aba55ef8ccbf52be7cfda09cb4c42009b">ShowTooltip</a>();</div>
-<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a128c4a8b3279c15abd711c555762d826">recipeInfo</a>)</div>
-<div class="line"><span class="lineno">  382</span>            {</div>
-<div class="line"><span class="lineno">  383</span>                <a class="code hl_variable" href="classDropdownGrid.html#a128c4a8b3279c15abd711c555762d826">recipeInfo</a>.<a class="code hl_function" href="classUIRecipeInfo.html#a1075e2a43acb9954d2c3a126fd603441">RefreshImages</a>();</div>
-<div class="line"><span class="lineno">  384</span>            }</div>
-<div class="line"><span class="lineno">  385</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>)</div>
-<div class="line"><span class="lineno">  386</span>            {</div>
-<div class="line"><span class="lineno">  387</span>                <a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>.<a class="code hl_function" href="classLayerCraft.html#a2c6414e8cab7664c6aef5a050e70fff1">RefreshProduct</a>();</div>
-<div class="line"><span class="lineno">  388</span>            }</div>
-<div class="line"><span class="lineno">  389</span>        }</div>
-<div class="line"><span class="lineno">  390</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00346">346</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>    {</div>
+<div class="line"><span class="lineno">  348</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> componentOf = <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
+<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (!componentOf || componentOf.<a class="code hl_variable" href="classButtonGrid.html#af8b5f69de9474caa70f7dc3177b22059">ing</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  350</span>        {</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="line"><span class="lineno">  353</span>        <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a> ing = componentOf.<a class="code hl_variable" href="classButtonGrid.html#af8b5f69de9474caa70f7dc3177b22059">ing</a>;</div>
+<div class="line"><span class="lineno">  354</span>        List&lt;Thing&gt; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a> = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_property" href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Stocked</a>.<a class="code hl_function" href="classProps.html#aed1de55a86964048f4268ffcc3a39a74">ListThingStack</a>(ing, <a class="code hl_variable" href="classDropdownGrid.html#a4157be1225d6529e657df5878516add2">searchMode</a>).<a class="code hl_variable" href="classThingStack.html#aa7d61e8c8d0f2e4707a1774363596a00">list</a>;</div>
+<div class="line"><span class="lineno">  355</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.IndexOf(ing.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e">thing</a>);</div>
+<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><span class="lineno">  357</span>        {</div>
+<div class="line"><span class="lineno">  358</span>            SE.Resource();</div>
+<div class="line"><span class="lineno">  359</span>            num += a;</div>
+<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">if</span> (num &lt; 0)</div>
+<div class="line"><span class="lineno">  361</span>            {</div>
+<div class="line"><span class="lineno">  362</span>                num = 0;</div>
+<div class="line"><span class="lineno">  363</span>            }</div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (num &gt;= <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.Count)</div>
+<div class="line"><span class="lineno">  365</span>            {</div>
+<div class="line"><span class="lineno">  366</span>                num = list.Count - 1;</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span>            ing.<a class="code hl_function" href="classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e">SetThing</a>(<a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>[num]);</div>
+<div class="line"><span class="lineno">  369</span>            <a class="code hl_function" href="classDropdownGrid.html#a40a6c53180d65ba3d83edeb203f3c368">OnChangeIngredient</a>();</div>
+<div class="line"><span class="lineno">  370</span>            <a class="code hl_class" href="classTooltipManager.html">TooltipManager</a>.<a class="code hl_variable" href="classTooltipManager.html#a827860af7a7443920bed563e47b8a475">Instance</a>.<a class="code hl_function" href="classTooltipManager.html#a1a9ce528a95fea6d0a96c296ddd4738b">ResetTooltips</a>();</div>
+<div class="line"><span class="lineno">  371</span>            componentOf.<a class="code hl_function" href="classUIButton.html#aba55ef8ccbf52be7cfda09cb4c42009b">ShowTooltip</a>();</div>
+<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classDropdownGrid.html#a128c4a8b3279c15abd711c555762d826">recipeInfo</a>)</div>
+<div class="line"><span class="lineno">  373</span>            {</div>
+<div class="line"><span class="lineno">  374</span>                <a class="code hl_variable" href="classDropdownGrid.html#a128c4a8b3279c15abd711c555762d826">recipeInfo</a>.<a class="code hl_function" href="classUIRecipeInfo.html#a1075e2a43acb9954d2c3a126fd603441">RefreshImages</a>();</div>
+<div class="line"><span class="lineno">  375</span>            }</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>)</div>
+<div class="line"><span class="lineno">  377</span>            {</div>
+<div class="line"><span class="lineno">  378</span>                <a class="code hl_class" href="classLayerCraft.html">LayerCraft</a>.<a class="code hl_variable" href="classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f">Instance</a>.<a class="code hl_function" href="classLayerCraft.html#a2c6414e8cab7664c6aef5a050e70fff1">RefreshProduct</a>();</div>
+<div class="line"><span class="lineno">  379</span>            }</div>
+<div class="line"><span class="lineno">  380</span>        }</div>
+<div class="line"><span class="lineno">  381</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html_af8b5f69de9474caa70f7dc3177b22059"><div class="ttname"><a href="classButtonGrid.html#af8b5f69de9474caa70f7dc3177b22059">ButtonGrid.ing</a></div><div class="ttdeci">Recipe.Ingredient ing</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00022">ButtonGrid.cs:22</a></div></div>
 <div class="ttc" id="aclassDropdownGrid_html_a128c4a8b3279c15abd711c555762d826"><div class="ttname"><a href="classDropdownGrid.html#a128c4a8b3279c15abd711c555762d826">DropdownGrid.recipeInfo</a></div><div class="ttdeci">UIRecipeInfo recipeInfo</div><div class="ttdef"><b>Definition:</b> <a href="DropdownGrid_8cs_source.html#l00036">DropdownGrid.cs:36</a></div></div>
 <div class="ttc" id="aclassInputModuleEX_html"><div class="ttname"><a href="classInputModuleEX.html">InputModuleEX</a></div><div class="ttdef"><b>Definition:</b> <a href="InputModuleEX_8cs_source.html#l00005">InputModuleEX.cs:6</a></div></div>
@@ -1060,9 +1051,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUIButton_html_aba55ef8ccbf52be7cfda09cb4c42009b"><div class="ttname"><a href="classUIButton.html#aba55ef8ccbf52be7cfda09cb4c42009b">UIButton.ShowTooltip</a></div><div class="ttdeci">virtual void ShowTooltip()</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00373">UIButton.cs:373</a></div></div>
 <div class="ttc" id="aclassUIRecipeInfo_html_a1075e2a43acb9954d2c3a126fd603441"><div class="ttname"><a href="classUIRecipeInfo.html#a1075e2a43acb9954d2c3a126fd603441">UIRecipeInfo.RefreshImages</a></div><div class="ttdeci">void RefreshImages()</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.cs:224</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00022">ButtonGrid.ing</a>, <a class="el" href="LayerCraft_8cs_source.html#l00008">LayerCraft.Instance</a>, <a class="el" href="TooltipManager_8cs_source.html#l00005">TooltipManager.Instance</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="ThingStack_8cs_source.html#l00005">ThingStack.list</a>, <a class="el" href="Props_8cs_source.html#l00204">Props.ListThingStack()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00323">OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00036">recipeInfo</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00483">LayerCraft.RefreshProduct()</a>, <a class="el" href="TooltipManager_8cs_source.html#l00018">TooltipManager.ResetTooltips()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00034">searchMode</a>, <a class="el" href="Recipe_8cs_source.html#l00089">Recipe.Ingredient.SetThing()</a>, <a class="el" href="UIButton_8cs_source.html#l00373">UIButton.ShowTooltip()</a>, <a class="el" href="Map_8cs_source.html#l00118">Map.Stocked</a>, and <a class="el" href="Recipe_8cs_source.html#l00037">Recipe.Ingredient.thing</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00022">ButtonGrid.ing</a>, <a class="el" href="LayerCraft_8cs_source.html#l00008">LayerCraft.Instance</a>, <a class="el" href="TooltipManager_8cs_source.html#l00005">TooltipManager.Instance</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="ThingStack_8cs_source.html#l00005">ThingStack.list</a>, <a class="el" href="Props_8cs_source.html#l00204">Props.ListThingStack()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00036">recipeInfo</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="LayerCraft_8cs_source.html#l00483">LayerCraft.RefreshProduct()</a>, <a class="el" href="TooltipManager_8cs_source.html#l00018">TooltipManager.ResetTooltips()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00034">searchMode</a>, <a class="el" href="Recipe_8cs_source.html#l00089">Recipe.Ingredient.SetThing()</a>, <a class="el" href="UIButton_8cs_source.html#l00373">UIButton.ShowTooltip()</a>, <a class="el" href="Map_8cs_source.html#l00118">Map.Stocked</a>, and <a class="el" href="Recipe_8cs_source.html#l00037">Recipe.Ingredient.thing</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00392">Next()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00397">Prev()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00383">Next()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00388">Prev()</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1104,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00032">32</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1122,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00024">24</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00323">OnChangeIngredient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00314">OnChangeIngredient()</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1148,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00010">10</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1174,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00008">8</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00340">Deactivate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00349">OnDestroy()</a>, <a class="el" href="Scene_8cs_source.html#l00352">Scene.OnUpdate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00046">Update()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00331">Deactivate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00340">OnDestroy()</a>, <a class="el" href="Scene_8cs_source.html#l00352">Scene.OnUpdate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00046">Update()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -1219,7 +1210,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00012">12</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00051">Build()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00323">OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00263">Redraw()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00355">TrySelect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00051">Build()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00254">Redraw()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00346">TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -1237,7 +1228,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00014">14</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1246,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00028">28</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1282,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00022">22</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00323">OnChangeIngredient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00314">OnChangeIngredient()</a>.</p>
 
 </div>
 </div>
@@ -1309,7 +1300,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00036">36</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00355">TrySelect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00346">TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1318,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00016">16</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00041">Awake()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00340">Deactivate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00323">OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00349">OnDestroy()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00046">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00041">Awake()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00331">Deactivate()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00340">OnDestroy()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00046">Update()</a>.</p>
 
 </div>
 </div>
@@ -1361,7 +1352,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00034">34</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00083">ListIngredients()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00355">TrySelect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00088">BuildIngredients()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00083">ListIngredients()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00346">TrySelect()</a>.</p>
 
 </div>
 </div>
@@ -1397,7 +1388,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DropdownGrid_8cs_source.html#l00026">26</a> of file <a class="el" href="DropdownGrid_8cs_source.html">DropdownGrid.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00268">Activate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00259">Activate()</a>.</p>
 
 </div>
 </div>

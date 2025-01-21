@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"classGrowSystemWheat.html#afbbaf5f7a37669268a59346145461fb2":[1,0,564,5],
 "classGrowSystem_1_1Stage.html":[1,0,551,0],
 "classGrowSystem_1_1Stage.html#a10462949388df2fcc7fbde2c5e64671f":[1,0,551,0,6],
 "classGrowSystem_1_1Stage.html#a19180ef099b5165235ed08a45f582a91":[1,0,551,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "classHoard_1_1Item.html#a0c712eba65b2b9e5d3d3966a799f5617":[1,0,581,0,11],
 "classHoard_1_1Item.html#a3d44c8f8269138297711345a790f79c3":[1,0,581,0,8],
 "classHoard_1_1Item.html#a4116688284cac1a6cc09041de2916c78":[1,0,581,0,3],
-"classHoard_1_1Item.html#a765c93b82eaa0ecee2fc84cba50bf79e":[1,0,581,0,9],
-"classHoard_1_1Item.html#a80ad2084038b3180aa8b62a3815c6e2f":[1,0,581,0,0]
+"classHoard_1_1Item.html#a765c93b82eaa0ecee2fc84cba50bf79e":[1,0,581,0,9]
 };

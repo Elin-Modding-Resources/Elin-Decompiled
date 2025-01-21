@@ -1,5 +1,8 @@
 var NAVTREEINDEX113 =
 {
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4":[1,0,1453,0],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3":[1,0,1453,0,1],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67":[1,0,1453,0,0],
 "classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0":[1,0,1453,0,2],
 "classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613":[1,0,1453,3],
 "classTraitCrafter.html#afd71330988c12ddf321aab298566b69b":[1,0,1453,23],
@@ -246,8 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitFactionBoard.html#ad763ea52e747c125501201db1ebd885c":[1,0,1502,0],
 "classTraitFactory.html":[1,0,1503],
 "classTraitFactory.html#a17d0626f634dfcbc6e4edc89c4bc989f":[1,0,1503,0],
-"classTraitFactory.html#a30d12910241ded1d77958c042f4ae3e0":[1,0,1503,5],
-"classTraitFactory.html#a4c38f7cc3a498750a2a11c75aa87460e":[1,0,1503,4],
-"classTraitFactory.html#a4ea2e3f2fa68547ae6f8664924ec1b1a":[1,0,1503,3],
-"classTraitFactory.html#a78d67401eceea58e197ddf83824dbf5e":[1,0,1503,1]
+"classTraitFactory.html#a30d12910241ded1d77958c042f4ae3e0":[1,0,1503,5]
 };

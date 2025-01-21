@@ -1,5 +1,8 @@
 var NAVTREEINDEX108 =
 {
+"classThingGen.html#a281cc475b772addc30ebe918809aaa30":[1,0,1286,9],
+"classThingGen.html#a2d2ac3c0ddedbe2df8dfc7d29eae3179":[1,0,1286,12],
+"classThingGen.html#a2f535312f6f871fb91354d24de6c0e44":[1,0,1286,15],
 "classThingGen.html#a3d7347076c20fe199b11069611a2711d":[1,0,1286,4],
 "classThingGen.html#a41e1514487384693ea6da76b4049a52d":[1,0,1286,2],
 "classThingGen.html#a52d9259ff236badd987e097b1c5c86ae":[1,0,1286,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX108 =
 "classTileTypeBridgePillar.html#abdaed7c24736d351e5b115cdb5519851":[1,0,1301,2],
 "classTileTypeBridgePillar.html#af821ab305856d5a0c8279083b6674f61":[1,0,1301,0],
 "classTileTypeChasm.html":[1,0,1302],
-"classTileTypeChasm.html#a805df73e2e1fe5b8a8aaf2ee49574726":[1,0,1302,0],
-"classTileTypeDoor.html":[1,0,1303],
-"classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7":[1,0,1303,5],
-"classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe":[1,0,1303,2]
+"classTileTypeChasm.html#a805df73e2e1fe5b8a8aaf2ee49574726":[1,0,1302,0]
 };

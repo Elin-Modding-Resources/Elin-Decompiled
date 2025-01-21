@@ -1,5 +1,9 @@
 var NAVTREEINDEX117 =
 {
+"classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1695,0],
+"classTraitQuestBoard.html":[1,0,1696],
+"classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1696,0],
+"classTraitQuestBoard.html#acc915a6236db624e9877d89ed47c9913":[1,0,1696,1],
 "classTraitQuiver.html":[1,0,1697],
 "classTraitQuru.html":[1,0,1698],
 "classTraitQuru.html#a78ee1996db80b583df7a0cc891ff6876":[1,0,1698,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1738,0],
 "classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1738,2],
 "classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756":[1,0,1738,1],
-"classTraitSmelter.html":[1,0,1739],
-"classTraitSmelter.html#a085a6739e2464e952545e9a02f30721e":[1,0,1739,4],
-"classTraitSmelter.html#a3180454786ce77336f6f31befaec2bf5":[1,0,1739,2],
-"classTraitSmelter.html#a5bbbc27e3581ae203ed08f424adbf78a":[1,0,1739,3],
-"classTraitSmelter.html#a5bd91a2e6d40f1482a070a63729e14d8":[1,0,1739,1]
+"classTraitSmelter.html":[1,0,1739]
 };

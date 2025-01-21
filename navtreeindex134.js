@@ -1,5 +1,9 @@
 var NAVTREEINDEX134 =
 {
+"classZonePreEnterBout.html":[1,0,2092],
+"classZonePreEnterBout.html#a0b4e0336203a50455fd13f9f4895b88f":[1,0,2092,0],
+"classZonePreEnterBout.html#aee2f1c20d1ea1cae6c89a2158f9a9a5b":[1,0,2092,1],
+"classZonePreEnterBoutWin.html":[1,0,2093],
 "classZonePreEnterBoutWin.html#a3ceb78f0ff78c6295b40700932ece9af":[1,0,2093,1],
 "classZonePreEnterBoutWin.html#ae62ef4a7c0dfd0c15d768f11432a39ac":[1,0,2093,0],
 "classZonePreEnterDigStairs.html":[1,0,2094],
@@ -245,9 +249,5 @@ var NAVTREEINDEX134 =
 "classZone__Nymelle.html#a82af9b1806d05ee08255f893c083b0e4":[1,0,2041,4],
 "classZone__Nymelle.html#a9f2196f36fac1c4aaed97a4843e38f4c":[1,0,2041,10],
 "classZone__Nymelle.html#ad589cd82fce3ebb1f6276d613f2a0b4d":[1,0,2041,6],
-"classZone__Nymelle.html#ae74897e9e5e32b43b61453181cf4fb5b":[1,0,2041,3],
-"classZone__Nymelle.html#ae8ff840f4eb5b21bda4394e0b9f84396":[1,0,2041,1],
-"classZone__Nymelle.html#aff651bca56f215442623898a5dee9ead":[1,0,2041,0],
-"classZone__OldGuild.html":[1,0,2042],
-"classZone__OldGuild.html#a944bef54278b07a2225c46f761a98324":[1,0,2042,0]
+"classZone__Nymelle.html#ae74897e9e5e32b43b61453181cf4fb5b":[1,0,2041,3]
 };

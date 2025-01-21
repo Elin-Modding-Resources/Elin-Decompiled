@@ -1,5 +1,8 @@
 var NAVTREEINDEX114 =
 {
+"classTraitFactory.html#a4c38f7cc3a498750a2a11c75aa87460e":[1,0,1503,4],
+"classTraitFactory.html#a4ea2e3f2fa68547ae6f8664924ec1b1a":[1,0,1503,3],
+"classTraitFactory.html#a78d67401eceea58e197ddf83824dbf5e":[1,0,1503,1],
 "classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1503,2],
 "classTraitFarmChest.html":[1,0,1504],
 "classTraitFarmChest.html#a24ba7195fdbb804198d179484cbcc0ad":[1,0,1504,1],
@@ -23,9 +26,10 @@ var NAVTREEINDEX114 =
 "classTraitFiama.html#ae8917e9a855a2c6ad72b8c3cd8dac15a":[1,0,1508,1],
 "classTraitFigure.html":[1,0,1509],
 "classTraitFigure.html#a38b489e2770736b3510ef28c481c620c":[1,0,1509,2],
-"classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6":[1,0,1509,5],
-"classTraitFigure.html#a8444d988cf072d1da015423790978202":[1,0,1509,4],
-"classTraitFigure.html#a96d673649e59ad682e39429f8678c0df":[1,0,1509,3],
+"classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6":[1,0,1509,6],
+"classTraitFigure.html#a725f17b8712fe0c9b06656a5e7109b41":[1,0,1509,3],
+"classTraitFigure.html#a8444d988cf072d1da015423790978202":[1,0,1509,5],
+"classTraitFigure.html#a96d673649e59ad682e39429f8678c0df":[1,0,1509,4],
 "classTraitFigure.html#ab82e086783ec1852f9a84e30f1318e1f":[1,0,1509,0],
 "classTraitFigure.html#aee15d2a35dbde8a92a90011db74f4e25":[1,0,1509,1],
 "classTraitFirework.html":[1,0,1510],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64":[1,0,1571,7],
 "classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945":[1,0,1571,9],
 "classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1571,3],
-"classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1571,6],
-"classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1571,4],
-"classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd":[1,0,1571,5],
-"classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931":[1,0,1571,8],
-"classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1571,10]
+"classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1571,6]
 };

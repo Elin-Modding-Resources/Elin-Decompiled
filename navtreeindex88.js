@@ -1,5 +1,8 @@
 var NAVTREEINDEX88 =
 {
+"classProgress__Custom.html#affec2c3e525ac2a72ff5aa25433567d1":[1,0,927,19],
+"classPrologue.html":[1,0,928],
+"classPrologue.html#a0fdb0997ef82d868f82ac024602e6d83":[1,0,928,4],
 "classPrologue.html#a2ffa5a83b86e36af131b5c1be89280f0":[1,0,928,2],
 "classPrologue.html#a3ba489caf49044257e3c94ea0fef87fa":[1,0,928,5],
 "classPrologue.html#a4238692911288efddeb45c0528efe5b7":[1,0,928,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX88 =
 "classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c":[1,0,943,4],
 "classQuestDefense.html#a60d78b0054890c25626e1a4acb701c31":[1,0,943,2],
 "classQuestDefense.html#a6a51cf620f36b0245510dbec7a189daa":[1,0,943,3],
-"classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8":[1,0,943,5],
-"classQuestDefense.html#a6d57887fbc63f1b9afb541d2c458e5fc":[1,0,943,1],
-"classQuestDefense.html#a8df54ea51ec9403136de4056ab0b1f74":[1,0,943,0],
-"classQuestDefenseGame.html":[1,0,944]
+"classQuestDefense.html#a6b8f443acd2df5b7ecf5a3af7b58f5f8":[1,0,943,5]
 };

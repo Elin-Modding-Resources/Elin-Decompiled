@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classInputFieldsTabSwitcher.html#a19ae6309117ff66d12b11b64c21e2a9e":[1,0,641,7],
 "classInputFieldsTabSwitcher.html#a1f14e24aae94458a60929b5f5d13d5b7":[1,0,641,5],
 "classInputFieldsTabSwitcher.html#a3c116ecaa22e70712af9748b20b61dbf":[1,0,641,6],
 "classInputFieldsTabSwitcher.html#a51d50f81a245a3141d2437b4a4301925":[1,0,641,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classInvOwnerDeliver.html#aee3cb483457de88284feefa34be513c7":[1,0,662,3],
 "classInvOwnerDeliver.html#af4ac55affebd13b9ebf635fb416d2cc1":[1,0,662,5],
 "classInvOwnerDeliver.html#af68dc939211520c7d05c2396d975c156":[1,0,662,7],
-"classInvOwnerDeliverBox.html":[1,0,663],
-"classInvOwnerDeliverBox.html#a46aef943dd83afd2ff682655f74ffba2":[1,0,663,1]
+"classInvOwnerDeliverBox.html":[1,0,663]
 };
