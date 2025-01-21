@@ -621,7 +621,7 @@ public class ElementContainer : EClass
 
 	public List<Element> ListGeneFeats()
 	{
-		return ListElements((Element a) => a.Value > 0 && a.source.category == "feat" && a.source.cost.Length != 0 && a.source.cost[0] > 0);
+		return ListElements((Element a) => a.Value > 0 && a.source.category == "feat" && a.source.cost.Length != 0 && a.source.cost[0] > 0 && a.source.geneSlot >= 0);
 	}
 
 	public List<Element> ListLearnable(Chara c)

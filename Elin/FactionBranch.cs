@@ -182,6 +182,10 @@ public class FactionBranch : EClass
 		{
 			return 0;
 		}
+		if (c.memberType == FactionMemberType.Livestock)
+		{
+			return 100;
+		}
 		return Mathf.Max(1, (90 + Evalue(2116) / 2) * efficiency / 100);
 	}
 

@@ -266,7 +266,7 @@ public class BuildMenu : EMono
 			}
 			foreach (Thing thing in EMono._map.Stocked.Things)
 			{
-				if (EMono._map.Stocked.ShouldListAsResource(thing) && (thing.source.name.Contains(s) || thing.source.name_JP.Contains(s)))
+				if (EMono._map.Stocked.ShouldListAsResource(thing) && (thing.source.name.Contains(s) || thing.source.name_JP.Contains(s) || thing.NameOne.Contains(s)))
 				{
 					Recipe recipe2 = Recipe.Create(thing);
 					if (recipe2 == null)
@@ -281,7 +281,7 @@ public class BuildMenu : EMono
 			}
 			EMono.pc.things.Foreach(delegate(Thing t)
 			{
-				if (t.trait.CanBeDropped && !t.trait.CanOnlyCarry && (t.source.name.Contains(s) || t.source.name_JP.Contains(s)))
+				if (t.trait.CanBeDropped && !t.trait.CanOnlyCarry && (t.source.name.Contains(s) || t.source.name_JP.Contains(s) || t.NameOne.Contains(s)))
 				{
 					Recipe recipe3 = Recipe.Create(t);
 					if (recipe3 == null)

@@ -664,9 +664,27 @@ public class WindowChara : WindowController
 						return false;
 					}
 				}
-				else if ((a.owner == chara.elements && a.vLink == 0 && !a.IsFactionElement(chara)) || a.source.category == "resist")
+				else
 				{
-					return false;
+					switch (a.id)
+					{
+					case 55:
+					case 56:
+					case 57:
+					case 68:
+					case 90:
+					case 91:
+					case 93:
+						if (a.vSource != 0)
+						{
+							return true;
+						}
+						break;
+					}
+					if ((a.owner == chara.elements && a.vLink == 0 && !a.IsFactionElement(chara)) || a.source.category == "resist")
+					{
+						return false;
+					}
 				}
 				return true;
 			});

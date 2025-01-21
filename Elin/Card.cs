@@ -2030,7 +2030,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		get
 		{
-			if (!IsFood && Evalue(10) <= 0 && !category.IsChildOf("seed") && !(id == "pasture") && !(id == "grass"))
+			if (!IsFood && (Evalue(10) <= 0 || IsEquipmentOrRanged) && !category.IsChildOf("seed") && !(id == "pasture") && !(id == "grass"))
 			{
 				return category.IsChildOf("drug");
 			}
@@ -3519,7 +3519,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public virtual void HealHP(int a, HealSource origin = HealSource.None)
 	{
-		hp += a;
+		hp += a * Mathf.Max(100 - Evalue(93), 1) / 100;
 		if (hp > MaxHP)
 		{
 			hp = MaxHP;
@@ -3598,6 +3598,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef), (origin != null) ? origin.Evalue(1238) : 0);
 				dmg = dmg * 100 / (100 + Mathf.Clamp(Evalue(961) * 5, -50, 200));
+				dmg = dmg * Mathf.Max(100 - Evalue(93), 10) / 100;
 			}
 			switch (e.id)
 			{
@@ -3825,7 +3826,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_09fc;
+							goto IL_0a24;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -3837,8 +3838,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_09fc;
-		IL_09fc:
+		goto IL_0a24;
+		IL_0a24:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);

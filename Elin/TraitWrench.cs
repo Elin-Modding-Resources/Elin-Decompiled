@@ -136,7 +136,7 @@ public class TraitWrench : Trait
 						Msg.Say("noMoreUpgrade", t, owner.GetName(NameStyle.Full, 1));
 					}
 					return false;
-				});
+				}, t);
 			}
 		});
 	}

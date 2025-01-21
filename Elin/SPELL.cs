@@ -40,7 +40,7 @@ public class SPELL
 
 	public const int puddle_Nether = 50906;
 
-	public const int ball_Mind = 50104;
+	public const int weapon_Nether = 50806;
 
 	public const int miasma_Nether = 50706;
 
@@ -82,17 +82,17 @@ public class SPELL
 
 	public const int funnel_Nether = 50606;
 
-	public const int weapon_Nether = 50806;
+	public const int ball_Mind = 50104;
 
 	public const int weapon_Mind = 50804;
 
-	public const int puddle_Ether = 50912;
+	public const int ball_Acid = 50113;
 
 	public const int hand_Holy = 50409;
 
-	public const int miasma_Darkness = 50703;
+	public const int puddle_Ether = 50912;
 
-	public const int ball_Acid = 50113;
+	public const int miasma_Darkness = 50703;
 
 	public const int bolt_Acid = 50313;
 
@@ -196,7 +196,7 @@ public class SPELL
 
 	public const int funnel_Darkness = 50603;
 
-	public const int SpDrawMetal = 9502;
+	public const int SpDrawMonster = 9501;
 
 	public const int hand_Darkness = 50403;
 
@@ -366,7 +366,7 @@ public class SPELL
 
 	public const int ball_Fire = 50100;
 
-	public const int SpDrawMonster = 9501;
+	public const int SpDrawMetal = 9502;
 
 	public const int SpGravity = 8708;
 
@@ -424,14 +424,14 @@ public class SPELL
 	{
 		50107, 50903, 50307, 50407, 50507, 50607, 50707, 50807, 50108, 50803,
 		50109, 50308, 50408, 50508, 50608, 50708, 50808, 50908, 50907, 50906,
-		50104, 50706, 50904, 50704, 50105, 50604, 50305, 50405, 50505, 50605,
+		50806, 50706, 50904, 50704, 50105, 50604, 50305, 50405, 50505, 50605,
 		50504, 50705, 50404, 50805, 50905, 50106, 50304, 50306, 50406, 50506,
-		50606, 50806, 50804, 50912, 50409, 50703, 50113, 50313, 50413, 50513,
+		50606, 50104, 50804, 50113, 50409, 50912, 50703, 50313, 50413, 50513,
 		50613, 50713, 50813, 50913, 50114, 50314, 50414, 50514, 50614, 50714,
 		50814, 50914, 50115, 50315, 50415, 50515, 50615, 50715, 50812, 50712,
 		50612, 50512, 50509, 50609, 50709, 50809, 50909, 50110, 50310, 50410,
 		50510, 50610, 50710, 50309, 50810, 50111, 50311, 50411, 50511, 50611,
-		50711, 50811, 50911, 50112, 50312, 50412, 50910, 50603, 9502, 50403,
+		50711, 50811, 50911, 50112, 50312, 50412, 50910, 50603, 9501, 50403,
 		8300, 8380, 8390, 8400, 8401, 8402, 8403, 8404, 8405, 8406,
 		8430, 8288, 8450, 8471, 8480, 8490, 8491, 8500, 8501, 8502,
 		8503, 8504, 8506, 8510, 8470, 8700, 8286, 8284, 50815, 7001,
@@ -440,7 +440,7 @@ public class SPELL
 		8280, 8281, 8221, 50503, 8702, 8706, 50400, 50500, 50600, 50700,
 		50800, 50900, 50101, 50301, 50401, 50501, 50601, 50300, 50701, 50901,
 		50102, 50302, 50402, 50502, 50602, 50702, 50802, 50902, 50103, 50303,
-		50801, 8704, 50100, 9501, 8708, 8710, 8770, 8775, 8776, 8780,
+		50801, 8704, 50100, 9502, 8708, 8710, 8770, 8775, 8776, 8780,
 		8790, 8791, 8800, 8801, 9000, 9503, 9001, 9003, 9004, 9005,
 		9006, 9007, 9050, 9150, 9151, 9160, 9200, 9500, 9002, 50915
 	};

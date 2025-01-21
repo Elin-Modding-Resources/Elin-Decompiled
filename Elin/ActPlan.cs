@@ -856,7 +856,7 @@ public class ActPlan : EClass
 					}
 				}
 			}
-			if (list.Count == 0 && input == ActInput.AllAction && pos.cell.IsSnowTile && !pos.IsBlocked && !pos.HasObj && !pos.HasThing)
+			if (list.Count == 0 && input == ActInput.AllAction && EClass.pc.held == null && pos.cell.IsSnowTile && !pos.IsBlocked && !pos.HasObj && !pos.HasThing)
 			{
 				TrySetAct(new AI_Craft_Snowman
 				{

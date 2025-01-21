@@ -476,6 +476,10 @@ public class DNA : EClass
 		for (int i = 0; i < vals.Count; i += 2)
 		{
 			Element element = Element.Create(vals[i], vals[i + 1]);
+			if (element.source.geneSlot < 0)
+			{
+				slot = 99;
+			}
 			if (element.source.geneSlot > slot)
 			{
 				slot = element.source.geneSlot;

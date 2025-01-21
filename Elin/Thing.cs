@@ -154,7 +154,7 @@ public class Thing : Card
 		if (source == null)
 		{
 			Debug.LogWarning("Thing " + id + " not found");
-			id = "1101";
+			id = "ash3";
 			source = EClass.sources.things.map[id];
 		}
 	}

@@ -49,25 +49,25 @@ public class POLICY
 
 	public const int incomeTransfer = 2711;
 
-	public const int nocturnal_life = 2508;
+	public const int inquisition = 2507;
 
 	public const int noAnimal = 2709;
 
 	public const int noMother = 2710;
 
-	public const int wealth_tax = 2500;
-
-	public const int impressment = 2504;
-
 	public const int prohibition = 2503;
 
 	public const int food_for_people = 2502;
+
+	public const int faith_tax = 2501;
+
+	public const int impressment = 2504;
 
 	public const int legal_drug = 2505;
 
 	public const int human_right = 2506;
 
-	public const int faith_tax = 2501;
+	public const int nocturnal_life = 2508;
 
 	public const int vaccination = 2509;
 
@@ -77,15 +77,15 @@ public class POLICY
 
 	public const int resident_tax = 2512;
 
-	public const int inquisition = 2507;
+	public const int wealth_tax = 2500;
 
 	public const int taxfree = 2514;
 
 	public const int auto_farm = 2707;
 
-	public const int demon_invocation = 2706;
-
 	public const int resident_wanted = 2513;
+
+	public const int demon_invocation = 2706;
 
 	public const int taxTransfer = 2705;
 
@@ -109,9 +109,9 @@ public class POLICY
 	{
 		2812, 2815, 2814, 2813, 2712, 2810, 2800, 2715, 2816, 2811,
 		2817, 2824, 2819, 2820, 2821, 2822, 2823, 2825, 2826, 2827,
-		2828, 2818, 2711, 2508, 2709, 2710, 2500, 2504, 2503, 2502,
-		2505, 2506, 2501, 2509, 2510, 2511, 2512, 2507, 2514, 2707,
-		2706, 2513, 2705, 2703, 2704, 2701, 2700, 2516, 2515, 2702,
+		2828, 2818, 2711, 2507, 2709, 2710, 2503, 2502, 2501, 2504,
+		2505, 2506, 2508, 2509, 2510, 2511, 2512, 2500, 2514, 2707,
+		2513, 2706, 2705, 2703, 2704, 2701, 2700, 2516, 2515, 2702,
 		2708
 	};
 }

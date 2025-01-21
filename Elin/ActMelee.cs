@@ -121,8 +121,10 @@ public class ActMelee : ActBaseAttack
 		int count = 0;
 		int num = Act.CC.Dist(Act.TC);
 		Point orgPos = Act.TC.pos.Copy();
+		Card tC = Act.TC;
 		foreach (BodySlot slot in Act.CC.body.slots)
 		{
+			Act.TC = tC;
 			if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
 			{
 				return true;
@@ -194,7 +196,7 @@ public class ActMelee : ActBaseAttack
 				}
 				foreach (Point item2 in list)
 				{
-					foreach (Card item3 in item2.ListCards())
+					foreach (Card item3 in item2.ListCards().Copy())
 					{
 						if (num4 <= 0 || !Act.CC.IsAliveInCurrentZone)
 						{
@@ -202,7 +204,6 @@ public class ActMelee : ActBaseAttack
 						}
 						if (item3.trait.CanBeAttacked || (item3.isChara && item3.Chara.IsHostile(Act.CC)))
 						{
-							Act.CC.Say("attack_cleave");
 							AttackWithFlurry(item3, item2, 1f, subAttack: true);
 							num4--;
 						}
@@ -215,6 +216,7 @@ public class ActMelee : ActBaseAttack
 			{
 				Act.TC = _tc;
 				Act.TP = _tp;
+				Debug.Log(w.Name + "/" + chaser + "/" + Act.TC.Name);
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
 				int num6 = 1;
 				if (chaser > 0)
@@ -245,10 +247,6 @@ public class ActMelee : ActBaseAttack
 					{
 						break;
 					}
-				}
-				if (flag2)
-				{
-					hasHit = true;
 				}
 				if (w.c_ammo > 0 && !Act.CC.HasCondition<ConReload>())
 				{

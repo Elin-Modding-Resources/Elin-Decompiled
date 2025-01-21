@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfBeach = 3604;
-
-	public const int bfCave = 3500;
+	public const int bfForest = 3601;
 
 	public const int bfPlain = 3600;
 
-	public const int bfForest = 3601;
-
-	public const int bfSnow = 3602;
+	public const int bfCave = 3500;
 
 	public const int bfHill = 3603;
+
+	public const int bfRuin = 3702;
+
+	public const int bfSnow = 3602;
 
 	public const int bfGeyser = 3701;
 
 	public const int bfFertile = 3700;
 
-	public const int bfSea = 3605;
-
 	public const int fRation = 2207;
 
-	public const int bfRuin = 3702;
+	public const int bfSea = 3605;
+
+	public const int bfBeach = 3604;
 
 	public const int fAttraction = 2206;
 
-	public const int fLoyal = 2117;
+	public const int fSoil = 2200;
 
 	public const int fFood = 2204;
 
@@ -38,19 +38,19 @@ public class FACTION
 
 	public const int fElec = 2201;
 
-	public const int fSoil = 2200;
-
-	public const int fLuck = 2118;
-
-	public const int fConstruction = 2003;
-
 	public const int fHeirloom = 2120;
 
 	public const int fTaxEvasion = 2119;
 
-	public const int fAdmin = 2115;
+	public const int fLuck = 2118;
+
+	public const int fLoyal = 2117;
 
 	public const int fEducation = 2116;
+
+	public const int fAdmin = 2115;
+
+	public const int fConstruction = 2003;
 
 	public const int fSafety = 2205;
 
@@ -110,9 +110,9 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[52]
 	{
-		3604, 3500, 3600, 3601, 3602, 3603, 3701, 3700, 3605, 2207,
-		3702, 2206, 2117, 2204, 2203, 2202, 2201, 2200, 2118, 2003,
-		2120, 2119, 2115, 2116, 2205, 3703, 3705, 3706, 4006, 4005,
+		3601, 3600, 3500, 3603, 3702, 3602, 3701, 3700, 2207, 3605,
+		3604, 2206, 2200, 2204, 2203, 2202, 2201, 2120, 2119, 2118,
+		2117, 2116, 2115, 2003, 2205, 3703, 3705, 3706, 4006, 4005,
 		4004, 4003, 4002, 4001, 3704, 3900, 3805, 3804, 3803, 4000,
 		3801, 3802, 3708, 3709, 3710, 3780, 3707, 3782, 3783, 3784,
 		3800, 3781

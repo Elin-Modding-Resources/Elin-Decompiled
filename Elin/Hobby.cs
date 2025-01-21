@@ -30,7 +30,7 @@ public class Hobby : EClass
 	public int GetEfficiency(Chara c)
 	{
 		int num = 50;
-		FactionBranch factionBranch = ((c.currentZone == null) ? EClass._zone.branch : c.homeBranch);
+		FactionBranch factionBranch = ((c.currentZone != null) ? c.homeBranch : EClass._zone?.branch);
 		if (factionBranch == null || (c.currentZone != null && c.currentZone != factionBranch.owner))
 		{
 			return 0;

@@ -4,7 +4,11 @@ public class TraitFoodPreparedPackage : TraitFood
 
 	public override bool CanEat(Chara c)
 	{
-		return owner.idSkin == 1;
+		if (c.IsPC)
+		{
+			return owner.idSkin == 1;
+		}
+		return true;
 	}
 
 	public override bool CanUse(Chara c)

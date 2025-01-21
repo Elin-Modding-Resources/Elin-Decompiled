@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int antidote = 753;
+	public const int hotspring = 756;
 
 	public const int blood = 755;
+
+	public const int nerve = 754;
+
+	public const int antidote = 753;
+
+	public const int cute = 752;
 
 	public const int rare = 751;
 
 	public const int comfort = 750;
-
-	public const int hotspring = 756;
-
-	public const int nerve = 754;
-
-	public const int cute = 752;
 
 	public const int _void = 0;
 
@@ -67,7 +67,7 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[30]
 	{
-		753, 755, 751, 750, 756, 754, 752, 0, 2, 1,
+		756, 755, 754, 753, 752, 751, 750, 0, 2, 1,
 		3, 5, 10, 11, 12, 13, 14, 16, 17, 18,
 		15, 21, 22, 23, 24, 25, 26, 29, 85, 20
 	};
@@ -521,6 +521,10 @@ public class Element : EClass
 
 	public static SourceElement.Row GetRandomElement(int lv = 1)
 	{
+		if (lv > 100)
+		{
+			lv = 100;
+		}
 		if (ListElements.Count == 0)
 		{
 			foreach (SourceElement.Row row in EClass.sources.elements.rows)

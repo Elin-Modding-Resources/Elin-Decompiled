@@ -1424,7 +1424,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		foreach (Card item in sharedPoint.ListCards())
 		{
-			if (item.trait.CanBeDestroyed && !item.trait.IsDoor && item.isThing)
+			if (item.trait.CanBeDestroyed && !item.trait.IsDoor && !item.isFireproof && !item.category.IsChildOf("currency") && item.rarity < Rarity.Legendary && !(item.trait is TraitFigure) && item.isThing)
 			{
 				if (instant)
 				{

@@ -100,7 +100,7 @@ public class QuestDeliver : QuestDestZone
 		{
 			return false;
 		}
-		if (!t.c_isImportant && t.Num >= num && t.IsIdentified && t.things.Count == 0 && !t.isEquipped)
+		if (!t.c_isImportant && t.Num >= num && t.IsIdentified && (!t.IsContainer || t.things.Count == 0) && !t.isEquipped)
 		{
 			if (t.id == idThing)
 			{
