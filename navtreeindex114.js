@@ -1,5 +1,6 @@
 var NAVTREEINDEX114 =
 {
+"classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1503,2],
 "classTraitFarmChest.html":[1,0,1504],
 "classTraitFarmChest.html#a24ba7195fdbb804198d179484cbcc0ad":[1,0,1504,1],
 "classTraitFarmChest.html#a2e5532fbdab692f8145e0aa82a785367":[1,0,1504,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1571,4],
 "classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd":[1,0,1571,5],
 "classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931":[1,0,1571,8],
-"classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1571,10],
-"classTraitHouseBoard_1_1Data.html":[1,0,1571,0]
+"classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1571,10]
 };

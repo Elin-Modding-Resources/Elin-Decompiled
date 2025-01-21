@@ -1,5 +1,6 @@
 var NAVTREEINDEX117 =
 {
+"classTraitQuiver.html":[1,0,1697],
 "classTraitQuru.html":[1,0,1698],
 "classTraitQuru.html#a78ee1996db80b583df7a0cc891ff6876":[1,0,1698,0],
 "classTraitQuru.html#ad31ffa6fd80a7a940392ffeffe073ea9":[1,0,1698,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitSmelter.html#a085a6739e2464e952545e9a02f30721e":[1,0,1739,4],
 "classTraitSmelter.html#a3180454786ce77336f6f31befaec2bf5":[1,0,1739,2],
 "classTraitSmelter.html#a5bbbc27e3581ae203ed08f424adbf78a":[1,0,1739,3],
-"classTraitSmelter.html#a5bd91a2e6d40f1482a070a63729e14d8":[1,0,1739,1],
-"classTraitSmelter.html#a947b1d267be4a146fa476811b48b6638":[1,0,1739,0]
+"classTraitSmelter.html#a5bd91a2e6d40f1482a070a63729e14d8":[1,0,1739,1]
 };

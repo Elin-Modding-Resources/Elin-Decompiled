@@ -1,5 +1,6 @@
 var NAVTREEINDEX134 =
 {
+"classZonePreEnterBoutWin.html#a3ceb78f0ff78c6295b40700932ece9af":[1,0,2093,1],
 "classZonePreEnterBoutWin.html#ae62ef4a7c0dfd0c15d768f11432a39ac":[1,0,2093,0],
 "classZonePreEnterDigStairs.html":[1,0,2094],
 "classZonePreEnterDigStairs.html#a092dc8608daf2ebaa641d1408cf6caab":[1,0,2094,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX134 =
 "classZone__Nymelle.html#ae8ff840f4eb5b21bda4394e0b9f84396":[1,0,2041,1],
 "classZone__Nymelle.html#aff651bca56f215442623898a5dee9ead":[1,0,2041,0],
 "classZone__OldGuild.html":[1,0,2042],
-"classZone__OldGuild.html#a944bef54278b07a2225c46f761a98324":[1,0,2042,0],
-"classZone__Olvina.html":[1,0,2043]
+"classZone__OldGuild.html#a944bef54278b07a2225c46f761a98324":[1,0,2042,0]
 };

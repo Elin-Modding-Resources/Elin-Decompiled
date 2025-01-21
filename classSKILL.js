@@ -3,6 +3,7 @@ var classSKILL =
     [ "acidproof", "classSKILL.html#add11f954aaec386fdfa8a2aa63c9caa6", null ],
     [ "alchemy", "classSKILL.html#a903db37d71ab9b74e15c3f5807cafd1a", null ],
     [ "anatomy", "classSKILL.html#a6780759ddcef2961a69acfefb9963d82", null ],
+    [ "antiMagic", "classSKILL.html#a7496e5ade56835be4b0950ee7c723b7a", null ],
     [ "appraising", "classSKILL.html#a0baa0737aa3c9d288ff76e81aabeb557", null ],
     [ "armorHeavy", "classSKILL.html#a800f2f9573fdfe3524e2f6bc38a03f84", null ],
     [ "armorLight", "classSKILL.html#a4974fb9fd137633da9f7bac04fd528fb", null ],

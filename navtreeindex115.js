@@ -1,5 +1,6 @@
 var NAVTREEINDEX115 =
 {
+"classTraitHouseBoard_1_1Data.html":[1,0,1571,0],
 "classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7":[1,0,1571,0,16],
 "classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23":[1,0,1571,0,7],
 "classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c":[1,0,1571,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitMerchantMap.html":[1,0,1631],
 "classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1631,1],
 "classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1631,0],
-"classTraitMerchantMeat.html":[1,0,1632],
-"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1632,0]
+"classTraitMerchantMeat.html":[1,0,1632]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX109 =
 {
+"classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0":[1,0,1303,3],
 "classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b":[1,0,1303,0],
 "classTileTypeDoor.html#ac4b93f5339d0bb2f63065dcfa3c8dfdc":[1,0,1303,1],
 "classTileTypeDoor.html#ac670c8ddfcf8db76f3575422ea4a70d5":[1,0,1303,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX109 =
 "classTooltipManager.html#a7e5c15fb299cd8a55190ab10c90b4e44":[1,0,1353,3],
 "classTooltipManager.html#a827860af7a7443920bed563e47b8a475":[1,0,1353,7],
 "classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f":[1,0,1353,6],
-"classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d":[1,0,1353,1],
-"classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb":[1,0,1353,8]
+"classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d":[1,0,1353,1]
 };
