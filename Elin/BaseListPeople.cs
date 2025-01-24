@@ -122,27 +122,11 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 
 	public void AddSubButtonWork(ItemGeneral b, Chara a)
 	{
-		BaseArea roomWork = null;
+		BaseArea roomWork = a.GetRoomWork();
 		bool flag = true;
-		foreach (Hobby item in a.ListWorks())
+		foreach (Hobby item in a.ListWorks().Concat(a.ListHobbies()))
 		{
-			AIWork aI = item.GetAI(a);
-			if (aI.SetDestination())
-			{
-				if (aI.destArea != null)
-				{
-					roomWork = aI.destArea;
-				}
-				else if (aI.destThing != null)
-				{
-					roomWork = aI.destThing.pos.cell.room;
-				}
-				break;
-			}
-		}
-		foreach (Hobby item2 in a.ListWorks().Concat(a.ListHobbies()))
-		{
-			if (item2.GetEfficiency(a) <= 0)
+			if (item.GetEfficiency(a) <= 0)
 			{
 				flag = false;
 				break;

@@ -310,7 +310,7 @@ public class AI_UseCrafter : AIAct
 				return false;
 			}
 			Card rootCard = t.GetRootCard();
-			if (rootCard != null && rootCard.isChara && !rootCard.IsPC)
+			if (rootCard != null && rootCard.isChara && !rootCard.IsPCFaction)
 			{
 				return false;
 			}

@@ -2,6 +2,8 @@ public class InvOwnerCraft : InvOwnerDraglet
 {
 	public TraitCrafter crafter;
 
+	public override bool CanTargetAlly => crafter is TraitToolTalisman;
+
 	public override bool ShowFuel => crafter.IsRequireFuel;
 
 	public override string langTransfer => crafter.CrafterTitle;

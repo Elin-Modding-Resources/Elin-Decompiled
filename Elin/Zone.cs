@@ -887,6 +887,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			});
 		}
 		isStarted = true;
+		Map.isDirtySunMap = true;
 		map.RefreshAllTiles();
 		if (events.listPreEnter.Count > 0)
 		{

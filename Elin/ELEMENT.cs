@@ -95,10 +95,10 @@ public class Element : EClass
 			}
 		}
 
-		public void AddText(string text)
+		public void AddText(string text, FontColor col = FontColor.Warning)
 		{
 			CheckFirst();
-			n.AddText("_bullet".lang() + text, FontColor.Warning);
+			n.AddText("_bullet".lang() + text, col);
 		}
 
 		public void AddText(int v, string text, string textBad = null)
@@ -187,21 +187,33 @@ public class Element : EClass
 			{
 				c.RefreshSpeed(this);
 			}
+			if (id == 78 && c.IsPCFactionOrMinion)
+			{
+				int num2 = EClass.player.CountKeyItem("lucky_coin");
+				if (num2 > 0)
+				{
+					AddText(EClass.sources.keyItems.alias["lucky_coin"].GetName() + " (+" + num2 * 2 + ")", FontColor.Great);
+				}
+				if (EClass.pc.faction.charaElements.Has(663))
+				{
+					AddFix(100, EClass.sources.elements.map[663].GetName());
+				}
+			}
 			if (!c.race.IsMachine && !(c.id == "android"))
 			{
 				return;
 			}
-			int num2 = c.Evalue(664);
-			if (num2 > 0)
+			int num3 = c.Evalue(664);
+			if (num3 > 0)
 			{
 				switch (id)
 				{
 				case 64:
 				case 65:
-					AddFix(num2 / 2, EClass.sources.elements.map[664].GetName());
+					AddFix(num3 / 2, EClass.sources.elements.map[664].GetName());
 					break;
 				case 79:
-					AddFix(num2, EClass.sources.elements.map[664].GetName());
+					AddFix(num3, EClass.sources.elements.map[664].GetName());
 					break;
 				}
 			}

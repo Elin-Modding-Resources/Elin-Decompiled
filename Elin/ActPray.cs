@@ -66,7 +66,7 @@ public class ActPray : Act
 			}
 			else
 			{
-				Pray(c, passive && EClass._zone.IsRegion);
+				Pray(c, passive);
 			}
 		}
 		return true;

@@ -102,7 +102,10 @@ public class ActRanged : ActThrow
 		bool hasHit = false;
 		int numFire = effectData.num;
 		int numFireWithoutDamageLoss = numFire;
-		int num = weapon.Evalue(602);
+		int num = GetWeaponEnc(602);
+		int drill = GetWeaponEnc(606);
+		int scatter = GetWeaponEnc(607);
+		int chaser = GetWeaponEnc(620);
 		if (num > 0)
 		{
 			numFire += num / 10 + ((num % 10 > EClass.rnd(10)) ? 1 : 0);
@@ -110,8 +113,6 @@ public class ActRanged : ActThrow
 		numFire += Act.CC.Evalue(1652);
 		int num2 = numFire;
 		int num3 = 1 + weapon.material.hardness / 30 + EClass.rnd(3);
-		int drill = weapon.Evalue(606);
-		int scatter = weapon.Evalue(607);
 		int num4 = weapon.Evalue(604);
 		if (num4 > 0)
 		{
@@ -254,6 +255,10 @@ public class ActRanged : ActThrow
 			}
 		}
 		return true;
+		int GetWeaponEnc(int ele)
+		{
+			return weapon.Evalue(ele) + EClass.pc.faction.charaElements.Value(ele);
+		}
 		void Shoot(Card _tc, Point _tp)
 		{
 			float dmgMulti = 1f;
@@ -295,11 +300,31 @@ public class ActRanged : ActThrow
 				{
 					dmgMulti = Mathf.Clamp(1.2f - 0.2f * (float)Act.CC.Dist(Act.TP) - (Act.TP.Equals(orgTP) ? 0f : 0.4f), 0.2f, 1f);
 				}
-				for (int j = 0; j < numFire; j++)
+				int num5 = 1;
+				bool flag3 = false;
+				if (chaser > 0)
 				{
-					if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
+					for (int j = 0; j < 10; j++)
 					{
-						hasHit = true;
+						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
+						{
+							num5++;
+						}
+					}
+				}
+				for (int k = 0; k < numFire + num5; k++)
+				{
+					if (k >= numFire)
+					{
+						if (flag3)
+						{
+							break;
+						}
+						Act.CC.Say("attack_chaser");
+					}
+					if (AttackProcess.Current.Perform(k, hasHit, dmgMulti))
+					{
+						flag3 = (hasHit = true);
 					}
 					if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
 					{

@@ -216,7 +216,6 @@ public class ActMelee : ActBaseAttack
 			{
 				Act.TC = _tc;
 				Act.TP = _tp;
-				Debug.Log(w.Name + "/" + chaser + "/" + Act.TC.Name);
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
 				int num6 = 1;
 				if (chaser > 0)

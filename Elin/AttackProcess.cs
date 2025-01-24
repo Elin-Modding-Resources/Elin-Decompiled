@@ -158,7 +158,7 @@ public class AttackProcess : EClass
 			attackType = AttackType.Blunt;
 			dBonus = CC.DMG + (CC.IsPCParty ? 3 : 7);
 			dNum = 2;
-			dDim = (((!CC.IsPCParty) ? CC.LV : 0) + CC.STR + CC.Evalue(108)) * num2 * num3 / 10000 / 2;
+			dDim = (((!CC.IsPCParty) ? CC.LV : 0) + CC.STR + CC.Evalue(108)) * num2 / 100 * num3 / 100 / 2;
 			dMulti = 1f;
 			toHitBase = EClass.curve(CC.DEX / 4 + CC.STR / 2 + weaponSkill.Value, 50, 25) + (CC.IsPCFaction ? 75 : 250);
 			toHitFix = CC.HIT + weapon.HIT;

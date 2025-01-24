@@ -72,10 +72,6 @@ public class TCOrbitChara : TCOrbit
 			{
 				emo = owner.trait.GetRestockedIcon();
 			}
-			else if (EMono.player.currentHotItem.Thing != null && EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner) != 0)
-			{
-				emo = EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner);
-			}
 			else
 			{
 				bool flag = false;
@@ -121,6 +117,10 @@ public class TCOrbitChara : TCOrbit
 					emo = Emo2.hint;
 				}
 			}
+		}
+		if (EMono.player.currentHotItem.Thing != null && EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner) != 0)
+		{
+			emo = EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner);
 		}
 		showIcon = emo != Emo2.none;
 		if (showIcon)

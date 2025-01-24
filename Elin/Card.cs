@@ -1900,7 +1900,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public SourceCategory.Row category => _category ?? (_category = EClass.sources.categories.map[sourceCard.category]);
 
-	public SourceMaterial.Row material => _material ?? (_material = EClass.sources.materials.map[idMaterial]);
+	public SourceMaterial.Row material => _material ?? (_material = EClass.sources.materials.map.TryGetValue(idMaterial, 3));
 
 	public virtual string AliasMaterialOnCreate => DefaultMaterial.alias;
 

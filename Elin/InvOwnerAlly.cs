@@ -40,12 +40,12 @@ public class InvOwnerAlly : InvOwner
 		{
 			return false;
 		}
-		ButtonGrid buttonGrid = LayerDragGrid.Instance.buttons[0];
-		if (buttonGrid.card != null)
+		ButtonGrid currentButton = LayerDragGrid.Instance.CurrentButton;
+		if (currentButton.card != null)
 		{
-			buttonGrid.card = null;
+			currentButton.card = null;
 		}
-		return new Transaction(new DragItemCard.DragInfo(button), new DragItemCard.DragInfo(buttonGrid)).Process(startTransaction: true);
+		return new Transaction(new DragItemCard.DragInfo(button), new DragItemCard.DragInfo(currentButton)).Process(startTransaction: true);
 	}
 
 	public override string GetAutoUseLang(ButtonGrid button)

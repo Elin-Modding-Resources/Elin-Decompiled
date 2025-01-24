@@ -1331,20 +1331,24 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (source.mainElement.Length != 0)
 		{
-			int maxEleLv = Mathf.Min(genLv, 100);
+			int _genLv = Mathf.Min(genLv, 100);
+			if (EClass._zone != null && EClass._zone.ScaleMonsterLevel)
+			{
+				_genLv = ((genLv - 1) % 50 + 5) * 150 / 100;
+			}
 			List<Tuple<string, int, int>> list = new List<Tuple<string, int, int>>();
 			string[] mainElement = source.mainElement;
 			for (int i = 0; i < mainElement.Length; i++)
 			{
 				string[] array = mainElement[i].Split('/');
 				SourceElement.Row row = EClass.sources.elements.alias["ele" + array[0]];
-				int num2 = source.LV * row.eleP / 100 + base.LV - source.LV;
-				if (list.Count == 0 || num2 < maxEleLv || array[0] == bp.idEle)
+				int num2 = source.LV * row.eleP / 100;
+				if (list.Count == 0 || num2 < _genLv || array[0] == bp.idEle)
 				{
 					list.Add(new Tuple<string, int, int>(array[0], (array.Length > 1) ? int.Parse(array[1]) : 0, num2));
 				}
 			}
-			Tuple<string, int, int> tuple = list.RandomItemWeighted((Tuple<string, int, int> a) => 10000 / (100 + (maxEleLv - a.Item3) * 25));
+			Tuple<string, int, int> tuple = list.RandomItemWeighted((Tuple<string, int, int> a) => 10000 / (100 + (_genLv - a.Item3) * 25));
 			if (!bp.idEle.IsEmpty())
 			{
 				tuple = list.Where((Tuple<string, int, int> a) => a.Item1 == bp.idEle).FirstOrDefault() ?? tuple;
@@ -4651,18 +4655,17 @@ public class Chara : Card, IPathfindWalker
 			return;
 		}
 		int currency = GetCurrency();
-		if (currency <= 0)
+		if (currency > 0)
 		{
-			return;
+			int num = currency / 3 + EClass.rnd(currency / 3 + 1);
+			if (num <= 0)
+			{
+				num = 1;
+			}
+			Msg.Say("panaltyMoney", this, Lang._currency(num));
+			ModCurrency(-num);
+			EClass._zone.AddCard(ThingGen.CreateCurrency(num), EClass.pc.pos);
 		}
-		int num = currency / 3 + EClass.rnd(currency / 3 + 1);
-		if (num <= 0)
-		{
-			num = 1;
-		}
-		Msg.Say("panaltyMoney", this, Lang._currency(num));
-		ModCurrency(-num);
-		EClass._zone.AddCard(ThingGen.CreateCurrency(num), EClass.pc.pos);
 		foreach (Element value in EClass.pc.elements.dict.Values)
 		{
 			if (EClass.rnd(5) == 0 && value.IsMainAttribute)
@@ -7322,7 +7325,7 @@ public class Chara : Card, IPathfindWalker
 			Msg.Say("affinityNone", c, this);
 			return;
 		}
-		if (t.IsCursed && t.IsEquipmentOrRanged && c.HasElement(1414))
+		if (!t.isCopy && t.IsCursed && t.IsEquipmentOrRanged && c.HasElement(1414))
 		{
 			bool num = t.blessedState == BlessedState.Doomed;
 			int num2 = 200 + t.LV * 3;
@@ -7920,6 +7923,28 @@ public class Chara : Card, IPathfindWalker
 		{
 			Tick();
 		}
+	}
+
+	public BaseArea GetRoomWork()
+	{
+		BaseArea result = null;
+		foreach (Hobby item in ListWorks())
+		{
+			AIWork aI = item.GetAI(this);
+			if (aI.SetDestination())
+			{
+				if (aI.destArea != null)
+				{
+					result = aI.destArea;
+				}
+				else if (aI.destThing != null)
+				{
+					result = aI.destThing.pos.cell.room;
+				}
+				break;
+			}
+		}
+		return result;
 	}
 
 	public List<Hobby> ListWorks(bool useMemberType = true)
