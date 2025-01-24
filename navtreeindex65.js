@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"classGoalSpot.html":[1,0,537],
 "classGoalSpot.html#a303713cf647d8b644b40d9b2f9de6bf6":[1,0,537,0],
 "classGoalTask.html":[1,0,538],
 "classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b":[1,0,538,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "classGrowSystemWheat.html#a222f7d600aa3caa55d53ee782bdae343":[1,0,564,2],
 "classGrowSystemWheat.html#a27315347780f0282b0350610a5eb7e96":[1,0,564,0],
 "classGrowSystemWheat.html#a7ca178e41b57c202760ee2d493d65116":[1,0,564,1],
-"classGrowSystemWheat.html#ac039e2a04188a91fd2a1a89c86d1cfef":[1,0,564,4],
-"classGrowSystemWheat.html#ad456c309a23e847bbffd289b5a6993c8":[1,0,564,3]
+"classGrowSystemWheat.html#ac039e2a04188a91fd2a1a89c86d1cfef":[1,0,564,4]
 };

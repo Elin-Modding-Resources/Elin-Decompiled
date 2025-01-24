@@ -1,5 +1,7 @@
 var NAVTREEINDEX116 =
 {
+"classTraitMerchantMagic.html":[1,0,1630],
+"classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1630,0],
 "classTraitMerchantMap.html":[1,0,1631],
 "classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1631,1],
 "classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1631,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1694,1],
 "classTraitPunishBall.html#a8eed1e8041d764c11247005ecef42000":[1,0,1694,4],
 "classTraitPunishBall.html#a94ac158ebca677e1b6dd601c52a5232b":[1,0,1694,0],
-"classTraitPunishBall.html#aa09ba5e2e40ce2ceab7738c0967479ad":[1,0,1694,3],
-"classTraitPunishBall.html#af986d9992b08bfedf70a1ccb37add2fb":[1,0,1694,2],
-"classTraitPuppy.html":[1,0,1695]
+"classTraitPunishBall.html#aa09ba5e2e40ce2ceab7738c0967479ad":[1,0,1694,3]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"classListPeopleEmbark.html#a8d85cb3f509f94d60ecddc66fc8828ad":[1,0,814,2],
+"classListPeopleEmbark.html#abee9036984a1cdec34938d85256c1ad5":[1,0,814,0],
 "classListPeopleEmbark.html#adad823e4a296f9f2efaea77dd7c070ba":[1,0,814,1],
 "classListPeopleExpedition.html":[1,0,815],
 "classListPeopleExpedition.html#a2b78b11d4fcc625fa6f8341c9e3d672b":[1,0,815,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "classMap.html#a3c65d9462d8708835e09cc1e9497a8e5":[1,0,828,27],
 "classMap.html#a3fee251c28c9e8ebcfbcf5cceacad995":[1,0,828,3],
 "classMap.html#a40139f174c10e2127d195aa840ec815d":[1,0,828,85],
-"classMap.html#a42e032d482e2b2533749319feae7836e":[1,0,828,135],
-"classMap.html#a43e29067fe5769a1a86c698711043fd5":[1,0,828,90],
-"classMap.html#a494fa4e96005d28cef557561e32c7129":[1,0,828,91]
+"classMap.html#a42e032d482e2b2533749319feae7836e":[1,0,828,135]
 };

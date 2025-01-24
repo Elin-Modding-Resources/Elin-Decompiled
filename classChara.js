@@ -106,6 +106,7 @@ var classChara =
     [ "GetName", "classChara.html#a6674652091034e289b6c5e16f9cc8761", null ],
     [ "GetPietyValue", "classChara.html#ad5f010850a3d54092ebcab88e0db0241", null ],
     [ "GetRevived", "classChara.html#a0219e0ff47bdfd344eed3d5238fb57f8", null ],
+    [ "GetRoomWork", "classChara.html#abd59149c5adfa0d451edbd7787d5f92c", null ],
     [ "GetSprite", "classChara.html#a31e3607407ceca2ee3efda372846f647", null ],
     [ "GetSubPassData", "classChara.html#acf2f6d8be13e78c44be3f813eca65ec8", null ],
     [ "GetTextHappiness", "classChara.html#ac512190e0ae489839978cc89ab617bcb", null ],

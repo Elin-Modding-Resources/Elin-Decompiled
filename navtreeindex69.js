@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classInputFieldsTabSwitcher.html#a08932a97481c55c41841189ff2ab5777":[1,0,641,9],
 "classInputFieldsTabSwitcher.html#a19ae6309117ff66d12b11b64c21e2a9e":[1,0,641,7],
 "classInputFieldsTabSwitcher.html#a1f14e24aae94458a60929b5f5d13d5b7":[1,0,641,5],
 "classInputFieldsTabSwitcher.html#a3c116ecaa22e70712af9748b20b61dbf":[1,0,641,6],
@@ -224,16 +225,17 @@ var NAVTREEINDEX69 =
 "classInvOwnerCopyShop.html#a55a19d7e66d75e168115bd23d6dbff0d":[1,0,660,3],
 "classInvOwnerCopyShop.html#ae17efa75e69c57847048c0061ca1c360":[1,0,660,2],
 "classInvOwnerCraft.html":[1,0,661],
-"classInvOwnerCraft.html#a11e999e62a678a43f8f8670ce54400ab":[1,0,661,8],
+"classInvOwnerCraft.html#a11e999e62a678a43f8f8670ce54400ab":[1,0,661,9],
 "classInvOwnerCraft.html#a2df3df11025d31c65f65fcfc57fe88db":[1,0,661,1],
 "classInvOwnerCraft.html#a33a8e10b471d1eb8534def9e2b4a5ac0":[1,0,661,5],
 "classInvOwnerCraft.html#a612096eef0ff7ddb2d0e61f519119fd5":[1,0,661,4],
-"classInvOwnerCraft.html#a625b925810ed0f1faa67d662487eecf2":[1,0,661,9],
+"classInvOwnerCraft.html#a625b925810ed0f1faa67d662487eecf2":[1,0,661,10],
 "classInvOwnerCraft.html#a7337dce17c8c3b407000587e0ddd57dd":[1,0,661,2],
 "classInvOwnerCraft.html#a7f2fee30c11d16d7c7253129213aa826":[1,0,661,3],
-"classInvOwnerCraft.html#a80ab2547032946b7f86a36a35a5109d5":[1,0,661,10],
+"classInvOwnerCraft.html#a80ab2547032946b7f86a36a35a5109d5":[1,0,661,11],
 "classInvOwnerCraft.html#a820b4d69c66d8d835f38a1345c0a81eb":[1,0,661,6],
-"classInvOwnerCraft.html#aa50fa286a15b714ea8941d8841fbdbe8":[1,0,661,7],
+"classInvOwnerCraft.html#a97bc6579f79a7b59aa5e3bdc0cca4fe3":[1,0,661,7],
+"classInvOwnerCraft.html#aa50fa286a15b714ea8941d8841fbdbe8":[1,0,661,8],
 "classInvOwnerCraft.html#ac4b2cb488f8682e3378a5af3bed32272":[1,0,661,0],
 "classInvOwnerDeliver.html":[1,0,662],
 "classInvOwnerDeliver.html#a07c80e378c8b8bfd13aa7b51c50610ad":[1,0,662,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX69 =
 "classInvOwnerDeliver.html#abb9e52964cc2ee3ce7950f7ca299525c":[1,0,662,1],
 "classInvOwnerDeliver.html#aea0d6276046f5aebc07d82cb33f552a2":[1,0,662,8],
 "classInvOwnerDeliver.html#aee3cb483457de88284feefa34be513c7":[1,0,662,3],
-"classInvOwnerDeliver.html#af4ac55affebd13b9ebf635fb416d2cc1":[1,0,662,5],
-"classInvOwnerDeliver.html#af68dc939211520c7d05c2396d975c156":[1,0,662,7],
-"classInvOwnerDeliverBox.html":[1,0,663]
+"classInvOwnerDeliver.html#af4ac55affebd13b9ebf635fb416d2cc1":[1,0,662,5]
 };

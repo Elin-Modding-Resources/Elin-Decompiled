@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,291,3],
 "classConDrawBacker.html":[1,0,293],
 "classConDrawMetal.html":[1,0,294],
 "classConDrawMonster.html":[1,0,295],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "classContentCodex.html#a447f01fc6f53cf285c4502b82fed78d9":[1,0,337,14],
 "classContentCodex.html#a5ab4cb87a77ff0fd4115ebc556590780":[1,0,337,4],
 "classContentCodex.html#a62e21ef8c54b3165408263ba054e5b4f":[1,0,337,3],
-"classContentCodex.html#a70214fbb99f1164a49ef384401325d61":[1,0,337,6],
-"classContentCodex.html#a72ce08695835b235356da896f053f077":[1,0,337,7]
+"classContentCodex.html#a70214fbb99f1164a49ef384401325d61":[1,0,337,6]
 };

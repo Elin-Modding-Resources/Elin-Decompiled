@@ -1,5 +1,7 @@
 var NAVTREEINDEX112 =
 {
+"classTraitBookSkill.html#ab6713c7b1e8deecda697aaefff9b5626":[1,0,1407,4],
+"classTraitBookSkill.html#ac6d82d6df069e06c6f51430ad202e7b5":[1,0,1407,2],
 "classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3":[1,0,1407,8],
 "classTraitBookSkill.html#af86dc9a98250fd3b4903ec5dace82612":[1,0,1407,1],
 "classTraitBrewery.html":[1,0,1408],
@@ -247,7 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitCrafter.html#ad084942afed510b4fbf54e9086eddde4":[1,0,1453,4],
 "classTraitCrafter.html#ad1550a5648cd24eac0d9b9c9bb068b7b":[1,0,1453,25],
 "classTraitCrafter.html#ada15d322729b7ddd06d3b5dcf8c92c9f":[1,0,1453,9],
-"classTraitCrafter.html#adda85b6e89740c5018791da335d9a024":[1,0,1453,5],
-"classTraitCrafter.html#ae834415b06f94a32305c88d57baedfe2":[1,0,1453,27],
-"classTraitCrafter.html#aed95a974a58e7bb8cfad5ba2c462a7b0":[1,0,1453,31]
+"classTraitCrafter.html#adda85b6e89740c5018791da335d9a024":[1,0,1453,5]
 };

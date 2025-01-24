@@ -7,6 +7,7 @@ var classInvOwnerCraft =
     [ "TryStartCraft", "classInvOwnerCraft.html#a612096eef0ff7ddb2d0e61f519119fd5", null ],
     [ "crafter", "classInvOwnerCraft.html#a33a8e10b471d1eb8534def9e2b4a5ac0", null ],
     [ "AllowStockIngredients", "classInvOwnerCraft.html#a820b4d69c66d8d835f38a1345c0a81eb", null ],
+    [ "CanTargetAlly", "classInvOwnerCraft.html#a97bc6579f79a7b59aa5e3bdc0cca4fe3", null ],
     [ "DenyImportant", "classInvOwnerCraft.html#aa50fa286a15b714ea8941d8841fbdbe8", null ],
     [ "langTransfer", "classInvOwnerCraft.html#a11e999e62a678a43f8f8670ce54400ab", null ],
     [ "numDragGrid", "classInvOwnerCraft.html#a625b925810ed0f1faa67d662487eecf2", null ],

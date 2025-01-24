@@ -1,5 +1,7 @@
 var NAVTREEINDEX111 =
 {
+"classTraitAbility.html#a7b2c5167072bc230341cc179e006225d":[1,0,1355,3],
+"classTraitAbility.html#a8d2e3feb454e134a2ec4f2de28760b59":[1,0,1355,2],
 "classTraitAbility.html#aa09c0fc724d476dff439483a22c9b663":[1,0,1355,1],
 "classTraitAbility.html#aa4660a54a34a6d5913eb4221bdb9f229":[1,0,1355,4],
 "classTraitAdventurer.html":[1,0,1356],
@@ -247,7 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitBookSkill.html#a63c1300106e2912ee4c3ae3f3fb989d4":[1,0,1407,0],
 "classTraitBookSkill.html#aa47b45c43d6da0c4173c2d940ac8f8bc":[1,0,1407,9],
 "classTraitBookSkill.html#aa63d4580da4a1a76951bc9dd84cc4c3e":[1,0,1407,7],
-"classTraitBookSkill.html#ab3e4b473d66fa8fc0f70eb0c086c5f53":[1,0,1407,3],
-"classTraitBookSkill.html#ab6713c7b1e8deecda697aaefff9b5626":[1,0,1407,4],
-"classTraitBookSkill.html#ac6d82d6df069e06c6f51430ad202e7b5":[1,0,1407,2]
+"classTraitBookSkill.html#ab3e4b473d66fa8fc0f70eb0c086c5f53":[1,0,1407,3]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX117 =
 {
+"classTraitPunishBall.html#af986d9992b08bfedf70a1ccb37add2fb":[1,0,1694,2],
+"classTraitPuppy.html":[1,0,1695],
 "classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1695,0],
 "classTraitQuestBoard.html":[1,0,1696],
 "classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1696,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitSlaver.html#ac441dd02a62a5446ee6382966679e280":[1,0,1737,1],
 "classTraitSlotMachine.html":[1,0,1738],
 "classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1738,0],
-"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1738,2],
-"classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756":[1,0,1738,1],
-"classTraitSmelter.html":[1,0,1739]
+"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1738,2]
 };
