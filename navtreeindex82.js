@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789":[1,0,865,0],
 "classMutation.html":[1,0,867],
 "classNet.html":[1,0,868],
 "classNet.html#a098087410828fafb0481376bf6ea78da":[1,0,868,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "classPOLICY.html#a5493026f8bdc63f4d03410568b143380":[1,0,910,37],
 "classPOLICY.html#a57cf85dbe2bf0cb27494d50d252f1b96":[1,0,910,31],
 "classPOLICY.html#a5cb10ec3aded21eb299bee504238dbcb":[1,0,910,38],
-"classPOLICY.html#a60249c22db6f308d18b82c782e4bc105":[1,0,910,16],
-"classPOLICY.html#a6039355175ce08a3164701145c56d747":[1,0,910,22]
+"classPOLICY.html#a60249c22db6f308d18b82c782e4bc105":[1,0,910,16]
 };

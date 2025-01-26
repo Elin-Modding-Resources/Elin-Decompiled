@@ -1,6 +1,7 @@
 var classMapMetaData =
 [
     [ "IsValidVersion", "classMapMetaData.html#a955cb7af4bf8c9c0b61162ae8a9b2244", null ],
+    [ "date", "classMapMetaData.html#a30e832da8bbce67a97213e22851fd57a", null ],
     [ "id", "classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762", null ],
     [ "name", "classMapMetaData.html#a27cfe03048cc7df21c5ec510f029b92b", null ],
     [ "partial", "classMapMetaData.html#a3ae3e3e7908ddc575232e49a713b2bfa", null ],

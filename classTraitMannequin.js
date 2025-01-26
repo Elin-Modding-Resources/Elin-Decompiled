@@ -5,6 +5,7 @@ var classTraitMannequin =
     [ "CanName", "classTraitMannequin.html#a97a6fc60e9f0d1318054b79ef4c07bc8", null ],
     [ "CanSearchContent", "classTraitMannequin.html#a8ebbf82ab1219140cb7656a4e6b76562", null ],
     [ "CanStack", "classTraitMannequin.html#ade085d97dce3c7f95d85c701deb30067", null ],
+    [ "CanUseContent", "classTraitMannequin.html#a1d3663a88e58c5eab42519b42d7a1264", null ],
     [ "CanUseFromInventory", "classTraitMannequin.html#a51c9d4666799b2cb4a2b74090d010f9b", null ],
     [ "UseAltTiles", "classTraitMannequin.html#a46dc077526eed5cc8c13690e85909b70", null ]
 ];

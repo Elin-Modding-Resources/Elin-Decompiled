@@ -1,5 +1,8 @@
 var NAVTREEINDEX118 =
 {
+"classTraitSlotMachine.html":[1,0,1738],
+"classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1738,0],
+"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1738,2],
 "classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756":[1,0,1738,1],
 "classTraitSmelter.html":[1,0,1739],
 "classTraitSmelter.html#a085a6739e2464e952545e9a02f30721e":[1,0,1739,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitToolSickle.html#aaf396ca14be0760703717610954d89b6":[1,0,1809,0],
 "classTraitToolTalisman.html":[1,0,1810],
 "classTraitToolTalisman.html#a0570fc6eaf7f97ac63265befa1c1b176":[1,0,1810,3],
-"classTraitToolTalisman.html#a2eef1c145cc21eef149e51d3068741cf":[1,0,1810,7],
-"classTraitToolTalisman.html#a3aaeea66f51cb96aea42536db2e290eb":[1,0,1810,6],
-"classTraitToolTalisman.html#a591bc7510cb9e9f810701c33e8aa115e":[1,0,1810,5],
-"classTraitToolTalisman.html#a641e5ad30e9b0a4efe916c0a0a9eddcc":[1,0,1810,4]
+"classTraitToolTalisman.html#a2eef1c145cc21eef149e51d3068741cf":[1,0,1810,7]
 };

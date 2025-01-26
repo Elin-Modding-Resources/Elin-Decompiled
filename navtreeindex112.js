@@ -1,5 +1,6 @@
 var NAVTREEINDEX112 =
 {
+"classTraitBookSkill.html#ab3e4b473d66fa8fc0f70eb0c086c5f53":[1,0,1407,3],
 "classTraitBookSkill.html#ab6713c7b1e8deecda697aaefff9b5626":[1,0,1407,4],
 "classTraitBookSkill.html#ac6d82d6df069e06c6f51430ad202e7b5":[1,0,1407,2],
 "classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3":[1,0,1407,8],
@@ -118,7 +119,8 @@ var NAVTREEINDEX112 =
 "classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1424,1],
 "classTraitChestMerchant.html":[1,0,1425],
 "classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1425,0],
-"classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1425,1],
+"classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1425,2],
+"classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1425,1],
 "classTraitChestPractice.html":[1,0,1426],
 "classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1426,0],
 "classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1426,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitCrafter.html#ab6976f17a6b72bb6a3af88d0627373cd":[1,0,1453,15],
 "classTraitCrafter.html#ac154e3baf3f8b1994e6bae094ad0401f":[1,0,1453,19],
 "classTraitCrafter.html#ad084942afed510b4fbf54e9086eddde4":[1,0,1453,4],
-"classTraitCrafter.html#ad1550a5648cd24eac0d9b9c9bb068b7b":[1,0,1453,25],
-"classTraitCrafter.html#ada15d322729b7ddd06d3b5dcf8c92c9f":[1,0,1453,9],
-"classTraitCrafter.html#adda85b6e89740c5018791da335d9a024":[1,0,1453,5]
+"classTraitCrafter.html#ad1550a5648cd24eac0d9b9c9bb068b7b":[1,0,1453,25]
 };

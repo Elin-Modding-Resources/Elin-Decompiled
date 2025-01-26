@@ -1,5 +1,6 @@
 var NAVTREEINDEX105 =
 {
+"classStickyTutorial.html#a69eb0549468eb92bddaa2494abe44932":[1,0,1221,2],
 "classStickyTutorial.html#a6b3d5ccfb59ce7556661477f9180613e":[1,0,1221,1],
 "classStickyWelcome.html":[1,0,1222],
 "classStickyWelcome.html#a1c692174965bb9d1a30583eb282c676e":[1,0,1222,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX105 =
 "classTask.html#a9774966f217d14e6bc8c7715613ddf7a":[1,0,1239,12],
 "classTask.html#aaed6d0dd18b3060661a230cf0abb77b9":[1,0,1239,4],
 "classTask.html#ab82e341c94f284fac8ce912b7e9d3d38":[1,0,1239,2],
-"classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0":[1,0,1239,3],
-"classTask.html#af222d40930341a71e855f3e1ec657476":[1,0,1239,7]
+"classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0":[1,0,1239,3]
 };

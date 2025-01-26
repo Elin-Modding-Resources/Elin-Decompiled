@@ -1,5 +1,6 @@
 var NAVTREEINDEX109 =
 {
+"classTileTypeBridgePillar.html#af821ab305856d5a0c8279083b6674f61":[1,0,1301,0],
 "classTileTypeChasm.html":[1,0,1302],
 "classTileTypeChasm.html#a805df73e2e1fe5b8a8aaf2ee49574726":[1,0,1302,0],
 "classTileTypeDoor.html":[1,0,1303],
@@ -248,6 +249,5 @@ var NAVTREEINDEX109 =
 "classTooltipData.html#ab6504946b62b544a7bf5f41927846cc5":[1,0,1352,1],
 "classTooltipData.html#ac4e4cc7e16a9152eefe14f65a604abdb":[1,0,1352,0],
 "classTooltipManager.html":[1,0,1353],
-"classTooltipManager.html#a13e875c6fcdb82ae7d6dd55b8dc91008":[1,0,1353,0],
-"classTooltipManager.html#a1a9ce528a95fea6d0a96c296ddd4738b":[1,0,1353,2]
+"classTooltipManager.html#a13e875c6fcdb82ae7d6dd55b8dc91008":[1,0,1353,0]
 };

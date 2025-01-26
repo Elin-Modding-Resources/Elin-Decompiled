@@ -1,5 +1,7 @@
 var NAVTREEINDEX115 =
 {
+"classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64":[1,0,1571,7],
+"classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945":[1,0,1571,9],
 "classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1571,3],
 "classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1571,6],
 "classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1571,4],
@@ -140,9 +142,9 @@ var NAVTREEINDEX115 =
 "classTraitMagicChest.html#a374c84d6ee8fd4b303002cce39310071":[1,0,1598,1],
 "classTraitMagicChest.html#a48d4cc922d03e7fff2a2122aa3ecffb4":[1,0,1598,4],
 "classTraitMagicChest.html#a4f5af16cef8f4b7cd634815df07ff21c":[1,0,1598,0],
+"classTraitMagicChest.html#a60fa09f514bf44fcc46986443de111fd":[1,0,1598,3],
 "classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1598,8],
 "classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1598,7],
-"classTraitMagicChest.html#ab53e0156b91e51e21f943b2a8667a156":[1,0,1598,3],
 "classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1598,2],
 "classTraitMagicChest.html#ad29543aa0f1c1c56d6c973b27d296a49":[1,0,1598,5],
 "classTraitMahjong.html":[1,0,1599],
@@ -168,9 +170,10 @@ var NAVTREEINDEX115 =
 "classTraitManhole.html":[1,0,1603],
 "classTraitManhole.html#aa962c446c36eae0e5f40730b4c7c288a":[1,0,1603,0],
 "classTraitMannequin.html":[1,0,1604],
+"classTraitMannequin.html#a1d3663a88e58c5eab42519b42d7a1264":[1,0,1604,5],
 "classTraitMannequin.html#a3eda9d8f2da4f148b92673bbc0d529e9":[1,0,1604,1],
-"classTraitMannequin.html#a46dc077526eed5cc8c13690e85909b70":[1,0,1604,6],
-"classTraitMannequin.html#a51c9d4666799b2cb4a2b74090d010f9b":[1,0,1604,5],
+"classTraitMannequin.html#a46dc077526eed5cc8c13690e85909b70":[1,0,1604,7],
+"classTraitMannequin.html#a51c9d4666799b2cb4a2b74090d010f9b":[1,0,1604,6],
 "classTraitMannequin.html#a8ebbf82ab1219140cb7656a4e6b76562":[1,0,1604,3],
 "classTraitMannequin.html#a97a6fc60e9f0d1318054b79ef4c07bc8":[1,0,1604,2],
 "classTraitMannequin.html#ade085d97dce3c7f95d85c701deb30067":[1,0,1604,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitMerchantJunk.html":[1,0,1628],
 "classTraitMerchantJunk.html#a2a14dcd2b678a3661030049a59084151":[1,0,1628,2],
 "classTraitMerchantJunk.html#a53445cae9c33cf4de11ada9ff0d356be":[1,0,1628,0],
-"classTraitMerchantJunk.html#a697a7628e397f4411127bdb3a5281182":[1,0,1628,1],
-"classTraitMerchantLamp.html":[1,0,1629],
-"classTraitMerchantLamp.html#a46f5cef42a3727aa84dac84ecd84cd74":[1,0,1629,0],
-"classTraitMerchantLamp.html#aa394c90f3e0cecdaedc87ec80690f7da":[1,0,1629,1]
+"classTraitMerchantJunk.html#a697a7628e397f4411127bdb3a5281182":[1,0,1628,1]
 };
