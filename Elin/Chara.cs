@@ -716,14 +716,26 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (IsPCFaction)
 			{
-				return elements.Value(64) / ((!HasCondition<ConWeakness>()) ? 1 : 2);
+				return WeaknessMod(elements.Value(64));
 			}
 			int num = base.LV;
 			if (num > 50)
 			{
 				num = 50 + (num - 50) / 10;
 			}
-			return (num + elements.Value(64) * (100 + num + race.DV * 5) / 100) / ((!HasCondition<ConWeakness>()) ? 1 : 2);
+			return WeaknessMod(num + elements.Value(64) * (100 + num + race.DV * 5) / 100);
+			int WeaknessMod(int a)
+			{
+				if (HasCondition<ConWeakness>())
+				{
+					if (a <= 0)
+					{
+						return a * 2;
+					}
+					return a / 2;
+				}
+				return a;
+			}
 		}
 	}
 
@@ -733,14 +745,26 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (IsPCFaction)
 			{
-				return elements.Value(65) / ((!HasCondition<ConWeakness>()) ? 1 : 2);
+				return WeaknessMod(elements.Value(65));
 			}
 			int num = base.LV;
 			if (num > 50)
 			{
 				num = 50 + (num - 50) / 10;
 			}
-			return (num + elements.Value(65) * (100 + num + race.PV * 5) / 100) / ((!HasCondition<ConWeakness>()) ? 1 : 2);
+			return WeaknessMod(num + elements.Value(65) * (100 + num + race.PV * 5) / 100);
+			int WeaknessMod(int a)
+			{
+				if (HasCondition<ConWeakness>())
+				{
+					if (a <= 0)
+					{
+						return a * 2;
+					}
+					return a / 2;
+				}
+				return a;
+			}
 		}
 	}
 
@@ -1332,10 +1356,7 @@ public class Chara : Card, IPathfindWalker
 		if (source.mainElement.Length != 0)
 		{
 			int _genLv = Mathf.Min(genLv, 100);
-			if (EClass._zone != null && EClass._zone.ScaleMonsterLevel)
-			{
-				_genLv = ((genLv - 1) % 50 + 5) * 150 / 100;
-			}
+			Debug.Log(genLv + "/" + _genLv);
 			List<Tuple<string, int, int>> list = new List<Tuple<string, int, int>>();
 			string[] mainElement = source.mainElement;
 			for (int i = 0; i < mainElement.Length; i++)
@@ -1356,7 +1377,7 @@ public class Chara : Card, IPathfindWalker
 			SetMainElement(tuple.Item1, (tuple.Item2 == 0) ? 10 : tuple.Item2, elemental: true);
 			if (list.Count >= 2)
 			{
-				num = tuple.Item3;
+				num = tuple.Item3 + base.LV - source.LV;
 			}
 		}
 		if (source.name == "*r")

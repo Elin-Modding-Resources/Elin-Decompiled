@@ -126,11 +126,18 @@ public class HotbarManager : EClass
 						id = "Deconstruct"
 					});
 				}
+			}
+			else if (EClass._zone is Zone_Tent)
+			{
 				hotbar.SetItem(new HotItemActionMode
 				{
-					id = "ExitBuild"
+					id = "Terrain"
 				});
 			}
+			hotbar.SetItem(new HotItemActionMode
+			{
+				id = "ExitBuild"
+			});
 			break;
 		}
 		case 4:

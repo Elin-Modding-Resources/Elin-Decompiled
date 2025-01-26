@@ -204,15 +204,21 @@ public class Trait : EClass
 
 	public virtual bool IsContainer => false;
 
+	public virtual bool CanUseContent => CanSearchContent;
+
 	public virtual bool CanSearchContent
 	{
 		get
 		{
-			if (IsContainer)
+			if (!owner.isChara)
 			{
-				return owner.c_lockLv == 0;
+				if (IsContainer)
+				{
+					return owner.c_lockLv == 0;
+				}
+				return false;
 			}
-			return false;
+			return true;
 		}
 	}
 
@@ -279,8 +285,6 @@ public class Trait : EClass
 	public virtual bool CanBeDestroyed => true;
 
 	public virtual bool CanBeHallucinated => true;
-
-	public virtual bool CanSearchContents => true;
 
 	public virtual bool CanBeDropped => true;
 

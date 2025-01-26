@@ -2786,19 +2786,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		_colorInt = 0;
 	}
 
-	public Card ChangeMaterial(int idNew)
+	public Card ChangeMaterial(int idNew, bool ignoreFixedMaterial = false)
 	{
-		return ChangeMaterial(EClass.sources.materials.map[idNew]);
+		return ChangeMaterial(EClass.sources.materials.map[idNew], ignoreFixedMaterial);
 	}
 
-	public Card ChangeMaterial(string idNew)
+	public Card ChangeMaterial(string idNew, bool ignoreFixedMaterial = false)
 	{
-		return ChangeMaterial(EClass.sources.materials.alias[idNew]);
+		return ChangeMaterial(EClass.sources.materials.alias[idNew], ignoreFixedMaterial);
 	}
 
-	public Card ChangeMaterial(SourceMaterial.Row row)
+	public Card ChangeMaterial(SourceMaterial.Row row, bool ignoreFixedMaterial = false)
 	{
-		if (sourceCard.fixedMaterial)
+		if (sourceCard.fixedMaterial && !ignoreFixedMaterial)
 		{
 			return this;
 		}
@@ -3125,7 +3125,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public Thing Duplicate(int num)
 	{
 		Thing thing = ThingGen.Create(id);
-		thing.ChangeMaterial(idMaterial);
+		thing.ChangeMaterial(idMaterial, ignoreFixedMaterial: true);
 		thing._bits1 = _bits1;
 		thing._bits2 = _bits2;
 		thing.dir = dir;

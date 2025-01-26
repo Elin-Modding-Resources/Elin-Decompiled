@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,6 +30,7 @@ public class TraitMoongateEx : TraitMoongate
 				if (metaData != null && metaData.IsValidVersion())
 				{
 					metaData.path = item.FullName;
+					metaData.date = item.LastWriteTime;
 					list.Add(metaData);
 				}
 			}
@@ -38,6 +40,7 @@ public class TraitMoongateEx : TraitMoongate
 			EClass.pc.SayNothingHappans();
 			return;
 		}
+		list.Sort((MapMetaData a, MapMetaData b) => DateTime.Compare(a.date, b.date));
 		LayerList layer = null;
 		bool skipDialog = false;
 		layer = EClass.ui.AddLayer<LayerList>().SetList2(list, (MapMetaData a) => a.name, delegate(MapMetaData a, ItemGeneral b)

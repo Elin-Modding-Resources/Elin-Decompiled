@@ -24,11 +24,14 @@ public class TraitTent : TraitNewZone
 			{
 				EClass._zone.AddChild(base.zone);
 			}
+			return;
 		}
-		else
+		EClass._zone.RemoveChild(base.zone);
+		int num = owner.Thing.source.weight + base.zone.GetInt(1) * 150 / 100;
+		if (owner.HasElement(652))
 		{
-			EClass._zone.RemoveChild(base.zone);
-			owner.ChangeWeight(owner.Thing.source.weight + base.zone.GetInt(1) * 150 / 100);
+			num = num * 100 / 110;
 		}
+		owner.ChangeWeight(num);
 	}
 }

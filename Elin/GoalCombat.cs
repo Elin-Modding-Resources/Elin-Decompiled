@@ -479,9 +479,24 @@ public class GoalCombat : Goal
 				continue;
 			}
 			string text = s.abilityType[0];
-			if ((flag5 && !(text == "melee") && !(text == "range") && EClass.rnd(2) == 0) || (id == 6602 && (dist <= 1 || tc.HasCondition<ConEntangle>())))
+			if (flag5 && !(text == "melee") && !(text == "range") && EClass.rnd(2) == 0)
 			{
 				continue;
+			}
+			switch (id)
+			{
+			case 6602:
+				if (dist <= 1 || tc.HasCondition<ConEntangle>())
+				{
+					continue;
+				}
+				break;
+			case 6450:
+				if (isPCFaction && (tc.HasElement(1221) || tc.HasElement(1223) || tc.id == "hedgehog_ether"))
+				{
+					continue;
+				}
+				break;
 			}
 			bool isHOT;
 			switch (text)

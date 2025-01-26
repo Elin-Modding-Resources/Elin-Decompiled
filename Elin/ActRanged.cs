@@ -257,7 +257,25 @@ public class ActRanged : ActThrow
 		return true;
 		int GetWeaponEnc(int ele)
 		{
-			return weapon.Evalue(ele) + EClass.pc.faction.charaElements.Value(ele);
+			return weapon.Evalue(ele) + (Act.CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
+		}
+		void Prepare()
+		{
+			AttackProcess.Current.Prepare(Act.CC, weapon, Act.TC, Act.TP);
+			AttackProcess.Current.numFire = numFire;
+			AttackProcess.Current.numFireWithoutDamageLoss = numFireWithoutDamageLoss;
+			AttackProcess.Current.posRangedAnime = Act.TP.Copy();
+			AttackProcess.Current.ignoreAnime = index > 1;
+			AttackProcess.Current.ignoreAttackSound = false;
+			if (drill > 0 && points.Count > 0)
+			{
+				AttackProcess.Current.posRangedAnime = points.LastItem();
+			}
+			else if (scatter > 0)
+			{
+				AttackProcess.Current.ignoreAnime = false;
+				AttackProcess.Current.ignoreAttackSound = index > 1;
+			}
 		}
 		void Shoot(Card _tc, Point _tp)
 		{
@@ -272,7 +290,6 @@ public class ActRanged : ActThrow
 					Act.TC = c;
 				});
 			}
-			AttackProcess.Current.Prepare(Act.CC, weapon, Act.TC, Act.TP);
 			CellEffect effect = Act.TP.cell.effect;
 			if (effect != null && effect.id == 6 && EClass.rnd(2) == 0)
 			{
@@ -282,49 +299,32 @@ public class ActRanged : ActThrow
 			}
 			else
 			{
-				AttackProcess.Current.numFire = numFire;
-				AttackProcess.Current.numFireWithoutDamageLoss = numFireWithoutDamageLoss;
-				AttackProcess.Current.posRangedAnime = Act.TP.Copy();
-				AttackProcess.Current.ignoreAnime = index > 1;
-				AttackProcess.Current.ignoreAttackSound = false;
-				if (drill > 0 && points.Count > 0)
-				{
-					AttackProcess.Current.posRangedAnime = points.LastItem();
-				}
-				else if (scatter > 0)
-				{
-					AttackProcess.Current.ignoreAnime = false;
-					AttackProcess.Current.ignoreAttackSound = index > 1;
-				}
 				if (scatter > 0)
 				{
 					dmgMulti = Mathf.Clamp(1.2f - 0.2f * (float)Act.CC.Dist(Act.TP) - (Act.TP.Equals(orgTP) ? 0f : 0.4f), 0.2f, 1f);
 				}
-				int num5 = 1;
-				bool flag3 = false;
-				if (chaser > 0)
+				for (int j = 0; j < numFire; j++)
 				{
-					for (int j = 0; j < 10; j++)
+					Act.TC = _tc;
+					Prepare();
+					if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
 					{
-						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
-						{
-							num5++;
-						}
+						hasHit = true;
 					}
-				}
-				for (int k = 0; k < numFire + num5; k++)
-				{
-					if (k >= numFire)
+					else if (chaser > 0)
 					{
-						if (flag3)
+						for (int k = 0; k < 10; k++)
 						{
-							break;
+							if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, k + 2 + j)))
+							{
+								Act.CC.Say("attack_chaser");
+								if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
+								{
+									hasHit = true;
+									break;
+								}
+							}
 						}
-						Act.CC.Say("attack_chaser");
-					}
-					if (AttackProcess.Current.Perform(k, hasHit, dmgMulti))
-					{
-						flag3 = (hasHit = true);
 					}
 					if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
 					{

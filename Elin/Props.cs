@@ -177,7 +177,7 @@ public class Props : EClass
 		{
 			return false;
 		}
-		if (card.isSale || !card.IsContainer || card.c_lockLv != 0 || card.trait is TraitChestMerchant)
+		if (card.isSale || !card.trait.CanUseContent)
 		{
 			return false;
 		}

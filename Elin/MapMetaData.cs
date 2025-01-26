@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json;
 
 public class MapMetaData : EClass
@@ -18,6 +19,8 @@ public class MapMetaData : EClass
 	public PartialMap partial;
 
 	public string path;
+
+	public DateTime date;
 
 	public bool IsValidVersion()
 	{

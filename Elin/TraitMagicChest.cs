@@ -36,7 +36,7 @@ public class TraitMagicChest : TraitContainer
 		}
 	}
 
-	public override bool CanSearchContents
+	public override bool CanSearchContent
 	{
 		get
 		{

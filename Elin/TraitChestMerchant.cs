@@ -1,5 +1,7 @@
 public class TraitChestMerchant : TraitContainer
 {
+	public override bool CanUseContent => false;
+
 	public override string IDInvStyle
 	{
 		get

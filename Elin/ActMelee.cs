@@ -343,7 +343,7 @@ public class ActMelee : ActBaseAttack
 			}
 			int GetWeaponEnc(int ele)
 			{
-				return ((w != null) ? w.Evalue(ele) : 0) + EClass.pc.faction.charaElements.Value(ele);
+				return ((w != null) ? w.Evalue(ele) : 0) + (Act.CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
 			}
 		}
 		if (!flag)

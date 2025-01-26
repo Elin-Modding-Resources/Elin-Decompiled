@@ -82,7 +82,7 @@ public class Thing : Card
 		{
 			if (base.IsContainer && base.c_lockLv == 0 && !base.isNPCProperty)
 			{
-				return trait.CanSearchContents;
+				return trait.CanSearchContent;
 			}
 			return false;
 		}

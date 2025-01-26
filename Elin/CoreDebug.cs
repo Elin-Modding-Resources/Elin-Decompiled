@@ -1950,6 +1950,10 @@ public class CoreDebug : EScriptable
 		{
 			return EnableCheat;
 		}
+		if (EClass._zone is Zone_Arena)
+		{
+			EClass._zone._dangerLv = lv;
+		}
 		foreach (Chara item in EClass._map.charas.Where((Chara c) => c.HasEditorTag(EditorTag.SpawnTest)).ToList())
 		{
 			item.Destroy();

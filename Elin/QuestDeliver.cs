@@ -96,7 +96,7 @@ public class QuestDeliver : QuestDestZone
 
 	public virtual bool IsDestThing(Thing t)
 	{
-		if (t.parentCard != null && (t.parentCard.c_lockLv != 0 || t.parentCard.trait is TraitChestMerchant))
+		if (t.parentCard != null && !t.parentCard.trait.CanUseContent)
 		{
 			return false;
 		}

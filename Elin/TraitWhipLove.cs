@@ -50,7 +50,7 @@ public class TraitWhipLove : TraitTool
 							EClass.pc.Say("spellbookCrumble", owner);
 							owner.Destroy();
 						}
-						return false;
+						return true;
 					}, c);
 				}
 			}

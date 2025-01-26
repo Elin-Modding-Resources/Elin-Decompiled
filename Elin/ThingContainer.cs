@@ -819,7 +819,7 @@ public class ThingContainer : List<Thing>
 
 	public void _List(Func<Thing, bool> func, bool onlyAccessible = false)
 	{
-		if (onlyAccessible && !owner.trait.CanSearchContents)
+		if (onlyAccessible && !owner.trait.CanSearchContent)
 		{
 			return;
 		}
