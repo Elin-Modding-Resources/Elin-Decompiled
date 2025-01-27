@@ -1,5 +1,11 @@
 var NAVTREEINDEX51 =
 {
+"classCorePath_1_1UI.html#aff0ff1858c2563d10f7539979483e58c":[1,0,374,1,12],
+"classCoreRef.html":[1,0,375],
+"classCoreRef.html#a0e716c362390647724e16ff4b2635037":[1,0,375,47],
+"classCoreRef.html#a11b960646c3374eb0938c85848221846":[1,0,375,22],
+"classCoreRef.html#a145a58405b8b7c64a4155a43f01a2a96":[1,0,375,25],
+"classCoreRef.html#a18759ab160ad8d8fba64f0f41f77f65a":[1,0,375,58],
 "classCoreRef.html#a1f603ad13e6bfeabbd56108faaab6659":[1,0,375,57],
 "classCoreRef.html#a23b6310cd88ac8985687addfd36327df":[1,0,375,32],
 "classCoreRef.html#a241a05b38e053cdfd563848e1784db20":[1,0,375,62],
@@ -115,8 +121,9 @@ var NAVTREEINDEX51 =
 "classCoreRef_1_1PopperSprites.html":[1,0,375,7],
 "classCoreRef_1_1PopperSprites.html#abad464045144a14a8f8ff8acb56c6cc9":[1,0,375,7,0],
 "classCoreRef_1_1PrefData.html":[1,0,375,8],
-"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,375,8,0],
-"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,375,8,1],
+"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,375,8,1],
+"classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4":[1,0,375,8,0],
+"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,375,8,2],
 "classCoreRef_1_1Rects.html":[1,0,375,9],
 "classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,375,9,4],
 "classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,375,9,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX51 =
 "classCritterCancerSmall.html#ac6fa539b93d658b6c1d430cdae523a85":[1,0,380,0],
 "classCritterFish.html":[1,0,381],
 "classCritterFish.html#a02b9138ce394a25c221e748f6bb92948":[1,0,381,2],
-"classCritterFish.html#a5250b2ad43df590cb0b3a590ed8d2491":[1,0,381,4],
-"classCritterFish.html#a8faaec7e3b8633d0ebeb1c096814dc8b":[1,0,381,1],
-"classCritterFish.html#ac1f24dfd07e1f5b133e7b215e5fc3a21":[1,0,381,0],
-"classCritterFish.html#ad29b0d43c2ca5ecbf4cf000f74a92f29":[1,0,381,3],
-"classCritterFrog.html":[1,0,382],
-"classCritterFrog.html#a0bc41fa4599947851fd30ae7ad0790e5":[1,0,382,1],
-"classCritterFrog.html#a50586930075e4df4995267137f326571":[1,0,382,2],
-"classCritterFrog.html#ac9320c4a2ea0209b47b4d45014ba5929":[1,0,382,0]
+"classCritterFish.html#a5250b2ad43df590cb0b3a590ed8d2491":[1,0,381,4]
 };

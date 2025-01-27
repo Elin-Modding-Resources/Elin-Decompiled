@@ -39,6 +39,7 @@ var classSKILL =
     [ "eleNether", "classSKILL.html#a83e12a8a2b63e1f9b00485d15927d956", null ],
     [ "elePoison", "classSKILL.html#ac454d38384486047221aec5857a5a989", null ],
     [ "eleSound", "classSKILL.html#a8571fdf424e3560df458058fd0ab659a", null ],
+    [ "eleVoid", "classSKILL.html#a6fbc944eb1a91ac7fe88a0ecf25413f7", null ],
     [ "END", "classSKILL.html#a2fe1e7208c74ac81fd42db8efca0f75a", null ],
     [ "env", "classSKILL.html#aa2b20acf55a43f9cf9f300ad8972ba3a", null ],
     [ "evasion", "classSKILL.html#a67bbda2b1d17574a0dfaeb0619bed8f3", null ],

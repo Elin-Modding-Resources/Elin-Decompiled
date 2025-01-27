@@ -59,10 +59,11 @@ var searchData=
   ['hotitemtogglevisible_2ecs_56',['HotItemToggleVisible.cs',['../HotItemToggleVisible_8cs.html',1,'']]],
   ['hotitemtogglewidget_2ecs_57',['HotItemToggleWidget.cs',['../HotItemToggleWidget_8cs.html',1,'']]],
   ['hotitemwidget_2ecs_58',['HotItemWidget.cs',['../HotItemWidget_8cs.html',1,'']]],
-  ['hs_5fparticleendsound_2ecs_59',['HS_ParticleEndSound.cs',['../HS__ParticleEndSound_8cs.html',1,'']]],
-  ['hslcolor_2ecs_60',['HSLColor.cs',['../HSLColor_8cs.html',1,'']]],
-  ['hsvcolor_2ecs_61',['HSVColor.cs',['../HSVColor_8cs.html',1,'']]],
-  ['hud_2ecs_62',['HUD.cs',['../HUD_8cs.html',1,'']]],
-  ['hueslider_2ecs_63',['HueSlider.cs',['../HueSlider_8cs.html',1,'']]],
-  ['hyphenationjpn_2ecs_64',['HyphenationJpn.cs',['../HyphenationJpn_8cs.html',1,'']]]
+  ['hotitemwidgetset_2ecs_59',['HotItemWidgetSet.cs',['../HotItemWidgetSet_8cs.html',1,'']]],
+  ['hs_5fparticleendsound_2ecs_60',['HS_ParticleEndSound.cs',['../HS__ParticleEndSound_8cs.html',1,'']]],
+  ['hslcolor_2ecs_61',['HSLColor.cs',['../HSLColor_8cs.html',1,'']]],
+  ['hsvcolor_2ecs_62',['HSVColor.cs',['../HSVColor_8cs.html',1,'']]],
+  ['hud_2ecs_63',['HUD.cs',['../HUD_8cs.html',1,'']]],
+  ['hueslider_2ecs_64',['HueSlider.cs',['../HueSlider_8cs.html',1,'']]],
+  ['hyphenationjpn_2ecs_65',['HyphenationJpn.cs',['../HyphenationJpn_8cs.html',1,'']]]
 ];

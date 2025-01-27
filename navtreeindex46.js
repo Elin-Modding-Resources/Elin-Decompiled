@@ -1,5 +1,11 @@
 var NAVTREEINDEX46 =
 {
+"classConDim.html#ab62c03810e3c03a3655c938d3e16e4f0":[1,0,290,0],
+"classConDisease.html":[1,0,291],
+"classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,291,1],
+"classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,291,4],
+"classConDisease.html#ad8527bb782ccef1f688df0ded6e72923":[1,0,291,2],
+"classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,291,0],
 "classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,291,3],
 "classConDrawBacker.html":[1,0,293],
 "classConDrawMetal.html":[1,0,294],
@@ -243,11 +249,5 @@ var NAVTREEINDEX46 =
 "classContentChronicle.html#af35eec2b514361d7050bae67d6e1a686":[1,0,336,0],
 "classContentCodex.html":[1,0,337],
 "classContentCodex.html#a007eb841fa4ad581a0b7c79c75a8e459":[1,0,337,11],
-"classContentCodex.html#a31956b743c882e5eec0c7da891c71643":[1,0,337,0],
-"classContentCodex.html#a3636c903855e3187c44dca1e0bebad2f":[1,0,337,19],
-"classContentCodex.html#a3f787f7de4f0238d3373f005658d5610":[1,0,337,12],
-"classContentCodex.html#a447f01fc6f53cf285c4502b82fed78d9":[1,0,337,14],
-"classContentCodex.html#a5ab4cb87a77ff0fd4115ebc556590780":[1,0,337,4],
-"classContentCodex.html#a62e21ef8c54b3165408263ba054e5b4f":[1,0,337,3],
-"classContentCodex.html#a70214fbb99f1164a49ef384401325d61":[1,0,337,6]
+"classContentCodex.html#a31956b743c882e5eec0c7da891c71643":[1,0,337,0]
 };

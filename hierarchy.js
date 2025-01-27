@@ -846,6 +846,7 @@ var hierarchy =
           [ "GrowSystemHerb", "classGrowSystemHerb.html", null ]
         ] ],
         [ "GrowSystemTree", "classGrowSystemTree.html", [
+          [ "GrowSystemTreeFeywood", "classGrowSystemTreeFeywood.html", null ],
           [ "GrowSystemTreeSingle", "classGrowSystemTreeSingle.html", null ]
         ] ],
         [ "GrowSystemWeed", "classGrowSystemWeed.html", null ]
@@ -935,6 +936,7 @@ var hierarchy =
         [ "NumLogWorth", "classNumLogWorth.html", null ]
       ] ],
       [ "NumLogManager", "classNumLogManager.html", null ],
+      [ "OBJ", "classOBJ.html", null ],
       [ "PartialMap", "classPartialMap.html", null ],
       [ "Party", "classParty.html", null ],
       [ "PartyManager", "classPartyManager.html", null ],
@@ -2300,7 +2302,8 @@ var hierarchy =
           [ "HotItemActionSleep", "classHotItemActionSleep.html", null ],
           [ "HotItemEQSet", "classHotItemEQSet.html", null ],
           [ "HotItemFocusPos", "classHotItemFocusPos.html", null ],
-          [ "HotItemLayout", "classHotItemLayout.html", null ]
+          [ "HotItemLayout", "classHotItemLayout.html", null ],
+          [ "HotItemWidgetSet", "classHotItemWidgetSet.html", null ]
         ] ],
         [ "HotItemActionMode", "classHotItemActionMode.html", null ],
         [ "HotItemChara", "classHotItemChara.html", null ],
