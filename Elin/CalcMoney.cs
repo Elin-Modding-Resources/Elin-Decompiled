@@ -61,11 +61,11 @@ public class CalcMoney : EClass
 
 	public static int InvestShop(Chara c, Chara tc)
 	{
-		return Invest(Guild.Merchant.InvestPrice(Mathf.Max(tc.c_invest * 700, tc.c_invest * tc.c_invest * 80) + 200));
+		return Invest(Guild.Merchant.InvestPrice(Mathf.Max(tc.c_invest * 700, Mathf.Min(tc.c_invest, 4000) * Mathf.Min(tc.c_invest, 4000) * 80) + 200));
 	}
 
 	public static int InvestZone(Chara c)
 	{
-		return Invest((int)Mathf.Max((long)EClass._zone.development * 50L, EClass._zone.development * EClass._zone.development / 4) + 500);
+		return Invest((int)Mathf.Max((long)EClass._zone.development * 50L, Mathf.Min(EClass._zone.development, 80000) * Mathf.Min(EClass._zone.development, 80000) / 4) + 500);
 	}
 }

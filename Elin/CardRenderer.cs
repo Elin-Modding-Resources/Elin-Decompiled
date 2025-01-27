@@ -354,22 +354,29 @@ public class CardRenderer : RenderObject
 
 	public SourcePref GetPref()
 	{
-		if (isChara && owner.idSkin > 0)
+		if (isChara)
 		{
-			switch (owner.sourceCard.tiles.TryGet(owner.idSkin))
+			if (owner.IsPCC || (owner.HasHost && owner.Chara.host.ride == owner))
 			{
-			case 2319:
-			case 2619:
-			case 2621:
-			case 2623:
-			case 2625:
-				return EClass.core.refs.prefs.sonwputit1;
-			case 2320:
-			case 2620:
-			case 2622:
-			case 2624:
-			case 2626:
-				return EClass.core.refs.prefs.snowputit2;
+				return EClass.core.refs.prefs.pcc;
+			}
+			if (owner.idSkin > 0)
+			{
+				switch (owner.sourceCard.tiles.TryGet(owner.idSkin))
+				{
+				case 2319:
+				case 2619:
+				case 2621:
+				case 2623:
+				case 2625:
+					return EClass.core.refs.prefs.sonwputit1;
+				case 2320:
+				case 2620:
+				case 2622:
+				case 2624:
+				case 2626:
+					return EClass.core.refs.prefs.snowputit2;
+				}
 			}
 		}
 		return owner.Pref;

@@ -2608,6 +2608,7 @@ public class Zone : Spatial, ICardParent, IInspect
 	public void RefreshElectricity()
 	{
 		dirtyElectricity = false;
+		bool flag = GetSoilCost() > MaxSoil;
 		base.electricity = elements.Value(2201) * 10 + BaseElectricity;
 		foreach (Thing thing in EClass._map.things)
 		{
@@ -2615,6 +2616,16 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				base.electricity += thing.trait.Electricity;
 			}
+		}
+		if (!flag)
+		{
+			EClass._map.bounds.ForeachCell(delegate(Cell c)
+			{
+				if (c.sourceObj.id == 118 && c.growth.IsMature)
+				{
+					base.electricity += 20;
+				}
+			});
 		}
 		foreach (Thing thing2 in EClass._map.things)
 		{
@@ -2627,7 +2638,8 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public int GetElectricity(bool cost = false)
 	{
-		int num = 0;
+		bool flag = GetSoilCost() > MaxSoil;
+		int sum = 0;
 		foreach (Thing thing in EClass._map.things)
 		{
 			if (!thing.IsInstalled || thing.trait.Electricity == 0)
@@ -2638,19 +2650,29 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				if (thing.trait.Electricity < 0)
 				{
-					num += -thing.trait.Electricity;
+					sum += -thing.trait.Electricity;
 				}
 			}
 			else if (thing.trait.Electricity > 0)
 			{
-				num += thing.trait.Electricity;
+				sum += thing.trait.Electricity;
 			}
 		}
 		if (!cost)
 		{
-			num += elements.Value(2201) * 10;
+			sum += elements.Value(2201) * 10 + BaseElectricity;
+			if (!flag)
+			{
+				EClass._map.bounds.ForeachCell(delegate(Cell c)
+				{
+					if (c.sourceObj.id == 118 && c.growth.IsMature)
+					{
+						sum += 20;
+					}
+				});
+			}
 		}
-		return num;
+		return sum;
 	}
 
 	public void SetBGM(List<int> ids, bool refresh = true)

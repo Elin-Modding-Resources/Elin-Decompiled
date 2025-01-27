@@ -1509,6 +1509,10 @@ public class Map : MapBounds, IPathfindGrid
 	public void SetObj(int x, int z, int idMat, int idObj, int value, int dir)
 	{
 		Cell cell = cells[x, z];
+		if (cell.sourceObj.id == 118 || idObj == 118)
+		{
+			EClass._zone.dirtyElectricity = true;
+		}
 		cell.obj = (byte)idObj;
 		cell.objVal = (byte)value;
 		cell.objMat = (byte)idMat;

@@ -114,25 +114,30 @@ public class ShopTransaction : EClass
 
 	public int GetPrice(Thing t, int n, bool sell)
 	{
-		int price = t.GetPrice(trader.currency, sell: false, trader.priceType);
-		int price2 = t.GetPrice(trader.currency, sell: true, trader.priceType);
-		int num = n;
-		int num2 = 0;
-		int num3 = (sell ? price : price2);
+		long num = t.GetPrice(trader.currency, sell: false, trader.priceType);
+		long num2 = t.GetPrice(trader.currency, sell: true, trader.priceType);
+		int num3 = n;
+		long num4 = 0L;
+		long num5 = (sell ? num : num2);
 		foreach (Item item in sell ? bought : sold)
 		{
-			if (item.thing.id == t.id && item.price == num3)
+			if (item.thing.id == t.id && item.price == num5)
 			{
-				int num4 = ((item.num >= num) ? num : item.num);
-				num -= num4;
-				num2 += num4 * num3;
+				int num6 = ((item.num >= num3) ? num3 : item.num);
+				num3 -= num6;
+				num4 += num6 * num5;
 			}
-			if (num == 0)
+			if (num3 == 0)
 			{
 				break;
 			}
 		}
-		return num2 + num * (sell ? price2 : price);
+		num4 += (sell ? num2 : num) * num3;
+		if (num4 >= int.MaxValue || num4 <= -2147483647)
+		{
+			return -1;
+		}
+		return (int)num4;
 	}
 
 	public void OnEndTransaction()

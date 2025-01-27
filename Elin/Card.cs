@@ -3583,7 +3583,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return;
 		}
 		Element e;
-		if (ele == 0)
+		if (ele == 0 || ele == 926)
 		{
 			e = Element.Void;
 			if (origin != null)
@@ -3640,12 +3640,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * (100 - (int)Mathf.Min(80f, Mathf.Sqrt(LV - 50) * 2.5f)) / 100;
 			}
-			dmg = dmg * Mathf.Max(0, 100 - Evalue((e == Element.Void) ? 55 : 56)) / 100;
+			dmg = dmg * Mathf.Max(0, 100 - Evalue((e == Element.Void || e.id == 926) ? 55 : 56)) / 100;
 			if (origin != null && origin.IsPC && EClass.player.codex.Has(id))
 			{
 				dmg = dmg * (100 + Mathf.Min(10, EClass.player.codex.GetOrCreate(id).weakspot)) / 100;
 			}
-			if (isChara && Chara.body.GetAttackStyle() == AttackStyle.Shield && elements.ValueWithoutLink(123) >= 5 && e == Element.Void)
+			if (isChara && Chara.body.GetAttackStyle() == AttackStyle.Shield && elements.ValueWithoutLink(123) >= 5 && (e == Element.Void || e.id == 926))
 			{
 				dmg = dmg * 90 / 100;
 			}
@@ -3834,7 +3834,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0a58;
+							goto IL_0a84;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -3846,8 +3846,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0a58;
-		IL_0a58:
+		goto IL_0a84;
+		IL_0a84:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -6472,7 +6472,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			break;
 		}
-		float num5 = Math.Clamp(Mathf.Sqrt(c.Evalue(291) + ((!sell && EClass._zone.IsPCFaction) ? (EClass.Branch.Evalue(2800) * 2) : 0)), 0f, 25f);
+		float num5 = Math.Clamp(Mathf.Sqrt(c.EvalueMax(291) + ((!sell && EClass._zone.IsPCFaction) ? (EClass.Branch.Evalue(2800) * 2) : 0)), 0f, 25f);
 		switch (priceType)
 		{
 		case PriceType.Tourism:

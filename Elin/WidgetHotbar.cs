@@ -381,6 +381,10 @@ public class WidgetHotbar : Widget, IDragParent
 			type = HotItemToggle.Type.showBalloon
 		});
 		action(arg, new HotItemActionAudoDump());
+		arg.AddButton("hotActionWidgetSet".lang(), delegate
+		{
+			SetItem(b, new HotItemWidgetSet().Register());
+		});
 		if (EMono.core.config.test.unsealWidgets)
 		{
 			arg = m.AddChild("menuShortcuts");

@@ -247,7 +247,7 @@ public class Date : EClass
 		switch (format)
 		{
 		case TextFormat.LogPlusYear:
-			return year + ", " + month + "/" + day + " " + hour + ":" + min;
+			return year + ", " + month + "/" + day + " " + ((hour < 10) ? "0" : "") + hour + ":" + ((min < 10) ? "0" : "") + min;
 		case TextFormat.Log:
 			return month + "/" + day + " " + hour + ":" + min;
 		case TextFormat.Widget:

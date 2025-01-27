@@ -416,6 +416,10 @@ public class GrowSystem : EClass
 		{
 			cell.isHarvested = true;
 		}
+		if (cell.sourceObj.id == 118)
+		{
+			EClass._zone.dirtyElectricity = true;
+		}
 	}
 
 	public bool HaltGrowth()

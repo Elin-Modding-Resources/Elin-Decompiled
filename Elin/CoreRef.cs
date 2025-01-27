@@ -294,6 +294,8 @@ public class CoreRef : ScriptableObject
 		public SourcePref sonwputit1;
 
 		public SourcePref snowputit2;
+
+		public SourcePref pcc;
 	}
 
 	public Biomes biomes;

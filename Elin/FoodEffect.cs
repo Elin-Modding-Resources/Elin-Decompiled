@@ -401,9 +401,9 @@ public class FoodEffect : EClass
 		if (num3 > 20 && c.HasElement(1413))
 		{
 			Thing thing = ThingGen.Create("seed");
-			if (EClass.rnd(EClass.debug.enable ? 1 : 10) == 0)
+			if (EClass.rnd(EClass.debug.enable ? 2 : 10) == 0)
 			{
-				TraitSeed.ApplySeed(thing, 90);
+				TraitSeed.ApplySeed(thing, (EClass.rnd(3) == 0) ? 118 : 90);
 			}
 			thing.SetNum(2 + EClass.rnd(3));
 			c.Talk("vomit");
