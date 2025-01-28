@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class TraitCanvas : Trait
 {
+	public override bool CanName => true;
+
 	public virtual bool PointFilter => false;
 
 	public virtual float Scale => 1f;

@@ -403,7 +403,7 @@ public class FoodEffect : EClass
 			Thing thing = ThingGen.Create("seed");
 			if (EClass.rnd(EClass.debug.enable ? 2 : 10) == 0)
 			{
-				TraitSeed.ApplySeed(thing, (EClass.rnd(3) == 0) ? 118 : 90);
+				TraitSeed.ApplySeed(thing, (EClass.rnd(4) == 0) ? 118 : ((EClass.rnd(3) == 0) ? 119 : 90));
 			}
 			thing.SetNum(2 + EClass.rnd(3));
 			c.Talk("vomit");

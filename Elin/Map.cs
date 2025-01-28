@@ -1537,6 +1537,7 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			plants.Remove(cell.index);
 		}
+		cell.growth?.OnSetObj();
 		Critter.RebuildCritter(cell);
 		RefreshNeighborTiles(x, z);
 	}

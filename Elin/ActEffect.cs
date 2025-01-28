@@ -268,7 +268,7 @@ public class ActEffect : EClass
 							continue;
 						}
 					}
-					if (CC.HasElement(1214) || (!CC.IsPC && (CC.IsPCFaction || CC.IsPCFactionMinion) && EClass.pc.HasElement(1214) && EClass.rnd(5) != 0))
+					if ((CC.HasElement(1214) || (!CC.IsPC && (CC.IsPCFaction || CC.IsPCFactionMinion) && EClass.pc.HasElement(1214))) && EClass.rnd(5) != 0)
 					{
 						continue;
 					}

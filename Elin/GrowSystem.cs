@@ -255,6 +255,10 @@ public class GrowSystem : EClass
 		cell.objVal = (byte)(DefaultStage * 30);
 	}
 
+	public virtual void OnSetObj()
+	{
+	}
+
 	public bool CanGrow(VirtualDate date)
 	{
 		if (source.id == 0)
@@ -420,6 +424,11 @@ public class GrowSystem : EClass
 		{
 			EClass._zone.dirtyElectricity = true;
 		}
+		OnSetStage(idx);
+	}
+
+	public virtual void OnSetStage(int idx)
+	{
 	}
 
 	public bool HaltGrowth()

@@ -44,6 +44,11 @@ public class AM_Paint : AM_BaseTileSelect
 		}
 		bool flag = true;
 		TraitCanvas canvas = painter.GetCanvas();
+		if (canvas == null || canvas.owner.GetRootCard() != EClass.pc)
+		{
+			Deactivate();
+			return;
+		}
 		if (EClass.ui.isPointerOverUI)
 		{
 			flag = false;

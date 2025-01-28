@@ -96,7 +96,7 @@ public class AI_Idle : AIAct
 						owner.InstantEat(thing, sound: false);
 						yield return Restart();
 					}
-					else
+					else if (thing.Num == 1 || !owner.things.IsFull())
 					{
 						yield return Do(new AI_Eat
 						{
@@ -195,7 +195,7 @@ public class AI_Idle : AIAct
 				if (EClass.rnd(20) == 0)
 				{
 					Thing thing3 = owner.things.Find((Thing a) => a.parent == owner && a.isGifted && (a.category.id == "skillbook" || a.category.id == "ancientbook"));
-					if (thing3 != null && thing3.trait.CanRead(owner))
+					if (thing3 != null && thing3.trait.CanRead(owner) && (thing3.Num == 1 || !owner.things.IsFull()))
 					{
 						yield return Do(new AI_Read
 						{

@@ -913,7 +913,13 @@ public class CoreDebug : EScriptable
 				EClass.pc.Pick(targetChara.MakeBraineCell());
 				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
 			}
-			return;
+			{
+				foreach (Chara chara in EClass._map.charas)
+				{
+					chara.hunger.value = 100;
+				}
+				return;
+			}
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
@@ -940,9 +946,9 @@ public class CoreDebug : EScriptable
 			{
 				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
 			}
-			foreach (Chara chara in EClass._map.charas)
+			foreach (Chara chara2 in EClass._map.charas)
 			{
-				chara.AddExp(chara.ExpToNext);
+				chara2.AddExp(chara2.ExpToNext);
 			}
 			EClass.pc.PlayEffect("boost");
 			EClass.pc.PlaySound("boost");
@@ -1767,6 +1773,24 @@ public class CoreDebug : EScriptable
 	{
 		EClass.game.config.cheat = true;
 		return "Cheat Enabled";
+	}
+
+	[ConsoleCommand("")]
+	public static string Fix_LoytelDebt()
+	{
+		QuestDebt questDebt = EClass.game.quests.Get<QuestDebt>();
+		if (questDebt == null || questDebt.stage != 6 || EClass.player.debt == 19000000)
+		{
+			return "Quest Status Not Valid.";
+		}
+		questDebt.stage = 0;
+		questDebt.paid = false;
+		questDebt.gaveBill = true;
+		EClass.player.debt = 20000000;
+		Thing thing = ThingGen.Create("856");
+		thing.refVal = 109;
+		EClass.pc.Pick(thing);
+		return "Quest Reset!";
 	}
 
 	[ConsoleCommand("")]
