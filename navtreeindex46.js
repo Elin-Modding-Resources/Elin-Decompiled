@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"classConDeathSentense.html#a43aab9b03d820744108fc9d28c720f62":[1,0,289,0],
+"classConDim.html":[1,0,290],
 "classConDim.html#ab62c03810e3c03a3655c938d3e16e4f0":[1,0,290,0],
 "classConDisease.html":[1,0,291],
 "classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,291,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "classContentChronicle.html":[1,0,336],
 "classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a":[1,0,336,1],
 "classContentChronicle.html#af35eec2b514361d7050bae67d6e1a686":[1,0,336,0],
-"classContentCodex.html":[1,0,337],
-"classContentCodex.html#a007eb841fa4ad581a0b7c79c75a8e459":[1,0,337,11],
-"classContentCodex.html#a31956b743c882e5eec0c7da891c71643":[1,0,337,0]
+"classContentCodex.html":[1,0,337]
 };

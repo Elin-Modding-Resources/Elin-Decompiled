@@ -847,7 +847,9 @@ var hierarchy =
         ] ],
         [ "GrowSystemTree", "classGrowSystemTree.html", [
           [ "GrowSystemTreeFeywood", "classGrowSystemTreeFeywood.html", null ],
-          [ "GrowSystemTreeSingle", "classGrowSystemTreeSingle.html", null ]
+          [ "GrowSystemTreeSingle", "classGrowSystemTreeSingle.html", [
+            [ "GrowSystemTreeCoralwood", "classGrowSystemTreeCoralwood.html", null ]
+          ] ]
         ] ],
         [ "GrowSystemWeed", "classGrowSystemWeed.html", null ]
       ] ],

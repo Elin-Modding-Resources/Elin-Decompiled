@@ -27,6 +27,8 @@ var classGrowSystem =
     [ "OnProgressComplete", "classGrowSystem.html#aa46c003453fd64f10cc86ef34afc242b", null ],
     [ "OnReachNextStage", "classGrowSystem.html#a17c94f16feae53b6e0d4185bdc546c4e", null ],
     [ "OnRenderTileMap", "classGrowSystem.html#a9bf056a1d60eed71c54613b7f73b428d", null ],
+    [ "OnSetObj", "classGrowSystem.html#aa2e9cb8324ddddfe04cdb43106bd7262", null ],
+    [ "OnSetStage", "classGrowSystem.html#a8541e1a138be799b8d2eecb8bd276386", null ],
     [ "Perish", "classGrowSystem.html#a362c090e198e864c45c393c71a6922bc", null ],
     [ "PopHarvest", "classGrowSystem.html#ad88e991257dae3a6e4d9db3dc03b170d", null ],
     [ "PopHarvest", "classGrowSystem.html#a09f6ec1ebb599d26522abf33e38ad116", null ],

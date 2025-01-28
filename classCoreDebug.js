@@ -49,6 +49,7 @@ var classCoreDebug =
     [ "FirstAdventurer", "classCoreDebug.html#a506f8281fdf879f01c51a8802827a25f", null ],
     [ "Fix_EtherDisease", "classCoreDebug.html#a22256c592fdb210a509a5d747fe8d040", null ],
     [ "Fix_LostCore", "classCoreDebug.html#ad8fd0fde65f710c7a6ea864e52b72c50", null ],
+    [ "Fix_LoytelDebt", "classCoreDebug.html#aa388c17e3edace544753dc7ca89ed902", null ],
     [ "Fix_RemoveDemitas", "classCoreDebug.html#a7bf4a83b527529ae371924df5af92ea9", null ],
     [ "Fix_RemoveDuplicateUnique", "classCoreDebug.html#ae6f3db70e5a4fb0f525180f92318841e", null ],
     [ "FlyMode", "classCoreDebug.html#a5cc5d2ec0690e323c18ee87980ac001a", null ],
