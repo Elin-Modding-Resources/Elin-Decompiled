@@ -696,7 +696,14 @@ public class ActPlan : EClass
 										Color lightColor = t.LightColor;
 										EClass.ui.AddLayer<LayerColorPicker>().SetColor(lightColor, lightColor, delegate(PickerState state, Color _c)
 										{
-											t.c_lightColor = (byte)Mathf.Clamp(_c.r * 32f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(_c.g * 32f, 1f, 31f) * 32 + (byte)Mathf.Clamp(_c.b * 32f, 1f, 31f);
+											if (state == PickerState.Cancel)
+											{
+												t.c_lightColor = 0;
+											}
+											else
+											{
+												t.c_lightColor = (byte)Mathf.Clamp(_c.r * 32f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(_c.g * 32f, 1f, 31f) * 32 + (byte)Mathf.Clamp(_c.b * 32f, 1f, 31f);
+											}
 											t.RecalculateFOV();
 											t.renderer.GetTC<TCExtra>()?.RefreshColor();
 										});

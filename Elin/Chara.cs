@@ -1452,7 +1452,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		}
-		if (source.tag.Contains("random_color"))
+		if (HasTag(CTAG.random_color))
 		{
 			DyeRandom();
 		}

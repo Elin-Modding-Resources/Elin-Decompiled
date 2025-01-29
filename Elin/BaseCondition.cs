@@ -435,7 +435,14 @@ public class BaseCondition : BaseStats
 		for (int j = 0; j < base.source.elements.Length; j += 2)
 		{
 			Element element = Element.Create(GetElementSource(j).id, base.source.elements[j + 1].Calc(power, 0, P2));
-			list.Add("modValue".lang(element.Name, ((element.Value < 0) ? "" : "+") + element.Value));
+			if (elements != null && elements.Has(element.id) && elements.Value(element.id) != element.Value)
+			{
+				list.Add("modValue".lang(element.Name, ((element.Value < 0) ? "" : "+") + elements.Value(element.id) + " (" + element.Value + ")"));
+			}
+			else
+			{
+				list.Add("modValue".lang(element.Name, ((element.Value < 0) ? "" : "+") + element.Value));
+			}
 		}
 		if (list.Count <= 0)
 		{

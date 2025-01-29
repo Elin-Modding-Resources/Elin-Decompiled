@@ -32,5 +32,6 @@ public enum CTAG
 	godArtifact,
 	noWish,
 	dish_bonus,
-	dish_fail
+	dish_fail,
+	random_color
 }

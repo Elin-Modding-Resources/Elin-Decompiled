@@ -913,13 +913,18 @@ public class CoreDebug : EScriptable
 				EClass.pc.Pick(targetChara.MakeBraineCell());
 				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
 			}
+			if (EClass.game.quests.Get<QuestDebt>() == null)
 			{
-				foreach (Chara chara in EClass._map.charas)
-				{
-					chara.hunger.value = 100;
-				}
-				return;
+				Chara chara = CharaGen.Create("loytel");
+				EClass._zone.AddCard(chara, EClass.pc.pos);
+				chara.SetGlobal();
+				Quest q = EClass.game.quests.Add("debt", "loytel");
+				EClass.game.quests.Start(q);
+				EClass.pc.party.RemoveMember(chara);
+				Hostility hostility2 = (chara.c_originalHostility = Hostility.Ally);
+				chara.hostility = hostility2;
 			}
+			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{

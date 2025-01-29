@@ -903,6 +903,10 @@ public class Zone : Spatial, ICardParent, IInspect
 			if (card.isChara)
 			{
 				Chara chara = card.Chara;
+				if (!card.isDyed && card.HasTag(CTAG.random_color))
+				{
+					card.DyeRandom();
+				}
 				if (card.IsUnique && !card.IsPCFaction && !card.IsPCParty)
 				{
 					Point point = chara.orgPos ?? card.pos;

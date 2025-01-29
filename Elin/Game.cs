@@ -392,6 +392,10 @@ public class Game : EClass
 			{
 				value.memberType = FactionMemberType.Default;
 			}
+			if (!value.isDyed && value.HasTag(CTAG.random_color))
+			{
+				value.DyeRandom();
+			}
 		}
 		foreach (FactionBranch child in EClass.pc.faction.GetChildren())
 		{

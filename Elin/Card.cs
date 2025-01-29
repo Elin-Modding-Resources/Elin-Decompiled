@@ -3683,7 +3683,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (IsPCParty && EClass.pc.ai is GoalAutoCombat)
 			{
-				dmg = dmg * 100 / Mathf.Min(105 + EClass.pc.Evalue(135) / 10, 110);
+				dmg = dmg * 100 / Mathf.Clamp(105 + EClass.pc.Evalue(135) / 10, 10, 110);
 			}
 			if (HasElement(1218))
 			{
@@ -3834,7 +3834,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0a84;
+							goto IL_0a86;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -3846,8 +3846,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0a84;
-		IL_0a84:
+		goto IL_0a86;
+		IL_0a86:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -5083,7 +5083,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void DyeRandom()
 	{
-		Dye(EClass.sources.materials.rows.RandomItem().alias);
+		Dye(EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.matColor.r != r.matColor.g || r.matColor.g != r.matColor.b || r.matColor.b != r.matColor.r).RandomItem().alias);
 	}
 
 	public void Dye(string idMat)

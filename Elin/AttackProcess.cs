@@ -574,7 +574,7 @@ public class AttackProcess : EClass
 				conWeapon = CC.GetCondition<ConWeapon>();
 				num4 = conWeapon.sourceElement.id;
 				num5 = conWeapon.power / 2;
-				num6 = 40 + (int)Mathf.Min(MathF.Sqrt(conWeapon.power), 80f);
+				num6 = (int)Mathf.Min(40f + MathF.Sqrt(conWeapon.power), 80f);
 			}
 			if (conWeapon == null && weapon == null && (CC.MainElement != Element.Void || CC.HasElement(1565)))
 			{
@@ -657,7 +657,7 @@ public class AttackProcess : EClass
 					{
 						num10 = 0;
 					}
-					if (num10 >= EClass.rnd(100))
+					if (num10 > EClass.rnd(100))
 					{
 						TC.DamageHP(dmg, item.id, isThrow ? (100 + item.Value * 5) : (30 + item.Value), AttackSource.WeaponEnchant, CC);
 					}
@@ -802,7 +802,7 @@ public class AttackProcess : EClass
 				{
 					int num12 = 10 + item2.Value / 5;
 					int power = EClass.curve((100 + item2.Value * 10) * (100 + weaponSkill.Value) / 100, 400, 100);
-					if (num12 >= EClass.rnd(100))
+					if (num12 > EClass.rnd(100))
 					{
 						Act obj = item2 as Act;
 						Card card = (obj.TargetType.CanSelectSelf ? CC : TC);

@@ -122,7 +122,7 @@ public class TraitBaseSpellbook : TraitScroll
 			c.Say("spell_fail_confuse", c);
 			c.AddCondition<ConConfuse>();
 		}
-		else if (EClass.rnd(3) == 0)
+		else if (((c.IsPCFaction && c.memberType == FactionMemberType.Default) || !EClass._zone.IsPCFaction) && EClass.rnd(3) == 0)
 		{
 			c.Say("spell_fail_monster", c);
 			c.PlaySound("spell_funnel");

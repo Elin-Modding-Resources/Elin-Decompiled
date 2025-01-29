@@ -87,6 +87,7 @@ public class AI_Torture : AIAct
 		{
 			return;
 		}
+		owner.AddCondition<ConInvulnerable>();
 		foreach (Chara chara in EClass._map.charas)
 		{
 			if (chara != _owner && (chara.enemy == _owner || chara.enemy == _owner.parasite || chara.enemy == _owner.ride))
