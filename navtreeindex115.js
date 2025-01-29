@@ -1,5 +1,6 @@
 var NAVTREEINDEX115 =
 {
+"classTraitGuildClerk.html#af26f260414696aa1275acfa5775f5bda":[1,0,1565,1],
 "classTraitGuildDoorman.html":[1,0,1566],
 "classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d":[1,0,1566,2],
 "classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d":[1,0,1566,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitMerchantDrug.html":[1,0,1619],
 "classTraitMerchantDrug.html#a446f3eea6485b5fc795d887c6daa6d5a":[1,0,1619,1],
 "classTraitMerchantDrug.html#a6047d4aa438e0445fa8e87faeb1a92f0":[1,0,1619,2],
-"classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1619,0],
-"classTraitMerchantDye.html":[1,0,1620]
+"classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1619,0]
 };

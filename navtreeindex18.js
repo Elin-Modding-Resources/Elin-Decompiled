@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitPillowMani_8cs.html":[2,0,0,1570],
 "TraitPillowMani_8cs_source.html":[2,0,0,1570],
 "TraitPillowOpatos_8cs.html":[2,0,0,1571],
 "TraitPillowOpatos_8cs_source.html":[2,0,0,1571],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitToolMusicMic_8cs_source.html":[2,0,0,1691],
 "TraitToolMusic_8cs.html":[2,0,0,1689],
 "TraitToolMusic_8cs_source.html":[2,0,0,1689],
-"TraitToolRangeBow_8cs.html":[2,0,0,1693],
-"TraitToolRangeBow_8cs_source.html":[2,0,0,1693]
+"TraitToolRangeBow_8cs.html":[2,0,0,1693]
 };

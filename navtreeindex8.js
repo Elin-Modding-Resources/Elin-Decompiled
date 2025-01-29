@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"Hotbar_8cs.html":[2,0,0,567],
 "Hotbar_8cs_source.html":[2,0,0,567],
 "HueSlider_8cs.html":[2,0,0,3,2,0,3],
 "HueSlider_8cs_source.html":[2,0,0,3,2,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "LIQUID_8cs.html":[2,0,0,753],
 "LIQUID_8cs_source.html":[2,0,0,753],
 "Lab_8cs.html":[2,0,0,3,54],
-"Lab_8cs_source.html":[2,0,0,3,54],
-"LabeledColorSlider_8cs.html":[2,0,0,3,2,0,4]
+"Lab_8cs_source.html":[2,0,0,3,54]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classInnerBevel.html#a8182fffc038be7e966d670fc1316ece6":[1,0,642,5],
 "classInnerBevel.html#a9c8acaf8cd03b3e58ed9ee6141ff1ef9":[1,0,642,18],
 "classInnerBevel.html#ac67e117e27140aa5bb2c72c3370cfa36":[1,0,642,11],
 "classInnerBevel.html#ad9fd3c5845920ba586aae987e664b277":[1,0,642,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classInvOwnerChaosOffering.html#aea5ebf8a277cff1ae073186dee205550":[1,0,662,1],
 "classInvOwnerCopyShop.html":[1,0,663],
 "classInvOwnerCopyShop.html#a0d07167d53225e387d0f9819b6088612":[1,0,663,1],
-"classInvOwnerCopyShop.html#a39548584d8ce38ab2043fbb9ed16b351":[1,0,663,0],
-"classInvOwnerCopyShop.html#a55a19d7e66d75e168115bd23d6dbff0d":[1,0,663,3]
+"classInvOwnerCopyShop.html#a39548584d8ce38ab2043fbb9ed16b351":[1,0,663,0]
 };

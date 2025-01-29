@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d":[1,0,584,8],
 "classHoardActor.html#abdee2ff2b5dff27afb70349a151f0cc1":[1,0,584,40],
 "classHoardActor.html#ac5f32758038aa67f792245187a6e2361":[1,0,584,36],
 "classHoardActor.html#ac64482d9c925c6a04f7fcf4123ecbb19":[1,0,584,37],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "classHotItemHeld.html#afd22fc9759c62f720236cb1d1514f860":[1,0,614,7],
 "classHotItemIcon.html":[1,0,615],
 "classHotItemIcon.html#a1ad65dd3241ccca26dc9aa46db699b2b":[1,0,615,1],
-"classHotItemIcon.html#a4acb840ba5cc86b7db9671967ffe0d99":[1,0,615,0],
-"classHotItemLayer.html":[1,0,616]
+"classHotItemIcon.html#a4acb840ba5cc86b7db9671967ffe0d99":[1,0,615,0]
 };

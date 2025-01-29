@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classTraitMerchantDye.html":[1,0,1620],
 "classTraitMerchantDye.html#ae2ce393bd47ac202ccff4640e88eed5d":[1,0,1620,0],
 "classTraitMerchantEcopo.html":[1,0,1621],
 "classTraitMerchantEcopo.html#a2807e15baab41db1b09f875969a1391d":[1,0,1621,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1690,0],
 "classTraitPoolTable.html":[1,0,1691],
 "classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1691,0],
-"classTraitPoop.html":[1,0,1692],
-"classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1692,0]
+"classTraitPoop.html":[1,0,1692]
 };

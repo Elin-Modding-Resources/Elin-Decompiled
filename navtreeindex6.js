@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba13348442cc6a27032d2b4aa28b75a5d3":[2,0,0,443,0,0],
 "ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba1819001b72329e2ef5799fe504238035":[2,0,0,443,0,2],
 "ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba85dd070c26938d7a4184269c6ddacd1f":[2,0,0,443,0,3],
 "ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6bacf270e40d273f9e7fd7c3061729060c3":[2,0,0,443,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GodStatueData_8cs_source.html":[2,0,0,510],
 "GradientColor_8cs.html":[2,0,0,3,37],
 "GradientColor_8cs_source.html":[2,0,0,3,37],
-"GradientDir_8cs.html":[2,0,0,3,38],
-"GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4ea":[2,0,0,3,38,0]
+"GradientDir_8cs.html":[2,0,0,3,38]
 };

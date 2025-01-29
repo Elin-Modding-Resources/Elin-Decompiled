@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"MapConfig_8cs_source.html":[2,0,0,774],
 "MapGenDungen_8cs.html":[2,0,0,776],
 "MapGenDungen_8cs_source.html":[2,0,0,776],
 "MapGenRegion_8cs.html":[2,0,0,777],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "PopperManager_8cs.html":[2,0,0,3,76],
 "PopperManager_8cs_source.html":[2,0,0,3,76],
 "Popper_8cs.html":[2,0,0,3,75],
-"Popper_8cs_source.html":[2,0,0,3,75],
-"PopupManager_8cs.html":[2,0,0,849]
+"Popper_8cs_source.html":[2,0,0,3,75]
 };

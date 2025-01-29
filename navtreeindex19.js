@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitToolRangeBow_8cs_source.html":[2,0,0,1693],
 "TraitToolRangeCane_8cs.html":[2,0,0,1694],
 "TraitToolRangeCane_8cs_source.html":[2,0,0,1694],
 "TraitToolRangeCrossbow_8cs.html":[2,0,0,1695],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "UIMouseInfo_8cs_source.html":[2,0,0,3,141],
 "UIMultiList_8cs.html":[2,0,0,1764],
 "UIMultiList_8cs_source.html":[2,0,0,1764],
-"UINoteProfile_8cs.html":[2,0,0,3,143],
-"UINoteProfile_8cs_source.html":[2,0,0,3,143]
+"UINoteProfile_8cs.html":[2,0,0,3,143]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"classEffectText.html#aae6f18ba2de0f196c1236c88f5ff9d62":[1,0,439,5],
 "classEffectText.html#ad19943eebbf7b804b7ff8561b95eca26":[1,0,439,2],
 "classEffectText.html#ae2d7f394992625a4bc02c93df3f61ab1":[1,0,439,9],
 "classEffectText.html#aeeea90652b20d1d1827a825d1c454d1d":[1,0,439,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "classEloMap.html#ac5eb159948ff6bdc6c043dfe7e4114da":[1,0,453,23],
 "classEloMap.html#acc54d7bc3101649e0cf1bf8416cf8c73":[1,0,453,32],
 "classEloMap.html#acda30801fc68b92c111857cf06f8136d":[1,0,453,7],
-"classEloMap.html#ad2714302a08521ee19863f0f2a04b52b":[1,0,453,8],
-"classEloMap.html#ad5d495ad943d57754dfcdadd1a11838a":[1,0,453,24]
+"classEloMap.html#ad2714302a08521ee19863f0f2a04b52b":[1,0,453,8]
 };

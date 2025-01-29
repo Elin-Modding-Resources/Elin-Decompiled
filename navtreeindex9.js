@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"LabeledColorSlider_8cs.html":[2,0,0,3,2,0,4],
 "LabeledColorSlider_8cs_source.html":[2,0,0,3,2,0,4],
 "LandFeat_8cs.html":[2,0,0,676],
 "LandFeat_8cs_source.html":[2,0,0,676],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "MapBG_8cs_source.html":[2,0,0,772],
 "MapBounds_8cs.html":[2,0,0,773],
 "MapBounds_8cs_source.html":[2,0,0,773],
-"MapConfig_8cs.html":[2,0,0,774],
-"MapConfig_8cs_source.html":[2,0,0,774]
+"MapConfig_8cs.html":[2,0,0,774]
 };

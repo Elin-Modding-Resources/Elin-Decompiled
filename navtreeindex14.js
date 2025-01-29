@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"StanceFury_8cs_source.html":[2,0,0,1098],
 "StanceIai_8cs.html":[2,0,0,1099],
 "StanceIai_8cs_source.html":[2,0,0,1099],
 "StanceManaCost_8cs.html":[2,0,0,1100],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "TileTypeFloor_8cs.html":[2,0,0,1200],
 "TileTypeFloor_8cs_source.html":[2,0,0,1200],
 "TileTypeHalfBlock_8cs.html":[2,0,0,1202],
-"TileTypeHalfBlock_8cs_source.html":[2,0,0,1202],
-"TileTypeIllumination_8cs.html":[2,0,0,1203]
+"TileTypeHalfBlock_8cs_source.html":[2,0,0,1202]
 };

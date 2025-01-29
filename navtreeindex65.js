@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"classGoalSearch.html#a885afe6c04988f4f300229da758ee4b4":[1,0,534,2],
 "classGoalSearch.html#acc56fdaaff2ec78ea6887d8679f00489":[1,0,534,1],
 "classGoalSiege.html":[1,0,535],
 "classGoalSiege.html#a073e02dd951587c191e56845b0f1afe6":[1,0,535,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "classGrowSystemTree.html#ab4503831b5d03eebd2d358075ee63157":[1,0,561,26],
 "classGrowSystemTree.html#ab5102062ed1b5f6db73cef8e36008b36":[1,0,561,6],
 "classGrowSystemTree.html#ae6239a2f6b839c2ae56b1cd66094cccd":[1,0,561,1],
-"classGrowSystemTreeCoralwood.html":[1,0,562],
-"classGrowSystemTreeCoralwood.html#a37c67f2e1077807819eb905920036179":[1,0,562,0]
+"classGrowSystemTreeCoralwood.html":[1,0,562]
 };

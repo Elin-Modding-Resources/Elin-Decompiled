@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4ea":[2,0,0,3,38,0],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4eaa06ce2a25e5d12c166a36f654dbea6012":[2,0,0,3,38,0,0],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4eaa8cabceb8bff12bb5c1ef2ade3396da2b":[2,0,0,3,38,0,3],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4eaac1b5fa03ecdb95d4a45dd1c40b02527f":[2,0,0,3,38,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HotItem_8cs.html":[2,0,0,569],
 "HotItem_8cs_source.html":[2,0,0,569],
 "HotbarManager_8cs.html":[2,0,0,568],
-"HotbarManager_8cs_source.html":[2,0,0,568],
-"Hotbar_8cs.html":[2,0,0,567]
+"HotbarManager_8cs_source.html":[2,0,0,568]
 };

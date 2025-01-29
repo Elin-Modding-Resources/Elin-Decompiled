@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"classGrowSystemTreeCoralwood.html#a37c67f2e1077807819eb905920036179":[1,0,562,0],
 "classGrowSystemTreeCoralwood.html#a636c575074610b4a5413b6b90f1c2071":[1,0,562,1],
 "classGrowSystemTreeCoralwood.html#aa6278a74133dd821c724cec516f35c71":[1,0,562,3],
 "classGrowSystemTreeCoralwood.html#afad69652ff8823cadf00d37c61f5c87c":[1,0,562,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "classHoardActor.html#a9593d8a68ba37637f515bc934e75785e":[1,0,584,27],
 "classHoardActor.html#a980773e6b2e267a672221dbf56b9843c":[1,0,584,23],
 "classHoardActor.html#aa826a9af1f50821c12ad1a7fbd162dfe":[1,0,584,32],
-"classHoardActor.html#aaf43240461905b78749b12d624ca1e06":[1,0,584,34],
-"classHoardActor.html#ab8c2fd21c5eff2be54866c3accd92e4d":[1,0,584,8]
+"classHoardActor.html#aaf43240461905b78749b12d624ca1e06":[1,0,584,34]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX111 =
 {
+"classTrait.html#ae35752993470738d5e850ad75016e9bd":[1,0,1358,23],
 "classTrait.html#ae5233ec2fda4f1b464b58c0d2451b164":[1,0,1358,154],
 "classTrait.html#ae5d380383c7a829f15b19a5df441de4e":[1,0,1358,101],
 "classTrait.html#ae7904a3d49a18bacb005773863af6d66":[1,0,1358,128],
@@ -248,6 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1405,5],
 "classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1405,4],
 "classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb":[1,0,1405,0],
-"classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1405,2],
-"classTraitBoat.html#ac63976c5747b30504ceb563902e8f276":[1,0,1405,3]
+"classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1405,2]
 };

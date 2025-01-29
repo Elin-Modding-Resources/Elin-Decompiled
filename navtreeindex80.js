@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classMapHeight.html#a200fa2fca5ba34ce90ee25a880b0193f":[1,0,838,1],
 "classMapHeight.html#a77738537192080f3d554c62f2e0ef295":[1,0,838,0],
 "classMapHeight.html#a894e94fec37ec029fd53caaebc722ca3":[1,0,838,3],
 "classMapHeight.html#ab07576fff5b64ee0f6a2a609151938be":[1,0,838,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "classModMinigame.html#a9c3490af9ff6afe017a922f17871073b":[1,0,859,0],
 "classModMinigame.html#ab3089b91744169f6142bb13f4ed6d08a":[1,0,859,1],
 "classModPackage.html":[1,0,860],
-"classModUtil.html":[1,0,861],
-"classModUtil.html#a53d43df453043e0d150611ffcca62116":[1,0,861,3]
+"classModUtil.html":[1,0,861]
 };
