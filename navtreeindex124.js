@@ -1,5 +1,7 @@
 var NAVTREEINDEX124 =
 {
+"classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15ae0626222614bdee31951d84c64e5e9ff":[1,0,1911,3,6],
+"classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15ae21cb1601ae1eb900b5812547b58810f":[1,0,1911,3,1],
 "classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15afb845762a66c26782f477febab5344dc":[1,0,1911,3,4],
 "classUIInventory.html#a1523e56034daa0f748962e29bafe90d5":[1,0,1911,56],
 "classUIInventory.html#a17f8132390eadf3fd27bb49219533d6d":[1,0,1911,27],
@@ -247,7 +249,5 @@ var NAVTREEINDEX124 =
 "classUIMagicChest.html#a03dc9cb30be9958fb997e8591a0a5542":[1,0,1917,29],
 "classUIMagicChest.html#a0f5b05b036c8200fcf1e0a3636f89401":[1,0,1917,20],
 "classUIMagicChest.html#a1291cd7e76136cb6ea7e0a7069b4308f":[1,0,1917,9],
-"classUIMagicChest.html#a23a486f428ed8338bee184f9573d2d21":[1,0,1917,6],
-"classUIMagicChest.html#a25d9c26d7d06068bd9005d3fbe2b17fd":[1,0,1917,25],
-"classUIMagicChest.html#a2ca1bb24f2767b046f7c8707d6167acf":[1,0,1917,22]
+"classUIMagicChest.html#a23a486f428ed8338bee184f9573d2d21":[1,0,1917,6]
 };

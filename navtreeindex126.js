@@ -1,5 +1,7 @@
 var NAVTREEINDEX126 =
 {
+"classUISelectableGroup.html#a0fde1a1739488010c7d3cf5dce573a3e":[1,0,1932,19],
+"classUISelectableGroup.html#a13f36679dec3e50c3c8b5897a1e2c8b9":[1,0,1932,13],
 "classUISelectableGroup.html#a148d06692c0606442469a9bca5b8ef70":[1,0,1932,32],
 "classUISelectableGroup.html#a1dc68c622f6103d48549f740d987655b":[1,0,1932,30],
 "classUISelectableGroup.html#a1e1e8b5434ad704b4f51e982a727b231":[1,0,1932,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX126 =
 "classWeather.html#af95a7d8d40f8d9c73c233bf7fb45e196":[1,0,1949,8],
 "classWeather_1_1Forecast.html":[1,0,1949,0],
 "classWeather_1_1Forecast.html#aee958b48f390d712f303b1dda80199f6":[1,0,1949,0,0],
-"classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e":[1,0,1949,0,1],
-"classWeather_1_1WeatherForecast.html":[1,0,1949,1],
-"classWeather_1_1WeatherForecast.html#a41ea9ffdc6b31d8c385706904f1c4a90":[1,0,1949,1,2]
+"classWeather_1_1Forecast.html#af87563a2e640378bc7911c7025912f5e":[1,0,1949,0,1]
 };

@@ -65,6 +65,7 @@ var classPlayer =
     [ "codex", "classPlayer.html#a113356c73c16220747128536b8d9394d", null ],
     [ "countNewline", "classPlayer.html#a60dd6a4beb79bedc55c83a919ce07e3a", null ],
     [ "currentHotItem", "classPlayer.html#ab5b3e5e408eccafc485520970da759f2", null ],
+    [ "customLightMod", "classPlayer.html#a6b8121e3a283d63bad1fd0f2722e6ebb", null ],
     [ "dailyGacha", "classPlayer.html#a7ecd8955e35506e0c8d0fdc65d5b7b99", null ],
     [ "dataPick", "classPlayer.html#a9f8367323015015264f245fdd7a0f070", null ],
     [ "dataWindow", "classPlayer.html#a9586bc0f2dd4ffd16108414c577bf185", null ],

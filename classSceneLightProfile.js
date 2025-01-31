@@ -17,6 +17,7 @@ var classSceneLightProfile =
     [ "lightPowerMod", "classSceneLightProfile.html#a9be1a94a27510a268710e4949a8a689b", null ],
     [ "nightRatioCurve", "classSceneLightProfile.html#ad69fd9935d743056acc2882e3aa941be", null ],
     [ "orbitAlphaCurve", "classSceneLightProfile.html#a901c31a018cf6040c9bbad53ae441951", null ],
+    [ "playerLightCustomMod", "classSceneLightProfile.html#abab12e01e26a923d5d35e8996d0d72ca", null ],
     [ "playerLightMod", "classSceneLightProfile.html#abcff3c7bfa79bd5e2d3af47912ba6fc2", null ],
     [ "shadowCurve", "classSceneLightProfile.html#ad679f0d9fa2883cbe58361d22bc2b6ae", null ],
     [ "shadowCurveFloor", "classSceneLightProfile.html#a34f11cf8631a9ab20639eb1dd24f62e6", null ],

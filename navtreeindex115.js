@@ -1,5 +1,7 @@
 var NAVTREEINDEX115 =
 {
+"classTraitGuildClerk.html":[1,0,1565],
+"classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1565,0],
 "classTraitGuildClerk.html#af26f260414696aa1275acfa5775f5bda":[1,0,1565,1],
 "classTraitGuildDoorman.html":[1,0,1566],
 "classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d":[1,0,1566,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitMerchantDeed.html#a50502273446dd725a00ed46880c16331":[1,0,1618,0],
 "classTraitMerchantDeed.html#ab20a849dfcf88145ebdc19fbbe31edb6":[1,0,1618,1],
 "classTraitMerchantDrug.html":[1,0,1619],
-"classTraitMerchantDrug.html#a446f3eea6485b5fc795d887c6daa6d5a":[1,0,1619,1],
-"classTraitMerchantDrug.html#a6047d4aa438e0445fa8e87faeb1a92f0":[1,0,1619,2],
-"classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1619,0]
+"classTraitMerchantDrug.html#a446f3eea6485b5fc795d887c6daa6d5a":[1,0,1619,1]
 };

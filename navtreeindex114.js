@@ -1,5 +1,7 @@
 var NAVTREEINDEX114 =
 {
+"classTraitEffect.html#a34357f3e4400c13895214be692eccb15":[1,0,1498,3],
+"classTraitEffect.html#a421a99541c178b934d4eef877efcfe1c":[1,0,1498,10],
 "classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138":[1,0,1498,2],
 "classTraitEffect.html#a5759212af372e9e407f76931f8659818":[1,0,1498,6],
 "classTraitEffect.html#a6332e579f42e7dadd7929afd9eb552c5":[1,0,1498,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1563,6],
 "classTraitGuard.html":[1,0,1564],
 "classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1564,0],
-"classTraitGuard.html#ab37ae0e246f09be3190e1017ac92c948":[1,0,1564,1],
-"classTraitGuildClerk.html":[1,0,1565],
-"classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1565,0]
+"classTraitGuard.html#ab37ae0e246f09be3190e1017ac92c948":[1,0,1564,1]
 };

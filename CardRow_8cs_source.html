@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83 Patch 3</span>
    </div>
   </td>
  </tr>
@@ -222,13 +222,14 @@ $(document).ready(function(){initNavTree('CardRow_8cs_source.html',''); initResi
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">return</span> text2;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">if</span> (full &amp;&amp; !text2.IsEmpty())</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            text = text2.ToTitleCase(wholeText: <span class="keyword">true</span>) + Lang.space + text.Bracket(2);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> text;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordtype">int</span> type = ((<a class="code hl_variable" href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">quality</a> == 3) ? 3 : ((<a class="code hl_variable" href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">quality</a> &lt; 2) ? 1 : 2));</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (full &amp;&amp; !text2.IsEmpty())</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            text = text2.ToTitleCase(wholeText: <span class="keyword">true</span>) + Lang.space + text.Bracket(type);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
 <div class="ttc" id="aclassCardRow_html_a0afdaf8101eebea34d1222646e2defd5"><div class="ttname"><a href="classCardRow.html#a0afdaf8101eebea34d1222646e2defd5">CardRow.idActor</a></div><div class="ttdeci">string[] idActor</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00035">CardRow.cs:35</a></div></div>
 <div class="ttc" id="aclassCardRow_html_a143615e63cb6a854f04dc809a499f1f8"><div class="ttname"><a href="classCardRow.html#a143615e63cb6a854f04dc809a499f1f8">CardRow.GetName</a></div><div class="ttdeci">virtual string GetName(int i)</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00095">CardRow.cs:95</a></div></div>
@@ -285,8 +286,8 @@ $(document).ready(function(){initNavTree('CardRow_8cs_source.html',''); initResi
 <div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00553">SourceData.cs:553</a></div></div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00010">SourceData.cs:11</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00010">SourceElement.cs:11</a></div></div>
-<div class="ttc" id="aclassSourceElement_1_1Row_html_a888c48d5c1c33af39db163eb567070f9"><div class="ttname"><a href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">SourceElement.Row.GetName</a></div><div class="ttdeci">override string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00162">SourceElement.cs:162</a></div></div>
-<div class="ttc" id="aclassSourceElement_1_1Row_html_ad52faa985a0920517d14f73ab86a81cf"><div class="ttname"><a href="classSourceElement_1_1Row.html#ad52faa985a0920517d14f73ab86a81cf">SourceElement.Row.GetAltname</a></div><div class="ttdeci">string GetAltname(int i)</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00189">SourceElement.cs:189</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_a888c48d5c1c33af39db163eb567070f9"><div class="ttname"><a href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">SourceElement.Row.GetName</a></div><div class="ttdeci">override string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00172">SourceElement.cs:172</a></div></div>
+<div class="ttc" id="aclassSourceElement_1_1Row_html_ad52faa985a0920517d14f73ab86a81cf"><div class="ttname"><a href="classSourceElement_1_1Row.html#ad52faa985a0920517d14f73ab86a81cf">SourceElement.Row.GetAltname</a></div><div class="ttdeci">string GetAltname(int i)</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00199">SourceElement.cs:199</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00008">SourceMaterial.cs:9</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_html"><div class="ttname"><a href="classSourceMaterial.html">SourceMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00005">SourceMaterial.cs:6</a></div></div>
 <div class="ttc" id="aclassSourcePref_html"><div class="ttname"><a href="classSourcePref.html">SourcePref</a></div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00006">SourcePref.cs:7</a></div></div>

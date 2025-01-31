@@ -1,5 +1,7 @@
 var NAVTREEINDEX116 =
 {
+"classTraitMerchantDrug.html#a6047d4aa438e0445fa8e87faeb1a92f0":[1,0,1619,2],
+"classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1619,0],
 "classTraitMerchantDye.html":[1,0,1620],
 "classTraitMerchantDye.html#ae2ce393bd47ac202ccff4640e88eed5d":[1,0,1620,0],
 "classTraitMerchantEcopo.html":[1,0,1621],
@@ -247,7 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitPolicyBoard.html":[1,0,1690],
 "classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1690,1],
 "classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1690,0],
-"classTraitPoolTable.html":[1,0,1691],
-"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1691,0],
-"classTraitPoop.html":[1,0,1692]
+"classTraitPoolTable.html":[1,0,1691]
 };

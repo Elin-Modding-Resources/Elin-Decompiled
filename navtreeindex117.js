@@ -1,5 +1,7 @@
 var NAVTREEINDEX117 =
 {
+"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1691,0],
+"classTraitPoop.html":[1,0,1692],
 "classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1692,0],
 "classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1692,1],
 "classTraitPotion.html":[1,0,1693],
@@ -247,7 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitSelfFactory.html#a7286b109cc525b39fad876445a9eb246":[1,0,1735,0],
 "classTraitSet.html":[1,0,1736],
 "classTraitSet.html#a0869a9868e1b1e44353ec0a21bae1b45":[1,0,1736,1],
-"classTraitSet.html#a146a2c859b3bab3e0dfce17e7dff2f0a":[1,0,1736,0],
-"classTraitSet.html#a31116c32394fefbde5691ead34f7af64":[1,0,1736,2],
-"classTraitShackle.html":[1,0,1737]
+"classTraitSet.html#a146a2c859b3bab3e0dfce17e7dff2f0a":[1,0,1736,0]
 };

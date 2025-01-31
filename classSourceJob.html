@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83 Patch 3</span>
    </div>
   </td>
  </tr>
@@ -150,31 +150,31 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00066">66</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
-<div class="line"><span class="lineno">   71</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
-<div class="line"><span class="lineno">   72</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
-<div class="line"><span class="lineno">   73</span>            playable = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(3),</div>
-<div class="line"><span class="lineno">   74</span>            STR = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(4),</div>
-<div class="line"><span class="lineno">   75</span>            END = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(5),</div>
-<div class="line"><span class="lineno">   76</span>            DEX = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(6),</div>
-<div class="line"><span class="lineno">   77</span>            PER = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(7),</div>
-<div class="line"><span class="lineno">   78</span>            LER = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(8),</div>
-<div class="line"><span class="lineno">   79</span>            WIL = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(9),</div>
-<div class="line"><span class="lineno">   80</span>            MAG = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(10),</div>
-<div class="line"><span class="lineno">   81</span>            CHA = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(11),</div>
-<div class="line"><span class="lineno">   82</span>            SPD = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(12),</div>
-<div class="line"><span class="lineno">   83</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(14)),</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba282aa351a2bd30655fbc060bd4f33766">weapon</a> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(15),</div>
-<div class="line"><span class="lineno">   85</span>            equip = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(16),</div>
-<div class="line"><span class="lineno">   86</span>            domain = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(17)),</div>
-<div class="line"><span class="lineno">   87</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(18),</div>
-<div class="line"><span class="lineno">   88</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(19)</div>
-<div class="line"><span class="lineno">   89</span>        };</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00068">68</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
+<div class="line"><span class="lineno">   73</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
+<div class="line"><span class="lineno">   74</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
+<div class="line"><span class="lineno">   75</span>            playable = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(3),</div>
+<div class="line"><span class="lineno">   76</span>            STR = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(4),</div>
+<div class="line"><span class="lineno">   77</span>            END = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(5),</div>
+<div class="line"><span class="lineno">   78</span>            DEX = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(6),</div>
+<div class="line"><span class="lineno">   79</span>            PER = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(7),</div>
+<div class="line"><span class="lineno">   80</span>            LER = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(8),</div>
+<div class="line"><span class="lineno">   81</span>            WIL = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(9),</div>
+<div class="line"><span class="lineno">   82</span>            MAG = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(10),</div>
+<div class="line"><span class="lineno">   83</span>            CHA = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(11),</div>
+<div class="line"><span class="lineno">   84</span>            SPD = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(12),</div>
+<div class="line"><span class="lineno">   85</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(14)),</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba282aa351a2bd30655fbc060bd4f33766">weapon</a> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(15),</div>
+<div class="line"><span class="lineno">   87</span>            equip = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(16),</div>
+<div class="line"><span class="lineno">   88</span>            domain = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(17)),</div>
+<div class="line"><span class="lineno">   89</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(18),</div>
+<div class="line"><span class="lineno">   90</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(19)</div>
+<div class="line"><span class="lineno">   91</span>        };</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba282aa351a2bd30655fbc060bd4f33766"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba282aa351a2bd30655fbc060bd4f33766">ContainerFlag.weapon</a></div><div class="ttdeci">@ weapon</div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
 <div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00705">Core.cs:705</a></div></div>
@@ -211,22 +211,22 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00097">97</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">  100</span>        {</div>
-<div class="line"><span class="lineno">  101</span>            Dictionary&lt;int, int&gt; dictionary = (row.elementMap = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">GetElementMap</a>(row.elements));</div>
-<div class="line"><span class="lineno">  102</span>            dictionary[70] = row.STR;</div>
-<div class="line"><span class="lineno">  103</span>            dictionary[71] = row.END;</div>
-<div class="line"><span class="lineno">  104</span>            dictionary[72] = row.DEX;</div>
-<div class="line"><span class="lineno">  105</span>            dictionary[73] = row.PER;</div>
-<div class="line"><span class="lineno">  106</span>            dictionary[74] = row.LER;</div>
-<div class="line"><span class="lineno">  107</span>            dictionary[75] = row.WIL;</div>
-<div class="line"><span class="lineno">  108</span>            dictionary[76] = row.MAG;</div>
-<div class="line"><span class="lineno">  109</span>            dictionary[77] = row.CHA;</div>
-<div class="line"><span class="lineno">  110</span>            dictionary[79] = row.SPD;</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00099">99</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            Dictionary&lt;int, int&gt; dictionary = (row.elementMap = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">GetElementMap</a>(row.elements));</div>
+<div class="line"><span class="lineno">  104</span>            dictionary[70] = row.STR;</div>
+<div class="line"><span class="lineno">  105</span>            dictionary[71] = row.END;</div>
+<div class="line"><span class="lineno">  106</span>            dictionary[72] = row.DEX;</div>
+<div class="line"><span class="lineno">  107</span>            dictionary[73] = row.PER;</div>
+<div class="line"><span class="lineno">  108</span>            dictionary[74] = row.LER;</div>
+<div class="line"><span class="lineno">  109</span>            dictionary[75] = row.WIL;</div>
+<div class="line"><span class="lineno">  110</span>            dictionary[76] = row.MAG;</div>
+<div class="line"><span class="lineno">  111</span>            dictionary[77] = row.CHA;</div>
+<div class="line"><span class="lineno">  112</span>            dictionary[79] = row.SPD;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00075">ELEMENT.cs:76</a></div></div>
 <div class="ttc" id="aclassElement_html_a7a35d5e595e6d1c73365f84fa7c37cc0"><div class="ttname"><a href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">Element.GetElementMap</a></div><div class="ttdeci">static Dictionary&lt; int, int &gt; GetElementMap(int[] list)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00509">ELEMENT.cs:509</a></div></div>
 </div><!-- fragment -->
@@ -258,10 +258,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00092">92</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
-<div class="line"><span class="lineno">   94</span>        map[r.id] = r;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceJob_8cs_source.html#l00094">94</a> of file <a class="el" href="SourceJob_8cs_source.html">SourceJob.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceJob_8cs_source.html#l00009">SourceJob.Row.id</a>.</p>
 

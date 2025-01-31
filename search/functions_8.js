@@ -80,7 +80,7 @@ var searchData=
   ['hsltohsv_77',['HSLtoHSV',['../classEmpyrean_1_1Utils_1_1Colorist.html#aa3e114374a3dc5fa74dcf7f9278ae658',1,'Empyrean::Utils::Colorist']]],
   ['hsvcolor_78',['HSVColor',['../structHSVColor.html#a5c768ddf18c6019c357d254af364f6d9',1,'HSVColor']]],
   ['hsvtohsl_79',['HSVtoHSL',['../classEmpyrean_1_1Utils_1_1Colorist.html#a8fa34023600268fcdb4b5d85b1bfd760',1,'Empyrean::Utils::Colorist']]],
-  ['hsvtorgb_80',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
-  ['hsvtorgb_81',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_80',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_81',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
   ['hyphenate_82',['Hyphenate',['../classUIItem.html#a978123034ebe56fe7a9efac366812b9f',1,'UIItem']]]
 ];

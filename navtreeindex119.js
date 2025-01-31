@@ -1,5 +1,7 @@
 var NAVTREEINDEX119 =
 {
+"classTraitToolRange.html#a89018195feee1415ca41b68b320d7f3e":[1,0,1805,2],
+"classTraitToolRange.html#a91661009806f1aa1b141f57c4c10a246":[1,0,1805,6],
 "classTraitToolRange.html#a94faf848646621a9c9358bf5e18ce492":[1,0,1805,0],
 "classTraitToolRange.html#ab4f86295feb5b9b007ea173e3c7b2c95":[1,0,1805,1],
 "classTraitToolRange.html#abcd66ba8f6bccb8cf0d74b493cf818bd":[1,0,1805,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX119 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1c96e56e82ac84817c1f58b5236a719d":[1,0,9,0,13],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1c96e56e82ac84817c1f58b5236a719d":[0,4,9,0,13],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7":[1,0,9,0,20],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7":[0,4,9,0,20],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a1ea8840dd370b7fa04b9cb817b1741c8":[0,4,9,0,30],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a1ea8840dd370b7fa04b9cb817b1741c8":[1,0,9,0,30]
+"classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7":[0,4,9,0,20]
 };
