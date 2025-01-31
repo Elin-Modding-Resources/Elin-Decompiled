@@ -56,6 +56,7 @@ public class SourceCategory : SourceDataString<SourceCategory.Row>
 		[NonSerialized]
 		public List<Row> children;
 
+		[NonSerialized]
 		public string name_L;
 
 		public override bool UseAlias => false;

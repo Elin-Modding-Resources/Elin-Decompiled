@@ -70,16 +70,22 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 
 		public string detail;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string textPhase_L;
 
+		[NonSerialized]
 		public string textPhase2_L;
 
+		[NonSerialized]
 		public string textEnd_L;
 
+		[NonSerialized]
 		public string[] strPhase_L;
 
 		public override bool UseAlias => true;

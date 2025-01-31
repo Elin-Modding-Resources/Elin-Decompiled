@@ -135,24 +135,34 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 		public int idMold;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string altname_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string textPhase_L;
 
+		[NonSerialized]
 		public string textExtra_L;
 
+		[NonSerialized]
 		public string textInc_L;
 
+		[NonSerialized]
 		public string textDec_L;
 
+		[NonSerialized]
 		public string levelBonus_L;
 
+		[NonSerialized]
 		public string[] textAlt_L;
 
+		[NonSerialized]
 		public string[] adjective_L;
 
 		public override bool UseAlias => true;

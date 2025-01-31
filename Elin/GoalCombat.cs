@@ -314,6 +314,7 @@ public class GoalCombat : Goal
 			}
 			else if (owner.FindNearestNewEnemy())
 			{
+				yield return Status.Running;
 				continue;
 			}
 			yield return Status.Running;

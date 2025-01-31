@@ -378,7 +378,7 @@ public class WindowChara : WindowController
 		textSAN.text = chara.SAN.value.ToString() ?? "";
 		textFame.text = (chara.IsPC ? (EClass.player.fame.ToString() ?? "") : "???");
 		textMoney.text = Lang._currency(chara.GetCurrency(), showUnit: true);
-		textDeposit.text = (chara.IsPC ? Lang._currency(EClass.game.cards.container_deposit.GetCurrency(), showUnit: true) : "???");
+		textDeposit.text = Lang._currency(chara.IsPC ? EClass.game.cards.container_deposit.GetCurrency() : chara.c_allowance, showUnit: true);
 		string text = "deepestLv2".lang((chara.IsPCFaction ? EClass.player.stats.deepest : chara.LV).ToString() ?? "");
 		if (chara.IsPCFaction && EClass.player.CountKeyItem("license_void") > 0)
 		{

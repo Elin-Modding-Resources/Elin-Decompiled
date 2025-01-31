@@ -46,8 +46,10 @@ public class SourceJob : SourceDataString<SourceJob.Row>
 
 		public Dictionary<int, int> elementMap;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
 		public override bool UseAlias => false;

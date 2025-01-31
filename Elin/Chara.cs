@@ -2468,7 +2468,7 @@ public class Chara : Card, IPathfindWalker
 				}
 				if (newPoint.cell.CanSuffocate())
 				{
-					AddCondition<ConSuffocation>((EClass.pc.Evalue(200) > 0) ? (2000 / (100 + Evalue(200) * 10)) : 30);
+					AddCondition<ConSuffocation>((EClass.pc.Evalue(200) != 0) ? (2000 / (100 + EvalueMax(200, -5) * 10)) : 30);
 					int num4 = GetCondition<ConSuffocation>()?.GetPhase() ?? 0;
 					if (num4 >= 2)
 					{
@@ -2860,11 +2860,16 @@ public class Chara : Card, IPathfindWalker
 
 	public void TryPush(Point point)
 	{
-		point.Charas.ForeachReverse(delegate(Chara c)
+		List<Chara> list = point.ListCharas();
+		if (list.Count == 0)
+		{
+			return;
+		}
+		list.Copy().ForeachReverse(delegate(Chara c)
 		{
 			if (!c.ai.IsMoveAI && !c.IsPC && c.trait.CanBePushed && c != this && !c.noMove && (!EClass._zone.IsRegion || c.IsPCFactionOrMinion))
 			{
-				List<Point> list = new List<Point>();
+				List<Point> list2 = new List<Point>();
 				for (int i = point.x - 1; i <= point.x + 1; i++)
 				{
 					for (int j = point.z - 1; j <= point.z + 1; j++)
@@ -2874,24 +2879,24 @@ public class Chara : Card, IPathfindWalker
 							Point point2 = new Point(i, j);
 							if (point2.IsValid && !point2.HasChara && !point2.IsBlocked && !point2.cell.hasDoor && !point2.IsBlockByHeight(point))
 							{
-								list.Add(point2);
+								list2.Add(point2);
 							}
 						}
 					}
 				}
-				if (list.Count > 0)
+				if (list2.Count > 0)
 				{
-					if (list.Count > 1)
+					if (list2.Count > 1)
 					{
-						list.ForeachReverse(delegate(Point p)
+						list2.ForeachReverse(delegate(Point p)
 						{
 							if (p.Equals(new Point(point.x + point.x - pos.x, point.z + point.z - pos.z)))
 							{
-								list.Remove(p);
+								list2.Remove(p);
 							}
 						});
 					}
-					Point newPoint = list.RandomItem();
+					Point newPoint = list2.RandomItem();
 					if (IsPC)
 					{
 						Say("displace", this, c);
@@ -3744,7 +3749,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate())
 		{
-			AddCondition<ConSuffocation>(800 / (100 + Evalue(200) * 10));
+			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10));
 		}
 		CellEffect e;
 		if (cell.effect != null)

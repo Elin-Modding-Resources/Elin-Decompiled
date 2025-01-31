@@ -51,14 +51,19 @@ public class SourceReligion : SourceDataString<SourceReligion.Row>
 
 		public string textPet;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string textType_L;
 
+		[NonSerialized]
 		public string textBenefit_L;
 
+		[NonSerialized]
 		public string[] name2_L;
 
 		public override bool UseAlias => false;

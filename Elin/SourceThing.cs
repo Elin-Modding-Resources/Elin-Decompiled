@@ -52,16 +52,22 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 
 		public bool ignoreAltFix;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string unit_L;
 
+		[NonSerialized]
 		public string unknown_L;
 
+		[NonSerialized]
 		public string[] name2_L;
 
+		[NonSerialized]
 		public string[] roomName_L;
 
 		public override bool UseAlias => false;

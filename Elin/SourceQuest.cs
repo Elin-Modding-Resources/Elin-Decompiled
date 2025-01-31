@@ -39,12 +39,16 @@ public class SourceQuest : SourceDataString<SourceQuest.Row>
 
 		public string talkComplete;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string talkProgress_L;
 
+		[NonSerialized]
 		public string talkComplete_L;
 
 		public override bool UseAlias => false;

@@ -35,10 +35,13 @@ public class SourcePerson : SourceDataString<SourcePerson.Row>
 
 		public string detail;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string aka_L;
 
 		public override bool UseAlias => false;

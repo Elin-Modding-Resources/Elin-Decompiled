@@ -39,8 +39,10 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 		[NonSerialized]
 		public BiomeProfile biome;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
 		public override bool UseAlias => true;

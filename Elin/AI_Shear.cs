@@ -17,7 +17,11 @@ public class AI_Shear : AI_TargetCard
 
 	public override bool IsValidTC(Card c)
 	{
-		return c?.CanBeSheared() ?? false;
+		if (c != null && c.IsAliveInCurrentZone)
+		{
+			return c.CanBeSheared();
+		}
+		return false;
 	}
 
 	public override bool Perform()
@@ -62,12 +66,15 @@ public class AI_Shear : AI_TargetCard
 			},
 			onProgressComplete = delegate
 			{
-				Thing fur = GetFur(target.Chara);
-				owner.Say("shear_end", owner, target, fur.Name);
-				owner.Pick(fur, msg: false);
-				owner.elements.ModExp(237, 50 * furLv);
-				owner.stamina.Mod(-1);
-				target.Chara.ModAffinity(owner, 1);
+				if (target.IsAliveInCurrentZone)
+				{
+					Thing fur = GetFur(target.Chara);
+					owner.Say("shear_end", owner, target, fur.Name);
+					owner.Pick(fur, msg: false);
+					owner.elements.ModExp(237, 50 * furLv);
+					owner.stamina.Mod(-1);
+					target.Chara.ModAffinity(owner, 1);
+				}
 			}
 		}.SetDuration((6 + furLv * 6) * 100 / (100 + owner.Tool.material.hardness * 2), 3);
 		yield return Do(seq);

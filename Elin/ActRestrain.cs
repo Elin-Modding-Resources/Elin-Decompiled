@@ -42,7 +42,7 @@ public class ActRestrain : Act
 		}
 		if (Act.TC.IsPCFaction && EClass._zone.IsPCFaction)
 		{
-			Act.CC.SetAI(new AI_Torture
+			Act.TC.Chara?.SetAI(new AI_Torture
 			{
 				shackle = shackle
 			});

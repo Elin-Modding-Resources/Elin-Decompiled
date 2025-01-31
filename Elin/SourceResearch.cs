@@ -31,8 +31,10 @@ public class SourceResearch : SourceDataString<SourceResearch.Row>
 
 		public string detail;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
 		public override bool UseAlias => false;

@@ -762,6 +762,9 @@ public class Player : EClass
 	public int luckycoin;
 
 	[JsonProperty]
+	public int customLightMod = 3;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]

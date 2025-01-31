@@ -128,9 +128,10 @@ public class CardRow : RenderRow
 		{
 			return text2;
 		}
+		int type = ((quality == 3) ? 3 : ((quality < 2) ? 1 : 2));
 		if (full && !text2.IsEmpty())
 		{
-			text = text2.ToTitleCase(wholeText: true) + Lang.space + text.Bracket(2);
+			text = text2.ToTitleCase(wholeText: true) + Lang.space + text.Bracket(type);
 		}
 		return text;
 	}

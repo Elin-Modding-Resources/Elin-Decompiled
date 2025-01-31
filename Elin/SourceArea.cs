@@ -21,10 +21,13 @@ public class SourceArea : SourceDataString<SourceArea.Row>
 
 		public string detail;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string textAssign_L;
 
 		public override bool UseAlias => false;

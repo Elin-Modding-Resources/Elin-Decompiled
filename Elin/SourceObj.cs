@@ -32,8 +32,10 @@ public class SourceObj : SourceDataInt<SourceObj.Row>
 
 		public ObjValType objValType;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
 		public override bool UseAlias => true;

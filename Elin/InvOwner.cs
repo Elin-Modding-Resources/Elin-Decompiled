@@ -1393,6 +1393,19 @@ public class InvOwner : EClass
 			}
 		}
 		ListInteractions(listInteraction, t, trait, b, context);
+		if (context && trait is TraitLightSource)
+		{
+			listInteraction.Add("customBrightness", 300, delegate
+			{
+				UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
+				uIContextMenu.AddSlider("brightness", (float a) => a.ToString() ?? "", EClass.player.customLightMod, delegate(float b)
+				{
+					EClass.player.customLightMod = (int)b;
+					EClass.pc.RecalculateFOV();
+				}, 1f, 6f, isInt: true, hideOther: false);
+				uIContextMenu.Show();
+			});
+		}
 		if (AllowHold(t) && !t.isEquipped && !HasTrader)
 		{
 			Interaction item = listInteraction.Add((EClass.pc.held == t) ? "actPick" : "actHold", 60, delegate

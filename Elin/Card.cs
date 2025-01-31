@@ -5573,7 +5573,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				power = EClass.scene.profile.global.playerLightPowerLimit;
 			}
-			power *= EClass.scene.profile.light.playerLightMod;
+			power *= EClass.scene.profile.light.playerLightMod + (float)EClass.player.customLightMod * EClass.scene.profile.light.playerLightCustomMod;
 			EClass.player.lightRadius = radius;
 			EClass.player.lightPower = power;
 		}

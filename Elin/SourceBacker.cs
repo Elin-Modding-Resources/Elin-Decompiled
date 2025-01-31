@@ -38,8 +38,10 @@ public class SourceBacker : SourceDataInt<SourceBacker.Row>
 
 		public string original;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string text_L;
 
 		public override bool UseAlias => false;

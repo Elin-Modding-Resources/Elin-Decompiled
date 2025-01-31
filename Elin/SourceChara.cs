@@ -59,10 +59,13 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		[NonSerialized]
 		public SourceRace.Row _race_row;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string aka_L;
 
 		public override bool UseAlias => false;

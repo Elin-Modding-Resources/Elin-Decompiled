@@ -27,14 +27,19 @@ public class SourceCharaText : SourceDataString<SourceCharaText.Row>
 
 		public string kill;
 
+		[NonSerialized]
 		public string calm_L;
 
+		[NonSerialized]
 		public string fov_L;
 
+		[NonSerialized]
 		public string aggro_L;
 
+		[NonSerialized]
 		public string dead_L;
 
+		[NonSerialized]
 		public string kill_L;
 
 		public override bool UseAlias => false;

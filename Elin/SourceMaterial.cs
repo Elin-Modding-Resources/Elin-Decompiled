@@ -87,10 +87,13 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 
 		public static string[] IDAxe = new string[1] { "wood" };
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
+		[NonSerialized]
 		public string[] altName_L;
 
 		public override bool UseAlias => true;

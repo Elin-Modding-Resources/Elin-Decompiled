@@ -26,8 +26,10 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 		[NonSerialized]
 		public SourceFloor.Row sourceAutoFloor;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
 		public override bool UseAlias => true;

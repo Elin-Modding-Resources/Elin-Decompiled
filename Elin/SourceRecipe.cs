@@ -27,8 +27,10 @@ public class SourceRecipe : SourceDataInt<SourceRecipe.Row>
 
 		public string[] tag;
 
+		[NonSerialized]
 		public string name_L;
 
+		[NonSerialized]
 		public string detail_L;
 
 		public override bool UseAlias => false;

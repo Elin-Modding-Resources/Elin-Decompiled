@@ -14,6 +14,8 @@ public class SceneLightProfile : ScriptableObject
 
 	public float playerLightMod = 1f;
 
+	public float playerLightCustomMod;
+
 	public AnimationCurve lightLimit;
 
 	public AnimationCurve lightModCurve;
