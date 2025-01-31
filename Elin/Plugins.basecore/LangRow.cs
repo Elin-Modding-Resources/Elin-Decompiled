@@ -1,3 +1,5 @@
+using System;
+
 public class LangRow : SourceData.BaseRow
 {
 	public string id;
@@ -6,5 +8,6 @@ public class LangRow : SourceData.BaseRow
 
 	public string text;
 
+	[NonSerialized]
 	public string text_L;
 }

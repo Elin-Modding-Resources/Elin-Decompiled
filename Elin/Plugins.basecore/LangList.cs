@@ -13,6 +13,7 @@ public class LangList : SourceDataString<LangList.Row>
 
 		public string[] text;
 
+		[NonSerialized]
 		public string[] text_L;
 
 		public override bool UseAlias => false;

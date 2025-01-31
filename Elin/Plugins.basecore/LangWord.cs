@@ -13,6 +13,7 @@ public class LangWord : SourceDataInt<LangWord.Row>
 
 		public string name;
 
+		[NonSerialized]
 		public string name_L;
 
 		public override bool UseAlias => false;

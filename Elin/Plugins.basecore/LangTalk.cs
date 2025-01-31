@@ -11,6 +11,7 @@ public class LangTalk : SourceDataString<LangTalk.Row>
 
 		public string text;
 
+		[NonSerialized]
 		public string text_L;
 
 		public override bool UseAlias => false;
