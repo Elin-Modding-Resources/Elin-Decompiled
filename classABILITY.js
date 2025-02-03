@@ -88,6 +88,7 @@ var classABILITY =
     [ "breathe_Nether", "classABILITY.html#a6690204ecf5535811e9fba81564b1fad", null ],
     [ "breathe_Poison", "classABILITY.html#a4fa9dfd470a6ef5a2a0f06caf591de1b", null ],
     [ "breathe_Sound", "classABILITY.html#a835016a075c73947c45fcfd549ad8caf", null ],
+    [ "breathe_Void", "classABILITY.html#a67090fabd08af2fd59575286e1fb394c", null ],
     [ "General", "classABILITY.html#a4538e18f925ec54263491feb59c744be", null ],
     [ "GoalIdle", "classABILITY.html#ab667d897b121612b392b5cd85c95fea8", null ],
     [ "GoalSleep", "classABILITY.html#a229d5176f72b0e523217c512ce5e5ddc", null ],

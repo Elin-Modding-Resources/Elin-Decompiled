@@ -76,6 +76,7 @@ var classScene =
     [ "popper", "classScene.html#adb0fbacd9d784558a85f789f605d0f89", null ],
     [ "posAudioListener", "classScene.html#a99728c16cef87724415c3a49d4a813ec", null ],
     [ "profile", "classScene.html#ab3aa5041af5100c338c990e5281c0297", null ],
+    [ "psFey", "classScene.html#a55498afcc66dc99605ad5d7200d11def", null ],
     [ "psFoot", "classScene.html#aac9b6a32d31f88ad82cd189c6da7c01f", null ],
     [ "psRainSplash", "classScene.html#a93da1950baffde6e929a2fe5ba1b2cef", null ],
     [ "psRainSplashWater", "classScene.html#a0989e7bda99a740613e8899f8ec018d6", null ],

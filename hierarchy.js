@@ -1520,6 +1520,11 @@ var hierarchy =
           [ "TraitMill", "classTraitMill.html", null ],
           [ "TraitRationMaker", "classTraitRationMaker.html", null ],
           [ "TraitRollingFortune", "classTraitRollingFortune.html", null ],
+          [ "TraitRuneMold", "classTraitRuneMold.html", [
+            [ "TraitRuneMoldEarth", "classTraitRuneMoldEarth.html", null ],
+            [ "TraitRuneMoldMana", "classTraitRuneMoldMana.html", null ],
+            [ "TraitRuneMoldSun", "classTraitRuneMoldSun.html", null ]
+          ] ],
           [ "TraitSawMill", "classTraitSawMill.html", null ],
           [ "TraitScratchMachine", "classTraitScratchMachine.html", null ],
           [ "TraitSculpture", "classTraitSculpture.html", null ],

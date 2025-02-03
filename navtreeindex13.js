@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba674b3cac45e2eef316a2dbcd7ec31be7":[2,0,0,1032,0,26],
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba69d7f1d911f3e28651a2dee1a9c7fd34":[2,0,0,1032,0,5],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1032,0,0],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba6e56f394da8a56773678be26f5d4d3b0":[2,0,0,1032,0,39],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba752049659fac08237d55a333277b9dd7":[2,0,0,1032,0,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "SpriteReplacer_8cs_source.html":[2,0,0,2,80],
 "SpriteSheet_8cs.html":[2,0,0,2,82],
 "SpriteSheet_8cs_source.html":[2,0,0,2,82],
-"SpriteVertexPositionChanger_8cs.html":[2,0,0,3,0,6],
-"SpriteVertexPositionChanger_8cs_source.html":[2,0,0,3,0,6],
-"StanceFury_8cs.html":[2,0,0,1098]
+"SpriteVertexPositionChanger_8cs.html":[2,0,0,3,0,6]
 };

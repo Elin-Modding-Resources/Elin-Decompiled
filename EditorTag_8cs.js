@@ -15,6 +15,7 @@ var EditorTag_8cs =
       [ "InvulnerableToMobs", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245ab0b33a87e0468f4da15b1ccb325d81c0", null ],
       [ "Male", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245a63889cfb9d3cbe05d1bd2be5cc9953fd", null ],
       [ "Female", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245ab719ce180ec7bd9641fece2f920f4817", null ],
+      [ "baby", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245a6848d756da66e55b42f79c0728e351ad", null ],
       [ "NoSnow", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245a5d9b206d211b48e68d4a7fd75a328434", null ],
       [ "TreasureMelilith", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245a971a339d0ed78160f6d3a08adf811742", null ],
       [ "Boss", "EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245a5859831e2b3db23528c710b1451e13fc", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"TraitCitizen_8cs.html":[2,0,0,1318],
+"TraitCitizen_8cs_source.html":[2,0,0,1318],
 "TraitClerk__Casino_8cs.html":[2,0,0,1319],
 "TraitClerk__Casino_8cs_source.html":[2,0,0,1319],
 "TraitClerk__Fighter_8cs.html":[2,0,0,1320],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitGiftJure_8cs.html":[2,0,0,1436],
 "TraitGiftJure_8cs_source.html":[2,0,0,1436],
 "TraitGiftNewYear_8cs.html":[2,0,0,1437],
-"TraitGiftNewYear_8cs_source.html":[2,0,0,1437],
-"TraitGiftPack_8cs.html":[2,0,0,1438],
-"TraitGiftPack_8cs_source.html":[2,0,0,1438]
+"TraitGiftNewYear_8cs_source.html":[2,0,0,1437]
 };

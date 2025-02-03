@@ -16,7 +16,8 @@ var classTraitCrafter =
       [ "Talisman", "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b", null ],
       [ "Scratch", "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba", null ],
       [ "Incubator", "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7", null ],
-      [ "Fortune", "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba07f3fb85953bf41d154cba88825ee748", null ]
+      [ "Fortune", "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba07f3fb85953bf41d154cba88825ee748", null ],
+      [ "RuneMold", "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba044a575ae41268e7c7a8b02452851a98", null ]
     ] ],
     [ "CanUse", "classTraitCrafter.html#a8ee92e5d33a73f0e966bf106d4d279d6", null ],
     [ "Craft", "classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613", null ],

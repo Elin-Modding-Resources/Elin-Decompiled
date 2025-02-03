@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TraitGiftPack_8cs.html":[2,0,0,1438],
+"TraitGiftPack_8cs_source.html":[2,0,0,1438],
 "TraitGodStatue_8cs.html":[2,0,0,1444],
 "TraitGodStatue_8cs_source.html":[2,0,0,1444],
 "TraitGoodsCoin_8cs.html":[2,0,0,1445],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitPillowJure_8cs.html":[2,0,0,1567],
 "TraitPillowJure_8cs_source.html":[2,0,0,1567],
 "TraitPillowKumiromi_8cs.html":[2,0,0,1568],
-"TraitPillowKumiromi_8cs_source.html":[2,0,0,1568],
-"TraitPillowLulwy_8cs.html":[2,0,0,1569],
-"TraitPillowLulwy_8cs_source.html":[2,0,0,1569]
+"TraitPillowKumiromi_8cs_source.html":[2,0,0,1568]
 };

@@ -437,6 +437,7 @@ var classCard =
     [ "IsRestrainedResident", "classCard.html#a287c8816afa5cbff62d3e53cf609958c", null ],
     [ "isRoofItem", "classCard.html#a3180ac44a4bdba4ab185f4c0453a560b", null ],
     [ "IsRotting", "classCard.html#a3c46bf63506a69565affb390ad4f9ed7", null ],
+    [ "isRuneAdded", "classCard.html#ae811b3cd028e5c1c400215562fa5b376", null ],
     [ "isSale", "classCard.html#a51e91216ecc9690a490e6b52ef798321", null ],
     [ "isStolen", "classCard.html#acb53bc89e7ae376f24fcccc205055952", null ],
     [ "isSubsetCard", "classCard.html#a2c402dd2cd3822276e084576ede5ded2", null ],

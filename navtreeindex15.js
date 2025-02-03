@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"TileTypeHalfBlock_8cs.html":[2,0,0,1202],
+"TileTypeHalfBlock_8cs_source.html":[2,0,0,1202],
 "TileTypeIllumination_8cs.html":[2,0,0,1203],
 "TileTypeIllumination_8cs_source.html":[2,0,0,1203],
 "TileTypeInvisibleBlock_8cs.html":[2,0,0,1204],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "TraitChest_8cs.html":[2,0,0,1314],
 "TraitChest_8cs_source.html":[2,0,0,1314],
 "TraitChopper_8cs.html":[2,0,0,1317],
-"TraitChopper_8cs_source.html":[2,0,0,1317],
-"TraitCitizen_8cs.html":[2,0,0,1318],
-"TraitCitizen_8cs_source.html":[2,0,0,1318]
+"TraitChopper_8cs_source.html":[2,0,0,1317]
 };

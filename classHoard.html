@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.84 Nightly</span>
    </div>
   </td>
  </tr>
@@ -307,11 +307,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  166</span>        {</div>
 <div class="line"><span class="lineno">  167</span>            num *= 2;</div>
 <div class="line"><span class="lineno">  168</span>        }</div>
-<div class="line"><span class="lineno">  169</span>        Item <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(row.<a class="code hl_variable" href="classSourceCollectible_1_1Row.html#ad6f26015541e36f97ae9f8a464f161ba">id</a>, num);</div>
+<div class="line"><span class="lineno">  169</span>        <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_function" href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Add</a>(row.<a class="code hl_variable" href="classSourceCollectible_1_1Row.html#ad6f26015541e36f97ae9f8a464f161ba">id</a>, num);</div>
 <div class="line"><span class="lineno">  170</span>        item.random = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
 <div class="line"><span class="lineno">  172</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
+<div class="ttc" id="aHealSource_8cs_html_a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679"><div class="ttname"><a href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">HealSource.Item</a></div><div class="ttdeci">@ Item</div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassHoard_html_a7754735994024a4a99a709025bbc2efb"><div class="ttname"><a href="classHoard.html#a7754735994024a4a99a709025bbc2efb">Hoard.Add</a></div><div class="ttdeci">Item Add(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Hoard_8cs_source.html#l00161">Hoard.cs:161</a></div></div>
@@ -372,10 +373,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  177</span>        {</div>
 <div class="line"><span class="lineno">  178</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classHoard.html#ae9808b12033a38303b28101c921d8c11">items</a>.TryGetValue(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">  179</span>        }</div>
-<div class="line"><span class="lineno">  180</span>        Item value = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a> value = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classHoard.html#ae9808b12033a38303b28101c921d8c11">items</a>.TryGetValue(<span class="keywordtype">id</span>, out value))</div>
 <div class="line"><span class="lineno">  182</span>        {</div>
-<div class="line"><span class="lineno">  183</span>            value = <span class="keyword">new</span> Item</div>
+<div class="line"><span class="lineno">  183</span>            value = <span class="keyword">new</span> <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a></div>
 <div class="line"><span class="lineno">  184</span>            {</div>
 <div class="line"><span class="lineno">  185</span>                <span class="keywordtype">id</span> = <span class="keywordtype">id</span></div>
 <div class="line"><span class="lineno">  186</span>            };</div>

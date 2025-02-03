@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.84 Nightly</span>
    </div>
   </td>
  </tr>
@@ -640,7 +640,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  541</span>        List&lt;UIList&gt; lists = <span class="keyword">new</span> List&lt;UIList&gt;();</div>
 <div class="line"><span class="lineno">  542</span>        lists.Add(<a class="code hl_variable" href="classUIBook.html#a07635576a52ff8cd800b4692d432903f">list</a>);</div>
 <div class="line"><span class="lineno">  543</span>        <a class="code hl_variable" href="classUIBook.html#a07635576a52ff8cd800b4692d432903f">list</a>.<a class="code hl_function" href="classUIList.html#a445017d68fcd7fb5a8b64bdbefd55126">Clear</a>();</div>
-<div class="line"><span class="lineno">  544</span>        list.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;Item, <a class="code hl_class" href="classButtonCategory.html">ButtonCategory</a>&gt;</div>
+<div class="line"><span class="lineno">  544</span>        list.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a>, <a class="code hl_class" href="classButtonCategory.html">ButtonCategory</a>&gt;</div>
 <div class="line"><span class="lineno">  545</span>        {</div>
 <div class="line"><span class="lineno">  546</span>            onClick = delegate(Item a, <a class="code hl_class" href="classButtonCategory.html">ButtonCategory</a> b)</div>
 <div class="line"><span class="lineno">  547</span>            {</div>
@@ -683,15 +683,15 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  584</span>            onRefresh = <span class="keyword">null</span></div>
 <div class="line"><span class="lineno">  585</span>        };</div>
 <div class="line"><span class="lineno">  586</span>        <span class="keywordtype">string</span> oldValue = <span class="charliteral">&#39;\t&#39;</span>.ToString();</div>
-<div class="line"><span class="lineno">  587</span>        Item <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  588</span>        Item item2 = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  587</span>        <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  588</span>        <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a> item2 = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  589</span>        <a class="code hl_variable" href="classUIBook.html#aa88465450fcbb9a918ee1121f5c889c4">helpTitles</a>.Clear();</div>
 <div class="line"><span class="lineno">  590</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
 <div class="line"><span class="lineno">  591</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array2.Length; i++)</div>
 <div class="line"><span class="lineno">  592</span>        {</div>
 <div class="line"><span class="lineno">  593</span>            <span class="keywordtype">string</span>[] array3 = array2[i].Replace(oldValue, <span class="stringliteral">&quot;&quot;</span>).Split(<span class="charliteral">&#39;,&#39;</span>);</div>
 <div class="line"><span class="lineno">  594</span>            <span class="keywordtype">string</span>[] array4 = array3[0].Split(<span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><span class="lineno">  595</span>            Item item3 = <span class="keyword">new</span> Item</div>
+<div class="line"><span class="lineno">  595</span>            <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a> item3 = <span class="keyword">new</span> <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a></div>
 <div class="line"><span class="lineno">  596</span>            {</div>
 <div class="line"><span class="lineno">  597</span>                <a class="code hl_variable" href="classUIBook.html#af0fa389e0c9aaf06574f687266b51c01">idFile</a> = array4[0],</div>
 <div class="line"><span class="lineno">  598</span>                <span class="keywordtype">id</span> = array4[1],</div>
@@ -701,6 +701,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  602</span>            <span class="keywordflow">if</span> (item3.title.StartsWith(<span class="stringliteral">&quot;$&quot;</span>))</div>
 <div class="line"><span class="lineno">  603</span>            {</div>
 <div class="line"><span class="lineno">  604</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = item3;</div>
+<div class="ttc" id="aHealSource_8cs_html_a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679"><div class="ttname"><a href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">HealSource.Item</a></div><div class="ttdeci">@ Item</div></div>
 <div class="ttc" id="aUIBook_8cs_html_a270e3896fe3ee5b1a258e8c8091a1945"><div class="ttname"><a href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a></div><div class="ttdeci">item3. title</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00609">UIBook.cs:609</a></div></div>
 <div class="ttc" id="aclassButtonCategory_html"><div class="ttname"><a href="classButtonCategory.html">ButtonCategory</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonCategory_8cs_source.html#l00005">ButtonCategory.cs:6</a></div></div>
 <div class="ttc" id="aclassButtonCategory_html_a06410ea790c2ce16d4b4c4c2507d5e2b"><div class="ttname"><a href="classButtonCategory.html#a06410ea790c2ce16d4b4c4c2507d5e2b">ButtonCategory.buttonFold</a></div><div class="ttdeci">UIButton buttonFold</div><div class="ttdef"><b>Definition:</b> <a href="ButtonCategory_8cs_source.html#l00007">ButtonCategory.cs:7</a></div></div>

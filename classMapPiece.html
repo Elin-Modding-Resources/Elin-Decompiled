@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.84 Nightly</span>
    </div>
   </td>
  </tr>
@@ -257,7 +257,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="MapPiece_8cs_source.html#l00049">49</a> of file <a class="el" href="MapPiece_8cs_source.html">MapPiece.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
 <div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="classMapPiece.html#a75fffc4272a96903992651e44f8a9b44">Init</a>();</div>
-<div class="line"><span class="lineno">   52</span>        Item <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_variable" href="classMapPiece.html#a7a433cbc0b13d4f3a60b2181f2ea2a67">items</a>.RandomItemWeighted((Item a) =&gt; (a.chance != 0f || !(type.ToString() == a.id)) ? (a.chance * (<span class="keywordtype">float</span>)((type == <a class="code hl_enumeration" href="classMapPiece.html#acfe3f2510fd310cc25d63a3ab81abbc1">Type</a>.Any || type.ToString() == a.id) ? 1 : 0)) : 1f);</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_enumvalue" href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_variable" href="classMapPiece.html#a7a433cbc0b13d4f3a60b2181f2ea2a67">items</a>.RandomItemWeighted((Item a) =&gt; (a.chance != 0f || !(type.ToString() == a.id)) ? (a.chance * (<span class="keywordtype">float</span>)((type == <a class="code hl_enumeration" href="classMapPiece.html#acfe3f2510fd310cc25d63a3ab81abbc1">Type</a>.Any || type.ToString() == a.id) ? 1 : 0)) : 1f);</div>
 <div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.paths.Count == 0)</div>
 <div class="line"><span class="lineno">   54</span>        {</div>
 <div class="line"><span class="lineno">   55</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;no path&quot;</span>);</div>
@@ -293,6 +293,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> partialMap;</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
+<div class="ttc" id="aHealSource_8cs_html_a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679"><div class="ttname"><a href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">HealSource.Item</a></div><div class="ttdeci">@ Item</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassEScriptable_html"><div class="ttname"><a href="classEScriptable.html">EScriptable</a></div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00003">EScriptable.cs:4</a></div></div>
 <div class="ttc" id="aclassEScriptable_html_a7e82765e268f34ed86f8407036038ac2"><div class="ttname"><a href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">EScriptable.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EScriptable_8cs_source.html#l00005">EScriptable.cs:5</a></div></div>

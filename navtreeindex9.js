@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"Lab_8cs.html":[2,0,0,3,54],
+"Lab_8cs_source.html":[2,0,0,3,54],
 "LabeledColorSlider_8cs.html":[2,0,0,3,2,0,4],
 "LabeledColorSlider_8cs_source.html":[2,0,0,3,2,0,4],
 "LandFeat_8cs.html":[2,0,0,676],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfacd56a9c68c3b6503ccfb283c81775b07":[2,0,0,772,0,5],
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfade750545706d10adc6a3b6ca1b0f7c3f":[2,0,0,772,0,3],
 "MapBG_8cs_source.html":[2,0,0,772],
-"MapBounds_8cs.html":[2,0,0,773],
-"MapBounds_8cs_source.html":[2,0,0,773],
-"MapConfig_8cs.html":[2,0,0,774]
+"MapBounds_8cs.html":[2,0,0,773]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.83 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.84 Nightly</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a636c575074610b4a5413b6b90f1c2071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6278a74133dd821c724cec516f35c71"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemTreeCoralwood.html#aa6278a74133dd821c724cec516f35c71">OnSetObj</a> ()</td></tr>
 <tr class="separator:aa6278a74133dd821c724cec516f35c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f2a40b9bada8c141c43a3d3b478c37"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemTreeCoralwood.html#a28f2a40b9bada8c141c43a3d3b478c37">GetStageTile</a> ()</td></tr>
+<tr class="separator:a28f2a40b9bada8c141c43a3d3b478c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classGrowSystemTreeSingle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGrowSystemTreeSingle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classGrowSystemTreeSingle.html">GrowSystemTreeSingle</a></td></tr>
 <tr class="memitem:a23141063b94f9a6063947340451932ac inherit pub_methods_classGrowSystemTreeSingle"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemTreeSingle.html#a23141063b94f9a6063947340451932ac">GetShadow</a> (int index)</td></tr>
 <tr class="separator:a23141063b94f9a6063947340451932ac inherit pub_methods_classGrowSystemTreeSingle"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -499,6 +501,41 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a28f2a40b9bada8c141c43a3d3b478c37" name="a28f2a40b9bada8c141c43a3d3b478c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f2a40b9bada8c141c43a3d3b478c37">&#9670;&#160;</a></span>GetStageTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int GrowSystemTreeCoralwood.GetStageTile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classGrowSystem.html#a0e4a38d660b3ca02796086c41ef85c46">GrowSystem</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="GrowSystemTreeCoralwood_8cs_source.html#l00027">27</a> of file <a class="el" href="GrowSystemTreeCoralwood_8cs_source.html">GrowSystemTreeCoralwood.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>._tiles[GrowSystem.cell.objDir % <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>._tiles.Length];</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassGrowSystem_html_a663df27be6412bdcab650a8d5afd49e2"><div class="ttname"><a href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">GrowSystem.source</a></div><div class="ttdeci">SourceObj.Row source</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00049">GrowSystem.cs:49</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="GrowSystem_8cs_source.html#l00049">GrowSystem.source</a>.</p>
+
+</div>
+</div>
 <a id="aa6278a74133dd821c724cec516f35c71" name="aa6278a74133dd821c724cec516f35c71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6278a74133dd821c724cec516f35c71">&#9670;&#160;</a></span>OnSetObj()</h2>
 
@@ -527,15 +564,17 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="GrowSystemTreeCoralwood_8cs_source.html#l00020">20</a> of file <a class="el" href="GrowSystemTreeCoralwood_8cs_source.html">GrowSystemTreeCoralwood.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
 <div class="line"><span class="lineno">   22</span>        GrowSystem.cell.isObjDyed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   23</span>        GrowSystem.cell.objMat = (byte)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.Where((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> r) =&gt; r.tag.Contains(<span class="stringliteral">&quot;coral&quot;</span>)).RandomItem().id;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="line"><span class="lineno">   23</span>        GrowSystem.cell.objDir = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>.tiles.Length);</div>
+<div class="line"><span class="lineno">   24</span>        GrowSystem.cell.objMat = (byte)<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.Where((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> r) =&gt; r.tag.Contains(<span class="stringliteral">&quot;coral&quot;</span>)).RandomItem().id;</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00050">EClass.cs:50</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00008">SourceMaterial.cs:9</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_html"><div class="ttname"><a href="classSourceMaterial.html">SourceMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00005">SourceMaterial.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00049">GrowSystem.source</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 </div>
 </div>

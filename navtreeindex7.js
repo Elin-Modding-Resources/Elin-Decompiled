@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GradientDir_8cs.html":[2,0,0,3,38],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4ea":[2,0,0,3,38,0],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4eaa06ce2a25e5d12c166a36f654dbea6012":[2,0,0,3,38,0,0],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4eaa8cabceb8bff12bb5c1ef2ade3396da2b":[2,0,0,3,38,0,3],
@@ -85,6 +86,7 @@ var NAVTREEINDEX7 =
 "HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0b":[2,0,0,543,0],
 "HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba02700e454d679f31f27c6f0768986dd1":[2,0,0,543,0,1],
 "HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,543,0,0],
+"HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679":[2,0,0,543,0,3],
 "HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0bac429fde8b1b986d42f84ba63dbfef6ac":[2,0,0,543,0,2],
 "HealSource_8cs_source.html":[2,0,0,543],
 "HeuristicFormula_8cs.html":[2,0,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "HotItemWidget_8cs.html":[2,0,0,592],
 "HotItemWidget_8cs_source.html":[2,0,0,592],
 "HotItem_8cs.html":[2,0,0,569],
-"HotItem_8cs_source.html":[2,0,0,569],
-"HotbarManager_8cs.html":[2,0,0,568],
-"HotbarManager_8cs_source.html":[2,0,0,568]
+"HotItem_8cs_source.html":[2,0,0,569]
 };

@@ -36,6 +36,7 @@ var classElementContainer =
     [ "ListElements", "classElementContainer.html#a07747c1874b09f80ab65ea65ab715828", null ],
     [ "ListGeneFeats", "classElementContainer.html#ad0f040e5eb34d7edb48f09398299e38c", null ],
     [ "ListLearnable", "classElementContainer.html#a229820fd172e0bea0b8c8da2e2be59e0", null ],
+    [ "ListRune", "classElementContainer.html#a7c100f82acfca13f5be0b2cc247edf05", null ],
     [ "ModBase", "classElementContainer.html#aa35ecf8180a3beb037151361a5b03511", null ],
     [ "ModExp", "classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702", null ],
     [ "ModLink", "classElementContainer.html#a3767c52eb3147f12179d1f1d9e2f0880", null ],

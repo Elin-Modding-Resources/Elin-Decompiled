@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"SpriteVertexPositionChanger_8cs_source.html":[2,0,0,3,0,6],
+"StanceFury_8cs.html":[2,0,0,1098],
 "StanceFury_8cs_source.html":[2,0,0,1098],
 "StanceIai_8cs.html":[2,0,0,1099],
 "StanceIai_8cs_source.html":[2,0,0,1099],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "TileTypeFloorScaffold_8cs.html":[2,0,0,1201],
 "TileTypeFloorScaffold_8cs_source.html":[2,0,0,1201],
 "TileTypeFloor_8cs.html":[2,0,0,1200],
-"TileTypeFloor_8cs_source.html":[2,0,0,1200],
-"TileTypeHalfBlock_8cs.html":[2,0,0,1202],
-"TileTypeHalfBlock_8cs_source.html":[2,0,0,1202]
+"TileTypeFloor_8cs_source.html":[2,0,0,1200]
 };

@@ -23,6 +23,7 @@ var classELEMENT =
     [ "old_heal", "classELEMENT.html#a3cdd7cc0fac6850b3df169d47392e485", null ],
     [ "piety", "classELEMENT.html#a9265e530043d7b0f5accc56b44196a77", null ],
     [ "poison", "classELEMENT.html#a98ef09fde73031733700ba202b2c61ee", null ],
+    [ "purity", "classELEMENT.html#a64a9763ef1dd174cfbbfcbfa6d7aff17", null ],
     [ "quality", "classELEMENT.html#a8b88fabbdc12e1c405fd2f9773bbdb7f", null ],
     [ "race", "classELEMENT.html#a421bcb2a97da3801cf9985e91c7933c6", null ],
     [ "rare", "classELEMENT.html#a725014f1f25da5da71d66d3076c21fe2", null ],
