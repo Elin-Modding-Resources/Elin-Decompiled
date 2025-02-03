@@ -152,7 +152,8 @@ public class TraitDrink : Trait
 		ActEffect.Proc(IdEffect, Power, owner.blessedState, c, null, new ActRef
 		{
 			n1 = N1,
-			isPerfume = (this is TraitPerfume)
+			isPerfume = (this is TraitPerfume),
+			refThing = owner.Thing
 		});
 	}
 

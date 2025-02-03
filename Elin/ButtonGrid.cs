@@ -508,6 +508,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 		int num = t.Num;
 		mainText.text = num.ToString() ?? "";
 		mainText.SetActive(enable: true);
+		ing = null;
 		if (t.GetRootCard() != EClass.pc)
 		{
 			Attach("pcInv", rightAttach: false);

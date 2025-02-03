@@ -56,6 +56,10 @@ public class TraitKettle : TraitUniqueChara
 		{
 			return true;
 		}
+		if (t.HasElement(759))
+		{
+			return false;
+		}
 		if (t.sockets != null)
 		{
 			foreach (int socket in t.sockets)

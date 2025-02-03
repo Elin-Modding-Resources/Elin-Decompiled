@@ -126,7 +126,7 @@ public class TraitBaseSpellbook : TraitScroll
 		{
 			c.Say("spell_fail_monster", c);
 			c.PlaySound("spell_funnel");
-			for (int i = 0; i < 1 + EClass._zone.DangerLv / 15 + EClass.rnd(3 + EClass._zone.DangerLv / 15); i++)
+			for (int i = 0; i < Mathf.Clamp(1 + EClass._zone.DangerLv / 15 + EClass.rnd(3 + EClass._zone.DangerLv / 15), 1, 8); i++)
 			{
 				Chara chara = CharaGen.CreateFromFilter("c_readFail", EClass._zone.DangerLv);
 				EClass._zone.AddCard(chara, c.pos.GetNearestPoint(allowBlock: false, allowChara: false));

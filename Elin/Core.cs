@@ -22,6 +22,8 @@ public class Core : BaseCore
 
 	public static float gameDeltaNoPause;
 
+	public static float fixedFrame;
+
 	public static bool spiked;
 
 	private static SourceElement sourceElement;
@@ -287,6 +289,11 @@ public class Core : BaseCore
 		{
 			Init();
 		}
+	}
+
+	private void FixedUpdate()
+	{
+		fixedFrame += 1f;
 	}
 
 	public void Update()

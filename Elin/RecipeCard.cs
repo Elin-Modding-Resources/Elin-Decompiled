@@ -449,7 +449,7 @@ public class RecipeCard : Recipe
 		{
 			if (_pos.cell.IsBlocked && _pos.HasChara)
 			{
-				foreach (Chara item in _pos.ListCharas())
+				foreach (Chara item in _pos.ListCharas().Copy())
 				{
 					chara.Kick(item, ignoreSelf: false, karmaLoss: false);
 				}

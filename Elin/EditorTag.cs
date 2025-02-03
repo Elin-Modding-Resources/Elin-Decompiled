@@ -14,6 +14,7 @@ public enum EditorTag
 	InvulnerableToMobs = 51,
 	Male = 60,
 	Female = 61,
+	baby = 65,
 	NoSnow = 70,
 	TreasureMelilith = 110,
 	Boss = 120,

@@ -1069,7 +1069,11 @@ public class Thing : Card
 		}
 		if (GetInt(107) > 0)
 		{
-			n.AddText("isLicked");
+			n.AddText("isLicked", FontColor.Great);
+		}
+		if (base.isRuneAdded)
+		{
+			n.AddText("isRuneAdded", FontColor.Great);
 		}
 		if (!base.c_idDeity.IsEmpty())
 		{

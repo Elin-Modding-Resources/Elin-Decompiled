@@ -6,9 +6,9 @@ public class InvOwnerMod : InvOwnerDraglet
 
 	public static bool IsValidRuneMod(Thing t, SourceElement.Row row, string idMat)
 	{
-		if (idMat == "adamantite")
+		if (t.category.slot != 0 && !t.isRuneAdded && !t.HasElement(row.id))
 		{
-			return t.category.slot == 35;
+			return !t.IsUnique;
 		}
 		return false;
 	}
@@ -41,8 +41,9 @@ public class InvOwnerMod : InvOwnerDraglet
 			{
 				return false;
 			}
+			return true;
 		}
-		else if (!IsValidRangedMod(t, traitMod.source))
+		if (!IsValidRangedMod(t, traitMod.source))
 		{
 			return false;
 		}
@@ -61,9 +62,19 @@ public class InvOwnerMod : InvOwnerDraglet
 
 	public override void _OnProcess(Thing t)
 	{
-		SE.Play("reloaded");
-		EClass.pc.PlayEffect("identify");
 		Msg.Say("modded", t, owner);
-		t.ApplySocket(owner.Thing);
+		if (owner.trait is TraitRune)
+		{
+			SE.Play("intonation");
+			EClass.pc.PlayEffect("intonation");
+			t.elements.ModBase(owner.refVal, owner.encLV);
+			t.isRuneAdded = true;
+		}
+		else
+		{
+			SE.Play("reloaded");
+			EClass.pc.PlayEffect("identify");
+			t.ApplySocket(owner.Thing);
+		}
 	}
 }

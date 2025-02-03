@@ -870,6 +870,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public bool isRuneAdded
+	{
+		get
+		{
+			return _bits2[8];
+		}
+		set
+		{
+			_bits2[8] = value;
+		}
+	}
+
 	public bool isBackerContent => c_idBacker != 0;
 
 	public SourceBacker.Row sourceBacker
@@ -3528,9 +3540,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			hp = MaxHP;
 		}
+		Debug.Log(origin);
 		switch (origin)
 		{
 		case HealSource.Magic:
+		case HealSource.Item:
 			PlaySound("heal");
 			PlayEffect("heal");
 			break;
@@ -6384,12 +6398,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		int num = ((priceType != PriceType.CopyShop) ? 1 : 5);
 		float num2 = Mathf.Min(0.01f * (float)Evalue(752), 1f);
 		float num3 = Mathf.Min(0.01f * (float)Evalue(751), 1f);
+		float num4 = Mathf.Min(0.02f * (float)Evalue(759), 2f);
 		if (num3 > 0f)
 		{
 			num3 *= (float)num;
 		}
-		float num4 = Mathf.Clamp(1f + num2 + num3, 0.5f, 5f);
-		p *= num4;
+		float num5 = Mathf.Clamp(1f + num2 + num3, 0.5f, 5f) + num4;
+		p *= num5;
 		p *= 0.20000000298023224;
 		if (sell)
 		{
@@ -6472,11 +6487,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			break;
 		}
-		float num5 = Math.Clamp(Mathf.Sqrt(c.EvalueMax(291) + ((!sell && EClass._zone.IsPCFaction) ? (EClass.Branch.Evalue(2800) * 2) : 0)), 0f, 25f);
+		float num6 = Math.Clamp(Mathf.Sqrt(c.EvalueMax(291) + ((!sell && EClass._zone.IsPCFaction) ? (EClass.Branch.Evalue(2800) * 2) : 0)), 0f, 25f);
 		switch (priceType)
 		{
 		case PriceType.Tourism:
-			num5 = 0f;
+			num6 = 0f;
 			break;
 		case PriceType.Shipping:
 			if (sell)
@@ -6490,52 +6505,52 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				break;
 			}
-			float num6 = 1.25f;
+			float num7 = 1.25f;
 			if (EClass.Branch != null)
 			{
 				if (EClass.Branch.policies.IsActive(2817))
 				{
-					num6 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2817));
+					num7 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2817));
 				}
 				if (EClass.Branch.policies.IsActive(2816))
 				{
-					num6 += 0.2f + 0.02f * Mathf.Sqrt(EClass.Branch.Evalue(2816));
+					num7 += 0.2f + 0.02f * Mathf.Sqrt(EClass.Branch.Evalue(2816));
 				}
 				if (isChara)
 				{
 					if (EClass.Branch.policies.IsActive(2828))
 					{
-						num6 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2828));
+						num7 += 0.1f + 0.01f * Mathf.Sqrt(EClass.Branch.Evalue(2828));
 					}
 				}
 				else if (category.IsChildOf("food") || category.IsChildOf("drink"))
 				{
 					if (EClass.Branch.policies.IsActive(2818))
 					{
-						num6 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2818));
+						num7 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2818));
 					}
 				}
 				else if (category.IsChildOf("furniture"))
 				{
 					if (EClass.Branch.policies.IsActive(2819))
 					{
-						num6 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2819));
+						num7 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2819));
 					}
 				}
 				else if (EClass.Branch.policies.IsActive(2820))
 				{
-					num6 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2820));
+					num7 += 0.05f + 0.005f * Mathf.Sqrt(EClass.Branch.Evalue(2820));
 				}
 			}
-			p *= num6;
+			p *= num7;
 			break;
 		}
 		}
 		if ((uint)currency > 1u)
 		{
-			num5 = 0f;
+			num6 = 0f;
 		}
-		p *= (sell ? (1f + num5 * 0.02f) : (1f - num5 * 0.02f));
+		p *= (sell ? (1f + num6 * 0.02f) : (1f - num6 * 0.02f));
 		if (sell)
 		{
 			p = EClass.curve((int)p, 10000, 10000, 80);

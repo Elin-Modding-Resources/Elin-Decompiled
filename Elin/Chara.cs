@@ -1783,6 +1783,9 @@ public class Chara : Card, IPathfindWalker
 			bio.SetGender(1);
 			base.c_idPortrait = Portrait.GetRandomPortrait(1, GetIdPortraitCat());
 			break;
+		case EditorTag.baby:
+			SetFeat(1232);
+			break;
 		}
 		base.ApplyEditorTags(tag);
 	}
@@ -7021,6 +7024,15 @@ public class Chara : Card, IPathfindWalker
 				target = t
 			});
 			return true;
+		}
+		if (base.hp < MaxHP * 90 / 100)
+		{
+			Action healAction = t.trait.GetHealAction(this);
+			if (healAction != null)
+			{
+				healAction();
+				return true;
+			}
 		}
 		return false;
 	}

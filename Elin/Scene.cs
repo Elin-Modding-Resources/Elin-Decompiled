@@ -110,6 +110,8 @@ public class Scene : EMono
 
 	public ParticleSystem psRainSplashWater;
 
+	public ParticleSystem psFey;
+
 	public MeshPass[] passes;
 
 	[NonSerialized]

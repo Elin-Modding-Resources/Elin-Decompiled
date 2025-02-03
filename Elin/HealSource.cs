@@ -2,5 +2,6 @@ public enum HealSource
 {
 	None,
 	Magic,
-	HOT
+	HOT,
+	Item
 }

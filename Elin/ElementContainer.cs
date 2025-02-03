@@ -637,6 +637,11 @@ public class ElementContainer : EClass
 		return list;
 	}
 
+	public List<Element> ListRune()
+	{
+		return ListElements((Element a) => !a.source.encSlot.IsEmpty());
+	}
+
 	public void CopyTo(ElementContainer container)
 	{
 		container.dict.Clear();

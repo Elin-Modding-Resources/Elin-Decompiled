@@ -673,7 +673,7 @@ public class Recipe : EClass
 			break;
 		case "Obj":
 			EClass._map.SetObj(pos.x, pos.z, mat, tileRow.id, 1, dir);
-			if (tileType.ChangeBlockDir)
+			if (tileType.ChangeBlockDir || pos.growth is GrowSystemTreeSingle)
 			{
 				EClass._map.SetBlockDir(pos.x, pos.z, dir);
 			}

@@ -5,4 +5,6 @@ public class TraitStairsDown : TraitStairs
 	public override string langOnUse => "stairsDown";
 
 	public override bool IsDownstairs => true;
+
+	public override int InstallBottomPriority => 20000;
 }

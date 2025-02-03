@@ -15,7 +15,8 @@ public class TraitCrafter : Trait
 		Talisman,
 		Scratch,
 		Incubator,
-		Fortune
+		Fortune,
+		RuneMold
 	}
 
 	public enum AnimeType
@@ -270,6 +271,7 @@ public class TraitCrafter : Trait
 		MixType mixType = source.type.ToEnum<MixType>();
 		int num = source.num.Calc();
 		Thing t = null;
+		bool claimed;
 		switch (mixType)
 		{
 		case MixType.Food:
@@ -314,6 +316,44 @@ public class TraitCrafter : Trait
 			t = CraftUtil.MixIngredients(t, ai.ings, CraftUtil.MixType.General, 999, EClass.pc).Thing;
 			break;
 		}
+		case MixType.RuneMold:
+		{
+			Thing eq = ai.ings[0];
+			List<Element> list2 = eq.elements.ListRune();
+			if (list2.Count == 0)
+			{
+				Msg.SayNothingHappen();
+				break;
+			}
+			if (eq.material.hardness > owner.material.hardness)
+			{
+				Msg.Say("rune_tooHard", owner);
+				break;
+			}
+			EClass.ui.AddLayer<LayerList>().SetList2(list2, (Element a) => a.Name, delegate(Element a, ItemGeneral b)
+			{
+				owner.ModNum(-1);
+				eq.Destroy();
+				Thing thing7 = ThingGen.Create("rune");
+				thing7.refVal = a.id;
+				thing7.encLV = a.vBase + a.vSource;
+				EClass.pc.Pick(thing7);
+				EClass.pc.PlaySound("intonation");
+				EClass.pc.PlayEffect("intonation");
+			}, delegate(Element a, ItemGeneral b)
+			{
+				if (EClass.debug.showExtra)
+				{
+					b.SetSubText(a.vBase.ToString() + a.vSource, 200, FontColor.Default, TextAnchor.MiddleRight);
+				}
+				b.Build();
+			}).SetSize(500f)
+				.SetOnKill(delegate
+				{
+				})
+				.SetTitles("wRuneMold");
+			break;
+		}
 		case MixType.Talisman:
 		{
 			int num4 = EClass.pc.Evalue(1418);
@@ -331,8 +371,7 @@ public class TraitCrafter : Trait
 			break;
 		}
 		case MixType.Scratch:
-		{
-			bool claimed = false;
+			claimed = false;
 			Prize(20, "medal", "save", cat: false);
 			Prize(10, "plat", "save", cat: false);
 			Prize(10, "furniture", "nice", cat: true);
@@ -340,7 +379,6 @@ public class TraitCrafter : Trait
 			Prize(4, "food", "", cat: false);
 			Prize(1, "casino_coin", "", cat: false);
 			break;
-		}
 		case MixType.Fortune:
 		{
 			EClass.player.seedFortune++;
@@ -409,6 +447,18 @@ public class TraitCrafter : Trait
 			t.SetNum(num);
 		}
 		return t;
+		void Prize(int chance, string s, string col, bool cat)
+		{
+			if (!claimed && EClass.rnd(chance) == 0)
+			{
+				t = (cat ? ThingGen.CreateFromCategory(s, EClass.pc.LV) : ThingGen.Create(s, -1, EClass.pc.LV));
+				claimed = true;
+				if (col != "")
+				{
+					Msg.SetColor(col);
+				}
+			}
+		}
 	}
 
 	public override void TrySetAct(ActPlan p)

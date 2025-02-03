@@ -281,7 +281,12 @@ public class GameDate : Date
 		{
 			return;
 		}
-		num2 = (shippingResult.hearthExpGained = num2 / 2 + 1);
+		num2 = num2 / 2 + 1;
+		if (zone.branch.policies.IsActive(2515))
+		{
+			num2 = 0;
+		}
+		shippingResult.hearthExpGained = num2;
 		EClass.pc.homeBranch.log.Add(Msg.Say("shipped_collect"));
 		foreach (string item in list2)
 		{
