@@ -21,7 +21,7 @@ public class InvOwnerChangeMaterial : InvOwnerEffect
 		{
 			return true;
 		}
-		if (!t.category.IsChildOf("currency") && !t.IsUnique && t.trait.CanBeDropped && !t.source.fixedMaterial && !(t.trait is TraitCatalyst) && !(t.trait is TraitTile) && !(t.trait is TraitMaterialHammer))
+		if (!t.category.IsChildOf("currency") && !t.IsUnique && !t.isRuneAdded && t.trait.CanBeDropped && !t.source.fixedMaterial && !(t.trait is TraitCatalyst) && !(t.trait is TraitTile) && !(t.trait is TraitMaterialHammer))
 		{
 			return !(t.trait is TraitSeed);
 		}

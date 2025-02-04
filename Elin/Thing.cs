@@ -1881,7 +1881,7 @@ public class Thing : Card
 
 	public void TryLickEnchant(Chara c, bool msg = true, Chara tg = null, BodySlot slot = null)
 	{
-		if (!base.IsEquipmentOrRanged || base.IsCursed || base.rarity <= Rarity.Normal || GetInt(107) > 0)
+		if (!base.IsEquipmentOrRanged || base.IsCursed || base.rarity <= Rarity.Normal || GetInt(107) > 0 || base.isRuneAdded)
 		{
 			return;
 		}

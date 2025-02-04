@@ -199,7 +199,7 @@ public class RecipeCard : Recipe
 				break;
 			}
 		}
-		bool num5 = EClass.sources.cards.map[key].tag.Contains("static_craft");
+		bool flag3 = EClass.sources.cards.map[key].tag.Contains("static_craft");
 		if (!isDish && num4 < 1)
 		{
 			num4 = 1;
@@ -212,7 +212,7 @@ public class RecipeCard : Recipe
 		{
 			num = -1;
 		}
-		if (num5)
+		if (flag3)
 		{
 			num3 = 0;
 			flag = false;
@@ -222,15 +222,25 @@ public class RecipeCard : Recipe
 			qualityBonus = num3,
 			rarity = (flag ? Rarity.Crude : Rarity.Normal)
 		});
-		Thing thing = (num5 ? ThingGen.Create(key) : ThingGen.Create(key, num, num4));
+		Thing thing = (flag3 ? ThingGen.Create(key) : ThingGen.Create(key, num, num4));
 		if (thing.trait.CraftNum > 1)
 		{
 			thing.SetNum(thing.trait.CraftNum);
 		}
 		thing.idSkin = idSkin;
+		if (thing.IsEquipment && ings != null)
+		{
+			foreach (Thing ing2 in ings)
+			{
+				if (ing2.trait is TraitRune)
+				{
+					thing.elements.ModBase(ing2.refVal, ing2.encLV);
+				}
+			}
+		}
 		thing.Identify(show: false);
 		thing.isCrafted = true;
-		if (!num5)
+		if (!flag3)
 		{
 			if (base.source.colorIng != 0)
 			{
@@ -243,7 +253,7 @@ public class RecipeCard : Recipe
 			}
 		}
 		thing.SetBlessedState(blessed);
-		if (!num5)
+		if (!flag3)
 		{
 			if (isDish)
 			{

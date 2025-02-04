@@ -3540,7 +3540,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			hp = MaxHP;
 		}
-		Debug.Log(origin);
 		switch (origin)
 		{
 		case HealSource.Magic:

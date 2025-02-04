@@ -639,7 +639,7 @@ public class ElementContainer : EClass
 
 	public List<Element> ListRune()
 	{
-		return ListElements((Element a) => !a.source.encSlot.IsEmpty());
+		return ListElements((Element a) => !a.source.encSlot.IsEmpty() && a.vBase + a.vSource != 0);
 	}
 
 	public void CopyTo(ElementContainer container)

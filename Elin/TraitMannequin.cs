@@ -32,7 +32,7 @@ public class TraitMannequin : TraitItem
 		List<Thing> list = new List<Thing>();
 		foreach (BodySlot slot in EClass.pc.body.slots)
 		{
-			if (slot.elementId != 44 && slot.elementId != 45 && slot.thing != null && slot.thing.blessedState >= BlessedState.Normal)
+			if (slot.elementId != 44 && slot.thing != null && slot.thing.blessedState >= BlessedState.Normal)
 			{
 				list.Add(slot.thing);
 			}

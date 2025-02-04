@@ -319,13 +319,15 @@ public class TraitCrafter : Trait
 		case MixType.RuneMold:
 		{
 			Thing eq = ai.ings[0];
-			List<Element> list2 = eq.elements.ListRune();
+			Thing thing7 = eq.Duplicate(1);
+			thing7.SetEncLv(0);
+			List<Element> list2 = thing7.elements.ListRune();
 			if (list2.Count == 0)
 			{
 				Msg.SayNothingHappen();
 				break;
 			}
-			if (eq.material.hardness > owner.material.hardness)
+			if (eq.material.hardness > owner.material.hardness && !EClass.debug.enable)
 			{
 				Msg.Say("rune_tooHard", owner);
 				break;
@@ -334,19 +336,21 @@ public class TraitCrafter : Trait
 			{
 				owner.ModNum(-1);
 				eq.Destroy();
-				Thing thing7 = ThingGen.Create("rune");
-				thing7.refVal = a.id;
-				thing7.encLV = a.vBase + a.vSource;
-				EClass.pc.Pick(thing7);
+				Thing thing8 = ThingGen.Create("rune");
+				thing8.refVal = a.id;
+				thing8.encLV = a.vBase + a.vSource;
+				EClass.pc.Pick(thing8);
 				EClass.pc.PlaySound("intonation");
 				EClass.pc.PlayEffect("intonation");
 			}, delegate(Element a, ItemGeneral b)
 			{
-				if (EClass.debug.showExtra)
-				{
-					b.SetSubText(a.vBase.ToString() + a.vSource, 200, FontColor.Default, TextAnchor.MiddleRight);
-				}
+				b.SetSubText((a.vBase + a.vSource).ToString() ?? "", 200, FontColor.Default, TextAnchor.MiddleRight);
 				b.Build();
+				if (a.HasTag("noRune"))
+				{
+					b.button1.interactable = false;
+					b.button1.mainText.gameObject.AddComponent<CanvasGroup>().alpha = 0.5f;
+				}
 			}).SetSize(500f)
 				.SetOnKill(delegate
 				{

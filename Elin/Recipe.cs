@@ -672,7 +672,7 @@ public class Recipe : EClass
 			EClass._map.SetBridge(pos.x, pos.z, Mathf.Clamp(bridgeHeight + altitude, 0, 255), mat, tileRow.id, dir);
 			break;
 		case "Obj":
-			EClass._map.SetObj(pos.x, pos.z, mat, tileRow.id, 1, dir);
+			EClass._map.SetObj(pos.x, pos.z, mat, tileRow.id, 1, dir, ignoreRandomMat: true);
 			if (tileType.ChangeBlockDir || pos.growth is GrowSystemTreeSingle)
 			{
 				EClass._map.SetBlockDir(pos.x, pos.z, dir);

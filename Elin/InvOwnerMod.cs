@@ -6,7 +6,24 @@ public class InvOwnerMod : InvOwnerDraglet
 
 	public static bool IsValidRuneMod(Thing t, SourceElement.Row row, string idMat)
 	{
-		if (t.category.slot != 0 && !t.isRuneAdded && !t.HasElement(row.id))
+		if (row.category == "resist")
+		{
+			foreach (Element item in t.elements.ListElements())
+			{
+				if (item.source.category == "resist")
+				{
+					return false;
+				}
+			}
+		}
+		foreach (int key in t.material.elementMap.Keys)
+		{
+			if (key == row.id)
+			{
+				return false;
+			}
+		}
+		if (t.category.slot != 0 && !t.isRuneAdded)
 		{
 			return !t.IsUnique;
 		}
@@ -67,8 +84,9 @@ public class InvOwnerMod : InvOwnerDraglet
 		{
 			SE.Play("intonation");
 			EClass.pc.PlayEffect("intonation");
-			t.elements.ModBase(owner.refVal, owner.encLV);
+			t.elements.SetBase(owner.refVal, owner.encLV);
 			t.isRuneAdded = true;
+			owner.ModNum(-1);
 		}
 		else
 		{

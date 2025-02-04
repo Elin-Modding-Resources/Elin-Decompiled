@@ -16,7 +16,7 @@ public class TraitRuneMold : TraitCrafter
 
 	public override bool IsIngredient(string cat, Card c)
 	{
-		if (c.rarity > MaxRarity)
+		if (c.rarity > MaxRarity || c.c_isImportant)
 		{
 			return false;
 		}

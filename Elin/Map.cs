@@ -1506,7 +1506,7 @@ public class Map : MapBounds, IPathfindGrid
 		SetObj(x, z, (byte)EClass.sources.objs.rows[id].DefaultMaterial.id, id, value, dir);
 	}
 
-	public void SetObj(int x, int z, int idMat, int idObj, int value, int dir)
+	public void SetObj(int x, int z, int idMat, int idObj, int value, int dir, bool ignoreRandomMat = false)
 	{
 		Cell cell = cells[x, z];
 		if (cell.sourceObj.id == 118 || idObj == 118)
@@ -1520,7 +1520,7 @@ public class Map : MapBounds, IPathfindGrid
 		cell.isHarvested = false;
 		cell.isObjDyed = false;
 		SourceObj.Row sourceObj = cell.sourceObj;
-		if (!sourceObj.matCategory.IsEmpty())
+		if (!ignoreRandomMat && !sourceObj.matCategory.IsEmpty())
 		{
 			int num = EClass._zone.DangerLv;
 			if (sourceObj.tag.Contains("spot"))
@@ -1630,7 +1630,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 	}
 
-	public void MineBlock(Point point, bool recoverBlock = false, Chara c = null)
+	public void MineBlock(Point point, bool recoverBlock = false, Chara c = null, bool mineObj = true)
 	{
 		bool flag = ActionMode.Mine.IsRoofEditMode() && point.cell._roofBlock != 0;
 		if (!point.IsValid || (!flag && !point.cell.HasBlock))
@@ -1658,7 +1658,7 @@ public class Map : MapBounds, IPathfindGrid
 				RemoveLonelyRamps(point.cell);
 			}
 			point.SetBlock();
-			if (flag2 && point.sourceObj.tileType.IsBlockMount)
+			if (flag2 && point.sourceObj.tileType.IsBlockMount && mineObj)
 			{
 				MineObj(point, null, c);
 			}
@@ -1806,7 +1806,6 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		Cell cell = point.cell;
 		SourceObj.Row sourceObj = cell.sourceObj;
-		bool flag = false;
 		if (c == null && task != null)
 		{
 			c = task.owner;
@@ -1848,7 +1847,7 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				if (cell.HasBlock && (sourceObj.id == 18 || sourceObj.id == 19))
 				{
-					MineBlock(point, recoverBlock: false, c);
+					MineBlock(point, recoverBlock: false, c, mineObj: false);
 				}
 				switch (sourceObj.alias)
 				{
@@ -1871,10 +1870,6 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		SetObj(point.x, point.z);
 		cell.gatherCount = 0;
-		if (flag)
-		{
-			RefreshFOV(point.x, point.z);
-		}
 		void Pop(Thing t)
 		{
 			if (EClass.scene.actionMode.IsBuildMode && EClass.debug.godBuild)

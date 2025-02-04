@@ -7363,7 +7363,7 @@ public class Chara : Card, IPathfindWalker
 			Msg.Say("affinityNone", c, this);
 			return;
 		}
-		if (!t.isCopy && t.IsCursed && t.IsEquipmentOrRanged && c.HasElement(1414))
+		if (!t.isCopy && t.IsCursed && t.IsEquipmentOrRanged && !t.IsAmmo && c.HasElement(1414))
 		{
 			bool num = t.blessedState == BlessedState.Doomed;
 			int num2 = 200 + t.LV * 3;
