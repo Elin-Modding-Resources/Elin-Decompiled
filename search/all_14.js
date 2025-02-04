@@ -458,7 +458,7 @@ var searchData=
   ['setnosell_455',['SetNoSell',['../classCard.html#abf12e8d4318bc2da41c22b32a7347857',1,'Card']]],
   ['setnosound_456',['SetNoSound',['../classLayerList.html#ae3f66e9d3ecf82e304fc9ffa18840daf',1,'LayerList']]],
   ['setnum_457',['SetNum',['../classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e',1,'Card']]],
-  ['setobj_458',['SetObj',['../classUICardInfo.html#a3a562719a2c782ba0e34b1885be380d8',1,'UICardInfo.SetObj()'],['../classPoint.html#a1b776a5c157ff23d2c418ba134448d74',1,'Point.SetObj()'],['../classMap.html#ae7aa431b1a705ca0af0a307b58ec78a2',1,'Map.SetObj()'],['../classLayerInfo.html#a2187026de5b5cd1b1a408d48b84453c0',1,'LayerInfo.SetObj()'],['../classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc',1,'BaseCard.SetObj()'],['../classMap.html#af848dbc201a7a7a24869d0f3d63df4ac',1,'Map.SetObj()']]],
+  ['setobj_458',['SetObj',['../classUICardInfo.html#a3a562719a2c782ba0e34b1885be380d8',1,'UICardInfo.SetObj()'],['../classPoint.html#a1b776a5c157ff23d2c418ba134448d74',1,'Point.SetObj()'],['../classMap.html#ae7eeb50def43ebdfa1d07e101e7a596e',1,'Map.SetObj()'],['../classLayerInfo.html#a2187026de5b5cd1b1a408d48b84453c0',1,'LayerInfo.SetObj()'],['../classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc',1,'BaseCard.SetObj()'],['../classMap.html#af848dbc201a7a7a24869d0f3d63df4ac',1,'Map.SetObj()']]],
   ['setobj_3c_20t_20_3e_459',['SetObj&lt; T &gt;',['../classBaseCard.html#acabe2b9b106e2196dd8856f9fa21b6f4',1,'BaseCard']]],
   ['setobject_460',['SetObject',['../classButtonGrid.html#a481bd8aa40e2ad1186c9ff3b200aa170',1,'ButtonGrid']]],
   ['setoffset_461',['setOffset',['../classMosframe_1_1DynamicScrollViewExtention.html#a73c4ddd74e8a8de4a4ddf4c2d91bf08f',1,'Mosframe::DynamicScrollViewExtention']]],

@@ -482,7 +482,7 @@ var searchData=
   ['mine_479',['mine',['../Emo_8cs.html#a3a776133b1ce94bdc19666187232d047a918b81db5e91d031548b963c93845e5b',1,'Emo.cs']]],
   ['mine_480',['Mine',['../classZone__Dungeon.html#adb8bd50a7445f690837777e003424b3eafedc0e3f18d0ff5df1579ad5ce33ba5d',1,'Zone_Dungeon.Mine()'],['../classCursorSystem.html#aa6e09d588ef0468948c9c8fc604ad27b',1,'CursorSystem.Mine()'],['../classActionMode.html#af4f718263d361a4d8a6c8f56d5dd883f',1,'ActionMode.Mine()']]],
   ['mine_481',['mine',['../classTaskManager_1_1Designations.html#aad4bbcfbd0a6dc433cd134ba9457d293',1,'TaskManager::Designations']]],
-  ['mineblock_482',['MineBlock',['../classMap.html#ab061fde4f0e4f0c54fb95da68cc9dcae',1,'Map']]],
+  ['mineblock_482',['MineBlock',['../classMap.html#a51bbbcb951eb4d3c64498ea00d50aa37',1,'Map']]],
   ['mined_483',['mined',['../classTaskMine.html#afa4b27f1771c354290b358ce5be75640',1,'TaskMine']]],
   ['minefloor_484',['MineFloor',['../classMap.html#a7bdcb253372258682073ab5b18f77560',1,'Map']]],
   ['minelapsed_485',['minElapsed',['../classZoneEvent.html#aa13f7a926daf1a2420487667eaa1097c',1,'ZoneEvent']]],
