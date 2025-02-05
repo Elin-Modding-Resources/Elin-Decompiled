@@ -122,6 +122,18 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		{
 		}
 
+		public bool HasEnc(int id)
+		{
+			foreach (int key in elementMap.Keys)
+			{
+				if (key == id)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
 		public void AddBlood(Point p, int a = 1)
 		{
 			if (decal == 0)

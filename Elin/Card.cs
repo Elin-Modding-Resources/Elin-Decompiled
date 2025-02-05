@@ -870,18 +870,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public bool isRuneAdded
-	{
-		get
-		{
-			return _bits2[8];
-		}
-		set
-		{
-			_bits2[8] = value;
-		}
-	}
-
 	public bool isBackerContent => c_idBacker != 0;
 
 	public SourceBacker.Row sourceBacker
@@ -1690,6 +1678,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		set
 		{
 			SetObj(9, value);
+		}
+	}
+
+	public List<SocketData> socketList
+	{
+		get
+		{
+			return GetObj<List<SocketData>>(17);
+		}
+		set
+		{
+			SetObj(17, value);
 		}
 	}
 
@@ -3286,6 +3286,58 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				sockets[i] = 0;
 			}
 		}
+	}
+
+	public SocketData AddRune(Card rune)
+	{
+		return AddRune(rune.refVal, rune.encLV);
+	}
+
+	public SocketData AddRune(int idEle, int v)
+	{
+		if (socketList == null)
+		{
+			socketList = new List<SocketData>();
+		}
+		SocketData socketData = new SocketData
+		{
+			idEle = idEle,
+			value = v,
+			type = SocketData.Type.Rune
+		};
+		socketList.Add(socketData);
+		elements.SetTo(idEle, v);
+		return socketData;
+	}
+
+	public SocketData GetRuneEnc(int idEle)
+	{
+		if (socketList != null)
+		{
+			foreach (SocketData socket in socketList)
+			{
+				if (socket.type == SocketData.Type.Rune && socket.idEle == idEle)
+				{
+					return socket;
+				}
+			}
+		}
+		return null;
+	}
+
+	public bool HasRune()
+	{
+		if (socketList != null)
+		{
+			foreach (SocketData socket in socketList)
+			{
+				if (socket.type == SocketData.Type.Rune && !socket.dontConsumeSlot)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 	public void OnChildNumChange(Card c)

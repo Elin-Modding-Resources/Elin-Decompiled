@@ -306,10 +306,10 @@ public class TraitCrafter : Trait
 		case MixType.Sculpture:
 		{
 			t = ThingGen.Create(thing3);
-			List<CardRow> list = EClass.player.codex.ListKills();
-			list.Add(EClass.sources.cards.map["putty"]);
-			list.Add(EClass.sources.cards.map["snail"]);
-			CardRow cardRow = list.RandomItemWeighted((CardRow a) => Mathf.Max(50 - a.LV, Mathf.Clamp(EClass.pc.Evalue(258) / 2, 1, a.LV * 2)));
+			List<CardRow> list2 = EClass.player.codex.ListKills();
+			list2.Add(EClass.sources.cards.map["putty"]);
+			list2.Add(EClass.sources.cards.map["snail"]);
+			CardRow cardRow = list2.RandomItemWeighted((CardRow a) => Mathf.Max(50 - a.LV, Mathf.Clamp(EClass.pc.Evalue(258) / 2, 1, a.LV * 2)));
 			t.c_idRefCard = cardRow.id;
 			t.ChangeMaterial(thing.material);
 			t.SetEncLv(Mathf.Min(EClass.rnd(EClass.rnd(Mathf.Max(5 + EClass.pc.Evalue(258) - cardRow.LV, 1))), 12));
@@ -321,22 +321,32 @@ public class TraitCrafter : Trait
 			Thing eq = ai.ings[0];
 			Thing thing7 = eq.Duplicate(1);
 			thing7.SetEncLv(0);
-			List<Element> list2 = thing7.elements.ListRune();
-			if (list2.Count == 0)
+			List<Element> list = thing7.elements.ListRune();
+			if (list.Count == 0)
 			{
 				Msg.SayNothingHappen();
 				break;
+			}
+			foreach (Element item in list)
+			{
+				SocketData runeEnc = eq.GetRuneEnc(item.id);
+				if (runeEnc != null)
+				{
+					item.vBase = runeEnc.value;
+					item.vSource = 0;
+				}
 			}
 			if (eq.material.hardness > owner.material.hardness && !EClass.debug.enable)
 			{
 				Msg.Say("rune_tooHard", owner);
 				break;
 			}
-			EClass.ui.AddLayer<LayerList>().SetList2(list2, (Element a) => a.Name, delegate(Element a, ItemGeneral b)
+			EClass.ui.AddLayer<LayerList>().SetList2(list, (Element a) => a.Name, delegate(Element a, ItemGeneral b)
 			{
 				owner.ModNum(-1);
 				eq.Destroy();
 				Thing thing8 = ThingGen.Create("rune");
+				thing8.ChangeMaterial(owner.material);
 				thing8.refVal = a.id;
 				thing8.encLV = a.vBase + a.vSource;
 				EClass.pc.Pick(thing8);

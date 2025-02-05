@@ -463,6 +463,18 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public bool IsPCFaction => base.mainFaction == EClass.pc.faction;
 
+	public bool IsPCFactionOrTent
+	{
+		get
+		{
+			if (base.mainFaction != EClass.pc.faction)
+			{
+				return EClass._zone is Zone_Tent;
+			}
+			return true;
+		}
+	}
+
 	public bool IsStartZone => this == EClass.game.StartZone;
 
 	public bool IsInstance => instance != null;

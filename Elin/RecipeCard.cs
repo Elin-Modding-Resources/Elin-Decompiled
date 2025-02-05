@@ -234,7 +234,7 @@ public class RecipeCard : Recipe
 			{
 				if (ing2.trait is TraitRune)
 				{
-					thing.elements.ModBase(ing2.refVal, ing2.encLV);
+					thing.AddRune(ing2).dontConsumeSlot = true;
 				}
 			}
 		}

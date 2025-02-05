@@ -793,21 +793,41 @@ public class ElementContainer : EClass
 				{
 					text = funcText(e, text);
 				}
-				n.AddText("NoteText_prefwidth", text, color);
+				UIItem uIItem = n.AddText("NoteText_enc", text, color);
+				Sprite sprite = EClass.core.refs.icons.enc.enc;
+				Thing thing = Card?.Thing;
+				if (thing != null)
+				{
+					if (thing.material.HasEnc(e.id))
+					{
+						sprite = EClass.core.refs.icons.enc.mat;
+					}
+					if (thing.GetRuneEnc(e.id) != null)
+					{
+						sprite = EClass.core.refs.icons.enc.rune;
+					}
+				}
+				if ((bool)sprite)
+				{
+					uIItem.image1.SetActive(enable: true);
+					uIItem.image1.sprite = sprite;
+				}
+				bool enable = e.HasTag("weaponEnc") || e is Ability || e.source.categorySub == "eleConvert" || e.source.categorySub == "eleAttack";
+				uIItem.image2.SetActive(enable);
 				onAddNote?.Invoke(n, e);
 				continue;
 			}
 			}
-			UIItem uIItem = n.AddTopic("TopicAttribute", e.Name, "".TagColor((e.ValueWithoutLink > 0) ? SkinManager.CurrentColors.textGood : SkinManager.CurrentColors.textBad, e.ValueWithoutLink.ToString() ?? ""));
-			if ((bool)uIItem.button1)
+			UIItem uIItem2 = n.AddTopic("TopicAttribute", e.Name, "".TagColor((e.ValueWithoutLink > 0) ? SkinManager.CurrentColors.textGood : SkinManager.CurrentColors.textBad, e.ValueWithoutLink.ToString() ?? ""));
+			if ((bool)uIItem2.button1)
 			{
-				uIItem.button1.tooltip.onShowTooltip = delegate(UITooltip t)
+				uIItem2.button1.tooltip.onShowTooltip = delegate(UITooltip t)
 				{
 					e.WriteNote(t.note, EClass.pc.elements);
 				};
 			}
-			e.SetImage(uIItem.image1);
-			Image image = uIItem.image2;
+			e.SetImage(uIItem2.image1);
+			Image image = uIItem2.image2;
 			int value = (e.Potential - 80) / 20;
 			image.enabled = e.Potential != 80;
 			image.sprite = EClass.core.refs.spritesPotential[Mathf.Clamp(Mathf.Abs(value), 0, EClass.core.refs.spritesPotential.Count - 1)];

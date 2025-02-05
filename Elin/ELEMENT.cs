@@ -649,7 +649,17 @@ public class Element : EClass
 		{
 			n.Space(4);
 			UIItem uIItem = n.AddExtra<UIItem>("costPrice");
-			uIItem.text1.SetText(cost.cost.ToString() ?? "", (((cost.type == Act.CostType.MP) ? c.mana.value : c.stamina.value) >= cost.cost) ? FontColor.Good : FontColor.Bad);
+			int num = cost.cost;
+			if (cost.type == Act.CostType.MP && c.Evalue(483) > 0)
+			{
+				num = cost.cost * 100 / (100 + (int)Mathf.Sqrt(c.Evalue(483) * 10) * 3);
+			}
+			string text4 = cost.cost.ToString() ?? "";
+			if (num != cost.cost)
+			{
+				text4 = num + " (" + text4 + ")";
+			}
+			uIItem.text1.SetText(text4, (((cost.type == Act.CostType.MP) ? c.mana.value : c.stamina.value) >= num) ? FontColor.Good : FontColor.Bad);
 			uIItem.image1.sprite = ((cost.type == Act.CostType.MP) ? EClass.core.refs.icons.mana : EClass.core.refs.icons.stamina);
 			uIItem.image1.SetNativeSize();
 		}

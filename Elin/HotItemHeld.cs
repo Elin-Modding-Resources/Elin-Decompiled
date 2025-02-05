@@ -31,7 +31,7 @@ public class HotItemHeld : HotItemThing
 		{
 			return false;
 		}
-		if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFaction && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
+		if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFactionOrTent && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
 		{
 			return false;
 		}

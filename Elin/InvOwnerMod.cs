@@ -16,14 +16,11 @@ public class InvOwnerMod : InvOwnerDraglet
 				}
 			}
 		}
-		foreach (int key in t.material.elementMap.Keys)
+		if (t.material.HasEnc(row.id))
 		{
-			if (key == row.id)
-			{
-				return false;
-			}
+			return false;
 		}
-		if (t.category.slot != 0 && !t.isRuneAdded)
+		if (t.category.slot != 0 && !t.HasRune())
 		{
 			return !t.IsUnique;
 		}
@@ -84,8 +81,7 @@ public class InvOwnerMod : InvOwnerDraglet
 		{
 			SE.Play("intonation");
 			EClass.pc.PlayEffect("intonation");
-			t.elements.SetBase(owner.refVal, owner.encLV);
-			t.isRuneAdded = true;
+			t.AddRune(owner);
 			owner.ModNum(-1);
 		}
 		else

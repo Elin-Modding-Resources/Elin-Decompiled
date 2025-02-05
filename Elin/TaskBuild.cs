@@ -83,7 +83,7 @@ public class TaskBuild : TaskBaseBuild
 			{
 				return false;
 			}
-			if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFaction && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
+			if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFactionOrTent && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
 			{
 				return false;
 			}
@@ -177,7 +177,7 @@ public class TaskBuild : TaskBaseBuild
 			}
 			if (!EClass.debug.ignoreBuildRule && !EClass._zone.IsPCFaction)
 			{
-				if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFaction && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
+				if (!(EClass._zone is Zone_Tent) && !EClass._zone.IsPCFactionOrTent && EClass.pc.held.trait.CanBeOnlyBuiltInHome)
 				{
 					return HitResult.Invalid;
 				}
