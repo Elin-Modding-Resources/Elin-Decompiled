@@ -1,6 +1,7 @@
 var classCoreRef_1_1Icons =
 [
     [ "Affinity", "classCoreRef_1_1Icons_1_1Affinity.html", "classCoreRef_1_1Icons_1_1Affinity" ],
+    [ "Enc", "classCoreRef_1_1Icons_1_1Enc.html", "classCoreRef_1_1Icons_1_1Enc" ],
     [ "affnity", "classCoreRef_1_1Icons.html#afbb5a47da23ece3ea1f84c13df70b9cd", null ],
     [ "bed", "classCoreRef_1_1Icons.html#af73c420bed60717a9c9bcd82aa5e36c3", null ],
     [ "caste", "classCoreRef_1_1Icons.html#aed98f3cb4cb6b061a8476fd276271a49", null ],
@@ -8,6 +9,7 @@ var classCoreRef_1_1Icons =
     [ "defaultHotItem", "classCoreRef_1_1Icons.html#a6ac3d6db421a2c20f52940426ff58ce7", null ],
     [ "delete", "classCoreRef_1_1Icons.html#a5071c4bbcdbc33b8520c8a93e27c233c", null ],
     [ "down", "classCoreRef_1_1Icons.html#ac6a34fe4de624fd1a760f32fa8a24f72", null ],
+    [ "enc", "classCoreRef_1_1Icons.html#ab753c65fe393999b727a883e79b9bf64", null ],
     [ "go", "classCoreRef_1_1Icons.html#a5c8295a7830b12a4a0882a2c2df175d7", null ],
     [ "home", "classCoreRef_1_1Icons.html#a311725d213bd13523c613c37fafc3da8", null ],
     [ "inspect", "classCoreRef_1_1Icons.html#ac0cd7f1b9f2604298cc5dc7b95ff8a33", null ],

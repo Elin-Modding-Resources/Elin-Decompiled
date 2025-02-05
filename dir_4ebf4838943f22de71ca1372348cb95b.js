@@ -1040,6 +1040,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "SlaverData.cs", "SlaverData_8cs.html", "SlaverData_8cs" ],
     [ "SlaverType.cs", "SlaverType_8cs.html", "SlaverType_8cs" ],
     [ "SLOT.cs", "SLOT_8cs.html", "SLOT_8cs" ],
+    [ "SocketData.cs", "SocketData_8cs.html", "SocketData_8cs" ],
     [ "SourceArea.cs", "SourceArea_8cs.html", "SourceArea_8cs" ],
     [ "SourceAsset.cs", "SourceAsset_8cs.html", "SourceAsset_8cs" ],
     [ "SourceBacker.cs", "SourceBacker_8cs.html", "SourceBacker_8cs" ],

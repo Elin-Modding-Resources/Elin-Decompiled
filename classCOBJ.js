@@ -13,6 +13,7 @@ var classCOBJ =
     [ "houseBoardData", "classCOBJ.html#a03f0d28bb87d65b037b7503873d3f9b2", null ],
     [ "roomPlateData", "classCOBJ.html#a384a447256e96248965b00dbdb5a1cad", null ],
     [ "slaverData", "classCOBJ.html#a3a43855c39f980465356bab93d16c52b", null ],
+    [ "socketList", "classCOBJ.html#a8aa320b8ebd598a93a24492399b38fe0", null ],
     [ "textureData", "classCOBJ.html#a90066ab9635f54adf680e7a67b71fd70", null ],
     [ "uniqueData", "classCOBJ.html#a8d86a1ccc9bbeedcbc086ffe322990a0", null ],
     [ "windowSaveData", "classCOBJ.html#a430eb1bab04b83ad5a0f29db4df0273a", null ]

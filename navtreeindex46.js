@@ -1,5 +1,12 @@
 var NAVTREEINDEX46 =
 {
+"classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1":[1,0,285,0],
+"classConBuffStats.html#ac4737a6c3e8cbe1bac169da4f6c69cc1":[1,0,285,5],
+"classConBuffStats.html#aca3550d9a6658613de6e23f5f6b93874":[1,0,285,9],
+"classConBuffStats.html#acaa10b9aa1f326df5a9150643878f330":[1,0,285,4],
+"classConBuffStats.html#ad853ae024d0c00b0252dcecd13742c03":[1,0,285,3],
+"classConBuffStats.html#aeb332106512f4814085c3f06d7930637":[1,0,285,6],
+"classConBuffStats.html#af11facc3c065d7a72b0d2b70851ead63":[1,0,285,10],
 "classConBuffStats.html#afb918f93387ca79874e9952d960aa37d":[1,0,285,7],
 "classConBurning.html":[1,0,286],
 "classConBurning.html#a49c579b9b8cd5a365f10d8dbe8a62e93":[1,0,286,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX46 =
 "classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454":[1,0,303,8],
 "classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09":[1,0,303,7],
 "classConfigPreference.html":[1,0,304],
-"classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1":[1,0,304,0],
-"classConfigPreference.html#a8cd362445590ff4623b1ef76f882ce5b":[1,0,304,1],
-"classConfigPreference.html#af01013389586f3c55a43a4bdcd949432":[1,0,304,2],
-"classConfigTactics.html":[1,0,305],
-"classConfigTactics.html#a47dffa4b1ca69a9226fa4054e1d6d405":[1,0,305,1],
-"classConfigTactics.html#a70a0db59b46e9424171d363f2ad2f188":[1,0,305,0],
-"classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d":[1,0,305,2],
-"classConsoleProDebug.html":[1,0,328]
+"classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1":[1,0,304,0]
 };

@@ -7,6 +7,7 @@ var CoreRef_8cs =
     [ "CoreRef.InventoryStyle", "classCoreRef_1_1InventoryStyle.html", "classCoreRef_1_1InventoryStyle" ],
     [ "CoreRef.Icons", "classCoreRef_1_1Icons.html", "classCoreRef_1_1Icons" ],
     [ "CoreRef.Icons.Affinity", "classCoreRef_1_1Icons_1_1Affinity.html", "classCoreRef_1_1Icons_1_1Affinity" ],
+    [ "CoreRef.Icons.Enc", "classCoreRef_1_1Icons_1_1Enc.html", "classCoreRef_1_1Icons_1_1Enc" ],
     [ "CoreRef.Biomes", "classCoreRef_1_1Biomes.html", "classCoreRef_1_1Biomes" ],
     [ "CoreRef.Rects", "classCoreRef_1_1Rects.html", "classCoreRef_1_1Rects" ],
     [ "CoreRef.StateIcons", "classCoreRef_1_1StateIcons.html", "classCoreRef_1_1StateIcons" ],

@@ -185,6 +185,7 @@ var classZone =
     [ "IsLoaded", "classZone.html#ae9fe6424d0966988a6ffb07d5f903bf4", null ],
     [ "IsNefia", "classZone.html#a396f4c936d0ea7a489f4ed9cd32e5818", null ],
     [ "IsPCFaction", "classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0", null ],
+    [ "IsPCFactionOrTent", "classZone.html#a5087a704f7346f0660ac8941e94cff0d", null ],
     [ "IsReturnLocation", "classZone.html#a65d316e69e82d1a8a5973d447b593843", null ],
     [ "IsSkyLevel", "classZone.html#a4fc0615656263255e26f1039af4d6602", null ],
     [ "IsStartZone", "classZone.html#a79d8a69c170a6377219509b5e4bcdd10", null ],

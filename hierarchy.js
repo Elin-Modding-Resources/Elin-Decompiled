@@ -1105,6 +1105,7 @@ var hierarchy =
       [ "ShopTransaction", "classShopTransaction.html", null ],
       [ "ShrineData", "classShrineData.html", null ],
       [ "SlaverData", "classSlaverData.html", null ],
+      [ "SocketData", "classSocketData.html", null ],
       [ "SourceCard", "classSourceCard.html", null ],
       [ "SourceExtension", "classSourceExtension.html", null ],
       [ "SourcePref", "classSourcePref.html", [
@@ -1953,6 +1954,7 @@ var hierarchy =
     [ "ElementOrigin", "classElementOrigin.html", null ],
     [ "ElementRef", "classElementRef.html", null ],
     [ "ElinEncoder", "classElinEncoder.html", null ],
+    [ "CoreRef.Icons.Enc", "classCoreRef_1_1Icons_1_1Enc.html", null ],
     [ "ENC", "classENC.html", null ],
     [ "ERROR", "classERROR.html", null ],
     [ "InvOwner.ErrorMessage", "classInvOwner_1_1ErrorMessage.html", null ],
