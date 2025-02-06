@@ -4,8 +4,7 @@ var classSourceElement_1_1Row =
     [ "GetName", "classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9", null ],
     [ "GetSprite", "classSourceElement_1_1Row.html#ab7fff6c47f36c12bb6874fcc9080d6b1", null ],
     [ "IsEncAppliable", "classSourceElement_1_1Row.html#a3fd71eb2d29dc3f58cc89adfde645fec", null ],
-    [ "IsEncAppliable", "classSourceElement_1_1Row.html#a971359157591e5ab2bb6f47802b3bc5b", null ],
-    [ "IsEncAppliable", "classSourceElement_1_1Row.html#ada33168a64beecc7441ee9924ad32b55", null ],
+    [ "IsMaterialEncAppliable", "classSourceElement_1_1Row.html#ac49c8cccce2906413105614c9740837d", null ],
     [ "SetImage", "classSourceElement_1_1Row.html#ab64861092c5652bee03b8ee6b92eddac", null ],
     [ "abilityType", "classSourceElement_1_1Row.html#a5fcdd676ecb98d08e93d211a2040e859", null ],
     [ "adjective", "classSourceElement_1_1Row.html#a23af0a91b2c7af3b7ebe2b2dbccf79cd", null ],
@@ -40,6 +39,7 @@ var classSourceElement_1_1Row =
     [ "isPrimaryAttribute", "classSourceElement_1_1Row.html#ad78e773d282e5796a75472a2932ccdd0", null ],
     [ "isSkill", "classSourceElement_1_1Row.html#ad6b81fe6b932c03cd86c8c9c9422b7e3", null ],
     [ "isSpell", "classSourceElement_1_1Row.html#a3149e26b1be4cc6cdce85a54ff1d3343", null ],
+    [ "isTrait", "classSourceElement_1_1Row.html#ac1ecea3a9b867462ebabb3fd20df01a7", null ],
     [ "langAct", "classSourceElement_1_1Row.html#a1cc4544c021b5e7640017edf7e9bc2ed", null ],
     [ "levelBonus", "classSourceElement_1_1Row.html#a09b79be9d3e545e81636171f3d2f3eb3", null ],
     [ "levelBonus_JP", "classSourceElement_1_1Row.html#a79caa3c3d601b6d4e7524996287b43dd", null ],
@@ -79,5 +79,6 @@ var classSourceElement_1_1Row =
     [ "type", "classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580", null ],
     [ "value", "classSourceElement_1_1Row.html#a7c90b7d633f5722cee42545faaeb3965", null ],
     [ "GetAlias", "classSourceElement_1_1Row.html#a0e1136b0bbbd340de2cf6843262df806", null ],
+    [ "IsWeaponEnc", "classSourceElement_1_1Row.html#aaf6f148f0134f89a242657663bc3305e", null ],
     [ "UseAlias", "classSourceElement_1_1Row.html#aa634fd91f3c6fd1cf27ff52109e8c369", null ]
 ];

@@ -3,13 +3,14 @@ var classTileType =
     [ "RampType", "classTileType.html#a40fd08da6f01be4b322461238acafae5", [
       [ "None", "classTileType.html#a40fd08da6f01be4b322461238acafae5a6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Full", "classTileType.html#a40fd08da6f01be4b322461238acafae5abbd47109890259c0127154db1af26c75", null ],
-      [ "Half", "classTileType.html#a40fd08da6f01be4b322461238acafae5ac48615a1bc4197056d522af276aa5a85", null ]
+      [ "Half", "classTileType.html#a40fd08da6f01be4b322461238acafae5ac48615a1bc4197056d522af276aa5a85", null ],
+      [ "Flat", "classTileType.html#a40fd08da6f01be4b322461238acafae5a745e3db6a7ffd50e1a72b39482f0882d", null ]
     ] ],
     [ "_HitTest", "classTileType.html#aecca33f3d58982dbbe16da5031c11ad6", null ],
     [ "CanRotate", "classTileType.html#ab8b4a408f2be7dc7c50095db0ef714f7", null ],
     [ "GetDesiredDir", "classTileType.html#ab0e2d32e4be2c7410c69978e77037a86", null ],
     [ "GetMountHeight", "classTileType.html#a2d59899a5c47cc73a46751f75152f164", null ],
-    [ "GetRampFix", "classTileType.html#a0c32c118c873e96ebd239ff8c7ffbe1b", null ],
+    [ "GetRampFix", "classTileType.html#ac5b875d43ce4f29ad9f6526d5a862fe1", null ],
     [ "HitTest", "classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d", null ],
     [ "Init", "classTileType.html#a4456e9bf550fe200ae026894f22e0922", null ],
     [ "Block", "classTileType.html#afca5a7092a22d2536c97994d1f79658d", null ],
@@ -51,6 +52,7 @@ var classTileType =
     [ "Seed", "classTileType.html#ab79b60a4a59aa881db9ac50f5d1cc971", null ],
     [ "Sky", "classTileType.html#a1b9fcbbffb060bcfa7b868f9afd3295b", null ],
     [ "Slope", "classTileType.html#a5fb9d9984fdf9601c53ba0dd921987f5", null ],
+    [ "SlopeFlat", "classTileType.html#a81844eb8247e9020a1771190b7e93b67", null ],
     [ "Stairs", "classTileType.html#af7a4c27969fd129853729ae637b770ca", null ],
     [ "StairsHalf", "classTileType.html#a60ba40e57b12a7d031a8058db602d623", null ],
     [ "Tent", "classTileType.html#ab1eb14f2067cf9560a3f14baeb8e542a", null ],

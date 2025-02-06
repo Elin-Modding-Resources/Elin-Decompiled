@@ -1413,6 +1413,7 @@ var annotated_dup =
     [ "TileTypeSeed", "classTileTypeSeed.html", "classTileTypeSeed" ],
     [ "TileTypeSky", "classTileTypeSky.html", "classTileTypeSky" ],
     [ "TileTypeSlope", "classTileTypeSlope.html", "classTileTypeSlope" ],
+    [ "TileTypeSlopeFlat", "classTileTypeSlopeFlat.html", "classTileTypeSlopeFlat" ],
     [ "TileTypeStairs", "classTileTypeStairs.html", "classTileTypeStairs" ],
     [ "TileTypeStairsHalf", "classTileTypeStairsHalf.html", "classTileTypeStairsHalf" ],
     [ "TileTypeTent", "classTileTypeTent.html", null ],

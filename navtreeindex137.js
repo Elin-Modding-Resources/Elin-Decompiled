@@ -1,5 +1,13 @@
 var NAVTREEINDEX137 =
 {
+"namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4faefe098277ee5771451a5295a2fd86f54":[0,4,0,6,4],
+"namespaceApplibot.html":[0,4,1],
+"namespaceAssets.html":[0,4,2],
+"namespaceAssets_1_1Resources.html":[0,4,2,0],
+"namespaceAssets_1_1Resources_1_1Scene.html":[0,4,2,0,0],
+"namespaceAssets_1_1Resources_1_1Scene_1_1Profile.html":[0,4,2,0,0,0],
+"namespaceAssets_1_1Resources_1_1Scene_1_1Profile_1_1Global.html":[0,4,2,0,0,0,0],
+"namespaceAssets_1_1Resources_1_1Scene_1_1Render.html":[0,4,2,0,0,1],
 "namespaceB83.html":[0,4,3],
 "namespaceB83_1_1Win32.html":[0,4,3,0],
 "namespaceB83_1_1Win32.html#a627533690054d981042e076f04aa24e1":[0,4,3,0,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX137 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daee8663b5640a8d2e5baeee082b5f69ee":[0,4,3,0,8,76],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf1ba083fe5ee06aded6aa92ddb5e3f94":[0,4,3,0,8,29],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf2e496ef2eb1ec8f3dc0e75b99d52411":[0,4,3,0,8,36],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf31a13e8d68291dc936825e7093cf4d6":[0,4,3,0,8,46],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf5d652839fae45649001249d8462eebd":[0,4,3,0,8,207],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf5f7fc0c7a07dcf4209f3096984cda14":[0,4,3,0,8,70],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf7f93635f8e193a924ae4a691bb66b8f":[0,4,3,0,8,3],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf81f76a27df5a93af247e99148ac175b":[0,4,3,0,8,116],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf96eee4e48ee90430f17fb3a8388507b":[0,4,3,0,8,210],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dafc89cc0c0724c4467dd3d42cebe22cda":[0,4,3,0,8,15],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dafe3c554280e3c257d73c92c6c7f203c9":[0,4,3,0,8,204],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daff4d5593d8c03948c9b0ee182d479341":[0,4,3,0,8,94]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf31a13e8d68291dc936825e7093cf4d6":[0,4,3,0,8,46]
 };

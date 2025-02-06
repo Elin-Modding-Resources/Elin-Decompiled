@@ -1,5 +1,8 @@
 var NAVTREEINDEX90 =
 {
+"classQuestManager.html#a03a85ca1ebdfbcd246547fe6d6d19213":[1,0,978,15],
+"classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28":[1,0,978,25],
+"classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf":[1,0,978,28],
 "classQuestManager.html#a281c23ba4522ebc66a200b6f66348eb6":[1,0,978,10],
 "classQuestManager.html#a2d53433827d15c28403cf19cb228bf68":[1,0,978,17],
 "classQuestManager.html#a320593473ea4f2341f4bb694f1f8f0f8":[1,0,978,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX90 =
 "classRaceBonus.html#ada422a858396669a8d82c244a81d0fd8":[1,0,1018,0],
 "classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09":[1,0,1018,1],
 "classRaceBonus.html#ae31a97330bd51599ea755f680f14d8a2":[1,0,1018,2],
-"classRand.html":[1,0,1019],
-"classRand.html#a07e7911615d9e9fa579859b4cd8f47f9":[1,0,1019,1],
-"classRand.html#a116307e9f0d536f3c83e7828acc25ec5":[1,0,1019,13],
-"classRand.html#a187db907a68b67bec2ae3bef8d07a856":[1,0,1019,6]
+"classRand.html":[1,0,1019]
 };

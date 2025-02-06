@@ -1,5 +1,8 @@
 var NAVTREEINDEX62 =
 {
+"classFactionBranch_1_1Statistics.html#a2f0ac1be8ed0c97edf64f0e25ca2979d":[1,0,478,0,1],
+"classFactionBranch_1_1Statistics.html#a411501e6fcd5c839e8e58e9c3c36c91d":[1,0,478,0,3],
+"classFactionBranch_1_1Statistics.html#a481a3d819c60ac2657a88e41e6b7f883":[1,0,478,0,5],
 "classFactionBranch_1_1Statistics.html#a506c4b5e7166b706436cad3e8011fd54":[1,0,478,0,4],
 "classFactionBranch_1_1Statistics.html#a6906cfb5377d932f82c25fd54e0e719d":[1,0,478,0,0],
 "classFactionBranch_1_1Statistics.html#aa09f5187e9c5ec092e0f210b0591d7bc":[1,0,478,0,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX62 =
 "classGameContractResolver.html#a9bd3abb8ca7cb07ff18d8dd0abf51790":[1,0,497,0],
 "classGameData.html":[1,0,498],
 "classGameData.html#a43977101aacc23cff46581fc74142a08":[1,0,498,2],
-"classGameData.html#ac93c0a803c83d08e18579eb0b1ee71aa":[1,0,498,3],
-"classGameData.html#ad4f29bf2ab5ec89e5dd4380a6f8f9768":[1,0,498,1],
-"classGameData.html#aeaa6a2e2ccd207e7b35aaa717ef31dd3":[1,0,498,0],
-"classGameDate.html":[1,0,499]
+"classGameData.html#ac93c0a803c83d08e18579eb0b1ee71aa":[1,0,498,3]
 };

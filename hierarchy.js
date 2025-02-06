@@ -1243,7 +1243,9 @@ var hierarchy =
             [ "TileTypeWaterfall", "classTileTypeWaterfall.html", null ]
           ] ],
           [ "TileTypeScaffold", "classTileTypeScaffold.html", null ],
-          [ "TileTypeSlope", "classTileTypeSlope.html", null ],
+          [ "TileTypeSlope", "classTileTypeSlope.html", [
+            [ "TileTypeSlopeFlat", "classTileTypeSlopeFlat.html", null ]
+          ] ],
           [ "TileTypeStairs", "classTileTypeStairs.html", [
             [ "TileTypeRooftop", "classTileTypeRooftop.html", null ],
             [ "TileTypeStairsHalf", "classTileTypeStairsHalf.html", null ]

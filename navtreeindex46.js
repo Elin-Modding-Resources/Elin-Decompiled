@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"classConBuffStats.html#a7ac5ab53c9ea33a6a4730b841ef5fdaf":[1,0,285,1],
+"classConBuffStats.html#a89aa2540012608c39824505a1ba5c378":[1,0,285,13],
+"classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5":[1,0,285,11],
 "classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1":[1,0,285,0],
 "classConBuffStats.html#ac4737a6c3e8cbe1bac169da4f6c69cc1":[1,0,285,5],
 "classConBuffStats.html#aca3550d9a6658613de6e23f5f6b93874":[1,0,285,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb":[1,0,303,13],
 "classConfigAutoCombat.html#abe364d7de4682ae19eddb2bf478a2d58":[1,0,303,14],
 "classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3":[1,0,303,1],
-"classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454":[1,0,303,8],
-"classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09":[1,0,303,7],
-"classConfigPreference.html":[1,0,304],
-"classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1":[1,0,304,0]
+"classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454":[1,0,303,8]
 };

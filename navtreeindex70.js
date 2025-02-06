@@ -1,5 +1,8 @@
 var NAVTREEINDEX70 =
 {
+"classInvOwnerAutoCombatBar.html#a099ff71b2f522df2fc17e08e59d9ffb5":[1,0,659,8],
+"classInvOwnerAutoCombatBar.html#a2505b4c5a20b596c54b86661f930dec7":[1,0,659,7],
+"classInvOwnerAutoCombatBar.html#a298997a28c1adeb6a856284c13053119":[1,0,659,3],
 "classInvOwnerAutoCombatBar.html#a371161fb6b4832b98a6d018e97698f41":[1,0,659,4],
 "classInvOwnerAutoCombatBar.html#a414ba64608448c57af39960dad179be4":[1,0,659,2],
 "classInvOwnerAutoCombatBar.html#ab2f844222858ed8813bd1aa77f3f2d2e":[1,0,659,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX70 =
 "classInvOwner_1_1ListInteraction.html#a9347b55760ccac85f47dda97ad8b6154":[1,0,657,3,0],
 "classInvOwner_1_1Transaction.html":[1,0,657,4],
 "classInvOwner_1_1Transaction.html#a048377434dd77cc4e56964b09e0458d0":[1,0,657,4,16],
-"classInvOwner_1_1Transaction.html#a0b8402931c705614ee30bd7725584892":[1,0,657,4,3],
-"classInvOwner_1_1Transaction.html#a1548d14710414e62bb77788eea1ccdfa":[1,0,657,4,1],
-"classInvOwner_1_1Transaction.html#a3c6051b99b57059570f6c3ee06cc6782":[1,0,657,4,2],
-"classInvOwner_1_1Transaction.html#a459c599fd39641ce3297e1713c2f3fce":[1,0,657,4,17]
+"classInvOwner_1_1Transaction.html#a0b8402931c705614ee30bd7725584892":[1,0,657,4,3]
 };

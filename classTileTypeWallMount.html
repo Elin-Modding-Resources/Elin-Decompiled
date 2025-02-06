@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.86 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.87 Nightly</span>
    </div>
   </td>
  </tr>
@@ -122,8 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab0e2d32e4be2c7410c69978e77037a86 inherit pub_methods_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d59899a5c47cc73a46751f75152f164 inherit pub_methods_classTileType"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a2d59899a5c47cc73a46751f75152f164">GetMountHeight</a> (ref Vector3 v, <a class="el" href="classPoint.html">Point</a> p, int d, <a class="el" href="classCard.html">Card</a> target=null)</td></tr>
 <tr class="separator:a2d59899a5c47cc73a46751f75152f164 inherit pub_methods_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c32c118c873e96ebd239ff8c7ffbe1b inherit pub_methods_classTileType"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a0c32c118c873e96ebd239ff8c7ffbe1b">GetRampFix</a> (int dir)</td></tr>
-<tr class="separator:a0c32c118c873e96ebd239ff8c7ffbe1b inherit pub_methods_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b875d43ce4f29ad9f6526d5a862fe1 inherit pub_methods_classTileType"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#ac5b875d43ce4f29ad9f6526d5a862fe1">GetRampFix</a> (int dir, <a class="el" href="classSourcePref.html">SourcePref</a> pref=null)</td></tr>
+<tr class="separator:ac5b875d43ce4f29ad9f6526d5a862fe1 inherit pub_methods_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -354,6 +354,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a40fd08da6f01be4b322461238acafae5 inherit pub_types_classTileType"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">RampType</a> { <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5a6adf97f83acf6453d4a6a4b1070f3754">None</a>
 , <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5abbd47109890259c0127154db1af26c75">Full</a>
 , <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5ac48615a1bc4197056d522af276aa5a85">Half</a>
+, <a class="el" href="classTileType.html#a40fd08da6f01be4b322461238acafae5a745e3db6a7ffd50e1a72b39482f0882d">Flat</a>
  }</td></tr>
 <tr class="separator:a40fd08da6f01be4b322461238acafae5 inherit pub_types_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classTileType"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classTileType')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classTileType.html">TileType</a></td></tr>
@@ -389,6 +390,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a641bec189d9b5dbc81ae6850d3fa81b1 inherit pub_static_attribs_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fb9d9984fdf9601c53ba0dd921987f5 inherit pub_static_attribs_classTileType"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeSlope.html">TileTypeSlope</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a5fb9d9984fdf9601c53ba0dd921987f5">Slope</a> = new <a class="el" href="classTileTypeSlope.html">TileTypeSlope</a>()</td></tr>
 <tr class="separator:a5fb9d9984fdf9601c53ba0dd921987f5 inherit pub_static_attribs_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81844eb8247e9020a1771190b7e93b67 inherit pub_static_attribs_classTileType"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeSlopeFlat.html">TileTypeSlopeFlat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a81844eb8247e9020a1771190b7e93b67">SlopeFlat</a> = new <a class="el" href="classTileTypeSlopeFlat.html">TileTypeSlopeFlat</a>()</td></tr>
+<tr class="separator:a81844eb8247e9020a1771190b7e93b67 inherit pub_static_attribs_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f57f8425c92d5b5b7bac21cac1f224f inherit pub_static_attribs_classTileType"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeHalfBlock.html">TileTypeHalfBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a1f57f8425c92d5b5b7bac21cac1f224f">HalfBlock</a> = new <a class="el" href="classTileTypeHalfBlock.html">TileTypeHalfBlock</a>()</td></tr>
 <tr class="separator:a1f57f8425c92d5b5b7bac21cac1f224f inherit pub_static_attribs_classTileType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7a4c27969fd129853729ae637b770ca inherit pub_static_attribs_classTileType"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeStairs.html">TileTypeStairs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#af7a4c27969fd129853729ae637b770ca">Stairs</a> = new <a class="el" href="classTileTypeStairs.html">TileTypeStairs</a>()</td></tr>

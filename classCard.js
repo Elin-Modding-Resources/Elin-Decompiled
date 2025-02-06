@@ -398,6 +398,7 @@ var classCard =
     [ "isElemental", "classCard.html#a1b8297aed57b50fc74d83b08089a399f", null ],
     [ "IsEquipment", "classCard.html#a9d9706366dbcdb8827734c18001f8f35", null ],
     [ "IsEquipmentOrRanged", "classCard.html#a8f074386edfb55a8db4bf6ad31f49c22", null ],
+    [ "IsEquipmentOrRangedOrAmmo", "classCard.html#a4cd822f787ae387c8a37301b56645c1a", null ],
     [ "isFireproof", "classCard.html#ab4cc31d0fa966203d152482ce0624532", null ],
     [ "isFloating", "classCard.html#a2b41046e2279091f77dbb3d33e247496", null ],
     [ "IsFood", "classCard.html#a772c9c38ff8325ceeb30a6e37fe6c6b7", null ],

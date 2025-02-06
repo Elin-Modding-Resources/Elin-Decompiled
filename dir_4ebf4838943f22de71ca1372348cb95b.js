@@ -1226,6 +1226,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TileTypeSeed.cs", "TileTypeSeed_8cs.html", "TileTypeSeed_8cs" ],
     [ "TileTypeSky.cs", "TileTypeSky_8cs.html", "TileTypeSky_8cs" ],
     [ "TileTypeSlope.cs", "TileTypeSlope_8cs.html", "TileTypeSlope_8cs" ],
+    [ "TileTypeSlopeFlat.cs", "TileTypeSlopeFlat_8cs.html", "TileTypeSlopeFlat_8cs" ],
     [ "TileTypeStairs.cs", "TileTypeStairs_8cs.html", "TileTypeStairs_8cs" ],
     [ "TileTypeStairsHalf.cs", "TileTypeStairsHalf_8cs.html", "TileTypeStairsHalf_8cs" ],
     [ "TileTypeTent.cs", "TileTypeTent_8cs.html", "TileTypeTent_8cs" ],
