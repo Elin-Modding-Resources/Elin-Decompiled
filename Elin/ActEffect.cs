@@ -857,10 +857,10 @@ public class ActEffect : EClass
 			{
 				return;
 			}
-			Thing thing = ThingGen.Create("mine");
-			thing.c_idRefCard = "dog_mine";
+			Thing thing3 = ThingGen.Create("mine");
+			thing3.c_idRefCard = "dog_mine";
 			Zone.ignoreSpawnAnime = true;
-			EClass._zone.AddCard(thing, CC.pos).Install();
+			EClass._zone.AddCard(thing3, CC.pos).Install();
 			break;
 		}
 		case EffectId.MagicMap:
@@ -913,9 +913,9 @@ public class ActEffect : EClass
 			TC.PlaySound("curse3");
 			TC.PlayEffect("curse");
 			TC.Say("forgetItems", TC);
-			int num5 = power / 50 + 1 + EClass.rnd(3);
+			int num = power / 50 + 1 + EClass.rnd(3);
 			List<Thing> source = TC.things.List((Thing t) => t.c_IDTState == 0);
-			for (int j = 0; j < num5; j++)
+			for (int i = 0; i < num; i++)
 			{
 				source.RandomItem().c_IDTState = 5;
 			}
@@ -927,10 +927,10 @@ public class ActEffect : EClass
 		case EffectId.EnchantArmorGreat:
 		{
 			bool armor = id == EffectId.EnchantArmor || id == EffectId.EnchantArmorGreat;
-			bool flag3 = id == EffectId.EnchantWeaponGreat || id == EffectId.EnchantArmorGreat;
+			bool flag4 = id == EffectId.EnchantWeaponGreat || id == EffectId.EnchantArmorGreat;
 			if (!tc.isThing)
 			{
-				LayerDragGrid.CreateEnchant(CC, armor, flag3, state);
+				LayerDragGrid.CreateEnchant(CC, armor, flag4, state);
 				return;
 			}
 			cc.PlaySound("identify");
@@ -941,8 +941,8 @@ public class ActEffect : EClass
 				tc.ModEncLv(-1);
 				break;
 			}
-			int num3 = (flag3 ? 4 : 2) + (blessed ? 1 : 0);
-			if (tc.encLV >= num3)
+			int num5 = (flag4 ? 4 : 2) + (blessed ? 1 : 0);
+			if (tc.encLV >= num5)
 			{
 				cc.Say("enc_resist", tc);
 				break;
@@ -978,17 +978,17 @@ public class ActEffect : EClass
 				LayerDragGrid.CreateUncurse(CC, state);
 				return;
 			}
-			Thing thing3 = tc.Thing;
-			if (thing3.blessedState == BlessedState.Cursed)
+			Thing thing = tc.Thing;
+			if (thing.blessedState == BlessedState.Cursed)
 			{
-				thing3.SetBlessedState(BlessedState.Normal);
+				thing.SetBlessedState(BlessedState.Normal);
 			}
-			else if (thing3.blessedState == BlessedState.Doomed)
+			else if (thing.blessedState == BlessedState.Doomed)
 			{
-				thing3.SetBlessedState(BlessedState.Normal);
+				thing.SetBlessedState(BlessedState.Normal);
 			}
-			thing3.GetRootCard()?.TryStack(thing3);
-			LayerInventory.SetDirty(thing3);
+			thing.GetRootCard()?.TryStack(thing);
+			LayerInventory.SetDirty(thing);
 			break;
 		}
 		case EffectId.Lighten:
@@ -1010,16 +1010,16 @@ public class ActEffect : EClass
 			Element orCreateElement2 = tc.elements.GetOrCreateElement(65);
 			Element orCreateElement3 = tc.elements.GetOrCreateElement(67);
 			Element orCreateElement4 = tc.elements.GetOrCreateElement(66);
-			bool flag4 = tc.IsEquipmentOrRanged || tc.IsThrownWeapon || tc.IsAmmo;
+			bool flag3 = tc.IsEquipmentOrRangedOrAmmo || tc.IsThrownWeapon;
 			if (flag)
 			{
 				num4 = (int)(0.01f * (float)num4 * (float)power * 0.75f + 500f);
 				if (num4 < 0 || num4 > 10000000)
 				{
 					num4 = 10000000;
-					flag4 = false;
+					flag3 = false;
 				}
-				if (flag4)
+				if (flag3)
 				{
 					if (tc.IsWeapon || tc.IsThrownWeapon || tc.IsAmmo)
 					{
@@ -1041,7 +1041,7 @@ public class ActEffect : EClass
 				{
 					power /= 4;
 				}
-				if (flag4)
+				if (flag3)
 				{
 					if (tc.IsWeapon || tc.IsThrownWeapon || tc.IsAmmo)
 					{
@@ -1107,36 +1107,36 @@ public class ActEffect : EClass
 			string name = tc.Name;
 			if (row == null)
 			{
-				bool num = id == EffectId.ChangeMaterialGreater;
+				bool num2 = id == EffectId.ChangeMaterialGreater;
 				bool flag2 = id == EffectId.ChangeMaterialLesser;
 				string text2 = tc.Thing.source.tierGroup;
 				Dictionary<string, SourceMaterial.TierList> tierMap = SourceMaterial.tierMap;
-				int num2 = 1;
+				int num3 = 1;
 				if (flag)
 				{
-					num2 -= 2;
+					num3 -= 2;
 				}
 				if (blessed)
 				{
-					num2++;
+					num3++;
 				}
-				if (num)
+				if (num2)
 				{
-					num2++;
+					num3++;
 				}
 				if (flag2)
 				{
-					num2 -= 2;
+					num3 -= 2;
 				}
-				num2 = Mathf.Clamp(num2 + EClass.rnd(2), 0, 4);
+				num3 = Mathf.Clamp(num3 + EClass.rnd(2), 0, 4);
 				if (EClass.rnd(10) == 0)
 				{
 					text2 = ((text2 == "metal") ? "leather" : "metal");
 				}
 				SourceMaterial.TierList tierList = (text2.IsEmpty() ? tierMap.RandomItem() : tierMap[text2]);
-				for (int i = 0; i < 1000; i++)
+				for (int j = 0; j < 1000; j++)
 				{
-					row = tierList.tiers[num2].Select();
+					row = tierList.tiers[num3].Select();
 					if (row != tc.material)
 					{
 						break;

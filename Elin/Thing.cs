@@ -413,7 +413,7 @@ public class Thing : Card
 				SetBase(65, source.defense[1] / 3);
 			}
 		}
-		if (base.IsEquipmentOrRanged || base.IsAmmo)
+		if (base.IsEquipmentOrRangedOrAmmo)
 		{
 			if (base.IsWeapon || base.IsAmmo)
 			{
@@ -503,7 +503,7 @@ public class Thing : Card
 		string text6 = source.GetText("unit");
 		ArticleStyle style2 = ((style == NameStyle.FullNoArticle) ? ArticleStyle.None : ArticleStyle.Default);
 		bool num2 = base.IsIdentified || source.unknown.IsEmpty();
-		bool isEquipmentOrRanged = base.IsEquipmentOrRanged;
+		bool isEquipmentOrRangedOrAmmo = base.IsEquipmentOrRangedOrAmmo;
 		bool flag = Lang.setting.nameStyle == 0;
 		if (num2)
 		{
@@ -524,11 +524,11 @@ public class Thing : Card
 			{
 				text = id;
 			}
-			if (!isEquipmentOrRanged || !base.IsIdentified || base.rarity < Rarity.Legendary)
+			if (!isEquipmentOrRangedOrAmmo || !base.IsIdentified || base.rarity < Rarity.Legendary)
 			{
 				if (source.naming == "m" || (source.naming == "ms" && base.material != source.DefaultMaterial))
 				{
-					if (isEquipmentOrRanged)
+					if (isEquipmentOrRangedOrAmmo)
 					{
 						string[] textArray = base.material.GetTextArray("altName");
 						if (textArray != null && textArray.Length >= 2)
@@ -655,13 +655,13 @@ public class Thing : Card
 				case Rarity.Artifact:
 					style2 = ArticleStyle.None;
 					text3 = "★";
-					text = (isEquipmentOrRanged ? text.Bracket(3) : text);
+					text = (isEquipmentOrRangedOrAmmo ? text.Bracket(3) : text);
 					break;
 				case Rarity.Legendary:
 				case Rarity.Mythical:
 					style2 = ArticleStyle.The;
 					text3 = "☆";
-					if (isEquipmentOrRanged)
+					if (isEquipmentOrRangedOrAmmo)
 					{
 						Rand.UseSeed(base.uid + EClass.game.seed, delegate
 						{
@@ -843,7 +843,7 @@ public class Thing : Card
 		n.Clear();
 		string text2 = "";
 		TraitAbility traitAbility = trait as TraitAbility;
-		bool showEQStats = base.IsEquipmentOrRanged || base.IsAmmo;
+		bool showEQStats = base.IsEquipmentOrRangedOrAmmo;
 		bool flag = mode == IInspect.NoteMode.Product;
 		bool flag2 = base.IsIdentified || flag;
 		text2 = base.Name;
@@ -1182,7 +1182,7 @@ public class Thing : Card
 		{
 			AddText("isBed".lang(traitBed.MaxHolders.ToString() ?? ""), FontColor.Default);
 		}
-		bool flag3 = base.IsEquipmentOrRanged || base.IsAmmo || base.IsThrownWeapon;
+		bool flag3 = base.IsEquipmentOrRangedOrAmmo || base.IsThrownWeapon;
 		if (flag2)
 		{
 			if (flag3)
@@ -1969,7 +1969,7 @@ public class Thing : Card
 			IDTSource.Skill => Rarity.Superior, 
 			_ => Rarity.Normal, 
 		};
-		if (rarity != 0 && ((base.IsEquipmentOrRanged && base.rarity >= rarity) || base.rarity >= Rarity.Mythical))
+		if (rarity != 0 && ((base.IsEquipmentOrRangedOrAmmo && base.rarity >= rarity) || base.rarity >= Rarity.Mythical))
 		{
 			base.c_IDTState = 3;
 		}

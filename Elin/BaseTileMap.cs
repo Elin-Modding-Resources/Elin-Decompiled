@@ -1367,7 +1367,7 @@ public class BaseTileMap : EMono
 					{
 						if (t.TileType.IsRamp)
 						{
-							Vector3 rampFix2 = t.TileType.GetRampFix(t.dir);
+							Vector3 rampFix2 = t.TileType.GetRampFix(t.dir, pref);
 							orgX += rampFix2.x;
 							orgY += rampFix2.y;
 							orgZ += rampFix2.z;
@@ -3204,7 +3204,7 @@ public class BaseTileMap : EMono
 				}
 				if (thing.TileType.IsRamp)
 				{
-					Vector3 rampFix2 = thing.TileType.GetRampFix(thing.dir);
+					Vector3 rampFix2 = thing.TileType.GetRampFix(thing.dir, pref);
 					zero.x += rampFix2.x;
 					zero.y += rampFix2.y;
 					zero.z += rampFix2.z;

@@ -69,7 +69,7 @@ public class TraitDrink : Trait
 		case EffectId.Acidproof:
 			if (!t.isAcidproof)
 			{
-				return t.IsEquipmentOrRanged;
+				return t.IsEquipmentOrRangedOrAmmo;
 			}
 			return false;
 		case EffectId.DrinkWater:

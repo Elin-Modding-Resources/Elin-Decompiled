@@ -8,7 +8,8 @@ public class TileType : EClass
 	{
 		None,
 		Full,
-		Half
+		Half,
+		Flat
 	}
 
 	public static TileTypeNone None = new TileTypeNone();
@@ -20,6 +21,8 @@ public class TileType : EClass
 	public static TileTypeBlockShip BlockShip = new TileTypeBlockShip();
 
 	public static TileTypeSlope Slope = new TileTypeSlope();
+
+	public static TileTypeSlopeFlat SlopeFlat = new TileTypeSlopeFlat();
 
 	public static TileTypeHalfBlock HalfBlock = new TileTypeHalfBlock();
 
@@ -366,10 +369,14 @@ public class TileType : EClass
 		v += EClass.screen.tileMap.altitudeFix * target.altitude;
 	}
 
-	public Vector3 GetRampFix(int dir)
+	public Vector3 GetRampFix(int dir, SourcePref pref = null)
 	{
 		int num = (int)Ramp * 2 - 2 + ((dir > 1) ? 1 : 0);
 		Vector3 vector = EClass.setting.render.rampFix[num];
+		if (pref != null && Ramp == RampType.Flat)
+		{
+			vector.y += pref.height;
+		}
 		return new Vector3(vector.x * (float)((dir % 2 == 0) ? 1 : (-1)), vector.y, vector.z);
 	}
 }

@@ -507,7 +507,7 @@ public class LayerCraft : LayerBaseCraft
 		{
 			thing.sockets.Clear();
 		}
-		if (thing.IsEquipmentOrRanged)
+		if (thing.IsEquipmentOrRangedOrAmmo)
 		{
 			foreach (Element item in thing.elements.dict.Values.ToList())
 			{

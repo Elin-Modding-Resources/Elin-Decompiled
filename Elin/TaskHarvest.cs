@@ -461,7 +461,7 @@ public class TaskHarvest : BaseTaskHarvest
 	public string GetIdDismantled()
 	{
 		string result = target.source.components[0].Split('|')[0].Split('/')[0];
-		if (target.IsEquipmentOrRanged || target.IsAmmo)
+		if (target.IsEquipmentOrRangedOrAmmo)
 		{
 			result = target.material.thing;
 		}

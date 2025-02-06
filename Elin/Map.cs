@@ -1251,7 +1251,7 @@ public class Map : MapBounds, IPathfindGrid
 				continue;
 			}
 			Card rootCard3 = item3.GetRootCard();
-			if (item3.IsEquipmentOrRanged && (EClass.rnd(4) != 0 || ((item3.IsRangedWeapon || item3.Thing.isEquipped) && rootCard3.IsPCFaction && EClass.rnd(4) != 0)))
+			if (item3.IsEquipmentOrRangedOrAmmo && (EClass.rnd(4) != 0 || ((item3.IsRangedWeapon || item3.Thing.isEquipped) && rootCard3.IsPCFaction && EClass.rnd(4) != 0)))
 			{
 				continue;
 			}

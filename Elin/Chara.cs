@@ -4973,22 +4973,22 @@ public class Chara : Card, IPathfindWalker
 		{
 			EClass.player.doneBackers.Add(base.sourceBacker.id);
 		}
-		if (IsPCParty)
+		if (base.IsPCFactionOrMinion)
 		{
-			if (!IsPC)
+			if (!IsPC && !IsMinion && EClass.game.config.autoCombat.abortOnAllyDead && EClass.player.TryAbortAutoCombat())
 			{
-				EClass.pc.party.RemoveMember(this);
-				base.c_wasInPcParty = true;
-				EClass.pc.Say("allyDead");
-				if (EClass.game.config.autoCombat.abortOnAllyDead && EClass.player.TryAbortAutoCombat())
-				{
-					Msg.Say("abort_allyDead");
-				}
+				Msg.Say("abort_allyDead");
 			}
 		}
 		else if (EClass.game.config.autoCombat.abortOnEnemyDead && EClass.player.TryAbortAutoCombat())
 		{
 			Msg.Say("abort_enemyDead");
+		}
+		if (IsPCParty && !IsPC)
+		{
+			EClass.pc.party.RemoveMember(this);
+			base.c_wasInPcParty = true;
+			EClass.pc.Say("allyDead");
 		}
 		text4 = id;
 		if (!(text4 == "littleOne"))

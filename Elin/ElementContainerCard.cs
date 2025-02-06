@@ -23,7 +23,7 @@ public class ElementContainerCard : ElementContainer
 	public void SetOwner(Card c, bool applyFeat)
 	{
 		owner = c;
-		SourceValueType sourceValueType = ((c.IsEquipmentOrRanged && c.rarity < Rarity.Artifact) ? SourceValueType.EquipmentRandom : SourceValueType.Fixed);
+		SourceValueType sourceValueType = ((c.IsEquipmentOrRangedOrAmmo && c.rarity < Rarity.Artifact) ? SourceValueType.EquipmentRandom : SourceValueType.Fixed);
 		ApplyElementMap(c.uid, sourceValueType, c.sourceCard.elementMap, (sourceValueType != SourceValueType.EquipmentRandom) ? 1 : c.LV, invert: false, applyFeat);
 	}
 

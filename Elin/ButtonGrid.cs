@@ -373,7 +373,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 				else
 				{
 					Sprite sprite = refs.bgDefault;
-					if (c.rarity >= Rarity.Superior && c.IsIdentified && (c.IsEquipmentOrRanged || c.IsAmmo))
+					if (c.rarity >= Rarity.Superior && c.IsIdentified && c.IsEquipmentOrRangedOrAmmo)
 					{
 						sprite = ((c.rarity >= Rarity.Artifact) ? refs.bgArtifact : ((c.rarity >= Rarity.Mythical) ? refs.bgMythical : ((c.rarity < Rarity.Legendary) ? refs.bgSuperior : refs.bgLegendary)));
 					}

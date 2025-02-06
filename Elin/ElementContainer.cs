@@ -108,7 +108,7 @@ public class ElementContainer : EClass
 				continue;
 			}
 			Element orCreateElement = GetOrCreateElement(item.Key);
-			if (!orCreateElement.source.IsEncAppliable(t))
+			if (!orCreateElement.source.IsMaterialEncAppliable(t))
 			{
 				if (orCreateElement.vBase == 0 && orCreateElement.vSource == 0 && orCreateElement.vLink == 0 && orCreateElement.vExp == 0 && orCreateElement.vPotential == 0)
 				{
@@ -812,8 +812,7 @@ public class ElementContainer : EClass
 					uIItem.image1.SetActive(enable: true);
 					uIItem.image1.sprite = sprite;
 				}
-				bool enable = e.HasTag("weaponEnc") || e is Ability || e.source.categorySub == "eleConvert" || e.source.categorySub == "eleAttack";
-				uIItem.image2.SetActive(enable);
+				uIItem.image2.SetActive(e.source.IsWeaponEnc);
 				onAddNote?.Invoke(n, e);
 				continue;
 			}

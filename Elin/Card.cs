@@ -2042,7 +2042,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		get
 		{
-			if (!IsFood && (Evalue(10) <= 0 || IsEquipmentOrRanged) && !category.IsChildOf("seed") && !(id == "pasture") && !(id == "grass"))
+			if (!IsFood && (Evalue(10) <= 0 || IsEquipmentOrRangedOrAmmo) && !category.IsChildOf("seed") && !(id == "pasture") && !(id == "grass"))
 			{
 				return category.IsChildOf("drug");
 			}
@@ -2069,6 +2069,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (category.slot == 0)
 			{
 				return IsRangedWeapon;
+			}
+			return true;
+		}
+	}
+
+	public bool IsEquipmentOrRangedOrAmmo
+	{
+		get
+		{
+			if (category.slot == 0 && !IsRangedWeapon)
+			{
+				return IsAmmo;
 			}
 			return true;
 		}
@@ -3455,7 +3467,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		ApplyMaterialElements(remove: true);
 		encLV += a;
 		ApplyMaterialElements(remove: false);
-		if (IsEquipmentOrRanged || IsAmmo)
+		if (IsEquipmentOrRangedOrAmmo)
 		{
 			if (IsWeapon || IsAmmo)
 			{
@@ -3484,7 +3496,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			num = -1;
 		}
-		if (num != 0 && (IsEquipmentOrRanged || IsAmmo))
+		if (num != 0 && IsEquipmentOrRangedOrAmmo)
 		{
 			if (IsWeapon || IsAmmo)
 			{
@@ -6285,7 +6297,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			num *= 0.5f;
 		}
 		float num2;
-		if (IsEquipmentOrRanged || trait is TraitMod)
+		if (IsEquipmentOrRangedOrAmmo || trait is TraitMod)
 		{
 			if (sell)
 			{
