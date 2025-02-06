@@ -17,6 +17,7 @@ public class ConBoost : BaseBuff
 			"black_angel" => RendererReplacer.CreateFrom("black_angel", -1), 
 			"adv_verna" => RendererReplacer.CreateFrom("adv_verna", 2), 
 			"griffin" => RendererReplacer.CreateFrom("griffin", 1), 
+			"isca" => RendererReplacer.CreateFrom("isca", 1), 
 			_ => null, 
 		};
 	}

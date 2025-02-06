@@ -5723,33 +5723,49 @@ public class Chara : Card, IPathfindWalker
 		int num = (base.PER + Evalue(210) * 2) * ((!flag) ? 1 : 2);
 		bool flag2 = IsPCParty && !IsPC && EClass.game.config.tactics.dontWander;
 		bool flag3 = !IsPCParty;
+		Chara chara = null;
+		int num2 = 9999;
 		for (int i = 0; i < EClass._map.charas.Count; i++)
 		{
-			Chara chara = EClass._map.charas[i];
-			if (chara == this || !IsHostile(chara) || !CanSee(chara))
+			Chara chara2 = EClass._map.charas[i];
+			if (chara2 == this || !IsHostile(chara2) || !CanSee(chara2))
 			{
 				continue;
 			}
-			int num2 = Dist(chara);
-			int num3 = GetSightRadius() + (flag ? 1 : 0);
-			if (num2 > num3)
+			int num3 = Dist(chara2);
+			int num4 = GetSightRadius() + (flag ? 1 : 0);
+			if (num3 > num4)
 			{
 				continue;
 			}
-			if (flag3 && EClass.rnd(chara.Evalue(152) + 5) * (100 + num2 * num2 * 10) / 100 > EClass.rnd(num))
+			if (flag3 && EClass.rnd(chara2.Evalue(152) + 5) * (100 + num3 * num3 * 10) / 100 > EClass.rnd(num))
 			{
 				if (this == pos.FirstChara)
 				{
-					chara.ModExp(152, Mathf.Clamp((num - chara.Evalue(152)) / 2, 1, Mathf.Max(30 - stealthSeen * 2, 1)));
+					chara2.ModExp(152, Mathf.Clamp((num - chara2.Evalue(152)) / 2, 1, Mathf.Max(30 - stealthSeen * 2, 1)));
 				}
 				stealthSeen++;
 			}
-			else if (Los.IsVisible(pos.x, chara.pos.x, pos.z, chara.pos.z) && (!flag2 || EClass.pc.isBlind || EClass.pc.CanSeeLos(chara)) && (!IsPCFaction || EClass.pc.ai.ShouldAllyAttack(chara)))
+			else if (Los.IsVisible(pos.x, chara2.pos.x, pos.z, chara2.pos.z) && (!flag2 || EClass.pc.isBlind || EClass.pc.CanSeeLos(chara2)) && (!IsPCFaction || EClass.pc.ai.ShouldAllyAttack(chara2)))
 			{
-				DoHostileAction(chara);
-				enemy = chara;
-				return true;
+				if (!IsPCParty)
+				{
+					DoHostileAction(chara2);
+					enemy = chara2;
+					return true;
+				}
+				if (num3 < num2)
+				{
+					num2 = num3;
+					chara = chara2;
+				}
 			}
+		}
+		if (chara != null)
+		{
+			DoHostileAction(chara);
+			enemy = chara;
+			return true;
 		}
 		return false;
 	}

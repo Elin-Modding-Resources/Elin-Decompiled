@@ -322,7 +322,7 @@ public class Region : Zone
 				ShouldPass = (SourceChara.Row s) => s.biome == biome.name || s.biome.IsEmpty()
 			}) : SpawnList.Get(biome.spawn.GetRandomCharaId()));
 			Chara chara = CharaGen.CreateFromFilter(list, regionPoint.dangerLv);
-			if (chara != null)
+			if (chara != null && !(chara.trait is TraitUniqueMonster))
 			{
 				AddCard(chara, randomPoint);
 			}

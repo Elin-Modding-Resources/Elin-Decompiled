@@ -235,6 +235,7 @@ public class RecipeCard : Recipe
 				if (ing2.trait is TraitRune)
 				{
 					thing.AddRune(ing2).dontConsumeSlot = true;
+					thing.elements.SetBase(484, 1);
 				}
 			}
 		}

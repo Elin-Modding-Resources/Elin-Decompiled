@@ -3337,19 +3337,57 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return null;
 	}
 
-	public bool HasRune()
+	public int CountRune()
 	{
+		int num = 0;
 		if (socketList != null)
 		{
 			foreach (SocketData socket in socketList)
 			{
-				if (socket.type == SocketData.Type.Rune && !socket.dontConsumeSlot)
+				if (socket.type == SocketData.Type.Rune)
 				{
-					return true;
+					num++;
 				}
 			}
 		}
-		return false;
+		return num;
+	}
+
+	public int MaxRune()
+	{
+		return ((!IsUnique) ? 1 : 0) + Evalue(484);
+	}
+
+	public bool CanAddRune(SourceElement.Row row)
+	{
+		if (category.slot == 0)
+		{
+			return false;
+		}
+		if (material.HasEnc(row.id))
+		{
+			return false;
+		}
+		if (!IsWeapon && row.IsWeaponEnc)
+		{
+			return false;
+		}
+		if (row.category == "resist")
+		{
+			foreach (Element item in elements.ListElements())
+			{
+				if (item.source.category == "resist" && (item.vBase != 0 || item.vSource != 0))
+				{
+					return false;
+				}
+			}
+		}
+		return CountRune() < MaxRune();
+	}
+
+	public bool HasRune()
+	{
+		return CountRune() > 0;
 	}
 
 	public void OnChildNumChange(Card c)

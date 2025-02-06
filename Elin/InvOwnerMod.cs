@@ -4,29 +4,6 @@ public class InvOwnerMod : InvOwnerDraglet
 
 	public override string langTransfer => "invMod";
 
-	public static bool IsValidRuneMod(Thing t, SourceElement.Row row, string idMat)
-	{
-		if (row.category == "resist")
-		{
-			foreach (Element item in t.elements.ListElements())
-			{
-				if (item.source.category == "resist")
-				{
-					return false;
-				}
-			}
-		}
-		if (t.material.HasEnc(row.id))
-		{
-			return false;
-		}
-		if (t.category.slot != 0 && !t.HasRune())
-		{
-			return !t.IsUnique;
-		}
-		return false;
-	}
-
 	public static bool IsValidRangedMod(Thing t, SourceElement.Row row)
 	{
 		if (t.trait is TraitToolRangeCane && !row.tag.Contains("modCane"))
@@ -51,7 +28,7 @@ public class InvOwnerMod : InvOwnerDraglet
 		TraitMod traitMod = owner.trait as TraitMod;
 		if (traitMod is TraitRune)
 		{
-			if (!IsValidRuneMod(t, traitMod.source, owner.material.alias))
+			if (!t.CanAddRune(traitMod.source))
 			{
 				return false;
 			}
