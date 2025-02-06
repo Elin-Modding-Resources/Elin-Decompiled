@@ -1,5 +1,8 @@
 var NAVTREEINDEX76 =
 {
+"classLayerList.html#ae6e1ad4f0688c043f51f5b44826825ea":[1,0,774,2],
+"classLayerList_1_1CustomItem.html":[1,0,774,0],
+"classLayerList_1_1CustomItem.html#aa360a22f6e668b72aae8c775c02f8581":[1,0,774,0,1],
 "classLayerList_1_1CustomItem.html#ac177caa1c62eef6ce14a379f1d95ce4c":[1,0,774,0,2],
 "classLayerList_1_1CustomItem.html#adb5002e1a671a0ea1e87040465a5e08a":[1,0,774,0,0],
 "classLayerLoadGame.html":[1,0,775],
@@ -246,8 +249,5 @@ var NAVTREEINDEX76 =
 "classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc":[1,0,792,6],
 "classLayerShippingResult.html#a882924a25ec67b2b4419e0844aed86fd":[1,0,792,22],
 "classLayerShippingResult.html#a8b840e85d8bd3c88c5e1b73b791a6dfb":[1,0,792,8],
-"classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd":[1,0,792,14],
-"classLayerShippingResult.html#a9aebd79a2f9e3030056d7a0e052b7491":[1,0,792,13],
-"classLayerShippingResult.html#a9dc9358b12cd9f4d102a1257f61baa04":[1,0,792,1],
-"classLayerShippingResult.html#ab24bcd1e739976191cc4e8550195cb2a":[1,0,792,19]
+"classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd":[1,0,792,14]
 };

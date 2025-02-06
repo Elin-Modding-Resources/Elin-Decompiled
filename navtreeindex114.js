@@ -1,5 +1,8 @@
 var NAVTREEINDEX114 =
 {
+"classTraitDreamBug.html#ad56606394c6e097a292ec3e7377c1714":[1,0,1488,4],
+"classTraitDresser.html":[1,0,1489],
+"classTraitDrink.html":[1,0,1490],
 "classTraitDrink.html#a0bf4419114e2e584a1e8f59c122a2cc9":[1,0,1490,0],
 "classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1490,9],
 "classTraitDrink.html#a56ee9dafa7d55b6b8e22e307b637b416":[1,0,1490,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1545,4],
 "classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1545,1],
 "classTraitGene.html#a8e6b1c7317611d1cf438e56d285a37af":[1,0,1545,6],
-"classTraitGene.html#aaac1b8bb856a544a6550160fe9e76d90":[1,0,1545,5],
-"classTraitGene.html#aad06c098417be0e93df7d983f89cb51e":[1,0,1545,2],
-"classTraitGeneMachine.html":[1,0,1546],
-"classTraitGeneMachine.html#a03b1dc06acc9e6af7a7bedc69f820523":[1,0,1546,2]
+"classTraitGene.html#aaac1b8bb856a544a6550160fe9e76d90":[1,0,1545,5]
 };

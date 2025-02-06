@@ -1,5 +1,8 @@
 var NAVTREEINDEX112 =
 {
+"classTraitBaseSpellbook.html#ad4db6e1d234810149a1ea4ef33b597f4":[1,0,1388,14],
+"classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551":[1,0,1388,2],
+"classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e":[1,0,1388,7],
 "classTraitBasketGame.html":[1,0,1389],
 "classTraitBasketGame.html#a25bbd4def567fde1fc68d5c017d129bd":[1,0,1389,0],
 "classTraitBath.html":[1,0,1390],
@@ -246,8 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1441,0],
 "classTraitComputer.html":[1,0,1442],
 "classTraitContainer.html":[1,0,1443],
-"classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1443,5],
-"classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1443,0],
-"classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1443,4],
-"classTraitContainer.html#aa5c0f23169a185c1604f46194357006d":[1,0,1443,3]
+"classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1443,5]
 };

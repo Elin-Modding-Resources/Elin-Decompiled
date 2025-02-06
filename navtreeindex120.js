@@ -1,5 +1,7 @@
 var NAVTREEINDEX120 =
 {
+"classTraitWhistlePeace.html#abed2bfb734498ed0371f0c28dfbecb09":[1,0,1852,2],
+"classTraitWindow.html":[1,0,1853],
 "classTraitWindow.html#a1be15d02b87a166b9ce31aa86db6bec7":[1,0,1853,3],
 "classTraitWindow.html#a621d6d89e8cba24ab0970bb674a7e0d9":[1,0,1853,4],
 "classTraitWindow.html#a7f02e57bbd404476453628327b198ee4":[1,0,1853,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX120 =
 "classUI.html#a5b3ea66477005df27fc843ec52387e84":[1,0,1874,71],
 "classUI.html#a5cb9d9e22597497c161b6821dc4fcf09":[1,0,1874,18],
 "classUI.html#a62eb916b498c54279db1c59a6fb58b71":[1,0,1874,4],
-"classUI.html#a630baf3e122583f742e382157d7e26f2":[1,0,1874,33],
-"classUI.html#a6494a4b3c42ef6822ed9c5b313688b59":[1,0,1874,68],
-"classUI.html#a696aa64f163be353920a7b62ac48284c":[1,0,1874,42]
+"classUI.html#a630baf3e122583f742e382157d7e26f2":[1,0,1874,33]
 };

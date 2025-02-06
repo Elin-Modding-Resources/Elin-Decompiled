@@ -1,5 +1,8 @@
 var NAVTREEINDEX116 =
 {
+"classTraitMahjong.html":[1,0,1605],
+"classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1605,0],
+"classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1605,3],
 "classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1605,1],
 "classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1605,2],
 "classTraitMaid.html":[1,0,1606],
@@ -246,8 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitPaintBoard.html":[1,0,1669],
 "classTraitPaintBoard.html#a20f72d48f1b7286fd038d9c5736ef41b":[1,0,1669,3],
 "classTraitPaintBoard.html#a2246016312bcd9dd29eace932f52f6e9":[1,0,1669,4],
-"classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1669,0],
-"classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1669,2],
-"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1669,1],
-"classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1669,5]
+"classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1669,0]
 };

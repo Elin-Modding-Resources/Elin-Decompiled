@@ -1,5 +1,7 @@
 var NAVTREEINDEX135 =
 {
+"classZone__CaveMonster.html":[1,0,2020],
+"classZone__CaveMonster.html#a942a8ea3e1cd4862d7b8e576702c4df3":[1,0,2020,1],
 "classZone__CaveMonster.html#ad372923143188f469da7a2d4ab9dccdf":[1,0,2020,0],
 "classZone__Civilized.html":[1,0,2021],
 "classZone__Civilized.html#a0165faa060db5f4b9ae23b0c506d907c":[1,0,2021,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX135 =
 "classZone__Yowyn.html#adb44b596d5aec8a6f5de868d95c0ecc8":[1,0,2080,0],
 "classZone__Yowyn.html#ae06b0b6751f31fb892c2d0af76691405":[1,0,2080,1],
 "classZone__Yowyn.html#ae0cb126cce3f9edf5e6644e2167542bc":[1,0,2080,2],
-"classelona_1_1MsgPlain.html":[0,4,4,0],
-"classelona_1_1MsgPlain.html":[1,0,4,0],
-"classes.html":[1,1]
+"classelona_1_1MsgPlain.html":[1,0,4,0]
 };

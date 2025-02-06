@@ -1,5 +1,8 @@
 var NAVTREEINDEX111 =
 {
+"classTrait.html#a894532420b321d7f0d21338ad31ff17a":[1,0,1360,69],
+"classTrait.html#a899baa906ee621e6883f05f8cc43c12f":[1,0,1360,22],
+"classTrait.html#a8a2bc513279c43772264edcd309c2aa4":[1,0,1360,80],
 "classTrait.html#a8a455e8ed66ed90362c14cd1ceb2f84b":[1,0,1360,30],
 "classTrait.html#a8c3323c41c1bf6c1a630a191b5b10391":[1,0,1360,185],
 "classTrait.html#a8c36bc2a2e2abe81be76ae1eb0322f23":[1,0,1360,149],
@@ -246,8 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitBaseSpellbook.html#a7e832f3c41aa28e23551946e5fd9334c":[1,0,1388,13],
 "classTraitBaseSpellbook.html#ab88e783f03c314e47d4d029af226a6d6":[1,0,1388,8],
 "classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5":[1,0,1388,12],
-"classTraitBaseSpellbook.html#ad11ef848ff01b61b036d24f744b39b24":[1,0,1388,5],
-"classTraitBaseSpellbook.html#ad4db6e1d234810149a1ea4ef33b597f4":[1,0,1388,14],
-"classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551":[1,0,1388,2],
-"classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e":[1,0,1388,7]
+"classTraitBaseSpellbook.html#ad11ef848ff01b61b036d24f744b39b24":[1,0,1388,5]
 };
