@@ -181,6 +181,9 @@ public class UIBook : MonoBehaviour
 								case "center":
 									center = true;
 									break;
+								case "/center":
+									center = false;
+									break;
 								case "layout":
 									if (array2.Length == 1)
 									{
