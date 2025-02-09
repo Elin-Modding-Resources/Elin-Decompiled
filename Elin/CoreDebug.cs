@@ -905,7 +905,6 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass.pc.body.GetSlot(45, onlyEmpty: false).thing.SetEncLv(EScriptable.rnd(100) - 50);
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{

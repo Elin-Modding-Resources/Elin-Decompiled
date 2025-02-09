@@ -1613,7 +1613,7 @@ public class FactionBranch : EClass
 		for (int j = 0; j < num2; j++)
 		{
 			Chara chara = CharaGen.CreateFromFilter("c_neutral", ContentLV + Mathf.Min(EClass.player.stats.days, 10));
-			if (chara.isBackerContent)
+			if (chara.isBackerContent || chara.source.quality != 0)
 			{
 				j--;
 			}

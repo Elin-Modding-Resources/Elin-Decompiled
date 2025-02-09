@@ -2421,6 +2421,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return elements.Value(ele);
 	}
 
+	public int Evalue(int ele, bool ignoreGlobalElement)
+	{
+		if (!ignoreGlobalElement || !HasGlobalElement(ele))
+		{
+			return elements.Value(ele);
+		}
+		return 0;
+	}
+
 	public int EvalueMax(int ele, int min = 0)
 	{
 		return Mathf.Max(elements.Value(ele), min);
@@ -2993,6 +3002,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void PurgeDuplicateArtifact(Thing af)
 	{
+		if (EClass.debug.enable)
+		{
+			return;
+		}
 		List<Chara> list = new List<Chara>();
 		foreach (FactionBranch child in EClass.pc.faction.GetChildren())
 		{
@@ -3311,6 +3324,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			socketList = new List<SocketData>();
 		}
+		SourceElement.Row row = EClass.sources.elements.map[idEle];
 		SocketData socketData = new SocketData
 		{
 			idEle = idEle,
@@ -3318,7 +3332,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			type = SocketData.Type.Rune
 		};
 		socketList.Add(socketData);
-		elements.SetTo(idEle, v);
+		if (IsWeapon || !row.IsWeaponEnc)
+		{
+			elements.SetTo(idEle, v);
+		}
 		return socketData;
 	}
 
@@ -5161,6 +5178,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public bool HasElement(string id, int req = 1)
 	{
 		return HasElement(EClass.sources.elements.alias[id].id, req);
+	}
+
+	public bool HasGlobalElement(int ele)
+	{
+		return elements.GetElement(ele)?.IsGlobalElement ?? false;
 	}
 
 	public virtual CardRenderer _CreateRenderer()

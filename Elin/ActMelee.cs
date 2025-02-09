@@ -116,159 +116,191 @@ public class ActMelee : ActBaseAttack
 			return true;
 		}
 		bool hasHit = false;
-		bool flag = false;
+		bool usedWeapon = false;
 		bool usedTalisman = false;
 		int count = 0;
-		int num = Act.CC.Dist(Act.TC);
+		int dist = Act.CC.Dist(Act.TC);
 		Point orgPos = Act.TC.pos.Copy();
-		Card tC = Act.TC;
+		Card orgTC = Act.TC;
 		foreach (BodySlot slot in Act.CC.body.slots)
 		{
-			Act.TC = tC;
-			if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
+			_Attack(slot);
+		}
+		if (!usedWeapon)
+		{
+			_Attack(null);
+		}
+		if (EClass.core.config.game.waitOnMelee)
+		{
+			EClass.Wait(0.25f, Act.CC);
+		}
+		if (!hasHit)
+		{
+			Act.CC.PlaySound("miss");
+		}
+		if (EClass.rnd(2) == 0)
+		{
+			Act.CC.RemoveCondition<ConInvisibility>();
+		}
+		return true;
+		void _Attack(BodySlot slot)
+		{
+			Act.TC = orgTC;
+			Thing w;
+			int splash;
+			int chaser;
+			int flurry;
+			int frustration;
+			int feint;
+			if (Act.TC != null && Act.TC.IsAliveInCurrentZone)
 			{
-				return true;
-			}
-			if (slot.thing == null || slot.elementId != 35 || slot.thing.source.offense.Length < 2)
-			{
-				continue;
-			}
-			Thing w = slot.thing;
-			if (num > 1 && num > w.Evalue(666) + 1)
-			{
-				continue;
-			}
-			flag = true;
-			if (w.IsMeleeWithAmmo && Act.CC.IsPC && w.c_ammo <= 0 && !Act.CC.HasCondition<ConReload>())
-			{
-				ActRanged.TryReload(w);
-			}
-			int num2 = GetWeaponEnc(606);
-			int scatter = GetWeaponEnc(607);
-			int splash = GetWeaponEnc(608);
-			int chaser = GetWeaponEnc(620);
-			int flurry = GetWeaponEnc(621);
-			int frustration = GetWeaponEnc(624);
-			int num3 = GetWeaponEnc(622);
-			int feint = GetWeaponEnc(623);
-			List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
-			AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
-			if (num2 > 0)
-			{
-				foreach (Point item in list2)
+				w = null;
+				if (slot != null)
 				{
-					if (!item.Equals(orgPos))
+					if (slot.thing == null || slot.elementId != 35 || slot.thing.source.offense.Length < 2)
 					{
-						Chara firstChara = item.FirstChara;
-						if (firstChara != null && firstChara.IsHostile(Act.CC))
+						return;
+					}
+					w = slot.thing;
+				}
+				int num = ((w == null) ? 1 : (w.Evalue(666) + 1));
+				if (dist <= 1 || dist <= num)
+				{
+					if (w != null)
+					{
+						usedWeapon = true;
+						if (w.IsMeleeWithAmmo && Act.CC.IsPC && w.c_ammo <= 0 && !Act.CC.HasCondition<ConReload>())
 						{
-							AttackWithFlurry(firstChara, item, 1f, subAttack: false);
+							ActRanged.TryReload(w);
 						}
 					}
-				}
-			}
-			else if (scatter > 0)
-			{
-				Act.TP.ForeachNeighbor(delegate(Point p)
-				{
-					if (!p.Equals(orgPos))
+					int num2 = GetWeaponEnc(606, addSelfEnc: false);
+					int scatter = GetWeaponEnc(607, addSelfEnc: false);
+					splash = GetWeaponEnc(608, addSelfEnc: true);
+					chaser = GetWeaponEnc(620, addSelfEnc: false);
+					flurry = GetWeaponEnc(621, addSelfEnc: false);
+					frustration = GetWeaponEnc(624, addSelfEnc: false);
+					int num3 = GetWeaponEnc(622, addSelfEnc: true);
+					feint = GetWeaponEnc(623, addSelfEnc: false);
+					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
+					AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
+					if (num2 > 0)
 					{
-						Chara firstChara2 = p.FirstChara;
-						if (firstChara2 != null && firstChara2.IsHostile(Act.CC))
+						foreach (Point item in list2)
 						{
-							AttackWithFlurry(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)), subAttack: true);
+							if (!item.Equals(orgPos))
+							{
+								Chara firstChara = item.FirstChara;
+								if (firstChara != null && firstChara.IsHostile(Act.CC))
+								{
+									AttackWithFlurry(firstChara, item, 1f, subAttack: false);
+								}
+							}
 						}
 					}
-				});
-			}
-			else if (num3 > 0)
-			{
-				List<Point> list = new List<Point>();
-				Act.TP.ForeachNeighbor(delegate(Point p)
-				{
-					list.Add(p.Copy());
-				});
-				list.Shuffle();
-				int num4 = 0;
-				for (int i = 0; i < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, i + 2)); i++)
-				{
-					num4++;
-				}
-				foreach (Point item2 in list)
-				{
-					foreach (Card item3 in item2.ListCards().Copy())
+					else if (scatter > 0)
 					{
-						if (num4 <= 0 || !Act.CC.IsAliveInCurrentZone)
+						Act.TP.ForeachNeighbor(delegate(Point p)
 						{
-							break;
+							if (!p.Equals(orgPos))
+							{
+								Chara firstChara2 = p.FirstChara;
+								if (firstChara2 != null && firstChara2.IsHostile(Act.CC))
+								{
+									AttackWithFlurry(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)), subAttack: true);
+								}
+							}
+						});
+					}
+					else if (num3 > 0)
+					{
+						List<Point> list = new List<Point>();
+						Act.TP.ForeachNeighbor(delegate(Point p)
+						{
+							list.Add(p.Copy());
+						});
+						list.Shuffle();
+						int num4 = 0;
+						for (int i = 0; i < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, i + 2)); i++)
+						{
+							num4++;
 						}
-						if (item3.trait.CanBeAttacked || (item3.isChara && item3.Chara.IsHostile(Act.CC)))
+						foreach (Point item2 in list)
 						{
-							AttackWithFlurry(item3, item2, 1f, subAttack: true);
-							num4--;
+							foreach (Card item3 in item2.ListCards().Copy())
+							{
+								if (num4 <= 0 || !Act.CC.IsAliveInCurrentZone)
+								{
+									break;
+								}
+								if (item3.trait.CanBeAttacked || (item3.isChara && item3.Chara.IsHostile(Act.CC)))
+								{
+									AttackWithFlurry(item3, item2, 1f, subAttack: true);
+									num4--;
+								}
+							}
 						}
 					}
+					count++;
 				}
 			}
-			int num5 = count;
-			count = num5 + 1;
 			void Attack(Card _tc, Point _tp, float mtp, bool subAttack)
 			{
 				Act.TC = _tc;
 				Act.TP = _tp;
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
-				int num6 = 1;
+				int num5 = 1;
 				if (chaser > 0)
 				{
 					for (int j = 0; j < 10; j++)
 					{
 						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
 						{
-							num6++;
+							num5++;
 						}
 					}
 				}
-				bool flag2 = false;
-				for (int k = 0; k < num6; k++)
+				bool flag = false;
+				for (int k = 0; k < num5; k++)
 				{
 					if (k > 0)
 					{
 						Act.CC.Say("attack_chaser");
 					}
-					flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
-					if (!flag2 && frustration > 0 && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))
+					flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
+					if (!flag && frustration > 0 && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))
 					{
 						AttackProcess.Current.critFury = true;
-						flag2 = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
+						flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
 						AttackProcess.Current.critFury = false;
 					}
-					if (flag2 || !Act.CC.IsAliveInCurrentZone || !Act.TC.IsAliveInCurrentZone)
+					if (flag || !Act.CC.IsAliveInCurrentZone || !Act.TC.IsAliveInCurrentZone)
 					{
 						break;
 					}
 				}
-				if (w.c_ammo > 0 && !Act.CC.HasCondition<ConReload>())
+				if (w != null && w.c_ammo > 0 && !Act.CC.HasCondition<ConReload>())
 				{
-					bool flag3 = true;
+					bool flag2 = true;
 					TraitAmmo traitAmmo = ((w.ammoData == null) ? null : (w.ammoData.trait as TraitAmmo));
 					if (traitAmmo != null && traitAmmo is TraitAmmoTalisman traitAmmoTalisman)
 					{
-						flag3 = false;
-						if (flag2 && !usedTalisman && Act.TC != null && Act.TC.IsAliveInCurrentZone)
+						flag2 = false;
+						if (flag && !usedTalisman && Act.TC != null && Act.TC.IsAliveInCurrentZone)
 						{
 							Act act = Act.CC.elements.GetElement(traitAmmoTalisman.owner.refVal)?.act ?? ACT.Create(traitAmmoTalisman.owner.refVal);
 							Act.powerMod = traitAmmo.owner.encLV;
 							if (act.Perform(Act.CC, Act.TC, Act.TP))
 							{
 								usedTalisman = true;
-								flag3 = true;
+								flag2 = true;
 								int spellExp = Act.CC.elements.GetSpellExp(Act.CC, act, 200);
 								Act.CC.ModExp(act.id, spellExp);
 							}
 							Act.powerMod = 100;
 						}
 					}
-					if (flag3)
+					if (flag2)
 					{
 						w.c_ammo--;
 						if (w.ammoData != null)
@@ -316,15 +348,15 @@ public class ActMelee : ActBaseAttack
 			}
 			void AttackWithFlurry(Card _tc, Point _tp, float mtp, bool subAttack)
 			{
-				int num7 = 1;
+				int num6 = 1;
 				if (flurry > 0)
 				{
 					for (int l = 0; l < 10 && flurry > EClass.rnd(25 + (int)Mathf.Pow(5f, l + 2)); l++)
 					{
-						num7++;
+						num6++;
 					}
 				}
-				for (int m = 0; m < num7; m++)
+				for (int m = 0; m < num6; m++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{
@@ -341,32 +373,10 @@ public class ActMelee : ActBaseAttack
 					Attack(_tc, _tp, mtp, subAttack);
 				}
 			}
-			int GetWeaponEnc(int ele)
+			int GetWeaponEnc(int ele, bool addSelfEnc)
 			{
-				return ((w != null) ? w.Evalue(ele) : 0) + (Act.CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
+				return (addSelfEnc ? Act.CC.Evalue(ele) : 0) + ((w != null) ? w.Evalue(ele) : 0) + (Act.CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
 			}
 		}
-		if (!flag)
-		{
-			AttackProcess.Current.Prepare(Act.CC, null, Act.TC, Act.TP);
-			if (AttackProcess.Current.Perform(count, hasHit, dmgMulti, maxRoll))
-			{
-				hasHit = true;
-			}
-			Act.CC.DoHostileAction(Act.TC);
-		}
-		if (EClass.core.config.game.waitOnMelee)
-		{
-			EClass.Wait(0.25f, Act.CC);
-		}
-		if (!hasHit)
-		{
-			Act.CC.PlaySound("miss");
-		}
-		if (EClass.rnd(2) == 0)
-		{
-			Act.CC.RemoveCondition<ConInvisibility>();
-		}
-		return true;
 	}
 }

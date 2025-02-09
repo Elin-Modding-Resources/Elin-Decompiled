@@ -8,6 +8,8 @@ public class TraitRuneMold : TraitCrafter
 
 	public override string idSoundProgress => "craft_sculpt";
 
+	public override bool HoldAsDefaultInteraction => false;
+
 	public override bool IsConsumeIng => false;
 
 	public override bool CloseOnComplete => true;

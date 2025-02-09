@@ -50,18 +50,6 @@ public class SocketData : EClass
 		}
 	}
 
-	public bool dontConsumeSlot
-	{
-		get
-		{
-			return bits[0];
-		}
-		set
-		{
-			bits[0] = value;
-		}
-	}
-
 	[OnSerializing]
 	private void _OnSerializing(StreamingContext context)
 	{

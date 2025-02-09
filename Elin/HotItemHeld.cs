@@ -39,13 +39,13 @@ public class HotItemHeld : HotItemThing
 		{
 			return false;
 		}
-		if (EClass.pc.held.trait is TraitTile)
-		{
-			return true;
-		}
 		if (taskBuild == null)
 		{
 			return false;
+		}
+		if (EClass.pc.held.trait is TraitTile)
+		{
+			return true;
 		}
 		if (!taskBuild.CanPerform())
 		{

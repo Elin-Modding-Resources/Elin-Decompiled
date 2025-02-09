@@ -763,9 +763,15 @@ public class ElementContainer : EClass
 					text = (flag6 ? "textEncSkill" : (flag7 ? "textEncEnc" : "textEnc")).lang(name, num + (e.source.tag.Contains("ratio") ? "%" : ""), ((e.Value > 0) ? "encIncrease" : "encDecrease").lang());
 				}
 				int num3 = ((!(e is Resistance)) ? 1 : 0);
+				int num4 = 5;
+				if (e.id == 484)
+				{
+					num3 = 0;
+					num4 = 1;
+				}
 				if (!flag && !flag2 && !e.source.tag.Contains("flag"))
 				{
-					text = text + " [" + "*".Repeat(Mathf.Clamp(num * e.source.mtp / 5 + num3, 1, 5)) + ((num * e.source.mtp / 5 + num3 > 5) ? "+" : "") + "]";
+					text = text + " [" + "*".Repeat(Mathf.Clamp(num * e.source.mtp / num4 + num3, 1, 5)) + ((num * e.source.mtp / num4 + num3 > 5) ? "+" : "") + "]";
 				}
 				if (e.HasTag("hidden"))
 				{

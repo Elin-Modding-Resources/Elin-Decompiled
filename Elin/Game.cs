@@ -460,6 +460,7 @@ public class Game : EClass
 				questDebt.stage = 5;
 			}
 		}
+		TryAddQuest("into_darkness", "exile_kettle");
 		if (version.IsBelow(0, 23, 72))
 		{
 			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
@@ -493,10 +494,6 @@ public class Game : EClass
 		if (version.IsBelow(0, 22, 91))
 		{
 			TryAddQuestIfActive("demitas_spellwriter", "into_darkness");
-		}
-		if (version.IsBelow(0, 22, 91))
-		{
-			TryAddQuest("into_darkness", "exile_kettle");
 		}
 		if (version.IsBelow(0, 22, 86))
 		{

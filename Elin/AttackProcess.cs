@@ -267,7 +267,7 @@ public class AttackProcess : EClass
 			dMulti = dMulti * 1.5f + 0.1f * Mathf.Sqrt(Mathf.Max(0, CC.Evalue(130)));
 		}
 		dMulti = dMulti * (float)distMod / 100f;
-		toHit = toHitBase + toHitFix;
+		toHit = (toHitBase + toHitFix) * (100 + CC.Evalue(414)) / 100;
 		toHit = toHit * distMod / 100;
 		if (CC.HasCondition<ConBane>())
 		{
@@ -451,11 +451,8 @@ public class AttackProcess : EClass
 			{
 				list2 = list2.Concat(ammo.elements.dict.Values).ToList();
 			}
-			if (IsRanged || isThrow)
-			{
-				num2 += weapon.Evalue(91);
-			}
-			num3 += weapon.Evalue(603);
+			num2 += weapon.Evalue(91, ignoreGlobalElement: true);
+			num3 += weapon.Evalue(603, ignoreGlobalElement: true);
 		}
 		else if (CC.id == "rabbit_vopal")
 		{
@@ -465,19 +462,16 @@ public class AttackProcess : EClass
 		if (TC?.Chara != null)
 		{
 			SourceRace.Row race = TC.Chara.race;
-			bane = CC.Evalue(468);
-			if (IsRanged)
-			{
-				bane += toolRange.owner.Evalue(468);
-			}
-			AddBane(race.IsUndead, 461);
-			AddBane(race.IsAnimal, 463);
-			AddBane(race.IsHuman, 464);
-			AddBane(race.IsDragon, 460);
-			AddBane(race.IsGod, 466);
-			AddBane(race.IsMachine, 465);
-			AddBane(race.IsFish, 467);
-			AddBane(race.IsFairy, 462);
+			bane = 0;
+			AddBane(valid: true, 468, 50);
+			AddBane(race.IsUndead, 461, 100);
+			AddBane(race.IsAnimal, 463, 100);
+			AddBane(race.IsHuman, 464, 100);
+			AddBane(race.IsDragon, 460, 100);
+			AddBane(race.IsGod, 466, 100);
+			AddBane(race.IsMachine, 465, 100);
+			AddBane(race.IsFish, 467, 100);
+			AddBane(race.IsFairy, 462, 100);
 			if (bane != 0)
 			{
 				num = num * (100 + bane * 3) / 100;
@@ -700,15 +694,11 @@ public class AttackProcess : EClass
 			TC.PlaySound("push", 1.5f);
 		}
 		return true;
-		void AddBane(bool valid, int idEle)
+		void AddBane(bool valid, int idEle, int mod)
 		{
 			if (valid)
 			{
-				if (IsRanged)
-				{
-					bane += toolRange.owner.Evalue(idEle);
-				}
-				bane += CC.Evalue(idEle);
+				bane += (CC.Evalue(idEle) + ((weapon != null) ? weapon.Evalue(idEle, ignoreGlobalElement: true) : 0)) * mod / 100;
 			}
 		}
 		bool IgnoreExp()
@@ -930,7 +920,7 @@ public class AttackProcess : EClass
 		{
 			return Crit();
 		}
-		if ((float)CC.Evalue(90) + Mathf.Sqrt(CC.Evalue(134)) > (float)EClass.rnd(200))
+		if ((float)(CC.Evalue(90) + ((weapon != null) ? weapon.Evalue(90, ignoreGlobalElement: true) : 0)) + Mathf.Sqrt(CC.Evalue(134)) > (float)EClass.rnd(200))
 		{
 			return Crit();
 		}

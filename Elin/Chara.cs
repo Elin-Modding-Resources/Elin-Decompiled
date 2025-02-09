@@ -5184,6 +5184,7 @@ public class Chara : Card, IPathfindWalker
 		a.GetPower(this);
 		int i = 1;
 		int num2 = 0;
+		bool flag = a.IsTargetHostileParty();
 		if (IsPC && HasCondition<StanceManaCost>())
 		{
 			num2 = Evalue(1657);
@@ -5196,10 +5197,20 @@ public class Chara : Card, IPathfindWalker
 		if (pt)
 		{
 			i = 0;
-			ForeachParty(delegate
+			if (flag)
 			{
-				i++;
-			});
+				ForeachEnemy(delegate
+				{
+					i++;
+				});
+			}
+			else
+			{
+				ForeachParty(delegate
+				{
+					i++;
+				});
+			}
 		}
 		if (a is Spell && IsPC && a.vPotential < i)
 		{
@@ -5356,14 +5367,24 @@ public class Chara : Card, IPathfindWalker
 			RemoveCondition<ConInvisibility>();
 			return true;
 		}
-		bool flag = true;
+		bool flag2 = true;
 		if (pt)
 		{
 			Act.forcePt = true;
-			ForeachParty(delegate(Chara c)
+			if (flag)
 			{
-				a.Perform(this, c, c.pos);
-			});
+				ForeachEnemy(delegate(Chara c)
+				{
+					a.Perform(this, c, c.pos);
+				});
+			}
+			else
+			{
+				ForeachParty(delegate(Chara c)
+				{
+					a.Perform(this, c, c.pos);
+				});
+			}
 			Act.forcePt = false;
 		}
 		else
@@ -5376,10 +5397,10 @@ public class Chara : Card, IPathfindWalker
 				}
 				ActEffect.RapidCount = j;
 				ActEffect.RapidDelay = a.RapidDelay;
-				flag = a.Perform(this, tc, pos);
+				flag2 = a.Perform(this, tc, pos);
 			}
 		}
-		if (flag && !isDead && cost.cost > 0 && a.source.lvFactor > 0)
+		if (flag2 && !isDead && cost.cost > 0 && a.source.lvFactor > 0)
 		{
 			ModExp(a.id, spellExp);
 		}
@@ -5388,11 +5409,30 @@ public class Chara : Card, IPathfindWalker
 		{
 			AddCooldown(a.id, a.source.cooldown);
 		}
-		if (flag && !a.source.tag.Contains("keepInvisi") && EClass.rnd(2) == 0)
+		if (flag2 && !a.source.tag.Contains("keepInvisi") && EClass.rnd(2) == 0)
 		{
 			RemoveCondition<ConInvisibility>();
 		}
-		return flag;
+		return flag2;
+		void ForeachEnemy(Action<Chara> action)
+		{
+			if (_pts.Count == 0)
+			{
+				for (int num8 = EClass._map.charas.Count - 1; num8 >= 0; num8--)
+				{
+					Chara chara3 = EClass._map.charas[num8];
+					if (chara3 != this && CanSeeLos(chara3) && chara3.IsHostile(this))
+					{
+						_pts.Add(chara3);
+					}
+				}
+			}
+			for (int num9 = _pts.Count - 1; num9 >= 0; num9--)
+			{
+				action(_pts[num9]);
+			}
+			Debug.Log(_pts.Count);
+		}
 		void ForeachParty(Action<Chara> action)
 		{
 			if (_pts.Count == 0)
@@ -5655,7 +5695,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					foreach (Chara member in EClass.pc.party.members)
 					{
-						if (member != EClass.pc && member.enemy == null)
+						if (member != EClass.pc && member.enemy == null && member.CanSee(chara))
 						{
 							member.SetEnemy(chara);
 						}
@@ -5666,7 +5706,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				foreach (Chara member2 in EClass.pc.party.members)
 				{
-					if (member2 != EClass.pc && member2.enemy == null)
+					if (member2 != EClass.pc && member2.enemy == null && member2.CanSee(this))
 					{
 						member2.SetEnemy(this);
 					}
@@ -5746,7 +5786,7 @@ public class Chara : Card, IPathfindWalker
 				}
 				stealthSeen++;
 			}
-			else if (Los.IsVisible(pos.x, chara2.pos.x, pos.z, chara2.pos.z) && (!flag2 || EClass.pc.isBlind || EClass.pc.CanSeeLos(chara2)) && (!IsPCFaction || EClass.pc.ai.ShouldAllyAttack(chara2)))
+			else if (CanSeeLos(chara2) && (!flag2 || EClass.pc.isBlind || EClass.pc.CanSeeLos(chara2)) && (!IsPCFaction || EClass.pc.ai.ShouldAllyAttack(chara2)))
 			{
 				if (!IsPCParty)
 				{
@@ -6073,7 +6113,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (EClass.pc.HasElement(481))
 		{
-			text2 += ("( " + faith.Name + ")").TagSize(14);
+			text2 += ("(" + faith.Name + ")").TagSize(14);
 		}
 		return text + text2 + s;
 	}

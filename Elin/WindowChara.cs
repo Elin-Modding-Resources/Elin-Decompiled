@@ -666,20 +666,17 @@ public class WindowChara : WindowController
 				}
 				else
 				{
-					switch (a.id)
+					if (a.vSource != 0)
 					{
-					case 55:
-					case 56:
-					case 57:
-					case 68:
-					case 90:
-					case 91:
-					case 93:
-						if (a.vSource != 0)
+						if (a.source.IsWeaponEnc)
 						{
 							return true;
 						}
-						break;
+						int id = a.id;
+						if ((uint)(id - 55) <= 2u || id == 68 || id == 93)
+						{
+							return true;
+						}
 					}
 					if ((a.owner == chara.elements && a.vLink == 0 && !a.IsFactionElement(chara)) || a.source.category == "resist")
 					{

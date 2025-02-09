@@ -236,6 +236,22 @@ public class Act : Element
 		return c.Name + c.GetExtraName();
 	}
 
+	public bool IsTargetHostileParty()
+	{
+		if (base.source.abilityType.Length != 0)
+		{
+			switch (base.source.abilityType[0])
+			{
+			case "debuff":
+			case "debuffStats":
+			case "attack":
+			case "dot":
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public virtual Color GetActPlanColor()
 	{
 		if (!IsCrime)
