@@ -87,8 +87,10 @@ public class WidgetCodex : Widget
 	{
 		list.callbacks = new UIList.Callback<Recipe, ButtonGrid>
 		{
-			onClick = delegate
+			onClick = delegate(Recipe a, ButtonGrid b)
 			{
+				SE.ClickGeneral();
+				a.ToggleTrack(a.GetQuestTrack());
 			},
 			onRedraw = delegate(Recipe a, ButtonGrid b, int i)
 			{

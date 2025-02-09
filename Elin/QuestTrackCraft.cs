@@ -17,7 +17,7 @@ public class QuestTrackCraft : Quest
 
 	public override string GetTitle()
 	{
-		return "trackCraft_title".lang(recipe.Name);
+		return "trackCraft_title".lang(recipe.Name, recipe.NameFactory);
 	}
 
 	public void SetRecipe(Recipe r)

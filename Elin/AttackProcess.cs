@@ -604,7 +604,7 @@ public class AttackProcess : EClass
 		int num9 = num * penetration / 100;
 		num -= num9;
 		num = TC.ApplyProtection(num) + num9 + num8;
-		TC.DamageHP(num, num4, num5, (!IsRanged && !isThrow) ? AttackSource.Melee : AttackSource.Range, CC, showEffect);
+		TC.DamageHP(num, num4, num5, (!IsRanged && !isThrow) ? AttackSource.Melee : AttackSource.Range, CC, showEffect, weapon);
 		conWeapon?.Mod(-1);
 		bool flag2 = IsCane || (weapon != null && weapon.Evalue(482) > 0);
 		int attackStyleElement = CC.body.GetAttackStyleElement(attackStyle);

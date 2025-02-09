@@ -409,10 +409,6 @@ public class CharaBody : EClass
 
 	public int GetMeleeDistance()
 	{
-		if (owner.Evalue(666) == 0)
-		{
-			return 1;
-		}
 		int num = 0;
 		foreach (BodySlot slot in slots)
 		{

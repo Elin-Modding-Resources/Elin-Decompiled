@@ -5431,7 +5431,6 @@ public class Chara : Card, IPathfindWalker
 			{
 				action(_pts[num9]);
 			}
-			Debug.Log(_pts.Count);
 		}
 		void ForeachParty(Action<Chara> action)
 		{

@@ -433,38 +433,10 @@ public class LayerCraft : LayerBaseCraft
 
 	public void RefreshTrackButton()
 	{
-		QuestTrackCraft quest = null;
-		foreach (Quest item in ELayer.game.quests.list)
-		{
-			if (item is QuestTrackCraft)
-			{
-				quest = item as QuestTrackCraft;
-				break;
-			}
-		}
+		QuestTrackCraft quest = recipe.GetQuestTrack();
 		buttonTrack.SetOnClick(delegate
 		{
-			if (quest != null && quest.idRecipe == recipe.id)
-			{
-				ELayer.game.quests.Remove(quest);
-			}
-			else
-			{
-				if (quest != null)
-				{
-					ELayer.game.quests.Remove(quest);
-				}
-				QuestTrackCraft questTrackCraft = Quest.Create("track_craft") as QuestTrackCraft;
-				questTrackCraft.SetRecipe(recipe);
-				ELayer.game.quests.Start(questTrackCraft);
-			}
-			if (!WidgetQuestTracker.Instance)
-			{
-				ELayer.player.questTracker = true;
-				ELayer.ui.widgets.ActivateWidget("QuestTracker");
-				WidgetHotbar.RefreshButtons();
-			}
-			WidgetQuestTracker.Instance.Refresh();
+			recipe.ToggleTrack(quest);
 			RefreshTrackButton();
 		});
 		buttonTrack.icon.SetActive(quest != null && quest.idRecipe == recipe.id);

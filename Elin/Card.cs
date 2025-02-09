@@ -3708,7 +3708,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		DamageHP(dmg, 0, 0, attackSource, origin);
 	}
 
-	public void DamageHP(int dmg, int ele, int eleP = 100, AttackSource attackSource = AttackSource.None, Card origin = null, bool showEffect = true)
+	public void DamageHP(int dmg, int ele, int eleP = 100, AttackSource attackSource = AttackSource.None, Card origin = null, bool showEffect = true, Thing weapon = null)
 	{
 		if (hp < 0)
 		{
@@ -3966,7 +3966,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0a86;
+							goto IL_0a8e;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -3978,8 +3978,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0a86;
-		IL_0a86:
+		goto IL_0a8e;
+		IL_0a8e:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4404,9 +4404,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			if (origin != null && origin.isChara && isChara)
 			{
-				if (origin.HasElement(662) && attackSource == AttackSource.Melee && origin.isChara && Chara.IsHostile(origin as Chara))
+				int valueOrDefault = (origin.Evalue(662) + weapon?.Evalue(662, ignoreGlobalElement: true)).GetValueOrDefault();
+				int valueOrDefault2 = (origin.Evalue(661) + weapon?.Evalue(661, ignoreGlobalElement: true)).GetValueOrDefault();
+				if (valueOrDefault > 0 && attackSource == AttackSource.Melee && origin.isChara && Chara.IsHostile(origin as Chara))
 				{
-					int num11 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, origin.Evalue(662) / 10));
+					int num11 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, valueOrDefault / 10));
 					origin.Chara.stamina.Mod(num11);
 					if (IsAliveInCurrentZone)
 					{
@@ -4422,9 +4424,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						Chara.mana.Mod(-num12);
 					}
 				}
-				if (origin.HasElement(661) && attackSource == AttackSource.Melee)
+				if (valueOrDefault2 > 0 && attackSource == AttackSource.Melee)
 				{
-					int num13 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, origin.Evalue(661) + 10));
+					int num13 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, valueOrDefault2 + 10));
 					origin.Chara.mana.Mod(num13);
 					if (IsAliveInCurrentZone)
 					{

@@ -982,4 +982,43 @@ public class Recipe : EClass
 		}
 		EClass.player.recipes.lastIngredients[id] = list;
 	}
+
+	public QuestTrackCraft GetQuestTrack()
+	{
+		QuestTrackCraft result = null;
+		foreach (Quest item in EClass.game.quests.list)
+		{
+			if (item is QuestTrackCraft)
+			{
+				result = item as QuestTrackCraft;
+				break;
+			}
+		}
+		return result;
+	}
+
+	public void ToggleTrack(QuestTrackCraft quest)
+	{
+		if (quest != null && quest.idRecipe == id)
+		{
+			EClass.game.quests.Remove(quest);
+		}
+		else
+		{
+			if (quest != null)
+			{
+				EClass.game.quests.Remove(quest);
+			}
+			QuestTrackCraft questTrackCraft = Quest.Create("track_craft") as QuestTrackCraft;
+			questTrackCraft.SetRecipe(this);
+			EClass.game.quests.Start(questTrackCraft);
+		}
+		if (!WidgetQuestTracker.Instance)
+		{
+			EClass.player.questTracker = true;
+			EClass.ui.widgets.ActivateWidget("QuestTracker");
+			WidgetHotbar.RefreshButtons();
+		}
+		WidgetQuestTracker.Instance.Refresh();
+	}
 }

@@ -845,7 +845,29 @@ public class GoalCombat : Goal
 				continue;
 			}
 			Cost cost = ability2.act.GetCost(owner);
-			if ((owner.IsPCParty && ability2.pt && !ability2.act.IsTargetHostileParty() && !ability2.act.TargetType.ForceParty && cost.cost * EClass.pc.party.members.Count > owner.mana.value) || (cost.cost > 0 && EClass.rnd(100) > tactics.AbilityChance))
+			if (owner.IsPCParty && ability2.pt && !ability2.act.IsTargetHostileParty() && !ability2.act.TargetType.ForceParty && cost.cost * EClass.pc.party.members.Count > owner.mana.value)
+			{
+				continue;
+			}
+			if (isPCFaction && cost.cost > 0)
+			{
+				switch (cost.type)
+				{
+				case CostType.MP:
+					if (cost.cost > owner.mana.value)
+					{
+						continue;
+					}
+					break;
+				case CostType.SP:
+					if (cost.cost > owner.stamina.value)
+					{
+						continue;
+					}
+					break;
+				}
+			}
+			if (cost.cost > 0 && EClass.rnd(100) > tactics.AbilityChance)
 			{
 				continue;
 			}
