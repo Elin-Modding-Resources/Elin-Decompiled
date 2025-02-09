@@ -1,5 +1,7 @@
 var NAVTREEINDEX116 =
 {
+"classTraitMagicChest.html#a60fa09f514bf44fcc46986443de111fd":[1,0,1604,3],
+"classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1604,8],
 "classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1604,7],
 "classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1604,2],
 "classTraitMagicChest.html#ad29543aa0f1c1c56d6c973b27d296a49":[1,0,1604,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitOlderYoungerSister.html":[1,0,1666],
 "classTraitOlderYoungerSister.html#a4c8168d19941a13b0584ef80b2ecd090":[1,0,1666,0],
 "classTraitOven.html":[1,0,1667],
-"classTraitOven.html#a1f80d356b2342a2e64725cf208df224f":[1,0,1667,0],
-"classTraitPaint.html":[1,0,1668],
-"classTraitPaintBoard.html":[1,0,1669]
+"classTraitOven.html#a1f80d356b2342a2e64725cf208df224f":[1,0,1667,0]
 };

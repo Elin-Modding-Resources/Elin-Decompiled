@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.89 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.89 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -412,12 +412,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classWidgetSearch.html#af03a19d7ea8c19541c75a9c5c524379b">WidgetSearch</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00136">136</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00138">138</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00109">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00111">Update()</a>.</p>
 
 </div>
 </div>
@@ -528,28 +528,32 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
 <div class="line"><span class="lineno">   88</span>        list.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;</div>
 <div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            onClick = delegate</div>
+<div class="line"><span class="lineno">   90</span>            onClick = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
 <div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>            },</div>
-<div class="line"><span class="lineno">   93</span>            onRedraw = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b, <span class="keywordtype">int</span> i)</div>
-<div class="line"><span class="lineno">   94</span>            {</div>
-<div class="line"><span class="lineno">   95</span>                b.<a class="code hl_function" href="classButtonGrid.html#a3fcedfa5c87142133676def09a0fbc07">SetCraftRecipe</a>(a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>.<a class="code hl_enumeration" href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">Mode</a>.RecipeGrid, tooltip: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   96</span>            },</div>
-<div class="line"><span class="lineno">   97</span>            onList = delegate</div>
-<div class="line"><span class="lineno">   98</span>            {</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a> recipe <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">recipes</a>)</div>
-<div class="line"><span class="lineno">  100</span>                {</div>
-<div class="line"><span class="lineno">  101</span>                    <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_function" href="classUIDynamicList.html#a81d537e8c205fab96932ea7c844da05b">Add</a>(recipe);</div>
-<div class="line"><span class="lineno">  102</span>                }</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>        };</div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_function" href="classUIDynamicList.html#a456b025d96191ccbf7f453e702e4840a">List</a>();</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_variable" href="classUIDynamicList.html#ab8e9849e481c21724ed219d7cb2c0fec">dsv</a>.OnResize();</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="line"><span class="lineno">   92</span>                SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   93</span>                a.<a class="code hl_function" href="classRecipe.html#aa54363ea2a0041efd9385d588a0fddd8">ToggleTrack</a>(a.<a class="code hl_function" href="classRecipe.html#a779d1b3f236db1c62d572563c5e30038">GetQuestTrack</a>());</div>
+<div class="line"><span class="lineno">   94</span>            },</div>
+<div class="line"><span class="lineno">   95</span>            onRedraw = delegate(<a class="code hl_class" href="classRecipe.html">Recipe</a> a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b, <span class="keywordtype">int</span> i)</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                b.<a class="code hl_function" href="classButtonGrid.html#a3fcedfa5c87142133676def09a0fbc07">SetCraftRecipe</a>(a, <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>.<a class="code hl_enumeration" href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">Mode</a>.RecipeGrid, tooltip: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   98</span>            },</div>
+<div class="line"><span class="lineno">   99</span>            onList = delegate</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classRecipe.html">Recipe</a> recipe <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">recipes</a>)</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_function" href="classUIDynamicList.html#a81d537e8c205fab96932ea7c844da05b">Add</a>(recipe);</div>
+<div class="line"><span class="lineno">  104</span>                }</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>        };</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_function" href="classUIDynamicList.html#a456b025d96191ccbf7f453e702e4840a">List</a>();</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">list</a>.<a class="code hl_variable" href="classUIDynamicList.html#ab8e9849e481c21724ed219d7cb2c0fec">dsv</a>.OnResize();</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
 <div class="ttc" id="aclassButtonGrid_html_a3fcedfa5c87142133676def09a0fbc07"><div class="ttname"><a href="classButtonGrid.html#a3fcedfa5c87142133676def09a0fbc07">ButtonGrid.SetCraftRecipe</a></div><div class="ttdeci">void SetCraftRecipe(Recipe r, Mode mode, bool tooltip=false)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00585">ButtonGrid.cs:585</a></div></div>
 <div class="ttc" id="aclassButtonGrid_html_a7c813d5ada0a86d8447be38224802048"><div class="ttname"><a href="classButtonGrid.html#a7c813d5ada0a86d8447be38224802048">ButtonGrid.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00008">ButtonGrid.cs:9</a></div></div>
 <div class="ttc" id="aclassRecipe_html"><div class="ttname"><a href="classRecipe.html">Recipe</a></div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00006">Recipe.cs:7</a></div></div>
+<div class="ttc" id="aclassRecipe_html_a779d1b3f236db1c62d572563c5e30038"><div class="ttname"><a href="classRecipe.html#a779d1b3f236db1c62d572563c5e30038">Recipe.GetQuestTrack</a></div><div class="ttdeci">QuestTrackCraft GetQuestTrack()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00986">Recipe.cs:986</a></div></div>
+<div class="ttc" id="aclassRecipe_html_aa54363ea2a0041efd9385d588a0fddd8"><div class="ttname"><a href="classRecipe.html#aa54363ea2a0041efd9385d588a0fddd8">Recipe.ToggleTrack</a></div><div class="ttdeci">void ToggleTrack(QuestTrackCraft quest)</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l01000">Recipe.cs:1000</a></div></div>
 <div class="ttc" id="aclassUIDynamicList_html_a456b025d96191ccbf7f453e702e4840a"><div class="ttname"><a href="classUIDynamicList.html#a456b025d96191ccbf7f453e702e4840a">UIDynamicList.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="UIDynamicList_8cs_source.html#l00235">UIDynamicList.cs:235</a></div></div>
 <div class="ttc" id="aclassUIDynamicList_html_a81d537e8c205fab96932ea7c844da05b"><div class="ttname"><a href="classUIDynamicList.html#a81d537e8c205fab96932ea7c844da05b">UIDynamicList.Add</a></div><div class="ttdeci">override void Add(object o)</div><div class="ttdef"><b>Definition:</b> <a href="UIDynamicList_8cs_source.html#l00068">UIDynamicList.cs:68</a></div></div>
 <div class="ttc" id="aclassUIDynamicList_html_ab8e9849e481c21724ed219d7cb2c0fec"><div class="ttname"><a href="classUIDynamicList.html#ab8e9849e481c21724ed219d7cb2c0fec">UIDynamicList.dsv</a></div><div class="ttdeci">DynamicScrollView dsv</div><div class="ttdef"><b>Definition:</b> <a href="UIDynamicList_8cs_source.html#l00018">UIDynamicList.cs:18</a></div></div>
@@ -558,7 +562,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidgetCodex_html_a0671e710267d2b4dd33245e34885c04b"><div class="ttname"><a href="classWidgetCodex.html#a0671e710267d2b4dd33245e34885c04b">WidgetCodex.recipes</a></div><div class="ttdeci">HashSet&lt; Recipe &gt; recipes</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00019">WidgetCodex.cs:19</a></div></div>
 <div class="ttc" id="aclassWidgetCodex_html_ad1420a518676d8e32f0712cbbd4752af"><div class="ttname"><a href="classWidgetCodex.html#ad1420a518676d8e32f0712cbbd4752af">WidgetCodex.list</a></div><div class="ttdeci">UIDynamicList list</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00017">WidgetCodex.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIDynamicList_8cs_source.html#l00068">UIDynamicList.Add()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00018">UIDynamicList.dsv</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00235">UIDynamicList.List()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00017">list</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00019">recipes</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00585">ButtonGrid.SetCraftRecipe()</a>.</p>
+<p class="reference">References <a class="el" href="UIDynamicList_8cs_source.html#l00068">UIDynamicList.Add()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00018">UIDynamicList.dsv</a>, <a class="el" href="Recipe_8cs_source.html#l00986">Recipe.GetQuestTrack()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00235">UIDynamicList.List()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00017">list</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00019">recipes</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00585">ButtonGrid.SetCraftRecipe()</a>, and <a class="el" href="Recipe_8cs_source.html#l01000">Recipe.ToggleTrack()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00048">Search()</a>.</p>
 
@@ -671,45 +675,45 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00109">109</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
-<div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">count</a>++;</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.Escape))</div>
-<div class="line"><span class="lineno">  113</span>        {</div>
-<div class="line"><span class="lineno">  114</span>            <a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
-<div class="line"><span class="lineno">  115</span>            <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>(consumeAxis: <span class="keyword">false</span>, 5);</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span> functionkeyDown = <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a07179adabfd70d47d78e0218ac279774">GetFunctionkeyDown</a>();</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">count</a> &gt; 10 &amp;&amp; functionkeyDown != -1)</div>
-<div class="line"><span class="lineno">  120</span>        {</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a> hotbarExtra = <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a>.<a class="code hl_variable" href="classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda">HotbarExtra</a>;</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)hotbarExtra &amp;&amp; hotbarExtra.<a class="code hl_function" href="classWidgetHotbar.html#a5cea9defd44424c129bbafc8a1d82588">GetItem</a>(functionkeyDown) is <a class="code hl_class" href="classHotItemWidget.html">HotItemWidget</a> hotItemWidget &amp;&amp; hotItemWidget.<a class="code hl_variable" href="classHotItemWidget.html#a66fa75ffd035511bccabab02c44c8018">id</a> == base.ID)</div>
-<div class="line"><span class="lineno">  123</span>            {</div>
-<div class="line"><span class="lineno">  124</span>                <a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
-<div class="line"><span class="lineno">  125</span>                <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>(consumeAxis: <span class="keyword">false</span>, 5);</div>
-<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classWidgetCodex.html#a592a54ff1c5482f437f159397dbd0b14">CheckClose</a>())</div>
-<div class="line"><span class="lineno">  130</span>        {</div>
-<div class="line"><span class="lineno">  131</span>            <a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00111">111</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">count</a>++;</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (Input.GetKeyDown(KeyCode.Escape))</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>(consumeAxis: <span class="keyword">false</span>, 5);</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">int</span> functionkeyDown = <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a07179adabfd70d47d78e0218ac279774">GetFunctionkeyDown</a>();</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">count</a> &gt; 10 &amp;&amp; functionkeyDown != -1)</div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a> hotbarExtra = <a class="code hl_class" href="classWidgetHotbar.html">WidgetHotbar</a>.<a class="code hl_variable" href="classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda">HotbarExtra</a>;</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)hotbarExtra &amp;&amp; hotbarExtra.<a class="code hl_function" href="classWidgetHotbar.html#a5cea9defd44424c129bbafc8a1d82588">GetItem</a>(functionkeyDown) is <a class="code hl_class" href="classHotItemWidget.html">HotItemWidget</a> hotItemWidget &amp;&amp; hotItemWidget.<a class="code hl_variable" href="classHotItemWidget.html#a66fa75ffd035511bccabab02c44c8018">id</a> == base.ID)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
+<div class="line"><span class="lineno">  127</span>                <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>(consumeAxis: <span class="keyword">false</span>, 5);</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classWidgetCodex.html#a592a54ff1c5482f437f159397dbd0b14">CheckClose</a>())</div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_function" href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Close</a>();</div>
+<div class="line"><span class="lineno">  134</span>            <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
 <div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
 <div class="ttc" id="aclassEInput_html_a07179adabfd70d47d78e0218ac279774"><div class="ttname"><a href="classEInput.html#a07179adabfd70d47d78e0218ac279774">EInput.GetFunctionkeyDown</a></div><div class="ttdeci">static int GetFunctionkeyDown()</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00937">EInput.cs:937</a></div></div>
 <div class="ttc" id="aclassEInput_html_a37ae393407e04100c89ce0578ee5f726"><div class="ttname"><a href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">EInput.Consume</a></div><div class="ttdeci">static void Consume(int _skipFrame)</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00656">EInput.cs:656</a></div></div>
 <div class="ttc" id="aclassHotItemWidget_html"><div class="ttname"><a href="classHotItemWidget.html">HotItemWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemWidget_8cs_source.html#l00003">HotItemWidget.cs:4</a></div></div>
 <div class="ttc" id="aclassHotItemWidget_html_a66fa75ffd035511bccabab02c44c8018"><div class="ttname"><a href="classHotItemWidget.html#a66fa75ffd035511bccabab02c44c8018">HotItemWidget.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="HotItemWidget_8cs_source.html#l00006">HotItemWidget.cs:6</a></div></div>
-<div class="ttc" id="aclassWidgetCodex_html_a592a54ff1c5482f437f159397dbd0b14"><div class="ttname"><a href="classWidgetCodex.html#a592a54ff1c5482f437f159397dbd0b14">WidgetCodex.CheckClose</a></div><div class="ttdeci">virtual bool CheckClose()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00136">WidgetCodex.cs:136</a></div></div>
+<div class="ttc" id="aclassWidgetCodex_html_a592a54ff1c5482f437f159397dbd0b14"><div class="ttname"><a href="classWidgetCodex.html#a592a54ff1c5482f437f159397dbd0b14">WidgetCodex.CheckClose</a></div><div class="ttdeci">virtual bool CheckClose()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00138">WidgetCodex.cs:138</a></div></div>
 <div class="ttc" id="aclassWidgetCodex_html_ab225e745df05361040fe40eda2b4ee45"><div class="ttname"><a href="classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45">WidgetCodex.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCodex_8cs_source.html#l00027">WidgetCodex.cs:27</a></div></div>
 <div class="ttc" id="aclassWidgetHotbar_html"><div class="ttname"><a href="classWidgetHotbar.html">WidgetHotbar</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00007">WidgetHotbar.cs:8</a></div></div>
 <div class="ttc" id="aclassWidgetHotbar_html_a5cea9defd44424c129bbafc8a1d82588"><div class="ttname"><a href="classWidgetHotbar.html#a5cea9defd44424c129bbafc8a1d82588">WidgetHotbar.GetItem</a></div><div class="ttdeci">HotItem GetItem(int index)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00205">WidgetHotbar.cs:205</a></div></div>
 <div class="ttc" id="aclassWidgetHotbar_html_a94dd65734e6cc375e940a8532edafdda"><div class="ttname"><a href="classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda">WidgetHotbar.HotbarExtra</a></div><div class="ttdeci">static WidgetHotbar HotbarExtra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetHotbar_8cs_source.html#l00040">WidgetHotbar.cs:40</a></div></div>
 <div class="ttc" id="aclassWidget_html_aaaf019896e4e771a5c74a4ccbecf24eb"><div class="ttname"><a href="classWidget.html#aaaf019896e4e771a5c74a4ccbecf24eb">Widget.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00319">Widget.cs:319</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetCodex_8cs_source.html#l00136">CheckClose()</a>, <a class="el" href="Widget_8cs_source.html#l00319">Widget.Close()</a>, <a class="el" href="EInput_8cs_source.html#l00656">EInput.Consume()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00027">count</a>, <a class="el" href="EInput_8cs_source.html#l00937">EInput.GetFunctionkeyDown()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00205">WidgetHotbar.GetItem()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00040">WidgetHotbar.HotbarExtra</a>, and <a class="el" href="HotItemWidget_8cs_source.html#l00006">HotItemWidget.id</a>.</p>
+<p class="reference">References <a class="el" href="WidgetCodex_8cs_source.html#l00138">CheckClose()</a>, <a class="el" href="Widget_8cs_source.html#l00319">Widget.Close()</a>, <a class="el" href="EInput_8cs_source.html#l00656">EInput.Consume()</a>, <a class="el" href="WidgetCodex_8cs_source.html#l00027">count</a>, <a class="el" href="EInput_8cs_source.html#l00937">EInput.GetFunctionkeyDown()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00205">WidgetHotbar.GetItem()</a>, <a class="el" href="WidgetHotbar_8cs_source.html#l00040">WidgetHotbar.HotbarExtra</a>, and <a class="el" href="HotItemWidget_8cs_source.html#l00006">HotItemWidget.id</a>.</p>
 
 </div>
 </div>
@@ -754,7 +758,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCodex_8cs_source.html#l00027">27</a> of file <a class="el" href="WidgetCodex_8cs_source.html">WidgetCodex.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00109">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCodex_8cs_source.html#l00111">Update()</a>.</p>
 
 </div>
 </div>

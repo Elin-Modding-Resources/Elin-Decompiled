@@ -1,5 +1,7 @@
 var NAVTREEINDEX114 =
 {
+"classTraitDreamBug.html":[1,0,1488],
+"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1488,2],
 "classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1488,0],
 "classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1488,1],
 "classTraitDreamBug.html#a52f951b18784825907d82d82bfa5b351":[1,0,1488,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitGemCutter.html#ad4c678718199490197cc863c8df758da":[1,0,1544,4],
 "classTraitGemCutter.html#ae2be1a78267a99786d8530c23fc9cce7":[1,0,1544,0],
 "classTraitGene.html":[1,0,1545],
-"classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1545,3],
-"classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1545,0],
-"classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1545,4]
+"classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1545,3]
 };

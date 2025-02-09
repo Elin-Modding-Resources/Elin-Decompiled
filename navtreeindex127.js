@@ -1,5 +1,7 @@
 var NAVTREEINDEX127 =
 {
+"classUndoManager_1_1Item.html#aa437853991bce745d1835533b45464d8":[1,0,1944,0,1],
+"classUniqueData.html":[1,0,1945],
 "classUniqueData.html#a2031f2e7a2e36c381e819fb4e0308d64":[1,0,1945,1],
 "classUniqueData.html#aa6b1ef08ea5a80cd5188079581fdfde3":[1,0,1945,0],
 "classUniqueData.html#ab8e6b8e7f42ff41467b4f9cf69310e3a":[1,0,1945,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX127 =
 "classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2":[1,0,1960,36],
 "classWidgetCurrentTool_1_1Extra.html":[1,0,1960,0],
 "classWidgetCurrentTool_1_1Extra.html#a6f4802e30eda97c3103fce65decff7fc":[1,0,1960,0,2],
-"classWidgetCurrentTool_1_1Extra.html#a80b027cca02f5897ceea01cfd22de0ab":[1,0,1960,0,0],
-"classWidgetCurrentTool_1_1Extra.html#afe1851a93f7c52d3017c92c7fd7d6abc":[1,0,1960,0,1],
-"classWidgetDate.html":[1,0,1961]
+"classWidgetCurrentTool_1_1Extra.html#a80b027cca02f5897ceea01cfd22de0ab":[1,0,1960,0,0]
 };

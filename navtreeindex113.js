@@ -1,5 +1,7 @@
 var NAVTREEINDEX113 =
 {
+"classTraitCobWeb.html":[1,0,1441],
+"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1441,0],
 "classTraitComputer.html":[1,0,1442],
 "classTraitContainer.html":[1,0,1443],
 "classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1443,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1487,2],
 "classTraitDrawingPaper.html#a9d3c27a16d974dcd0cef28907885c8b5":[1,0,1487,0],
 "classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1487,1],
-"classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1487,3],
-"classTraitDreamBug.html":[1,0,1488],
-"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1488,2]
+"classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1487,3]
 };

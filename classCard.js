@@ -52,7 +52,7 @@ var classCard =
     [ "Create", "classCard.html#af99dca1f14e48087ea7f3f3532aa679c", null ],
     [ "CreateFov", "classCard.html#a77439730e52709e1b67481212fa30c47", null ],
     [ "DamageHP", "classCard.html#a2a73375a18833c19a9e05e12cd1d0202", null ],
-    [ "DamageHP", "classCard.html#ac691d5227ce7b399144e7c3e89f26baa", null ],
+    [ "DamageHP", "classCard.html#a6f8518efe8347b690831f8163977934c", null ],
     [ "Decay", "classCard.html#a869adcabca0f1c6650ea6b071deed105", null ],
     [ "DecayNatural", "classCard.html#a823a9f78b176ab3d3f98792b64e0c855", null ],
     [ "Deconstruct", "classCard.html#a6c765adc5948dfdc0fc3dd82fd896c1c", null ],

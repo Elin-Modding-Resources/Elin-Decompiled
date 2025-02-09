@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.89 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.89 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -259,10 +259,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00094">94</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_function" href="classSourceData_1_1BaseRow.html#a1e2b122f2061738b17564cc3df06cb18">GetDetail</a>();</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00104">104</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_function" href="classSourceData_1_1BaseRow.html#a1e2b122f2061738b17564cc3df06cb18">GetDetail</a>();</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 <div class="ttc" id="aclassRecipeSource_html_a2b57efc5ee24c77c9c4ee3d3b578a37d"><div class="ttname"><a href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">RecipeSource.row</a></div><div class="ttdeci">RenderRow row</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00005">RecipeSource.cs:5</a></div></div>
 <div class="ttc" id="aclassSourceData_1_1BaseRow_html_a1e2b122f2061738b17564cc3df06cb18"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a1e2b122f2061738b17564cc3df06cb18">SourceData.BaseRow.GetDetail</a></div><div class="ttdeci">string GetDetail()</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00543">SourceData.cs:543</a></div></div>
 </div><!-- fragment -->
@@ -295,25 +295,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00174">174</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordtype">string</span>[] components = <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>;</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (!components.IsEmpty() &amp;&amp; components[0] != <span class="stringliteral">&quot;-&quot;</span>)</div>
-<div class="line"><span class="lineno">  178</span>        {</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (num &lt; components.Length)</div>
-<div class="line"><span class="lineno">  181</span>            {</div>
-<div class="line"><span class="lineno">  182</span>                <span class="keywordtype">string</span>[] array = components[num].Split(<span class="charliteral">&#39;/&#39;</span>)[0].Split(<span class="charliteral">&#39;@&#39;</span>);</div>
-<div class="line"><span class="lineno">  183</span>                <span class="keywordtype">char</span> c = array[0][0];</div>
-<div class="line"><span class="lineno">  184</span>                <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;#&#39;</span> || c == <span class="charliteral">&#39;$&#39;</span> || c == <span class="charliteral">&#39;+&#39;</span>)</div>
-<div class="line"><span class="lineno">  185</span>                {</div>
-<div class="line"><span class="lineno">  186</span>                    array[0] = array[0].Remove(0, 1);</div>
-<div class="line"><span class="lineno">  187</span>                }</div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">return</span> array[0];</div>
-<div class="line"><span class="lineno">  189</span>            }</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00184">184</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>    {</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordtype">string</span>[] components = <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>;</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> (!components.IsEmpty() &amp;&amp; components[0] != <span class="stringliteral">&quot;-&quot;</span>)</div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (num &lt; components.Length)</div>
+<div class="line"><span class="lineno">  191</span>            {</div>
+<div class="line"><span class="lineno">  192</span>                <span class="keywordtype">string</span>[] array = components[num].Split(<span class="charliteral">&#39;/&#39;</span>)[0].Split(<span class="charliteral">&#39;@&#39;</span>);</div>
+<div class="line"><span class="lineno">  193</span>                <span class="keywordtype">char</span> c = array[0][0];</div>
+<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;#&#39;</span> || c == <span class="charliteral">&#39;$&#39;</span> || c == <span class="charliteral">&#39;+&#39;</span>)</div>
+<div class="line"><span class="lineno">  195</span>                {</div>
+<div class="line"><span class="lineno">  196</span>                    array[0] = array[0].Remove(0, 1);</div>
+<div class="line"><span class="lineno">  197</span>                }</div>
+<div class="line"><span class="lineno">  198</span>                <span class="keywordflow">return</span> array[0];</div>
+<div class="line"><span class="lineno">  199</span>            }</div>
+<div class="line"><span class="lineno">  200</span>        }</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
 <div class="ttc" id="aclassRenderRow_html_a952ba4b3cb52951ee41c166a2f1d30f3"><div class="ttname"><a href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">RenderRow.components</a></div><div class="ttdeci">string[] components</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00052">RenderRow.cs:52</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00052">RenderRow.components</a>, and <a class="el" href="RecipeSource_8cs_source.html#l00005">row</a>.</p>
@@ -345,75 +345,75 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00104">104</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>.IsEmpty() &amp;&amp; <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>[0] == <span class="stringliteral">&quot;x&quot;</span>)</div>
-<div class="line"><span class="lineno">  107</span>        {</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="classRecipeSource.html#a8f18d60250c94437c895922bf455293a">noListing</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>.Length == 0)</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974">DefaultIngredients</a>;</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>[0] == <span class="stringliteral">&quot;-&quot;</span>)</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974">DefaultIngredients</a>;</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#ac8011f6a77ce7474edab024f664ead2c">recipeKey</a>.Length != 0 &amp;&amp; <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#ac8011f6a77ce7474edab024f664ead2c">recipeKey</a>[0] == <span class="stringliteral">&quot;*&quot;</span>)</div>
-<div class="line"><span class="lineno">  119</span>        {</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_variable" href="classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50">alwaysKnown</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordtype">string</span>[] components = <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>;</div>
-<div class="line"><span class="lineno">  123</span>        List&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a>&gt; list = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a>&gt;();</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (!components.IsEmpty() &amp;&amp; components[0] != <span class="stringliteral">&quot;-&quot;</span>)</div>
+<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00114">114</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>.IsEmpty() &amp;&amp; <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>[0] == <span class="stringliteral">&quot;x&quot;</span>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="classRecipeSource.html#a8f18d60250c94437c895922bf455293a">noListing</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>.Length == 0)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974">DefaultIngredients</a>;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>[0] == <span class="stringliteral">&quot;-&quot;</span>)</div>
 <div class="line"><span class="lineno">  125</span>        {</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; components.Length; i++)</div>
-<div class="line"><span class="lineno">  127</span>            {</div>
-<div class="line"><span class="lineno">  128</span>                <span class="keywordtype">string</span>[] array = components[i].Split(<span class="charliteral">&#39;|&#39;</span>);</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordtype">string</span>[] array2 = array[0].Split(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  130</span>                <span class="keywordtype">string</span>[] array3 = array2[0].Split(<span class="charliteral">&#39;@&#39;</span>);</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordtype">bool</span> optional = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordtype">bool</span> useCat = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  134</span>                {</div>
-<div class="line"><span class="lineno">  135</span>                    <span class="keywordflow">switch</span> (array3[0][0])</div>
-<div class="line"><span class="lineno">  136</span>                    {</div>
-<div class="line"><span class="lineno">  137</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:</div>
-<div class="line"><span class="lineno">  138</span>                        <a class="code hl_variable" href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">colorIng</a> = i;</div>
-<div class="line"><span class="lineno">  139</span>                        array3[0] = array3[0].Remove(0, 1);</div>
-<div class="line"><span class="lineno">  140</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  141</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
-<div class="line"><span class="lineno">  142</span>                        useCat = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  143</span>                        array3[0] = array3[0].Remove(0, 1);</div>
-<div class="line"><span class="lineno">  144</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  145</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:</div>
-<div class="line"><span class="lineno">  146</span>                        <span class="keywordflow">goto</span> IL_0142;</div>
-<div class="line"><span class="lineno">  147</span>                    }</div>
-<div class="line"><span class="lineno">  148</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  149</span>                    IL_0142:</div>
-<div class="line"><span class="lineno">  150</span>                    optional = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  151</span>                    array3[0] = array3[0].Remove(0, 1);</div>
-<div class="line"><span class="lineno">  152</span>                }</div>
-<div class="line"><span class="lineno">  153</span>                <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a> ingredient = <span class="keyword">new</span> <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a></div>
-<div class="line"><span class="lineno">  154</span>                {</div>
-<div class="line"><span class="lineno">  155</span>                    <span class="keywordtype">id</span> = array3[0],</div>
-<div class="line"><span class="lineno">  156</span>                    tag = ((array3.Length &gt; 1) ? array3[1] : <span class="keyword">null</span>),</div>
-<div class="line"><span class="lineno">  157</span>                    req = ((array2.Length &lt;= 1) ? 1 : <span class="keywordtype">int</span>.Parse(array2[1])),</div>
-<div class="line"><span class="lineno">  158</span>                    optional = optional,</div>
-<div class="line"><span class="lineno">  159</span>                    useCat = useCat</div>
-<div class="line"><span class="lineno">  160</span>                };</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
-<div class="line"><span class="lineno">  162</span>                {</div>
-<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; array.Length; j++)</div>
-<div class="line"><span class="lineno">  164</span>                    {</div>
-<div class="line"><span class="lineno">  165</span>                        ingredient.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac">idOther</a>.Add(array[j]);</div>
-<div class="line"><span class="lineno">  166</span>                    }</div>
-<div class="line"><span class="lineno">  167</span>                }</div>
-<div class="line"><span class="lineno">  168</span>                list.Add(ingredient);</div>
-<div class="line"><span class="lineno">  169</span>            }</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974">DefaultIngredients</a>;</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#ac8011f6a77ce7474edab024f664ead2c">recipeKey</a>.Length != 0 &amp;&amp; <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#ac8011f6a77ce7474edab024f664ead2c">recipeKey</a>[0] == <span class="stringliteral">&quot;*&quot;</span>)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_variable" href="classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50">alwaysKnown</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">string</span>[] components = <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a952ba4b3cb52951ee41c166a2f1d30f3">components</a>;</div>
+<div class="line"><span class="lineno">  133</span>        List&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a>&gt; list = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a>&gt;();</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (!components.IsEmpty() &amp;&amp; components[0] != <span class="stringliteral">&quot;-&quot;</span>)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; components.Length; i++)</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordtype">string</span>[] array = components[i].Split(<span class="charliteral">&#39;|&#39;</span>);</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordtype">string</span>[] array2 = array[0].Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordtype">string</span>[] array3 = array2[0].Split(<span class="charliteral">&#39;@&#39;</span>);</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordtype">bool</span> optional = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  142</span>                <span class="keywordtype">bool</span> useCat = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  144</span>                {</div>
+<div class="line"><span class="lineno">  145</span>                    <span class="keywordflow">switch</span> (array3[0][0])</div>
+<div class="line"><span class="lineno">  146</span>                    {</div>
+<div class="line"><span class="lineno">  147</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:</div>
+<div class="line"><span class="lineno">  148</span>                        <a class="code hl_variable" href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">colorIng</a> = i;</div>
+<div class="line"><span class="lineno">  149</span>                        array3[0] = array3[0].Remove(0, 1);</div>
+<div class="line"><span class="lineno">  150</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  151</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
+<div class="line"><span class="lineno">  152</span>                        useCat = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  153</span>                        array3[0] = array3[0].Remove(0, 1);</div>
+<div class="line"><span class="lineno">  154</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  155</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:</div>
+<div class="line"><span class="lineno">  156</span>                        <span class="keywordflow">goto</span> IL_0142;</div>
+<div class="line"><span class="lineno">  157</span>                    }</div>
+<div class="line"><span class="lineno">  158</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  159</span>                    IL_0142:</div>
+<div class="line"><span class="lineno">  160</span>                    optional = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  161</span>                    array3[0] = array3[0].Remove(0, 1);</div>
+<div class="line"><span class="lineno">  162</span>                }</div>
+<div class="line"><span class="lineno">  163</span>                <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a> ingredient = <span class="keyword">new</span> <a class="code hl_class" href="classRecipe_1_1Ingredient.html">Recipe.Ingredient</a></div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    <span class="keywordtype">id</span> = array3[0],</div>
+<div class="line"><span class="lineno">  166</span>                    tag = ((array3.Length &gt; 1) ? array3[1] : <span class="keyword">null</span>),</div>
+<div class="line"><span class="lineno">  167</span>                    req = ((array2.Length &lt;= 1) ? 1 : <span class="keywordtype">int</span>.Parse(array2[1])),</div>
+<div class="line"><span class="lineno">  168</span>                    optional = optional,</div>
+<div class="line"><span class="lineno">  169</span>                    useCat = useCat</div>
+<div class="line"><span class="lineno">  170</span>                };</div>
+<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">if</span> (array.Length &gt; 1)</div>
+<div class="line"><span class="lineno">  172</span>                {</div>
+<div class="line"><span class="lineno">  173</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; array.Length; j++)</div>
+<div class="line"><span class="lineno">  174</span>                    {</div>
+<div class="line"><span class="lineno">  175</span>                        ingredient.<a class="code hl_variable" href="classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac">idOther</a>.Add(array[j]);</div>
+<div class="line"><span class="lineno">  176</span>                    }</div>
+<div class="line"><span class="lineno">  177</span>                }</div>
+<div class="line"><span class="lineno">  178</span>                list.Add(ingredient);</div>
+<div class="line"><span class="lineno">  179</span>            }</div>
+<div class="line"><span class="lineno">  180</span>        }</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
 <div class="ttc" id="aclassRecipeSource_html_a131007e755b7e6df83226c0ce1796b50"><div class="ttname"><a href="classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50">RecipeSource.alwaysKnown</a></div><div class="ttdeci">bool alwaysKnown</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00023">RecipeSource.cs:23</a></div></div>
 <div class="ttc" id="aclassRecipeSource_html_a8f18d60250c94437c895922bf455293a"><div class="ttname"><a href="classRecipeSource.html#a8f18d60250c94437c895922bf455293a">RecipeSource.noListing</a></div><div class="ttdeci">bool noListing</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00019">RecipeSource.cs:19</a></div></div>
 <div class="ttc" id="aclassRecipeSource_html_ac27e98de62ebf616e976b385da4f1bf9"><div class="ttname"><a href="classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9">RecipeSource.colorIng</a></div><div class="ttdeci">int colorIng</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00011">RecipeSource.cs:11</a></div></div>
@@ -453,15 +453,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00099">99</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>((<a class="code hl_property" href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">NeedFactory</a> ? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_function" href="classSourceCard.html#a3cc71d4ab28b980b642c3913326215fd">GetModelCrafter</a>(<a class="code hl_property" href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">idFactory</a>) : <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a>).IDReqEle(<span class="keyword">this</span>), <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a>);</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00109">109</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>((<a class="code hl_property" href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">NeedFactory</a> ? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_function" href="classSourceCard.html#a3cc71d4ab28b980b642c3913326215fd">GetModelCrafter</a>(<a class="code hl_property" href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">idFactory</a>) : <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a>).IDReqEle(<span class="keyword">this</span>), <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a>);</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00078">ELEMENT.cs:79</a></div></div>
 <div class="ttc" id="aclassElement_html_a7f33c59a74a6c34a37f8eee0e0cecd1e"><div class="ttname"><a href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Element.Create</a></div><div class="ttdeci">static Element Create(int id, int v=0)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00904">ELEMENT.cs:904</a></div></div>
-<div class="ttc" id="aclassRecipeSource_html_a3eae8739c68c89266fb328c94ff76fd7"><div class="ttname"><a href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">RecipeSource.idFactory</a></div><div class="ttdeci">string idFactory</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00074">RecipeSource.cs:75</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a3eae8739c68c89266fb328c94ff76fd7"><div class="ttname"><a href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">RecipeSource.idFactory</a></div><div class="ttdeci">string idFactory</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00084">RecipeSource.cs:85</a></div></div>
 <div class="ttc" id="aclassRecipeSource_html_ab70f617638ee28866d9874ff8bb7293d"><div class="ttname"><a href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">RecipeSource.NeedFactory</a></div><div class="ttdeci">bool NeedFactory</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00060">RecipeSource.cs:61</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aed3ac25d06114085ec605995cd3d9171"><div class="ttname"><a href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">RenderRow.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00022">RenderRow.cs:22</a></div></div>
 <div class="ttc" id="aclassSourceCard_html_a3cc71d4ab28b980b642c3913326215fd"><div class="ttname"><a href="classSourceCard.html#a3cc71d4ab28b980b642c3913326215fd">SourceCard.GetModelCrafter</a></div><div class="ttdeci">TraitCrafter GetModelCrafter(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00027">SourceCard.cs:27</a></div></div>
@@ -469,9 +469,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00006">Trait.cs:7</a></div></div>
 <div class="ttc" id="aclassTrait_html_ae5d380383c7a829f15b19a5df441de4e"><div class="ttname"><a href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">Trait.SelfFactory</a></div><div class="ttdeci">static TraitSelfFactory SelfFactory</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00024">Trait.cs:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="ELEMENT_8cs_source.html#l00904">Element.Create()</a>, <a class="el" href="SourceCard_8cs_source.html#l00027">SourceCard.GetModelCrafter()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00075">idFactory</a>, <a class="el" href="RenderRow_8cs_source.html#l00022">RenderRow.LV</a>, <a class="el" href="RecipeSource_8cs_source.html#l00061">NeedFactory</a>, <a class="el" href="RecipeSource_8cs_source.html#l00005">row</a>, <a class="el" href="Trait_8cs_source.html#l00024">Trait.SelfFactory</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="ELEMENT_8cs_source.html#l00904">Element.Create()</a>, <a class="el" href="SourceCard_8cs_source.html#l00027">SourceCard.GetModelCrafter()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00085">idFactory</a>, <a class="el" href="RenderRow_8cs_source.html#l00022">RenderRow.LV</a>, <a class="el" href="RecipeSource_8cs_source.html#l00061">NeedFactory</a>, <a class="el" href="RecipeSource_8cs_source.html#l00005">row</a>, <a class="el" href="Trait_8cs_source.html#l00024">Trait.SelfFactory</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00234">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00253">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00380">Recipe.GetQualityBonus()</a>, <a class="el" href="Recipe_8cs_source.html#l00944">Recipe.GetSortVal()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00194">GetSPCost()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00081">TaskCraft.OnProgress()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="Recipe_8cs_source.html#l00936">Recipe.SetTextDifficulty()</a>, <a class="el" href="Recipe_8cs_source.html#l00963">Recipe.TryGetFirstTimeBonus()</a>, and <a class="el" href="Recipe_8cs_source.html#l00802">Recipe.WriteReqSkill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00234">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00253">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00380">Recipe.GetQualityBonus()</a>, <a class="el" href="Recipe_8cs_source.html#l00944">Recipe.GetSortVal()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00204">GetSPCost()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00081">TaskCraft.OnProgress()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="Recipe_8cs_source.html#l00936">Recipe.SetTextDifficulty()</a>, <a class="el" href="Recipe_8cs_source.html#l00963">Recipe.TryGetFirstTimeBonus()</a>, and <a class="el" href="Recipe_8cs_source.html#l00802">Recipe.WriteReqSkill()</a>.</p>
 
 </div>
 </div>
@@ -499,24 +499,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00194">194</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>    {</div>
-<div class="line"><span class="lineno">  196</span>        <a class="code hl_class" href="classElement.html">Element</a> reqSkill = <a class="code hl_function" href="classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551">GetReqSkill</a>();</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">int</span> num = row.Category.costSP + reqSkill.Value / 10;</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(reqSkill.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (num2 &lt; reqSkill.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>)</div>
-<div class="line"><span class="lineno">  200</span>        {</div>
-<div class="line"><span class="lineno">  201</span>            num += (reqSkill.Value - num2) * 2 / 3;</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  204</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00204">204</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>        <a class="code hl_class" href="classElement.html">Element</a> reqSkill = <a class="code hl_function" href="classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551">GetReqSkill</a>();</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordtype">int</span> num = row.Category.costSP + reqSkill.Value / 10;</div>
+<div class="line"><span class="lineno">  208</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(reqSkill.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (num2 &lt; reqSkill.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>)</div>
+<div class="line"><span class="lineno">  210</span>        {</div>
+<div class="line"><span class="lineno">  211</span>            num += (reqSkill.Value - num2) * 2 / 3;</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
 <div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02419">Card.cs:2419</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassElement_html_a3616aee54a980974d7cc43b7f8d94abc"><div class="ttname"><a href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">Element.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00240">ELEMENT.cs:240</a></div></div>
 <div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00282">ELEMENT.cs:282</a></div></div>
-<div class="ttc" id="aclassRecipeSource_html_a2266c0dbc3e404d4589c40d1759ab551"><div class="ttname"><a href="classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551">RecipeSource.GetReqSkill</a></div><div class="ttdeci">Element GetReqSkill()</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00099">RecipeSource.cs:99</a></div></div>
+<div class="ttc" id="aclassRecipeSource_html_a2266c0dbc3e404d4589c40d1759ab551"><div class="ttname"><a href="classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551">RecipeSource.GetReqSkill</a></div><div class="ttdeci">Element GetReqSkill()</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00109">RecipeSource.cs:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02419">Card.Evalue()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">GetReqSkill()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00240">Element.id</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00282">Element.Value</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02419">Card.Evalue()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00109">GetReqSkill()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00240">Element.id</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00282">Element.Value</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitFactory_8cs_source.html#l00016">TraitFactory.GetCostSp()</a>, and <a class="el" href="UIRecipeInfo_8cs_source.html#l00180">UIRecipeInfo.RefreshBalance()</a>.</p>
 
@@ -537,7 +537,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00023">23</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">GetIngredients()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00114">GetIngredients()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00011">11</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00481">Recipe.GetColorMaterial()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00104">GetIngredients()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00017">DropdownRecipe.RefreshLabel()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00481">Recipe.GetColorMaterial()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00114">GetIngredients()</a>, <a class="el" href="DropdownRecipe_8cs_source.html#l00017">DropdownRecipe.RefreshLabel()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>.</p>
 
 </div>
 </div>
@@ -589,7 +589,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00025">25</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">GetIngredients()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00114">GetIngredients()</a>.</p>
 
 </div>
 </div>
@@ -695,7 +695,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00019">19</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00104">GetIngredients()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00114">GetIngredients()</a>, and <a class="el" href="WidgetCodex_8cs_source.html#l00048">WidgetCodex.Search()</a>.</p>
 
 </div>
 </div>
@@ -713,7 +713,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00005">5</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00234">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00253">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00094">GetDetail()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00174">GetIDIngredient()</a>, <a class="el" href="Recipe_8cs_source.html#l00422">Recipe.GetIdThing()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00104">GetIngredients()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00296">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00760">Recipe.GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00405">Recipe.GetRefVal()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">GetReqSkill()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00282">RecipeManager.GetUnlearnedRecipe()</a>, <a class="el" href="TraitCauldron_8cs_source.html#l00003">TraitCauldron.IDReqEle()</a>, <a class="el" href="Trait_8cs_source.html#l01463">Trait.OnBarter()</a>, and <a class="el" href="Map_8cs_source.html#l01177">Map.TryShatter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00234">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00253">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00104">GetDetail()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00184">GetIDIngredient()</a>, <a class="el" href="Recipe_8cs_source.html#l00422">Recipe.GetIdThing()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00114">GetIngredients()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00296">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="Recipe_8cs_source.html#l00760">Recipe.GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00405">Recipe.GetRefVal()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00109">GetReqSkill()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00282">RecipeManager.GetUnlearnedRecipe()</a>, <a class="el" href="TraitCauldron_8cs_source.html#l00003">TraitCauldron.IDReqEle()</a>, <a class="el" href="Trait_8cs_source.html#l01463">Trait.OnBarter()</a>, and <a class="el" href="Map_8cs_source.html#l01177">Map.TryShatter()</a>.</p>
 
 </div>
 </div>
@@ -756,29 +756,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00074">74</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   79</span>            {</div>
-<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#aa020ed75e904c0a435556008bb20a4d4">isBridge</a>)</div>
-<div class="line"><span class="lineno">   81</span>                {</div>
-<div class="line"><span class="lineno">   82</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#a7646730e28576ddcc326ba2c218b4903">isBridgePillar</a>)</div>
-<div class="line"><span class="lineno">   83</span>                    {</div>
-<div class="line"><span class="lineno">   84</span>                        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>[0];</div>
-<div class="line"><span class="lineno">   85</span>                    }</div>
-<div class="line"><span class="lineno">   86</span>                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;tool_carving&quot;</span>;</div>
-<div class="line"><span class="lineno">   87</span>                }</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;factory_platform&quot;</span>;</div>
-<div class="line"><span class="lineno">   89</span>            }</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00084">84</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#aa020ed75e904c0a435556008bb20a4d4">isBridge</a>)</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRecipeSource.html#a7646730e28576ddcc326ba2c218b4903">isBridgePillar</a>)</div>
+<div class="line"><span class="lineno">   93</span>                    {</div>
+<div class="line"><span class="lineno">   94</span>                        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d">row</a>.<a class="code hl_variable" href="classRenderRow.html#a344b77b4f5fd30bd72126f13afdfc346">factory</a>[0];</div>
+<div class="line"><span class="lineno">   95</span>                    }</div>
+<div class="line"><span class="lineno">   96</span>                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;tool_carving&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>                }</div>
+<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;factory_platform&quot;</span>;</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 <div class="ttc" id="aclassRecipeSource_html_a7646730e28576ddcc326ba2c218b4903"><div class="ttname"><a href="classRecipeSource.html#a7646730e28576ddcc326ba2c218b4903">RecipeSource.isBridgePillar</a></div><div class="ttdeci">bool isBridgePillar</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00015">RecipeSource.cs:15</a></div></div>
 <div class="ttc" id="aclassRecipeSource_html_aa020ed75e904c0a435556008bb20a4d4"><div class="ttname"><a href="classRecipeSource.html#aa020ed75e904c0a435556008bb20a4d4">RecipeSource.isBridge</a></div><div class="ttdeci">bool isBridge</div><div class="ttdef"><b>Definition:</b> <a href="RecipeSource_8cs_source.html#l00013">RecipeSource.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TraitBBQ_8cs_source.html#l00003">TraitBBQ.Contains()</a>, <a class="el" href="TraitCauldron_8cs_source.html#l00021">TraitCauldron.Contains()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">GetReqSkill()</a>, <a class="el" href="Recipe_8cs_source.html#l00366">Recipe.IsStaticLV()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, and <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitBBQ_8cs_source.html#l00003">TraitBBQ.Contains()</a>, <a class="el" href="TraitCauldron_8cs_source.html#l00021">TraitCauldron.Contains()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00109">GetReqSkill()</a>, <a class="el" href="Recipe_8cs_source.html#l00366">Recipe.IsStaticLV()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, and <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>.</p>
 
 </div>
 </div>
@@ -865,8 +865,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="RecipeSource_8cs_source.html#l00072">72</a> of file <a class="el" href="RecipeSource_8cs_source.html">RecipeSource.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00035">TraitRecipe.WriteNote()</a>, and <a class="el" href="Recipe_8cs_source.html#l00793">Recipe.WriteReqFactory()</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d">NeedFactory</a>)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[6012].GetName();</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<a class="code hl_property" href="classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7">idFactory</a>].GetName();</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="QuestTrackCraft_8cs_source.html#l00018">QuestTrackCraft.GetTitle()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00035">TraitRecipe.WriteNote()</a>, and <a class="el" href="Recipe_8cs_source.html#l00793">Recipe.WriteReqFactory()</a>.</p>
 
 </div>
 </div>
@@ -902,7 +914,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   69</span>        }</div>
 <div class="line"><span class="lineno">   70</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00234">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00253">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00296">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00099">GetReqSkill()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00035">TraitRecipe.WriteNote()</a>, and <a class="el" href="Recipe_8cs_source.html#l00793">Recipe.WriteReqFactory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00105">RecipeManager.Add()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00234">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00253">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00296">RecipeManager.GetLearnedRecipe()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00109">GetReqSkill()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>, <a class="el" href="TraitRecipe_8cs_source.html#l00035">TraitRecipe.WriteNote()</a>, and <a class="el" href="Recipe_8cs_source.html#l00793">Recipe.WriteReqFactory()</a>.</p>
 
 </div>
 </div>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['dailyoutcome_0',['DailyOutcome',['../classFactionBranch.html#a2b06ef27c1488f8cc19a69009d6c6ec1',1,'FactionBranch.DailyOutcome()'],['../classAIWork.html#a1766ec0c976dea1607ff4d8618dca613',1,'AIWork.DailyOutcome()']]],
   ['damageele_1',['DamageEle',['../classActEffect.html#aa7e3c236ae31446cae7736dab0d27c33',1,'ActEffect']]],
-  ['damagehp_2',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#ac691d5227ce7b399144e7c3e89f26baa',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true)']]],
+  ['damagehp_2',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#a6f8518efe8347b690831f8163977934c',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null)']]],
   ['damagetempelement_3',['DamageTempElement',['../classChara.html#af597dde42c5907ce8ec4e70bacff3c16',1,'Chara']]],
   ['damagetempelements_4',['DamageTempElements',['../classChara.html#a43247f7da1ea4677e24bc734eb6b528b',1,'Chara']]],
   ['darken_5',['Darken',['../classEmpyrean_1_1Utils_1_1Colorist.html#a5625e1eb103cfc25cf53858c62e6d61e',1,'Empyrean::Utils::Colorist']]],

@@ -7,7 +7,7 @@ var searchData=
   ['damagebody_4',['DamageBody',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a9fbb34dc67910e72e937444001751a40',1,'EffectId.cs']]],
   ['damagebodygreat_5',['DamageBodyGreat',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02af5b3bad11e28ef8ca8a6ca8dfa36de2b',1,'EffectId.cs']]],
   ['damageele_6',['DamageEle',['../classActEffect.html#aa7e3c236ae31446cae7736dab0d27c33',1,'ActEffect']]],
-  ['damagehp_7',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#ac691d5227ce7b399144e7c3e89f26baa',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true)']]],
+  ['damagehp_7',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#a6f8518efe8347b690831f8163977934c',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null)']]],
   ['damagemana_8',['damageMana',['../classColorProfile_1_1TextColors.html#aa14831daa3137d4b7adda2546b979c2d',1,'ColorProfile::TextColors']]],
   ['damagemind_9',['DamageMind',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aec1cf9bec793ac56e58fdda3a5d1d77a',1,'EffectId.cs']]],
   ['damagemindgreat_10',['DamageMindGreat',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02abdcde8830b37b15ec0d7aa197de5d97d',1,'EffectId.cs']]],

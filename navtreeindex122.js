@@ -1,5 +1,7 @@
 var NAVTREEINDEX122 =
 {
+"classUIButton.html#afa913c0d00a0816f0fea174f9cfe5025":[1,0,1882,58],
+"classUIButton.html#afc734e4d75bb8511fcf170192096df78":[1,0,1882,17],
 "classUIButton.html#afe5e249c90a44fb5c9dafc5b8b48c58d":[1,0,1882,21],
 "classUIButtonHighlighter.html":[1,0,1883],
 "classUIButtonHighlighter.html#a321e579e5ef11fe4cc9a65852d3501b7":[1,0,1883,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX122 =
 "classUICurrency_1_1Item.html#a6862711ea043fc07790c94845b39fb4a":[1,0,1896,0,0],
 "classUICurrency_1_1Item.html#ad5b5dcca3d5e950ca008ffd3ecaa243e":[1,0,1896,0,1],
 "classUICurrency_1_1Options.html":[1,0,1896,1],
-"classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0":[1,0,1896,1,8],
-"classUICurrency_1_1Options.html#a69b5d9247671bbbbd91c1449a9e2f54f":[1,0,1896,1,4],
-"classUICurrency_1_1Options.html#a733eb4143c788d78a73809faa1a3fee4":[1,0,1896,1,3]
+"classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0":[1,0,1896,1,8]
 };

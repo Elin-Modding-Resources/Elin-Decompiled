@@ -1,5 +1,7 @@
 var NAVTREEINDEX112 =
 {
+"classTraitBaseSpellbook.html#a68ad147a394d09b062f9d4fc042816d9":[1,0,1388,4],
+"classTraitBaseSpellbook.html#a7e832f3c41aa28e23551946e5fd9334c":[1,0,1388,13],
 "classTraitBaseSpellbook.html#ab88e783f03c314e47d4d029af226a6d6":[1,0,1388,8],
 "classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5":[1,0,1388,12],
 "classTraitBaseSpellbook.html#ad11ef848ff01b61b036d24f744b39b24":[1,0,1388,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitClerk__Merchant.html":[1,0,1438],
 "classTraitClerk__Thief.html":[1,0,1439],
 "classTraitClock.html":[1,0,1440],
-"classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1440,0],
-"classTraitCobWeb.html":[1,0,1441],
-"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1441,0]
+"classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1440,0]
 };
