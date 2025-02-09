@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitWhipLove.html#ae46661061bbfd94fc8380c2f39b89b44":[1,0,1851,2],
+"classTraitWhistlePeace.html":[1,0,1852],
+"classTraitWhistlePeace.html#a4361b8d1c18544bdfc53d83e6d122591":[1,0,1852,0],
+"classTraitWhistlePeace.html#aac8be37376522065fd73e92110963bad":[1,0,1852,1],
 "classTraitWhistlePeace.html#abed2bfb734498ed0371f0c28dfbecb09":[1,0,1852,2],
 "classTraitWindow.html":[1,0,1853],
 "classTraitWindow.html#a1be15d02b87a166b9ce31aa86db6bec7":[1,0,1853,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classUI.html#a4f04da8eeea9eb42ff68a561b1055d4c":[1,0,1874,19],
 "classUI.html#a53fa54b315eafbee9077a41a040be2d5":[1,0,1874,73],
 "classUI.html#a56cb0ee79e44bae5a2c5e4d22d7b69ee":[1,0,1874,1],
-"classUI.html#a579396b757c487905778cf48d773e61e":[1,0,1874,32],
-"classUI.html#a5b3ea66477005df27fc843ec52387e84":[1,0,1874,71],
-"classUI.html#a5cb9d9e22597497c161b6821dc4fcf09":[1,0,1874,18],
-"classUI.html#a62eb916b498c54279db1c59a6fb58b71":[1,0,1874,4],
-"classUI.html#a630baf3e122583f742e382157d7e26f2":[1,0,1874,33]
+"classUI.html#a579396b757c487905778cf48d773e61e":[1,0,1874,32]
 };

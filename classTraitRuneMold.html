@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.88 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.89 Nightly</span>
    </div>
   </td>
  </tr>
@@ -352,6 +352,8 @@ Properties</h2></td></tr>
 <tr class="separator:a7bbec895032465484d4465ed87ef8324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9eb3f66a75f2bc7fd78b8bfa71682dd"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitRuneMold.html#ab9eb3f66a75f2bc7fd78b8bfa71682dd">idSoundProgress</a><code> [get]</code></td></tr>
 <tr class="separator:ab9eb3f66a75f2bc7fd78b8bfa71682dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0b309c3da8ac657c67b07d2ac70a57"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitRuneMold.html#abc0b309c3da8ac657c67b07d2ac70a57">HoldAsDefaultInteraction</a><code> [get]</code></td></tr>
+<tr class="separator:abc0b309c3da8ac657c67b07d2ac70a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e9a7e9012a365c20c2297ce477847d9"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9">IsConsumeIng</a><code> [get]</code></td></tr>
 <tr class="separator:a0e9a7e9012a365c20c2297ce477847d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58cd8719287fb908e6b92d92c0287739"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitRuneMold.html#a58cd8719287fb908e6b92d92c0287739">CloseOnComplete</a><code> [get]</code></td></tr>
@@ -812,19 +814,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitCrafter.html#a380ec8a3ad068bb5d7f154aa6b9d5e30">TraitCrafter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00017">17</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &gt; <a class="code hl_property" href="classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b">MaxRarity</a> || c.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a>)</div>
-<div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> base.IsIngredient(cat, c);</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &gt; <a class="code hl_property" href="classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b">MaxRarity</a> || c.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a>)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> base.IsIngredient(cat, c);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
 <div class="ttc" id="aclassCard_html_a5977c43f14d376055d2ab4e8009c31d4"><div class="ttname"><a href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">Card.rarity</a></div><div class="ttdeci">Rarity rarity</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00297">Card.cs:298</a></div></div>
 <div class="ttc" id="aclassCard_html_aab7876b07bbc37cc23c4bcf8c94dc6e6"><div class="ttname"><a href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">Card.c_isImportant</a></div><div class="ttdeci">bool c_isImportant</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00971">Card.cs:972</a></div></div>
-<div class="ttc" id="aclassTraitRuneMold_html_ab25f3f4b37ae7fd37b510c6ac547f87b"><div class="ttname"><a href="classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b">TraitRuneMold.MaxRarity</a></div><div class="ttdeci">virtual Rarity MaxRarity</div><div class="ttdef"><b>Definition:</b> <a href="TraitRuneMold_8cs_source.html#l00015">TraitRuneMold.cs:15</a></div></div>
+<div class="ttc" id="aclassTraitRuneMold_html_ab25f3f4b37ae7fd37b510c6ac547f87b"><div class="ttname"><a href="classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b">TraitRuneMold.MaxRarity</a></div><div class="ttdeci">virtual Rarity MaxRarity</div><div class="ttdef"><b>Definition:</b> <a href="TraitRuneMold_8cs_source.html#l00017">TraitRuneMold.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l00972">Card.c_isImportant</a>, <a class="el" href="TraitRuneMold_8cs_source.html#l00015">MaxRarity</a>, and <a class="el" href="Card_8cs_source.html#l00298">Card.rarity</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00972">Card.c_isImportant</a>, <a class="el" href="TraitRuneMold_8cs_source.html#l00017">MaxRarity</a>, and <a class="el" href="Card_8cs_source.html#l00298">Card.rarity</a>.</p>
 
 </div>
 </div>
@@ -864,10 +866,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitCrafter.html#a48ba3e8202cfb2e57ddad797be7baa1d">TraitCrafter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00026">26</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00028">28</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -892,7 +894,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
 
 </div>
 </div>
@@ -917,6 +919,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
+
+</div>
+</div>
+<a id="abc0b309c3da8ac657c67b07d2ac70a57" name="abc0b309c3da8ac657c67b07d2ac70a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0b309c3da8ac657c67b07d2ac70a57">&#9670;&#160;</a></span>HoldAsDefaultInteraction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitRuneMold.HoldAsDefaultInteraction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1038,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
 
 </div>
 </div>
@@ -1036,9 +1062,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitRuneMold_8cs_source.html#l00017">17</a> of file <a class="el" href="TraitRuneMold_8cs_source.html">TraitRuneMold.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitRuneMold_8cs_source.html#l00017">IsIngredient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitRuneMold_8cs_source.html#l00019">IsIngredient()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX36 =
 {
+"classBiomeProfile_1_1Style.html#a9cd06ab5d59a26d5dde34e67bc964488":[1,0,208,9,4],
 "classBiomeProfile_1_1Style.html#ac46f8c498ed451fc38d2dbffc36a0825":[1,0,208,9,10],
 "classBiomeProfile_1_1Style.html#ac79abfd748c78dda71beb3377ce93dfe":[1,0,208,9,0],
 "classBiomeProfile_1_1Style.html#ae25273318844ca7fd6e0a454ac7084d4":[1,0,208,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX36 =
 "classButtonGrid.html#aa5cbf66d7590bb0c4c9ca3c5276cfe02":[1,0,223,19],
 "classButtonGrid.html#ab762ad6eaf96b3071d411ef9ee3b6d05":[1,0,223,14],
 "classButtonGrid.html#abb04e7e8ef0ed6073086b6ef0e0d3b9f":[1,0,223,15],
-"classButtonGrid.html#abd84c66b64c707deaa9908f5ac2b71d0":[1,0,223,23],
-"classButtonGrid.html#ac1ec76cc3a596152930e98ac7bb11286":[1,0,223,17]
+"classButtonGrid.html#abd84c66b64c707deaa9908f5ac2b71d0":[1,0,223,23]
 };

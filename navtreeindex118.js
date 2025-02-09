@@ -1,5 +1,9 @@
 var NAVTREEINDEX118 =
 {
+"classTraitScratchMachine.html#a1e300ed5e281053a560c503b6c162582":[1,0,1730,0],
+"classTraitScratchMachine.html#a72df852eba74fe1aa8bd21edaa934784":[1,0,1730,1],
+"classTraitScratchMachine.html#ac416bde38f24b7c8d3288c117d819393":[1,0,1730,2],
+"classTraitScratchMachine.html#afd1c86f4c7b5d3f00009927806cdfc44":[1,0,1730,3],
 "classTraitScroll.html":[1,0,1731],
 "classTraitScroll.html#a0e073abdcec7d8ab46d4835511d90bc0":[1,0,1731,1],
 "classTraitScroll.html#a1373d9916e36ca2f4d2e64e9ca16261b":[1,0,1731,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitSwitch.html#ab12879a8ef9657e9d31696e76c6565e5":[1,0,1787,13],
 "classTraitSwitch.html#ab80222c9689fa6ed1b8b4b8385066677":[1,0,1787,1],
 "classTraitSwitch.html#ab8fc8a07245dfe353eae19d0008aec09":[1,0,1787,0],
-"classTraitSwitch.html#acbfaeac17f79590e525a8259d27ad43f":[1,0,1787,7],
-"classTraitSwitch.html#ad40ecb5f28a20f72ff7d7ff2df131b8c":[1,0,1787,9],
-"classTraitSyringeGene.html":[1,0,1788],
-"classTraitSyringeGene.html#a179a76a02db2b362ce90fd20eab454e3":[1,0,1788,1],
-"classTraitSyringeGene.html#ab1f4770127aaf0bbf84eb7428a1258bb":[1,0,1788,0]
+"classTraitSwitch.html#acbfaeac17f79590e525a8259d27ad43f":[1,0,1787,7]
 };

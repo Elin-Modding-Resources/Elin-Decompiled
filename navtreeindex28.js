@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"classActMiasma.html":[1,0,32],
 "classActMiasma.html#a64fcca62a52cce6959d23270928482b5":[1,0,32,0],
 "classActNTR.html":[1,0,34],
 "classActNTR.html#a6bfc933229296c5a037fe61d567906f9":[1,0,34,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "classActionMode.html#a9f0ac9400ace813edde81542dddbd4f4":[1,0,27,48],
 "classActionMode.html#a9f55bf80d24fc6e795c647adc6459515":[1,0,27,119],
 "classActionMode.html#a9f9401be2dfb55935059903517407923":[1,0,27,60],
-"classActionMode.html#a9fd76fb2e8d23a07ed69180fc63c36ae":[1,0,27,12],
-"classActionMode.html#aa078bec99bbd3c8a7bc1d8aad9249754":[1,0,27,112]
+"classActionMode.html#a9fd76fb2e8d23a07ed69180fc63c36ae":[1,0,27,12]
 };

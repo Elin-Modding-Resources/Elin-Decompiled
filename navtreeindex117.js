@@ -1,5 +1,8 @@
 var NAVTREEINDEX117 =
 {
+"classTraitPaintBoard.html#a20f72d48f1b7286fd038d9c5736ef41b":[1,0,1669,3],
+"classTraitPaintBoard.html#a2246016312bcd9dd29eace932f52f6e9":[1,0,1669,4],
+"classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1669,0],
 "classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1669,2],
 "classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1669,1],
 "classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1669,5],
@@ -214,15 +217,16 @@ var NAVTREEINDEX117 =
 "classTraitRune.html#a3ef4e57dd7b4f5ccefcd30f71a65985f":[1,0,1722,1],
 "classTraitRune.html#ad1d7c2da5c25bbce6d814883e67850f8":[1,0,1722,0],
 "classTraitRuneMold.html":[1,0,1723],
-"classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9":[1,0,1723,7],
+"classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9":[1,0,1723,8],
 "classTraitRuneMold.html#a37f968d4735a5f78b1ea5cdadc7adb6a":[1,0,1723,0],
 "classTraitRuneMold.html#a4de0834828f33388aa73f0faa28c3106":[1,0,1723,3],
 "classTraitRuneMold.html#a58cd8719287fb908e6b92d92c0287739":[1,0,1723,2],
-"classTraitRuneMold.html#a7bbec895032465484d4465ed87ef8324":[1,0,1723,4],
-"classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b":[1,0,1723,8],
-"classTraitRuneMold.html#ab9eb3f66a75f2bc7fd78b8bfa71682dd":[1,0,1723,5],
+"classTraitRuneMold.html#a7bbec895032465484d4465ed87ef8324":[1,0,1723,5],
+"classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b":[1,0,1723,9],
+"classTraitRuneMold.html#ab9eb3f66a75f2bc7fd78b8bfa71682dd":[1,0,1723,6],
+"classTraitRuneMold.html#abc0b309c3da8ac657c67b07d2ac70a57":[1,0,1723,4],
 "classTraitRuneMold.html#ac6ce8e48e7e6672abaf383d4501fd6a8":[1,0,1723,1],
-"classTraitRuneMold.html#acbe331aca8ae318d87e2f5f54e24b1dd":[1,0,1723,6],
+"classTraitRuneMold.html#acbe331aca8ae318d87e2f5f54e24b1dd":[1,0,1723,7],
 "classTraitRuneMoldEarth.html":[1,0,1724],
 "classTraitRuneMoldEarth.html#aaf5b0202412f8b854b113e089bb52a02":[1,0,1724,0],
 "classTraitRuneMoldMana.html":[1,0,1725],
@@ -245,9 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitSawMill.html#a8ae6d8f9e96ab3c70ecb63f0e71a85dc":[1,0,1729,1],
 "classTraitSawMill.html#ae1971cf328e9f99ba0fd3fe2992d8689":[1,0,1729,0],
 "classTraitScratchMachine.html":[1,0,1730],
-"classTraitScratchMachine.html#a07ffdf52fc643dc776ed37719159f4a4":[1,0,1730,4],
-"classTraitScratchMachine.html#a1e300ed5e281053a560c503b6c162582":[1,0,1730,0],
-"classTraitScratchMachine.html#a72df852eba74fe1aa8bd21edaa934784":[1,0,1730,1],
-"classTraitScratchMachine.html#ac416bde38f24b7c8d3288c117d819393":[1,0,1730,2],
-"classTraitScratchMachine.html#afd1c86f4c7b5d3f00009927806cdfc44":[1,0,1730,3]
+"classTraitScratchMachine.html#a07ffdf52fc643dc776ed37719159f4a4":[1,0,1730,4]
 };

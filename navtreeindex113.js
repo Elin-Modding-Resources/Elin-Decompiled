@@ -1,5 +1,8 @@
 var NAVTREEINDEX113 =
 {
+"classTraitComputer.html":[1,0,1442],
+"classTraitContainer.html":[1,0,1443],
+"classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1443,5],
 "classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1443,0],
 "classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1443,4],
 "classTraitContainer.html#aa5c0f23169a185c1604f46194357006d":[1,0,1443,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1487,1],
 "classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1487,3],
 "classTraitDreamBug.html":[1,0,1488],
-"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1488,2],
-"classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1488,0],
-"classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1488,1],
-"classTraitDreamBug.html#a52f951b18784825907d82d82bfa5b351":[1,0,1488,3]
+"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1488,2]
 };

@@ -15,6 +15,7 @@ var classAct =
     [ "GetStateIcon", "classAct.html#ad25cbedfa2d1e3cc55e0704dc38128b0", null ],
     [ "GetText", "classAct.html#ad78fda455786213d477bf3acfd262968", null ],
     [ "GetTextSmall", "classAct.html#ac7b2338760bdf4f253e1591ebcd3ce92", null ],
+    [ "IsTargetHostileParty", "classAct.html#adc19d0cb704087216c6dbc16bd26cb35", null ],
     [ "IsToolValid", "classAct.html#a2600677b96236f286f6c755d60e07e2e", null ],
     [ "IsValidTC", "classAct.html#a5814db229a2618652d8cc9149434e36b", null ],
     [ "OnMarkMapHighlights", "classAct.html#a9afd48282348d8bdcac66c301a2e9798", null ],
