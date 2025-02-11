@@ -34,6 +34,10 @@ public class TraitMod : TraitItem
 
 	public override int GetValue()
 	{
+		if (this is TraitRune)
+		{
+			return base.GetValue();
+		}
 		int num = source.value * owner.encLV;
 		return base.GetValue() * num / 100;
 	}

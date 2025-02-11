@@ -905,24 +905,14 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
-			if (targetChara != null)
+			EClass.player.recipes.Add("b32");
+			if (EScriptable.rnd(2) == 0)
 			{
-				EClass.pc.Pick(targetChara.MakeMilk());
-				EClass.pc.Pick(targetChara.MakeGene());
-				EClass.pc.Pick(targetChara.MakeBraineCell());
-				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
+				EClass.player.recipes.Add("b118");
 			}
-			if (EClass.game.quests.Get<QuestDebt>() == null)
+			else
 			{
-				Chara chara = CharaGen.Create("loytel");
-				EClass._zone.AddCard(chara, EClass.pc.pos);
-				chara.SetGlobal();
-				Quest q = EClass.game.quests.Add("debt", "loytel");
-				EClass.game.quests.Start(q);
-				EClass.pc.party.RemoveMember(chara);
-				Hostility hostility2 = (chara.c_originalHostility = Hostility.Ally);
-				chara.hostility = hostility2;
+				EClass.player.recipes.Add("b118-p");
 			}
 			return;
 		}
@@ -951,9 +941,9 @@ public class CoreDebug : EScriptable
 			{
 				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
 			}
-			foreach (Chara chara2 in EClass._map.charas)
+			foreach (Chara chara in EClass._map.charas)
 			{
-				chara2.AddExp(chara2.ExpToNext);
+				chara.AddExp(chara.ExpToNext);
 			}
 			EClass.pc.PlayEffect("boost");
 			EClass.pc.PlaySound("boost");

@@ -126,7 +126,7 @@ public class RecipeManager : EClass
 			EClass.pc.ShowEmo(Emo.idea, 0.5f, skipSame: false);
 		}
 		EClass.pc.Say("learnRecipe" + ((num == 1) ? "New" : ""), dict[id].Name.ToTitleCase(), num.ToString() ?? "");
-		if (num == 1)
+		if (num == 1 && !recipeSource.isBridgePillar)
 		{
 			if (recipeSource.NeedFactory)
 			{
@@ -136,6 +136,16 @@ public class RecipeManager : EClass
 			{
 				EClass.pc.Say("recipe_nofactory");
 			}
+		}
+		recipeSource = Get(id + "-p");
+		if (recipeSource != null && !knownRecipes.ContainsKey(recipeSource.id))
+		{
+			Add(recipeSource.id, showEffect: false);
+		}
+		recipeSource = Get(id.Replace("-p", ""));
+		if (recipeSource != null && !knownRecipes.ContainsKey(recipeSource.id))
+		{
+			Add(recipeSource.id, showEffect: false);
 		}
 		if (recipeSource.row.category == "floor")
 		{

@@ -1032,7 +1032,7 @@ public class DramaManager : EMono
 			}
 			return false;
 		case "hasMelilithCurse":
-			return EMono.player.flags.gotMelilithCurse;
+			return EMono.pc.HasElement(1206);
 		case "merchant":
 			return Guild.Current == Guild.Merchant;
 		case "fighter":

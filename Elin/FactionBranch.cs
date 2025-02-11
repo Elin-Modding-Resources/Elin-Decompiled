@@ -1495,6 +1495,7 @@ public class FactionBranch : EClass
 	{
 		RemoveRecruit(c);
 		AddMemeber(c);
+		c.isRestrained = false;
 		if (c.currentZone != EClass._zone && !c.isDead)
 		{
 			Point point = EClass._map.Installed.traits.GetTraitSet<TraitSpotExit>().GetRandom()?.GetPoint() ?? EClass.pc.pos;

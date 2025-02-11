@@ -484,7 +484,7 @@ public class GoalCombat : Goal
 			{
 				continue;
 			}
-			switch (id)
+			switch (act.id)
 			{
 			case 6602:
 				if (dist <= 1 || tc.HasCondition<ConEntangle>())
@@ -494,6 +494,19 @@ public class GoalCombat : Goal
 				break;
 			case 6450:
 				if (isPCFaction && (tc.HasElement(1221) || tc.HasElement(1223) || tc.id == "hedgehog_ether"))
+				{
+					continue;
+				}
+				break;
+			case 8200:
+			case 8201:
+				if (owner.HasElement(400))
+				{
+					continue;
+				}
+				break;
+			case 6400:
+				if (isPCFaction)
 				{
 					continue;
 				}

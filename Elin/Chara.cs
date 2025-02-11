@@ -4397,7 +4397,11 @@ public class Chara : Card, IPathfindWalker
 		}
 		for (int k = 0; k < ((!(race.id == "mutant")) ? 1 : (2 + base.LV / 30)); k++)
 		{
-			if (!job.weapon.IsEmpty())
+			if (source.ContainsTag("boxer"))
+			{
+				EQ_CAT("martial");
+			}
+			else if (!job.weapon.IsEmpty())
 			{
 				if (race.id == "mutant" || (body.slotMainHand != null && body.slotMainHand.thing == null))
 				{

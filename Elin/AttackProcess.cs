@@ -342,6 +342,16 @@ public class AttackProcess : EClass
 		Thing _weapon = weapon;
 		bool ignoreSound = ignoreAttackSound;
 		Zone _zone = CC.currentZone;
+		Color effColor = Color.white;
+		if (isCane)
+		{
+			IEnumerable<Element> enumerable = toolRange.owner.elements.dict.Values.Where((Element e) => e.source.categorySub == "eleAttack");
+			if (enumerable.Count() > 0)
+			{
+				Element element = enumerable.RandomItem();
+				effColor = EClass.Colors.elementColors[element.source.alias];
+			}
+		}
 		for (int i = 0; i < numFire; i++)
 		{
 			TweenUtil.Delay((float)i * data.delay, delegate
@@ -357,12 +367,7 @@ public class AttackProcess : EClass
 						Effect effect = Effect.Get("ranged_arrow")._Play(_CC.pos, _CC.isSynced ? _CC.renderer.position : _CC.pos.Position(), 0f, _TP, data.sprite);
 						if (isCane)
 						{
-							IEnumerable<Element> enumerable = toolRange.owner.elements.dict.Values.Where((Element e) => e.source.categorySub == "eleAttack");
-							if (enumerable.Count() > 0)
-							{
-								Element element = enumerable.RandomItem();
-								effect.sr.color = EClass.Colors.elementColors[element.source.alias];
-							}
+							effect.sr.color = effColor;
 						}
 					}
 					if (data.eject)

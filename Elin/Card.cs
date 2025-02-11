@@ -6400,7 +6400,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			num *= 0.1f;
 		}
-		if (encLV != 0)
+		if (encLV != 0 && !category.tag.Contains("noEnc"))
 		{
 			num = (category.tag.Contains("enc") ? (num * (0.7f + (float)(encLV - 1) * 0.2f)) : ((!IsFood) ? (num * (1f + (float)encLV * 0.01f)) : ((!(id == "honey")) ? (num * Mathf.Min(1f + 0.1f * (float)encLV, 2f) + (float)(encLV * 100)) : (num + (float)(encLV * 10)))));
 		}
