@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.89 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.90 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -128,10 +128,14 @@ $(document).ready(function(){initNavTree('TraitMod_8cs_source.html',''); initRes
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classTraitMod.html#adcfa9cd25b8e8886d8eb4abacdc9c015">   35</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classTraitMod.html#adcfa9cd25b8e8886d8eb4abacdc9c015">GetValue</a>()</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">int</span> num = source.value * <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> base.GetValue() * num / 100;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classTraitRune.html">TraitRune</a>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">return</span> base.GetValue();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">int</span> num = source.value * <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> base.GetValue() * num / 100;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516">CTAG.neg</a></div><div class="ttdeci">@ neg</div></div>
 <div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00189">Card.cs:190</a></div></div>
 <div class="ttc" id="aclassCard_html_a9c3b6d0fb8ee414aecdd21c21153204b"><div class="ttname"><a href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">Card.encLV</a></div><div class="ttdeci">int encLV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00309">Card.cs:310</a></div></div>
@@ -158,6 +162,7 @@ $(document).ready(function(){initNavTree('TraitMod_8cs_source.html',''); initRes
 <div class="ttc" id="aclassTraitMod_html_a975135b726610ccf2b3a50950c6c0393"><div class="ttname"><a href="classTraitMod.html#a975135b726610ccf2b3a50950c6c0393">TraitMod.DefaultEnc</a></div><div class="ttdeci">virtual int DefaultEnc</div><div class="ttdef"><b>Definition:</b> <a href="TraitMod_8cs_source.html#l00005">TraitMod.cs:5</a></div></div>
 <div class="ttc" id="aclassTraitMod_html_aa5ac6744c07cc86edd9b9a46f152d79d"><div class="ttname"><a href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">TraitMod.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="TraitMod_8cs_source.html#l00011">TraitMod.cs:11</a></div></div>
 <div class="ttc" id="aclassTraitMod_html_adcfa9cd25b8e8886d8eb4abacdc9c015"><div class="ttname"><a href="classTraitMod.html#adcfa9cd25b8e8886d8eb4abacdc9c015">TraitMod.GetValue</a></div><div class="ttdeci">override int GetValue()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMod_8cs_source.html#l00035">TraitMod.cs:35</a></div></div>
+<div class="ttc" id="aclassTraitRune_html"><div class="ttname"><a href="classTraitRune.html">TraitRune</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitRune_8cs_source.html#l00001">TraitRune.cs:2</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
