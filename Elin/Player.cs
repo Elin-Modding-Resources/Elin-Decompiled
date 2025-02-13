@@ -1969,13 +1969,17 @@ public class Player : EClass
 	public void RefreshCurrentHotItem()
 	{
 		WidgetCurrentTool instance = WidgetCurrentTool.Instance;
+		if (!instance)
+		{
+			return;
+		}
 		if (currentHotItem != null)
 		{
 			if ((bool)instance)
 			{
 				instance.buttonHotItem.Refresh();
 			}
-			if (currentHotItem is HotItemHeld && currentHotItem.Thing != EClass.pc.held)
+			if (currentHotItem is HotItemHeld && (currentHotItem.Thing != EClass.pc.held || currentHotItem.Thing.GetRootCard() != EClass.pc))
 			{
 				currentHotItem = null;
 			}
@@ -1990,7 +1994,7 @@ public class Player : EClass
 		}
 		if (currentHotItem == null)
 		{
-			if ((bool)instance && instance.selected != -1 && instance.selectedButton.card != null && instance.selectedButton.card.GetRootCard() == EClass.pc)
+			if ((bool)instance && instance.selected != -1 && instance.selectedButton.card != null && instance.selectedButton.card.GetRootCard() == EClass.pc && !instance.selectedButton.card.GetRootCard().isDestroyed)
 			{
 				currentHotItem = instance.selectedButton.card.trait.GetHotItem();
 			}
@@ -1999,6 +2003,7 @@ public class Player : EClass
 				currentHotItem = hotItemNoItem;
 			}
 		}
+		Debug.Log(currentHotItem);
 		if (currentHotItem != lastHotItem)
 		{
 			if (lastHotItem != null)

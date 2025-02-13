@@ -10,6 +10,8 @@ public class TraitShackle : Trait
 
 	public override string LangUse => "ActRestrain";
 
+	public virtual bool AllowTraining => true;
+
 	public override bool CanStackTo(Thing to)
 	{
 		return false;

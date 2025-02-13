@@ -283,7 +283,7 @@ public class GameIO : EClass
 		}
 	}
 
-	public static List<GameIndex> GetGameList(string path, bool sortByName = false)
+	public static List<GameIndex> GetGameList(string path, bool sortByName = false, bool includeEmptyFolder = false)
 	{
 		List<GameIndex> list = new List<GameIndex>();
 		DirectoryInfo directoryInfo = new DirectoryInfo(path);
@@ -303,9 +303,22 @@ public class GameIO : EClass
 					gameIndex.path = directoryInfo2.FullName;
 					list.Add(gameIndex);
 				}
-				catch (Exception)
+				catch (Exception message)
 				{
+					Debug.Log(message);
+					goto IL_0097;
 				}
+				continue;
+			}
+			goto IL_0097;
+			IL_0097:
+			if (includeEmptyFolder && Directory.Exists(CorePath.PathBackup + directoryInfo2.Name))
+			{
+				GameIndex gameIndex2 = new GameIndex();
+				gameIndex2.id = directoryInfo2.Name;
+				gameIndex2.path = directoryInfo2.FullName;
+				gameIndex2.date = (gameIndex2.real = new Date());
+				list.Add(gameIndex2);
 			}
 		}
 		if (sortByName)

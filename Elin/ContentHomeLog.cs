@@ -24,7 +24,7 @@ public class ContentHomeLog : EContent
 				{
 					b.text1.SetColor(a.col.ToEnum<FontColor>());
 				}
-				b.text2.text = a.date.month + "/" + a.date.day + " " + a.date.hour + ":" + a.date.min;
+				b.text2.text = a.date.month + "/" + a.date.day + " " + ((a.date.hour < 10) ? "0" : "") + a.date.hour + ":" + ((a.date.min < 10) ? "0" : "") + a.date.min;
 			}
 		};
 		uIList.Clear();

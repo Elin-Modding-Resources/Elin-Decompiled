@@ -406,6 +406,8 @@ public class Core : BaseCore
 
 	public void OnApplicationFocus(bool focus)
 	{
+		Resources.UnloadUnusedAssets();
+		GC.Collect();
 		if (config == null)
 		{
 			return;

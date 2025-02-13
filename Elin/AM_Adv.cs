@@ -155,9 +155,9 @@ public class AM_Adv : AM_BaseGameMode
 
 	private float gearAngle;
 
-	protected bool updatePlans;
+	public bool updatePlans;
 
-	protected bool isMoving;
+	public bool isMoving;
 
 	private Vector3 lastCamPos;
 

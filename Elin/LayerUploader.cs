@@ -19,6 +19,8 @@ public class LayerUploader : ELayer
 
 	public InputField inputPassword;
 
+	public InputField inputWelcome;
+
 	public IniData ini;
 
 	public UIText textInvalidId;
@@ -30,6 +32,8 @@ public class LayerUploader : ELayer
 	public UIButton buttonUpload;
 
 	public UIButton buttonSave;
+
+	public UIButton toggleClearLocalCharas;
 
 	public int limitSec;
 
@@ -49,6 +53,20 @@ public class LayerUploader : ELayer
 		string text = ini.GetKey("pass") ?? "password";
 		inputId.text = ELayer._map.custom?.id ?? "new_zone";
 		inputPassword.text = text;
+		if (ELayer._map.exportSetting == null)
+		{
+			ELayer._map.exportSetting = new MapExportSetting();
+		}
+		MapExportSetting ex = ELayer._map.exportSetting;
+		inputWelcome.text = ex.textWelcome.IsEmpty("");
+		inputWelcome.onValueChanged.AddListener(delegate(string s)
+		{
+			ex.textWelcome = s;
+		});
+		toggleClearLocalCharas.SetToggle(ex.clearLocalCharas, delegate(bool on)
+		{
+			ex.clearLocalCharas = on;
+		});
 	}
 
 	private void Update()

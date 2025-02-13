@@ -69,6 +69,9 @@ public class Map : MapBounds, IPathfindGrid
 	[JsonProperty]
 	public Dictionary<int, PlantData> plants = new Dictionary<int, PlantData>();
 
+	[JsonProperty]
+	public MapExportSetting exportSetting;
+
 	public BitArray32 bits;
 
 	public Playlist plDay;
@@ -484,11 +487,12 @@ public class Map : MapBounds, IPathfindGrid
 			export.serializedCards.cards.Clear();
 			if (partial == null)
 			{
+				MapExportSetting mapExportSetting = exportSetting ?? new MapExportSetting();
 				foreach (Chara chara2 in charas)
 				{
 					if (export.usermap)
 					{
-						if (!chara2.trait.IsUnique && !chara2.IsPC)
+						if ((!mapExportSetting.clearLocalCharas || chara2.IsPCFactionOrMinion) && !chara2.trait.IsUnique && !chara2.IsPC)
 						{
 							export.serializedCards.Add(chara2);
 						}

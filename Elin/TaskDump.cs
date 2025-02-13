@@ -272,7 +272,7 @@ public class TaskDump : Task
 		return list;
 		bool ExcludeDump(Thing t)
 		{
-			if (t.isEquipped || t.c_isImportant || !t.trait.CanBeDropped || t.IsHotItem || t.trait is TraitToolBelt || t.trait is TraitAbility)
+			if (t.isEquipped || t.c_isImportant || t.trait.CanOnlyCarry || !t.trait.CanBeDropped || t.IsHotItem || t.trait is TraitToolBelt || t.trait is TraitAbility)
 			{
 				return true;
 			}

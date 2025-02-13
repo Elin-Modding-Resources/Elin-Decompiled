@@ -12,6 +12,8 @@ public class LayerLoadGame : ELayer
 
 	public GameObject goNoInfo;
 
+	public GameObject goInfo2;
+
 	public GameObject goCloudWarn;
 
 	public UINote note;
@@ -108,7 +110,7 @@ public class LayerLoadGame : ELayer
 			windows[0].SetCaption("saveList".lang() + (cloud ? (" " + "isCloud".lang()) : ""));
 		}
 		pathRoot = (backup ? pathBackup : (cloud ? CorePath.RootSaveCloud : CorePath.RootSave));
-		worlds = GameIO.GetGameList(pathRoot, backup);
+		worlds = GameIO.GetGameList(pathRoot, backup, !backup && !cloud);
 		goCloudWarn.SetActive(cloud && !backup);
 		goInfo.SetActive(value: false);
 		goNoInfo.SetActive(value: true);
@@ -151,8 +153,14 @@ public class LayerLoadGame : ELayer
 		note.AddTopic("date_real".lang(), i.RealDate);
 		note.AddTopic("date_game".lang(), i.GameData);
 		note.AddTopic("ID", i.id);
-		bool flag = ELayer.core.version.IsSaveCompatible(i.version);
-		if (!flag)
+		bool flag = ELayer.core.version.IsSaveCompatible(i.version) && !i.IsCorrupted;
+		goInfo2.SetActive(flag);
+		if (i.IsCorrupted)
+		{
+			note.Space();
+			note.AddText("corrupted_folder".lang(), FontColor.Bad);
+		}
+		else if (!flag)
 		{
 			note.Space();
 			note.AddText("incompatible".lang(), FontColor.Bad);

@@ -33,5 +33,6 @@ public enum CTAG
 	noWish,
 	dish_bonus,
 	dish_fail,
-	random_color
+	random_color,
+	noRandomEnc
 }

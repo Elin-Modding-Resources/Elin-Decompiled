@@ -528,12 +528,16 @@ public class ActPlan : EClass
 						}
 						if (c2.host != EClass.pc)
 						{
+							TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
 							if (c2.IsRestrainedResident)
 							{
-								TrySetAct(new AI_PracticeDummy
+								if (traitShackle != null && traitShackle.AllowTraining)
 								{
-									target = c2
-								});
+									TrySetAct(new AI_PracticeDummy
+									{
+										target = c2
+									});
+								}
 							}
 							else if ((c2.IsHostile() || altAction || c2.isRestrained) && c2.IsAliveInCurrentZone)
 							{
@@ -834,6 +838,7 @@ public class ActPlan : EClass
 						{
 							_ = cc.held;
 							cc.PickHeld(msg: true);
+							ActionMode.AdvOrRegion.updatePlans = true;
 							return false;
 						}, cc.held, CursorSystem.Inventory, 1, isHostileAct: false, localAct: false);
 					}

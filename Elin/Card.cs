@@ -3049,7 +3049,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		if ((GetRootCard() as Chara)?.held == thing)
 		{
-			(GetRootCard() as Chara).held = null;
+			Chara obj = GetRootCard() as Chara;
+			obj.held = null;
+			if (obj.IsPC)
+			{
+				WidgetCurrentTool instance = WidgetCurrentTool.Instance;
+				if ((bool)instance && instance.selected != -1 && instance.selectedButton.card != null && instance.selectedButton.card == thing)
+				{
+					instance.selectedButton.card = null;
+				}
+				EClass.player.RefreshCurrentHotItem();
+				ActionMode.AdvOrRegion.updatePlans = true;
+			}
 			RecalculateFOV();
 		}
 		dirtyWeight = true;
@@ -4581,7 +4592,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood;
 		int num = 1;
-		if (Chara.race.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
+		if (!IsMinion && Chara.race.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
 		{
 			flag2 = true;
 		}
@@ -4590,7 +4601,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			flag2 = true;
 			num = EClass.rndHalf(4 + 10 * (50 + Mathf.Max(0, (int)MathF.Sqrt(EClass.pc.Evalue(290) * 10))) / 100);
 		}
-		else if (origin != null && origin.HasElement(290))
+		else if (origin != null && origin.HasElement(290) && !IsMinion)
 		{
 			if (!flag2 && Chara.race.corpse[1].ToInt() > EClass.rnd(150000 / (100 + (int)Mathf.Sqrt(origin.Evalue(290)) * 5)))
 			{
@@ -4809,7 +4820,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (IsMinion)
 			{
-				i *= 2;
+				i *= 5;
 			}
 			if (EClass.rnd(i) == 0)
 			{

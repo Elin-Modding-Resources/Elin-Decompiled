@@ -55,6 +55,18 @@ public class GameIndex : EClass
 
 	public string FormTitle => id + ": " + zoneName + "(" + factionName + ") " + RealDate;
 
+	public bool IsCorrupted
+	{
+		get
+		{
+			if (zoneName == null)
+			{
+				return pcName == null;
+			}
+			return false;
+		}
+	}
+
 	public GameIndex Create(Game game)
 	{
 		if (game != null)

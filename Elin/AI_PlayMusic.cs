@@ -382,7 +382,7 @@ public class AI_PlayMusic : AIAct
 
 	public void Evaluate(bool success)
 	{
-		if (!owner.IsPC)
+		if (owner == null || !owner.IsPC)
 		{
 			return;
 		}

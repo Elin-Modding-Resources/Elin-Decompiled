@@ -19,4 +19,16 @@ public class Zone_User : Zone
 	public override int BaseElectricity => 1000;
 
 	public override bool RevealRoom => true;
+
+	public override void OnActivate()
+	{
+		base.OnActivate();
+		if (EClass._map.exportSetting != null && !EClass._map.exportSetting.textWelcome.IsEmpty())
+		{
+			WidgetMainText.Instance.NewLine();
+			Msg.SetColor("save");
+			Msg.SayRaw("<i>" + EClass._map.exportSetting.textWelcome + "</i>");
+			WidgetMainText.Instance.NewLine();
+		}
+	}
 }

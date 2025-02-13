@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 public class MsgLog : EClass
@@ -33,6 +35,18 @@ public class MsgLog : EClass
 				return 9999;
 			}
 			return 50;
+		}
+	}
+
+	[OnSerializing]
+	private void OnSerializing(StreamingContext context)
+	{
+		foreach (int item in dict.Keys.ToList())
+		{
+			if (item >= currentLogIndex || item <= currentLogIndex - maxLog)
+			{
+				dict.Remove(item);
+			}
 		}
 	}
 

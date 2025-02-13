@@ -186,10 +186,14 @@ public class AI_Idle : AIAct
 			{
 				if (owner.IsRestrainedResident && owner.stamina.value > owner.stamina.max / 2)
 				{
-					owner.SetAI(new AI_Torture
+					TraitShackle traitShackle = owner.pos.FindThing<TraitShackle>();
+					if (traitShackle != null && traitShackle.AllowTraining)
 					{
-						shackle = owner.pos.FindThing<TraitShackle>()
-					});
+						owner.SetAI(new AI_Torture
+						{
+							shackle = traitShackle
+						});
+					}
 					yield return Restart();
 				}
 				if (EClass.rnd(20) == 0)
@@ -586,11 +590,15 @@ public class AI_Idle : AIAct
 		}
 		if (owner.IsRestrainedResident && owner.stamina.value > owner.stamina.max / 2)
 		{
-			owner.SetAI(new AI_Torture
+			TraitShackle traitShackle2 = owner.pos.FindThing<TraitShackle>();
+			if (traitShackle2 != null && traitShackle2.AllowTraining)
 			{
-				shackle = owner.pos.FindThing<TraitShackle>()
-			});
-			yield return Restart();
+				owner.SetAI(new AI_Torture
+				{
+					shackle = traitShackle2
+				});
+				yield return Restart();
+			}
 		}
 		if (!owner.IsPCFactionOrMinion && EClass.rnd(owner.isSynced ? 50 : 2000) == 0 && owner.hostility == Hostility.Neutral && EClass.pc.party.HasElement(1563) && !owner.race.tag.Contains("animal") && EClass._zone.IsTown && !EClass._zone.IsPCFaction && !owner.HasCondition<ConIncognito>())
 		{

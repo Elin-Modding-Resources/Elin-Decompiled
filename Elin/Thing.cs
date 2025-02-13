@@ -208,7 +208,7 @@ public class Thing : Card
 			{
 				num = EClass.rnd(2) + 1;
 			}
-			if (num > 0 && !HasTag(CTAG.godArtifact))
+			if (num > 0 && !HasTag(CTAG.godArtifact) && !HasTag(CTAG.noRandomEnc))
 			{
 				for (int i = 0; i < num; i++)
 				{
