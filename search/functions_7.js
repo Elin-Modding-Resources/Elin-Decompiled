@@ -207,7 +207,7 @@ var searchData=
   ['getfunctionkeydown_204',['GetFunctionkeyDown',['../classEInput.html#a07179adabfd70d47d78e0218ac279774',1,'EInput']]],
   ['getfur_205',['GetFur',['../classAI__Shear.html#ac070fc80712bac5ef985de4691a4f519',1,'AI_Shear']]],
   ['getfurlv_206',['GetFurLv',['../classAI__Shear.html#a9931fc56ba6e57e83eaceaec5978fa06',1,'AI_Shear']]],
-  ['getgamelist_207',['GetGameList',['../classGameIO.html#ae74458c2df2444d74127d927a4af828f',1,'GameIO']]],
+  ['getgamelist_207',['GetGameList',['../classGameIO.html#af6be28d0c3241be15fdf59c410ccab6b',1,'GameIO']]],
   ['getgametext_208',['GetGameText',['../classMsg.html#a659b5ace053812ca07f66b59c0993030',1,'Msg']]],
   ['getgeneslot_209',['GetGeneSlot',['../classCharaGenes.html#af7fe457103e5f19a8ae0992f887afdfc',1,'CharaGenes']]],
   ['getglobal_210',['GetGlobal',['../classQuestManager.html#aee656082e2037dfef69293944f3fc838',1,'QuestManager']]],

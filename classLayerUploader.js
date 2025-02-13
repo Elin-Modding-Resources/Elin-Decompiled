@@ -11,6 +11,7 @@ var classLayerUploader =
     [ "ini", "classLayerUploader.html#adfebce1f2f2c4885d5bb150ec2d6ab07", null ],
     [ "inputId", "classLayerUploader.html#ae3c2c339bc33eca8812417e7d9acfc02", null ],
     [ "inputPassword", "classLayerUploader.html#ad0ed016af7f4060fa949ada62c4ead9d", null ],
+    [ "inputWelcome", "classLayerUploader.html#af2ed691a454f6e10b593d867c6760689", null ],
     [ "InvalidChars", "classLayerUploader.html#a83b7e217eb247ee1faf38ddd80cc6342", null ],
     [ "invalidIds", "classLayerUploader.html#a08c2067a31eb306034a12fc1a3b52a73", null ],
     [ "limitSec", "classLayerUploader.html#ab4c244a3728919d2a6bed59d9f88c253", null ],
@@ -18,6 +19,7 @@ var classLayerUploader =
     [ "textInvalidId", "classLayerUploader.html#a746a96f283384fc5fe00fcd4afcf0391", null ],
     [ "textInvalidPass", "classLayerUploader.html#ad6aebeef23f1d88a4ffc702d17467be9", null ],
     [ "textNextUpload", "classLayerUploader.html#a8db4660aee1dd9950bb7494153252864", null ],
+    [ "toggleClearLocalCharas", "classLayerUploader.html#a70f534277ef6fa00078d850549fcbf6a", null ],
     [ "validId", "classLayerUploader.html#aab2ebf84c6201a18a84e68b78c051e74", null ],
     [ "validPass", "classLayerUploader.html#afce858b1920afcb328ea8343721dbcb6", null ],
     [ "savePath", "classLayerUploader.html#ad2ef4adbf4dd7e29e4790769d392d701", null ]

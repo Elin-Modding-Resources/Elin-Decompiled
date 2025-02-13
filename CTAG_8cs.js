@@ -34,6 +34,7 @@ var CTAG_8cs =
       [ "noWish", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8969bd6d04bc5b0d14818687a9f8e193", null ],
       [ "dish_bonus", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a09bd0c57208f68dcb3d008f06dbf9fc3", null ],
       [ "dish_fail", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a750af94725478f5028046ddcb50d41d6", null ],
-      [ "random_color", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3712c55e14d81902f831c6225fb1b831", null ]
+      [ "random_color", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3712c55e14d81902f831c6225fb1b831", null ],
+      [ "noRandomEnc", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a990f7531362a2d795631fa1fe4079", null ]
     ] ]
 ];

@@ -1,5 +1,13 @@
 var NAVTREEINDEX64 =
 {
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#a64234aca07db0d41670f5093f87bffe7":[1,0,509,6,2,3],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#ad1c38073b56a472b5547e04e99eac6f9":[1,0,509,6,2,2],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#aee81da98f859b0f1e9eda6b3932cb4b2":[1,0,509,6,2,0],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#af73b58547aa77d7e7b968787853bce87":[1,0,509,6,2,1],
+"classGameSetting_1_1RenderSetting_1_1TCSetting.html":[1,0,509,6,3],
+"classGameSetting_1_1RenderSetting_1_1TCSetting.html#a68011beb3795892b83b01c0a39662e15":[1,0,509,6,3,3],
+"classGameSetting_1_1RenderSetting_1_1TCSetting.html#a6d6bd456bc0d6eccd6fbda73dd2f8eb2":[1,0,509,6,3,4],
+"classGameSetting_1_1RenderSetting_1_1TCSetting.html#a8042f490018718ba6a69f28ed34230da":[1,0,509,6,3,2],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#aadeb796c757a7dddefcac8af544451e3":[1,0,509,6,3,0],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#ab376ae129417c9faa2800057cde5101b":[1,0,509,6,3,1],
 "classGameSetting_1_1RenderSetting_1_1UD__FogSetting.html":[1,0,509,6,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX64 =
 "classGoalCombat.html#a4b0365304964156d50339dbb3c3fe5e8":[1,0,526,19],
 "classGoalCombat.html#a5e3a1a85d6b197380da42273c5a8d4b5":[1,0,526,13],
 "classGoalCombat.html#a6c8189a549709f4f7914e2f2616e6fd5":[1,0,526,5],
-"classGoalCombat.html#a7d130edf908caf0cf259a5d7f4692378":[1,0,526,16],
-"classGoalCombat.html#a9a36c7c515deec0f4d38997c7318cf03":[1,0,526,6],
-"classGoalCombat.html#aa061918810bb03c4d79ab9d67a213a4a":[1,0,526,12],
-"classGoalCombat.html#aa4388b9d8b3c1976a1ac793ba3fbb20f":[1,0,526,10],
-"classGoalCombat.html#aa60910c66dd9c3f97c82116265cb1183":[1,0,526,11],
-"classGoalCombat.html#aa9f4b721863857c3dc5c85e55bd74785":[1,0,526,8],
-"classGoalCombat.html#aaa48e0068704064909172bc590274f1d":[1,0,526,18],
-"classGoalCombat.html#abe14ec2e5ea805d31be2dfc34701cd93":[1,0,526,17],
-"classGoalCombat.html#ace487d76923e212d80f9d0b999d7e9cd":[1,0,526,14]
+"classGoalCombat.html#a7d130edf908caf0cf259a5d7f4692378":[1,0,526,16]
 };

@@ -12,6 +12,7 @@ var classLayerLoadGame =
     [ "buttonOpen", "classLayerLoadGame.html#a2b2d822fad64cbf38bc019d5493b39b9", null ],
     [ "goCloudWarn", "classLayerLoadGame.html#ae710388e494fcd3c631b01c12b4932cb", null ],
     [ "goInfo", "classLayerLoadGame.html#abdbbf09273fdf172a836aeee6ab9e499", null ],
+    [ "goInfo2", "classLayerLoadGame.html#acf57bf91c0636113bd35b7bf0de1bc23", null ],
     [ "goNoInfo", "classLayerLoadGame.html#a05c729b92d38363eb8327cc93de318e8", null ],
     [ "idDest", "classLayerLoadGame.html#aa5bc8344034724a573d13533db429ba7", null ],
     [ "list", "classLayerLoadGame.html#a221fc68e319573ad9a468a5602f36fb0", null ],

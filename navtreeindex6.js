@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"ExpeditionType_8cs.html":[2,0,0,443],
 "ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6b":[2,0,0,443,0],
 "ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba13348442cc6a27032d2b4aa28b75a5d3":[2,0,0,443,0,0],
 "ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba1819001b72329e2ef5799fe504238035":[2,0,0,443,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "Goal_8cs_source.html":[2,0,0,490],
 "GodStatueData_8cs.html":[2,0,0,510],
 "GodStatueData_8cs_source.html":[2,0,0,510],
-"GradientColor_8cs.html":[2,0,0,3,37],
-"GradientColor_8cs_source.html":[2,0,0,3,37]
+"GradientColor_8cs.html":[2,0,0,3,37]
 };

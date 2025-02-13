@@ -1,5 +1,6 @@
 var classZone__User =
 [
+    [ "OnActivate", "classZone__User.html#afa80587830747bdba392050437c5c700", null ],
     [ "path", "classZone__User.html#a39276fd8e5123d0429967d4b37a6fcc2", null ],
     [ "BaseElectricity", "classZone__User.html#ac02aa2186566378632525fa711bbc1a3", null ],
     [ "HasLaw", "classZone__User.html#a3025bd2f1e2bcd662726f384cb4d4cea", null ],

@@ -1776,6 +1776,9 @@ var hierarchy =
         ] ],
         [ "TraitSeed", "classTraitSeed.html", null ],
         [ "TraitShackle", "classTraitShackle.html", [
+          [ "TraitCage", "classTraitCage.html", [
+            [ "TraitCageBreeding", "classTraitCageBreeding.html", null ]
+          ] ],
           [ "TraitGallows", "classTraitGallows.html", null ],
           [ "TraitTortureHorse", "classTraitTortureHorse.html", null ]
         ] ],
@@ -2467,6 +2470,7 @@ var hierarchy =
       [ "InputFieldsTabSwitcher", "classInputFieldsTabSwitcher.html", null ]
     ] ],
     [ "GameSetting.RenderSetting.MapBGSetting", "classGameSetting_1_1RenderSetting_1_1MapBGSetting.html", null ],
+    [ "MapExportSetting", "classMapExportSetting.html", null ],
     [ "ZoneBlueprint.MapGenSetting", "structZoneBlueprint_1_1MapGenSetting.html", null ],
     [ "MapPiece.MapPath", "classMapPiece_1_1MapPath.html", null ],
     [ "MaskableGraphic", null, [

@@ -135,6 +135,7 @@ var classMap =
     [ "custom", "classMap.html#a6ddcbf6eab09e36eb3ae4afd2dd93a9e", null ],
     [ "deadCharas", "classMap.html#a6fd760aadfe057efc089e77ec2a3a532", null ],
     [ "effectManager", "classMap.html#ad57c3c4b4fa33e01643455c726019724", null ],
+    [ "exportSetting", "classMap.html#ac4c131a09dea197611e826592b6bd788", null ],
     [ "flood", "classMap.html#a42e032d482e2b2533749319feae7836e", null ],
     [ "footmarks", "classMap.html#a862bd855ebb54475e313802c9ed0f0ac", null ],
     [ "fowProfile", "classMap.html#acab4efe506ba4693a5a9541439ac17c2", null ],

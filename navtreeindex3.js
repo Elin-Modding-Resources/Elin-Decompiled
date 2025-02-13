@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"ColorProfile_8cs.html":[2,0,0,259],
 "ColorProfile_8cs_source.html":[2,0,0,259],
 "ColorUtil_8cs.html":[2,0,0,2,13],
 "ColorUtil_8cs_source.html":[2,0,0,2,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ContentPopulation_8cs.html":[2,0,0,334],
 "ContentPopulation_8cs_source.html":[2,0,0,334],
 "ContentQuest_8cs.html":[2,0,0,335],
-"ContentQuest_8cs_source.html":[2,0,0,335],
-"ContentRanking_8cs.html":[2,0,0,336]
+"ContentQuest_8cs_source.html":[2,0,0,335]
 };

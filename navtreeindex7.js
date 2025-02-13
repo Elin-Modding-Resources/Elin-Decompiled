@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GradientColor_8cs_source.html":[2,0,0,3,37],
 "GradientDir_8cs.html":[2,0,0,3,38],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4ea":[2,0,0,3,38,0],
 "GradientDir_8cs.html#a6a1e1afb16f9bdf258c6206fa912f4eaa06ce2a25e5d12c166a36f654dbea6012":[2,0,0,3,38,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HotItemWidgetSet_8cs_source.html":[2,0,0,593],
 "HotItemWidget_8cs.html":[2,0,0,592],
 "HotItemWidget_8cs_source.html":[2,0,0,592],
-"HotItem_8cs.html":[2,0,0,569],
-"HotItem_8cs_source.html":[2,0,0,569]
+"HotItem_8cs.html":[2,0,0,569]
 };

@@ -23,6 +23,7 @@ var classGameIndex =
     [ "zoneName", "classGameIndex.html#adc16f3bb080248d5c3e361d1035d342f", null ],
     [ "FormTitle", "classGameIndex.html#a7814512f978c761739aabb9245029850", null ],
     [ "GameData", "classGameIndex.html#aeeb8881417fbc072913e7470116d496e", null ],
+    [ "IsCorrupted", "classGameIndex.html#a2babae415cea4e0010f277939a8c6abd", null ],
     [ "RealDate", "classGameIndex.html#a055409fca29a714aace17fd83bb9eefe", null ],
     [ "Title", "classGameIndex.html#a06cbefd55026ea5aa6331601ec274bce", null ]
 ];

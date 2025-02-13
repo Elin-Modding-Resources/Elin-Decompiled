@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"HotItem_8cs_source.html":[2,0,0,569],
 "HotbarManager_8cs.html":[2,0,0,568],
 "HotbarManager_8cs_source.html":[2,0,0,568],
 "Hotbar_8cs.html":[2,0,0,567],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "Knowledge_8cs_source.html":[2,0,0,669],
 "KnownSong_8cs.html":[2,0,0,675],
 "KnownSong_8cs_source.html":[2,0,0,675],
-"LIQUID_8cs.html":[2,0,0,753],
-"LIQUID_8cs_source.html":[2,0,0,753]
+"LIQUID_8cs.html":[2,0,0,753]
 };

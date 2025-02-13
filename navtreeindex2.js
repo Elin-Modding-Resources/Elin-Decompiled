@@ -120,6 +120,7 @@ var NAVTREEINDEX2 =
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a5a026bf976c51ba22c2a2b2cffbf02f2":[2,0,0,370,0,4],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a662f707d5491e9bce8238a6c0be92190":[2,0,0,370,0,9],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a5d255a4109da344424e6bc9bb40c0":[2,0,0,370,0,21],
+"CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a990f7531362a2d795631fa1fe4079":[2,0,0,370,0,34],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a750af94725478f5028046ddcb50d41d6":[2,0,0,370,0,32],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a77d5c72c578b34aab3f8a2708911db50":[2,0,0,370,0,16],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8969bd6d04bc5b0d14818687a9f8e193":[2,0,0,370,0,30],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "ColorPalette_8cs.html":[2,0,0,3,2,0,0],
 "ColorPalette_8cs_source.html":[2,0,0,3,2,0,0],
 "ColorPicker_8cs.html":[2,0,0,3,2,0,1],
-"ColorPicker_8cs_source.html":[2,0,0,3,2,0,1],
-"ColorProfile_8cs.html":[2,0,0,259]
+"ColorPicker_8cs_source.html":[2,0,0,3,2,0,1]
 };

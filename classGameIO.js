@@ -4,7 +4,7 @@ var classGameIO =
     [ "ClearTemp", "classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5", null ],
     [ "DeleteEmptyGameFolders", "classGameIO.html#a3641078c1136f225277874c099b60179", null ],
     [ "DeleteGame", "classGameIO.html#a038c8c9ec58cd95871110de3e0afb483", null ],
-    [ "GetGameList", "classGameIO.html#ae74458c2df2444d74127d927a4af828f", null ],
+    [ "GetGameList", "classGameIO.html#af6be28d0c3241be15fdf59c410ccab6b", null ],
     [ "GetNewId", "classGameIO.html#a33c393c075f356bdad0d427c1924e0ff", null ],
     [ "LoadFile< T >", "classGameIO.html#a0d7e1032464fc7f6f21d627a55782f2d", null ],
     [ "LoadGame", "classGameIO.html#a9ca0d21de188a86eec9cd75e968070b8", null ],

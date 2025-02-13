@@ -1,5 +1,12 @@
 var NAVTREEINDEX25 =
 {
+"classAI__TendAnimal.html":[1,0,97],
+"classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7":[1,0,97,1],
+"classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac":[1,0,97,0],
+"classAI__Torture.html":[1,0,98],
+"classAI__Torture.html#a2b1313f9ad04927a973dfbe065a29277":[1,0,98,8],
+"classAI__Torture.html#a5040dcfb96a85fcdab262e30f0a92e4f":[1,0,98,7],
+"classAI__Torture.html#a5761b927faf17c1ff04752ab8090663b":[1,0,98,0],
 "classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2":[1,0,98,5],
 "classAI__Torture.html#a6f424584c46f3e4104c623bdaea8f268":[1,0,98,1],
 "classAI__Torture.html#a71db25923468f6db8884ee24c6ee3efe":[1,0,98,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX25 =
 "classAM__Cinema.html#ac56c1ff4f82f286a5f85a0d778a494c7":[1,0,122,5],
 "classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b":[1,0,122,4],
 "classAM__Cinema.html#aceced69f71118a0d501cb7e1dbfefc14":[1,0,122,1],
-"classAM__Cinema.html#ad2cab20f8808e1d3346c6c2188cc1df5":[1,0,122,12],
-"classAM__Cinema.html#ad969334df35448dd2a177716a432de34":[1,0,122,0],
-"classAM__Copy.html":[1,0,123],
-"classAM__Copy.html#a0ea8651089960626a5f938784258a70c":[1,0,123,0],
-"classAM__Copy.html#a0ea8651089960626a5f938784258a70ca5fb63579fc981698f97d55bfecb213ea":[1,0,123,0,0],
-"classAM__Copy.html#a0ea8651089960626a5f938784258a70ca686e697538050e4664636337cc3b834f":[1,0,123,0,2],
-"classAM__Copy.html#a0ea8651089960626a5f938784258a70ca7b9cf007806ed854cd12ab800c8a982b":[1,0,123,0,1],
-"classAM__Copy.html#a17f283e0a805719bc058c76cccd7f62a":[1,0,123,13]
+"classAM__Cinema.html#ad2cab20f8808e1d3346c6c2188cc1df5":[1,0,122,12]
 };
