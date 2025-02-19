@@ -2,7 +2,17 @@ public class InvOwnerCraft : InvOwnerDraglet
 {
 	public TraitCrafter crafter;
 
-	public override bool CanTargetAlly => crafter is TraitToolTalisman;
+	public override bool CanTargetAlly
+	{
+		get
+		{
+			if (!(crafter is TraitToolTalisman))
+			{
+				return crafter is TraitRuneMold;
+			}
+			return true;
+		}
+	}
 
 	public override bool ShowFuel => crafter.IsRequireFuel;
 

@@ -19,6 +19,11 @@ public class ConStrife : BaseBuff
 
 	public int ExpToNext => (lv + 1) * (lv + 1);
 
+	public override bool CanStack(Condition c)
+	{
+		return true;
+	}
+
 	public void AddKill(Chara c)
 	{
 		if (c.IsPCFactionOrMinion)

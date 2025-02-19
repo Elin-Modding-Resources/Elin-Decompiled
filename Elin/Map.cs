@@ -1948,13 +1948,18 @@ public class Map : MapBounds, IPathfindGrid
 			HitResult hitResult = item.TileType._HitTest(point, item.Thing, canIgnore: false);
 			if (item.Thing.stackOrder != detail.things.IndexOf(item.Thing) || (hitResult != HitResult.Valid && hitResult != HitResult.Warning))
 			{
-				if (EClass._zone.IsPCFaction)
+				bool flag = true;
+				if (EClass._zone.IsPCFaction || item.rarity >= Rarity.Legendary || item.trait is TraitFigure)
 				{
-					item.SetPlaceState(PlaceState.roaming);
+					flag = false;
+				}
+				if (flag)
+				{
+					item.Die();
 				}
 				else
 				{
-					item.Die();
+					item.SetPlaceState(PlaceState.roaming);
 				}
 			}
 		}

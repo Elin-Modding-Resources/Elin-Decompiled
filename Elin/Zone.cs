@@ -1515,7 +1515,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				{
 					continue;
 				}
-				if (c.isRestrained && c.currentZone == EClass.pc.currentZone && c.pos.FindThing<TraitShackle>() == null)
+				if (c.isRestrained && c.currentZone == EClass.pc.currentZone && (!c.pos.IsValid || c.pos.FindThing<TraitShackle>() == null))
 				{
 					c.isRestrained = false;
 				}

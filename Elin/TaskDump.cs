@@ -213,20 +213,18 @@ public class TaskDump : Task
 			{
 				EClass.pc.things.Foreach(delegate(Thing t)
 				{
-					if (!ExcludeDump(t))
+					if (!list.Contains(t) && !ExcludeDump(t) && t.CanStackTo(ct))
 					{
 						if (data.userFilter)
 						{
-							switch (data.IsFilterPass(t.GetName(NameStyle.Full, 1)))
+							Window.SaveData.FilterResult filterResult = data.IsFilterPass(t.GetName(NameStyle.Full, 1));
+							if (filterResult != Window.SaveData.FilterResult.Block)
 							{
-							case Window.SaveData.FilterResult.Block:
-								return;
-							case Window.SaveData.FilterResult.PassWithoutFurtherTest:
+								_ = 2;
 								list.Add(t);
-								return;
 							}
 						}
-						if (t.CanStackTo(ct))
+						else
 						{
 							list.Add(t);
 						}

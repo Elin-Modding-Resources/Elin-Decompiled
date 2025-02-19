@@ -30,7 +30,8 @@ public class TraitItemProc : TraitItem
 		}
 		ActEffect.Proc(IdEffect, GetParamInt(3, num), owner.blessedState, c, null, new ActRef
 		{
-			n1 = n1
+			n1 = n1,
+			refThing = owner.Thing
 		});
 		if (c.ExistsOnMap)
 		{

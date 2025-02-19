@@ -195,6 +195,12 @@ public class ButtonElement : UIButton
 			if (element != null)
 			{
 				num = element.Value;
+				if (element.IsGlobalElement && thing.c_idDeity != EClass.pc.faith.id)
+				{
+					uIItem.text1.SetActive(enable: false);
+					uIItem.image1.color = Color.white.SetAlpha(0.5f);
+					continue;
+				}
 			}
 			if (num == 0)
 			{

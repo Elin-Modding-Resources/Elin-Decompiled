@@ -8696,6 +8696,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (TC.IsPC && EClass.player.invlunerable)
+		{
+			return false;
+		}
 		PlaySound("hit_finish");
 		Say("finish");
 		Say("finish2", this, TC);

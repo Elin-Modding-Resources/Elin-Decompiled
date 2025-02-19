@@ -1,5 +1,7 @@
 public class InvOwnerMod : InvOwnerDraglet
 {
+	public override bool CanTargetAlly => true;
+
 	public override ProcessType processType => ProcessType.None;
 
 	public override string langTransfer => "invMod";

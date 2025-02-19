@@ -242,8 +242,7 @@ public class Props : EClass
 			{
 				foreach (Card item3 in cardMap.GetOrCreate(id))
 				{
-					Card obj = item3.parent as Card;
-					if (obj != null && obj.c_lockLv == 0)
+					if (!(item3.parent is Thing thing) || (thing.c_lockLv == 0 && thing.trait.CanUseContent))
 					{
 						TryAdd(item3.Thing);
 					}
@@ -262,12 +261,12 @@ public class Props : EClass
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
 			{
-				foreach (Thing thing in things)
+				foreach (Thing thing2 in things)
 				{
-					Card obj2 = thing.parent as Card;
-					if (obj2 != null && obj2.c_lockLv == 0 && thing.category.IsChildOf(cat.id) && !thing.IsExcludeFromCraft())
+					Card obj = thing2.parent as Card;
+					if (obj != null && obj.c_lockLv == 0 && thing2.category.IsChildOf(cat.id) && !thing2.IsExcludeFromCraft())
 					{
-						stack.Add(thing);
+						stack.Add(thing2);
 					}
 				}
 			}

@@ -75,7 +75,7 @@ public class CharaRenderer : CardRenderer
 		}
 		ignoreFirst = false;
 		nextframeTimer = 0f;
-		if (EClass.core.config.game.haltOnSpotEnemy && owner.ExistsOnMap && !EClass._zone.IsRegion && owner.IsHostile())
+		if (EClass.core.config.game.haltOnSpotEnemy && owner.ExistsOnMap && !EClass._zone.IsRegion && owner.IsHostile() && EClass.pc.CanSeeLos(owner))
 		{
 			EClass.player.enemySpotted = true;
 		}

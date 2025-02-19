@@ -461,6 +461,14 @@ public class Game : EClass
 			}
 		}
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 93))
+		{
+			RecipeManager.BuildList();
+			Debug.Log("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■feafefaeffaeaffeaaeaefseasfaefaef");
+			while (TryAddRecipe())
+			{
+			}
+		}
 		if (version.IsBelow(0, 23, 72))
 		{
 			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
@@ -609,6 +617,30 @@ public class Game : EClass
 			{
 				quests.Add(idQuest);
 			}
+		}
+		bool TryAddRecipe()
+		{
+			foreach (string key in player.recipes.knownRecipes.Keys)
+			{
+				if (key.Length > 1 && key[0] == 'b')
+				{
+					RecipeSource recipeSource = RecipeManager.Get(key + "-p");
+					if (recipeSource != null && !player.recipes.knownRecipes.ContainsKey(recipeSource.id))
+					{
+						Debug.Log(recipeSource.id);
+						player.recipes.Add(recipeSource.id, showEffect: false);
+						return true;
+					}
+					recipeSource = RecipeManager.Get(key.Replace("-p", ""));
+					if (recipeSource != null && !player.recipes.knownRecipes.ContainsKey(recipeSource.id))
+					{
+						Debug.Log(recipeSource.id);
+						player.recipes.Add(recipeSource.id, showEffect: false);
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 		static bool TryDestroy()
 		{

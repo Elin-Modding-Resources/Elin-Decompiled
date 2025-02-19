@@ -2003,7 +2003,6 @@ public class Player : EClass
 				currentHotItem = hotItemNoItem;
 			}
 		}
-		Debug.Log(currentHotItem);
 		if (currentHotItem != lastHotItem)
 		{
 			if (lastHotItem != null)

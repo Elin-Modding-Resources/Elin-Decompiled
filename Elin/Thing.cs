@@ -1208,7 +1208,7 @@ public class Thing : Card
 						return false;
 					}
 					return (!showEQStats || (e.id != 64 && e.id != 65 && e.id != 66 && e.id != 67)) ? true : false;
-				});
+				}, null, ElementContainer.NoteMode.Default, addRaceFeat: false, (Element e, string s) => (mode != IInspect.NoteMode.Info) ? s : (s + " (" + e.Value + ")"));
 			}
 			if (sockets != null)
 			{

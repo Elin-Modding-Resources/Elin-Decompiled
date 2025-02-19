@@ -6,4 +6,9 @@ public class BaseBuff : BaseDebuff
 	{
 		return 0;
 	}
+
+	public override bool CanStack(Condition c)
+	{
+		return c.power >= base.power;
+	}
 }

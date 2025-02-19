@@ -905,6 +905,10 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
+			for (int i = 0; i < 20; i++)
+			{
+				Debug.Log(Rand.Range(0, 2));
+			}
 			EClass.player.recipes.Add("b32");
 			if (EScriptable.rnd(2) == 0)
 			{
@@ -919,7 +923,7 @@ public class CoreDebug : EScriptable
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
 			EClass.pc.AddCondition<ConDisease>();
-			for (int i = 0; i < 10; i++)
+			for (int j = 0; j < 10; j++)
 			{
 				Thing thing = ThingGen.Create("egg_fertilized");
 				thing.TryMakeRandomItem(40);
@@ -1021,7 +1025,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int j = 0; j < advanceMin; j++)
+				for (int k = 0; k < advanceMin; k++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}

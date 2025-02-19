@@ -394,22 +394,30 @@ public class RecipeCard : Recipe
 			}
 			card = task.resources[0];
 		}
+		else if (sourceCard.isChara)
+		{
+			card = CharaGen.Create(idCard, Mathf.Max(EClass._zone.DangerLv, EClass.pc.LV));
+		}
 		else
 		{
-			card = ((!sourceCard.isChara) ? ((Card)ThingGen.Create(idCard, -1, Mathf.Max(EClass._zone.DangerLv, EClass.pc.LV))) : ((Card)CharaGen.Create(idCard, Mathf.Max(EClass._zone.DangerLv, EClass.pc.LV))));
-			if (!card.isChara)
+			card = ThingGen.Create(idCard, -1, Mathf.Max(EClass._zone.DangerLv, EClass.pc.LV));
+			if (!card.IsUnique)
 			{
-				if (!card.IsUnique)
+				card.ChangeMaterial(GetMainMaterial());
+			}
+			if (base.source.colorIng != 0)
+			{
+				card.Dye(GetColorMaterial());
+			}
+			if (card.IsContainer)
+			{
+				card.RemoveThings();
+			}
+			foreach (Ingredient ingredient in ingredients)
+			{
+				if (ingredient.thing != null && ingredient.thing.HasElement(759))
 				{
-					card.ChangeMaterial(GetMainMaterial());
-				}
-				if (base.source.colorIng != 0)
-				{
-					card.Dye(GetColorMaterial());
-				}
-				if (card.IsContainer)
-				{
-					card.RemoveThings();
+					card.elements.SetBase(759, ingredient.thing.Evalue(759));
 				}
 			}
 		}

@@ -658,7 +658,7 @@ public class Recipe : EClass
 			}
 		}
 		case "Floor":
-			if (pos.sourceObj.tileType.RemoveOnFloorChange && (!BuildMenu.Instance || !EClass.debug.ignoreBuildRule))
+			if (pos.HasObj && pos.sourceObj.tileType.RemoveOnFloorChange && (!BuildMenu.Instance || !EClass.debug.ignoreBuildRule))
 			{
 				EClass._map.SetObj(pos.x, pos.z);
 			}
