@@ -1,5 +1,11 @@
 var NAVTREEINDEX119 =
 {
+"classTraitStoneCutter.html#ac917262d6ce0c2e113fb0443933c49b0":[1,0,1785,2],
+"classTraitStoryBook.html":[1,0,1786],
+"classTraitStoryBook.html#a82109034aff557b0537cff48cc1ade7d":[1,0,1786,1],
+"classTraitStoryBook.html#abfc271f7fc85a93c40a6f7fd646dadf8":[1,0,1786,0],
+"classTraitStove.html":[1,0,1787],
+"classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a":[1,0,1787,0],
 "classTraitStrangeGirl.html":[1,0,1788],
 "classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8":[1,0,1788,0],
 "classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,1788,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitUsuihon.html#ae9d3b575f6fabcddbc088b50b6305b71":[1,0,1847,2],
 "classTraitVendingMachine.html":[1,0,1848],
 "classTraitVendingMachine.html#a329def7b0c25bf0e716501317ff8177f":[1,0,1848,4],
-"classTraitVendingMachine.html#a4254b5be98a12a2d09c39e1e9dc9e411":[1,0,1848,1],
-"classTraitVendingMachine.html#ab466c22e9734fc8ef713a6679e0ad1d6":[1,0,1848,3],
-"classTraitVendingMachine.html#ad895e9e7d4ed9691d63b363ee1bb5be7":[1,0,1848,0],
-"classTraitVendingMachine.html#ae1aba46863971c17f143c85fe8774f15":[1,0,1848,2],
-"classTraitViewMap.html":[1,0,1849],
-"classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1":[1,0,1849,0],
-"classTraitWaystone.html":[1,0,1850]
+"classTraitVendingMachine.html#a4254b5be98a12a2d09c39e1e9dc9e411":[1,0,1848,1]
 };

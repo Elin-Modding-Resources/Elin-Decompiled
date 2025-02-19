@@ -1,6 +1,7 @@
 var classConStrife =
 [
     [ "AddKill", "classConStrife.html#a3ecda945e3a9e93ecf891ac781bc65e3", null ],
+    [ "CanStack", "classConStrife.html#a2af44a6312647eee095a885580f94326", null ],
     [ "GetDice", "classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8", null ],
     [ "OnWriteNote", "classConStrife.html#a9dd786341f40327a11ab2b3aa2961c1b", null ],
     [ "SetTurn", "classConStrife.html#a60912300dfc3352f3ff76405302d505d", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX105 =
 {
+"classStanceManaCost.html":[1,0,1210],
+"classStanceTaunt.html":[1,0,1211],
+"classStats.html":[1,0,1212],
+"classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1212,17],
+"classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1212,18],
+"classStats.html#a272581c184ff82852476db0e26571c73":[1,0,1212,3],
 "classStats.html#a2972d0d69579f77f16a038c181357c20":[1,0,1212,4],
 "classStats.html#a2cb20076257f94455dac63674bf53902":[1,0,1212,13],
 "classStats.html#a2fd603d82369cb63e193b53225a59b7c":[1,0,1212,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX105 =
 "classTCState.html#a6ed5c2399593835bc1d473ad32b33af2":[1,0,1277,3],
 "classTCState.html#aa634bb2c7aa235fe49d1ca4fed2e74a8":[1,0,1277,1],
 "classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602":[1,0,1277,4],
-"classTCState.html#ae0fc3788169c15d791921e42262ed557":[1,0,1277,6],
-"classTCText.html":[1,0,1278],
-"classTCText.html#a199a8c0ded87c7829836d203dd736b34":[1,0,1278,2],
-"classTCText.html#a2b09382c9b128aeabad5b03842704f2c":[1,0,1278,0],
-"classTCText.html#a52fb1f4d631520a4182bbd23c1a62866":[1,0,1278,5],
-"classTCText.html#a547b65a6f6aade46d7245555d1c8225d":[1,0,1278,7],
-"classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8":[1,0,1278,4]
+"classTCState.html#ae0fc3788169c15d791921e42262ed557":[1,0,1277,6]
 };

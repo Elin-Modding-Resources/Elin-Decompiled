@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.92 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.93 Nightly</span>
    </div>
   </td>
  </tr>
@@ -254,6 +254,8 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:ab8d6e3e0fd66417cf9f6e489351ce0dd"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvOwnerMod.html#ab8d6e3e0fd66417cf9f6e489351ce0dd">CanTargetAlly</a><code> [get]</code></td></tr>
+<tr class="separator:ab8d6e3e0fd66417cf9f6e489351ce0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ffab16500d4b1eafc0d71453114479b"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77e">ProcessType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvOwnerMod.html#a3ffab16500d4b1eafc0d71453114479b">processType</a><code> [get]</code></td></tr>
 <tr class="separator:a3ffab16500d4b1eafc0d71453114479b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1468894934f3f75b38711aec5463cb"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvOwnerMod.html#aff1468894934f3f75b38711aec5463cb">langTransfer</a><code> [get]</code></td></tr>
@@ -466,11 +468,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00020">20</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>        : base(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>, container, _currency)</div>
-<div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="classInvOwnerDraglet.html#ae83ddb901c756203313ff8ac207ba460">count</a> = 1;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00022">22</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        : base(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>, container, _currency)</div>
+<div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="classInvOwnerDraglet.html#ae83ddb901c756203313ff8ac207ba460">count</a> = 1;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
 <div class="ttc" id="aclassInvOwnerDraglet_html_ae83ddb901c756203313ff8ac207ba460"><div class="ttname"><a href="classInvOwnerDraglet.html#ae83ddb901c756203313ff8ac207ba460">InvOwnerDraglet.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerDraglet_8cs_source.html#l00012">InvOwnerDraglet.cs:12</a></div></div>
 <div class="ttc" id="aclassInvOwner_html_a2bc2abb661daacba5097b1fbf31988c9"><div class="ttname"><a href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">InvOwner.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="InvOwner_8cs_source.html#l00538">InvOwner.cs:538</a></div></div>
 </div><!-- fragment -->
@@ -505,23 +507,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classInvOwnerDraglet.html#a3d60e9b55ed8812c443d98ae1432af98">InvOwnerDraglet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00054">54</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;modded&quot;</span>, t, <a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>);</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitRune.html">TraitRune</a>)</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            SE.Play(<span class="stringliteral">&quot;intonation&quot;</span>);</div>
-<div class="line"><span class="lineno">   60</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<span class="stringliteral">&quot;intonation&quot;</span>);</div>
-<div class="line"><span class="lineno">   61</span>            t.<a class="code hl_function" href="classCard.html#a164f43e042f81f1934f958fc02acfcb7">AddRune</a>(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>);</div>
-<div class="line"><span class="lineno">   62</span>            <a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1);</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            SE.Play(<span class="stringliteral">&quot;reloaded&quot;</span>);</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<span class="stringliteral">&quot;identify&quot;</span>);</div>
-<div class="line"><span class="lineno">   68</span>            t.<a class="code hl_function" href="classCard.html#a678b5118f18de1772e105d32a686c529">ApplySocket</a>(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>);</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00056">56</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;modded&quot;</span>, t, <a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>);</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitRune.html">TraitRune</a>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            SE.Play(<span class="stringliteral">&quot;intonation&quot;</span>);</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<span class="stringliteral">&quot;intonation&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span>            t.<a class="code hl_function" href="classCard.html#a164f43e042f81f1934f958fc02acfcb7">AddRune</a>(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>);</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            SE.Play(<span class="stringliteral">&quot;reloaded&quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">PlayEffect</a>(<span class="stringliteral">&quot;identify&quot;</span>);</div>
+<div class="line"><span class="lineno">   70</span>            t.<a class="code hl_function" href="classCard.html#a678b5118f18de1772e105d32a686c529">ApplySocket</a>(<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>);</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
 <div class="ttc" id="aclassCard_html_a164f43e042f81f1934f958fc02acfcb7"><div class="ttname"><a href="classCard.html#a164f43e042f81f1934f958fc02acfcb7">Card.AddRune</a></div><div class="ttdeci">SocketData AddRune(Card rune)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03327">Card.cs:3327</a></div></div>
 <div class="ttc" id="aclassCard_html_a678b5118f18de1772e105d32a686c529"><div class="ttname"><a href="classCard.html#a678b5118f18de1772e105d32a686c529">Card.ApplySocket</a></div><div class="ttdeci">void ApplySocket(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03279">Card.cs:3279</a></div></div>
 <div class="ttc" id="aclassCard_html_a8e3d176eebbdd8df4f5868aa199d488a"><div class="ttname"><a href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">Card.PlayEffect</a></div><div class="ttdeci">Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05410">Card.cs:5410</a></div></div>
@@ -572,18 +574,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00007">7</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolRangeCane.html">TraitToolRangeCane</a> &amp;&amp; !row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;modCane&quot;</span>))</div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> ((t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolRangeBow.html">TraitToolRangeBow</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolRangeCrossbow.html">TraitToolRangeCrossbow</a>) &amp;&amp; row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a> == 601)</div>
-<div class="line"><span class="lineno">   14</span>        {</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   16</span>        }</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00009">9</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolRangeCane.html">TraitToolRangeCane</a> &amp;&amp; !row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;modCane&quot;</span>))</div>
+<div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> ((t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolRangeBow.html">TraitToolRangeBow</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolRangeCrossbow.html">TraitToolRangeCrossbow</a>) &amp;&amp; row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a> == 601)</div>
+<div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_a258e55d6efca1996b0542540a95442a9"><div class="ttname"><a href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">SourceElement.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00066">SourceElement.cs:66</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_a99432e5acb5134731ae3aca223e261ef"><div class="ttname"><a href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">SourceElement.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00012">SourceElement.cs:12</a></div></div>
 <div class="ttc" id="aclassTraitToolRangeBow_html"><div class="ttname"><a href="classTraitToolRangeBow.html">TraitToolRangeBow</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitToolRangeBow_8cs_source.html#l00001">TraitToolRangeBow.cs:2</a></div></div>
@@ -592,7 +594,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Trait_8cs_source.html#l00533">Trait.Contains()</a>, and <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00162">Thing.OnCreate()</a>, and <a class="el" href="InvOwnerMod_8cs_source.html#l00026">ShouldShowGuide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00162">Thing.OnCreate()</a>, and <a class="el" href="InvOwnerMod_8cs_source.html#l00028">ShouldShowGuide()</a>.</p>
 
 </div>
 </div>
@@ -622,44 +624,68 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classInvOwner.html#aed54b09e84cc86b06b74bb6e7c82ab95">InvOwner</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00026">26</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_class" href="classTraitMod.html">TraitMod</a> traitMod = owner.trait as <a class="code hl_class" href="classTraitMod.html">TraitMod</a>;</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (traitMod is <a class="code hl_class" href="classTraitRune.html">TraitRune</a>)</div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classCard.html#a0e4224dbb6d38e65061bdece669b97b5">CanAddRune</a>(traitMod.<a class="code hl_property" href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">source</a>))</div>
-<div class="line"><span class="lineno">   32</span>            {</div>
-<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   34</span>            }</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classInvOwnerMod.html#aab8f870b96190680c0cba49034a1b947">IsValidRangedMod</a>(t, traitMod.<a class="code hl_property" href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">source</a>))</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> socket <span class="keywordflow">in</span> t.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a>)</div>
-<div class="line"><span class="lineno">   44</span>            {</div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (socket == 0)</div>
-<div class="line"><span class="lineno">   46</span>                {</div>
-<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   48</span>                }</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00028">28</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_class" href="classTraitMod.html">TraitMod</a> traitMod = owner.trait as <a class="code hl_class" href="classTraitMod.html">TraitMod</a>;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (traitMod is <a class="code hl_class" href="classTraitRune.html">TraitRune</a>)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classCard.html#a0e4224dbb6d38e65061bdece669b97b5">CanAddRune</a>(traitMod.<a class="code hl_property" href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">source</a>))</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classInvOwnerMod.html#aab8f870b96190680c0cba49034a1b947">IsValidRangedMod</a>(t, traitMod.<a class="code hl_property" href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">source</a>))</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> socket <span class="keywordflow">in</span> t.<a class="code hl_variable" href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">sockets</a>)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (socket == 0)</div>
+<div class="line"><span class="lineno">   48</span>                {</div>
+<div class="line"><span class="lineno">   49</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   50</span>                }</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
 <div class="ttc" id="aclassCard_html_a0e4224dbb6d38e65061bdece669b97b5"><div class="ttname"><a href="classCard.html#a0e4224dbb6d38e65061bdece669b97b5">Card.CanAddRune</a></div><div class="ttdeci">bool CanAddRune(SourceElement.Row row)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03389">Card.cs:3389</a></div></div>
 <div class="ttc" id="aclassCard_html_af10b07d1dd2e8ac8d687663d7a0a383e"><div class="ttname"><a href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">Card.sockets</a></div><div class="ttdeci">List&lt; int &gt; sockets</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00043">Card.cs:43</a></div></div>
-<div class="ttc" id="aclassInvOwnerMod_html_aab8f870b96190680c0cba49034a1b947"><div class="ttname"><a href="classInvOwnerMod.html#aab8f870b96190680c0cba49034a1b947">InvOwnerMod.IsValidRangedMod</a></div><div class="ttdeci">static bool IsValidRangedMod(Thing t, SourceElement.Row row)</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerMod_8cs_source.html#l00007">InvOwnerMod.cs:7</a></div></div>
+<div class="ttc" id="aclassInvOwnerMod_html_aab8f870b96190680c0cba49034a1b947"><div class="ttname"><a href="classInvOwnerMod.html#aab8f870b96190680c0cba49034a1b947">InvOwnerMod.IsValidRangedMod</a></div><div class="ttdeci">static bool IsValidRangedMod(Thing t, SourceElement.Row row)</div><div class="ttdef"><b>Definition:</b> <a href="InvOwnerMod_8cs_source.html#l00009">InvOwnerMod.cs:9</a></div></div>
 <div class="ttc" id="aclassTraitMod_html"><div class="ttname"><a href="classTraitMod.html">TraitMod</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMod_8cs_source.html#l00003">TraitMod.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitMod_html_aa5ac6744c07cc86edd9b9a46f152d79d"><div class="ttname"><a href="classTraitMod.html#aa5ac6744c07cc86edd9b9a46f152d79d">TraitMod.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="TraitMod_8cs_source.html#l00011">TraitMod.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l03389">Card.CanAddRune()</a>, <a class="el" href="InvOwnerMod_8cs_source.html#l00007">IsValidRangedMod()</a>, <a class="el" href="Card_8cs_source.html#l00043">Card.sockets</a>, and <a class="el" href="TraitMod_8cs_source.html#l00011">TraitMod.source</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03389">Card.CanAddRune()</a>, <a class="el" href="InvOwnerMod_8cs_source.html#l00009">IsValidRangedMod()</a>, <a class="el" href="Card_8cs_source.html#l00043">Card.sockets</a>, and <a class="el" href="TraitMod_8cs_source.html#l00011">TraitMod.source</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="ab8d6e3e0fd66417cf9f6e489351ce0dd" name="ab8d6e3e0fd66417cf9f6e489351ce0dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d6e3e0fd66417cf9f6e489351ce0dd">&#9670;&#160;</a></span>CanTargetAlly</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool InvOwnerMod.CanTargetAlly</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00003">3</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+
+</div>
+</div>
 <a id="aff1468894934f3f75b38711aec5463cb" name="aff1468894934f3f75b38711aec5463cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff1468894934f3f75b38711aec5463cb">&#9670;&#160;</a></span>langTransfer</h2>
 
@@ -680,7 +706,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00005">5</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00007">7</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
 
 </div>
 </div>
@@ -704,7 +730,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00003">3</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="InvOwnerMod_8cs_source.html#l00005">5</a> of file <a class="el" href="InvOwnerMod_8cs_source.html">InvOwnerMod.cs</a>.</p>
 
 </div>
 </div>

@@ -22,8 +22,9 @@ var NAVTREEINDEX32 =
 "classBaseArea_1_1Interaction.html#ac1d1fe44de391404415035c87441bb5e":[1,0,182,0,1],
 "classBaseArea_1_1Interaction.html#ac35cbe1d252d7ab9512b897b2dd0b958":[1,0,182,0,0],
 "classBaseBuff.html":[1,0,183],
-"classBaseBuff.html#a4f974b4c4a5752202b0ca45fed1215cf":[1,0,183,1],
-"classBaseBuff.html#a60a332b4153ca603e99a522505d8321a":[1,0,183,0],
+"classBaseBuff.html#a2e5de72784437fef24958bad1063eaf2":[1,0,183,0],
+"classBaseBuff.html#a4f974b4c4a5752202b0ca45fed1215cf":[1,0,183,2],
+"classBaseBuff.html#a60a332b4153ca603e99a522505d8321a":[1,0,183,1],
 "classBaseCard.html":[1,0,184],
 "classBaseCard.html#a02f7c5bcefd7e68419c8b24725e74a6a":[1,0,184,10],
 "classBaseCard.html#a0b4a87d58880cf73c22170e42605b923":[1,0,184,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classBaseGameScreen.html#afdb6921197dbe381797f80da10ef986b":[1,0,188,3],
 "classBaseGameScreen.html#afdd05efed988f0b70acd0196e2768df2":[1,0,188,31],
 "classBaseGameScreen.html#affda37c61daac0b635b89d553c4694db":[1,0,188,40],
-"classBaseGameScreen_1_1FocusOption.html":[1,0,188,0],
-"classBaseGameScreen_1_1FocusOption.html#a00ef6f9f563eac18e121034e6e275b87":[1,0,188,0,1]
+"classBaseGameScreen_1_1FocusOption.html":[1,0,188,0]
 };

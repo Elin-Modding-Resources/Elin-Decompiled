@@ -1,5 +1,11 @@
 var NAVTREEINDEX118 =
 {
+"classTraitRuneMold.html#a7bbec895032465484d4465ed87ef8324":[1,0,1726,5],
+"classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b":[1,0,1726,9],
+"classTraitRuneMold.html#ab9eb3f66a75f2bc7fd78b8bfa71682dd":[1,0,1726,6],
+"classTraitRuneMold.html#abc0b309c3da8ac657c67b07d2ac70a57":[1,0,1726,4],
+"classTraitRuneMold.html#ac6ce8e48e7e6672abaf383d4501fd6a8":[1,0,1726,1],
+"classTraitRuneMold.html#acbe331aca8ae318d87e2f5f54e24b1dd":[1,0,1726,7],
 "classTraitRuneMoldEarth.html":[1,0,1727],
 "classTraitRuneMoldEarth.html#aaf5b0202412f8b854b113e089bb52a02":[1,0,1727,0],
 "classTraitRuneMoldMana.html":[1,0,1728],
@@ -243,11 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitStoneCutter.html":[1,0,1785],
 "classTraitStoneCutter.html#a05c54a273a1b037c2418d56b4aafb9dd":[1,0,1785,3],
 "classTraitStoneCutter.html#a5e2c3d5d944c49954c63a2326df03338":[1,0,1785,0],
-"classTraitStoneCutter.html#a965c9a1be14b65a329ece7ab2700a0e5":[1,0,1785,1],
-"classTraitStoneCutter.html#ac917262d6ce0c2e113fb0443933c49b0":[1,0,1785,2],
-"classTraitStoryBook.html":[1,0,1786],
-"classTraitStoryBook.html#a82109034aff557b0537cff48cc1ade7d":[1,0,1786,1],
-"classTraitStoryBook.html#abfc271f7fc85a93c40a6f7fd646dadf8":[1,0,1786,0],
-"classTraitStove.html":[1,0,1787],
-"classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a":[1,0,1787,0]
+"classTraitStoneCutter.html#a965c9a1be14b65a329ece7ab2700a0e5":[1,0,1785,1]
 };

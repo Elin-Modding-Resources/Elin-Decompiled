@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"classGrowSystemHerb.html#af9ab00f59c132f8c7c4627b011113e9c":[1,0,556,1],
+"classGrowSystemKinoko.html":[1,0,557],
 "classGrowSystemKinoko.html#a0d762e7ad7f24dd7edb6e6d28e974d98":[1,0,557,5],
 "classGrowSystemKinoko.html#a17ba0063fc4757d5e69ac11e78b43ac8":[1,0,557,8],
 "classGrowSystemKinoko.html#a33a9fe10b0d5adf8e706a70e9adc5621":[1,0,557,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "classHitSummary.html#afbb5cec869f85dcbc69a8f0055672df8":[1,0,582,0],
 "classHoard.html":[1,0,583],
 "classHoard.html#a14ed19f37de12dc8fac23f0517b0d2a2":[1,0,583,18],
-"classHoard.html#a356da000fbe69aba476d1dce7ffd3cc5":[1,0,583,7],
-"classHoard.html#a48ebae85bb650431db04296ee5a9a905":[1,0,583,20],
-"classHoard.html#a66175193b33b769f34b3cbe044ef8126":[1,0,583,3]
+"classHoard.html#a356da000fbe69aba476d1dce7ffd3cc5":[1,0,583,7]
 };

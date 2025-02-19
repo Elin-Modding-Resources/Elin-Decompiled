@@ -4,6 +4,7 @@ var classInvOwnerMod =
     [ "_OnProcess", "classInvOwnerMod.html#af7276fe420b1e1b6f2658283c2573afd", null ],
     [ "IsValidRangedMod", "classInvOwnerMod.html#aab8f870b96190680c0cba49034a1b947", null ],
     [ "ShouldShowGuide", "classInvOwnerMod.html#a96afdcae3a667a085b79f9c056968cbd", null ],
+    [ "CanTargetAlly", "classInvOwnerMod.html#ab8d6e3e0fd66417cf9f6e489351ce0dd", null ],
     [ "langTransfer", "classInvOwnerMod.html#aff1468894934f3f75b38711aec5463cb", null ],
     [ "processType", "classInvOwnerMod.html#a3ffab16500d4b1eafc0d71453114479b", null ]
 ];

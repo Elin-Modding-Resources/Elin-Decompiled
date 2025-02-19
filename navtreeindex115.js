@@ -1,5 +1,11 @@
 var NAVTREEINDEX115 =
 {
+"classTraitGachaBall.html#a48ed88c0c4253754c083b5c5ee1f0c36":[1,0,1541,1],
+"classTraitGainPrecious.html":[1,0,1542],
+"classTraitGainPrecious.html#aaf4de6e5938f0def1751c3b72fdbb97d":[1,0,1542,0],
+"classTraitGallows.html":[1,0,1543],
+"classTraitGallows.html#a0ded69d79de1041a109a0a649861d915":[1,0,1543,0],
+"classTraitGamble.html":[1,0,1544],
 "classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950":[1,0,1544,5],
 "classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec":[1,0,1544,3],
 "classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1544,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitLittleOne.html#a196d3faedc31a553cf60e02e07ec8eb1":[1,0,1602,1],
 "classTraitLittleOne.html#a6879827034676409bc8095bb301c4222":[1,0,1602,0],
 "classTraitLittleOne.html#a709fb591676b3fbde62b1c23a06c7107":[1,0,1602,2],
-"classTraitLockpick.html":[1,0,1603],
-"classTraitLockpick.html#a1977a922312eddf53c4875f1abfc4113":[1,0,1603,1],
-"classTraitLockpick.html#ac1e7f25b0601c97eb79c83863631b317":[1,0,1603,2],
-"classTraitLockpick.html#ae1c518446591fb32ae8b418fe91d17c3":[1,0,1603,0],
-"classTraitLoom.html":[1,0,1604],
-"classTraitLoom.html#a91d05d92c54929bd16c48c081c44c2f0":[1,0,1604,0],
-"classTraitLoytel.html":[1,0,1605]
+"classTraitLockpick.html":[1,0,1603]
 };

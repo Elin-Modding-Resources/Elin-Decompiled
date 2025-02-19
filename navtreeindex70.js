@@ -1,5 +1,7 @@
 var NAVTREEINDEX70 =
 {
+"classInvOwner.html#aed54b09e84cc86b06b74bb6e7c82ab95":[1,0,657,43],
+"classInvOwner.html#aedc756b1e0f5b92de40324dde90dc147":[1,0,657,51],
 "classInvOwner.html#af098a2a7af607372a953ec520728e6fc":[1,0,657,65],
 "classInvOwner.html#af4762f2977cedfe6de73ecddcd881e96":[1,0,657,69],
 "classInvOwner.html#af9219f77282e3f55489a777ed99be9f1":[1,0,657,60],
@@ -188,12 +190,13 @@ var NAVTREEINDEX70 =
 "classInvOwnerLighten.html#abf76b3d666c1997bd35f22b29880869d":[1,0,676,1],
 "classInvOwnerLighten.html#ad51345a7822fddbc4078e820d078c1e9":[1,0,676,3],
 "classInvOwnerMod.html":[1,0,677],
-"classInvOwnerMod.html#a3ffab16500d4b1eafc0d71453114479b":[1,0,677,5],
+"classInvOwnerMod.html#a3ffab16500d4b1eafc0d71453114479b":[1,0,677,6],
 "classInvOwnerMod.html#a96afdcae3a667a085b79f9c056968cbd":[1,0,677,3],
 "classInvOwnerMod.html#aab8f870b96190680c0cba49034a1b947":[1,0,677,2],
 "classInvOwnerMod.html#ab2c0365f9761638756a6fceb7356dd7a":[1,0,677,0],
+"classInvOwnerMod.html#ab8d6e3e0fd66417cf9f6e489351ce0dd":[1,0,677,4],
 "classInvOwnerMod.html#af7276fe420b1e1b6f2658283c2573afd":[1,0,677,1],
-"classInvOwnerMod.html#aff1468894934f3f75b38711aec5463cb":[1,0,677,4],
+"classInvOwnerMod.html#aff1468894934f3f75b38711aec5463cb":[1,0,677,5],
 "classInvOwnerOffering.html":[1,0,678],
 "classInvOwnerOffering.html#a0a7890abba33e42f0b37416dd41e2dd0":[1,0,678,3],
 "classInvOwnerOffering.html#a22427d1324d485c120db9250622d73d5":[1,0,678,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX70 =
 "classInvOwnerUncurse.html#af590c31f3125225e136c9b824bb60110":[1,0,684,5],
 "classInvOwner_1_1ErrorMessage.html":[1,0,657,0],
 "classInvOwner_1_1ErrorMessage.html#a71ea84fc96fbc9badee45a8ec806fb50":[1,0,657,0,2],
-"classInvOwner_1_1ErrorMessage.html#a799c732c6a632bc72fbb53f3416284e1":[1,0,657,0,0],
-"classInvOwner_1_1ErrorMessage.html#a8b939228e929b9b1db4679779df5f181":[1,0,657,0,1],
-"classInvOwner_1_1ErrorMessage.html#ad48a969cd50b06b068ca14f1f43c5646":[1,0,657,0,3],
-"classInvOwner_1_1ForceGiveData.html":[1,0,657,1]
+"classInvOwner_1_1ErrorMessage.html#a799c732c6a632bc72fbb53f3416284e1":[1,0,657,0,0]
 };

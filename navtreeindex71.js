@@ -1,5 +1,8 @@
 var NAVTREEINDEX71 =
 {
+"classInvOwner_1_1ErrorMessage.html#a8b939228e929b9b1db4679779df5f181":[1,0,657,0,1],
+"classInvOwner_1_1ErrorMessage.html#ad48a969cd50b06b068ca14f1f43c5646":[1,0,657,0,3],
+"classInvOwner_1_1ForceGiveData.html":[1,0,657,1],
 "classInvOwner_1_1ForceGiveData.html#ab4cf57772d86144d2e44850db2391875":[1,0,657,1,0],
 "classInvOwner_1_1ForceGiveData.html#adbd6cda38f6abc8f0f0f89153dd443e1":[1,0,657,1,1],
 "classInvOwner_1_1Interaction.html":[1,0,657,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX71 =
 "classLangGame_1_1Row.html#a9956849b596f07d758ab7144adfae49d":[1,0,723,0,0],
 "classLangGame_1_1Row.html#aa5015e9512b5b236310d70fd0db9a96f":[1,0,723,0,6],
 "classLangGame_1_1Row.html#abb62ae570393dfd662fd52c0ae4baa73":[1,0,723,0,3],
-"classLangGame_1_1Row.html#ad651e729b1d410c645d0a4ebfc9a4a7c":[1,0,723,0,4],
-"classLangGame_1_1Row.html#ad77a2bbc1c8aa6a5b12023ef2cc6c7ba":[1,0,723,0,2],
-"classLangGame_1_1Row.html#ae9a4837bb8f1626c287d4870285f95ea":[1,0,723,0,1],
-"classLangGeneral.html":[1,0,724]
+"classLangGame_1_1Row.html#ad651e729b1d410c645d0a4ebfc9a4a7c":[1,0,723,0,4]
 };

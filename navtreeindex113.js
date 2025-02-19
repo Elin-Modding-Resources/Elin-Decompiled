@@ -1,5 +1,11 @@
 var NAVTREEINDEX113 =
 {
+"classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1433,1],
+"classTraitChestMerchant.html":[1,0,1434],
+"classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1434,0],
+"classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1434,2],
+"classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1434,1],
+"classTraitChestPractice.html":[1,0,1435],
 "classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1435,0],
 "classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1435,3],
 "classTraitChestPractice.html#aa888ef024cbf4d967f1780c60ffeab9d":[1,0,1435,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitDoorCurtain.html#a2afacb16aa5d5ef62f7c093981328ca8":[1,0,1481,0],
 "classTraitDoorCurtain.html#a6fe7f911c184a7ccbc01324566486227":[1,0,1481,2],
 "classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e":[1,0,1481,1],
-"classTraitDoorCurtain2.html":[1,0,1482],
-"classTraitDoorCurtain2.html#aee16732f839dd53bf7a49de2a4bcd391":[1,0,1482,0],
-"classTraitDoorFence.html":[1,0,1483],
-"classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1483,0],
-"classTraitDoorFrame.html":[1,0,1484],
-"classTraitDoorFrame.html#ab343e2af0b44daf071a0bbc7535dc5c5":[1,0,1484,0],
-"classTraitDoorSwing.html":[1,0,1488]
+"classTraitDoorCurtain2.html":[1,0,1482]
 };

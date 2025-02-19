@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.92 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.93 Nightly</span>
    </div>
   </td>
  </tr>
@@ -138,6 +138,8 @@ Inheritance diagram for BaseBuff:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a60a332b4153ca603e99a522505d8321a"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseBuff.html#a60a332b4153ca603e99a522505d8321a">GetPhase</a> ()</td></tr>
 <tr class="separator:a60a332b4153ca603e99a522505d8321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5de72784437fef24958bad1063eaf2"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseBuff.html#a2e5de72784437fef24958bad1063eaf2">CanStack</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
+<tr class="separator:a2e5de72784437fef24958bad1063eaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBaseDebuff"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBaseDebuff')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBaseDebuff.html">BaseDebuff</a></td></tr>
 <tr class="memitem:a154d1c999dc45d255e0523ad84b0de71 inherit pub_methods_classBaseDebuff"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">GetPhase</a> ()</td></tr>
 <tr class="separator:a154d1c999dc45d255e0523ad84b0de71 inherit pub_methods_classBaseDebuff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -431,6 +433,41 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="BaseBuff_8cs_source.html#l00001">1</a> of file <a class="el" href="BaseBuff_8cs_source.html">BaseBuff.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2e5de72784437fef24958bad1063eaf2" name="a2e5de72784437fef24958bad1063eaf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5de72784437fef24958bad1063eaf2">&#9670;&#160;</a></span>CanStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool BaseBuff.CanStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCondition.html">Condition</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCondition.html#a15631ed2272e1ae304dd7e173ef6dfcc">BaseCondition</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classConStrife.html#a2af44a6312647eee095a885580f94326">ConStrife</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BaseBuff_8cs_source.html#l00010">10</a> of file <a class="el" href="BaseBuff_8cs_source.html">BaseBuff.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> c.power &gt;= base.power;</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a60a332b4153ca603e99a522505d8321a" name="a60a332b4153ca603e99a522505d8321a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60a332b4153ca603e99a522505d8321a">&#9670;&#160;</a></span>GetPhase()</h2>
 

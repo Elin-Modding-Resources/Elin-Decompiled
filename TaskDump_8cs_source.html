@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.92 Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.93 Nightly</span>
    </div>
   </td>
  </tr>
@@ -307,89 +307,87 @@ $(document).ready(function(){initNavTree('TaskDump_8cs_source.html',''); initRes
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            {</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    <span class="keywordflow">if</span> (!ExcludeDump(t))</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    <span class="keywordflow">if</span> (!list.Contains(t) &amp;&amp; !ExcludeDump(t) &amp;&amp; t.<a class="code hl_function" href="classThing.html#aee1df4abe2d7c40bbf16c94850628b08">CanStackTo</a>(ct))</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                    {</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                        <span class="keywordflow">if</span> (data.userFilter)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                        if (data.userFilter)</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                        {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                            switch (data.IsFilterPass(t.GetName(NameStyle.Full, 1)))</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                            {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                            case Window.SaveData.FilterResult.Block:</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                                return;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                            case Window.SaveData.FilterResult.PassWithoutFurtherTest:</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                                list.Add(t);</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                                return;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                            }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                        }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                        <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classThing.html#aee1df4abe2d7c40bbf16c94850628b08">CanStackTo</a>(ct))</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                        {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                            list.Add(t);</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                        }</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    }</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                });</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            }</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="AutodumpFlag_8cs.html#a4d2959963559bdb2dad9ad9b4946e0f2">AutodumpFlag</a>.sameCategory:</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        {</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            <span class="keywordflow">if</span> (c.things.Count == 0)</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            }</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            HashSet&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>&gt; cats = <span class="keyword">new</span> HashSet&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>&gt;();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> c.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>)</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                cats.Add(thing.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            }</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            {</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                <span class="keywordflow">if</span> (!ExcludeDump(t))</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                {</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                    <span class="keywordflow">if</span> (data.userFilter)</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                        <span class="keywordflow">switch</span> (data.IsFilterPass(t.<a class="code hl_function" href="classThing.html#abf919b04ba952974c2778a7f50ab647c">GetName</a>(<a class="code hl_enumeration" href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a>.Full, 1)))</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                        {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        <span class="keywordflow">case</span> <a class="code hl_class" href="classWindow.html">Window</a>.<a class="code hl_class" href="classWindow_1_1SaveData.html">SaveData</a>.<a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Block:</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                        <span class="keywordflow">case</span> <a class="code hl_class" href="classWindow.html">Window</a>.<a class="code hl_class" href="classWindow_1_1SaveData.html">SaveData</a>.<a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.PassWithoutFurtherTest:</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                            list.Add(t);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                        }</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                    }</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                    <span class="keywordflow">if</span> (cats.Contains(t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>))</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    {</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                        list.Add(t);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                    }</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            });</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordtype">bool</span> ExcludeDump(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classThing.html#a1d1749db95ba575945fd81955bbcd364">isEquipped</a> || t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af59d1d8c9919b6620eab8ceba3956cca">CanOnlyCarry</a> || !t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#adbd5ca5694536e90f772c119bf79126c">CanBeDropped</a> || t.<a class="code hl_property" href="classCard.html#a621ae80a7c7b7c58519c1afdcfe0dc89">IsHotItem</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolBelt.html">TraitToolBelt</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a>)</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">IsContainer</a> &amp;&amp; t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count &gt; 0)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">if</span> (data.noRotten &amp;&amp; t.<a class="code hl_property" href="classCard.html#a11cc150430f197d1edc6a774ed221e14">IsDecayed</a>)</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="keywordflow">if</span> (data.onlyRottable &amp;&amp; t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#aeae7706effc27faab891e9b6e10b5dd8">Decay</a> == 0)</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            }</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            <span class="keywordflow">if</span> (!(t.<a class="code hl_variable" href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">parent</a> is <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>))</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>.GetWindowSaveData()?.excludeDump ?? <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                            Window.SaveData.FilterResult filterResult = data.IsFilterPass(t.GetName(NameStyle.Full, 1));</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                            if (filterResult != Window.SaveData.FilterResult.Block)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                            {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                                _ = 2;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                                list.Add(t);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                            }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                        }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                        {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                            list.Add(t);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                        }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                });</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="AutodumpFlag_8cs.html#a4d2959963559bdb2dad9ad9b4946e0f2">AutodumpFlag</a>.sameCategory:</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordflow">if</span> (c.things.Count == 0)</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            HashSet&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>&gt; cats = <span class="keyword">new</span> HashSet&lt;<a class="code hl_class" href="classSourceCategory.html">SourceCategory</a>.<a class="code hl_class" href="classSourceCategory_1_1Row.html">Row</a>&gt;();</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> c.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                cats.Add(thing.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <span class="keywordflow">if</span> (!ExcludeDump(t))</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                    <span class="keywordflow">if</span> (data.userFilter)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                    {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                        <span class="keywordflow">switch</span> (data.IsFilterPass(t.<a class="code hl_function" href="classThing.html#abf919b04ba952974c2778a7f50ab647c">GetName</a>(<a class="code hl_enumeration" href="NameStyle_8cs.html#abf34abdeef335d7689e17246b418a71a">NameStyle</a>.Full, 1)))</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                        {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                        <span class="keywordflow">case</span> <a class="code hl_class" href="classWindow.html">Window</a>.<a class="code hl_class" href="classWindow_1_1SaveData.html">SaveData</a>.<a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.Block:</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        <span class="keywordflow">case</span> <a class="code hl_class" href="classWindow.html">Window</a>.<a class="code hl_class" href="classWindow_1_1SaveData.html">SaveData</a>.<a class="code hl_enumeration" href="classWindow_1_1SaveData.html#ab53756696fc8cdb01ffe31f1e9a09df8">FilterResult</a>.PassWithoutFurtherTest:</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                            list.Add(t);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                        }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                    }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                    <span class="keywordflow">if</span> (cats.Contains(t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>))</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                    {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                        list.Add(t);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            });</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordtype">bool</span> ExcludeDump(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classThing.html#a1d1749db95ba575945fd81955bbcd364">isEquipped</a> || t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#af59d1d8c9919b6620eab8ceba3956cca">CanOnlyCarry</a> || !t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#adbd5ca5694536e90f772c119bf79126c">CanBeDropped</a> || t.<a class="code hl_property" href="classCard.html#a621ae80a7c7b7c58519c1afdcfe0dc89">IsHotItem</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolBelt.html">TraitToolBelt</a> || t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a>)</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">IsContainer</a> &amp;&amp; t.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count &gt; 0)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keywordflow">if</span> (data.noRotten &amp;&amp; t.<a class="code hl_property" href="classCard.html#a11cc150430f197d1edc6a774ed221e14">IsDecayed</a>)</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keywordflow">if</span> (data.onlyRottable &amp;&amp; t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#aeae7706effc27faab891e9b6e10b5dd8">Decay</a> == 0)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">if</span> (!(t.<a class="code hl_variable" href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">parent</a> is <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>))</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>.GetWindowSaveData()?.excludeDump ?? <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
 <div class="ttc" id="aAutodumpFlag_8cs_html_a4d2959963559bdb2dad9ad9b4946e0f2"><div class="ttname"><a href="AutodumpFlag_8cs.html#a4d2959963559bdb2dad9ad9b4946e0f2">AutodumpFlag</a></div><div class="ttdeci">AutodumpFlag</div><div class="ttdef"><b>Definition:</b> <a href="AutodumpFlag_8cs_source.html#l00001">AutodumpFlag.cs:2</a></div></div>
 <div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85b"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85b">ContainerFlag</a></div><div class="ttdeci">ContainerFlag</div><div class="ttdef"><b>Definition:</b> <a href="ContainerFlag_8cs_source.html#l00004">ContainerFlag.cs:5</a></div></div>

@@ -1,5 +1,11 @@
 var NAVTREEINDEX80 =
 {
+"classMapConfig.html#a38f9878894d33f899ef6450b251afca6":[1,0,833,7],
+"classMapConfig.html#a498956a06ce4cd0749fc67d7c6331b2e":[1,0,833,24],
+"classMapConfig.html#a53d0b1f71bc0aa424e84f1641c73eafe":[1,0,833,10],
+"classMapConfig.html#a5a5bb318a384516d35207331b3af2e06":[1,0,833,14],
+"classMapConfig.html#a620f51f2e2fb8fa4f56c1648fb9aa0af":[1,0,833,9],
+"classMapConfig.html#a693e975ab77ef8bc79406271e58d8e6b":[1,0,833,19],
 "classMapConfig.html#a6975da84308f50dfa79dfa41abea2bb5":[1,0,833,32],
 "classMapConfig.html#a6b89a023c62dd032d14b08b95e72b5aa":[1,0,833,27],
 "classMapConfig.html#a73fc9b138a5c0ec744c5b56d92c67728":[1,0,833,28],
@@ -243,11 +249,5 @@ var NAVTREEINDEX80 =
 "classMiniGame_1_1Balance.html":[1,0,852,0],
 "classMiniGame_1_1Balance.html#a8833567ed4c9713c3c55696db7ef2b43":[1,0,852,0,0],
 "classMiniGame_1_1Balance.html#acbc87a54916231a8634b866458d0eb98":[1,0,852,0,1],
-"classMiniGame__Basket.html":[1,0,853],
-"classMiniGame__Basket.html#a2dd727ad662fe5f3d66101cd689cdc96":[1,0,853,2],
-"classMiniGame__Basket.html#a41d9dcbe5364d3f07b9b9adab70d8f4d":[1,0,853,0],
-"classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6":[1,0,853,1],
-"classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026":[1,0,853,3],
-"classMiniGame__Basket.html#aebcbc2cebb258e17bd28564df05a5746":[1,0,853,4],
-"classMiniGame__Blackjack.html":[1,0,854]
+"classMiniGame__Basket.html":[1,0,853]
 };

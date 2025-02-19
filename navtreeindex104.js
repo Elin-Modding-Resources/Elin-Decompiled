@@ -1,5 +1,11 @@
 var NAVTREEINDEX104 =
 {
+"classSpatial.html#a76a64bcb0eb5089956bc50e8c74946b4":[1,0,1189,18],
+"classSpatial.html#a76e41bd267f581e82f8a5592ff85c1d6":[1,0,1189,74],
+"classSpatial.html#a7811977e144299adabca3a9908a04f17":[1,0,1189,76],
+"classSpatial.html#a7ae673439c824ce2a723e36ad371342f":[1,0,1189,1],
+"classSpatial.html#a8173a182bcfaa59147bd62d5a6555248":[1,0,1189,44],
+"classSpatial.html#a839c20ec6dcb720f013f2871590f7eb3":[1,0,1189,88],
 "classSpatial.html#a8667078305385c64b1209db11f6462c9":[1,0,1189,85],
 "classSpatial.html#a872aba4f74325d925c3306f42503d569":[1,0,1189,32],
 "classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b":[1,0,1189,90],
@@ -243,11 +249,5 @@ var NAVTREEINDEX104 =
 "classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016":[1,0,1207,4],
 "classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714":[1,0,1207,5],
 "classStanceFury.html":[1,0,1208],
-"classStanceIai.html":[1,0,1209],
-"classStanceManaCost.html":[1,0,1210],
-"classStanceTaunt.html":[1,0,1211],
-"classStats.html":[1,0,1212],
-"classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1212,17],
-"classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1212,18],
-"classStats.html#a272581c184ff82852476db0e26571c73":[1,0,1212,3]
+"classStanceIai.html":[1,0,1209]
 };
