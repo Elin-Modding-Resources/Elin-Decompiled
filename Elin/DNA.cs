@@ -457,16 +457,16 @@ public class DNA : EClass
 					vals.Add(id);
 					vals.Add(v);
 				}
-				cost += funcCost(num);
+				cost += Mathf.Max(0, funcCost(num));
 			}
 		}
 	}
 
 	public void CalcCost()
 	{
-		for (int i = 0; i < vals.Count; i += 2)
+		if (cost < 0)
 		{
-			Element.Create(vals[i], vals[i + 1]);
+			cost = 0;
 		}
 	}
 
@@ -484,6 +484,10 @@ public class DNA : EClass
 			{
 				slot = element.source.geneSlot;
 			}
+		}
+		if (slot < 0)
+		{
+			slot = 0;
 		}
 	}
 

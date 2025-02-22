@@ -11,10 +11,6 @@ public class CharaGen : CardGen
 		}
 		objLv = lv;
 		chara.Create(id, idMat, lv);
-		if (EClass.player != null)
-		{
-			EClass.player.codex.AddSpawn(id);
-		}
 		return chara;
 	}
 

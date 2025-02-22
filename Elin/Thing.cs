@@ -1891,7 +1891,7 @@ public class Thing : Card
 
 	public void TryLickEnchant(Chara c, bool msg = true, Chara tg = null, BodySlot slot = null)
 	{
-		if (!base.IsEquipmentOrRanged || base.IsCursed || base.rarity <= Rarity.Normal || GetInt(107) > 0)
+		if (!base.IsEquipment || base.IsCursed || base.rarity <= Rarity.Normal || GetInt(107) > 0)
 		{
 			return;
 		}
@@ -1905,7 +1905,7 @@ public class Thing : Card
 				PlaySound("offering");
 				PlayEffect("mutation");
 			}
-			Element element = AddEnchant(5 + Mathf.Max(EClass.pc.LUC, 0));
+			Element element = AddEnchant(base.LV);
 			if (element != null)
 			{
 				SetInt(107, element.id);

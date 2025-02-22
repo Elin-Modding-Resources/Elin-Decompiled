@@ -870,6 +870,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public bool hasSpawned
+	{
+		get
+		{
+			return _bits2[8];
+		}
+		set
+		{
+			_bits2[8] = value;
+		}
+	}
+
 	public bool isBackerContent => c_idBacker != 0;
 
 	public SourceBacker.Row sourceBacker
@@ -3962,9 +3974,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				else
 				{
-					if (attackSource != AttackSource.Finish && IsPCParty && Chara.host == null && EClass.pc.ai is GoalAutoCombat)
+					if (attackSource != AttackSource.Finish && IsPCParty && Chara.host == null)
 					{
-						if (!EClass.player.invlunerable && (EClass.pc.ai as GoalAutoCombat).listHealthy.Contains(Chara))
+						if (EClass.pc.ai is GoalAutoCombat && !EClass.player.invlunerable && (EClass.pc.ai as GoalAutoCombat).listHealthy.Contains(Chara))
 						{
 							EClass.core.actionsNextFrame.Add(delegate
 							{
@@ -4079,6 +4091,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isDestroyed)
 			{
+				Debug.Log(EClass.player.invlunerable);
+				Debug.Log(EClass.pc.ai?.ToString() + "/" + EClass.pc.ai.IsRunning);
 				Die(e, origin, attackSource);
 				ProcAbsorb();
 				if (EClass.pc.Evalue(1355) > 0 && (IsPCFactionOrMinion || (origin != null && origin.IsPCParty)))
@@ -4798,7 +4812,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			item4.isHidden = false;
 			item4.SetInt(116);
 			EClass._zone.AddCard(item4, nearestPoint);
-			if (!item4.IsEquipmentOrRanged || item4.rarity < Rarity.Superior || item4.IsCursed)
+			if (!item4.IsEquipment || item4.rarity < Rarity.Superior || item4.IsCursed)
 			{
 				continue;
 			}

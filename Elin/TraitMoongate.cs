@@ -52,7 +52,25 @@ public class TraitMoongate : Trait
 				EClass.pc.SayNothingHappans();
 				return false;
 			}
-			Net.DownloadMeta item = list.RandomItem();
+			List<MapMetaData> list2 = ListSavedUserMap();
+			IList<Net.DownloadMeta> list3 = list.Copy();
+			foreach (MapMetaData item2 in list2)
+			{
+				foreach (Net.DownloadMeta item3 in list3)
+				{
+					if (item3.id == item2.id && item3.version == item2.version)
+					{
+						list3.Remove(item3);
+						break;
+					}
+				}
+			}
+			Debug.Log(list3.Count);
+			if (list3.Count == 0)
+			{
+				list3 = list.Copy();
+			}
+			Net.DownloadMeta item = list3.RandomItem();
 			Zone_User zone_User = EClass.game.spatials.Find((Zone_User z) => z.id == item.id);
 			if (zone_User != null)
 			{
@@ -111,5 +129,24 @@ public class TraitMoongate : Trait
 			z = EClass.pc.pos.z
 		};
 		EClass.pc.MoveZone(zone, ZoneTransition.EnterState.Moongate);
+	}
+
+	public List<MapMetaData> ListSavedUserMap()
+	{
+		List<MapMetaData> list = new List<MapMetaData>();
+		foreach (FileInfo item in new DirectoryInfo(CorePath.ZoneSaveUser).GetFiles().Concat(MOD.listMaps))
+		{
+			if (!(item.Extension != ".z"))
+			{
+				MapMetaData metaData = Map.GetMetaData(item.FullName);
+				if (metaData != null && metaData.IsValidVersion())
+				{
+					metaData.path = item.FullName;
+					metaData.date = item.LastWriteTime;
+					list.Add(metaData);
+				}
+			}
+		}
+		return list;
 	}
 }

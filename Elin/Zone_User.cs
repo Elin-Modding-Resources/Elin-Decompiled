@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -23,12 +24,24 @@ public class Zone_User : Zone
 	public override void OnActivate()
 	{
 		base.OnActivate();
-		if (EClass._map.exportSetting != null && !EClass._map.exportSetting.textWelcome.IsEmpty())
+		if (EClass._map.exportSetting == null || EClass._map.exportSetting.textWelcome.IsEmpty())
 		{
-			WidgetMainText.Instance.NewLine();
+			return;
+		}
+		WidgetMainText.Instance.NewLine();
+		string[] array = EClass._map.exportSetting.textWelcome.Replace("\\n", "").Split(Environment.NewLine.ToCharArray());
+		int num = 0;
+		string[] array2 = array;
+		foreach (string text in array2)
+		{
 			Msg.SetColor("save");
-			Msg.SayRaw("<i>" + EClass._map.exportSetting.textWelcome + "</i>");
+			Msg.SayRaw("<i>" + text.Replace(Environment.NewLine, "") + "</i>");
 			WidgetMainText.Instance.NewLine();
+			num++;
+			if (num >= 5)
+			{
+				break;
+			}
 		}
 	}
 }

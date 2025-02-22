@@ -154,7 +154,7 @@ public class ActPlan : EClass
 
 	public bool altAction;
 
-	public bool ignoreAdddCondition;
+	public bool ignoreAddCondition;
 
 	private bool _canInteractNeighbor;
 
@@ -366,7 +366,7 @@ public class ActPlan : EClass
 
 	public bool TrySetAct(Act _act, Card _tc = null)
 	{
-		if (!ignoreAdddCondition && !_act.CanPerform(cc, _tc, pos))
+		if (!ignoreAddCondition && !_act.CanPerform(cc, _tc, pos))
 		{
 			return false;
 		}

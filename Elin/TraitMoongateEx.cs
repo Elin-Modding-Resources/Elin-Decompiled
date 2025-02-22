@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 public class TraitMoongateEx : TraitMoongate
 {
@@ -21,32 +19,19 @@ public class TraitMoongateEx : TraitMoongate
 
 	public void _OnUse()
 	{
-		List<MapMetaData> list = new List<MapMetaData>();
-		foreach (FileInfo item in new DirectoryInfo(CorePath.ZoneSaveUser).GetFiles().Concat(MOD.listMaps))
-		{
-			if (!(item.Extension != ".z"))
-			{
-				MapMetaData metaData = Map.GetMetaData(item.FullName);
-				if (metaData != null && metaData.IsValidVersion())
-				{
-					metaData.path = item.FullName;
-					metaData.date = item.LastWriteTime;
-					list.Add(metaData);
-				}
-			}
-		}
+		List<MapMetaData> list = ListSavedUserMap();
 		if (list.Count == 0)
 		{
 			EClass.pc.SayNothingHappans();
 			return;
 		}
-		foreach (MapMetaData item2 in list)
+		foreach (MapMetaData item in list)
 		{
 			bool flag = false;
-			foreach (string item3 in EClass.player.favMoongate)
+			foreach (string item2 in EClass.player.favMoongate)
 			{
-				_ = item3;
-				if (EClass.player.favMoongate.Contains(item2.id))
+				_ = item2;
+				if (EClass.player.favMoongate.Contains(item.id))
 				{
 					flag = true;
 					break;
@@ -54,7 +39,7 @@ public class TraitMoongateEx : TraitMoongate
 			}
 			if (!flag)
 			{
-				EClass.player.favMoongate.Remove(item2.id);
+				EClass.player.favMoongate.Remove(item.id);
 			}
 		}
 		Sort();

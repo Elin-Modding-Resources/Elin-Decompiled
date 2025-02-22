@@ -12,16 +12,22 @@ public class GamePrincipal : EClass
 	public int socre;
 
 	[JsonProperty]
-	public int bonusLoot;
+	public int dropRateMtp;
 
 	[JsonProperty]
-	public bool deathPenaltyProtection;
+	public bool ignoreEvaluate;
+
+	[JsonProperty]
+	public bool disableDeathPenaltyProtection;
+
+	[JsonProperty]
+	public bool tax;
 
 	[JsonProperty]
 	public bool opMilk;
 
 	[JsonProperty]
-	public bool manualSave;
+	public bool disableManualSave;
 
 	[JsonProperty]
 	public bool permadeath;
@@ -30,16 +36,16 @@ public class GamePrincipal : EClass
 	public bool infiniteMarketFund;
 
 	[JsonProperty]
-	public bool moreFood;
+	public bool disableUsermapBenefit;
 
 	[JsonProperty]
-	public bool moreReward;
+	public bool dropRate;
 
 	public bool IsCustom => idTemplate == -1;
 
 	public int GetGrade(int score)
 	{
-		return Mathf.Clamp(score / 100, 0, 5);
+		return Mathf.Clamp(score / 20, 0, 5);
 	}
 
 	public string GetTitle()
@@ -50,28 +56,68 @@ public class GamePrincipal : EClass
 
 	public int GetScore()
 	{
-		int num = 300;
+		if (ignoreEvaluate)
+		{
+			return 0;
+		}
+		int num = 0;
+		if (tax)
+		{
+			num += GetScore("tax");
+		}
+		if (disableManualSave)
+		{
+			num += GetScore("disableManualSave");
+		}
+		if (disableDeathPenaltyProtection)
+		{
+			num += GetScore("disableDeathPenaltyProtection");
+		}
+		if (disableUsermapBenefit)
+		{
+			num += GetScore("disableUsermapBenefit");
+		}
 		if (permadeath)
 		{
-			num += 200;
+			num += GetScore("permadeath");
 		}
 		if (infiniteMarketFund)
 		{
-			num -= 200;
+			num += GetScore("infiniteMarketFund");
 		}
 		if (opMilk)
 		{
-			num -= 200;
+			num += GetScore("opMilk");
 		}
-		if (manualSave)
+		if (dropRate)
 		{
-			num -= 100;
+			num += GetScore("dropRate");
 		}
-		if (deathPenaltyProtection)
+		if (num >= 0)
 		{
-			num -= 50;
+			return num;
 		}
-		return num;
+		return 0;
+	}
+
+	public int GetScore(string s)
+	{
+		if (ignoreEvaluate)
+		{
+			return 0;
+		}
+		return s switch
+		{
+			"tax" => 20, 
+			"disableManualSave" => 20, 
+			"disableDeathPenaltyProtection" => 10, 
+			"disableUsermapBenefit" => 20, 
+			"permadeath" => 50, 
+			"infiniteMarketFund" => -40, 
+			"opMilk" => -40, 
+			"dropRate" => 20 + dropRateMtp * -10, 
+			_ => 0, 
+		};
 	}
 
 	public int GetValidScore()

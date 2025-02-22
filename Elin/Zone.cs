@@ -1922,6 +1922,11 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			ignoreSpawnAnime = false;
 		}
+		if (chara != null && EClass.player != null && !chara.hasSpawned)
+		{
+			EClass.player.codex.AddSpawn(chara.id);
+			chara.hasSpawned = true;
+		}
 		return t;
 	}
 

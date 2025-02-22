@@ -244,7 +244,7 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 				ActPlan actPlan = new ActPlan
 				{
 					pos = point.Copy(),
-					ignoreAdddCondition = true,
+					ignoreAddCondition = true,
 					input = ActInput.AllAction,
 					altAction = true
 				};

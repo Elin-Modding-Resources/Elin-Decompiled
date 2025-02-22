@@ -1356,7 +1356,6 @@ public class Chara : Card, IPathfindWalker
 		if (source.mainElement.Length != 0)
 		{
 			int _genLv = Mathf.Min(genLv, 100);
-			Debug.Log(genLv + "/" + _genLv);
 			List<Tuple<string, int, int>> list = new List<Tuple<string, int, int>>();
 			string[] mainElement = source.mainElement;
 			for (int i = 0; i < mainElement.Length; i++)

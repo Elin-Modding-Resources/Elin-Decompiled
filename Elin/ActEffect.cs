@@ -1229,11 +1229,11 @@ public class ActEffect : EClass
 				}
 				if (id == EffectId.Gate && CC.IsPC)
 				{
-					foreach (Chara member in EClass.pc.party.members)
+					foreach (Chara chara2 in EClass._map.charas)
 					{
-						if (!member.HasHost && member != tc)
+						if (!chara2.HasHost && chara2 != tc && (chara2.IsPCParty || chara2.IsPCPartyMinion))
 						{
-							member.Teleport(tc.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? tc.pos);
+							chara2.Teleport(tc.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? tc.pos);
 						}
 					}
 				}
