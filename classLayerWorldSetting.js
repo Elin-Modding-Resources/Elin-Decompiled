@@ -1,0 +1,21 @@
+var classLayerWorldSetting =
+[
+    [ "OnInit", "classLayerWorldSetting.html#a02372087adc2a8b5bba0508f26c2a523", null ],
+    [ "OnKill", "classLayerWorldSetting.html#afefe51c6a802ec45fec8f92efdcfb22e", null ],
+    [ "Refresh", "classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37", null ],
+    [ "RefreshScore", "classLayerWorldSetting.html#a52c92b42e2e611bc254f6e2872be7889", null ],
+    [ "SetTemplate", "classLayerWorldSetting.html#a7296a92365f62176b2c00a2387a64c72", null ],
+    [ "buttonTemplates", "classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92", null ],
+    [ "groupTemplate", "classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0", null ],
+    [ "imageScoreBar", "classLayerWorldSetting.html#acc7114848dd0251e13fed091ccf23c38", null ],
+    [ "textScore", "classLayerWorldSetting.html#a40e40050d5a9cc852968f1e6e22b6ba8", null ],
+    [ "textTitle", "classLayerWorldSetting.html#aa3576b6a95b58355d35c183893d87db6", null ],
+    [ "textValidScore", "classLayerWorldSetting.html#a7a7e3e93e130d037f93f93f1ce1b64ff", null ],
+    [ "toggleDeathPenaltyProtection", "classLayerWorldSetting.html#a4f26605453e37a7db4ab9713d6022256", null ],
+    [ "toggleInfiniteMarketFund", "classLayerWorldSetting.html#a4b59ba1614b6174ccf85339a312e20e8", null ],
+    [ "toggleManualSave", "classLayerWorldSetting.html#ab43254358da9dd50ced14fc6e1f3a0d7", null ],
+    [ "toggleOPMilk", "classLayerWorldSetting.html#a83178d855f262af18720a0f24345d952", null ],
+    [ "togglePermadeath", "classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3", null ],
+    [ "IdxCustom", "classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e", null ],
+    [ "pp", "classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df", null ]
+];

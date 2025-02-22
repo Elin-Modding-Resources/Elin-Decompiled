@@ -1,5 +1,8 @@
 var NAVTREEINDEX36 =
 {
+"classBiomeProfile_1_1Spawns.html#a4e8768671ec038559c672993b2ea6bc0":[1,0,208,8,2],
+"classBiomeProfile_1_1Spawns.html#a6dc998aa33dba9bd67fef56052f21a0b":[1,0,208,8,1],
+"classBiomeProfile_1_1Spawns.html#a89908c1dbe320a70e6ebf704261cdfdf":[1,0,208,8,3],
 "classBiomeProfile_1_1Spawns.html#a9047801b7dbb06b4774aa792a4fe967f":[1,0,208,8,0],
 "classBiomeProfile_1_1Style.html":[1,0,208,9],
 "classBiomeProfile_1_1Style.html#a099afa38ab91f7208439a32f7a2b6eda":[1,0,208,9,9],
@@ -138,6 +141,7 @@ var NAVTREEINDEX36 =
 "classBuruBuru.html#accaf7adefee8a7e5e2fe9e40d22d746d":[1,0,217,3],
 "classButtonAbility.html":[1,0,218],
 "classButtonAbility.html#a07afc23f0c014e2648b162006951c998":[1,0,218,21],
+"classButtonAbility.html#a0dda160f90e79b2ed73f9192ae083e3e":[1,0,218,28],
 "classButtonAbility.html#a22a75fea4856ce1626e29ff516a53758":[1,0,218,22],
 "classButtonAbility.html#a27f2ea4d22788e6fea2055cbc1c06869":[1,0,218,24],
 "classButtonAbility.html#a2d3123a9d4eae73d6fca077fcf311285":[1,0,218,27],
@@ -245,9 +249,5 @@ var NAVTREEINDEX36 =
 "classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a28250bea189c979bf5d600aa8c2ec3f7":[1,0,223,0,4],
 "classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a5174d1309f275ba6f275db3af9eb3e18":[1,0,223,0,1],
 "classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a59198347aa8a409ad9e4f0ccd56950eb":[1,0,223,0,2],
-"classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a7a1920d61156abc05a60135aefe8bc67":[1,0,223,0,0],
-"classButtonGrid.html#a7c813d5ada0a86d8447be38224802048aaef6ec2224f7ef3c74b4942b0e7f2969":[1,0,223,0,3],
-"classButtonGrid.html#a89320a99d4eaed4b6747f423433aad46":[1,0,223,8],
-"classButtonGrid.html#a98a9dd03e3eea775314f54649e90dd53":[1,0,223,25],
-"classButtonGrid.html#a9c4619e5ae629df4bf04fd5647938cfe":[1,0,223,26]
+"classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a7a1920d61156abc05a60135aefe8bc67":[1,0,223,0,0]
 };

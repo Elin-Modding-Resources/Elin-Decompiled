@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"classAI__Fish.html#a2fa8ec25729a0766b9a51a8c30eab5db":[1,0,67,2],
+"classAI__Fish.html#a3df4c45bba2ae31d7aab1c3a799ec0b8":[1,0,67,4],
+"classAI__Fish.html#a6609c32f49e750f712efd18f265590d1":[1,0,67,3],
 "classAI__Fish.html#a86200a8ccb003517831188223cd6055b":[1,0,67,1],
 "classAI__Fish.html#a9c278672928adb7693910385fd85f26b":[1,0,67,8],
 "classAI__Fish.html#a9d3487bd5d11e31b5c319c3d67530468":[1,0,67,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__TargetCard.html#a59b7ee93e112ce624549a4f4b56cb672":[1,0,94,0],
 "classAI__TargetCard.html#aa6e302a0d0dfa18d3264a1072d6c8c72":[1,0,94,5],
 "classAI__TargetCard.html#ad845f0d46d38890de19c213b65b5da7a":[1,0,94,4],
-"classAI__TargetChara.html":[1,0,95],
-"classAI__TargetChara.html#ad56469a28809f815dc31cd04c8aa705b":[1,0,95,0],
-"classAI__TargetThing.html":[1,0,96],
-"classAI__TargetThing.html#ad28b07f72052e88f5d7dbe3d75d31c06":[1,0,96,0]
+"classAI__TargetChara.html":[1,0,95]
 };

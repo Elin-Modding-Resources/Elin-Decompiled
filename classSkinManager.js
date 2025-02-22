@@ -17,6 +17,7 @@ var classSkinManager =
     [ "fontList", "classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0", null ],
     [ "fontListOriginal", "classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207", null ],
     [ "fontSet", "classSkinManager.html#a0fb915cf6efc8056b2e57620bfdcf585", null ],
+    [ "LimitFontSizeMod_UI", "classSkinManager.html#a6f38c69d6333b793258e65b4f2ca67d6", null ],
     [ "mainSkins", "classSkinManager.html#a43aee8bd945731f4d5a16d901384db49", null ],
     [ "onSetSkin", "classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e", null ],
     [ "originalTexture", "classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b", null ],

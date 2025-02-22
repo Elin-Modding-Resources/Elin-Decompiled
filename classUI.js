@@ -6,7 +6,7 @@ var classUI =
     [ "CreateContextMenuInteraction", "classUI.html#a08e6ec6a709d6ad868fda1f6be7e05b4", null ],
     [ "EndDrag", "classUI.html#a62eb916b498c54279db1c59a6fb58b71", null ],
     [ "FlashCover", "classUI.html#a6b5ab030afb21f194c61824112ea5aed", null ],
-    [ "FreezeScreen", "classUI.html#a1947ceda2a068252291a85e0c252b99c", null ],
+    [ "FreezeScreen", "classUI.html#ad53ffd063dd5e1faacc8b71a164129c9", null ],
     [ "Hide", "classUI.html#ad4e115676f0ce8e488ac20981251be22", null ],
     [ "HideCover", "classUI.html#a8059950914eff477458b34768020b744", null ],
     [ "HideFloats", "classUI.html#a7c75d9b059f50f497968e9e551b66347", null ],

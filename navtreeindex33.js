@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"classBaseGameScreen.html#afdd05efed988f0b70acd0196e2768df2":[1,0,188,31],
+"classBaseGameScreen.html#affda37c61daac0b635b89d553c4694db":[1,0,188,40],
+"classBaseGameScreen_1_1FocusOption.html":[1,0,188,0],
 "classBaseGameScreen_1_1FocusOption.html#a00ef6f9f563eac18e121034e6e275b87":[1,0,188,0,1],
 "classBaseGameScreen_1_1FocusOption.html#a138fd78e99f0ce1015e24c6f9771a37f":[1,0,188,0,3],
 "classBaseGameScreen_1_1FocusOption.html#ac62e7596dbbb68b2a0d8640639625804":[1,0,188,0,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c":[1,0,201,0],
 "classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7cadfca0e7187caf74d098105f76d3b6cca":[1,0,201,0,3],
 "classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7cae1e4c8c9ccd9fc39c391da4bcd093fb2":[1,0,201,0,1],
-"classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7caecb7677e094d5e91766c7aae919dfc12":[1,0,201,0,4],
-"classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7caf3f6d0343d56ce88ce7958170ed05cb3":[1,0,201,0,0],
-"classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7caf4c93c906a99a31bf2d92cf5724dfbed":[1,0,201,0,2],
-"classBaseTaskHarvest.html#a74c30a74e460ae416501122bb9238928":[1,0,201,24]
+"classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7caecb7677e094d5e91766c7aae919dfc12":[1,0,201,0,4]
 };

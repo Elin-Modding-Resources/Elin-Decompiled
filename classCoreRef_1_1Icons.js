@@ -10,6 +10,7 @@ var classCoreRef_1_1Icons =
     [ "delete", "classCoreRef_1_1Icons.html#a5071c4bbcdbc33b8520c8a93e27c233c", null ],
     [ "down", "classCoreRef_1_1Icons.html#ac6a34fe4de624fd1a760f32fa8a24f72", null ],
     [ "enc", "classCoreRef_1_1Icons.html#ab753c65fe393999b727a883e79b9bf64", null ],
+    [ "fav", "classCoreRef_1_1Icons.html#a0b7ae58921fbadf8bf42d0e8589d19d0", null ],
     [ "go", "classCoreRef_1_1Icons.html#a5c8295a7830b12a4a0882a2c2df175d7", null ],
     [ "home", "classCoreRef_1_1Icons.html#a311725d213bd13523c613c37fafc3da8", null ],
     [ "inspect", "classCoreRef_1_1Icons.html#ac0cd7f1b9f2604298cc5dc7b95ff8a33", null ],

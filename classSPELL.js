@@ -145,6 +145,7 @@ var classSPELL =
     [ "SpEvac", "classSPELL.html#af64bab68ba4855b5f3c41fd5b5139cc7", null ],
     [ "SpExterminate", "classSPELL.html#aa1a0bd79789874fb8005789f69616b13", null ],
     [ "SpFaith", "classSPELL.html#aa6878f1bf90959aaf246a03c151c97cd", null ],
+    [ "SpGate", "classSPELL.html#a1ab0c9f2df6394aeef5e8649a8900120", null ],
     [ "SpGravity", "classSPELL.html#ac5d8ffbbc1e8359376c06bf560378259", null ],
     [ "SpHeal", "classSPELL.html#a5bcc9ef722636a4172fe71ea805c0f23", null ],
     [ "SpHealCritical", "classSPELL.html#a94c3fa413433a54c285b73f578ba6954", null ],

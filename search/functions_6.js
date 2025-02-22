@@ -85,7 +85,7 @@ var searchData=
   ['foreachsphere_82',['ForeachSphere',['../classMap.html#a09c1df49e3d0b39ff98627b436211ab1',1,'Map']]],
   ['foreachxyz_83',['ForeachXYZ',['../classMap.html#a0311e82911cc5489918d5a856decc2c2',1,'Map.ForeachXYZ()'],['../classMapBounds.html#ac84aca8ccba57bb566680b072b526ce9',1,'MapBounds.ForeachXYZ()']]],
   ['fowprofileids_84',['FowProfileIDs',['../classMapConfig.html#aa0b163b8988791c90fb1d434e613e21c',1,'MapConfig']]],
-  ['freezescreen_85',['FreezeScreen',['../classUI.html#a1947ceda2a068252291a85e0c252b99c',1,'UI.FreezeScreen()'],['../classBaseCore.html#a4624a1879317b00a7bcf9e8c250b8022',1,'BaseCore.FreezeScreen()'],['../classCore.html#a4628cc2028f25f32659b0efbf8074ca1',1,'Core.FreezeScreen()']]],
+  ['freezescreen_85',['FreezeScreen',['../classUI.html#ad53ffd063dd5e1faacc8b71a164129c9',1,'UI.FreezeScreen()'],['../classBaseCore.html#a4624a1879317b00a7bcf9e8c250b8022',1,'BaseCore.FreezeScreen()'],['../classCore.html#a4628cc2028f25f32659b0efbf8074ca1',1,'Core.FreezeScreen()']]],
   ['frombytes_86',['FromBytes',['../classSerializableColor.html#aff625263cdcab1f1f62a5d2a72371a37',1,'SerializableColor']]],
   ['fromint_87',['FromInt',['../classIntColor.html#aa1896d3a2fb16365e35456ad6c0d516b',1,'IntColor']]],
   ['fromint2_88',['FromInt2',['../classClassExtension.html#a42c95437c7e2de0027b87d049321418a',1,'ClassExtension']]],

@@ -782,11 +782,11 @@ var hierarchy =
       [ "Game", "classGame.html", null ],
       [ "Game.Config", "classGame_1_1Config.html", null ],
       [ "Game.Flags", "classGame_1_1Flags.html", null ],
-      [ "GameDifficulty", "classGameDifficulty.html", null ],
       [ "GameDifficultySetting", "classGameDifficultySetting.html", null ],
       [ "GameIO", "classGameIO.html", null ],
       [ "GameIndex", "classGameIndex.html", null ],
       [ "GameLang", "classGameLang.html", null ],
+      [ "GamePrincipal", "classGamePrincipal.html", null ],
       [ "GameUpdater", "classGameUpdater.html", null ],
       [ "GameUpdater.Updater", "classGameUpdater_1_1Updater.html", [
         [ "GameUpdater.AreaUpdater", "classGameUpdater_1_1AreaUpdater.html", null ],
@@ -2423,6 +2423,7 @@ var hierarchy =
           [ "LayerTreasureMap", "classLayerTreasureMap.html", null ],
           [ "LayerUploader", "classLayerUploader.html", null ],
           [ "LayerWidget", "classLayerWidget.html", null ],
+          [ "LayerWorldSetting", "classLayerWorldSetting.html", null ],
           [ "UI", "classUI.html", null ],
           [ "UIInspector", "classUIInspector.html", null ]
         ] ]

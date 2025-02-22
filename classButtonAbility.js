@@ -27,5 +27,6 @@ var classButtonAbility =
     [ "imageType", "classButtonAbility.html#a27f2ea4d22788e6fea2055cbc1c06869", null ],
     [ "source", "classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52", null ],
     [ "textStock", "classButtonAbility.html#a306a857f888accf8ab432811bc106b8c", null ],
-    [ "transFav", "classButtonAbility.html#a2d3123a9d4eae73d6fca077fcf311285", null ]
+    [ "transFav", "classButtonAbility.html#a2d3123a9d4eae73d6fca077fcf311285", null ],
+    [ "usedMouseKey", "classButtonAbility.html#a0dda160f90e79b2ed73f9192ae083e3e", null ]
 ];

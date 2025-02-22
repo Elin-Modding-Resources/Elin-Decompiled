@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.93 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.94 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -165,6 +165,8 @@ Public Attributes</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ac8c131c98fb73a1ecd32017dfbb27739"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSkinManager.html">SkinManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkinManager.html#ac8c131c98fb73a1ecd32017dfbb27739">_Instance</a></td></tr>
 <tr class="separator:ac8c131c98fb73a1ecd32017dfbb27739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f38c69d6333b793258e65b4f2ca67d6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkinManager.html#a6f38c69d6333b793258e65b4f2ca67d6">LimitFontSizeMod_UI</a> = 999</td></tr>
+<tr class="separator:a6f38c69d6333b793258e65b4f2ca67d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b2d37038d5614ca289c2f1a76b2d81"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSkinRootStatic.html">SkinRootStatic</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSkinManager.html#a57b2d37038d5614ca289c2f1a76b2d81">tempSkin</a></td></tr>
 <tr class="separator:a57b2d37038d5614ca289c2f1a76b2d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -208,39 +210,39 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00107">107</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">fontList</a>.Clear();</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">fontListOriginal</a>.Count; i++)</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">fontList</a>.Add(<a class="code hl_variable" href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">fontListOriginal</a>[i]);</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a> = <span class="keyword">new</span> Dictionary&lt;string, FontSource&gt;();</div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classFontSource.html">FontSource</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">fontListOriginal</a>)</div>
-<div class="line"><span class="lineno">  118</span>            {</div>
-<div class="line"><span class="lineno">  119</span>                <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>._name, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLangSetting.html">LangSetting</a>.<a class="code hl_class" href="classLangSetting_1_1FontSetting.html">FontSetting</a> item2 in <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#a2451b4f98575e876ac1383bf8a69f86a">setting</a>.<a class="code hl_variable" href="classLangSetting.html#a9ade4eb63d485eccbd3653f8c80c17d0">listFont</a>)</div>
-<div class="line"><span class="lineno">  123</span>        {</div>
-<div class="line"><span class="lineno">  124</span>            <a class="code hl_class" href="classFontSource.html">FontSource</a> fontSource = <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a>.TryGetValue(item2.id);</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (fontSource == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  126</span>            {</div>
-<div class="line"><span class="lineno">  127</span>                fontSource = <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a>[<span class="stringliteral">&quot;Arial&quot;</span>].Instantiate();</div>
-<div class="line"><span class="lineno">  128</span>                Font font = Font.CreateDynamicFontFromOSFont(item2.id, item2.importSize);</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">if</span> (font != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  130</span>                {</div>
-<div class="line"><span class="lineno">  131</span>                    fontSource.font = font;</div>
-<div class="line"><span class="lineno">  132</span>                }</div>
-<div class="line"><span class="lineno">  133</span>                _ = <span class="stringliteral">&quot;*&quot;</span> + item2.id;</div>
-<div class="line"><span class="lineno">  134</span>                fontSource._name = <span class="stringliteral">&quot;*&quot;</span> + item2.id + ((font == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;(NotFound)&quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">fontList</a>[item2.index] = fontSource;</div>
-<div class="line"><span class="lineno">  137</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Loaded Font:&quot;</span> + item2.id + <span class="stringliteral">&quot;/&quot;</span> + fontSource.<a class="code hl_variable" href="classFontSource.html#ade0ecf392e53cdfb12eb5d0736691d7a">_name</a> + <span class="stringliteral">&quot;/&quot;</span> + fontSource.<a class="code hl_variable" href="classFontSource.html#afa5282da8ea2e7a01335cdb53604062a">font</a>?.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#a2451b4f98575e876ac1383bf8a69f86a">setting</a>.<a class="code hl_variable" href="classLangSetting.html#abcb98457be827fb37adf73b094f3b629">id</a>);</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00109">109</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">fontList</a>.Clear();</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">fontListOriginal</a>.Count; i++)</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">fontList</a>.Add(<a class="code hl_variable" href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">fontListOriginal</a>[i]);</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a> = <span class="keyword">new</span> Dictionary&lt;string, FontSource&gt;();</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classFontSource.html">FontSource</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">fontListOriginal</a>)</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>._name, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLangSetting.html">LangSetting</a>.<a class="code hl_class" href="classLangSetting_1_1FontSetting.html">FontSetting</a> item2 in <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#a2451b4f98575e876ac1383bf8a69f86a">setting</a>.<a class="code hl_variable" href="classLangSetting.html#a9ade4eb63d485eccbd3653f8c80c17d0">listFont</a>)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_class" href="classFontSource.html">FontSource</a> fontSource = <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a>.TryGetValue(item2.id);</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (fontSource == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                fontSource = <a class="code hl_variable" href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">dictFonts</a>[<span class="stringliteral">&quot;Arial&quot;</span>].Instantiate();</div>
+<div class="line"><span class="lineno">  130</span>                Font font = Font.CreateDynamicFontFromOSFont(item2.id, item2.importSize);</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (font != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  132</span>                {</div>
+<div class="line"><span class="lineno">  133</span>                    fontSource.font = font;</div>
+<div class="line"><span class="lineno">  134</span>                }</div>
+<div class="line"><span class="lineno">  135</span>                _ = <span class="stringliteral">&quot;*&quot;</span> + item2.id;</div>
+<div class="line"><span class="lineno">  136</span>                fontSource._name = <span class="stringliteral">&quot;*&quot;</span> + item2.id + ((font == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;(NotFound)&quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="line"><span class="lineno">  138</span>            <a class="code hl_variable" href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">fontList</a>[item2.index] = fontSource;</div>
+<div class="line"><span class="lineno">  139</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Loaded Font:&quot;</span> + item2.id + <span class="stringliteral">&quot;/&quot;</span> + fontSource.<a class="code hl_variable" href="classFontSource.html#ade0ecf392e53cdfb12eb5d0736691d7a">_name</a> + <span class="stringliteral">&quot;/&quot;</span> + fontSource.<a class="code hl_variable" href="classFontSource.html#afa5282da8ea2e7a01335cdb53604062a">font</a>?.ToString() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#a2451b4f98575e876ac1383bf8a69f86a">setting</a>.<a class="code hl_variable" href="classLangSetting.html#abcb98457be827fb37adf73b094f3b629">id</a>);</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassFontSource_html"><div class="ttname"><a href="classFontSource.html">FontSource</a></div><div class="ttdef"><b>Definition:</b> <a href="FontSource_8cs_source.html#l00003">FontSource.cs:4</a></div></div>
@@ -253,11 +255,11 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_a2451b4f98575e876ac1383bf8a69f86a"><div class="ttname"><a href="classLang.html#a2451b4f98575e876ac1383bf8a69f86a">Lang.setting</a></div><div class="ttdeci">static LangSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00054">Lang.cs:54</a></div></div>
 <div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00028">Lang.cs:28</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_a5176be1e2d09e07c1903c4c6306466c8"><div class="ttname"><a href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">SkinManager.dictFonts</a></div><div class="ttdeci">Dictionary&lt; string, FontSource &gt; dictFonts</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00074">SkinManager.cs:74</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_a9f9bcf5006be336bbf51f04f6a0083a0"><div class="ttname"><a href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">SkinManager.fontList</a></div><div class="ttdeci">List&lt; FontSource &gt; fontList</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00043">SkinManager.cs:43</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_ab5e21fa55f04a06d9c1c1956e1198207"><div class="ttname"><a href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">SkinManager.fontListOriginal</a></div><div class="ttdeci">List&lt; FontSource &gt; fontListOriginal</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00045">SkinManager.cs:45</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_a5176be1e2d09e07c1903c4c6306466c8"><div class="ttname"><a href="classSkinManager.html#a5176be1e2d09e07c1903c4c6306466c8">SkinManager.dictFonts</a></div><div class="ttdeci">Dictionary&lt; string, FontSource &gt; dictFonts</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00076">SkinManager.cs:76</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_a9f9bcf5006be336bbf51f04f6a0083a0"><div class="ttname"><a href="classSkinManager.html#a9f9bcf5006be336bbf51f04f6a0083a0">SkinManager.fontList</a></div><div class="ttdeci">List&lt; FontSource &gt; fontList</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00045">SkinManager.cs:45</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_ab5e21fa55f04a06d9c1c1956e1198207"><div class="ttname"><a href="classSkinManager.html#ab5e21fa55f04a06d9c1c1956e1198207">SkinManager.fontListOriginal</a></div><div class="ttdeci">List&lt; FontSource &gt; fontListOriginal</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00047">SkinManager.cs:47</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FontSource_8cs_source.html#l00005">FontSource._name</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SkinManager_8cs_source.html#l00074">dictFonts</a>, <a class="el" href="FontSource_8cs_source.html#l00009">FontSource.font</a>, <a class="el" href="SkinManager_8cs_source.html#l00043">fontList</a>, <a class="el" href="SkinManager_8cs_source.html#l00045">fontListOriginal</a>, <a class="el" href="LangSetting_8cs_source.html#l00022">LangSetting.id</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>, <a class="el" href="LangSetting_8cs_source.html#l00052">LangSetting.listFont</a>, and <a class="el" href="Lang_8cs_source.html#l00054">Lang.setting</a>.</p>
+<p class="reference">References <a class="el" href="FontSource_8cs_source.html#l00005">FontSource._name</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SkinManager_8cs_source.html#l00076">dictFonts</a>, <a class="el" href="FontSource_8cs_source.html#l00009">FontSource.font</a>, <a class="el" href="SkinManager_8cs_source.html#l00045">fontList</a>, <a class="el" href="SkinManager_8cs_source.html#l00047">fontListOriginal</a>, <a class="el" href="LangSetting_8cs_source.html#l00022">LangSetting.id</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>, <a class="el" href="LangSetting_8cs_source.html#l00052">LangSetting.listFont</a>, and <a class="el" href="Lang_8cs_source.html#l00054">Lang.setting</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l01000">CoreConfig.OnSetLang()</a>.</p>
 
@@ -321,26 +323,26 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00086">86</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        fontSet.ui.index = dataUI.index;</div>
-<div class="line"><span class="lineno">   89</span>        fontSet.ui.sizeMod = dataUI.size - 4;</div>
-<div class="line"><span class="lineno">   90</span>        fontSet.chatbox.index = dataChatbox.index;</div>
-<div class="line"><span class="lineno">   91</span>        fontSet.chatbox.sizeMod = dataChatbox.size - 3;</div>
-<div class="line"><span class="lineno">   92</span>        fontSet.balloon.index = dataBalloon.index;</div>
-<div class="line"><span class="lineno">   93</span>        fontSet.balloon.sizeMod = dataBalloon.size - 1;</div>
-<div class="line"><span class="lineno">   94</span>        fontSet.dialog.index = dataDialog.index;</div>
-<div class="line"><span class="lineno">   95</span>        fontSet.dialog.sizeMod = dataDialog.size - 3;</div>
-<div class="line"><span class="lineno">   96</span>        fontSet.widget.index = dataWidget.index;</div>
-<div class="line"><span class="lineno">   97</span>        fontSet.widget.sizeMod = dataWidget.size - 2;</div>
-<div class="line"><span class="lineno">   98</span>        fontSet.news.index = dataNews.index;</div>
-<div class="line"><span class="lineno">   99</span>        fontSet.news.sizeMod = dataNews.size - 2;</div>
-<div class="line"><span class="lineno">  100</span>        <a class="code hl_class" href="classUIText.html">UIText</a>[] componentsInChildren = <a class="code hl_class" href="classBaseCore.html">BaseCore</a>.<a class="code hl_variable" href="classBaseCore.html#ac6c29aa6af4d4e8979c2df152853fc28">Instance</a>.<a class="code hl_variable" href="classBaseCore.html#a9f27db83d3270bfd7b2f476e81cc6424">canvas</a>.GetComponentsInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;(includeInactive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            componentsInChildren[i].<a class="code hl_function" href="classUIText.html#a1163a1672b1b67321171376d326a3401">ApplySkin</a>();</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00088">88</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        fontSet.ui.index = dataUI.index;</div>
+<div class="line"><span class="lineno">   91</span>        fontSet.ui.sizeMod = dataUI.size - 4;</div>
+<div class="line"><span class="lineno">   92</span>        fontSet.chatbox.index = dataChatbox.index;</div>
+<div class="line"><span class="lineno">   93</span>        fontSet.chatbox.sizeMod = dataChatbox.size - 3;</div>
+<div class="line"><span class="lineno">   94</span>        fontSet.balloon.index = dataBalloon.index;</div>
+<div class="line"><span class="lineno">   95</span>        fontSet.balloon.sizeMod = dataBalloon.size - 1;</div>
+<div class="line"><span class="lineno">   96</span>        fontSet.dialog.index = dataDialog.index;</div>
+<div class="line"><span class="lineno">   97</span>        fontSet.dialog.sizeMod = dataDialog.size - 3;</div>
+<div class="line"><span class="lineno">   98</span>        fontSet.widget.index = dataWidget.index;</div>
+<div class="line"><span class="lineno">   99</span>        fontSet.widget.sizeMod = dataWidget.size - 2;</div>
+<div class="line"><span class="lineno">  100</span>        fontSet.news.index = dataNews.index;</div>
+<div class="line"><span class="lineno">  101</span>        fontSet.news.sizeMod = dataNews.size - 2;</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_class" href="classUIText.html">UIText</a>[] componentsInChildren = <a class="code hl_class" href="classBaseCore.html">BaseCore</a>.<a class="code hl_variable" href="classBaseCore.html#ac6c29aa6af4d4e8979c2df152853fc28">Instance</a>.<a class="code hl_variable" href="classBaseCore.html#a9f27db83d3270bfd7b2f476e81cc6424">canvas</a>.GetComponentsInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;(includeInactive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            componentsInChildren[i].<a class="code hl_function" href="classUIText.html#a1163a1672b1b67321171376d326a3401">ApplySkin</a>();</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 <div class="ttc" id="aclassBaseCore_html"><div class="ttname"><a href="classBaseCore.html">BaseCore</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00007">BaseCore.cs:8</a></div></div>
 <div class="ttc" id="aclassBaseCore_html_a9f27db83d3270bfd7b2f476e81cc6424"><div class="ttname"><a href="classBaseCore.html#a9f27db83d3270bfd7b2f476e81cc6424">BaseCore.canvas</a></div><div class="ttdeci">Canvas canvas</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00034">BaseCore.cs:34</a></div></div>
 <div class="ttc" id="aclassBaseCore_html_ac6c29aa6af4d4e8979c2df152853fc28"><div class="ttname"><a href="classBaseCore.html#ac6c29aa6af4d4e8979c2df152853fc28">BaseCore.Instance</a></div><div class="ttdeci">static BaseCore Instance</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00011">BaseCore.cs:11</a></div></div>
@@ -374,17 +376,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00146">146</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="classSkinManager.html#a4bfb2c89b8983661a6010c43df28544a">SetMainSkin</a>((<a class="code hl_variable" href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">currentSkin</a> == <a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[0]) ? <a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[1] : <a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[0]);</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-<div class="ttc" id="aclassSkinManager_html_a12c98e364980a98d84b0e343d384dee8"><div class="ttname"><a href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">SkinManager.currentSkin</a></div><div class="ttdeci">SkinRootStatic currentSkin</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00051">SkinManager.cs:51</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_a43aee8bd945731f4d5a16d901384db49"><div class="ttname"><a href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">SkinManager.mainSkins</a></div><div class="ttdeci">List&lt; SkinRootStatic &gt; mainSkins</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00049">SkinManager.cs:49</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_a4bfb2c89b8983661a6010c43df28544a"><div class="ttname"><a href="classSkinManager.html#a4bfb2c89b8983661a6010c43df28544a">SkinManager.SetMainSkin</a></div><div class="ttdeci">void SetMainSkin()</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00146">SkinManager.cs:146</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00148">148</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="classSkinManager.html#a4bfb2c89b8983661a6010c43df28544a">SetMainSkin</a>((<a class="code hl_variable" href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">currentSkin</a> == <a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[0]) ? <a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[1] : <a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[0]);</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="ttc" id="aclassSkinManager_html_a12c98e364980a98d84b0e343d384dee8"><div class="ttname"><a href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">SkinManager.currentSkin</a></div><div class="ttdeci">SkinRootStatic currentSkin</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00053">SkinManager.cs:53</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_a43aee8bd945731f4d5a16d901384db49"><div class="ttname"><a href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">SkinManager.mainSkins</a></div><div class="ttdeci">List&lt; SkinRootStatic &gt; mainSkins</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00051">SkinManager.cs:51</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_a4bfb2c89b8983661a6010c43df28544a"><div class="ttname"><a href="classSkinManager.html#a4bfb2c89b8983661a6010c43df28544a">SkinManager.SetMainSkin</a></div><div class="ttdeci">void SetMainSkin()</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00148">SkinManager.cs:148</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00051">currentSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00049">mainSkins</a>, and <a class="el" href="SkinManager_8cs_source.html#l00146">SetMainSkin()</a>.</p>
+<p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00053">currentSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00051">mainSkins</a>, and <a class="el" href="SkinManager_8cs_source.html#l00148">SetMainSkin()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00141">SetMainSkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00143">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -412,12 +414,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00141">141</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>    {</div>
-<div class="line"><span class="lineno">  143</span>        <a class="code hl_function" href="classSkinManager.html#a4bfb2c89b8983661a6010c43df28544a">SetMainSkin</a>(<a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[<span class="keywordtype">id</span>]);</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00143">143</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_function" href="classSkinManager.html#a4bfb2c89b8983661a6010c43df28544a">SetMainSkin</a>(<a class="code hl_variable" href="classSkinManager.html#a43aee8bd945731f4d5a16d901384db49">mainSkins</a>[<span class="keywordtype">id</span>]);</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00049">mainSkins</a>, and <a class="el" href="SkinManager_8cs_source.html#l00146">SetMainSkin()</a>.</p>
+<p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00051">mainSkins</a>, and <a class="el" href="SkinManager_8cs_source.html#l00148">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -445,37 +447,37 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00151">151</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>    {</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (dest.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a> != <a class="code hl_variable" href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">currentSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>)</div>
-<div class="line"><span class="lineno">  154</span>        {</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (dest.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a> == <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>)</div>
-<div class="line"><span class="lineno">  156</span>            {</div>
-<div class="line"><span class="lineno">  157</span>                Graphics.CopyTexture(<a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a>, <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>);</div>
-<div class="line"><span class="lineno">  158</span>            }</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  160</span>            {</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a>)</div>
-<div class="line"><span class="lineno">  162</span>                {</div>
-<div class="line"><span class="lineno">  163</span>                    Texture2D skinTexture = <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>;</div>
-<div class="line"><span class="lineno">  164</span>                    <a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a> = <span class="keyword">new</span> Texture2D(skinTexture.width, skinTexture.height, skinTexture.format, mipChain: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  165</span>                    Graphics.CopyTexture(skinTexture, <a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a>);</div>
-<div class="line"><span class="lineno">  166</span>                }</div>
-<div class="line"><span class="lineno">  167</span>                Graphics.CopyTexture(dest.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>, <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>);</div>
-<div class="line"><span class="lineno">  168</span>            }</div>
-<div class="line"><span class="lineno">  169</span>        }</div>
-<div class="line"><span class="lineno">  170</span>        <a class="code hl_variable" href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">currentSkin</a> = dest;</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e">onSetSkin</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  172</span>        {</div>
-<div class="line"><span class="lineno">  173</span>            <a class="code hl_variable" href="classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e">onSetSkin</a>();</div>
-<div class="line"><span class="lineno">  174</span>        }</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-<div class="ttc" id="aclassSkinManager_html_a889f5331d55dda4f3b1d39195b42ad6b"><div class="ttname"><a href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">SkinManager.originalTexture</a></div><div class="ttdeci">Texture2D originalTexture</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00070">SkinManager.cs:70</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_aca34b0fb4d1a23d4a4fae3fdd6d66c03"><div class="ttname"><a href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">SkinManager.defaultSkin</a></div><div class="ttdeci">SkinRootStatic defaultSkin</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00053">SkinManager.cs:53</a></div></div>
-<div class="ttc" id="aclassSkinManager_html_add1f368f7e35c8d5ff9e576d5981d92e"><div class="ttname"><a href="classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e">SkinManager.onSetSkin</a></div><div class="ttdeci">Action onSetSkin</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00063">SkinManager.cs:63</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00153">153</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (dest.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a> != <a class="code hl_variable" href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">currentSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">if</span> (dest.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a> == <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                Graphics.CopyTexture(<a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a>, <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>);</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a>)</div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    Texture2D skinTexture = <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>;</div>
+<div class="line"><span class="lineno">  166</span>                    <a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a> = <span class="keyword">new</span> Texture2D(skinTexture.width, skinTexture.height, skinTexture.format, mipChain: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  167</span>                    Graphics.CopyTexture(skinTexture, <a class="code hl_variable" href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">originalTexture</a>);</div>
+<div class="line"><span class="lineno">  168</span>                }</div>
+<div class="line"><span class="lineno">  169</span>                Graphics.CopyTexture(dest.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>, <a class="code hl_variable" href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">defaultSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">skinTexture</a>);</div>
+<div class="line"><span class="lineno">  170</span>            }</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        <a class="code hl_variable" href="classSkinManager.html#a12c98e364980a98d84b0e343d384dee8">currentSkin</a> = dest;</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e">onSetSkin</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  174</span>        {</div>
+<div class="line"><span class="lineno">  175</span>            <a class="code hl_variable" href="classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e">onSetSkin</a>();</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+<div class="ttc" id="aclassSkinManager_html_a889f5331d55dda4f3b1d39195b42ad6b"><div class="ttname"><a href="classSkinManager.html#a889f5331d55dda4f3b1d39195b42ad6b">SkinManager.originalTexture</a></div><div class="ttdeci">Texture2D originalTexture</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00072">SkinManager.cs:72</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_aca34b0fb4d1a23d4a4fae3fdd6d66c03"><div class="ttname"><a href="classSkinManager.html#aca34b0fb4d1a23d4a4fae3fdd6d66c03">SkinManager.defaultSkin</a></div><div class="ttdeci">SkinRootStatic defaultSkin</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00055">SkinManager.cs:55</a></div></div>
+<div class="ttc" id="aclassSkinManager_html_add1f368f7e35c8d5ff9e576d5981d92e"><div class="ttname"><a href="classSkinManager.html#add1f368f7e35c8d5ff9e576d5981d92e">SkinManager.onSetSkin</a></div><div class="ttdeci">Action onSetSkin</div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00065">SkinManager.cs:65</a></div></div>
 <div class="ttc" id="aclassSkinRootStatic_html_ac3bd5828a8a16152df9f558fef8bf447"><div class="ttname"><a href="classSkinRootStatic.html#ac3bd5828a8a16152df9f558fef8bf447">SkinRootStatic.skinTexture</a></div><div class="ttdeci">Texture2D skinTexture</div><div class="ttdef"><b>Definition:</b> <a href="SkinRootStatic_8cs_source.html#l00096">SkinRootStatic.cs:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00051">currentSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00053">defaultSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00063">onSetSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00070">originalTexture</a>, and <a class="el" href="SkinRootStatic_8cs_source.html#l00096">SkinRootStatic.skinTexture</a>.</p>
+<p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00053">currentSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00055">defaultSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00065">onSetSkin</a>, <a class="el" href="SkinManager_8cs_source.html#l00072">originalTexture</a>, and <a class="el" href="SkinRootStatic_8cs_source.html#l00096">SkinRootStatic.skinTexture</a>.</p>
 
 </div>
 </div>
@@ -516,9 +518,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00051">51</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00053">53</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIImage_8cs_source.html#l00024">UIImage.ApplySkin()</a>, <a class="el" href="UIRawImage_8cs_source.html#l00051">UIRawImage.ApplySkin()</a>, <a class="el" href="WindowInner_8cs_source.html#l00019">WindowInner.ApplySkin()</a>, and <a class="el" href="SkinManager_8cs_source.html#l00146">SetMainSkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIImage_8cs_source.html#l00024">UIImage.ApplySkin()</a>, <a class="el" href="UIRawImage_8cs_source.html#l00051">UIRawImage.ApplySkin()</a>, <a class="el" href="WindowInner_8cs_source.html#l00019">WindowInner.ApplySkin()</a>, and <a class="el" href="SkinManager_8cs_source.html#l00148">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +536,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00067">67</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00069">69</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 </div>
 </div>
@@ -550,9 +552,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00053">53</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00055">55</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00151">SetMainSkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00153">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -568,9 +570,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00074">74</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00076">76</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00107">InitFont()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00109">InitFont()</a>.</p>
 
 </div>
 </div>
@@ -586,7 +588,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00065">65</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00067">67</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 </div>
 </div>
@@ -602,9 +604,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00043">43</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00045">45</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00107">InitFont()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00109">InitFont()</a>.</p>
 
 </div>
 </div>
@@ -620,9 +622,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00045">45</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00047">47</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00107">InitFont()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00109">InitFont()</a>.</p>
 
 </div>
 </div>
@@ -638,9 +640,35 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00072">72</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00074">74</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>, <a class="el" href="UiInputField_8cs_source.html#l00031">UiInputField.Awake()</a>, <a class="el" href="UIInputText_8cs_source.html#l00058">UIInputText.Awake()</a>, and <a class="el" href="Popper_8cs_source.html#l00040">Popper.SetText()</a>.</p>
+
+</div>
+</div>
+<a id="a6f38c69d6333b793258e65b4f2ca67d6" name="a6f38c69d6333b793258e65b4f2ca67d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f38c69d6333b793258e65b4f2ca67d6">&#9670;&#160;</a></span>LimitFontSizeMod_UI</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SkinManager.LimitFontSizeMod_UI = 999</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00043">43</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>.</p>
 
 </div>
 </div>
@@ -656,9 +684,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00049">49</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00051">51</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00141">SetMainSkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00143">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -674,9 +702,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00063">63</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00065">65</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00151">SetMainSkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00153">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -692,9 +720,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00070">70</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00072">72</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00151">SetMainSkin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SkinManager_8cs_source.html#l00153">SetMainSkin()</a>.</p>
 
 </div>
 </div>
@@ -710,7 +738,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00057">57</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00059">59</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00052">WidgetPopText._Say()</a>, and <a class="el" href="SkinRootStatic_8cs_source.html#l00114">SkinRootStatic.GetSkin()</a>.</p>
 
@@ -728,7 +756,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00055">55</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00057">57</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SkinRootStatic_8cs_source.html#l00114">SkinRootStatic.GetSkin()</a>.</p>
 
@@ -746,7 +774,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00047">47</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00049">49</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SkinRoot_8cs_source.html#l00024">SkinRoot.ApplySkin()</a>, and <a class="el" href="Widget_8cs_source.html#l00527">Widget.GetSkin()</a>.</p>
 
@@ -764,7 +792,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00059">59</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00061">61</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SkinRootStatic_8cs_source.html#l00114">SkinRootStatic.GetSkin()</a>.</p>
 
@@ -790,7 +818,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00061">61</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00063">63</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UINote_8cs_source.html#l00035">UINote.Clear()</a>, and <a class="el" href="UIList_8cs_source.html#l00424">UIList.Refresh()</a>.</p>
 
@@ -817,7 +845,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00082">82</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00084">84</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ElementContainer_8cs_source.html#l00675">ElementContainer.AddNote()</a>, <a class="el" href="BaseStats_8cs_source.html#l00037">BaseStats.GetColor()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00547">ButtonGrid.SetRecipe()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00880">Element.SetTextValue()</a>, <a class="el" href="CoreExtension_8cs_source.html#l00042">CoreExtension.TagColor()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00646">ButtonGrid.WriteReqMat()</a>.</p>
 
@@ -843,7 +871,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00080">80</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00082">82</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>, <a class="el" href="UINote_8cs_source.html#l00035">UINote.Clear()</a>, <a class="el" href="CoreExtension_8cs_source.html#l00007">CoreExtension.GetFixedColor()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00029">WindowMenu.Init()</a>, <a class="el" href="UIList_8cs_source.html#l00424">UIList.Refresh()</a>, <a class="el" href="UITooltip_8cs_source.html#l00052">UITooltip.SetData()</a>, and <a class="el" href="CoreExtension_8cs_source.html#l00019">CoreExtension.TagColorGoodBad()</a>.</p>
 
@@ -869,7 +897,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00084">84</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00086">86</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="InvOwner_8cs_source.html#l01740">InvOwner.GetTextDetail()</a>, and <a class="el" href="InvOwner_8cs_source.html#l01306">InvOwner.ListInteractions()</a>.</p>
 
@@ -895,7 +923,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00078">78</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00080">80</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>, and <a class="el" href="LayerConfig_8cs_source.html#l00515">LayerConfig.SetFont()</a>.</p>
 
@@ -921,7 +949,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00076">76</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SkinManager_8cs_source.html#l00078">78</a> of file <a class="el" href="SkinManager_8cs_source.html">SkinManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetPopText_8cs_source.html#l00052">WidgetPopText._Say()</a>, <a class="el" href="UIImage_8cs_source.html#l00024">UIImage.ApplySkin()</a>, <a class="el" href="UIRawImage_8cs_source.html#l00051">UIRawImage.ApplySkin()</a>, <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>, <a class="el" href="WindowInner_8cs_source.html#l00019">WindowInner.ApplySkin()</a>, <a class="el" href="SkinRoot_8cs_source.html#l00024">SkinRoot.ApplySkin()</a>, <a class="el" href="UiInputField_8cs_source.html#l00031">UiInputField.Awake()</a>, <a class="el" href="UIInputText_8cs_source.html#l00058">UIInputText.Awake()</a>, <a class="el" href="Widget_8cs_source.html#l00527">Widget.GetSkin()</a>, <a class="el" href="SkinRootStatic_8cs_source.html#l00114">SkinRootStatic.GetSkin()</a>, <a class="el" href="CoreConfig_8cs_source.html#l01000">CoreConfig.OnSetLang()</a>, and <a class="el" href="Popper_8cs_source.html#l00040">Popper.SetText()</a>.</p>
 

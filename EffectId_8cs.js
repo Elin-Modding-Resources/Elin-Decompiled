@@ -26,6 +26,7 @@ var EffectId_8cs =
       [ "GreaterIdentify", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a82a28f2fc06792940c0f68897b39ace8", null ],
       [ "Teleport", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a054fc7866c93a2496fd9048c493e6aed", null ],
       [ "TeleportShort", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a6b937e631177847a3d9eb9cbd8a03b25", null ],
+      [ "Gate", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ad25b4bd4c72aa2c07ee87adb10b59f16", null ],
       [ "CreateWall", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a83877258ef6c4f302d9a553b2d926f20", null ],
       [ "Return", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a988fd738de9c6d177440c5dcf69e73ce", null ],
       [ "Evac", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a11ce2d0c33f6c59321af220fa3bd6985", null ],

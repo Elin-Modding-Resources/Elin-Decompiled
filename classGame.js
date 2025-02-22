@@ -49,6 +49,7 @@ var classGame =
     [ "lostThings", "classGame.html#a1666d00e23667d30eddbe73518f9b2f9", null ],
     [ "parties", "classGame.html#a349a0bbe99b236e2cbe5b187cbd510a3", null ],
     [ "player", "classGame.html#a2c3d7514a2db1030fb90f7f0626a299e", null ],
+    [ "principal", "classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb", null ],
     [ "quests", "classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1", null ],
     [ "referenceMap", "classGame.html#a1b89e86c25c4f9446eae6a0a68654a98", null ],
     [ "relations", "classGame.html#ac194cdcc502d6e3f5c92ea1126a908d5", null ],
