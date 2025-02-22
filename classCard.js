@@ -369,6 +369,7 @@ var classCard =
     [ "H", "classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f", null ],
     [ "HasContainerSize", "classCard.html#a7ae369b009147908de2f8d96f9b070ff", null ],
     [ "HasHost", "classCard.html#ac960565370f4e1bb110e1db83f16dea2", null ],
+    [ "hasSpawned", "classCard.html#a60b7481116a15ac9462349167a47fd45", null ],
     [ "HIT", "classCard.html#a3ec2e5fee58de81a7c966ee7ede3c543", null ],
     [ "HostRenderer", "classCard.html#a33c96d443f7a3e5a49e0ff775903ef80", null ],
     [ "hp", "classCard.html#a593fb4b7395052856ce5e759a5eeb525", null ],

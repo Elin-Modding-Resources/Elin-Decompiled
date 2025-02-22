@@ -14,7 +14,7 @@ var classActPlan =
     [ "_canInteractNeighbor", "classActPlan.html#a136ae61a6412e897c4532f0ff7fe5586", null ],
     [ "altAction", "classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b", null ],
     [ "dist", "classActPlan.html#a0e5b70073db0dee9f871820c6ce5a8c7", null ],
-    [ "ignoreAdddCondition", "classActPlan.html#aabaf00e2e9b46cf8a8a3e5f7986ec30a", null ],
+    [ "ignoreAddCondition", "classActPlan.html#a599ce2088cd2bd4ac5800f6126f4b300", null ],
     [ "input", "classActPlan.html#a6f9540948676b3b625b47e4f3716a36c", null ],
     [ "lastAct", "classActPlan.html#a55a7bb25ac36bc119f44e6731649f21a", null ],
     [ "list", "classActPlan.html#ac44abbbccad66e906c331ae738ec33e9", null ],

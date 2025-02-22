@@ -1,5 +1,14 @@
 var NAVTREEINDEX114 =
 {
+"classTraitDetector.html#a63eedb5860b0146c5f1835fc11f594df":[1,0,1475,3],
+"classTraitDetector.html#a6b96afb45af0b26ed5f605ed361c8e6a":[1,0,1475,8],
+"classTraitDetector.html#a9e7e8d276449faaa0644822a9cbb6018":[1,0,1475,0],
+"classTraitDetector.html#aa63003e20603cbc941c5d5d646665cf0":[1,0,1475,6],
+"classTraitDetector.html#adf62bf55b7dd3c226817a81aff5a4fa9":[1,0,1475,5],
+"classTraitDetector.html#ae5b2194d1b933c2243523c34c25db102":[1,0,1475,4],
+"classTraitDetector.html#aebd3b1f858c9274e1e3fae92aa523796":[1,0,1475,7],
+"classTraitDiary.html":[1,0,1476],
+"classTraitDiary.html#a4f501798bbec5f93bea8bf0f723cee3c":[1,0,1476,0],
 "classTraitDoor.html":[1,0,1477],
 "classTraitDoor.html#a01266a1c7b65a7c0d9e6b1d8711e1e57":[1,0,1477,13],
 "classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a":[1,0,1477,10],
@@ -240,14 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitFoodEgg.html#abff42ae0524da5ba0917398f75555dd5":[1,0,1528,3],
 "classTraitFoodEggFertilized.html":[1,0,1529],
 "classTraitFoodEggFertilized.html#a30deffbc67fef64568d97ccfe62691ad":[1,0,1529,1],
-"classTraitFoodEggFertilized.html#a7a4d7a1a045a83230ceb34f69a3edc51":[1,0,1529,0],
-"classTraitFoodEggFertilized.html#a9aaf52190a37d498c768abc2210cf62f":[1,0,1529,2],
-"classTraitFoodEggFertilized.html#aec113c7bbcd065461773f4ec7ccd59e6":[1,0,1529,3],
-"classTraitFoodFish.html":[1,0,1530],
-"classTraitFoodFish.html#a844ba52915c9c1616917ba3bed8f0014":[1,0,1530,0],
-"classTraitFoodMeal.html":[1,0,1531],
-"classTraitFoodMeat.html":[1,0,1532],
-"classTraitFoodMeat.html#a191ea68390f5bed9c333b9de376ad5fd":[1,0,1532,0],
-"classTraitFoodMeat.html#aa792f2c17c7d0fd28603bbb8bbe30ad5":[1,0,1532,1],
-"classTraitFoodMeat.html#ab0e92b21d810be525166166aeeac4c4a":[1,0,1532,2]
+"classTraitFoodEggFertilized.html#a7a4d7a1a045a83230ceb34f69a3edc51":[1,0,1529,0]
 };

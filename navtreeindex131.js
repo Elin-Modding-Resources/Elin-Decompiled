@@ -1,5 +1,16 @@
 var NAVTREEINDEX131 =
 {
+"classWidgetSticky.html#a791ab74ca867d71f0982e186fa44f28c":[1,0,1994,11],
+"classWidgetSticky.html#a937d554ce340ebaa75ff1605db28ead4":[1,0,1994,3],
+"classWidgetSticky.html#a9e03316f3c3d932b5cafba67352340da":[1,0,1994,6],
+"classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c":[1,0,1994,1],
+"classWidgetSticky.html#ac0f415f904673f5e01d70cc8e49826b0":[1,0,1994,8],
+"classWidgetSticky.html#ac2e0532f009bd9e5177591fc6e0c8bb8":[1,0,1994,2],
+"classWidgetSticky.html#afddfc517a91a0bd033d1d9785a4a2e96":[1,0,1994,7],
+"classWidgetSticky_1_1Extra.html":[1,0,1994,0],
+"classWidgetSticky_1_1Extra.html#a11c1f45e139b5bdf200590d9e70011ed":[1,0,1994,0,1],
+"classWidgetSticky_1_1Extra.html#ad1cf743687339dc85b60e621d65066c9":[1,0,1994,0,0],
+"classWidgetSticky_1_1Extra.html#ad37d3b20451ef68d265c32e8125fb233":[1,0,1994,0,2],
 "classWidgetStockTracker.html":[1,0,1995],
 "classWidgetStockTracker.html#a13c9f72a5e5181989a94e4397bf171fc":[1,0,1995,0],
 "classWidgetStockTracker.html#a14d4644500680d2c6796b58324d70eaa":[1,0,1995,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX131 =
 "classWindowChara.html":[1,0,2001],
 "classWindowChara.html#a024c3675e9325b014ac5a47305ed3e03":[1,0,2001,44],
 "classWindowChara.html#a040e90aad321f5d7481594e54dc9b5f2":[1,0,2001,2],
-"classWindowChara.html#a0935befb6665b7f14927f8261e86b035":[1,0,2001,39],
-"classWindowChara.html#a0cf74de688a63c52de28101464a8439a":[1,0,2001,74],
-"classWindowChara.html#a0ef15972e3350da415633d45437808f7":[1,0,2001,10],
-"classWindowChara.html#a1652def3f15e1d1f2ffa45fbc0da3f7e":[1,0,2001,14],
-"classWindowChara.html#a1c34261fdc7ff46422612876e964f5c8":[1,0,2001,34],
-"classWindowChara.html#a1cd6fb6e2fa6059ba0a7da5d5f89bc87":[1,0,2001,95],
-"classWindowChara.html#a1cd88bb74fcbb1a8965ad09ae51f101b":[1,0,2001,1],
-"classWindowChara.html#a1e8407f6c1a702cb8ef3a19f0dc5e976":[1,0,2001,28],
-"classWindowChara.html#a21b17ce282c902f5df77763dd73fd2cc":[1,0,2001,27],
-"classWindowChara.html#a21ece923356452693d21e25433483a5c":[1,0,2001,90],
-"classWindowChara.html#a234056be9adeba0e13c23e1afdbae64f":[1,0,2001,49],
-"classWindowChara.html#a2fc1b3755a9eca7f95c3254fcd16b8d4":[1,0,2001,25]
+"classWindowChara.html#a0935befb6665b7f14927f8261e86b035":[1,0,2001,39]
 };

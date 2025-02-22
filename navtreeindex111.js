@@ -1,5 +1,14 @@
 var NAVTREEINDEX111 =
 {
+"classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6":[1,0,1362,93],
+"classTrait.html#a4ac641a35b27784da64e13edc433d23b":[1,0,1362,72],
+"classTrait.html#a4aff3c950b25f7b4527c33c3678d3f87":[1,0,1362,203],
+"classTrait.html#a4b04ca74c54bb2fad488c295278265dd":[1,0,1362,18],
+"classTrait.html#a4b2d59088504ce0145c3096fb99645fc":[1,0,1362,11],
+"classTrait.html#a4d20dd4795d1045eba97f315560053b1":[1,0,1362,204],
+"classTrait.html#a4f89efebbdf3bf36c106d69f646853c5":[1,0,1362,108],
+"classTrait.html#a50ebba181dd04ca5ab9622c16c6b824b":[1,0,1362,186],
+"classTrait.html#a50ff3f794150d62da8471d3fb73b77ed":[1,0,1362,10],
 "classTrait.html#a52939bcd3cee8f5f363fdf65226c8c41":[1,0,1362,206],
 "classTrait.html#a5403dc0110848cbb7e18de734186502c":[1,0,1362,189],
 "classTrait.html#a54e7efc433bb50c88c6499d508da5044":[1,0,1362,104],
@@ -240,14 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitAppraiser.html":[1,0,1379],
 "classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1379,0],
 "classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1379,1],
-"classTraitAshland.html":[1,0,1380],
-"classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1380,0],
-"classTraitBBQ.html":[1,0,1393],
-"classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1393,0],
-"classTraitBJTable.html":[1,0,1402],
-"classTraitBJTable.html#a294b8bdb971efcc60d99ff887df2b8f2":[1,0,1402,1],
-"classTraitBJTable.html#a98f8d5d6799da4249a3328f36a4220cd":[1,0,1402,0],
-"classTraitBait.html":[1,0,1381],
-"classTraitBait.html#a6b2a160c8dd590cac04bca5e1206ab0c":[1,0,1381,1],
-"classTraitBait.html#a8c0f75c77ea0f262d1f27a4b0f456420":[1,0,1381,0]
+"classTraitAshland.html":[1,0,1380]
 };

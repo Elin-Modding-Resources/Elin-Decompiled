@@ -1,5 +1,14 @@
 var NAVTREEINDEX105 =
 {
+"classSpriteBasedLaser.html#af723a6519af2ca9b810ed4f62f34c144":[1,0,1203,15],
+"classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036":[1,0,1203,23],
+"classSpriteData.html":[1,0,1204],
+"classSpriteData.html#a067129c7182d547ab1b051543814d315":[1,0,1204,2],
+"classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5":[1,0,1204,9],
+"classSpriteData.html#a2418e7613134aad4c224a6681a029930":[1,0,1204,10],
+"classSpriteData.html#a2bb56554ce16f0af909b235b83215517":[1,0,1204,11],
+"classSpriteData.html#a81fe21e2f728eac5c0e9d5f030f344b1":[1,0,1204,12],
+"classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38":[1,0,1204,7],
 "classSpriteData.html#a9610c941e83f99180123ba77377656bc":[1,0,1204,4],
 "classSpriteData.html#aa80b10d37115b754b7a57721af581e11":[1,0,1204,8],
 "classSpriteData.html#aaac9e5cf21d768861d5bea79f4bfbeb0":[1,0,1204,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX105 =
 "classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6":[1,0,1271,0],
 "classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6a624aa1a206e09836e3c81ea95502f459":[1,0,1271,0,0],
 "classTCExtraProgress.html#ad430e6222bd25395256dd5de7174e0dc":[1,0,1271,1],
-"classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae":[1,0,1271,5],
-"classTCExtraUI.html":[1,0,1272],
-"classTCOrbit.html":[1,0,1273],
-"classTCOrbit.html#a31d1630788c38e82d1004040c15ffa0a":[1,0,1273,0],
-"classTCOrbitChara.html":[1,0,1274],
-"classTCOrbitChara.html#a07328f0dedbf3fea135eee217dfe16be":[1,0,1274,9],
-"classTCOrbitChara.html#a1842d0bf68c64882ec730d68ace4839f":[1,0,1274,13],
-"classTCOrbitChara.html#a34c1fc086a84fc890aa0e8dee5352ea7":[1,0,1274,1],
-"classTCOrbitChara.html#a351d4801a88cbb1a134a4cc7e4988d17":[1,0,1274,10],
-"classTCOrbitChara.html#a4209d81b33a346db553b33732f1de679":[1,0,1274,2]
+"classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae":[1,0,1271,5]
 };

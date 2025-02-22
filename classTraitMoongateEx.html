@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.94 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.95 Nyaightly</span>
    </div>
   </td>
  </tr>
@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a074c20e5f9d54bcc590372dc69766388 inherit pub_methods_classTraitMoongate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a517aab4bd4dc0df5f124fb8e81c984 inherit pub_methods_classTraitMoongate"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984">MoveZone</a> (<a class="el" href="classZone.html">Zone</a> zone)</td></tr>
 <tr class="separator:a4a517aab4bd4dc0df5f124fb8e81c984 inherit pub_methods_classTraitMoongate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6904ec6f73d14f1204481714bb72414f inherit pub_methods_classTraitMoongate"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classMapMetaData.html">MapMetaData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitMoongate.html#a6904ec6f73d14f1204481714bb72414f">ListSavedUserMap</a> ()</td></tr>
+<tr class="separator:a6904ec6f73d14f1204481714bb72414f inherit pub_methods_classTraitMoongate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
 <tr class="memitem:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a> (int i, string def=null)</td></tr>
 <tr class="separator:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -675,7 +677,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TraitMoongateEx_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitMoongateEx_8cs_source.html">TraitMoongateEx.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitMoongateEx_8cs_source.html#l00004">4</a> of file <a class="el" href="TraitMoongateEx_8cs_source.html">TraitMoongateEx.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af1cb535215ab7b75a8bed16754776eac" name="af1cb535215ab7b75a8bed16754776eac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1cb535215ab7b75a8bed16754776eac">&#9670;&#160;</a></span>_OnUse()</h2>
@@ -700,113 +702,98 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitMoongateEx_8cs_source.html#l00022">22</a> of file <a class="el" href="TraitMoongateEx_8cs_source.html">TraitMoongateEx.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        List&lt;MapMetaData&gt; list = <span class="keyword">new</span> List&lt;MapMetaData&gt;();</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">foreach</span> (FileInfo <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a5d8d6bd78ec613599905be7400a6b68b">ZoneSaveUser</a>).GetFiles().Concat(<a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#af5d400f232b2c4ef9c548521df7541b4">listMaps</a>))</div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (!(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Extension != <span class="stringliteral">&quot;.z&quot;</span>))</div>
-<div class="line"><span class="lineno">   28</span>            {</div>
-<div class="line"><span class="lineno">   29</span>                <a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> metaData = <a class="code hl_class" href="classMap.html">Map</a>.<a class="code hl_function" href="classMap.html#aa426157c406b2301c8586007a65ecb43">GetMetaData</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FullName);</div>
-<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">if</span> (metaData != <span class="keyword">null</span> &amp;&amp; metaData.<a class="code hl_function" href="classMapMetaData.html#a955cb7af4bf8c9c0b61162ae8a9b2244">IsValidVersion</a>())</div>
-<div class="line"><span class="lineno">   31</span>                {</div>
-<div class="line"><span class="lineno">   32</span>                    metaData.path = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FullName;</div>
-<div class="line"><span class="lineno">   33</span>                    metaData.date = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.LastWriteTime;</div>
-<div class="line"><span class="lineno">   34</span>                    list.Add(metaData);</div>
-<div class="line"><span class="lineno">   35</span>                }</div>
-<div class="line"><span class="lineno">   36</span>            }</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
-<div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">SayNothingHappans</a>();</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> item2 <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">   44</span>        {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> item3 <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>)</div>
-<div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                _ = item3;</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.Contains(item2.<a class="code hl_variable" href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">id</a>))</div>
-<div class="line"><span class="lineno">   50</span>                {</div>
-<div class="line"><span class="lineno">   51</span>                    flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   53</span>                }</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (!flag)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.Remove(item2.<a class="code hl_variable" href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">id</a>);</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        Sort();</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_class" href="classLayerList.html">LayerList</a> layer = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">bool</span> skipDialog = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   63</span>        layer = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetList2(list, (<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a) =&gt; a.name, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_function" href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">LoadMap</a>(a);</div>
-<div class="line"><span class="lineno">   66</span>        }, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
-<div class="line"><span class="lineno">   67</span>        {</div>
-<div class="line"><span class="lineno">   68</span>            b.<a class="code hl_function" href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">AddSubButton</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">icons</a>.<a class="code hl_variable" href="classCoreRef_1_1Icons.html#a8144f2e6c2979f1b858603052c82aae1">trash</a>, delegate</div>
-<div class="line"><span class="lineno">   69</span>            {</div>
-<div class="line"><span class="lineno">   70</span>                if (skipDialog)</div>
-<div class="line"><span class="lineno">   71</span>                {</div>
-<div class="line"><span class="lineno">   72</span>                    func();</div>
-<div class="line"><span class="lineno">   73</span>                }</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   75</span>                {</div>
-<div class="line"><span class="lineno">   76</span>                    Dialog.Choice(<span class="stringliteral">&quot;dialogDeleteGame&quot;</span>, delegate(Dialog d)</div>
-<div class="line"><span class="lineno">   77</span>                    {</div>
-<div class="line"><span class="lineno">   78</span>                        d.AddButton(<span class="stringliteral">&quot;yes&quot;</span>.lang(), delegate</div>
-<div class="line"><span class="lineno">   79</span>                        {</div>
-<div class="line"><span class="lineno">   80</span>                            func();</div>
-<div class="line"><span class="lineno">   81</span>                        });</div>
-<div class="line"><span class="lineno">   82</span>                        d.AddButton(<span class="stringliteral">&quot;yesAndSkip&quot;</span>.lang(), delegate</div>
-<div class="line"><span class="lineno">   83</span>                        {</div>
-<div class="line"><span class="lineno">   84</span>                            func();</div>
-<div class="line"><span class="lineno">   85</span>                            skipDialog = true;</div>
-<div class="line"><span class="lineno">   86</span>                        });</div>
-<div class="line"><span class="lineno">   87</span>                        d.AddButton(<span class="stringliteral">&quot;no&quot;</span>.lang());</div>
-<div class="line"><span class="lineno">   88</span>                    });</div>
-<div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>            });</div>
-<div class="line"><span class="lineno">   91</span>            <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = b.AddSubButton(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">icons</a>.<a class="code hl_variable" href="classCoreRef_1_1Icons.html#a0b7ae58921fbadf8bf42d0e8589d19d0">fav</a>, delegate</div>
-<div class="line"><span class="lineno">   92</span>            {</div>
-<div class="line"><span class="lineno">   93</span>                SE.ClickGeneral();</div>
-<div class="line"><span class="lineno">   94</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a4b35a1d5bfcb5a5cd563335abac15a17">ToggleFavMoongate</a>(a.id);</div>
-<div class="line"><span class="lineno">   95</span>                Sort();</div>
-<div class="line"><span class="lineno">   96</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.FreezeScreen(0.1f);</div>
-<div class="line"><span class="lineno">   97</span>                layer.<a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.<a class="code hl_function" href="classUIList.html#af98b337c74c8977ec262db16f160612c">List</a>();</div>
-<div class="line"><span class="lineno">   98</span>            });</div>
-<div class="line"><span class="lineno">   99</span>            uIButton.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetAlpha(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.Contains(a.id) ? 1f : 0.3f);</div>
-<div class="line"><span class="lineno">  100</span>            uIButton.icon.SetNativeSize();</div>
-<div class="line"><span class="lineno">  101</span>            <span class="keywordtype">void</span> func()</div>
-<div class="line"><span class="lineno">  102</span>            {</div>
-<div class="line"><span class="lineno">  103</span>                <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a86b8ba3562764038cd549e8dbccbbcf1">DeleteFile</a>(a.path);</div>
-<div class="line"><span class="lineno">  104</span>                list.Remove(a);</div>
-<div class="line"><span class="lineno">  105</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.FreezeScreen(0.1f);</div>
-<div class="line"><span class="lineno">  106</span>                layer.<a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.<a class="code hl_function" href="classUIList.html#af98b337c74c8977ec262db16f160612c">List</a>();</div>
-<div class="line"><span class="lineno">  107</span>                SE.Trash();</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }).SetSize(500f)</div>
-<div class="line"><span class="lineno">  110</span>            .SetTitles(<span class="stringliteral">&quot;wMoongate&quot;</span>) as <a class="code hl_class" href="classLayerList.html">LayerList</a>;</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keyword">static</span> DateTime GetDate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> meta)</div>
-<div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.IndexOf(meta.<a class="code hl_variable" href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">id</a>);</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span> (num == -1)</div>
-<div class="line"><span class="lineno">  115</span>            {</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">return</span> meta.<a class="code hl_variable" href="classMapMetaData.html#a30e832da8bbce67a97213e22851fd57a">date</a>;</div>
-<div class="line"><span class="lineno">  117</span>            }</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> meta.date + <span class="keyword">new</span> TimeSpan(-3650 - num, 0, 0, 0, 0);</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">void</span> Sort()</div>
-<div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            list.Sort((<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> b) =&gt; DateTime.Compare(GetDate(a), GetDate(b)));</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitMoongateEx_8cs_source.html#l00020">20</a> of file <a class="el" href="TraitMoongateEx_8cs_source.html">TraitMoongateEx.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        List&lt;MapMetaData&gt; list = <a class="code hl_function" href="classTraitMoongate.html#a6904ec6f73d14f1204481714bb72414f">ListSavedUserMap</a>();</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">SayNothingHappans</a>();</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> item2 <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                _ = item2;</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.Contains(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id))</div>
+<div class="line"><span class="lineno">   35</span>                {</div>
+<div class="line"><span class="lineno">   36</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   37</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   38</span>                }</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.Remove(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id);</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        Sort();</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_class" href="classLayerList.html">LayerList</a> layer = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordtype">bool</span> skipDialog = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   48</span>        layer = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetList2(list, (<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a) =&gt; a.name, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_function" href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">LoadMap</a>(a);</div>
+<div class="line"><span class="lineno">   51</span>        }, delegate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            b.<a class="code hl_function" href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">AddSubButton</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">icons</a>.<a class="code hl_variable" href="classCoreRef_1_1Icons.html#a8144f2e6c2979f1b858603052c82aae1">trash</a>, delegate</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                if (skipDialog)</div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    func();</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    Dialog.Choice(<span class="stringliteral">&quot;dialogDeleteGame&quot;</span>, delegate(Dialog d)</div>
+<div class="line"><span class="lineno">   62</span>                    {</div>
+<div class="line"><span class="lineno">   63</span>                        d.AddButton(<span class="stringliteral">&quot;yes&quot;</span>.lang(), delegate</div>
+<div class="line"><span class="lineno">   64</span>                        {</div>
+<div class="line"><span class="lineno">   65</span>                            func();</div>
+<div class="line"><span class="lineno">   66</span>                        });</div>
+<div class="line"><span class="lineno">   67</span>                        d.AddButton(<span class="stringliteral">&quot;yesAndSkip&quot;</span>.lang(), delegate</div>
+<div class="line"><span class="lineno">   68</span>                        {</div>
+<div class="line"><span class="lineno">   69</span>                            func();</div>
+<div class="line"><span class="lineno">   70</span>                            skipDialog = true;</div>
+<div class="line"><span class="lineno">   71</span>                        });</div>
+<div class="line"><span class="lineno">   72</span>                        d.AddButton(<span class="stringliteral">&quot;no&quot;</span>.lang());</div>
+<div class="line"><span class="lineno">   73</span>                    });</div>
+<div class="line"><span class="lineno">   74</span>                }</div>
+<div class="line"><span class="lineno">   75</span>            });</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = b.AddSubButton(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">icons</a>.<a class="code hl_variable" href="classCoreRef_1_1Icons.html#a0b7ae58921fbadf8bf42d0e8589d19d0">fav</a>, delegate</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                SE.ClickGeneral();</div>
+<div class="line"><span class="lineno">   79</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_function" href="classPlayer.html#a4b35a1d5bfcb5a5cd563335abac15a17">ToggleFavMoongate</a>(a.id);</div>
+<div class="line"><span class="lineno">   80</span>                Sort();</div>
+<div class="line"><span class="lineno">   81</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.FreezeScreen(0.1f);</div>
+<div class="line"><span class="lineno">   82</span>                layer.<a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.<a class="code hl_function" href="classUIList.html#af98b337c74c8977ec262db16f160612c">List</a>();</div>
+<div class="line"><span class="lineno">   83</span>            });</div>
+<div class="line"><span class="lineno">   84</span>            uIButton.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetAlpha(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.Contains(a.id) ? 1f : 0.3f);</div>
+<div class="line"><span class="lineno">   85</span>            uIButton.icon.SetNativeSize();</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordtype">void</span> func()</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a86b8ba3562764038cd549e8dbccbbcf1">DeleteFile</a>(a.path);</div>
+<div class="line"><span class="lineno">   89</span>                list.Remove(a);</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.FreezeScreen(0.1f);</div>
+<div class="line"><span class="lineno">   91</span>                layer.<a class="code hl_variable" href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">list</a>.<a class="code hl_function" href="classUIList.html#af98b337c74c8977ec262db16f160612c">List</a>();</div>
+<div class="line"><span class="lineno">   92</span>                SE.Trash();</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>        }).SetSize(500f)</div>
+<div class="line"><span class="lineno">   95</span>            .SetTitles(<span class="stringliteral">&quot;wMoongate&quot;</span>) as <a class="code hl_class" href="classLayerList.html">LayerList</a>;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keyword">static</span> DateTime GetDate(<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> meta)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordtype">int</span> num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">favMoongate</a>.IndexOf(meta.<a class="code hl_variable" href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">id</a>);</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">return</span> meta.<a class="code hl_variable" href="classMapMetaData.html#a30e832da8bbce67a97213e22851fd57a">date</a>;</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> meta.date + <span class="keyword">new</span> TimeSpan(-3650 - num, 0, 0, 0, 0);</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">void</span> Sort()</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            list.Sort((<a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> a, <a class="code hl_class" href="classMapMetaData.html">MapMetaData</a> b) =&gt; DateTime.Compare(GetDate(a), GetDate(b)));</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
-<div class="ttc" id="aclassCard_html_aa89684d63a6b62711e7337d9ac11f059"><div class="ttname"><a href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">Card.SayNothingHappans</a></div><div class="ttdeci">void SayNothingHappans()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06013">Card.cs:6013</a></div></div>
-<div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
-<div class="ttc" id="aclassCorePath_html_a5d8d6bd78ec613599905be7400a6b68b"><div class="ttname"><a href="classCorePath.html#a5d8d6bd78ec613599905be7400a6b68b">CorePath.ZoneSaveUser</a></div><div class="ttdeci">static string ZoneSaveUser</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00198">CorePath.cs:198</a></div></div>
+<div class="ttc" id="aclassCard_html_aa89684d63a6b62711e7337d9ac11f059"><div class="ttname"><a href="classCard.html#aa89684d63a6b62711e7337d9ac11f059">Card.SayNothingHappans</a></div><div class="ttdeci">void SayNothingHappans()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06027">Card.cs:6027</a></div></div>
 <div class="ttc" id="aclassCoreRef_1_1Icons_html_a0b7ae58921fbadf8bf42d0e8589d19d0"><div class="ttname"><a href="classCoreRef_1_1Icons.html#a0b7ae58921fbadf8bf42d0e8589d19d0">CoreRef.Icons.fav</a></div><div class="ttdeci">Sprite fav</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00108">CoreRef.cs:108</a></div></div>
 <div class="ttc" id="aclassCoreRef_1_1Icons_html_a8144f2e6c2979f1b858603052c82aae1"><div class="ttname"><a href="classCoreRef_1_1Icons.html#a8144f2e6c2979f1b858603052c82aae1">CoreRef.Icons.trash</a></div><div class="ttdeci">Sprite trash</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00104">CoreRef.cs:104</a></div></div>
 <div class="ttc" id="aclassCoreRef_html_a52546c5617153fd210e634ad96c7eae7"><div class="ttname"><a href="classCoreRef.html#a52546c5617153fd210e634ad96c7eae7">CoreRef.icons</a></div><div class="ttdeci">Icons icons</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00339">CoreRef.cs:339</a></div></div>
@@ -816,30 +803,26 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00012">EClass.cs:12</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
-<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00008">IO.cs:9</a></div></div>
-<div class="ttc" id="aclassIO_html_a86b8ba3562764038cd549e8dbccbbcf1"><div class="ttname"><a href="classIO.html#a86b8ba3562764038cd549e8dbccbbcf1">IO.DeleteFile</a></div><div class="ttdeci">static void DeleteFile(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00311">IO.cs:311</a></div></div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
+<div class="ttc" id="aclassIO_html_a86b8ba3562764038cd549e8dbccbbcf1"><div class="ttname"><a href="classIO.html#a86b8ba3562764038cd549e8dbccbbcf1">IO.DeleteFile</a></div><div class="ttdeci">static void DeleteFile(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00313">IO.cs:313</a></div></div>
 <div class="ttc" id="aclassItemGeneral_html"><div class="ttname"><a href="classItemGeneral.html">ItemGeneral</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00005">ItemGeneral.cs:6</a></div></div>
 <div class="ttc" id="aclassItemGeneral_html_a386a4f0ea416c6463ff620facdbe2574"><div class="ttname"><a href="classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574">ItemGeneral.AddSubButton</a></div><div class="ttdeci">UIButton AddSubButton(Sprite sprite, Action action, string lang=null, Action&lt; UITooltip &gt; onTooltip=null)</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00076">ItemGeneral.cs:76</a></div></div>
 <div class="ttc" id="aclassLayerList_html"><div class="ttname"><a href="classLayerList.html">LayerList</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00005">LayerList.cs:6</a></div></div>
 <div class="ttc" id="aclassLayerList_html_a2f0d0d5e509a0580a826a00eed1b000e"><div class="ttname"><a href="classLayerList.html#a2f0d0d5e509a0580a826a00eed1b000e">LayerList.list</a></div><div class="ttdeci">UIList list</div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00016">LayerList.cs:16</a></div></div>
-<div class="ttc" id="aclassMOD_html"><div class="ttname"><a href="classMOD.html">MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00006">MOD.cs:7</a></div></div>
-<div class="ttc" id="aclassMOD_html_af5d400f232b2c4ef9c548521df7541b4"><div class="ttname"><a href="classMOD.html#af5d400f232b2c4ef9c548521df7541b4">MOD.listMaps</a></div><div class="ttdeci">static List&lt; FileInfo &gt; listMaps</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00020">MOD.cs:20</a></div></div>
 <div class="ttc" id="aclassMapMetaData_html"><div class="ttname"><a href="classMapMetaData.html">MapMetaData</a></div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00004">MapMetaData.cs:5</a></div></div>
 <div class="ttc" id="aclassMapMetaData_html_a30e832da8bbce67a97213e22851fd57a"><div class="ttname"><a href="classMapMetaData.html#a30e832da8bbce67a97213e22851fd57a">MapMetaData.date</a></div><div class="ttdeci">DateTime date</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00023">MapMetaData.cs:23</a></div></div>
 <div class="ttc" id="aclassMapMetaData_html_a6aa1e30fc883ee8d4cf526ac40709762"><div class="ttname"><a href="classMapMetaData.html#a6aa1e30fc883ee8d4cf526ac40709762">MapMetaData.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00010">MapMetaData.cs:10</a></div></div>
-<div class="ttc" id="aclassMapMetaData_html_a955cb7af4bf8c9c0b61162ae8a9b2244"><div class="ttname"><a href="classMapMetaData.html#a955cb7af4bf8c9c0b61162ae8a9b2244">MapMetaData.IsValidVersion</a></div><div class="ttdeci">bool IsValidVersion()</div><div class="ttdef"><b>Definition:</b> <a href="MapMetaData_8cs_source.html#l00025">MapMetaData.cs:25</a></div></div>
-<div class="ttc" id="aclassMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00012">Map.cs:13</a></div></div>
-<div class="ttc" id="aclassMap_html_aa426157c406b2301c8586007a65ecb43"><div class="ttname"><a href="classMap.html#aa426157c406b2301c8586007a65ecb43">Map.GetMetaData</a></div><div class="ttdeci">static MapMetaData GetMetaData(string pathZip)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00732">Map.cs:732</a></div></div>
 <div class="ttc" id="aclassPlayer_html_a4b35a1d5bfcb5a5cd563335abac15a17"><div class="ttname"><a href="classPlayer.html#a4b35a1d5bfcb5a5cd563335abac15a17">Player.ToggleFavMoongate</a></div><div class="ttdeci">void ToggleFavMoongate(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l02338">Player.cs:2338</a></div></div>
 <div class="ttc" id="aclassPlayer_html_aebc4321f0cf770f3c2e0f11cd8c37f0a"><div class="ttname"><a href="classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a">Player.favMoongate</a></div><div class="ttdeci">List&lt; string &gt; favMoongate</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00930">Player.cs:930</a></div></div>
-<div class="ttc" id="aclassTraitMoongate_html_a074c20e5f9d54bcc590372dc69766388"><div class="ttname"><a href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">TraitMoongate.LoadMap</a></div><div class="ttdeci">void LoadMap(MapMetaData m)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00084">TraitMoongate.cs:84</a></div></div>
+<div class="ttc" id="aclassTraitMoongate_html_a074c20e5f9d54bcc590372dc69766388"><div class="ttname"><a href="classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388">TraitMoongate.LoadMap</a></div><div class="ttdeci">void LoadMap(MapMetaData m)</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00102">TraitMoongate.cs:102</a></div></div>
+<div class="ttc" id="aclassTraitMoongate_html_a6904ec6f73d14f1204481714bb72414f"><div class="ttname"><a href="classTraitMoongate.html#a6904ec6f73d14f1204481714bb72414f">TraitMoongate.ListSavedUserMap</a></div><div class="ttdeci">List&lt; MapMetaData &gt; ListSavedUserMap()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongate_8cs_source.html#l00134">TraitMoongate.cs:134</a></div></div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
 <div class="ttc" id="aclassUIList_html_af98b337c74c8977ec262db16f160612c"><div class="ttname"><a href="classUIList.html#af98b337c74c8977ec262db16f160612c">UIList.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00717">UIList.cs:717</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00076">ItemGeneral.AddSubButton()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Player_8cs_source.html#l00930">Player.favMoongate</a>, <a class="el" href="Map_8cs_source.html#l00732">Map.GetMetaData()</a>, <a class="el" href="CoreRef_8cs_source.html#l00339">CoreRef.icons</a>, <a class="el" href="MapMetaData_8cs_source.html#l00010">MapMetaData.id</a>, <a class="el" href="MapMetaData_8cs_source.html#l00025">MapMetaData.IsValidVersion()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="MOD_8cs_source.html#l00020">MOD.listMaps</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00084">TraitMoongate.LoadMap()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00007">MapMetaData.name</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="Card_8cs_source.html#l06013">Card.SayNothingHappans()</a>, <a class="el" href="CoreRef_8cs_source.html#l00104">CoreRef.Icons.trash</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="CorePath_8cs_source.html#l00198">CorePath.ZoneSaveUser</a>.</p>
+<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00076">ItemGeneral.AddSubButton()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Player_8cs_source.html#l00930">Player.favMoongate</a>, <a class="el" href="CoreRef_8cs_source.html#l00339">CoreRef.icons</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00134">TraitMoongate.ListSavedUserMap()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00102">TraitMoongate.LoadMap()</a>, <a class="el" href="MapMetaData_8cs_source.html#l00007">MapMetaData.name</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="Card_8cs_source.html#l06027">Card.SayNothingHappans()</a>, <a class="el" href="CoreRef_8cs_source.html#l00104">CoreRef.Icons.trash</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitMoongateEx_8cs_source.html#l00008">OnUse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitMoongateEx_8cs_source.html#l00006">OnUse()</a>.</p>
 
 </div>
 </div>
@@ -869,28 +852,28 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitMoongate.html#ac4325da59139f85cb656e9e14ce3d641">TraitMoongate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitMoongateEx_8cs_source.html#l00008">8</a> of file <a class="el" href="TraitMoongateEx_8cs_source.html">TraitMoongateEx.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a>)</div>
-<div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#aecd2169a069c87c9eca10d3a04249b54">SayNothingHappen</a>();</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   14</span>        }</div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">TryWarnMod</a>(delegate</div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <a class="code hl_function" href="classTraitMoongateEx.html#af1cb535215ab7b75a8bed16754776eac">_OnUse</a>();</div>
-<div class="line"><span class="lineno">   18</span>        }, warn: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitMoongateEx_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitMoongateEx_8cs_source.html">TraitMoongateEx.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a>)</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#aecd2169a069c87c9eca10d3a04249b54">SayNothingHappen</a>();</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">TryWarnMod</a>(delegate</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_function" href="classTraitMoongateEx.html#af1cb535215ab7b75a8bed16754776eac">_OnUse</a>();</div>
+<div class="line"><span class="lineno">   16</span>        }, warn: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 <div class="ttc" id="aclassBaseCore_html_aa560bb8f25eb2a78768fe250b772c470"><div class="ttname"><a href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">BaseCore.version</a></div><div class="ttdeci">Version version</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00017">BaseCore.cs:17</a></div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
 <div class="ttc" id="aclassCore_html_ae3107026cb0aee74afb00590d1ed9cb9"><div class="ttname"><a href="classCore.html#ae3107026cb0aee74afb00590d1ed9cb9">Core.TryWarnMod</a></div><div class="ttdeci">static void TryWarnMod(Action action, bool warn=true)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00798">Core.cs:798</a></div></div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_aecd2169a069c87c9eca10d3a04249b54"><div class="ttname"><a href="classMsg.html#aecd2169a069c87c9eca10d3a04249b54">Msg.SayNothingHappen</a></div><div class="ttdeci">static string SayNothingHappen()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00096">Msg.cs:96</a></div></div>
-<div class="ttc" id="aclassTraitMoongateEx_html_af1cb535215ab7b75a8bed16754776eac"><div class="ttname"><a href="classTraitMoongateEx.html#af1cb535215ab7b75a8bed16754776eac">TraitMoongateEx._OnUse</a></div><div class="ttdeci">void _OnUse()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongateEx_8cs_source.html#l00022">TraitMoongateEx.cs:22</a></div></div>
+<div class="ttc" id="aclassTraitMoongateEx_html_af1cb535215ab7b75a8bed16754776eac"><div class="ttname"><a href="classTraitMoongateEx.html#af1cb535215ab7b75a8bed16754776eac">TraitMoongateEx._OnUse</a></div><div class="ttdeci">void _OnUse()</div><div class="ttdef"><b>Definition:</b> <a href="TraitMoongateEx_8cs_source.html#l00020">TraitMoongateEx.cs:20</a></div></div>
 <div class="ttc" id="astructVersion_html_ae633012a534a727dfaa4035d90b14c2c"><div class="ttname"><a href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">Version.demo</a></div><div class="ttdeci">bool demo</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00014">Version.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitMoongateEx_8cs_source.html#l00022">_OnUse()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Version_8cs_source.html#l00014">Version.demo</a>, <a class="el" href="Msg_8cs_source.html#l00096">Msg.SayNothingHappen()</a>, <a class="el" href="Core_8cs_source.html#l00798">Core.TryWarnMod()</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
+<p class="reference">References <a class="el" href="TraitMoongateEx_8cs_source.html#l00020">_OnUse()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Version_8cs_source.html#l00014">Version.demo</a>, <a class="el" href="Msg_8cs_source.html#l00096">Msg.SayNothingHappen()</a>, <a class="el" href="Core_8cs_source.html#l00798">Core.TryWarnMod()</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
 
 </div>
 </div>

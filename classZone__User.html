@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.94 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.95 Nyaightly</span>
    </div>
   </td>
  </tr>
@@ -892,7 +892,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00004">4</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00005">5</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afa80587830747bdba392050437c5c700" name="afa80587830747bdba392050437c5c700"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa80587830747bdba392050437c5c700">&#9670;&#160;</a></span>OnActivate()</h2>
@@ -919,17 +919,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classZone.html#a9a76eb1513f018d620bd11877c548d3d">Zone</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00023">23</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        base.OnActivate();</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ac4c131a09dea197611e826592b6bd788">exportSetting</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ac4c131a09dea197611e826592b6bd788">exportSetting</a>.<a class="code hl_variable" href="classMapExportSetting.html#af2416c056db2e9f25e515e3865c57568">textWelcome</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">SetColor</a>(<span class="stringliteral">&quot;save&quot;</span>);</div>
-<div class="line"><span class="lineno">   30</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ab028873eb3682ed46301711e0b6f23c9">SayRaw</a>(<span class="stringliteral">&quot;&lt;i&gt;&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ac4c131a09dea197611e826592b6bd788">exportSetting</a>.<a class="code hl_variable" href="classMapExportSetting.html#af2416c056db2e9f25e515e3865c57568">textWelcome</a> + <span class="stringliteral">&quot;&lt;/i&gt;&quot;</span>);</div>
-<div class="line"><span class="lineno">   31</span>            <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00024">24</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        base.OnActivate();</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ac4c131a09dea197611e826592b6bd788">exportSetting</a> == <span class="keyword">null</span> || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ac4c131a09dea197611e826592b6bd788">exportSetting</a>.<a class="code hl_variable" href="classMapExportSetting.html#af2416c056db2e9f25e515e3865c57568">textWelcome</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">string</span>[] array = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#ac4c131a09dea197611e826592b6bd788">exportSetting</a>.<a class="code hl_variable" href="classMapExportSetting.html#af2416c056db2e9f25e515e3865c57568">textWelcome</a>.Replace(<span class="stringliteral">&quot;\\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Split(Environment.NewLine.ToCharArray());</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> array2)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#afb750c35eea77e527ebbe43d7fb085ef">SetColor</a>(<span class="stringliteral">&quot;save&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ab028873eb3682ed46301711e0b6f23c9">SayRaw</a>(<span class="stringliteral">&quot;&lt;i&gt;&quot;</span> + text.Replace(Environment.NewLine, <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot;&lt;/i&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="classWidgetMainText.html">WidgetMainText</a>.<a class="code hl_variable" href="classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213">Instance</a>.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
+<div class="line"><span class="lineno">   40</span>            num++;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (num &gt;= 5)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
 <div class="ttc" id="aclassMapExportSetting_html_af2416c056db2e9f25e515e3865c57568"><div class="ttname"><a href="classMapExportSetting.html#af2416c056db2e9f25e515e3865c57568">MapExportSetting.textWelcome</a></div><div class="ttdeci">string textWelcome</div><div class="ttdef"><b>Definition:</b> <a href="MapExportSetting_8cs_source.html#l00009">MapExportSetting.cs:9</a></div></div>
@@ -958,7 +970,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00007">7</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00008">8</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -983,7 +995,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00019">19</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00020">20</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1019,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00015">15</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00016">16</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1043,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00011">11</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00012">12</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1067,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00009">9</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00010">10</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1091,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00017">17</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00018">18</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1115,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00013">13</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00014">14</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>
@@ -1127,7 +1139,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00021">21</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Zone__User_8cs_source.html#l00022">22</a> of file <a class="el" href="Zone__User_8cs_source.html">Zone_User.cs</a>.</p>
 
 </div>
 </div>

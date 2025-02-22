@@ -1,5 +1,16 @@
 var NAVTREEINDEX129 =
 {
+"classWidgetHotbar.html#a8b5c6bd7d4572114016201bc5e321764":[1,0,1972,24],
+"classWidgetHotbar.html#a8e1991bbed11dc9e86a62d91bf713b6c":[1,0,1972,36],
+"classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda":[1,0,1972,29],
+"classWidgetHotbar.html#a968f093cd100c8a2d24efc56b61ebb8e":[1,0,1972,43],
+"classWidgetHotbar.html#a9aecc2578b7c5fd4946fdd02add7f347":[1,0,1972,42],
+"classWidgetHotbar.html#a9bb95f059a4e5c1e3a6babdf86372dda":[1,0,1972,33],
+"classWidgetHotbar.html#aa4d5af0b66b41511efdf6750c1d3ebb6":[1,0,1972,25],
+"classWidgetHotbar.html#aafcf455979c22916c3bfd42fa8680604":[1,0,1972,13],
+"classWidgetHotbar.html#ac37420963e117e7f232d769ff0f1cf7d":[1,0,1972,2],
+"classWidgetHotbar.html#ac812c73e4b719a8a5d88dd8ac6c3eb0c":[1,0,1972,45],
+"classWidgetHotbar.html#acad83a1fec07a9b82a13f2ff6c2a0aae":[1,0,1972,46],
 "classWidgetHotbar.html#ad06710a1e76fa456d3a254d1f0565b6e":[1,0,1972,16],
 "classWidgetHotbar.html#ad376e38a0125ddff14cea45fd183959c":[1,0,1972,8],
 "classWidgetHotbar.html#ad60cb652a5ce20317de4af3ccb3d9bf4":[1,0,1972,26],
@@ -238,16 +249,5 @@ var NAVTREEINDEX129 =
 "classWidgetMouseover.html#aa432ae25e9dfb4ad60b6aace3747dd87":[1,0,1981,12],
 "classWidgetMouseover.html#aa6a54f12fce1877b18fc066f9557e277":[1,0,1981,3],
 "classWidgetMouseover.html#abea00d065948cf90f454ac8a8e9c4acc":[1,0,1981,6],
-"classWidgetMouseover.html#acb664decbb4f9d3b00033d7f9ceecb96":[1,0,1981,11],
-"classWidgetMouseover.html#ad64368305908c8ace169cc8f5c480abb":[1,0,1981,8],
-"classWidgetMouseover.html#ae07560ec8d9d5c136cbc78b15068e899":[1,0,1981,10],
-"classWidgetMouseover.html#afaa8a36bcf5ee4c1b77304c9b9430cab":[1,0,1981,1],
-"classWidgetMouseover.html#afcf255a277dc526ef6499e4079703a4a":[1,0,1981,7],
-"classWidgetNeeds.html":[1,0,1982],
-"classWidgetNotice.html":[1,0,1983],
-"classWidgetNotice.html#a27a19eeaa2d242b722606ad77da93a77":[1,0,1983,6],
-"classWidgetNotice.html#a3cd5dd67e8a4e43fd5d7d0c50fff096f":[1,0,1983,4],
-"classWidgetNotice.html#a405bee62b657824dc72f9059b58b89c4":[1,0,1983,8],
-"classWidgetNotice.html#a4bf5b239379f9ba77d7684887a531064":[1,0,1983,3],
-"classWidgetNotice.html#a53399e19770d36c6d5ee82d3abfc72a1":[1,0,1983,9]
+"classWidgetMouseover.html#acb664decbb4f9d3b00033d7f9ceecb96":[1,0,1981,11]
 };

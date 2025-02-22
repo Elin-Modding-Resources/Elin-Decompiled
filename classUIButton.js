@@ -29,6 +29,7 @@ var classUIButton =
     [ "SetItem", "classUIButton.html#a7a82ce5c8a72a456e56fe924e902e4fe", null ],
     [ "SetNavigation", "classUIButton.html#ab79aa51b802c914b99daa84b67faf774", null ],
     [ "SetToggle", "classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52", null ],
+    [ "SetToggleWithScore", "classUIButton.html#a4ff95d8087b10c4d6fb023441e6a19ff", null ],
     [ "SetTooltip", "classUIButton.html#a6736e16f32684c87b44bef2263f10692", null ],
     [ "SetTooltip", "classUIButton.html#a7fb5602522d8df297c4e397ffa336628", null ],
     [ "SetTooltipLang", "classUIButton.html#a95a16ea2188a92160e7b6a5c54206689", null ],

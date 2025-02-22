@@ -1,5 +1,16 @@
 var NAVTREEINDEX128 =
 {
+"classWidgetArtTool.html#a3fa6f2f1987503c189f8834b4d15e8b5":[1,0,1961,8],
+"classWidgetArtTool.html#a56c7a434247ce108aba6d7d93af3c7bd":[1,0,1961,1],
+"classWidgetArtTool.html#a9dcaac3356aa9a780dc9bdfd6438f022":[1,0,1961,0],
+"classWidgetArtTool.html#aa8b79f967f2607b150088d5f03c5dfe7":[1,0,1961,4],
+"classWidgetArtTool.html#aafa71c4a1eb02bf9132d4dadd39cd4e1":[1,0,1961,6],
+"classWidgetBottomBar.html":[1,0,1962],
+"classWidgetBottomBar.html#a1a6f27e12c3ae683e4d193eee8f8d6e7":[1,0,1962,3],
+"classWidgetBottomBar.html#a2ebc0c24ea23e869057e8a5e8cec9f28":[1,0,1962,6],
+"classWidgetBottomBar.html#a395fc9396e865a12d82b51c7497b06fe":[1,0,1962,8],
+"classWidgetBottomBar.html#a575bd71265f49d58b97c39601be10d99":[1,0,1962,5],
+"classWidgetBottomBar.html#a5aa5c882ff57e3d0001b85db0c920b5f":[1,0,1962,9],
 "classWidgetBottomBar.html#a62fad1ba9aff0521f1699fb4c21cb8d3":[1,0,1962,1],
 "classWidgetBottomBar.html#a95af5a5b1cca9ce55807bd407f8ccf89":[1,0,1962,7],
 "classWidgetBottomBar.html#a9d7f3428f8839f8cc2b5ff9bfb74ef95":[1,0,1962,4],
@@ -238,16 +249,5 @@ var NAVTREEINDEX128 =
 "classWidgetHotbar.html#a821d135d80d1a54eabc30bab714e1a97":[1,0,1972,27],
 "classWidgetHotbar.html#a8414ffd2f6f275b4e6263e0112603797":[1,0,1972,40],
 "classWidgetHotbar.html#a843406c6e5c8286cff99ee333fc49749":[1,0,1972,39],
-"classWidgetHotbar.html#a8519fc90ad052800abe81fe239451b87":[1,0,1972,37],
-"classWidgetHotbar.html#a8b5c6bd7d4572114016201bc5e321764":[1,0,1972,24],
-"classWidgetHotbar.html#a8e1991bbed11dc9e86a62d91bf713b6c":[1,0,1972,36],
-"classWidgetHotbar.html#a94dd65734e6cc375e940a8532edafdda":[1,0,1972,29],
-"classWidgetHotbar.html#a968f093cd100c8a2d24efc56b61ebb8e":[1,0,1972,43],
-"classWidgetHotbar.html#a9aecc2578b7c5fd4946fdd02add7f347":[1,0,1972,42],
-"classWidgetHotbar.html#a9bb95f059a4e5c1e3a6babdf86372dda":[1,0,1972,33],
-"classWidgetHotbar.html#aa4d5af0b66b41511efdf6750c1d3ebb6":[1,0,1972,25],
-"classWidgetHotbar.html#aafcf455979c22916c3bfd42fa8680604":[1,0,1972,13],
-"classWidgetHotbar.html#ac37420963e117e7f232d769ff0f1cf7d":[1,0,1972,2],
-"classWidgetHotbar.html#ac812c73e4b719a8a5d88dd8ac6c3eb0c":[1,0,1972,45],
-"classWidgetHotbar.html#acad83a1fec07a9b82a13f2ff6c2a0aae":[1,0,1972,46]
+"classWidgetHotbar.html#a8519fc90ad052800abe81fe239451b87":[1,0,1972,37]
 };
