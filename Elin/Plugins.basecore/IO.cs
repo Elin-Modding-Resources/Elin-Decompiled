@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using System.Security;
+using System.Security.Permissions;
 using LZ4;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -342,6 +344,14 @@ public class IO
 		if (Directory.Exists(path))
 		{
 			DirectoryInfo directoryInfo = new DirectoryInfo(path);
+			try
+			{
+				new FileIOPermission(FileIOPermissionAccess.AllAccess, path).Demand();
+			}
+			catch (SecurityException ex)
+			{
+				Debug.Log(ex.ToString());
+			}
 			if (directoryInfo.Exists)
 			{
 				directoryInfo.Delete(recursive: true);
