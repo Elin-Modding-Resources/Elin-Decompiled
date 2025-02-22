@@ -352,6 +352,15 @@ public class UIButton : Button, IUISkin, IPointerDownHandler, IEventSystemHandle
 		});
 	}
 
+	public void SetToggleWithScore(bool isOn, Action<bool> onToggle, int? score)
+	{
+		SetToggle(isOn, onToggle);
+		subText.SetActive(score != 0);
+		UIText uIText = subText;
+		int? num = score;
+		uIText.SetText(num.ToString() ?? "", (score >= 0) ? FontColor.Good : FontColor.Bad);
+	}
+
 	public void SetTooltip(Action<UITooltip> onShowTooltip = null, bool enable = true)
 	{
 		SetTooltip("note", onShowTooltip, enable);
