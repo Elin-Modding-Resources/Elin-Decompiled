@@ -40,6 +40,8 @@ public class SkinManager : MonoBehaviour
 
 	public static SkinManager _Instance;
 
+	public static int LimitFontSizeMod_UI = 999;
+
 	public List<FontSource> fontList;
 
 	public List<FontSource> fontListOriginal;

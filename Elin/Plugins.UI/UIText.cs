@@ -52,7 +52,7 @@ public class UIText : Text, IUISkin
 			{
 			case FontType.UI:
 				fontSource = fontSet.ui.source;
-				num2 = fontSet.ui.sizeMod;
+				num2 = Mathf.Min(fontSet.ui.sizeMod, SkinManager.LimitFontSizeMod_UI);
 				break;
 			case FontType.Widget:
 				fontSource = fontSet.widget.source;
