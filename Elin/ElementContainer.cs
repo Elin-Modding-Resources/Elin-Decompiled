@@ -808,6 +808,17 @@ public class ElementContainer : EClass
 					{
 						sprite = EClass.core.refs.icons.enc.mat;
 					}
+					foreach (int key in thing.source.elementMap.Keys)
+					{
+						if (key == e.id)
+						{
+							sprite = EClass.core.refs.icons.enc.card;
+						}
+					}
+					if (e.id == thing.GetInt(107))
+					{
+						sprite = EClass.core.refs.icons.enc.cat;
+					}
 					if (thing.GetRuneEnc(e.id) != null)
 					{
 						sprite = EClass.core.refs.icons.enc.rune;

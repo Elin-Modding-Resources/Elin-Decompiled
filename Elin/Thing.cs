@@ -1895,6 +1895,7 @@ public class Thing : Card
 		{
 			return;
 		}
+		SetInt(107, 1);
 		if (tg == null)
 		{
 			Rand.SetSeed(EClass.world.date.day + source._index + c.uid);
@@ -1904,7 +1905,11 @@ public class Thing : Card
 				PlaySound("offering");
 				PlayEffect("mutation");
 			}
-			AddEnchant(base.LV);
+			Element element = AddEnchant(5 + Mathf.Max(EClass.pc.LUC, 0));
+			if (element != null)
+			{
+				SetInt(107, element.id);
+			}
 		}
 		else
 		{
@@ -1919,8 +1924,9 @@ public class Thing : Card
 			}
 			if (list.Count > 0)
 			{
-				Element element = list.RandomItem();
-				elements.ModBase(element.id, Mathf.Max(EClass.rnd(Mathf.Abs(element.vBase / 5)), 1));
+				Element element2 = list.RandomItem();
+				elements.ModBase(element2.id, Mathf.Max(EClass.rnd(Mathf.Abs(element2.vBase / 5)), 1));
+				SetInt(107, element2.id);
 			}
 			if (msg)
 			{
@@ -1930,7 +1936,6 @@ public class Thing : Card
 			}
 		}
 		Rand.SetSeed();
-		SetInt(107, 1);
 	}
 
 	public Element AddEnchant(int lv = -1)

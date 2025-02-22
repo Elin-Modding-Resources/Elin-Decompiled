@@ -177,9 +177,9 @@ public class ActMelee : ActBaseAttack
 					int num2 = GetWeaponEnc(606, addSelfEnc: false);
 					int scatter = GetWeaponEnc(607, addSelfEnc: false);
 					splash = GetWeaponEnc(608, addSelfEnc: true);
-					chaser = GetWeaponEnc(620, addSelfEnc: false);
-					flurry = GetWeaponEnc(621, addSelfEnc: false);
-					frustration = GetWeaponEnc(624, addSelfEnc: false);
+					chaser = GetWeaponEnc(620, addSelfEnc: true);
+					flurry = GetWeaponEnc(621, addSelfEnc: true);
+					frustration = GetWeaponEnc(624, addSelfEnc: true);
 					int num3 = GetWeaponEnc(622, addSelfEnc: true);
 					feint = GetWeaponEnc(623, addSelfEnc: false);
 					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);

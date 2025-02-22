@@ -8,6 +8,14 @@ public class LayerHelp : ELayer
 
 	public override bool blockWidgetClick => false;
 
+	public override void OnInit()
+	{
+		if (book.mode == UIBook.Mode.Book)
+		{
+			SkinManager.LimitFontSizeMod_UI = -2;
+		}
+	}
+
 	public override void OnAfterInit()
 	{
 		switch (book.mode)
@@ -49,5 +57,6 @@ public class LayerHelp : ELayer
 			lastIdFile = book.idFile;
 			lastIdTopic = book.idTopic;
 		}
+		SkinManager.LimitFontSizeMod_UI = 999;
 	}
 }

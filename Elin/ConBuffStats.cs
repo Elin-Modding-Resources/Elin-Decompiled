@@ -17,7 +17,7 @@ public class ConBuffStats : Condition
 		}
 	}
 
-	public bool isDebuff => base.refVal2 == 221;
+	public bool isDebuff => base.refVal2 == 222;
 
 	public override bool WillOverride => true;
 
@@ -27,7 +27,7 @@ public class ConBuffStats : Condition
 
 	public override int EvaluateTurn(int p)
 	{
-		if (base.refVal2 == 266)
+		if (base.refVal2 == 267)
 		{
 			return 7;
 		}
@@ -95,7 +95,7 @@ public class ConBuffStats : Condition
 
 	public int CalcValue()
 	{
-		if (base.refVal2 == 266)
+		if (base.refVal2 == 267)
 		{
 			return 100 + (int)Mathf.Sqrt(base.power) * 2;
 		}

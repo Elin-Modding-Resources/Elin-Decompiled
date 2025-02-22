@@ -550,7 +550,7 @@ public class UI : ELayer
 		Debug.Log(text);
 	}
 
-	public void FreezeScreen(float duration)
+	public void FreezeScreen(float duration, bool highlight = true)
 	{
 		if ((bool)texFreeze)
 		{
@@ -559,14 +559,18 @@ public class UI : ELayer
 		texFreeze = ScreenCapture.CaptureScreenshotAsTexture();
 		imageFreeze.SetActive(enable: true);
 		imageFreeze.texture = texFreeze;
-		if (duration != 0f)
+		if (duration == 0f)
 		{
-			TweenUtil.Tween(duration, null, delegate
-			{
-				UnfreezeScreen();
-				UIButton.TryHihlight();
-			});
+			return;
 		}
+		TweenUtil.Tween(duration, null, delegate
+		{
+			UnfreezeScreen();
+			if (highlight)
+			{
+				UIButton.TryHihlight();
+			}
+		});
 	}
 
 	public void UnfreezeScreen()

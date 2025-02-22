@@ -1,12 +1,14 @@
 public class SKILL
 {
-	public const int armorHeavy = 122;
+	public const int tactics = 132;
 
 	public const int twowield = 131;
 
 	public const int twohand = 130;
 
 	public const int shield = 123;
+
+	public const int armorHeavy = 122;
 
 	public const int acidproof = 51;
 
@@ -18,15 +20,15 @@ public class SKILL
 
 	public const int fireproof = 50;
 
-	public const int tactics = 132;
+	public const int marksman = 133;
 
 	public const int armorLight = 120;
 
-	public const int marksman = 133;
+	public const int eyeofmind = 134;
 
-	public const int evasionPlus = 151;
+	public const int parasite = 227;
 
-	public const int strategy = 135;
+	public const int evasion = 150;
 
 	public const int climbing = 242;
 
@@ -40,15 +42,15 @@ public class SKILL
 
 	public const int digging = 230;
 
-	public const int parasite = 227;
-
-	public const int eyeofmind = 134;
+	public const int PDR = 55;
 
 	public const int riding = 226;
 
+	public const int lumberjack = 225;
+
 	public const int mining = 220;
 
-	public const int spotting = 210;
+	public const int fishing = 245;
 
 	public const int weightlifting = 207;
 
@@ -56,19 +58,15 @@ public class SKILL
 
 	public const int stealth = 152;
 
-	public const int PDR = 55;
+	public const int evasionPlus = 151;
 
-	public const int evasion = 150;
-
-	public const int lumberjack = 225;
+	public const int strategy = 135;
 
 	public const int EDR = 56;
 
-	public const int throwing = 108;
+	public const int weaponSword = 101;
 
 	public const int life = 60;
-
-	public const int fishing = 245;
 
 	public const int mana = 61;
 
@@ -96,11 +94,11 @@ public class SKILL
 
 	public const int WIL = 75;
 
-	public const int evasionPerfect = 57;
-
 	public const int MAG = 76;
 
-	public const int LUC = 78;
+	public const int evasionPerfect = 57;
+
+	public const int CHA = 77;
 
 	public const int SPD = 79;
 
@@ -128,11 +126,13 @@ public class SKILL
 
 	public const int weaponDagger = 107;
 
-	public const int CHA = 77;
+	public const int throwing = 108;
+
+	public const int LUC = 78;
 
 	public const int gathering = 250;
 
-	public const int weaponSword = 101;
+	public const int spotting = 210;
 
 	public const int blacksmith = 256;
 
@@ -190,7 +190,7 @@ public class SKILL
 
 	public const int resImpact = 965;
 
-	public const int resDamage = 971;
+	public const int resDecay = 970;
 
 	public const int resCurse = 972;
 
@@ -200,17 +200,17 @@ public class SKILL
 
 	public const int eleMind = 914;
 
-	public const int resDecay = 970;
+	public const int resDamage = 971;
 
 	public const int eleLightning = 912;
 
 	public const int eleDarkness = 913;
 
+	public const int alchemy = 257;
+
 	public const int sculpture = 258;
 
 	public const int jewelry = 259;
-
-	public const int alchemy = 257;
 
 	public const int weaving = 260;
 
@@ -238,9 +238,9 @@ public class SKILL
 
 	public const int regeneration = 300;
 
-	public const int eleCold = 911;
-
 	public const int eleFire = 910;
+
+	public const int env = 313;
 
 	public const int disarmTrap = 293;
 
@@ -252,13 +252,13 @@ public class SKILL
 
 	public const int memorization = 307;
 
-	public const int env = 313;
-
 	public const int magicDevice = 305;
 
 	public const int casting = 304;
 
 	public const int manaCapacity = 303;
+
+	public const int eleCold = 911;
 
 	public const int controlmana = 302;
 
@@ -268,19 +268,19 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		122, 131, 130, 123, 51, 111, 110, 109, 50, 132,
-		120, 133, 151, 135, 242, 241, 240, 237, 235, 230,
-		227, 134, 226, 220, 210, 207, 200, 152, 55, 150,
-		225, 56, 108, 60, 245, 61, 62, 64, 65, 66,
-		67, 68, 70, 71, 72, 73, 74, 75, 57, 76,
-		78, 79, 80, 90, 91, 92, 93, 100, 102, 103,
-		104, 105, 106, 107, 77, 250, 101, 256, 916, 917,
+		132, 131, 130, 123, 122, 51, 111, 110, 109, 50,
+		133, 120, 134, 227, 150, 242, 241, 240, 237, 235,
+		230, 55, 226, 225, 220, 245, 207, 200, 152, 151,
+		135, 56, 101, 60, 61, 62, 64, 65, 66, 67,
+		68, 70, 71, 72, 73, 74, 75, 76, 57, 77,
+		79, 80, 90, 91, 92, 93, 100, 102, 103, 104,
+		105, 106, 107, 108, 78, 250, 210, 256, 916, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 950,
 		951, 952, 915, 953, 955, 956, 957, 958, 959, 960,
-		961, 962, 963, 964, 965, 971, 972, 255, 954, 914,
-		970, 912, 913, 258, 259, 257, 260, 261, 280, 281,
-		285, 286, 287, 289, 290, 291, 292, 288, 300, 911,
-		910, 293, 312, 311, 310, 307, 313, 305, 304, 303,
+		961, 962, 963, 964, 965, 970, 972, 255, 954, 914,
+		971, 912, 913, 257, 258, 259, 260, 261, 280, 281,
+		285, 286, 287, 289, 290, 291, 292, 288, 300, 910,
+		313, 293, 312, 311, 310, 307, 305, 304, 303, 911,
 		302, 301, 306
 	};
 }

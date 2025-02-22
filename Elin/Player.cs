@@ -765,6 +765,9 @@ public class Player : EClass
 	public int customLightMod = 3;
 
 	[JsonProperty]
+	public int validScore;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]
@@ -922,6 +925,9 @@ public class Player : EClass
 
 	[JsonProperty]
 	public Window.SaveData windowAllyInv;
+
+	[JsonProperty]
+	public List<string> favMoongate = new List<string>();
 
 	public static int seedHallucination;
 
@@ -2327,5 +2333,17 @@ public class Player : EClass
 			return true;
 		}
 		return false;
+	}
+
+	public void ToggleFavMoongate(string id)
+	{
+		if (favMoongate.Contains(id))
+		{
+			favMoongate.Remove(id);
+		}
+		else
+		{
+			favMoongate.Add(id);
+		}
 	}
 }

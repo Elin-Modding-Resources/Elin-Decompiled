@@ -58,6 +58,8 @@ public class CoreRef : ScriptableObject
 		{
 			public Sprite mat;
 
+			public Sprite card;
+
 			public Sprite cat;
 
 			public Sprite enc;
@@ -102,6 +104,8 @@ public class CoreRef : ScriptableObject
 		public Sprite trash;
 
 		public Sprite trans;
+
+		public Sprite fav;
 
 		public Sprite noHotItem;
 

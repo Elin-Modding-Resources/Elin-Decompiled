@@ -7,4 +7,9 @@ public class ConWeapon : BaseBuff
 	public override void Tick()
 	{
 	}
+
+	public override bool CanStack(Condition c)
+	{
+		return true;
+	}
 }

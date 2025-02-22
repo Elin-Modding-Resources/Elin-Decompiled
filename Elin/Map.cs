@@ -610,12 +610,14 @@ public class Map : MapBounds, IPathfindGrid
 		Validate(ref bytes18, "roofBlocks");
 		Validate(ref bytes19, "roofBlockMats");
 		Validate(ref bytes20, "roofBlockDirs");
+		int count = EClass.sources.floors.rows.Count;
+		int count2 = EClass.sources.materials.rows.Count;
 		int num3 = 0;
 		for (int i = 0; i < num; i++)
 		{
 			for (int j = 0; j < num2; j++)
 			{
-				cells[i, j] = new Cell
+				Cell cell = (cells[i, j] = new Cell
 				{
 					x = (byte)i,
 					z = (byte)j,
@@ -646,8 +648,16 @@ public class Map : MapBounds, IPathfindGrid
 					isWatered = bytes12[num3].GetBit(0),
 					isObjDyed = bytes12[num3].GetBit(1),
 					crossWall = bytes12[num3].GetBit(2)
-				};
-				Critter.RebuildCritter(cells[i, j]);
+				});
+				if (cell._bridge >= count)
+				{
+					cell._bridge = 0;
+				}
+				if (cell._bridgeMat >= count2)
+				{
+					cell._bridgeMat = 1;
+				}
+				Critter.RebuildCritter(cell);
 				num3++;
 			}
 		}

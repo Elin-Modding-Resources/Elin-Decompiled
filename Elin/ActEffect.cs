@@ -191,7 +191,7 @@ public class ActEffect : EClass
 				{
 					continue;
 				}
-				if ((uint)(id - 249) <= 1u && c.isChara && CC.isChara)
+				if ((uint)(id - 250) <= 1u && c.isChara && CC.isChara)
 				{
 					c.Chara.RequestProtection(CC.Chara, delegate(Chara a)
 					{
@@ -772,7 +772,7 @@ public class ActEffect : EClass
 				{
 					CC.DoHostileAction(item2);
 				}
-				if (actRef.refThing == null || !(actRef.refThing.trait is TraitRod) || (uint)(id - 200) <= 3u)
+				if (actRef.refThing == null || !(actRef.refThing.trait is TraitRod) || (uint)(id - 200) <= 4u)
 				{
 					return;
 				}
@@ -913,9 +913,9 @@ public class ActEffect : EClass
 			TC.PlaySound("curse3");
 			TC.PlayEffect("curse");
 			TC.Say("forgetItems", TC);
-			int num = power / 50 + 1 + EClass.rnd(3);
+			int num2 = power / 50 + 1 + EClass.rnd(3);
 			List<Thing> source = TC.things.List((Thing t) => t.c_IDTState == 0);
-			for (int i = 0; i < num; i++)
+			for (int i = 0; i < num2; i++)
 			{
 				source.RandomItem().c_IDTState = 5;
 			}
@@ -1004,22 +1004,22 @@ public class ActEffect : EClass
 			}
 			cc.PlaySound("offering");
 			cc.PlayEffect("buff");
-			int num4 = (tc.isWeightChanged ? tc.c_weight : tc.Thing.source.weight);
+			int num = (tc.isWeightChanged ? tc.c_weight : tc.Thing.source.weight);
 			tc.isWeightChanged = true;
 			Element orCreateElement = tc.elements.GetOrCreateElement(64);
 			Element orCreateElement2 = tc.elements.GetOrCreateElement(65);
 			Element orCreateElement3 = tc.elements.GetOrCreateElement(67);
 			Element orCreateElement4 = tc.elements.GetOrCreateElement(66);
-			bool flag3 = tc.IsEquipmentOrRangedOrAmmo || tc.IsThrownWeapon;
+			bool flag2 = tc.IsEquipmentOrRangedOrAmmo || tc.IsThrownWeapon;
 			if (flag)
 			{
-				num4 = (int)(0.01f * (float)num4 * (float)power * 0.75f + 500f);
-				if (num4 < 0 || num4 > 10000000)
+				num = (int)(0.01f * (float)num * (float)power * 0.75f + 500f);
+				if (num < 0 || num > 10000000)
 				{
-					num4 = 10000000;
-					flag3 = false;
+					num = 10000000;
+					flag2 = false;
 				}
-				if (flag3)
+				if (flag2)
 				{
 					if (tc.IsWeapon || tc.IsThrownWeapon || tc.IsAmmo)
 					{
@@ -1036,12 +1036,12 @@ public class ActEffect : EClass
 			}
 			else
 			{
-				num4 = num4 * (100 - power / 10) / 100;
+				num = num * (100 - power / 10) / 100;
 				if (blessed)
 				{
 					power /= 4;
 				}
-				if (flag3)
+				if (flag2)
 				{
 					if (tc.IsWeapon || tc.IsThrownWeapon || tc.IsAmmo)
 					{
@@ -1056,7 +1056,7 @@ public class ActEffect : EClass
 				}
 				cc.Say("lighten", cc, tc);
 			}
-			tc.c_weight = num4;
+			tc.c_weight = num;
 			tc.SetDirtyWeight();
 			if (tc.parent == null)
 			{
@@ -1107,28 +1107,28 @@ public class ActEffect : EClass
 			string name = tc.Name;
 			if (row == null)
 			{
-				bool num2 = id == EffectId.ChangeMaterialGreater;
-				bool flag2 = id == EffectId.ChangeMaterialLesser;
+				bool num3 = id == EffectId.ChangeMaterialGreater;
+				bool flag3 = id == EffectId.ChangeMaterialLesser;
 				string text2 = tc.Thing.source.tierGroup;
 				Dictionary<string, SourceMaterial.TierList> tierMap = SourceMaterial.tierMap;
-				int num3 = 1;
+				int num4 = 1;
 				if (flag)
 				{
-					num3 -= 2;
+					num4 -= 2;
 				}
 				if (blessed)
 				{
-					num3++;
+					num4++;
 				}
-				if (num2)
+				if (num3)
 				{
-					num3++;
+					num4++;
 				}
-				if (flag2)
+				if (flag3)
 				{
-					num3 -= 2;
+					num4 -= 2;
 				}
-				num3 = Mathf.Clamp(num3 + EClass.rnd(2), 0, 4);
+				num4 = Mathf.Clamp(num4 + EClass.rnd(2), 0, 4);
 				if (EClass.rnd(10) == 0)
 				{
 					text2 = ((text2 == "metal") ? "leather" : "metal");
@@ -1136,7 +1136,7 @@ public class ActEffect : EClass
 				SourceMaterial.TierList tierList = (text2.IsEmpty() ? tierMap.RandomItem() : tierMap[text2]);
 				for (int j = 0; j < 1000; j++)
 				{
-					row = tierList.tiers[num3].Select();
+					row = tierList.tiers[num4].Select();
 					if (row != tc.material)
 					{
 						break;
@@ -1213,15 +1213,29 @@ public class ActEffect : EClass
 			break;
 		case EffectId.Teleport:
 		case EffectId.TeleportShort:
-			if (!tc.HasHost && !flag)
+		case EffectId.Gate:
+			if (!tc.HasHost)
 			{
-				if (id == EffectId.TeleportShort)
+				if (!flag)
 				{
-					tc.Teleport(GetTeleportPos(tc.pos));
+					if (id == EffectId.TeleportShort)
+					{
+						tc.Teleport(GetTeleportPos(tc.pos));
+					}
+					else
+					{
+						tc.Teleport(GetTeleportPos(tc.pos, EClass._map.bounds.Width));
+					}
 				}
-				else
+				if (id == EffectId.Gate && CC.IsPC)
 				{
-					tc.Teleport(GetTeleportPos(tc.pos, EClass._map.bounds.Width));
+					foreach (Chara member in EClass.pc.party.members)
+					{
+						if (!member.HasHost && member != tc)
+						{
+							member.Teleport(tc.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? tc.pos);
+						}
+					}
 				}
 			}
 			if (flag)

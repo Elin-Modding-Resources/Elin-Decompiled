@@ -30,6 +30,8 @@ public class ButtonAbility : UIButton, IMouseHint
 
 	public static float hotkeyTimer;
 
+	public static bool usedMouseKey;
+
 	public void SetAct(Chara _chara, Element e)
 	{
 		source = e.source;
@@ -137,11 +139,17 @@ public class ButtonAbility : UIButton, IMouseHint
 		{
 			hotkeyAct = act;
 		}
-		if (first && EInput.GetHotkey() != -1)
+		if (first)
 		{
-			mouse = false;
-			hotkeyTimer = 0f;
-			Debug.Log(EInput.GetHotkey());
+			if (EInput.GetHotkey() != -1)
+			{
+				mouse = false;
+				hotkeyTimer = 0f;
+			}
+			else
+			{
+				usedMouseKey = EInput.rightMouse.usedKey;
+			}
 		}
 		if (act.HaveLongPressAction && act == hotkeyAct)
 		{
@@ -165,7 +173,14 @@ public class ButtonAbility : UIButton, IMouseHint
 						EInput.rightMouse.down = false;
 						EInput.rightMouse.consumed = false;
 						EInput.rightMouse.pressing = true;
-						EInput.rightMouse.usedMouse = true;
+						if (usedMouseKey)
+						{
+							EInput.rightMouse.usedKey = true;
+						}
+						else
+						{
+							EInput.rightMouse.usedMouse = true;
+						}
 					});
 				}
 				return false;

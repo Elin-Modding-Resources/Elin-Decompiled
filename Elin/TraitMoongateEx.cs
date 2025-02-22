@@ -40,7 +40,24 @@ public class TraitMoongateEx : TraitMoongate
 			EClass.pc.SayNothingHappans();
 			return;
 		}
-		list.Sort((MapMetaData a, MapMetaData b) => DateTime.Compare(a.date, b.date));
+		foreach (MapMetaData item2 in list)
+		{
+			bool flag = false;
+			foreach (string item3 in EClass.player.favMoongate)
+			{
+				_ = item3;
+				if (EClass.player.favMoongate.Contains(item2.id))
+				{
+					flag = true;
+					break;
+				}
+			}
+			if (!flag)
+			{
+				EClass.player.favMoongate.Remove(item2.id);
+			}
+		}
+		Sort();
 		LayerList layer = null;
 		bool skipDialog = false;
 		layer = EClass.ui.AddLayer<LayerList>().SetList2(list, (MapMetaData a) => a.name, delegate(MapMetaData a, ItemGeneral b)
@@ -71,14 +88,38 @@ public class TraitMoongateEx : TraitMoongate
 					});
 				}
 			});
+			UIButton uIButton = b.AddSubButton(EClass.core.refs.icons.fav, delegate
+			{
+				SE.ClickGeneral();
+				EClass.player.ToggleFavMoongate(a.id);
+				Sort();
+				EClass.ui.FreezeScreen(0.1f);
+				layer.list.List();
+			});
+			uIButton.icon.SetAlpha(EClass.player.favMoongate.Contains(a.id) ? 1f : 0.3f);
+			uIButton.icon.SetNativeSize();
 			void func()
 			{
 				IO.DeleteFile(a.path);
 				list.Remove(a);
+				EClass.ui.FreezeScreen(0.1f);
 				layer.list.List();
 				SE.Trash();
 			}
 		}).SetSize(500f)
 			.SetTitles("wMoongate") as LayerList;
+		static DateTime GetDate(MapMetaData meta)
+		{
+			int num = EClass.player.favMoongate.IndexOf(meta.id);
+			if (num == -1)
+			{
+				return meta.date;
+			}
+			return meta.date + new TimeSpan(-3650 - num, 0, 0, 0, 0);
+		}
+		void Sort()
+		{
+			list.Sort((MapMetaData a, MapMetaData b) => DateTime.Compare(GetDate(a), GetDate(b)));
+		}
 	}
 }

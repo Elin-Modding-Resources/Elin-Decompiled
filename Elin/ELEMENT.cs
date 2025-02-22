@@ -607,11 +607,11 @@ public class Element : EClass
 					switch (act.id)
 					{
 					case 6902:
-						condition.SetRefVal(79, 266);
+						condition.SetRefVal(79, 267);
 						break;
 					case 8510:
 					case 8710:
-						condition.SetRefVal(79, (act.id == 8710) ? 221 : 220);
+						condition.SetRefVal(79, (act.id == 8710) ? 222 : 221);
 						break;
 					}
 					n.AddText("_bullet".lang() + "hintCon".lang(condition.Name, condition.EvaluateTurn(p).ToString() ?? ""));

@@ -217,6 +217,9 @@ public class Game : EClass
 	[JsonProperty]
 	public List<Thing> lostThings = new List<Thing>();
 
+	[JsonProperty]
+	public GamePrincipal principal = new GamePrincipal();
+
 	public int gameSpeedIndex = 1;
 
 	public int lastGameSpeedIndex = 1;
@@ -461,6 +464,11 @@ public class Game : EClass
 			}
 		}
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 94))
+		{
+			EClass.game.principal = IO.DeepCopy(EClass.setting.start.principals[0]);
+			player.validScore = -1;
+		}
 		if (version.IsBelow(0, 23, 93))
 		{
 			RecipeManager.BuildList();
