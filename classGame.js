@@ -70,7 +70,6 @@ var classGame =
     [ "altCraft", "classGame.html#adc4fcdf04bc0105799d51b1e009a3c8d", null ],
     [ "altInv", "classGame.html#aaf3a6ba060d72c88051a40c58db7f7d8", null ],
     [ "altUI", "classGame.html#a1b41e2e127eba0c3c96e531237f653f0", null ],
-    [ "Difficulty", "classGame.html#adc92d63408af2aa22665fb6affc300e4", null ],
     [ "IsWaiting", "classGame.html#a1e92ddb28d26b02073086f3b520ede40", null ],
     [ "Prologue", "classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e", null ],
     [ "StartZone", "classGame.html#af5bab79510ad2e270786814b8c0c896f", null ],

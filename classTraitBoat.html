@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.95 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.96 Nyaightly</span>
    </div>
   </td>
  </tr>
@@ -315,6 +315,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a705e954b7c448d954b7431ecd442e265"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBoat.html#a705e954b7c448d954b7431ecd442e265">CanBeDestroyed</a><code> [get]</code></td></tr>
+<tr class="separator:a705e954b7c448d954b7431ecd442e265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5253b9184dc5a75cacd2393a3b5e8045"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045">IsFloating</a><code> [get]</code></td></tr>
 <tr class="separator:a5253b9184dc5a75cacd2393a3b5e8045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bdc2e5b15308d9d3451a3dd390ad308"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308">IsGround</a><code> [get]</code></td></tr>
@@ -698,22 +700,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00033">33</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> num = 1 + ((owner.dir % 2 == 1 &amp;&amp; owner.id != <span class="stringliteral">&quot;boat3&quot;</span>) ? 1 : 0);</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> num2 = 1 + ((owner.dir % 2 == 0 &amp;&amp; owner.id != <span class="stringliteral">&quot;boat3&quot;</span>) ? 1 : 0);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">int</span> x = owner.pos.x - owner.W + num;</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">int</span> z = owner.pos.z + num2;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">int</span> mx = owner.pos.x - num;</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">int</span> mz = owner.pos.z + owner.H - num2;</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">ForeachMultiSize</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ad03194fe33b200a48c78e8a53e8c1bea">W</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f">H</a>, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
-<div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span> (p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &gt; x &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &gt;= z &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &lt;= mx &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &lt; mz)</div>
-<div class="line"><span class="lineno">   44</span>            {</div>
-<div class="line"><span class="lineno">   45</span>                action(p);</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>        });</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00035">35</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">int</span> num = 1 + ((owner.dir % 2 == 1 &amp;&amp; owner.id != <span class="stringliteral">&quot;boat3&quot;</span>) ? 1 : 0);</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">int</span> num2 = 1 + ((owner.dir % 2 == 0 &amp;&amp; owner.id != <span class="stringliteral">&quot;boat3&quot;</span>) ? 1 : 0);</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">int</span> x = owner.pos.x - owner.W + num;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">int</span> z = owner.pos.z + num2;</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">int</span> mx = owner.pos.x - num;</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">int</span> mz = owner.pos.z + owner.H - num2;</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">ForeachMultiSize</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ad03194fe33b200a48c78e8a53e8c1bea">W</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f">H</a>, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &gt; x &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &gt;= z &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> &lt;= mx &amp;&amp; p.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a> &lt; mz)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                action(p);</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        });</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00055">Card.cs:55</a></div></div>
 <div class="ttc" id="aclassCard_html_ac9c5cc2a97c2cdd68faceb54bea6ff1f"><div class="ttname"><a href="classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f">Card.H</a></div><div class="ttdeci">int H</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02225">Card.cs:2226</a></div></div>
 <div class="ttc" id="aclassCard_html_ad03194fe33b200a48c78e8a53e8c1bea"><div class="ttname"><a href="classCard.html#ad03194fe33b200a48c78e8a53e8c1bea">Card.W</a></div><div class="ttdeci">int W</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02213">Card.cs:2214</a></div></div>
@@ -725,7 +727,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Point_8cs_source.html#l01349">Point.ForeachMultiSize()</a>, <a class="el" href="Card_8cs_source.html#l02226">Card.H</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l02214">Card.W</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitBoat_8cs_source.html#l00009">OnChangePlaceState()</a>, and <a class="el" href="TraitBoat_8cs_source.html#l00021">OnRemovedFromZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitBoat_8cs_source.html#l00011">OnChangePlaceState()</a>, and <a class="el" href="TraitBoat_8cs_source.html#l00023">OnRemovedFromZone()</a>.</p>
 
 </div>
 </div>
@@ -752,28 +754,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00050">50</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">int</span> mat = 67;</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">ForeachPoint</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a4aa6bc692d83b7d516ca0bf55453f82a">IsFloorWater</a>)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                mat = p.matFloor.id;</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>        });</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows[mat];</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclassCard_html_a6c22bc720e969bf7b5160a2b5280951e"><div class="ttname"><a href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">Card.ForeachPoint</a></div><div class="ttdeci">void ForeachPoint(Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06928">Card.cs:6928</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00052">52</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">int</span> mat = 67;</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">ForeachPoint</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p, <span class="keywordtype">bool</span> main)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a4aa6bc692d83b7d516ca0bf55453f82a">IsFloorWater</a>)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                mat = p.matFloor.id;</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        });</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows[mat];</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aclassCard_html_a6c22bc720e969bf7b5160a2b5280951e"><div class="ttname"><a href="classCard.html#a6c22bc720e969bf7b5160a2b5280951e">Card.ForeachPoint</a></div><div class="ttdeci">void ForeachPoint(Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06936">Card.cs:6936</a></div></div>
 <div class="ttc" id="aclassCell_html_a4aa6bc692d83b7d516ca0bf55453f82a"><div class="ttname"><a href="classCell.html#a4aa6bc692d83b7d516ca0bf55453f82a">Cell.IsFloorWater</a></div><div class="ttdeci">bool IsFloorWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00727">Cell.cs:727</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l06928">Card.ForeachPoint()</a>, <a class="el" href="Cell_8cs_source.html#l00727">Cell.IsFloorWater</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l06936">Card.ForeachPoint()</a>, <a class="el" href="Cell_8cs_source.html#l00727">Cell.IsFloorWater</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitBoat_8cs_source.html#l00021">OnRemovedFromZone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitBoat_8cs_source.html#l00023">OnRemovedFromZone()</a>.</p>
 
 </div>
 </div>
@@ -803,22 +805,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a1bcc89016758ef51b5722da792d53f41">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (state == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <a class="code hl_function" href="classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb">ForeachDeck</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
-<div class="line"><span class="lineno">   14</span>            {</div>
-<div class="line"><span class="lineno">   15</span>                p.<a class="code hl_function" href="classPoint.html#a7c79c7d7ececfa4b997a01fe93f3e385">SetFloor</a>(1, 57);</div>
-<div class="line"><span class="lineno">   16</span>                p.cell.floorDir = ((owner.dir % 2 != 0) ? 1 : 0);</div>
-<div class="line"><span class="lineno">   17</span>            });</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (state == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_function" href="classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb">ForeachDeck</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                p.<a class="code hl_function" href="classPoint.html#a7c79c7d7ececfa4b997a01fe93f3e385">SetFloor</a>(1, 57);</div>
+<div class="line"><span class="lineno">   18</span>                p.cell.floorDir = ((owner.dir % 2 != 0) ? 1 : 0);</div>
+<div class="line"><span class="lineno">   19</span>            });</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 <div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00001">PlaceState.cs:2</a></div></div>
 <div class="ttc" id="aclassPoint_html_a7c79c7d7ececfa4b997a01fe93f3e385"><div class="ttname"><a href="classPoint.html#a7c79c7d7ececfa4b997a01fe93f3e385">Point.SetFloor</a></div><div class="ttdeci">void SetFloor(int idMat=0, int idFloor=0)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00887">Point.cs:887</a></div></div>
-<div class="ttc" id="aclassTraitBoat_html_ab4ce982447bae437147d059cb71f8aeb"><div class="ttname"><a href="classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb">TraitBoat.ForeachDeck</a></div><div class="ttdeci">void ForeachDeck(Action&lt; Point &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="TraitBoat_8cs_source.html#l00033">TraitBoat.cs:33</a></div></div>
+<div class="ttc" id="aclassTraitBoat_html_ab4ce982447bae437147d059cb71f8aeb"><div class="ttname"><a href="classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb">TraitBoat.ForeachDeck</a></div><div class="ttdeci">void ForeachDeck(Action&lt; Point &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="TraitBoat_8cs_source.html#l00035">TraitBoat.cs:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitBoat_8cs_source.html#l00033">ForeachDeck()</a>, and <a class="el" href="Point_8cs_source.html#l00887">Point.SetFloor()</a>.</p>
+<p class="reference">References <a class="el" href="TraitBoat_8cs_source.html#l00035">ForeachDeck()</a>, and <a class="el" href="Point_8cs_source.html#l00887">Point.SetFloor()</a>.</p>
 
 </div>
 </div>
@@ -847,27 +849,51 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#ad263937d8c3e9afc1d523cf5241a198e">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00021">21</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">placeState</a> == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat = <a class="code hl_function" href="classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6">GetWaterMat</a>();</div>
-<div class="line"><span class="lineno">   26</span>            <a class="code hl_function" href="classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb">ForeachDeck</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
-<div class="line"><span class="lineno">   27</span>            {</div>
-<div class="line"><span class="lineno">   28</span>                p.<a class="code hl_function" href="classPoint.html#a7c79c7d7ececfa4b997a01fe93f3e385">SetFloor</a>(mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af25f7aab4d97ca55b5ee305f82ccf6c8">id</a>, 43);</div>
-<div class="line"><span class="lineno">   29</span>            });</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00023">23</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">placeState</a> == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat = <a class="code hl_function" href="classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6">GetWaterMat</a>();</div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_function" href="classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb">ForeachDeck</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                p.<a class="code hl_function" href="classPoint.html#a7c79c7d7ececfa4b997a01fe93f3e385">SetFloor</a>(mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#af25f7aab4d97ca55b5ee305f82ccf6c8">id</a>, 43);</div>
+<div class="line"><span class="lineno">   31</span>            });</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 <div class="ttc" id="aclassCard_html_a77dc3446a7564c5ec837ac0033f6a313"><div class="ttname"><a href="classCard.html#a77dc3446a7564c5ec837ac0033f6a313">Card.placeState</a></div><div class="ttdeci">PlaceState placeState</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00079">Card.cs:79</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00008">SourceMaterial.cs:9</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_af25f7aab4d97ca55b5ee305f82ccf6c8"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#af25f7aab4d97ca55b5ee305f82ccf6c8">SourceMaterial.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00010">SourceMaterial.cs:10</a></div></div>
-<div class="ttc" id="aclassTraitBoat_html_ac97e5e8c4ae9111069e4075e2e57c7c6"><div class="ttname"><a href="classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6">TraitBoat.GetWaterMat</a></div><div class="ttdeci">SourceMaterial.Row GetWaterMat()</div><div class="ttdef"><b>Definition:</b> <a href="TraitBoat_8cs_source.html#l00050">TraitBoat.cs:50</a></div></div>
+<div class="ttc" id="aclassTraitBoat_html_ac97e5e8c4ae9111069e4075e2e57c7c6"><div class="ttname"><a href="classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6">TraitBoat.GetWaterMat</a></div><div class="ttdeci">SourceMaterial.Row GetWaterMat()</div><div class="ttdef"><b>Definition:</b> <a href="TraitBoat_8cs_source.html#l00052">TraitBoat.cs:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitBoat_8cs_source.html#l00033">ForeachDeck()</a>, <a class="el" href="TraitBoat_8cs_source.html#l00050">GetWaterMat()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00010">SourceMaterial.Row.id</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00079">Card.placeState</a>, and <a class="el" href="Point_8cs_source.html#l00887">Point.SetFloor()</a>.</p>
+<p class="reference">References <a class="el" href="TraitBoat_8cs_source.html#l00035">ForeachDeck()</a>, <a class="el" href="TraitBoat_8cs_source.html#l00052">GetWaterMat()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00010">SourceMaterial.Row.id</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00079">Card.placeState</a>, and <a class="el" href="Point_8cs_source.html#l00887">Point.SetFloor()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="a705e954b7c448d954b7431ecd442e265" name="a705e954b7c448d954b7431ecd442e265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705e954b7c448d954b7431ecd442e265">&#9670;&#160;</a></span>CanBeDestroyed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitBoat.CanBeDestroyed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+
+</div>
+</div>
 <a id="a5253b9184dc5a75cacd2393a3b5e8045" name="a5253b9184dc5a75cacd2393a3b5e8045"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5253b9184dc5a75cacd2393a3b5e8045">&#9670;&#160;</a></span>IsFloating</h2>
 
@@ -888,7 +914,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
 
 </div>
 </div>
@@ -912,7 +938,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitBoat_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitBoat_8cs_source.html">TraitBoat.cs</a>.</p>
 
 </div>
 </div>

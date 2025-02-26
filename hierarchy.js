@@ -2295,6 +2295,9 @@ var hierarchy =
     [ "BookList.Item", "classBookList_1_1Item.html", null ],
     [ "ContentGallery.Page.Item", "classContentGallery_1_1Page_1_1Item.html", null ],
     [ "DSVRow.Item", "classDSVRow_1_1Item.html", null ],
+    [ "GamePrincipal.Item", "classGamePrincipal_1_1Item.html", [
+      [ "GamePrincipal.ItemSlider", "classGamePrincipal_1_1ItemSlider.html", null ]
+    ] ],
     [ "HotItemEQSet.Item", "classHotItemEQSet_1_1Item.html", null ],
     [ "InspectGroup< T >.Item", "classInspectGroup_1_1Item.html", null ],
     [ "LayerInteraction.Item", "classLayerInteraction_1_1Item.html", null ],

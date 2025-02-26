@@ -1,14 +1,25 @@
 var classLayerWorldSetting =
 [
+    [ "Apply", "classLayerWorldSetting.html#a9e37aa25a648869cc1fb1bfff9825b65", null ],
     [ "OnInit", "classLayerWorldSetting.html#a02372087adc2a8b5bba0508f26c2a523", null ],
     [ "OnKill", "classLayerWorldSetting.html#afefe51c6a802ec45fec8f92efdcfb22e", null ],
     [ "Refresh", "classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37", null ],
-    [ "RefreshScore", "classLayerWorldSetting.html#a52c92b42e2e611bc254f6e2872be7889", null ],
+    [ "RefreshTemplate", "classLayerWorldSetting.html#ad021b5389dbef06f9a6cc59b698e49bc", null ],
     [ "SetTemplate", "classLayerWorldSetting.html#a7296a92365f62176b2c00a2387a64c72", null ],
+    [ "StartGame", "classLayerWorldSetting.html#a9cfe1fba0a0a8ec2638719f7d6e13174", null ],
+    [ "buttonEmbark", "classLayerWorldSetting.html#a3852739f16940b70849c331f91b098f5", null ],
     [ "buttonTemplates", "classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92", null ],
+    [ "buttonWorkaround", "classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733", null ],
     [ "groupTemplate", "classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0", null ],
     [ "imageScoreBar", "classLayerWorldSetting.html#acc7114848dd0251e13fed091ccf23c38", null ],
+    [ "moldHeader", "classLayerWorldSetting.html#ae542969d3002f272ca80ea014d8fdfb7", null ],
+    [ "moldSlider", "classLayerWorldSetting.html#a85d943fe40dc3024c5f8145850c0d694", null ],
+    [ "moldToggle", "classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff", null ],
+    [ "pp", "classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df", null ],
     [ "sliderDropRate", "classLayerWorldSetting.html#a63bae541382c458b89737e7224f22ce0", null ],
+    [ "sprites", "classLayerWorldSetting.html#ac4f834613c2e731ad9d8046f431d98bc", null ],
+    [ "started", "classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2", null ],
+    [ "textDetail", "classLayerWorldSetting.html#a7795c34d61c4167f5de9c32f6dc72aea", null ],
     [ "textScore", "classLayerWorldSetting.html#a40e40050d5a9cc852968f1e6e22b6ba8", null ],
     [ "textTitle", "classLayerWorldSetting.html#aa3576b6a95b58355d35c183893d87db6", null ],
     [ "textValidScore", "classLayerWorldSetting.html#a7a7e3e93e130d037f93f93f1ce1b64ff", null ],
@@ -21,6 +32,8 @@ var classLayerWorldSetting =
     [ "togglePermadeath", "classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3", null ],
     [ "toggleTax", "classLayerWorldSetting.html#afbd816fb7ac9b54eb1cc057d22238733", null ],
     [ "toggleUsermapBenefit", "classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a", null ],
+    [ "transCustom", "classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978", null ],
+    [ "transMold", "classLayerWorldSetting.html#aa3b2cb30b49efa57156fb1738726e9b5", null ],
     [ "IdxCustom", "classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e", null ],
-    [ "pp", "classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df", null ]
+    [ "IsEmbark", "classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d", null ]
 ];
