@@ -287,25 +287,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					}
 				});
 			});
-			if (c == EClass.pc)
-			{
-				if (EClass.game.Difficulty.tier > 0)
-				{
-					uIContextMenu.AddButton("changeDifficulty", delegate
-					{
-						Dialog.YesNo("dialog_changeDifficulty".lang(EClass.game.Difficulty.Name), delegate
-						{
-							SE.Play("mutation");
-							if (!EClass.game.Difficulty.allowRevive)
-							{
-								EClass.pc.SetFeat(1220, 0);
-							}
-							EClass.game.idDifficulty--;
-						});
-					});
-				}
-			}
-			else
+			if (c != EClass.pc)
 			{
 				if (c.sourceCard.idActor.IsEmpty() && c.host == null)
 				{

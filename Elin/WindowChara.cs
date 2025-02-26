@@ -270,8 +270,7 @@ public class WindowChara : WindowController
 		@object = Portrait.modPortraitBGFs.GetItem(chara.GetStr(24) ?? "BGF_1").GetObject();
 		@object.texture.filterMode = FilterMode.Bilinear;
 		portrait.imageFrame.sprite = @object;
-		string text = Lang.GetList("difficulties_title")[EClass.game.idDifficulty];
-		window.SetCaption(((text.IsEmpty() || !chara.IsPC) ? "" : (text + " - ")) + chara.NameBraced);
+		window.SetCaption(chara.NameBraced);
 		listAttaribute.Clear();
 		listAttaribute.callbacks = new UIList.Callback<Element, ButtonElement>
 		{

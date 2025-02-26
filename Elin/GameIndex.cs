@@ -14,8 +14,6 @@ public class GameIndex : EClass
 
 	public string color;
 
-	public int difficulty;
-
 	public int days;
 
 	public int deepest;
@@ -41,6 +39,8 @@ public class GameIndex : EClass
 	public bool isBackup;
 
 	public bool cloud;
+
+	public bool permaDeath;
 
 	public Dictionary<string, string> fallbackTypes = new Dictionary<string, string>();
 
@@ -75,8 +75,8 @@ public class GameIndex : EClass
 			zoneName = game.player.zone.Name;
 			pcName = EClass.pc.c_altName;
 			aka = EClass.pc.Aka;
+			permaDeath = game.principal.permadeath;
 			date = game.world.date.Copy();
-			difficulty = game.idDifficulty;
 			idPortrait = EClass.pc.c_idPortrait;
 			idRace = EClass.pc.race.id;
 			idJob = EClass.pc.job.id;

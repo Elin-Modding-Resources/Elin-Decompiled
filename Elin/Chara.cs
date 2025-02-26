@@ -498,7 +498,7 @@ public class Chara : Card, IPathfindWalker
 
 	public string NameBraced => GetName(NameStyle.Full);
 
-	public string NameTitled => ((EClass.game.idDifficulty == 0) ? "" : ((EClass.game.idDifficulty == 1) ? "☆" : "★")) + NameBraced;
+	public string NameTitled => (EClass.game.principal.permadeath ? "★" : "") + NameBraced;
 
 	public override string actorPrefab
 	{
@@ -4615,7 +4615,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				Msg.Say("noDeathPenalty2", this);
 			}
-			else if (EClass.player.stats.days <= 90 && !EClass.debug.enable)
+			else if (EClass.player.stats.days <= 90 && !EClass.game.principal.disableDeathPenaltyProtection)
 			{
 				Msg.Say("noDeathPenalty", this);
 			}

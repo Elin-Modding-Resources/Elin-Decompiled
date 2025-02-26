@@ -798,6 +798,9 @@ public class Player : EClass
 	public bool openContainerCenter;
 
 	[JsonProperty]
+	public bool showWorkaround;
+
+	[JsonProperty]
 	public string title;
 
 	[JsonProperty]
@@ -970,6 +973,8 @@ public class Player : EClass
 	public bool invlunerable;
 
 	public bool willAutoSave;
+
+	public bool resetPrincipal;
 
 	public bool simulatingZone;
 
@@ -1216,10 +1221,6 @@ public class Player : EClass
 		dateTravel = EClass.world.date.GetRaw();
 		uidLastTravelZone = EClass.pc.currentZone.uid;
 		GenerateBackgroundText();
-		if (!EClass.game.Difficulty.allowRevive)
-		{
-			EClass.pc.SetFeat(1220);
-		}
 		EClass.pc.elements.CheckSkillActions();
 		EClass.pc.hunger.value = 30;
 		EClass.pc.CalculateMaxStamina();

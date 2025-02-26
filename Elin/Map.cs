@@ -737,18 +737,21 @@ public class Map : MapBounds, IPathfindGrid
 			ZipEntry zipEntry = zipFile["meta"];
 			if (zipEntry != null)
 			{
-				Debug.Log(zipEntry);
-				using MemoryStream stream = new MemoryStream();
-				zipEntry.Extract(stream);
-				MapMetaData mapMetaData = IO.LoadStreamJson<MapMetaData>(stream);
-				Debug.Log(mapMetaData);
-				mapMetaData.path = pathZip;
-				return mapMetaData;
+				using (MemoryStream stream = new MemoryStream())
+				{
+					zipEntry.Extract(stream);
+					MapMetaData mapMetaData = IO.LoadStreamJson<MapMetaData>(stream);
+					mapMetaData.path = pathZip;
+					return mapMetaData;
+				}
 			}
 		}
 		catch (Exception message)
 		{
-			Debug.Log(message);
+			if (Application.isEditor)
+			{
+				Debug.Log(message);
+			}
 		}
 		return null;
 	}
@@ -1958,18 +1961,13 @@ public class Map : MapBounds, IPathfindGrid
 			HitResult hitResult = item.TileType._HitTest(point, item.Thing, canIgnore: false);
 			if (item.Thing.stackOrder != detail.things.IndexOf(item.Thing) || (hitResult != HitResult.Valid && hitResult != HitResult.Warning))
 			{
-				bool flag = true;
-				if (EClass._zone.IsPCFaction || item.rarity >= Rarity.Legendary || item.trait is TraitFigure)
-				{
-					flag = false;
-				}
-				if (flag)
-				{
-					item.Die();
-				}
-				else
+				if (EClass._zone.IsPCFaction || !item.isNPCProperty)
 				{
 					item.SetPlaceState(PlaceState.roaming);
+				}
+				else if (item.rarity < Rarity.Legendary)
+				{
+					item.Die();
 				}
 			}
 		}

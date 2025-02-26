@@ -123,7 +123,7 @@ public class LayerLoadGame : ELayer
 				string s = a.Title + ((ELayer.core.IsGameStarted && a.id == Game.id) ? "currentSave".lang() : "") + Environment.NewLine;
 				b.mainText.SetText(s, c);
 				b.subText.SetText(a.RealDate ?? "");
-				b.subText2.SetText(((a.difficulty == 2) ? "★" : ((a.difficulty == 1) ? "☆" : "")) + a.pcName + " (" + a.zoneName + ")", c);
+				b.subText2.SetText((a.permaDeath ? "★" : "") + a.pcName + " (" + a.zoneName + ")", c);
 				b.GetComponent<UIItem>().text1.SetText(a.version.GetText() + (cloud ? (" " + "isCloud".lang()) : ""));
 			},
 			onClick = delegate(GameIndex a, UIButton b)

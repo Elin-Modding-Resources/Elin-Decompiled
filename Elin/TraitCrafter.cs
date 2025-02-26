@@ -330,8 +330,13 @@ public class TraitCrafter : Trait
 			foreach (Element item in list)
 			{
 				SocketData runeEnc = eq.GetRuneEnc(item.id);
+				item.vLink = 0;
 				if (runeEnc != null)
 				{
+					if (item.vBase + item.vSource != runeEnc.value)
+					{
+						item.vLink = item.vBase + item.vSource;
+					}
 					item.vBase = runeEnc.value;
 					item.vSource = 0;
 				}
@@ -354,7 +359,7 @@ public class TraitCrafter : Trait
 				EClass.pc.PlayEffect("intonation");
 			}, delegate(Element a, ItemGeneral b)
 			{
-				b.SetSubText((a.vBase + a.vSource).ToString() ?? "", 200, FontColor.Default, TextAnchor.MiddleRight);
+				b.SetSubText(a.vBase + a.vSource + ((a.vLink != 0) ? (" (" + a.vLink + ")") : ""), 200, FontColor.Default, TextAnchor.MiddleRight);
 				b.Build();
 				if (a.HasTag("noRune"))
 				{

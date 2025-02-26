@@ -170,7 +170,7 @@ public class GrowSystemTree : GrowSystem
 			TryPick(GrowSystem.cell, IsPalulu ? "leaf_palulu" : "bark", -1, 1 + PlantBonus() / 2);
 			TryPick(GrowSystem.cell, "log", id, 1 + EClass.rnd(3) + PlantBonus(), applySeed: true);
 			TryPick(GrowSystem.cell, "resin", -1, 1 + PlantBonus() / 2);
-			if (!EClass.player.isAutoFarming)
+			if ((!EClass._zone.IsUserZone || !EClass.game.principal.disableUsermapBenefit) && !EClass.player.isAutoFarming)
 			{
 				if (EClass.rnd(500) == 0)
 				{
@@ -185,7 +185,7 @@ public class GrowSystemTree : GrowSystem
 		}
 		TryPick(GrowSystem.cell, "bark", -1, EClass.rnd(3) + PlantBonus());
 		TryPick(GrowSystem.cell, "resin", -1, 1 + PlantBonus() / 2);
-		if (!EClass.player.isAutoFarming)
+		if ((!EClass._zone.IsUserZone || !EClass.game.principal.disableUsermapBenefit) && !EClass.player.isAutoFarming)
 		{
 			TryPick(GrowSystem.cell, TraitSeed.MakeSeed(GrowSystem.cell.sourceObj, plant).SetNum(1 + EClass.rnd(3)), c);
 			if (EClass.rnd(100) == 0)

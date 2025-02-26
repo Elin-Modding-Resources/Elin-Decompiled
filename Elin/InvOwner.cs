@@ -1447,7 +1447,7 @@ public class InvOwner : EClass
 						t.ShowSplitMenu(b, (HasTrader && currency != 0 && !owner.IsPC) ? new Transaction(b) : null);
 					});
 				}
-				if (owner.IsPC && AllowDrop(t))
+				if (owner.IsPC)
 				{
 					flag4 = true;
 					listInteraction.Add(t.c_isImportant ? "important_off" : "important_on", 299, delegate
@@ -1456,7 +1456,7 @@ public class InvOwner : EClass
 						LayerInventory.SetDirty(t);
 						SE.ClickOk();
 					});
-					if (!EClass._zone.IsRegion)
+					if (AllowDrop(t))
 					{
 						listInteraction.Add(flag ? "dragForget" : "actDrop", 300, delegate
 						{

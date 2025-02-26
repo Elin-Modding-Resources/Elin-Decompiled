@@ -861,7 +861,7 @@ public class AM_Adv : AM_BaseGameMode
 			break;
 		}
 		case EAction.QuickSave:
-			if (EClass.debug.enable || EClass.game.Difficulty.allowManualSave)
+			if (EClass.debug.enable || !EClass.game.principal.disableManualSave)
 			{
 				if (!EClass.pc.HasNoGoal)
 				{
@@ -875,7 +875,7 @@ public class AM_Adv : AM_BaseGameMode
 			break;
 		case EAction.QuickLoad:
 		{
-			if (!EClass.debug.enable && !EClass.game.Difficulty.allowManualSave)
+			if (!EClass.debug.enable && EClass.game.principal.disableManualSave)
 			{
 				SE.Beep();
 				break;

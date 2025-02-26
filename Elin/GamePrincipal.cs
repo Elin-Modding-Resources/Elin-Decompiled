@@ -1,18 +1,123 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
-using UnityEngine;
 
 [Serializable]
 public class GamePrincipal : EClass
 {
+	public enum Type
+	{
+		Oath,
+		Workaround
+	}
+
+	public class Item
+	{
+		public string id;
+
+		public Type type;
+
+		public Func<bool> _get;
+
+		public Action<bool> _set;
+
+		public int grade;
+
+		public bool IsEmbark
+		{
+			get
+			{
+				if (EClass.core.IsGameStarted)
+				{
+					return EClass.player.resetPrincipal;
+				}
+				return true;
+			}
+		}
+
+		public bool Get()
+		{
+			return _get();
+		}
+
+		public void Set(bool value)
+		{
+			_set(value);
+		}
+
+		public bool IsModified()
+		{
+			return Get() != EClass.game.principal.GetField<bool>(id);
+		}
+
+		public bool WasSealed()
+		{
+			if (EClass.game.principal.modified.Contains(id) || IsEmbark)
+			{
+				return false;
+			}
+			bool num = type == Type.Oath;
+			bool field = EClass.game.principal.GetField<bool>(id);
+			if (num)
+			{
+				return field;
+			}
+			return !field;
+		}
+
+		public bool IsSealed()
+		{
+			if (EClass.game.principal.modified.Contains(id))
+			{
+				return false;
+			}
+			bool num = type == Type.Oath;
+			bool flag = Get();
+			bool flag2 = (IsEmbark ? flag : EClass.game.principal.GetField<bool>(id));
+			if (num)
+			{
+				return flag2 && flag;
+			}
+			if (!flag2)
+			{
+				return !flag;
+			}
+			return false;
+		}
+	}
+
+	public class ItemSlider : Item
+	{
+		public int max;
+
+		public Func<int> _getInt;
+
+		public Action<int> _setInt;
+
+		public Func<int, string> funcText;
+
+		public int GetInt()
+		{
+			return _getInt();
+		}
+
+		public void SetInt(int value)
+		{
+			_setInt(value);
+		}
+	}
+
 	[JsonProperty]
-	public int idTemplate;
+	public int id;
 
 	[JsonProperty]
 	public int socre;
 
 	[JsonProperty]
 	public int dropRateMtp;
+
+	[JsonProperty]
+	public int petFeatExpMtp;
 
 	[JsonProperty]
 	public bool ignoreEvaluate;
@@ -41,101 +146,66 @@ public class GamePrincipal : EClass
 	[JsonProperty]
 	public bool dropRate;
 
-	public bool IsCustom => idTemplate == -1;
+	[JsonProperty]
+	public bool petFeatExp;
 
-	public int GetGrade(int score)
-	{
-		return Mathf.Clamp(score / 20, 0, 5);
-	}
+	[JsonProperty]
+	public HashSet<string> modified = new HashSet<string>();
 
-	public string GetTitle()
-	{
-		int grade = GetGrade(GetScore());
-		return Lang.GetList("pp_titles")[grade];
-	}
+	public bool IsCustom => id == -1;
 
-	public int GetScore()
+	public List<Item> ListItems()
 	{
-		if (ignoreEvaluate)
+		List<Item> list = new List<Item>();
+		Add(1, Type.Oath, "disableManualSave", () => disableManualSave, delegate(bool a)
 		{
-			return 0;
-		}
-		int num = 0;
-		if (tax)
+			disableManualSave = a;
+		});
+		Add(1, Type.Oath, "disableDeathPenaltyProtection", () => disableDeathPenaltyProtection, delegate(bool a)
 		{
-			num += GetScore("tax");
-		}
-		if (disableManualSave)
+			disableDeathPenaltyProtection = a;
+		});
+		Add(1, Type.Oath, "disableUsermapBenefit", () => disableUsermapBenefit, delegate(bool a)
 		{
-			num += GetScore("disableManualSave");
-		}
-		if (disableDeathPenaltyProtection)
+			disableUsermapBenefit = a;
+		});
+		Add(3, Type.Oath, "permadeath", () => permadeath, delegate(bool a)
 		{
-			num += GetScore("disableDeathPenaltyProtection");
-		}
-		if (disableUsermapBenefit)
+			permadeath = a;
+		});
+		AddSlider(2, Type.Workaround, "dropRate", () => dropRate, delegate(bool a)
 		{
-			num += GetScore("disableUsermapBenefit");
-		}
-		if (permadeath)
+			dropRate = a;
+		}, () => dropRateMtp, delegate(int a)
 		{
-			num += GetScore("permadeath");
-		}
-		if (infiniteMarketFund)
+			dropRateMtp = a;
+		}, (int a) => 0.5f + 0.5f * (float)a + "x", 5);
+		return list;
+		void Add(int grade, Type type, string id, Func<bool> _get, Action<bool> _set)
 		{
-			num += GetScore("infiniteMarketFund");
-		}
-		if (opMilk)
-		{
-			num += GetScore("opMilk");
-		}
-		if (dropRate)
-		{
-			num += GetScore("dropRate");
-		}
-		if (num >= 0)
-		{
-			return num;
-		}
-		return 0;
-	}
-
-	public int GetScore(string s)
-	{
-		if (ignoreEvaluate)
-		{
-			return 0;
-		}
-		return s switch
-		{
-			"tax" => 20, 
-			"disableManualSave" => 20, 
-			"disableDeathPenaltyProtection" => 10, 
-			"disableUsermapBenefit" => 20, 
-			"permadeath" => 50, 
-			"infiniteMarketFund" => -40, 
-			"opMilk" => -40, 
-			"dropRate" => 20 + dropRateMtp * -10, 
-			_ => 0, 
-		};
-	}
-
-	public int GetValidScore()
-	{
-		int score = GetScore();
-		if (EClass.player.validScore != -1)
-		{
-			if (score >= EClass.player.validScore)
+			list.Add(new Item
 			{
-				return EClass.player.validScore;
-			}
-			return score;
+				type = type,
+				grade = grade,
+				id = id,
+				_get = _get,
+				_set = _set
+			});
 		}
-		return score;
-	}
-
-	public void Apply()
-	{
-		EClass.player.validScore = GetScore();
+		void AddSlider(int grade, Type type, string id, Func<bool> _get, Action<bool> _set, Func<int> _getInt, Action<int> _setInt, Func<int, string> funcText, int max)
+		{
+			list.Add(new ItemSlider
+			{
+				type = type,
+				grade = grade,
+				id = id,
+				_get = _get,
+				_set = _set,
+				_getInt = _getInt,
+				_setInt = _setInt,
+				funcText = funcText,
+				max = max
+			});
+		}
 	}
 }

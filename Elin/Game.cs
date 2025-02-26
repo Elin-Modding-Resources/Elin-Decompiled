@@ -256,8 +256,6 @@ public class Game : EClass
 
 	public Prologue Prologue => EClass.setting.start.prologues[idPrologue];
 
-	public GameDifficultySetting Difficulty => EClass.setting.start.difficulties[idDifficulty];
-
 	public bool UseGrid => EClass.core.config.game.useGrid;
 
 	public bool altUI => EClass.core.config.game.altUI;
@@ -464,10 +462,18 @@ public class Game : EClass
 			}
 		}
 		TryAddQuest("into_darkness", "exile_kettle");
-		if (version.IsBelow(0, 23, 94))
+		if (version.IsBelow(0, 23, 96))
 		{
 			EClass.game.principal = IO.DeepCopy(EClass.setting.start.principals[0]);
-			player.validScore = -1;
+			player.resetPrincipal = true;
+			GameDifficultySetting gameDifficultySetting = EClass.setting.start.difficulties[idDifficulty];
+			EClass.game.principal.id = -1;
+			EClass.game.principal.permadeath = gameDifficultySetting.deleteGameOnDeath;
+			EClass.game.principal.disableManualSave = !gameDifficultySetting.allowManualSave;
+			EClass.core.actionsNextFrame.Add(delegate
+			{
+				EClass.ui.AddLayer<LayerWorldSetting>();
+			});
 		}
 		if (version.IsBelow(0, 23, 93))
 		{
@@ -717,6 +723,8 @@ public class Game : EClass
 
 	public void _Create()
 	{
+		principal = IO.DeepCopy(EClass.setting.start.principals[0]);
+		idDifficulty = 1;
 		config.snapFreePos = (config.slope = (config.autoWall = true));
 		config.autoCombat.abortOnAllyDead = true;
 		config.autoCombat.abortOnHalfHP = true;
@@ -725,7 +733,6 @@ public class Game : EClass
 		config.autoCombat.bDontChangeTarget = true;
 		config.autoCombat.abortOnKill = true;
 		config.autoCombat.abortOnItemLoss = true;
-		idDifficulty = 1;
 		seed = EClass.rnd(10000);
 		Debug.Log("creating game: " + id + " seed:" + seed);
 		uniforms.Import();

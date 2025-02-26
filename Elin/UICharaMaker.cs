@@ -51,8 +51,6 @@ public class UICharaMaker : EMono
 
 	public UIText textMode;
 
-	public UIText textDifficulty;
-
 	public int ageIndex;
 
 	public Vector2 posList;
@@ -74,7 +72,6 @@ public class UICharaMaker : EMono
 		listMode = Lang.GetList("startMode");
 		listDifficulties = Lang.GetList("difficulties");
 		textMode.SetText(listMode[EMono.game.idPrologue]);
-		textDifficulty.SetText(listDifficulties[EMono.game.idDifficulty]);
 		chara = c;
 		BuildRaces();
 		SetPortraitSlider();
@@ -175,7 +172,7 @@ public class UICharaMaker : EMono
 		chara.elements.AddNote(note2, (Element e) => e.source.category == "skill" && e.ValueWithoutLink > 1 && e.source.categorySub != "weapon", null, ElementContainer.NoteMode.CharaMake);
 		note2.Space();
 		note2.AddHeaderTopic("feats".lang());
-		chara.elements.AddNote(note2, (Element e) => e is Feat, null, ElementContainer.NoteMode.CharaMake, addRaceFeat: true);
+		chara.elements.AddNote(note2, (Element e) => e is Feat && e.id != 1220, null, ElementContainer.NoteMode.CharaMake, addRaceFeat: true);
 		note2.Build();
 		if (!addShadow)
 		{
@@ -207,50 +204,6 @@ public class UICharaMaker : EMono
 			Refresh();
 		}).SetSize()
 			.SetTitles("wStartMode");
-	}
-
-	public void ListDifficulties()
-	{
-		TooltipManager.Instance.HideTooltips(immediate: true);
-		TooltipManager.Instance.disableHide = "note";
-		bool first = true;
-		EMono.ui.AddLayer<LayerList>().SetPivot(0.5f, 0.2f).SetSize(260f)
-			.SetList2(EMono.setting.start.difficulties, (GameDifficultySetting a) => a.Name, delegate(GameDifficultySetting a, ItemGeneral b)
-			{
-				EMono.game.idDifficulty = a.ID;
-				textDifficulty.SetText(listDifficulties[EMono.game.idDifficulty]);
-				Refresh();
-			}, delegate(GameDifficultySetting a, ItemGeneral item)
-			{
-				UIButton b2 = item.button1;
-				b2.SetTooltip(delegate(UITooltip t)
-				{
-					t.note.Clear();
-					t.note.AddHeader(a.Name);
-					t.note.Space(8);
-					t.note.AddText("NoteText_medium", "vow_" + a.ID).Hyphenate();
-					t.note.Space(8);
-					t.note.Build();
-				});
-				if (first)
-				{
-					TooltipManager.Instance.GetComponent<CanvasGroup>().alpha = 0f;
-					TooltipManager.Instance.GetComponent<CanvasGroup>().DOFade(1f, 0.3f);
-					EMono.core.actionsNextFrame.Add(delegate
-					{
-						b2.ShowTooltipForced();
-					});
-				}
-				first = false;
-			})
-			.SetTitles("wDifficulty");
-		RectTransform rectTransform = EMono.ui.GetLayer<LayerList>().windows[0].Rect();
-		rectTransform.pivot = new Vector2(0.5f, 0.5f);
-		rectTransform.anchoredPosition = posList2;
-		TweenUtil.Tween(0.3f, null, delegate
-		{
-			UIButton.TryShowTip();
-		});
 	}
 
 	public void RerollAlias()

@@ -237,8 +237,6 @@ public class CoreDebug : EScriptable
 
 	public bool allStory;
 
-	public bool skipInitialQuest;
-
 	[Header("Log")]
 	public bool logAdv;
 
@@ -355,8 +353,6 @@ public class CoreDebug : EScriptable
 			break;
 		}
 		EClass.game.StartNewGame();
-		EClass.game.principal = IO.DeepCopy(EClass.setting.start.principals[0]);
-		EClass.player.validScore = -1;
 		EClass.player.flags.OnEnableDebug();
 		EClass.player.pref.lastIdTabAbility = 3;
 		Zone homeZone = EClass.game.spatials.Find(EClass.game.Prologue.idStartZone);
@@ -2005,6 +2001,17 @@ public class CoreDebug : EScriptable
 			}
 		}
 		return "Not Implemented.";
+	}
+
+	[ConsoleCommand("")]
+	public static string ResetPrincipalSeals()
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		EClass.game.principal.modified.Clear();
+		return "Done.";
 	}
 
 	[ConsoleCommand("")]

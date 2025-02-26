@@ -562,7 +562,7 @@ public class Scene : EMono
 				EMono.Sound.Play("dead_pc");
 				string[] list = Lang.GetList("lastWords");
 				string lastWord = list.RandomItem();
-				if (EMono.game.Difficulty.deleteGameOnDeath)
+				if (EMono.game.principal.permadeath)
 				{
 					GameIO.DeleteGame(Game.id, EMono.game.isCloud);
 				}
@@ -590,7 +590,7 @@ public class Scene : EMono
 					List<string> list2 = new List<string>();
 					Zone lastTown = EMono.game.spatials.Find(EMono.player.uidLastTown);
 					bool addTownRevive = lastTown != null && !EMono._zone.IsInstance;
-					if (EMono.game.Difficulty.allowRevive)
+					if (!EMono.game.principal.permadeath)
 					{
 						if (addTownRevive)
 						{
@@ -610,7 +610,7 @@ public class Scene : EMono
 						Dialog.List("pc_deathChoice".lang(), list2, (string j) => j, delegate(int c, string d)
 						{
 							EMono.player.deathDialog = false;
-							if (EMono.game.Difficulty.allowRevive && (c == 0 || (addTownRevive && c == 1)))
+							if (!EMono.game.principal.permadeath && (c == 0 || (addTownRevive && c == 1)))
 							{
 								EMono.pc.MakeGrave(lastWord);
 								EMono.pc.Revive();

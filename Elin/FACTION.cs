@@ -398,7 +398,7 @@ public class Faction : EClass
 		Msg.Say("getBill", Lang._currency(num, "money"));
 		TryPayBill(thing2);
 		Msg.Say("bills", EClass.player.taxBills.ToString() ?? "");
-		if (EClass.player.taxBills >= 4 && !EClass.debug.godMode)
+		if (EClass.player.taxBills >= 4 && EClass.game.principal.tax && !EClass.debug.godMode)
 		{
 			EClass.player.ModKarma(-50);
 		}

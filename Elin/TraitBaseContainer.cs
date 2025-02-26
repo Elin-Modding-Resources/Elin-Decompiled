@@ -2,6 +2,20 @@ using UnityEngine;
 
 public class TraitBaseContainer : Trait
 {
+	public bool HasChara => owner.c_idRefCard != null;
+
+	public override bool ShowChildrenNumber
+	{
+		get
+		{
+			if (!HasChara)
+			{
+				return base.ShowChildrenNumber;
+			}
+			return false;
+		}
+	}
+
 	public override string IDInvStyle
 	{
 		get
@@ -81,8 +95,6 @@ public class TraitBaseContainer : Trait
 			return false;
 		}
 	}
-
-	public bool HasChara => owner.c_idRefCard != null;
 
 	public override void OnCreate(int lv)
 	{

@@ -2,6 +2,8 @@ using System;
 
 public class TraitBoat : Trait
 {
+	public override bool CanBeDestroyed => false;
+
 	public override bool IsFloating => true;
 
 	public override bool IsGround => true;

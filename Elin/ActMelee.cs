@@ -146,6 +146,7 @@ public class ActMelee : ActBaseAttack
 		void _Attack(BodySlot slot)
 		{
 			Act.TC = orgTC;
+			Act.TP = orgPos;
 			Thing w;
 			int splash;
 			int chaser;
@@ -163,7 +164,7 @@ public class ActMelee : ActBaseAttack
 					}
 					w = slot.thing;
 				}
-				int num = ((w == null) ? 1 : (w.Evalue(666) + 1));
+				int num = 1 + Mathf.Max(Act.CC.Evalue(666), (w != null) ? w.Evalue(666) : 0);
 				if (dist <= 1 || dist <= num)
 				{
 					if (w != null)

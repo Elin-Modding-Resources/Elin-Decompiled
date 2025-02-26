@@ -2772,6 +2772,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (IsPCFaction)
 			{
 				a = a * Mathf.Clamp(100 + Chara.affinity.value / 10, 50, 200) / 100;
+				if (EClass.game.principal.petFeatExp)
+				{
+					a = a * (50 + EClass.game.principal.petFeatExpMtp * 50) / 100;
+				}
 			}
 		}
 		a = a * (100 + Evalue(1237) * 30) / 100;
@@ -4651,7 +4655,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			list.Add(thing3);
 		}
-		if (!IsPCFaction && chance(200))
+		if (!IsPCFaction && (!isUserZone || !EClass.game.principal.disableUsermapBenefit) && chance(200))
 		{
 			list.Add(Chara.MakeGene());
 		}
@@ -4714,6 +4718,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				if (text2 == "big_daddy" || text2 == "santa")
 				{
 					num5 += 2;
+				}
+				if (num5 > 0 && EClass.game.principal.dropRate)
+				{
+					num5 = Mathf.Max(1, num5 * (50 + EClass.game.principal.dropRateMtp * 50) / 100);
 				}
 				List<Thing> list2 = new List<Thing>();
 				foreach (Thing thing4 in things)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class LayerWorldSetting : ELayer
 	public UISelectableGroup groupTemplate;
 
 	public List<UIButton> buttonTemplates;
+
+	public GamePrincipal pp;
 
 	public UIButton toggleEvaluate;
 
@@ -32,16 +35,54 @@ public class LayerWorldSetting : ELayer
 
 	public UIText textValidScore;
 
+	public UIText textDetail;
+
 	public UISlider sliderDropRate;
 
 	public Image imageScoreBar;
 
-	public GamePrincipal pp => ELayer.game.principal;
+	public UIButton moldToggle;
+
+	public UIButton moldSlider;
+
+	public UIButton buttonEmbark;
+
+	public UIButton buttonWorkaround;
+
+	public UIItem moldHeader;
+
+	public Transform transCustom;
+
+	public Transform transMold;
+
+	public List<Sprite> sprites;
+
+	private bool started;
 
 	public int IdxCustom => 3;
 
+	public bool IsEmbark
+	{
+		get
+		{
+			if (ELayer.core.IsGameStarted)
+			{
+				return ELayer.player.resetPrincipal;
+			}
+			return true;
+		}
+	}
+
 	public override void OnInit()
 	{
+		buttonEmbark.SetActive(IsEmbark);
+		buttonWorkaround.SetActive(!IsEmbark);
+		if (IsEmbark)
+		{
+			ELayer.game.principal.modified.Clear();
+		}
+		pp = IO.DeepCopy(ELayer.game.principal);
+		transMold.SetActive(enable: false);
 		for (int j = 0; j < buttonTemplates.Count; j++)
 		{
 			int i = j;
@@ -56,24 +97,29 @@ public class LayerWorldSetting : ELayer
 				SetTemplate(i);
 			});
 		}
+		buttonWorkaround.SetToggle(ELayer.player.showWorkaround, delegate(bool a)
+		{
+			ELayer.player.showWorkaround = a;
+			Refresh();
+		});
 		Refresh();
 	}
 
 	public void SetTemplate(int idx)
 	{
-		pp.idTemplate = idx;
+		pp.id = idx;
 		if (idx == IdxCustom)
 		{
-			pp.idTemplate = -1;
+			pp.id = -1;
 		}
 		else
 		{
-			ELayer.game.principal = IO.DeepCopy(ELayer.setting.start.principals[idx]);
+			pp = IO.DeepCopy(ELayer.setting.start.principals[idx]);
 		}
 		Refresh();
 	}
 
-	public void Refresh()
+	public void RefreshTemplate()
 	{
 		if (pp.IsCustom)
 		{
@@ -81,76 +127,107 @@ public class LayerWorldSetting : ELayer
 		}
 		else
 		{
-			groupTemplate.Select(pp.idTemplate);
+			groupTemplate.Select(pp.id);
 		}
-		toggleEvaluate.SetToggleWithScore(pp.ignoreEvaluate, delegate(bool a)
+		textDetail.SetText(("vow_" + pp.id).lang());
+	}
+
+	public void Refresh()
+	{
+		RefreshTemplate();
+		transCustom.DestroyChildren();
+		List<GamePrincipal.Item> items = pp.ListItems();
+		AddCategory(GamePrincipal.Type.Oath);
+		if (!IsEmbark && ELayer.player.showWorkaround)
 		{
-			Toggle(ref pp.ignoreEvaluate, a);
-			Refresh();
-		}, 0);
-		toggleTax.SetToggleWithScore(pp.tax, delegate(bool a)
+			AddCategory(GamePrincipal.Type.Workaround);
+		}
+		transCustom.RebuildLayout();
+		void AddCategory(GamePrincipal.Type type)
 		{
-			Toggle(ref pp.tax, a);
-		}, pp.GetScore("tax"));
-		toggleDeathPenaltyProtection.SetToggleWithScore(pp.disableDeathPenaltyProtection, delegate(bool a)
-		{
-			Toggle(ref pp.disableDeathPenaltyProtection, a);
-		}, pp.GetScore("disableDeathPenaltyProtection"));
-		toggleManualSave.SetToggleWithScore(pp.disableManualSave, delegate(bool a)
-		{
-			Toggle(ref pp.disableManualSave, a);
-		}, pp.GetScore("disableManualSave"));
-		toggleUsermapBenefit.SetToggleWithScore(pp.disableUsermapBenefit, delegate(bool a)
-		{
-			Toggle(ref pp.disableUsermapBenefit, a);
-		}, pp.GetScore("disableUsermapBenefit"));
-		toggleDropRate.SetToggleWithScore(pp.dropRate, delegate(bool a)
-		{
-			Toggle(ref pp.dropRate, a);
-		}, pp.GetScore("dropRate"));
-		togglePermadeath.SetToggleWithScore(pp.permadeath, delegate(bool a)
-		{
-			Toggle(ref pp.permadeath, a);
-		}, pp.GetScore("permadeath"));
-		toggleInfiniteMarketFund.SetToggleWithScore(pp.infiniteMarketFund, delegate(bool a)
-		{
-			Toggle(ref pp.infiniteMarketFund, a);
-		}, pp.GetScore("infiniteMarketFund"));
-		toggleOPMilk.SetToggleWithScore(pp.opMilk, delegate(bool a)
-		{
-			Toggle(ref pp.opMilk, a);
-		}, pp.GetScore("opMilk"));
-		sliderDropRate.SetSlider(pp.dropRateMtp, (float a) => (float)(int)a * 0.5f + "x", 0, 10, notify: false);
-		sliderDropRate.onValueChanged.RemoveAllListeners();
-		sliderDropRate.onValueChanged.AddListener(delegate(float a)
-		{
-			pp.dropRateMtp = (int)a;
-			Refresh();
-		});
-		RefreshScore();
-		void Toggle(ref bool flag, bool on)
-		{
-			flag = on;
-			if (!pp.IsCustom)
+			Util.Instantiate(moldHeader, transCustom).text1.SetText(("pp_" + type).lang());
+			foreach (GamePrincipal.Item item in items.Where((GamePrincipal.Item a) => a.type == type))
 			{
-				pp.idTemplate = -1;
-				groupTemplate.Select(buttonTemplates.LastItem());
+				UIButton b = null;
+				GamePrincipal.ItemSlider itemSlider = item as GamePrincipal.ItemSlider;
+				if (itemSlider == null)
+				{
+					if (item != null)
+					{
+						_ = item;
+						b = Util.Instantiate(moldToggle, transCustom);
+					}
+				}
+				else
+				{
+					b = Util.Instantiate(moldSlider, transCustom);
+					b.GetComponentInChildren<UISlider>().SetSlider(itemSlider.GetInt(), delegate(float a)
+					{
+						itemSlider.SetInt((int)a);
+						return itemSlider.funcText((int)a);
+					}, 0, itemSlider.max, notify: false);
+				}
+				bool flag = item.id == "permadeath" && !IsEmbark && !item.WasSealed();
+				b.mainText.SetText(("pp_" + item.id).lang());
+				b.icon.SetActive(item.IsSealed() || item.WasSealed());
+				b.icon.SetAlpha(item.IsSealed() ? 1f : 0.3f);
+				b.icon.sprite = sprites[item.grade];
+				b.icon.SetNativeSize();
+				b.GetOrCreate<CanvasGroup>().alpha = (flag ? 0.5f : 1f);
+				b.interactable = !flag;
+				b.SetToggle(item.Get(), delegate(bool a)
+				{
+					item.Set(a);
+					if (!pp.IsCustom)
+					{
+						pp.id = -1;
+						RefreshTemplate();
+					}
+					b.icon.SetActive(item.IsSealed() || item.WasSealed());
+					b.icon.SetAlpha(item.IsSealed() ? 1f : 0.3f);
+				});
 			}
-			RefreshScore();
 		}
 	}
 
-	public void RefreshScore()
+	public void StartGame()
 	{
-		textTitle.text = pp.GetTitle() ?? "";
-		textScore.text = "pp_score".lang(pp.ignoreEvaluate ? " - " : (pp.GetScore().ToString() ?? ""));
-		textValidScore.text = "pp_validScore".lang(pp.GetValidScore().ToString() ?? "");
-		textValidScore.SetActive(!pp.ignoreEvaluate);
-		imageScoreBar.rectTransform.sizeDelta = new Vector2(Mathf.Clamp(300f * (float)pp.GetScore() / 100f, 0f, 300f), 50f);
+		if (ELayer.player.resetPrincipal)
+		{
+			Close();
+			return;
+		}
+		started = true;
+		Close();
+		if (!LayerDrama.Instance)
+		{
+			LayerDrama.ActivateMain("mono", "1-1");
+		}
 	}
 
 	public override void OnKill()
 	{
-		pp.Apply();
+		Apply();
+	}
+
+	public void Apply()
+	{
+		if (!IsEmbark)
+		{
+			pp.modified = ELayer.game.principal.modified;
+			foreach (GamePrincipal.Item item in pp.ListItems())
+			{
+				if (item.IsModified())
+				{
+					pp.modified.Add(item.id);
+				}
+			}
+		}
+		ELayer.game.principal = pp;
+		if (ELayer.player.resetPrincipal)
+		{
+			ELayer.player.resetPrincipal = false;
+		}
+		ELayer.pc.SetFeat(1220, pp.permadeath ? 1 : 0);
 	}
 }

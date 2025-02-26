@@ -2172,7 +2172,7 @@ public class ActEffect : EClass
 			tc.Say("love_chara", c, tc);
 		}
 		tc.ModAffinity(EClass.pc, power / 4);
-		if (EClass.rnd(2) != 0)
+		if (EClass.rnd(2) != 0 && (!EClass._zone.IsUserZone || tc.IsPCFaction || !EClass.game.principal.disableUsermapBenefit))
 		{
 			if (EClass.rnd(2) == 0)
 			{
@@ -2274,6 +2274,7 @@ public class ActEffect : EClass
 					}
 					Thing thing = ThingGen.Create(r.id, -1, wishLv);
 					int num = 1;
+					bool flag2 = thing.trait is TraitDeed || thing.rarity >= Rarity.Artifact || thing.source._origin == "artifact_summon";
 					switch (thing.id)
 					{
 					case "rod_wish":
@@ -2291,30 +2292,24 @@ public class ActEffect : EClass
 					case "medal":
 						num = EClass.rndHalf(wishValue / 3000 + 4);
 						break;
-					}
-					if (num < 1)
-					{
-						num = 1;
-					}
-					if (num == 1 && thing.trait.CanStack)
-					{
-						int num2 = wishValue;
-						int price = thing.GetPrice();
-						for (int i = 0; i < 1000; i++)
+					default:
+						if (!flag2 && thing.trait.CanStack)
 						{
-							int num3 = price + 500 + i * Mathf.Max(price, 200);
-							if (num2 > num3)
+							int num2 = wishValue;
+							int price = thing.GetPrice();
+							for (int i = 0; i < 1000; i++)
 							{
-								num++;
-								num2 -= num3;
+								int num3 = price + 500 + i * Mathf.Max(price, 200);
+								if (num2 > num3)
+								{
+									num++;
+									num2 -= num3;
+								}
 							}
 						}
+						break;
 					}
-					if (thing.trait is TraitDeed)
-					{
-						num = 1;
-					}
-					if (thing.source._origin == "artifact_summon")
+					if (num < 1)
 					{
 						num = 1;
 					}

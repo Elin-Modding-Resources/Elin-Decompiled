@@ -12,8 +12,6 @@ public class LayerEditBio : ELayer
 
 	public Image imageBG;
 
-	private bool started;
-
 	public override void OnAfterAddLayer()
 	{
 		if (ELayer.game == null)
@@ -42,35 +40,9 @@ public class LayerEditBio : ELayer
 
 	public void OnClickStart()
 	{
-		if (!ELayer.game.Difficulty.allowManualSave)
+		if (!ELayer.ui.GetLayer<LayerWorldSetting>())
 		{
-			Dialog.YesNo("dialog_warnManualSave".lang(ELayer.game.Difficulty.Name), delegate
-			{
-				Start();
-			});
-		}
-		else
-		{
-			Start();
-		}
-		void Start()
-		{
-			if (!started)
-			{
-				started = true;
-				if (!ELayer.debug.skipInitialQuest)
-				{
-					if (!LayerDrama.Instance)
-					{
-						LayerDrama.ActivateMain("mono", "1-1");
-					}
-					else
-					{
-						LayerTitle.KillActor();
-						ELayer.game.StartNewGame();
-					}
-				}
-			}
+			ELayer.ui.AddLayer<LayerWorldSetting>();
 		}
 	}
 

@@ -573,6 +573,10 @@ public class GrowSystem : EClass
 			{
 				num /= 5;
 			}
+			if (EClass._zone.IsUserZone && EClass.game.principal.disableUsermapBenefit)
+			{
+				return null;
+			}
 			if (EClass.player.isAutoFarming || EClass.rnd(num) < EClass.rnd(source.chance))
 			{
 				Thing thing = TraitSeed.MakeSeed(source, EClass._map.TryGetPlant(cell));
