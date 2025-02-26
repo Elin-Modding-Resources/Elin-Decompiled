@@ -1176,7 +1176,12 @@ public static class ClassExtension
 
 	public static T GetOrCreate<T>(this Component t) where T : Component
 	{
-		return t.gameObject.GetComponent<T>() ?? t.gameObject.AddComponent<T>();
+		T val = t.gameObject.GetComponent<T>();
+		if (!val)
+		{
+			val = t.gameObject.AddComponent<T>();
+		}
+		return val;
 	}
 
 	public static RectTransform Rect(this Component c)
