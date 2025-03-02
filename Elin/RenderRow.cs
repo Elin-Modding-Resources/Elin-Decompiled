@@ -354,7 +354,7 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		RectTransform rectTransform = image.Rect();
 		SourcePref sourcePref = GetPref();
 		rectTransform.pivot = renderData.imagePivot - new Vector2(0.01f * (float)sourcePref.pivotX, 0.01f * (float)sourcePref.pivotY);
-		float x = Mathf.Abs(image.transform.localScale.x) * (float)(((bool)sprite || _tiles.Length == 0 || _tiles[dir % _tiles.Length] >= 0) ? 1 : (-1));
+		float x = Mathf.Abs(image.transform.localScale.x) * (float)((_tiles == null || _tiles.Length == 0 || _tiles[dir % _tiles.Length] >= 0) ? 1 : (-1));
 		float y = image.transform.localScale.y;
 		image.transform.localScale = new Vector3(x, y, image.transform.localScale.z);
 		sourcePref.Validate();

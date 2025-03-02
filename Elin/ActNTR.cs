@@ -4,7 +4,11 @@ public class ActNTR : Ability
 	{
 		if (Act.TC.isChara)
 		{
-			return Act.TC.Chara.conSleep != null;
+			if (Act.TC.Chara.conSleep == null)
+			{
+				return Act.CC.HasElement(1239);
+			}
+			return true;
 		}
 		return false;
 	}

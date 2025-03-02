@@ -68,7 +68,7 @@ public class AI_Fuck : AIAct
 		{
 			cc.SetTempHand(1104, -1);
 		}
-		maxProgress = 25;
+		maxProgress = (ntr ? 15 : 25);
 		if (succubus)
 		{
 			cc.Talk("seduce");
@@ -80,6 +80,10 @@ public class AI_Fuck : AIAct
 			switch (Type)
 			{
 			case FuckType.fuck:
+				if (ntr)
+				{
+					cc.Say("ntr", cc, tc);
+				}
 				cc.LookAt(tc);
 				tc.LookAt(cc);
 				switch (i % 4)
@@ -275,6 +279,10 @@ public class AI_Fuck : AIAct
 			SuccubusExp(chara, chara2);
 			SuccubusExp(chara2, chara);
 			chara2.ModAffinity(chara, flag ? 10 : (-5));
+			if (ntr && chara.HasElement(1239) && chara2.ExistsOnMap)
+			{
+				chara2.stamina.Mod(-1000000);
+			}
 			break;
 		}
 		case FuckType.tame:

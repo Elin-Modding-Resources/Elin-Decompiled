@@ -506,8 +506,11 @@ public class GrowSystem : EClass
 
 	public void PopMineObj(Chara c = null)
 	{
-		OnMineObj(c);
-		TryPopSeed(c);
+		if (!EClass._zone.IsUserZone || !EClass.game.principal.disableUsermapBenefit)
+		{
+			OnMineObj(c);
+			TryPopSeed(c);
+		}
 	}
 
 	public virtual void OnMineObj(Chara c = null)

@@ -255,7 +255,11 @@ public class TaskHarvest : BaseTaskHarvest
 		p.interval = 1;
 		p.onProgressBegin = delegate
 		{
-			if (base.IsTooHard)
+			if (TryGetAct(owner, pos) == null)
+			{
+				p.Cancel();
+			}
+			else if (base.IsTooHard)
 			{
 				owner.Say((mode == HarvestType.Disassemble) ? "tooHardToDisassemble" : "tooHardToHarvest", owner, i);
 				p.Cancel();
@@ -371,7 +375,10 @@ public class TaskHarvest : BaseTaskHarvest
 			{
 				exp = target.Num * 5;
 				num2 = target.Num / 3 + EClass.rnd(target.Num / 3 + 2);
-				HarvestThing();
+				if (!EClass._zone.IsUserZone || !EClass.game.principal.disableUsermapBenefit || !target.isNPCProperty)
+				{
+					HarvestThing();
+				}
 			}
 			if (EClass._zone.IsCrime(owner, this) && EClass.rnd(3) != 0)
 			{

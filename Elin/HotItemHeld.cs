@@ -374,13 +374,6 @@ public class HotItemHeld : HotItemThing
 			{
 				return true;
 			}
-			if (thing.HasElement(286) && p.TrySetAct(new TaskPlow
-			{
-				pos = pos.Copy()
-			}))
-			{
-				return true;
-			}
 			if (thing.HasElement(230) && p.TrySetAct(new TaskDig
 			{
 				pos = pos.Copy(),
@@ -389,20 +382,27 @@ public class HotItemHeld : HotItemThing
 			{
 				return true;
 			}
-			if (TaskMine.CanMine(pos, thing) && p.TrySetAct(new TaskMine
+			if (thing.HasElement(286) && p.TrySetAct(new TaskPlow
 			{
 				pos = pos.Copy()
 			}))
 			{
 				return true;
 			}
-			if (thing.HasElement(225) && p.TrySetAct(new TaskChopWood
-			{
-				pos = pos.Copy()
-			}))
-			{
-				return true;
-			}
+		}
+		if (TaskMine.CanMine(pos, thing) && p.TrySetAct(new TaskMine
+		{
+			pos = pos.Copy()
+		}))
+		{
+			return true;
+		}
+		if (thing.HasElement(225) && p.TrySetAct(new TaskChopWood
+		{
+			pos = pos.Copy()
+		}))
+		{
+			return true;
 		}
 		if (pos.HasChara)
 		{

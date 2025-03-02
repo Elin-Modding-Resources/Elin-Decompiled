@@ -997,7 +997,7 @@ public class Thing : Card
 		{
 			int key = base.category.skill;
 			int key2 = 132;
-			if (base.IsRangedWeapon)
+			if (base.IsRangedWeapon && !base.IsMeleeWeapon)
 			{
 				key2 = 133;
 			}

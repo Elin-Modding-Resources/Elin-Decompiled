@@ -198,6 +198,15 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					int num = Mathf.Max(1, h.source.things[i + 1].ToInt() * efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
 					string text3 = h.source.things[i];
 					string s = (text3.StartsWith("#") ? EClass.sources.categories.map[text3.Replace("#", "")].GetName() : EClass.sources.cards.map[h.source.things[i]].GetName());
+					if (h.source.alias == "Breeding")
+					{
+						num = a.race.breeder * 100 / 2500;
+						num = num * ((!(text3 == "_egg")) ? 1 : 2) / 3;
+						if (a.race.breeder > 0 && num <= 0)
+						{
+							num = 1;
+						}
+					}
 					t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
 				}
 				if (!h.source.elements.IsEmpty())
@@ -235,8 +244,8 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			break;
 		case LayerPeople.ShowMode.Work:
 		{
-			string lang = a.GetTextWork(simple: true) + "," + a.GetTextHobby(simple: true);
-			b.SetSubText(lang, 300);
+			string text = a.GetTextWork(simple: true) + "," + a.GetTextHobby(simple: true);
+			b.SetSubText(text.TrimEnd(','), 300);
 			break;
 		}
 		}

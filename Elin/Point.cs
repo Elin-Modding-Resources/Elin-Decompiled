@@ -1088,7 +1088,7 @@ public class Point : EClass
 
 	public T FindThing<T>() where T : Trait
 	{
-		if (detail != null)
+		if (IsValid && detail != null)
 		{
 			foreach (Thing thing in detail.things)
 			{

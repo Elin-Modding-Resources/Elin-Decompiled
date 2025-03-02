@@ -466,6 +466,9 @@ public class Game : EClass
 		{
 			EClass.game.principal = IO.DeepCopy(EClass.setting.start.principals[0]);
 			player.resetPrincipal = true;
+		}
+		if (player.resetPrincipal)
+		{
 			GameDifficultySetting gameDifficultySetting = EClass.setting.start.difficulties[idDifficulty];
 			EClass.game.principal.id = -1;
 			EClass.game.principal.permadeath = gameDifficultySetting.deleteGameOnDeath;

@@ -1612,6 +1612,10 @@ public class Map : MapBounds, IPathfindGrid
 
 	public void DropBlockComponent(Point point, TileRow r, SourceMaterial.Row mat, bool recoverBlock, bool isPlatform = false, Chara c = null)
 	{
+		if (EClass._zone.IsUserZone && EClass.game.principal.disableUsermapBenefit)
+		{
+			return;
+		}
 		Thing thing = null;
 		if (r.components.Length == 0)
 		{
@@ -1663,6 +1667,10 @@ public class Map : MapBounds, IPathfindGrid
 		point.PlaySound(row.GetSoundDead(row2));
 		row.AddBlood(point, 8);
 		bool flag2 = c == null || c.IsAgent || c.IsPCFactionOrMinion;
+		if (EClass._zone.IsUserZone && EClass.game.principal.disableUsermapBenefit)
+		{
+			flag2 = false;
+		}
 		if (flag)
 		{
 			point.cell._roofBlock = 0;
@@ -1889,13 +1897,16 @@ public class Map : MapBounds, IPathfindGrid
 		cell.gatherCount = 0;
 		void Pop(Thing t)
 		{
-			if (EClass.scene.actionMode.IsBuildMode && EClass.debug.godBuild)
+			if (!EClass._zone.IsUserZone || !EClass.game.principal.disableUsermapBenefit)
 			{
-				EClass._map.PutAway(t);
-			}
-			else
-			{
-				TrySmoothPick(point, t, c);
+				if (EClass.scene.actionMode.IsBuildMode && EClass.debug.godBuild)
+				{
+					EClass._map.PutAway(t);
+				}
+				else
+				{
+					TrySmoothPick(point, t, c);
+				}
 			}
 		}
 	}
@@ -1961,7 +1972,7 @@ public class Map : MapBounds, IPathfindGrid
 			HitResult hitResult = item.TileType._HitTest(point, item.Thing, canIgnore: false);
 			if (item.Thing.stackOrder != detail.things.IndexOf(item.Thing) || (hitResult != HitResult.Valid && hitResult != HitResult.Warning))
 			{
-				if (EClass._zone.IsPCFaction || !item.isNPCProperty)
+				if (EClass._zone.IsPCFaction || (!item.isNPCProperty && !(item.trait is TraitHarvest)))
 				{
 					item.SetPlaceState(PlaceState.roaming);
 				}

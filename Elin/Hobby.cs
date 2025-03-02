@@ -35,6 +35,10 @@ public class Hobby : EClass
 		{
 			return 0;
 		}
+		if (source.alias == "Breeding")
+		{
+			return c.race.breeder;
+		}
 		if (c.currentZone == null || c.currentZone == EClass._zone)
 		{
 			if ((!source.destTrait.IsEmpty() || !source.workTag.IsEmpty()) && !GetAI(c).SetDestination())
@@ -53,10 +57,6 @@ public class Hobby : EClass
 					num += 30 + traitBed.owner.GetTotalQuality() + traitBed.owner.Evalue(750);
 				}
 			}
-		}
-		if (source.alias == "Breeding")
-		{
-			num = num * c.race.breeder / 100;
 		}
 		num += GetLv(c);
 		if (c.affinity.value < 0)

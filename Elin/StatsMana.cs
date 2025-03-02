@@ -49,9 +49,10 @@ public class StatsMana : Stats
 		}
 		BaseStats.CC.Say("mana_overflow", BaseStats.CC);
 		BaseStats.CC.DamageHP(num, 921, 100, AttackSource.ManaBackfire);
-		if (BaseStats.CC.IsAliveInCurrentZone)
+		Chara cC = BaseStats.CC;
+		if (cC.IsAliveInCurrentZone)
 		{
-			BaseStats.CC.elements.ModExp(303, Mathf.Clamp(-a * 10, 10, 200));
+			cC.elements.ModExp(303, Mathf.Clamp(-a * 10, 10, 200));
 		}
 	}
 }

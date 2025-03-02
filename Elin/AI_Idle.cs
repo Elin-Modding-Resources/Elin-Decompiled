@@ -135,7 +135,7 @@ public class AI_Idle : AIAct
 						}
 					}
 				}
-				if (actRevive != null && EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList().Count > 0 && owner.UseAbility(actRevive.source.alias, owner))
+				if (actRevive != null && owner.IsPCFaction && EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList().Count > 0 && owner.UseAbility(actRevive.source.alias, owner))
 				{
 					yield return KeepRunning();
 				}

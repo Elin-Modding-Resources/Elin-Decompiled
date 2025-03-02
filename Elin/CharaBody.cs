@@ -130,6 +130,10 @@ public class CharaBody : EClass
 			}
 			break;
 		}
+		if (slot.thing != null && slot.thing.blessedState <= BlessedState.Cursed)
+		{
+			return CannotEquip();
+		}
 		if (IsTooHeavyToEquip(thing))
 		{
 			if (EClass.core.IsGameStarted && owner.IsPC && text)
