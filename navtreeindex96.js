@@ -1,5 +1,6 @@
 var NAVTREEINDEX96 =
 {
+"classSPELL.html#a6920d467844f030a1352ae3676567269":[1,0,1199,194],
 "classSPELL.html#a6ad1360e7a7f1e865188a31afb6564c7":[1,0,1199,122],
 "classSPELL.html#a6b73b3ca009ffebb2c4b717b8f940260":[1,0,1199,57],
 "classSPELL.html#a6e1c6f85d8fd655d12e4e5b134538a07":[1,0,1199,60],
@@ -248,6 +249,5 @@ var NAVTREEINDEX96 =
 "classSceneLightProfile.html#a66a649d575b13c2209e0d1c02a6d5d01":[1,0,1096,3],
 "classSceneLightProfile.html#a79a8bc3455f74fb4ff84eef174794e4a":[1,0,1096,6],
 "classSceneLightProfile.html#a82e2071b99c2ec6b80a8ab2777ba153f":[1,0,1096,10],
-"classSceneLightProfile.html#a865213286ca0688f63569b5d01b5abc1":[1,0,1096,21],
-"classSceneLightProfile.html#a901c31a018cf6040c9bbad53ae441951":[1,0,1096,16]
+"classSceneLightProfile.html#a865213286ca0688f63569b5d01b5abc1":[1,0,1096,21]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"classLayerInventory.html#ab8dcee55eca64ed2846ffba3d0f0025e":[1,0,772,15],
 "classLayerInventory.html#abea507ed297c7656997f16c71af9971b":[1,0,772,14],
 "classLayerInventory.html#abfb9b9d147b3612970ff14b3a8e566c1":[1,0,772,20],
 "classLayerInventory.html#ac033da52aa572bb8f5a0b8c822cc13d0":[1,0,772,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "classLayerQuestBoard.html#a5caf9b3414467a257ee88dc8d108c0b0":[1,0,788,3],
 "classLayerQuestBoard.html#a650bba7de444082f8a8b34974bb8c603":[1,0,788,12],
 "classLayerQuestBoard.html#a6af0110a529d7dcb9d5e02d9911aef1f":[1,0,788,15],
-"classLayerQuestBoard.html#a814a08c3aab0b21c8baf0f6da3629712":[1,0,788,7],
-"classLayerQuestBoard.html#a83803d813e7727d7924a39035d714f1d":[1,0,788,18]
+"classLayerQuestBoard.html#a814a08c3aab0b21c8baf0f6da3629712":[1,0,788,7]
 };

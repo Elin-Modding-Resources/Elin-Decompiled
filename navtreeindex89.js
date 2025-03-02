@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"classPropsManager.html#a62335779e5e3ef519b5d6a5d11baa6c2":[1,0,939,0],
 "classPropsManager.html#a68dcaad94831ab42f5e9b5a8f4c442d8":[1,0,939,8],
 "classPropsManager.html#ac22e5a152c6ffab82b4dfb4af1cdca8b":[1,0,939,1],
 "classPropsManager.html#acef3d60fb0706c1e737bce2a21f776c1":[1,0,939,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX89 =
 "classQuestEscort.html#a533012513bfee3ab6705621e89c54a19":[1,0,956,0],
 "classQuestEscort.html#a70416e2b58cb2ef5d8f031e172a97688":[1,0,956,9],
 "classQuestEscort.html#ac53306b38cafbaa27fec0670c98551f4":[1,0,956,7],
-"classQuestEscort.html#acbc60325f77dfde637101926c1d53f4d":[1,0,956,4],
-"classQuestEscort.html#ad3129d33f2ce289389f2caf9d78b4d7f":[1,0,956,8]
+"classQuestEscort.html#acbc60325f77dfde637101926c1d53f4d":[1,0,956,4]
 };

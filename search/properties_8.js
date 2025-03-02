@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['h_0',['H',['../classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f',1,'Card']]],
+  ['h_0',['H',['../classRecipe.html#a8725308b3668823e833db7036dd5f443',1,'Recipe.H()'],['../classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f',1,'Card.H()']]],
   ['h_1',['h',['../classWindow_1_1SaveData.html#a25972e0af4e8b068826f50d12f7f2075',1,'Window::SaveData']]],
-  ['h_2',['H',['../classTaskMoveInstalled.html#af010736f2804ae7cb60ab1c4efd905fa',1,'TaskMoveInstalled.H()'],['../classTaskDesignation.html#abd0db3364a44feedf964f44c620fa3c8',1,'TaskDesignation.H()'],['../classRecipe.html#a8725308b3668823e833db7036dd5f443',1,'Recipe.H()'],['../classTaskBuild.html#a8382467d13d367386ed342936e17b097',1,'TaskBuild.H()']]],
+  ['h_2',['H',['../classTaskMoveInstalled.html#af010736f2804ae7cb60ab1c4efd905fa',1,'TaskMoveInstalled.H()'],['../classTaskBuild.html#a8382467d13d367386ed342936e17b097',1,'TaskBuild.H()'],['../classTaskDesignation.html#abd0db3364a44feedf964f44c620fa3c8',1,'TaskDesignation.H()']]],
   ['halfsamplecountx_3',['halfSampleCountX',['../classBoxOutline.html#a7a2b303e8572fffaf5384730964de22c',1,'BoxOutline']]],
   ['halfsamplecounty_4',['halfSampleCountY',['../classBoxOutline.html#a9c6dcbe45e4be7b977a063ffdcdc851e',1,'BoxOutline']]],
   ['haltstage_5',['HaltStage',['../classGrowSystem.html#a8f378d1da1d951e47a8883d77d002195',1,'GrowSystem']]],
@@ -74,9 +74,9 @@ var searchData=
   ['hearthexp_71',['hearthExp',['../classShippingResult.html#ae68660a963626fbb885a0e336c833cac',1,'ShippingResult']]],
   ['hearthexpgained_72',['hearthExpGained',['../classShippingResult.html#a4d4194aa4623cb75bff5621c5a820a8c',1,'ShippingResult']]],
   ['hearthlv_73',['hearthLv',['../classShippingResult.html#affa6c7dd98f79ab8160badb8defe0876',1,'ShippingResult']]],
-  ['height_74',['height',['../classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1',1,'SourcePref']]],
-  ['height_75',['Height',['../classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e',1,'TraitBaseContainer.Height()'],['../classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84',1,'MapBounds.Height()'],['../classBaseTileSelector.html#a65d0ebc8b59e7933d13a3d03279f1919',1,'BaseTileSelector.Height()']]],
-  ['height_76',['height',['../classBiography.html#a68a5e6a8bb2e1659140e7460c064b125',1,'Biography']]],
+  ['height_74',['Height',['../classMapBounds.html#ad8c28f1465f8f95e69ba0f6e40abfd84',1,'MapBounds']]],
+  ['height_75',['height',['../classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1',1,'SourcePref.height()'],['../classBiography.html#a68a5e6a8bb2e1659140e7460c064b125',1,'Biography.height()']]],
+  ['height_76',['Height',['../classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e',1,'TraitBaseContainer.Height()'],['../classBaseTileSelector.html#a65d0ebc8b59e7933d13a3d03279f1919',1,'BaseTileSelector.Height()']]],
   ['help_77',['Help',['../classCorePath_1_1CorePackage.html#a188e8df72f21a0d553815855be0c7a8c',1,'CorePath::CorePackage']]],
   ['helpen_78',['HelpEN',['../classCorePath_1_1CorePackage.html#a83201af5274f2d9e53ad19891efcda4e',1,'CorePath::CorePackage']]],
   ['helphighlightdisabled_79',['helpHighlightDisabled',['../classPlayer_1_1Flags.html#a74a126baeb27da0fb77813e520e70da3',1,'Player::Flags']]],

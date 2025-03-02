@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classTraitIncubator.html":[1,0,1584],
 "classTraitIncubator.html#a01be3a4b8ab3dca322ee0eec40670aa8":[1,0,1584,6],
 "classTraitIncubator.html#a08b08410e9e46115a2b6d236b22429df":[1,0,1584,3],
 "classTraitIncubator.html#a0f85ef82f7e7f9334ecd28ec4a039598":[1,0,1584,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitMerchantWeapon.html#af0080d32bcb9f5aade5f2099b25dcd70":[1,0,1648,0],
 "classTraitMiko__Mifu.html":[1,0,1649],
 "classTraitMiko__Nefu.html":[1,0,1650],
-"classTraitMill.html":[1,0,1651],
-"classTraitMill.html#a2131821af05b10eddd12f4eb27e79ef1":[1,0,1651,1]
+"classTraitMill.html":[1,0,1651]
 };

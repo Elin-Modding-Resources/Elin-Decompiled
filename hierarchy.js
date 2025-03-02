@@ -1482,7 +1482,6 @@ var hierarchy =
           ] ]
         ] ],
         [ "TraitClock", "classTraitClock.html", null ],
-        [ "TraitCobWeb", "classTraitCobWeb.html", null ],
         [ "TraitComputer", "classTraitComputer.html", null ],
         [ "TraitCoreDefense", "classTraitCoreDefense.html", null ],
         [ "TraitCoreZone", "classTraitCoreZone.html", null ],
@@ -1610,7 +1609,9 @@ var hierarchy =
           ] ]
         ] ],
         [ "TraitGrave", "classTraitGrave.html", null ],
-        [ "TraitHarvest", "classTraitHarvest.html", null ],
+        [ "TraitHarvest", "classTraitHarvest.html", [
+          [ "TraitCobWeb", "classTraitCobWeb.html", null ]
+        ] ],
         [ "TraitHoard", "classTraitHoard.html", null ],
         [ "TraitIllumination", "classTraitIllumination.html", null ],
         [ "TraitIncinerator", "classTraitIncinerator.html", null ],

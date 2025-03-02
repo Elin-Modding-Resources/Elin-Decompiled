@@ -14,6 +14,7 @@ var classFEAT =
     [ "featDefender", "classFEAT.html#af028af952f3c8a7f7979d8e15658a90d", null ],
     [ "featDefense", "classFEAT.html#a84de4d872622596f4376dd2353da59fa", null ],
     [ "featDemigod", "classFEAT.html#ae8cd2598cd5e9cdcc8984323fed15363", null ],
+    [ "featDemon", "classFEAT.html#a0843b427fe3f6506609cf16b64b4ea54", null ],
     [ "featDEX", "classFEAT.html#a37292ae76cf46837a338f46620934bbc", null ],
     [ "featDreamWaker", "classFEAT.html#a663191d71696293163c40b5b06432a33", null ],
     [ "featDwarf", "classFEAT.html#a91bc843f57e6cf073059522328eebf78", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX115 =
 {
+"classTraitFigure.html#a725f17b8712fe0c9b06656a5e7109b41":[1,0,1519,3],
 "classTraitFigure.html#a8444d988cf072d1da015423790978202":[1,0,1519,5],
 "classTraitFigure.html#a96d673649e59ad682e39429f8678c0df":[1,0,1519,4],
 "classTraitFigure.html#ab82e086783ec1852f9a84e30f1318e1f":[1,0,1519,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitIllumination.html":[1,0,1582],
 "classTraitIllumination.html#a2943f02d7fa0fe4ab25fe2df3423fb16":[1,0,1582,1],
 "classTraitIllumination.html#ae080f2ba42627c81c2a4ae423d3a0ddb":[1,0,1582,0],
-"classTraitIncinerator.html":[1,0,1583],
-"classTraitIncubator.html":[1,0,1584]
+"classTraitIncinerator.html":[1,0,1583]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"classReligionLuck.html":[1,0,1051],
 "classReligionLuck.html#a1b5ca9e23e2cbec5ccf19815887ccd1b":[1,0,1051,2],
 "classReligionLuck.html#a556f693e6c54f1e2fbd59a357c991c18":[1,0,1051,0],
 "classReligionLuck.html#a57d062a54f7fe7909437063ec08f10dd":[1,0,1051,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "classRenderRow.html#acfe30e8de10e2308d7f79486dfa8fd6f":[1,0,1079,32],
 "classRenderRow.html#ad4632c7da29f59e46ade6c673adc5fe7":[1,0,1079,24],
 "classRenderRow.html#ad57ed01141ba99b76edb07d907510bc6":[1,0,1079,35],
-"classRenderRow.html#adb9686ebbfe61770f51f846de0b14d1a":[1,0,1079,26],
-"classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce":[1,0,1079,7]
+"classRenderRow.html#adb9686ebbfe61770f51f846de0b14d1a":[1,0,1079,26]
 };

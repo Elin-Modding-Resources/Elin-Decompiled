@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classUIMapPreview.html#a75156eab446f98f632d6e147e6139be4":[1,0,1928,24],
 "classUIMapPreview.html#a7903a3352f55c812afa095c9eb6e8b57":[1,0,1928,19],
 "classUIMapPreview.html#a7db78c2ad173dec3fe695e7e639bdd4a":[1,0,1928,14],
 "classUIMapPreview.html#a80e3dad8f9291c2a9c0de0af1afb68ed":[1,0,1928,34],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classUISlider.html#a21152ef5dc46fa4355eccbe7483448e0":[1,0,1943,7],
 "classUISlider.html#a2fb07bfb4f5daee4fd82ade5a2b92e9a":[1,0,1943,1],
 "classUISlider.html#a338c10cb854431dc34c9b09d8b536137":[1,0,1943,4],
-"classUISlider.html#a565a5fdb42322232edb524639561ec6f":[1,0,1943,6],
-"classUISlider.html#a7523226b8e83083682163c309c8e0fad":[1,0,1943,2]
+"classUISlider.html#a565a5fdb42322232edb524639561ec6f":[1,0,1943,6]
 };

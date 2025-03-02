@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitSnow.html#a521e55acbe1bcdfc18f3cf6728b18e94":[1,0,1754,2],
 "classTraitSnow.html#a7e56f341e87a9bdc4b8fb9064b6b5718":[1,0,1754,0],
 "classTraitSnow.html#ac0420a0ba3539ee8be4738478c0dce8d":[1,0,1754,1],
 "classTraitSofa.html":[1,0,1755],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitToolTalisman.html#ab67b4736c563c4a2e4ef5dc747b24fc1":[1,0,1824,2],
 "classTraitToolTalisman.html#ac2f907dd845c4d804ac2ee22834864ff":[1,0,1824,8],
 "classTraitToolTalisman.html#adf76fbbdf82cce4f21bfefa434cac57f":[1,0,1824,1],
-"classTraitToolTorch.html":[1,0,1825],
-"classTraitToolTorch.html#a3b8c5ddcec4521177869f8001db2c9ce":[1,0,1825,2]
+"classTraitToolTorch.html":[1,0,1825]
 };

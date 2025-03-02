@@ -1,5 +1,6 @@
 var NAVTREEINDEX110 =
 {
+"classTileTypeHalfBlock.html#a9889458181687b5d95ba01303f05c644":[1,0,1315,2],
 "classTileTypeIllumination.html":[1,0,1316],
 "classTileTypeIllumination.html#a74411db318ad0a1ff045c8333b3b247a":[1,0,1316,0],
 "classTileTypeInvisibleBlock.html":[1,0,1317],
@@ -248,6 +249,5 @@ var NAVTREEINDEX110 =
 "classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d":[1,0,1362,44],
 "classTrait.html#a1bc5c20004a292d57037a9556ad49d96":[1,0,1362,133],
 "classTrait.html#a1bcc89016758ef51b5722da792d53f41":[1,0,1362,50],
-"classTrait.html#a1c2daa2fd743cdd5707d254414078140":[1,0,1362,157],
-"classTrait.html#a1ef6408bcd6e52240db168e4bb4b227f":[1,0,1362,32]
+"classTrait.html#a1c2daa2fd743cdd5707d254414078140":[1,0,1362,157]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX136 =
 {
+"classZone__Olvina.html#a37fc2a934d2f84e231171ee1ed2d0db0":[1,0,2057,1],
 "classZone__Olvina.html#ac8b4736a565f467f805b3870b41c892b":[1,0,2057,0],
 "classZone__Palmia.html":[1,0,2058],
 "classZone__RandomDungeon.html":[1,0,2059],
@@ -248,6 +249,5 @@ var NAVTREEINDEX136 =
 "functions_vars_p.html":[1,3,2,16],
 "functions_vars_q.html":[1,3,2,17],
 "functions_vars_r.html":[1,3,2,18],
-"functions_vars_s.html":[1,3,2,19],
-"functions_vars_t.html":[1,3,2,20]
+"functions_vars_s.html":[1,3,2,19]
 };

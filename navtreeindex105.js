@@ -1,5 +1,6 @@
 var NAVTREEINDEX105 =
 {
+"classSpriteBasedLaser.html#a3d39daca9e998038a45f766d5f84a913":[1,0,1203,38],
 "classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f":[1,0,1203,32],
 "classSpriteBasedLaser.html#a41998771267522776d775b91175c1c31":[1,0,1203,42],
 "classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89":[1,0,1203,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX105 =
 "classTCExtra.html#a51dca8df3ff18a9929a14aaba73773d2":[1,0,1270,2],
 "classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9":[1,0,1270,1],
 "classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9a0f4f8497bc3fb1eb8dd10066adcf8a41":[1,0,1270,1,3],
-"classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9a6adf97f83acf6453d4a6a4b1070f3754":[1,0,1270,1,0],
-"classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9a9914a0ce04a7b7b6a8e39bec55064b82":[1,0,1270,1,1]
+"classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9a6adf97f83acf6453d4a6a4b1070f3754":[1,0,1270,1,0]
 };

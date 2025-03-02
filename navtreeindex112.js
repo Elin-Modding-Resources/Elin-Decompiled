@@ -1,5 +1,6 @@
 var NAVTREEINDEX112 =
 {
+"classTraitAltarAncient.html":[1,0,1368],
 "classTraitAltarAncient.html#a8d295ef9480c495698224054e97c41f7":[1,0,1368,0],
 "classTraitAltarAncient.html#af14e8f20f77cec9a3515d788847ae57d":[1,0,1368,1],
 "classTraitAltarChaos.html":[1,0,1369],
@@ -248,6 +249,5 @@ var NAVTREEINDEX112 =
 "classTraitCageBreeding.html#a779c81f89cd66f20077a888380404e22":[1,0,1422,1],
 "classTraitCageBreeding.html#aa7d49a6b01ba23fad87525861730ba91":[1,0,1422,0],
 "classTraitCamera.html":[1,0,1423],
-"classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1423,0],
-"classTraitCanvas.html":[1,0,1424]
+"classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1423,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX113 =
 {
+"classTraitCanvas.html":[1,0,1424],
 "classTraitCanvas.html#a4298d852681c52ee1dbe685153801ce6":[1,0,1424,2],
 "classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1424,1],
 "classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1424,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitDaggerGrave.html#a9f325398c45e2274af5e891c6b8a037e":[1,0,1468,5],
 "classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1468,4],
 "classTraitDaggerGrave.html#acf147a5264c45378dd110273219aa277":[1,0,1468,0],
-"classTraitDaggerGrave.html#af35f76abd92bc5cf9735d463db3b8cc4":[1,0,1468,2],
-"classTraitDeed.html":[1,0,1469]
+"classTraitDaggerGrave.html#af35f76abd92bc5cf9735d463db3b8cc4":[1,0,1468,2]
 };
