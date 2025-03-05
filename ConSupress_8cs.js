@@ -1,4 +1,4 @@
 var ConSupress_8cs =
 [
-    [ "ConSupress", "classConSupress.html", null ]
+    [ "ConSupress", "classConSupress.html", "classConSupress" ]
 ];

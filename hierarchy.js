@@ -1171,7 +1171,12 @@ var hierarchy =
               [ "Zone_CaveMonster", "classZone__CaveMonster.html", [
                 [ "Zone_Mine", "classZone__Mine.html", null ]
               ] ],
-              [ "Zone_RandomDungeonFactory", "classZone__RandomDungeonFactory.html", null ]
+              [ "Zone_Gathering", "classZone__Gathering.html", null ],
+              [ "Zone_RandomDungeonFactory", "classZone__RandomDungeonFactory.html", null ],
+              [ "Zone_RandomDungeonNature", "classZone__RandomDungeonNature.html", [
+                [ "Zone_RandomDungeonForest", "classZone__RandomDungeonForest.html", null ],
+                [ "Zone_RandomDungeonPlain", "classZone__RandomDungeonPlain.html", null ]
+              ] ]
             ] ],
             [ "Zone_VernisMine", "classZone__VernisMine.html", null ],
             [ "Zone_Void", "classZone__Void.html", null ]

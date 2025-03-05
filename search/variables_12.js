@@ -5,11 +5,12 @@ var searchData=
   ['qualitybonus_2',['qualityBonus',['../classCardBlueprint.html#a4fe21cf7f452ebaa644c881b3e566b5c',1,'CardBlueprint']]],
   ['querytarget_3',['queryTarget',['../classContentPopulation.html#ab763f8f79e730921459263d187bce74d',1,'ContentPopulation']]],
   ['querytype_4',['queryType',['../classContentPopulation.html#acd18cd17be7ae332de8bced3a41b8346',1,'ContentPopulation']]],
-  ['quest_5',['quest',['../classItemNotice.html#a70f418e8c683fb058c78ce722bcc101b',1,'ItemNotice.quest()'],['../classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0',1,'ItemQuestTracker.quest()'],['../classChara.html#ac731ec9388e7e2e4cc28f929d9206b24',1,'Chara.quest()']]],
-  ['quests_6',['quests',['../classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1',1,'Game.quests()'],['../classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8',1,'SourceManager.quests()']]],
-  ['questtag_7',['questTag',['../classSourceZone_1_1Row.html#ac57c5464750876e277bf85053f3deaa7',1,'SourceZone::Row']]],
-  ['questtracker_8',['questTracker',['../classPlayer.html#a4a1b5ecc8497e06ebf50b4358ccc542a',1,'Player']]],
-  ['queues_9',['queues',['../classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56',1,'FactoryData.queues()'],['../classPlayer.html#af48b1b24f3cb69a893417c4a9ea3cab7',1,'Player.queues()']]],
-  ['quickload_10',['quickLoad',['../classEInput_1_1KeyMapManager.html#ae00278b32149ef5b2470d3e01dacd32c',1,'EInput::KeyMapManager']]],
-  ['quicksave_11',['quickSave',['../classEInput_1_1KeyMapManager.html#a3b3d6d30c57b40a95bdbcddc57a3de02',1,'EInput::KeyMapManager']]]
+  ['quest_5',['quest',['../classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0',1,'ItemQuestTracker.quest()'],['../classItemNotice.html#a70f418e8c683fb058c78ce722bcc101b',1,'ItemNotice.quest()'],['../classChara.html#ac731ec9388e7e2e4cc28f929d9206b24',1,'Chara.quest()']]],
+  ['questrerollcost_6',['questRerollCost',['../classPlayer.html#acdaac44482592905e152cbfe7e103273',1,'Player']]],
+  ['quests_7',['quests',['../classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1',1,'Game.quests()'],['../classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8',1,'SourceManager.quests()']]],
+  ['questtag_8',['questTag',['../classSourceZone_1_1Row.html#ac57c5464750876e277bf85053f3deaa7',1,'SourceZone::Row']]],
+  ['questtracker_9',['questTracker',['../classPlayer.html#a4a1b5ecc8497e06ebf50b4358ccc542a',1,'Player']]],
+  ['queues_10',['queues',['../classFactoryData.html#a6a9235d2153a7018b7b943cb2d969f56',1,'FactoryData.queues()'],['../classPlayer.html#af48b1b24f3cb69a893417c4a9ea3cab7',1,'Player.queues()']]],
+  ['quickload_11',['quickLoad',['../classEInput_1_1KeyMapManager.html#ae00278b32149ef5b2470d3e01dacd32c',1,'EInput::KeyMapManager']]],
+  ['quicksave_12',['quickSave',['../classEInput_1_1KeyMapManager.html#a3b3d6d30c57b40a95bdbcddc57a3de02',1,'EInput::KeyMapManager']]]
 ];

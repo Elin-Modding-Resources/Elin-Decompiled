@@ -25,6 +25,7 @@ var classButtonAbility =
     [ "hotkeyTimer", "classButtonAbility.html#a22a75fea4856ce1626e29ff516a53758", null ],
     [ "imageFav", "classButtonAbility.html#aef9b2e4fbb772c54436f2f0d292a4154", null ],
     [ "imageType", "classButtonAbility.html#a27f2ea4d22788e6fea2055cbc1c06869", null ],
+    [ "lockUse", "classButtonAbility.html#a35db11cc99e2f1eb14b2a2a77c3d8329", null ],
     [ "source", "classButtonAbility.html#a7f8966240ba94ebea2a0309754a64e52", null ],
     [ "textStock", "classButtonAbility.html#a306a857f888accf8ab432811bc106b8c", null ],
     [ "transFav", "classButtonAbility.html#a2d3123a9d4eae73d6fca077fcf311285", null ],

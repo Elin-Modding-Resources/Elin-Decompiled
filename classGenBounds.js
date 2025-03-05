@@ -6,7 +6,7 @@ var classGenBounds =
     [ "IsEmpty", "classGenBounds.html#a87d313b56d6297576275f4e5451f554b", null ],
     [ "IsSub", "classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943", null ],
     [ "ListEmptyPoint", "classGenBounds.html#a2a04f9ca95e3faa4ba4d0d8b3a4990de", null ],
-    [ "SetBlock", "classGenBounds.html#add6f8c9d43aa5da0adffb03135318bdc", null ],
+    [ "SetBlock", "classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003", null ],
     [ "SetBlock", "classGenBounds.html#a47c04dbce161e0b866a954888a2bb061", null ],
     [ "SetFloor", "classGenBounds.html#af25058aec70f18f04698c0425d977cdb", null ],
     [ "SetFloor", "classGenBounds.html#aeee2c378d9484c36a2fca2c49f89f44c", null ],

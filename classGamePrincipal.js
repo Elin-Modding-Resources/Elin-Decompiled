@@ -10,6 +10,7 @@ var classGamePrincipal =
     [ "disableDeathPenaltyProtection", "classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224", null ],
     [ "disableManualSave", "classGamePrincipal.html#a56258ebb87dc44289acfb56409ec3d48", null ],
     [ "disableUsermapBenefit", "classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2", null ],
+    [ "disableVoidBlessing", "classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27", null ],
     [ "dropRate", "classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841", null ],
     [ "dropRateMtp", "classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1", null ],
     [ "id", "classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef", null ],

@@ -1,5 +1,17 @@
 var NAVTREEINDEX54 =
 {
+"classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38":[1,0,411,1],
+"classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b":[1,0,411,9],
+"classDramaActor.html#ac6307f57faa1a481c54975385adbf562":[1,0,411,3],
+"classDramaActor.html#ad8d294303a2b2b25327ed8fcb0a61af9":[1,0,411,8],
+"classDramaActor.html#add2d49bf6ba26f5e06c5f248c1a976b2":[1,0,411,5],
+"classDramaActor.html#af4d105a979cecc1d374e44c2ab702466":[1,0,411,7],
+"classDramaChoice.html":[1,0,412],
+"classDramaChoice.html#a0389856ea3878c846bbb2852c15d2faa":[1,0,412,0],
+"classDramaChoice.html#a0412fd34eaca8675c3f7242abdd794bd":[1,0,412,2],
+"classDramaChoice.html#a053d2c1b53296e41e2a0e493b10663c6":[1,0,412,10],
+"classDramaChoice.html#a0a5d8f192034275e6bc5c37c6297034b":[1,0,412,12],
+"classDramaChoice.html#a2123aa178af8ca70fafbdb9749ea4c84":[1,0,412,1],
 "classDramaChoice.html#a3d0f02fbfcd6840baf979a94f9caaf07":[1,0,412,16],
 "classDramaChoice.html#a4a5208e5c480f24f9c1887b9b26f6c29":[1,0,412,5],
 "classDramaChoice.html#a66d8d95232a8c8ae63a8cab77c49c58f":[1,0,412,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX54 =
 "classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f":[1,0,425,14],
 "classDramaSequence.html#a86ea69bffdc2a8d35e3157b8171dd21a":[1,0,425,21],
 "classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0":[1,0,425,10],
-"classDramaSequence.html#a926b9c4c4ca7851d5d2086609166f10b":[1,0,425,3],
-"classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b":[1,0,425,15],
-"classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049":[1,0,425,23],
-"classDramaSequence.html#aae1d5cd2845ca1e6397ece8a20681924":[1,0,425,4],
-"classDramaSequence.html#ab4da3e0eb4757986c1c690d43a3170dc":[1,0,425,18],
-"classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761":[1,0,425,24],
-"classDramaSequence.html#ab94829503185d562bfccdbca66009f5e":[1,0,425,19],
-"classDramaSequence.html#ad0a8d5bb13ec7fd65f0e2faa9e511cd7":[1,0,425,30],
-"classDramaSequence.html#ae97581cac16b3c600a0c9c6991d0ba67":[1,0,425,13],
-"classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8":[1,0,425,29],
-"classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74":[1,0,425,28],
-"classDramaSequence.html#afa53cbb53d0c16828693b58860f47621":[1,0,425,9],
-"classDramaSetup.html":[1,0,426]
+"classDramaSequence.html#a926b9c4c4ca7851d5d2086609166f10b":[1,0,425,3]
 };

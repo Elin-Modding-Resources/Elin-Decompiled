@@ -9,6 +9,7 @@ var classContentConfigGame =
     [ "sliderBackupNum", "classContentConfigGame.html#aeacba678b7946abd3afd3071c38aa60b", null ],
     [ "sliderWait", "classContentConfigGame.html#a2c7079a8b269f6cc41bc8a41449a6d7d", null ],
     [ "toggleAdvanceMenu", "classContentConfigGame.html#aa84d1a4d8573b468926bcb5e2bce0919", null ],
+    [ "toggleAntiSpider", "classContentConfigGame.html#afd62dad3bbc94c6d1b4995d7c5419011", null ],
     [ "toggleAutoBackup", "classContentConfigGame.html#a50328ca664090a34dec47b58ba56e476", null ],
     [ "toggleConfirmExit", "classContentConfigGame.html#a4634a5c025497cbcfed4613226153383", null ],
     [ "toggleConfirmGive", "classContentConfigGame.html#adcf40320de56385bf7c243935e35de4f", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.97 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.99</span>
    </div>
   </td>
  </tr>
@@ -108,32 +108,32 @@ $(document).ready(function(){initNavTree('Dice_8cs_source.html',''); initResizab
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">   15</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Roll</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a> = 0, <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a> = <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">int</span> num2 = 1;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">int</span> a = 1;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">int</span> num2 = 0;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordtype">int</span> num4 = <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(78);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            flag = num4 &gt;= 0;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            num2 = 1 + Mathf.Abs(num4 / 100) + ((Mathf.Abs(num4 % 100) &gt; <a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(100)) ? 1 : 0);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="classDice.html#a24642e26e06e5eb0d5f953eefff94357">card</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(78);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            flag = num3 &gt;= 0;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            a = 1 + Mathf.Abs(num3 / 100) + ((Mathf.Abs(num3 % 100) &gt; <a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(100)) ? 1 : 0);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Mathf.Min(a, 20); i++)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordtype">int</span> num5 = <a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (i == 0 || (flag &amp;&amp; num5 &gt; num3) || (!flag &amp;&amp; num5 &lt; num3))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordtype">int</span> num4 = <a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (i == 0 || (flag &amp;&amp; num4 &gt; num2) || (!flag &amp;&amp; num4 &lt; num2))</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                num3 = num5;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                num2 = num4;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> num3;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> num2;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classDice.html#a68e3451284a714cfcb18b58aae96095c">Roll</a>()</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordtype">int</span> num6 = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordtype">int</span> num5 = 0;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classDice.html#a4b9e90500421a1143633da2a44ae7804">num</a>; j++)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                num6 += <a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(<a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>) + 1;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                num5 += <a class="code hl_function" href="classDice.html#abb71f28b7a36ecf8683a858dac37daa5">rnd</a>(<a class="code hl_variable" href="classDice.html#a7cf126ff6fadde1647253181bad02a2c">sides</a>) + 1;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> num6 + <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> num5 + <a class="code hl_variable" href="classDice.html#a14f9bc3b46c5df08322e1cce4ec357d1">bonus</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>

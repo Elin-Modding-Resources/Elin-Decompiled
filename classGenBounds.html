@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.97 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.99</span>
    </div>
   </td>
  </tr>
@@ -119,8 +119,8 @@ Inheritance diagram for GenBounds:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af25058aec70f18f04698c0425d977cdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a> (<a class="el" href="classBiomeProfile_1_1Tile.html">BiomeProfile.Tile</a> t, int <a class="el" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, int z)</td></tr>
 <tr class="separator:af25058aec70f18f04698c0425d977cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add6f8c9d43aa5da0adffb03135318bdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenBounds.html#add6f8c9d43aa5da0adffb03135318bdc">SetBlock</a> (<a class="el" href="classBiomeProfile_1_1Tile.html">BiomeProfile.Tile</a> t, int <a class="el" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, int z)</td></tr>
-<tr class="separator:add6f8c9d43aa5da0adffb03135318bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3900bb7ca79c125ccc73f114f014c003"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a> (<a class="el" href="classBiomeProfile_1_1Tile.html">BiomeProfile.Tile</a> t, int <a class="el" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, int z, int idMat=-1)</td></tr>
+<tr class="separator:a3900bb7ca79c125ccc73f114f014c003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeee2c378d9484c36a2fca2c49f89f44c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenBounds.html#aeee2c378d9484c36a2fca2c49f89f44c">SetFloor</a> (int <a class="el" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, int z, int idMat, int idFloor, int direction=0)</td></tr>
 <tr class="separator:aeee2c378d9484c36a2fca2c49f89f44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47c04dbce161e0b866a954888a2bb061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenBounds.html#a47c04dbce161e0b866a954888a2bb061">SetBlock</a> (int <a class="el" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, int z, int idMat, int idBlock, int direction=0)</td></tr>
@@ -658,8 +658,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="add6f8c9d43aa5da0adffb03135318bdc" name="add6f8c9d43aa5da0adffb03135318bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add6f8c9d43aa5da0adffb03135318bdc">&#9670;&#160;</a></span>SetBlock() <span class="overload">[1/2]</span></h2>
+<a id="a3900bb7ca79c125ccc73f114f014c003" name="a3900bb7ca79c125ccc73f114f014c003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3900bb7ca79c125ccc73f114f014c003">&#9670;&#160;</a></span>SetBlock() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -683,7 +683,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idMat</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -701,18 +707,18 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00043">43</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
 <div class="line"><span class="lineno">   45</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_function" href="classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943">IsSub</a>(t, <a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z);</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="classGenBounds.html#add6f8c9d43aa5da0adffb03135318bdc">SetBlock</a>(<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z, flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7">matSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225">mat</a>, flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">idSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81">id</a>);</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_variable" href="classGenBounds.html#a6b1ebb8ff2af742f37e086e7daf70486">x</a>, z, (idMat != -1) ? idMat : (flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7">matSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225">mat</a>), flag ? t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">idSub</a> : t.<a class="code hl_variable" href="classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81">id</a>);</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
 <div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a6cc5ce0d0bfd86581f4a8679c6955225"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225">BiomeProfile.Tile.mat</a></div><div class="ttdeci">int mat</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00184">BiomeProfile.cs:184</a></div></div>
 <div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a762961914009f2c293c711c603475360"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360">BiomeProfile.Tile.idSub</a></div><div class="ttdeci">int idSub</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00187">BiomeProfile.cs:187</a></div></div>
 <div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a9e84d5f037423d8aead3414947faec81"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81">BiomeProfile.Tile.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00181">BiomeProfile.cs:181</a></div></div>
 <div class="ttc" id="aclassBiomeProfile_1_1Tile_html_a9f25f93e246ab2df8d439b24055ee0f7"><div class="ttname"><a href="classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7">BiomeProfile.Tile.matSub</a></div><div class="ttdeci">int matSub</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00190">BiomeProfile.cs:190</a></div></div>
-<div class="ttc" id="aclassGenBounds_html_add6f8c9d43aa5da0adffb03135318bdc"><div class="ttname"><a href="classGenBounds.html#add6f8c9d43aa5da0adffb03135318bdc">GenBounds.SetBlock</a></div><div class="ttdeci">void SetBlock(BiomeProfile.Tile t, int x, int z)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00043">GenBounds.cs:43</a></div></div>
+<div class="ttc" id="aclassGenBounds_html_a3900bb7ca79c125ccc73f114f014c003"><div class="ttname"><a href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">GenBounds.SetBlock</a></div><div class="ttdeci">void SetBlock(BiomeProfile.Tile t, int x, int z, int idMat=-1)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00043">GenBounds.cs:43</a></div></div>
 <div class="ttc" id="aclassGenBounds_html_af2b2ee3b0222ce1d895b77171a9ce943"><div class="ttname"><a href="classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943">GenBounds.IsSub</a></div><div class="ttdeci">bool IsSub(BiomeProfile.Tile g, int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="GenBounds_8cs_source.html#l00025">GenBounds.cs:25</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="GenBounds_8cs_source.html#l00025">IsSub()</a>, <a class="el" href="GenBounds_8cs_source.html#l00043">SetBlock()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00013">x</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00339">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00414">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00471">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00043">SetBlock()</a>, and <a class="el" href="MapGen_8cs_source.html#l00667">MapGen.TryMakeRiver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00343">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00418">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00475">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00043">SetBlock()</a>, and <a class="el" href="MapGen_8cs_source.html#l00671">MapGen.TryMakeRiver()</a>.</p>
 
 </div>
 </div>
@@ -830,7 +836,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="GenBounds_8cs_source.html#l00025">IsSub()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rnd()</a>, <a class="el" href="GenBounds_8cs_source.html#l00037">SetFloor()</a>, and <a class="el" href="GenBounds_8cs_source.html#l00013">x</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00339">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00414">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00471">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00010">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00037">SetFloor()</a>, and <a class="el" href="MapGen_8cs_source.html#l00667">MapGen.TryMakeRiver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00343">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00418">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00475">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00010">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00037">SetFloor()</a>, and <a class="el" href="MapGen_8cs_source.html#l00671">MapGen.TryMakeRiver()</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1045,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00007">7</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00123">Create()</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00101">BaseMapGen.Generate()</a>, <a class="el" href="MapGen_8cs_source.html#l00010">MapGen.GenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00137">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00066">IsEmpty()</a>, <a class="el" href="GenBounds_8cs_source.html#l00094">ListEmptyPoint()</a>, <a class="el" href="MapGen_8cs_source.html#l00528">MapGen.ModifyHeight()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00010">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00113">GenRoom.OnPopulate()</a>, <a class="el" href="MapGen_8cs_source.html#l00721">MapGen.Populate()</a>, <a class="el" href="GenBounds_8cs_source.html#l00057">SetBlock()</a>, <a class="el" href="GenBounds_8cs_source.html#l00049">SetFloor()</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00091">BaseMapGen.SetSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GenBounds_8cs_source.html#l00123">Create()</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00101">BaseMapGen.Generate()</a>, <a class="el" href="MapGen_8cs_source.html#l00010">MapGen.GenerateTerrain()</a>, <a class="el" href="GenBounds_8cs_source.html#l00137">GetBounds()</a>, <a class="el" href="GenBounds_8cs_source.html#l00066">IsEmpty()</a>, <a class="el" href="GenBounds_8cs_source.html#l00094">ListEmptyPoint()</a>, <a class="el" href="MapGen_8cs_source.html#l00532">MapGen.ModifyHeight()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00010">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00113">GenRoom.OnPopulate()</a>, <a class="el" href="MapGen_8cs_source.html#l00725">MapGen.Populate()</a>, <a class="el" href="GenBounds_8cs_source.html#l00057">SetBlock()</a>, <a class="el" href="GenBounds_8cs_source.html#l00049">SetFloor()</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00091">BaseMapGen.SetSize()</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1081,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GenBounds_8cs_source.html#l00011">11</a> of file <a class="el" href="GenBounds_8cs_source.html">GenBounds.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00010">MapGen.GenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00023">GenRoom.Init()</a>, <a class="el" href="MapGen_8cs_source.html#l00339">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00414">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00471">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00528">MapGen.ModifyHeight()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00010">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00113">GenRoom.OnPopulate()</a>, <a class="el" href="GenRoomMonsterHouse_8cs_source.html#l00003">GenRoomMonsterHouse.OnPopulate()</a>, <a class="el" href="MapGen_8cs_source.html#l00721">MapGen.Populate()</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00091">BaseMapGen.SetSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MapGen_8cs_source.html#l00010">MapGen.GenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00023">GenRoom.Init()</a>, <a class="el" href="MapGen_8cs_source.html#l00343">MapGen.MakeNeighbor()</a>, <a class="el" href="MapGen_8cs_source.html#l00418">MapGen.MakeNeighbor_old()</a>, <a class="el" href="MapGen_8cs_source.html#l00475">MapGen.MakeRoad()</a>, <a class="el" href="MapGen_8cs_source.html#l00532">MapGen.ModifyHeight()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00011">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="MapGenRegion_8cs_source.html#l00010">MapGenRegion.OnGenerateTerrain()</a>, <a class="el" href="GenRoom_8cs_source.html#l00113">GenRoom.OnPopulate()</a>, <a class="el" href="GenRoomMonsterHouse_8cs_source.html#l00003">GenRoomMonsterHouse.OnPopulate()</a>, <a class="el" href="MapGen_8cs_source.html#l00725">MapGen.Populate()</a>, and <a class="el" href="BaseMapGen_8cs_source.html#l00091">BaseMapGen.SetSize()</a>.</p>
 
 </div>
 </div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.97 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.99</span>
    </div>
   </td>
  </tr>
@@ -158,6 +158,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a3696a08c9b43124ddbb84ae05d367841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56980908c63bf9df8a4e3982561461b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGamePrincipal.html#a56980908c63bf9df8a4e3982561461b6">petFeatExp</a></td></tr>
 <tr class="separator:a56980908c63bf9df8a4e3982561461b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c8848d805f8e61cf7db970faac71f27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27">disableVoidBlessing</a></td></tr>
+<tr class="separator:a5c8848d805f8e61cf7db970faac71f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e6c90c15b4c7b80ec396812a3d7c03a"><td class="memItemLeft" align="right" valign="top">HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a> = new HashSet&lt;string&gt;()</td></tr>
 <tr class="separator:a9e6c90c15b4c7b80ec396812a3d7c03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -288,73 +290,87 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00157">157</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
-<div class="line"><span class="lineno">  159</span>        List&lt;Item&gt; list = <span class="keyword">new</span> List&lt;Item&gt;();</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(1, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;disableManualSave&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a56258ebb87dc44289acfb56409ec3d48">disableManualSave</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  161</span>        {</div>
-<div class="line"><span class="lineno">  162</span>            <a class="code hl_variable" href="classGamePrincipal.html#a56258ebb87dc44289acfb56409ec3d48">disableManualSave</a> = a;</div>
-<div class="line"><span class="lineno">  163</span>        });</div>
-<div class="line"><span class="lineno">  164</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(1, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;disableDeathPenaltyProtection&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224">disableDeathPenaltyProtection</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  165</span>        {</div>
-<div class="line"><span class="lineno">  166</span>            <a class="code hl_variable" href="classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224">disableDeathPenaltyProtection</a> = a;</div>
-<div class="line"><span class="lineno">  167</span>        });</div>
-<div class="line"><span class="lineno">  168</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(1, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;disableUsermapBenefit&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">disableUsermapBenefit</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  169</span>        {</div>
-<div class="line"><span class="lineno">  170</span>            <a class="code hl_variable" href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">disableUsermapBenefit</a> = a;</div>
-<div class="line"><span class="lineno">  171</span>        });</div>
-<div class="line"><span class="lineno">  172</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(3, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;permadeath&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">permadeath</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  173</span>        {</div>
-<div class="line"><span class="lineno">  174</span>            <a class="code hl_variable" href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">permadeath</a> = a;</div>
-<div class="line"><span class="lineno">  175</span>        });</div>
-<div class="line"><span class="lineno">  176</span>        AddSlider(2, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Workaround, <span class="stringliteral">&quot;dropRate&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841">dropRate</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  177</span>        {</div>
-<div class="line"><span class="lineno">  178</span>            <a class="code hl_variable" href="classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841">dropRate</a> = a;</div>
-<div class="line"><span class="lineno">  179</span>        }, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1">dropRateMtp</a>, delegate(<span class="keywordtype">int</span> a)</div>
+<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00160">160</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
+<div class="line"><span class="lineno">  162</span>        List&lt;Item&gt; list = <span class="keyword">new</span> List&lt;Item&gt;();</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(1, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;disableManualSave&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a56258ebb87dc44289acfb56409ec3d48">disableManualSave</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <a class="code hl_variable" href="classGamePrincipal.html#a56258ebb87dc44289acfb56409ec3d48">disableManualSave</a> = a;</div>
+<div class="line"><span class="lineno">  166</span>        });</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(1, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;disableDeathPenaltyProtection&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224">disableDeathPenaltyProtection</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_variable" href="classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224">disableDeathPenaltyProtection</a> = a;</div>
+<div class="line"><span class="lineno">  170</span>        });</div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(1, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;disableUsermapBenefit&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">disableUsermapBenefit</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            <a class="code hl_variable" href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">disableUsermapBenefit</a> = a;</div>
+<div class="line"><span class="lineno">  174</span>        });</div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(3, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath, <span class="stringliteral">&quot;permadeath&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">permadeath</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_variable" href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">permadeath</a> = a;</div>
+<div class="line"><span class="lineno">  178</span>        });</div>
+<div class="line"><span class="lineno">  179</span>        <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(2, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Workaround, <span class="stringliteral">&quot;disableVoidBlessing&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27">disableVoidBlessing</a>, delegate(<span class="keywordtype">bool</span> a)</div>
 <div class="line"><span class="lineno">  180</span>        {</div>
-<div class="line"><span class="lineno">  181</span>            <a class="code hl_variable" href="classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1">dropRateMtp</a> = a;</div>
-<div class="line"><span class="lineno">  182</span>        }, (<span class="keywordtype">int</span> a) =&gt; 0.5f + 0.5f * (<span class="keywordtype">float</span>)a + <span class="stringliteral">&quot;x&quot;</span>, 5);</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(<span class="keywordtype">int</span> grade, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a> type, <span class="keywordtype">string</span> <span class="keywordtype">id</span>, Func&lt;bool&gt; _get, Action&lt;bool&gt; _set)</div>
-<div class="line"><span class="lineno">  185</span>        {</div>
-<div class="line"><span class="lineno">  186</span>            list.Add(<span class="keyword">new</span> Item</div>
-<div class="line"><span class="lineno">  187</span>            {</div>
-<div class="line"><span class="lineno">  188</span>                type = type,</div>
-<div class="line"><span class="lineno">  189</span>                grade = grade,</div>
-<div class="line"><span class="lineno">  190</span>                <span class="keywordtype">id</span> = <a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>,</div>
-<div class="line"><span class="lineno">  191</span>                _get = _get,</div>
-<div class="line"><span class="lineno">  192</span>                _set = _set</div>
-<div class="line"><span class="lineno">  193</span>            });</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordtype">void</span> AddSlider(<span class="keywordtype">int</span> grade, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a> type, <span class="keywordtype">string</span> <span class="keywordtype">id</span>, Func&lt;bool&gt; _get, Action&lt;bool&gt; _set, Func&lt;int&gt; _getInt, Action&lt;int&gt; _setInt, Func&lt;int, string&gt; funcText, <span class="keywordtype">int</span> max)</div>
-<div class="line"><span class="lineno">  196</span>        {</div>
-<div class="line"><span class="lineno">  197</span>            list.Add(<span class="keyword">new</span> ItemSlider</div>
-<div class="line"><span class="lineno">  198</span>            {</div>
-<div class="line"><span class="lineno">  199</span>                type = type,</div>
-<div class="line"><span class="lineno">  200</span>                grade = grade,</div>
-<div class="line"><span class="lineno">  201</span>                <span class="keywordtype">id</span> = <a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>,</div>
-<div class="line"><span class="lineno">  202</span>                _get = _get,</div>
-<div class="line"><span class="lineno">  203</span>                _set = _set,</div>
-<div class="line"><span class="lineno">  204</span>                _getInt = _getInt,</div>
-<div class="line"><span class="lineno">  205</span>                _setInt = _setInt,</div>
-<div class="line"><span class="lineno">  206</span>                funcText = funcText,</div>
-<div class="line"><span class="lineno">  207</span>                max = max</div>
-<div class="line"><span class="lineno">  208</span>            });</div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span>    }</div>
+<div class="line"><span class="lineno">  181</span>            <a class="code hl_variable" href="classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27">disableVoidBlessing</a> = a;</div>
+<div class="line"><span class="lineno">  182</span>        });</div>
+<div class="line"><span class="lineno">  183</span>        AddSlider(2, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Workaround, <span class="stringliteral">&quot;dropRate&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841">dropRate</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  184</span>        {</div>
+<div class="line"><span class="lineno">  185</span>            <a class="code hl_variable" href="classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841">dropRate</a> = a;</div>
+<div class="line"><span class="lineno">  186</span>        }, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1">dropRateMtp</a>, delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            <a class="code hl_variable" href="classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1">dropRateMtp</a> = a;</div>
+<div class="line"><span class="lineno">  189</span>        }, (<span class="keywordtype">int</span> a) =&gt; 0.5f + 0.5f * (<span class="keywordtype">float</span>)a + <span class="stringliteral">&quot;x&quot;</span>, 5);</div>
+<div class="line"><span class="lineno">  190</span>        AddSlider(2, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Workaround, <span class="stringliteral">&quot;petFeatExp&quot;</span>, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a56980908c63bf9df8a4e3982561461b6">petFeatExp</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            <a class="code hl_variable" href="classGamePrincipal.html#a56980908c63bf9df8a4e3982561461b6">petFeatExp</a> = a;</div>
+<div class="line"><span class="lineno">  193</span>        }, () =&gt; <a class="code hl_variable" href="classGamePrincipal.html#a2be217677d0059e921b6ae7a07a697a5">petFeatExpMtp</a>, delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  194</span>        {</div>
+<div class="line"><span class="lineno">  195</span>            <a class="code hl_variable" href="classGamePrincipal.html#a2be217677d0059e921b6ae7a07a697a5">petFeatExpMtp</a> = a;</div>
+<div class="line"><span class="lineno">  196</span>        }, (<span class="keywordtype">int</span> a) =&gt; 0.5f + 0.5f * (<span class="keywordtype">float</span>)a + <span class="stringliteral">&quot;x&quot;</span>, 3);</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a>(<span class="keywordtype">int</span> grade, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a> type, <span class="keywordtype">string</span> <span class="keywordtype">id</span>, Func&lt;bool&gt; _get, Action&lt;bool&gt; _set)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            list.Add(<span class="keyword">new</span> Item</div>
+<div class="line"><span class="lineno">  201</span>            {</div>
+<div class="line"><span class="lineno">  202</span>                type = type,</div>
+<div class="line"><span class="lineno">  203</span>                grade = grade,</div>
+<div class="line"><span class="lineno">  204</span>                <span class="keywordtype">id</span> = <a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>,</div>
+<div class="line"><span class="lineno">  205</span>                _get = _get,</div>
+<div class="line"><span class="lineno">  206</span>                _set = _set</div>
+<div class="line"><span class="lineno">  207</span>            });</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordtype">void</span> AddSlider(<span class="keywordtype">int</span> grade, <a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a> type, <span class="keywordtype">string</span> <span class="keywordtype">id</span>, Func&lt;bool&gt; _get, Action&lt;bool&gt; _set, Func&lt;int&gt; _getInt, Action&lt;int&gt; _setInt, Func&lt;int, string&gt; funcText, <span class="keywordtype">int</span> max)</div>
+<div class="line"><span class="lineno">  210</span>        {</div>
+<div class="line"><span class="lineno">  211</span>            list.Add(<span class="keyword">new</span> ItemSlider</div>
+<div class="line"><span class="lineno">  212</span>            {</div>
+<div class="line"><span class="lineno">  213</span>                type = type,</div>
+<div class="line"><span class="lineno">  214</span>                grade = grade,</div>
+<div class="line"><span class="lineno">  215</span>                <span class="keywordtype">id</span> = <a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>,</div>
+<div class="line"><span class="lineno">  216</span>                _get = _get,</div>
+<div class="line"><span class="lineno">  217</span>                _set = _set,</div>
+<div class="line"><span class="lineno">  218</span>                _getInt = _getInt,</div>
+<div class="line"><span class="lineno">  219</span>                _setInt = _setInt,</div>
+<div class="line"><span class="lineno">  220</span>                funcText = funcText,</div>
+<div class="line"><span class="lineno">  221</span>                max = max</div>
+<div class="line"><span class="lineno">  222</span>            });</div>
+<div class="line"><span class="lineno">  223</span>        }</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
 <div class="ttc" id="aUIBook_8cs_html_afffba82c830716c9f14305e33e94b4d2"><div class="ttname"><a href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add</a></div><div class="ttdeci">list. Add(item3)</div></div>
 <div class="ttc" id="aclassGamePrincipal_html_a0a68bbd1b3d3d6c7e984284c25401aef"><div class="ttname"><a href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">GamePrincipal.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00111">GamePrincipal.cs:111</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_a2be217677d0059e921b6ae7a07a697a5"><div class="ttname"><a href="classGamePrincipal.html#a2be217677d0059e921b6ae7a07a697a5">GamePrincipal.petFeatExpMtp</a></div><div class="ttdeci">int petFeatExpMtp</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00120">GamePrincipal.cs:120</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_a3696a08c9b43124ddbb84ae05d367841"><div class="ttname"><a href="classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841">GamePrincipal.dropRate</a></div><div class="ttdeci">bool dropRate</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00147">GamePrincipal.cs:147</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_a56258ebb87dc44289acfb56409ec3d48"><div class="ttname"><a href="classGamePrincipal.html#a56258ebb87dc44289acfb56409ec3d48">GamePrincipal.disableManualSave</a></div><div class="ttdeci">bool disableManualSave</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00135">GamePrincipal.cs:135</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_a56980908c63bf9df8a4e3982561461b6"><div class="ttname"><a href="classGamePrincipal.html#a56980908c63bf9df8a4e3982561461b6">GamePrincipal.petFeatExp</a></div><div class="ttdeci">bool petFeatExp</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00150">GamePrincipal.cs:150</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_a5c8848d805f8e61cf7db970faac71f27"><div class="ttname"><a href="classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27">GamePrincipal.disableVoidBlessing</a></div><div class="ttdeci">bool disableVoidBlessing</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00153">GamePrincipal.cs:153</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_a6ca40d57c29fbb485f6cc61af0fc5fa9"><div class="ttname"><a href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">GamePrincipal.permadeath</a></div><div class="ttdeci">bool permadeath</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00138">GamePrincipal.cs:138</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_aaa0084e8e866cc69c9c2e774c37a24a2"><div class="ttname"><a href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">GamePrincipal.disableUsermapBenefit</a></div><div class="ttdeci">bool disableUsermapBenefit</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00144">GamePrincipal.cs:144</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_aadd8a550e2256e3893837c4d570a2b12"><div class="ttname"><a href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">GamePrincipal.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00008">GamePrincipal.cs:9</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_afa4f16908f61111eda9ea80a758a2fe1"><div class="ttname"><a href="classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1">GamePrincipal.dropRateMtp</a></div><div class="ttdeci">int dropRateMtp</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00117">GamePrincipal.cs:117</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_afca6b1c14e3686412c9e51f5c7cc2224"><div class="ttname"><a href="classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224">GamePrincipal.disableDeathPenaltyProtection</a></div><div class="ttdeci">bool disableDeathPenaltyProtection</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00126">GamePrincipal.cs:126</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00126">disableDeathPenaltyProtection</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00135">disableManualSave</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00144">disableUsermapBenefit</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00147">dropRate</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00117">dropRateMtp</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00111">id</a>, and <a class="el" href="GamePrincipal_8cs_source.html#l00138">permadeath</a>.</p>
+<p class="reference">References <a class="el" href="UIBook_8cs.html#afffba82c830716c9f14305e33e94b4d2">Add()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00126">disableDeathPenaltyProtection</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00135">disableManualSave</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00144">disableUsermapBenefit</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00153">disableVoidBlessing</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00147">dropRate</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00117">dropRateMtp</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00111">id</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00138">permadeath</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00150">petFeatExp</a>, and <a class="el" href="GamePrincipal_8cs_source.html#l00120">petFeatExpMtp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00213">LayerWorldSetting.Apply()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00135">LayerWorldSetting.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00216">LayerWorldSetting.Apply()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00135">LayerWorldSetting.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -373,7 +389,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00126">126</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, and <a class="el" href="Chara_8cs_source.html#l04595">Chara.Revive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="Chara_8cs_source.html#l04639">Chara.Revive()</a>.</p>
 
 </div>
 </div>
@@ -391,7 +407,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00135">135</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, and <a class="el" href="HotItemContext_8cs_source.html#l00067">HotItemContext.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="HotItemContext_8cs_source.html#l00067">HotItemContext.Show()</a>.</p>
 
 </div>
 </div>
@@ -409,7 +425,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00144">144</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l01613">Map.DropBlockComponent()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, <a class="el" href="ActEffect_8cs_source.html#l02164">ActEffect.LoveMiracle()</a>, <a class="el" href="Map_8cs_source.html#l01654">Map.MineBlock()</a>, <a class="el" href="Map_8cs_source.html#l01826">Map.MineObj()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00243">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00507">GrowSystem.PopMineObj()</a>, <a class="el" href="Card_8cs_source.html#l04576">Card.SpawnLoot()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00564">GrowSystem.TryPopSeed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Map_8cs_source.html#l01614">Map.DropBlockComponent()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, <a class="el" href="ActEffect_8cs_source.html#l02164">ActEffect.LoveMiracle()</a>, <a class="el" href="Map_8cs_source.html#l01655">Map.MineBlock()</a>, <a class="el" href="Map_8cs_source.html#l01827">Map.MineObj()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00243">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00507">GrowSystem.PopMineObj()</a>, <a class="el" href="Card_8cs_source.html#l04576">Card.SpawnLoot()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00564">GrowSystem.TryPopSeed()</a>.</p>
+
+</div>
+</div>
+<a id="a5c8848d805f8e61cf7db970faac71f27" name="a5c8848d805f8e61cf7db970faac71f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8848d805f8e61cf7db970faac71f27">&#9670;&#160;</a></span>disableVoidBlessing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GamePrincipal.disableVoidBlessing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00153">153</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="Chara_8cs_source.html#l01614">Chara.RefreshSpeed()</a>.</p>
 
 </div>
 </div>
@@ -427,7 +461,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00147">147</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, and <a class="el" href="Card_8cs_source.html#l04576">Card.SpawnLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="Card_8cs_source.html#l04576">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +479,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00117">117</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, and <a class="el" href="Card_8cs_source.html#l04576">Card.SpawnLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="Card_8cs_source.html#l04576">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>
@@ -463,7 +497,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00111">111</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00122">LayerWorldSetting.RefreshTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00122">LayerWorldSetting.RefreshTemplate()</a>.</p>
 
 </div>
 </div>
@@ -511,9 +545,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00153">153</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00156">156</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00213">LayerWorldSetting.Apply()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00068">GamePrincipal.Item.IsSealed()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00076">LayerWorldSetting.OnInit()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02007">CoreDebug.ResetPrincipalSeals()</a>, and <a class="el" href="GamePrincipal_8cs_source.html#l00053">GamePrincipal.Item.WasSealed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00216">LayerWorldSetting.Apply()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00068">GamePrincipal.Item.IsSealed()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00076">LayerWorldSetting.OnInit()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02007">CoreDebug.ResetPrincipalSeals()</a>, and <a class="el" href="GamePrincipal_8cs_source.html#l00053">GamePrincipal.Item.WasSealed()</a>.</p>
 
 </div>
 </div>
@@ -547,7 +581,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00138">138</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00213">LayerWorldSetting.Apply()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00157">ListItems()</a>, and <a class="el" href="Scene_8cs_source.html#l00354">Scene.OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00216">LayerWorldSetting.Apply()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>, and <a class="el" href="Scene_8cs_source.html#l00354">Scene.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -565,7 +599,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00150">150</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02767">Card.AddExp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02767">Card.AddExp()</a>, and <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>.</p>
 
 </div>
 </div>
@@ -582,6 +616,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00120">120</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GamePrincipal_8cs_source.html#l00160">ListItems()</a>.</p>
 
 </div>
 </div>
@@ -640,7 +676,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00155">155</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GamePrincipal_8cs_source.html#l00158">158</a> of file <a class="el" href="GamePrincipal_8cs_source.html">GamePrincipal.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00135">LayerWorldSetting.Refresh()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00122">LayerWorldSetting.RefreshTemplate()</a>.</p>
 

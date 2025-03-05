@@ -7,6 +7,7 @@ var classCoreConfig_1_1GameConfig =
     [ "altUI", "classCoreConfig_1_1GameConfig.html#a389b48f450540295cb5e242822b0a915", null ],
     [ "alwaysUpdateRecipe", "classCoreConfig_1_1GameConfig.html#a53021513933992dde2483faca222c75f", null ],
     [ "angleMargin", "classCoreConfig_1_1GameConfig.html#aa77e48a52c60bfe22633bad6ac70ca10", null ],
+    [ "antiSpider", "classCoreConfig_1_1GameConfig.html#a69b2f876fc1eb5805ddd8edf8fbd309d", null ],
     [ "autoBackup", "classCoreConfig_1_1GameConfig.html#a781b7c9812ca529c0f14ae2c77b3f864", null ],
     [ "autopause", "classCoreConfig_1_1GameConfig.html#a78401f152b95a05061fc85ed99af131a", null ],
     [ "autoSave", "classCoreConfig_1_1GameConfig.html#a9e0212a8ef049cae899df09c3b9c47de", null ],
