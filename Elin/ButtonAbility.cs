@@ -32,6 +32,8 @@ public class ButtonAbility : UIButton, IMouseHint
 
 	public static bool usedMouseKey;
 
+	public static bool lockUse;
+
 	public void SetAct(Chara _chara, Element e)
 	{
 		source = e.source;
@@ -126,6 +128,10 @@ public class ButtonAbility : UIButton, IMouseHint
 
 	public static bool TryUse(Act act, Card tg = null, Point pos = null, Card catalyst = null, bool first = true, bool mouse = true)
 	{
+		if (lockUse && first)
+		{
+			return false;
+		}
 		bool flag = false;
 		if (tg == null)
 		{
@@ -137,10 +143,8 @@ public class ButtonAbility : UIButton, IMouseHint
 		}
 		if (first)
 		{
+			lockUse = true;
 			hotkeyAct = act;
-		}
-		if (first)
-		{
 			if (EInput.GetHotkey() != -1)
 			{
 				mouse = false;
@@ -186,6 +190,7 @@ public class ButtonAbility : UIButton, IMouseHint
 				return false;
 			}
 		}
+		lockUse = false;
 		if (flag && SpecialHoldAction(act))
 		{
 			EClass.player.EndTurn();

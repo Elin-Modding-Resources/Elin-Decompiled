@@ -33,6 +33,10 @@ public class AI_PracticeDummy : AIAct
 			},
 			onProgress = delegate(Progress_Custom p)
 			{
+				if (p.progress % 10 == 0)
+				{
+					target.animeCounter = 0.01f;
+				}
 				if (throwItem != null)
 				{
 					if (!ActThrow.CanThrow(EClass.pc, throwItem, target))

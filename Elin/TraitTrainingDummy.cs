@@ -1,5 +1,7 @@
 public class TraitTrainingDummy : Trait
 {
+	public override TileMode tileMode => TileMode.SignalAnime;
+
 	public override bool CanBeAttacked => true;
 
 	public override bool IdleUse(Chara c, int dist)

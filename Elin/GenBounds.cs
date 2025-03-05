@@ -40,10 +40,10 @@ public class GenBounds : EClass
 		SetFloor(x, z, flag ? t.matSub : t.mat, flag ? t.idSub : t.id, EClass.rnd(EClass.rnd(8) + 1));
 	}
 
-	public void SetBlock(BiomeProfile.Tile t, int x, int z)
+	public void SetBlock(BiomeProfile.Tile t, int x, int z, int idMat = -1)
 	{
 		bool flag = IsSub(t, x, z);
-		SetBlock(x, z, flag ? t.matSub : t.mat, flag ? t.idSub : t.id);
+		SetBlock(x, z, (idMat != -1) ? idMat : (flag ? t.matSub : t.mat), flag ? t.idSub : t.id);
 	}
 
 	public void SetFloor(int x, int z, int idMat, int idFloor, int direction = 0)

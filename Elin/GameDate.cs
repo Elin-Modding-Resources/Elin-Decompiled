@@ -143,6 +143,11 @@ public class GameDate : Date
 		base.day++;
 		base.min = 0;
 		EClass.player.stats.days++;
+		EClass.player.questRerollCost -= 3;
+		if (EClass.player.questRerollCost < 0)
+		{
+			EClass.player.questRerollCost = 0;
+		}
 		if (EClass.player.stats.days >= 90)
 		{
 			Tutorial.Reserve("death_penalty");

@@ -7,6 +7,8 @@ public class ContentConfigGame : ContentConfig
 
 	public UIButton toggleOffhand;
 
+	public UIButton toggleAntiSpider;
+
 	public UIButton toggleShowInvBG;
 
 	public UIButton toggleConfirmGive;
@@ -150,6 +152,10 @@ public class ContentConfigGame : ContentConfig
 		toggleSortEach.SetToggle(base.config.game.sortEach, delegate(bool on)
 		{
 			base.config.game.sortEach = on;
+		});
+		toggleAntiSpider.SetToggle(base.config.game.antiSpider, delegate(bool on)
+		{
+			base.config.game.antiSpider = on;
 		});
 		toggleOffhand.SetToggle(base.config.game.showOffhand, delegate(bool on)
 		{

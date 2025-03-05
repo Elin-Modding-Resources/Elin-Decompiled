@@ -1458,7 +1458,7 @@ public class Thing : Card
 			{
 				p.tile = sourceCard._tiles[base.dir % sourceCard._tiles.Length] * ((!flipX) ? 1 : (-1));
 			}
-			if (animeCounter > 0f)
+			if (animeCounter > 0f && source.anime.Length != 0)
 			{
 				animeCounter += Time.deltaTime;
 				int num3 = (int)(animeCounter / (0.001f * (float)source.anime[1]));

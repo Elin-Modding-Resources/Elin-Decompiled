@@ -76,7 +76,7 @@ public class LayerWorldSetting : ELayer
 	public override void OnInit()
 	{
 		buttonEmbark.SetActive(IsEmbark);
-		buttonWorkaround.SetActive(!IsEmbark);
+		buttonWorkaround.SetActive(enable: true);
 		if (IsEmbark)
 		{
 			ELayer.game.principal.modified.Clear();
@@ -138,7 +138,7 @@ public class LayerWorldSetting : ELayer
 		transCustom.DestroyChildren();
 		List<GamePrincipal.Item> items = pp.ListItems();
 		AddCategory(GamePrincipal.Type.Oath);
-		if (!IsEmbark && ELayer.player.showWorkaround)
+		if (ELayer.player.showWorkaround)
 		{
 			AddCategory(GamePrincipal.Type.Workaround);
 		}
@@ -174,6 +174,9 @@ public class LayerWorldSetting : ELayer
 				b.icon.sprite = sprites[item.grade];
 				b.icon.SetNativeSize();
 				b.GetOrCreate<CanvasGroup>().alpha = (flag ? 0.5f : 1f);
+				string text = "pp_" + item.id + "_hint";
+				b.SetTooltipLang(text);
+				b.tooltip.enable = Lang.Has(text);
 				b.interactable = !flag;
 				b.SetToggle(item.Get(), delegate(bool a)
 				{

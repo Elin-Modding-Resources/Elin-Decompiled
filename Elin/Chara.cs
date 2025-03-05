@@ -690,7 +690,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override bool IsMultisize => sourceCard.multisize;
 
-	public override int MaxHP => Mathf.Max(1, ((base.END * 2 + base.STR + base.WIL / 2) * Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((IsPCFaction ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100);
+	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((IsPCFaction ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 100000000f);
 
 	public override int WeightLimit => (base.STR * 500 + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000;
 
@@ -1714,7 +1714,7 @@ public class Chara : Card, IPathfindWalker
 				info?.AddFix(EClass.player.lastEmptyAlly * 10 - 10, "exceedParty".lang());
 			}
 		}
-		else if (base.LV >= 1000)
+		else if (base.LV >= 1000 && !EClass.game.principal.disableVoidBlessing)
 		{
 			num += EClass.curve((base.LV - 900) / 100 * 10, 500, 100);
 			info?.AddFix(EClass.curve((base.LV - 900) / 100 * 10, 500, 100), "enemySpeedBuff".lang());
@@ -1814,16 +1814,14 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (base.c_idMainElement != 0)
 		{
-			elements.SetBase(base.c_idMainElement, 0);
-			elements.ModBase(EClass.sources.elements.alias[EClass.sources.elements.map[base.c_idMainElement].aliasRef].id, -20);
+			SetElements(base.c_idMainElement, remove: true);
 			base.c_idMainElement = 0;
 		}
 		if (id != 0)
 		{
-			SourceElement.Row row = EClass.sources.elements.map[id];
+			_ = EClass.sources.elements.map[id];
+			SetElements(id, remove: false);
 			base.c_idMainElement = id;
-			elements.ModBase(id, (v == 0) ? 10 : v);
-			elements.ModBase(EClass.sources.elements.alias[row.aliasRef].id, 20);
 			if (elemental)
 			{
 				base.isElemental = true;
@@ -1832,6 +1830,52 @@ public class Chara : Card, IPathfindWalker
 				base.c_lightColor = (byte)Mathf.Clamp(colorSprite.r * 3f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(colorSprite.g * 3f, 1f, 31f) * 32 + (byte)Mathf.Clamp(colorSprite.b * 3f, 1f, 31f);
 			}
 			_ability = null;
+		}
+		void SetElements(int idEle, bool remove)
+		{
+			elements.SetBase(idEle, (!remove) ? ((v == 0) ? 10 : v) : 0);
+			elements.ModBase(EClass.sources.elements.alias[EClass.sources.elements.map[idEle].aliasRef].id, remove ? (-20) : 20);
+			switch (idEle)
+			{
+			case 910:
+				elements.ModBase(951, remove ? 10 : (-10));
+				break;
+			case 911:
+				elements.ModBase(950, remove ? 10 : (-10));
+				break;
+			case 912:
+				elements.ModBase(953, remove ? 10 : (-10));
+				break;
+			case 913:
+				elements.ModBase(952, remove ? 10 : (-10));
+				break;
+			case 916:
+				elements.ModBase(960, remove ? 10 : (-10));
+				break;
+			case 919:
+				elements.ModBase(956, remove ? 10 : (-10));
+				break;
+			case 925:
+				elements.ModBase(962, remove ? 10 : (-10));
+				break;
+			case 922:
+				elements.ModBase(965, remove ? 10 : (-10));
+				break;
+			case 921:
+				elements.ModBase(971, remove ? 10 : (-10));
+				break;
+			case 926:
+				elements.ModBase(961, remove ? 10 : (-10));
+				break;
+			case 914:
+			case 915:
+			case 917:
+			case 918:
+			case 920:
+			case 923:
+			case 924:
+				break;
+			}
 		}
 	}
 
@@ -4983,7 +5027,7 @@ public class Chara : Card, IPathfindWalker
 				Msg.Say("abort_allyDead");
 			}
 		}
-		else if (EClass.game.config.autoCombat.abortOnEnemyDead && EClass.player.TryAbortAutoCombat())
+		else if (EClass.game.config.autoCombat.abortOnEnemyDead && EClass.player.TryAbortAutoCombat(immediate: false))
 		{
 			Msg.Say("abort_enemyDead");
 		}
@@ -5939,6 +5983,10 @@ public class Chara : Card, IPathfindWalker
 	public override CardRenderer _CreateRenderer()
 	{
 		CharaRenderer charaRenderer = new CharaRenderer();
+		if (race.id == "spider" && source.tiles.Length > 1)
+		{
+			base.idSkin = (EClass.core.config.game.antiSpider ? 1 : 0);
+		}
 		if (source.moveAnime == "hop")
 		{
 			charaRenderer.hopCurve = EClass.setting.render.anime.hop;

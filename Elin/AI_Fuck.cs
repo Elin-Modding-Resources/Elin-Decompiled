@@ -279,7 +279,18 @@ public class AI_Fuck : AIAct
 			SuccubusExp(chara, chara2);
 			SuccubusExp(chara2, chara);
 			chara2.ModAffinity(chara, flag ? 10 : (-5));
-			if (ntr && chara.HasElement(1239) && chara2.ExistsOnMap)
+			if (!ntr || !chara.HasElement(1239) || chara2.HasElement(1216))
+			{
+				break;
+			}
+			if (chara2.HasElement(758))
+			{
+				if (chara.ExistsOnMap)
+				{
+					chara.stamina.Mod(-1000000);
+				}
+			}
+			else if (chara2.ExistsOnMap)
 			{
 				chara2.stamina.Mod(-1000000);
 			}

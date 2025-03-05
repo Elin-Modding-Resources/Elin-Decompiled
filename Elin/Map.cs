@@ -1196,6 +1196,7 @@ public class Map : MapBounds, IPathfindGrid
 		Element element = Element.Create(ele);
 		List<Card> list = new List<Card>();
 		bool fire = ele == 910;
+		bool flag = ele == 911;
 		_ = fire;
 		List<Card> list2 = pos.ListCards();
 		if (fire && (pos.cell.IsSnowTile || pos.cell.IsTopWater))
@@ -1204,7 +1205,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		foreach (Card item in list2)
 		{
-			if (item.ResistLvFrom(ele) >= 3 || item.trait is TraitBlanket || (EClass.rnd(3) == 0 && !CanCook(item)) || (item.IsPCFaction && EClass.rnd(3) == 0))
+			if (item.ResistLvFrom(ele) >= 3 || item.trait is TraitBlanket || (EClass.rnd(3) == 0 && !CanCook(item)) || (item.IsPCFaction && EClass.rnd(3) == 0) || (fire && item.HasCondition<ConWet>()) || (flag && item.HasCondition<ConBurning>()))
 			{
 				continue;
 			}
@@ -1291,9 +1292,9 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				continue;
 			}
-			bool flag = CanCook(item3);
+			bool flag2 = CanCook(item3);
 			string text = "";
-			if (flag)
+			if (flag2)
 			{
 				List<SourceThing.Row> list3 = new List<SourceThing.Row>();
 				foreach (RecipeSource item4 in RecipeManager.list)
@@ -1323,7 +1324,7 @@ public class Map : MapBounds, IPathfindGrid
 					text = list3.RandomItem().id;
 				}
 			}
-			if (flag && !text.IsEmpty())
+			if (flag2 && !text.IsEmpty())
 			{
 				item3.GetRoot();
 				Thing thing2 = item3.Split(1);

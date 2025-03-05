@@ -157,17 +157,22 @@ public class TraitCrafter : Trait
 				{
 					return true;
 				}
+				continue;
 			}
-			else
+			if (text == "any")
 			{
-				if (text == "any" && !c.IsUnique && !c.IsImportant && !c.trait.CanOnlyCarry)
+				if (this is TraitDyeMaker && !c.category.GetRoot().tag.Contains("dye") && !c.category.tag.Contains("dye"))
+				{
+					return false;
+				}
+				if (!c.IsUnique && !c.IsImportant && !c.trait.CanOnlyCarry)
 				{
 					return true;
 				}
-				if (c.id == text || c.sourceCard._origin == text)
-				{
-					return true;
-				}
+			}
+			if (c.id == text || c.sourceCard._origin == text)
+			{
+				return true;
 			}
 		}
 		return false;

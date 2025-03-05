@@ -1011,6 +1011,8 @@ public class DramaManager : EMono
 		string[] array = IF.Split(',');
 		switch (array[0])
 		{
+		case "WindRest":
+			return EMono._zone is Zone_WindRest;
 		case "guild_promote":
 			return Guild.Current.relation.exp >= Guild.Current.relation.ExpToNext;
 		case "guild_maxpromote":

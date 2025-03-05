@@ -177,13 +177,22 @@ public class GenRoom : GenBounds
 	{
 		BiomeProfile.TileFloor floor = group.floor;
 		BiomeProfile.TileBlock block = group.block;
+		int idMat = block.mat;
+		if (zone is Zone_RandomDungeonNature && EClass.rnd(3) != 0)
+		{
+			block = EClass.core.refs.biomes.dict["Dungeon_Forest"].exterior.block;
+			if (zone is Zone_RandomDungeonPlain)
+			{
+				idMat = 5;
+			}
+		}
 		for (int i = x; i < x + width; i++)
 		{
 			for (int j = y; j < y + height; j++)
 			{
 				if (map.cells[i, j]._block != 0)
 				{
-					SetBlock(i, j, block.mat, block.id, EClass.rnd(EClass.rnd(4) + 1));
+					SetBlock(i, j, idMat, block.id, EClass.rnd(EClass.rnd(4) + 1));
 				}
 				SetFloor(i, j, floor.mat, floor.id, EClass.rnd(EClass.rnd(8) + 1));
 			}

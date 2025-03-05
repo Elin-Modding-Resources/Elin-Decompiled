@@ -765,7 +765,7 @@ public class Player : EClass
 	public int customLightMod = 3;
 
 	[JsonProperty]
-	public int validScore;
+	public int questRerollCost;
 
 	[JsonProperty]
 	public float angle;
@@ -2179,14 +2179,17 @@ public class Player : EClass
 		}
 	}
 
-	public bool TryAbortAutoCombat()
+	public bool TryAbortAutoCombat(bool immediate = true)
 	{
 		if (!(EClass.pc.ai is GoalAutoCombat))
 		{
 			return false;
 		}
 		EClass.pc.ai.Cancel();
-		EClass.pc.SetNoGoal();
+		if (immediate)
+		{
+			EClass.pc.SetNoGoal();
+		}
 		return true;
 	}
 

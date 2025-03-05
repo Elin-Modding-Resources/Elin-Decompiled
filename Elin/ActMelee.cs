@@ -182,7 +182,7 @@ public class ActMelee : ActBaseAttack
 					flurry = GetWeaponEnc(621, addSelfEnc: true);
 					frustration = GetWeaponEnc(624, addSelfEnc: true);
 					int num3 = GetWeaponEnc(622, addSelfEnc: true);
-					feint = GetWeaponEnc(623, addSelfEnc: false);
+					feint = GetWeaponEnc(623, addSelfEnc: true);
 					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
 					AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
 					if (num2 > 0)
@@ -329,7 +329,7 @@ public class ActMelee : ActBaseAttack
 				{
 					Act.TP.ForeachNeighbor(delegate(Point p)
 					{
-						if (p.Equals(Act.TP) || p.Equals(Act.CC.pos))
+						if (p.Equals(Act.TP) || p.Equals(Act.CC.pos) || p.IsBlocked)
 						{
 							return;
 						}

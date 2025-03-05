@@ -14,32 +14,32 @@ public class Dice
 
 	public static int Roll(int num, int sides, int bonus = 0, Card card = null)
 	{
-		int num2 = 1;
+		int a = 1;
 		bool flag = true;
-		int num3 = 0;
+		int num2 = 0;
 		if (card != null)
 		{
-			int num4 = card.Evalue(78);
-			flag = num4 >= 0;
-			num2 = 1 + Mathf.Abs(num4 / 100) + ((Mathf.Abs(num4 % 100) > rnd(100)) ? 1 : 0);
+			int num3 = card.Evalue(78);
+			flag = num3 >= 0;
+			a = 1 + Mathf.Abs(num3 / 100) + ((Mathf.Abs(num3 % 100) > rnd(100)) ? 1 : 0);
 		}
-		for (int i = 0; i < num2; i++)
+		for (int i = 0; i < Mathf.Min(a, 20); i++)
 		{
-			int num5 = Roll();
-			if (i == 0 || (flag && num5 > num3) || (!flag && num5 < num3))
+			int num4 = Roll();
+			if (i == 0 || (flag && num4 > num2) || (!flag && num4 < num2))
 			{
-				num3 = num5;
+				num2 = num4;
 			}
 		}
-		return num3;
+		return num2;
 		int Roll()
 		{
-			int num6 = 0;
+			int num5 = 0;
 			for (int j = 0; j < num; j++)
 			{
-				num6 += rnd(sides) + 1;
+				num5 += rnd(sides) + 1;
 			}
-			return num6 + bonus;
+			return num5 + bonus;
 		}
 	}
 

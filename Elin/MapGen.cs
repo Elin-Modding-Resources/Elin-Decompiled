@@ -9,7 +9,7 @@ public class MapGen : BaseMapGen
 
 	protected override void GenerateTerrain()
 	{
-		SetSize(zp.useRootSize ? zone.GetTopZone().bounds.Size : zp.size, 10);
+		SetSize((zone is Zone_Gathering) ? 60 : ((!zp.useRootSize) ? zp.size : (zone.GetTopZone().bounds?.Size ?? zp.size)), 10);
 		if (biomes == null || Size != biomes.GetLength(0))
 		{
 			biomes = new BiomeProfile[Size, Size];
@@ -66,7 +66,11 @@ public class MapGen : BaseMapGen
 			map.CreateNew(Size);
 		}
 		map.poiMap.Reset();
-		if (bp.zoneProfile.useRootSize)
+		if (zone is Zone_Gathering)
+		{
+			map.SetBounds(Size - 20);
+		}
+		else if (bp.zoneProfile.useRootSize && zone.GetTopZone().bounds != null)
 		{
 			map.SetBounds(zone.GetTopZone().bounds);
 		}

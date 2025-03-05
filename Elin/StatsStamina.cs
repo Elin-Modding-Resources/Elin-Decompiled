@@ -12,7 +12,7 @@ public class StatsStamina : Stats
 
 	public override int max => BaseStats.CC._maxStamina * BaseStats.CC.Evalue(62) / 100;
 
-	public override int min => -9999;
+	public override int min => -999999;
 
 	public override void Mod(int a)
 	{

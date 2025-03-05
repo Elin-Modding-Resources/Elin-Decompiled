@@ -150,6 +150,9 @@ public class GamePrincipal : EClass
 	public bool petFeatExp;
 
 	[JsonProperty]
+	public bool disableVoidBlessing;
+
+	[JsonProperty]
 	public HashSet<string> modified = new HashSet<string>();
 
 	public bool IsCustom => id == -1;
@@ -173,6 +176,10 @@ public class GamePrincipal : EClass
 		{
 			permadeath = a;
 		});
+		Add(2, Type.Workaround, "disableVoidBlessing", () => disableVoidBlessing, delegate(bool a)
+		{
+			disableVoidBlessing = a;
+		});
 		AddSlider(2, Type.Workaround, "dropRate", () => dropRate, delegate(bool a)
 		{
 			dropRate = a;
@@ -180,6 +187,13 @@ public class GamePrincipal : EClass
 		{
 			dropRateMtp = a;
 		}, (int a) => 0.5f + 0.5f * (float)a + "x", 5);
+		AddSlider(2, Type.Workaround, "petFeatExp", () => petFeatExp, delegate(bool a)
+		{
+			petFeatExp = a;
+		}, () => petFeatExpMtp, delegate(int a)
+		{
+			petFeatExpMtp = a;
+		}, (int a) => 0.5f + 0.5f * (float)a + "x", 3);
 		return list;
 		void Add(int grade, Type type, string id, Func<bool> _get, Action<bool> _set)
 		{

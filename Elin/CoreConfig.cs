@@ -110,6 +110,8 @@ public class CoreConfig : EClass
 
 		public bool sortEach;
 
+		public bool antiSpider;
+
 		public bool autopause;
 
 		public bool showQuickMenuHint;

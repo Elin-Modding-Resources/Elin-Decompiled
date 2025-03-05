@@ -35,6 +35,15 @@ public class MapGenDungen : BaseMapGen
 		}
 		BiomeProfile.TileFloor floor = biome.exterior.floor;
 		BiomeProfile.TileBlock block = biome.exterior.block;
+		int idMat = -1;
+		if (zone is Zone_RandomDungeonNature && EClass.rnd(3) != 0)
+		{
+			block = EClass.core.refs.biomes.dict["Dungeon_Forest"].exterior.block;
+			if (zone is Zone_RandomDungeonPlain)
+			{
+				idMat = 5;
+			}
+		}
 		bool flag = zone.lv <= 0;
 		bool flag2 = false;
 		bool flag3 = false;
@@ -48,7 +57,7 @@ public class MapGenDungen : BaseMapGen
 				if (i == 0 || j == 0 || i >= mapData.size_X || j >= mapData.size_Y)
 				{
 					SetFloor(floor, i, j);
-					SetBlock(block, i, j);
+					SetBlock(block, i, j, idMat);
 					continue;
 				}
 				Dungen.Cell cell = mapData.cellsOnMap[i - 1, j - 1];
@@ -104,18 +113,18 @@ public class MapGenDungen : BaseMapGen
 				case "Door":
 					if (!(biome.style.doorChance < Rand.Range(0f, 1f)))
 					{
-						SetBlock(block, i, j);
+						SetBlock(block, i, j, idMat);
 						Thing t2 = ThingGen.Create(biome.style.GetIdDoor(), biome.style.matDoor);
 						zone.AddCard(t2, i, j).Install();
 					}
 					break;
 				case "Abyss":
-					SetBlock(block, i, j);
+					SetBlock(block, i, j, idMat);
 					break;
 				default:
 					if (type.passable == generator.reversePassage)
 					{
-						SetBlock(block, i, j);
+						SetBlock(block, i, j, idMat);
 					}
 					break;
 				}
@@ -184,6 +193,10 @@ public class MapGenDungen : BaseMapGen
 		Debug.Log("Dungen: room:" + rooms.Count + "/" + mapData.rooms.Count + " width:" + width + " height:" + height);
 		int num2 = EClass.rnd(Size * Size / 50 + EClass.rnd(20)) + 5;
 		num2 = num2 * Mathf.Min(20 + zone.DangerLv * 5, 100) / 100;
+		if (zone is Zone_RandomDungeonNature)
+		{
+			num2 /= 5;
+		}
 		for (int k = 0; k < num2; k++)
 		{
 			point = EClass._map.GetRandomPoint();
@@ -192,6 +205,29 @@ public class MapGenDungen : BaseMapGen
 				Thing t3 = ThingGen.CreateFromCategory("trap", zone.DangerLv);
 				EClass._zone.AddCard(t3, point).Install();
 			}
+		}
+		if (zone is Zone_RandomDungeonPlain)
+		{
+			Crawler crawler = Crawler.Create("pasture");
+			int tries = 3;
+			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), tries, delegate(Crawler.Result r)
+			{
+				int id = ((EClass.rnd(3) == 0) ? 108 : 105);
+				foreach (Point point2 in r.points)
+				{
+					if (!point2.cell.isModified && !point2.HasThing && !point2.HasBlock && !point2.HasObj)
+					{
+						map.SetObj(point2.x, point2.z, id);
+						int num3 = 3;
+						if (EClass.rnd(6) == 0)
+						{
+							num3++;
+						}
+						point2.growth.SetStage(num3);
+					}
+				}
+				return false;
+			});
 		}
 		map.things.ForeachReverse(delegate(Thing t)
 		{
@@ -228,7 +264,7 @@ public class MapGenDungen : BaseMapGen
 			room.map = map;
 			room.zone = zone;
 			room.gen = this;
-			room.group = biome.interior;
+			room.group = ((zone is Zone_RandomDungeonNature) ? biome.exterior : biome.interior);
 			rooms[room.Index] = room;
 			room.Fill();
 			Debug.Log("Room" + count + " " + room.width + "*" + room.height + " " + room);
