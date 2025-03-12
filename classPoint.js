@@ -42,7 +42,7 @@ var classPoint =
     [ "ListCards", "classPoint.html#a256787e4a6e7438db25289f56e618463", null ],
     [ "ListCharas", "classPoint.html#a965804b59f2be20290d5d14ceeda6625", null ],
     [ "ListCharasInNeighbor", "classPoint.html#a846cc046864f4d4463053b899b59d1c3", null ],
-    [ "ListCharasInRadius", "classPoint.html#ade32278a861c232311f3397e88000b3e", null ],
+    [ "ListCharasInRadius", "classPoint.html#a8b1488299388277a7ac0e7556b3ee3b9", null ],
     [ "ListInspectorTargets", "classPoint.html#a4c05463f4ffe9ed95d182ef08212f951", null ],
     [ "ListThings< T >", "classPoint.html#a1e88a45c9c04fd202cb46ebf5a192ee6", null ],
     [ "ListVisibleCards", "classPoint.html#a21cd2c17e944f99115003225cf9b2122", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"classClassExtension.html#a5c1f832891a69241762398a1cd4775fe":[1,0,269,202],
+"classClassExtension.html#a61983d1bff3aeff5f4010e92515abb6d":[1,0,269,194],
+"classClassExtension.html#a639a298682db007c32718c6756f01456":[1,0,269,87],
+"classClassExtension.html#a65e080071dd3b0f69fb7d6b4e2ca7185":[1,0,269,173],
+"classClassExtension.html#a66aefaec5dfa053b2089cdb4d5711b80":[1,0,269,8],
+"classClassExtension.html#a673aa52d543af3a4058a6c56054d1351":[1,0,269,138],
 "classClassExtension.html#a673e54cd112ea37283f13507ba482956":[1,0,269,21],
 "classClassExtension.html#a67a73ed0af1e2286fefaa3d4555623e5":[1,0,269,49],
 "classClassExtension.html#a68150d395b9a82d3b356210faf74b6a2":[1,0,269,50],
@@ -134,7 +140,6 @@ var NAVTREEINDEX45 =
 "classClassWithBits.html#a88ffe814fac844b728c7948fded533ff":[1,0,270,3],
 "classClassWithBits.html#aa4dd1436ff6cc3975605464f90eb4861":[1,0,270,2],
 "classCodexCreature.html":[1,0,272],
-"classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411":[1,0,272,1],
 "classCodexCreature.html#a53fc120a115da7361e65f8df05ada451":[1,0,272,8],
 "classCodexCreature.html#a58063c13c4320af8195fa35419d55d01":[1,0,272,5],
 "classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b":[1,0,272,9],
@@ -144,6 +149,7 @@ var NAVTREEINDEX45 =
 "classCodexCreature.html#a909253583d6c402986b699a819754fb1":[1,0,272,6],
 "classCodexCreature.html#a950a88f7881ea6b652df6611beb20898":[1,0,272,7],
 "classCodexCreature.html#a9654bae57b5adc8d81055aebf817c48a":[1,0,272,2],
+"classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d":[1,0,272,1],
 "classCodexCreature.html#ac6b694c12306573a3537e09971e9e061":[1,0,272,11],
 "classCodexCreature.html#ace1c6e37028a9e373ece50bb2390248c":[1,0,272,4],
 "classCodexManager.html":[1,0,273],
@@ -243,11 +249,5 @@ var NAVTREEINDEX45 =
 "classColorProfile_1_1RarityColors.html#a4d5f11be82d0051ad40e8793eb9f5a0e":[1,0,277,2,4],
 "classColorProfile_1_1RarityColors.html#a5bd7eb53338b63dcee159a20a3d56479":[1,0,277,2,2],
 "classColorProfile_1_1RarityColors.html#afe6cb39b3473dd4325e2aa4aacdfdd29":[1,0,277,2,3],
-"classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,277,2,5],
-"classColorProfile_1_1TextColors.html":[1,0,277,3],
-"classColorProfile_1_1TextColors.html#a6c99dcd62a4673e64a14b2324a2e7337":[1,0,277,3,0],
-"classColorProfile_1_1TextColors.html#a7d0ef1dadafbcd19a9da15cbef54ff09":[1,0,277,3,4],
-"classColorProfile_1_1TextColors.html#a9ce7a72666a8eddfc927d30e89c6bc9c":[1,0,277,3,2],
-"classColorProfile_1_1TextColors.html#aa14831daa3137d4b7adda2546b979c2d":[1,0,277,3,1],
-"classColorProfile_1_1TextColors.html#ac2752ca3670d4965f01c6ceac9993931":[1,0,277,3,3]
+"classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,277,2,5]
 };

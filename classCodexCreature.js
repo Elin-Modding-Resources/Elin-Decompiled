@@ -1,7 +1,7 @@
 var classCodexCreature =
 [
     [ "GetTextBonus", "classCodexCreature.html#a8f278f37a2e35c847d54cf3a925a29fd", null ],
-    [ "SetImage", "classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411", null ],
+    [ "SetImage", "classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d", null ],
     [ "_ints", "classCodexCreature.html#a9654bae57b5adc8d81055aebf817c48a", null ],
     [ "id", "classCodexCreature.html#a81ac7ba6c24ffae71af742eb5f6d22d0", null ],
     [ "BonusDropLv", "classCodexCreature.html#ace1c6e37028a9e373ece50bb2390248c", null ],

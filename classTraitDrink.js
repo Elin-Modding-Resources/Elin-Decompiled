@@ -17,5 +17,6 @@ var classTraitDrink =
     [ "IsThrowMainAction", "classTraitDrink.html#a7fb1ac5d9691764a0359512f6b612150", null ],
     [ "N1", "classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796", null ],
     [ "Power", "classTraitDrink.html#a79a7994ae5c96c13dfd79126692854ec", null ],
+    [ "source", "classTraitDrink.html#a455aa1d0f6ec5f3e7799065a8d68337c", null ],
     [ "ThrowType", "classTraitDrink.html#ae71cd26e116c46e80fdbb5d13f27048f", null ]
 ];

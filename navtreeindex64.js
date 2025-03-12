@@ -1,5 +1,12 @@
 var NAVTREEINDEX64 =
 {
+"classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740":[1,0,509,6,33],
+"classGameSetting_1_1RenderSetting.html#a240ad6921d06b05c7fc81f4604992374":[1,0,509,6,28],
+"classGameSetting_1_1RenderSetting.html#a2962ec49976352472ea560591afc5324":[1,0,509,6,26],
+"classGameSetting_1_1RenderSetting.html#a2f3613c92a9081dc58832db858ac0145":[1,0,509,6,34],
+"classGameSetting_1_1RenderSetting.html#a3ac111a8067a63e300d15732a4efd145":[1,0,509,6,17],
+"classGameSetting_1_1RenderSetting.html#a3bebce8fd64a95c0096bd4ed9c59c489":[1,0,509,6,24],
+"classGameSetting_1_1RenderSetting.html#a3c01deda3421eadbc1fcbdf15a275a71":[1,0,509,6,39],
 "classGameSetting_1_1RenderSetting.html#a42f89db4180b00cb7f16d8741d30817e":[1,0,509,6,9],
 "classGameSetting_1_1RenderSetting.html#a45f6ebe317f503a9ab368010437c40f9":[1,0,509,6,18],
 "classGameSetting_1_1RenderSetting.html#a4bdbfd4571370bd8257f59dfe690d34c":[1,0,509,6,46],
@@ -242,12 +249,5 @@ var NAVTREEINDEX64 =
 "classGenRoom.html#ab2ce5e1b0c7fef5259b10b302f152879":[1,0,515,7],
 "classGenRoomBig.html":[1,0,516],
 "classGenRoomBig.html#ac068322065cf11bab9e9bdc65b1b8f49":[1,0,516,0],
-"classGenRoomMonsterHouse.html":[1,0,517],
-"classGenRoomMonsterHouse.html#a93d6224c369b776cc2f69e1a18076db1":[1,0,517,0],
-"classGender.html":[1,0,513],
-"classGender.html#a4e2a057c4856ed63dbc0bd6abfa9577f":[1,0,513,4],
-"classGender.html#a5e5ac6c93493c292aa478d8b2f648272":[1,0,513,1],
-"classGender.html#a5e65110a5dddefc6fcb4902b3d3ea028":[1,0,513,0],
-"classGender.html#aea111ef25547cdaba8d4f4405876fc07":[1,0,513,2],
-"classGender.html#af880737171140963693b6ae64fc4c748":[1,0,513,3]
+"classGenRoomMonsterHouse.html":[1,0,517]
 };

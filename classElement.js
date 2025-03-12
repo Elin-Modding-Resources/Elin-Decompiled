@@ -28,6 +28,7 @@ var classElement =
     [ "GetSourceValue", "classElement.html#a443f04ef73f9f3e044a74ea5e8a3ad4f", null ],
     [ "GetSprite", "classElement.html#a0d205d7d575ee861ed54c8be0b0760cf", null ],
     [ "HasTag", "classElement.html#a5163326f1ee817cd7b4d06165bbf30c7", null ],
+    [ "IsActive", "classElement.html#afd8cdc0bc0886fd7c549aadfce40ef71", null ],
     [ "IsFactionElement", "classElement.html#a0176422320eb27feb176bf81a9a9f8e8", null ],
     [ "IsPurchaseFeatReqMet", "classElement.html#a445488caa04fb5048418f8f1d8f770f4", null ],
     [ "OnChangeValue", "classElement.html#a1053d168a082abeb846bc292994a01e0", null ],

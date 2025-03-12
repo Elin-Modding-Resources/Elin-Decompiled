@@ -1,5 +1,10 @@
 var NAVTREEINDEX24 =
 {
+"classAI__Eat.html#af360d70637e48fa709f2ffeaa53b67d6":[1,0,64,3],
+"classAI__Eat.html#af542285e8d3e367ad24d37a23dfb3456":[1,0,64,2],
+"classAI__Equip.html":[1,0,65],
+"classAI__Equip.html#a2e280f2083c06fb41296482d359e8146":[1,0,65,1],
+"classAI__Equip.html#a6ca311ba9d26281a3a0bc18bf4ab1fa1":[1,0,65,0],
 "classAI__Farm.html":[1,0,66],
 "classAI__Farm.html#a0240662c3daa782b2184f6fc53e65b44":[1,0,66,4],
 "classAI__Farm.html#a19bec2fea0ddb2d9105c0149f2a24306":[1,0,66,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Sleep.html#a2ae4e094f4f9eb9dd1865de0b2b1aac5":[1,0,92,1],
 "classAI__Steal.html":[1,0,93],
 "classAI__Steal.html#a040ad3580a90f3b3c4914bebf28ee022":[1,0,93,0],
-"classAI__Steal.html#a47bfbf515178ad5cb94c2598d0de546e":[1,0,93,2],
-"classAI__Steal.html#a4991dfa11ffd0b5c93eb60878372bade":[1,0,93,3],
-"classAI__Steal.html#a6a207d2a803cc6768dbcfd71245a732e":[1,0,93,5],
-"classAI__Steal.html#abbc7d1d1f9b03299fbe9ce7096675110":[1,0,93,6],
-"classAI__Steal.html#ae64590a43b91f1f99943dce61c832e20":[1,0,93,1],
-"classAI__Steal.html#af5090a7b3a1c346541a28bd60ac90c3e":[1,0,93,4]
+"classAI__Steal.html#a47bfbf515178ad5cb94c2598d0de546e":[1,0,93,2]
 };

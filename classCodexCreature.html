@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.99</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.101 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -109,8 +109,8 @@ Inheritance diagram for CodexCreature:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a519d0dd84c2ae2b9412c8d311638c411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411">SetImage</a> (Image image, bool nativeSize=false)</td></tr>
-<tr class="separator:a519d0dd84c2ae2b9412c8d311638c411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa104f63d75aba89cabacbfa5d5296a2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d">SetImage</a> (Image image, int idSkin=0, bool nativeSize=true)</td></tr>
+<tr class="separator:aa104f63d75aba89cabacbfa5d5296a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f278f37a2e35c847d54cf3a925a29fd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodexCreature.html#a8f278f37a2e35c847d54cf3a925a29fd">GetTextBonus</a> ()</td></tr>
 <tr class="separator:a8f278f37a2e35c847d54cf3a925a29fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -248,12 +248,12 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CodexCreature_8cs_source.html#l00065">BonusDropLv</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>.</p>
 
 </div>
 </div>
-<a id="a519d0dd84c2ae2b9412c8d311638c411" name="a519d0dd84c2ae2b9412c8d311638c411"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a519d0dd84c2ae2b9412c8d311638c411">&#9670;&#160;</a></span>SetImage()</h2>
+<a id="aa104f63d75aba89cabacbfa5d5296a2d" name="aa104f63d75aba89cabacbfa5d5296a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa104f63d75aba89cabacbfa5d5296a2d">&#9670;&#160;</a></span>SetImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,8 +270,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idSkin</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>nativeSize</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>nativeSize</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -288,14 +294,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CodexCreature_8cs_source.html#l00088">88</a> of file <a class="el" href="CodexCreature_8cs_source.html">CodexCreature.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_property" href="classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b">source</a>.SetImage(image, <span class="keyword">null</span>, 0, nativeSize);</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_property" href="classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b">source</a>.SetImage(image, <span class="keyword">null</span>, 0, nativeSize, 0, idSkin);</div>
 <div class="line"><span class="lineno">   91</span>        image.SetActive(enable: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   92</span>    }</div>
 <div class="ttc" id="aclassCodexCreature_html_a704ac7b03e97fa4803a7e6db7bc62b5b"><div class="ttname"><a href="classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b">CodexCreature.source</a></div><div class="ttdeci">SourceChara.Row source</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00014">CodexCreature.cs:14</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CodexCreature_8cs_source.html#l00014">source</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -330,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CodexCreature_8cs_source.html#l00007">7</a> of file <a class="el" href="CodexCreature_8cs_source.html">CodexCreature.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00169">ContentCodex.OnClickGetCard()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00171">ContentCodex.OnClickGetCard()</a>.</p>
 
 </div>
 </div>
@@ -441,7 +447,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>        }</div>
 <div class="line"><span class="lineno">   50</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00055">CodexManager.AddKill()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00055">CodexManager.AddKill()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -467,7 +473,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CodexCreature_8cs_source.html#l00012">12</a> of file <a class="el" href="CodexCreature_8cs_source.html">CodexCreature.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -503,7 +509,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   25</span>        }</div>
 <div class="line"><span class="lineno">   26</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00031">CodexManager.AddCard()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00169">ContentCodex.OnClickGetCard()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00031">CodexManager.AddCard()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00171">ContentCodex.OnClickGetCard()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>.</p>
 
 </div>
 </div>
@@ -529,7 +535,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CodexCreature_8cs_source.html#l00014">14</a> of file <a class="el" href="CodexCreature_8cs_source.html">CodexCreature.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>, and <a class="el" href="CodexCreature_8cs_source.html#l00088">SetImage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00059">ContentCodex.RefreshList()</a>, and <a class="el" href="CodexCreature_8cs_source.html#l00088">SetImage()</a>.</p>
 
 </div>
 </div>
@@ -565,7 +571,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   61</span>        }</div>
 <div class="line"><span class="lineno">   62</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00065">CodexManager.AddSpawn()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00065">CodexManager.AddSpawn()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -601,7 +607,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   37</span>        }</div>
 <div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00060">CodexManager.AddWeakspot()</a>, <a class="el" href="Card_8cs_source.html#l03738">Card.DamageHP()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00112">ContentCodex.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00060">CodexManager.AddWeakspot()</a>, <a class="el" href="Card_8cs_source.html#l03738">Card.DamageHP()</a>, and <a class="el" href="ContentCodex_8cs_source.html#l00113">ContentCodex.RefreshInfo()</a>.</p>
 
 </div>
 </div>

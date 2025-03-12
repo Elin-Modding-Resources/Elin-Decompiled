@@ -145,6 +145,7 @@ var classBaseTileMap =
     [ "passChara", "classBaseTileMap.html#a397f9e6cb11fd8eba4e9ab5ff6b755b9", null ],
     [ "passCharaL", "classBaseTileMap.html#ab5c0ef910c6d4502e9467e3ad71da71a", null ],
     [ "passCharaLL", "classBaseTileMap.html#ace964686514f184588290990387df0ba", null ],
+    [ "passCharaLW", "classBaseTileMap.html#acf78b64ffa54eefacf7fe7f07b69a5e8", null ],
     [ "passDecal", "classBaseTileMap.html#a6d1f7d5c4bd07f89dbed8632f1c5a0d6", null ],
     [ "passEdge", "classBaseTileMap.html#ab211777d16eae0438e7a312798ff2756", null ],
     [ "passFloor", "classBaseTileMap.html#a0bd59b51edd19ea5c7e2f7dd3f1dd267", null ],

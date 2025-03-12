@@ -840,6 +840,7 @@ var hierarchy =
             [ "GrowSystemRice", "classGrowSystemRice.html", null ]
           ] ]
         ] ],
+        [ "GrowSystemDeco", "classGrowSystemDeco.html", null ],
         [ "GrowSystemKinoko", "classGrowSystemKinoko.html", null ],
         [ "GrowSystemPlant", "classGrowSystemPlant.html", [
           [ "GrowSystemFlower", "classGrowSystemFlower.html", null ],
@@ -1446,6 +1447,7 @@ var hierarchy =
               [ "TraitMerchantSouvenir", "classTraitMerchantSouvenir.html", null ],
               [ "TraitMerchantWeapon", "classTraitMerchantWeapon.html", null ]
             ] ],
+            [ "TraitRogue", "classTraitRogue.html", null ],
             [ "TraitSecretary", "classTraitSecretary.html", null ],
             [ "TraitSlaver", "classTraitSlaver.html", null ],
             [ "TraitTrainer", "classTraitTrainer.html", null ]

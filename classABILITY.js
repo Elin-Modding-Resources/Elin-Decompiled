@@ -47,6 +47,7 @@ var classABILITY =
     [ "ActSuicide", "classABILITY.html#af0e7592d41608265e49c942239229d9e", null ],
     [ "ActThrow", "classABILITY.html#a06b65c5615c1221abbecd0409d773149", null ],
     [ "ActThrowPotion", "classABILITY.html#addc80d6d5bcdbd78d7b204f6c670c6c4", null ],
+    [ "ActTouchDrown", "classABILITY.html#a4e29e1b0193a96126a27deced33533cf", null ],
     [ "ActTouchSleep", "classABILITY.html#ae7bec151e00e990eb7b948ce61db5a9b", null ],
     [ "ActWait", "classABILITY.html#a63fcb96cc9a85af1306052e12fb2dca4", null ],
     [ "ActWeaken", "classABILITY.html#af8bd2be6670fe3dde20919c493907878", null ],

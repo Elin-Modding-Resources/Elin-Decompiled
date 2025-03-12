@@ -54,6 +54,7 @@ var classGrowSystem =
     [ "stages", "classGrowSystem.html#ae4655ebf2d3adc14c911371d63b4c31c", null ],
     [ "AnimeProgress", "classGrowSystem.html#a6a76b5555359a2aa5dbf72e98f3bd5c1", null ],
     [ "AutoMineStage", "classGrowSystem.html#a206be625418635a5c246e741756156d8", null ],
+    [ "CanLevelSeed", "classGrowSystem.html#af96e927fa2f02f23e0e1171f9c700b69", null ],
     [ "CanRegrow", "classGrowSystem.html#ade599e37dc719b61fb35ad63ff7b17f1", null ],
     [ "DefaultStage", "classGrowSystem.html#a3c3e3d7c4a75b4b188f93c4116b6984a", null ],
     [ "DrawHarvestOnTop", "classGrowSystem.html#aac6278e9765227e16e062e1d79f598c6", null ],

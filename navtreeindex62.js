@@ -1,5 +1,12 @@
 var NAVTREEINDEX62 =
 {
+"classFactionBranch.html#a9c43efb72fecd5cf65ab40f8f3f80f41":[1,0,478,34],
+"classFactionBranch.html#a9db7990917dd6400343cefdbc6e015e4":[1,0,478,60],
+"classFactionBranch.html#a9dedeba736b27be777255ac69df229ac":[1,0,478,94],
+"classFactionBranch.html#aa0b5db919cdfecebf8f0fea09faa6bc4":[1,0,478,62],
+"classFactionBranch.html#aa20f50dc62e794214c234bfd32e45966":[1,0,478,12],
+"classFactionBranch.html#aa365c2025a38f7523b813ce5a4729617":[1,0,478,78],
+"classFactionBranch.html#aa463c2c6c059f6e4a7359e4beaa62cf9":[1,0,478,50],
 "classFactionBranch.html#aa4dfa3533ff62549ca662b82d3b7abd9":[1,0,478,45],
 "classFactionBranch.html#aa5fab5f7e4f559a2403cea7345910044":[1,0,478,76],
 "classFactionBranch.html#aa7a4baa704ef06e5446d7966cb862620":[1,0,478,16],
@@ -205,8 +212,8 @@ var NAVTREEINDEX62 =
 "classFowProfile.html#a7e5e4aea769698da500f72ee42edf78e":[1,0,494,2],
 "classFowProfile.html#a8eb2a413b06a550ed2c9249896840739":[1,0,494,1],
 "classFowProfile.html#a8f84e9309325d31c2662fdfb56b314f7":[1,0,494,0],
-"classGStability.html":[1,0,567],
-"classGWorth.html":[1,0,574],
+"classGStability.html":[1,0,568],
+"classGWorth.html":[1,0,575],
 "classGame.html":[1,0,495],
 "classGame.html#a02a28f0a82ac4c610a072faadca62556":[1,0,495,13],
 "classGame.html#a04c738690a3d2f0105f00fcaa52f1f27":[1,0,495,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX62 =
 "classGame.html#a66686ed40b2f75c85ad2a7a84f839c09":[1,0,495,57],
 "classGame.html#a678bda9cd7e60cd719852efe7febf5fe":[1,0,495,60],
 "classGame.html#a69977c67b81e6e151a516876c77361a4":[1,0,495,58],
-"classGame.html#a6f95f61e8f4ba88af692cc6ca0150efd":[1,0,495,4],
-"classGame.html#a768ab7c51eafee90672f1c644e66b2c0":[1,0,495,37],
-"classGame.html#a78107f466f8a2fe5f5fcc46551006d37":[1,0,495,6],
-"classGame.html#a7bbb6a47351673a98c1d24fa09325f19":[1,0,495,10],
-"classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e":[1,0,495,71],
-"classGame.html#a7f59fa26eba2fef8501d590be1e34582":[1,0,495,26],
-"classGame.html#a84fa911bfcada40b45b0176fe99f04cf":[1,0,495,38],
-"classGame.html#a85b865c8c3633f0c1c186fc0ef3b5401":[1,0,495,23]
+"classGame.html#a6f95f61e8f4ba88af692cc6ca0150efd":[1,0,495,4]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.99</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.101 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -179,9 +179,9 @@ $(document).ready(function(){initNavTree('CodexCreature_8cs_source.html',''); in
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411">   88</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411">SetImage</a>(Image image, <span class="keywordtype">bool</span> nativeSize = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d">   88</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d">SetImage</a>(Image image, <span class="keywordtype">int</span> idSkin = 0, <span class="keywordtype">bool</span> nativeSize = <span class="keyword">true</span>)</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_property" href="classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b">source</a>.SetImage(image, <span class="keyword">null</span>, 0, nativeSize);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_property" href="classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b">source</a>.SetImage(image, <span class="keyword">null</span>, 0, nativeSize, 0, idSkin);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        image.SetActive(enable: <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
@@ -196,7 +196,6 @@ $(document).ready(function(){initNavTree('CodexCreature_8cs_source.html',''); in
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
 <div class="ttc" id="aclassCodexCreature_html"><div class="ttname"><a href="classCodexCreature.html">CodexCreature</a></div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00005">CodexCreature.cs:6</a></div></div>
-<div class="ttc" id="aclassCodexCreature_html_a519d0dd84c2ae2b9412c8d311638c411"><div class="ttname"><a href="classCodexCreature.html#a519d0dd84c2ae2b9412c8d311638c411">CodexCreature.SetImage</a></div><div class="ttdeci">void SetImage(Image image, bool nativeSize=false)</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00088">CodexCreature.cs:88</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_a53fc120a115da7361e65f8df05ada451"><div class="ttname"><a href="classCodexCreature.html#a53fc120a115da7361e65f8df05ada451">CodexCreature.numCard</a></div><div class="ttdeci">int numCard</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00016">CodexCreature.cs:17</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_a58063c13c4320af8195fa35419d55d01"><div class="ttname"><a href="classCodexCreature.html#a58063c13c4320af8195fa35419d55d01">CodexCreature.droppedCard</a></div><div class="ttdeci">bool droppedCard</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00076">CodexCreature.cs:77</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_a704ac7b03e97fa4803a7e6db7bc62b5b"><div class="ttname"><a href="classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b">CodexCreature.source</a></div><div class="ttdeci">SourceChara.Row source</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00014">CodexCreature.cs:14</a></div></div>
@@ -206,6 +205,7 @@ $(document).ready(function(){initNavTree('CodexCreature_8cs_source.html',''); in
 <div class="ttc" id="aclassCodexCreature_html_a909253583d6c402986b699a819754fb1"><div class="ttname"><a href="classCodexCreature.html#a909253583d6c402986b699a819754fb1">CodexCreature.kills</a></div><div class="ttdeci">int kills</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00040">CodexCreature.cs:41</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_a950a88f7881ea6b652df6611beb20898"><div class="ttname"><a href="classCodexCreature.html#a950a88f7881ea6b652df6611beb20898">CodexCreature.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00012">CodexCreature.cs:12</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_a9654bae57b5adc8d81055aebf817c48a"><div class="ttname"><a href="classCodexCreature.html#a9654bae57b5adc8d81055aebf817c48a">CodexCreature._ints</a></div><div class="ttdeci">int[] _ints</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00010">CodexCreature.cs:10</a></div></div>
+<div class="ttc" id="aclassCodexCreature_html_aa104f63d75aba89cabacbfa5d5296a2d"><div class="ttname"><a href="classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d">CodexCreature.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int idSkin=0, bool nativeSize=true)</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00088">CodexCreature.cs:88</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_ac6b694c12306573a3537e09971e9e061"><div class="ttname"><a href="classCodexCreature.html#ac6b694c12306573a3537e09971e9e061">CodexCreature.weakspot</a></div><div class="ttdeci">int weakspot</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00028">CodexCreature.cs:29</a></div></div>
 <div class="ttc" id="aclassCodexCreature_html_ace1c6e37028a9e373ece50bb2390248c"><div class="ttname"><a href="classCodexCreature.html#ace1c6e37028a9e373ece50bb2390248c">CodexCreature.BonusDropLv</a></div><div class="ttdeci">int BonusDropLv</div><div class="ttdef"><b>Definition:</b> <a href="CodexCreature_8cs_source.html#l00064">CodexCreature.cs:65</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
