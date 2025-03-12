@@ -494,6 +494,10 @@ public class UIBook : MonoBehaviour
 	{
 		pages.Clear();
 		string[] array = IO.LoadTextArray(CorePath.CorePackage.Help + idFile);
+		if (idFile == "version" && Lang.langCode == "CN")
+		{
+			array = IO.LoadTextArray(CorePath.CorePackage.TextEN + idFile);
+		}
 		if (array.IsEmpty())
 		{
 			array = IO.LoadTextArray(CorePath.CorePackage.Text + idFile);
