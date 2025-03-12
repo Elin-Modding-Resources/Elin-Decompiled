@@ -188,6 +188,8 @@ public class BaseTileMap : EMono
 
 	public MeshPass passCharaL;
 
+	public MeshPass passCharaLW;
+
 	public MeshPass passCharaLL;
 
 	public MeshPass passShore;

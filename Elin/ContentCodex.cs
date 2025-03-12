@@ -78,7 +78,8 @@ public class ContentCodex : EContent
 				{
 					b.icon.transform.localScale = new Vector3(1f / EClass.core.uiScale, 1f / EClass.core.uiScale, 1f);
 				}
-				a.SetImage(b.icon, nativeSize: true);
+				int idSkin = ((EClass.core.config.game.antiSpider && a.source.race == "spider" && a.source.tiles.Length > 1) ? 1 : 0);
+				a.SetImage(b.icon, idSkin);
 			},
 			onList = delegate
 			{
@@ -118,7 +119,8 @@ public class ContentCodex : EContent
 			SourceChara.Row source = codexCreature.source;
 			uINote.Clear();
 			UIItem uIItem = uINote.AddHeader("HeaderCodex", codexCreature.Name.Replace("『", Environment.NewLine + "『"));
-			codexCreature.SetImage(uIItem.image1, nativeSize: true);
+			int idSkin = ((EClass.core.config.game.antiSpider && codexCreature.source.race == "spider" && codexCreature.source.tiles.Length > 1) ? 1 : 0);
+			codexCreature.SetImage(uIItem.image1, idSkin);
 			uIItem.text2.text = "Lv." + source.LV + Environment.NewLine + EClass.sources.races.map[source.race].GetName().ToTitleCase(wholeText: true) + Environment.NewLine + EClass.sources.jobs.map[source.job].GetName().ToTitleCase(wholeText: true);
 			uIItem.image1.rectTransform.pivot = pivot;
 			uIItem.image1.rectTransform.localPosition = localPos;

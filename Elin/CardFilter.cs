@@ -98,6 +98,8 @@ public class CardFilter : EClass
 		{
 			return false;
 		}
+		bool flag = false;
+		bool flag2 = false;
 		for (int i = 0; i < tags.Count; i++)
 		{
 			FilterItem filterItem = tags[i];
@@ -107,11 +109,17 @@ public class CardFilter : EClass
 				{
 					return false;
 				}
+				continue;
 			}
-			else if (!ContainsTag(source, filterItem.name))
+			flag2 = true;
+			if (!flag && ContainsTag(source, filterItem.name))
 			{
-				return false;
+				flag = true;
 			}
+		}
+		if (flag2 && !flag)
+		{
+			return false;
 		}
 		for (int j = 0; j < filters.Count; j++)
 		{
@@ -134,19 +142,19 @@ public class CardFilter : EClass
 		}
 		if (categories.Count > 0)
 		{
-			bool flag = false;
+			bool flag3 = false;
 			foreach (FilterCategory category in categories)
 			{
-				if ((!flag || category.exclude) && EClass.sources.categories.map[source.category].IsChildOf(category.row))
+				if ((!flag3 || category.exclude) && EClass.sources.categories.map[source.category].IsChildOf(category.row))
 				{
 					if (category.exclude)
 					{
 						return false;
 					}
-					flag = true;
+					flag3 = true;
 				}
 			}
-			if (!flag)
+			if (!flag3)
 			{
 				return false;
 			}

@@ -28,6 +28,8 @@ public class TraitDrink : Trait
 		}
 	}
 
+	public virtual SourceElement.Row source => null;
+
 	public virtual string AliasEle => N1;
 
 	public virtual string N1 => GetParam(3);
@@ -153,7 +155,8 @@ public class TraitDrink : Trait
 		{
 			n1 = N1,
 			isPerfume = (this is TraitPerfume),
-			refThing = owner.Thing
+			refThing = owner.Thing,
+			act = ((source != null) ? ACT.Create(source) : null)
 		});
 	}
 

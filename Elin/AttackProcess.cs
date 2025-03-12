@@ -648,7 +648,7 @@ public class AttackProcess : EClass
 				{
 					break;
 				}
-				if (item.source.categorySub == "eleAttack")
+				if (item.IsActive(weapon) && item.source.categorySub == "eleAttack")
 				{
 					int num10 = 25;
 					int dmg = EClass.rnd(num * (100 + item.Value * 10) / 500 + 5);

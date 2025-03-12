@@ -132,7 +132,7 @@ public class TCOrbitChara : TCOrbit
 		showHP = num < 0.9f && (owner.IsPCParty || owner.IsHostile() || (owner.enemy != null && owner.enemy.IsPCParty));
 		if (showHP)
 		{
-			barHP.transform.SetLocalScaleX(num);
+			barHP.transform.SetLocalScaleX(Mathf.Max(0f, num));
 			barHP.SetActive(enable: true);
 			bgHP.SetActive(enable: true);
 		}
@@ -147,7 +147,7 @@ public class TCOrbitChara : TCOrbit
 			showHP2 = num2 < 0.9f;
 			if (showHP2)
 			{
-				barHP2.transform.SetLocalScaleX(num2);
+				barHP2.transform.SetLocalScaleX(Mathf.Max(0f, num2));
 				barHP2.SetActive(enable: true);
 				bgHP2.SetActive(enable: true);
 			}

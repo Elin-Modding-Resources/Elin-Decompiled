@@ -50,6 +50,10 @@ public class TraitSeed : Trait
 		{
 			n.AddText("isNeedSun");
 		}
+		if (row.growth == null || !row.growth.CanLevelSeed)
+		{
+			n.AddText("isDecoSeed", FontColor.Warning);
+		}
 	}
 
 	public void TrySprout(bool force = false, bool sucker = false, VirtualDate date = null)
@@ -57,7 +61,7 @@ public class TraitSeed : Trait
 		Point pos = owner.pos;
 		if (!pos.HasObj && pos.cell.CanGrow(row, date ?? new VirtualDate()))
 		{
-			pos.SetObj(row.id);
+			pos.SetObj(row.id, 1, owner.dir);
 			EClass._map.AddPlant(pos, owner.Thing);
 			if (sucker)
 			{
@@ -79,7 +83,7 @@ public class TraitSeed : Trait
 		}
 		Thing thing2 = ThingGen.Create("seed");
 		ApplySeed(thing2, obj.id);
-		if (thing != null)
+		if (thing != null && obj.growth != null && obj.growth.CanLevelSeed)
 		{
 			foreach (Element value in thing.elements.dict.Values)
 			{
@@ -124,6 +128,10 @@ public class TraitSeed : Trait
 
 	public static void LevelSeed(Thing t, SourceObj.Row obj, int num)
 	{
+		if (obj == null || obj.growth == null || !obj.growth.CanLevelSeed)
+		{
+			return;
+		}
 		for (int i = 0; i < num; i++)
 		{
 			if (obj == null || obj.objType == "crop")

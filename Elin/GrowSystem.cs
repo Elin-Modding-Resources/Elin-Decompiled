@@ -80,6 +80,8 @@ public class GrowSystem : EClass
 
 	protected virtual bool CanRegrow => true;
 
+	public virtual bool CanLevelSeed => true;
+
 	public virtual int ShadowStage => 1;
 
 	public virtual bool IsTree => false;

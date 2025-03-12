@@ -1032,7 +1032,7 @@ public class Thing : Card
 		}
 		if (base.isDyed)
 		{
-			AddText("isDyed".lang(), FontColor.Default);
+			AddText("isDyed".lang(base.DyeMat.GetName() ?? ""), FontColor.Default);
 		}
 		if (base.IsEquipment)
 		{

@@ -329,12 +329,15 @@ public class ActMelee : ActBaseAttack
 				{
 					Act.TP.ForeachNeighbor(delegate(Point p)
 					{
-						if (p.Equals(Act.TP) || p.Equals(Act.CC.pos) || p.IsBlocked)
+						if (p.Equals(Act.TP) || p.Equals(Act.CC.pos))
 						{
 							return;
 						}
-						p.PlayEffect("smoke_shockwave");
-						p.Copy().Animate(AnimeID.QuakeMini, animeBlock: true);
+						if (!p.IsBlocked)
+						{
+							p.PlayEffect("smoke_shockwave");
+							p.Copy().Animate(AnimeID.QuakeMini, animeBlock: true);
+						}
 						foreach (Card item4 in p.ListCards())
 						{
 							if (item4.trait.CanBeAttacked || (item4.isChara && item4.Chara.IsHostile(Act.CC)))

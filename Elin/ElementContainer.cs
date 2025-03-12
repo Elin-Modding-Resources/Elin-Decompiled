@@ -781,7 +781,7 @@ public class ElementContainer : EClass
 				if (e.IsGlobalElement)
 				{
 					text = text + " " + (e.IsFactionWideElement ? "_factionWide" : "_partyWide").lang();
-					if (Card != null && !Card.c_idDeity.IsEmpty() && Card.c_idDeity != EClass.pc.idFaith)
+					if (!e.IsActive(Card))
 					{
 						continue;
 					}

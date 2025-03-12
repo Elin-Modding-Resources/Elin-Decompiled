@@ -2953,7 +2953,16 @@ public class Chara : Card, IPathfindWalker
 						c.PlayEffect("push");
 					}
 					c.MoveByForce(newPoint, this, checkWall: true);
-					if (IsPC && !c.IsPCParty && !c.IsUnique && c.IsHuman && EClass.rnd(5) == 0)
+					if (!c.IsPC && c.trait is TraitRogue && EClass.rnd(3) == 0 && GetCurrency() > 20)
+					{
+						int num = EClass.rndHalf(10 + Mathf.Min(GetCurrency() / 100, 1000));
+						c.Talk("pushed");
+						Say("pushed_money", this, c);
+						ModCurrency(-num);
+						c.ModCurrency(num);
+						c.PlaySound("steal_money");
+					}
+					else if (IsPC && !c.IsPCParty && !c.IsUnique && c.IsHuman && EClass.rnd(5) == 0)
 					{
 						c.Talk("pushed");
 					}
@@ -3910,7 +3919,7 @@ public class Chara : Card, IPathfindWalker
 
 	public Thing Pick(Thing t, bool msg = true, bool tryStack = true)
 	{
-		if (t.trait is TraitCard && t.isNew && EClass.game.config.autoCollectCard)
+		if (t.trait is TraitCard && t.isNew && EClass.game.config.autoCollectCard && !t.c_idRefCard.IsEmpty())
 		{
 			ContentCodex.Collect(t);
 			return t;
@@ -5982,6 +5991,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override CardRenderer _CreateRenderer()
 	{
+		CardRenderer cardRenderer = renderer;
 		CharaRenderer charaRenderer = new CharaRenderer();
 		if (race.id == "spider" && source.tiles.Length > 1)
 		{
@@ -6017,6 +6027,10 @@ public class Chara : Card, IPathfindWalker
 		}
 		renderer = charaRenderer;
 		renderer.SetOwner(this);
+		if (cardRenderer != null)
+		{
+			renderer.SetFirst(first: false, cardRenderer.position);
+		}
 		return charaRenderer;
 	}
 

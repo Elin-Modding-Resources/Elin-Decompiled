@@ -43,6 +43,7 @@ public class TextureManager
 		Add(tileMap.passAutoTileWater, textureData.floor);
 		Add(tileMap.passFloorMarker, textureData.floor);
 		Add(tileMap.passCharaL, textureData.objs_C);
+		Add(tileMap.passCharaLW, textureData.objs_C);
 		Add(tileMap.passIcon, textureData.objs_S);
 		AddList(textureData.world, "world.png");
 		AddList(textureData.bird, "bird1.png");

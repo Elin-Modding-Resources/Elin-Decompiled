@@ -462,6 +462,14 @@ public class Game : EClass
 			}
 		}
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 100))
+		{
+			int num = player.recipes.knownRecipes.TryGetValue("trainingDummy_heavy", 0);
+			if (num != 0)
+			{
+				player.recipes.knownRecipes["trainingDummy_heavy1"] = num;
+			}
+		}
 		if (version.IsBelow(0, 23, 96))
 		{
 			EClass.game.principal = IO.DeepCopy(EClass.setting.start.principals[0]);

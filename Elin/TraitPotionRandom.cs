@@ -6,7 +6,7 @@ public class TraitPotionRandom : TraitPotion
 		lvMod = 10
 	};
 
-	public SourceElement.Row source => EClass.sources.elements.map[owner.refVal];
+	public override SourceElement.Row source => EClass.sources.elements.map[owner.refVal];
 
 	public override string AliasEle => source.aliasRef;
 

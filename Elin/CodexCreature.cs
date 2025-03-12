@@ -85,9 +85,9 @@ public class CodexCreature : EClass
 		}
 	}
 
-	public void SetImage(Image image, bool nativeSize = false)
+	public void SetImage(Image image, int idSkin = 0, bool nativeSize = true)
 	{
-		source.SetImage(image, null, 0, nativeSize);
+		source.SetImage(image, null, 0, nativeSize, 0, idSkin);
 		image.SetActive(enable: true);
 	}
 

@@ -36,7 +36,7 @@ public class ItemGeneral : UIItem, IPrefImage
 		{
 			c2 = FontColor.Good;
 		}
-		else if (c.hp < c.MaxHP / 2)
+		else if (c.hp < c.MaxHP / 2 && c.currentZone == EClass._zone)
 		{
 			c2 = FontColor.Warning;
 		}

@@ -537,6 +537,17 @@ public class CoreDebug : EScriptable
 			}
 			EClass.pc.AddCard(thing);
 			thing.Dye("rubinus");
+			thing = ThingGen.Create("backpack");
+			foreach (SourceObj.Row row3 in EClass.sources.objs.rows)
+			{
+				if (row3.tag.Contains("seed"))
+				{
+					Thing c = TraitSeed.MakeSeed(row3).SetNum(100);
+					thing.AddCard(c);
+				}
+			}
+			EClass.pc.AddCard(thing);
+			thing.Dye("silver");
 			thing = ThingGen.Create("pouch");
 			for (int num4 = 0; num4 < 30; num4++)
 			{

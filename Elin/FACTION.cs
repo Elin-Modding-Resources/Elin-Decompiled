@@ -4,19 +4,7 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfSea = 3605;
-
-	public const int bfFertile = 3700;
-
 	public const int bfHill = 3603;
-
-	public const int bfBeach = 3604;
-
-	public const int fRation = 2207;
-
-	public const int bfGeyser = 3701;
-
-	public const int bfRuin = 3702;
 
 	public const int bfSnow = 3602;
 
@@ -24,11 +12,23 @@ public class FACTION
 
 	public const int bfPlain = 3600;
 
+	public const int bfSea = 3605;
+
 	public const int bfCave = 3500;
 
-	public const int fAttraction = 2206;
+	public const int bfFertile = 3700;
 
-	public const int fLoyal = 2117;
+	public const int bfGeyser = 3701;
+
+	public const int bfRuin = 3702;
+
+	public const int bfBeach = 3604;
+
+	public const int fRation = 2207;
+
+	public const int actBuildRecipe = 4005;
+
+	public const int fSafety = 2205;
 
 	public const int fFood = 2204;
 
@@ -40,39 +40,35 @@ public class FACTION
 
 	public const int fSoil = 2200;
 
-	public const int fLuck = 2118;
-
-	public const int fConstruction = 2003;
+	public const int bfTranquil = 3703;
 
 	public const int fHeirloom = 2120;
 
 	public const int fTaxEvasion = 2119;
 
-	public const int fAdmin = 2115;
+	public const int fLuck = 2118;
 
-	public const int fEducation = 2116;
+	public const int fLoyal = 2117;
 
-	public const int fSafety = 2205;
+	public const int fAttraction = 2206;
 
-	public const int bfTranquil = 3703;
+	public const int bfVolcano = 3704;
 
-	public const int bfHunt = 3705;
+	public const int bfMushroom = 3801;
 
 	public const int bfFish = 3706;
 
 	public const int actBuildInspect = 4006;
 
-	public const int actBuildRecipe = 4005;
-
-	public const int actBuildCollect = 4004;
-
 	public const int actBuildAnywhere = 4003;
 
 	public const int actBuildTerrain = 4002;
 
+	public const int fEducation = 2116;
+
 	public const int actBuildMine = 4001;
 
-	public const int bfVolcano = 3704;
+	public const int actBuildCut = 4000;
 
 	public const int bfStart = 3900;
 
@@ -82,40 +78,44 @@ public class FACTION
 
 	public const int bfGum = 3803;
 
-	public const int actBuildCut = 4000;
-
-	public const int bfMushroom = 3801;
+	public const int bfHunt = 3705;
 
 	public const int bfSilica = 3802;
 
-	public const int bfFreshAir = 3708;
-
-	public const int bfBasin = 3709;
-
-	public const int bfBreed = 3710;
-
-	public const int bfLandmark1 = 3780;
-
-	public const int bfMonster = 3707;
-
-	public const int bfLandmark3 = 3782;
-
-	public const int bfLandmark4 = 3783;
+	public const int bfCoal = 3800;
 
 	public const int bfLandmark5 = 3784;
 
-	public const int bfCoal = 3800;
+	public const int bfLandmark4 = 3783;
+
+	public const int bfLandmark3 = 3782;
 
 	public const int bfLandmark2 = 3781;
 
+	public const int bfLandmark1 = 3780;
+
+	public const int bfBreed = 3710;
+
+	public const int bfBasin = 3709;
+
+	public const int bfFreshAir = 3708;
+
+	public const int bfMonster = 3707;
+
+	public const int actBuildCollect = 4004;
+
+	public const int fAdmin = 2115;
+
+	public const int fConstruction = 2003;
+
 	public static readonly int[] IDS = new int[52]
 	{
-		3605, 3700, 3603, 3604, 2207, 3701, 3702, 3602, 3601, 3600,
-		3500, 2206, 2117, 2204, 2203, 2202, 2201, 2200, 2118, 2003,
-		2120, 2119, 2115, 2116, 2205, 3703, 3705, 3706, 4006, 4005,
-		4004, 4003, 4002, 4001, 3704, 3900, 3805, 3804, 3803, 4000,
-		3801, 3802, 3708, 3709, 3710, 3780, 3707, 3782, 3783, 3784,
-		3800, 3781
+		3603, 3602, 3601, 3600, 3605, 3500, 3700, 3701, 3702, 3604,
+		2207, 4005, 2205, 2204, 2203, 2202, 2201, 2200, 3703, 2120,
+		2119, 2118, 2117, 2206, 3704, 3801, 3706, 4006, 4003, 4002,
+		2116, 4001, 4000, 3900, 3805, 3804, 3803, 3705, 3802, 3800,
+		3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707, 4004,
+		2115, 2003
 	};
 }
 public class Faction : EClass
@@ -511,7 +511,12 @@ public class Faction : EClass
 	public int GetFameTax(bool evasion)
 	{
 		int v = EClass.curve(EClass.player.fame * 2, 10000, 2000, 80);
-		return EvadeTax(v, evasion);
+		v = EvadeTax(v, evasion);
+		if (v < 0)
+		{
+			v = 50000;
+		}
+		return v;
 	}
 
 	public int EvadeTax(int v, bool evasion)
@@ -525,7 +530,7 @@ public class Faction : EClass
 		{
 			num += child.Evalue(2119);
 		}
-		return (int)((float)(v * 100) / (100f + Mathf.Sqrt(num * 5)));
+		return (int)(long)((float)(v * 100) / (100f + Mathf.Sqrt(num * 5)));
 	}
 
 	public void SetTaxTooltip(UINote n)

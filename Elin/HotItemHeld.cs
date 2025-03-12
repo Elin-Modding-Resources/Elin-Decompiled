@@ -221,6 +221,10 @@ public class HotItemHeld : HotItemThing
 		{
 			flag = false;
 		}
+		if (thing.trait is TraitTent && EClass._zone is Zone_Tent)
+		{
+			flag = false;
+		}
 		Chara tg;
 		if (flag)
 		{

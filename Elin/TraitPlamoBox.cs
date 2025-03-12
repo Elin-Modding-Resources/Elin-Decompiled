@@ -15,7 +15,7 @@ public class TraitPlamoBox : TraitItem
 			return false;
 		}
 		EClass.pc.Say("openDoor", EClass.pc, owner);
-		Thing thing = ThingGen.Create("plamo");
+		Thing thing = ThingGen.Create((EClass.rnd(5) == 0) ? "plamo_stand" : ((EClass.rnd(4) == 0) ? "plamo_bird" : "plamo"));
 		thing.DyeRandom();
 		EClass.pc.Pick(thing);
 		owner.ModNum(-1);

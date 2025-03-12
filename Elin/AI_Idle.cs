@@ -370,6 +370,22 @@ public class AI_Idle : AIAct
 		{
 			owner.TryAssignBed();
 		}
+		if (owner.id == "geist" && EClass.rnd(20) == 0)
+		{
+			Point nearestPoint = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false);
+			if (nearestPoint != null)
+			{
+				foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion))
+				{
+					item3.Teleport(nearestPoint.GetNearestPoint(allowBlock: false, allowChara: false) ?? nearestPoint);
+				}
+				if (owner != null)
+				{
+					owner.Teleport(nearestPoint);
+				}
+				yield return Success();
+			}
+		}
 		if (EClass._zone.IsPCFaction)
 		{
 			Room room = owner.pos.cell.room;

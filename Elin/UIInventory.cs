@@ -333,7 +333,7 @@ public class UIInventory : EMono
 		}
 		if ((bool)layer.uiCurrency)
 		{
-			tab.owner.BuildUICurrency(layer.uiCurrency, tab.owner.owner.trait.CostRerollShop != 0);
+			tab.owner.BuildUICurrency(layer.uiCurrency, tab.owner.owner.trait.CostRerollShop != 0 || EMono.debug.enable);
 		}
 		layer.TryShowHint("h_inv" + tab.mode);
 		if ((bool)headerRow)

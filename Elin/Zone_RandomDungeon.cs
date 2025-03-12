@@ -10,17 +10,7 @@ public class Zone_RandomDungeon : Zone_Dungeon
 
 	public override int MinLv => LvBoss;
 
-	public override bool ScaleMonsterLevel
-	{
-		get
-		{
-			if (!EClass.player.flags.KilledBossInVoid || DangerLv < 50)
-			{
-				return DangerLv >= 200;
-			}
-			return true;
-		}
-	}
+	public override bool ScaleMonsterLevel => DangerLv >= 200;
 
 	public override string IDPlayList
 	{

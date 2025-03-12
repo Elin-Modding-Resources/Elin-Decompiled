@@ -60,11 +60,13 @@ public class PostEffectProfile : EScriptable
 		{
 			EClass.scene.screenElin.tileMap.passChara.mat.EnableKeyword("AA_ON");
 			EClass.scene.screenElin.tileMap.passCharaL.mat.EnableKeyword("AA_ON");
+			EClass.scene.screenElin.tileMap.passCharaLW.mat.EnableKeyword("AA_ON");
 		}
 		else
 		{
 			EClass.scene.screenElin.tileMap.passChara.mat.DisableKeyword("AA_ON");
 			EClass.scene.screenElin.tileMap.passCharaL.mat.DisableKeyword("AA_ON");
+			EClass.scene.screenElin.tileMap.passCharaLW.mat.DisableKeyword("AA_ON");
 		}
 	}
 }

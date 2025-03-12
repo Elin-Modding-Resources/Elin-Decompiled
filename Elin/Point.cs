@@ -1181,12 +1181,12 @@ public class Point : EClass
 		return listChara;
 	}
 
-	public List<Chara> ListCharasInRadius(Chara cc, int dist, Func<Chara, bool> func)
+	public List<Chara> ListCharasInRadius(Chara cc, int dist, Func<Chara, bool> func, bool onlyVisible = true)
 	{
 		listChara.Clear();
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (func(chara) && chara.Dist(cc) < dist && Los.IsVisible(chara, cc))
+			if (func(chara) && chara.Dist(cc) < dist && (!onlyVisible || Los.IsVisible(chara, cc)))
 			{
 				listChara.Add(chara);
 			}

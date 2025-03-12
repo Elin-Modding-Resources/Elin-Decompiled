@@ -68,7 +68,7 @@ public class AI_Fuck : AIAct
 		{
 			cc.SetTempHand(1104, -1);
 		}
-		maxProgress = (ntr ? 15 : 25);
+		maxProgress = (ntr ? 10 : 25);
 		if (succubus)
 		{
 			cc.Talk("seduce");
@@ -292,7 +292,7 @@ public class AI_Fuck : AIAct
 			}
 			else if (chara2.ExistsOnMap)
 			{
-				chara2.stamina.Mod(-1000000);
+				chara2.stamina.Mod((!chara2.IsPCFaction) ? (-10000) : (chara2.IsPC ? (-25) : (-50)));
 			}
 			break;
 		}
