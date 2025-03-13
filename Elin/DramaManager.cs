@@ -275,6 +275,10 @@ public class DramaManager : EMono
 			}
 			return;
 		}
+		if (LayerDrama.fromBook && action == "editPlaylist")
+		{
+			action = "BGM";
+		}
 		switch (action)
 		{
 		case "disableFullPortrait":
@@ -309,8 +313,8 @@ public class DramaManager : EMono
 			{
 				if (p2.StartsWith("*"))
 				{
-					Quest quest = EMono.game.quests.Get(p2.TrimStart('*'));
-					quest?.ChangePhase(p3.ToInt(quest.GetType()));
+					Quest quest3 = EMono.game.quests.Get(p2.TrimStart('*'));
+					quest3?.ChangePhase(p3.ToInt(quest3.GetType()));
 				}
 				else
 				{
@@ -413,6 +417,10 @@ public class DramaManager : EMono
 			break;
 		}
 		case "invoke":
+			if (LayerDrama.fromBook)
+			{
+				break;
+			}
 			if (jump.IsEmpty())
 			{
 				AddEvent(delegate
@@ -657,28 +665,32 @@ public class DramaManager : EMono
 			AddEvent(new DramaEventExit());
 			break;
 		case "acceptQuest":
+			if (LayerDrama.fromBook)
+			{
+				break;
+			}
 			AddEvent(delegate
 			{
-				Quest quest2 = EMono.game.quests.globalList.Where((Quest a) => a.source.id == p2).First();
-				EMono.game.quests.globalList.Remove(quest2);
-				EMono.game.quests.Start(quest2);
+				Quest quest = EMono.game.quests.globalList.Where((Quest a) => a.source.id == p2).First();
+				EMono.game.quests.globalList.Remove(quest);
+				EMono.game.quests.Start(quest);
 			});
 			break;
 		case "startQuest":
 			AddEvent(delegate
 			{
-				Quest quest3 = Quest.Create(p2);
-				if (!quest3.HasDLC)
+				Quest quest2 = Quest.Create(p2);
+				if (!quest2.HasDLC)
 				{
 					Msg.Say("(Failed DLC check)");
 				}
 				else
 				{
-					EMono.game.quests.Start(quest3);
-					LayerDrama.currentQuest = quest3;
+					EMono.game.quests.Start(quest2);
+					LayerDrama.currentQuest = quest2;
 					if (tg != null && tg.chara != null)
 					{
-						Debug.Log("Starting Quest:" + quest3?.ToString() + "/" + tg.chara.quest?.ToString() + "/" + (quest3 == tg.chara.quest));
+						Debug.Log("Starting Quest:" + quest2?.ToString() + "/" + tg.chara.quest?.ToString() + "/" + (quest2 == tg.chara.quest));
 					}
 				}
 			});
@@ -699,32 +711,44 @@ public class DramaManager : EMono
 			});
 			break;
 		case "addKeyItem":
-			AddEvent(delegate
+			if (!LayerDrama.fromBook)
 			{
-				EMono.player.ModKeyItem(p2);
-			});
+				AddEvent(delegate
+				{
+					EMono.player.ModKeyItem(p2);
+				});
+			}
 			break;
 		case "drop":
-			AddEvent(delegate
+			if (!LayerDrama.fromBook)
 			{
-				Msg.Say("dropReward");
-				CardBlueprint.SetNormalRarity();
-				Thing t = ThingGen.Create(p2);
-				EMono._zone.AddCard(t, EMono.pc.pos);
-			});
+				AddEvent(delegate
+				{
+					Msg.Say("dropReward");
+					CardBlueprint.SetNormalRarity();
+					Thing t = ThingGen.Create(p2);
+					EMono._zone.AddCard(t, EMono.pc.pos);
+				});
+			}
 			break;
 		case "completeQuest":
-			AddEvent(delegate
+			if (!LayerDrama.fromBook)
 			{
-				EMono.game.quests.Complete(p2.IsEmpty() ? LayerDrama.currentQuest : EMono.game.quests.Get(p2));
-				LayerDrama.currentQuest = null;
-			});
+				AddEvent(delegate
+				{
+					EMono.game.quests.Complete(p2.IsEmpty() ? LayerDrama.currentQuest : EMono.game.quests.Get(p2));
+					LayerDrama.currentQuest = null;
+				});
+			}
 			break;
 		case "nextPhase":
-			AddEvent(delegate
+			if (!LayerDrama.fromBook)
 			{
-				EMono.game.quests.Get(p2).NextPhase();
-			});
+				AddEvent(delegate
+				{
+					EMono.game.quests.Get(p2).NextPhase();
+				});
+			}
 			break;
 		case "addResource":
 			AddEvent(delegate
@@ -1011,6 +1035,10 @@ public class DramaManager : EMono
 		string[] array = IF.Split(',');
 		switch (array[0])
 		{
+		case "fromBook":
+			return LayerDrama.fromBook;
+		case "!fromBook":
+			return !LayerDrama.fromBook;
 		case "WindRest":
 			return EMono._zone is Zone_WindRest;
 		case "guild_promote":

@@ -13,6 +13,8 @@ public class LayerDrama : ELayer
 
 	public static bool maxBGMVolume;
 
+	public static bool fromBook;
+
 	public static string forceJump;
 
 	public static LayerDrama Instance;
@@ -114,6 +116,7 @@ public class LayerDrama : ELayer
 		ELayer.ui.Show();
 		keepBGM = false;
 		haltPlaylist = false;
+		fromBook = false;
 		SoundManager.current.haltUpdate = false;
 		SoundManager.forceBGM = false;
 		ELayer.ui.hud.hint.cg.alpha = 1f;

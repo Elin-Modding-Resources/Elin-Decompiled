@@ -64,17 +64,25 @@ public class TraitDrinkMilkMother : TraitDrinkMilk
 				c.Say("grow_adult", c);
 				c.PlaySound("mutation");
 				c.PlayEffect("mutation");
-				string id = c.id;
-				if (!(id == "putty_snow"))
+				switch (c.id)
 				{
-					if (id == "putty_snow_gold" && c.idSkin >= 1)
+				case "putty_snow":
+					if (c.idSkin >= 4)
+					{
+						c.idSkin = (c.idSkin - 4) / 2;
+					}
+					break;
+				case "putty_snow_gold":
+					if (c.idSkin >= 1)
 					{
 						c.idSkin = 0;
 					}
-				}
-				else if (c.idSkin >= 4)
-				{
-					c.idSkin = (c.idSkin - 4) / 2;
+					break;
+				case "chicken":
+				case "duck":
+				case "shamo":
+					c.idSkin = 0;
+					break;
 				}
 			}
 			else

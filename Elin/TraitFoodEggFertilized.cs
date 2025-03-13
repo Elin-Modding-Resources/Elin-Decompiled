@@ -64,17 +64,25 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 	public static void MakeBaby(Chara c, int baby)
 	{
 		c.SetFeat(1232, baby, msg: true);
-		string id = c.id;
-		if (!(id == "putty_snow"))
+		switch (c.id)
 		{
-			if (id == "putty_snow_gold" && c.idSkin == 0)
+		case "putty_snow":
+			if (c.idSkin <= 3)
+			{
+				c.idSkin = 4 + c.idSkin * 2 + EClass.rnd(2);
+			}
+			break;
+		case "putty_snow_gold":
+			if (c.idSkin == 0)
 			{
 				c.idSkin = 1 + EClass.rnd(2);
 			}
-		}
-		else if (c.idSkin <= 3)
-		{
-			c.idSkin = 4 + c.idSkin * 2 + EClass.rnd(2);
+			break;
+		case "shamo":
+		case "chicken":
+		case "duck":
+			c.idSkin = 1;
+			break;
 		}
 	}
 

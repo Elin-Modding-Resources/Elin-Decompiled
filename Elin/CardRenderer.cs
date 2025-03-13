@@ -375,6 +375,7 @@ public class CardRenderer : RenderObject
 				case 2625:
 					return EClass.core.refs.prefs.sonwputit1;
 				case 2320:
+				case 2611:
 				case 2620:
 				case 2622:
 				case 2624:

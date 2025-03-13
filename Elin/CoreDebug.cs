@@ -443,8 +443,9 @@ public class CoreDebug : EScriptable
 			thing = ThingGen.Create("pouch");
 			for (int k = 0; k < 30; k++)
 			{
-				thing.AddCard(ThingGen.Create("mathammer", MATERIAL.GetRandomMaterial(100).alias));
+				thing.AddCard(ThingGen.Create("mathammer", MATERIAL.GetRandomMaterial(100).alias)).SetNum(10);
 			}
+			thing.AddCard(ThingGen.Create("mathammer", 102)).SetNum(10);
 			EClass.pc.AddCard(thing);
 			thing = ThingGen.Create("pouch");
 			for (int l = 0; l < 30; l++)
@@ -519,7 +520,6 @@ public class CoreDebug : EScriptable
 			thing.AddCard(ThingGen.Create("gem").SetNum(99).ChangeMaterial("rubinus"));
 			thing.AddCard(ThingGen.Create("flower_white").SetNum(99));
 			thing.AddCard(ThingGen.Create("bait").SetNum(10));
-			thing.AddCard(ThingGen.Create("seed").SetNum(99));
 			EClass.pc.AddCard(thing);
 			thing.Dye("rubinus");
 			Thing thing6 = ThingGen.Create("quiver");
@@ -542,7 +542,7 @@ public class CoreDebug : EScriptable
 			{
 				if (row3.tag.Contains("seed"))
 				{
-					Thing c = TraitSeed.MakeSeed(row3).SetNum(100);
+					Thing c = TraitSeed.MakeSeed(row3).SetNum(10);
 					thing.AddCard(c);
 				}
 			}
@@ -583,6 +583,7 @@ public class CoreDebug : EScriptable
 			EClass.pc.AddThing("record");
 			EClass.pc.AddThing("deed").SetNum(5);
 			EClass.pc.AddThing("book_story");
+			EClass.pc.AddThing("book_story_home");
 			EClass.pc.AddThing("book_tutorial");
 			EClass.pc.AddThing("water").SetNum(20).SetBlessedState(BlessedState.Blessed);
 			EClass.pc.AddThing("water").SetNum(20).SetBlessedState(BlessedState.Cursed);
@@ -647,6 +648,13 @@ public class CoreDebug : EScriptable
 			EClass.game.quests.Add("quru_past1");
 			EClass.game.quests.Add("quru_past2");
 			EClass.game.quests.Add("pre_debt");
+			EClass.game.quests.Add("exile_meet");
+			EClass.game.quests.Add("exile_quru");
+			EClass.game.quests.Add("exile_kettle");
+			EClass.game.quests.Add("exile_whisper");
+			EClass.game.quests.Add("exile_voice");
+			EClass.game.quests.Add("into_darkness");
+			EClass.game.quests.Add("demitas_spellwriter");
 		}
 		static Thing AddAbility(string id)
 		{
@@ -914,25 +922,31 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			for (int i = 0; i < 20; i++)
+			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
+			if (targetChara != null)
 			{
-				Debug.Log(Rand.Range(0, 2));
+				EClass.pc.Pick(targetChara.MakeMilk());
+				EClass.pc.Pick(targetChara.MakeGene());
+				EClass.pc.Pick(targetChara.MakeBraineCell());
+				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
 			}
-			EClass.player.recipes.Add("b32");
-			if (EScriptable.rnd(2) == 0)
+			if (EClass.game.quests.Get<QuestDebt>() == null)
 			{
-				EClass.player.recipes.Add("b118");
-			}
-			else
-			{
-				EClass.player.recipes.Add("b118-p");
+				Chara chara = CharaGen.Create("loytel");
+				EClass._zone.AddCard(chara, EClass.pc.pos);
+				chara.SetGlobal();
+				Quest q = EClass.game.quests.Add("debt", "loytel");
+				EClass.game.quests.Start(q);
+				EClass.pc.party.RemoveMember(chara);
+				Hostility hostility2 = (chara.c_originalHostility = Hostility.Ally);
+				chara.hostility = hostility2;
 			}
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
 			EClass.pc.AddCondition<ConDisease>();
-			for (int j = 0; j < 10; j++)
+			for (int i = 0; i < 10; i++)
 			{
 				Thing thing = ThingGen.Create("egg_fertilized");
 				thing.TryMakeRandomItem(40);
@@ -954,9 +968,9 @@ public class CoreDebug : EScriptable
 			{
 				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
 			}
-			foreach (Chara chara in EClass._map.charas)
+			foreach (Chara chara2 in EClass._map.charas)
 			{
-				chara.AddExp(chara.ExpToNext);
+				chara2.AddExp(chara2.ExpToNext);
 			}
 			EClass.pc.PlayEffect("boost");
 			EClass.pc.PlaySound("boost");
@@ -1034,7 +1048,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int k = 0; k < advanceMin; k++)
+				for (int j = 0; j < advanceMin; j++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}

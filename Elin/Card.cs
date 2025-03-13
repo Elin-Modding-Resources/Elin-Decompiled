@@ -3076,6 +3076,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				EClass.player.RefreshCurrentHotItem();
 				ActionMode.AdvOrRegion.updatePlans = true;
+				LayerInventory.SetDirty(thing);
+				Debug.Log(thing);
 			}
 			RecalculateFOV();
 		}

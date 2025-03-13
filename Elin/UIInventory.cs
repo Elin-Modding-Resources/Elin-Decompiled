@@ -1110,7 +1110,6 @@ public class UIInventory : EMono
 			},
 			onInstantiate = delegate(Thing a, ButtonGrid b)
 			{
-				dirty = false;
 				_ = a.Name;
 				bool flag = mode == Mode.Buy || mode == Mode.Sell || mode == Mode.Identify;
 				int num2 = ((destNum != -1) ? 1 : a.Num);
@@ -1138,6 +1137,7 @@ public class UIInventory : EMono
 			},
 			onList = delegate
 			{
+				dirty = false;
 				List<Thing> list = new List<Thing>();
 				foreach (Thing thing in owner.Things)
 				{
@@ -1211,7 +1211,6 @@ public class UIInventory : EMono
 		{
 			onRedraw = delegate(Thing a, ButtonGrid b, int i)
 			{
-				dirty = false;
 				b.index = i;
 				bool flag4 = i >= owner.Things.Count;
 				if (IsMagicChest)

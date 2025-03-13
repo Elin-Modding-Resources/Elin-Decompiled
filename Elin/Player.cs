@@ -608,6 +608,7 @@ public class Player : EClass
 			}
 			Dictionary<string, string> storyRow = GetStoryRow(idBook, id);
 			SoundManager.ForceBGM();
+			LayerDrama.fromBook = fromBook;
 			LayerDrama.Activate(idBook, storyRow["sheet"], storyRow["step"]);
 			if (!fromBook && !playedStories.Contains(id))
 			{

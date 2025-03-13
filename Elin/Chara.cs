@@ -1714,7 +1714,7 @@ public class Chara : Card, IPathfindWalker
 				info?.AddFix(EClass.player.lastEmptyAlly * 10 - 10, "exceedParty".lang());
 			}
 		}
-		else if (base.LV >= 1000 && !EClass.game.principal.disableVoidBlessing)
+		else if (base.LV >= 1000 && !EClass.game.principal.disableVoidBlessing && !base.IsPCFactionOrMinion)
 		{
 			num += EClass.curve((base.LV - 900) / 100 * 10, 500, 100);
 			info?.AddFix(EClass.curve((base.LV - 900) / 100 * 10, 500, 100), "enemySpeedBuff".lang());
@@ -2953,7 +2953,7 @@ public class Chara : Card, IPathfindWalker
 						c.PlayEffect("push");
 					}
 					c.MoveByForce(newPoint, this, checkWall: true);
-					if (!c.IsPC && c.trait is TraitRogue && EClass.rnd(3) == 0 && GetCurrency() > 20)
+					if (!c.IsPC && c.trait is TraitRogue && EClass.rnd(3) == 0 && GetCurrency() > 20 && !HasElement(426))
 					{
 						int num = EClass.rndHalf(10 + Mathf.Min(GetCurrency() / 100, 1000));
 						c.Talk("pushed");
@@ -2973,7 +2973,7 @@ public class Chara : Card, IPathfindWalker
 
 	public bool CanReplace(Chara c)
 	{
-		if (c.IsMultisize || !c.trait.CanBePushed || c.noMove || IsHostile(c) || IsMinion || (EClass._zone.IsRegion && !c.IsPCFactionOrMinion))
+		if (c.IsMultisize || !c.trait.CanBePushed || c.isRestrained || c.noMove || IsHostile(c) || IsMinion || (EClass._zone.IsRegion && !c.IsPCFactionOrMinion))
 		{
 			return false;
 		}
@@ -4519,6 +4519,7 @@ public class Chara : Card, IPathfindWalker
 			break;
 		case "farris":
 			Restock("lute", 1);
+			Restock("book_story_home", 1);
 			break;
 		case "begger":
 			break;
@@ -7173,7 +7174,7 @@ public class Chara : Card, IPathfindWalker
 			c.ModAffinity(EClass.pc, a, show);
 			return;
 		}
-		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase());
+		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 20 : 0);
 		if (IsPCFaction && homeBranch != null)
 		{
 			num += (int)Mathf.Sqrt(homeBranch.Evalue(2117)) * 5;
