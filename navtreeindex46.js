@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"classColorProfile_1_1RarityColors.html#afe6cb39b3473dd4325e2aa4aacdfdd29":[1,0,277,2,3],
+"classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,277,2,5],
 "classColorProfile_1_1TextColors.html":[1,0,277,3],
 "classColorProfile_1_1TextColors.html#a6c99dcd62a4673e64a14b2324a2e7337":[1,0,277,3,0],
 "classColorProfile_1_1TextColors.html#a7d0ef1dadafbcd19a9da15cbef54ff09":[1,0,277,3,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "classConWeapon.html#a83c2446cdf2064c5a5024bff09a8bfea":[1,0,366,2],
 "classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202":[1,0,366,1],
 "classConWet.html":[1,0,367],
-"classConWet.html#a06230376e3e51455384ee8e0581ff506":[1,0,367,3],
-"classConWet.html#aa3870f2c1fdbf51345e087e460013891":[1,0,367,1],
-"classConWet.html#aeee74cc0eef973f46565fed93e932c8d":[1,0,367,0]
+"classConWet.html#a06230376e3e51455384ee8e0581ff506":[1,0,367,3]
 };

@@ -30,6 +30,7 @@ var classENC =
     [ "invisibility", "classENC.html#ae5c738a413709462c1cfa19f00935c7c", null ],
     [ "levitation", "classENC.html#a9a5743895b58af8c659aafc855ad4108", null ],
     [ "living", "classENC.html#a45906330fe84f72c65c2bb5ef39ad413", null ],
+    [ "loving", "classENC.html#aed71db2edae0b707e1194236a7d74129", null ],
     [ "meleeDistance", "classENC.html#a1acc45030647323ffb2e21755fe0ef37", null ],
     [ "mod_ammo", "classENC.html#ae6075b407708032de2af662101425986", null ],
     [ "mod_ammo_knockback", "classENC.html#ad8de993aefa96fc6d5d051a5fa245c12", null ],

@@ -1780,7 +1780,8 @@ var hierarchy =
           ] ],
           [ "TraitStoryBook", "classTraitStoryBook.html", [
             [ "TraitTutorialBook", "classTraitTutorialBook.html", null ]
-          ] ]
+          ] ],
+          [ "TraitStoryBookHome", "classTraitStoryBookHome.html", null ]
         ] ],
         [ "TraitSeed", "classTraitSeed.html", null ],
         [ "TraitShackle", "classTraitShackle.html", [

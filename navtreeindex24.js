@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"classAI__Eat.html#acfde6bf6461e7ffac35078af83ee4dc9":[1,0,64,7],
+"classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27":[1,0,64,5],
 "classAI__Eat.html#af360d70637e48fa709f2ffeaa53b67d6":[1,0,64,3],
 "classAI__Eat.html#af542285e8d3e367ad24d37a23dfb3456":[1,0,64,2],
 "classAI__Equip.html":[1,0,65],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Sleep.html":[1,0,92],
 "classAI__Sleep.html#a1d3f1813a5ed00cebbe9fcd14711baba":[1,0,92,0],
 "classAI__Sleep.html#a2ae4e094f4f9eb9dd1865de0b2b1aac5":[1,0,92,1],
-"classAI__Steal.html":[1,0,93],
-"classAI__Steal.html#a040ad3580a90f3b3c4914bebf28ee022":[1,0,93,0],
-"classAI__Steal.html#a47bfbf515178ad5cb94c2598d0de546e":[1,0,93,2]
+"classAI__Steal.html":[1,0,93]
 };

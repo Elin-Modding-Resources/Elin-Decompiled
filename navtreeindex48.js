@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"classContentHallOfFame.html#ad404d8cf687cf941908cfb96d9090136":[1,0,346,6],
+"classContentHomeLog.html":[1,0,347],
 "classContentHomeLog.html#a015ec3d3662b5f62a1bc9d975f4e3e86":[1,0,347,2],
 "classContentHomeLog.html#a2037d50deef3aa936572dd2d476b455c":[1,0,347,3],
 "classContentHomeLog.html#a36803c6c55c1b32b89d487e3d2676ee5":[1,0,347,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "classCoreConfig.html#aacfb79ec5c6e9fa278ec39e047ad79f2":[1,0,370,49],
 "classCoreConfig.html#aae007e38b62657c302497feedbc22240":[1,0,370,58],
 "classCoreConfig.html#aaf97e864945409d10bcb60c21f911ce9":[1,0,370,31],
-"classCoreConfig.html#ab58606cb626ed12304fd82020d759d59":[1,0,370,77],
-"classCoreConfig.html#abadc01f5c02a15d89e59295be4841c11":[1,0,370,18],
-"classCoreConfig.html#abc986f644ed3f3936ffe6ce2e8853259":[1,0,370,48]
+"classCoreConfig.html#ab58606cb626ed12304fd82020d759d59":[1,0,370,77]
 };

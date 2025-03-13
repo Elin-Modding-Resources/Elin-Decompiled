@@ -14,6 +14,7 @@ var classLayerDrama =
     [ "currentReligion", "classLayerDrama.html#a7a3918a5f00f96e8ca8dbe1060190e3f", null ],
     [ "drama", "classLayerDrama.html#a87c9f83a7248a2e154a0f2eb97f8a00b", null ],
     [ "forceJump", "classLayerDrama.html#a142cc5ae178acbff2783c96fcca08ba2", null ],
+    [ "fromBook", "classLayerDrama.html#a47d0abdecf0b17416b3bfc09be6195f2", null ],
     [ "haltPlaylist", "classLayerDrama.html#ada46697fddd0a2c44e96f81804721ed6", null ],
     [ "Instance", "classLayerDrama.html#a41f2a2efd728c2119701cfb474a91450", null ],
     [ "keepBGM", "classLayerDrama.html#a75194987ef0384cd11416586d1e41afe", null ],

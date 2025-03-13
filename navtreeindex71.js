@@ -1,5 +1,8 @@
 var NAVTREEINDEX71 =
 {
+"classInvOwnerIdentify.html#acb1f450584838392e3b899717aec8c91":[1,0,676,1],
+"classInvOwnerLighten.html":[1,0,677],
+"classInvOwnerLighten.html#a82a092830e296879b5827907ef5b59bc":[1,0,677,2],
 "classInvOwnerLighten.html#a92113346e1f2e59d53de86c011fbbd4a":[1,0,677,4],
 "classInvOwnerLighten.html#a9fe07b56325f6589c9d0c3fbf6b2cfd1":[1,0,677,5],
 "classInvOwnerLighten.html#abc1e69d8c7e9d030d2c7aeb4f18b525f":[1,0,677,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX71 =
 "classKnowledgeResearch.html":[1,0,718],
 "classKnownSong.html":[1,0,719],
 "classKnownSong.html#a8c2167f1668086f4dc715109d28d80e4":[1,0,719,0],
-"classLIQUID.html":[1,0,812],
-"classLIQUID.html#a73ae5bc74a07c860c32cab2f47b05105":[1,0,812,0],
-"classLIQUID.html#aa93a8282dae666c4b35c7b5f9da6f135":[1,0,812,1],
-"classLab.html":[1,0,720]
+"classLIQUID.html":[1,0,812]
 };

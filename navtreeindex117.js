@@ -1,5 +1,9 @@
 var NAVTREEINDEX117 =
 {
+"classTraitMerchantJunk.html#a53445cae9c33cf4de11ada9ff0d356be":[1,0,1639,0],
+"classTraitMerchantJunk.html#a697a7628e397f4411127bdb3a5281182":[1,0,1639,1],
+"classTraitMerchantLamp.html":[1,0,1640],
+"classTraitMerchantLamp.html#a46f5cef42a3727aa84dac84ecd84cd74":[1,0,1640,0],
 "classTraitMerchantLamp.html#aa394c90f3e0cecdaedc87ec80690f7da":[1,0,1640,1],
 "classTraitMerchantMagic.html":[1,0,1641],
 "classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1641,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1704,7],
 "classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1704,5],
 "classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1704,6],
-"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1704,4],
-"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1704,1],
-"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1704,3],
-"classTraitPunishBall.html":[1,0,1705],
-"classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1705,1]
+"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1704,4]
 };
