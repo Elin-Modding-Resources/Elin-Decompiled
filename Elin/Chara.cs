@@ -4632,7 +4632,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
-		if (!IsPC && (!trait.CanJoinPartyResident || !trait.CanJoinParty))
+		if (!IsPC && (!trait.CanJoinPartyResident || !trait.CanJoinParty || memberType != 0))
 		{
 			if (homeZone != null && EClass._zone != homeZone)
 			{
@@ -7174,7 +7174,7 @@ public class Chara : Card, IPathfindWalker
 			c.ModAffinity(EClass.pc, a, show);
 			return;
 		}
-		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 20 : 0);
+		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 30 : 0);
 		if (IsPCFaction && homeBranch != null)
 		{
 			num += (int)Mathf.Sqrt(homeBranch.Evalue(2117)) * 5;

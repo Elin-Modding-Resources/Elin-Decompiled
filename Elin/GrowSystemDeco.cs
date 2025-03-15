@@ -8,6 +8,11 @@ public class GrowSystemDeco : GrowSystem
 
 	public override int StageLength => 2;
 
+	public override bool CanReapSeed()
+	{
+		return true;
+	}
+
 	public override void OnExceedLastStage()
 	{
 		SetStage(1);

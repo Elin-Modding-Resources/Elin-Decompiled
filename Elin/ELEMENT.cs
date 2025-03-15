@@ -39,7 +39,7 @@ public class ELEMENT
 
 	public const int hardness = 13;
 
-	public const int growth = 14;
+	public const int water = 15;
 
 	public const int heat = 16;
 
@@ -47,7 +47,7 @@ public class ELEMENT
 
 	public const int taste = 18;
 
-	public const int water = 15;
+	public const int growth = 14;
 
 	public const int fire = 21;
 
@@ -70,8 +70,8 @@ public class ELEMENT
 	public static readonly int[] IDS = new int[31]
 	{
 		751, 752, 753, 754, 755, 756, 759, 750, 0, 2,
-		1, 3, 5, 10, 11, 12, 13, 14, 16, 17,
-		18, 15, 21, 22, 23, 24, 25, 26, 29, 85,
+		1, 3, 5, 10, 11, 12, 13, 15, 16, 17,
+		18, 14, 21, 22, 23, 24, 25, 26, 29, 85,
 		20
 	};
 }

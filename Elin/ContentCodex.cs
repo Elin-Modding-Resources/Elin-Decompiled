@@ -157,6 +157,13 @@ public class ContentCodex : EContent
 			SE.BeepSmall();
 			Msg.Say("noCard");
 		}
+		if (EClass.debug.enable)
+		{
+			foreach (SourceChara.Row row in EClass.sources.charas.rows)
+			{
+				EClass.player.codex.AddCard(row.id);
+			}
+		}
 		RefreshInfo();
 	}
 

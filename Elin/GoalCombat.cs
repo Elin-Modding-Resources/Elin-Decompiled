@@ -511,6 +511,13 @@ public class GoalCombat : Goal
 					continue;
 				}
 				break;
+			case 8790:
+			case 8791:
+				if (tc.host != null)
+				{
+					continue;
+				}
+				break;
 			}
 			bool isHOT;
 			switch (text)

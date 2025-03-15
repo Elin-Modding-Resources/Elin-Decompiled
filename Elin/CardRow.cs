@@ -131,8 +131,8 @@ public class CardRow : RenderRow
 		int type = ((quality == 3) ? 3 : ((quality < 2) ? 1 : 2));
 		if (full && !text2.IsEmpty())
 		{
-			text = text2.ToTitleCase(wholeText: true) + Lang.space + text.Bracket(type);
+			text = ((text2 == "*r") ? "" : text2.ToTitleCase(wholeText: true)) + Lang.space + text.Bracket(type);
 		}
-		return text;
+		return text.TrimStart(' ');
 	}
 }

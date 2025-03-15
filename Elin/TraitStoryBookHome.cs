@@ -9,6 +9,7 @@ public class TraitStoryBookHome : TraitScroll
 		List<SourceQuest.Row> list = EClass.sources.quests.rows.Where((SourceQuest.Row q) => IsAvailable(q)).ToList();
 		EClass.ui.AddLayer<LayerList>().SetSize().SetList2(list, (SourceQuest.Row a) => GetTitle(a), delegate(SourceQuest.Row a, ItemGeneral b)
 		{
+			EClass.ui.GetLayer<LayerList>().SetActive(enable: false);
 			LayerDrama.fromBook = true;
 			string text3 = a.drama[0];
 			string idStep = "quest_" + a.id;
@@ -16,7 +17,10 @@ public class TraitStoryBookHome : TraitScroll
 			{
 				idStep = "loytelEscaped";
 			}
-			LayerDrama.Activate(text3, text3, idStep, GetChara(text3));
+			LayerDrama.Activate(text3, text3, idStep, GetChara(text3)).SetOnKill(delegate
+			{
+				EClass.ui.GetLayer<LayerList>().SetActive(enable: true);
+			});
 		}, delegate
 		{
 		}, autoClose: false);

@@ -146,7 +146,7 @@ public class Portrait : UIButton
 			if (fixSpritePos)
 			{
 				imageChara.transform.localScale = (c.IsPCC ? new Vector3(1.3f, 1.4f, 1f) : new Vector3(1f, 1f, 1f)) * charaScale;
-				imageChara.rectTransform.pivot = (c.IsPCC ? new Vector2(0.5f, 0.4f) : new Vector2(0.5f, 0.2f));
+				imageChara.rectTransform.pivot = (c.IsPCC ? new Vector2(0.5f, 0.3f) : new Vector2(0.5f, 0.2f));
 				imageChara.rectTransform.anchoredPosition = (c.IsPCC ? new Vector2(-25f, 20f) : new Vector2(-25f, 20f));
 			}
 		}

@@ -5344,7 +5344,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return (trait as TraitAbility).CreateAct()?.GetSprite() ?? EClass.core.refs.icons.defaultAbility;
 		}
-		return sourceCard.GetSprite(dir, trait.IdSkin, (IsInstalled && pos.cell.IsSnowTile) ? true : false);
+		return sourceCard.GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
 	}
 
 	public virtual Sprite GetImageSprite()
