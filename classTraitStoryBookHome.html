@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.102 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.103 Nightly</span>
    </div>
   </td>
  </tr>
@@ -708,70 +708,74 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">    9</span>        List&lt;<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a>&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.rows.Where((<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> q) =&gt; IsAvailable(q)).ToList();</div>
 <div class="line"><span class="lineno">   10</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetSize().SetList2(list, (<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> a) =&gt; GetTitle(a), delegate(<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> a, <a class="code hl_class" href="classItemGeneral.html">ItemGeneral</a> b)</div>
 <div class="line"><span class="lineno">   11</span>        {</div>
-<div class="line"><span class="lineno">   12</span>            LayerDrama.fromBook = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordtype">string</span> text3 = a.drama[0];</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordtype">string</span> idStep = <span class="stringliteral">&quot;quest_&quot;</span> + a.id;</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">if</span> (a.id == <span class="stringliteral">&quot;pre_debt_runaway&quot;</span>)</div>
-<div class="line"><span class="lineno">   16</span>            {</div>
-<div class="line"><span class="lineno">   17</span>                idStep = <span class="stringliteral">&quot;loytelEscaped&quot;</span>;</div>
-<div class="line"><span class="lineno">   18</span>            }</div>
-<div class="line"><span class="lineno">   19</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">Activate</a>(text3, text3, idStep, GetChara(text3));</div>
-<div class="line"><span class="lineno">   20</span>        }, delegate</div>
-<div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>        }, autoClose: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keyword">static</span> <a class="code hl_class" href="classChara.html">Chara</a> GetChara(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.<a class="code hl_function" href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">Find</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> GetTitle(<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> r)</div>
+<div class="line"><span class="lineno">   12</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   13</span>            LayerDrama.fromBook = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordtype">string</span> text3 = a.drama[0];</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordtype">string</span> idStep = <span class="stringliteral">&quot;quest_&quot;</span> + a.id;</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (a.id == <span class="stringliteral">&quot;pre_debt_runaway&quot;</span>)</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                idStep = <span class="stringliteral">&quot;loytelEscaped&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>            }</div>
+<div class="line"><span class="lineno">   20</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">Activate</a>(text3, text3, idStep, GetChara(text3)).<a class="code hl_function" href="classLayer.html#afa85d191f8e6375270c9d01ddde61855">SetOnKill</a>(delegate</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.GetLayer&lt;<a class="code hl_class" href="classLayerList.html">LayerList</a>&gt;().SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   23</span>            });</div>
+<div class="line"><span class="lineno">   24</span>        }, delegate</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>        }, autoClose: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">static</span> <a class="code hl_class" href="classChara.html">Chara</a> GetChara(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordtype">string</span> name = r.<a class="code hl_function" href="classChara.html#a6674652091034e289b6c5e16f9cc8761">GetName</a>();</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">string</span> text = Regex.Replace(r.id, <span class="stringliteral">&quot;([0-9]*$)&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordtype">string</span> str = r.id.Replace(text, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordtype">int</span> num = 1;</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!str.IsEmpty())</div>
-<div class="line"><span class="lineno">   34</span>            {</div>
-<div class="line"><span class="lineno">   35</span>                num = 1 + str.ToInt();</div>
-<div class="line"><span class="lineno">   36</span>            }</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (name.IsEmpty())</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.<a class="code hl_function" href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">Find</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> GetTitle(<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> r)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordtype">string</span> name = r.<a class="code hl_function" href="classChara.html#a6674652091034e289b6c5e16f9cc8761">GetName</a>();</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordtype">string</span> text = Regex.Replace(r.id, <span class="stringliteral">&quot;([0-9]*$)&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordtype">string</span> str = r.id.Replace(text, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordtype">int</span> num = 1;</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!str.IsEmpty())</div>
 <div class="line"><span class="lineno">   38</span>            {</div>
-<div class="line"><span class="lineno">   39</span>                r = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.map.TryGetValue(text);</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span> (r != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   41</span>                {</div>
-<div class="line"><span class="lineno">   42</span>                    name = r.GetName();</div>
-<div class="line"><span class="lineno">   43</span>                }</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> name + <span class="stringliteral">&quot; &quot;</span> + num;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsAvailable(<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> r)</div>
-<div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (r.drama.IsEmpty() || GetChara(r.drama[0]) == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   50</span>            {</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a> &amp;&amp; r.tags.Contains(<span class="stringliteral">&quot;debug&quot;</span>))</div>
+<div class="line"><span class="lineno">   39</span>                num = 1 + str.ToInt();</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (name.IsEmpty())</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                r = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ae13e44c82dc0772f87c1ad21b9c653f8">quests</a>.map.TryGetValue(text);</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">if</span> (r != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   45</span>                {</div>
+<div class="line"><span class="lineno">   46</span>                    name = r.GetName();</div>
+<div class="line"><span class="lineno">   47</span>                }</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> name + <span class="stringliteral">&quot; &quot;</span> + num;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsAvailable(<a class="code hl_class" href="classSourceQuest.html">SourceQuest</a>.<a class="code hl_class" href="classSourceQuest_1_1Row.html">Row</a> r)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (r.drama.IsEmpty() || GetChara(r.drama[0]) == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   54</span>            {</div>
 <div class="line"><span class="lineno">   55</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordtype">string</span> text2 = Regex.Replace(r.id, <span class="stringliteral">&quot;([0-9]*$)&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28">completedIDs</a>.Contains(r.id) || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28">completedIDs</a>.Contains(text2))</div>
-<div class="line"><span class="lineno">   59</span>            {</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">string</span> str2 = r.id.Replace(text2, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordtype">int</span> num2 = 0;</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!str2.IsEmpty())</div>
-<div class="line"><span class="lineno">   65</span>            {</div>
-<div class="line"><span class="lineno">   66</span>                num2 = str2.ToInt();</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>            <a class="code hl_class" href="classQuest.html">Quest</a> quest = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12">Get</a>(text2);</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (quest != <span class="keyword">null</span> &amp;&amp; num2 &lt;= quest.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a>)</div>
-<div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>;</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a> &amp;&amp; r.tags.Contains(<span class="stringliteral">&quot;debug&quot;</span>))</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordtype">string</span> text2 = Regex.Replace(r.id, <span class="stringliteral">&quot;([0-9]*$)&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28">completedIDs</a>.Contains(r.id) || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_variable" href="classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28">completedIDs</a>.Contains(text2))</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordtype">string</span> str2 = r.id.Replace(text2, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (!str2.IsEmpty())</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                num2 = str2.ToInt();</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classQuest.html">Quest</a> quest = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12">Get</a>(text2);</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (quest != <span class="keyword">null</span> &amp;&amp; num2 &lt;= quest.<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a>)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca">showExtra</a>;</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 <div class="ttc" id="aclassCardManager_1_1GlobalCharaList_html_ab5eacf5c9f0cfe2fa9d1f9fdbf74f227"><div class="ttname"><a href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">CardManager.GlobalCharaList.Find</a></div><div class="ttdeci">Chara Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00020">CardManager.cs:20</a></div></div>
 <div class="ttc" id="aclassCardManager_html_a33a9778b2b0c1018c12d90e1b572e221"><div class="ttname"><a href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">CardManager.globalCharas</a></div><div class="ttdeci">GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00046">CardManager.cs:46</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
@@ -788,6 +792,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html_a13117d5fd681016c717b59b5bf9823a9"><div class="ttname"><a href="classLayerDrama.html#a13117d5fd681016c717b59b5bf9823a9">LayerDrama.Activate</a></div><div class="ttdeci">static LayerDrama Activate(string book, string idSheet, string idStep, Chara target=null, Card ref1=null, string tag=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00066">LayerDrama.cs:66</a></div></div>
 <div class="ttc" id="aclassLayerList_html"><div class="ttname"><a href="classLayerList.html">LayerList</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerList_8cs_source.html#l00005">LayerList.cs:6</a></div></div>
+<div class="ttc" id="aclassLayer_html_afa85d191f8e6375270c9d01ddde61855"><div class="ttname"><a href="classLayer.html#afa85d191f8e6375270c9d01ddde61855">Layer.SetOnKill</a></div><div class="ttdeci">Layer SetOnKill(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00579">Layer.cs:579</a></div></div>
 <div class="ttc" id="aclassQuestManager_html_a0b19e50fb38a0218c9a9a8bffc794a28"><div class="ttname"><a href="classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28">QuestManager.completedIDs</a></div><div class="ttdeci">HashSet&lt; string &gt; completedIDs</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00017">QuestManager.cs:17</a></div></div>
 <div class="ttc" id="aclassQuestManager_html_ae95a50210b18f1576e03bc0faffd3e12"><div class="ttname"><a href="classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12">QuestManager.Get</a></div><div class="ttdeci">Quest Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00160">QuestManager.cs:160</a></div></div>
 <div class="ttc" id="aclassQuest_html"><div class="ttname"><a href="classQuest.html">Quest</a></div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00006">Quest.cs:7</a></div></div>
@@ -796,7 +801,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceQuest_1_1Row_html"><div class="ttname"><a href="classSourceQuest_1_1Row.html">SourceQuest.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceQuest_8cs_source.html#l00006">SourceQuest.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceQuest_html"><div class="ttname"><a href="classSourceQuest.html">SourceQuest</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceQuest_8cs_source.html#l00003">SourceQuest.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00066">LayerDrama.Activate()</a>, <a class="el" href="Game_8cs_source.html#l00155">Game.cards</a>, <a class="el" href="QuestManager_8cs_source.html#l00017">QuestManager.completedIDs</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="CardManager_8cs_source.html#l00020">CardManager.GlobalCharaList.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00160">QuestManager.Get()</a>, <a class="el" href="Chara_8cs_source.html#l01166">Chara.GetName()</a>, <a class="el" href="CardManager_8cs_source.html#l00046">CardManager.globalCharas</a>, <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>, <a class="el" href="Game_8cs_source.html#l00179">Game.quests</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00066">LayerDrama.Activate()</a>, <a class="el" href="Game_8cs_source.html#l00155">Game.cards</a>, <a class="el" href="QuestManager_8cs_source.html#l00017">QuestManager.completedIDs</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="CardManager_8cs_source.html#l00020">CardManager.GlobalCharaList.Find()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00160">QuestManager.Get()</a>, <a class="el" href="Chara_8cs_source.html#l01166">Chara.GetName()</a>, <a class="el" href="CardManager_8cs_source.html#l00046">CardManager.globalCharas</a>, <a class="el" href="Quest_8cs_source.html#l00040">Quest.phase</a>, <a class="el" href="Game_8cs_source.html#l00179">Game.quests</a>, <a class="el" href="SourceManager_8cs_source.html#l00058">SourceManager.quests</a>, <a class="el" href="Layer_8cs_source.html#l00579">Layer.SetOnKill()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00167">CoreDebug.showExtra</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classBackerContentInspector_1_1ContentObj.html#a37ecfaa8b8ed69eb3087b4de947e857e":[1,0,179,2,2],
+"classBackerContentInspector_1_1ContentObj.html#a4959176808bd8103a21cca880f18e77f":[1,0,179,2,0],
 "classBackerContentInspector_1_1ContentObj.html#a805388cd34c8be7b6dd1992deb26ec11":[1,0,179,2,1],
 "classBackerContentInspector_1_1ContentObj.html#ab28c61e192939dd42f359bef4e94a810":[1,0,179,2,3],
 "classBadCondition.html":[1,0,180],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classBaseGameScreen.html#acc1c58209aa7203f241ba23ae0c3cbba":[1,0,188,30],
 "classBaseGameScreen.html#acdbbb6a2c7a0a7866a3973ef1baec7cc":[1,0,188,64],
 "classBaseGameScreen.html#ace7e04df042a675049e0b1a3ffad955f":[1,0,188,21],
-"classBaseGameScreen.html#ad2bb7197eca837be47a45df5394940f7":[1,0,188,23],
-"classBaseGameScreen.html#ad6c40c221707b1b31fdf76bffcc6d1bf":[1,0,188,20],
-"classBaseGameScreen.html#ad6f7a11dac07f531bf7052a9d437d893":[1,0,188,8]
+"classBaseGameScreen.html#ad2bb7197eca837be47a45df5394940f7":[1,0,188,23]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.102 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.103 Nightly</span>
    </div>
   </td>
  </tr>
@@ -225,9 +225,9 @@ $(document).ready(function(){initNavTree('CardRow_8cs_source.html',''); initResi
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordtype">int</span> type = ((<a class="code hl_variable" href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">quality</a> == 3) ? 3 : ((<a class="code hl_variable" href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">quality</a> &lt; 2) ? 1 : 2));</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (full &amp;&amp; !text2.IsEmpty())</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            text = text2.ToTitleCase(wholeText: <span class="keyword">true</span>) + Lang.space + text.Bracket(type);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            text = ((text2 == <span class="stringliteral">&quot;*r&quot;</span>) ? <span class="stringliteral">&quot;&quot;</span> : text2.ToTitleCase(wholeText: <span class="keyword">true</span>)) + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ab6c6063b77d22d9ac6f53c789763bf95">space</a> + text.Bracket(type);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> text.TrimStart(<span class="charliteral">&#39; &#39;</span>);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
@@ -276,6 +276,8 @@ $(document).ready(function(){initNavTree('CardRow_8cs_source.html',''); initResi
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00078">ELEMENT.cs:79</a></div></div>
 <div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00262">ELEMENT.cs:263</a></div></div>
 <div class="ttc" id="aclassElement_html_aa5fd377f6540bc972b237363b2f5fe37"><div class="ttname"><a href="classElement.html#aa5fd377f6540bc972b237363b2f5fe37">Element.Void</a></div><div class="ttdeci">static Element Void</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00228">ELEMENT.cs:228</a></div></div>
+<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
+<div class="ttc" id="aclassLang_html_ab6c6063b77d22d9ac6f53c789763bf95"><div class="ttname"><a href="classLang.html#ab6c6063b77d22d9ac6f53c789763bf95">Lang.space</a></div><div class="ttdeci">static string space</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00032">Lang.cs:32</a></div></div>
 <div class="ttc" id="aclassRenderRow_html"><div class="ttname"><a href="classRenderRow.html">RenderRow</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00006">RenderRow.cs:7</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a2081e4780b37fba374c0014d0405cc09"><div class="ttname"><a href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">RenderRow.multisize</a></div><div class="ttdeci">bool multisize</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00064">RenderRow.cs:64</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a430cf4dd98a65d9e4ec2458b62de39ef"><div class="ttname"><a href="classRenderRow.html#a430cf4dd98a65d9e4ec2458b62de39ef">RenderRow.W</a></div><div class="ttdeci">int W</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00060">RenderRow.cs:60</a></div></div>

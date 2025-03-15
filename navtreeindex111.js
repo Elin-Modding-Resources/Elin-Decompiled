@@ -1,5 +1,9 @@
 var NAVTREEINDEX111 =
 {
+"classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f":[1,0,1362,6],
+"classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d":[1,0,1362,1],
+"classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb":[1,0,1362,8],
+"classTooltipManager.html#adca56be292c3fbc644ec72267f02a5fb":[1,0,1362,5],
 "classTrait.html":[1,0,1363],
 "classTrait.html#a0022e2d2cd75f779cd0205150933c4ac":[1,0,1363,188],
 "classTrait.html#a01114b762877593444f784e64c4421de":[1,0,1363,59],
@@ -245,9 +249,5 @@ var NAVTREEINDEX111 =
 "classTraitAbility.html#a3ff0e49744c0db27dc6b601bfdf8bda5":[1,0,1364,5],
 "classTraitAbility.html#a7b2c5167072bc230341cc179e006225d":[1,0,1364,3],
 "classTraitAbility.html#a8d2e3feb454e134a2ec4f2de28760b59":[1,0,1364,2],
-"classTraitAbility.html#aa09c0fc724d476dff439483a22c9b663":[1,0,1364,1],
-"classTraitAbility.html#aa4660a54a34a6d5913eb4221bdb9f229":[1,0,1364,4],
-"classTraitAdventurer.html":[1,0,1365],
-"classTraitAdventurer.html#a225b3307798bd0e207a66cc9a0dc4781":[1,0,1365,4],
-"classTraitAdventurer.html#a3496d12378b02a40e9328ac5130cc414":[1,0,1365,5]
+"classTraitAbility.html#aa09c0fc724d476dff439483a22c9b663":[1,0,1364,1]
 };

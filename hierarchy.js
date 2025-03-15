@@ -1501,7 +1501,9 @@ var hierarchy =
               [ "TraitChopper", "classTraitChopper.html", [
                 [ "TraitMixer", "classTraitMixer.html", null ]
               ] ],
-              [ "TraitCookerMicrowave", "classTraitCookerMicrowave.html", null ],
+              [ "TraitCookerMicrowave", "classTraitCookerMicrowave.html", [
+                [ "TraitEspressoMachine", "classTraitEspressoMachine.html", null ]
+              ] ],
               [ "TraitCookingPot", "classTraitCookingPot.html", [
                 [ "TraitCauldron", "classTraitCauldron.html", null ]
               ] ],

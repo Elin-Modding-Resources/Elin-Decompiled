@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"classClassExtension.html#a4fde1d33179a2366a82bd66cd26063e0":[1,0,269,64],
+"classClassExtension.html#a5229e9842c1db5152dae3fd7b453c5c2":[1,0,269,132],
 "classClassExtension.html#a591c68fb2f384ac41324e06624a9f46f":[1,0,269,119],
 "classClassExtension.html#a5971ffe4809d6e29c29278c087680b58":[1,0,269,136],
 "classClassExtension.html#a5c1f832891a69241762398a1cd4775fe":[1,0,269,202],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,277,1,0],
 "classColorProfile_1_1RarityColors.html":[1,0,277,2],
 "classColorProfile_1_1RarityColors.html#a26ac41b8dbadb4e9d41b9498e24c4d4b":[1,0,277,2,0],
-"classColorProfile_1_1RarityColors.html#a4a84930afe50735e9a4f9be1e84b7772":[1,0,277,2,1],
-"classColorProfile_1_1RarityColors.html#a4d5f11be82d0051ad40e8793eb9f5a0e":[1,0,277,2,4],
-"classColorProfile_1_1RarityColors.html#a5bd7eb53338b63dcee159a20a3d56479":[1,0,277,2,2]
+"classColorProfile_1_1RarityColors.html#a4a84930afe50735e9a4f9be1e84b7772":[1,0,277,2,1]
 };

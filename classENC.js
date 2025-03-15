@@ -27,6 +27,7 @@ var classENC =
     [ "expMod", "classENC.html#a0ce600fd7031e892c5357353d1e3487b", null ],
     [ "force_weapon", "classENC.html#a9f1818d1783e6c234846718c768c8596", null ],
     [ "IDS", "classENC.html#a0ea03827875acf944710cf32043f6a83", null ],
+    [ "innocence", "classENC.html#ac570152d083c4bb748f247c10960e751", null ],
     [ "invisibility", "classENC.html#ae5c738a413709462c1cfa19f00935c7c", null ],
     [ "levitation", "classENC.html#a9a5743895b58af8c659aafc855ad4108", null ],
     [ "living", "classENC.html#a45906330fe84f72c65c2bb5ef39ad413", null ],

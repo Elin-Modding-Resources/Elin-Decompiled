@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classButtonGrid.html#a23b93294fc0262739ca0b7c92199c032":[1,0,223,3],
+"classButtonGrid.html#a2822aa8a389a2b3b4b3b33c89d8686f6":[1,0,223,41],
 "classButtonGrid.html#a2b526d85a56954b0a6b5dd814395b410":[1,0,223,33],
 "classButtonGrid.html#a2becc2a3ca635edf4c61b606dc757f33":[1,0,223,27],
 "classButtonGrid.html#a2cf318e2b297b742f1de59eeee938a3f":[1,0,223,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "classCalcGold.html#a7fbc0fbd76bbf9e605ef7e2e5b121dd4":[1,0,231,1],
 "classCalcMoney.html":[1,0,232],
 "classCalcMoney.html#a18a242323d95d32aad0dd76ceebf78a6":[1,0,232,7],
-"classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69":[1,0,232,3],
-"classCalcMoney.html#a1ed5dcdb2fdad9775c606c408620ea89":[1,0,232,8],
-"classCalcMoney.html#a59c727aee99fe298c0530f2cad45ad07":[1,0,232,10]
+"classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69":[1,0,232,3]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.102 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.103 Nightly</span>
    </div>
   </td>
  </tr>
@@ -109,6 +109,8 @@ Inheritance diagram for GrowSystemDeco:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa0055ca17c1adc9a97e656f1ef64cc20"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemDeco.html#aa0055ca17c1adc9a97e656f1ef64cc20">CanReapSeed</a> ()</td></tr>
+<tr class="separator:aa0055ca17c1adc9a97e656f1ef64cc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96b5509fce97b454897b191845d71f78"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemDeco.html#a96b5509fce97b454897b191845d71f78">OnExceedLastStage</a> ()</td></tr>
 <tr class="separator:a96b5509fce97b454897b191845d71f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd6698b986a8d257caf290c7da4e496"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemDeco.html#aabd6698b986a8d257caf290c7da4e496">GetStageTile</a> ()</td></tr>
@@ -344,6 +346,38 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="GrowSystemDeco_8cs_source.html#l00001">1</a> of file <a class="el" href="GrowSystemDeco_8cs_source.html">GrowSystemDeco.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa0055ca17c1adc9a97e656f1ef64cc20" name="aa0055ca17c1adc9a97e656f1ef64cc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0055ca17c1adc9a97e656f1ef64cc20">&#9670;&#160;</a></span>CanReapSeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool GrowSystemDeco.CanReapSeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classGrowSystem.html#a70a66c10a8b0f8a2067d6a99935a70aa">GrowSystem</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="GrowSystemDeco_8cs_source.html#l00011">11</a> of file <a class="el" href="GrowSystemDeco_8cs_source.html">GrowSystemDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aabd6698b986a8d257caf290c7da4e496" name="aabd6698b986a8d257caf290c7da4e496"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabd6698b986a8d257caf290c7da4e496">&#9670;&#160;</a></span>GetStageTile()</h2>
 
@@ -369,10 +403,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classGrowSystem.html#a0e4a38d660b3ca02796086c41ef85c46">GrowSystem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="GrowSystemDeco_8cs_source.html#l00016">16</a> of file <a class="el" href="GrowSystemDeco_8cs_source.html">GrowSystemDeco.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>._tiles[GrowSystem.cell.objDir % <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>._tiles.Length];</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="GrowSystemDeco_8cs_source.html#l00021">21</a> of file <a class="el" href="GrowSystemDeco_8cs_source.html">GrowSystemDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>._tiles[GrowSystem.cell.objDir % <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>._tiles.Length];</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
 <div class="ttc" id="aclassGrowSystem_html_a663df27be6412bdcab650a8d5afd49e2"><div class="ttname"><a href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">GrowSystem.source</a></div><div class="ttdeci">SourceObj.Row source</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00049">GrowSystem.cs:49</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="GrowSystem_8cs_source.html#l00049">GrowSystem.source</a>.</p>
@@ -404,10 +438,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classGrowSystem.html#ab028808110e94251906390f66f446389">GrowSystem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="GrowSystemDeco_8cs_source.html#l00011">11</a> of file <a class="el" href="GrowSystemDeco_8cs_source.html">GrowSystemDeco.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_function" href="classGrowSystem.html#a56b3cddf93ee01ecacd1a3ceb05a899a">SetStage</a>(1);</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="GrowSystemDeco_8cs_source.html#l00016">16</a> of file <a class="el" href="GrowSystemDeco_8cs_source.html">GrowSystemDeco.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_function" href="classGrowSystem.html#a56b3cddf93ee01ecacd1a3ceb05a899a">SetStage</a>(1);</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
 <div class="ttc" id="aclassGrowSystem_html_a56b3cddf93ee01ecacd1a3ceb05a899a"><div class="ttname"><a href="classGrowSystem.html#a56b3cddf93ee01ecacd1a3ceb05a899a">GrowSystem.SetStage</a></div><div class="ttdeci">void SetStage(int idx, bool renewHarvest=false)</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00413">GrowSystem.cs:413</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="GrowSystem_8cs_source.html#l00413">GrowSystem.SetStage()</a>.</p>

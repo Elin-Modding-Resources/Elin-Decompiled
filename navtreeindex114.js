@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325":[1,0,1464,6],
+"classTraitCrafter.html#ab6976f17a6b72bb6a3af88d0627373cd":[1,0,1464,15],
+"classTraitCrafter.html#ac154e3baf3f8b1994e6bae094ad0401f":[1,0,1464,19],
+"classTraitCrafter.html#ad084942afed510b4fbf54e9086eddde4":[1,0,1464,4],
 "classTraitCrafter.html#ad1550a5648cd24eac0d9b9c9bb068b7b":[1,0,1464,25],
 "classTraitCrafter.html#ada15d322729b7ddd06d3b5dcf8c92c9f":[1,0,1464,9],
 "classTraitCrafter.html#adda85b6e89740c5018791da335d9a024":[1,0,1464,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1510,0],
 "classTraitErohon.html":[1,0,1511],
 "classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1511,0],
-"classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1511,2],
-"classTraitErohon.html#a6c1465509a734979f77294dc47c71369":[1,0,1511,1],
-"classTraitErohon.html#ad7141e5b654da19ff834bfe154bce6f5":[1,0,1511,3],
-"classTraitEureka.html":[1,0,1512],
-"classTraitFactionBoard.html":[1,0,1513]
+"classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1511,2]
 };
