@@ -3383,7 +3383,7 @@ public class Chara : Card, IPathfindWalker
 		case 1:
 			if (!IsPC || !EClass.debug.godMode)
 			{
-				if (EClass.rnd(2) == 0)
+				if (EClass.rnd(2) == 0 && !HasCondition<ConAwakening>())
 				{
 					sleepiness.Mod(1);
 				}
@@ -6202,6 +6202,16 @@ public class Chara : Card, IPathfindWalker
 			text2 = text2 + base.uid + IsMinion + "/" + base.c_uidMaster + "/" + master;
 			text2 = text2 + " dir:" + base.dir + " skin:" + base.idSkin;
 		}
+		if (EClass.pc.held?.trait is TraitWhipLove && IsPCFaction)
+		{
+			text2 += Environment.NewLine;
+			text2 += "<size=14>";
+			foreach (Hobby item in ListHobbies().Concat(ListWorks()))
+			{
+				text2 = text2 + item.Name + ", ";
+			}
+			text2 = text2.TrimEnd(", ".ToCharArray()) + "</size>";
+		}
 		string text3 = "";
 		IEnumerable<BaseStats> enumerable = conditions.Concat((!IsPCFaction) ? new BaseStats[0] : new BaseStats[2] { hunger, stamina });
 		if (enumerable.Count() > 0)
@@ -6209,15 +6219,15 @@ public class Chara : Card, IPathfindWalker
 			text3 += Environment.NewLine;
 			text3 += "<size=14>";
 			int num = 0;
-			foreach (BaseStats item in enumerable)
+			foreach (BaseStats item2 in enumerable)
 			{
-				string text4 = item.GetPhaseStr();
+				string text4 = item2.GetPhaseStr();
 				if (text4.IsEmpty() || text4 == "#")
 				{
 					continue;
 				}
 				Color c = Color.white;
-				switch (item.source.group)
+				switch (item2.source.group)
 				{
 				case "Bad":
 				case "Debuff":
@@ -6230,10 +6240,10 @@ public class Chara : Card, IPathfindWalker
 				}
 				if (EClass.debug.showExtra)
 				{
-					text4 = text4 + "(" + item.GetValue() + ")";
-					if (resistCon != null && resistCon.ContainsKey(item.id))
+					text4 = text4 + "(" + item2.GetValue() + ")";
+					if (resistCon != null && resistCon.ContainsKey(item2.id))
 					{
-						text4 = text4 + "{" + resistCon[item.id] + "}";
+						text4 = text4 + "{" + resistCon[item2.id] + "}";
 					}
 				}
 				num++;
@@ -6252,9 +6262,9 @@ public class Chara : Card, IPathfindWalker
 		if (EClass.debug.showExtra)
 		{
 			text3 += Environment.NewLine;
-			foreach (ActList.Item item2 in ability.list.items)
+			foreach (ActList.Item item3 in ability.list.items)
 			{
-				text3 = text3 + item2.act.Name + ", ";
+				text3 = text3 + item3.act.Name + ", ";
 			}
 			text3 = text3.TrimEnd(", ".ToCharArray());
 		}
@@ -7125,6 +7135,11 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (t.id == "cigar")
+		{
+			(t.trait as TraitItemProc).OnUse(this);
+			return true;
+		}
 		if (t.trait.CanEat(this) && hunger.GetPhase() > ((IsPCFaction || IsPCFactionMinion) ? 2 : 0))
 		{
 			SetAIImmediate(new AI_Eat
@@ -7174,7 +7189,7 @@ public class Chara : Card, IPathfindWalker
 			c.ModAffinity(EClass.pc, a, show);
 			return;
 		}
-		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 30 : 0);
+		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 30 : 0) + (EClass.pc.HasCondition<ConSmoking>() ? (-30) : 0);
 		if (IsPCFaction && homeBranch != null)
 		{
 			num += (int)Mathf.Sqrt(homeBranch.Evalue(2117)) * 5;

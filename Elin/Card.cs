@@ -6320,6 +6320,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				EClass.player.ModKarma(2);
 			}
 		}
+		if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent)
+		{
+			return;
+		}
 		foreach (Chara item in c.pos.ListCharasInRadius(c, 5, (Chara _c) => _c.id == "fanatic" && _c.faith != Chara.faith))
 		{
 			c.DoHostileAction(item, immediate: true);

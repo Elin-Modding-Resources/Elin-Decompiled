@@ -815,6 +815,10 @@ public class ElementContainer : EClass
 							sprite = EClass.core.refs.icons.enc.card;
 						}
 					}
+					if (thing.IsFood && e.IsFoodTrait)
+					{
+						sprite = EClass.core.refs.icons.enc.traitFood;
+					}
 					if (e.id == thing.GetInt(107))
 					{
 						sprite = EClass.core.refs.icons.enc.cat;

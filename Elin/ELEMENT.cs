@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
+	public const int stimulant = 760;
+
+	public const int comfort = 750;
+
 	public const int rare = 751;
 
 	public const int cute = 752;
@@ -17,9 +21,9 @@ public class ELEMENT
 
 	public const int hotspring = 756;
 
-	public const int purity = 759;
+	public const int recharge = 761;
 
-	public const int comfort = 750;
+	public const int purity = 759;
 
 	public const int _void = 0;
 
@@ -39,7 +43,7 @@ public class ELEMENT
 
 	public const int hardness = 13;
 
-	public const int water = 15;
+	public const int growth = 14;
 
 	public const int heat = 16;
 
@@ -47,7 +51,7 @@ public class ELEMENT
 
 	public const int taste = 18;
 
-	public const int growth = 14;
+	public const int water = 15;
 
 	public const int fire = 21;
 
@@ -67,12 +71,12 @@ public class ELEMENT
 
 	public const int poison = 20;
 
-	public static readonly int[] IDS = new int[31]
+	public static readonly int[] IDS = new int[33]
 	{
-		751, 752, 753, 754, 755, 756, 759, 750, 0, 2,
-		1, 3, 5, 10, 11, 12, 13, 15, 16, 17,
-		18, 14, 21, 22, 23, 24, 25, 26, 29, 85,
-		20
+		760, 750, 751, 752, 753, 754, 755, 756, 761, 759,
+		0, 2, 1, 3, 5, 10, 11, 12, 13, 14,
+		16, 17, 18, 15, 21, 22, 23, 24, 25, 26,
+		29, 85, 20
 	};
 }
 public class Element : EClass

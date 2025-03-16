@@ -160,7 +160,7 @@ public class CraftUtil : EClass
 		{
 			foreach (Element value3 in product.sourceCard.model.elements.dict.Values)
 			{
-				if (value3.IsFoodTraitMain)
+				if (value3.IsTrait || value3.IsFoodTraitMain)
 				{
 					product.elements.ModBase(value3.id, value3.Value);
 				}

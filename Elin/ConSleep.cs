@@ -179,12 +179,12 @@ public class ConSleep : BadCondition
 		}
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (chara == tg || chara.IsPC || chara.HasElement(418) || EClass.rnd(3) != 0 || chara.IsDisabled || !chara.IsIdle)
+			if (chara == tg || chara.IsPC || chara.host != null || chara.IsDisabled || !chara.IsIdle || chara.Evalue(418) > 0 || tg.Evalue(418) > 0)
 			{
 				continue;
 			}
 			Thing thing = chara.things.Find<TraitDreamBug>();
-			if ((!chara.HasElement(1216) && thing == null) || chara.host != null || (tg.IsPC && thing == null && EClass.rnd(200) != 0))
+			if ((!chara.HasElement(1216) && thing == null) || (tg.Evalue(418) == 0 && (EClass.rnd(3) != 0 || (tg.IsPC && thing == null && EClass.rnd(200) != 0))))
 			{
 				continue;
 			}

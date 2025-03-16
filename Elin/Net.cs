@@ -43,7 +43,11 @@ public class Net : MonoBehaviour
 
 		public bool IsValidVersion()
 		{
-			return !Version.Get(version).IsBelow(EClass.core.versionMoongate);
+			if (!Version.Get(version).IsBelow(EClass.core.versionMoongate))
+			{
+				return Version.Get(version).IsSameOrBelow(EClass.core.version);
+			}
+			return false;
 		}
 	}
 

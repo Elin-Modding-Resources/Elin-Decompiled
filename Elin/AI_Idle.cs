@@ -569,7 +569,7 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(100) == 0 && owner.trait is TraitBitch)
 		{
-			Chara chara2 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && !c.HasElement(418));
+			Chara chara2 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && c.Evalue(418) <= 0);
 			if (chara2 != null)
 			{
 				yield return Do(new AI_Fuck

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfBeach = 3604;
+	public const int bfHill = 3603;
 
 	public const int bfCave = 3500;
 
@@ -14,11 +14,11 @@ public class FACTION
 
 	public const int bfSnow = 3602;
 
-	public const int bfHill = 3603;
-
 	public const int bfFertile = 3700;
 
 	public const int bfSea = 3605;
+
+	public const int bfBeach = 3604;
 
 	public const int fRation = 2207;
 
@@ -26,7 +26,7 @@ public class FACTION
 
 	public const int fAttraction = 2206;
 
-	public const int fEducation = 2116;
+	public const int fLoyal = 2117;
 
 	public const int fFood = 2204;
 
@@ -40,8 +40,6 @@ public class FACTION
 
 	public const int fHeirloom = 2120;
 
-	public const int fLoyal = 2117;
-
 	public const int fConstruction = 2003;
 
 	public const int bfRuin = 3702;
@@ -52,11 +50,13 @@ public class FACTION
 
 	public const int fAdmin = 2115;
 
+	public const int fEducation = 2116;
+
 	public const int fSafety = 2205;
 
 	public const int bfTranquil = 3703;
 
-	public const int bfFish = 3706;
+	public const int bfMonster = 3707;
 
 	public const int bfHunt = 3705;
 
@@ -96,7 +96,7 @@ public class FACTION
 
 	public const int bfLandmark1 = 3780;
 
-	public const int bfMonster = 3707;
+	public const int bfFish = 3706;
 
 	public const int bfLandmark3 = 3782;
 
@@ -110,11 +110,11 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[52]
 	{
-		3604, 3500, 3600, 3601, 3602, 3603, 3700, 3605, 2207, 3701,
-		2206, 2116, 2204, 2203, 2202, 2201, 2200, 2120, 2117, 2003,
-		3702, 2119, 2118, 2115, 2205, 3703, 3706, 3705, 4006, 4005,
+		3603, 3500, 3600, 3601, 3602, 3700, 3605, 3604, 2207, 3701,
+		2206, 2117, 2204, 2203, 2202, 2201, 2200, 2120, 2003, 3702,
+		2119, 2118, 2115, 2116, 2205, 3703, 3707, 3705, 4006, 4005,
 		4004, 4003, 4002, 4001, 3704, 3900, 3805, 3804, 3803, 4000,
-		3801, 3802, 3708, 3709, 3710, 3780, 3707, 3782, 3783, 3784,
+		3801, 3802, 3708, 3709, 3710, 3780, 3706, 3782, 3783, 3784,
 		3800, 3781
 	};
 }

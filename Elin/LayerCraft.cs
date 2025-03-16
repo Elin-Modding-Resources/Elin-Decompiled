@@ -483,10 +483,7 @@ public class LayerCraft : LayerBaseCraft
 		{
 			foreach (Element item in thing.elements.dict.Values.ToList())
 			{
-				if (!item.IsTrait)
-				{
-					thing.elements.Remove(item.id);
-				}
+				_ = item;
 			}
 		}
 		info1.buttonProduct.SetCard(thing);

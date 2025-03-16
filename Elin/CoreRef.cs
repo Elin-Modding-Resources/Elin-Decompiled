@@ -68,6 +68,8 @@ public class CoreRef : ScriptableObject
 
 			public Sprite trait;
 
+			public Sprite traitFood;
+
 			public Sprite mod;
 
 			public Sprite weaponEnc;

@@ -889,37 +889,34 @@ public class Thing : Card
 				uIItem.text2.SetText(text2);
 				if (showEQStats && flag2)
 				{
-					if (!flag)
+					text2 = "";
+					if (DV != 0 || PV != 0 || base.HIT != 0 || base.DMG != 0 || Penetration != 0)
 					{
-						text2 = "";
-						if (DV != 0 || PV != 0 || base.HIT != 0 || base.DMG != 0 || Penetration != 0)
+						if (base.DMG != 0)
 						{
-							if (base.DMG != 0)
-							{
-								text2 = text2 + "DMG".lang() + ((base.DMG > 0) ? "+" : "") + base.DMG + ", ";
-							}
-							if (base.HIT != 0)
-							{
-								text2 = text2 + "HIT".lang() + ((base.HIT > 0) ? "+" : "") + base.HIT + ", ";
-							}
-							if (DV != 0)
-							{
-								text2 = text2 + "DV".lang() + ((DV > 0) ? "+" : "") + DV + ", ";
-							}
-							if (PV != 0)
-							{
-								text2 = text2 + "PV".lang() + ((PV > 0) ? "+" : "") + PV + ", ";
-							}
-							if (Penetration != 0)
-							{
-								text2 = text2 + "PEN".lang() + ((Penetration > 0) ? "+" : "") + Penetration + "%, ";
-							}
-							text2 = text2.TrimEnd(' ').TrimEnd(',');
+							text2 = text2 + "DMG".lang() + ((base.DMG > 0) ? "+" : "") + base.DMG + ", ";
 						}
-						if (!text2.IsEmpty())
+						if (base.HIT != 0)
 						{
-							n.AddText("NoteText_eqstats", text2);
+							text2 = text2 + "HIT".lang() + ((base.HIT > 0) ? "+" : "") + base.HIT + ", ";
 						}
+						if (DV != 0)
+						{
+							text2 = text2 + "DV".lang() + ((DV > 0) ? "+" : "") + DV + ", ";
+						}
+						if (PV != 0)
+						{
+							text2 = text2 + "PV".lang() + ((PV > 0) ? "+" : "") + PV + ", ";
+						}
+						if (Penetration != 0)
+						{
+							text2 = text2 + "PEN".lang() + ((Penetration > 0) ? "+" : "") + Penetration + "%, ";
+						}
+						text2 = text2.TrimEnd(' ').TrimEnd(',');
+					}
+					if (!text2.IsEmpty())
+					{
+						n.AddText("NoteText_eqstats", text2);
 					}
 					if (trait is TraitToolRange traitToolRange)
 					{
@@ -1283,7 +1280,7 @@ public class Thing : Card
 			if (mode == IInspect.NoteMode.Product && HasTag(CTAG.dish_bonus))
 			{
 				n.AddHeader("HeaderAdditionalTrait", "additional_trait");
-				source.model.elements.AddNote(n, (Element e) => e.IsFoodTraitMain, null, ElementContainer.NoteMode.Trait, addRaceFeat: false, delegate(Element e, string s)
+				source.model.elements.AddNote(n, (Element e) => e.IsTrait || e.IsFoodTraitMain, null, ElementContainer.NoteMode.Trait, addRaceFeat: false, delegate(Element e, string s)
 				{
 					string text9 = s;
 					string text10 = e.source.GetText("textExtra");
@@ -1320,7 +1317,7 @@ public class Thing : Card
 		{
 			AddText("isReplica", FontColor.Passive);
 		}
-		if (flag2)
+		if (flag2 && mode != IInspect.NoteMode.Product)
 		{
 			Chara chara = GetRootCard() as Chara;
 			if (base.parentCard?.trait is TraitChestMerchant)
@@ -1346,6 +1343,10 @@ public class Thing : Card
 			n.AddText(base.ammoData.Name);
 		}
 		onWriteNote?.Invoke(n);
+		if (mode == IInspect.NoteMode.Product && base.IsEquipmentOrRangedOrAmmo)
+		{
+			AddText("isProductWarning", FontColor.Default);
+		}
 		if ((bool)LayerDragGrid.Instance)
 		{
 			LayerDragGrid.Instance.owner.OnWriteNote(this, n);

@@ -486,6 +486,20 @@ public class GoalCombat : Goal
 			}
 			switch (act.id)
 			{
+			case 6603:
+				if (!tc.IsPCParty || tc.Evalue(418) < 0)
+				{
+					break;
+				}
+				foreach (Chara member in EClass.pc.party.members)
+				{
+					if (member.Evalue(418) < 0)
+					{
+						owner.enemy = (tc = member);
+						return false;
+					}
+				}
+				break;
 			case 6602:
 				if (dist <= 1 || tc.HasCondition<ConEntangle>())
 				{

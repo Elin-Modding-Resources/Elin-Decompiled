@@ -158,6 +158,7 @@ public class TraitDrink : Trait
 			refThing = owner.Thing,
 			act = ((source != null) ? ACT.Create(source) : null)
 		});
+		FoodEffect.ProcTrait(c, owner);
 	}
 
 	public override void OnThrowGround(Chara c, Point p)

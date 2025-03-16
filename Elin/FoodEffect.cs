@@ -419,6 +419,7 @@ public class FoodEffect : EClass
 
 	public static void ProcTrait(Chara c, Card t)
 	{
+		bool flag = false;
 		foreach (Element value in t.elements.dict.Values)
 		{
 			if (!value.IsTrait)
@@ -441,6 +442,27 @@ public class FoodEffect : EClass
 				case 756:
 					c.AddCondition<ConHotspring>(value.Value * 2)?.SetPerfume();
 					break;
+				case 760:
+					if (!c.HasCondition<ConAwakening>())
+					{
+						flag = true;
+					}
+					c.AddCondition<ConAwakening>(1000 + value.Value * 20);
+					break;
+				case 761:
+					if (c.HasCondition<ConAwakening>() && !flag)
+					{
+						if (c.IsPC)
+						{
+							Msg.Say("recharge_stamina_fail");
+						}
+					}
+					else
+					{
+						c.Say("recharge_stamina", c);
+						c.stamina.Mod(value.Value * 2 / 3 + EClass.rnd(5));
+					}
+					break;
 				}
 			}
 			else
@@ -456,6 +478,10 @@ public class FoodEffect : EClass
 					c.AddCondition<ConConfuse>(-value.Value * 10);
 					c.AddCondition<ConInsane>(-value.Value * 10);
 					c.AddCondition<ConHallucination>(-value.Value * 20);
+					break;
+				case 761:
+					c.Say("recharge_stamina_negative", c);
+					c.stamina.Mod(value.Value);
 					break;
 				}
 			}
