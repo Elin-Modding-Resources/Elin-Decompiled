@@ -38,6 +38,15 @@ public struct Version
 		return IsBelow(v.GetInt());
 	}
 
+	public bool IsSameOrBelow(Version v)
+	{
+		if (v.GetInt() != GetInt())
+		{
+			return IsBelow(v.GetInt());
+		}
+		return true;
+	}
+
 	public bool IsBelow(int _int)
 	{
 		return GetInt() < _int;
