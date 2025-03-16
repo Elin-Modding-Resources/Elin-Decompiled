@@ -1,5 +1,9 @@
 var NAVTREEINDEX38 =
 {
+"classCalcGold.html#a7fbc0fbd76bbf9e605ef7e2e5b121dd4":[1,0,231,1],
+"classCalcMoney.html":[1,0,232],
+"classCalcMoney.html#a18a242323d95d32aad0dd76ceebf78a6":[1,0,232,7],
+"classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69":[1,0,232,3],
 "classCalcMoney.html#a1ed5dcdb2fdad9775c606c408620ea89":[1,0,232,8],
 "classCalcMoney.html#a59c727aee99fe298c0530f2cad45ad07":[1,0,232,10],
 "classCalcMoney.html#a641ab2f690f502c0693cf0525ed32fd9":[1,0,232,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX38 =
 "classCard.html#a5d63427212c856513a8ace9d963d28c1":[1,0,237,234],
 "classCard.html#a5dab6db16b0ad59a7df0bf7a7c6341dc":[1,0,237,251],
 "classCard.html#a5e0535e093f8257427b9510e045b48fc":[1,0,237,333],
-"classCard.html#a5f02e935812eb54897e91b3789b306d6":[1,0,237,346],
-"classCard.html#a5fdd419eccae9c9ab3af2c954091692c":[1,0,237,235],
-"classCard.html#a600593316390a7d873cb5ff53f269517":[1,0,237,350],
-"classCard.html#a604e3ffd8abe67624276d393f733aab5":[1,0,237,227],
-"classCard.html#a60b7481116a15ac9462349167a47fd45":[1,0,237,362]
+"classCard.html#a5f02e935812eb54897e91b3789b306d6":[1,0,237,346]
 };

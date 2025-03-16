@@ -474,9 +474,11 @@ var hierarchy =
               [ "StanceManaCost", "classStanceManaCost.html", null ],
               [ "StanceTaunt", "classStanceTaunt.html", null ]
             ] ],
+            [ "ConAwakening", "classConAwakening.html", null ],
             [ "ConBuffStats", "classConBuffStats.html", null ],
             [ "ConFreeze", "classConFreeze.html", null ],
             [ "ConReload", "classConReload.html", null ],
+            [ "ConSmoking", "classConSmoking.html", null ],
             [ "ConSuffocation", "classConSuffocation.html", null ],
             [ "ConWait", "classConWait.html", null ],
             [ "ConWet", "classConWet.html", null ]

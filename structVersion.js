@@ -10,6 +10,7 @@ var structVersion =
     [ "IsBelow", "structVersion.html#a490c2151896a8941b8a0f49578892c69", null ],
     [ "IsBelow", "structVersion.html#a80d73b686e4de0964d1802d5fd659ce1", null ],
     [ "IsBelow", "structVersion.html#a0ec5f39242107585b2f65f0af2e84e49", null ],
+    [ "IsSameOrBelow", "structVersion.html#ad98e951bc92039db600dcc351a6fcc17", null ],
     [ "IsSaveCompatible", "structVersion.html#aefa98a7b452cad604dac16e8237f4092", null ],
     [ "batch", "structVersion.html#a15c79ef52d7a6e998ae1a96e43ab9fff", null ],
     [ "demo", "structVersion.html#ae633012a534a727dfaa4035d90b14c2c", null ],

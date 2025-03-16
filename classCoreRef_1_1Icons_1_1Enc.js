@@ -7,5 +7,6 @@ var classCoreRef_1_1Icons_1_1Enc =
     [ "mod", "classCoreRef_1_1Icons_1_1Enc.html#a0a3a33c5e5b066e7d79db7977921772a", null ],
     [ "rune", "classCoreRef_1_1Icons_1_1Enc.html#a1c3275de633867e073fffdca5479a2cd", null ],
     [ "trait", "classCoreRef_1_1Icons_1_1Enc.html#af3ba97ffeaed6abcf2271f1b9e7ce731", null ],
+    [ "traitFood", "classCoreRef_1_1Icons_1_1Enc.html#a3609b435b8664bd69ed550e7286004e1", null ],
     [ "weaponEnc", "classCoreRef_1_1Icons_1_1Enc.html#a548331da867fd6fe01170e7b95e847ae", null ]
 ];
