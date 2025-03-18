@@ -166,6 +166,10 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			t.note.Space(8);
 			t.note.AddText("workNotActive_party".lang(), FontColor.Warning);
 		}
+		if (a.IsPCFactionOrMinion && !a.trait.IsCountAsResident)
+		{
+			t.note.AddText("notCountResident".lang(), FontColor.Good);
+		}
 		t.note.Build();
 		void AddText(Hobby h, string lang, bool fix)
 		{

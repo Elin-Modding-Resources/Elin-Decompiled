@@ -4824,6 +4824,10 @@ public class Chara : Card, IPathfindWalker
 				if (trait is TraitLittleOne)
 				{
 					MakeEgg();
+					if (IsPCFaction)
+					{
+						EClass.Branch.RemoveMemeber(this);
+					}
 				}
 				PlayEffect("revive");
 				PlaySound("chime_angel");
@@ -5057,7 +5061,7 @@ public class Chara : Card, IPathfindWalker
 				Msg.Say("little_pop");
 			}
 		}
-		else if (attackSource != AttackSource.DeathSentense)
+		else if (attackSource != AttackSource.DeathSentense && !IsPCFaction)
 		{
 			EClass.player.flags.little_killed = true;
 			EClass.player.little_dead++;
@@ -6051,7 +6055,7 @@ public class Chara : Card, IPathfindWalker
 			pCC.Build();
 			return pCC.variation.idle[0, 0];
 		}
-		return sourceCard.GetSprite((sourceCard._tiles.Length > 1) ? ((base.idSkin != 0 || source.staticSkin) ? base.idSkin : (base.uid % sourceCard._tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0))) : 0);
+		return sourceCard.GetSprite(0, (sourceCard._tiles.Length > 1) ? ((base.idSkin != 0 || source.staticSkin) ? base.idSkin : (base.uid % sourceCard._tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0))) : 0);
 	}
 
 	public void SetTempHand(int right = 0, int left = 0)
@@ -6206,9 +6210,13 @@ public class Chara : Card, IPathfindWalker
 		{
 			text2 += Environment.NewLine;
 			text2 += "<size=14>";
-			foreach (Hobby item in ListHobbies().Concat(ListWorks()))
+			foreach (Hobby item in ListWorks())
 			{
 				text2 = text2 + item.Name + ", ";
+			}
+			foreach (Hobby item2 in ListHobbies())
+			{
+				text2 = text2 + item2.Name + ", ";
 			}
 			text2 = text2.TrimEnd(", ".ToCharArray()) + "</size>";
 		}
@@ -6219,15 +6227,15 @@ public class Chara : Card, IPathfindWalker
 			text3 += Environment.NewLine;
 			text3 += "<size=14>";
 			int num = 0;
-			foreach (BaseStats item2 in enumerable)
+			foreach (BaseStats item3 in enumerable)
 			{
-				string text4 = item2.GetPhaseStr();
+				string text4 = item3.GetPhaseStr();
 				if (text4.IsEmpty() || text4 == "#")
 				{
 					continue;
 				}
 				Color c = Color.white;
-				switch (item2.source.group)
+				switch (item3.source.group)
 				{
 				case "Bad":
 				case "Debuff":
@@ -6240,10 +6248,10 @@ public class Chara : Card, IPathfindWalker
 				}
 				if (EClass.debug.showExtra)
 				{
-					text4 = text4 + "(" + item2.GetValue() + ")";
-					if (resistCon != null && resistCon.ContainsKey(item2.id))
+					text4 = text4 + "(" + item3.GetValue() + ")";
+					if (resistCon != null && resistCon.ContainsKey(item3.id))
 					{
-						text4 = text4 + "{" + resistCon[item2.id] + "}";
+						text4 = text4 + "{" + resistCon[item3.id] + "}";
 					}
 				}
 				num++;
@@ -6262,9 +6270,9 @@ public class Chara : Card, IPathfindWalker
 		if (EClass.debug.showExtra)
 		{
 			text3 += Environment.NewLine;
-			foreach (ActList.Item item3 in ability.list.items)
+			foreach (ActList.Item item4 in ability.list.items)
 			{
-				text3 = text3 + item3.act.Name + ", ";
+				text3 = text3 + item4.act.Name + ", ";
 			}
 			text3 = text3.TrimEnd(", ".ToCharArray());
 		}
@@ -8826,6 +8834,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void Sleep(Thing bed = null, Thing pillow = null, bool pickup = false, ItemPosition posBed = null, ItemPosition posPillow = null)
 	{
+		RemoveCondition<ConAwakening>();
 		AddCondition(Condition.Create(100, delegate(ConSleep con)
 		{
 			con.pcSleep = 15;
@@ -9235,6 +9244,12 @@ public class Chara : Card, IPathfindWalker
 		if (a > 0 && tempElements.Base(ele) > a)
 		{
 			a = a * 100 / (200 + (tempElements.Base(ele) - a) * 10);
+		}
+		int num = Mathf.Abs(elements.Base(ele)) * 2 + 20;
+		int num2 = tempElements.Base(ele) + a;
+		if (num2 < num || num2 > num)
+		{
+			a = 0;
 		}
 		Element element = tempElements.ModBase(ele, a);
 		if (element.vBase == 0)

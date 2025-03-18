@@ -288,10 +288,10 @@ public class AI_Fish : AIAct
 		{
 			return null;
 		}
-		int[] array = new int[15]
+		int[] array = new int[18]
 		{
 			233, 235, 236, 236, 236, 1170, 1143, 1144, 727, 728,
-			237, 869, 1178, 1179, 1180
+			237, 869, 1178, 1179, 1180, 1243, 1244, 1245
 		};
 		Thing thing = null;
 		int num2 = 1;

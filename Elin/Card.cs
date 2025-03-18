@@ -4633,6 +4633,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				origin.elements.ModExp(290, 5);
 			}
 		}
+		if (id == "littleOne" && IsPCFactionOrMinion)
+		{
+			flag2 = false;
+		}
 		if (flag2 && !isUserZone)
 		{
 			string text = Chara.race.corpse[0];
@@ -6388,7 +6392,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public int GetValue(bool sell = false)
+	public int GetValue(PriceType priceType = PriceType.Default, bool sell = false)
 	{
 		int value = trait.GetValue();
 		if (value == 0)
@@ -6396,7 +6400,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return 0;
 		}
 		float num = value;
-		num = num * (float)Mathf.Max(100 + rarityLv + Mathf.Min(QualityLv * 10, 200), 80) / 100f;
+		num = ((priceType != PriceType.CopyShop) ? (num * (float)Mathf.Max(100 + rarityLv + Mathf.Min(QualityLv * 10, 200), 80) / 100f) : (num * (float)Mathf.Max(150 + rarityLv, 150) / 100f));
 		if (IsFood && !material.tag.Contains("food"))
 		{
 			num *= 0.5f;
@@ -6513,7 +6517,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return 20;
 		}
-		int value = GetValue(sell);
+		int value = GetValue(priceType, sell);
 		if (value == 0)
 		{
 			return 0;
@@ -6563,7 +6567,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			p = Guild.Mage.BuySpellbookPrice((int)p);
 		}
-		int num = ((priceType != PriceType.CopyShop) ? 1 : 5);
+		bool flag = priceType == PriceType.CopyShop;
+		int num = ((!flag) ? 1 : 5);
 		float num2 = Mathf.Min(0.01f * (float)Evalue(752), 1f);
 		float num3 = Mathf.Min(0.01f * (float)Evalue(751), 1f);
 		float num4 = Mathf.Min(0.02f * (float)Evalue(759), 2f);
@@ -6577,6 +6582,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (sell)
 		{
 			p *= 0.20000000298023224;
+			if (isCopy)
+			{
+				p *= 0.20000000298023224;
+			}
 			if (currency == CurrencyType.Money && (category.IsChildOf("meal") || category.IsChildOf("preserved")))
 			{
 				p *= 0.5;
@@ -6625,13 +6634,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 					p *= 1.25;
 				}
-				else if (blessedState == BlessedState.Cursed)
+				else if (blessedState <= BlessedState.Cursed)
 				{
-					p *= 0.5;
-				}
-				else if (blessedState == BlessedState.Doomed)
-				{
-					p *= 0.20000000298023224;
+					p *= (flag ? 1.25f : 0.3f);
 				}
 				if (this.trait.HasCharges)
 				{
@@ -6639,7 +6644,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				if (IsDecayed)
 				{
-					p *= 0.5;
+					p *= (flag ? 1.25f : 0.5f);
 				}
 			}
 			else

@@ -460,7 +460,7 @@ public class FoodEffect : EClass
 					else
 					{
 						c.Say("recharge_stamina", c);
-						c.stamina.Mod(value.Value * 2 / 3 + EClass.rnd(5));
+						c.stamina.Mod(c.stamina.max * (value.Value / 10 + 1) / 100 + value.Value * 2 / 3 + EClass.rnd(5));
 					}
 					break;
 				}
@@ -481,7 +481,7 @@ public class FoodEffect : EClass
 					break;
 				case 761:
 					c.Say("recharge_stamina_negative", c);
-					c.stamina.Mod(value.Value);
+					c.stamina.Mod(-c.stamina.max * (-value.Value / 10 + 1) / 100 + value.Value);
 					break;
 				}
 			}

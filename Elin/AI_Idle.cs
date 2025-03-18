@@ -514,7 +514,12 @@ public class AI_Idle : AIAct
 			{
 				thing4 = null;
 			}
-			if (thing4 == null && (owner.homeBranch == null || !owner.homeBranch.policies.IsActive(2503)))
+			bool flag5 = EClass.Branch != null && EClass.Branch.policies.IsActive(2503);
+			if (owner.homeBranch != null && owner.homeBranch.policies.IsActive(2503))
+			{
+				flag5 = true;
+			}
+			if (thing4 == null && !flag5)
 			{
 				thing4 = ThingGen.Create("crimAle");
 				owner.Drink(thing4);
@@ -531,12 +536,12 @@ public class AI_Idle : AIAct
 			{
 				owner.Say("drunk_mess", owner, c);
 				owner.Talk("drunk_mess");
-				bool flag5 = EClass.rnd(5) == 0 && !c.IsPC;
+				bool flag6 = EClass.rnd(5) == 0 && !c.IsPC;
 				if (c.IsPCParty && owner.hostility >= Hostility.Friend)
 				{
-					flag5 = false;
+					flag6 = false;
 				}
-				if (flag5)
+				if (flag6)
 				{
 					owner.Say("drunk_counter", c, owner);
 					c.Talk("drunk_counter");

@@ -269,6 +269,12 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		{
 			sprites = new Sprite[(skins == null) ? 1 : (skins.Length + 1), (array.Length == 0) ? 1 : array.Length];
 		}
+		if (this is SourceChara.Row)
+		{
+			dir = skin;
+			skin = 0;
+			Debug.Log(idString + "/" + dir + "/" + skin);
+		}
 		if (skin != 0 && skin >= sprites.GetLength(0))
 		{
 			skin = 0;
@@ -312,9 +318,9 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		return sprites[skin, dir];
 	}
 
-	public void SetSpriteRenderer(SpriteRenderer sr, Sprite sprite = null, int matCol = 0, bool setTransform = true, int dir = 0)
+	public void SetSpriteRenderer(SpriteRenderer sr, Sprite sprite = null, int matCol = 0, bool setTransform = true, int dir = 0, int idSkin = 0)
 	{
-		sr.sprite = sprite ?? GetSprite(dir);
+		sr.sprite = sprite ?? GetSprite(dir, idSkin);
 		if (renderData is RenderDataThing)
 		{
 			sr.sprite = EClass.core.refs.spriteThingActor;

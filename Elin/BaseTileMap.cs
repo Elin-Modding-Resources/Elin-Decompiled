@@ -1256,8 +1256,8 @@ public class BaseTileMap : EMono
 				fogged = true;
 			}
 		}
-		goto IL_7b6a;
-		IL_6faf:
+		goto IL_7b6d;
+		IL_6fb2:
 		if (isSnowCovered && (sourceBlock.id != 0 || this.cell.hasDoor) && !snowed && !this.cell.isClearSnow && ((!this.cell.Front.HasRoof && !this.cell.Front.HasBlock) || (!this.cell.Right.HasRoof && !this.cell.Right.HasBlock)))
 		{
 			snowed = true;
@@ -1480,7 +1480,7 @@ public class BaseTileMap : EMono
 			param.matColor = 104025f;
 			renderFootmark.Draw(param);
 		}
-		goto IL_7b6a;
+		goto IL_7b6d;
 		IL_1668:
 		if (this.cell.isSlopeEdge)
 		{
@@ -2245,7 +2245,7 @@ public class BaseTileMap : EMono
 			case BlockRenderMode.FullBlock:
 			{
 				bool invisible = sourceBlock.tileType.Invisible;
-				if (invisible && !buildMode && !ActionMode.Cinema.IsActive)
+				if (invisible && (!buildMode || ActionMode.Cinema.IsActive))
 				{
 					break;
 				}
@@ -2677,19 +2677,19 @@ public class BaseTileMap : EMono
 		{
 			if (this.cell.room != null || !this.cell.IsRoomEdge || !showRoof)
 			{
-				goto IL_6f4f;
+				goto IL_6f52;
 			}
 			if (this.cell._block == 0 || !this.cell.sourceBlock.tileType.RepeatBlock)
 			{
 				Room obj = this.cell.FrontRight.room;
 				if (obj == null || !obj.HasRoof)
 				{
-					goto IL_6f4f;
+					goto IL_6f52;
 				}
 			}
 		}
-		goto IL_6faf;
-		IL_7b6a:
+		goto IL_6fb2;
+		IL_7b6d:
 		if (detail.things.Count == 0 && detail.charas.Count == 0)
 		{
 			return;
@@ -3122,13 +3122,13 @@ public class BaseTileMap : EMono
 			param.z = orgZ;
 		}
 		return;
-		IL_6f4f:
+		IL_6f52:
 		if (!showRoof || !roof || this.cell.room == null || this.cell.Front.room == null || this.cell.Right.room == null)
 		{
 			param.tile = num14;
 			rendererFov.Draw(param);
 		}
-		goto IL_6faf;
+		goto IL_6fb2;
 		void Draw(int tile)
 		{
 			pass = passEdge;

@@ -1784,6 +1784,7 @@ public class Trait : EClass
 					if (num8 > 0)
 					{
 						Add("syringe_gene", num8, 0);
+						Add("diary_little", 1, 0);
 					}
 					if (num8 > 10)
 					{
@@ -2021,7 +2022,10 @@ public class Trait : EClass
 				case ShopType.Ecopo:
 				{
 					Thing thing = TraitSeed.MakeRandomSeed(enc: true);
-					TraitSeed.LevelSeed(thing, (thing.trait as TraitSeed).row, 1);
+					if (EClass.rnd(2) == 0)
+					{
+						TraitSeed.LevelSeed(thing, (thing.trait as TraitSeed).row, 1);
+					}
 					return thing;
 				}
 				case ShopType.Healer:

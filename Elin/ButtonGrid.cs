@@ -525,7 +525,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 		}
 		else
 		{
-			recipe.renderRow.SetImage(icon, null, recipe.renderRow.GetColorInt(recipe.GetColorMaterial()), setNativeSize: true, a.dir, recipe.idSkin);
+			recipe.renderRow.SetImage(icon, null, recipe.renderRow.GetColorInt(recipe.GetColorMaterial()), setNativeSize: true, (recipe.renderRow is SourceChara.Row) ? recipe.idSkin : a.dir, (recipe.renderRow is SourceChara.Row) ? a.dir : recipe.idSkin);
 		}
 		mainText.SetActive(enable: false);
 	}

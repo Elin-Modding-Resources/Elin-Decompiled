@@ -151,6 +151,11 @@ public class TraitDrink : Trait
 
 	public override void OnDrink(Chara c)
 	{
+		if (owner.id == "334" && c.HasCondition<ConAwakening>())
+		{
+			c.RemoveCondition<ConAwakening>();
+			return;
+		}
 		ActEffect.Proc(IdEffect, Power, owner.blessedState, c, null, new ActRef
 		{
 			n1 = N1,

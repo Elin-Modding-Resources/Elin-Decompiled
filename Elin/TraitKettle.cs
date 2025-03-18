@@ -48,7 +48,7 @@ public class TraitKettle : TraitUniqueChara
 
 	public override bool CanCopy(Thing t)
 	{
-		if (t.noSell || t.HasRune() || t.HasElement(1229))
+		if (t.noSell || t.isStolen || t.HasRune() || t.HasElement(1229))
 		{
 			return false;
 		}
