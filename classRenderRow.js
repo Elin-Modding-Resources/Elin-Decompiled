@@ -13,7 +13,7 @@ var classRenderRow =
     [ "SetImage", "classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6", null ],
     [ "SetRenderData", "classRenderRow.html#ab65ea9cd24798f115b3628ac3833c255", null ],
     [ "SetRenderParam", "classRenderRow.html#a107056ec89fe5d7b157fec0a35d16030", null ],
-    [ "SetSpriteRenderer", "classRenderRow.html#a87bcf1445ebd40131891c754b5d11e5f", null ],
+    [ "SetSpriteRenderer", "classRenderRow.html#accc19e7e1a2e00fb5a6440bd041989f3", null ],
     [ "SetTiles", "classRenderRow.html#adddb275abf4b84cdecfd290be6489365", null ],
     [ "_category", "classRenderRow.html#ae568a46541cb140778697cfbf49429ef", null ],
     [ "_idRenderData", "classRenderRow.html#a82af10b87c391d04afb2eda475458d42", null ],

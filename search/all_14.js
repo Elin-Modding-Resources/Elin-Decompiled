@@ -556,7 +556,7 @@ var searchData=
   ['setsound_553',['SetSound',['../classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028',1,'ItemGeneral']]],
   ['setsource_554',['SetSource',['../classCard.html#a26d33fd74d31b3dd3d80cdb3f649fdb5',1,'Card.SetSource()'],['../classChara.html#a695badea79c9ea30cecda8be52d2a966',1,'Chara.SetSource()'],['../classThing.html#a6e4666ef298413fd9d48e8cc09f7eaab',1,'Thing.SetSource()']]],
   ['setsprite_555',['SetSprite',['../classTCState.html#aa634bb2c7aa235fe49d1ca4fed2e74a8',1,'TCState']]],
-  ['setspriterenderer_556',['SetSpriteRenderer',['../classRenderRow.html#a87bcf1445ebd40131891c754b5d11e5f',1,'RenderRow']]],
+  ['setspriterenderer_556',['SetSpriteRenderer',['../classRenderRow.html#accc19e7e1a2e00fb5a6440bd041989f3',1,'RenderRow']]],
   ['setstage_557',['SetStage',['../classGrowSystem.html#a56b3cddf93ee01ecacd1a3ceb05a899a',1,'GrowSystem']]],
   ['setstagetile_558',['SetStageTile',['../classGrowSystemTreeSingle.html#a25579c483783340ad3b8bb762a67db4b',1,'GrowSystemTreeSingle.SetStageTile()'],['../classGrowSystemTree.html#a4a3f6f38064fa87dd12159b885242733',1,'GrowSystemTree.SetStageTile()'],['../classGrowSystem.html#a91e2316e7b1c4140d97616cd211e8d44',1,'GrowSystem.SetStageTile()']]],
   ['setstartdelay_559',['SetStartDelay',['../classEffect.html#a69f58e47b43d42c2fa477801a64775f1',1,'Effect']]],

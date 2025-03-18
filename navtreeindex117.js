@@ -1,5 +1,6 @@
 var NAVTREEINDEX117 =
 {
+"classTraitMerchantFireworks.html#af84a04a6dfc173d2a6a94831393cb686":[1,0,1634,1],
 "classTraitMerchantFish.html":[1,0,1635],
 "classTraitMerchantFish.html#ad1f0cdfc5509de5d5e99febb5e334e67":[1,0,1635,0],
 "classTraitMerchantFood.html":[1,0,1636],
@@ -248,6 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitPotionEmpty.html#aca8c5b343e5ee07e3f37bc4c937dcc06":[1,0,1704,2],
 "classTraitPotionEmpty.html#acf75a07b204c6897c1318f5068aefd27":[1,0,1704,5],
 "classTraitPotionEmpty.html#ae2b5d3e8d70472d582ab0bd42d9b966f":[1,0,1704,1],
-"classTraitPotionLove.html":[1,0,1705],
-"classTraitPotionRandom.html":[1,0,1706]
+"classTraitPotionLove.html":[1,0,1705]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX137 =
 {
+"functions_func_x.html":[1,3,1,24],
 "functions_func_y.html":[1,3,1,25],
 "functions_func_z.html":[1,3,1,26],
 "functions_g.html":[1,3,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX137 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da249db0eb4b616f59dfef1860bf264eb0":[0,4,3,0,8,16],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da251d80790550e2f9fd849380d2e9af8c":[0,4,3,0,8,81],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da26097a57f572fe88a7cdf80543422cb1":[0,4,3,0,8,109],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da269940bcad6fddf5c68d3e67f767c3d1":[0,4,3,0,8,195],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da28f29391d95282b4ccf464b635fd8542":[0,4,3,0,8,214]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da269940bcad6fddf5c68d3e67f767c3d1":[0,4,3,0,8,195]
 };

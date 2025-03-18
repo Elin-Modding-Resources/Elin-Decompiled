@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitPotionRandom.html":[1,0,1706],
 "classTraitPotionRandom.html#a446a2199968a1bd5756385afb8bf1d5c":[1,0,1706,0],
 "classTraitPotionRandom.html#a531b0e1d3ffaa723f9ed9ab0cd05f928":[1,0,1706,9],
 "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1706,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitSeeker.html#af4fd3ab0ee02d09da967e4c7f540c6f3":[1,0,1748,3],
 "classTraitSeesaw.html":[1,0,1749],
 "classTraitSeesaw.html#a50e8c578eff4b59f42f4c42bf55dcd98":[1,0,1749,0],
-"classTraitSeesaw.html#a889c15329db166f80a71e35ffa51b9b0":[1,0,1749,1],
-"classTraitSelfFactory.html":[1,0,1750]
+"classTraitSeesaw.html#a889c15329db166f80a71e35ffa51b9b0":[1,0,1749,1]
 };

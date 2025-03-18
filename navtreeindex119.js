@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitSelfFactory.html":[1,0,1750],
 "classTraitSelfFactory.html#a7286b109cc525b39fad876445a9eb246":[1,0,1750,0],
 "classTraitSet.html":[1,0,1751],
 "classTraitSet.html#a0869a9868e1b1e44353ec0a21bae1b45":[1,0,1751,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitToolButcher.html#a0103466a2e9987634cc7f73461ec8aaa":[1,0,1815,1],
 "classTraitToolButcher.html#a3de7c0c977df29e7f3fb7309e820117f":[1,0,1815,0],
 "classTraitToolHammer.html":[1,0,1816],
-"classTraitToolLoom.html":[1,0,1817],
-"classTraitToolMusic.html":[1,0,1818]
+"classTraitToolLoom.html":[1,0,1817]
 };

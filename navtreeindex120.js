@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitToolMusic.html":[1,0,1818],
 "classTraitToolMusic.html#a6c7c055a5a8b58dd04965de99fce74be":[1,0,1818,0],
 "classTraitToolMusic.html#a781fb5d77ac59a1293edca876030cf25":[1,0,1818,1],
 "classTraitToolMusicBig.html":[1,0,1819],
@@ -248,6 +249,5 @@ var NAVTREEINDEX120 =
 "classTutorial.html#ab85440503c3af4aabb573a5966e257fe":[1,0,1870,1],
 "classTwoDLaserPack_1_1LineBasedLaser.html":[1,0,9,0],
 "classTwoDLaserPack_1_1LineBasedLaser.html":[0,4,9,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[1,0,9,0,10],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[0,4,9,0,10]
+"classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[1,0,9,0,10]
 };

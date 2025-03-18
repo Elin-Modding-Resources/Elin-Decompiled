@@ -245,9 +245,9 @@ var NAVTREEINDEX116 =
 "classTraitMerchantExotic.html#a3664f3c679c914d3c28fab3bff9ad2ef":[1,0,1632,0],
 "classTraitMerchantExotic.html#ac58139989bb307f7f8ec6c7a243b7e41":[1,0,1632,1],
 "classTraitMerchantFestival.html":[1,0,1633],
-"classTraitMerchantFestival.html#abd43f9437bc6f61d53b9de5619219f84":[1,0,1633,0],
-"classTraitMerchantFestival.html#afeae3be395de985707af611b1b94d310":[1,0,1633,1],
+"classTraitMerchantFestival.html#a7210e546e1a6bed156031704e8a2a17d":[1,0,1633,0],
+"classTraitMerchantFestival.html#abd43f9437bc6f61d53b9de5619219f84":[1,0,1633,1],
+"classTraitMerchantFestival.html#afeae3be395de985707af611b1b94d310":[1,0,1633,2],
 "classTraitMerchantFireworks.html":[1,0,1634],
-"classTraitMerchantFireworks.html#a30a2f89321d28133f532d8ac79063746":[1,0,1634,0],
-"classTraitMerchantFireworks.html#af84a04a6dfc173d2a6a94831393cb686":[1,0,1634,1]
+"classTraitMerchantFireworks.html#a30a2f89321d28133f532d8ac79063746":[1,0,1634,0]
 };

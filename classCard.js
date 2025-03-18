@@ -100,7 +100,7 @@ var classCard =
     [ "GetTalkText", "classCard.html#a8084bac883c3a8b5d002730f9cf179d3", null ],
     [ "GetTilePrice", "classCard.html#a4fb8f36504059dd3186572dc828e8df0", null ],
     [ "GetTotalQuality", "classCard.html#adfbcd3ca3e65a9fa664c7e9f6f255da3", null ],
-    [ "GetValue", "classCard.html#a6c74326e06c2cb9a4f9328aadffbfd31", null ],
+    [ "GetValue", "classCard.html#af02729c7e09da90a46ce3c4675c1a07c", null ],
     [ "GetWindowSaveData", "classCard.html#a9519572407c820e387c96acf4de9457c", null ],
     [ "HasCondition< T >", "classCard.html#af83001b719b99cd755618fe2e8486681", null ],
     [ "HasEditorTag", "classCard.html#aac6327d31e4aac5ec2dc1993dd98fff2", null ],
