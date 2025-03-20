@@ -1233,7 +1233,7 @@ public class Thing : Card
 			{
 				list = list2;
 			}
-			elements.AddNote(n, (Element e) => list.Contains(e), null, ElementContainer.NoteMode.Trait, addRaceFeat: false, delegate(Element e, string s)
+			elements.AddNote(n, (Element e) => list.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, delegate(Element e, string s)
 			{
 				string text12 = s;
 				string text13 = e.source.GetText("textExtra");
@@ -1277,27 +1277,30 @@ public class Thing : Card
 			{
 				AddText("traitOther".lang((list2.Count - list.Count).ToString() ?? ""), FontColor.Default);
 			}
-			if (mode == IInspect.NoteMode.Product && HasTag(CTAG.dish_bonus))
+			if (mode == IInspect.NoteMode.Product && HasCraftBonusTrait())
 			{
 				n.AddHeader("HeaderAdditionalTrait", "additional_trait");
-				source.model.elements.AddNote(n, (Element e) => e.IsTrait || e.IsFoodTraitMain, null, ElementContainer.NoteMode.Trait, addRaceFeat: false, delegate(Element e, string s)
+				foreach (Element item in ListCraftBonusTraits())
 				{
-					string text9 = s;
-					string text10 = e.source.GetText("textExtra");
-					if (!text10.IsEmpty())
+					item.AddEncNote(n, this, ElementContainer.NoteMode.BonusTrait, delegate(Element e, string s)
 					{
-						string text11 = "";
-						int num = e.Value / 10;
-						num = ((e.Value < 0) ? (num - 1) : (num + 1));
-						text10 = "Lv." + num + text11 + " " + text10;
-						if (infoMode && e.IsFoodTraitMain)
+						string text9 = s;
+						string text10 = e.source.GetText("textExtra");
+						if (!text10.IsEmpty())
 						{
-							text10 += "traitAdditive".lang();
+							string text11 = "";
+							int num = e.Value / 10;
+							num = ((e.Value < 0) ? (num - 1) : (num + 1));
+							text10 = "Lv." + num + text11 + " " + text10;
+							if (infoMode && e.IsFoodTraitMain)
+							{
+								text10 += "traitAdditive".lang();
+							}
+							text9 += (" <size=12>" + text10 + "</size>").TagColor(FontColor.Passive);
 						}
-						text9 += (" <size=12>" + text10 + "</size>").TagColor(FontColor.Passive);
-					}
-					return text9;
-				});
+						return text9;
+					});
+				}
 			}
 		}
 		if (EClass.debug.showExtra)

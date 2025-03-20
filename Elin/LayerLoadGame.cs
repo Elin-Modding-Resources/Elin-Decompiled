@@ -30,6 +30,8 @@ public class LayerLoadGame : ELayer
 
 	public UIButton buttonMove;
 
+	public UIButton buttonRename;
+
 	public List<GameIndex> worlds;
 
 	public Portrait portrait;
@@ -103,7 +105,7 @@ public class LayerLoadGame : ELayer
 		}
 	}
 
-	public void RefreshList()
+	public void RefreshList(string id = null)
 	{
 		if (!backup)
 		{
@@ -141,6 +143,18 @@ public class LayerLoadGame : ELayer
 			buttonLoad.SetActive(enable: false);
 			buttonDelete.SetActive(enable: false);
 			goNoInfo.SetActive(value: true);
+		}
+		if (id == null)
+		{
+			return;
+		}
+		list.Select((GameIndex a) => a.id == id);
+		foreach (GameIndex world2 in worlds)
+		{
+			if (world2.id == id)
+			{
+				RefreshInfo(world2);
+			}
 		}
 	}
 
@@ -187,22 +201,59 @@ public class LayerLoadGame : ELayer
 			portrait.SetActive(enable: false);
 		}
 		note.Build();
-		buttonListBackup.SetActive(!backup);
+		int num = 0;
+		if (!backup)
+		{
+			num = GameIO.GetGameList((cloud ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id + "/").Count;
+		}
+		buttonListBackup.mainText.SetText("listBackup".lang() + " (" + num + ")");
+		buttonListBackup.SetActive(!backup && num > 0);
 		buttonDelete.SetActive(!backup && !ELayer.core.IsGameStarted);
 		buttonBackup.SetActive(!backup && (!ELayer.core.IsGameStarted || i.id == Game.id));
 		buttonOpen.SetActive(backup);
 		buttonMove.SetActive(!backup && !ELayer.core.IsGameStarted);
 		buttonMove.mainText.SetText((cloud ? "fromCloud" : "toCloud").lang());
+		buttonRename.SetActive(!backup && !cloud && !ELayer.core.IsGameStarted);
+		buttonRename.SetOnClick(delegate
+		{
+			Dialog.InputName("dialogTeleportId", i.id, delegate(bool cancel, string text)
+			{
+				if (!cancel && !text.IsEmpty())
+				{
+					try
+					{
+						if (Directory.Exists(CorePath.RootSave + text))
+						{
+							throw new Exception(text + " already exists.");
+						}
+						Directory.Move(CorePath.RootSave + i.id, CorePath.RootSave + text);
+						if (Directory.Exists(CorePath.PathBackup + i.id))
+						{
+							if (Directory.Exists(CorePath.PathBackup + text))
+							{
+								throw new Exception("Backup/" + text + " already exists.");
+							}
+							Directory.Move(CorePath.PathBackup + i.id, CorePath.PathBackup + text);
+						}
+						RefreshList(text);
+					}
+					catch (Exception ex2)
+					{
+						ELayer.ui.Say(ex2.Message);
+					}
+				}
+			});
+		});
 		buttonMove.SetOnClick(delegate
 		{
 			Dialog.YesNo("dialog_switchCloud", delegate
 			{
 				string sourceDirName = (cloud ? CorePath.RootSaveCloud : CorePath.RootSave) + i.id;
-				string text = (cloud ? CorePath.RootSave : CorePath.RootSaveCloud) + i.id;
-				string text2 = (cloud ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id;
-				string text3 = (cloud ? CorePath.PathBackup : CorePath.PathBackupCloud) + i.id;
-				bool flag2 = Directory.Exists(text2);
-				if (Directory.Exists(text) || Directory.Exists(text3))
+				string text2 = (cloud ? CorePath.RootSave : CorePath.RootSaveCloud) + i.id;
+				string text3 = (cloud ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id;
+				string text4 = (cloud ? CorePath.PathBackup : CorePath.PathBackupCloud) + i.id;
+				bool flag2 = Directory.Exists(text3);
+				if (Directory.Exists(text2) || Directory.Exists(text4))
 				{
 					SE.Beep();
 					ELayer.ui.Say("cloud_conflict");
@@ -215,7 +266,7 @@ public class LayerLoadGame : ELayer
 						if (flag2)
 						{
 							Debug.Log("Converting Backup files:");
-							Directory.Move(text2, text3);
+							Directory.Move(text3, text4);
 							foreach (GameIndex game in GameIO.GetGameList(((!cloud) ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id + "/"))
 							{
 								Debug.Log("Processing:" + game.id + ": " + game.path);
@@ -226,8 +277,8 @@ public class LayerLoadGame : ELayer
 							}
 						}
 						Debug.Log("Converting Current World:");
-						Directory.Move(sourceDirName, text);
-						i.path = text;
+						Directory.Move(sourceDirName, text2);
+						i.path = text2;
 						i.cloud = !cloud;
 						GameIO.UpdateGameIndex(i);
 						if (i.cloud)
@@ -302,6 +353,7 @@ public class LayerLoadGame : ELayer
 			GameIO.MakeBackup(i);
 			ELayer.ui.Say("backupDone");
 			SE.WriteJournal();
+			RefreshInfo(i);
 		});
 		buttonOpen.SetOnClick(delegate
 		{

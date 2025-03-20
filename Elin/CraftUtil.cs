@@ -156,14 +156,11 @@ public class CraftUtil : EClass
 				product.elements.SetTo(value2.id, 0);
 			}
 		}
-		if (product.HasTag(CTAG.dish_bonus))
+		if (product.HasCraftBonusTrait())
 		{
-			foreach (Element value3 in product.sourceCard.model.elements.dict.Values)
+			foreach (Element item in product.ListCraftBonusTraits())
 			{
-				if (value3.IsTrait || value3.IsFoodTraitMain)
-				{
-					product.elements.ModBase(value3.id, value3.Value);
-				}
+				product.elements.ModBase(item.id, item.Value);
 			}
 		}
 		if (isFood)
@@ -227,6 +224,14 @@ public class CraftUtil : EClass
 		{
 			product.elements.ModBase(10, 6);
 		}
+		if (product.HasElement(762))
+		{
+			product.elements.ModBase(10, product.Evalue(762) / 5);
+			if (product.Evalue(10) < 1)
+			{
+				product.elements.SetTo(10, 1);
+			}
+		}
 		return product;
 		bool IsValidTrait(Element e)
 		{
@@ -259,20 +264,20 @@ public class CraftUtil : EClass
 		{
 			if (t != null)
 			{
-				foreach (Element value4 in t.elements.dict.Values)
+				foreach (Element value3 in t.elements.dict.Values)
 				{
-					if (IsValidTrait(value4))
+					if (IsValidTrait(value3))
 					{
-						if (isFood && value4.IsFoodTraitMain)
+						if (isFood && value3.IsFoodTraitMain)
 						{
-							product.elements.ModBase(value4.id, value4.Value);
+							product.elements.ModBase(value3.id, value3.Value);
 						}
 						else
 						{
-							int num4 = product.elements.Base(value4.id);
-							if ((num4 <= 0 && value4.Value < 0 && value4.Value < num4) || (value4.Value > 0 && value4.Value > num4))
+							int num4 = product.elements.Base(value3.id);
+							if ((num4 <= 0 && value3.Value < 0 && value3.Value < num4) || (value3.Value > 0 && value3.Value > num4))
 							{
-								product.elements.SetTo(value4.id, value4.Value);
+								product.elements.SetTo(value3.id, value3.Value);
 							}
 						}
 					}

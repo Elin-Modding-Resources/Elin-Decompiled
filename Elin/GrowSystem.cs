@@ -612,7 +612,19 @@ public class GrowSystem : EClass
 	{
 		if (t == null)
 		{
-			t = ((!idHarvestThing.StartsWith('#')) ? ThingGen.Create(idHarvestThing.IsEmpty("apple")) : ThingGen.CreateFromCategory(idHarvestThing.Replace("#", "")));
+			if (idHarvestThing.StartsWith('#'))
+			{
+				t = ThingGen.CreateFromCategory(idHarvestThing.Replace("#", ""));
+			}
+			else
+			{
+				string text = idHarvestThing;
+				if (text == "potato" && EClass.rnd(3) == 0)
+				{
+					text = "784";
+				}
+				t = ThingGen.Create(text.IsEmpty("apple"));
+			}
 		}
 		ApplySeed(t);
 		PlantData plantData = EClass._map.TryGetPlant(cell);

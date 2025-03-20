@@ -4711,9 +4711,32 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isBackerContent && !flag)
 			{
-				if (id == "isca")
+				switch (id)
 				{
+				case "isca":
 					list.Add(ThingGen.Create("blood_angel"));
+					break;
+				case "golem_wood":
+					if (chance(30))
+					{
+						list.Add(ThingGen.Create("crystal_earth"));
+					}
+					break;
+				case "golem_stone":
+					if (chance(30))
+					{
+						list.Add(ThingGen.Create("crystal_sun"));
+					}
+					break;
+				case "golem_steel":
+					if (chance(30))
+					{
+						list.Add(ThingGen.Create("crystal_mana"));
+					}
+					break;
+				case "golem_gold":
+					list.Add(ThingGen.Create("money2"));
+					break;
 				}
 				int num5 = ((EClass._zone.Boss == this) ? 2 : ((this.rarity >= Rarity.Legendary) ? 1 : 0));
 				if (EClass._zone is Zone_Void)
@@ -6177,6 +6200,27 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		c_idTone = MOD.tones.GetToneID(text, bio?.gender ?? 0);
 	}
 
+	public bool HasCraftBonusTrait()
+	{
+		return ListCraftBonusTraits().Count > 0;
+	}
+
+	public List<Element> ListCraftBonusTraits()
+	{
+		List<Element> list = new List<Element>();
+		string[] tag = sourceCard.tag;
+		for (int i = 0; i < tag.Length; i++)
+		{
+			string[] array = tag[i].Split('/');
+			if (!(array[0] != "craft_bonus"))
+			{
+				Element item = Element.Create(array[1], array[2].ToInt());
+				list.Add(item);
+			}
+		}
+		return list;
+	}
+
 	public void TryStack(Thing t)
 	{
 		if (t == this)
@@ -6644,7 +6688,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				if (IsDecayed)
 				{
-					p *= (flag ? 1.25f : 0.5f);
+					p *= (flag ? 0.9f : 0.5f);
 				}
 			}
 			else

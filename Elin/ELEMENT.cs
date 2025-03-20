@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
+	public const int purity = 759;
+
+	public const int roasted = 762;
+
 	public const int stimulant = 760;
 
 	public const int comfort = 750;
@@ -19,19 +23,17 @@ public class ELEMENT
 
 	public const int blood = 755;
 
-	public const int hotspring = 756;
-
 	public const int recharge = 761;
 
-	public const int purity = 759;
+	public const int hotspring = 756;
 
 	public const int _void = 0;
 
-	public const int quality = 2;
+	public const int d = 3;
 
 	public const int lv = 1;
 
-	public const int d = 3;
+	public const int quality = 2;
 
 	public const int socket = 5;
 
@@ -71,12 +73,12 @@ public class ELEMENT
 
 	public const int poison = 20;
 
-	public static readonly int[] IDS = new int[33]
+	public static readonly int[] IDS = new int[34]
 	{
-		760, 750, 751, 752, 753, 754, 755, 756, 761, 759,
-		0, 2, 1, 3, 5, 10, 11, 12, 13, 14,
-		16, 17, 18, 15, 21, 22, 23, 24, 25, 26,
-		29, 85, 20
+		759, 762, 760, 750, 751, 752, 753, 754, 755, 761,
+		756, 0, 3, 1, 2, 5, 10, 11, 12, 13,
+		14, 16, 17, 18, 15, 21, 22, 23, 24, 25,
+		26, 29, 85, 20
 	};
 }
 public class Element : EClass
@@ -784,6 +786,154 @@ public class Element : EClass
 			bonusInfo.WriteNote();
 		}
 		UIText.globalSizeMod = 0;
+	}
+
+	public void AddEncNote(UINote n, Card Card, ElementContainer.NoteMode mode = ElementContainer.NoteMode.Default, Func<Element, string, string> funcText = null, Action<UINote, Element> onAddNote = null)
+	{
+		string text = "";
+		switch (mode)
+		{
+		case ElementContainer.NoteMode.Domain:
+			n.AddText(Name, FontColor.Default);
+			return;
+		case ElementContainer.NoteMode.Default:
+		case ElementContainer.NoteMode.BonusTrait:
+		{
+			bool flag = source.tag.Contains("common");
+			string categorySub = source.categorySub;
+			bool flag2 = false;
+			bool flag3 = (source.tag.Contains("neg") ? (Value > 0) : (Value < 0));
+			int num = Mathf.Abs(Value);
+			bool flag4 = Card?.ShowFoodEnc ?? false;
+			bool flag5 = Card != null && Card.IsWeapon && this is Ability;
+			if (IsTrait || (flag4 && IsFoodTrait))
+			{
+				string[] textArray = source.GetTextArray("textAlt");
+				int num2 = Mathf.Clamp(Value / 10 + 1, (Value < 0 || textArray.Length <= 2) ? 1 : 2, textArray.Length - 1);
+				text = "altEnc".lang(textArray[0].IsEmpty(Name), textArray[num2], EClass.debug.showExtra ? (Value + " " + Name) : "");
+				flag3 = num2 <= 1 || textArray.Length <= 2;
+				flag2 = true;
+			}
+			else if (flag5)
+			{
+				text = "isProc".lang(Name);
+				flag3 = false;
+			}
+			else if (categorySub == "resist")
+			{
+				text = ("isResist" + (flag3 ? "Neg" : "")).lang(Name);
+			}
+			else if (categorySub == "eleAttack")
+			{
+				text = "isEleAttack".lang(Name);
+			}
+			else if (!source.textPhase.IsEmpty() && Value > 0)
+			{
+				text = source.GetText("textPhase");
+			}
+			else
+			{
+				string name = Name;
+				bool flag6 = source.category == "skill" || (source.category == "attribute" && !source.textPhase.IsEmpty());
+				bool flag7 = source.category == "enchant";
+				if (source.tag.Contains("multiplier"))
+				{
+					flag6 = (flag7 = false);
+					name = EClass.sources.elements.alias[source.aliasRef].GetName();
+				}
+				flag2 = !(flag6 || flag7);
+				text = (flag6 ? "textEncSkill" : (flag7 ? "textEncEnc" : "textEnc")).lang(name, num + (source.tag.Contains("ratio") ? "%" : ""), ((Value > 0) ? "encIncrease" : "encDecrease").lang());
+			}
+			int num3 = ((!(this is Resistance)) ? 1 : 0);
+			int num4 = 5;
+			if (id == 484)
+			{
+				num3 = 0;
+				num4 = 1;
+			}
+			if (!flag && !flag2 && !source.tag.Contains("flag"))
+			{
+				text = text + " [" + "*".Repeat(Mathf.Clamp(num * source.mtp / num4 + num3, 1, 5)) + ((num * source.mtp / num4 + num3 > 5) ? "+" : "") + "]";
+			}
+			if (HasTag("hidden") && mode != ElementContainer.NoteMode.BonusTrait)
+			{
+				text = "(debug)" + text;
+			}
+			FontColor color = (flag ? FontColor.Default : (flag3 ? FontColor.Bad : FontColor.Good));
+			if (IsGlobalElement)
+			{
+				text = text + " " + (IsFactionWideElement ? "_factionWide" : "_partyWide").lang();
+				if (!IsActive(Card))
+				{
+					return;
+				}
+				color = FontColor.Myth;
+			}
+			if (flag4 && IsFoodTrait && !IsFoodTraitMain)
+			{
+				color = FontColor.FoodMisc;
+			}
+			if (id == 2 && Value >= 0)
+			{
+				color = FontColor.FoodQuality;
+			}
+			if (funcText != null)
+			{
+				text = funcText(this, text);
+			}
+			UIItem uIItem = n.AddText("NoteText_enc", text, color);
+			Sprite sprite = EClass.core.refs.icons.enc.enc;
+			Thing thing = Card?.Thing;
+			if (thing != null)
+			{
+				if (thing.material.HasEnc(id))
+				{
+					sprite = EClass.core.refs.icons.enc.mat;
+				}
+				foreach (int key in thing.source.elementMap.Keys)
+				{
+					if (key == id)
+					{
+						sprite = EClass.core.refs.icons.enc.card;
+					}
+				}
+				if (thing.IsFood && IsFoodTrait)
+				{
+					sprite = EClass.core.refs.icons.enc.traitFood;
+				}
+				if (id == thing.GetInt(107))
+				{
+					sprite = EClass.core.refs.icons.enc.cat;
+				}
+				if (thing.GetRuneEnc(id) != null)
+				{
+					sprite = EClass.core.refs.icons.enc.rune;
+				}
+			}
+			if ((bool)sprite)
+			{
+				uIItem.image1.SetActive(enable: true);
+				uIItem.image1.sprite = sprite;
+			}
+			uIItem.image2.SetActive(source.IsWeaponEnc);
+			onAddNote?.Invoke(n, this);
+			return;
+		}
+		}
+		UIItem uIItem2 = n.AddTopic("TopicAttribute", Name, "".TagColor((ValueWithoutLink > 0) ? SkinManager.CurrentColors.textGood : SkinManager.CurrentColors.textBad, ValueWithoutLink.ToString() ?? ""));
+		if ((bool)uIItem2.button1)
+		{
+			uIItem2.button1.tooltip.onShowTooltip = delegate(UITooltip t)
+			{
+				WriteNote(t.note, EClass.pc.elements);
+			};
+		}
+		SetImage(uIItem2.image1);
+		Image image = uIItem2.image2;
+		int value = (Potential - 80) / 20;
+		image.enabled = Potential != 80;
+		image.sprite = EClass.core.refs.spritesPotential[Mathf.Clamp(Mathf.Abs(value), 0, EClass.core.refs.spritesPotential.Count - 1)];
+		image.color = ((Potential - 80 >= 0) ? Color.white : new Color(1f, 0.7f, 0.7f));
 	}
 
 	public virtual void OnWriteNote(UINote n, ElementContainer owner)

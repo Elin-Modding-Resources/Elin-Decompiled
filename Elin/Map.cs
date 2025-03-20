@@ -1314,7 +1314,7 @@ public class Map : MapBounds, IPathfindGrid
 							continue;
 						}
 					}
-					if (row.components[0] == item3.id || row.components[0] == item3.sourceCard._origin)
+					if (row.components[0].Split('|').Contains(item3.id) || row.components[0].Split('|').Contains(item3.sourceCard._origin))
 					{
 						list3.Add(row);
 					}

@@ -2514,7 +2514,7 @@ public class Chara : Card, IPathfindWalker
 				}
 				if (newPoint.cell.CanSuffocate())
 				{
-					AddCondition<ConSuffocation>((EClass.pc.Evalue(200) != 0) ? (2000 / (100 + EvalueMax(200, -5) * 10)) : 30);
+					AddCondition<ConSuffocation>((EClass.pc.Evalue(200) != 0) ? (2000 / (100 + EvalueMax(200, -5) * 10)) : 30, force: true);
 					int num4 = GetCondition<ConSuffocation>()?.GetPhase() ?? 0;
 					if (num4 >= 2)
 					{
@@ -3804,7 +3804,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate())
 		{
-			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10));
+			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10), force: true);
 		}
 		CellEffect e;
 		if (cell.effect != null)
@@ -6766,7 +6766,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			foreach (Thing thing4 in container.things)
 			{
-				if (!thing4.c_isImportant)
+				if (!thing4.c_isImportant && thing4.IsIdentified)
 				{
 					if (num3 > 0 && thing4.id == "polish_powder")
 					{
@@ -9245,9 +9245,9 @@ public class Chara : Card, IPathfindWalker
 		{
 			a = a * 100 / (200 + (tempElements.Base(ele) - a) * 10);
 		}
-		int num = Mathf.Abs(elements.Base(ele)) * 2 + 20;
+		int num = Mathf.Abs(elements.ValueWithoutLink(ele)) * 2 + 20;
 		int num2 = tempElements.Base(ele) + a;
-		if (num2 < num || num2 > num)
+		if (num2 < -num || num2 > num)
 		{
 			a = 0;
 		}

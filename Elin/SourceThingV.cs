@@ -213,6 +213,9 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 						string[] array2 = parse[i].Split('/');
 						switch (array2[0])
 						{
+						case "elec":
+							row.electricity = array2[1].ToInt();
+							break;
 						case "render":
 							row._idRenderData = array2[1];
 							break;

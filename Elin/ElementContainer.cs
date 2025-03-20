@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ElementContainer : EClass
 {
@@ -14,7 +13,7 @@ public class ElementContainer : EClass
 		CharaMake,
 		CharaMakeAttributes,
 		Domain,
-		Trait
+		BonusTrait
 	}
 
 	public Dictionary<int, Element> dict = new Dictionary<int, Element>();
@@ -675,11 +674,11 @@ public class ElementContainer : EClass
 	public void AddNote(UINote n, Func<Element, bool> isValid = null, Action onAdd = null, NoteMode mode = NoteMode.Default, bool addRaceFeat = false, Func<Element, string, string> funcText = null, Action<UINote, Element> onAddNote = null)
 	{
 		List<Element> list = new List<Element>();
-		foreach (Element value2 in dict.Values)
+		foreach (Element value in dict.Values)
 		{
-			if ((isValid == null || isValid(value2)) && (mode != NoteMode.CharaMake || value2.ValueWithoutLink != 0) && (value2.Value != 0 || mode == NoteMode.CharaMakeAttributes) && (!value2.HasTag("hidden") || EClass.debug.showExtra))
+			if ((isValid == null || isValid(value)) && (mode != NoteMode.CharaMake || value.ValueWithoutLink != 0) && (value.Value != 0 || mode == NoteMode.CharaMakeAttributes) && (!value.HasTag("hidden") || EClass.debug.showExtra))
 			{
-				list.Add(value2);
+				list.Add(value);
 			}
 		}
 		if (addRaceFeat)
@@ -699,159 +698,16 @@ public class ElementContainer : EClass
 		case NoteMode.CharaMakeAttributes:
 			list.Sort((Element a, Element b) => a.GetSortVal(UIList.SortMode.ByElementParent) - b.GetSortVal(UIList.SortMode.ByElementParent));
 			break;
-		case NoteMode.Trait:
+		case NoteMode.BonusTrait:
 			list.Sort((Element a, Element b) => GetSortVal(b) - GetSortVal(a));
 			break;
 		default:
 			list.Sort((Element a, Element b) => a.SortVal() - b.SortVal());
 			break;
 		}
-		string text = "";
-		foreach (Element e in list)
+		foreach (Element item in list)
 		{
-			switch (mode)
-			{
-			case NoteMode.Domain:
-				n.AddText(e.Name, FontColor.Default);
-				continue;
-			case NoteMode.Default:
-			case NoteMode.Trait:
-			{
-				bool flag = e.source.tag.Contains("common");
-				string categorySub = e.source.categorySub;
-				bool flag2 = false;
-				bool flag3 = (e.source.tag.Contains("neg") ? (e.Value > 0) : (e.Value < 0));
-				int num = Mathf.Abs(e.Value);
-				bool flag4 = Card != null && Card.ShowFoodEnc;
-				bool flag5 = Card != null && Card.IsWeapon && e is Ability;
-				if (e.IsTrait || (flag4 && e.IsFoodTrait))
-				{
-					string[] textArray = e.source.GetTextArray("textAlt");
-					int num2 = Mathf.Clamp(e.Value / 10 + 1, (e.Value < 0 || textArray.Length <= 2) ? 1 : 2, textArray.Length - 1);
-					text = "altEnc".lang(textArray[0].IsEmpty(e.Name), textArray[num2], EClass.debug.showExtra ? (e.Value + " " + e.Name) : "");
-					flag3 = num2 <= 1 || textArray.Length <= 2;
-					flag2 = true;
-				}
-				else if (flag5)
-				{
-					text = "isProc".lang(e.Name);
-					flag3 = false;
-				}
-				else if (categorySub == "resist")
-				{
-					text = ("isResist" + (flag3 ? "Neg" : "")).lang(e.Name);
-				}
-				else if (categorySub == "eleAttack")
-				{
-					text = "isEleAttack".lang(e.Name);
-				}
-				else if (!e.source.textPhase.IsEmpty() && e.Value > 0)
-				{
-					text = e.source.GetText("textPhase");
-				}
-				else
-				{
-					string name = e.Name;
-					bool flag6 = e.source.category == "skill" || (e.source.category == "attribute" && !e.source.textPhase.IsEmpty());
-					bool flag7 = e.source.category == "enchant";
-					if (e.source.tag.Contains("multiplier"))
-					{
-						flag6 = (flag7 = false);
-						name = EClass.sources.elements.alias[e.source.aliasRef].GetName();
-					}
-					flag2 = !(flag6 || flag7);
-					text = (flag6 ? "textEncSkill" : (flag7 ? "textEncEnc" : "textEnc")).lang(name, num + (e.source.tag.Contains("ratio") ? "%" : ""), ((e.Value > 0) ? "encIncrease" : "encDecrease").lang());
-				}
-				int num3 = ((!(e is Resistance)) ? 1 : 0);
-				int num4 = 5;
-				if (e.id == 484)
-				{
-					num3 = 0;
-					num4 = 1;
-				}
-				if (!flag && !flag2 && !e.source.tag.Contains("flag"))
-				{
-					text = text + " [" + "*".Repeat(Mathf.Clamp(num * e.source.mtp / num4 + num3, 1, 5)) + ((num * e.source.mtp / num4 + num3 > 5) ? "+" : "") + "]";
-				}
-				if (e.HasTag("hidden"))
-				{
-					text = "(debug)" + text;
-				}
-				FontColor color = (flag ? FontColor.Default : (flag3 ? FontColor.Bad : FontColor.Good));
-				if (e.IsGlobalElement)
-				{
-					text = text + " " + (e.IsFactionWideElement ? "_factionWide" : "_partyWide").lang();
-					if (!e.IsActive(Card))
-					{
-						continue;
-					}
-					color = FontColor.Myth;
-				}
-				if (flag4 && e.IsFoodTrait && !e.IsFoodTraitMain)
-				{
-					color = FontColor.FoodMisc;
-				}
-				if (e.id == 2 && e.Value >= 0)
-				{
-					color = FontColor.FoodQuality;
-				}
-				if (funcText != null)
-				{
-					text = funcText(e, text);
-				}
-				UIItem uIItem = n.AddText("NoteText_enc", text, color);
-				Sprite sprite = EClass.core.refs.icons.enc.enc;
-				Thing thing = Card?.Thing;
-				if (thing != null)
-				{
-					if (thing.material.HasEnc(e.id))
-					{
-						sprite = EClass.core.refs.icons.enc.mat;
-					}
-					foreach (int key in thing.source.elementMap.Keys)
-					{
-						if (key == e.id)
-						{
-							sprite = EClass.core.refs.icons.enc.card;
-						}
-					}
-					if (thing.IsFood && e.IsFoodTrait)
-					{
-						sprite = EClass.core.refs.icons.enc.traitFood;
-					}
-					if (e.id == thing.GetInt(107))
-					{
-						sprite = EClass.core.refs.icons.enc.cat;
-					}
-					if (thing.GetRuneEnc(e.id) != null)
-					{
-						sprite = EClass.core.refs.icons.enc.rune;
-					}
-				}
-				if ((bool)sprite)
-				{
-					uIItem.image1.SetActive(enable: true);
-					uIItem.image1.sprite = sprite;
-				}
-				uIItem.image2.SetActive(e.source.IsWeaponEnc);
-				onAddNote?.Invoke(n, e);
-				continue;
-			}
-			}
-			UIItem uIItem2 = n.AddTopic("TopicAttribute", e.Name, "".TagColor((e.ValueWithoutLink > 0) ? SkinManager.CurrentColors.textGood : SkinManager.CurrentColors.textBad, e.ValueWithoutLink.ToString() ?? ""));
-			if ((bool)uIItem2.button1)
-			{
-				uIItem2.button1.tooltip.onShowTooltip = delegate(UITooltip t)
-				{
-					e.WriteNote(t.note, EClass.pc.elements);
-				};
-			}
-			e.SetImage(uIItem2.image1);
-			Image image = uIItem2.image2;
-			int value = (e.Potential - 80) / 20;
-			image.enabled = e.Potential != 80;
-			image.sprite = EClass.core.refs.spritesPotential[Mathf.Clamp(Mathf.Abs(value), 0, EClass.core.refs.spritesPotential.Count - 1)];
-			image.color = ((e.Potential - 80 >= 0) ? Color.white : new Color(1f, 0.7f, 0.7f));
+			item.AddEncNote(n, Card, mode, funcText, onAddNote);
 		}
 	}
 
