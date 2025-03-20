@@ -1,5 +1,10 @@
 var NAVTREEINDEX77 =
 {
+"classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bfa4e221fc084bb69a82315a154d6dd7879":[1,0,787,1,1],
+"classLayerPeople.html#ae40e45a9b25d781eaaecb19dbf2f90bfacf51066f49e517f274b8173cc265c60b":[1,0,787,1,0],
+"classLayerPeople.html#ae8b5fc6e3af77eb8c66ccfe8ae21e6b4":[1,0,787,9],
+"classLayerPeople.html#aed39dc0c8955645db88df9bfe45cb54a":[1,0,787,2],
+"classLayerPeople.html#af8d422551ab5219ee28b4e15a583e696":[1,0,787,15],
 "classLayerPixelPaint.html":[1,0,788],
 "classLayerPixelPaint.html#a101cebc4ab33f2eb9cb939f20e809db4":[1,0,788,4],
 "classLayerPixelPaint.html#a154eb2e697b24dd12e6a768f997b1d87":[1,0,788,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX77 =
 "classLayerTravel.html#ae3175394351130486ec48288e55c1db1":[1,0,803,18],
 "classLayerTravel.html#af365196ec995e80b8ccf6f587c65d1b2":[1,0,803,3],
 "classLayerTreasureMap.html":[1,0,804],
-"classLayerTreasureMap.html#a97bb1e74ba3e084b89a793a7cdecc32d":[1,0,804,1],
-"classLayerTreasureMap.html#af445d81b557f55c0e33cb605ce90845a":[1,0,804,2],
-"classLayerTreasureMap.html#afa0696d20109373d929cd6e708ac06d5":[1,0,804,0],
-"classLayerUploader.html":[1,0,805],
-"classLayerUploader.html#a08c2067a31eb306034a12fc1a3b52a73":[1,0,805,13],
-"classLayerUploader.html#a2adcf260f2e9c70fa846be0c35cfb2ca":[1,0,805,1]
+"classLayerTreasureMap.html#a97bb1e74ba3e084b89a793a7cdecc32d":[1,0,804,1]
 };

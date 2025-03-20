@@ -3,6 +3,7 @@ var classElement =
     [ "BonusInfo", "classElement_1_1BonusInfo.html", "classElement_1_1BonusInfo" ],
     [ "_WriteNote", "classElement.html#a44ec7d5b4683382abeda62c48e135e7f", null ],
     [ "_WriteNote", "classElement.html#ab4417f7aaa68076323cb399f346b58e8", null ],
+    [ "AddEncNote", "classElement.html#a60af76ab6c772294cb7fb96b6f22c666", null ],
     [ "AddHeaderAbility", "classElement.html#a5f5ad4c1f92587c481975a6cf2302569", null ],
     [ "CanLink", "classElement.html#a83c7be33ee0ea37dfaf49c393a5c2d34", null ],
     [ "CheckLevelBonus", "classElement.html#a6cfa1c445cd30ebe7c711a708fb069e8", null ],

@@ -2,7 +2,7 @@ var classLayerLoadGame =
 [
     [ "Init", "classLayerLoadGame.html#a675e4a96d86ee4a6c3681cc79742adb4", null ],
     [ "RefreshInfo", "classLayerLoadGame.html#a1a61b274ca682b0dbf1647500b9e7700", null ],
-    [ "RefreshList", "classLayerLoadGame.html#ae00cf29155d76477888fc5ed79edb464", null ],
+    [ "RefreshList", "classLayerLoadGame.html#ad958944f76cdd2d2f139465e13401c3e", null ],
     [ "backup", "classLayerLoadGame.html#a11154e547372b6d1dfd259efa75e6e97", null ],
     [ "buttonBackup", "classLayerLoadGame.html#a2d690350335fce619571d79284f5e681", null ],
     [ "buttonDelete", "classLayerLoadGame.html#a89dfdbd63b01c00861afa4a121da768a", null ],
@@ -10,6 +10,7 @@ var classLayerLoadGame =
     [ "buttonLoad", "classLayerLoadGame.html#a6209504d29ecf13031c4a2abe70de217", null ],
     [ "buttonMove", "classLayerLoadGame.html#ae34c79d6297a270b5b33ae183f5bac99", null ],
     [ "buttonOpen", "classLayerLoadGame.html#a2b2d822fad64cbf38bc019d5493b39b9", null ],
+    [ "buttonRename", "classLayerLoadGame.html#a10bc5a0cc27e4bacd1a8e7254766d1c0", null ],
     [ "goCloudWarn", "classLayerLoadGame.html#ae710388e494fcd3c631b01c12b4932cb", null ],
     [ "goInfo", "classLayerLoadGame.html#abdbbf09273fdf172a836aeee6ab9e499", null ],
     [ "goInfo2", "classLayerLoadGame.html#acf57bf91c0636113bd35b7bf0de1bc23", null ],

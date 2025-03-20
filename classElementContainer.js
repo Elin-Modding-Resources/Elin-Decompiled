@@ -5,7 +5,7 @@ var classElementContainer =
       [ "CharaMake", "classElementContainer.html#a92e69612e688de96b29b05f148a7edafa76744a6e262c1ba8b5a174ea54452b1c", null ],
       [ "CharaMakeAttributes", "classElementContainer.html#a92e69612e688de96b29b05f148a7edafaa887e2a7dfbc9a7d73a1e6da1c9577e5", null ],
       [ "Domain", "classElementContainer.html#a92e69612e688de96b29b05f148a7edafaeae639a70006feff484a39363c977e24", null ],
-      [ "Trait", "classElementContainer.html#a92e69612e688de96b29b05f148a7edafa9118ea0f76d0a8f21a42591caeee043e", null ]
+      [ "BonusTrait", "classElementContainer.html#a92e69612e688de96b29b05f148a7edafaa28fabc0848e54b4bd61247ff22ded54", null ]
     ] ],
     [ "AddNote", "classElementContainer.html#a26377870226f002b18d5a5012a78ee75", null ],
     [ "AddNoteAll", "classElementContainer.html#a20675e034922c6602e03c38c020cd212", null ],

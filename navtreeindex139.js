@@ -1,5 +1,10 @@
 var NAVTREEINDEX139 =
 {
+"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[0,4,0,3,3],
+"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[1,0,0,3,3],
+"structAlgorithms_1_1PathFinderNode.html#a9d142733e5e490432c66cb30a26b9f1a":[0,4,0,3,4],
+"structAlgorithms_1_1PathFinderNode.html#a9d142733e5e490432c66cb30a26b9f1a":[1,0,0,3,4],
+"structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[1,0,0,3,2],
 "structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[0,4,0,3,2],
 "structAlgorithms_1_1PathFinderNode.html#ae6d978ba911c6243806a5795f6fda2dc":[1,0,0,3,1],
 "structAlgorithms_1_1PathFinderNode.html#ae6d978ba911c6243806a5795f6fda2dc":[0,4,0,3,1],

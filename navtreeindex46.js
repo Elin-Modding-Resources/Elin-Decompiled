@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"classColorProfile_1_1PCLights.html":[1,0,277,1],
+"classColorProfile_1_1PCLights.html#a30528f180df46b944db528c60af05ad5":[1,0,277,1,1],
 "classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,277,1,0],
 "classColorProfile_1_1RarityColors.html":[1,0,277,2],
 "classColorProfile_1_1RarityColors.html#a26ac41b8dbadb4e9d41b9498e24c4d4b":[1,0,277,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "classConTransmuteBroom.html#aeb7fecc8d0e9cd898c0223cf5c69563a":[1,0,362,0],
 "classConTransmutePutit.html":[1,0,363],
 "classConTransmutePutit.html#ada9c385182f1466817153ea230fe2df3":[1,0,363,0],
-"classConWait.html":[1,0,364],
-"classConWait.html#a1b779fa88b0ebec7ba621cd29e30b3f5":[1,0,364,2],
-"classConWait.html#a2d776cfc0c273df7309b94ddc9cf42c2":[1,0,364,1]
+"classConWait.html":[1,0,364]
 };

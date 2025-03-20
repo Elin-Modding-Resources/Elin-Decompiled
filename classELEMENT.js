@@ -28,6 +28,7 @@ var classELEMENT =
     [ "race", "classELEMENT.html#a421bcb2a97da3801cf9985e91c7933c6", null ],
     [ "rare", "classELEMENT.html#a725014f1f25da5da71d66d3076c21fe2", null ],
     [ "recharge", "classELEMENT.html#ac4e6c49d74e65cc4024ed90e746a0012", null ],
+    [ "roasted", "classELEMENT.html#ab392a77d840433604def0bba1da1deb2", null ],
     [ "size", "classELEMENT.html#a8a39f66b58731337e63a5889e2f6ea65", null ],
     [ "socket", "classELEMENT.html#ae1a910f7c95568cd2aac8c3628ef5ee9", null ],
     [ "stimulant", "classELEMENT.html#a1a9155e052ec4297f426f9668849252e", null ],

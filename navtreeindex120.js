@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitToolButcher.html":[1,0,1815],
+"classTraitToolButcher.html#a0103466a2e9987634cc7f73461ec8aaa":[1,0,1815,1],
+"classTraitToolButcher.html#a3de7c0c977df29e7f3fb7309e820117f":[1,0,1815,0],
+"classTraitToolHammer.html":[1,0,1816],
+"classTraitToolLoom.html":[1,0,1817],
 "classTraitToolMusic.html":[1,0,1818],
 "classTraitToolMusic.html#a6c7c055a5a8b58dd04965de99fce74be":[1,0,1818,0],
 "classTraitToolMusic.html#a781fb5d77ac59a1293edca876030cf25":[1,0,1818,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTutorial.html":[1,0,1870],
 "classTutorial.html#a39aaae45ca729223dc4ee97367aee1f2":[1,0,1870,4],
 "classTutorial.html#a7a855d15511d9a0ccb8eae2afe1aa66b":[1,0,1870,3],
-"classTutorial.html#aa538aa010806489d96924e8005aec0c2":[1,0,1870,2],
-"classTutorial.html#aad010e98af70d4cafa738f43205e4887":[1,0,1870,0],
-"classTutorial.html#ab85440503c3af4aabb573a5966e257fe":[1,0,1870,1],
-"classTwoDLaserPack_1_1LineBasedLaser.html":[1,0,9,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html":[0,4,9,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[1,0,9,0,10]
+"classTutorial.html#aa538aa010806489d96924e8005aec0c2":[1,0,1870,2]
 };

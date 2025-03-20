@@ -1,5 +1,10 @@
 var NAVTREEINDEX113 =
 {
+"classTraitBookResident.html#a5ffba76c6181dfe17b3259fbbc31538f":[1,0,1415,0],
+"classTraitBookResident.html#ae54a3c6dd723fbca1b6fdd72ab3e26a1":[1,0,1415,1],
+"classTraitBookSecret.html":[1,0,1416],
+"classTraitBookSecret.html#a1205df148f455a95a9530c6aa7083c76":[1,0,1416,2],
+"classTraitBookSecret.html#a215ca78cdcc00697186d537abf8e9351":[1,0,1416,0],
 "classTraitBookSecret.html#a8f15b023c265ca0a70f1f8ec57f0046c":[1,0,1416,1],
 "classTraitBookShelf.html":[1,0,1417],
 "classTraitBookShelf.html#a2f2ea8d92fd19b64c53459be7cc5c806":[1,0,1417,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b":[1,0,1466,1,7],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754":[1,0,1466,1,0],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0":[1,0,1466,1,6],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5":[1,0,1466,1,4],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba":[1,0,1466,1,8],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a":[1,0,1466,1,2],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7":[1,0,1466,1,9],
-"classTraitCrafter.html#a1fbe73f7969a5a7616846de2c329bdca":[1,0,1466,29],
-"classTraitCrafter.html#a2775523ce44d0ea98e4a6f2f4f2b9e8b":[1,0,1466,26]
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5":[1,0,1466,1,4]
 };
