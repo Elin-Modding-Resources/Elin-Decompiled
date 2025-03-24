@@ -3801,6 +3801,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * (100 - (int)Mathf.Min(80f, Mathf.Sqrt(LV - 50) * 2.5f)) / 100;
 			}
+			if (EClass.game.principal.enableDamageReduction && IsPCFaction)
+			{
+				int num = ((origin != null) ? origin.LV : EClass._zone.DangerLv);
+				if (num > 50)
+				{
+					dmg = dmg * (100 - (int)Mathf.Min(95f, Mathf.Sqrt(num - 50))) / 100;
+				}
+			}
 			dmg = dmg * Mathf.Max(0, 100 - Evalue((e == Element.Void || e.id == 926) ? 55 : 56)) / 100;
 			if (origin != null && origin.IsPC && EClass.player.codex.Has(id))
 			{
@@ -3820,26 +3828,26 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (EClass.pc.HasElement(1207) && isChara)
 			{
-				int num = 0;
 				int num2 = 0;
+				int num3 = 0;
 				foreach (Condition condition2 in Chara.conditions)
 				{
 					if (condition2.Type == ConditionType.Buff)
 					{
-						num++;
+						num2++;
 					}
 					else if (condition2.Type == ConditionType.Debuff)
 					{
-						num2++;
+						num3++;
 					}
 				}
 				if (IsPCParty)
 				{
-					dmg = dmg * 100 / Mathf.Min(100 + num * 5, 120);
+					dmg = dmg * 100 / Mathf.Min(100 + num2 * 5, 120);
 				}
 				else
 				{
-					dmg = dmg * Mathf.Min(100 + num2 * 5, 120) / 100;
+					dmg = dmg * Mathf.Min(100 + num3 * 5, 120) / 100;
 				}
 			}
 			if (IsPCParty && EClass.pc.ai is GoalAutoCombat)
@@ -3856,10 +3864,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (dmg >= MaxHP / 10 && Evalue(68) > 0)
 			{
-				int num3 = MaxHP / 10;
-				int num4 = dmg - num3;
-				num4 = num4 * 100 / (200 + Evalue(68) * 10);
-				dmg = num3 + num4;
+				int num4 = MaxHP / 10;
+				int num5 = dmg - num4;
+				num5 = num5 * 100 / (200 + Evalue(68) * 10);
+				dmg = num4 + num5;
 			}
 		}
 		if (origin != null && origin.IsPC && EClass.pc.Evalue(654) > 0)
@@ -3870,19 +3878,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			dmg = 0;
 		}
-		int num5 = Mathf.Clamp(dmg * 6 / MaxHP, 0, 4) + ((dmg > 0) ? 1 : 0);
+		int num6 = Mathf.Clamp(dmg * 6 / MaxHP, 0, 4) + ((dmg > 0) ? 1 : 0);
 		if (Evalue(1421) > 0)
 		{
-			int num6 = 0;
-			int num7 = dmg;
+			int num7 = 0;
+			int num8 = dmg;
 			if (hp > 0)
 			{
-				num7 = dmg - hp;
+				num8 = dmg - hp;
 				hp -= dmg;
-				num6 += dmg;
+				num7 += dmg;
 				if (hp < 0 && Chara.mana.value >= 0)
 				{
-					num6 += hp;
+					num7 += hp;
 					hp = 0;
 				}
 			}
@@ -3890,22 +3898,22 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				if (Evalue(1421) >= 2)
 				{
-					num7 /= 2;
+					num8 /= 2;
 				}
-				dmg = num7;
+				dmg = num8;
 				if (Chara.mana.value > 0)
 				{
-					num7 -= Chara.mana.value;
+					num8 -= Chara.mana.value;
 					Chara.mana.value -= dmg;
-					num6 += dmg;
+					num7 += dmg;
 				}
 				if (Chara.mana.value <= 0)
 				{
-					hp -= num7;
-					num6 += num7;
+					hp -= num8;
+					num7 += num8;
 				}
 			}
-			dmg = num6;
+			dmg = num7;
 		}
 		else
 		{
@@ -3925,9 +3933,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					if (e != Element.Void)
 					{
 						c2 = EClass.Colors.elementColors.TryGetValue(e.source.alias);
-						float num14 = (c2.r + c2.g + c2.b) / 3f;
-						num14 = ((num14 > 0.5f) ? 0f : (0.6f - num14));
-						c2 = new Color(c2.r + num14, c2.g + num14, c2.b + num14, 1f);
+						float num15 = (c2.r + c2.g + c2.b) / 3f;
+						num15 = ((num15 > 0.5f) ? 0f : (0.6f - num15));
+						c2 = new Color(c2.r + num15, c2.g + num15, c2.b + num15, 1f);
 					}
 					popper.SetText(dmg.ToString() ?? "", c2);
 				}
@@ -3995,7 +4003,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0a8f;
+							goto IL_0af8;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -4007,8 +4015,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0a8f;
-		IL_0a8f:
+		goto IL_0af8;
+		IL_0af8:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4141,20 +4149,20 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else if ((attackSource == AttackSource.Melee || attackSource == AttackSource.Range) && origin != null)
 		{
-			(IsPC ? EClass.pc : origin).Say("dmgMelee" + num5 + (IsPC ? "pc" : ""), origin, this);
+			(IsPC ? EClass.pc : origin).Say("dmgMelee" + num6 + (IsPC ? "pc" : ""), origin, this);
 		}
 		else if (isChara)
 		{
-			int num8 = ((attackSource != AttackSource.Condition && attackSource != AttackSource.WeaponEnchant) ? 1 : 2);
-			if (num5 >= num8)
+			int num9 = ((attackSource != AttackSource.Condition && attackSource != AttackSource.WeaponEnchant) ? 1 : 2);
+			if (num6 >= num9)
 			{
 				if (e != Element.Void)
 				{
 					Say("dmg_" + e.source.alias, this);
 				}
-				if (e == Element.Void || num5 >= 2)
+				if (e == Element.Void || num6 >= 2)
 				{
-					Say("dmg" + num5, this);
+					Say("dmg" + num6, this);
 				}
 			}
 		}
@@ -4199,15 +4207,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				elements.ModExp(123, a3);
 			}
 		}
-		int num9 = ((EClass.rnd(2) == 0) ? 1 : 0);
+		int num10 = ((EClass.rnd(2) == 0) ? 1 : 0);
 		if (attackSource == AttackSource.Condition)
 		{
-			num9 = 1 + EClass.rnd(2);
+			num10 = 1 + EClass.rnd(2);
 		}
-		if (num9 > 0)
+		if (num10 > 0)
 		{
 			bool flag = Chara.HasCondition<ConPoison>() || ((e.id == 915 || e.id == 923) && ResistLv(Evalue(955)) < 4);
-			AddBlood(num9, flag ? 6 : (-1));
+			AddBlood(num10, flag ? 6 : (-1));
 		}
 		bool flag2 = true;
 		switch (e.id)
@@ -4359,14 +4367,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (IsPC)
 		{
-			float num10 = (float)hp / (float)MaxHP;
+			float num11 = (float)hp / (float)MaxHP;
 			if (Evalue(1421) > 0)
 			{
-				num10 = (float)Chara.mana.value / (float)Chara.mana.max;
+				num11 = (float)Chara.mana.value / (float)Chara.mana.max;
 			}
-			if (num10 < 0.3f)
+			if (num11 < 0.3f)
 			{
-				PlaySound("heartbeat", 1f - num10 * 2f);
+				PlaySound("heartbeat", 1f - num11 * 2f);
 			}
 		}
 		if (!IsPC && hp < MaxHP / 5 && Evalue(423) <= 0 && dmg * 100 / MaxHP + 10 > EClass.rnd(IsPowerful ? 400 : 150) && !HasCondition<ConFear>())
@@ -4439,29 +4447,29 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				int valueOrDefault2 = (origin.Evalue(661) + weapon?.Evalue(661, ignoreGlobalElement: true)).GetValueOrDefault();
 				if (valueOrDefault > 0 && attackSource == AttackSource.Melee && origin.isChara && Chara.IsHostile(origin as Chara))
 				{
-					int num11 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, valueOrDefault / 10));
-					origin.Chara.stamina.Mod(num11);
+					int num12 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, valueOrDefault / 10));
+					origin.Chara.stamina.Mod(num12);
 					if (IsAliveInCurrentZone)
 					{
-						Chara.stamina.Mod(-num11);
+						Chara.stamina.Mod(-num12);
 					}
 				}
 				if (origin.HasElement(1350) && attackSource == AttackSource.Melee)
 				{
-					int num12 = EClass.rndHalf(2 + Mathf.Clamp(dmg / 10, 0, origin.Chara.GetPietyValue() + 10));
-					origin.Chara.mana.Mod(num12);
-					if (IsAliveInCurrentZone)
-					{
-						Chara.mana.Mod(-num12);
-					}
-				}
-				if (valueOrDefault2 > 0 && attackSource == AttackSource.Melee)
-				{
-					int num13 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, valueOrDefault2 + 10));
+					int num13 = EClass.rndHalf(2 + Mathf.Clamp(dmg / 10, 0, origin.Chara.GetPietyValue() + 10));
 					origin.Chara.mana.Mod(num13);
 					if (IsAliveInCurrentZone)
 					{
 						Chara.mana.Mod(-num13);
+					}
+				}
+				if (valueOrDefault2 > 0 && attackSource == AttackSource.Melee)
+				{
+					int num14 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, valueOrDefault2 + 10));
+					origin.Chara.mana.Mod(num14);
+					if (IsAliveInCurrentZone)
+					{
+						Chara.mana.Mod(-num14);
 					}
 				}
 			}
@@ -6099,7 +6107,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public string GetTalkText(string idTopic, bool stripPun = false, bool useDefault = true)
 	{
-		bool flag = isChara && Chara.IsHuman;
+		bool flag = isChara && Chara.IsHumanSpeak;
 		string text = MOD.listTalk.GetTalk(c_idTalk.IsEmpty(id), idTopic, useDefault, flag);
 		if (!text.IsEmpty())
 		{

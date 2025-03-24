@@ -113,5 +113,6 @@ public enum EffectId
 	Scream = 289,
 	DropMine = 290,
 	ThrowPotion = 291,
-	DrainMana = 292
+	DrainMana = 292,
+	Swarm = 293
 }

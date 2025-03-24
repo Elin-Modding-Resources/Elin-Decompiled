@@ -20,7 +20,7 @@ public class FACTION
 
 	public const int fRation = 2207;
 
-	public const int fLoyal = 2117;
+	public const int fEducation = 2116;
 
 	public const int bfGeyser = 3701;
 
@@ -42,13 +42,13 @@ public class FACTION
 
 	public const int fHeirloom = 2120;
 
-	public const int fEducation = 2116;
+	public const int fTaxEvasion = 2119;
 
 	public const int fAdmin = 2115;
 
-	public const int fLuck = 2118;
+	public const int fLoyal = 2117;
 
-	public const int fTaxEvasion = 2119;
+	public const int fLuck = 2118;
 
 	public const int bfRuin = 3702;
 
@@ -110,9 +110,9 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[52]
 	{
-		3500, 3600, 3601, 3602, 3603, 3700, 3605, 2207, 2117, 3701,
-		3604, 2206, 2202, 2204, 2203, 2003, 2201, 2200, 2120, 2116,
-		2115, 2118, 2119, 3702, 2205, 3703, 3707, 3705, 4006, 4005,
+		3500, 3600, 3601, 3602, 3603, 3700, 3605, 2207, 2116, 3701,
+		3604, 2206, 2202, 2204, 2203, 2003, 2201, 2200, 2120, 2119,
+		2115, 2117, 2118, 3702, 2205, 3703, 3707, 3705, 4006, 4005,
 		4004, 4003, 4002, 4001, 3704, 3900, 3805, 3804, 3803, 4000,
 		3801, 3802, 3708, 3709, 3710, 3780, 3706, 3782, 3783, 3784,
 		3800, 3781

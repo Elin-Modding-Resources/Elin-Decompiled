@@ -9,6 +9,18 @@ public class TraitMoongate : Trait
 {
 	public UniTask<bool> test;
 
+	public virtual string AllowedCat
+	{
+		get
+		{
+			if (!(EClass._zone is Zone_Tent))
+			{
+				return "Home,Dungeon,Town";
+			}
+			return "Tent";
+		}
+	}
+
 	public override bool CanUse(Chara c)
 	{
 		if (EClass._zone.IsInstance || EClass._zone.dateExpire != 0 || EClass._zone.IsRegion || !owner.IsInstalled)
@@ -46,31 +58,39 @@ public class TraitMoongate : Trait
 		Debug.Log(lang);
 		try
 		{
-			List<Net.DownloadMeta> list = (await Net.GetFileList(lang)).Where((Net.DownloadMeta m) => m.IsValidVersion()).ToList();
-			if (list == null || list.Count == 0)
+			List<Net.DownloadMeta> listOrg = await Net.GetFileList(lang);
+			listOrg = listOrg.Where((Net.DownloadMeta m) => m.IsValidVersion()).ToList();
+			listOrg.ForeachReverse(delegate(Net.DownloadMeta m)
+			{
+				if (!AllowedCat.Split(',').Contains(m.cat.IsEmpty("Home")))
+				{
+					listOrg.Remove(m);
+				}
+			});
+			if (listOrg == null || listOrg.Count == 0)
 			{
 				EClass.pc.SayNothingHappans();
 				return false;
 			}
-			List<MapMetaData> list2 = ListSavedUserMap();
-			IList<Net.DownloadMeta> list3 = list.Copy();
-			foreach (MapMetaData item2 in list2)
+			List<MapMetaData> list = ListSavedUserMap();
+			IList<Net.DownloadMeta> list2 = listOrg.Copy();
+			foreach (MapMetaData item2 in list)
 			{
-				foreach (Net.DownloadMeta item3 in list3)
+				foreach (Net.DownloadMeta item3 in list2)
 				{
 					if (item3.id == item2.id && item3.version == item2.version)
 					{
-						list3.Remove(item3);
+						list2.Remove(item3);
 						break;
 					}
 				}
 			}
-			Debug.Log(list3.Count);
-			if (list3.Count == 0)
+			Debug.Log(list2.Count);
+			if (list2.Count == 0)
 			{
-				list3 = list.Copy();
+				list2 = listOrg.Copy();
 			}
-			Net.DownloadMeta item = list3.RandomItem();
+			Net.DownloadMeta item = list2.RandomItem();
 			Zone_User zone_User = EClass.game.spatials.Find((Zone_User z) => z.id == item.id);
 			if (zone_User != null)
 			{

@@ -117,6 +117,12 @@ public class AI_PlayMusic : AIAct
 			case "lute":
 				idSong = "guitar_sad";
 				break;
+			case "recorder":
+				idSong = "recorder";
+				break;
+			case "flute":
+				idSong = "flute";
+				break;
 			case "taiko":
 				idSong = "taiko";
 				break;

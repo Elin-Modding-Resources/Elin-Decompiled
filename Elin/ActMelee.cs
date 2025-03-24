@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ActMelee : ActBaseAttack
 {
+	public virtual bool UseWeaponDist => true;
+
 	public override int PerformDistance
 	{
 		get
@@ -66,7 +68,7 @@ public class ActMelee : ActBaseAttack
 		{
 			return false;
 		}
-		if (Act.CC.Dist(Act.TC) > PerformDistance)
+		if (UseWeaponDist && Act.CC.Dist(Act.TC) > PerformDistance)
 		{
 			return false;
 		}
@@ -165,7 +167,7 @@ public class ActMelee : ActBaseAttack
 					w = slot.thing;
 				}
 				int num = 1 + Mathf.Max(Act.CC.Evalue(666), (w != null) ? w.Evalue(666) : 0);
-				if (dist <= 1 || dist <= num)
+				if (!UseWeaponDist || dist <= 1 || dist <= num)
 				{
 					if (w != null)
 					{

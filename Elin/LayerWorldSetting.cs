@@ -141,6 +141,7 @@ public class LayerWorldSetting : ELayer
 		if (ELayer.player.showWorkaround)
 		{
 			AddCategory(GamePrincipal.Type.Workaround);
+			AddCategory(GamePrincipal.Type.Legacy);
 		}
 		transCustom.RebuildLayout();
 		void AddCategory(GamePrincipal.Type type)
@@ -169,9 +170,9 @@ public class LayerWorldSetting : ELayer
 				}
 				bool flag = item.id == "permadeath" && !IsEmbark && !item.WasSealed();
 				b.mainText.SetText(("pp_" + item.id).lang());
-				b.icon.SetActive(item.IsSealed() || item.WasSealed());
+				b.icon.SetActive(item.grade >= 0 && (item.IsSealed() || item.WasSealed()));
 				b.icon.SetAlpha(item.IsSealed() ? 1f : 0.3f);
-				b.icon.sprite = sprites[item.grade];
+				b.icon.sprite = ((item.grade < 0) ? null : sprites[item.grade]);
 				b.icon.SetNativeSize();
 				b.GetOrCreate<CanvasGroup>().alpha = (flag ? 0.5f : 1f);
 				string text = "pp_" + item.id + "_hint";
@@ -186,7 +187,7 @@ public class LayerWorldSetting : ELayer
 						pp.id = -1;
 						RefreshTemplate();
 					}
-					b.icon.SetActive(item.IsSealed() || item.WasSealed());
+					b.icon.SetActive(item.grade >= 0 && (item.IsSealed() || item.WasSealed()));
 					b.icon.SetAlpha(item.IsSealed() ? 1f : 0.3f);
 				});
 			}

@@ -47,6 +47,14 @@ public class EClass
 
 	public static CoreDebug debug => core.debug;
 
+	public static int rndSeed(int a, int seed)
+	{
+		Rand.SetSeed(seed);
+		int result = rnd(a);
+		Rand.SetSeed();
+		return result;
+	}
+
 	public static int rnd(int a)
 	{
 		return Rand.rnd(a);

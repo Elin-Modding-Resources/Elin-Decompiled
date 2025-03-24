@@ -2962,7 +2962,7 @@ public class Chara : Card, IPathfindWalker
 						c.ModCurrency(num);
 						c.PlaySound("steal_money");
 					}
-					else if (IsPC && !c.IsPCParty && !c.IsUnique && c.IsHuman && EClass.rnd(5) == 0)
+					else if (IsPC && !c.IsPCParty && !c.IsUnique && c.IsHumanSpeak && EClass.rnd(5) == 0)
 					{
 						c.Talk("pushed");
 					}
@@ -5429,6 +5429,17 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		bool flag2 = true;
+		switch (a.id)
+		{
+		case 9150:
+			EClass.player.forceTalk = true;
+			Talk("ab_meteor");
+			break;
+		case 6662:
+			EClass.player.forceTalk = true;
+			Talk("ab_swarm");
+			break;
+		}
 		if (pt)
 		{
 			Act.forcePt = true;
@@ -7645,14 +7656,14 @@ public class Chara : Card, IPathfindWalker
 
 	public void RequestProtection(Chara attacker, Action<Chara> action)
 	{
-		if (HasCondition<StanceTaunt>() || base.isRestrained || attacker == this || (host != null && host.isRestrained) || (IsPCFaction && attacker.IsPCFaction))
+		if (HasCondition<StanceTaunt>() || base.isRestrained || attacker == this || (host != null && host.isRestrained) || (base.IsPCFactionOrMinion && attacker.IsPCFactionOrMinion))
 		{
 			return;
 		}
 		bool flag = false;
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (chara == attacker || chara.enemy == this || chara == this || chara.host != null || chara.IsDisabled || !chara.IsFriendOrAbove(this) || chara.conSuspend != null || (chara.IsPCParty && !IsPCParty) || (IsPCFaction && !chara.IsPCFaction))
+			if (chara == attacker || chara.enemy == this || chara == this || chara.host != null || chara.IsDisabled || !chara.IsFriendOrAbove(this) || chara.conSuspend != null || (chara.IsPCParty && !IsPCParty) || (IsPCFaction && !chara.IsPCFaction) || (attacker.IsPCFactionOrMinion && chara.IsPCFactionOrMinion))
 			{
 				continue;
 			}

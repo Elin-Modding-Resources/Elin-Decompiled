@@ -138,7 +138,7 @@ public class BuildMenu : EMono
 		}
 		EMono.ui.HideFloats();
 		this.SetActive(mode != Mode.None);
-		transMain.SetActive(mode == Mode.Build && (EMono.debug.godBuild || EMono._zone.elements.Has(4005)));
+		transMain.SetActive(mode == Mode.Build && (EMono.debug.godBuild || EMono._zone.elements.Has(4005) || (EMono._zone is Zone_Tent && EMono.pc.homeBranch.elements.Has(4005))));
 		switch (mode)
 		{
 		case Mode.Build:

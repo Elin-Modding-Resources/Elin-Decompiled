@@ -37,6 +37,8 @@ public class Net : MonoBehaviour
 
 		public string path;
 
+		public string cat;
+
 		public string date;
 
 		public int version;
@@ -98,7 +100,7 @@ public class Net : MonoBehaviour
 		}
 	}
 
-	public static async UniTask<bool> UploadFile(string id, string password, string name, string title, string path, string idLang)
+	public static async UniTask<bool> UploadFile(string id, string password, string name, string title, string path, string idLang, string cat = "Home")
 	{
 		if (isUploading)
 		{
@@ -117,7 +119,7 @@ public class Net : MonoBehaviour
 		wWWForm.AddField("id", id);
 		wWWForm.AddField("name", name);
 		wWWForm.AddField("title", title);
-		wWWForm.AddField("cat", "Home");
+		wWWForm.AddField("cat", cat);
 		wWWForm.AddField("idLang", idLang);
 		wWWForm.AddField("password", password);
 		wWWForm.AddField("submit", "Send");
@@ -220,6 +222,7 @@ public class Net : MonoBehaviour
 					id = array[1].Replace("\"", ""),
 					name = array[2],
 					title = array[3],
+					cat = array[5],
 					date = array[6].Replace("\"", ""),
 					version = ((array.Length >= 9) ? array[8].ToInt() : 0)
 				});

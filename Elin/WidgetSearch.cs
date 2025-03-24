@@ -108,7 +108,7 @@ public class WidgetSearch : WidgetCodex
 		HashSet<Card> newCards = new HashSet<Card>();
 		if (!s.IsEmpty())
 		{
-			if (!encSearch && (EMono._zone.IsTown || EMono._zone.IsPCFaction || EMono._zone is Zone_Tent))
+			if (!encSearch && (EMono._zone.IsTown || EMono._zone.HasLaw || EMono._zone.IsPCFaction || EMono._zone is Zone_Tent))
 			{
 				foreach (Chara chara in EMono._map.charas)
 				{

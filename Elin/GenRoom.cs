@@ -178,7 +178,7 @@ public class GenRoom : GenBounds
 		BiomeProfile.TileFloor floor = group.floor;
 		BiomeProfile.TileBlock block = group.block;
 		int idMat = block.mat;
-		if (zone is Zone_RandomDungeonNature && EClass.rnd(3) != 0)
+		if (zone is Zone_RandomDungeonNature && EClass.rndSeed(3, zone.uid) != 0)
 		{
 			block = EClass.core.refs.biomes.dict["Dungeon_Forest"].exterior.block;
 			if (zone is Zone_RandomDungeonPlain)

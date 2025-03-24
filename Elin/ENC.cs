@@ -68,7 +68,7 @@ public class ENC
 
 	public const int negateFear = 423;
 
-	public const int negateBlind = 421;
+	public const int negateParalysis = 422;
 
 	public const int negatePoison = 420;
 
@@ -114,7 +114,7 @@ public class ENC
 
 	public const int sustain_STR = 440;
 
-	public const int negateParalysis = 422;
+	public const int negateBlind = 421;
 
 	public const int sustain_DEX = 442;
 
@@ -128,9 +128,9 @@ public class ENC
 
 	public const int mod_reload = 601;
 
-	public const int mod_ammo = 600;
-
 	public const int sustain_END = 441;
+
+	public const int slot_rune = 484;
 
 	public const int optimizeMana = 483;
 
@@ -148,7 +148,7 @@ public class ENC
 
 	public const int bane_machine = 465;
 
-	public const int slot_rune = 484;
+	public const int mod_ammo = 600;
 
 	public const int bane_animal = 463;
 
@@ -173,11 +173,11 @@ public class ENC
 		653, 652, 651, 650, 641, 624, 621, 622, 623, 654,
 		640, 655, 851, 660, 661, 662, 663, 664, 665, 666,
 		850, 620, 865, 852, 656, 608, 464, 606, 428, 427,
-		426, 425, 424, 423, 421, 420, 418, 417, 416, 415,
+		426, 425, 424, 423, 422, 420, 418, 417, 416, 415,
 		414, 412, 411, 410, 409, 408, 407, 406, 405, 404,
-		403, 402, 401, 400, 607, 429, 440, 422, 442, 605,
-		604, 603, 602, 601, 600, 441, 483, 482, 481, 480,
-		468, 467, 466, 465, 484, 463, 462, 461, 460, 447,
+		403, 402, 401, 400, 607, 429, 440, 421, 442, 605,
+		604, 603, 602, 601, 441, 484, 483, 482, 481, 480,
+		468, 467, 466, 465, 600, 463, 462, 461, 460, 447,
 		446, 445, 444, 443
 	};
 }

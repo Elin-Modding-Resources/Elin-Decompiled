@@ -1,32 +1,32 @@
 public class SKILL
 {
-	public const int armorLight = 120;
-
-	public const int twohand = 130;
-
 	public const int shield = 123;
 
 	public const int armorHeavy = 122;
 
-	public const int acidproof = 51;
+	public const int armorLight = 120;
+
+	public const int fireproof = 50;
 
 	public const int weaponScythe = 110;
 
 	public const int weaponCrossbow = 109;
 
-	public const int fireproof = 50;
+	public const int twohand = 130;
 
-	public const int twowield = 131;
+	public const int acidproof = 51;
 
 	public const int PDR = 55;
 
+	public const int EDR = 56;
+
 	public const int weaponBlunt = 111;
 
-	public const int tactics = 132;
+	public const int twowield = 131;
 
-	public const int evasion = 150;
+	public const int strategy = 135;
 
-	public const int eyeofmind = 134;
+	public const int marksman = 133;
 
 	public const int climbing = 242;
 
@@ -42,11 +42,9 @@ public class SKILL
 
 	public const int parasite = 227;
 
-	public const int marksman = 133;
+	public const int tactics = 132;
 
 	public const int riding = 226;
-
-	public const int mining = 220;
 
 	public const int spotting = 210;
 
@@ -58,17 +56,21 @@ public class SKILL
 
 	public const int evasionPlus = 151;
 
-	public const int strategy = 135;
+	public const int evasion = 150;
+
+	public const int eyeofmind = 134;
+
+	public const int mining = 220;
 
 	public const int lumberjack = 225;
 
-	public const int EDR = 56;
-
-	public const int throwing = 108;
+	public const int martial = 100;
 
 	public const int weaponDagger = 107;
 
 	public const int fishing = 245;
+
+	public const int evasionPerfect = 57;
 
 	public const int life = 60;
 
@@ -94,11 +96,11 @@ public class SKILL
 
 	public const int PER = 73;
 
+	public const int throwing = 108;
+
 	public const int LER = 74;
 
-	public const int evasionPerfect = 57;
-
-	public const int WIL = 75;
+	public const int MAG = 76;
 
 	public const int CHA = 77;
 
@@ -116,8 +118,6 @@ public class SKILL
 
 	public const int antiMagic = 93;
 
-	public const int martial = 100;
-
 	public const int weaponAxe = 102;
 
 	public const int weaponStaff = 103;
@@ -128,7 +128,7 @@ public class SKILL
 
 	public const int weaponPolearm = 106;
 
-	public const int MAG = 76;
+	public const int WIL = 75;
 
 	public const int gathering = 250;
 
@@ -268,13 +268,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		120, 130, 123, 122, 51, 110, 109, 50, 131, 55,
-		111, 132, 150, 134, 242, 241, 240, 237, 235, 230,
-		227, 133, 226, 220, 210, 207, 200, 152, 151, 135,
-		225, 56, 108, 107, 245, 60, 61, 62, 64, 65,
-		66, 67, 68, 70, 71, 72, 73, 74, 57, 75,
-		77, 78, 79, 80, 90, 91, 92, 93, 100, 102,
-		103, 104, 105, 106, 76, 250, 101, 256, 916, 917,
+		123, 122, 120, 50, 110, 109, 130, 51, 55, 56,
+		111, 131, 135, 133, 242, 241, 240, 237, 235, 230,
+		227, 132, 226, 210, 207, 200, 152, 151, 150, 134,
+		220, 225, 100, 107, 245, 57, 60, 61, 62, 64,
+		65, 66, 67, 68, 70, 71, 72, 73, 108, 74,
+		76, 77, 78, 79, 80, 90, 91, 92, 93, 102,
+		103, 104, 105, 106, 75, 250, 101, 256, 916, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 950,
 		951, 952, 915, 953, 955, 956, 957, 958, 959, 960,
 		961, 962, 963, 964, 965, 970, 972, 255, 954, 914,

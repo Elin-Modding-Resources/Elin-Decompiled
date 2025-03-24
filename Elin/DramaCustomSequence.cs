@@ -39,7 +39,7 @@ public class DramaCustomSequence : EClass
 		_ = c.Name;
 		string rumor = (c.IsPCParty ? GetTalk("sup") : GetRumor(c));
 		Layer layer = null;
-		bool flag3 = c.IsHuman || EClass.pc.HasElement(1640);
+		bool flag3 = c.IsHumanSpeak || EClass.pc.HasElement(1640);
 		if (!flag)
 		{
 			Step("Resident");

@@ -144,7 +144,7 @@ public class LayerUploader : ELayer
 			string text2 = inputPassword.text;
 			SaveID();
 			ExportMap();
-			Net.UploadFile(text, text2, ELayer.pc.NameBraced, ELayer._zone.Name, savePath, Lang.langCode);
+			Net.UploadFile(text, text2, ELayer.pc.NameBraced, ELayer._zone.Name, savePath, Lang.langCode, (ELayer._zone is Zone_Tent) ? "Tent" : "Home");
 			nextUpload = (int)Time.realtimeSinceStartup + limitSec;
 		}
 	}

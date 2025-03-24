@@ -8,7 +8,8 @@ public class GamePrincipal : EClass
 	public enum Type
 	{
 		Oath,
-		Workaround
+		Workaround,
+		Legacy
 	}
 
 	public class Item
@@ -153,6 +154,9 @@ public class GamePrincipal : EClass
 	public bool disableVoidBlessing;
 
 	[JsonProperty]
+	public bool enableDamageReduction;
+
+	[JsonProperty]
 	public HashSet<string> modified = new HashSet<string>();
 
 	public bool IsCustom => id == -1;
@@ -194,6 +198,10 @@ public class GamePrincipal : EClass
 		{
 			petFeatExpMtp = a;
 		}, (int a) => 0.5f + 0.5f * (float)a + "x", 3);
+		Add(-1, Type.Legacy, "enableDamageReduction", () => enableDamageReduction, delegate(bool a)
+		{
+			enableDamageReduction = a;
+		});
 		return list;
 		void Add(int grade, Type type, string id, Func<bool> _get, Action<bool> _set)
 		{

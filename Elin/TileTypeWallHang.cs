@@ -114,6 +114,10 @@ public class TileTypeWallHang : TileTypeObj
 		{
 			v.y += p.sourceBlock.tileType.MountHeight;
 		}
+		if (target != null)
+		{
+			v.z += target.Pref.z;
+		}
 	}
 
 	protected override HitResult HitTest(Point pos)

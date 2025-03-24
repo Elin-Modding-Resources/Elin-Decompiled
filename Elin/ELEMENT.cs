@@ -5,27 +5,27 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int purity = 759;
-
 	public const int roasted = 762;
 
-	public const int stimulant = 760;
+	public const int antidote = 753;
+
+	public const int recharge = 761;
+
+	public const int purity = 759;
+
+	public const int hotspring = 756;
+
+	public const int blood = 755;
+
+	public const int nerve = 754;
 
 	public const int comfort = 750;
 
 	public const int rare = 751;
 
+	public const int stimulant = 760;
+
 	public const int cute = 752;
-
-	public const int antidote = 753;
-
-	public const int nerve = 754;
-
-	public const int blood = 755;
-
-	public const int recharge = 761;
-
-	public const int hotspring = 756;
 
 	public const int _void = 0;
 
@@ -75,8 +75,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[34]
 	{
-		759, 762, 760, 750, 751, 752, 753, 754, 755, 761,
-		756, 0, 3, 1, 2, 5, 10, 11, 12, 13,
+		762, 753, 761, 759, 756, 755, 754, 750, 751, 760,
+		752, 0, 3, 1, 2, 5, 10, 11, 12, 13,
 		14, 16, 17, 18, 15, 21, 22, 23, 24, 25,
 		26, 29, 85, 20
 	};
@@ -660,24 +660,36 @@ public class Element : EClass
 			n.Space();
 			n.AddText("isGlobalAct".lang());
 		}
-		if (cost.type != 0 && cost.cost != 0)
+		if (cost.type == Act.CostType.None || cost.cost == 0)
 		{
-			n.Space(4);
-			UIItem uIItem = n.AddExtra<UIItem>("costPrice");
-			int num = cost.cost;
-			if (cost.type == Act.CostType.MP && c.Evalue(483) > 0)
+			return;
+		}
+		n.Space(4);
+		UIItem uIItem = n.AddExtra<UIItem>("costPrice");
+		int num = cost.cost;
+		if (cost.type == Act.CostType.MP)
+		{
+			if (c.Evalue(483) > 0)
 			{
 				num = cost.cost * 100 / (100 + (int)Mathf.Sqrt(c.Evalue(483) * 10) * 3);
 			}
-			string text4 = cost.cost.ToString() ?? "";
-			if (num != cost.cost)
+			if (c.IsPC && c.HasCondition<StanceManaCost>())
 			{
-				text4 = num + " (" + text4 + ")";
+				int num2 = c.Evalue(1657);
+				if (num2 > 0 && vPotential >= 2)
+				{
+					num = num * (100 - num2 * 20) / 100;
+				}
 			}
-			uIItem.text1.SetText(text4, (((cost.type == Act.CostType.MP) ? c.mana.value : c.stamina.value) >= num) ? FontColor.Good : FontColor.Bad);
-			uIItem.image1.sprite = ((cost.type == Act.CostType.MP) ? EClass.core.refs.icons.mana : EClass.core.refs.icons.stamina);
-			uIItem.image1.SetNativeSize();
 		}
+		string text4 = cost.cost.ToString() ?? "";
+		if (num != cost.cost)
+		{
+			text4 = num + " (" + text4 + ")";
+		}
+		uIItem.text1.SetText(text4, (((cost.type == Act.CostType.MP) ? c.mana.value : c.stamina.value) >= num) ? FontColor.Good : FontColor.Bad);
+		uIItem.image1.sprite = ((cost.type == Act.CostType.MP) ? EClass.core.refs.icons.mana : EClass.core.refs.icons.stamina);
+		uIItem.image1.SetNativeSize();
 		string Calc()
 		{
 			Dice dice = Dice.Create(e, c);

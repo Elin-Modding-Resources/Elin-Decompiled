@@ -67,7 +67,14 @@ public class AM_Terrain : AM_BaseTerrain
 				p.cell.height -= (byte)num2;
 				if (p.cell._bridge != 0)
 				{
-					p.cell.bridgeHeight -= (byte)num2;
+					if (p.cell.bridgeHeight - num2 < 0)
+					{
+						p.cell.bridgeHeight = 0;
+					}
+					else
+					{
+						p.cell.bridgeHeight -= (byte)num2;
+					}
 				}
 			}
 			else
@@ -92,7 +99,14 @@ public class AM_Terrain : AM_BaseTerrain
 				p.cell.height += (byte)num3;
 				if (p.cell._bridge != 0)
 				{
-					p.cell.bridgeHeight += (byte)num3;
+					if (p.cell.bridgeHeight + num3 < 0)
+					{
+						p.cell.bridgeHeight = 0;
+					}
+					else
+					{
+						p.cell.bridgeHeight += (byte)num3;
+					}
 				}
 			}
 			p.RefreshNeighborTiles();

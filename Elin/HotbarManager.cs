@@ -129,6 +129,41 @@ public class HotbarManager : EClass
 			}
 			else if (EClass._zone is Zone_Tent)
 			{
+				if (flag || EClass.pc.homeBranch.elements.Has(4006))
+				{
+					hotbar.SetItem(new HotItemActionMode
+					{
+						id = "Inspect"
+					}).always = true;
+				}
+				if (flag || EClass.pc.homeBranch.elements.Has(4000))
+				{
+					hotbar.SetItem(new HotItemActionMode
+					{
+						id = "Cut"
+					});
+				}
+				if (flag || EClass.pc.homeBranch.elements.Has(4001))
+				{
+					hotbar.SetItem(new HotItemActionMode
+					{
+						id = "Mine"
+					});
+				}
+				if (flag || EClass.pc.homeBranch.elements.Has(4001))
+				{
+					hotbar.SetItem(new HotItemActionMode
+					{
+						id = "Dig"
+					});
+				}
+				if (flag || EClass.pc.homeBranch.elements.Has(4004))
+				{
+					hotbar.SetItem(new HotItemActionMode
+					{
+						id = "Deconstruct"
+					});
+				}
 				hotbar.SetItem(new HotItemActionMode
 				{
 					id = "Terrain"

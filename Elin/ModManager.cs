@@ -194,7 +194,7 @@ public class ModManager : BaseModManager
 		ListPluginObject.Clear();
 		foreach (BaseModPackage package5 in packages)
 		{
-			if (package5.IsValidVersion())
+			if (package5.IsValidVersion() && (!disableMod || package5.builtin))
 			{
 				package5.Activate();
 				if (package5.activated)
