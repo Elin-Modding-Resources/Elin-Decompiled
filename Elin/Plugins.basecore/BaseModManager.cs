@@ -51,7 +51,7 @@ public class BaseModManager
 
 	public void InitLang()
 	{
-		Debug.Log("Initializing Langs");
+		Debug.Log("Initializing Langs: " + Lang.langCode);
 		foreach (LangSetting value in MOD.langs.Values)
 		{
 			if (value.id != Lang.langCode)
