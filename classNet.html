@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.109 Stable Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.112 Nightly</span>
    </div>
   </td>
  </tr>
@@ -128,8 +128,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7a77c6cc2628f612e1fa5c7de3567dd8"><td class="memItemLeft" align="right" valign="top">static async UniTask&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNet.html#a7a77c6cc2628f612e1fa5c7de3567dd8">UploadFile</a> (string id, string password, string name, string <a class="el" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a>, string path, string idLang)</td></tr>
-<tr class="separator:a7a77c6cc2628f612e1fa5c7de3567dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad269270a4e27aacfa3cd86d802b3e93b"><td class="memItemLeft" align="right" valign="top">static async UniTask&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNet.html#ad269270a4e27aacfa3cd86d802b3e93b">UploadFile</a> (string id, string password, string name, string <a class="el" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a>, string path, string idLang, string cat=&quot;Home&quot;)</td></tr>
+<tr class="separator:ad269270a4e27aacfa3cd86d802b3e93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c69988ccb35fa7486ce11e15e7334ed"><td class="memItemLeft" align="right" valign="top">static async UniTask&lt; FileInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNet.html#a9c69988ccb35fa7486ce11e15e7334ed">DownloadFile</a> (<a class="el" href="classNet_1_1DownloadMeta.html">DownloadMeta</a> <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, string path, string idLang)</td></tr>
 <tr class="separator:a9c69988ccb35fa7486ce11e15e7334ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad17d676a4f056f2f7ac706987acdbc7d"><td class="memItemLeft" align="right" valign="top">static async UniTask&lt; List&lt; <a class="el" href="classNet_1_1DownloadMeta.html">DownloadMeta</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNet.html#ad17d676a4f056f2f7ac706987acdbc7d">GetFileList</a> (string idLang)</td></tr>
@@ -213,38 +213,38 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00158">158</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordtype">string</span> fn = item.id + <span class="stringliteral">&quot;.z&quot;</span>;</div>
-<div class="line"><span class="lineno">  161</span>        DownloadCahce caches = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;DownloadCahce&gt;(CorePath.ZoneSaveUser + <span class="stringliteral">&quot;cache.txt&quot;</span>) ?? <span class="keyword">new</span> DownloadCahce();</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (caches.items.TryGetValue(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) == <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.date.Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>) &amp;&amp; File.Exists(path + fn))</div>
-<div class="line"><span class="lineno">  163</span>        {</div>
-<div class="line"><span class="lineno">  164</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Returning Cache:&quot;</span> + path + fn);</div>
-<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> FileInfo(path + fn);</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/uploader/files/&quot;</span> + idLang + <span class="stringliteral">&quot;/&quot;</span> + fn);</div>
-<div class="line"><span class="lineno">  168</span>        www.downloadHandler = <span class="keyword">new</span> DownloadHandlerFile(path + fn);</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  170</span>        {</div>
-<div class="line"><span class="lineno">  171</span>            await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">  174</span>        {</div>
-<div class="line"><span class="lineno">  175</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(path + fn);</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (!fileInfo.Exists || www.result != UnityWebRequest.Result.Success)</div>
-<div class="line"><span class="lineno">  179</span>        {</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
-<div class="line"><span class="lineno">  181</span>            {</div>
-<div class="line"><span class="lineno">  182</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
-<div class="line"><span class="lineno">  183</span>            }</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>        caches.items[<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id] = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.date;</div>
-<div class="line"><span class="lineno">  187</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">SaveFile</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a5d8d6bd78ec613599905be7400a6b68b">ZoneSaveUser</a> + <span class="stringliteral">&quot;cache.txt&quot;</span>, caches);</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> fileInfo;</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00160">160</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordtype">string</span> fn = item.id + <span class="stringliteral">&quot;.z&quot;</span>;</div>
+<div class="line"><span class="lineno">  163</span>        DownloadCahce caches = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;DownloadCahce&gt;(CorePath.ZoneSaveUser + <span class="stringliteral">&quot;cache.txt&quot;</span>) ?? <span class="keyword">new</span> DownloadCahce();</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (caches.items.TryGetValue(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id) == <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.date.Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>) &amp;&amp; File.Exists(path + fn))</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Returning Cache:&quot;</span> + path + fn);</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> FileInfo(path + fn);</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/uploader/files/&quot;</span> + idLang + <span class="stringliteral">&quot;/&quot;</span> + fn);</div>
+<div class="line"><span class="lineno">  170</span>        www.downloadHandler = <span class="keyword">new</span> DownloadHandlerFile(path + fn);</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(path + fn);</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (!fileInfo.Exists || www.result != UnityWebRequest.Result.Success)</div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
+<div class="line"><span class="lineno">  183</span>            {</div>
+<div class="line"><span class="lineno">  184</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
+<div class="line"><span class="lineno">  185</span>            }</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  187</span>        }</div>
+<div class="line"><span class="lineno">  188</span>        caches.items[<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id] = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.date;</div>
+<div class="line"><span class="lineno">  189</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">SaveFile</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a5d8d6bd78ec613599905be7400a6b68b">ZoneSaveUser</a> + <span class="stringliteral">&quot;cache.txt&quot;</span>, caches);</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">return</span> fileInfo;</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
@@ -253,11 +253,11 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
 <div class="ttc" id="aclassIO_html_ac15051fb75be08e9ff3dd16de65959b3"><div class="ttname"><a href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">IO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj, bool compress=false, JsonSerializerSettings setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00089">IO.cs:89</a></div></div>
-<div class="ttc" id="aclassNet_html_a4bfdab861eff509f28999c69b8700b89"><div class="ttname"><a href="classNet.html#a4bfdab861eff509f28999c69b8700b89">Net.ShowNetError</a></div><div class="ttdeci">static bool ShowNetError</div><div class="ttdef"><b>Definition:</b> <a href="Net_8cs_source.html#l00071">Net.cs:72</a></div></div>
+<div class="ttc" id="aclassNet_html_a4bfdab861eff509f28999c69b8700b89"><div class="ttname"><a href="classNet.html#a4bfdab861eff509f28999c69b8700b89">Net.ShowNetError</a></div><div class="ttdeci">static bool ShowNetError</div><div class="ttdef"><b>Definition:</b> <a href="Net_8cs_source.html#l00073">Net.cs:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Net_8cs_source.html#l00056">Net.DownloadCahce.items</a>, <a class="el" href="Net_8cs_source.html#l00072">ShowNetError</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="CorePath_8cs_source.html#l00198">CorePath.ZoneSaveUser</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Net_8cs_source.html#l00058">Net.DownloadCahce.items</a>, <a class="el" href="Net_8cs_source.html#l00074">ShowNetError</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="CorePath_8cs_source.html#l00198">CorePath.ZoneSaveUser</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00035">TraitMoongate.UseMoongate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00047">TraitMoongate.UseMoongate()</a>.</p>
 
 </div>
 </div>
@@ -295,40 +295,40 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00354">354</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  355</span>    {</div>
-<div class="line"><span class="lineno">  356</span>        List&lt;ChatLog&gt; list = <span class="keyword">new</span> List&lt;ChatLog&gt;();</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  358</span>        {</div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
-<div class="line"><span class="lineno">  360</span>            {</div>
-<div class="line"><span class="lineno">  361</span>                idLang = <span class="stringliteral">&quot;DEBUG&quot;</span>;</div>
-<div class="line"><span class="lineno">  362</span>            }</div>
-<div class="line"><span class="lineno">  363</span>            <span class="keywordtype">string</span> uri = <a class="code hl_variable" href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/chat/logs/all_{idLang}.json&quot;</span>;</div>
-<div class="line"><span class="lineno">  364</span>            <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(uri);</div>
-<div class="line"><span class="lineno">  365</span>            await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
-<div class="line"><span class="lineno">  367</span>            {</div>
-<div class="line"><span class="lineno">  368</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  369</span>            }</div>
-<div class="line"><span class="lineno">  370</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Download Chat Logs: Success&quot;</span>);</div>
-<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">foreach</span> (JToken <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> (JArray)JsonConvert.DeserializeObject(www.downloadHandler.text))</div>
-<div class="line"><span class="lineno">  372</span>            {</div>
-<div class="line"><span class="lineno">  373</span>                list.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ToObject&lt;ChatLog&gt;());</div>
-<div class="line"><span class="lineno">  374</span>            }</div>
-<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">foreach</span> (ChatLog item2 <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">  376</span>            {</div>
-<div class="line"><span class="lineno">  377</span>                item2.msg = item2.msg.Replace(<span class="stringliteral">&quot;\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;&amp;quot;&quot;</span>, <span class="stringliteral">&quot;\&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  378</span>                    .ToTitleCase();</div>
-<div class="line"><span class="lineno">  379</span>            }</div>
-<div class="line"><span class="lineno">  380</span>            list.Reverse();</div>
-<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  382</span>        }</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  384</span>        {</div>
-<div class="line"><span class="lineno">  385</span>            <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  386</span>        }</div>
-<div class="line"><span class="lineno">  387</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00357">357</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  358</span>    {</div>
+<div class="line"><span class="lineno">  359</span>        List&lt;ChatLog&gt; list = <span class="keyword">new</span> List&lt;ChatLog&gt;();</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  361</span>        {</div>
+<div class="line"><span class="lineno">  362</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  363</span>            {</div>
+<div class="line"><span class="lineno">  364</span>                idLang = <span class="stringliteral">&quot;DEBUG&quot;</span>;</div>
+<div class="line"><span class="lineno">  365</span>            }</div>
+<div class="line"><span class="lineno">  366</span>            <span class="keywordtype">string</span> uri = <a class="code hl_variable" href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/chat/logs/all_{idLang}.json&quot;</span>;</div>
+<div class="line"><span class="lineno">  367</span>            <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(uri);</div>
+<div class="line"><span class="lineno">  368</span>            await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
+<div class="line"><span class="lineno">  370</span>            {</div>
+<div class="line"><span class="lineno">  371</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  372</span>            }</div>
+<div class="line"><span class="lineno">  373</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Download Chat Logs: Success&quot;</span>);</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">foreach</span> (JToken <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> (JArray)JsonConvert.DeserializeObject(www.downloadHandler.text))</div>
+<div class="line"><span class="lineno">  375</span>            {</div>
+<div class="line"><span class="lineno">  376</span>                list.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ToObject&lt;ChatLog&gt;());</div>
+<div class="line"><span class="lineno">  377</span>            }</div>
+<div class="line"><span class="lineno">  378</span>            <span class="keywordflow">foreach</span> (ChatLog item2 <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">  379</span>            {</div>
+<div class="line"><span class="lineno">  380</span>                item2.msg = item2.msg.Replace(<span class="stringliteral">&quot;\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;&amp;quot;&quot;</span>, <span class="stringliteral">&quot;\&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  381</span>                    .ToTitleCase();</div>
+<div class="line"><span class="lineno">  382</span>            }</div>
+<div class="line"><span class="lineno">  383</span>            list.Reverse();</div>
+<div class="line"><span class="lineno">  384</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  385</span>        }</div>
+<div class="line"><span class="lineno">  386</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  387</span>        {</div>
+<div class="line"><span class="lineno">  388</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  389</span>        }</div>
+<div class="line"><span class="lineno">  390</span>    }</div>
 <div class="ttc" id="aSearchContext_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="SearchContext_8cs_source.html#l00086">SearchContext.cs:86</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00285">CoreDebug.cs:285</a></div></div>
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00048">EClass.cs:48</a></div></div>
@@ -363,50 +363,51 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00191">191</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
-<div class="line"><span class="lineno">  193</span>        List&lt;DownloadMeta&gt; list = <span class="keyword">new</span> List&lt;DownloadMeta&gt;();</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/uploader/files/&quot;</span> + idLang + <span class="stringliteral">&quot;/index.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  196</span>        {</div>
-<div class="line"><span class="lineno">  197</span>            await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">  200</span>        {</div>
-<div class="line"><span class="lineno">  201</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (www.result != UnityWebRequest.Result.Success)</div>
-<div class="line"><span class="lineno">  204</span>        {</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
-<div class="line"><span class="lineno">  206</span>            {</div>
-<div class="line"><span class="lineno">  207</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
-<div class="line"><span class="lineno">  208</span>            }</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        StringReader stringReader = <span class="keyword">new</span> StringReader(www.downloadHandler.text);</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">for</span> (<span class="keywordtype">string</span> text = stringReader.ReadLine(); text != <span class="keyword">null</span>; text = stringReader.ReadLine())</div>
-<div class="line"><span class="lineno">  213</span>        {</div>
-<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(text))</div>
-<div class="line"><span class="lineno">  215</span>            {</div>
-<div class="line"><span class="lineno">  216</span>                <span class="keywordtype">string</span>[] array = text.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  217</span>                list.Add(<span class="keyword">new</span> DownloadMeta</div>
-<div class="line"><span class="lineno">  218</span>                {</div>
-<div class="line"><span class="lineno">  219</span>                    path = array[0],</div>
-<div class="line"><span class="lineno">  220</span>                    <span class="keywordtype">id</span> = array[1].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><span class="lineno">  221</span>                    name = array[2],</div>
-<div class="line"><span class="lineno">  222</span>                    <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a> = array[3],</div>
-<div class="line"><span class="lineno">  223</span>                    date = array[6].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><span class="lineno">  224</span>                    version = ((array.Length &gt;= 9) ? array[8].ToInt() : 0)</div>
-<div class="line"><span class="lineno">  225</span>                });</div>
-<div class="line"><span class="lineno">  226</span>            }</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00193">193</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>    {</div>
+<div class="line"><span class="lineno">  195</span>        List&lt;DownloadMeta&gt; list = <span class="keyword">new</span> List&lt;DownloadMeta&gt;();</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/uploader/files/&quot;</span> + idLang + <span class="stringliteral">&quot;/index.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  198</span>        {</div>
+<div class="line"><span class="lineno">  199</span>            await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  200</span>        }</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  202</span>        {</div>
+<div class="line"><span class="lineno">  203</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (www.result != UnityWebRequest.Result.Success)</div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
+<div class="line"><span class="lineno">  208</span>            {</div>
+<div class="line"><span class="lineno">  209</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
+<div class="line"><span class="lineno">  210</span>            }</div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span>        StringReader stringReader = <span class="keyword">new</span> StringReader(www.downloadHandler.text);</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">for</span> (<span class="keywordtype">string</span> text = stringReader.ReadLine(); text != <span class="keyword">null</span>; text = stringReader.ReadLine())</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(text))</div>
+<div class="line"><span class="lineno">  217</span>            {</div>
+<div class="line"><span class="lineno">  218</span>                <span class="keywordtype">string</span>[] array = text.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  219</span>                list.Add(<span class="keyword">new</span> DownloadMeta</div>
+<div class="line"><span class="lineno">  220</span>                {</div>
+<div class="line"><span class="lineno">  221</span>                    path = array[0],</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="keywordtype">id</span> = array[1].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><span class="lineno">  223</span>                    name = array[2],</div>
+<div class="line"><span class="lineno">  224</span>                    <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a> = array[3],</div>
+<div class="line"><span class="lineno">  225</span>                    cat = array[5],</div>
+<div class="line"><span class="lineno">  226</span>                    date = array[6].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><span class="lineno">  227</span>                    version = ((array.Length &gt;= 9) ? array[8].ToInt() : 0)</div>
+<div class="line"><span class="lineno">  228</span>                });</div>
+<div class="line"><span class="lineno">  229</span>            }</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
 <div class="ttc" id="aUIBook_8cs_html_a270e3896fe3ee5b1a258e8c8091a1945"><div class="ttname"><a href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a></div><div class="ttdeci">item3. title</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00616">UIBook.cs:616</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Net_8cs_source.html#l00072">ShowNetError</a>, <a class="el" href="UIBook_8cs_source.html#l00616">title</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="Net_8cs_source.html#l00074">ShowNetError</a>, <a class="el" href="UIBook_8cs_source.html#l00616">title</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00035">TraitMoongate.UseMoongate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitMoongate_8cs_source.html#l00047">TraitMoongate.UseMoongate()</a>.</p>
 
 </div>
 </div>
@@ -434,58 +435,58 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00259">259</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  260</span>    {</div>
-<div class="line"><span class="lineno">  261</span>        List&lt;VoteLog&gt; list = <span class="keyword">new</span> List&lt;VoteLog&gt;();</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  263</span>        {</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordtype">string</span> uri = <a class="code hl_variable" href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/vote/logs/data_{idLang}.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(uri);</div>
-<div class="line"><span class="lineno">  266</span>            await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
-<div class="line"><span class="lineno">  268</span>            {</div>
-<div class="line"><span class="lineno">  269</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
-<div class="line"><span class="lineno">  270</span>                {</div>
-<div class="line"><span class="lineno">  271</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
-<div class="line"><span class="lineno">  272</span>                }</div>
-<div class="line"><span class="lineno">  273</span>            }</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  275</span>            {</div>
-<div class="line"><span class="lineno">  276</span>                StringReader stringReader = <span class="keyword">new</span> StringReader(www.downloadHandler.text);</div>
-<div class="line"><span class="lineno">  277</span>                <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  278</span>                <span class="keywordflow">for</span> (<span class="keywordtype">string</span> text = stringReader.ReadLine(); text != <span class="keyword">null</span>; text = stringReader.ReadLine())</div>
-<div class="line"><span class="lineno">  279</span>                {</div>
-<div class="line"><span class="lineno">  280</span>                    <span class="keywordtype">string</span>[] array = text.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  281</span>                    <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">  282</span>                    {</div>
-<div class="line"><span class="lineno">  283</span>                        list.Add(<span class="keyword">new</span> VoteLog</div>
-<div class="line"><span class="lineno">  284</span>                        {</div>
-<div class="line"><span class="lineno">  285</span>                            name = array[0].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><span class="lineno">  286</span>                            time = array[2].ToInt(),</div>
-<div class="line"><span class="lineno">  287</span>                            index = num</div>
-<div class="line"><span class="lineno">  288</span>                        });</div>
-<div class="line"><span class="lineno">  289</span>                    }</div>
-<div class="line"><span class="lineno">  290</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  291</span>                    {</div>
-<div class="line"><span class="lineno">  292</span>                        list.Add(<span class="keyword">new</span> VoteLog</div>
-<div class="line"><span class="lineno">  293</span>                        {</div>
-<div class="line"><span class="lineno">  294</span>                            name = array[0].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><span class="lineno">  295</span>                            count = array[1].ToInt(),</div>
-<div class="line"><span class="lineno">  296</span>                            index = num</div>
-<div class="line"><span class="lineno">  297</span>                        });</div>
-<div class="line"><span class="lineno">  298</span>                    }</div>
-<div class="line"><span class="lineno">  299</span>                    num++;</div>
-<div class="line"><span class="lineno">  300</span>                }</div>
-<div class="line"><span class="lineno">  301</span>            }</div>
-<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  303</span>        }</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  305</span>        {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00262">262</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>    {</div>
+<div class="line"><span class="lineno">  264</span>        List&lt;VoteLog&gt; list = <span class="keyword">new</span> List&lt;VoteLog&gt;();</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  266</span>        {</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordtype">string</span> uri = <a class="code hl_variable" href="SearchContext_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/vote/logs/data_{idLang}.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Get(uri);</div>
+<div class="line"><span class="lineno">  269</span>            await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
+<div class="line"><span class="lineno">  271</span>            {</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
+<div class="line"><span class="lineno">  273</span>                {</div>
+<div class="line"><span class="lineno">  274</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
+<div class="line"><span class="lineno">  275</span>                }</div>
+<div class="line"><span class="lineno">  276</span>            }</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  278</span>            {</div>
+<div class="line"><span class="lineno">  279</span>                StringReader stringReader = <span class="keyword">new</span> StringReader(www.downloadHandler.text);</div>
+<div class="line"><span class="lineno">  280</span>                <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  281</span>                <span class="keywordflow">for</span> (<span class="keywordtype">string</span> text = stringReader.ReadLine(); text != <span class="keyword">null</span>; text = stringReader.ReadLine())</div>
+<div class="line"><span class="lineno">  282</span>                {</div>
+<div class="line"><span class="lineno">  283</span>                    <span class="keywordtype">string</span>[] array = text.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  284</span>                    <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">  285</span>                    {</div>
+<div class="line"><span class="lineno">  286</span>                        list.Add(<span class="keyword">new</span> VoteLog</div>
+<div class="line"><span class="lineno">  287</span>                        {</div>
+<div class="line"><span class="lineno">  288</span>                            name = array[0].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><span class="lineno">  289</span>                            time = array[2].ToInt(),</div>
+<div class="line"><span class="lineno">  290</span>                            index = num</div>
+<div class="line"><span class="lineno">  291</span>                        });</div>
+<div class="line"><span class="lineno">  292</span>                    }</div>
+<div class="line"><span class="lineno">  293</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  294</span>                    {</div>
+<div class="line"><span class="lineno">  295</span>                        list.Add(<span class="keyword">new</span> VoteLog</div>
+<div class="line"><span class="lineno">  296</span>                        {</div>
+<div class="line"><span class="lineno">  297</span>                            name = array[0].Replace(<span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><span class="lineno">  298</span>                            count = array[1].ToInt(),</div>
+<div class="line"><span class="lineno">  299</span>                            index = num</div>
+<div class="line"><span class="lineno">  300</span>                        });</div>
+<div class="line"><span class="lineno">  301</span>                    }</div>
+<div class="line"><span class="lineno">  302</span>                    num++;</div>
+<div class="line"><span class="lineno">  303</span>                }</div>
+<div class="line"><span class="lineno">  304</span>            }</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  306</span>        }</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  308</span>        {</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  310</span>        }</div>
+<div class="line"><span class="lineno">  311</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SearchContext_8cs_source.html#l00086">$</a>, <a class="el" href="Net_8cs_source.html#l00072">ShowNetError</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="SearchContext_8cs_source.html#l00086">$</a>, <a class="el" href="Net_8cs_source.html#l00074">ShowNetError</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00216">LayerNewspaper.RefreshVote()</a>.</p>
 
@@ -537,54 +538,54 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00310">310</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>    {</div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a>)</div>
-<div class="line"><span class="lineno">  313</span>        {</div>
-<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  315</span>        }</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  317</span>        {</div>
-<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
-<div class="line"><span class="lineno">  319</span>            {</div>
-<div class="line"><span class="lineno">  320</span>                idLang = <span class="stringliteral">&quot;DEBUG&quot;</span>;</div>
-<div class="line"><span class="lineno">  321</span>            }</div>
-<div class="line"><span class="lineno">  322</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Start Sending Text:&quot;</span>);</div>
-<div class="line"><span class="lineno">  323</span>            WWWForm wWWForm = <span class="keyword">new</span> WWWForm();</div>
-<div class="line"><span class="lineno">  324</span>            wWWForm.AddField(<span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;Send&quot;</span>);</div>
-<div class="line"><span class="lineno">  325</span>            wWWForm.AddField(<span class="stringliteral">&quot;name&quot;</span>, name);</div>
-<div class="line"><span class="lineno">  326</span>            wWWForm.AddField(<span class="stringliteral">&quot;msg&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  327</span>            wWWForm.AddField(<span class="stringliteral">&quot;cat&quot;</span>, cat.ToString());</div>
-<div class="line"><span class="lineno">  328</span>            wWWForm.AddField(<span class="stringliteral">&quot;idLang&quot;</span>, idLang);</div>
-<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  330</span>            {</div>
-<div class="line"><span class="lineno">  331</span>                <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Post(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/chat/chat.php&quot;</span>, wWWForm);</div>
-<div class="line"><span class="lineno">  332</span>                await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  333</span>                <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
-<div class="line"><span class="lineno">  334</span>                {</div>
-<div class="line"><span class="lineno">  335</span>                    <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
-<div class="line"><span class="lineno">  336</span>                    {</div>
-<div class="line"><span class="lineno">  337</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
-<div class="line"><span class="lineno">  338</span>                    }</div>
-<div class="line"><span class="lineno">  339</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  340</span>                }</div>
-<div class="line"><span class="lineno">  341</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text);</div>
-<div class="line"><span class="lineno">  342</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  343</span>            }</div>
-<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  345</span>            {</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00313">313</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>    {</div>
+<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_variable" href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">demo</a>)</div>
+<div class="line"><span class="lineno">  316</span>        {</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  318</span>        }</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  320</span>        {</div>
+<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">  322</span>            {</div>
+<div class="line"><span class="lineno">  323</span>                idLang = <span class="stringliteral">&quot;DEBUG&quot;</span>;</div>
+<div class="line"><span class="lineno">  324</span>            }</div>
+<div class="line"><span class="lineno">  325</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Start Sending Text:&quot;</span>);</div>
+<div class="line"><span class="lineno">  326</span>            WWWForm wWWForm = <span class="keyword">new</span> WWWForm();</div>
+<div class="line"><span class="lineno">  327</span>            wWWForm.AddField(<span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;Send&quot;</span>);</div>
+<div class="line"><span class="lineno">  328</span>            wWWForm.AddField(<span class="stringliteral">&quot;name&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  329</span>            wWWForm.AddField(<span class="stringliteral">&quot;msg&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  330</span>            wWWForm.AddField(<span class="stringliteral">&quot;cat&quot;</span>, cat.ToString());</div>
+<div class="line"><span class="lineno">  331</span>            wWWForm.AddField(<span class="stringliteral">&quot;idLang&quot;</span>, idLang);</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  333</span>            {</div>
+<div class="line"><span class="lineno">  334</span>                <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Post(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/chat/chat.php&quot;</span>, wWWForm);</div>
+<div class="line"><span class="lineno">  335</span>                await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  336</span>                <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
+<div class="line"><span class="lineno">  337</span>                {</div>
+<div class="line"><span class="lineno">  338</span>                    <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
+<div class="line"><span class="lineno">  339</span>                    {</div>
+<div class="line"><span class="lineno">  340</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
+<div class="line"><span class="lineno">  341</span>                    }</div>
+<div class="line"><span class="lineno">  342</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  343</span>                }</div>
+<div class="line"><span class="lineno">  344</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text);</div>
+<div class="line"><span class="lineno">  345</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  346</span>            }</div>
-<div class="line"><span class="lineno">  347</span>        }</div>
-<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  349</span>        {</div>
+<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  348</span>            {</div>
+<div class="line"><span class="lineno">  349</span>            }</div>
 <div class="line"><span class="lineno">  350</span>        }</div>
-<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  352</span>    }</div>
+<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  352</span>        {</div>
+<div class="line"><span class="lineno">  353</span>        }</div>
+<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  355</span>    }</div>
 <div class="ttc" id="aclassBaseCore_html_aa560bb8f25eb2a78768fe250b772c470"><div class="ttname"><a href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">BaseCore.version</a></div><div class="ttdeci">Version version</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00017">BaseCore.cs:17</a></div></div>
 <div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00006">EClass.cs:6</a></div></div>
 <div class="ttc" id="astructVersion_html_ae633012a534a727dfaa4035d90b14c2c"><div class="ttname"><a href="structVersion.html#ae633012a534a727dfaa4035d90b14c2c">Version.demo</a></div><div class="ttdeci">bool demo</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00014">Version.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Version_8cs_source.html#l00014">Version.demo</a>, <a class="el" href="CoreDebug_8cs_source.html#l00285">CoreDebug.enable</a>, <a class="el" href="Net_8cs_source.html#l00072">ShowNetError</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Version_8cs_source.html#l00014">Version.demo</a>, <a class="el" href="CoreDebug_8cs_source.html#l00285">CoreDebug.enable</a>, <a class="el" href="Net_8cs_source.html#l00074">ShowNetError</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l02212">ActEffect.Wish()</a>.</p>
 
@@ -624,35 +625,35 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00231">231</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>    {</div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  234</span>        {</div>
-<div class="line"><span class="lineno">  235</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Start Sending Vote:&quot;</span>);</div>
-<div class="line"><span class="lineno">  236</span>            WWWForm wWWForm = <span class="keyword">new</span> WWWForm();</div>
-<div class="line"><span class="lineno">  237</span>            wWWForm.AddField(<span class="stringliteral">&quot;vote&quot;</span>, <span class="keywordtype">id</span>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  238</span>            wWWForm.AddField(<span class="stringliteral">&quot;idLang&quot;</span>, idLang);</div>
-<div class="line"><span class="lineno">  239</span>            wWWForm.AddField(<span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;Send&quot;</span>);</div>
-<div class="line"><span class="lineno">  240</span>            <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Post(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/vote/vote.php&quot;</span>, wWWForm);</div>
-<div class="line"><span class="lineno">  241</span>            await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
-<div class="line"><span class="lineno">  243</span>            {</div>
-<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
-<div class="line"><span class="lineno">  245</span>                {</div>
-<div class="line"><span class="lineno">  246</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
-<div class="line"><span class="lineno">  247</span>                }</div>
-<div class="line"><span class="lineno">  248</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  249</span>            }</div>
-<div class="line"><span class="lineno">  250</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text);</div>
-<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  252</span>        }</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  254</span>        {</div>
-<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  256</span>        }</div>
-<div class="line"><span class="lineno">  257</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00234">234</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  235</span>    {</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  237</span>        {</div>
+<div class="line"><span class="lineno">  238</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Start Sending Vote:&quot;</span>);</div>
+<div class="line"><span class="lineno">  239</span>            WWWForm wWWForm = <span class="keyword">new</span> WWWForm();</div>
+<div class="line"><span class="lineno">  240</span>            wWWForm.AddField(<span class="stringliteral">&quot;vote&quot;</span>, <span class="keywordtype">id</span>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  241</span>            wWWForm.AddField(<span class="stringliteral">&quot;idLang&quot;</span>, idLang);</div>
+<div class="line"><span class="lineno">  242</span>            wWWForm.AddField(<span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;Send&quot;</span>);</div>
+<div class="line"><span class="lineno">  243</span>            <span class="keyword">using </span>UnityWebRequest www = UnityWebRequest.Post(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/vote/vote.php&quot;</span>, wWWForm);</div>
+<div class="line"><span class="lineno">  244</span>            await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">if</span> (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)</div>
+<div class="line"><span class="lineno">  246</span>            {</div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="classNet.html#a4bfdab861eff509f28999c69b8700b89">ShowNetError</a>)</div>
+<div class="line"><span class="lineno">  248</span>                {</div>
+<div class="line"><span class="lineno">  249</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(www.error);</div>
+<div class="line"><span class="lineno">  250</span>                }</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text);</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  255</span>        }</div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  257</span>        {</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  259</span>        }</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Net_8cs_source.html#l00072">ShowNetError</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Net_8cs_source.html#l00074">ShowNetError</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerNewspaper_8cs_source.html#l00216">LayerNewspaper.RefreshVote()</a>.</p>
 
@@ -682,14 +683,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00092">92</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">foreach</span> (JToken <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> (JArray)JsonConvert.DeserializeObject(logs))</div>
-<div class="line"><span class="lineno">   95</span>        {</div>
-<div class="line"><span class="lineno">   96</span>            ChatLog chatLog = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ToObject&lt;ChatLog&gt;();</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(chatLog.name + <span class="stringliteral">&quot;/&quot;</span> + chatLog.msg);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00094">94</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">foreach</span> (JToken <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> (JArray)JsonConvert.DeserializeObject(logs))</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            ChatLog chatLog = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ToObject&lt;ChatLog&gt;();</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(chatLog.name + <span class="stringliteral">&quot;/&quot;</span> + chatLog.msg);</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Net_8cs_source.html#l00016">Net.ChatLog.msg</a>, and <a class="el" href="Net_8cs_source.html#l00014">Net.ChatLog.name</a>.</p>
 
@@ -719,21 +720,21 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00083">83</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
-<div class="line"><span class="lineno">   85</span>        StringReader stringReader = <span class="keyword">new</span> StringReader(logs);</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">for</span> (<span class="keywordtype">string</span> text = stringReader.ReadLine(); text != <span class="keyword">null</span>; text = stringReader.ReadLine())</div>
-<div class="line"><span class="lineno">   87</span>        {</div>
-<div class="line"><span class="lineno">   88</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(text);</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00085">85</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        StringReader stringReader = <span class="keyword">new</span> StringReader(logs);</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">for</span> (<span class="keywordtype">string</span> text = stringReader.ReadLine(); text != <span class="keyword">null</span>; text = stringReader.ReadLine())</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(text);</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
 </div>
 </div>
-<a id="a7a77c6cc2628f612e1fa5c7de3567dd8" name="a7a77c6cc2628f612e1fa5c7de3567dd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a77c6cc2628f612e1fa5c7de3567dd8">&#9670;&#160;</a></span>UploadFile()</h2>
+<a id="ad269270a4e27aacfa3cd86d802b3e93b" name="ad269270a4e27aacfa3cd86d802b3e93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad269270a4e27aacfa3cd86d802b3e93b">&#9670;&#160;</a></span>UploadFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -775,7 +776,13 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>idLang</em>&#160;</td>
+          <td class="paramname"><em>idLang</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cat</em> = <code>&quot;Home&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -790,66 +797,66 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00101">101</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNet.html#a2afe531e2065f45582467f63756e04a0">isUploading</a>)</div>
-<div class="line"><span class="lineno">  104</span>        {</div>
-<div class="line"><span class="lineno">  105</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_uploadUploading&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_uploadStart&quot;</span>);</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">byte</span>[] array;</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keyword">using</span> (FileStream fileStream = File.OpenRead(path))</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            array = <span class="keyword">new</span> <span class="keywordtype">byte</span>[fileStream.Length];</div>
-<div class="line"><span class="lineno">  113</span>            fileStream.Read(array, 0, (<span class="keywordtype">int</span>)fileStream.Length);</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        WWWForm wWWForm = <span class="keyword">new</span> WWWForm();</div>
-<div class="line"><span class="lineno">  116</span>        wWWForm.AddField(<span class="stringliteral">&quot;mode&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">  117</span>        wWWForm.AddField(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  118</span>        wWWForm.AddField(<span class="stringliteral">&quot;name&quot;</span>, name);</div>
-<div class="line"><span class="lineno">  119</span>        wWWForm.AddField(<span class="stringliteral">&quot;title&quot;</span>, <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a>);</div>
-<div class="line"><span class="lineno">  120</span>        wWWForm.AddField(<span class="stringliteral">&quot;cat&quot;</span>, <span class="stringliteral">&quot;Home&quot;</span>);</div>
-<div class="line"><span class="lineno">  121</span>        wWWForm.AddField(<span class="stringliteral">&quot;idLang&quot;</span>, idLang);</div>
-<div class="line"><span class="lineno">  122</span>        wWWForm.AddField(<span class="stringliteral">&quot;password&quot;</span>, password);</div>
-<div class="line"><span class="lineno">  123</span>        wWWForm.AddField(<span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;Send&quot;</span>);</div>
-<div class="line"><span class="lineno">  124</span>        wWWForm.AddField(<span class="stringliteral">&quot;version&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_function" href="structVersion.html#a98e033ae057b79c228009593de93d313">GetInt</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  125</span>        wWWForm.AddBinaryData(<span class="stringliteral">&quot;file&quot;</span>, array, <span class="stringliteral">&quot;file.z&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_variable" href="classNet.html#a2afe531e2065f45582467f63756e04a0">isUploading</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  127</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  128</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(name);</div>
-<div class="line"><span class="lineno">  129</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a>);</div>
-<div class="line"><span class="lineno">  130</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(idLang);</div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(password);</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(array.Length);</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keyword">using</span> (UnityWebRequest www = UnityWebRequest.Post(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/uploader/uploader.php&quot;</span>, wWWForm))</div>
-<div class="line"><span class="lineno">  134</span>        {</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  136</span>            {</div>
-<div class="line"><span class="lineno">  137</span>                await www.SendWebRequest();</div>
-<div class="line"><span class="lineno">  138</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.result.ToString());</div>
-<div class="line"><span class="lineno">  139</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.ToString());</div>
-<div class="line"><span class="lineno">  140</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text);</div>
-<div class="line"><span class="lineno">  141</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text.ToString());</div>
-<div class="line"><span class="lineno">  142</span>            }</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">  144</span>            {</div>
-<div class="line"><span class="lineno">  145</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
-<div class="line"><span class="lineno">  146</span>            }</div>
-<div class="line"><span class="lineno">  147</span>            <a class="code hl_variable" href="classNet.html#a2afe531e2065f45582467f63756e04a0">isUploading</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (www.result != UnityWebRequest.Result.Success)</div>
-<div class="line"><span class="lineno">  149</span>            {</div>
-<div class="line"><span class="lineno">  150</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say((www.responseCode == 401) ? <span class="stringliteral">&quot;sys_uploadConflict&quot;</span> : <span class="stringliteral">&quot;sys_uploadFail&quot;</span>);</div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_uploadSuccess&quot;</span>);</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-<div class="ttc" id="aclassNet_html_a2afe531e2065f45582467f63756e04a0"><div class="ttname"><a href="classNet.html#a2afe531e2065f45582467f63756e04a0">Net.isUploading</a></div><div class="ttdeci">static bool isUploading</div><div class="ttdef"><b>Definition:</b> <a href="Net_8cs_source.html#l00069">Net.cs:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00103">103</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>    {</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNet.html#a2afe531e2065f45582467f63756e04a0">isUploading</a>)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_uploadUploading&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_uploadStart&quot;</span>);</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordtype">byte</span>[] array;</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keyword">using</span> (FileStream fileStream = File.OpenRead(path))</div>
+<div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            array = <span class="keyword">new</span> <span class="keywordtype">byte</span>[fileStream.Length];</div>
+<div class="line"><span class="lineno">  115</span>            fileStream.Read(array, 0, (<span class="keywordtype">int</span>)fileStream.Length);</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        WWWForm wWWForm = <span class="keyword">new</span> WWWForm();</div>
+<div class="line"><span class="lineno">  118</span>        wWWForm.AddField(<span class="stringliteral">&quot;mode&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  119</span>        wWWForm.AddField(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  120</span>        wWWForm.AddField(<span class="stringliteral">&quot;name&quot;</span>, name);</div>
+<div class="line"><span class="lineno">  121</span>        wWWForm.AddField(<span class="stringliteral">&quot;title&quot;</span>, <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a>);</div>
+<div class="line"><span class="lineno">  122</span>        wWWForm.AddField(<span class="stringliteral">&quot;cat&quot;</span>, cat);</div>
+<div class="line"><span class="lineno">  123</span>        wWWForm.AddField(<span class="stringliteral">&quot;idLang&quot;</span>, idLang);</div>
+<div class="line"><span class="lineno">  124</span>        wWWForm.AddField(<span class="stringliteral">&quot;password&quot;</span>, password);</div>
+<div class="line"><span class="lineno">  125</span>        wWWForm.AddField(<span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;Send&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>        wWWForm.AddField(<span class="stringliteral">&quot;version&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_function" href="structVersion.html#a98e033ae057b79c228009593de93d313">GetInt</a>().ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  127</span>        wWWForm.AddBinaryData(<span class="stringliteral">&quot;file&quot;</span>, array, <span class="stringliteral">&quot;file.z&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_variable" href="classNet.html#a2afe531e2065f45582467f63756e04a0">isUploading</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(name);</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a>);</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(idLang);</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(password);</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(array.Length);</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keyword">using</span> (UnityWebRequest www = UnityWebRequest.Post(<span class="stringliteral">&quot;http://ylva.php.xdomain.jp/script/uploader/uploader.php&quot;</span>, wWWForm))</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  138</span>            {</div>
+<div class="line"><span class="lineno">  139</span>                await www.SendWebRequest();</div>
+<div class="line"><span class="lineno">  140</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.result.ToString());</div>
+<div class="line"><span class="lineno">  141</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.ToString());</div>
+<div class="line"><span class="lineno">  142</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text);</div>
+<div class="line"><span class="lineno">  143</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(www.downloadHandler.text.ToString());</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(ex.Message);</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>            <a class="code hl_variable" href="classNet.html#a2afe531e2065f45582467f63756e04a0">isUploading</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (www.result != UnityWebRequest.Result.Success)</div>
+<div class="line"><span class="lineno">  151</span>            {</div>
+<div class="line"><span class="lineno">  152</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say((www.responseCode == 401) ? <span class="stringliteral">&quot;sys_uploadConflict&quot;</span> : <span class="stringliteral">&quot;sys_uploadFail&quot;</span>);</div>
+<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  154</span>            }</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_uploadSuccess&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="ttc" id="aclassNet_html_a2afe531e2065f45582467f63756e04a0"><div class="ttname"><a href="classNet.html#a2afe531e2065f45582467f63756e04a0">Net.isUploading</a></div><div class="ttdeci">static bool isUploading</div><div class="ttdef"><b>Definition:</b> <a href="Net_8cs_source.html#l00071">Net.cs:71</a></div></div>
 <div class="ttc" id="astructVersion_html_a98e033ae057b79c228009593de93d313"><div class="ttname"><a href="structVersion.html#a98e033ae057b79c228009593de93d313">Version.GetInt</a></div><div class="ttdeci">int GetInt()</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00021">Version.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Version_8cs_source.html#l00021">Version.GetInt()</a>, <a class="el" href="Net_8cs_source.html#l00069">isUploading</a>, <a class="el" href="UIBook_8cs_source.html#l00616">title</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Version_8cs_source.html#l00021">Version.GetInt()</a>, <a class="el" href="Net_8cs_source.html#l00071">isUploading</a>, <a class="el" href="UIBook_8cs_source.html#l00616">title</a>, <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerUploader_8cs_source.html#l00120">LayerUploader.Upload()</a>.</p>
 
@@ -868,7 +875,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00059">59</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00061">61</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
 
 </div>
 </div>
@@ -892,9 +899,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00069">69</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00071">71</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Net_8cs_source.html#l00101">UploadFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Net_8cs_source.html#l00103">UploadFile()</a>.</p>
 
 </div>
 </div>
@@ -918,7 +925,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00063">63</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00065">65</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
 
 </div>
 </div>
@@ -942,7 +949,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00061">61</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00063">63</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
 
 </div>
 </div>
@@ -966,7 +973,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00067">67</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00069">69</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
 
 </div>
 </div>
@@ -990,7 +997,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00065">65</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00067">67</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
 
 </div>
 </div>
@@ -1015,22 +1022,22 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00071">71</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad440e94257b81f8f997ac591b60ed64d">test</a>.<a class="code hl_variable" href="classCoreConfig_1_1Test.html#afa510c7e3b781dc922924515b6c8c94d">showNetError</a>)</div>
-<div class="line"><span class="lineno">   76</span>            {</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>;</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Net_8cs_source.html#l00073">73</a> of file <a class="el" href="Net_8cs_source.html">Net.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad440e94257b81f8f997ac591b60ed64d">test</a>.<a class="code hl_variable" href="classCoreConfig_1_1Test.html#afa510c7e3b781dc922924515b6c8c94d">showNetError</a>)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>;</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 <div class="ttc" id="aclassCoreConfig_1_1Test_html_afa510c7e3b781dc922924515b6c8c94d"><div class="ttname"><a href="classCoreConfig_1_1Test.html#afa510c7e3b781dc922924515b6c8c94d">CoreConfig.Test.showNetError</a></div><div class="ttdeci">bool showNetError</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00541">CoreConfig.cs:541</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_ad440e94257b81f8f997ac591b60ed64d"><div class="ttname"><a href="classCoreConfig.html#ad440e94257b81f8f997ac591b60ed64d">CoreConfig.test</a></div><div class="ttdeci">Test test</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00610">CoreConfig.cs:610</a></div></div>
 <div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00070">Core.cs:70</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Net_8cs_source.html#l00158">DownloadFile()</a>, <a class="el" href="Net_8cs_source.html#l00191">GetFileList()</a>, <a class="el" href="Net_8cs_source.html#l00259">GetVote()</a>, <a class="el" href="Net_8cs_source.html#l00310">SendChat()</a>, and <a class="el" href="Net_8cs_source.html#l00231">SendVote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Net_8cs_source.html#l00160">DownloadFile()</a>, <a class="el" href="Net_8cs_source.html#l00193">GetFileList()</a>, <a class="el" href="Net_8cs_source.html#l00262">GetVote()</a>, <a class="el" href="Net_8cs_source.html#l00313">SendChat()</a>, and <a class="el" href="Net_8cs_source.html#l00234">SendVote()</a>.</p>
 
 </div>
 </div>

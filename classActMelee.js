@@ -10,5 +10,6 @@ var classActMelee =
     [ "ShowMouseHint", "classActMelee.html#af6157d89fe35f11db3810c102af185bf", null ],
     [ "CanPressRepeat", "classActMelee.html#a66248e05deb4c48e6de9840b14ee145f", null ],
     [ "PerformDistance", "classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29", null ],
-    [ "ResetAxis", "classActMelee.html#a14ac7d513d79093fd141771463eb21bc", null ]
+    [ "ResetAxis", "classActMelee.html#a14ac7d513d79093fd141771463eb21bc", null ],
+    [ "UseWeaponDist", "classActMelee.html#ad5256811dd4d62af9138afd1e657ec5c", null ]
 ];

@@ -1,6 +1,7 @@
 var classNet_1_1DownloadMeta =
 [
     [ "IsValidVersion", "classNet_1_1DownloadMeta.html#a7b8f8209cc07b23bc3ed5a04366478bf", null ],
+    [ "cat", "classNet_1_1DownloadMeta.html#a761a68d876a0eb0bf723cc5404b992ca", null ],
     [ "date", "classNet_1_1DownloadMeta.html#a83b366c48610f9615d4f6e7dd2b6fd58", null ],
     [ "id", "classNet_1_1DownloadMeta.html#a578ce5253b4fe0b274c820e1fb1e5d24", null ],
     [ "name", "classNet_1_1DownloadMeta.html#a839b3dd4ffbf6146da54a47079a81893", null ],

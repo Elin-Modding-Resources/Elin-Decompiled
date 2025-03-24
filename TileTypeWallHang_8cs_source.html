@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.109 Stable Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.112 Nightly</span>
    </div>
   </td>
  </tr>
@@ -208,17 +208,21 @@ $(document).ready(function(){initNavTree('TileTypeWallHang_8cs_source.html','');
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            v.y += p.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.MountHeight;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">  119</a></span>    <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> <a class="code hl_function" href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">HitTest</a>(<a class="code hl_class" href="classPoint.html">Point</a> pos)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">GetDesiredDir</a>(pos, -1) == -1)</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> base.HitTest(pos);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            v.z += target.Pref.z;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">  123</a></span>    <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> <a class="code hl_function" href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">HitTest</a>(<a class="code hl_class" href="classPoint.html">Point</a> pos)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">GetDesiredDir</a>(pos, -1) == -1)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">return</span> base.HitTest(pos);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
 <div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00001">HitResult.cs:2</a></div></div>
 <div class="ttc" id="aclassActionMode_html_a26abacdc282f62e9bef7da716469f9cf"><div class="ttname"><a href="classActionMode.html#a26abacdc282f62e9bef7da716469f9cf">ActionMode.IsRoofEditMode</a></div><div class="ttdeci">virtual bool IsRoofEditMode(Card c=null)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00311">ActionMode.cs:311</a></div></div>
 <div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.cs:114</a></div></div>
@@ -245,7 +249,7 @@ $(document).ready(function(){initNavTree('TileTypeWallHang_8cs_source.html','');
 <div class="ttc" id="aclassTileTypeWallHang_html_a0564e7bf30a034302bb92bfd47b3154e"><div class="ttname"><a href="classTileTypeWallHang.html#a0564e7bf30a034302bb92bfd47b3154e">TileTypeWallHang.CanStack</a></div><div class="ttdeci">override bool CanStack</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00009">TileTypeWallHang.cs:9</a></div></div>
 <div class="ttc" id="aclassTileTypeWallHang_html_a0b82650b3237bef5768db8e52481c126"><div class="ttname"><a href="classTileTypeWallHang.html#a0b82650b3237bef5768db8e52481c126">TileTypeWallHang.GetMountHeight</a></div><div class="ttdeci">override void GetMountHeight(ref Vector3 v, Point p, int d, Card target=null)</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00059">TileTypeWallHang.cs:59</a></div></div>
 <div class="ttc" id="aclassTileTypeWallHang_html_a30c4f75d260f9fc63c5b18261d9f3c7d"><div class="ttname"><a href="classTileTypeWallHang.html#a30c4f75d260f9fc63c5b18261d9f3c7d">TileTypeWallHang.NoBackSide</a></div><div class="ttdeci">virtual bool NoBackSide</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00017">TileTypeWallHang.cs:17</a></div></div>
-<div class="ttc" id="aclassTileTypeWallHang_html_a570909940537c3b5f9915ed6536f4b66"><div class="ttname"><a href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">TileTypeWallHang.HitTest</a></div><div class="ttdeci">override HitResult HitTest(Point pos)</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00119">TileTypeWallHang.cs:119</a></div></div>
+<div class="ttc" id="aclassTileTypeWallHang_html_a570909940537c3b5f9915ed6536f4b66"><div class="ttname"><a href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">TileTypeWallHang.HitTest</a></div><div class="ttdeci">override HitResult HitTest(Point pos)</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00123">TileTypeWallHang.cs:123</a></div></div>
 <div class="ttc" id="aclassTileTypeWallHang_html_a63ce922569de68338d08c1bf1140f9fb"><div class="ttname"><a href="classTileTypeWallHang.html#a63ce922569de68338d08c1bf1140f9fb">TileTypeWallHang.IsBlockMount</a></div><div class="ttdeci">override bool IsBlockMount</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00011">TileTypeWallHang.cs:11</a></div></div>
 <div class="ttc" id="aclassTileTypeWallHang_html_a95d8c7d63d74fa960b61b63c0cdfb000"><div class="ttname"><a href="classTileTypeWallHang.html#a95d8c7d63d74fa960b61b63c0cdfb000">TileTypeWallHang.LangPlaceType</a></div><div class="ttdeci">override string LangPlaceType</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00007">TileTypeWallHang.cs:7</a></div></div>
 <div class="ttc" id="aclassTileTypeWallHang_html_aa464f4de355f4ca3a564dabd28f355e0"><div class="ttname"><a href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">TileTypeWallHang.GetDesiredDir</a></div><div class="ttdeci">override int GetDesiredDir(Point p, int d)</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeWallHang_8cs_source.html#l00019">TileTypeWallHang.cs:19</a></div></div>

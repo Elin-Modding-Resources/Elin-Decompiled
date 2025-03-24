@@ -5,6 +5,7 @@ var classEClass =
     [ "rnd", "classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c", null ],
     [ "rndf", "classEClass.html#a859a9e1a1cbce6b89892bb19cebe1a30", null ],
     [ "rndHalf", "classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd", null ],
+    [ "rndSeed", "classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b", null ],
     [ "rndSqrt", "classEClass.html#a545c4413b940ef1b8afa1334aa21e97f", null ],
     [ "Smaller", "classEClass.html#a5033afff637b28a95cd12ebbf51e1805", null ],
     [ "Wait", "classEClass.html#a44f68f6f1c55b824f3684c78364abf5f", null ],

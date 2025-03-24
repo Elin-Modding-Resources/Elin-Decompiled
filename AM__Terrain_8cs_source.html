@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.109 Stable Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.112 Nightly</span>
    </div>
   </td>
  </tr>
@@ -161,42 +161,56 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> -= (<span class="keywordtype">byte</span>)num2;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    p.cell.bridgeHeight -= (byte)num2;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3">brushRadius</a> - num;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a87252937274776e86b7a8ea4ea21dded">isShiftDown</a>)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    num3 = 1;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (<a class="code hl_variable" href="classAM__Terrain.html#aa428ca09f7dc9510ba97b5fee7875b49">mode</a> == <a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>.Down)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    num3 *= -1;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> + num3 &lt; 0)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    num3 = -p.cell.height;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">else</span> <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> + num3 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67">maxGenHeight</a>)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    num3 = EClass.setting.maxGenHeight - p.cell.height;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> += (<span class="keywordtype">byte</span>)num3;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    p.cell.bridgeHeight += (byte)num3;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            p.<a class="code hl_function" href="classPoint.html#abdbc97bd4e9a2e289a39ecbaea3a6aef">RefreshNeighborTiles</a>();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a08f807559626eeda17f411b6a038665f">room</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                p.cell.room.SetDirty();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        });</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    if (p.cell.bridgeHeight - num2 &lt; 0)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        p.cell.bridgeHeight = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        p.cell.bridgeHeight -= (byte)num2;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3">brushRadius</a> - num;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a87252937274776e86b7a8ea4ea21dded">isShiftDown</a>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    num3 = 1;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (<a class="code hl_variable" href="classAM__Terrain.html#aa428ca09f7dc9510ba97b5fee7875b49">mode</a> == <a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>.Down)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    num3 *= -1;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.cell.height + num3 &lt; 0)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    num3 = -p.cell.height;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">else</span> <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.cell.height + num3 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67">maxGenHeight</a>)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    num3 = EClass.setting.maxGenHeight - p.cell.height;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                p.cell.height += (<span class="keywordtype">byte</span>)num3;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (p.cell._bridge != 0)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    if (p.cell.bridgeHeight + num3 &lt; 0)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                        p.cell.bridgeHeight = 0;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        p.cell.bridgeHeight += (byte)num3;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            p.RefreshNeighborTiles();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">if</span> (p.cell.room != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                p.cell.room.SetDirty();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        });</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
 <div class="ttc" id="aUIBook_8cs_html_a7a84b28e36fc5c8b0594d31d7e8d7808"><div class="ttname"><a href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a></div><div class="ttdeci">if(item3.idFile==idFirstFile &amp;&amp;item3.id==idFirstTopic)</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00627">UIBook.cs:627</a></div></div>
 <div class="ttc" id="aclassAM__BaseTerrain_html"><div class="ttname"><a href="classAM__BaseTerrain.html">AM_BaseTerrain</a></div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00003">AM_BaseTerrain.cs:4</a></div></div>
 <div class="ttc" id="aclassAM__BaseTerrain_html_a053aac41776b71fd9fe24a48f041b061"><div class="ttname"><a href="classAM__BaseTerrain.html#a053aac41776b71fd9fe24a48f041b061">AM_BaseTerrain.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00007">AM_BaseTerrain.cs:7</a></div></div>
@@ -215,7 +229,6 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="ttc" id="aclassAM__Terrain_html_afe47c4bf51cba44aa9822cb8c4b31289a4adae1c15e93fd1abd85fcdd8b948e10"><div class="ttname"><a href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a4adae1c15e93fd1abd85fcdd8b948e10">AM_Terrain.Mode.Flatten</a></div><div class="ttdeci">@ Flatten</div></div>
 <div class="ttc" id="aclassActionMode_html_afbd86defe6dc3ded79dd62c0460915a3"><div class="ttname"><a href="classActionMode.html#afbd86defe6dc3ded79dd62c0460915a3">ActionMode.brushRadius</a></div><div class="ttdeci">int brushRadius</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00099">ActionMode.cs:99</a></div></div>
 <div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
-<div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00102">Cell.cs:102</a></div></div>
 <div class="ttc" id="aclassCell_html_a23a20aed3b871d236514d5e80ce425ab"><div class="ttname"><a href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">Cell._bridge</a></div><div class="ttdeci">byte _bridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00046">Cell.cs:46</a></div></div>
 <div class="ttc" id="aclassCell_html_a835540b2640271ddf7ca5b7cd12466c1"><div class="ttname"><a href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">Cell.height</a></div><div class="ttdeci">byte height</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00072">Cell.cs:72</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
@@ -228,7 +241,6 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
 <div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00036">Point.cs:36</a></div></div>
 <div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00039">Point.cs:39</a></div></div>
-<div class="ttc" id="aclassPoint_html_abdbc97bd4e9a2e289a39ecbaea3a6aef"><div class="ttname"><a href="classPoint.html#abdbc97bd4e9a2e289a39ecbaea3a6aef">Point.RefreshNeighborTiles</a></div><div class="ttdeci">void RefreshNeighborTiles()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01240">Point.cs:1240</a></div></div>
 <div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00953">Point.cs:953</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>

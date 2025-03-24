@@ -4,7 +4,8 @@ var classGamePrincipal =
     [ "ItemSlider", "classGamePrincipal_1_1ItemSlider.html", "classGamePrincipal_1_1ItemSlider" ],
     [ "Type", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12", [
       [ "Oath", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a01d1d3c2f04043c035a52d9ff8f51c79", null ],
-      [ "Workaround", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a7aebfa1e2291377e040de92d7f7f335f", null ]
+      [ "Workaround", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a7aebfa1e2291377e040de92d7f7f335f", null ],
+      [ "Legacy", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a0cc0a0507cf3d31e5089f420a4cf8b4b", null ]
     ] ],
     [ "ListItems", "classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0", null ],
     [ "disableDeathPenaltyProtection", "classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224", null ],
@@ -13,6 +14,7 @@ var classGamePrincipal =
     [ "disableVoidBlessing", "classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27", null ],
     [ "dropRate", "classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841", null ],
     [ "dropRateMtp", "classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1", null ],
+    [ "enableDamageReduction", "classGamePrincipal.html#a018779ceddaf2f8332ff5215b07bd9c8", null ],
     [ "id", "classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef", null ],
     [ "ignoreEvaluate", "classGamePrincipal.html#a7367a6d6ff6c977d173a412cfffc81dd", null ],
     [ "infiniteMarketFund", "classGamePrincipal.html#a32142e558ef82d06956a4711238713a4", null ],
