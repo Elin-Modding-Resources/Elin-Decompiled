@@ -9,6 +9,20 @@ public class TraitBookSkill : TraitScroll
 
 	public virtual bool IsPlan => false;
 
+	public override string IdNoRestock => owner.id + "_" + source?.id;
+
+	public override bool IsOnlyUsableByPc
+	{
+		get
+		{
+			if (source != null)
+			{
+				return source.category == "ability";
+			}
+			return false;
+		}
+	}
+
 	public override bool CanRead(Chara c)
 	{
 		return !c.isBlind;
@@ -82,6 +96,11 @@ public class TraitBookSkill : TraitScroll
 		if (IsPlan && EClass.Branch.elements.HasBase(idEle))
 		{
 			owner.Say("skillbook_knownSkill", c, source.GetName());
+			return;
+		}
+		if (IsOnlyUsableByPc && !c.IsPC)
+		{
+			owner.SayNothingHappans();
 			return;
 		}
 		owner.Say(IsPlan ? "skillbook_learnPlan" : "skillbook_learn", c, source.GetName());

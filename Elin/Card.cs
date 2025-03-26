@@ -4021,6 +4021,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
 			hp = MaxHP;
+			if (trait.CanBeSmashedToDeath)
+			{
+				hp = -1;
+			}
 		}
 		Chara target;
 		if (hp < 0)
@@ -4063,6 +4067,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					Chara.Cure(CureType.Boss);
 					hp = MaxHP / 3;
 					Chara.AddCondition<ConInvulnerable>();
+					return;
+				}
+				if (HasCondition<ConRebirth>())
+				{
+					Say("rebirth", this);
+					hp = Mathf.Min(MaxHP * (int)(5f + Mathf.Sqrt(Chara.GetCondition<ConRebirth>().power)) / 100, MaxHP);
+					Chara.AddCondition<ConInvulnerable>();
+					Chara.RemoveCondition<ConRebirth>();
+					PlayEffect("revive");
+					PlaySound("revive");
 					return;
 				}
 				foreach (Chara chara3 in EClass._map.charas)
@@ -4108,6 +4122,44 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				Debug.Log(EClass.player.invlunerable);
 				Debug.Log(EClass.pc.ai?.ToString() + "/" + EClass.pc.ai.IsRunning);
 				Die(e, origin, attackSource);
+				if (trait.CanBeSmashedToDeath)
+				{
+					Rand.SetSeed(uid);
+					if (EClass.rnd(3) == 0)
+					{
+						string text2 = new int[18]
+						{
+							233, 235, 236, 236, 236, 1170, 1143, 1144, 727, 728,
+							237, 869, 1178, 1179, 1180, 1243, 1244, 1245
+						}.RandomItem().ToString();
+						if (EClass.rnd(10) == 0)
+						{
+							text2 = "casino_coin";
+						}
+						if (EClass.rnd(10) == 0)
+						{
+							text2 = "scratchcard";
+						}
+						if (EClass.rnd(3) == 0)
+						{
+							text2 = "money";
+						}
+						if (EClass.rnd(5) == 0)
+						{
+							text2 = "plat";
+						}
+						if (EClass.rnd(10) == 0)
+						{
+							text2 = "money2";
+						}
+						if (EClass.rnd(20) == 0)
+						{
+							text2 = "medal";
+						}
+						EClass._zone.AddCard(ThingGen.Create(text2).SetNum((!(text2 == "money")) ? 1 : EClass.rndHalf(100)), pos);
+					}
+					Rand.SetSeed();
+				}
 				ProcAbsorb();
 				if (EClass.pc.Evalue(1355) > 0 && (IsPCFactionOrMinion || (origin != null && origin.IsPCParty)))
 				{
@@ -4445,7 +4497,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				int valueOrDefault = (origin.Evalue(662) + weapon?.Evalue(662, ignoreGlobalElement: true)).GetValueOrDefault();
 				int valueOrDefault2 = (origin.Evalue(661) + weapon?.Evalue(661, ignoreGlobalElement: true)).GetValueOrDefault();
-				if (valueOrDefault > 0 && attackSource == AttackSource.Melee && origin.isChara && Chara.IsHostile(origin as Chara))
+				if (valueOrDefault > 0 && attackSource == AttackSource.Melee && origin.isChara && !origin.Chara.ignoreSPAbsorb && Chara.IsHostile(origin as Chara))
 				{
 					int num12 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, valueOrDefault / 10));
 					origin.Chara.stamina.Mod(num12);
@@ -4488,7 +4540,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			_pos.PlaySound(material.GetSoundDead(sourceCard));
 			_pos.PlayEffect("mine").SetParticleColor(material.GetColor()).Emit(10 + EClass.rnd(10));
-			material.AddBlood(_pos, 6);
+			material.AddBlood(_pos, trait.CanBeSmashedToDeath ? (12 + EClass.rnd(8)) : 6);
 			if (_pos.IsSync)
 			{
 				string text = ((rootCard != this) ? "destroyed_inv_" : "destroyed_ground_");
@@ -5981,6 +6033,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public bool HasTalk(string idTopic)
+	{
+		return !MOD.listTalk.GetTalk(c_idTalk.IsEmpty(id), idTopic, useDefault: true).IsEmpty();
+	}
+
 	public void Talk(string idTopic, string ref1 = null, string ref2 = null, bool forceSync = false)
 	{
 		if (IsPC && !EClass.player.forceTalk && idTopic != "goodBoy" && idTopic != "insane")
@@ -6517,11 +6574,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			switch (currency)
 			{
 			case CurrencyType.Plat:
-				if (id == "lucky_coin")
+			{
+				string text = id;
+				if (!(text == "lucky_coin"))
 				{
-					return 100;
+					if (!(text == "book_skill"))
+					{
+						break;
+					}
+					return 50;
 				}
-				break;
+				return 100;
+			}
 			case CurrencyType.Medal:
 				switch (id)
 				{

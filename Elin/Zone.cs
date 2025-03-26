@@ -2283,7 +2283,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			bp.GenerateMap(this);
 		}
 		map.SetZone(this);
-		if (this is Zone_Field)
+		if (this is Zone_Field zone_Field)
 		{
 			if (EClass.rnd(3) == 0)
 			{
@@ -2295,6 +2295,19 @@ public class Zone : Spatial, ICardParent, IInspect
 					{
 						Card t = ThingGen.Create("chest3").ChangeMaterial(biome.style.matDoor);
 						EClass._zone.AddCard(t, randomSurface).Install();
+					}
+				}
+			}
+			if (zone_Field.IdBiome == "Sand" || zone_Field.IdBiome == "Water")
+			{
+				int num2 = 1 + EClass.rnd((zone_Field.IdBiome == "water") ? 4 : 2);
+				for (int j = 0; j < num2; j++)
+				{
+					Point randomSurface2 = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
+					if (!randomSurface2.HasObj)
+					{
+						Thing t2 = ThingGen.Create("pearl_oyster");
+						EClass._zone.AddCard(t2, randomSurface2).Install();
 					}
 				}
 			}

@@ -947,7 +947,6 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
-			EClass.pc.AddCondition<ConDisease>();
 			for (int i = 0; i < 10; i++)
 			{
 				Thing thing = ThingGen.Create("egg_fertilized");
@@ -984,7 +983,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			TestSpawn(param1, param2, 5);
+			EClass.pc.PlayEffect("phoenix");
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))

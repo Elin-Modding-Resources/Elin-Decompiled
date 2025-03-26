@@ -176,12 +176,14 @@ public class HotbarManager : EClass
 			break;
 		}
 		case 4:
+		{
 			hotbar = SetHobar(4, 9);
 			if (!EClass.core.IsGameStarted)
 			{
 				return;
 			}
-			if (EClass.debug.godBuild || EClass.Branch != null)
+			FactionBranch factionBranch = ((EClass._zone is Zone_Tent) ? EClass.pc.homeBranch : EClass.Branch);
+			if (EClass.debug.godBuild || factionBranch != null)
 			{
 				hotbar.SetItem(new HotItemActionMode
 				{
@@ -191,7 +193,7 @@ public class HotbarManager : EClass
 				{
 					id = "FlagCell"
 				});
-				if (EClass.debug.godBuild || EClass.Branch.elements.Has(4006))
+				if (EClass.debug.godBuild || factionBranch.elements.Has(4006))
 				{
 					hotbar.SetItem(new HotItemActionMode
 					{
@@ -205,7 +207,7 @@ public class HotbarManager : EClass
 						id = "EditMarker"
 					});
 				}
-				if (EClass.debug.godBuild || EClass.Branch.elements.Has(4005))
+				if (EClass.debug.godBuild || factionBranch.elements.Has(4005))
 				{
 					hotbar.SetItem(new HotItemActionMode
 					{
@@ -222,6 +224,7 @@ public class HotbarManager : EClass
 				}
 			}
 			break;
+		}
 		case 5:
 			hotbar = SetHobar(5, 9);
 			hotbar.SetItem(new HotItemLayer

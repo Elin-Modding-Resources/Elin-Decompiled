@@ -153,6 +153,13 @@ public class ThingGen : CardGen
 		return CreateSpellbook(EClass.sources.elements.alias[alias].id, num);
 	}
 
+	public static Thing CreateSkillbook(int ele, int num = 1)
+	{
+		Thing thing = Create("book_skill").SetNum(num);
+		thing.refVal = ele;
+		return thing;
+	}
+
 	public static Thing CreateSpellbook(int ele, int num = 1)
 	{
 		Thing thing = Create("spellbook").SetNum(num);

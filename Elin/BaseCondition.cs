@@ -98,6 +98,8 @@ public class BaseCondition : BaseStats
 
 	public virtual bool ConsumeTurn => false;
 
+	public virtual bool HasDuration => base.source.duration != "-1";
+
 	public virtual bool PreventRegen => false;
 
 	public virtual bool ShouldRefresh => false;

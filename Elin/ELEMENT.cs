@@ -5,27 +5,27 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int roasted = 762;
+	public const int rare = 751;
+
+	public const int cute = 752;
 
 	public const int antidote = 753;
 
-	public const int recharge = 761;
-
-	public const int purity = 759;
-
-	public const int hotspring = 756;
+	public const int nerve = 754;
 
 	public const int blood = 755;
 
-	public const int nerve = 754;
-
-	public const int comfort = 750;
-
-	public const int rare = 751;
+	public const int hotspring = 756;
 
 	public const int stimulant = 760;
 
-	public const int cute = 752;
+	public const int recharge = 761;
+
+	public const int roasted = 762;
+
+	public const int comfort = 750;
+
+	public const int purity = 759;
 
 	public const int _void = 0;
 
@@ -75,8 +75,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[34]
 	{
-		762, 753, 761, 759, 756, 755, 754, 750, 751, 760,
-		752, 0, 3, 1, 2, 5, 10, 11, 12, 13,
+		751, 752, 753, 754, 755, 756, 760, 761, 762, 750,
+		759, 0, 3, 1, 2, 5, 10, 11, 12, 13,
 		14, 16, 17, 18, 15, 21, 22, 23, 24, 25,
 		26, 29, 85, 20
 	};
@@ -629,7 +629,7 @@ public class Element : EClass
 						condition.SetRefVal(79, (act.id == 8710) ? 222 : 221);
 						break;
 					}
-					n.AddText("_bullet".lang() + "hintCon".lang(condition.Name, condition.EvaluateTurn(p).ToString() ?? ""));
+					n.AddText("_bullet".lang() + (condition.HasDuration ? "hintCon" : "hintCon2").lang(condition.Name, condition.EvaluateTurn(p).ToString() ?? ""));
 					condition._WriteNote(n, asChild: true);
 				}
 				else

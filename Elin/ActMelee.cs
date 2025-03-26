@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ActMelee : ActBaseAttack
 {
+	public virtual float BaseDmgMTP => 1f;
+
 	public virtual bool UseWeaponDist => true;
 
 	public override int PerformDistance
@@ -270,7 +272,7 @@ public class ActMelee : ActBaseAttack
 					{
 						Act.CC.Say("attack_chaser");
 					}
-					flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
+					flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp * BaseDmgMTP, maxRoll, subAttack);
 					if (!flag && frustration > 0 && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))
 					{
 						AttackProcess.Current.critFury = true;
@@ -297,6 +299,10 @@ public class ActMelee : ActBaseAttack
 							{
 								usedTalisman = true;
 								flag2 = true;
+								if (Act.CC.Evalue(609) > 0 && Mathf.Min(10f + Mathf.Sqrt(Act.CC.Evalue(609)) * 5f, 90f) > (float)EClass.rnd(100))
+								{
+									flag2 = false;
+								}
 								int spellExp = Act.CC.elements.GetSpellExp(Act.CC, act, 200);
 								Act.CC.ModExp(act.id, spellExp);
 							}

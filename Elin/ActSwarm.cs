@@ -2,9 +2,11 @@ using System.Linq;
 
 public class ActSwarm : Ability
 {
+	public override int PerformDistance => 3;
+
 	public override bool CanPerform()
 	{
-		if (Act.TC == null || !Act.CC.IsHostile(Act.TC.Chara))
+		if (Act.CC == Act.TC || Act.TC == null || Act.CC.Dist(Act.TC) > PerformDistance)
 		{
 			return false;
 		}
@@ -14,13 +16,14 @@ public class ActSwarm : Ability
 	public override bool Perform()
 	{
 		float num = 0f;
-		foreach (Chara item in EClass._map.charas.ToList())
+		Card tC = Act.TC;
+		foreach (Card item in EClass._map.Cards.ToList())
 		{
 			if (!Act.CC.IsAliveInCurrentZone)
 			{
 				break;
 			}
-			if (item.IsAliveInCurrentZone && item != Act.CC && item.IsHostile(Act.CC) && Act.CC.CanSeeLos(item))
+			if (item.IsAliveInCurrentZone && item != Act.CC && (!item.isChara || item == tC || item.Chara.IsHostile(Act.CC)) && (item.isChara || item.trait.CanBeAttacked) && item.Dist(Act.CC) <= PerformDistance && Act.CC.CanSeeLos(item))
 			{
 				Point pos = item.pos;
 				TweenUtil.Delay(num, delegate

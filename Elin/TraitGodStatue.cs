@@ -34,21 +34,31 @@ public class TraitGodStatue : TraitPowerStatue
 		{
 		case "harvest":
 		{
-			Thing t2 = ThingGen.Create("book_kumiromi");
-			EClass.pc.Pick(t2);
+			Thing t = ThingGen.Create("book_kumiromi");
+			EClass.pc.Pick(t);
 			break;
 		}
 		case "machine":
 		{
-			Thing t = owner.things.Find("gene") ?? DNA.GenerateManiGene(owner);
-			EClass.pc.Pick(t);
+			Thing t2 = owner.things.Find("gene") ?? DNA.GenerateManiGene(owner);
+			EClass.pc.Pick(t2);
 			break;
 		}
 		case "healing":
+		{
 			Msg.Say("jure_hug");
 			EClass.player.ModKeyItem("jure_feather");
 			Msg.Say("jure_hug2");
+			for (int i = 0; i < 5; i++)
+			{
+				Chara chara = EClass.pc.party.members.RandomItem();
+				if (!chara.HasCondition<ConRebirth>())
+				{
+					chara.AddCondition<ConRebirth>();
+				}
+			}
 			break;
+		}
 		case "luck":
 			EClass.player.ModKeyItem((!EClass.player.wellWished && EClass.player.CountKeyItem("well_wish") == 0) ? "well_wish" : "well_enhance");
 			break;

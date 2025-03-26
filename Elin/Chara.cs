@@ -138,6 +138,8 @@ public class Chara : Card, IPathfindWalker
 
 	public bool bossText;
 
+	public bool ignoreSPAbsorb;
+
 	private Faction _faction;
 
 	public SourceChara.Row source;
@@ -3589,6 +3591,7 @@ public class Chara : Card, IPathfindWalker
 	{
 		SyncRide();
 		combatCount--;
+		ignoreSPAbsorb = false;
 		if (IsPC)
 		{
 			if (hasMovedThisTurn)
@@ -5404,6 +5407,7 @@ public class Chara : Card, IPathfindWalker
 			break;
 		case Act.CostType.SP:
 			stamina.Mod(-num4);
+			ignoreSPAbsorb = true;
 			break;
 		}
 		if (a is Spell && GetCondition<ConSilence>() != null)
@@ -5429,16 +5433,10 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		bool flag2 = true;
-		switch (a.id)
+		if (HasTalk("phrase_" + a.source.alias))
 		{
-		case 9150:
 			EClass.player.forceTalk = true;
-			Talk("ab_meteor");
-			break;
-		case 6662:
-			EClass.player.forceTalk = true;
-			Talk("ab_swarm");
-			break;
+			Talk("phrase_" + a.source.alias);
 		}
 		if (pt)
 		{
@@ -9258,7 +9256,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		int num = Mathf.Abs(elements.ValueWithoutLink(ele)) * 2 + 20;
 		int num2 = tempElements.Base(ele) + a;
-		if (num2 < -num || num2 > num)
+		if (num2 < -num || num2 > num || (a < 0 && num2 < -100))
 		{
 			a = 0;
 		}
@@ -9317,7 +9315,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (item.vBase > 0)
 			{
-				ModTempElement(item.id, -Mathf.Min(a, item.vBase), naturalDecay: true);
+				ModTempElement(item.id, -Mathf.Min(item.vBase * 5 / 100 + 1, item.vBase), naturalDecay: true);
 			}
 		}
 	}

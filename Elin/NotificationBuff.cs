@@ -24,6 +24,7 @@ public class NotificationBuff : NotificationCondition
 		}
 		text = condition.GetText() + (EClass.debug.showExtra ? (" " + condition.value) : "");
 		item.textDuration.SetText(condition.TextDuration);
+		item.textDuration.SetActive(condition.HasDuration);
 	}
 
 	public override void OnInstantiate()

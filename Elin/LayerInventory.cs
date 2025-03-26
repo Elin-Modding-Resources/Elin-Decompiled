@@ -580,6 +580,11 @@ public class LayerInventory : ELayer
 		}
 		layerInventory.windows[0].saveData = container.c_windowSaveData;
 		ELayer.ui.AddLayer(layerInventory);
+		if (container.id == "barrel")
+		{
+			ELayer.player.forceTalk = true;
+			ELayer.pc.party.members.RandomItem().Talk("barrel");
+		}
 		return layerInventory;
 	}
 

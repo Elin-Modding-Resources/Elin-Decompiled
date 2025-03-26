@@ -1093,6 +1093,10 @@ public class Thing : Card
 		{
 			AddText("isNoSell", FontColor.Ether);
 		}
+		if (trait.IsOnlyUsableByPc)
+		{
+			AddText("isOnlyUsableByPC", FontColor.Ether);
+		}
 		if (base.isStolen)
 		{
 			AddText("isStolen", FontColor.Ether);

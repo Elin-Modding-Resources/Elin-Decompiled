@@ -25,9 +25,13 @@ public class ActRush : ActMelee
 		bool flag = Act.CC.IsPC && !(Act.CC.ai is GoalAutoCombat);
 		if (flag)
 		{
-			Act.TC = EClass.scene.mouseTarget.TargetChara;
+			Act.TC = EClass.scene.mouseTarget.card;
 		}
 		if (Act.TC == null)
+		{
+			return false;
+		}
+		if (Act.TC.isThing && !Act.TC.trait.CanBeAttacked)
 		{
 			return false;
 		}
@@ -40,10 +44,6 @@ public class ActRush : ActMelee
 		{
 			return false;
 		}
-		if (Los.GetRushPoint(Act.CC.pos, Act.TP) == null)
-		{
-			return false;
-		}
 		return base.CanPerform();
 	}
 
@@ -52,7 +52,7 @@ public class ActRush : ActMelee
 		bool flag = Act.CC.IsPC && !(Act.CC.ai is GoalAutoCombat);
 		if (flag)
 		{
-			Act.TC = EClass.scene.mouseTarget.TargetChara;
+			Act.TC = EClass.scene.mouseTarget.card;
 		}
 		if (Act.TC == null)
 		{

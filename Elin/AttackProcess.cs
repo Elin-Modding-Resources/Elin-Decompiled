@@ -610,7 +610,10 @@ public class AttackProcess : EClass
 		num -= num9;
 		num = TC.ApplyProtection(num) + num9 + num8;
 		TC.DamageHP(num, num4, num5, (!IsRanged && !isThrow) ? AttackSource.Melee : AttackSource.Range, CC, showEffect, weapon);
-		conWeapon?.Mod(-1);
+		if (conWeapon != null && (CC.Evalue(609) <= 0 || !(Mathf.Min(10f + Mathf.Sqrt(CC.Evalue(609)) * 5f, 90f) > (float)EClass.rnd(100))))
+		{
+			conWeapon.Mod(-1);
+		}
 		bool flag2 = IsCane || (weapon != null && weapon.Evalue(482) > 0);
 		int attackStyleElement = CC.body.GetAttackStyleElement(attackStyle);
 		if (!subAttack)

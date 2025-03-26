@@ -63,6 +63,8 @@ public class Trait : EClass
 
 	public virtual bool IsGround => false;
 
+	public virtual bool IsOnlyUsableByPc => false;
+
 	public virtual bool InvertHeldSprite => false;
 
 	public virtual bool IsChangeFloorHeight => owner.Pref.Surface;
@@ -284,6 +286,8 @@ public class Trait : EClass
 
 	public virtual bool CanBeDestroyed => true;
 
+	public virtual bool CanBeSmashedToDeath => false;
+
 	public virtual bool CanBeHallucinated => true;
 
 	public virtual bool CanBeDropped => true;
@@ -461,6 +465,38 @@ public class Trait : EClass
 				return ToggleType.None;
 			}
 			return ToggleType.Electronics;
+		}
+	}
+
+	public virtual string IdSoundToggleOn
+	{
+		get
+		{
+			if (Electricity >= 0)
+			{
+				if (ToggleType != ToggleType.Fire)
+				{
+					return "switch_on";
+				}
+				return "torch_lit";
+			}
+			return "switch_on_electricity";
+		}
+	}
+
+	public virtual string IdSoundToggleOff
+	{
+		get
+		{
+			if (Electricity >= 0)
+			{
+				if (ToggleType != ToggleType.Fire)
+				{
+					return "switch_off";
+				}
+				return "torch_unlit";
+			}
+			return "switch_off_electricity";
 		}
 	}
 
@@ -1167,28 +1203,20 @@ public class Trait : EClass
 			if (!silent)
 			{
 				owner.Say(flag ? "toggle_fire" : "toggle_ele", EClass.pc, owner);
-				string id = ((Electricity < 0) ? "switch_on_electricity" : (flag ? "torch_lit" : "switch_on"));
-				if (this is TraitMusicBox)
-				{
-					id = "switch_on_musicbox";
-				}
-				owner.PlaySound(id);
+				owner.PlaySound(IdSoundToggleOn);
 			}
 			RefreshRenderer();
 			owner.RecalculateFOV();
-			return;
 		}
-		if (!silent)
+		else
 		{
-			string id2 = ((Electricity < 0) ? "switch_off_electricity" : (flag ? "torch_unlit" : "switch_off"));
-			if (this is TraitMusicBox)
+			if (!silent)
 			{
-				id2 = "switch_off_musicbox";
+				owner.PlaySound(IdSoundToggleOff);
 			}
-			owner.PlaySound(id2);
+			RefreshRenderer();
+			owner.RecalculateFOV();
 		}
-		RefreshRenderer();
-		owner.RecalculateFOV();
 	}
 
 	public virtual void OnToggle()
@@ -1484,6 +1512,8 @@ public class Trait : EClass
 		{
 		case ShopType.Plat:
 			NoRestock(ThingGen.Create("lucky_coin").SetNum(10));
+			NoRestock(ThingGen.CreateSkillbook(6662));
+			NoRestock(ThingGen.CreateSkillbook(6664));
 			break;
 		case ShopType.Copy:
 		{
