@@ -30,7 +30,6 @@ public class TalkDataList : ExcelDataList
 		Dictionary<string, string> dictionary = all.TryGetValue(idTopic);
 		if (dictionary == null)
 		{
-			Debug.LogError("idTopic not found:" + idTopic);
 			return "";
 		}
 		string text = dictionary.TryGetValue(id);
