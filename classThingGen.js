@@ -21,6 +21,7 @@ var classThingGen =
     [ "CreateRawMaterial", "classThingGen.html#a16e0b64aeb4fa2a4762c16694c211c32", null ],
     [ "CreateRecipe", "classThingGen.html#aa30e2786f0bd455873b1e6930db41d8b", null ],
     [ "CreateScroll", "classThingGen.html#ac776e0530919124a87091f5e0886108d", null ],
+    [ "CreateSkillbook", "classThingGen.html#aaf3ff60e30aecf89c53c6204cdb8558b", null ],
     [ "CreateSpellbook", "classThingGen.html#aba127b1f4a4f532feeadf4f49391fa7b", null ],
     [ "CreateSpellbook", "classThingGen.html#a86d8c3002203f01152938292ca40bc31", null ],
     [ "CreateTreasure", "classThingGen.html#a1fb0aa7926f8c7896be91cedcd12878f", null ],

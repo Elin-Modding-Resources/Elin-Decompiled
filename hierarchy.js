@@ -438,6 +438,7 @@ var hierarchy =
                 [ "ConLevitate", "classConLevitate.html", null ],
                 [ "ConNightVision", "classConNightVision.html", null ],
                 [ "ConPeace", "classConPeace.html", null ],
+                [ "ConRebirth", "classConRebirth.html", null ],
                 [ "ConResEle", "classConResEle.html", null ],
                 [ "ConSeeInvisible", "classConSeeInvisible.html", null ],
                 [ "ConStrife", "classConStrife.html", null ],
@@ -459,6 +460,7 @@ var hierarchy =
               [ "ConDeathSentense", "classConDeathSentense.html", null ],
               [ "ConExcommunication", "classConExcommunication.html", null ],
               [ "ConGravity", "classConGravity.html", null ],
+              [ "ConNightmare", "classConNightmare.html", null ],
               [ "ConSilence", "classConSilence.html", null ],
               [ "ConSupress", "classConSupress.html", null ],
               [ "ConWeakResEle", "classConWeakResEle.html", null ],
@@ -697,6 +699,7 @@ var hierarchy =
           [ "Ability", "classAbility.html", [
             [ "ActBreathe", "classActBreathe.html", null ],
             [ "ActDreamBug", "classActDreamBug.html", null ],
+            [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", null ],
             [ "ActQuickCraft", "classActQuickCraft.html", null ],
             [ "ActRide", "classActRide.html", [
@@ -715,6 +718,7 @@ var hierarchy =
           ] ],
           [ "ActBaseAttack", "classActBaseAttack.html", [
             [ "ActMelee", "classActMelee.html", [
+              [ "ActMeleeBladeStorm", "classActMeleeBladeStorm.html", null ],
               [ "ActMeleeSwarm", "classActMeleeSwarm.html", null ],
               [ "ActRush", "classActRush.html", null ]
             ] ],
@@ -1322,7 +1326,9 @@ var hierarchy =
               [ "TraitContainerCompost", "classTraitContainerCompost.html", null ],
               [ "TraitDryBrick", "classTraitDryBrick.html", null ]
             ] ],
-            [ "TraitChest", "classTraitChest.html", null ],
+            [ "TraitChest", "classTraitChest.html", [
+              [ "TraitChestOyster", "classTraitChestOyster.html", null ]
+            ] ],
             [ "TraitChestMerchant", "classTraitChestMerchant.html", null ],
             [ "TraitChestPractice", "classTraitChestPractice.html", null ],
             [ "TraitContainerBook", "classTraitContainerBook.html", null ],
@@ -1697,6 +1703,7 @@ var hierarchy =
           [ "TraitStairsLocked", "classTraitStairsLocked.html", null ],
           [ "TraitTape", "classTraitTape.html", null ],
           [ "TraitTaxChest", "classTraitTaxChest.html", null ],
+          [ "TraitTerraGlobe", "classTraitTerraGlobe.html", null ],
           [ "TraitVendingMachine", "classTraitVendingMachine.html", [
             [ "TraitLoytelMart", "classTraitLoytelMart.html", null ]
           ] ],
@@ -1752,6 +1759,9 @@ var hierarchy =
           [ "TraitPoop", "classTraitPoop.html", null ]
         ] ],
         [ "TraitRoadSign", "classTraitRoadSign.html", null ],
+        [ "TraitSack", "classTraitSack.html", [
+          [ "TraitVase", "classTraitVase.html", null ]
+        ] ],
         [ "TraitSalesTag", "classTraitSalesTag.html", null ],
         [ "TraitScroll", "classTraitScroll.html", [
           [ "TraitBaseSpellbook", "classTraitBaseSpellbook.html", [

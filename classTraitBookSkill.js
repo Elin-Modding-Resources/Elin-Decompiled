@@ -8,6 +8,8 @@ var classTraitBookSkill =
     [ "SetName", "classTraitBookSkill.html#a11b3629d21599f3a7ce0af7a0e060087", null ],
     [ "WriteNote", "classTraitBookSkill.html#a5972d668c656eae458806db1a30475bb", null ],
     [ "idEle", "classTraitBookSkill.html#aa63d4580da4a1a76951bc9dd84cc4c3e", null ],
+    [ "IdNoRestock", "classTraitBookSkill.html#ac695a7d658deb3806341d2dfcfd68d87", null ],
+    [ "IsOnlyUsableByPc", "classTraitBookSkill.html#aeffee5e08a150e1b0168e9833669ac49", null ],
     [ "IsPlan", "classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3", null ],
     [ "source", "classTraitBookSkill.html#aa47b45c43d6da0c4173c2d940ac8f8bc", null ]
 ];

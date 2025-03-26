@@ -8,6 +8,7 @@ var classActMelee =
     [ "HideHint", "classActMelee.html#a4ff7dab0d8f72e32f5d6e7ad47dfa5b8", null ],
     [ "Perform", "classActMelee.html#a5f5c1ef56dae21eb09507566edcc4f15", null ],
     [ "ShowMouseHint", "classActMelee.html#af6157d89fe35f11db3810c102af185bf", null ],
+    [ "BaseDmgMTP", "classActMelee.html#ab10fd890ef2195084424749a4208469e", null ],
     [ "CanPressRepeat", "classActMelee.html#a66248e05deb4c48e6de9840b14ee145f", null ],
     [ "PerformDistance", "classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29", null ],
     [ "ResetAxis", "classActMelee.html#a14ac7d513d79093fd141771463eb21bc", null ],

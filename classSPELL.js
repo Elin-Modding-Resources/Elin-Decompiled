@@ -167,6 +167,8 @@ var classSPELL =
     [ "SpMagicMap", "classSPELL.html#aaab6ca82ac91f93af64985f858aa2c18", null ],
     [ "SpMeteor", "classSPELL.html#a5e0639f095733a27664baac1f85593de", null ],
     [ "SpMutation", "classSPELL.html#a3c4640eacd2e94728a369fcfc1f6b995", null ],
+    [ "SpNightmare", "classSPELL.html#a5ca06be4195aa6a0999d901744876a34", null ],
+    [ "SpRebirth", "classSPELL.html#a73ea51bbf2d19002682705f5af7a6f65", null ],
     [ "SpReconstruction", "classSPELL.html#aa525e85d0b0e5bcc67a0d0abdee861ca", null ],
     [ "SpRemoveHex", "classSPELL.html#ad60467d6eee60f6f3ea0cfc40d81ba6b", null ],
     [ "SpResEle", "classSPELL.html#a2a85c0f3427a8f2cb308c73ecfe8cb59", null ],

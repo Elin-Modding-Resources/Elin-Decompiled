@@ -332,6 +332,7 @@ var classChara =
     [ "idleActTimer", "classChara.html#af6ec8bc00881d6ebff143ebda7b5d492", null ],
     [ "idleTimer", "classChara.html#a1dd13be4094c7d948172adfa43bb90a4", null ],
     [ "IDTimeTable", "classChara.html#ae433a88c8c08a7396b9929d245921850", null ],
+    [ "ignoreSPAbsorb", "classChara.html#abc1357b9ea88d43b14d15879b87eb1fb", null ],
     [ "isBlind", "classChara.html#ac9bbd5a4dcf26788aa4c91c9250fe2f8", null ],
     [ "isConfused", "classChara.html#ae01775c793b8622d795d1c914742983c", null ],
     [ "isCreated", "classChara.html#a98d825458372fa675ae153c690b65602", null ],

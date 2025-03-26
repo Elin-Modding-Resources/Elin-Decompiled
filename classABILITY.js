@@ -2,6 +2,7 @@ var classABILITY =
 [
     [ "ActAttack", "classABILITY.html#a480423be656e4071170825580acac0fe", null ],
     [ "ActBash", "classABILITY.html#abf77bd1c1befef9de38f56383d2ce637", null ],
+    [ "ActBladeStorm", "classABILITY.html#a146a0ed607929f03e2a95de24f4504e6", null ],
     [ "ActCancelTask", "classABILITY.html#ace019e9ba722e4d94c4da89a2f125da6", null ],
     [ "ActChat", "classABILITY.html#afacb4e07fb01980838dc0783af4dbcc2", null ],
     [ "ActCrabBreathe", "classABILITY.html#a8a69010ec89e0f07900917dc392cc4cd", null ],
@@ -28,6 +29,7 @@ var classABILITY =
     [ "ActLulwyTrick", "classABILITY.html#aaf7d7682639e944877dd826d9cc29e33", null ],
     [ "ActManaAbsorb", "classABILITY.html#ac22d039123a14f116ade80dd89ff8a3c", null ],
     [ "ActMelee", "classABILITY.html#a31775f0ae6d599b73f18bc3ecb3d420f", null ],
+    [ "ActMultiHit", "classABILITY.html#af23957d1a9cb6b367fdbb7ee9cf90b16", null ],
     [ "ActNeckHunt", "classABILITY.html#a963696db205f85846cd1f9d414257856", null ],
     [ "ActNoItem", "classABILITY.html#afa4f631432e82412604c09ee2800d04b", null ],
     [ "ActNTR", "classABILITY.html#a845ba830c0d20b97b013d6b307baa868", null ],

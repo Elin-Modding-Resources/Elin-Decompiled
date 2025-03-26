@@ -46,6 +46,7 @@ var classBaseCondition =
     [ "ConsumeTurn", "classBaseCondition.html#a7bcd09d541305c41297cabf1a1449294", null ],
     [ "GainResistFactor", "classBaseCondition.html#a5ed342f7a43b5d20affd6fbbe8f88155", null ],
     [ "givenByPcParty", "classBaseCondition.html#aaaa20d7172c3bd5b1c5f46f3b1d26248", null ],
+    [ "HasDuration", "classBaseCondition.html#a25aa6aa3d3fe7c1621dd07fe5e0d412a", null ],
     [ "IsElemental", "classBaseCondition.html#afaf2494eaf8d9e427a88f248d0e77142", null ],
     [ "isPerfume", "classBaseCondition.html#adb275b67d6831d265774cb24476031e2", null ],
     [ "IsToggle", "classBaseCondition.html#a27be1bf4b5e38ddf5d9e1da8f58101ec", null ],

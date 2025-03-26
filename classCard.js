@@ -111,6 +111,7 @@ var classCard =
     [ "HasLight", "classCard.html#a706ea072b9545b123863b1294b6adf57", null ],
     [ "HasRune", "classCard.html#a1a28353830ac60c8ebf01f599b99b0db", null ],
     [ "HasTag", "classCard.html#a810e687225ccdc1dc342506473c87334", null ],
+    [ "HasTalk", "classCard.html#a8071e0b31c643a2199be2c1944a6b3d8", null ],
     [ "HaveFur", "classCard.html#aabe35615ebbc4aca9021bf2c38a47a35", null ],
     [ "HealHP", "classCard.html#a4b66715cfdd6e3a9835fb6806a8ef9be", null ],
     [ "HealHPHost", "classCard.html#a46101186b77dc490ec71020dbfdaa762", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.112 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.114 Nightly</span>
    </div>
   </td>
  </tr>
@@ -179,15 +179,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TalkDataList_8cs_source.html#l00059">59</a> of file <a class="el" href="TalkDataList_8cs_source.html">TalkDataList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTalkDataList.html#a313200ec86e0ec40751d28ff335df32f">IDs</a>.RandomItem();</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TalkDataList_8cs_source.html#l00058">58</a> of file <a class="el" href="TalkDataList_8cs_source.html">TalkDataList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTalkDataList.html#a313200ec86e0ec40751d28ff335df32f">IDs</a>.RandomItem();</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
 <div class="ttc" id="aclassTalkDataList_html_a313200ec86e0ec40751d28ff335df32f"><div class="ttname"><a href="classTalkDataList.html#a313200ec86e0ec40751d28ff335df32f">TalkDataList.IDs</a></div><div class="ttdeci">List&lt; string &gt; IDs</div><div class="ttdef"><b>Definition:</b> <a href="TalkDataList_8cs_source.html#l00007">TalkDataList.cs:7</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TalkDataList_8cs_source.html#l00007">IDs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06181">Card.SetRandomTalk()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06238">Card.SetRandomTalk()</a>.</p>
 
 </div>
 </div>
@@ -247,31 +247,30 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   30</span>        Dictionary&lt;string, string&gt; dictionary = <a class="code hl_variable" href="classExcelDataList.html#a107c6afb7de42b94658481efb5cd8d0d">all</a>.TryGetValue(idTopic);</div>
 <div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (dictionary == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;idTopic not found:&quot;</span> + idTopic);</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">string</span> text = dictionary.TryGetValue(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!useDefault)</div>
-<div class="line"><span class="lineno">   40</span>            {</div>
-<div class="line"><span class="lineno">   41</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;id not found:&quot;</span> + <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            text = dictionary.TryGetValue(<span class="stringliteral">&quot;default&quot;</span>);</div>
-<div class="line"><span class="lineno">   45</span>            flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        text = text.Split(<span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;\r\n&quot;</span>, <span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span> }, StringSplitOptions.None).RandomItem();</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70">human</a>)</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (flag &amp;&amp; !text.IsEmpty() &amp;&amp; !text.StartsWith(<span class="stringliteral">&quot;(&quot;</span>) &amp;&amp; !text.StartsWith(<span class="stringliteral">&quot;*&quot;</span>))</div>
-<div class="line"><span class="lineno">   51</span>            {</div>
-<div class="line"><span class="lineno">   52</span>                text = <span class="stringliteral">&quot;(&quot;</span> + text + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">   53</span>            }</div>
-<div class="line"><span class="lineno">   54</span>            text = text.Replace(<span class="stringliteral">&quot;。)&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> text;</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">string</span> text = dictionary.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (!useDefault)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;id not found:&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>            text = dictionary.TryGetValue(<span class="stringliteral">&quot;default&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        text = text.Split(<span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;\r\n&quot;</span>, <span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span> }, StringSplitOptions.None).RandomItem();</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70">human</a>)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (flag &amp;&amp; !text.IsEmpty() &amp;&amp; !text.StartsWith(<span class="stringliteral">&quot;(&quot;</span>) &amp;&amp; !text.StartsWith(<span class="stringliteral">&quot;*&quot;</span>))</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                text = <span class="stringliteral">&quot;(&quot;</span> + text + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>            text = text.Replace(<span class="stringliteral">&quot;。)&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
 <div class="ttc" id="aInterest_8cs_html_a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70"><div class="ttname"><a href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70">Interest.human</a></div><div class="ttdeci">@ human</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassExcelDataList_html_a00fe424eb2bcf02c37b9c84dc09bcf9d"><div class="ttname"><a href="classExcelDataList.html#a00fe424eb2bcf02c37b9c84dc09bcf9d">ExcelDataList.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00012">ExcelDataList.cs:12</a></div></div>
@@ -280,7 +279,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00008">ExcelDataList.all</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70">human</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">ExcelDataList.Initialize()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00012">ExcelDataList.initialized</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Person_8cs_source.html#l00106">Person.GetDramaTitle()</a>, and <a class="el" href="Card_8cs_source.html#l06108">Card.GetTalkText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Person_8cs_source.html#l00106">Person.GetDramaTitle()</a>, <a class="el" href="Card_8cs_source.html#l06165">Card.GetTalkText()</a>, and <a class="el" href="Card_8cs_source.html#l06036">Card.HasTalk()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +340,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TalkDataList_8cs_source.html#l00007">7</a> of file <a class="el" href="TalkDataList_8cs_source.html">TalkDataList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TalkDataList_8cs_source.html#l00059">GetRandomID()</a>, and <a class="el" href="TalkDataList_8cs_source.html#l00011">OnInitialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TalkDataList_8cs_source.html#l00058">GetRandomID()</a>, and <a class="el" href="TalkDataList_8cs_source.html#l00011">OnInitialize()</a>.</p>
 
 </div>
 </div>

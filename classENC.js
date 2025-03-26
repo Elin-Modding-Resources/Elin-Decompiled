@@ -47,6 +47,7 @@ var classENC =
     [ "mod_reload", "classENC.html#a2df1c367b0b50b85fbe0aac3056956e6", null ],
     [ "mod_scatter", "classENC.html#a6b8cb9c7572ee18ec9bd5436543606aa", null ],
     [ "mod_splash", "classENC.html#a20b50bed4a16b50aca29d0a467443317", null ],
+    [ "mod_talisman", "classENC.html#a5152232bc554519bff4e917718386abe", null ],
     [ "negateBlind", "classENC.html#a517d56a3f192912ced970e20a5acbef8", null ],
     [ "negateConfusion", "classENC.html#a180bb6befe36295721edb545931f5436", null ],
     [ "negateFear", "classENC.html#a5efdf5b041dc0829e9d547bf399ef9dc", null ],

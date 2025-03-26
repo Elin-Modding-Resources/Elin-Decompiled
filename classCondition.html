@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.112 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.114 Nightly</span>
    </div>
   </td>
  </tr>
@@ -308,6 +308,8 @@ Properties</h2></td></tr>
 <tr class="separator:a7b345c50b1166e87c49c8ace46dd5729 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bcd09d541305c41297cabf1a1449294 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a7bcd09d541305c41297cabf1a1449294">ConsumeTurn</a><code> [get]</code></td></tr>
 <tr class="separator:a7bcd09d541305c41297cabf1a1449294 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25aa6aa3d3fe7c1621dd07fe5e0d412a inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a25aa6aa3d3fe7c1621dd07fe5e0d412a">HasDuration</a><code> [get]</code></td></tr>
+<tr class="separator:a25aa6aa3d3fe7c1621dd07fe5e0d412a inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433192bcbafe922e72aaad8239934279 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a433192bcbafe922e72aaad8239934279">PreventRegen</a><code> [get]</code></td></tr>
 <tr class="separator:a433192bcbafe922e72aaad8239934279 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c765b9f06398ef311f291623a1b597 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">ShouldRefresh</a><code> [get]</code></td></tr>
@@ -472,7 +474,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceStat_8cs_source.html#l00009">SourceStat.Row.id</a>, <a class="el" href="BaseCondition_8cs_source.html#l00030">BaseCondition.power</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00060">SourceManager.stats</a>, and <a class="el" href="SourceStat_8cs_source.html#l00017">SourceStat.Row.type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00602">Element._WriteNote()</a>, <a class="el" href="Chara_8cs_source.html#l08449">Chara.AddCondition()</a>, <a class="el" href="Condition_8cs_source.html#l00038">Create&lt; T &gt;()</a>, <a class="el" href="Chara_8cs_source.html#l08846">Chara.Sleep()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00009">ConMiasma.Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00602">Element._WriteNote()</a>, <a class="el" href="Chara_8cs_source.html#l08447">Chara.AddCondition()</a>, <a class="el" href="Condition_8cs_source.html#l00038">Create&lt; T &gt;()</a>, <a class="el" href="Chara_8cs_source.html#l08844">Chara.Sleep()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00009">ConMiasma.Tick()</a>.</p>
 
 </div>
 </div>
@@ -617,22 +619,22 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
 <div class="line"><span class="lineno">  109</span>        }</div>
 <div class="line"><span class="lineno">  110</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_a33c765b9f06398ef311f291623a1b597"><div class="ttname"><a href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">BaseCondition.ShouldRefresh</a></div><div class="ttdeci">virtual bool ShouldRefresh</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00103">BaseCondition.cs:103</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_a68c88f07a0d161a580dbee29aa406a8f"><div class="ttname"><a href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">BaseCondition.RefString1</a></div><div class="ttdeci">virtual string RefString1</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00121">BaseCondition.cs:122</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_ab0dc2314a6e33d4561841e5a1f65c90e"><div class="ttname"><a href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">BaseCondition.OnRemoved</a></div><div class="ttdeci">virtual void OnRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00389">BaseCondition.cs:389</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_adc2afd810b0ce0a62481218449231929"><div class="ttname"><a href="classBaseCondition.html#adc2afd810b0ce0a62481218449231929">BaseCondition.PlayEndEffect</a></div><div class="ttdeci">virtual void PlayEndEffect()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00292">BaseCondition.cs:292</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a33c765b9f06398ef311f291623a1b597"><div class="ttname"><a href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">BaseCondition.ShouldRefresh</a></div><div class="ttdeci">virtual bool ShouldRefresh</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00105">BaseCondition.cs:105</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a68c88f07a0d161a580dbee29aa406a8f"><div class="ttname"><a href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">BaseCondition.RefString1</a></div><div class="ttdeci">virtual string RefString1</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00123">BaseCondition.cs:124</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_ab0dc2314a6e33d4561841e5a1f65c90e"><div class="ttname"><a href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">BaseCondition.OnRemoved</a></div><div class="ttdeci">virtual void OnRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00391">BaseCondition.cs:391</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_adc2afd810b0ce0a62481218449231929"><div class="ttname"><a href="classBaseCondition.html#adc2afd810b0ce0a62481218449231929">BaseCondition.PlayEndEffect</a></div><div class="ttdeci">virtual void PlayEndEffect()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00294">BaseCondition.cs:294</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_ae298dc6f6177eb07f0aa01f7422532f5"><div class="ttname"><a href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">BaseCondition.elements</a></div><div class="ttdeci">ElementContainer elements</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00013">BaseCondition.cs:13</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06081">Card.cs:6081</a></div></div>
-<div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01504">Chara.cs:1504</a></div></div>
-<div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01605">Chara.cs:1605</a></div></div>
-<div class="ttc" id="aclassChara_html_a522224f15420736ea92c6acee26efd6c"><div class="ttname"><a href="classChara.html#a522224f15420736ea92c6acee26efd6c">Chara.conditions</a></div><div class="ttdeci">List&lt; Condition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00196">Chara.cs:196</a></div></div>
-<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00373">Chara.cs:374</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06138">Card.cs:6138</a></div></div>
+<div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01506">Chara.cs:1506</a></div></div>
+<div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01607">Chara.cs:1607</a></div></div>
+<div class="ttc" id="aclassChara_html_a522224f15420736ea92c6acee26efd6c"><div class="ttname"><a href="classChara.html#a522224f15420736ea92c6acee26efd6c">Chara.conditions</a></div><div class="ttdeci">List&lt; Condition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00198">Chara.cs:198</a></div></div>
+<div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00375">Chara.cs:376</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_a1612076673169f97fcfabf021eee2f20"><div class="ttname"><a href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">ElementContainer.SetParent</a></div><div class="ttdeci">void SetParent(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00520">ElementContainer.cs:520</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00196">Chara.conditions</a>, <a class="el" href="BaseCondition_8cs_source.html#l00013">BaseCondition.elements</a>, <a class="el" href="Chara_8cs_source.html#l00374">Chara.isDead</a>, <a class="el" href="BaseCondition_8cs_source.html#l00389">BaseCondition.OnRemoved()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="BaseCondition_8cs_source.html#l00292">BaseCondition.PlayEndEffect()</a>, <a class="el" href="Chara_8cs_source.html#l01504">Chara.Refresh()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00122">BaseCondition.RefString1</a>, <a class="el" href="Card_8cs_source.html#l06081">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01605">Chara.SetDirtySpeed()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00520">ElementContainer.SetParent()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00103">BaseCondition.ShouldRefresh</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00198">Chara.conditions</a>, <a class="el" href="BaseCondition_8cs_source.html#l00013">BaseCondition.elements</a>, <a class="el" href="Chara_8cs_source.html#l00376">Chara.isDead</a>, <a class="el" href="BaseCondition_8cs_source.html#l00391">BaseCondition.OnRemoved()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="BaseCondition_8cs_source.html#l00294">BaseCondition.PlayEndEffect()</a>, <a class="el" href="Chara_8cs_source.html#l01506">Chara.Refresh()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00124">BaseCondition.RefString1</a>, <a class="el" href="Card_8cs_source.html#l06138">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01607">Chara.SetDirtySpeed()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00520">ElementContainer.SetParent()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00105">BaseCondition.ShouldRefresh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08681">Chara.Cure()</a>, <a class="el" href="Card_8cs_source.html#l03740">Card.DamageHP()</a>, <a class="el" href="Chara_8cs_source.html#l05186">Chara.Kick()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00032">NotificationCondition.OnClick()</a>, <a class="el" href="Condition_8cs_source.html#l00083">OnValueChanged()</a>, <a class="el" href="Chara_8cs_source.html#l08656">Chara.RemoveCondition&lt; T &gt;()</a>, <a class="el" href="ConStrife_8cs_source.html#l00062">ConStrife.Tick()</a>, <a class="el" href="ConSuffocation_8cs_source.html#l00030">ConSuffocation.Tick()</a>, <a class="el" href="ConSuspend_8cs_source.html#l00042">ConSuspend.Tick()</a>, and <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08679">Chara.Cure()</a>, <a class="el" href="Card_8cs_source.html#l03740">Card.DamageHP()</a>, <a class="el" href="Chara_8cs_source.html#l05189">Chara.Kick()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00032">NotificationCondition.OnClick()</a>, <a class="el" href="Condition_8cs_source.html#l00083">OnValueChanged()</a>, <a class="el" href="Chara_8cs_source.html#l08654">Chara.RemoveCondition&lt; T &gt;()</a>, <a class="el" href="ConStrife_8cs_source.html#l00062">ConStrife.Tick()</a>, <a class="el" href="ConSuffocation_8cs_source.html#l00030">ConSuffocation.Tick()</a>, <a class="el" href="ConSuspend_8cs_source.html#l00042">ConSuspend.Tick()</a>, and <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -682,7 +684,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
 <div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05763">Card.CalculateFOV()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05815">Card.CalculateFOV()</a>.</p>
 
 </div>
 </div>
@@ -716,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
 <div class="line"><span class="lineno">   81</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05805">Card.CreateFov()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05857">Card.CreateFov()</a>.</p>
 
 </div>
 </div>
@@ -749,10 +751,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   59</span>        base.value += <a class="code hl_function" href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">EvaluateTurn</a>(p);</div>
 <div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">SetPhase</a>();</div>
 <div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_a4767e1a9196cc255eb901ac7988f600e"><div class="ttname"><a href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">BaseCondition.SetPhase</a></div><div class="ttdeci">void SetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00308">BaseCondition.cs:308</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_a7f23858771f5daa7a120966068d52c05"><div class="ttname"><a href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">BaseCondition.EvaluateTurn</a></div><div class="ttdeci">virtual int EvaluateTurn(int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00398">BaseCondition.cs:398</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a4767e1a9196cc255eb901ac7988f600e"><div class="ttname"><a href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">BaseCondition.SetPhase</a></div><div class="ttdeci">void SetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00310">BaseCondition.cs:310</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a7f23858771f5daa7a120966068d52c05"><div class="ttname"><a href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">BaseCondition.EvaluateTurn</a></div><div class="ttdeci">virtual int EvaluateTurn(int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00400">BaseCondition.cs:400</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00398">BaseCondition.EvaluateTurn()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00308">BaseCondition.SetPhase()</a>.</p>
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00400">BaseCondition.EvaluateTurn()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00310">BaseCondition.SetPhase()</a>.</p>
 
 </div>
 </div>
@@ -852,17 +854,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af0c6ea92ca1cc59ce6dec886a38868b5">BaseCondition</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classConDrunk.html#ae4d2e7cc94ace1d9d1d4bb431b4d8eb3">ConDrunk</a>, <a class="el" href="classConEntangle.html#ae77d05cda6139fa2f75bd4d5f1caec4c">ConEntangle</a>, <a class="el" href="classConFear.html#ada8a00942fd4cb0054a6891fce9f3305">ConFear</a>, <a class="el" href="classConHOT.html#ae1fbaa703bd42d4142d3965d7bb5e595">ConHOT</a>, <a class="el" href="classConInsane.html#a7b0bd17d749ff8c3d0664f7a432002e7">ConInsane</a>, <a class="el" href="classConMiasma.html#a0e4b16048c4c380aff9bfddd04d39273">ConMiasma</a>, <a class="el" href="classConPoison.html#adba150667ac07d0665dfca4cbca09755">ConPoison</a>, <a class="el" href="classConSleep.html#ab1af65d98ba5552f166ddf59802a0cf7">ConSleep</a>, <a class="el" href="classConSmoking.html#ae466ace8ef73f73a224bfe2d59679dab">ConSmoking</a>, <a class="el" href="classConStrife.html#a2fc13f405ab43edaf071446d7261082d">ConStrife</a>, <a class="el" href="classConSuffocation.html#a491553122d58258cb1fb7725f8b582c5">ConSuffocation</a>, <a class="el" href="classConSuspend.html#acf7c42aa99b78f28a517ef0b39d59fe2">ConSuspend</a>, <a class="el" href="classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a">ConTransmute</a>, <a class="el" href="classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202">ConWeapon</a>, and <a class="el" href="classConWet.html#aefa09eb61bd604b8c38a56cf8d36e6ee">ConWet</a>.</p>
+<p>Reimplemented in <a class="el" href="classConDrunk.html#ae4d2e7cc94ace1d9d1d4bb431b4d8eb3">ConDrunk</a>, <a class="el" href="classConEntangle.html#ae77d05cda6139fa2f75bd4d5f1caec4c">ConEntangle</a>, <a class="el" href="classConFear.html#ada8a00942fd4cb0054a6891fce9f3305">ConFear</a>, <a class="el" href="classConHOT.html#ae1fbaa703bd42d4142d3965d7bb5e595">ConHOT</a>, <a class="el" href="classConInsane.html#a7b0bd17d749ff8c3d0664f7a432002e7">ConInsane</a>, <a class="el" href="classConMiasma.html#a0e4b16048c4c380aff9bfddd04d39273">ConMiasma</a>, <a class="el" href="classConPoison.html#adba150667ac07d0665dfca4cbca09755">ConPoison</a>, <a class="el" href="classConRebirth.html#a65d7000ce43d7e5df654694c9cbfd18d">ConRebirth</a>, <a class="el" href="classConSleep.html#ab1af65d98ba5552f166ddf59802a0cf7">ConSleep</a>, <a class="el" href="classConSmoking.html#ae466ace8ef73f73a224bfe2d59679dab">ConSmoking</a>, <a class="el" href="classConStrife.html#a2fc13f405ab43edaf071446d7261082d">ConStrife</a>, <a class="el" href="classConSuffocation.html#a491553122d58258cb1fb7725f8b582c5">ConSuffocation</a>, <a class="el" href="classConSuspend.html#acf7c42aa99b78f28a517ef0b39d59fe2">ConSuspend</a>, <a class="el" href="classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a">ConTransmute</a>, <a class="el" href="classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202">ConWeapon</a>, and <a class="el" href="classConWet.html#aefa09eb61bd604b8c38a56cf8d36e6ee">ConWet</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00070">70</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
 <div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">Mod</a>(-1);</div>
 <div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_aba9c7904f2e608799748dbb7947d48ea"><div class="ttname"><a href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">BaseCondition.Mod</a></div><div class="ttdeci">void Mod(int a, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00371">BaseCondition.cs:371</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_aba9c7904f2e608799748dbb7947d48ea"><div class="ttname"><a href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">BaseCondition.Mod</a></div><div class="ttdeci">void Mod(int a, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00373">BaseCondition.cs:373</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00371">BaseCondition.Mod()</a>.</p>
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00373">BaseCondition.Mod()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03355">Chara.TickConditions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03357">Chara.TickConditions()</a>.</p>
 
 </div>
 </div>
@@ -889,7 +891,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00005">5</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseCondition_8cs_source.html#l00280">BaseCondition.PlayEffect()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00070">ConBuffStats.PlayEffect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseCondition_8cs_source.html#l00282">BaseCondition.PlayEffect()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00070">ConBuffStats.PlayEffect()</a>.</p>
 
 </div>
 </div>
@@ -916,7 +918,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00007">7</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationCondition_8cs_source.html#l00019">NotificationCondition.ShouldRemove()</a>, and <a class="el" href="Chara_8cs_source.html#l03355">Chara.TickConditions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NotificationCondition_8cs_source.html#l00019">NotificationCondition.ShouldRemove()</a>, and <a class="el" href="Chara_8cs_source.html#l03357">Chara.TickConditions()</a>.</p>
 
 </div>
 </div>
