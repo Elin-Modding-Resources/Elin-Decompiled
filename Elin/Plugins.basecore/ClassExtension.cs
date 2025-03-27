@@ -32,6 +32,11 @@ public static class ClassExtension
 		return Lang.Parse(s, ref1, ref2, ref3, ref4, ref5);
 	}
 
+	public static string[] langList(this string s)
+	{
+		return Lang.GetList(s);
+	}
+
 	public static string langGame(this string s)
 	{
 		return Lang.Game.Get(s);
