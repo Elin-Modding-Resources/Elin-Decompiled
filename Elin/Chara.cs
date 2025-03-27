@@ -1246,6 +1246,10 @@ public class Chara : Card, IPathfindWalker
 			return;
 		}
 		memberType = FactionMemberType.Default;
+		foreach (Thing item in things.List((Thing a) => a.HasTag(CTAG.godArtifact)))
+		{
+			EClass.pc.PickOrDrop(EClass.pc.pos, item);
+		}
 		UniqueData uniqueData = base.c_uniqueData;
 		if (uniqueData != null)
 		{

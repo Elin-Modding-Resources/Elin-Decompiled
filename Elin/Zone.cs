@@ -2306,7 +2306,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					Point randomSurface2 = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
 					if (!randomSurface2.HasObj)
 					{
-						Thing t2 = ThingGen.Create("pearl_oyster");
+						Thing t2 = ThingGen.Create("pearl_oyster", new string[3] { "wood_birch", "poplar", "coralwood" }.RandomItem());
 						EClass._zone.AddCard(t2, randomSurface2).Install();
 					}
 				}

@@ -502,7 +502,7 @@ public class ActPlan : EClass
 			{
 				if (_c.isThing)
 				{
-					if (_c.trait.CanBeAttacked)
+					if (_c.trait.CanBeAttacked && !(_c.trait is TraitTrainingDummy))
 					{
 						TrySetAct(ACT.Melee, _c);
 					}

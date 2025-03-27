@@ -3018,10 +3018,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void PurgeDuplicateArtifact(Thing af)
 	{
-		if (EClass.debug.enable)
-		{
-			return;
-		}
 		List<Chara> list = new List<Chara>();
 		foreach (FactionBranch child in EClass.pc.faction.GetChildren())
 		{
@@ -3854,7 +3850,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * 100 / Mathf.Clamp(105 + EClass.pc.Evalue(135) / 10, 10, 110);
 			}
-			if (HasElement(1218))
+			if (HasElement(1218) && attackSource != AttackSource.ManaBackfire && (hp > 0 || Evalue(1421) <= 0))
 			{
 				dmg = dmg * (1000 - Evalue(1218)) / 1000;
 				if (dmg <= 0 && EClass.rnd(4) == 0)
@@ -4003,7 +3999,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0af8;
+							goto IL_0b19;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -4015,8 +4011,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0af8;
-		IL_0af8:
+		goto IL_0b19;
+		IL_0b19:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);

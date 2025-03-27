@@ -1391,44 +1391,49 @@ public class FactionBranch : EClass
 
 	public void AddMemeber(Chara c)
 	{
-		if (!members.Contains(c))
+		if (members.Contains(c))
 		{
-			EClass.Home.FindBranch(c)?.RemoveMemeber(c);
-			EClass.Home.RemoveReserve(c);
-			c.SetGlobal();
-			c.SetFaction(EClass.Home);
-			c.SetHomeZone(owner);
-			if (c.OriginalHostility <= Hostility.Ally)
-			{
-				c.c_originalHostility = Hostility.Ally;
-			}
-			c.hostility = Hostility.Ally;
-			c.enemy = null;
-			c.orgPos = null;
-			if (c.memberType != 0 && c.memberType != FactionMemberType.Livestock)
-			{
-				c.memberType = FactionMemberType.Default;
-			}
-			if (c.hp > c.MaxHP)
-			{
-				c.hp = c.MaxHP;
-			}
-			if (c.mana.value > c.mana.max)
-			{
-				c.mana.value = c.mana.max;
-			}
-			if (c.stamina.value > c.stamina.max)
-			{
-				c.stamina.value = c.stamina.max;
-			}
-			members.Add(c);
-			EClass.pc.faction.charaElements.OnAddMemeber(c);
-			RefreshEfficiency();
-			c.RefreshWorkElements(elements);
-			if (uidMaid == 0 && c.id == "maid")
-			{
-				uidMaid = c.uid;
-			}
+			return;
+		}
+		EClass.Home.FindBranch(c)?.RemoveMemeber(c);
+		EClass.Home.RemoveReserve(c);
+		c.SetGlobal();
+		c.SetFaction(EClass.Home);
+		c.SetHomeZone(owner);
+		foreach (Thing item in c.things.List((Thing a) => a.HasTag(CTAG.godArtifact)).Copy())
+		{
+			c.PurgeDuplicateArtifact(item);
+		}
+		if (c.OriginalHostility <= Hostility.Ally)
+		{
+			c.c_originalHostility = Hostility.Ally;
+		}
+		c.hostility = Hostility.Ally;
+		c.enemy = null;
+		c.orgPos = null;
+		if (c.memberType != 0 && c.memberType != FactionMemberType.Livestock)
+		{
+			c.memberType = FactionMemberType.Default;
+		}
+		if (c.hp > c.MaxHP)
+		{
+			c.hp = c.MaxHP;
+		}
+		if (c.mana.value > c.mana.max)
+		{
+			c.mana.value = c.mana.max;
+		}
+		if (c.stamina.value > c.stamina.max)
+		{
+			c.stamina.value = c.stamina.max;
+		}
+		members.Add(c);
+		EClass.pc.faction.charaElements.OnAddMemeber(c);
+		RefreshEfficiency();
+		c.RefreshWorkElements(elements);
+		if (uidMaid == 0 && c.id == "maid")
+		{
+			uidMaid = c.uid;
 		}
 	}
 

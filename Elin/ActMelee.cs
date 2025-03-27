@@ -157,6 +157,7 @@ public class ActMelee : ActBaseAttack
 			int flurry;
 			int frustration;
 			int feint;
+			int mod_talisman;
 			if (Act.TC != null && Act.TC.IsAliveInCurrentZone)
 			{
 				w = null;
@@ -187,6 +188,7 @@ public class ActMelee : ActBaseAttack
 					frustration = GetWeaponEnc(624, addSelfEnc: true);
 					int num3 = GetWeaponEnc(622, addSelfEnc: true);
 					feint = GetWeaponEnc(623, addSelfEnc: true);
+					mod_talisman = GetWeaponEnc(609, addSelfEnc: true);
 					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
 					AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
 					if (num2 > 0)
@@ -299,7 +301,7 @@ public class ActMelee : ActBaseAttack
 							{
 								usedTalisman = true;
 								flag2 = true;
-								if (Act.CC.Evalue(609) > 0 && Mathf.Min(10f + Mathf.Sqrt(Act.CC.Evalue(609)) * 5f, 90f) > (float)EClass.rnd(100))
+								if (mod_talisman > 0 && Mathf.Min(10f + Mathf.Sqrt(mod_talisman) * 5f, 90f) > (float)EClass.rnd(100))
 								{
 									flag2 = false;
 								}
@@ -387,7 +389,7 @@ public class ActMelee : ActBaseAttack
 			}
 			int GetWeaponEnc(int ele, bool addSelfEnc)
 			{
-				return (addSelfEnc ? Act.CC.Evalue(ele) : 0) + ((w != null) ? w.Evalue(ele) : 0) + (Act.CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
+				return AttackProcess.GetWeaponEnc(Act.CC, w, ele, addSelfEnc);
 			}
 		}
 	}

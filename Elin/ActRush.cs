@@ -44,6 +44,10 @@ public class ActRush : ActMelee
 		{
 			return false;
 		}
+		if (Los.GetRushPoint(Act.CC.pos, Act.TP) == null)
+		{
+			return false;
+		}
 		return base.CanPerform();
 	}
 

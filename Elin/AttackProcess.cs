@@ -111,6 +111,11 @@ public class AttackProcess : EClass
 		}
 	}
 
+	public static int GetWeaponEnc(Chara CC, Thing w, int ele, bool addSelfEnc = false)
+	{
+		return (addSelfEnc ? CC.Evalue(ele) : 0) + (w?.Evalue(ele) ?? 0) + (CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
+	}
+
 	public string GetText()
 	{
 		string text = dNum + "d" + dDim;
@@ -609,8 +614,9 @@ public class AttackProcess : EClass
 		int num9 = num * penetration / 100;
 		num -= num9;
 		num = TC.ApplyProtection(num) + num9 + num8;
+		int weaponEnc = GetWeaponEnc(CC, weapon, 609, addSelfEnc: true);
 		TC.DamageHP(num, num4, num5, (!IsRanged && !isThrow) ? AttackSource.Melee : AttackSource.Range, CC, showEffect, weapon);
-		if (conWeapon != null && (CC.Evalue(609) <= 0 || !(Mathf.Min(10f + Mathf.Sqrt(CC.Evalue(609)) * 5f, 90f) > (float)EClass.rnd(100))))
+		if (conWeapon != null && (weaponEnc <= 0 || !(Mathf.Min(10f + Mathf.Sqrt(weaponEnc) * 5f, 90f) > (float)EClass.rnd(100))))
 		{
 			conWeapon.Mod(-1);
 		}

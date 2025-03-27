@@ -582,6 +582,10 @@ public class LayerInventory : ELayer
 		ELayer.ui.AddLayer(layerInventory);
 		if (container.id == "barrel")
 		{
+			if ((bool)WidgetFeed.Instance)
+			{
+				WidgetFeed.Instance.Nerun("barrel".langList().RandomItem());
+			}
 			ELayer.player.forceTalk = true;
 			ELayer.pc.party.members.RandomItem().Talk("barrel");
 		}
