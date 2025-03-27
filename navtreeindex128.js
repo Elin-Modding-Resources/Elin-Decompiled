@@ -1,5 +1,7 @@
 var NAVTREEINDEX128 =
 {
+"classUndoManager_1_1Item.html#a6d5a931d585e00b808661db5ae633e16":[1,0,1964,0,2],
+"classUndoManager_1_1Item.html#aa437853991bce745d1835533b45464d8":[1,0,1964,0,1],
 "classUniqueData.html":[1,0,1965],
 "classUniqueData.html#a2031f2e7a2e36c381e819fb4e0308d64":[1,0,1965,1],
 "classUniqueData.html#aa6b1ef08ea5a80cd5188079581fdfde3":[1,0,1965,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX128 =
 "classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f":[1,0,1980,31],
 "classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2":[1,0,1980,36],
 "classWidgetCurrentTool_1_1Extra.html":[1,0,1980,0],
-"classWidgetCurrentTool_1_1Extra.html#a6f4802e30eda97c3103fce65decff7fc":[1,0,1980,0,2],
-"classWidgetCurrentTool_1_1Extra.html#a80b027cca02f5897ceea01cfd22de0ab":[1,0,1980,0,0],
-"classWidgetCurrentTool_1_1Extra.html#afe1851a93f7c52d3017c92c7fd7d6abc":[1,0,1980,0,1]
+"classWidgetCurrentTool_1_1Extra.html#a6f4802e30eda97c3103fce65decff7fc":[1,0,1980,0,2]
 };

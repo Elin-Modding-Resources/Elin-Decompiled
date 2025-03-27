@@ -1,5 +1,7 @@
 var NAVTREEINDEX121 =
 {
+"classTraitWhipInterest.html":[1,0,1870],
+"classTraitWhipLove.html":[1,0,1871],
 "classTraitWhipLove.html#a11614644a618aa6bd7adab84ea63ed26":[1,0,1871,1],
 "classTraitWhipLove.html#a448accef964c73a7cfd4fc7565c69370":[1,0,1871,0],
 "classTraitWhipLove.html#ae46661061bbfd94fc8380c2f39b89b44":[1,0,1871,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX121 =
 "classUI.html#a41a1a57b2747554d08f05c9d38ffc559":[1,0,1894,20],
 "classUI.html#a42296503b1951a21d5263aed6d0b9f65":[1,0,1894,66],
 "classUI.html#a441a686337aaa1c820f61c2da8d2d2a1":[1,0,1894,78],
-"classUI.html#a4f04da8eeea9eb42ff68a561b1055d4c":[1,0,1894,19],
-"classUI.html#a53fa54b315eafbee9077a41a040be2d5":[1,0,1894,73],
-"classUI.html#a56cb0ee79e44bae5a2c5e4d22d7b69ee":[1,0,1894,1]
+"classUI.html#a4f04da8eeea9eb42ff68a561b1055d4c":[1,0,1894,19]
 };

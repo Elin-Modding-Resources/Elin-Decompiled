@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"classLayerTitle.html#a917cff661afa96a7d4a6740dea5df805":[1,0,808,13],
+"classLayerTitle.html#a97a98cb92c6b1f6ddbdf9821ec0d5f5e":[1,0,808,30],
 "classLayerTitle.html#a9d68f0a64d26b07f0bd9ad0eaf92c3a3":[1,0,808,12],
 "classLayerTitle.html#a9fb745f372b3eacf6c58e1eaf94aded5":[1,0,808,25],
 "classLayerTitle.html#aa39b845d9aa388d36014981169e51ef9":[1,0,808,28],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "classListPeopleBed.html#aaedab255ec9850dd3ae7978ac3b15323":[1,0,824,1],
 "classListPeopleBed.html#afe9c7702ec24c95eda2879754860a2e2":[1,0,824,0],
 "classListPeopleBuySlave.html":[1,0,825],
-"classListPeopleBuySlave.html#a1bd7a31eebc142907da48b950a19677a":[1,0,825,3],
-"classListPeopleBuySlave.html#a39f53208f122137fdd53dd14d96ec64f":[1,0,825,6],
-"classListPeopleBuySlave.html#a554213c5b956d9ca92f0216c7d681378":[1,0,825,0]
+"classListPeopleBuySlave.html#a1bd7a31eebc142907da48b950a19677a":[1,0,825,3]
 };

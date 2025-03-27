@@ -82,6 +82,7 @@ var classClassExtension =
     [ "lang", "classClassExtension.html#ad7efed2659de7998eb032294b17d8638", null ],
     [ "langGame", "classClassExtension.html#a930f5f594601a6a309cf44ef1898ee5a", null ],
     [ "langGame", "classClassExtension.html#a1bb8b68df17c079d979f23f564c5dc43", null ],
+    [ "langList", "classClassExtension.html#a6499a5b8e972268057530eb83c0f566c", null ],
     [ "langPlural", "classClassExtension.html#a29caa0a028325742eb62e9a15a471a96", null ],
     [ "LastItem< TValue >", "classClassExtension.html#af183718b4096cd508d48380bc71a578b", null ],
     [ "LookAt2D", "classClassExtension.html#ad95cfc56e6d71bd8fde088b58b905fb4", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"classGuildMerchant.html#a5fd97abc9095e72e75d94fbcd7cff5af":[1,0,580,2],
+"classGuildMerchant.html#a6d41f632d415e9a9171d08420dd9c2b0":[1,0,580,1],
 "classGuildRankData.html":[1,0,581],
 "classGuildRankData.html#ac30df4712bdd809645df1aa715b0b441":[1,0,581,0],
 "classGuildRankData.html#acd460ee5840491cac11074c18d9ea07d":[1,0,581,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "classHomeResourceManager.html#a3242633e908c805e41c16dbecbc6c143":[1,0,601,4],
 "classHomeResourceManager.html#a32a4450387cec1df853555b28f120165":[1,0,601,18],
 "classHomeResourceManager.html#a37f7c8ee2d1fe1866ffa8e489bd575e1":[1,0,601,16],
-"classHomeResourceManager.html#a5b08cf3b2a7e3e302fd35b51bab6c7f0":[1,0,601,8],
-"classHomeResourceManager.html#a5e33fa3c9c0bad08598a0a2e526e20dc":[1,0,601,12],
-"classHomeResourceManager.html#a8182a62f4e21d9d941ce27595af0f8b5":[1,0,601,1]
+"classHomeResourceManager.html#a5b08cf3b2a7e3e302fd35b51bab6c7f0":[1,0,601,8]
 };

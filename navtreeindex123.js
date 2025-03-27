@@ -1,5 +1,7 @@
 var NAVTREEINDEX123 =
 {
+"classUIButton.html#aef0f4d01e75ad360b6f2da508ef8cdb3":[1,0,1902,1],
+"classUIButton.html#af235c51f6c1cf671bb71bbdd7567668c":[1,0,1902,38],
 "classUIButton.html#af7d9161a76d6a8973fe99c290333c50f":[1,0,1902,8],
 "classUIButton.html#afa913c0d00a0816f0fea174f9cfe5025":[1,0,1902,59],
 "classUIButton.html#afc734e4d75bb8511fcf170192096df78":[1,0,1902,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX123 =
 "classUICurrency_1_1Item.html":[1,0,1916,0],
 "classUICurrency_1_1Item.html#a6862711ea043fc07790c94845b39fb4a":[1,0,1916,0,0],
 "classUICurrency_1_1Item.html#ad5b5dcca3d5e950ca008ffd3ecaa243e":[1,0,1916,0,1],
-"classUICurrency_1_1Options.html":[1,0,1916,1],
-"classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0":[1,0,1916,1,8],
-"classUICurrency_1_1Options.html#a69b5d9247671bbbbd91c1449a9e2f54f":[1,0,1916,1,4]
+"classUICurrency_1_1Options.html":[1,0,1916,1]
 };

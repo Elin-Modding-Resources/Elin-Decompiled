@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"classLayerNewspaper.html#a87ff9a5a1b085ce62b0a4838e1566107":[1,0,789,13],
+"classLayerNewspaper.html#a88e79c9db6a5a5f43217d5eed62e86b9":[1,0,789,27],
 "classLayerNewspaper.html#a8b41d8c32ef9b7a51ff44cc3584d848f":[1,0,789,4],
 "classLayerNewspaper.html#a94582d1109e4b8b9464dea8e33176ed3":[1,0,789,32],
 "classLayerNewspaper.html#aa97a637aa09a6a4979f6c24d842d34ce":[1,0,789,22],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "classLayerTitle.html#a69b5286b5dd2413a246db6f48c62ad81":[1,0,808,18],
 "classLayerTitle.html#a7bc6620ebe080bbab56dea9d95afddde":[1,0,808,31],
 "classLayerTitle.html#a862165ca12fc97c85776cf244c049cb6":[1,0,808,6],
-"classLayerTitle.html#a8ddb9c7585d197f7364ea5a7e1b37559":[1,0,808,32],
-"classLayerTitle.html#a917cff661afa96a7d4a6740dea5df805":[1,0,808,13],
-"classLayerTitle.html#a97a98cb92c6b1f6ddbdf9821ec0d5f5e":[1,0,808,30]
+"classLayerTitle.html#a8ddb9c7585d197f7364ea5a7e1b37559":[1,0,808,32]
 };

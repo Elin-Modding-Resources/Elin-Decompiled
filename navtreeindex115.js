@@ -1,5 +1,7 @@
 var NAVTREEINDEX115 =
 {
+"classTraitDrink.html#ad9b0a48d51f67c076e30b33b0a677834":[1,0,1504,1],
+"classTraitDrink.html#adcd5e846d9fdd1e3cfbe692ad2fcb84d":[1,0,1504,8],
 "classTraitDrink.html#ae71cd26e116c46e80fdbb5d13f27048f":[1,0,1504,18],
 "classTraitDrink.html#aee4631f0388761dc3024f09b46ddbfe9":[1,0,1504,3],
 "classTraitDrink.html#af09a4c0047023ec0dafca8e1a7b6e7fd":[1,0,1504,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitGenerator.html":[1,0,1562],
 "classTraitGenerator.html#a11a723c61164373246f873d3c26d06be":[1,0,1562,7],
 "classTraitGenerator.html#a4f1bf038188ad91be9ad5df2e5fc66a6":[1,0,1562,8],
-"classTraitGenerator.html#a5be285cfd5a23ffd594bcaf6348404ac":[1,0,1562,0],
-"classTraitGenerator.html#a6ed75db33a6525b9478e937bac6f9a66":[1,0,1562,2],
-"classTraitGenerator.html#a9246204b2fd25126838aa27cf9c84f10":[1,0,1562,4]
+"classTraitGenerator.html#a5be285cfd5a23ffd594bcaf6348404ac":[1,0,1562,0]
 };

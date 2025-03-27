@@ -1,5 +1,7 @@
 var NAVTREEINDEX91 =
 {
+"classQuestMeal__bread.html":[1,0,991],
+"classQuestMeal__bread.html#a65954dc12fe7455c04cf4a0c61b47ab8":[1,0,991,0],
 "classQuestMeal__cake.html":[1,0,992],
 "classQuestMeal__cake.html#a6dbd8a4ccd83395bf852d7fe1d05e045":[1,0,992,0],
 "classQuestMeal__cat.html":[1,0,993],
@@ -247,7 +249,5 @@ var NAVTREEINDEX91 =
 "classRankedZoneManager.html#ab95dca50e72d372a1fc0d4ed79674db8":[1,0,1033,3],
 "classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289":[1,0,1033,0],
 "classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d":[1,0,1033,1],
-"classRecipe.html":[1,0,1034],
-"classRecipe.html#a040c3f5e15fef1caad347e061707d507":[1,0,1034,46],
-"classRecipe.html#a083683c4d4736902ce4ce7243afc4321":[1,0,1034,22]
+"classRecipe.html":[1,0,1034]
 };

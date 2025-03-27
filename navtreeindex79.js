@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"classListPeopleBuySlave.html#a39f53208f122137fdd53dd14d96ec64f":[1,0,825,6],
+"classListPeopleBuySlave.html#a554213c5b956d9ca92f0216c7d681378":[1,0,825,0],
 "classListPeopleBuySlave.html#a62010b79805e89340ef0f8e050095d2b":[1,0,825,4],
 "classListPeopleBuySlave.html#a699c96c76204c9085ab90de54148b4d5":[1,0,825,1],
 "classListPeopleBuySlave.html#a711cc16f71a9e52f4a69738dbe6668ec":[1,0,825,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "classMap.html#a228d9b4ac99ec031f7d51e801e83b1f3":[1,0,841,23],
 "classMap.html#a23ce45b95f1ea57c3c73161608b04806":[1,0,841,116],
 "classMap.html#a23d207ec7157765b32f746e583ae9aac":[1,0,841,18],
-"classMap.html#a24d3fee4afaf93534658fecee5237d5c":[1,0,841,87],
-"classMap.html#a25bafc20956f401cc2da5cc148894108":[1,0,841,82],
-"classMap.html#a27d795ab54d6422ef7539689e7bb68ac":[1,0,841,164]
+"classMap.html#a24d3fee4afaf93534658fecee5237d5c":[1,0,841,87]
 };

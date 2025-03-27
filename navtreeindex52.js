@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"classCoreRef_1_1InventoryStyle.html#afbde42cc1979a47687c1f63c98e956dc":[1,0,383,5,5],
+"classCoreRef_1_1OrbitIcons.html":[1,0,383,6],
 "classCoreRef_1_1OrbitIcons.html#a0b28c6233985b12039a03d5b62ebe4de":[1,0,383,6,3],
 "classCoreRef_1_1OrbitIcons.html#a0d8a65f247c0b9b9f25eb453bd4c17ee":[1,0,383,6,5],
 "classCoreRef_1_1OrbitIcons.html#abd6e5e690d8eb1a8df78d880687d37f0":[1,0,383,6,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "classCursorSystem.html#afd6e6c2813a93fb13fb26d1785d80467":[1,0,401,7],
 "classCurveEffect.html":[1,0,402],
 "classCurveEffect.html#a23da238be27fe6799a1794157d666f5c":[1,0,402,2],
-"classCurveEffect.html#a25c7e050fc84c8cb85c2df853f9487bc":[1,0,402,1],
-"classCurveEffect.html#a36c44031fd96679fb10f9d29283c0443":[1,0,402,8],
-"classCurveEffect.html#a4de2c00445b65ff28da37c2ed81050e0":[1,0,402,6]
+"classCurveEffect.html#a25c7e050fc84c8cb85c2df853f9487bc":[1,0,402,1]
 };

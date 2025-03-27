@@ -1,5 +1,7 @@
 var NAVTREEINDEX111 =
 {
+"classTileTypeWater.html#aaf3eb4aa6a0bcfda571d816047de12b0":[1,0,1358,0],
+"classTileTypeWater.html#ac5fa46e8815367c7a3898823d74d513d":[1,0,1358,1],
 "classTileTypeWaterDeep.html":[1,0,1359],
 "classTileTypeWaterDeep.html#a2fdcd44f69ceefcb126d599b8ff91043":[1,0,1359,0],
 "classTileTypeWaterShallow.html":[1,0,1361],
@@ -247,7 +249,5 @@ var NAVTREEINDEX111 =
 "classTrait.html#aab2c36c771a16fcfd82e4e22edd66aac":[1,0,1371,132],
 "classTrait.html#aacfcf53c2e6cf84d8bdd01c7ae2e2fc4":[1,0,1371,137],
 "classTrait.html#aad2791b98fe164652fb38d929afe2750":[1,0,1371,201],
-"classTrait.html#aaea5f045bee932aa78a2d0f869e964e1":[1,0,1371,145],
-"classTrait.html#aaf1688a9ac11123f24f3f2df674745da":[1,0,1371,67],
-"classTrait.html#ab01fcf69a6a6bd89131cb35f5357761f":[1,0,1371,204]
+"classTrait.html#aaea5f045bee932aa78a2d0f869e964e1":[1,0,1371,145]
 };

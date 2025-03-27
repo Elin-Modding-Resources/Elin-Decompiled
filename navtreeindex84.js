@@ -1,5 +1,7 @@
 var NAVTREEINDEX84 =
 {
+"classPOIMap.html#adfa981c42d87b20885030d260ab00a82":[1,0,921,5],
+"classPOIMap.html#ae7b2df98e524856e3ad70d80a7ad3127":[1,0,921,12],
 "classPOIMap_1_1Cell.html":[1,0,921,0],
 "classPOIMap_1_1Cell.html#a45e9ede9b960a00adb1bc6324a83ac1f":[1,0,921,0,0],
 "classPOIMap_1_1Cell.html#a540473ebe596fa99ab1eb447e5f323da":[1,0,921,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX84 =
 "classPixelPaint.html#a718f8728b3c73018fc070224048de339":[1,0,917,7],
 "classPixelPaint.html#a7db627a092dd58956407dbaa731e60d2":[1,0,917,15],
 "classPixelPaint.html#a85a24d7c6cebb93e985a2fefdac09c7b":[1,0,917,14],
-"classPixelPaint.html#a8714d5b3a6a82878bcd6efbf9f19d403":[1,0,917,6],
-"classPixelPaint.html#a90d8d3fdc0f8f1c1bf8f009c1250fbd1":[1,0,917,0],
-"classPixelPaint.html#aad6f1ba06364102b8c80fb7b24c6d473":[1,0,917,17]
+"classPixelPaint.html#a8714d5b3a6a82878bcd6efbf9f19d403":[1,0,917,6]
 };

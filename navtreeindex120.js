@@ -1,5 +1,7 @@
 var NAVTREEINDEX120 =
 {
+"classTraitSyringeHeaven.html#ae116be70d6483b666e6ec18323d1b57f":[1,0,1807,1],
+"classTraitTV.html":[1,0,1857],
 "classTraitTape.html":[1,0,1808],
 "classTraitTape.html#a55f53a4890e234310abe5f347103bf29":[1,0,1808,0],
 "classTraitTape.html#a639842fd0fbd83e545993a38b6319009":[1,0,1808,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitWell.html#ae2b4bf33123a1f3c0b46675ffe02d681":[1,0,1868,3],
 "classTraitWell.html#ae97735786b491042ebc9680c1fed4317":[1,0,1868,12],
 "classTraitWell.html#aed89e37aae131a29d674b6e7f92f895e":[1,0,1868,1],
-"classTraitWellHoly.html":[1,0,1869],
-"classTraitWhipInterest.html":[1,0,1870],
-"classTraitWhipLove.html":[1,0,1871]
+"classTraitWellHoly.html":[1,0,1869]
 };

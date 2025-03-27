@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"classB83_1_1Win32_1_1Window.html#aaff362879994db8a3aedf72e287d4a7d":[1,0,3,0,6,1],
 "classB83_1_1Win32_1_1Window.html#aaff362879994db8a3aedf72e287d4a7d":[0,4,3,0,6,1],
 "classB83_1_1Win32_1_1Window.html#aba5bc594f12baa1f17fb76b5a981cfac":[1,0,3,0,6,6],
 "classB83_1_1Win32_1_1Window.html#aba5bc594f12baa1f17fb76b5a981cfac":[0,4,3,0,6,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classBaseGameScreen.html#a737d22dbf739d099a5fc1218758c007e":[1,0,192,85],
 "classBaseGameScreen.html#a74ff8ee7c8ddbaf352152b301f2aec2b":[1,0,192,84],
 "classBaseGameScreen.html#a792d6455be3643c458b4eeae0258d3fc":[1,0,192,99],
-"classBaseGameScreen.html#a7967fb8ac280efc7698dc0ac55496b83":[1,0,192,43],
-"classBaseGameScreen.html#a79b184c493b01f482ac7f076e5c1fc82":[1,0,192,111]
+"classBaseGameScreen.html#a7967fb8ac280efc7698dc0ac55496b83":[1,0,192,43]
 };
