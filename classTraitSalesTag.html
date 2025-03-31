@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.115 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.117 Patch 1</span>
    </div>
   </td>
  </tr>
@@ -369,6 +369,8 @@ Properties</h2></td></tr>
 <tr class="separator:a228e3c8aa5066a2ce0f371b7435a2a29 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70453308263f41f9914360d9b180bb48 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a70453308263f41f9914360d9b180bb48">IsFloating</a><code> [get]</code></td></tr>
 <tr class="separator:a70453308263f41f9914360d9b180bb48 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c36cb3396a41ee14cf18a07a7ed134 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a69c36cb3396a41ee14cf18a07a7ed134">IsNoShop</a><code> [get]</code></td></tr>
+<tr class="separator:a69c36cb3396a41ee14cf18a07a7ed134 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4656c0f30c01fc0cdcb4afc4c09c0d4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa4656c0f30c01fc0cdcb4afc4c09c0d4">IsGround</a><code> [get]</code></td></tr>
 <tr class="separator:aa4656c0f30c01fc0cdcb4afc4c09c0d4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7588f237a51493c30d63c55f03448771 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7588f237a51493c30d63c55f03448771">IsOnlyUsableByPc</a><code> [get]</code></td></tr>
@@ -714,10 +716,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a4b2d59088504ce0145c3096fb99645fc">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitSalesTag_8cs_source.html#l00084">84</a> of file <a class="el" href="TraitSalesTag_8cs_source.html">TraitSalesTag.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitSalesTag_8cs_source.html#l00088">88</a> of file <a class="el" href="TraitSalesTag_8cs_source.html">TraitSalesTag.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -783,13 +785,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   34</span>            {</div>
 <div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   36</span>            }</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money, sell: <span class="keyword">true</span>, <a class="code hl_enumeration" href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a>.PlayerShop) == 0)</div>
-<div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitMannequin.html">TraitMannequin</a>)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
 <div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money, sell: <span class="keyword">true</span>, <a class="code hl_enumeration" href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a>.PlayerShop) == 0)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
 <div class="ttc" id="aCurrencyType_8cs_html_ae0bc22f8030e9a947eaf6b905e7b730e"><div class="ttname"><a href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a></div><div class="ttdeci">CurrencyType</div><div class="ttdef"><b>Definition:</b> <a href="CurrencyType_8cs_source.html#l00001">CurrencyType.cs:2</a></div></div>
 <div class="ttc" id="aPriceType_8cs_html_a482277e66af02c7d65679d7485095573"><div class="ttname"><a href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a></div><div class="ttdeci">PriceType</div><div class="ttdef"><b>Definition:</b> <a href="PriceType_8cs_source.html#l00001">PriceType.cs:2</a></div></div>
 <div class="ttc" id="aclassCardManager_html_a28acf582cfc41086813835dc3bdd7076"><div class="ttname"><a href="classCardManager.html#a28acf582cfc41086813835dc3bdd7076">CardManager.listAdv</a></div><div class="ttdeci">List&lt; Chara &gt; listAdv</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00064">CardManager.cs:64</a></div></div>
@@ -808,15 +814,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
 <div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00155">Game.cs:155</a></div></div>
+<div class="ttc" id="aclassTraitMannequin_html"><div class="ttname"><a href="classTraitMannequin.html">TraitMannequin</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMannequin_8cs_source.html#l00003">TraitMannequin.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitSpot_html"><div class="ttname"><a href="classTraitSpot.html">TraitSpot</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSpot_8cs_source.html#l00001">TraitSpot.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitUniqueChara_html"><div class="ttname"><a href="classTraitUniqueChara.html">TraitUniqueChara</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitUniqueChara_8cs_source.html#l00001">TraitUniqueChara.cs:2</a></div></div>
-<div class="ttc" id="aclassTrait_html_a4f89efebbdf3bf36c106d69f646853c5"><div class="ttname"><a href="classTrait.html#a4f89efebbdf3bf36c106d69f646853c5">Trait.CanBeDestroyed</a></div><div class="ttdeci">virtual bool CanBeDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00287">Trait.cs:287</a></div></div>
-<div class="ttc" id="aclassTrait_html_a720939d7e5e5d39df34607bff2678e4b"><div class="ttname"><a href="classTrait.html#a720939d7e5e5d39df34607bff2678e4b">Trait.CanBeHeld</a></div><div class="ttdeci">virtual bool CanBeHeld</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00271">Trait.cs:271</a></div></div>
-<div class="ttc" id="aclassTrait_html_abe2e0dadad63c335e4219a7aebe9fedc"><div class="ttname"><a href="classTrait.html#abe2e0dadad63c335e4219a7aebe9fedc">Trait.CanBeShipped</a></div><div class="ttdeci">virtual bool CanBeShipped</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00309">Trait.cs:310</a></div></div>
+<div class="ttc" id="aclassTrait_html_a4f89efebbdf3bf36c106d69f646853c5"><div class="ttname"><a href="classTrait.html#a4f89efebbdf3bf36c106d69f646853c5">Trait.CanBeDestroyed</a></div><div class="ttdeci">virtual bool CanBeDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00289">Trait.cs:289</a></div></div>
+<div class="ttc" id="aclassTrait_html_a720939d7e5e5d39df34607bff2678e4b"><div class="ttname"><a href="classTrait.html#a720939d7e5e5d39df34607bff2678e4b">Trait.CanBeHeld</a></div><div class="ttdeci">virtual bool CanBeHeld</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00273">Trait.cs:273</a></div></div>
+<div class="ttc" id="aclassTrait_html_abe2e0dadad63c335e4219a7aebe9fedc"><div class="ttname"><a href="classTrait.html#abe2e0dadad63c335e4219a7aebe9fedc">Trait.CanBeShipped</a></div><div class="ttdeci">virtual bool CanBeShipped</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00311">Trait.cs:312</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00287">Trait.CanBeDestroyed</a>, <a class="el" href="Trait_8cs_source.html#l00271">Trait.CanBeHeld</a>, <a class="el" href="Trait_8cs_source.html#l00310">Trait.CanBeShipped</a>, <a class="el" href="Game_8cs_source.html#l00155">Game.cards</a>, <a class="el" href="Card_8cs_source.html#l01946">Card.Chara</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Card_8cs_source.html#l06562">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l01959">Card.isChara</a>, <a class="el" href="Card_8cs_source.html#l02241">Card.IsInstalled</a>, <a class="el" href="Card_8cs_source.html#l00562">Card.isMasked</a>, <a class="el" href="Chara_8cs_source.html#l00658">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l00602">Chara.IsPCParty</a>, <a class="el" href="Card_8cs_source.html#l00838">Card.isSale</a>, <a class="el" href="Card_8cs_source.html#l01967">Card.IsUnique</a>, <a class="el" href="CardManager_8cs_source.html#l00064">CardManager.listAdv</a>, <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>, and <a class="el" href="Chara_8cs_source.html#l00490">Chara.trait</a>.</p>
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00289">Trait.CanBeDestroyed</a>, <a class="el" href="Trait_8cs_source.html#l00273">Trait.CanBeHeld</a>, <a class="el" href="Trait_8cs_source.html#l00312">Trait.CanBeShipped</a>, <a class="el" href="Game_8cs_source.html#l00155">Game.cards</a>, <a class="el" href="Card_8cs_source.html#l01946">Card.Chara</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="Card_8cs_source.html#l06562">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l01959">Card.isChara</a>, <a class="el" href="Card_8cs_source.html#l02241">Card.IsInstalled</a>, <a class="el" href="Card_8cs_source.html#l00562">Card.isMasked</a>, <a class="el" href="Chara_8cs_source.html#l00658">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l00602">Chara.IsPCParty</a>, <a class="el" href="Card_8cs_source.html#l00838">Card.isSale</a>, <a class="el" href="Card_8cs_source.html#l01967">Card.IsUnique</a>, <a class="el" href="CardManager_8cs_source.html#l00064">CardManager.listAdv</a>, <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>, and <a class="el" href="Chara_8cs_source.html#l00490">Chara.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Zone_8cs_source.html#l02175">Zone.TryGetRestock&lt; T &gt;()</a>, <a class="el" href="TraitSalesTag_8cs_source.html#l00045">TrySetHeldAct()</a>, and <a class="el" href="AI__Shopping_8cs_source.html#l00010">AI_Shopping.TryShop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00494">Thing.GetName()</a>, <a class="el" href="Zone_8cs_source.html#l02175">Zone.TryGetRestock&lt; T &gt;()</a>, <a class="el" href="TraitSalesTag_8cs_source.html#l00049">TrySetHeldAct()</a>, and <a class="el" href="AI__Shopping_8cs_source.html#l00010">AI_Shopping.TryShop()</a>.</p>
 
 </div>
 </div>
@@ -846,44 +853,44 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitSalesTag_8cs_source.html#l00045">45</a> of file <a class="el" href="TraitSalesTag_8cs_source.html">TraitSalesTag.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a> || <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
-<div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>().ForEach(delegate(<a class="code hl_class" href="classCard.html">Card</a> t)</div>
+<p class="definition">Definition at line <a class="el" href="TraitSalesTag_8cs_source.html#l00049">49</a> of file <a class="el" href="TraitSalesTag_8cs_source.html">TraitSalesTag.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a> || <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
 <div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitSalesTag.html">TraitSalesTag</a> &amp;&amp; t.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
-<div class="line"><span class="lineno">   54</span>            {</div>
-<div class="line"><span class="lineno">   55</span>                p.TrySetAct(<span class="stringliteral">&quot;actRemove&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   56</span>                {</div>
-<div class="line"><span class="lineno">   57</span>                    t.Destroy();</div>
-<div class="line"><span class="lineno">   58</span>                    SE.Trash();</div>
-<div class="line"><span class="lineno">   59</span>                    return false;</div>
-<div class="line"><span class="lineno">   60</span>                }, t);</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a51e91216ecc9690a490e6b52ef798321">isSale</a>)</div>
-<div class="line"><span class="lineno">   63</span>            {</div>
-<div class="line"><span class="lineno">   64</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actRemoveSalesTag&quot;</span>.lang(t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>), delegate</div>
-<div class="line"><span class="lineno">   65</span>                {</div>
-<div class="line"><span class="lineno">   66</span>                    SE.Play(<span class="stringliteral">&quot;paper&quot;</span>);</div>
-<div class="line"><span class="lineno">   67</span>                    t.SetSale(sale: false);</div>
-<div class="line"><span class="lineno">   68</span>                    return false;</div>
-<div class="line"><span class="lineno">   69</span>                });</div>
-<div class="line"><span class="lineno">   70</span>            }</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3">CanTagSale</a>(t))</div>
-<div class="line"><span class="lineno">   72</span>            {</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordtype">int</span> price = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money, sell: <span class="keyword">true</span>, <a class="code hl_enumeration" href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a>.PlayerShop);</div>
-<div class="line"><span class="lineno">   74</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actSalesTag&quot;</span>.lang(<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ad22a457cf8e8db9df95fc389e825d528">_currency</a>(price, <span class="stringliteral">&quot;money&quot;</span>), t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>), delegate</div>
-<div class="line"><span class="lineno">   75</span>                {</div>
-<div class="line"><span class="lineno">   76</span>                    SE.Play(<span class="stringliteral">&quot;paper&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>                    t.SetSale(sale: true);</div>
-<div class="line"><span class="lineno">   78</span>                    return false;</div>
-<div class="line"><span class="lineno">   79</span>                });</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span>        });</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>().ForEach(delegate(<a class="code hl_class" href="classCard.html">Card</a> t)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitSalesTag.html">TraitSalesTag</a> &amp;&amp; t.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                p.TrySetAct(<span class="stringliteral">&quot;actRemove&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    t.Destroy();</div>
+<div class="line"><span class="lineno">   62</span>                    SE.Trash();</div>
+<div class="line"><span class="lineno">   63</span>                    return false;</div>
+<div class="line"><span class="lineno">   64</span>                }, t);</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a51e91216ecc9690a490e6b52ef798321">isSale</a>)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actRemoveSalesTag&quot;</span>.lang(t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>), delegate</div>
+<div class="line"><span class="lineno">   69</span>                {</div>
+<div class="line"><span class="lineno">   70</span>                    SE.Play(<span class="stringliteral">&quot;paper&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>                    t.SetSale(sale: false);</div>
+<div class="line"><span class="lineno">   72</span>                    return false;</div>
+<div class="line"><span class="lineno">   73</span>                });</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3">CanTagSale</a>(t))</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordtype">int</span> price = t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>(<a class="code hl_enumeration" href="CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e">CurrencyType</a>.Money, sell: <span class="keyword">true</span>, <a class="code hl_enumeration" href="PriceType_8cs.html#a482277e66af02c7d65679d7485095573">PriceType</a>.PlayerShop);</div>
+<div class="line"><span class="lineno">   78</span>                p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actSalesTag&quot;</span>.lang(<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ad22a457cf8e8db9df95fc389e825d528">_currency</a>(price, <span class="stringliteral">&quot;money&quot;</span>), t.<a class="code hl_property" href="classCard.html#a5a6f253b03f13d9e792836ee2ec678ec">Name</a>), delegate</div>
+<div class="line"><span class="lineno">   79</span>                {</div>
+<div class="line"><span class="lineno">   80</span>                    SE.Play(<span class="stringliteral">&quot;paper&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>                    t.SetSale(sale: true);</div>
+<div class="line"><span class="lineno">   82</span>                    return false;</div>
+<div class="line"><span class="lineno">   83</span>                });</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>        });</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00149">ActPlan.cs:149</a></div></div>
 <div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00344">ActPlan.cs:344</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>

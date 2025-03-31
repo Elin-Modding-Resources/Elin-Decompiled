@@ -191,6 +191,7 @@ var classTrait =
     [ "IsLighting", "classTrait.html#aa07fe850412601525bf13deba55fb67c", null ],
     [ "IsLightOn", "classTrait.html#a65fa9e571e5f9760c022cd73e922904c", null ],
     [ "IsNightOnlyLight", "classTrait.html#aceab6db1d1509b1a079539e56fc72439", null ],
+    [ "IsNoShop", "classTrait.html#a69c36cb3396a41ee14cf18a07a7ed134", null ],
     [ "IsOn", "classTrait.html#ac45c76ca50bef4ccac766640350165f4", null ],
     [ "IsOnlyUsableByPc", "classTrait.html#a7588f237a51493c30d63c55f03448771", null ],
     [ "IsOpenPath", "classTrait.html#a228e3c8aa5066a2ce0f371b7435a2a29", null ],

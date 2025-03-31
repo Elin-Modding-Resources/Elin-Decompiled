@@ -14,6 +14,7 @@ var classTraitDrink =
     [ "IdEle", "classTraitDrink.html#ad2425ac00054de2ab0c68036cdc852e4", null ],
     [ "IsBlendBase", "classTraitDrink.html#a9280301ca2bf185a8618d464d04973d6", null ],
     [ "IsNeg", "classTraitDrink.html#a6f961b99b7206af0591187f7ca7b00af", null ],
+    [ "IsNoShop", "classTraitDrink.html#ad0b2f8aaf39451418c80ed052118d03e", null ],
     [ "IsThrowMainAction", "classTraitDrink.html#a7fb1ac5d9691764a0359512f6b612150", null ],
     [ "N1", "classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796", null ],
     [ "Power", "classTraitDrink.html#a79a7994ae5c96c13dfd79126692854ec", null ],

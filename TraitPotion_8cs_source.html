@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.115 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.117 Patch 1</span>
    </div>
   </td>
  </tr>
@@ -94,9 +94,25 @@ $(document).ready(function(){initNavTree('TraitPotion_8cs_source.html',''); init
 <div class="contents">
 <a href="TraitPotion_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitPotion.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitPotion.html">TraitPotion</a> : <a class="code hl_class" href="classTraitDrink.html">TraitDrink</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">    3</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">Create</a>(<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keywordtype">int</span> ele)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        owner.refVal = ele;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].tag.Contains(<span class="stringliteral">&quot;noCopy&quot;</span>))</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(759, 10);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
+<div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00037">Card.cs:37</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassElementContainer_html_acc8918541c5d18ee2741762a612487b5"><div class="ttname"><a href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">ElementContainer.SetBase</a></div><div class="ttdeci">Element SetBase(string alias, int v, int potential=0)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00351">ElementContainer.cs:351</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
 <div class="ttc" id="aclassTraitDrink_html"><div class="ttname"><a href="classTraitDrink.html">TraitDrink</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitDrink_8cs_source.html#l00003">TraitDrink.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitPotion_html"><div class="ttname"><a href="classTraitPotion.html">TraitPotion</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00001">TraitPotion.cs:2</a></div></div>
+<div class="ttc" id="aclassTraitPotion_html_afff8d665590ded77bf0541ff9a5de82e"><div class="ttname"><a href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">TraitPotion.Create</a></div><div class="ttdeci">static void Create(Card owner, int ele)</div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00003">TraitPotion.cs:3</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

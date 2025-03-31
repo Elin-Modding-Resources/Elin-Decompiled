@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.115 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.117 Patch 1</span>
    </div>
   </td>
  </tr>
@@ -1210,24 +1210,27 @@ $(document).ready(function(){initNavTree('ELEMENT_8cs_source.html',''); initResi
 <div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span> </div>
 <div class="line"><a id="l01117" name="l01117"></a><span class="lineno"><a class="line" href="classElement.html#a2aac1d17dae88109a6d166fc67d03732"> 1117</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classElement.html#a2aac1d17dae88109a6d166fc67d03732">GetResistDamage</a>(<span class="keywordtype">int</span> dmg, <span class="keywordtype">int</span> v, <span class="keywordtype">int</span> power = 0)</div>
 <div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>    {</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>        <span class="keywordtype">int</span> resistLv = <a class="code hl_function" href="classElement.html#a4e50a377ed544c43bdf0992b97eb20fb">GetResistLv</a>(v);</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        resistLv -= power;</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        <span class="keywordflow">if</span> (resistLv &gt;= 4)</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>        {</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        }</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>        <span class="keywordflow">return</span> resistLv <span class="keywordflow">switch</span></div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>        {</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>            3 =&gt; dmg / 4, </div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>            2 =&gt; dmg / 3, </div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>            1 =&gt; dmg / 2, </div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>            0 =&gt; dmg, </div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>            -1 =&gt; dmg * 3 / 2, </div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>            -2 =&gt; dmg * 2, </div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>            _ =&gt; dmg * 2, </div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>        };</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>    }</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>}</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>        <span class="keywordtype">int</span> num = <a class="code hl_function" href="classElement.html#a4e50a377ed544c43bdf0992b97eb20fb">GetResistLv</a>(v);</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        <span class="keywordflow">if</span> (power &gt; 0 &amp;&amp; num &gt; 0)</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        {</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>            num = Mathf.Max(num - power, 0);</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>        }</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        <span class="keywordflow">if</span> (num &gt;= 4)</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>        {</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>        }</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>        <span class="keywordflow">return</span> num <span class="keywordflow">switch</span></div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>        {</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>            3 =&gt; dmg / 4, </div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>            2 =&gt; dmg / 3, </div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>            1 =&gt; dmg / 2, </div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>            0 =&gt; dmg, </div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>            -1 =&gt; dmg * 3 / 2, </div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>            -2 =&gt; dmg * 2, </div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>            _ =&gt; dmg * 2, </div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        };</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    }</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>}</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a></div><div class="ttdeci">FontColor</div><div class="ttdef"><b>Definition:</b> <a href="FontColor_8cs_source.html#l00001">FontColor.cs:2</a></div></div>
 <div class="ttc" id="aSourceValueType_8cs_html_a35f4cafd6783c747f55b3b7ff42d7d27"><div class="ttname"><a href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a></div><div class="ttdeci">SourceValueType</div><div class="ttdef"><b>Definition:</b> <a href="SourceValueType_8cs_source.html#l00001">SourceValueType.cs:2</a></div></div>
@@ -1456,7 +1459,7 @@ $(document).ready(function(){initNavTree('ELEMENT_8cs_source.html',''); initResi
 <div class="ttc" id="aclassElement_html_afeba135500efd368d722410549c45457"><div class="ttname"><a href="classElement.html#afeba135500efd368d722410549c45457">Element.ShortName</a></div><div class="ttdeci">virtual string ShortName</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00338">ELEMENT.cs:338</a></div></div>
 <div class="ttc" id="aclassElement_html_aff3eb71f147171d357ad77c34b0cf709"><div class="ttname"><a href="classElement.html#aff3eb71f147171d357ad77c34b0cf709">Element.SortVal</a></div><div class="ttdeci">int SortVal(bool charaSheet=false)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00458">ELEMENT.cs:458</a></div></div>
 <div class="ttc" id="aclassFaction_html_a1b34df7d18b957867edae88d72282499"><div class="ttname"><a href="classFaction.html#a1b34df7d18b957867edae88d72282499">Faction.charaElements</a></div><div class="ttdeci">ElementContainerFaction charaElements</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00144">FACTION.cs:144</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a86096c60374f45759ca5fe756b3a1fda"><div class="ttname"><a href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">Player.CountKeyItem</a></div><div class="ttdeci">int CountKeyItem(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01946">Player.cs:1946</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a86096c60374f45759ca5fe756b3a1fda"><div class="ttname"><a href="classPlayer.html#a86096c60374f45759ca5fe756b3a1fda">Player.CountKeyItem</a></div><div class="ttdeci">int CountKeyItem(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01947">Player.cs:1947</a></div></div>
 <div class="ttc" id="aclassReligion_html_abe2bc6614b87754e9d5dbbf2df46d25b"><div class="ttname"><a href="classReligion.html#abe2bc6614b87754e9d5dbbf2df46d25b">Religion.id</a></div><div class="ttdeci">virtual string id</div><div class="ttdef"><b>Definition:</b> <a href="Religion_8cs_source.html#l00026">Religion.cs:26</a></div></div>
 <div class="ttc" id="aclassResistance_html"><div class="ttname"><a href="classResistance.html">Resistance</a></div><div class="ttdef"><b>Definition:</b> <a href="Resistance_8cs_source.html#l00003">Resistance.cs:4</a></div></div>
 <div class="ttc" id="aclassSkinColorProfile_html_aa092806bb1b7aabf42b4112bf202c2bf"><div class="ttname"><a href="classSkinColorProfile.html#aa092806bb1b7aabf42b4112bf202c2bf">SkinColorProfile.textBad</a></div><div class="ttdeci">Color textBad</div><div class="ttdef"><b>Definition:</b> <a href="SkinColorProfile_8cs_source.html#l00031">SkinColorProfile.cs:31</a></div></div>
@@ -1470,7 +1473,7 @@ $(document).ready(function(){initNavTree('ELEMENT_8cs_source.html',''); initResi
 <div class="ttc" id="aclassSourceElement_html"><div class="ttname"><a href="classSourceElement.html">SourceElement</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00007">SourceElement.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a1c3e4bbd9eedfe0790974b85655a72ff"><div class="ttname"><a href="classSourceManager.html#a1c3e4bbd9eedfe0790974b85655a72ff">SourceManager.keyItems</a></div><div class="ttdeci">SourceKeyItem keyItems</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00086">SourceManager.cs:86</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
-<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="classSpell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> <a href="SPELL_8cs_source.html#l00472">SPELL.cs:473</a></div></div>
+<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="classSpell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> <a href="SPELL_8cs_source.html#l00474">SPELL.cs:475</a></div></div>
 <div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
 <div class="ttc" id="aclassSpriteSheet_html_a3ba485078c417ef19ea17e2f624dba02"><div class="ttname"><a href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">SpriteSheet.Get</a></div><div class="ttdeci">static Sprite Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.cs:28</a></div></div>
 <div class="ttc" id="aclassStanceManaCost_html"><div class="ttname"><a href="classStanceManaCost.html">StanceManaCost</a></div><div class="ttdef"><b>Definition:</b> <a href="StanceManaCost_8cs_source.html#l00001">StanceManaCost.cs:2</a></div></div>

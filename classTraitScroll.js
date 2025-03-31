@@ -4,6 +4,7 @@ var classTraitScroll =
     [ "GetRefElement", "classTraitScroll.html#a0e073abdcec7d8ab46d4835511d90bc0", null ],
     [ "GetValue", "classTraitScroll.html#a2da72f058b8d178c5bb4711b594a0178", null ],
     [ "eleParent", "classTraitScroll.html#af9a2497cf6c86cfd800d295aae53061d", null ],
+    [ "IsNoShop", "classTraitScroll.html#a463b2bf283a2cdcc2f42e218ba9503ae", null ],
     [ "MTPValue", "classTraitScroll.html#afd7a0040e801c53bac9e70d29fd078e2", null ],
     [ "source", "classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d", null ],
     [ "UseSourceValue", "classTraitScroll.html#a1373d9916e36ca2f4d2e64e9ca16261b", null ]

@@ -188,7 +188,7 @@ var classCard =
     [ "SetDirtyWeight", "classCard.html#a84191d98263a3defe53d9ee3ebed5241", null ],
     [ "SetEncLv", "classCard.html#aa496921a5e1a0f5339eb8b1cdfaf9cd3", null ],
     [ "SetFreePos", "classCard.html#ab720b5016c9a957e550db25229f44eeb", null ],
-    [ "SetHidden", "classCard.html#a2cb75681cd72e1dc00182c0e4254fb21", null ],
+    [ "SetHidden", "classCard.html#ab188048630cbc3853d60cd4997981c65", null ],
     [ "SetImage", "classCard.html#abc0b164a6b0e02658891df271f825f82", null ],
     [ "SetImage", "classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5", null ],
     [ "SetLv", "classCard.html#a58f06539b1340f90f343bdab15828ad2", null ],

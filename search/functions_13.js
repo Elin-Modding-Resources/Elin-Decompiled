@@ -171,7 +171,7 @@ var searchData=
   ['setgridcontextmenu_168',['SetGridContextMenu',['../classWidget.html#a1ad7837f095382884364ecba60c0a4cb',1,'Widget']]],
   ['setgroup_169',['SetGroup',['../classContentConfigGame.html#adcba3d522936faac0160bdb57c404b30',1,'ContentConfigGame.SetGroup()'],['../classLayerConfig.html#a8d574c2c4a6012072df05222fe791cb3',1,'LayerConfig.SetGroup()'],['../classUISelectableGroup.html#afb8e1c9370c36a274e01c820397d6b62',1,'UISelectableGroup.SetGroup()']]],
   ['setheader_170',['SetHeader',['../classLayerList.html#a7971e018f71abea1f320727dd4bee1b1',1,'LayerList.SetHeader()'],['../classUIInventory.html#a552b7951f587327da5458edd9db6f92f',1,'UIInventory.SetHeader()']]],
-  ['sethidden_171',['SetHidden',['../classCard.html#a2cb75681cd72e1dc00182c0e4254fb21',1,'Card']]],
+  ['sethidden_171',['SetHidden',['../classCard.html#ab188048630cbc3853d60cd4997981c65',1,'Card']]],
   ['sethighlight_172',['SetHighlight',['../classPoint.html#a24faf995bc1f381ad3c29edd597fbf1b',1,'Point']]],
   ['sethighlighttarget_173',['SetHighlightTarget',['../classUIContextMenu.html#a58906162c75d3440177a07ef893c3b30',1,'UIContextMenu.SetHighlightTarget(UIButton t)'],['../classUIContextMenu.html#aa6100f4ca5d2982fc5f602296c26b610',1,'UIContextMenu.SetHighlightTarget(UIItem i)'],['../classLayerList.html#aa0a7f4c8ccffc506c3dee0fdc8e29170',1,'LayerList.SetHighlightTarget()']]],
   ['sethobar_174',['SetHobar',['../classHotbarManager.html#a6d9fbb5e886f6dfdb09071c05212b0f6',1,'HotbarManager']]],

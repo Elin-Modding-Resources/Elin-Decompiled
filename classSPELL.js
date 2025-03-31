@@ -204,6 +204,7 @@ var classSPELL =
     [ "SpWeb", "classSPELL.html#a833f8fd4b6f6ea8d6a7e22a3eed15824", null ],
     [ "SpWisdom", "classSPELL.html#a78d907bc34a4fb43ad0b3f749b1a3e36", null ],
     [ "SpWish", "classSPELL.html#a63a4d359935d0084710a7f3bdb38fa60", null ],
+    [ "sword_", "classSPELL.html#a1279ebdffb882763ebbdb75adef5d39a", null ],
     [ "weapon_", "classSPELL.html#a4b043d098873f9b0f9ffe38b3faf1606", null ],
     [ "weapon_Acid", "classSPELL.html#a5de2838d16e4e9c22070c4b398142fec", null ],
     [ "weapon_Chaos", "classSPELL.html#a0e777798807cf889dd6d118d51e71e95", null ],
