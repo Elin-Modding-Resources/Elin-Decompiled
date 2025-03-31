@@ -52,6 +52,10 @@ public class TraitDemitas : TraitUniqueChara
 
 	public override bool CanCopy(Thing t)
 	{
+		if (t.HasElement(759))
+		{
+			return false;
+		}
 		return t.trait is TraitSpellbook;
 	}
 }

@@ -45,7 +45,7 @@ public class TraitBaseSpellbook : TraitScroll
 		switch (BookType)
 		{
 		case Type.RandomSpell:
-			owner.refVal = selecter.Select(lv);
+			TraitSpellbook.Create(owner, selecter.Select(lv));
 			break;
 		case Type.Ancient:
 		{

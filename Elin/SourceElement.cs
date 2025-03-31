@@ -380,6 +380,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			AddRow(ele, num + num2 + 700, "miasma_");
 			AddRow(ele, num + num2 + 800, "weapon_");
 			AddRow(ele, num + num2 + 900, "puddle_");
+			AddRow(ele, num + num2 + 1000, "sword_");
 			num2++;
 		}
 	}

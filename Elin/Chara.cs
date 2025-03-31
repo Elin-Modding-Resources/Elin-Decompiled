@@ -1246,7 +1246,7 @@ public class Chara : Card, IPathfindWalker
 			return;
 		}
 		memberType = FactionMemberType.Default;
-		foreach (Thing item in things.List((Thing a) => a.HasTag(CTAG.godArtifact)))
+		foreach (Thing item in things.List((Thing a) => a.HasTag(CTAG.godArtifact)).ToList())
 		{
 			EClass.pc.PickOrDrop(EClass.pc.pos, item);
 		}
@@ -6445,7 +6445,7 @@ public class Chara : Card, IPathfindWalker
 				if (questDebt != null && questDebt.paid)
 				{
 					questDebt.stage++;
-					if (questDebt.stage > 6)
+					if (questDebt.stage > 7)
 					{
 						questDebt.stage = 1;
 					}

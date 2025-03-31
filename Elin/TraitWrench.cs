@@ -117,7 +117,7 @@ public class TraitWrench : Trait
 
 	public override void TrySetHeldAct(ActPlan p)
 	{
-		p.pos.Things.ForEach(delegate(Thing t)
+		p.pos.Things.ForeachReverse(delegate(Thing t)
 		{
 			if (IsValidTarget(t))
 			{

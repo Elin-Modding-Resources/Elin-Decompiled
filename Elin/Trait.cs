@@ -61,6 +61,8 @@ public class Trait : EClass
 
 	public virtual bool IsFloating => false;
 
+	public virtual bool IsNoShop => false;
+
 	public virtual bool IsGround => false;
 
 	public virtual bool IsOnlyUsableByPc => false;
@@ -1782,7 +1784,7 @@ public class Trait : EClass
 					for (int i = 0; (float)i < num; i++)
 					{
 						Thing thing = CreateStock();
-						if ((!(thing.trait is TraitRod) || thing.c_charges != 0) && thing.GetPrice() > 0)
+						if ((!thing.trait.IsNoShop || (ShopType == ShopType.LoytelMart && EClass.player.flags.loytelMartLv >= 2)) && (!(thing.trait is TraitRod) || thing.c_charges != 0) && thing.GetPrice() > 0)
 						{
 							t.AddThing(thing);
 						}
@@ -2169,7 +2171,9 @@ public class Trait : EClass
 				case ShopType.Drug:
 					return FromFilter("shop_drug");
 				case ShopType.LoytelMart:
-					if (EClass.player.flags.loytelMartLv >= 1)
+				{
+					int loytelMartLv = EClass.player.flags.loytelMartLv;
+					if (loytelMartLv >= 1)
 					{
 						if (EClass.rnd(10) == 0)
 						{
@@ -2192,7 +2196,9 @@ public class Trait : EClass
 							return Create("1165");
 						}
 					}
+					_ = 2;
 					return FromFilter("shop_junk");
+				}
 				case ShopType.Junk:
 					return FromFilter("shop_junk");
 				case ShopType.Souvenir:

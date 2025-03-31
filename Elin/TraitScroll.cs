@@ -20,6 +20,18 @@ public class TraitScroll : Trait
 
 	public virtual bool UseSourceValue => true;
 
+	public override bool IsNoShop
+	{
+		get
+		{
+			if (source != null)
+			{
+				return source.tag.Contains("noShop");
+			}
+			return false;
+		}
+	}
+
 	public override SourceElement.Row GetRefElement()
 	{
 		return source;

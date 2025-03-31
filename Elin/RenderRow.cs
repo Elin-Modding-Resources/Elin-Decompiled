@@ -273,7 +273,6 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		{
 			dir = skin;
 			skin = 0;
-			Debug.Log(idString + "/" + dir + "/" + skin);
 		}
 		if (skin != 0 && skin >= sprites.GetLength(0))
 		{

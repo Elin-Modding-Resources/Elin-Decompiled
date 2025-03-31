@@ -1586,6 +1586,7 @@ public class Player : EClass
 					case "weapon":
 					case "funnel":
 					case "miasma":
+					case "sword":
 						flag = true;
 						break;
 					}

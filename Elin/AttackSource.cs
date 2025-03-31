@@ -18,5 +18,6 @@ public enum AttackSource
 	Wrath,
 	ManaBackfire,
 	DeathSentense,
-	Shockwave
+	Shockwave,
+	MagicSword
 }

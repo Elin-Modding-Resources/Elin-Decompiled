@@ -1116,13 +1116,16 @@ public class Element : EClass
 
 	public static int GetResistDamage(int dmg, int v, int power = 0)
 	{
-		int resistLv = GetResistLv(v);
-		resistLv -= power;
-		if (resistLv >= 4)
+		int num = GetResistLv(v);
+		if (power > 0 && num > 0)
+		{
+			num = Mathf.Max(num - power, 0);
+		}
+		if (num >= 4)
 		{
 			return 0;
 		}
-		return resistLv switch
+		return num switch
 		{
 			3 => dmg / 4, 
 			2 => dmg / 3, 

@@ -286,6 +286,8 @@ public class ActMelee : ActBaseAttack
 						break;
 					}
 				}
+				Act.TC = _tc;
+				Act.TP = _tp;
 				if (w != null && w.c_ammo > 0 && !Act.CC.HasCondition<ConReload>())
 				{
 					bool flag2 = true;

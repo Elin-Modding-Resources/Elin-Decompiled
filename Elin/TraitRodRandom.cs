@@ -30,8 +30,7 @@ public class TraitRodRandom : TraitRod
 
 	public override void OnCreate(int lv)
 	{
-		owner.c_charges = EClass.rnd(source.charge * 150 / 100);
-		owner.refVal = selecter.Select(lv);
+		TraitRod.Create(owner, selecter.Select(lv));
 	}
 
 	public override string GetName()

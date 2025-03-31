@@ -50,7 +50,7 @@ public class ENC
 
 	public const int mod_chaser = 620;
 
-	public const int bane_machine = 465;
+	public const int loving = 417;
 
 	public const int mod_splash = 608;
 
@@ -70,17 +70,17 @@ public class ENC
 
 	public const int negateBlind = 421;
 
-	public const int innocence = 418;
+	public const int negatePoison = 420;
 
-	public const int loving = 417;
+	public const int innocence = 418;
 
 	public const int seeInvisible = 416;
 
 	public const int invisibility = 415;
 
-	public const int encHit = 414;
+	public const int breathing = 429;
 
-	public const int slowCorruption = 412;
+	public const int encHit = 414;
 
 	public const int encSpell = 411;
 
@@ -92,7 +92,7 @@ public class ENC
 
 	public const int travelSpeed = 407;
 
-	public const int resMutation = 406;
+	public const int mod_talisman = 609;
 
 	public const int slowDecay = 405;
 
@@ -106,15 +106,15 @@ public class ENC
 
 	public const int negateTeleport = 400;
 
-	public const int mod_talisman = 609;
-
-	public const int breathing = 429;
+	public const int slowCorruption = 412;
 
 	public const int sustain_STR = 440;
 
-	public const int negatePoison = 420;
+	public const int resMutation = 406;
 
 	public const int sustain_DEX = 442;
+
+	public const int sustain_END = 441;
 
 	public const int mod_scatter = 607;
 
@@ -123,8 +123,6 @@ public class ENC
 	public const int mod_precision = 605;
 
 	public const int mod_ammo_recover = 604;
-
-	public const int sustain_END = 441;
 
 	public const int mod_rapid = 602;
 
@@ -148,38 +146,40 @@ public class ENC
 
 	public const int mod_ammo_knockback = 603;
 
-	public const int sustain_WIL = 445;
-
-	public const int bane_man = 464;
-
-	public const int bane_animal = 463;
-
-	public const int bane_fairy = 462;
-
-	public const int bane_undead = 461;
-
-	public const int bane_dragon = 460;
-
-	public const int sustain_CHA = 447;
-
 	public const int sustain_MAG = 446;
 
 	public const int bane_god = 466;
 
 	public const int sustain_LER = 444;
 
+	public const int sustain_WIL = 445;
+
+	public const int sustain_CHA = 447;
+
+	public const int bane_dragon = 460;
+
 	public const int sustain_PER = 443;
+
+	public const int bane_fairy = 462;
+
+	public const int bane_animal = 463;
+
+	public const int bane_man = 464;
+
+	public const int bane_machine = 465;
+
+	public const int bane_undead = 461;
 
 	public static readonly int[] IDS = new int[85]
 	{
 		653, 652, 651, 650, 624, 622, 623, 640, 654, 641,
 		655, 851, 660, 661, 662, 663, 664, 665, 666, 850,
-		621, 865, 852, 656, 620, 465, 608, 428, 427, 426,
-		425, 424, 423, 422, 421, 418, 417, 416, 415, 414,
-		412, 411, 410, 409, 408, 407, 406, 405, 404, 403,
-		402, 401, 400, 609, 429, 440, 420, 442, 607, 606,
-		605, 604, 441, 602, 601, 600, 484, 483, 482, 481,
-		480, 468, 467, 603, 445, 464, 463, 462, 461, 460,
-		447, 446, 466, 444, 443
+		621, 865, 852, 656, 620, 417, 608, 428, 427, 426,
+		425, 424, 423, 422, 421, 420, 418, 416, 415, 429,
+		414, 411, 410, 409, 408, 407, 609, 405, 404, 403,
+		402, 401, 400, 412, 440, 406, 442, 441, 607, 606,
+		605, 604, 602, 601, 600, 484, 483, 482, 481, 480,
+		468, 467, 603, 446, 466, 444, 445, 447, 460, 443,
+		462, 463, 464, 465, 461
 	};
 }

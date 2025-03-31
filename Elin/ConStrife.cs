@@ -26,10 +26,6 @@ public class ConStrife : BaseBuff
 
 	public void AddKill(Chara c)
 	{
-		if (c == null)
-		{
-			return;
-		}
 		if (c.IsPCFactionOrMinion)
 		{
 			if (c.IsMinion)

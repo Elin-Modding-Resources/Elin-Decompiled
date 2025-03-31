@@ -60,6 +60,7 @@ public class ActEffect : EClass
 		foreach (Point p in points)
 		{
 			bool flag2 = true;
+			AttackSource attackSource = AttackSource.None;
 			switch (id)
 			{
 			case EffectId.Explosive:
@@ -191,12 +192,16 @@ public class ActEffect : EClass
 				{
 					continue;
 				}
-				if ((uint)(id - 250) <= 1u && c.isChara && CC.isChara)
+				if (((uint)(id - 250) <= 1u || id == EffectId.Sword) && c.isChara && CC.isChara)
 				{
 					c.Chara.RequestProtection(CC.Chara, delegate(Chara a)
 					{
 						c = a;
 					});
+				}
+				if (id == EffectId.Sword)
+				{
+					attackSource = AttackSource.MagicSword;
 				}
 				int num4 = 0;
 				bool isChara = CC.isChara;
@@ -217,8 +222,9 @@ public class ActEffect : EClass
 						Debug.Log(text2);
 					}
 					num4 = dice.Roll();
-					if (id == EffectId.Earthquake)
+					switch (id)
 					{
+					case EffectId.Earthquake:
 						if (c.HasCondition<ConGravity>())
 						{
 							num4 = dice.RollMax() * 2;
@@ -227,11 +233,20 @@ public class ActEffect : EClass
 						{
 							num4 /= 2;
 						}
+						break;
+					case EffectId.Sword:
+						num4 = num4 * (int)Mathf.Min(70f + Mathf.Sqrt(CC.Evalue(101)) * 3f, 200f) / 100;
+						break;
 					}
 					if (id == EffectId.Ball || id == EffectId.BallBubble || id == EffectId.Explosive)
 					{
 						num4 = num4 * 100 / (90 + point.Distance(p) * 10);
 					}
+				}
+				if (id == EffectId.Sword)
+				{
+					c.PlaySound("ab_magicsword");
+					c.PlayEffect("hit_slash");
 				}
 				if ((actref.noFriendlyFire && !CC.Chara.IsHostile(c as Chara)) || (flag && c == CC))
 				{
@@ -306,7 +321,7 @@ public class ActEffect : EClass
 					num4 = num4 * 100 / (100 + RapidCount * 50);
 				}
 				num4 = num4 * Act.powerMod / 100;
-				c.DamageHP(num4, e.id, power * num / 100, AttackSource.None, chara ?? CC);
+				c.DamageHP(num4, e.id, power * num / 100, attackSource, chara ?? CC);
 				if (c.IsAliveInCurrentZone && CC.IsAliveInCurrentZone && id == EffectId.DrainMana && c.isChara && CC.isChara && c.Chara.mana.value > 0)
 				{
 					int num6 = num4 * num / 100;
@@ -408,10 +423,10 @@ public class ActEffect : EClass
 		{
 		case EffectId.Earthquake:
 		{
-			List<Point> list4 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
-			if (list4.Count == 0)
+			List<Point> list3 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
+			if (list3.Count == 0)
 			{
-				list4.Add(CC.pos.Copy());
+				list3.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_earthquake", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -423,7 +438,7 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list4, actRef, "spell_earthquake");
+			DamageEle(CC, id, power, element, list3, actRef, "spell_earthquake");
 			break;
 		}
 		case EffectId.Meteor:
@@ -431,10 +446,10 @@ public class ActEffect : EClass
 			EffectMeteor.Create(cc.pos, 6, 10, delegate
 			{
 			});
-			List<Point> list3 = EClass._map.ListPointsInCircle(CC.pos, 10f);
-			if (list3.Count == 0)
+			List<Point> list4 = EClass._map.ListPointsInCircle(CC.pos, 10f);
+			if (list4.Count == 0)
 			{
-				list3.Add(CC.pos.Copy());
+				list4.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_ball", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -446,12 +461,13 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list3, actRef, "spell_ball");
+			DamageEle(CC, id, power, element, list4, actRef, "spell_ball");
 			return;
 		}
 		case EffectId.Hand:
 		case EffectId.DrainBlood:
 		case EffectId.DrainMana:
+		case EffectId.Sword:
 		{
 			List<Point> list5 = new List<Point>();
 			list5.Add(tp.Copy());
@@ -460,7 +476,25 @@ public class ActEffect : EClass
 			{
 				CC.PlaySound("spell_hand");
 			});
-			if (!DamageEle(CC, id, power, element, list5, actRef, (id == EffectId.DrainBlood || id == EffectId.DrainMana) ? "" : "spell_hand"))
+			Chara cC = CC;
+			EffectId id3 = id;
+			Element e = element;
+			ActRef actref = actRef;
+			object lang;
+			switch (id)
+			{
+			default:
+				lang = "spell_hand";
+				break;
+			case EffectId.Sword:
+				lang = "spell_sword";
+				break;
+			case EffectId.DrainBlood:
+			case EffectId.DrainMana:
+				lang = "";
+				break;
+			}
+			if (!DamageEle(cC, id3, power, e, list5, actref, (string)lang))
 			{
 				CC.Say("spell_hand_miss", CC, element.Name.ToLower());
 			}
@@ -487,7 +521,7 @@ public class ActEffect : EClass
 				CC.Say("summon_ally_fail", CC);
 				return;
 			}
-			string id3 = actRef.n1;
+			string id4 = actRef.n1;
 			int num3 = 1;
 			int num4 = -1;
 			int radius = 3;
@@ -504,7 +538,7 @@ public class ActEffect : EClass
 				num3 = 1 + EClass.rnd(2);
 				break;
 			case "special_force":
-				id3 = "army_palmia";
+				id4 = "army_palmia";
 				num3 = 4 + EClass.rnd(2);
 				num5 = EClass._zone.DangerLv;
 				break;
@@ -540,7 +574,7 @@ public class ActEffect : EClass
 					"monster" => CharaGen.CreateFromFilter("c_dungeon", power / 10), 
 					"animal" => CharaGen.CreateFromFilter("c_animal", power / 15), 
 					"fire" => CharaGen.CreateFromElement("Fire", power / 10), 
-					_ => CharaGen.Create(id3, power / 10), 
+					_ => CharaGen.Create(id4, power / 10), 
 				};
 				if (chara2 == null)
 				{

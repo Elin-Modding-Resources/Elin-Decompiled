@@ -30,7 +30,7 @@ public class TraitPotionRandom : TraitPotion
 
 	public override void OnCreate(int lv)
 	{
-		owner.refVal = selecter.Select(lv);
+		TraitPotion.Create(owner, selecter.Select(lv));
 	}
 
 	public override string GetName()

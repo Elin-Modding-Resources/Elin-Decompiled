@@ -34,6 +34,10 @@ public class TraitSalesTag : Trait
 			{
 				return false;
 			}
+			if (t.trait is TraitMannequin)
+			{
+				return false;
+			}
 		}
 		if (t.GetPrice(CurrencyType.Money, sell: true, PriceType.PlayerShop) == 0)
 		{

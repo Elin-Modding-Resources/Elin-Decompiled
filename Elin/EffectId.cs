@@ -114,5 +114,6 @@ public enum EffectId
 	DropMine = 290,
 	ThrowPotion = 291,
 	DrainMana = 292,
-	Swarm = 293
+	Swarm = 293,
+	Sword = 294
 }

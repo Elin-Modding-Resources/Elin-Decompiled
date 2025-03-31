@@ -153,6 +153,13 @@ public class ThingGen : CardGen
 		return CreateSpellbook(EClass.sources.elements.alias[alias].id, num);
 	}
 
+	public static Thing CreateSpellbook(int ele, int num = 1)
+	{
+		Thing thing = Create("spellbook").SetNum(num);
+		TraitSpellbook.Create(thing, ele);
+		return thing;
+	}
+
 	public static Thing CreateSkillbook(int ele, int num = 1)
 	{
 		Thing thing = Create("book_skill").SetNum(num);
@@ -160,31 +167,31 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
-	public static Thing CreateSpellbook(int ele, int num = 1)
-	{
-		Thing thing = Create("spellbook").SetNum(num);
-		thing.refVal = ele;
-		return thing;
-	}
-
 	public static Thing CreateScroll(int ele, int num = 1)
 	{
 		Thing thing = Create("scroll_random").SetNum(num);
-		thing.refVal = ele;
+		TraitSpellbook.Create(thing, ele);
+		return thing;
+	}
+
+	public static Thing CreateRod(int ele)
+	{
+		Thing thing = Create("rod");
+		TraitRod.Create(thing, ele);
 		return thing;
 	}
 
 	public static Thing CreatePotion(int ele, int num = 1)
 	{
 		Thing thing = Create("1163").SetNum(num);
-		thing.refVal = ele;
+		TraitPotion.Create(thing, ele);
 		return thing;
 	}
 
 	public static Thing CreatePerfume(int ele, int num = 1)
 	{
 		Thing thing = Create("perfume").SetNum(num);
-		thing.refVal = ele;
+		TraitPotion.Create(thing, ele);
 		return thing;
 	}
 

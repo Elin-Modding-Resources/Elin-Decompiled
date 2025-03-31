@@ -6,6 +6,18 @@ public class TraitRod : TraitTool
 
 	public virtual string aliasEle => null;
 
+	public override bool IsNoShop
+	{
+		get
+		{
+			if (source != null)
+			{
+				return source.tag.Contains("noShop");
+			}
+			return false;
+		}
+	}
+
 	public virtual SourceElement.Row source => null;
 
 	public virtual int Power
@@ -49,6 +61,7 @@ public class TraitRod : TraitTool
 		if (owner.id == "rod_wish")
 		{
 			owner.c_charges = 1;
+			owner.elements.SetBase(759, 30);
 		}
 	}
 
@@ -58,5 +71,16 @@ public class TraitRod : TraitTool
 		{
 			trait = this
 		}, owner);
+	}
+
+	public static void Create(Card owner, int ele)
+	{
+		owner.refVal = ele;
+		SourceElement.Row row = EClass.sources.elements.map[ele];
+		owner.c_charges = EClass.rnd(row.charge * 150 / 100);
+		if (row.tag.Contains("noCopy"))
+		{
+			owner.elements.SetBase(759, 10);
+		}
 	}
 }

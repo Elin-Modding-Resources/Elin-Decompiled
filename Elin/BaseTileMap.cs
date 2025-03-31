@@ -1660,17 +1660,24 @@ public class BaseTileMap : EMono
 				else
 				{
 					param.liquidLv = liquidLv;
-					if (chara.Pref.Float && liquidLv > 0 && !hasBridge && !flag)
+					if (liquidLv > 0)
 					{
-						float num16 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
-						orgY += 0.01f * floatY - num16;
-						_actorPos.y += 0.01f * floatY - num16;
-						int num17 = TileType.FloorWaterShallow.LiquidLV * 10;
-						num17 -= (int)(floatY * 0.5f);
-						param.liquidLv = num17;
-					}
-					if (param.liquidLv > 0)
-					{
+						if (chara.Pref.Float && !flag && !hasBridge)
+						{
+							if (liquidLv > 20)
+							{
+								float num16 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
+								orgY += 0.01f * floatY - num16;
+								_actorPos.y += 0.01f * floatY - num16;
+								int num17 = TileType.FloorWaterShallow.LiquidLV * 10;
+								num17 -= (int)(floatY * 0.5f);
+								param.liquidLv = num17;
+							}
+							else
+							{
+								param.liquidLv -= 20;
+							}
+						}
 						param.liquidLv += chara.Pref.liquidMod;
 						if (param.liquidLv < 1)
 						{

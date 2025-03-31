@@ -30,6 +30,18 @@ public class TraitDrink : Trait
 
 	public virtual SourceElement.Row source => null;
 
+	public override bool IsNoShop
+	{
+		get
+		{
+			if (source != null)
+			{
+				return source.tag.Contains("noShop");
+			}
+			return false;
+		}
+	}
+
 	public virtual string AliasEle => N1;
 
 	public virtual string N1 => GetParam(3);

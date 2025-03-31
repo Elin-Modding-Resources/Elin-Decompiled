@@ -41,7 +41,7 @@ public class QuestDebt : QuestProgression
 
 	public bool CanGiveBill()
 	{
-		return stage < 6;
+		return stage < 7;
 	}
 
 	public int GetBillAmount()
@@ -87,6 +87,10 @@ public class QuestDebt : QuestProgression
 			break;
 		case 6:
 			EClass.player.flags.loytelMartLv = 1;
+			Msg.Say("upgradeLoytelMart");
+			break;
+		case 7:
+			EClass.player.flags.loytelMartLv = 2;
 			Msg.Say("upgradeLoytelMart");
 			break;
 		}

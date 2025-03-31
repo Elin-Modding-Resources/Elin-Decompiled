@@ -924,6 +924,9 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
+			EClass.pc.Pick(ThingGen.CreateSpellbook(8550));
+			EClass.pc.Pick(ThingGen.CreatePotion(8550));
+			EClass.pc.Pick(ThingGen.CreateSpellbook(9004));
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
