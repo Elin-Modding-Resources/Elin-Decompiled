@@ -1035,9 +1035,24 @@ public class Element : EClass
 		{
 			result2.type = Act.CostType.SP;
 			result2.cost = source.cost[0];
-			if (source.id == 6020)
+			switch (source.id)
 			{
+			case 6020:
 				result2.cost = c.stamina.max / 3 + 10;
+				break;
+			case 6664:
+			{
+				int num2 = -2;
+				foreach (BodySlot slot in c.body.slots)
+				{
+					if (slot.thing != null && slot.thing.IsMeleeWeapon)
+					{
+						num2++;
+					}
+				}
+				result2.cost += num2 * 2;
+				break;
+			}
 			}
 		}
 		if (!c.IsPC && result2.cost > 2)

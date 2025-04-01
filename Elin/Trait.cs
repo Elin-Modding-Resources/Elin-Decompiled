@@ -1784,7 +1784,7 @@ public class Trait : EClass
 					for (int i = 0; (float)i < num; i++)
 					{
 						Thing thing = CreateStock();
-						if ((!thing.trait.IsNoShop || (ShopType == ShopType.LoytelMart && EClass.player.flags.loytelMartLv >= 2)) && (!(thing.trait is TraitRod) || thing.c_charges != 0) && thing.GetPrice() > 0)
+						if ((!thing.trait.IsNoShop || (ShopType == ShopType.LoytelMart && (EClass.debug.enable || EClass.player.flags.loytelMartLv >= 2))) && (!(thing.trait is TraitRod) || thing.c_charges != 0) && thing.GetPrice() > 0)
 						{
 							t.AddThing(thing);
 						}
@@ -1869,7 +1869,7 @@ public class Trait : EClass
 						Add("ticket_armpillow", 1, 0);
 						Add("ticket_champagne", 1, 0);
 					}
-					for (int num6 = 0; num6 < (EClass.debug.enable ? 30 : 3); num6++)
+					for (int num6 = 0; num6 < 3; num6++)
 					{
 						if (EClass.rnd(5) == 0)
 						{
@@ -2029,9 +2029,9 @@ public class Trait : EClass
 				{
 				case ShopType.Dye:
 				{
-					Thing thing4 = ThingGen.Create("dye").SetNum(15 + EClass.rnd(30));
-					thing4.ChangeMaterial(EClass.sources.materials.rows.RandomItem().alias);
-					return thing4;
+					Thing thing = ThingGen.Create("dye").SetNum(15 + EClass.rnd(30));
+					thing.ChangeMaterial(EClass.sources.materials.rows.RandomItem().alias);
+					return thing;
 				}
 				case ShopType.GeneralExotic:
 					return FromFilter("shop_generalExotic");
@@ -2053,12 +2053,12 @@ public class Trait : EClass
 					return FromFilter("shop_magic");
 				case ShopType.Ecopo:
 				{
-					Thing thing = TraitSeed.MakeRandomSeed(enc: true);
+					Thing thing3 = TraitSeed.MakeRandomSeed(enc: true);
 					if (EClass.rnd(2) == 0)
 					{
-						TraitSeed.LevelSeed(thing, (thing.trait as TraitSeed).row, 1);
+						TraitSeed.LevelSeed(thing3, (thing3.trait as TraitSeed).row, 1);
 					}
-					return thing;
+					return thing3;
 				}
 				case ShopType.Healer:
 				{
@@ -2091,10 +2091,10 @@ public class Trait : EClass
 				case ShopType.Milk:
 					if (EClass._zone is Zone_Nefu && EClass.rnd(2) == 0)
 					{
-						Thing thing3 = ThingGen.Create("milk");
-						thing3.MakeRefFrom(EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "mifu" || r.race == "nefu").RandomItem().model);
-						Debug.Log(thing3);
-						return thing3;
+						Thing thing4 = ThingGen.Create("milk");
+						thing4.MakeRefFrom(EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "mifu" || r.race == "nefu").RandomItem().model);
+						Debug.Log(thing4);
+						return thing4;
 					}
 					return Create("milk");
 				case ShopType.Map:
@@ -2191,12 +2191,28 @@ public class Trait : EClass
 						{
 							return Create("water").SetPriceFix(1000);
 						}
-						if (EClass.rnd(EClass.debug.enable ? 20 : 1000) == 0)
+						if (EClass.rnd(1000) == 0)
 						{
 							return Create("1165");
 						}
 					}
-					_ = 2;
+					if ((loytelMartLv >= 2 || EClass.debug.enable) && EClass.rnd(10) == 0)
+					{
+						SourceElement.Row row = EClass.sources.elements.rows.Where((SourceElement.Row r) => r.tag.Contains("loytelMart") && ShopLv + 10 >= r.LV).ToList().RandomItemWeighted((SourceElement.Row r) => r.chance);
+						switch ((from _s in row.thing.ToCharArray()
+							where _s != ' '
+							select _s).RandomItem())
+						{
+						case 'B':
+							return ThingGen.CreateSpellbook(row.id);
+						case 'P':
+							return ThingGen.CreatePotion(row.id);
+						case 'R':
+							return ThingGen.CreateRod(row.id);
+						case 'S':
+							return ThingGen.CreateScroll(row.id);
+						}
+					}
 					return FromFilter("shop_junk");
 				}
 				case ShopType.Junk:

@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class ZoneEventSubdue : ZoneEventQuest
 {
@@ -13,7 +14,7 @@ public class ZoneEventSubdue : ZoneEventQuest
 	{
 		if (!EClass.game.isLoading)
 		{
-			EClass._zone._dangerLv = base.quest.DangerLv;
+			EClass._zone._dangerLv = Mathf.Max(base.quest.DangerLv - 5, 1);
 			Spawn(4 + base.quest.difficulty * 2 + EClass.rnd(5));
 			AggroEnemy(15);
 			EClass._zone.SetBGM(102);

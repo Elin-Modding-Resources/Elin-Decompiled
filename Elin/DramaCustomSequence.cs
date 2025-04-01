@@ -110,56 +110,19 @@ public class DramaCustomSequence : EClass
 				});
 			}
 		}
-		if (c.IsPCParty)
+		if (c.IsPCParty && !c.isSummon)
 		{
-			if (!c.isSummon)
+			if (EClass._zone.IsPCFaction && c.homeBranch != EClass._zone.branch)
 			{
-				if (EClass._zone.IsPCFaction && c.homeBranch != EClass._zone.branch)
-				{
-					Choice2("daMakeHome", "_makeHome");
-				}
-				if (c.host == null && c.homeZone != null)
-				{
-					Choice2("daLeaveParty".lang(c.homeZone.Name), "_leaveParty");
-				}
+				Choice2("daMakeHome", "_makeHome");
+			}
+			if (c.host == null && c.homeZone != null)
+			{
+				Choice2("daLeaveParty".lang(c.homeZone.Name), "_leaveParty");
 			}
 		}
-		else if (c.memberType != FactionMemberType.Livestock && !c.IsGuest())
+		if (c.memberType != FactionMemberType.Livestock && !c.IsGuest())
 		{
-			if (c.trait.CanGuide)
-			{
-				foreach (Quest item3 in EClass.game.quests.list)
-				{
-					if (!item3.IsRandomQuest)
-					{
-						continue;
-					}
-					Chara dest = ((item3.chara != null && item3.chara.IsAliveInCurrentZone) ? item3.chara : null);
-					if (dest != null)
-					{
-						Choice2("daGoto".lang(dest.Name, item3.GetTitle() ?? ""), "_goto").SetOnClick(delegate
-						{
-							destCard = dest;
-						});
-					}
-					if (!(item3 is QuestDeliver { IsDeliver: not false } questDeliver2) || questDeliver2.DestZone != EClass._zone || !EClass._zone.dictCitizen.ContainsKey(questDeliver2.uidTarget))
-					{
-						continue;
-					}
-					Chara dest2 = EClass._zone.FindChara(questDeliver2.uidTarget);
-					if (dest2 != null)
-					{
-						Choice2("daGoto".lang(dest2.Name, item3.GetTitle() ?? ""), "_goto").SetOnClick(delegate
-						{
-							destCard = dest2;
-						});
-					}
-				}
-				if (GetListGuide().Count > 0)
-				{
-					Choice2("daGuide", "_Guide");
-				}
-			}
 			Choice2("daQuest".lang(c.quest?.GetTitle() ?? ""), "_quest").SetCondition(() => c.quest != null);
 			if (c.trait is TraitGuard)
 			{
@@ -174,101 +137,138 @@ public class DramaCustomSequence : EClass
 					}
 				});
 			}
-			if (c.trait is TraitGM_Mage && Guild.Mage.relation.rank >= 4)
+			if (!c.IsPCParty || EClass._zone.IsPCFaction)
 			{
-				Choice2("daChangeDomain", "_changeDomain").DisableSound();
-			}
-			if (c.trait.ShopType != 0)
-			{
-				Choice2(c.trait.TextNextRestock, "_buy").DisableSound();
-			}
-			if (c.trait.SlaverType != 0)
-			{
-				Choice2(c.trait.TextNextRestockPet, "_buySlave").DisableSound();
-			}
-			if (c.trait.CopyShop != 0)
-			{
-				Choice2(("daCopy" + c.trait.CopyShop).lang(c.trait.NumCopyItem.ToString() ?? ""), "_copyItem").DisableSound();
-			}
-			if (c.trait.HaveNews && c.GetInt(33) + 10080 < EClass.world.date.GetRaw())
-			{
-				Choice2("daNews", "_news");
-			}
-			if (!flag4 && !EClass._zone.IsInstance && !c.IsPCFaction && c.trait.CanBout && c.IsGlobal && c.GetInt(59) + 10080 < EClass.world.date.GetRaw())
-			{
-				Choice2("daBout", "_bout");
-			}
-			if (c.isDrunk || EClass.debug.enable)
-			{
-				Choice2(flag2 ? "daBird" : "daTail", "_tail");
-			}
-			if (c.trait.CanRevive)
-			{
-				Choice2("daRevive", "_revive").DisableSound();
-			}
-			if (!c.trait.IDTrainer.IsEmpty() && !EClass._zone.IsUserZone && (Guild.GetCurrentGuild() == null || Guild.GetCurrentGuild().relation.IsMember()))
-			{
-				Choice2("daTrain", "_train").DisableSound();
-			}
-			if (c.trait.CanWhore)
-			{
-				Choice2(flag2 ? "daBirdBuy" : "daTailBuy", "_whore");
-			}
-			if (c.trait.CanHeal)
-			{
-				Choice2("daHeal", "_heal");
-			}
-			if (c.trait.CanServeFood)
-			{
-				Choice2("daFood", "_food");
-			}
-			if (c.trait is TraitInformer)
-			{
-				Choice2("daSellFame", "_sellFame");
-			}
-			if (EClass._zone.AllowInvest)
-			{
-				if (c.trait.CanInvestTown && Guild.GetCurrentGuild() == null)
+				if (c.trait.CanGuide)
 				{
-					Choice2("daInvest", "_investZone");
-				}
-				if (c.trait.CanInvest)
-				{
-					Choice2("daInvest", "_investShop");
-				}
-			}
-			if (c.trait.CanIdentify)
-			{
-				Choice2("daIdentify", "_identify").DisableSound();
-				Choice2("daIdentifyAll", "_identifyAll");
-				Choice2("daIdentifySP", "_identifySP").DisableSound();
-			}
-			if (c.trait.CanPicklock)
-			{
-				if (c.Evalue(280) < 20)
-				{
-					c.elements.SetBase(280, 20);
-				}
-				foreach (Thing item4 in EClass.pc.things.List((Thing a) => a.c_lockLv > 0, onlyAccessible: true))
-				{
-					Thing _t3 = item4;
-					Choice2("daPicklock".lang(_t3.Name), "_picklock").SetOnClick(delegate
+					foreach (Quest item3 in EClass.game.quests.list)
 					{
-						destThing = _t3;
-					});
+						if (!item3.IsRandomQuest)
+						{
+							continue;
+						}
+						Chara dest = ((item3.chara != null && item3.chara.IsAliveInCurrentZone) ? item3.chara : null);
+						if (dest != null)
+						{
+							Choice2("daGoto".lang(dest.Name, item3.GetTitle() ?? ""), "_goto").SetOnClick(delegate
+							{
+								destCard = dest;
+							});
+						}
+						if (!(item3 is QuestDeliver { IsDeliver: not false } questDeliver2) || questDeliver2.DestZone != EClass._zone || !EClass._zone.dictCitizen.ContainsKey(questDeliver2.uidTarget))
+						{
+							continue;
+						}
+						Chara dest2 = EClass._zone.FindChara(questDeliver2.uidTarget);
+						if (dest2 != null)
+						{
+							Choice2("daGoto".lang(dest2.Name, item3.GetTitle() ?? ""), "_goto").SetOnClick(delegate
+							{
+								destCard = dest2;
+							});
+						}
+					}
+					if (GetListGuide().Count > 0)
+					{
+						Choice2("daGuide", "_Guide");
+					}
 				}
-			}
-			if (c.trait is TraitBanker)
-			{
-				Choice2("daDeposit", "_deposit");
-			}
-			if (c.IsMaid || (c.trait.CanInvestTown && (EClass._zone.source.faction == "mysilia" || EClass._zone.IsPCFaction)))
-			{
-				Choice2("daExtraTax", "_extraTax");
-			}
-			if ((c.trait is TraitMiko_Mifu || c.trait is TraitMiko_Nefu || c.trait is TraitEureka) && EClass.world.date.IsExpired(c.c_dateStockExpire))
-			{
-				Choice2("daBlessing", "_blessing");
+				if (c.trait is TraitGM_Mage && Guild.Mage.relation.rank >= 4)
+				{
+					Choice2("daChangeDomain", "_changeDomain").DisableSound();
+				}
+				if (c.trait.ShopType != 0)
+				{
+					Choice2(c.trait.TextNextRestock, "_buy").DisableSound();
+				}
+				if (c.trait.SlaverType != 0)
+				{
+					Choice2(c.trait.TextNextRestockPet, "_buySlave").DisableSound();
+				}
+				if (c.trait.CopyShop != 0)
+				{
+					Choice2(("daCopy" + c.trait.CopyShop).lang(c.trait.NumCopyItem.ToString() ?? ""), "_copyItem").DisableSound();
+				}
+				if (c.trait.HaveNews && c.GetInt(33) + 10080 < EClass.world.date.GetRaw())
+				{
+					Choice2("daNews", "_news");
+				}
+				if (!flag4 && !EClass._zone.IsInstance && !c.IsPCFaction && c.trait.CanBout && c.IsGlobal && c.GetInt(59) + 10080 < EClass.world.date.GetRaw())
+				{
+					Choice2("daBout", "_bout");
+				}
+				if (c.isDrunk || EClass.debug.enable)
+				{
+					Choice2(flag2 ? "daBird" : "daTail", "_tail");
+				}
+				if (c.trait.CanRevive)
+				{
+					Choice2("daRevive", "_revive").DisableSound();
+				}
+				if (!c.trait.IDTrainer.IsEmpty() && !EClass._zone.IsUserZone && (Guild.GetCurrentGuild() == null || Guild.GetCurrentGuild().relation.IsMember()))
+				{
+					Choice2("daTrain", "_train").DisableSound();
+				}
+				if (c.trait.CanWhore)
+				{
+					Choice2(flag2 ? "daBirdBuy" : "daTailBuy", "_whore");
+				}
+				if (c.trait.CanHeal)
+				{
+					Choice2("daHeal", "_heal");
+				}
+				if (c.trait.CanServeFood)
+				{
+					Choice2("daFood", "_food");
+				}
+				if (c.trait is TraitInformer)
+				{
+					Choice2("daSellFame", "_sellFame");
+				}
+				if (EClass._zone.AllowInvest)
+				{
+					if (c.trait.CanInvestTown && Guild.GetCurrentGuild() == null)
+					{
+						Choice2("daInvest", "_investZone");
+					}
+					if (c.trait.CanInvest)
+					{
+						Choice2("daInvest", "_investShop");
+					}
+				}
+				if (c.trait.CanIdentify)
+				{
+					Choice2("daIdentify", "_identify").DisableSound();
+					Choice2("daIdentifyAll", "_identifyAll");
+					Choice2("daIdentifySP", "_identifySP").DisableSound();
+				}
+				if (c.trait.CanPicklock)
+				{
+					if (c.Evalue(280) < 20)
+					{
+						c.elements.SetBase(280, 20);
+					}
+					foreach (Thing item4 in EClass.pc.things.List((Thing a) => a.c_lockLv > 0, onlyAccessible: true))
+					{
+						Thing _t3 = item4;
+						Choice2("daPicklock".lang(_t3.Name), "_picklock").SetOnClick(delegate
+						{
+							destThing = _t3;
+						});
+					}
+				}
+				if (c.trait is TraitBanker)
+				{
+					Choice2("daDeposit", "_deposit");
+				}
+				if (c.IsMaid || (c.trait.CanInvestTown && (EClass._zone.source.faction == "mysilia" || EClass._zone.IsPCFaction)))
+				{
+					Choice2("daExtraTax", "_extraTax");
+				}
+				if ((c.trait is TraitMiko_Mifu || c.trait is TraitMiko_Nefu || c.trait is TraitEureka) && EClass.world.date.IsExpired(c.c_dateStockExpire))
+				{
+					Choice2("daBlessing", "_blessing");
+				}
 			}
 		}
 		if (c.IsHomeMember())

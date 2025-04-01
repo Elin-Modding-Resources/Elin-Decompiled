@@ -2,7 +2,7 @@ public class TraitLoytelMart : TraitVendingMachine
 {
 	public int LV => EClass.player.flags.loytelMartLv;
 
-	public override int ShopLv => LV * 10 + ((LV <= 0) ? 1 : 10);
+	public override int ShopLv => LV * 10 + ((LV <= 0) ? 1 : 10) + (EClass.debug.enable ? 50 : 0);
 
 	public override bool IsHomeItem => true;
 
