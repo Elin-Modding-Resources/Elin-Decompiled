@@ -1,5 +1,7 @@
 var NAVTREEINDEX116 =
 {
+"classTraitGeneMachine.html#a1f7be56595047759e8b9b61ae3f3a148":[1,0,1562,7],
+"classTraitGeneMachine.html#a2a1d11ad60083a0503ea8e179290c04a":[1,0,1562,1],
 "classTraitGeneMachine.html#a30f763812a2f54de86e466b44e7bcc4e":[1,0,1562,6],
 "classTraitGeneMachine.html#aaba778eaed8a003cd53f8b1f995546b9":[1,0,1562,8],
 "classTraitGeneMachine.html#abc5664c3b0f81910c90a5edabae3fa6f":[1,0,1562,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitMahjong.html":[1,0,1621],
 "classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1621,0],
 "classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1621,3],
-"classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1621,1],
-"classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1621,2],
-"classTraitMaid.html":[1,0,1622]
+"classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1621,1]
 };

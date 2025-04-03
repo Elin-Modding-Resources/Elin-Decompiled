@@ -1,5 +1,7 @@
 var NAVTREEINDEX115 =
 {
+"classTraitDrink.html#a6068c08dba4621b9c437ecf4dd8ca80e":[1,0,1505,10],
+"classTraitDrink.html#a6f961b99b7206af0591187f7ca7b00af":[1,0,1505,13],
 "classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796":[1,0,1505,16],
 "classTraitDrink.html#a79a7994ae5c96c13dfd79126692854ec":[1,0,1505,17],
 "classTraitDrink.html#a7fb1ac5d9691764a0359512f6b612150":[1,0,1505,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitGene.html#aad06c098417be0e93df7d983f89cb51e":[1,0,1561,2],
 "classTraitGeneMachine.html":[1,0,1562],
 "classTraitGeneMachine.html#a03b1dc06acc9e6af7a7bedc69f820523":[1,0,1562,2],
-"classTraitGeneMachine.html#a18fc33579f038949f461da6fbc04ac49":[1,0,1562,3],
-"classTraitGeneMachine.html#a1f7be56595047759e8b9b61ae3f3a148":[1,0,1562,7],
-"classTraitGeneMachine.html#a2a1d11ad60083a0503ea8e179290c04a":[1,0,1562,1]
+"classTraitGeneMachine.html#a18fc33579f038949f461da6fbc04ac49":[1,0,1562,3]
 };

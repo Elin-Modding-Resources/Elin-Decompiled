@@ -1,5 +1,7 @@
 var NAVTREEINDEX114 =
 {
+"classTraitContainerBook.html#ac19bdaddbfbf9f4035ab4314d5e05c49":[1,0,1459,0],
+"classTraitContainerBurnable.html":[1,0,1460],
 "classTraitContainerCompost.html":[1,0,1461],
 "classTraitContainerCompost.html#a0be6317217c5debd87ce1c36394215e1":[1,0,1461,1],
 "classTraitContainerCompost.html#a5b4a67a4a23d4dda0ea44411dda071e5":[1,0,1461,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitDrink.html#a0bf4419114e2e584a1e8f59c122a2cc9":[1,0,1505,0],
 "classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1505,9],
 "classTraitDrink.html#a455aa1d0f6ec5f3e7799065a8d68337c":[1,0,1505,18],
-"classTraitDrink.html#a56ee9dafa7d55b6b8e22e307b637b416":[1,0,1505,5],
-"classTraitDrink.html#a6068c08dba4621b9c437ecf4dd8ca80e":[1,0,1505,10],
-"classTraitDrink.html#a6f961b99b7206af0591187f7ca7b00af":[1,0,1505,13]
+"classTraitDrink.html#a56ee9dafa7d55b6b8e22e307b637b416":[1,0,1505,5]
 };

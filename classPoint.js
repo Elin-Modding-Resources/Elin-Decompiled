@@ -121,6 +121,7 @@ var classPoint =
     [ "index", "classPoint.html#a0ca407a11b2419684bb28adee73363cf", null ],
     [ "Installed", "classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e", null ],
     [ "IsBlocked", "classPoint.html#a6616973a1d297c13f4b13f6221c88d19", null ],
+    [ "IsDeepWater", "classPoint.html#afdc4f950522acdbccf552a7a6cb9baa8", null ],
     [ "IsFarmField", "classPoint.html#a758f4e0fc35d1bbf2d960d5910f9200e", null ],
     [ "IsHidden", "classPoint.html#ada44fdbdd3ddd6c4601d7926f51fa463", null ],
     [ "IsHotSpring", "classPoint.html#af88c7f8fe25b233c77721069f79ac140", null ],

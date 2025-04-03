@@ -1,5 +1,7 @@
 var NAVTREEINDEX118 =
 {
+"classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1685,0],
+"classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1685,2],
 "classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1685,1],
 "classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1685,5],
 "classTraitPainter.html":[1,0,1686],
@@ -247,7 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1746,5],
 "classTraitSalesTag.html#af240bb3862ff5b8acb871e125b0ae553":[1,0,1746,2],
 "classTraitSawMill.html":[1,0,1747],
-"classTraitSawMill.html#a2c05175e641c6a8c4f1735138ecaebec":[1,0,1747,2],
-"classTraitSawMill.html#a38eb32553713219ddcd2410d4442c2f0":[1,0,1747,3],
-"classTraitSawMill.html#a8ae6d8f9e96ab3c70ecb63f0e71a85dc":[1,0,1747,1]
+"classTraitSawMill.html#a2c05175e641c6a8c4f1735138ecaebec":[1,0,1747,2]
 };

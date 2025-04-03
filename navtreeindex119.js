@@ -1,5 +1,7 @@
 var NAVTREEINDEX119 =
 {
+"classTraitSawMill.html#a38eb32553713219ddcd2410d4442c2f0":[1,0,1747,3],
+"classTraitSawMill.html#a8ae6d8f9e96ab3c70ecb63f0e71a85dc":[1,0,1747,1],
 "classTraitSawMill.html#ae1971cf328e9f99ba0fd3fe2992d8689":[1,0,1747,0],
 "classTraitScratchMachine.html":[1,0,1748],
 "classTraitScratchMachine.html#a07ffdf52fc643dc776ed37719159f4a4":[1,0,1748,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitSwitch.html":[1,0,1806],
 "classTraitSwitch.html#a069e285e73f58fcb14dd4ce45b058a44":[1,0,1806,5],
 "classTraitSwitch.html#a38ceb3586c4921cafed4f9cdfed87d21":[1,0,1806,10],
-"classTraitSwitch.html#a3c9509bede5f05b010e060ce84565232":[1,0,1806,12],
-"classTraitSwitch.html#a3faa1881b194fd8ec3d3da09dac942ca":[1,0,1806,4],
-"classTraitSwitch.html#a45b1f27a7c8ce08676d19cb35da14341":[1,0,1806,8]
+"classTraitSwitch.html#a3c9509bede5f05b010e060ce84565232":[1,0,1806,12]
 };

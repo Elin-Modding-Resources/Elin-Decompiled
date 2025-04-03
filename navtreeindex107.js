@@ -1,5 +1,7 @@
 var NAVTREEINDEX107 =
 {
+"classTalkText.html":[1,0,1244],
+"classTalkText.html#a5eb886a787c22328bf1782c1cd002440":[1,0,1244,1],
 "classTalkText.html#ac064f13f119e231c6ada5327e3d32d09":[1,0,1244,0],
 "classTargetType.html":[1,0,1245],
 "classTargetType.html#a046e95e5c766351eaa12c37f122e9c25":[1,0,1245,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX107 =
 "classTaskHarvest.html#afb189d47cd5063a1f9621113906b4bd6":[1,0,1268,0],
 "classTaskList.html":[1,0,1269],
 "classTaskList.html#a0f2224048b3f764e54b21fe744043821":[1,0,1269,16],
-"classTaskList.html#a1b59a2c538dc2c206c6ce13a6db9cbb5":[1,0,1269,6],
-"classTaskList.html#a243509fe87ef516f7dd8adf86c23a637":[1,0,1269,5],
-"classTaskList.html#a2c67b84753672064a0f9ce09efcea649":[1,0,1269,14]
+"classTaskList.html#a1b59a2c538dc2c206c6ce13a6db9cbb5":[1,0,1269,6]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX132 =
 {
+"classWidgetUnityChan.html#ae01f8e1743dcbf0c6abf93f06a728105":[1,0,2016,2],
+"classWidgetUnityChan.html#ae309ad2d0b46dcd643dbb9c907b758a3":[1,0,2016,1],
 "classWidget_1_1Config.html":[1,0,1977,0],
 "classWidget_1_1Config.html#a0078fd56422ee4056faff6f151c43dd1":[1,0,1977,0,13],
 "classWidget_1_1Config.html#a0286d6c98f8cbaa98d3bb528392a9010":[1,0,1977,0,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX132 =
 "classWindowChara.html#abeaea5f7d59db700be694f9bcb9e2dd9":[1,0,2018,0],
 "classWindowChara.html#abf0d73f9f6918d28b181d818d86b82d8":[1,0,2018,30],
 "classWindowChara.html#abf152e72ff0745c055072763505771cc":[1,0,2018,70],
-"classWindowChara.html#ac12f390bc1a45f1d5cc3c06135594e35":[1,0,2018,57],
-"classWindowChara.html#ac1d3c0249dfc672ad51b352036a5b2de":[1,0,2018,19],
-"classWindowChara.html#ac3ae6f900892c5b9c3b5652b9bec24d8":[1,0,2018,29]
+"classWindowChara.html#ac12f390bc1a45f1d5cc3c06135594e35":[1,0,2018,57]
 };

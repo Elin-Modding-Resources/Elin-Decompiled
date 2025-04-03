@@ -1,5 +1,7 @@
 var NAVTREEINDEX93 =
 {
+"classRefractionProfile.html#a30467ffd9b30edd11de0ebc4b960fe2f":[1,0,1047,2],
+"classRefractionProfile.html#a49892c2c685c132b01f07410403afe52":[1,0,1047,3],
 "classRefractionProfile.html#a4ab4d6763218831d0d134f4391ff7a51":[1,0,1047,6],
 "classRefractionProfile.html#a95f32eeb4aed84825b46ac1e1bab1fae":[1,0,1047,1],
 "classRefractionProfile.html#ab78262fe7606ffeb695ba08879a0a2ac":[1,0,1047,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX93 =
 "classRenderDataObjAdd.html#af99afbf3224677c1669ab9ca05add881":[1,0,1080,1],
 "classRenderDataObjAdd.html#afa7f2d3bce599bb865d73be0f9ca9aa2":[1,0,1080,2],
 "classRenderDataObjDummy.html":[1,0,1081],
-"classRenderDataObjDummy.html#a44a7d6891ad904bb1bc896c55f86ee21":[1,0,1081,0],
-"classRenderDataObjV.html":[1,0,1082],
-"classRenderDataObjV.html#a1b40fbdb497e2afcee85611250007c28":[1,0,1082,3]
+"classRenderDataObjDummy.html#a44a7d6891ad904bb1bc896c55f86ee21":[1,0,1081,0]
 };
