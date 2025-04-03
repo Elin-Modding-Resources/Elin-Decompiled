@@ -83,7 +83,11 @@ public class QuestDebt : QuestProgression
 			EClass.player.DropReward(ThingGen.Create("ticket_resident"));
 			break;
 		case 5:
-			EClass.player.DropReward(ThingGen.Create("loytel_mart"));
+			if (!EClass.player.flags.gotLoytelMart)
+			{
+				EClass.player.flags.gotLoytelMart = true;
+				EClass.player.DropReward(ThingGen.Create("loytel_mart"));
+			}
 			break;
 		case 6:
 			EClass.player.flags.loytelMartLv = 1;

@@ -260,6 +260,18 @@ public class Point : EClass
 		}
 	}
 
+	public bool IsDeepWater
+	{
+		get
+		{
+			if (cell.IsTopWaterAndNoSnow)
+			{
+				return sourceFloor.tileType.IsDeepWater;
+			}
+			return false;
+		}
+	}
+
 	public Chara FirstChara
 	{
 		get

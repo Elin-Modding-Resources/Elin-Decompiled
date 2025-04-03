@@ -1802,16 +1802,16 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
-	public static string Fix_LoytelDebt()
+	public static string Reset_LoytelDebt()
 	{
 		QuestDebt questDebt = EClass.game.quests.Get<QuestDebt>();
-		if (questDebt == null || questDebt.stage != 6 || EClass.player.debt == 19000000)
+		if (questDebt == null)
 		{
 			return "Quest Status Not Valid.";
 		}
 		questDebt.stage = 0;
 		questDebt.paid = false;
-		questDebt.gaveBill = true;
+		questDebt.gaveBill = false;
 		EClass.player.debt = 20000000;
 		Thing thing = ThingGen.Create("856");
 		thing.refVal = 109;

@@ -818,6 +818,18 @@ public class AI_Idle : AIAct
 				yield return DoGoto(thing7.pos);
 			}
 		}
+		if (EClass.rnd(10) == 0 && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
+		{
+			for (int j = 0; j < 100; j++)
+			{
+				Point randomPoint = EClass._map.GetRandomPoint();
+				if (randomPoint.IsDeepWater && !randomPoint.IsBlocked)
+				{
+					yield return DoGoto(randomPoint);
+					break;
+				}
+			}
+		}
 		string aiIdle = owner.source.aiIdle;
 		if (!(aiIdle == "stand") && !(aiIdle == "root"))
 		{
@@ -841,12 +853,12 @@ public class AI_Idle : AIAct
 		yield return Restart();
 		Point FindMovePoint(BaseArea.AccessType type)
 		{
-			for (int j = 0; j < 20; j++)
+			for (int k = 0; k < 20; k++)
 			{
-				Point randomPoint = owner.pos.GetRandomPoint(5 + j, requireLos: false);
-				if (randomPoint != null && randomPoint.IsInBounds && (randomPoint.cell.room == null || randomPoint.cell.room.data.accessType == type))
+				Point randomPoint2 = owner.pos.GetRandomPoint(5 + k, requireLos: false);
+				if (randomPoint2 != null && randomPoint2.IsInBounds && (randomPoint2.cell.room == null || randomPoint2.cell.room.data.accessType == type))
 				{
-					return randomPoint;
+					return randomPoint2;
 				}
 			}
 			return null;

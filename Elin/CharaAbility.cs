@@ -156,7 +156,10 @@ public class CharaAbility : EClass
 					continue;
 				}
 			}
-			randomAbilities.Add(row);
+			if (!row.tag.Contains("noRandomAbility"))
+			{
+				randomAbilities.Add(row);
+			}
 		}
 	}
 

@@ -434,6 +434,18 @@ public class Player : EClass
 			}
 		}
 
+		public bool gotLoytelMart
+		{
+			get
+			{
+				return bits[31];
+			}
+			set
+			{
+				bits[31] = value;
+			}
+		}
+
 		public int start
 		{
 			get

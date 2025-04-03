@@ -25,26 +25,26 @@ public class ActPray : Act
 		}
 		if (c.faith.IsEyth)
 		{
+			c.Say("pray", c);
 			if (passive)
 			{
-				if (c.Evalue(1655) < 2 || EClass.pc.party.members.Count <= 1)
+				if (c.Evalue(1655) >= 2 && EClass.pc.party.members.Count > 1)
 				{
-					return true;
-				}
-				foreach (Chara member in EClass.pc.party.members)
-				{
-					if (member != EClass.pc)
+					foreach (Chara member in EClass.pc.party.members)
 					{
-						member.Say("pray2", member, member.faith.Name);
-						member.ModExp(306, 200);
+						if (member != EClass.pc)
+						{
+							member.Say("pray2", member, member.faith.Name);
+							member.ModExp(306, 200);
+						}
 					}
 				}
 			}
 			else
 			{
-				c.Say("pray", c);
 				c.PlaySound("pray_ignore");
 			}
+			c.ModExp(306, 100);
 			return true;
 		}
 		foreach (Chara member2 in EClass.pc.party.members)

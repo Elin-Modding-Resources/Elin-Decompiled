@@ -2292,6 +2292,10 @@ public class Chara : Card, IPathfindWalker
 		Point randomNeighbor = pos.GetRandomNeighbor();
 		if (!randomNeighbor.Equals(pos) && !randomNeighbor.HasChara && HasAccess(randomNeighbor))
 		{
+			if ((race.tag.Contains("water") || source.tag.Contains("water")) && pos.cell.IsTopWaterAndNoSnow && !randomNeighbor.IsDeepWater)
+			{
+				return false;
+			}
 			return TryMove(randomNeighbor) == MoveResult.Success;
 		}
 		return false;
@@ -5474,9 +5478,16 @@ public class Chara : Card, IPathfindWalker
 				flag2 = a.Perform(this, tc, pos);
 			}
 		}
-		if (flag2 && !isDead && cost.cost > 0 && a.source.lvFactor > 0)
+		if (flag2 && !isDead)
 		{
-			ModExp(a.id, spellExp);
+			if (cost.cost > 0 && a.source.lvFactor > 0)
+			{
+				ModExp(a.id, spellExp);
+			}
+			if (a.source.alias.StartsWith("sword_"))
+			{
+				ModExp(101, 50);
+			}
 		}
 		ActEffect.RapidCount = 0;
 		if (!IsPC && a.source.cooldown > 0)
