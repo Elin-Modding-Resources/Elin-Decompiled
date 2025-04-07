@@ -1,5 +1,14 @@
 var NAVTREEINDEX52 =
 {
+"classCoreRef_1_1Icons_1_1Enc.html#a1c3275de633867e073fffdca5479a2cd":[1,0,384,4,1,5],
+"classCoreRef_1_1Icons_1_1Enc.html#a3609b435b8664bd69ed550e7286004e1":[1,0,384,4,1,7],
+"classCoreRef_1_1Icons_1_1Enc.html#a548331da867fd6fe01170e7b95e847ae":[1,0,384,4,1,8],
+"classCoreRef_1_1Icons_1_1Enc.html#aacc6a4cfc59980498129f9557907386c":[1,0,384,4,1,0],
+"classCoreRef_1_1Icons_1_1Enc.html#ae59258f5606c3f15c47b656b8ad002bb":[1,0,384,4,1,3],
+"classCoreRef_1_1Icons_1_1Enc.html#af3ba97ffeaed6abcf2271f1b9e7ce731":[1,0,384,4,1,6],
+"classCoreRef_1_1Icons_1_1Enc.html#aff8caac73c5c3a4c54c2fe82d2563e5d":[1,0,384,4,1,1],
+"classCoreRef_1_1InventoryStyle.html":[1,0,384,5],
+"classCoreRef_1_1InventoryStyle.html#a5a045a527ee179bb9b2e49e767b2e42a":[1,0,384,5,1],
 "classCoreRef_1_1InventoryStyle.html#a6172b3e95259e01a518d0e58d985e82b":[1,0,384,5,4],
 "classCoreRef_1_1InventoryStyle.html#a7f573b78f18f635b6d659d0eb49bd655":[1,0,384,5,3],
 "classCoreRef_1_1InventoryStyle.html#a8ed7bce0502a8b5d590085bcadfda9d7":[1,0,384,5,6],
@@ -240,14 +249,5 @@ var NAVTREEINDEX52 =
 "classCursorSystem.html#ac07633f0f6e4b54f93c6ca2df3456d27":[1,0,402,34],
 "classCursorSystem.html#ac0df02e70f07b28ee3900bcb1a2d11c6":[1,0,402,11],
 "classCursorSystem.html#ac5dabb2eb39d6cbef0af4fc30072a02d":[1,0,402,48],
-"classCursorSystem.html#ac605eb0fc0a6c88d2a0c0566abaa1a1a":[1,0,402,52],
-"classCursorSystem.html#ac76a6394ff03967d7b71281dcb7cd2a6":[1,0,402,47],
-"classCursorSystem.html#ac7847ce32e8528c0f776a6f6c22ae2a6":[1,0,402,20],
-"classCursorSystem.html#aca93c166e0621b7830ccb5cad5b30ac9":[1,0,402,58],
-"classCursorSystem.html#acb10be4f95d235a54d61e9b6da6c7ba1":[1,0,402,18],
-"classCursorSystem.html#ad3a17fecf5fdf0989bea9c5fd7285b8c":[1,0,402,35],
-"classCursorSystem.html#ad7722ab42c8895c7a63ac32d81e1b6c7":[1,0,402,13],
-"classCursorSystem.html#adb13ec5be75cf5ab11901adf158dcdb5":[1,0,402,9],
-"classCursorSystem.html#aef5d580420f8c746eecc7d3137a2b542":[1,0,402,19],
-"classCursorSystem.html#af0be3fdfb388384d628117833e3a5c30":[1,0,402,51]
+"classCursorSystem.html#ac605eb0fc0a6c88d2a0c0566abaa1a1a":[1,0,402,52]
 };

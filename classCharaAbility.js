@@ -3,7 +3,6 @@ var classCharaAbility =
     [ "CharaAbility", "classCharaAbility.html#aa7eca6bfbe7ae45afae816c8feeb93fd", null ],
     [ "Add", "classCharaAbility.html#a885ca8bfe313c327cf5c20c9d8b84ea9", null ],
     [ "AddRandom", "classCharaAbility.html#ab6700b71776d339a548021bd14e5c739", null ],
-    [ "BuildRandomAbilityList", "classCharaAbility.html#aaca98d7913e0d48dca22d4938877d924", null ],
     [ "BuildRandomAbilityList", "classCharaAbility.html#af0cba40d33b6f10a36477b55966f8150", null ],
     [ "GetRandomAbilityList", "classCharaAbility.html#a479e02727103d58eb0d03f2eb08c5fee", null ],
     [ "Refresh", "classCharaAbility.html#a22d81c4f23177d3772df0b1c64574f7c", null ],

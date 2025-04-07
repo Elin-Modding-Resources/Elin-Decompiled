@@ -17,6 +17,7 @@ var classCoreConfig_1_1Test =
     [ "showNumbers", "classCoreConfig_1_1Test.html#a8fcc2fc6c7bd2b9fb9afa0d0a48dc173", null ],
     [ "showRefIcon", "classCoreConfig_1_1Test.html#ad5ea4538f8152066f72ae5577bafd645", null ],
     [ "showTrait", "classCoreConfig_1_1Test.html#a3bb6461e52c9bfbb569bb36b5dd5aa2d", null ],
+    [ "stackNumbers", "classCoreConfig_1_1Test.html#abe77798eeca82895dfbac0843c09f930", null ],
     [ "toolNoPick", "classCoreConfig_1_1Test.html#a73bf949639e5c41206c2c40f96c37a92", null ],
     [ "unsealWidgets", "classCoreConfig_1_1Test.html#a3ee62d506f19bc3c33ee116e1a8e840a", null ]
 ];

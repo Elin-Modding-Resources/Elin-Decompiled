@@ -1,5 +1,13 @@
 var NAVTREEINDEX26 =
 {
+"classAM__Blueprint.html#a411fb78b6a4d8eee5c174591cc0806dc":[1,0,125,5],
+"classAM__Blueprint.html#a96aae9fe2358c69bf634dc54fee9fb56":[1,0,125,0],
+"classAM__Blueprint.html#a97d1302696ed237e5cc191f6cd748895":[1,0,125,3],
+"classAM__Blueprint.html#afceae73eda50f5eac1ef2958fd8278b2":[1,0,125,4],
+"classAM__Build.html":[1,0,126],
+"classAM__Build.html#a007d83e3f6738839cfca45e887ee6fad":[1,0,126,2],
+"classAM__Build.html#a039a1ff3be43d9d3300b6725e224e3bf":[1,0,126,24],
+"classAM__Build.html#a1484aa8b4dd861d3101c55d2f4516d51":[1,0,126,35],
 "classAM__Build.html#a1c9b55489e0a3076e1636ddf6ada7ff9":[1,0,126,27],
 "classAM__Build.html#a1cc5016800110194bd994a6f3a28cdd1":[1,0,126,30],
 "classAM__Build.html#a1f8b40da48e033e1f968c4543cfb9c55":[1,0,126,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX26 =
 "classAM__MiniGame.html#ab7c2c5b8c59d76d78b3b167f5837f314":[1,0,142,4],
 "classAM__MoveInstalled.html":[1,0,143],
 "classAM__MoveInstalled.html#a043f889264546b830927e58cf7c82c12":[1,0,143,20],
-"classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601":[1,0,143,15],
-"classAM__MoveInstalled.html#a1ca7794b65e63e3ed4a5314dcff402fa":[1,0,143,27],
-"classAM__MoveInstalled.html#a257cdf514813c2c497d432e834465583":[1,0,143,30],
-"classAM__MoveInstalled.html#a2fb7b082dc7ec43763a64e667f56de63":[1,0,143,22],
-"classAM__MoveInstalled.html#a3a577f5de923532fcf02643320874c17":[1,0,143,28],
-"classAM__MoveInstalled.html#a3ce29a3258ab1f58d9a1396d4d6ec6fa":[1,0,143,10],
-"classAM__MoveInstalled.html#a3ea91eee174b7caa23355f252c5359c2":[1,0,143,7],
-"classAM__MoveInstalled.html#a42e272a65ca4a451f51141c8da03b4e4":[1,0,143,24],
-"classAM__MoveInstalled.html#a4d9f72165bb0d57d61bacd6534116088":[1,0,143,21]
+"classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601":[1,0,143,15]
 };

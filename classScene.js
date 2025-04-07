@@ -54,6 +54,7 @@ var classScene =
     [ "camSupport", "classScene.html#a4fed7b4258761e1c13852b02ea502564", null ],
     [ "camTreasure", "classScene.html#ad3d7e4e4d51242fed4080dee7a07923e", null ],
     [ "ClickPoint", "classScene.html#a491b2d710d9a8046d1812ca83d8b971c", null ],
+    [ "damageTextRenderer", "classScene.html#a2ce0e093c535ddb8e497a23882d71626", null ],
     [ "dictActorEx", "classScene.html#a5fc24ae0de0d29489a08c6624dd689dd", null ],
     [ "elomapActor", "classScene.html#a636c0f359588fb403c3460f84bcf45af", null ],
     [ "ether", "classScene.html#a048ab3d3f2acc2f08becb0b4492a5d17", null ],

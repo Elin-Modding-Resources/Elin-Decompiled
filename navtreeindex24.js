@@ -1,5 +1,13 @@
 var NAVTREEINDEX24 =
 {
+"classAIWork__Research.html#add975b18f52d8c68f69edb2e9c197379":[1,0,117,2],
+"classAI__ArmPillow.html":[1,0,59],
+"classAI__ArmPillow.html#a4cb91941e5111811013be8d8267acc2c":[1,0,59,0],
+"classAI__AttackHome.html":[1,0,60],
+"classAI__AttackHome.html#ad7ea0f6f0aa849fd444905a5cd17e9f0":[1,0,60,0],
+"classAI__Bladder.html":[1,0,61],
+"classAI__Bladder.html#a34fc6731995a1775ed05759d28659635":[1,0,61,1],
+"classAI__Bladder.html#a4f8f070534728775fe2e534ee6dc70dc":[1,0,61,0],
 "classAI__Bladder.html#a6106eb8a006de9e6ed2fc4ad39826af2":[1,0,61,2],
 "classAI__Clean.html":[1,0,62],
 "classAI__Clean.html#a24522f1b78e616258e0cfe9ad9194067":[1,0,62,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,90,0],
 "classAI__Pray.html#a72cbc4ccf6864ede8f4dcc1f3b3ca90f":[1,0,90,2],
 "classAI__Pray.html#a76dad0b469e00ae0458c9cf0367a4cd9":[1,0,90,4],
-"classAI__Pray.html#a8d3b186e7e9f85e975f899e77143b46d":[1,0,90,1],
-"classAI__Pray.html#af1be3c0e8c04a33aaa127ec879b8e03e":[1,0,90,3],
-"classAI__Read.html":[1,0,91],
-"classAI__Read.html#a5946252854f402ff272fdde1b271bf38":[1,0,91,4],
-"classAI__Read.html#a5a80981e76be75e9f02be20ef4e8b7c4":[1,0,91,1],
-"classAI__Read.html#a7a71040134c92c58a8550aa7320c0e6f":[1,0,91,3],
-"classAI__Read.html#ab9abd844f3d45c948dd5e4e773dfe686":[1,0,91,0],
-"classAI__Read.html#abf176bb2cce745515adc2673258f944a":[1,0,91,2],
-"classAI__ReleaseHeld.html":[1,0,92]
+"classAI__Pray.html#a8d3b186e7e9f85e975f899e77143b46d":[1,0,90,1]
 };

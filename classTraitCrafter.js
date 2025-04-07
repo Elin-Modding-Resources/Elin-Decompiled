@@ -33,6 +33,7 @@ var classTraitCrafter =
     [ "OnUse", "classTraitCrafter.html#a824ce8e058c0eb2b1de4bfbb0cb7f787", null ],
     [ "ShouldConsumeIng", "classTraitCrafter.html#a48ba3e8202cfb2e57ddad797be7baa1d", null ],
     [ "TrySetAct", "classTraitCrafter.html#ab6976f17a6b72bb6a3af88d0627373cd", null ],
+    [ "WitchDoubleCraftChance", "classTraitCrafter.html#a0fd5b545f7c71323fba5fd391449bfdd", null ],
     [ "animeType", "classTraitCrafter.html#a802e6840bf1d6f9db73c0616f39c6b83", null ],
     [ "AutoTurnOff", "classTraitCrafter.html#a84da1cc9f16d6d4ff211ee229419f5b5", null ],
     [ "CanTriggerFire", "classTraitCrafter.html#aff65bd2e6b1c0b1ca49985bc7e9a4e9c", null ],

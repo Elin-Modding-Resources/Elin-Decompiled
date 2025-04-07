@@ -17,5 +17,6 @@ var classContentConfigTest =
     [ "toggleRefIcon", "classContentConfigTest.html#a651e6c9d2607919e295aab1a366e0c45", null ],
     [ "toggleSeal", "classContentConfigTest.html#abfa00aad45b4e1cf67997019959e57d6", null ],
     [ "toggleShowNumber", "classContentConfigTest.html#a3da2a81f47e59556f6fb303bc56fc1fd", null ],
+    [ "toggleStackNumber", "classContentConfigTest.html#ad88f39dd2ad9196dc3d7e215f0443ed5", null ],
     [ "toggleToolNoPick", "classContentConfigTest.html#a2d58888b375094da386d600fe4652232", null ]
 ];

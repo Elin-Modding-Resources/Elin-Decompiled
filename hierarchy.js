@@ -554,6 +554,7 @@ var hierarchy =
       ] ],
       [ "CustomData", "classCustomData.html", null ],
       [ "DNA", "classDNA.html", null ],
+      [ "DamageTextRenderer", "classDamageTextRenderer.html", null ],
       [ "Date", "classDate.html", [
         [ "GameDate", "classGameDate.html", null ],
         [ "VirtualDate", "classVirtualDate.html", null ]
@@ -1530,7 +1531,9 @@ var hierarchy =
             ] ],
             [ "TraitSelfFactory", "classTraitSelfFactory.html", null ],
             [ "TraitWorkbench", "classTraitWorkbench.html", [
+              [ "TraitAlchemyBench", "classTraitAlchemyBench.html", null ],
               [ "TraitAnvil", "classTraitAnvil.html", null ],
+              [ "TraitToolAlchemy", "classTraitToolAlchemy.html", null ],
               [ "TraitToolSculpture", "classTraitToolSculpture.html", null ],
               [ "TraitToolWrite", "classTraitToolWrite.html", null ],
               [ "TraitWorkbenchFuel", "classTraitWorkbenchFuel.html", null ]
@@ -1585,7 +1588,8 @@ var hierarchy =
           [ "TraitPotion", "classTraitPotion.html", [
             [ "TraitPotionLove", "classTraitPotionLove.html", null ],
             [ "TraitPotionRandom", "classTraitPotionRandom.html", [
-              [ "TraitPerfume", "classTraitPerfume.html", null ]
+              [ "TraitPerfume", "classTraitPerfume.html", null ],
+              [ "TraitPotionAlchemy", "classTraitPotionAlchemy.html", null ]
             ] ]
           ] ],
           [ "TraitPotionEmpty", "classTraitPotionEmpty.html", null ]
