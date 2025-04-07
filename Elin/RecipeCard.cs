@@ -223,10 +223,6 @@ public class RecipeCard : Recipe
 			rarity = (flag ? Rarity.Crude : Rarity.Normal)
 		});
 		Thing thing = (flag3 ? ThingGen.Create(key) : ThingGen.Create(key, num, num4));
-		if (thing.trait.CraftNum > 1)
-		{
-			thing.SetNum(thing.trait.CraftNum);
-		}
 		thing.idSkin = idSkin;
 		if (thing.IsEquipment && ings != null)
 		{
@@ -288,6 +284,15 @@ public class RecipeCard : Recipe
 		{
 			thing.SetNum(1);
 			return thing;
+		}
+		int num5 = thing.trait.CraftNum;
+		if (crafter != null && EClass.pc.Evalue(1417) > 0 && crafter.WitchDoubleCraftChance(thing) > EClass.rnd(100))
+		{
+			num5 *= 2;
+		}
+		if (num5 > 1)
+		{
+			thing.SetNum(num5);
 		}
 		if (EClass.pc.held == null || !thing.TryStackTo(EClass.pc.held.Thing))
 		{

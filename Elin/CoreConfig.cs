@@ -526,6 +526,8 @@ public class CoreConfig : EClass
 
 		public bool showNumbers;
 
+		public bool stackNumbers;
+
 		public bool aaPortrait;
 
 		public bool extraTurnaround;

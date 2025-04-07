@@ -96,6 +96,7 @@ public class ActPlan : EClass
 			AIAct aIAct = act as AIAct;
 			if (act.IsAct)
 			{
+				Act.CC = EClass.pc;
 				if (act.PerformDistance != -1 && (num > act.PerformDistance || (num == 1 && !flag)))
 				{
 					cc.SetAIImmediate(new DynamicAIAct(act.GetText(), () => act.Perform(cc, tc, pos))

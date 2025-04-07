@@ -93,9 +93,13 @@ public class HitSummary : EClass
 					}
 				}
 			}
-			else if (recipe.ingredients[0].thing == null || recipe.ingredients[0].thing.Num < countValid)
+			else
 			{
-				return false;
+				Thing thing = recipe.ingredients[0].thing;
+				if (thing == null || recipe.ingredients[0].thing.Num < countValid / (thing.W * thing.H))
+				{
+					return false;
+				}
 			}
 		}
 		return true;

@@ -1371,7 +1371,7 @@ public class ActEffect : EClass
 				break;
 			}
 			Thing thing6 = null;
-			bool flag8 = actRef.n1 == "food";
+			bool flag7 = actRef.n1 == "food";
 			if (actRef.n1 == "money")
 			{
 				int currency = TC.GetCurrency();
@@ -1385,7 +1385,7 @@ public class ActEffect : EClass
 			else
 			{
 				Func<Thing, bool> func = (Thing t) => true;
-				if (flag8)
+				if (flag7)
 				{
 					func = (Thing t) => t.IsFood;
 				}
@@ -1567,12 +1567,12 @@ public class ActEffect : EClass
 		{
 			EClass.game.religions.Trickery.Talk("ability");
 			bool hex2 = CC.IsHostile(TC);
-			List<SourceStat.Row> list5 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex2 ? "Debuff" : "Buff")).ToList();
+			List<SourceStat.Row> list4 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex2 ? "Debuff" : "Buff")).ToList();
 			int power2 = power;
 			for (int k = 0; k < 4 + EClass.rnd(2); k++)
 			{
-				SourceStat.Row row2 = list5.RandomItem();
-				list5.Remove(row2);
+				SourceStat.Row row2 = list4.RandomItem();
+				list4.Remove(row2);
 				Proc(hex2 ? EffectId.Debuff : EffectId.Buff, CC, TC, power2, new ActRef
 				{
 					n1 = row2.alias
@@ -1594,13 +1594,13 @@ public class ActEffect : EClass
 				power = power * 2 / 3;
 			}
 			int a2 = power;
-			int num9 = TC.WIL * (isPowerful ? 20 : 5);
+			int num8 = TC.WIL * (isPowerful ? 20 : 5);
 			ConHolyVeil condition3 = TC.GetCondition<ConHolyVeil>();
 			if (condition3 != null)
 			{
-				num9 += condition3.power * 5;
+				num8 += condition3.power * 5;
 			}
-			if (EClass.rnd(a2) < num9 / EClass.sources.stats.alias[n].hexPower && EClass.rnd(10) != 0)
+			if (EClass.rnd(a2) < num8 / EClass.sources.stats.alias[n].hexPower && EClass.rnd(10) != 0)
 			{
 				TC.Say("debuff_resist", TC);
 				CC.DoHostileAction(TC);
@@ -1765,13 +1765,13 @@ public class ActEffect : EClass
 		case EffectId.DamageMindGreat:
 		case EffectId.Weaken:
 		{
-			bool flag7 = id == EffectId.DamageBody || id == EffectId.DamageBodyGreat;
+			bool flag8 = id == EffectId.DamageBody || id == EffectId.DamageBodyGreat;
 			bool mind = id == EffectId.DamageMind || id == EffectId.DamageMindGreat;
 			int num6 = ((id == EffectId.DamageBody || id == EffectId.DamageMind) ? 1 : (4 + EClass.rnd(4)));
 			if (id == EffectId.Weaken)
 			{
-				flag7 = EClass.rnd(2) == 0;
-				mind = !flag7;
+				flag8 = EClass.rnd(2) == 0;
+				mind = !flag8;
 				num6 = 1;
 			}
 			else
@@ -1779,10 +1779,10 @@ public class ActEffect : EClass
 				TC.PlayEffect("debuff");
 				TC.PlaySound("debuff");
 			}
-			TC.Say(flag7 ? "damageBody" : "damageMind", TC);
+			TC.Say(flag8 ? "damageBody" : "damageMind", TC);
 			for (int l = 0; l < num6; l++)
 			{
-				TC.DamageTempElements(power, flag7, mind);
+				TC.DamageTempElements(power, flag8, mind);
 			}
 			if (TC.IsPC)
 			{
@@ -1827,7 +1827,6 @@ public class ActEffect : EClass
 			break;
 		}
 		case EffectId.HealComplete:
-			Dice.Create("SpHealLight", power, CC, (actRef.refThing != null) ? null : actRef.act);
 			TC.HealHPHost(9999, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
 			TC.CureHost(CureType.HealComplete, power, state);
 			TC.Say("heal_heavy", TC);
@@ -1843,13 +1842,17 @@ public class ActEffect : EClass
 			{
 				Debug.Log(actRef.act.id);
 			}
-			int num8 = Dice.Create((actRef.act != null && EClass.sources.calc.map.ContainsKey(actRef.act.ID)) ? actRef.act.ID : "SpHealLight", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
+			int num9 = Dice.Create((actRef.act != null && EClass.sources.calc.map.ContainsKey(actRef.act.ID)) ? actRef.act.ID : "SpHealLight", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
+			if (actRef.refThing != null)
+			{
+				num9 = num9 * (100 + actRef.refThing.Evalue(7500)) / 100;
+			}
 			if (flag)
 			{
-				TC.DamageHP(num8 / 2, 919, power);
+				TC.DamageHP(num9 / 2, 919, power);
 				break;
 			}
-			TC.HealHPHost(num8, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
+			TC.HealHPHost(num9, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
 			TC.CureHost(CureType.Heal, power, state);
 			TC.Say((power >= 300) ? "heal_heavy" : "heal_light", TC);
 			break;
@@ -2120,10 +2123,10 @@ public class ActEffect : EClass
 			{
 				power /= 4;
 			}
-			List<Thing> list4 = TC.things.List((Thing t) => (t.Num <= 1 && t.IsEquipmentOrRanged && !t.IsToolbelt && !t.IsLightsource && t.isEquipped) ? true : false);
-			if (list4.Count != 0)
+			List<Thing> list5 = TC.things.List((Thing t) => (t.Num <= 1 && t.IsEquipmentOrRanged && !t.IsToolbelt && !t.IsLightsource && t.isEquipped) ? true : false);
+			if (list5.Count != 0)
 			{
-				Thing thing5 = list4.RandomItem();
+				Thing thing5 = list5.RandomItem();
 				TC.Say("acid_hit", TC);
 				if (thing5.isAcidproof)
 				{

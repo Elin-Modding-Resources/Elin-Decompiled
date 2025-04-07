@@ -337,6 +337,10 @@ public class AttackProcess : EClass
 
 	public void PlayRangedAnime(int numFire)
 	{
+		if (weapon == null)
+		{
+			return;
+		}
 		bool isGun = toolRange is TraitToolRangeGun;
 		bool isCane = toolRange is TraitToolRangeCane;
 		GameSetting.EffectData data = EClass.setting.effect.guns.TryGetValue(weapon.id) ?? EClass.setting.effect.guns[isCane ? "cane" : (isGun ? "gun" : "bow")];

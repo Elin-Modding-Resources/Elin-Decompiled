@@ -64,6 +64,11 @@ public class TraitCrafter : Trait
 
 	public virtual int CostSP => 1;
 
+	public virtual int WitchDoubleCraftChance(Thing t)
+	{
+		return 0;
+	}
+
 	public virtual string IDReqEle(RecipeSource r)
 	{
 		return GetParam(1) ?? "handicraft";

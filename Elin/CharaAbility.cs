@@ -43,7 +43,10 @@ public class CharaAbility : EClass
 					continue;
 				}
 			}
-			list.Add(row);
+			if (!row.tag.Contains("noRandomAbility"))
+			{
+				list.Add(row);
+			}
 		}
 		return list;
 	}
@@ -122,44 +125,6 @@ public class CharaAbility : EClass
 				return s + owner.MainElement.source.alias.Replace("ele", "");
 			}
 			return s;
-		}
-	}
-
-	public void BuildRandomAbilityList()
-	{
-		foreach (SourceElement.Row row in EClass.sources.elements.rows)
-		{
-			if (row.abilityType.Length == 0 || row.aliasRef == "mold")
-			{
-				continue;
-			}
-			switch (row.id)
-			{
-			case 5000:
-			case 5001:
-			case 5005:
-			case 5040:
-			case 5048:
-			case 6400:
-			case 6410:
-			case 8200:
-				continue;
-			}
-			if (row.idMold != 0 && !(owner.trait is TraitAdventurer))
-			{
-				switch (row.aliasRef)
-				{
-				case "eleEther":
-				case "eleAcid":
-				case "eleCut":
-				case "eleImpact":
-					continue;
-				}
-			}
-			if (!row.tag.Contains("noRandomAbility"))
-			{
-				randomAbilities.Add(row);
-			}
 		}
 	}
 

@@ -3929,16 +3929,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				c.PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[material.alias].main).Emit(20 + (int)(30f * ratio));
 				if (EClass.core.config.test.showNumbers || isThing)
 				{
-					Popper popper = EClass.scene.popper.Pop(renderer.PositionCenter(), "DamageNum");
-					Color c2 = (c.IsPC ? EClass.Colors.textColors.damagePC : (c.IsPCFaction ? EClass.Colors.textColors.damagePCParty : EClass.Colors.textColors.damage));
-					if (e != Element.Void)
-					{
-						c2 = EClass.Colors.elementColors.TryGetValue(e.source.alias);
-						float num16 = (c2.r + c2.g + c2.b) / 3f;
-						num16 = ((num16 > 0.5f) ? 0f : (0.6f - num16));
-						c2 = new Color(c2.r + num16, c2.g + num16, c2.b + num16, 1f);
-					}
-					popper.SetText(dmg.ToString() ?? "", c2);
+					EClass.scene.damageTextRenderer.Add(this, c, dmg, e);
 				}
 			});
 		}
@@ -4121,7 +4112,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!isDestroyed)
 			{
 				Die(e, origin, attackSource);
-				if (trait.CanBeSmashedToDeath)
+				if (trait.CanBeSmashedToDeath && !EClass._zone.IsUserZone)
 				{
 					Rand.SetSeed(uid);
 					if (EClass.rnd(3) == 0 && !isCrafted && !isCopy)
@@ -6006,7 +5997,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				if (IsFood)
 				{
-					elements.SetBase(73, -10);
+					elements.ModBase(73, -10);
 				}
 			}
 		}

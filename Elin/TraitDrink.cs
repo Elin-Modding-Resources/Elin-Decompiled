@@ -173,7 +173,7 @@ public class TraitDrink : Trait
 			n1 = N1,
 			isPerfume = (this is TraitPerfume),
 			refThing = owner.Thing,
-			act = ((source != null) ? ACT.Create(source) : null)
+			act = ((source != null && source.id != 0) ? ACT.Create(source) : null)
 		});
 		FoodEffect.ProcTrait(c, owner);
 	}

@@ -111,13 +111,14 @@ public class AM_FlagCell : AM_BaseTileSelect
 
 	public override string OnSetSubMenuButton(int a, UIButton b)
 	{
-		if (a >= 3 && !EClass.debug.enable)
-		{
-			return null;
-		}
 		if (a < 5)
 		{
-			return a.ToEnum<Mode>().ToString();
+			Mode mode = a.ToEnum<Mode>();
+			if (a >= 3 && mode != Mode.flagShadow)
+			{
+				return null;
+			}
+			return mode.ToString();
 		}
 		return null;
 	}

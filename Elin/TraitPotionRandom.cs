@@ -12,11 +12,26 @@ public class TraitPotionRandom : TraitPotion
 
 	public override int Power => 200;
 
-	public override EffectId IdEffect => source.proc[0].ToEnum<EffectId>();
+	public override EffectId IdEffect
+	{
+		get
+		{
+			if (!source.proc.IsEmpty())
+			{
+				return source.proc[0].ToEnum<EffectId>();
+			}
+			return EffectId.DrinkWaterDirty;
+		}
+	}
 
 	public override string N1 => source.proc.TryGet(1, returnNull: true);
 
 	public override bool IsNeg => source.tag.Contains("neg");
+
+	public override void OnCreate(int lv)
+	{
+		TraitPotion.Create(owner, selecter.Select(lv));
+	}
 
 	public override SourceElement.Row GetRefElement()
 	{
@@ -28,13 +43,21 @@ public class TraitPotionRandom : TraitPotion
 		return source.value * 120 / 100;
 	}
 
-	public override void OnCreate(int lv)
-	{
-		TraitPotion.Create(owner, selecter.Select(lv));
-	}
-
 	public override string GetName()
 	{
-		return Lang.TryGet("potion_" + source.alias) ?? "potion_".lang(source.GetName().ToLower());
+		string text;
+		if (owner.refVal != 0)
+		{
+			text = Lang.TryGet("potion_" + source.alias);
+			if (text == null)
+			{
+				return "potion_".lang(source.GetName().ToLower());
+			}
+		}
+		else
+		{
+			text = base.GetName();
+		}
+		return text;
 	}
 }

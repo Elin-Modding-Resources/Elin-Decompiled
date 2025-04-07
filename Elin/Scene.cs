@@ -102,6 +102,8 @@ public class Scene : EMono
 
 	public Material matFloorEx;
 
+	public DamageTextRenderer damageTextRenderer = new DamageTextRenderer();
+
 	public ParticleSystem psFoot;
 
 	public ParticleSystem psSmoke;
@@ -675,6 +677,7 @@ public class Scene : EMono
 				EMono.ui.mouseInfo.SetText();
 			}
 			EMono.screen.Draw();
+			damageTextRenderer.Flush();
 			actionMode.OnAfterUpdate();
 			if (EMono.player.lastTransition == null || EMono.player.simulatingZone)
 			{

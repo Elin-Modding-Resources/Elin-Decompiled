@@ -856,7 +856,7 @@ public class Thing : Card
 				text2 = array[0] + Environment.NewLine + text3 + array[1];
 			}
 		}
-		if (flag)
+		if (flag && !(trait is TraitPotionAlchemy))
 		{
 			text2 = recipe.GetName();
 		}

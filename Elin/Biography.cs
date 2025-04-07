@@ -409,6 +409,10 @@ public class Biography : EClass
 	{
 		SourceRace.Row race = c.race;
 		height = race.height + EClass.rnd(race.height / 5 + 1) - EClass.rnd(race.height / 5 + 1);
+		if (c.source.tag.Contains("mini"))
+		{
+			height /= 10;
+		}
 		weight = height * height * (EClass.rnd(6) + 18) / 10000;
 	}
 

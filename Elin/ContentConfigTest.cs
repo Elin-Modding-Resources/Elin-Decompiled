@@ -13,6 +13,8 @@ public class ContentConfigTest : ContentConfig
 
 	public UIButton toggleShowNumber;
 
+	public UIButton toggleStackNumber;
+
 	public UIButton toggleAAPortrait;
 
 	public UIButton toggleExTurn;
@@ -67,6 +69,10 @@ public class ContentConfigTest : ContentConfig
 		toggleShowNumber.SetToggle(base.config.test.showNumbers, delegate(bool on)
 		{
 			base.config.test.showNumbers = on;
+		});
+		toggleStackNumber.SetToggle(base.config.test.stackNumbers, delegate(bool on)
+		{
+			base.config.test.stackNumbers = on;
 		});
 		toggleToolNoPick.SetToggle(base.config.test.toolNoPick, delegate(bool on)
 		{

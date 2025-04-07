@@ -293,6 +293,7 @@ public class ActRanged : ActThrow
 			CellEffect effect = Act.TP.cell.effect;
 			if (effect != null && effect.id == 6 && EClass.rnd(2) == 0)
 			{
+				Prepare();
 				AttackProcess.Current.PlayRangedAnime(numFire);
 				Act.CC.PlaySound(missSound);
 				Act.CC.Say("abMistOfDarkness_miss", Act.CC);
