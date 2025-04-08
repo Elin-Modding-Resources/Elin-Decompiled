@@ -448,6 +448,7 @@ public class CoreDebug : EScriptable
 			thing.AddCard(ThingGen.Create("mathammer", 102)).SetNum(10);
 			thing.AddCard(ThingGen.Create("mathammer", 33)).SetNum(10);
 			thing.AddCard(ThingGen.Create("mathammer", 18)).SetNum(10);
+			thing.AddCard(ThingGen.Create("mathammer", 10)).SetNum(99);
 			EClass.pc.AddCard(thing);
 			thing = ThingGen.Create("pouch");
 			for (int l = 0; l < 30; l++)

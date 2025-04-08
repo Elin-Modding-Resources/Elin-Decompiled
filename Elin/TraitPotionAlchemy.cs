@@ -20,6 +20,7 @@ public class TraitPotionAlchemy : TraitPotionRandom
 			case 750:
 			case 753:
 				num = ((num2 >= 6) ? 8402 : ((num2 >= 4) ? 8401 : 8400));
+				Debug.Log(num.ToString() + num2);
 				break;
 			case 754:
 				num = 8471;

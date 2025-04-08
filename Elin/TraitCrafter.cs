@@ -16,7 +16,8 @@ public class TraitCrafter : Trait
 		Scratch,
 		Incubator,
 		Fortune,
-		RuneMold
+		RuneMold,
+		FixedResource
 	}
 
 	public enum AnimeType
@@ -281,6 +282,7 @@ public class TraitCrafter : Trait
 		MixType mixType = source.type.ToEnum<MixType>();
 		int num = source.num.Calc();
 		Thing t = null;
+		string[] array = thing3.Split('%');
 		bool claimed;
 		switch (mixType)
 		{
@@ -288,11 +290,9 @@ public class TraitCrafter : Trait
 			t = CraftUtil.MixIngredients(thing3, ai.ings, CraftUtil.MixType.General, 0, EClass.pc);
 			break;
 		case MixType.Resource:
-		{
-			string[] array = thing3.Split('%');
-			t = CraftUtil.MixIngredients(ThingGen.Create(array[0], (array.Length > 1) ? EClass.sources.materials.alias[array[1]].id : thing.material.id), ai.ings, CraftUtil.MixType.General, 999, EClass.pc).Thing;
+		case MixType.FixedResource:
+			t = CraftUtil.MixIngredients(ThingGen.Create(array[0], (array.Length > 1) ? EClass.sources.materials.alias[array[1]].id : thing.material.id), ai.ings, (mixType == MixType.FixedResource) ? CraftUtil.MixType.NoMix : CraftUtil.MixType.General, 999, EClass.pc).Thing;
 			break;
-		}
 		case MixType.Dye:
 			t = ThingGen.Create(thing3, thing2.material.id);
 			break;

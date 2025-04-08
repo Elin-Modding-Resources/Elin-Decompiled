@@ -7,7 +7,8 @@ public class CraftUtil : EClass
 	public enum MixType
 	{
 		General,
-		Food
+		Food,
+		NoMix
 	}
 
 	public static string[] ListFoodEffect = new string[2] { "exp", "pot" };
@@ -142,18 +143,22 @@ public class CraftUtil : EClass
 
 	public static Card MixIngredients(Card product, List<Thing> ings, MixType type, int maxQuality, Chara crafter = null)
 	{
+		bool noMix = type == MixType.NoMix || product.HasTag(CTAG.noMix);
 		bool isFood = type == MixType.Food;
 		int nutFactor = 100 - (ings.Count - 1) * 5;
 		if (crafter != null && crafter.Evalue(1650) >= 3)
 		{
 			nutFactor -= 10;
 		}
-		foreach (Element value2 in product.elements.dict.Values)
+		if (!noMix)
 		{
-			int id = value2.id;
-			if ((uint)(id - 914) > 1u && value2.Value >= 0 && (value2.HasTag("noInherit") || IsValidTrait(value2)))
+			foreach (Element value2 in product.elements.dict.Values)
 			{
-				product.elements.SetTo(value2.id, 0);
+				int id = value2.id;
+				if ((uint)(id - 914) > 1u && value2.Value >= 0 && (value2.HasTag("noInherit") || IsValidTrait(value2)))
+				{
+					product.elements.SetTo(value2.id, 0);
+				}
 			}
 		}
 		if (product.HasCraftBonusTrait())
@@ -248,7 +253,7 @@ public class CraftUtil : EClass
 				}
 				if (e.IsFoodTrait)
 				{
-					return product.ShowFoodEnc;
+					return product.IsInheritFoodTraits;
 				}
 				break;
 			case MixType.Food:
@@ -266,7 +271,7 @@ public class CraftUtil : EClass
 			{
 				foreach (Element value3 in t.elements.dict.Values)
 				{
-					if (IsValidTrait(value3))
+					if (IsValidTrait(value3) && (!noMix || value3.id == 2))
 					{
 						if (isFood && value3.IsFoodTraitMain)
 						{

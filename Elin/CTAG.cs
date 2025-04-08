@@ -34,5 +34,6 @@ public enum CTAG
 	dish_bonus,
 	dish_fail,
 	random_color,
-	noRandomEnc
+	noRandomEnc,
+	noMix
 }

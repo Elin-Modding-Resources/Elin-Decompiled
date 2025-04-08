@@ -2050,11 +2050,23 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public bool IsFood => category.IsChildOf("food");
 
+	public bool IsInheritFoodTraits
+	{
+		get
+		{
+			if (!IsFood && !category.IsChildOf("seed") && !(id == "pasture"))
+			{
+				return id == "grass";
+			}
+			return true;
+		}
+	}
+
 	public bool ShowFoodEnc
 	{
 		get
 		{
-			if (!IsFood && (Evalue(10) <= 0 || IsEquipmentOrRangedOrAmmo) && !category.IsChildOf("seed") && !(id == "pasture") && !(id == "grass"))
+			if (!IsInheritFoodTraits && (Evalue(10) <= 0 || IsEquipmentOrRangedOrAmmo))
 			{
 				return category.IsChildOf("drug");
 			}
@@ -3677,7 +3689,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		if (origin == HealSource.Magic)
 		{
-			a = a * Mathf.Max(100 - Evalue(93), 1) / 100;
+			a = (int)Mathf.Min(a * Mathf.Max(100 - Evalue(93), 1) / 100, 100000000f);
 		}
 		hp += a;
 		if (hp > MaxHP)

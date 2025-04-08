@@ -445,22 +445,6 @@ public class Game : EClass
 				}
 			}
 		});
-		QuestDebt questDebt = EClass.game.quests.Get<QuestDebt>();
-		if (questDebt != null && questDebt.stage == 6)
-		{
-			if (player.debt == 19900000)
-			{
-				EClass.pc.AddCard(ThingGen.Create("ticket_champagne"));
-				questDebt.stage = 3;
-			}
-			if (player.debt == 19530000)
-			{
-				EClass.pc.AddCard(ThingGen.Create("loytel_mart"));
-				EClass.pc.AddCard(ThingGen.Create("ticket_massage"));
-				player.debt = 19500000;
-				questDebt.stage = 5;
-			}
-		}
 		TryAddQuest("into_darkness", "exile_kettle");
 		if (version.IsBelow(0, 23, 100))
 		{

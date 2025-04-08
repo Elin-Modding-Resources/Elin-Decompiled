@@ -1060,6 +1060,10 @@ public class Thing : Card
 		{
 			AddText("isCopy", FontColor.Default);
 		}
+		if (flag && HasTag(CTAG.noMix))
+		{
+			AddText("isNoMix", FontColor.Default);
+		}
 		if (!trait.CanBeDestroyed)
 		{
 			AddText("isIndestructable", FontColor.Default);

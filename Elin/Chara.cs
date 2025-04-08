@@ -4942,6 +4942,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		daysStarved = 0;
 		isDead = true;
+		ClearTempElements();
 		enemy = null;
 		_cooldowns = null;
 		base.isSale = false;
@@ -9362,6 +9363,15 @@ public class Chara : Card, IPathfindWalker
 					ModTempElement(ele, Mathf.Clamp(p / 20 + EClass.rnd(p / 20), 1, -element.vBase));
 				}
 			}
+		}
+	}
+
+	public void ClearTempElements()
+	{
+		if (tempElements != null)
+		{
+			tempElements.SetParent();
+			tempElements = null;
 		}
 	}
 }

@@ -1827,7 +1827,7 @@ public class ActEffect : EClass
 			break;
 		}
 		case EffectId.HealComplete:
-			TC.HealHPHost(9999, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
+			TC.HealHPHost(100000000, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
 			TC.CureHost(CureType.HealComplete, power, state);
 			TC.Say("heal_heavy", TC);
 			break;
