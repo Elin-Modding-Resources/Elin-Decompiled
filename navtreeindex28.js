@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"classActBreathe.html#a60457d7264e26509408ac042cc004fef":[1,0,19,0],
 "classActBreathe.html#a8f9245b9be5061b7120bb4f99f747228":[1,0,19,1],
 "classActChat.html":[1,0,20],
 "classActChat.html#a0283750aa4c1ae67687dbdc6cc673699":[1,0,20,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "classActionMode.html#a1797b68efe17f724c31add787bab1039":[1,0,27,93],
 "classActionMode.html#a19c74c264b2c8f12b56782be8a6ef761":[1,0,27,94],
 "classActionMode.html#a1a477b75600fc38fd2cef424fe58ef0a":[1,0,27,95],
-"classActionMode.html#a1f519f70030e4604e0655771c340b8b9":[1,0,27,23],
-"classActionMode.html#a2061fd9cb0ca5f5ba410f65b14ddbf68":[1,0,27,90]
+"classActionMode.html#a1f519f70030e4604e0655771c340b8b9":[1,0,27,23]
 };

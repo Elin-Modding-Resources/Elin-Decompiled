@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"TileMap_8cs.html":[2,0,0,1197],
 "TileMap_8cs_source.html":[2,0,0,1197],
 "TileRow_8cs.html":[2,0,0,1199],
 "TileRow_8cs_source.html":[2,0,0,1199],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "TraitBook_8cs.html":[2,0,0,1308],
 "TraitBook_8cs_source.html":[2,0,0,1308],
 "TraitBrewery_8cs.html":[2,0,0,1314],
-"TraitBrewery_8cs_source.html":[2,0,0,1314],
-"TraitBroomWitch_8cs.html":[2,0,0,1316]
+"TraitBrewery_8cs_source.html":[2,0,0,1314]
 };

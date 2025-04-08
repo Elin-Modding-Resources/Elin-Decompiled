@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitStatue_8cs_source.html":[2,0,0,1688],
 "TraitStethoscope_8cs.html":[2,0,0,1689],
 "TraitStethoscope_8cs_source.html":[2,0,0,1689],
 "TraitStoneCutter_8cs.html":[2,0,0,1690],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "UIContent_8cs_source.html":[2,0,0,3,118],
 "UIContextMenuItem_8cs.html":[2,0,0,3,121],
 "UIContextMenuItem_8cs_source.html":[2,0,0,3,121],
-"UIContextMenuManager_8cs.html":[2,0,0,3,122],
-"UIContextMenuManager_8cs_source.html":[2,0,0,3,122]
+"UIContextMenuManager_8cs.html":[2,0,0,3,122]
 };

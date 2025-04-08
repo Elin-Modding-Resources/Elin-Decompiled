@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"HotItemIcon_8cs.html":[2,0,0,592],
 "HotItemIcon_8cs_source.html":[2,0,0,592],
 "HotItemLayer_8cs.html":[2,0,0,593],
 "HotItemLayer_8cs_source.html":[2,0,0,593],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "ItemNumLog_8cs.html":[2,0,0,672],
 "ItemNumLog_8cs_source.html":[2,0,0,672],
 "ItemPopulation_8cs.html":[2,0,0,673],
-"ItemPopulation_8cs_source.html":[2,0,0,673],
-"ItemPosition_8cs.html":[2,0,0,674]
+"ItemPopulation_8cs_source.html":[2,0,0,673]
 };

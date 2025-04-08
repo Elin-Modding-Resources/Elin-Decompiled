@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GoalNeeds_8cs.html":[2,0,0,510],
 "GoalNeeds_8cs_source.html":[2,0,0,510],
 "GoalSearch_8cs.html":[2,0,0,511],
 "GoalSearch_8cs_source.html":[2,0,0,511],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HotItemGameAction_8cs.html":[2,0,0,590],
 "HotItemGameAction_8cs_source.html":[2,0,0,590],
 "HotItemHeld_8cs.html":[2,0,0,591],
-"HotItemHeld_8cs_source.html":[2,0,0,591],
-"HotItemIcon_8cs.html":[2,0,0,592]
+"HotItemHeld_8cs_source.html":[2,0,0,591]
 };

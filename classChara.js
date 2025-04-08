@@ -47,6 +47,7 @@ var classChara =
     [ "ChooseNewGoal", "classChara.html#ad62e23ca01b9673119e29a581b1ca6fe", null ],
     [ "ClearBed", "classChara.html#acc4bb3d2b2adb9abdb29b369d3ad40b6", null ],
     [ "ClearInventory", "classChara.html#a9608b8357016cc2070350b7abdabc4ec", null ],
+    [ "ClearTempElements", "classChara.html#a8988af0b1817fa3f32ef0ccf97ddcd6f", null ],
     [ "CreateReplacement", "classChara.html#a1f287f980922e280d5a6f05a2d6123c2", null ],
     [ "Cuddle", "classChara.html#a27e5e85c520e314f03bb351be14a11ac", null ],
     [ "Cure", "classChara.html#ae42b4572e382fedd76e007f4be33e8fb", null ],

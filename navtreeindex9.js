@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"ItemPosition_8cs.html":[2,0,0,674],
 "ItemPosition_8cs_source.html":[2,0,0,674],
 "ItemQuestTracker_8cs.html":[2,0,0,676],
 "ItemQuestTracker_8cs_source.html":[2,0,0,676],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1":[2,0,0,777,0,1],
 "LockOpenState_8cs_source.html":[2,0,0,777],
 "Log_8cs.html":[2,0,0,2,55],
-"Log_8cs_source.html":[2,0,0,2,55],
-"LogicalFire_8cs.html":[2,0,0,778]
+"Log_8cs_source.html":[2,0,0,2,55]
 };

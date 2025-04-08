@@ -1,5 +1,10 @@
 var NAVTREEINDEX116 =
 {
+"classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d":[1,0,1559,1],
+"classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6":[1,0,1559,4],
+"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1559,0],
+"classTraitGambleChest.html":[1,0,1560],
+"classTraitGambleChest.html#a56658f6dfd99173f5e66cde54417c3cf":[1,0,1560,3],
 "classTraitGambleChest.html#a5a10166174b109bf73e6df8d4eabec37":[1,0,1560,2],
 "classTraitGambleChest.html#a61cea1f2dbec25aeb9030dc223efbaa3":[1,0,1560,1],
 "classTraitGambleChest.html#af1855c0b9def1407b0cb0d967d4204be":[1,0,1560,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitLoytel.html":[1,0,1620],
 "classTraitLoytel.html#a5fb49eaba30736bfdf70764f2edc6450":[1,0,1620,4],
 "classTraitLoytel.html#a85070c450e7c710848975c5dc5ca317c":[1,0,1620,2],
-"classTraitLoytel.html#aadacdea2a438c67563e2ecc063c7b34a":[1,0,1620,3],
-"classTraitLoytel.html#ac53844a5ad9188df790abc3ad4db7441":[1,0,1620,1],
-"classTraitLoytel.html#ad7f4e03ba1079b4bd6cc36e55d4ce73d":[1,0,1620,0],
-"classTraitLoytelMart.html":[1,0,1621],
-"classTraitLoytelMart.html#a029e6a9a12587279c405edfd8ab22402":[1,0,1621,3],
-"classTraitLoytelMart.html#a0c82ada3b22c9c9aa0413fb104e7ebc1":[1,0,1621,4]
+"classTraitLoytel.html#aadacdea2a438c67563e2ecc063c7b34a":[1,0,1620,3]
 };

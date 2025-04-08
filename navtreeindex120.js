@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitStethoscope.html":[1,0,1802],
+"classTraitStethoscope.html#a1378d4c0883841197569236cedcf157e":[1,0,1802,2],
+"classTraitStethoscope.html#a5e57478dff52286322ba3de95bfc7e4d":[1,0,1802,0],
+"classTraitStethoscope.html#aea25913633730dcf60b7af36eaea2465":[1,0,1802,1],
+"classTraitStoneCutter.html":[1,0,1803],
 "classTraitStoneCutter.html#a05c54a273a1b037c2418d56b4aafb9dd":[1,0,1803,3],
 "classTraitStoneCutter.html#a5e2c3d5d944c49954c63a2326df03338":[1,0,1803,0],
 "classTraitStoneCutter.html#a965c9a1be14b65a329ece7ab2700a0e5":[1,0,1803,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitTrolley.html#aac4b1624e10b00b395604662c1e0f53c":[1,0,1859,5],
 "classTraitTrolley.html#af0f060ec628470b1d81957f5bb97cfbf":[1,0,1859,2],
 "classTraitTrolleyBig.html":[1,0,1860],
-"classTraitTrolleyBig.html#a09dcd9bc79cac19122a973307407f0c0":[1,0,1860,0],
-"classTraitTutorialBook.html":[1,0,1861],
-"classTraitTutorialBook.html#a05430eee448599a3b9a58ec882a7244b":[1,0,1861,0],
-"classTraitUniqueChara.html":[1,0,1863],
-"classTraitUniqueChara.html#ac677a6c2395ef425343f0eb8d612b874":[1,0,1863,0],
-"classTraitUniqueGuildPersonnel.html":[1,0,1864]
+"classTraitTrolleyBig.html#a09dcd9bc79cac19122a973307407f0c0":[1,0,1860,0]
 };

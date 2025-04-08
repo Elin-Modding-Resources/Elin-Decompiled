@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.121 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.122 Nightly</span>
    </div>
   </td>
  </tr>
@@ -305,11 +305,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   84</span>                        {</div>
 <div class="line"><span class="lineno">   85</span>                            <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#ac05ccf90352c9131a2df3d06199e8fb2">moldOr</a>, b);</div>
 <div class="line"><span class="lineno">   86</span>                        }</div>
-<div class="line"><span class="lineno">   87</span>                        AddThing(text2);</div>
+<div class="line"><span class="lineno">   87</span>                        AddThing(text2, <span class="keyword">null</span>);</div>
 <div class="line"><span class="lineno">   88</span>                    }</div>
 <div class="line"><span class="lineno">   89</span>                }</div>
 <div class="line"><span class="lineno">   90</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#ae9c22fb8c47c2e92308bf96d7755a528">moldEqual</a>, b);</div>
-<div class="line"><span class="lineno">   91</span>                AddThing(a.thing);</div>
+<div class="line"><span class="lineno">   91</span>                AddThing(a.thing, (a.type == <span class="stringliteral">&quot;FixedResource&quot;</span>) ? <span class="stringliteral">&quot;noInherit&quot;</span> : <span class="keyword">null</span>);</div>
 <div class="line"><span class="lineno">   92</span>            },</div>
 <div class="line"><span class="lineno">   93</span>            onList = delegate</div>
 <div class="line"><span class="lineno">   94</span>            {</div>
@@ -331,11 +331,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  110</span>        }</div>
 <div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71">window</a>.SetActive(enable: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  112</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71">window</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">void</span> AddThing(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">void</span> AddThing(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> lang)</div>
 <div class="line"><span class="lineno">  114</span>        {</div>
 <div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty() || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;notImplemented&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;any&quot;</span>)</div>
 <div class="line"><span class="lineno">  116</span>            {</div>
-<div class="line"><span class="lineno">  117</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a4fd17cb3b6aada58c3760f9e9414be37">moldUnknown</a>, P_1.b).GetComponentInChildren&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;().tooltip.lang = <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">  117</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a4fd17cb3b6aada58c3760f9e9414be37">moldUnknown</a>, P_2.b).GetComponentInChildren&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;().tooltip.lang = <span class="stringliteral">&quot;???&quot;</span>;</div>
 <div class="line"><span class="lineno">  118</span>            }</div>
 <div class="line"><span class="lineno">  119</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  120</span>            {</div>
@@ -354,22 +354,24 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  133</span>                {</div>
 <div class="line"><span class="lineno">  134</span>                    mat = ((!(array[1] == <span class="stringliteral">&quot;gelatin&quot;</span>)) ? <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[array[1]] : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;jelly&quot;</span>]);</div>
 <div class="line"><span class="lineno">  135</span>                }</div>
-<div class="line"><span class="lineno">  136</span>                Transform transform = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#afbdb46112ab9a1ff156cf6519e637b7f">moldThing</a>, P_1.b);</div>
+<div class="line"><span class="lineno">  136</span>                Transform transform = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#afbdb46112ab9a1ff156cf6519e637b7f">moldThing</a>, P_2.b);</div>
 <div class="line"><span class="lineno">  137</span>                Image componentInChildren = transform.GetComponentInChildren&lt;Image&gt;();</div>
 <div class="line"><span class="lineno">  138</span>                <a class="code hl_class" href="classUIButton.html">UIButton</a> component = componentInChildren.GetComponent&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;();</div>
 <div class="line"><span class="lineno">  139</span>                cardRow.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(componentInChildren, <span class="keyword">null</span>, cardRow.<a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat));</div>
 <div class="line"><span class="lineno">  140</span>                <span class="keywordtype">string</span> s = cardRow.<a class="code hl_function" href="classCardRow.html#a143615e63cb6a854f04dc809a499f1f8">GetName</a>();</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">if</span> (!text.IsEmpty())</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">if</span> (!text.IsEmpty() || lang != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  142</span>                {</div>
-<div class="line"><span class="lineno">  143</span>                    Transform obj = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a9baa0b4bccabc2687a94051d7ca40c3a">moldCat</a>, transform);</div>
-<div class="line"><span class="lineno">  144</span>                    <span class="keywordtype">string</span> @ref = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.map[text].GetName();</div>
-<div class="line"><span class="lineno">  145</span>                    obj.GetComponentInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;().SetText(<span class="stringliteral">&quot;category&quot;</span>.lang());</div>
-<div class="line"><span class="lineno">  146</span>                    s = <span class="stringliteral">&quot;ingCat&quot;</span>.<a class="code hl_variable" href="classUIText.html#a27925d9d037d3be267ef11b25eb6c481">lang</a>(@ref);</div>
-<div class="line"><span class="lineno">  147</span>                }</div>
-<div class="line"><span class="lineno">  148</span>                component.tooltip.lang = s.ToTitleCase();</div>
-<div class="line"><span class="lineno">  149</span>            }</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="line"><span class="lineno">  143</span>                    <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a9baa0b4bccabc2687a94051d7ca40c3a">moldCat</a>, transform).GetComponentInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;().SetText((lang ?? <span class="stringliteral">&quot;category&quot;</span>).lang());</div>
+<div class="line"><span class="lineno">  144</span>                    <span class="keywordflow">if</span> (lang == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  145</span>                    {</div>
+<div class="line"><span class="lineno">  146</span>                        <span class="keywordtype">string</span> @ref = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.map[text].GetName();</div>
+<div class="line"><span class="lineno">  147</span>                        s = <span class="stringliteral">&quot;ingCat&quot;</span>.lang(@ref);</div>
+<div class="line"><span class="lineno">  148</span>                    }</div>
+<div class="line"><span class="lineno">  149</span>                }</div>
+<div class="line"><span class="lineno">  150</span>                component.tooltip.lang = s.ToTitleCase();</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
 <div class="ttc" id="aclassCardRow_html_a143615e63cb6a854f04dc809a499f1f8"><div class="ttname"><a href="classCardRow.html#a143615e63cb6a854f04dc809a499f1f8">CardRow.GetName</a></div><div class="ttdeci">virtual string GetName(int i)</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00095">CardRow.cs:95</a></div></div>
@@ -393,8 +395,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceRecipe_1_1Row_html"><div class="ttname"><a href="classSourceRecipe_1_1Row.html">SourceRecipe.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00006">SourceRecipe.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceRecipe_html"><div class="ttname"><a href="classSourceRecipe.html">SourceRecipe</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRecipe_8cs_source.html#l00003">SourceRecipe.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitCrafter_html"><div class="ttname"><a href="classTraitCrafter.html">TraitCrafter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00004">TraitCrafter.cs:5</a></div></div>
-<div class="ttc" id="aclassTraitCrafter_html_a1fbe73f7969a5a7616846de2c329bdca"><div class="ttname"><a href="classTraitCrafter.html#a1fbe73f7969a5a7616846de2c329bdca">TraitCrafter.IdSource</a></div><div class="ttdeci">virtual string IdSource</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00035">TraitCrafter.cs:35</a></div></div>
-<div class="ttc" id="aclassTraitCrafter_html_aa7ba1ba047159bd7dec7c9cedfafd755"><div class="ttname"><a href="classTraitCrafter.html#aa7ba1ba047159bd7dec7c9cedfafd755">TraitCrafter.numIng</a></div><div class="ttdeci">virtual int numIng</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00033">TraitCrafter.cs:33</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_a1fbe73f7969a5a7616846de2c329bdca"><div class="ttname"><a href="classTraitCrafter.html#a1fbe73f7969a5a7616846de2c329bdca">TraitCrafter.IdSource</a></div><div class="ttdeci">virtual string IdSource</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00036">TraitCrafter.cs:36</a></div></div>
+<div class="ttc" id="aclassTraitCrafter_html_aa7ba1ba047159bd7dec7c9cedfafd755"><div class="ttname"><a href="classTraitCrafter.html#aa7ba1ba047159bd7dec7c9cedfafd755">TraitCrafter.numIng</a></div><div class="ttdeci">virtual int numIng</div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00034">TraitCrafter.cs:34</a></div></div>
 <div class="ttc" id="aclassTraitRollingFortune_html"><div class="ttname"><a href="classTraitRollingFortune.html">TraitRollingFortune</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitRollingFortune_8cs_source.html#l00001">TraitRollingFortune.cs:2</a></div></div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
 <div class="ttc" id="aclassUIDragGridInfo_html_a07e87e5650d3274788ec17ead83477ba"><div class="ttname"><a href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">UIDragGridInfo.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="UIDragGridInfo_8cs_source.html#l00028">UIDragGridInfo.cs:28</a></div></div>
@@ -411,12 +413,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUIList_html_ac59eb9491315a616940c5ba77f95f538"><div class="ttname"><a href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">UIList.Add</a></div><div class="ttdeci">override void Add(object item)</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00302">UIList.cs:302</a></div></div>
 <div class="ttc" id="aclassUIList_html_af98b337c74c8977ec262db16f160612c"><div class="ttname"><a href="classUIList.html#af98b337c74c8977ec262db16f160612c">UIList.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00717">UIList.cs:717</a></div></div>
 <div class="ttc" id="aclassUIText_html"><div class="ttname"><a href="classUIText.html">UIText</a></div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00005">UIText.cs:6</a></div></div>
-<div class="ttc" id="aclassUIText_html_a27925d9d037d3be267ef11b25eb6c481"><div class="ttname"><a href="classUIText.html#a27925d9d037d3be267ef11b25eb6c481">UIText.lang</a></div><div class="ttdeci">string lang</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00009">UIText.cs:9</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 <div class="ttc" id="aclassZone_html_a27a05884b6115a562a7dc1c9e6044e38"><div class="ttname"><a href="classZone.html#a27a05884b6115a562a7dc1c9e6044e38">Zone.GetOrCreateFortuneRollData</a></div><div class="ttdeci">FortuneRollData GetOrCreateFortuneRollData(bool refresh=true)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03549">Zone.cs:3549</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00019">EMono._zone</a>, <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="SourceManager_8cs_source.html#l00036">SourceManager.categories</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="RenderRow_8cs_source.html#l00086">RenderRow.DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">RenderRow.GetColorInt()</a>, <a class="el" href="CardRow_8cs_source.html#l00095">CardRow.GetName()</a>, <a class="el" href="Zone_8cs_source.html#l03549">Zone.GetOrCreateFortuneRollData()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00180">CoreDebug.godCraft</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00035">TraitCrafter.IdSource</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Player_8cs_source.html#l00889">Player.knownCraft</a>, <a class="el" href="UIText_8cs_source.html#l00009">UIText.lang</a>, <a class="el" href="UIList_8cs_source.html#l00717">UIList.List()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00026">list</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00022">moldCat</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00018">moldEqual</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00020">moldOr</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00016">moldPlus</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00014">moldThing</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00024">moldUnknown</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00030">note</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00033">TraitCrafter.numIng</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00028">owner</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="SourceManager_8cs_source.html#l00080">SourceManager.recipes</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">RenderRow.SetImage()</a>, <a class="el" href="EMono_8cs_source.html#l00041">EMono.sources</a>, <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00008">window</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00271">FortuneRollData.WriteNote()</a>.</p>
+<p class="reference">References <a class="el" href="EMono_8cs_source.html#l00019">EMono._zone</a>, <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="SourceManager_8cs_source.html#l00036">SourceManager.categories</a>, <a class="el" href="EMono_8cs_source.html#l00045">EMono.debug</a>, <a class="el" href="RenderRow_8cs_source.html#l00086">RenderRow.DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">RenderRow.GetColorInt()</a>, <a class="el" href="CardRow_8cs_source.html#l00095">CardRow.GetName()</a>, <a class="el" href="Zone_8cs_source.html#l03549">Zone.GetOrCreateFortuneRollData()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00180">CoreDebug.godCraft</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00036">TraitCrafter.IdSource</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Player_8cs_source.html#l00889">Player.knownCraft</a>, <a class="el" href="UIList_8cs_source.html#l00717">UIList.List()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00026">list</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00022">moldCat</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00018">moldEqual</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00020">moldOr</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00016">moldPlus</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00014">moldThing</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00024">moldUnknown</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00030">note</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00034">TraitCrafter.numIng</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00028">owner</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="SourceManager_8cs_source.html#l00080">SourceManager.recipes</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">RenderRow.SetImage()</a>, <a class="el" href="EMono_8cs_source.html#l00041">EMono.sources</a>, <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00008">window</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00271">FortuneRollData.WriteNote()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00038">Refresh()</a>.</p>
 
@@ -446,81 +447,81 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">153</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">owner</a> = _owner;</div>
-<div class="line"><span class="lineno">  156</span>        textHeader.text = <span class="stringliteral">&quot;knownFuel&quot;</span>.lang();</div>
-<div class="line"><span class="lineno">  157</span>        List&lt;<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>&gt; fuels = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>&gt;();</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows)</div>
-<div class="line"><span class="lineno">  159</span>        {</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a05348975d767a4a7869d864869d5bd82">IsFuel</a>(row.id))</div>
-<div class="line"><span class="lineno">  161</span>            {</div>
-<div class="line"><span class="lineno">  162</span>                fuels.Add(row);</div>
-<div class="line"><span class="lineno">  163</span>            }</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
-<div class="line"><span class="lineno">  165</span>        list.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>, LayoutGroup&gt;</div>
-<div class="line"><span class="lineno">  166</span>        {</div>
-<div class="line"><span class="lineno">  167</span>            onClick = delegate</div>
-<div class="line"><span class="lineno">  168</span>            {</div>
-<div class="line"><span class="lineno">  169</span>            },</div>
-<div class="line"><span class="lineno">  170</span>            onInstantiate = delegate(<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> a, LayoutGroup b)</div>
-<div class="line"><span class="lineno">  171</span>            {</div>
-<div class="line"><span class="lineno">  172</span>                AddThing(a.id);</div>
-<div class="line"><span class="lineno">  173</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#ae9c22fb8c47c2e92308bf96d7755a528">moldEqual</a>, b);</div>
-<div class="line"><span class="lineno">  174</span>                AddThing(<a class="code hl_variable" href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">owner</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>);</div>
-<div class="line"><span class="lineno">  175</span>            },</div>
-<div class="line"><span class="lineno">  176</span>            onList = delegate</div>
-<div class="line"><span class="lineno">  177</span>            {</div>
-<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in fuels)</div>
-<div class="line"><span class="lineno">  179</span>                {</div>
-<div class="line"><span class="lineno">  180</span>                    <a class="code hl_variable" href="classUIDragGridInfo.html#aeb3add986a26bb5b21925079b52ce5dd">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">  181</span>                }</div>
-<div class="line"><span class="lineno">  182</span>            }</div>
-<div class="line"><span class="lineno">  183</span>        };</div>
-<div class="line"><span class="lineno">  184</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#aeb3add986a26bb5b21925079b52ce5dd">list</a>.<a class="code hl_function" href="classUIList.html#af98b337c74c8977ec262db16f160612c">List</a>();</div>
-<div class="line"><span class="lineno">  185</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71">window</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  186</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71">window</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordtype">void</span> AddThing(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  188</span>        {</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty() || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;notImplemented&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;any&quot;</span>)</div>
-<div class="line"><span class="lineno">  190</span>            {</div>
-<div class="line"><span class="lineno">  191</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a4fd17cb3b6aada58c3760f9e9414be37">moldUnknown</a>, P_1.b).GetComponentInChildren&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;().tooltip.lang = <span class="stringliteral">&quot;???&quot;</span>;</div>
-<div class="line"><span class="lineno">  192</span>            }</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  194</span>            {</div>
-<div class="line"><span class="lineno">  195</span>                <span class="keywordtype">id</span> = <span class="keywordtype">id</span>.Replace(<span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;@&quot;</span>);</div>
-<div class="line"><span class="lineno">  196</span>                <span class="keywordtype">string</span>[] array = <span class="keywordtype">id</span>.Split(<span class="charliteral">&#39;@&#39;</span>);</div>
-<div class="line"><span class="lineno">  197</span>                <span class="keywordtype">string</span> cat = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  198</span>                <span class="keywordtype">id</span> = array[0];</div>
-<div class="line"><span class="lineno">  199</span>                <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.StartsWith(<span class="charliteral">&#39;#&#39;</span>))</div>
-<div class="line"><span class="lineno">  200</span>                {</div>
-<div class="line"><span class="lineno">  201</span>                    cat = <span class="keywordtype">id</span>.Replace(<span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  202</span>                    List&lt;CardRow&gt; obj = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">rows</a>.Where((<a class="code hl_class" href="classCardRow.html">CardRow</a> r) =&gt; r.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.IsChildOf(cat)).ToList();</div>
-<div class="line"><span class="lineno">  203</span>                    obj.Sort((<a class="code hl_class" href="classCardRow.html">CardRow</a> a, <a class="code hl_class" href="classCardRow.html">CardRow</a> b) =&gt; a.value - b.<a class="code hl_variable" href="classRenderRow.html#acd185bcd12119d3cd2cab52b47d47923">value</a>);</div>
-<div class="line"><span class="lineno">  204</span>                    <span class="keywordtype">id</span> = obj[0].id;</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[id];</div>
-<div class="line"><span class="lineno">  207</span>                <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat = cardRow.<a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>;</div>
-<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">if</span> (array.Length &gt;= 2)</div>
-<div class="line"><span class="lineno">  209</span>                {</div>
-<div class="line"><span class="lineno">  210</span>                    mat = ((!(array[1] == <span class="stringliteral">&quot;gelatin&quot;</span>)) ? <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[array[1]] : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;jelly&quot;</span>]);</div>
-<div class="line"><span class="lineno">  211</span>                }</div>
-<div class="line"><span class="lineno">  212</span>                Transform transform = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#afbdb46112ab9a1ff156cf6519e637b7f">moldThing</a>, P_1.b);</div>
-<div class="line"><span class="lineno">  213</span>                Image componentInChildren = transform.GetComponentInChildren&lt;Image&gt;();</div>
-<div class="line"><span class="lineno">  214</span>                <a class="code hl_class" href="classUIButton.html">UIButton</a> component = componentInChildren.GetComponent&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;();</div>
-<div class="line"><span class="lineno">  215</span>                cardRow.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(componentInChildren, <span class="keyword">null</span>, cardRow.<a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat));</div>
-<div class="line"><span class="lineno">  216</span>                <span class="keywordtype">string</span> s = cardRow.<a class="code hl_function" href="classCardRow.html#a143615e63cb6a854f04dc809a499f1f8">GetName</a>();</div>
-<div class="line"><span class="lineno">  217</span>                <span class="keywordflow">if</span> (!cat.IsEmpty())</div>
-<div class="line"><span class="lineno">  218</span>                {</div>
-<div class="line"><span class="lineno">  219</span>                    Transform obj2 = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a9baa0b4bccabc2687a94051d7ca40c3a">moldCat</a>, transform);</div>
-<div class="line"><span class="lineno">  220</span>                    <span class="keywordtype">string</span> @ref = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.map[cat].GetName();</div>
-<div class="line"><span class="lineno">  221</span>                    obj2.GetComponentInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;().SetText(<span class="stringliteral">&quot;(&quot;</span> + <span class="stringliteral">&quot;category&quot;</span>.lang() + <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><span class="lineno">  222</span>                    s = <span class="stringliteral">&quot;ingCat&quot;</span>.<a class="code hl_variable" href="classUIText.html#a27925d9d037d3be267ef11b25eb6c481">lang</a>(@ref);</div>
-<div class="line"><span class="lineno">  223</span>                }</div>
-<div class="line"><span class="lineno">  224</span>                component.tooltip.lang = s.ToTitleCase();</div>
-<div class="line"><span class="lineno">  225</span>            }</div>
-<div class="line"><span class="lineno">  226</span>        }</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">155</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">owner</a> = _owner;</div>
+<div class="line"><span class="lineno">  158</span>        textHeader.text = <span class="stringliteral">&quot;knownFuel&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">  159</span>        List&lt;<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>&gt; fuels = <span class="keyword">new</span> List&lt;<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>&gt;();</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows)</div>
+<div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a05348975d767a4a7869d864869d5bd82">IsFuel</a>(row.id))</div>
+<div class="line"><span class="lineno">  163</span>            {</div>
+<div class="line"><span class="lineno">  164</span>                fuels.Add(row);</div>
+<div class="line"><span class="lineno">  165</span>            }</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        list.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>, LayoutGroup&gt;</div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            onClick = delegate</div>
+<div class="line"><span class="lineno">  170</span>            {</div>
+<div class="line"><span class="lineno">  171</span>            },</div>
+<div class="line"><span class="lineno">  172</span>            onInstantiate = delegate(<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> a, LayoutGroup b)</div>
+<div class="line"><span class="lineno">  173</span>            {</div>
+<div class="line"><span class="lineno">  174</span>                AddThing(a.id);</div>
+<div class="line"><span class="lineno">  175</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#ae9c22fb8c47c2e92308bf96d7755a528">moldEqual</a>, b);</div>
+<div class="line"><span class="lineno">  176</span>                AddThing(<a class="code hl_variable" href="classUIDragGridInfo.html#a07e87e5650d3274788ec17ead83477ba">owner</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>);</div>
+<div class="line"><span class="lineno">  177</span>            },</div>
+<div class="line"><span class="lineno">  178</span>            onList = delegate</div>
+<div class="line"><span class="lineno">  179</span>            {</div>
+<div class="line"><span class="lineno">  180</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in fuels)</div>
+<div class="line"><span class="lineno">  181</span>                {</div>
+<div class="line"><span class="lineno">  182</span>                    <a class="code hl_variable" href="classUIDragGridInfo.html#aeb3add986a26bb5b21925079b52ce5dd">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">  183</span>                }</div>
+<div class="line"><span class="lineno">  184</span>            }</div>
+<div class="line"><span class="lineno">  185</span>        };</div>
+<div class="line"><span class="lineno">  186</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#aeb3add986a26bb5b21925079b52ce5dd">list</a>.<a class="code hl_function" href="classUIList.html#af98b337c74c8977ec262db16f160612c">List</a>();</div>
+<div class="line"><span class="lineno">  187</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71">window</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_variable" href="classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71">window</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">void</span> AddThing(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  190</span>        {</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.IsEmpty() || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;notImplemented&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;any&quot;</span>)</div>
+<div class="line"><span class="lineno">  192</span>            {</div>
+<div class="line"><span class="lineno">  193</span>                <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a4fd17cb3b6aada58c3760f9e9414be37">moldUnknown</a>, P_1.b).GetComponentInChildren&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;().tooltip.lang = <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><span class="lineno">  194</span>            }</div>
+<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  196</span>            {</div>
+<div class="line"><span class="lineno">  197</span>                <span class="keywordtype">id</span> = <span class="keywordtype">id</span>.Replace(<span class="stringliteral">&quot;%&quot;</span>, <span class="stringliteral">&quot;@&quot;</span>);</div>
+<div class="line"><span class="lineno">  198</span>                <span class="keywordtype">string</span>[] array = <span class="keywordtype">id</span>.Split(<span class="charliteral">&#39;@&#39;</span>);</div>
+<div class="line"><span class="lineno">  199</span>                <span class="keywordtype">string</span> cat = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  200</span>                <span class="keywordtype">id</span> = array[0];</div>
+<div class="line"><span class="lineno">  201</span>                <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.StartsWith(<span class="charliteral">&#39;#&#39;</span>))</div>
+<div class="line"><span class="lineno">  202</span>                {</div>
+<div class="line"><span class="lineno">  203</span>                    cat = <span class="keywordtype">id</span>.Replace(<span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  204</span>                    List&lt;CardRow&gt; obj = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">rows</a>.Where((<a class="code hl_class" href="classCardRow.html">CardRow</a> r) =&gt; r.<a class="code hl_property" href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">Category</a>.IsChildOf(cat)).ToList();</div>
+<div class="line"><span class="lineno">  205</span>                    obj.Sort((<a class="code hl_class" href="classCardRow.html">CardRow</a> a, <a class="code hl_class" href="classCardRow.html">CardRow</a> b) =&gt; a.value - b.<a class="code hl_variable" href="classRenderRow.html#acd185bcd12119d3cd2cab52b47d47923">value</a>);</div>
+<div class="line"><span class="lineno">  206</span>                    <span class="keywordtype">id</span> = obj[0].id;</div>
+<div class="line"><span class="lineno">  207</span>                }</div>
+<div class="line"><span class="lineno">  208</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[id];</div>
+<div class="line"><span class="lineno">  209</span>                <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat = cardRow.<a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>;</div>
+<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">if</span> (array.Length &gt;= 2)</div>
+<div class="line"><span class="lineno">  211</span>                {</div>
+<div class="line"><span class="lineno">  212</span>                    mat = ((!(array[1] == <span class="stringliteral">&quot;gelatin&quot;</span>)) ? <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[array[1]] : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;jelly&quot;</span>]);</div>
+<div class="line"><span class="lineno">  213</span>                }</div>
+<div class="line"><span class="lineno">  214</span>                Transform transform = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#afbdb46112ab9a1ff156cf6519e637b7f">moldThing</a>, P_1.b);</div>
+<div class="line"><span class="lineno">  215</span>                Image componentInChildren = transform.GetComponentInChildren&lt;Image&gt;();</div>
+<div class="line"><span class="lineno">  216</span>                <a class="code hl_class" href="classUIButton.html">UIButton</a> component = componentInChildren.GetComponent&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;();</div>
+<div class="line"><span class="lineno">  217</span>                cardRow.<a class="code hl_function" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a>(componentInChildren, <span class="keyword">null</span>, cardRow.<a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat));</div>
+<div class="line"><span class="lineno">  218</span>                <span class="keywordtype">string</span> s = cardRow.<a class="code hl_function" href="classCardRow.html#a143615e63cb6a854f04dc809a499f1f8">GetName</a>();</div>
+<div class="line"><span class="lineno">  219</span>                <span class="keywordflow">if</span> (!cat.IsEmpty())</div>
+<div class="line"><span class="lineno">  220</span>                {</div>
+<div class="line"><span class="lineno">  221</span>                    Transform obj2 = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classUIDragGridInfo.html#a9baa0b4bccabc2687a94051d7ca40c3a">moldCat</a>, transform);</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="keywordtype">string</span> @ref = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#afaf9020addda94e6bab3a114be10e563">sources</a>.<a class="code hl_variable" href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">categories</a>.map[cat].GetName();</div>
+<div class="line"><span class="lineno">  223</span>                    obj2.GetComponentInChildren&lt;<a class="code hl_class" href="classUIText.html">UIText</a>&gt;().SetText(<span class="stringliteral">&quot;(&quot;</span> + <span class="stringliteral">&quot;category&quot;</span>.lang() + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>                    s = <span class="stringliteral">&quot;ingCat&quot;</span>.<a class="code hl_variable" href="classUIText.html#a27925d9d037d3be267ef11b25eb6c481">lang</a>(@ref);</div>
+<div class="line"><span class="lineno">  225</span>                }</div>
+<div class="line"><span class="lineno">  226</span>                component.tooltip.lang = s.ToTitleCase();</div>
+<div class="line"><span class="lineno">  227</span>            }</div>
+<div class="line"><span class="lineno">  228</span>        }</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00031">Card.cs:31</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00049">Card.cs:49</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a40de73dfca78c824bfd191752a2cb532"><div class="ttname"><a href="classRenderRow.html#a40de73dfca78c824bfd191752a2cb532">RenderRow.Category</a></div><div class="ttdeci">SourceCategory.Row Category</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00119">RenderRow.cs:119</a></div></div>
@@ -530,6 +531,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00007">SourceThing.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
 <div class="ttc" id="aclassTrait_html_a05348975d767a4a7869d864869d5bd82"><div class="ttname"><a href="classTrait.html#a05348975d767a4a7869d864869d5bd82">Trait.IsFuel</a></div><div class="ttdeci">bool IsFuel(string s)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01316">Trait.cs:1316</a></div></div>
+<div class="ttc" id="aclassUIText_html_a27925d9d037d3be267ef11b25eb6c481"><div class="ttname"><a href="classUIText.html#a27925d9d037d3be267ef11b25eb6c481">UIText.lang</a></div><div class="ttdeci">string lang</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00009">UIText.cs:9</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIList_8cs_source.html#l00302">UIList.Add()</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="SourceManager_8cs_source.html#l00036">SourceManager.categories</a>, <a class="el" href="RenderRow_8cs_source.html#l00119">RenderRow.Category</a>, <a class="el" href="RenderRow_8cs_source.html#l00086">RenderRow.DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">RenderRow.GetColorInt()</a>, <a class="el" href="CardRow_8cs_source.html#l00095">CardRow.GetName()</a>, <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>, <a class="el" href="Trait_8cs_source.html#l01316">Trait.IsFuel()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="UIText_8cs_source.html#l00009">UIText.lang</a>, <a class="el" href="UIList_8cs_source.html#l00717">UIList.List()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00026">list</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00022">moldCat</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00018">moldEqual</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00014">moldThing</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00024">moldUnknown</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00028">owner</a>, <a class="el" href="SourceCard_8cs_source.html#l00006">SourceCard.rows</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">RenderRow.SetImage()</a>, <a class="el" href="EMono_8cs_source.html#l00041">EMono.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00026">SourceManager.things</a>, <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>, <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>, <a class="el" href="RenderRow_8cs_source.html#l00020">RenderRow.value</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00008">window</a>.</p>
 
@@ -566,7 +568,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00028">owner</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00261">TraitCrafter.Craft()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00262">TraitCrafter.Craft()</a>.</p>
 
 </div>
 </div>
@@ -585,7 +587,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00026">26</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>.</p>
 
 </div>
 </div>
@@ -603,7 +605,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00022">22</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>.</p>
 
 </div>
 </div>
@@ -621,7 +623,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00018">18</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>.</p>
 
 </div>
 </div>
@@ -675,7 +677,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00014">14</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>.</p>
 
 </div>
 </div>
@@ -693,7 +695,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00024">24</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>.</p>
 
 </div>
 </div>
@@ -729,7 +731,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00028">28</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00038">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00038">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -781,7 +783,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UIDragGridInfo_8cs_source.html#l00008">8</a> of file <a class="el" href="UIDragGridInfo_8cs_source.html">UIDragGridInfo.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00032">Awake()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00153">InitFuel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00032">Awake()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">Init()</a>, and <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">InitFuel()</a>.</p>
 
 </div>
 </div>

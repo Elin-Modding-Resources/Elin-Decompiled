@@ -1,5 +1,10 @@
 var NAVTREEINDEX118 =
 {
+"classTraitNino.html":[1,0,1680],
+"classTraitNino.html#a52a3bee476df1c859276f2c9b7fd8339":[1,0,1680,1],
+"classTraitNino.html#abe015264f3aaf095ee1ab26af1de6242":[1,0,1680,3],
+"classTraitNino.html#ac3469f2ea35d743ae9cc384866c16c8f":[1,0,1680,2],
+"classTraitNino.html#acc31a15517d8afa22aeeeae87258b9c4":[1,0,1680,0],
 "classTraitNola.html":[1,0,1681],
 "classTraitNola.html#a2d3973f59a50ca94708145aa5a20e545":[1,0,1681,1],
 "classTraitNola.html#a376fa5937ae4878a433ad8b1c02e8947":[1,0,1681,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitRune.html#a3ef4e57dd7b4f5ccefcd30f71a65985f":[1,0,1742,1],
 "classTraitRune.html#ad1d7c2da5c25bbce6d814883e67850f8":[1,0,1742,0],
 "classTraitRuneMold.html":[1,0,1743],
-"classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9":[1,0,1743,8],
-"classTraitRuneMold.html#a37f968d4735a5f78b1ea5cdadc7adb6a":[1,0,1743,0],
-"classTraitRuneMold.html#a4de0834828f33388aa73f0faa28c3106":[1,0,1743,3],
-"classTraitRuneMold.html#a58cd8719287fb908e6b92d92c0287739":[1,0,1743,2],
-"classTraitRuneMold.html#a7bbec895032465484d4465ed87ef8324":[1,0,1743,5],
-"classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b":[1,0,1743,9]
+"classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9":[1,0,1743,8]
 };

@@ -2,7 +2,8 @@ var classCraftUtil =
 [
     [ "MixType", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7", [
       [ "General", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0db377921f4ce762c62526131097968f", null ],
-      [ "Food", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0a38e7286ebbb560354992b3ce62be67", null ]
+      [ "Food", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0a38e7286ebbb560354992b3ce62be67", null ],
+      [ "NoMix", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a761633dea969aa13350ebbb08aea8d04", null ]
     ] ],
     [ "AddRandomFoodEnc", "classCraftUtil.html#a6414ffbba2b88786b5a038f5f6805217", null ],
     [ "MakeDish", "classCraftUtil.html#a373d25217096239cdfbc441c85f742d1", null ],

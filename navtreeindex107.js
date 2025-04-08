@@ -1,5 +1,9 @@
 var NAVTREEINDEX107 =
 {
+"classTactics.html#a51df248f18f84f1f8b446c41ba7d49e7":[1,0,1243,6],
+"classTactics.html#a5dbb92b5bf85148cacc178d8d7643f75":[1,0,1243,5],
+"classTactics.html#a7f5e4d5cecc8c50aab9a55cc0ee74dc3":[1,0,1243,11],
+"classTactics.html#a835f143a21af573d527c515521cceb67":[1,0,1243,1],
 "classTactics.html#a85c1fcd50eefde87cdd05d92d5e2c31a":[1,0,1243,10],
 "classTactics.html#a8a9acef5488b9b142e3eb395836a09b2":[1,0,1243,7],
 "classTactics.html#a8fb9e3bcde63fcc7cc5245962fd1f2b7":[1,0,1243,13],
@@ -245,9 +249,5 @@ var NAVTREEINDEX107 =
 "classTaskHarvest.html":[1,0,1269],
 "classTaskHarvest.html#a017a58fd465d7d4748dfb123d7e01a3f":[1,0,1269,1],
 "classTaskHarvest.html#a0910b02ce883c7d735c1426622aa5430":[1,0,1269,7],
-"classTaskHarvest.html#a1e71abfde9afe71cf2353d43b59761bb":[1,0,1269,5],
-"classTaskHarvest.html#a2208222c5e4f7a23b6479f55ab923ef0":[1,0,1269,4],
-"classTaskHarvest.html#a29e2c879c63a74f87999c30a1e0dd7d1":[1,0,1269,14],
-"classTaskHarvest.html#a695e8406de9c15931315290d86c161d3":[1,0,1269,12],
-"classTaskHarvest.html#a7132864d9029508b7e151ec18b9e0faa":[1,0,1269,20]
+"classTaskHarvest.html#a1e71abfde9afe71cf2353d43b59761bb":[1,0,1269,5]
 };

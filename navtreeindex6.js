@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"Emo_8cs.html#a3a776133b1ce94bdc19666187232d047ae3e90fd6d2a7c4661a1a3acf2f60bc6d":[2,0,0,444,0,11],
 "Emo_8cs.html#a3a776133b1ce94bdc19666187232d047ae67ed91b512d4579faed79c9dd162f35":[2,0,0,444,0,12],
 "Emo_8cs.html#a3a776133b1ce94bdc19666187232d047afe47aa7c733c490d36e80508d5dc4019":[2,0,0,444,0,6],
 "Emo_8cs_source.html":[2,0,0,444],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GoalList_8cs.html":[2,0,0,507],
 "GoalList_8cs_source.html":[2,0,0,507],
 "GoalManualMove_8cs.html":[2,0,0,509],
-"GoalManualMove_8cs_source.html":[2,0,0,509],
-"GoalNeeds_8cs.html":[2,0,0,510]
+"GoalManualMove_8cs_source.html":[2,0,0,509]
 };

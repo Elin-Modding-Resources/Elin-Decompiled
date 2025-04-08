@@ -147,6 +147,7 @@ var NAVTREEINDEX2 =
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ae0597c15d721776e8a797581b4cd4e30":[2,0,0,379,0,12],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aec894178b32d61b7b0fc75fb83d6f4f1":[2,0,0,379,0,22],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af24c2c15b9d03797c6874986a8d19516":[2,0,0,379,0,11],
+"CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af40e3d0e9577a8a2a2e9cdd1e2bcaefb":[2,0,0,379,0,35],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af674ecc8a03f8e24ea9ed65b91ea5a70":[2,0,0,379,0,25],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192":[2,0,0,379,0,13],
 "CTAG_8cs_source.html":[2,0,0,379],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "ClearInventoryType_8cs.html#ac2369609a8ebd07f4a1ac011e6db2648ad67c704564d7976991e2f23e4315ccfd":[2,0,0,259,0,0],
 "ClearInventoryType_8cs_source.html":[2,0,0,259],
 "CodexCreature_8cs.html":[2,0,0,261],
-"CodexCreature_8cs_source.html":[2,0,0,261],
-"CodexManager_8cs.html":[2,0,0,262]
+"CodexCreature_8cs_source.html":[2,0,0,261]
 };

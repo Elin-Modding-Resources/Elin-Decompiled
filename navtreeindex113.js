@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTraitBaseSpellbook.html#a5d102c34e32611f13f7a4db5f2c30c05":[1,0,1402,6],
+"classTraitBaseSpellbook.html#a6751607c6ecd9ad50bafe58d9d96428a":[1,0,1402,10],
+"classTraitBaseSpellbook.html#a68ad147a394d09b062f9d4fc042816d9":[1,0,1402,4],
+"classTraitBaseSpellbook.html#a7e832f3c41aa28e23551946e5fd9334c":[1,0,1402,13],
 "classTraitBaseSpellbook.html#ab88e783f03c314e47d4d029af226a6d6":[1,0,1402,8],
 "classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5":[1,0,1402,12],
 "classTraitBaseSpellbook.html#ad11ef848ff01b61b036d24f744b39b24":[1,0,1402,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitChopper.html":[1,0,1450],
 "classTraitChopper.html#a94d6375d40d335e6b98e54be09f2185a":[1,0,1450,0],
 "classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1450,2],
-"classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1450,1],
-"classTraitCitizen.html":[1,0,1451],
-"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1451,0],
-"classTraitClerk__Casino.html":[1,0,1452],
-"classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1452,0]
+"classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1450,1]
 };

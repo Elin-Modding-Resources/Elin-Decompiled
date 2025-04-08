@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TraitBroomWitch_8cs.html":[2,0,0,1316],
 "TraitBroomWitch_8cs_source.html":[2,0,0,1316],
 "TraitBroom_8cs.html":[2,0,0,1315],
 "TraitBroom_8cs_source.html":[2,0,0,1315],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitFortuneBall_8cs.html":[2,0,0,1438],
 "TraitFortuneBall_8cs_source.html":[2,0,0,1438],
 "TraitFortuneCookie_8cs.html":[2,0,0,1439],
-"TraitFortuneCookie_8cs_source.html":[2,0,0,1439],
-"TraitFridge_8cs.html":[2,0,0,1440]
+"TraitFortuneCookie_8cs_source.html":[2,0,0,1439]
 };

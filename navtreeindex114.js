@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitCitizen.html":[1,0,1451],
+"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1451,0],
+"classTraitClerk__Casino.html":[1,0,1452],
+"classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1452,0],
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1452,1],
 "classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1452,3],
 "classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1452,2],
@@ -91,6 +95,7 @@ var NAVTREEINDEX114 =
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba0a38e7286ebbb560354992b3ce62be67":[1,0,1476,1,1],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8":[1,0,1476,1,5],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39":[1,0,1476,1,3],
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba416cbeae2070fddbfc244e8c51179235":[1,0,1476,1,12],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b":[1,0,1476,1,7],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754":[1,0,1476,1,0],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0":[1,0,1476,1,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitDoorSwing.html#aca0158988369ad823267b50e84e975c1":[1,0,1502,3],
 "classTraitDoorSwing.html#ad93b92fd8e8cad28f6a870398bf54f2b":[1,0,1502,0],
 "classTraitDoorSwingGrass.html":[1,0,1503],
-"classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1503,0],
-"classTraitDoorman__Fighter.html":[1,0,1499],
-"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1499,1],
-"classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1499,2],
-"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1499,0],
-"classTraitDoorman__Mage.html":[1,0,1500]
+"classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1503,0]
 };

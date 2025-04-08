@@ -1,5 +1,10 @@
 var NAVTREEINDEX115 =
 {
+"classTraitDoorman__Fighter.html":[1,0,1499],
+"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1499,1],
+"classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1499,2],
+"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1499,0],
+"classTraitDoorman__Mage.html":[1,0,1500],
 "classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1500,0],
 "classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1500,1],
 "classTraitDoorman__Thief.html":[1,0,1501],
@@ -244,10 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitGamble.html":[1,0,1559],
 "classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950":[1,0,1559,5],
 "classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec":[1,0,1559,3],
-"classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1559,2],
-"classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d":[1,0,1559,1],
-"classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6":[1,0,1559,4],
-"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1559,0],
-"classTraitGambleChest.html":[1,0,1560],
-"classTraitGambleChest.html#a56658f6dfd99173f5e66cde54417c3cf":[1,0,1560,3]
+"classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1559,2]
 };

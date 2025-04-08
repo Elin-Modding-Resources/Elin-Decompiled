@@ -1,5 +1,9 @@
 var NAVTREEINDEX66 =
 {
+"classGoalWork.html#a98743380566d05d5a4ae2091ad139fed":[1,0,552,2],
+"classGoalWork.html#aaa51f3a65f2fe8848a8e59ce3caf5e29":[1,0,552,7],
+"classGoalWork.html#af5257e8f9c7fd0f16e2d4b14750faa87":[1,0,552,0],
+"classGoalWork.html#afa1d985e1477f615656f583a6ea948a3":[1,0,552,3],
 "classGodStatueData.html":[1,0,553],
 "classGodStatueData.html#a2d212fbe1f26d099c87f5e545bcce412":[1,0,553,2],
 "classGodStatueData.html#a899f3c401b475c7c5f4896eee1a3705d":[1,0,553,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX66 =
 "classGrowSystem_1_1Stage.html#a786feaf163f0fc39028143cae29f720e":[1,0,561,0,3],
 "classGrowSystem_1_1Stage.html#a7b92d82b698ce498752814ebdb8e4231":[1,0,561,0,2],
 "classGrowSystem_1_1Stage.html#a7c9d88a20e51eb0b582b5f20e2eee1ff":[1,0,561,0,4],
-"classGrowSystem_1_1Stage.html#acb367e63cd28051c647f051a8b8a91f9":[1,0,561,0,1],
-"classGuild.html":[1,0,579],
-"classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8":[1,0,579,8],
-"classGuild.html#a3f93d65a828d8a78e6f4679600e65929":[1,0,579,1],
-"classGuild.html#a52ba7465f4616db45d8b622c42049325":[1,0,579,10]
+"classGrowSystem_1_1Stage.html#acb367e63cd28051c647f051a8b8a91f9":[1,0,561,0,1]
 };

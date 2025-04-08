@@ -420,6 +420,7 @@ var classCard =
     [ "IsIdentified", "classCard.html#aeb6ca5c2f62e5a584b732552ed160599", null ],
     [ "IsImportant", "classCard.html#a187cb70b7ee0bbdf2167ff1cbfeecfea", null ],
     [ "isImported", "classCard.html#a17ef4146fe362eaf05ab5fdf4050800a", null ],
+    [ "IsInheritFoodTraits", "classCard.html#a302c836aa54a19fffe8696adeda82122", null ],
     [ "IsInstalled", "classCard.html#aadea8879b1297e3bd6bae341b8be33c7", null ],
     [ "isLeashed", "classCard.html#aeaabd21f83508d8bd8d10395f12a39b8", null ],
     [ "IsLightsource", "classCard.html#ac80d1450f39b28fd323f0406c6e2c579", null ],

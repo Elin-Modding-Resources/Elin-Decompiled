@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitFridge_8cs.html":[2,0,0,1440],
 "TraitFridge_8cs_source.html":[2,0,0,1440],
 "TraitGM_8cs.html":[2,0,0,1459],
 "TraitGM_8cs_source.html":[2,0,0,1459],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMusicBox_8cs.html":[2,0,0,1563],
 "TraitMusicBox_8cs_source.html":[2,0,0,1563],
 "TraitNewZone_8cs.html":[2,0,0,1565],
-"TraitNewZone_8cs_source.html":[2,0,0,1565],
-"TraitNewspaper_8cs.html":[2,0,0,1564]
+"TraitNewZone_8cs_source.html":[2,0,0,1565]
 };

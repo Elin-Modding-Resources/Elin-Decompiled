@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"CodexManager_8cs.html":[2,0,0,262],
 "CodexManager_8cs_source.html":[2,0,0,262],
 "CollectibleActor_8cs.html":[2,0,0,263],
 "CollectibleActor_8cs_source.html":[2,0,0,263],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ContentConfigTest_8cs.html":[2,0,0,334],
 "ContentConfigTest_8cs_source.html":[2,0,0,334],
 "ContentConfig_8cs.html":[2,0,0,329],
-"ContentConfig_8cs_source.html":[2,0,0,329],
-"ContentFaction_8cs.html":[2,0,0,335]
+"ContentConfig_8cs_source.html":[2,0,0,329]
 };

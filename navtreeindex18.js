@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitNewspaper_8cs.html":[2,0,0,1564],
 "TraitNewspaper_8cs_source.html":[2,0,0,1564],
 "TraitNino_8cs.html":[2,0,0,1566],
 "TraitNino_8cs_source.html":[2,0,0,1566],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitStairs_8cs_source.html":[2,0,0,1682],
 "TraitStasisChamber_8cs.html":[2,0,0,1687],
 "TraitStasisChamber_8cs_source.html":[2,0,0,1687],
-"TraitStatue_8cs.html":[2,0,0,1688],
-"TraitStatue_8cs_source.html":[2,0,0,1688]
+"TraitStatue_8cs.html":[2,0,0,1688]
 };

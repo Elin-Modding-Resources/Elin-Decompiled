@@ -1,5 +1,10 @@
 var NAVTREEINDEX121 =
 {
+"classTraitTutorialBook.html":[1,0,1861],
+"classTraitTutorialBook.html#a05430eee448599a3b9a58ec882a7244b":[1,0,1861,0],
+"classTraitUniqueChara.html":[1,0,1863],
+"classTraitUniqueChara.html#ac677a6c2395ef425343f0eb8d612b874":[1,0,1863,0],
+"classTraitUniqueGuildPersonnel.html":[1,0,1864],
 "classTraitUniqueGuildPersonnel.html#adc1724fadb4065c8a2eb2f34691a733f":[1,0,1864,0],
 "classTraitUniqueMerchant.html":[1,0,1865],
 "classTraitUniqueMerchant.html#ad289685349da1a3d0940247ab5a21533":[1,0,1865,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX121 =
 "classUDictionary.html#a4e58f2b20514dac97313a4c6a9b32620":[1,0,1898,36],
 "classUDictionary.html#a4f02252f56e6dde5cabe937efc544976":[1,0,1898,34],
 "classUDictionary.html#a4f4e2c4242c0334b72a57a93947d8874":[1,0,1898,7],
-"classUDictionary.html#a5830d72b86552924fcf9a47c27a9b1fe":[1,0,1898,5],
-"classUDictionary.html#a611345bad29e9a54adf2abd2c6687b51":[1,0,1898,3],
-"classUDictionary.html#a77ce65cdf18e3650e1c646da76976be3":[1,0,1898,27],
-"classUDictionary.html#a78a68f0972224be1cd7258b65d1eb034":[1,0,1898,10],
-"classUDictionary.html#a7fdb4668c53252db09269c955d05b771":[1,0,1898,19],
-"classUDictionary.html#a85cece213657ca1ade0035b690d1be99":[1,0,1898,2]
+"classUDictionary.html#a5830d72b86552924fcf9a47c27a9b1fe":[1,0,1898,5]
 };

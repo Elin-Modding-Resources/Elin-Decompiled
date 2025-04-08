@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LogicalFire_8cs.html":[2,0,0,778],
 "LogicalFire_8cs_source.html":[2,0,0,778],
 "LogicalPointManager_8cs.html":[2,0,0,780],
 "LogicalPointManager_8cs_source.html":[2,0,0,780],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "Plugins_8UI_2ObjectPool_8cs.html":[2,0,0,3,65],
 "Plugins_8UI_2ObjectPool_8cs_source.html":[2,0,0,3,65],
 "Plugins_8UI_2Properties_2AssemblyInfo_8cs.html":[2,0,0,3,5,0],
-"Plugins_8UI_2Properties_2AssemblyInfo_8cs_source.html":[2,0,0,3,5,0],
-"Plugins_8UI_2Window_8cs.html":[2,0,0,3,150]
+"Plugins_8UI_2Properties_2AssemblyInfo_8cs_source.html":[2,0,0,3,5,0]
 };

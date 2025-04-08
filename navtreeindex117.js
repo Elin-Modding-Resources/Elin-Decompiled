@@ -1,5 +1,10 @@
 var NAVTREEINDEX117 =
 {
+"classTraitLoytel.html#ac53844a5ad9188df790abc3ad4db7441":[1,0,1620,1],
+"classTraitLoytel.html#ad7f4e03ba1079b4bd6cc36e55d4ce73d":[1,0,1620,0],
+"classTraitLoytelMart.html":[1,0,1621],
+"classTraitLoytelMart.html#a029e6a9a12587279c405edfd8ab22402":[1,0,1621,3],
+"classTraitLoytelMart.html#a0c82ada3b22c9c9aa0413fb104e7ebc1":[1,0,1621,4],
 "classTraitLoytelMart.html#a2c3f989012a1bbbabc467c7794e66c6c":[1,0,1621,5],
 "classTraitLoytelMart.html#a3a3cb3daed684b4a9afd4bb9c6d3cbf8":[1,0,1621,7],
 "classTraitLoytelMart.html#a495ada5a08f0db13418719695f1ea152":[1,0,1621,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitNewZone.html#afc72378e91e49dc9fbf792ebb54f040d":[1,0,1679,8],
 "classTraitNewspaper.html":[1,0,1678],
 "classTraitNewspaper.html#aba9f4a4c3b225af53eb55c8bd573ab41":[1,0,1678,1],
-"classTraitNewspaper.html#ae275756177be5faf11f7e2fd4e23cf5d":[1,0,1678,0],
-"classTraitNino.html":[1,0,1680],
-"classTraitNino.html#a52a3bee476df1c859276f2c9b7fd8339":[1,0,1680,1],
-"classTraitNino.html#abe015264f3aaf095ee1ab26af1de6242":[1,0,1680,3],
-"classTraitNino.html#ac3469f2ea35d743ae9cc384866c16c8f":[1,0,1680,2],
-"classTraitNino.html#acc31a15517d8afa22aeeeae87258b9c4":[1,0,1680,0]
+"classTraitNewspaper.html#ae275756177be5faf11f7e2fd4e23cf5d":[1,0,1678,0]
 };
