@@ -692,7 +692,7 @@ public class UIInventory : EMono
 							SE.ClickOk();
 						});
 					}
-					if (!con2.isChara && !con2.trait.IsSpecialContainer)
+					if (!con2.isChara && (IsMagicChest || !con2.trait.IsSpecialContainer))
 					{
 						uIContextMenu5.AddButton("changeName", delegate
 						{

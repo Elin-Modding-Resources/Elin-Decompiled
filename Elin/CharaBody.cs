@@ -286,23 +286,29 @@ public class CharaBody : EClass
 
 	public void RefreshBodyParts()
 	{
-		foreach (BodySlot slot in slots)
+		for (int i = 0; i < slots.Count; i++)
 		{
-			int elementId = slot.elementId;
+			BodySlot bodySlot = slots[i];
+			bodySlot.index = i;
+			int elementId = bodySlot.elementId;
 			if (elementId == 35)
 			{
 				if (slotMainHand == null)
 				{
-					slotMainHand = slot;
+					slotMainHand = bodySlot;
 				}
 				else if (slotOffHand == null)
 				{
-					slotOffHand = slot;
+					slotOffHand = bodySlot;
 				}
 			}
 			if (elementId == 41)
 			{
-				slotRange = slot;
+				slotRange = bodySlot;
+			}
+			if (bodySlot.thing != null)
+			{
+				bodySlot.thing.c_equippedSlot = i + 1;
 			}
 		}
 	}

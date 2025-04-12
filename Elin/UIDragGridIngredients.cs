@@ -43,7 +43,6 @@ public class UIDragGridIngredients : EMono
 
 	public void Refresh()
 	{
-		Debug.Log("Refreshing uiDragGridIngredients");
 		List<Thing> list = new List<Thing>();
 		if (layer.owner.AllowStockIngredients && !layer.owner.owner.c_isDisableStockUse)
 		{

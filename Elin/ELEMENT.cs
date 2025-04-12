@@ -909,7 +909,7 @@ public class Element : EClass
 						sprite = EClass.core.refs.icons.enc.card;
 					}
 				}
-				if (thing.IsFood && IsFoodTrait)
+				if (thing.ShowFoodEnc && IsFoodTrait)
 				{
 					sprite = EClass.core.refs.icons.enc.traitFood;
 				}

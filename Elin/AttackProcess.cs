@@ -944,7 +944,7 @@ public class AttackProcess : EClass
 		}
 		if (CC.Evalue(1420) > 0)
 		{
-			int num3 = Mathf.Min(100, 100 - CC.hp * 100 / CC.MaxHP);
+			int num3 = Mathf.Min(100, 100 - CC.hp * 100 / CC.MaxHP) * (50 + CC.Evalue(1420) * 50) / 100;
 			if (num3 >= 50 && num3 * num3 * num3 * num3 / 3 > EClass.rnd(100000000))
 			{
 				return Crit();

@@ -264,6 +264,7 @@ public class AI_UseCrafter : AIAct
 					for (int n = 0; n < num; n++)
 					{
 						owner.RemoveCondition<ConInvulnerable>();
+						EClass.player.invlunerable = false;
 						owner.elements.ModExp(orCreateElement.id, costSP * 12 * (100 + duration * 2) / 100);
 						owner.stamina.Mod(-costSP);
 						if (owner == null || owner.isDead)

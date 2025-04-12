@@ -2310,6 +2310,15 @@ public class Zone : Spatial, ICardParent, IInspect
 						EClass._zone.AddCard(t2, randomSurface2).Install();
 					}
 				}
+				num2 = 4 + EClass.rnd(5);
+				for (int k = 0; k < num2; k++)
+				{
+					Point randomSurface3 = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
+					if (!randomSurface3.HasObj && (randomSurface3.cell.IsTopWaterAndNoSnow || EClass.rnd(6) == 0))
+					{
+						EClass._zone.AddCard(ThingGen.Create("70"), randomSurface3);
+					}
+				}
 			}
 			if (EClass.rnd(8) == 0)
 			{
@@ -2596,8 +2605,6 @@ public class Zone : Spatial, ICardParent, IInspect
 			num = ((dangerLv - 1) % 50 + 5) * 150 / 100;
 		}
 		CardRow cardRow = (setting.id.IsEmpty() ? spawnList.Select(num, setting.levelRange) : EClass.sources.cards.map[setting.id]);
-		Debug.Log(cardRow);
-		Debug.Log(cardRow.id);
 		int num2 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
 		if (ScaleMonsterLevel)
 		{

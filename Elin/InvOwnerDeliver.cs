@@ -40,6 +40,10 @@ public class InvOwnerDeliver : InvOwnerDraglet
 		case Mode.Bank:
 			return t.id == "money";
 		case Mode.Crop:
+			if (!t.GetBool(115))
+			{
+				return false;
+			}
 			if (!(t.category.id == "vegi") && !(t.category.id == "fruit"))
 			{
 				return t.category.id == "mushroom";

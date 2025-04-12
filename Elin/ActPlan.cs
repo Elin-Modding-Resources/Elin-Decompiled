@@ -501,71 +501,61 @@ public class ActPlan : EClass
 			}
 			items.ForeachReverse(delegate(Card _c)
 			{
-				if (_c.isThing)
+				Chara c2 = _c.Chara;
+				if (c2 != null && !c2.IsPC && EClass.pc.CanSee(c2))
 				{
-					if (_c.trait.CanBeAttacked && !(_c.trait is TraitTrainingDummy))
+					int num = c2.Dist(EClass.pc);
+					if (num <= 1 || !EClass.pc.isBlind)
 					{
-						TrySetAct(ACT.Melee, _c);
-					}
-				}
-				else
-				{
-					Chara c2 = _c.Chara;
-					if (c2 != null && !c2.IsPC && EClass.pc.CanSee(c2))
-					{
-						int num = c2.Dist(EClass.pc);
-						if (num <= 1 || !EClass.pc.isBlind)
+						if (!EClass.pc.isBlind && !c2.IsHostile() && (input == ActInput.AllAction || !(c2.IsPCParty || c2.IsMinion || isKey)) && (input == ActInput.AllAction || !c2.IsNeutral() || c2.quest != null || EClass.game.quests.IsDeliverTarget(c2)) && c2.isSynced && num <= 2)
 						{
-							if (!EClass.pc.isBlind && !c2.IsHostile() && (input == ActInput.AllAction || !(c2.IsPCParty || c2.IsMinion || isKey)) && (input == ActInput.AllAction || !c2.IsNeutral() || c2.quest != null || EClass.game.quests.IsDeliverTarget(c2)) && c2.isSynced && num <= 2)
+							bool flag5 = !c2.HasCondition<ConSuspend>() && (!c2.isRestrained || !c2.IsPCFaction);
+							if (EClass._zone.instance is ZoneInstanceMusic && !c2.IsPCFactionOrMinion)
 							{
-								bool flag5 = !c2.HasCondition<ConSuspend>() && (!c2.isRestrained || !c2.IsPCFaction);
-								if (EClass._zone.instance is ZoneInstanceMusic && !c2.IsPCFactionOrMinion)
+								flag5 = false;
+							}
+							if (flag5 || altAction)
+							{
+								if (EClass.pc.HasElement(1216) && c2.HasCondition<ConSleep>())
 								{
-									flag5 = false;
-								}
-								if (flag5 || altAction)
-								{
-									if (EClass.pc.HasElement(1216) && c2.HasCondition<ConSleep>())
+									TrySetAct(new AI_Fuck
 									{
-										TrySetAct(new AI_Fuck
-										{
-											target = c2,
-											succubus = true
-										}, c2);
-									}
-									TrySetAct(ACT.Chat, c2);
+										target = c2,
+										succubus = true
+									}, c2);
 								}
+								TrySetAct(ACT.Chat, c2);
 							}
-							if (c2.host != EClass.pc)
+						}
+						if (c2.host != EClass.pc)
+						{
+							TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
+							if (c2.IsRestrainedResident)
 							{
-								TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
-								if (c2.IsRestrainedResident)
+								if (traitShackle != null && traitShackle.AllowTraining)
 								{
-									if (traitShackle != null && traitShackle.AllowTraining)
+									TrySetAct(new AI_PracticeDummy
 									{
-										TrySetAct(new AI_PracticeDummy
-										{
-											target = c2
-										});
-									}
-								}
-								else if ((c2.IsHostile() || altAction || c2.isRestrained) && c2.IsAliveInCurrentZone)
-								{
-									TrySetAct(ACT.Melee, c2);
+										target = c2
+									});
 								}
 							}
-							if (c2.IsPCPartyMinion && !c2.Chara.IsEscorted() && altAction)
+							else if ((c2.IsHostile() || altAction || c2.isRestrained) && c2.IsAliveInCurrentZone)
 							{
-								TrySetAct("ActBanishSummon", delegate
-								{
-									EClass.pc.Say("summon_vanish", c2);
-									c2.pos.PlayEffect("vanish");
-									c2.pos.PlaySound("vanish");
-									c2.pos.PlayEffect("teleport");
-									c2.Destroy();
-									return true;
-								}, c2, null, 99);
+								TrySetAct(ACT.Melee, c2);
 							}
+						}
+						if (c2.IsPCPartyMinion && !c2.Chara.IsEscorted() && altAction)
+						{
+							TrySetAct("ActBanishSummon", delegate
+							{
+								EClass.pc.Say("summon_vanish", c2);
+								c2.pos.PlayEffect("vanish");
+								c2.pos.PlaySound("vanish");
+								c2.pos.PlayEffect("teleport");
+								c2.Destroy();
+								return true;
+							}, c2, null, 99);
 						}
 					}
 				}
@@ -886,6 +876,17 @@ public class ActPlan : EClass
 					pos = pos.Copy()
 				});
 			}
+			if (list.Count != 0 && input != ActInput.AllAction)
+			{
+				return;
+			}
+			items.ForeachReverse(delegate(Card _c)
+			{
+				if (_c.isThing && _c.trait.CanBeAttacked && !(_c.trait is TraitTrainingDummy))
+				{
+					TrySetAct(ACT.Melee, _c);
+				}
+			});
 		}
 		else
 		{

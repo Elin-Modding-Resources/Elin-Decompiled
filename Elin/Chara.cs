@@ -1989,6 +1989,7 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 		}
+		body.RefreshBodyParts();
 		elements.ApplyElementMap(base.uid, SourceValueType.Chara, race.elementMap, base.DefaultLV, remove, applyFeat: true);
 	}
 
@@ -2899,7 +2900,7 @@ public class Chara : Card, IPathfindWalker
 						{
 							t.Destroy();
 						}
-						else
+						else if (!t.IsUnique && !t.trait.CanBeDestroyed)
 						{
 							t.SetPlaceState(PlaceState.roaming);
 						}
@@ -5252,15 +5253,25 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		int num = 1;
+		if (a.source.proc.TryGet(0) == "Heal" && HasElement(1422))
+		{
+			List<int> list = new List<int> { 8400, 8401, 8402, 8403, 8404, 8405 };
+			int num = list.IndexOf(a.id);
+			if (num != -1)
+			{
+				int num2 = list.TryGet(num + Evalue(1422));
+				a = elements.GetElement(num2)?.act ?? ACT.Create(num2);
+			}
+		}
+		int num3 = 1;
 		Act.Cost cost = a.GetCost(this);
 		a.GetPower(this);
 		int i = 1;
-		int num2 = 0;
+		int num4 = 0;
 		bool flag = a.IsTargetHostileParty();
 		if (IsPC && HasCondition<StanceManaCost>())
 		{
-			num2 = Evalue(1657);
+			num4 = Evalue(1657);
 		}
 		_pts.Clear();
 		if (a.TargetType.ForceParty)
@@ -5292,15 +5303,15 @@ public class Chara : Card, IPathfindWalker
 			_pts.Add(this);
 			pt = false;
 		}
-		int num3 = 100;
+		int num5 = 100;
 		if (!a.TargetType.ForceParty && i > 1)
 		{
-			num3 = (IsPC ? (i * 100) : (50 + i * 50));
+			num5 = (IsPC ? (i * 100) : (50 + i * 50));
 		}
-		int num4 = cost.cost * num3 / 100;
+		int num6 = cost.cost * num5 / 100;
 		if (cost.type == Act.CostType.MP && Evalue(483) > 0)
 		{
-			num4 = num4 * 100 / (100 + (int)Mathf.Sqrt(Evalue(483) * 10) * 3);
+			num6 = num6 * 100 / (100 + (int)Mathf.Sqrt(Evalue(483) * 10) * 3);
 		}
 		if (i == 0)
 		{
@@ -5316,7 +5327,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC)
 		{
-			if (!Dialog.warned && cost.type == Act.CostType.MP && cost.cost > 0 && mana.value < num4 && !EClass.debug.godMode)
+			if (!Dialog.warned && cost.type == Act.CostType.MP && cost.cost > 0 && mana.value < num6 && !EClass.debug.godMode)
 			{
 				ActPlan.warning = true;
 				Dialog.TryWarnMana(delegate
@@ -5345,7 +5356,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (a.CanRapidFire && HasElement(1648))
 		{
-			num = 1 + Evalue(1648);
+			num3 = 1 + Evalue(1648);
 		}
 		if (IsPC && cost.cost > 0 && a.Value == 0)
 		{
@@ -5368,10 +5379,10 @@ public class Chara : Card, IPathfindWalker
 					EInput.Consume();
 					return false;
 				}
-				if (num2 > 0 && a.vPotential >= i * 2)
+				if (num4 > 0 && a.vPotential >= i * 2)
 				{
 					a.vPotential -= i * 2;
-					num4 = num4 * (100 - num2 * 20) / 100;
+					num6 = num6 * (100 - num4 * 20) / 100;
 				}
 				else
 				{
@@ -5386,9 +5397,9 @@ public class Chara : Card, IPathfindWalker
 			string text2 = ((a.source.langAct.Length >= 2) ? a.source.langAct[1] : "");
 			if (text == "spell_hand")
 			{
-				string[] list = Lang.GetList("attack" + race.meleeStyle.IsEmpty("Touch"));
-				string @ref = text2.lang(list[4]);
-				Say(tc.IsPCParty ? "cast_hand_ally" : "cast_hand", this, tc, @ref, tc.IsPCParty ? list[1] : list[2]);
+				string[] list2 = Lang.GetList("attack" + race.meleeStyle.IsEmpty("Touch"));
+				string @ref = text2.lang(list2[4]);
+				Say(tc.IsPCParty ? "cast_hand_ally" : "cast_hand", this, tc, @ref, tc.IsPCParty ? list2[1] : list2[2]);
 			}
 			else
 			{
@@ -5404,18 +5415,18 @@ public class Chara : Card, IPathfindWalker
 		case Act.CostType.MP:
 			if (Evalue(1421) >= 2 && base.hp <= MaxHP / (9 - Evalue(1421) * 2))
 			{
-				num4 /= 2;
+				num6 /= 2;
 			}
 			PlayEffect("cast");
-			mana.Mod(-num4);
+			mana.Mod(-num6);
 			if (isDead)
 			{
 				return true;
 			}
-			elements.ModExp(304, Mathf.Clamp(num4 * 2, 1, 200));
+			elements.ModExp(304, Mathf.Clamp(num6 * 2, 1, 200));
 			break;
 		case Act.CostType.SP:
-			stamina.Mod(-num4);
+			stamina.Mod(-num6);
 			ignoreSPAbsorb = true;
 			break;
 		}
@@ -5428,7 +5439,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return true;
 		}
-		int spellExp = elements.GetSpellExp(this, a, num3);
+		int spellExp = elements.GetSpellExp(this, a, num5);
 		if (EClass.rnd(100) >= CalcCastingChance(a, i) && !EClass.debug.godMode)
 		{
 			Say("fizzle", this);
@@ -5468,7 +5479,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			for (int j = 0; j < num; j++)
+			for (int j = 0; j < num3; j++)
 			{
 				if (a.TargetType != TargetType.SelfParty && tc != null && !tc.IsAliveInCurrentZone)
 				{
@@ -5504,18 +5515,18 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (_pts.Count == 0)
 			{
-				for (int num8 = EClass._map.charas.Count - 1; num8 >= 0; num8--)
+				for (int num10 = EClass._map.charas.Count - 1; num10 >= 0; num10--)
 				{
-					Chara chara3 = EClass._map.charas[num8];
+					Chara chara3 = EClass._map.charas[num10];
 					if (chara3 != this && CanSeeLos(chara3) && chara3.IsHostile(this))
 					{
 						_pts.Add(chara3);
 					}
 				}
 			}
-			for (int num9 = _pts.Count - 1; num9 >= 0; num9--)
+			for (int num11 = _pts.Count - 1; num11 >= 0; num11--)
 			{
-				action(_pts[num9]);
+				action(_pts[num11]);
 			}
 		}
 		void ForeachParty(Action<Chara> action)
@@ -5524,9 +5535,9 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (IsPCParty)
 				{
-					for (int num5 = EClass.pc.party.members.Count - 1; num5 >= 0; num5--)
+					for (int num7 = EClass.pc.party.members.Count - 1; num7 >= 0; num7--)
 					{
-						Chara chara = EClass.pc.party.members[num5];
+						Chara chara = EClass.pc.party.members[num7];
 						if (chara == this || chara.host != null || CanSeeLos(chara))
 						{
 							_pts.Add(chara);
@@ -5535,9 +5546,9 @@ public class Chara : Card, IPathfindWalker
 				}
 				else
 				{
-					for (int num6 = EClass._map.charas.Count - 1; num6 >= 0; num6--)
+					for (int num8 = EClass._map.charas.Count - 1; num8 >= 0; num8--)
 					{
-						Chara chara2 = EClass._map.charas[num6];
+						Chara chara2 = EClass._map.charas[num8];
 						if ((chara2 == this || (chara2.IsFriendOrAbove(this) && CanSeeLos(chara2))) && (chara2 == tc || _pts.Count < 3 || EClass.rnd(_pts.Count * _pts.Count) > 6))
 						{
 							_pts.Add(chara2);
@@ -5545,9 +5556,9 @@ public class Chara : Card, IPathfindWalker
 					}
 				}
 			}
-			for (int num7 = _pts.Count - 1; num7 >= 0; num7--)
+			for (int num9 = _pts.Count - 1; num9 >= 0; num9--)
 			{
-				action(_pts[num7]);
+				action(_pts[num9]);
 			}
 		}
 	}
@@ -8507,7 +8518,7 @@ public class Chara : Card, IPathfindWalker
 			Element defenseAttribute = c.GetDefenseAttribute(this);
 			if (defenseAttribute != null)
 			{
-				c.power = 100 * c.power / (100 + defenseAttribute.Value);
+				c.power = 100 * c.power / Mathf.Max(100 + defenseAttribute.Value, 1);
 			}
 			if (c.source.resistance.Length != 0)
 			{

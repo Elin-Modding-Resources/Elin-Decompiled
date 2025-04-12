@@ -24,7 +24,7 @@ public class FACTION
 
 	public const int bfPlain = 3600;
 
-	public const int fTaxEvasion = 2119;
+	public const int fLuck = 2118;
 
 	public const int fPromo = 2202;
 
@@ -36,17 +36,17 @@ public class FACTION
 
 	public const int fMoral = 2203;
 
-	public const int fElec = 2201;
-
 	public const int fSoil = 2200;
 
 	public const int fHeirloom = 2120;
 
-	public const int fLoyal = 2117;
+	public const int fTaxEvasion = 2119;
+
+	public const int fEducation = 2116;
 
 	public const int bfTranquil = 3703;
 
-	public const int fLuck = 2118;
+	public const int fLoyal = 2117;
 
 	public const int fRation = 2207;
 
@@ -60,7 +60,7 @@ public class FACTION
 
 	public const int actBuildRecipe = 4005;
 
-	public const int fEducation = 2116;
+	public const int fAdmin = 2115;
 
 	public const int actBuildCollect = 4004;
 
@@ -104,18 +104,18 @@ public class FACTION
 
 	public const int bfHunt = 3705;
 
-	public const int fAdmin = 2115;
-
 	public const int fConstruction = 2003;
+
+	public const int fElec = 2201;
 
 	public static readonly int[] IDS = new int[52]
 	{
 		3702, 3701, 3700, 3500, 3605, 3604, 3603, 3602, 3601, 3600,
-		2119, 2202, 2206, 2205, 2204, 2203, 2201, 2200, 2120, 2117,
-		3703, 2118, 2207, 3704, 3803, 3706, 4006, 4005, 2116, 4004,
+		2118, 2202, 2206, 2205, 2204, 2203, 2200, 2120, 2119, 2116,
+		3703, 2117, 2207, 3704, 3803, 3706, 4006, 4005, 2115, 4004,
 		4003, 4002, 4001, 4000, 3900, 3805, 3804, 3802, 3801, 3800,
 		3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707, 3705,
-		2115, 2003
+		2003, 2201
 	};
 }
 public class Faction : EClass

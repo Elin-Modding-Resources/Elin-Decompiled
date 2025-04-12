@@ -34,4 +34,12 @@ public class TraitTent : TraitNewZone
 		}
 		owner.ChangeWeight(num);
 	}
+
+	public override void SetName(ref string s)
+	{
+		if (base.zone != null && !base.zone.name.IsEmpty())
+		{
+			s = s + "(" + base.zone.name + ")";
+		}
+	}
 }

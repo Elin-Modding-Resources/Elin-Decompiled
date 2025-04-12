@@ -45,7 +45,7 @@ public class TraitBrewery : TraitContainer
 			{
 				return true;
 			}
-			if (!c.IsFood && !(c.trait is TraitDrinkMilk))
+			if (!c.IsFood && !(c.id == "508") && !(c.id == "778") && !(c.id == "milk"))
 			{
 				return true;
 			}

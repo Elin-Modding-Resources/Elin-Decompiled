@@ -853,7 +853,7 @@ public class DramaCustomSequence : EClass
 		{
 			int cost5 = CalcMoney.InvestZone(EClass.pc);
 			GameLang.refDrama1 = cost5.ToString() ?? "";
-			GameLang.refDrama2 = EClass._zone.investment.ToString() ?? "";
+			GameLang.refDrama2 = ((EClass._zone.investment < 0) ? int.MaxValue : EClass._zone.investment).ToString() ?? "";
 			TempTalkTopic("invest1", null);
 			Choice("yes", delegate
 			{

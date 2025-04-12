@@ -4,12 +4,17 @@ public class CalcMoney : EClass
 {
 	public static int Negotiate(int a, float mod = 1.5f)
 	{
-		return (int)Mathf.Max((long)a * 100L / (long)(100f + (float)Mathf.Max(0, EClass.pc.CHA / 2 + EClass.pc.Evalue(291)) * mod), 1f);
+		return Mathf.Max((int)((float)((long)a * 100L) / (100f + (float)Mathf.Max(0, EClass.pc.CHA / 2 + EClass.pc.Evalue(291)) * mod)), 1);
 	}
 
-	public static int Invest(int a, float mod = 2f)
+	public static int Invest(long a, float mod = 2f)
 	{
-		return (int)Mathf.Max((long)a * 100L / (long)(100f + (float)Mathf.Max(0, EClass.pc.CHA / 2 + EClass.pc.Evalue(292)) * mod), 1f);
+		long num = a * 100 / (long)(100f + (float)Mathf.Max(0, EClass.pc.CHA / 2 + EClass.pc.Evalue(292)) * mod);
+		if (num >= 0 && num < 100000000)
+		{
+			return (int)num;
+		}
+		return 100000000;
 	}
 
 	public static int Meal(Chara c)
@@ -61,11 +66,13 @@ public class CalcMoney : EClass
 
 	public static int InvestShop(Chara c, Chara tc)
 	{
-		return Invest(Guild.Merchant.InvestPrice(Mathf.Max(tc.c_invest * 700, Mathf.Min(tc.c_invest, 4000) * Mathf.Min(tc.c_invest, 4000) * 80) + 200));
+		long a = Guild.Merchant.InvestPrice(tc.c_invest * 700);
+		return Mathf.Max(b: Invest(Guild.Merchant.InvestPrice(tc.c_invest * tc.c_invest * 80 + 200)), a: Invest(a));
 	}
 
 	public static int InvestZone(Chara c)
 	{
-		return Invest((int)Mathf.Max((long)EClass._zone.development * 50L, Mathf.Min(EClass._zone.development, 80000) * Mathf.Min(EClass._zone.development, 80000) / 4) + 500);
+		long a = EClass._zone.development * 50;
+		return Mathf.Max(b: Invest((long)EClass._zone.development * (long)EClass._zone.development / 4 + 500), a: Invest(a));
 	}
 }

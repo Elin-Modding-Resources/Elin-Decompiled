@@ -1609,6 +1609,10 @@ public class Thing : Card
 		{
 			return false;
 		}
+		if (base.Num + to.Num <= 0)
+		{
+			return false;
+		}
 		bool flag = false;
 		if (to.parent is Card)
 		{
