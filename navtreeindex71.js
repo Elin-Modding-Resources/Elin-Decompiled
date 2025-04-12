@@ -1,5 +1,6 @@
 var NAVTREEINDEX71 =
 {
+"classInvOwnerDeliverBox.html":[1,0,677],
 "classInvOwnerDeliverBox.html#a46aef943dd83afd2ff682655f74ffba2":[1,0,677,1],
 "classInvOwnerDeliverBox.html#a801687c1d956499ee8d32b2ae50b8536":[1,0,677,2],
 "classInvOwnerDeliverBox.html#a9b48c477d477a57e7282d3cc9e0bdc34":[1,0,677,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX71 =
 "classItemGeneral.html#ae2b8778fd74445f36964a7224550426a":[1,0,709,11],
 "classItemGeneral.html#ae8e3365b984c4da9c4e6491c28d8bb24":[1,0,709,15],
 "classItemGeneral.html#af72d1ea6307d5d57ba3927d7c1ac7363":[1,0,709,8],
-"classItemHomeResource.html":[1,0,710],
-"classItemHomeResource.html#a50731b4cd2cf9456e6cd50ac8ef56db8":[1,0,710,1]
+"classItemHomeResource.html":[1,0,710]
 };

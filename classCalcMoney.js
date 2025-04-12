@@ -3,7 +3,7 @@ var classCalcMoney =
     [ "BuySlave", "classCalcMoney.html#a8b8f576c8e9f6ec5a286627cc24b4c1a", null ],
     [ "Heal", "classCalcMoney.html#a641ab2f690f502c0693cf0525ed32fd9", null ],
     [ "Identify", "classCalcMoney.html#a8a1cc8408de7da3bc18c54d4f00fd110", null ],
-    [ "Invest", "classCalcMoney.html#a19f6f324d65f59f86d572589b6b9cd69", null ],
+    [ "Invest", "classCalcMoney.html#a5265eed125eba45b358a0a18bf24bc0f", null ],
     [ "InvestShop", "classCalcMoney.html#a97f4e295592f13e43b4fb695bc767417", null ],
     [ "InvestZone", "classCalcMoney.html#a6a100adf4e016de897ebebe7acafda1a", null ],
     [ "Meal", "classCalcMoney.html#aea79efe244b90285b6dd96bfe102fd1c", null ],

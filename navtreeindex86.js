@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"classPlayer_1_1Flags.html#a18363eb223e3eb3f6071db5901764bd5":[1,0,921,0,33],
 "classPlayer_1_1Flags.html#a1c49f0f9e9a93a3c6c5a7baed4d3f9e9":[1,0,921,0,5],
 "classPlayer_1_1Flags.html#a1ddf8b634e2bf98b569e26d98d6e1143":[1,0,921,0,52],
 "classPlayer_1_1Flags.html#a23289c953b5d00e073bcb379e7efd421":[1,0,921,0,42],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "classPointList.html#a699b0bbab054257d55f0485551d7b7b4":[1,0,925,3],
 "classPointTarget.html":[1,0,926],
 "classPointTarget.html#a0f379d8d65cf04007dc1c3e56c27ed1a":[1,0,926,14],
-"classPointTarget.html#a20a92fc73e23255960e484f57c73b40c":[1,0,926,3],
-"classPointTarget.html#a3b44e409bf0209864a93e08decf70391":[1,0,926,22]
+"classPointTarget.html#a20a92fc73e23255960e484f57c73b40c":[1,0,926,3]
 };

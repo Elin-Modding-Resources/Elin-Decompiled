@@ -52,6 +52,7 @@ var classFEAT =
     [ "featGourmet", "classFEAT.html#ab968a100573bd4cab5bc98de3f7737a3", null ],
     [ "featGrowParts", "classFEAT.html#ae80667dde5254b5607cbdf1bae0fb297", null ],
     [ "featHardy", "classFEAT.html#a562bddae24d3a27cd73b96815c774b47", null ],
+    [ "featHealer", "classFEAT.html#a61ed1dcd232cd4cf802ace46042dc1a7", null ],
     [ "featHeavyCasting", "classFEAT.html#a59d7667fcf2229bdbc50424ce4decba2", null ],
     [ "featHeavyEater", "classFEAT.html#ae0ed29384c317c820aa53b19e36ee7ee", null ],
     [ "featInquisitor", "classFEAT.html#a945b76c0bd70afd54bf12de9bb54e058", null ],
