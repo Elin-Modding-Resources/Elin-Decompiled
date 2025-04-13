@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"classABILITY.html#a47d8388e5509eb1eea4cbe3651f44a86":[1,0,11,22],
+"classABILITY.html#a480423be656e4071170825580acac0fe":[1,0,11,0],
 "classABILITY.html#a48936e8e4b10e56ccf6ee5e1e2c58177":[1,0,11,74],
 "classABILITY.html#a4b0d861103c165f656e1fa7873cbc70e":[1,0,11,100],
 "classABILITY.html#a4b8fde403e9c61cbeb165df2f114181e":[1,0,11,107],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "classAIWork__Lumberjack.html#a763161e7e4552e3386beb111c1bf6444":[1,0,116,1],
 "classAIWork__Lumberjack.html#a986bfca56d8554f375cf197eae88cec9":[1,0,116,2],
 "classAIWork__Lumberjack.html#aa63356dc267a43bae0e64228924aa1ef":[1,0,116,4],
-"classAIWork__Lumberjack.html#ab80d1d9f3dad266f0a72c20c769d5a9f":[1,0,116,3],
-"classAIWork__Research.html":[1,0,117],
-"classAIWork__Research.html#a0f68d6c8a5ebab557866188cbde67862":[1,0,117,0]
+"classAIWork__Lumberjack.html#ab80d1d9f3dad266f0a72c20c769d5a9f":[1,0,116,3]
 };

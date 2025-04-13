@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitChef.html":[1,0,1445],
+"classTraitChef.html#a0cb367e1a36ee27848151015571b0967":[1,0,1445,0],
+"classTraitChef.html#aabf5e2cf6a203954522b31e5398ee049":[1,0,1445,1],
+"classTraitChest.html":[1,0,1446],
 "classTraitChest.html#a844ef34ac1868307a3b79a00864d30b6":[1,0,1446,0],
 "classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1446,1],
 "classTraitChestMerchant.html":[1,0,1447],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitDoorAutoShoji.html#a6e3209cbb2b148f8073cfaccd5980424":[1,0,1492,1],
 "classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129":[1,0,1492,0],
 "classTraitDoorBell.html":[1,0,1493],
-"classTraitDoorBell.html#a60355c6c79902899dab8139d7b7dffad":[1,0,1493,1],
-"classTraitDoorBell.html#a66facc2f3eb6cdb5c0370fa66cb27bcd":[1,0,1493,0],
-"classTraitDoorBoat.html":[1,0,1494],
-"classTraitDoorBoat.html#a64f9181c8d5d8f8fc36f488cccc0ac0b":[1,0,1494,2],
-"classTraitDoorBoat.html#a854673d89d37cd7ba135e68b7f7278b8":[1,0,1494,1]
+"classTraitDoorBell.html#a60355c6c79902899dab8139d7b7dffad":[1,0,1493,1]
 };

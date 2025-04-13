@@ -1,5 +1,9 @@
 var NAVTREEINDEX98 =
 {
+"classSeason.html#abeaf17fabb06e6a4c914cebcd8b7006c":[1,0,1117,9],
+"classSeason.html#ac4c15861571bcdbba9bc47bcf73d463b":[1,0,1117,5],
+"classSeason.html#adbef9ae5c84accd448d4d3bcb6100173":[1,0,1117,0],
+"classSeason.html#ae7038e9fba02028c9941f1f8f6170d91":[1,0,1117,3],
 "classSelectedColorController.html":[1,0,1118],
 "classSelectedColorController.html#a1ec98ff6e005bf5af7c36b3d77d0c2e4":[1,0,1118,7],
 "classSelectedColorController.html#a21cc6ca3c90d9335b87940cc3995ef85":[1,0,1118,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX98 =
 "classSkinColorProfileEx.html#a0669ab193d313446919569f9bf146774":[1,0,1140,3],
 "classSkinColorProfileEx.html#a38b64f90524142c62ad4d42f495399a1":[1,0,1140,2],
 "classSkinColorProfileEx.html#ac6b55c8bec7ef5c7ce2d1f987ccbef28":[1,0,1140,1],
-"classSkinColorProfileEx_1_1GroupColors.html":[1,0,1140,0],
-"classSkinColorProfileEx_1_1GroupColors.html#a0c9e6cde7f8cb4207c14a92dbd06a360":[1,0,1140,0,3],
-"classSkinColorProfileEx_1_1GroupColors.html#a55a1c0eb97ab9e6aeb8053aeadd2c367":[1,0,1140,0,2],
-"classSkinColorProfileEx_1_1GroupColors.html#a76085ffbffd557e1125944ab99ffaa9c":[1,0,1140,0,1],
-"classSkinColorProfileEx_1_1GroupColors.html#aa9017faed9f64077370eae303ca7a4f9":[1,0,1140,0,0]
+"classSkinColorProfileEx_1_1GroupColors.html":[1,0,1140,0]
 };

@@ -27,6 +27,7 @@ var classCINT =
     [ "dyeMat", "classCINT.html#a63a74c3c3a0f07360db7f17e0df0e170", null ],
     [ "equippedSlot", "classCINT.html#a71db5e06600041f69f744821a8c194d2", null ],
     [ "fiamaPet", "classCINT.html#a08f9ed82073374be60e7d4eba9a312d4", null ],
+    [ "fixedValue", "classCINT.html#abca89486d90b93aa65c5451a0e47da79", null ],
     [ "fur", "classCINT.html#a0e5ef825d3c97fbd444825027b143d0e", null ],
     [ "godEaten", "classCINT.html#a169ad80acf2c9fcafbfbaf8594cfa0c5", null ],
     [ "idBacker", "classCINT.html#a67b4232ffd3a965573815c52ff8837b9", null ],

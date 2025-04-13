@@ -1,5 +1,9 @@
 var NAVTREEINDEX111 =
 {
+"classTileTypeSlopeFlat.html":[1,0,1349],
+"classTileTypeSlopeFlat.html#a361d6a6e94007bd386d720ee6332e5eb":[1,0,1349,0],
+"classTileTypeStairs.html":[1,0,1350],
+"classTileTypeStairs.html#a0d472b0cd04dd2c0c02dcdf561d2df02":[1,0,1350,3],
 "classTileTypeStairs.html#a35260845e79493808ddce3ee96f4c25d":[1,0,1350,1],
 "classTileTypeStairs.html#a9a7230dc5827e5c7940eb560b45a2868":[1,0,1350,2],
 "classTileTypeStairs.html#ac1d80ea8151c946f5cc5dcb8dec8d433":[1,0,1350,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX111 =
 "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79":[1,0,1373,1],
 "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1":[1,0,1373,1,3],
 "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a7a1920d61156abc05a60135aefe8bc67":[1,0,1373,1,0],
-"classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f":[1,0,1373,1,2],
-"classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af44e14d49cd011d1e873d9fe0c4624f1":[1,0,1373,1,1],
-"classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90":[1,0,1373,1,4],
-"classTrait.html#a773ff35de469eff01a2dbe0b165d32a5":[1,0,1373,45],
-"classTrait.html#a779d6dc323fb8414562afc9cc2fe3406":[1,0,1373,172]
+"classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f":[1,0,1373,1,2]
 };

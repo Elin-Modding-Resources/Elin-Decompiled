@@ -1,5 +1,9 @@
 var NAVTREEINDEX110 =
 {
+"classTileType.html#a75c9998a41c9d0a9fd227051b0c8672e":[1,0,1312,128],
+"classTileType.html#a7696b1e673d1d014eb2a9ea5f3598a0a":[1,0,1312,14],
+"classTileType.html#a7aa52e1a50038c7d8bd917431cb7debe":[1,0,1312,114],
+"classTileType.html#a7d85f99f690fdb92006f25d18dc2ad7e":[1,0,1312,31],
 "classTileType.html#a7dc15f6afd390a3cfb2e4a2274070b23":[1,0,1312,94],
 "classTileType.html#a7dcb9d6b672b94ac3188eb0f0a7dccf9":[1,0,1312,105],
 "classTileType.html#a81844eb8247e9020a1771190b7e93b67":[1,0,1312,47],
@@ -245,9 +249,5 @@ var NAVTREEINDEX110 =
 "classTileTypeSlope.html#a201145048b9119c7ebf5e4fc05f98430":[1,0,1348,1],
 "classTileTypeSlope.html#a3bdde15089d5e86ff5b61c37ade4a8b0":[1,0,1348,0],
 "classTileTypeSlope.html#a90c3c0dcd7da2e81a48abc0abafcc2c7":[1,0,1348,4],
-"classTileTypeSlope.html#ab984b0186dd3f4376a060bfd3f851003":[1,0,1348,5],
-"classTileTypeSlopeFlat.html":[1,0,1349],
-"classTileTypeSlopeFlat.html#a361d6a6e94007bd386d720ee6332e5eb":[1,0,1349,0],
-"classTileTypeStairs.html":[1,0,1350],
-"classTileTypeStairs.html#a0d472b0cd04dd2c0c02dcdf561d2df02":[1,0,1350,3]
+"classTileTypeSlope.html#ab984b0186dd3f4376a060bfd3f851003":[1,0,1348,5]
 };

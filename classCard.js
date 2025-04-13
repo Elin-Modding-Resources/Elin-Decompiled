@@ -293,6 +293,7 @@ var classCard =
     [ "c_editorTraitVal", "classCard.html#af225a5b21cec7951f084668cf4b07494", null ],
     [ "c_equippedSlot", "classCard.html#a28a8d98b4bcfc5eb69a58358e898292e", null ],
     [ "c_extraNameRef", "classCard.html#a3f1e7213bfec0dbaa2e3c2aed317c33e", null ],
+    [ "c_fixedValue", "classCard.html#a55c6372f750f89f08ed22f51d3864ff4", null ],
     [ "c_fur", "classCard.html#af268ee4a7279daaada3ee908e3b5f7c6", null ],
     [ "c_genes", "classCard.html#aa3c3d753e44ae7a28fe2d9e3a4a774d3", null ],
     [ "c_idAbility", "classCard.html#a674519f36d3e8c46a8f237bab9d26d26", null ],

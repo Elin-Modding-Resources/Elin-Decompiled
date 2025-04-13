@@ -1613,7 +1613,9 @@ var hierarchy =
           [ "TraitFoodEgg", "classTraitFoodEgg.html", [
             [ "TraitFoodEggFertilized", "classTraitFoodEggFertilized.html", null ]
           ] ],
-          [ "TraitFoodFish", "classTraitFoodFish.html", null ],
+          [ "TraitFoodFish", "classTraitFoodFish.html", [
+            [ "TraitFoodFishSlice", "classTraitFoodFishSlice.html", null ]
+          ] ],
           [ "TraitFoodMeat", "classTraitFoodMeat.html", null ],
           [ "TraitFoodNut", "classTraitFoodNut.html", null ],
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
