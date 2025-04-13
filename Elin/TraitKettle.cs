@@ -56,6 +56,10 @@ public class TraitKettle : TraitUniqueChara
 		{
 			return true;
 		}
+		if (t.trait is TraitFoodFishSlice)
+		{
+			return false;
+		}
 		if (t.HasElement(759))
 		{
 			return false;

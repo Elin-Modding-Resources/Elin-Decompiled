@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 
 public class ActSwarm : Ability
@@ -17,15 +18,21 @@ public class ActSwarm : Ability
 	{
 		float num = 0f;
 		Card tC = Act.TC;
+		HashSet<int> hashSet = new HashSet<int>();
 		foreach (Card item in EClass._map.Cards.ToList())
 		{
 			if (!Act.CC.IsAliveInCurrentZone)
 			{
 				break;
 			}
-			if (item.IsAliveInCurrentZone && item != Act.CC && (!item.isChara || item == tC || item.Chara.IsHostile(Act.CC)) && (item.isChara || item.trait.CanBeAttacked) && item.Dist(Act.CC) <= PerformDistance && Act.CC.CanSeeLos(item))
+			if (!item.IsAliveInCurrentZone || item == Act.CC || (item.isChara && item != tC && !item.Chara.IsHostile(Act.CC)) || (!item.isChara && !item.trait.CanBeAttacked) || item.Dist(Act.CC) > PerformDistance || !Act.CC.CanSeeLos(item))
 			{
-				Point pos = item.pos;
+				continue;
+			}
+			Point pos = item.pos;
+			if (!hashSet.Contains(pos.index))
+			{
+				hashSet.Add(pos.index);
 				TweenUtil.Delay(num, delegate
 				{
 					pos.PlayEffect("ab_swarm");

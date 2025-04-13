@@ -433,6 +433,10 @@ public class DNA : EClass
 		{
 			bool flag = false;
 			int num = EClass.curve(v, 20, 10, 90);
+			if (v < -100)
+			{
+				num = EClass.curve(Mathf.Abs(v + 100), 20, 10, 90);
+			}
 			v = EClass.curve(v, 20, 10, 80);
 			for (int k = 0; k < vals.Count; k += 2)
 			{

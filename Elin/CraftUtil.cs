@@ -146,6 +146,7 @@ public class CraftUtil : EClass
 		bool noMix = type == MixType.NoMix || product.HasTag(CTAG.noMix);
 		bool isFood = type == MixType.Food;
 		int nutFactor = 100 - (ings.Count - 1) * 5;
+		Thing thing = ((ings.Count > 0) ? ings[0] : null);
 		if (crafter != null && crafter.Evalue(1650) >= 3)
 		{
 			nutFactor -= 10;
@@ -192,6 +193,15 @@ public class CraftUtil : EClass
 			product.isWeightChanged = true;
 			product.c_weight = num;
 			product.c_priceAdd = num2;
+		}
+		if (thing != null && product.trait is TraitFoodFishSlice)
+		{
+			product.elements.SetTo(10, thing.Evalue(10) / 4);
+			product.isWeightChanged = true;
+			product.c_weight = Mathf.Min(thing.SelfWeight / 6, 800);
+			product.c_idRefCard = thing.id;
+			product.c_fixedValue = thing.sourceCard.value / 8;
+			product.decay = thing.decay;
 		}
 		if (product.HasElement(652))
 		{

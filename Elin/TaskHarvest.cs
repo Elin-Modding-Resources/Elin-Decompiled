@@ -481,6 +481,10 @@ public class TaskHarvest : BaseTaskHarvest
 		{
 			return false;
 		}
+		if (target.trait is TraitFoodFishSlice)
+		{
+			return false;
+		}
 		if (dest.Contains("$") || dest.Contains("#") || dest.Contains("@") || dest.Contains("-"))
 		{
 			return false;

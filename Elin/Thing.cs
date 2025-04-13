@@ -856,9 +856,16 @@ public class Thing : Card
 				text2 = array[0] + Environment.NewLine + text3 + array[1];
 			}
 		}
-		if (flag && !(trait is TraitPotionAlchemy))
+		if (flag)
 		{
-			text2 = recipe.GetName();
+			if (!(trait is TraitPotionAlchemy))
+			{
+				text2 = recipe.GetName();
+			}
+			if (trait.CraftNum > 1)
+			{
+				text2 = text2 + " x " + trait.CraftNum;
+			}
 		}
 		if (mode != IInspect.NoteMode.Recipe)
 		{
@@ -1063,6 +1070,10 @@ public class Thing : Card
 		if (flag && HasTag(CTAG.noMix))
 		{
 			AddText("isNoMix", FontColor.Default);
+		}
+		if (trait is TraitFoodFishSlice)
+		{
+			AddText("isNoProcessIng", FontColor.Default);
 		}
 		if (!trait.CanBeDestroyed)
 		{

@@ -131,6 +131,10 @@ public class GameDate : Date
 			{
 				Tutorial.Reserve("season2");
 			}
+			if (base.year >= 2500)
+			{
+				Tutorial.Reserve("worldend");
+			}
 			else
 			{
 				Tutorial.Remove("season2");

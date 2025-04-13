@@ -35,7 +35,7 @@ public class ACT : EClass
 
 	public static Act Create(int id)
 	{
-		return Create(EClass.sources.elements.map[id]);
+		return Create(EClass.sources.elements.map.TryGetValue(id, 6003));
 	}
 
 	public static Act Create(string id)

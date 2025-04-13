@@ -577,7 +577,12 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 	{
 		ThingStack thingStack = EClass.pc.things.GetThingStack(recipe.GetIdThing(), recipe.GetRefVal());
 		bool flag = recipe.IsCraftable();
-		mainText.SetText(recipe.Name, flag ? FontColor.Good : FontColor.Bad);
+		string text = recipe.Name;
+		if (recipe.Mold != null && recipe.Mold.trait.CraftNum > 1)
+		{
+			text = text + " x " + recipe.Mold.trait.CraftNum;
+		}
+		mainText.SetText(text, flag ? FontColor.Good : FontColor.Bad);
 		subText.text = thingStack.count.ToString() ?? "";
 		recipe.SetTextDifficulty(subText2);
 	}

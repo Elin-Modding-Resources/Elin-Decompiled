@@ -458,7 +458,7 @@ public class Element : EClass
 	public int SortVal(bool charaSheet = false)
 	{
 		int num = ((source.sort != 0) ? source.sort : id);
-		return (IsFlag ? 100000 : 0) + ((!charaSheet && IsGlobalElement) ? (-1000000) : 0) + num;
+		return (IsFlag ? 100000 : 0) + ((!charaSheet && IsGlobalElement) ? (-1000000) : 0) + (((IsFoodTrait || IsTrait) && owner != null && owner.Card != null && owner.Card.ShowFoodEnc) ? 10000 : 0) + num;
 	}
 
 	public virtual bool CanLink(ElementContainer owner)

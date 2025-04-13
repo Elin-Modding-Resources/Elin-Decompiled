@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class TaskWater : Task
 {
@@ -35,6 +36,7 @@ public class TaskWater : Task
 		List<Point> list = ListPoints();
 		while (list.Count != 0)
 		{
+			Debug.Log(list.Count);
 			list.Sort((Point a, Point b) => a.Distance(dest) - b.Distance(dest));
 			Point p = list[0];
 			dest.Set(p);
@@ -48,15 +50,16 @@ public class TaskWater : Task
 				yield return Cancel();
 			}
 			bool fail = false;
-			yield return DoGoto(p, 1, ignoreConnection: false, delegate
+			Status status = DoGoto(p, 1, ignoreConnection: false, delegate
 			{
 				fail = true;
 				return Status.Running;
 			});
-			if (fail)
+			if (fail || status == Status.Fail)
 			{
 				continue;
 			}
+			yield return Status.Running;
 			if (!IsWaterCanValid())
 			{
 				yield return Cancel();

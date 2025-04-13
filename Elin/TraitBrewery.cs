@@ -37,6 +37,10 @@ public class TraitBrewery : TraitContainer
 
 	public override bool OnChildDecay(Card c, bool firstDecay)
 	{
+		if (c.trait is TraitFoodFishSlice)
+		{
+			return true;
+		}
 		switch (type)
 		{
 		case Type.Food:

@@ -105,6 +105,10 @@ public class TraitCrafter : Trait
 		{
 			return false;
 		}
+		if (c.trait is TraitFoodFishSlice)
+		{
+			return false;
+		}
 		string[] array = ((idx == 0) ? r.ing1 : r.ing2);
 		if (r.type.ToEnum<MixType>() == MixType.Grind && idx == 1)
 		{

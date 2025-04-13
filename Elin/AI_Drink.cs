@@ -32,6 +32,10 @@ public class AI_Drink : AIAct
 		if (target != null && (target.GetRootCard() == owner || target.parent == null))
 		{
 			owner.Drink(target);
+			if (owner == EClass.pc)
+			{
+				EClass.player.EndTurn();
+			}
 			Success();
 		}
 	}

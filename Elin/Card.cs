@@ -1117,6 +1117,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_fixedValue
+	{
+		get
+		{
+			return GetInt(131);
+		}
+		set
+		{
+			SetInt(131, value);
+		}
+	}
+
 	public int c_dyeMat
 	{
 		get
@@ -4261,12 +4273,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (dmg > 0)
 		{
-			int a3 = 100 * (dmg * 100 / MaxHP) / 100;
+			int a3 = (int)(100L * (long)(dmg * 100 / MaxHP) / 100) + 1;
 			a3 = Mathf.Min(a3, Chara.isRestrained ? 15 : 200);
-			elements.ModExp(GetArmorSkill(), a3);
-			if (Chara.body.GetAttackStyle() == AttackStyle.Shield)
+			if (a3 > 0)
 			{
-				elements.ModExp(123, a3);
+				elements.ModExp(GetArmorSkill(), a3);
+				if (Chara.body.GetAttackStyle() == AttackStyle.Shield)
+				{
+					elements.ModExp(123, a3);
+				}
 			}
 		}
 		int num11 = ((EClass.rnd(2) == 0) ? 1 : 0);
@@ -6510,64 +6525,64 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public int GetValue(PriceType priceType = PriceType.Default, bool sell = false)
 	{
-		int value = trait.GetValue();
-		if (value == 0)
+		int num = ((c_fixedValue == 0) ? trait.GetValue() : c_fixedValue);
+		if (num == 0)
 		{
 			return 0;
 		}
-		float num = value;
-		num = ((priceType != PriceType.CopyShop) ? (num * (float)Mathf.Max(100 + rarityLv + Mathf.Min(QualityLv * 10, 200), 80) / 100f) : (num * (float)Mathf.Max(150 + rarityLv, 150) / 100f));
+		float num2 = num;
+		num2 = ((priceType != PriceType.CopyShop) ? (num2 * (float)Mathf.Max(100 + rarityLv + Mathf.Min(QualityLv * 10, 200), 80) / 100f) : (num2 * (float)Mathf.Max(150 + rarityLv, 150) / 100f));
 		if (IsFood && !material.tag.Contains("food"))
 		{
-			num *= 0.5f;
+			num2 *= 0.5f;
 		}
-		float num2;
+		float num3;
 		if (IsEquipmentOrRangedOrAmmo || trait is TraitMod)
 		{
 			if (sell)
 			{
-				num *= 0.3f;
+				num2 *= 0.3f;
 			}
-			num2 = 2f;
+			num3 = 2f;
 		}
 		else
 		{
-			num2 = 0.5f;
+			num3 = 0.5f;
 		}
 		if (isReplica)
 		{
-			num *= 0.15f;
+			num2 *= 0.15f;
 		}
 		if (!IsUnique)
 		{
 			if (IsEquipmentOrRanged && rarity >= Rarity.Legendary)
 			{
-				num = Mathf.Max(num, 1800f + num / 5f);
+				num2 = Mathf.Max(num2, 1800f + num2 / 5f);
 			}
-			num = num * (100f + num2 * (float)(material.value - 100)) / 100f;
+			num2 = num2 * (100f + num3 * (float)(material.value - 100)) / 100f;
 			if (IsEquipmentOrRanged)
 			{
-				int num3 = 0;
-				foreach (Element value2 in elements.dict.Values)
+				int num4 = 0;
+				foreach (Element value in elements.dict.Values)
 				{
-					num3 += value2.source.value;
+					num4 += value.source.value;
 				}
-				num = num * (float)(100 + (sell ? ((int)MathF.Sqrt(num3) * 10) : num3)) / 100f;
+				num2 = num2 * (float)(100 + (sell ? ((int)MathF.Sqrt(num4) * 10) : num4)) / 100f;
 				if (rarity >= Rarity.Legendary)
 				{
-					num = Mathf.Max(num, 3600f + num / 5f);
+					num2 = Mathf.Max(num2, 3600f + num2 / 5f);
 				}
 			}
 		}
 		if (trait is TraitRecipe && sell)
 		{
-			num *= 0.1f;
+			num2 *= 0.1f;
 		}
 		if (encLV != 0 && !category.tag.Contains("noEnc"))
 		{
-			num = (category.tag.Contains("enc") ? (num * (0.7f + (float)(encLV - 1) * 0.2f)) : ((!IsFood) ? (num * (1f + (float)encLV * 0.01f)) : ((!(id == "honey")) ? (num * Mathf.Min(1f + 0.1f * (float)encLV, 2f) + (float)(encLV * 100)) : (num + (float)(encLV * 10)))));
+			num2 = (category.tag.Contains("enc") ? (num2 * (0.7f + (float)(encLV - 1) * 0.2f)) : ((!IsFood) ? (num2 * (1f + (float)encLV * 0.01f)) : ((!(id == "honey")) ? (num2 * Mathf.Min(1f + 0.1f * (float)encLV, 2f) + (float)(encLV * 100)) : (num2 + (float)(encLV * 10)))));
 		}
-		return (int)num;
+		return (int)num2;
 	}
 
 	public virtual int GetPrice(CurrencyType currency = CurrencyType.Money, bool sell = false, PriceType priceType = PriceType.Default, Chara c = null)

@@ -925,6 +925,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
+			EClass.game.world.date.year = 3000;
 			EClass._zone.development += 10;
 			EClass._zone.development *= EClass._zone.development;
 			EClass.pc.Pick(ThingGen.CreateSpellbook(8550));

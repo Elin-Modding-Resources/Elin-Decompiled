@@ -15,7 +15,7 @@ public class TraitItemProc : TraitItem
 	{
 		if (owner.id == "bandage")
 		{
-			return 2 + EClass.rnd(2);
+			return 3;
 		}
 		return 0;
 	}
