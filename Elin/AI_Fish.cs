@@ -302,7 +302,7 @@ public class AI_Fish : AIAct
 			{
 				text = "book_ancient";
 			}
-			if (EClass.rnd(35) == 0 || EClass.debug.enable)
+			if (EClass.rnd(35) == 0)
 			{
 				text = "plat";
 				if (EClass.rnd(2) == 0)
@@ -317,7 +317,7 @@ public class AI_Fish : AIAct
 				{
 					text = "gacha_coin";
 				}
-				if (EClass.rnd(50) == 0 || EClass.debug.enable)
+				if (EClass.rnd(50) == 0)
 				{
 					text = new string[7] { "659", "758", "759", "806", "828", "1190", "1191" }.RandomItem();
 				}
@@ -348,6 +348,10 @@ public class AI_Fish : AIAct
 			if (num4 >= EClass.rnd(100))
 			{
 				num2++;
+			}
+			if (EClass.rnd(EClass.debug.enable ? 3 : 25) == 0)
+			{
+				thing.SetTier(Mathf.Min(EClass.rnd(EClass.rnd(num + 50)) / 50, 3));
 			}
 		}
 		if (thing != null)

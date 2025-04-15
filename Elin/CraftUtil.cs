@@ -198,10 +198,12 @@ public class CraftUtil : EClass
 		{
 			product.elements.SetTo(10, thing.Evalue(10) / 4);
 			product.isWeightChanged = true;
-			product.c_weight = Mathf.Min(thing.SelfWeight / 6, 800);
+			product.c_weight = Mathf.Min(thing.SelfWeight / 6, 1000);
 			product.c_idRefCard = thing.id;
-			product.c_fixedValue = thing.sourceCard.value / 8;
+			product.c_fixedValue = ((thing.c_fixedValue == 0) ? thing.sourceCard.value : thing.c_fixedValue) / 6;
 			product.decay = thing.decay;
+			product.elements.SetBase(707, 1);
+			product.SetTier(thing.tier, setTraits: false);
 		}
 		if (product.HasElement(652))
 		{

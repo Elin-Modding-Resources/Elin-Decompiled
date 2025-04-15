@@ -1,21 +1,12 @@
 using System.Collections.Generic;
 
-public class AI_PracticeDummy : AIAct
+public class AI_PracticeDummy : AI_Practice
 {
 	public Card target;
 
 	public Thing throwItem;
 
 	public bool range;
-
-	public override CursorInfo CursorIcon => CursorSystem.IconMelee;
-
-	public override bool HasProgress => true;
-
-	public override bool CanManualCancel()
-	{
-		return true;
-	}
 
 	public override IEnumerable<Status> Run()
 	{
@@ -62,6 +53,7 @@ public class AI_PracticeDummy : AIAct
 				{
 					ACT.Melee.Perform(owner, target);
 				}
+				turn++;
 				if (owner != null && EClass.rnd(5) < 2)
 				{
 					owner.stamina.Mod(-1);

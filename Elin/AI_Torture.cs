@@ -1,21 +1,12 @@
 using System.Collections.Generic;
 
-public class AI_Torture : AIAct
+public class AI_Torture : AI_Practice
 {
 	public TraitShackle shackle;
 
 	public Chara _owner;
 
-	public override CursorInfo CursorIcon => CursorSystem.IconMelee;
-
-	public override bool HasProgress => true;
-
 	public override bool CancelWhenDamaged => false;
-
-	public override bool CanManualCancel()
-	{
-		return true;
-	}
 
 	public override IEnumerable<Status> Run()
 	{
@@ -83,6 +74,7 @@ public class AI_Torture : AIAct
 
 	public override void OnCancelOrSuccess()
 	{
+		base.OnCancelOrSuccess();
 		if (_owner == null)
 		{
 			return;

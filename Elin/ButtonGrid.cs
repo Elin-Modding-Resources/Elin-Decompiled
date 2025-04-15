@@ -260,9 +260,9 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 				}
 			}
 		}
-		if (c.qualityTier > 0)
+		if (c.tier > 0)
 		{
-			Attach<Image>("quality", rightAttach: false).sprite = EClass.core.refs.icons.quality[Mathf.Clamp(c.qualityTier - 1, 0, EClass.core.refs.icons.quality.Count - 1)];
+			Attach<Image>("quality", rightAttach: false).sprite = EClass.core.refs.icons.quality[Mathf.Clamp(c.tier - 1, 0, EClass.core.refs.icons.quality.Count - 1)];
 		}
 		if (c.c_equippedSlot != 0 && invOwner != null && invOwner.owner.isChara && !invOwner.owner.IsPC)
 		{

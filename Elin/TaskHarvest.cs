@@ -467,6 +467,10 @@ public class TaskHarvest : BaseTaskHarvest
 
 	public string GetIdDismantled()
 	{
+		if (target.HasElement(707))
+		{
+			return "fish_slice";
+		}
 		string result = target.source.components[0].Split('|')[0].Split('/')[0];
 		if (target.IsEquipmentOrRangedOrAmmo)
 		{
@@ -511,18 +515,24 @@ public class TaskHarvest : BaseTaskHarvest
 		string text = GetIdDismantled();
 		float num = target.Num;
 		float num2 = 1.0999999f;
-		if (text == "log" || text == "rock")
+		if (target.trait.CraftNum > 1)
 		{
+			num2 = (float)target.trait.CraftNum * 1.35f;
+		}
+		switch (text)
+		{
+		case "log":
+		case "rock":
 			num2 = 2.1999998f;
+			break;
+		case "fish_slice":
+			num2 = 4.4f;
+			break;
 		}
 		string text2 = target.id;
 		if (text2 == "glass" || text2 == "brick")
 		{
 			num2 = 2.1999998f;
-		}
-		if (target.trait is TraitAmmo)
-		{
-			num2 = 50f;
 		}
 		float num3 = num % num2;
 		num /= num2;

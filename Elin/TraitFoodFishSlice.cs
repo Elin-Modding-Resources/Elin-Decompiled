@@ -1,4 +1,4 @@
 public class TraitFoodFishSlice : TraitFoodFish
 {
-	public override int CraftNum => 4;
+	public override int CraftNum => 3;
 }

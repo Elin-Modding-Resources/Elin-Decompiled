@@ -3,48 +3,6 @@ using UnityEngine;
 
 public class FoodEffect : EClass
 {
-	public static bool IsHumanFlesh(Thing food)
-	{
-		if (food.HasTag(CTAG.notHumanMeat))
-		{
-			return false;
-		}
-		if (food.id == "deadbody")
-		{
-			return true;
-		}
-		if (food.source._origin != "meat" && food.source._origin != "dish")
-		{
-			return false;
-		}
-		string[] components = food.source.components;
-		for (int i = 0; i < components.Length; i++)
-		{
-			if (components[i].Contains("egg"))
-			{
-				return false;
-			}
-		}
-		if (!IsHumanFlesh(food.refCard))
-		{
-			return IsHumanFlesh(food.refCard2);
-		}
-		return true;
-	}
-
-	public static bool IsUndeadFlesh(Thing food)
-	{
-		if (food.source._origin != "meat" && food.source._origin != "dish")
-		{
-			return false;
-		}
-		if (!IsUndeadFlesh(food.refCard))
-		{
-			return IsUndeadFlesh(food.refCard2);
-		}
-		return true;
-	}
-
 	public static bool IsHumanFlesh(CardRow r)
 	{
 		if (r == null)
@@ -93,8 +51,8 @@ public class FoodEffect : EClass
 		float num4 = 25f;
 		float num5 = 1f;
 		string idTaste = "";
-		bool flag2 = IsHumanFlesh(food);
-		bool flag3 = IsUndeadFlesh(food);
+		bool flag2 = food.HasElement(708);
+		bool flag3 = food.HasElement(709);
 		bool flag4 = c.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
 		if (food.IsBlessed)

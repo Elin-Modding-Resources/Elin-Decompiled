@@ -290,6 +290,11 @@ public class RecipeCard : Recipe
 		{
 			num5 *= 2;
 		}
+		if (thing.trait is TraitFoodFishSlice && thing.c_idRefCard == thing.id && (thing.SelfWeight == 0 || thing.Evalue(10) == 0))
+		{
+			Msg.Say("noMoreSlice");
+			num5 = 1;
+		}
 		if (num5 > 1)
 		{
 			thing.SetNum(num5);

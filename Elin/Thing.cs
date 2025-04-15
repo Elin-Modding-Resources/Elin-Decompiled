@@ -559,8 +559,8 @@ public class Thing : Card
 			}
 			text = idUnknown;
 		}
-		goto IL_02c9;
-		IL_02c9:
+		goto IL_02a1;
+		IL_02a1:
 		if (!base.c_idRefCard.IsEmpty() && trait.RefCardName != RefCardName.None)
 		{
 			string text7 = base.c_altName.IsEmpty(base.refCard.GetName());
@@ -586,6 +586,10 @@ public class Thing : Card
 			text = "_of".lang(Lang._currency(base.c_bill, showUnit: true, 0), text);
 		}
 		trait.SetName(ref text);
+		if (base.tier > 0)
+		{
+			text = Lang.GetList((base.category.id == "fish") ? "quality_fish" : "quality_general")[Mathf.Clamp(base.tier, 0, 3)] + text;
+		}
 		switch (style)
 		{
 		case NameStyle.Simple:
@@ -735,11 +739,7 @@ public class Thing : Card
 		{
 			text = base.material.GetName();
 		}
-		if (base.qualityTier > 0)
-		{
-			text = Lang.GetList("quality_general")[Mathf.Clamp(base.qualityTier, 0, 3)] + text;
-		}
-		goto IL_02c9;
+		goto IL_02a1;
 	}
 
 	public override string GetHoverText()
@@ -1199,15 +1199,23 @@ public class Thing : Card
 			AddText("isBed".lang(traitBed.MaxHolders.ToString() ?? ""), FontColor.Default);
 		}
 		bool flag3 = base.IsEquipmentOrRangedOrAmmo || base.IsThrownWeapon;
+		bool showTraits = !flag3 || base.ShowFoodEnc;
+		bool infoMode = mode == IInspect.NoteMode.Info;
+		List<Element> listTrait = ListValidTraits(isCraft: false, !infoMode);
+		List<Element> list = ListValidTraits(isCraft: false, limit: false);
+		if (list.Count - listTrait.Count <= 1)
+		{
+			listTrait = list;
+		}
 		if (flag2)
 		{
+			Element element = elements.GetElement(653);
+			if (element != null)
+			{
+				AddText("isAlive".lang(element.vBase.ToString() ?? "", (element.vExp / 10).ToString() ?? "", (element.ExpToNext / 10).ToString() ?? ""), FontColor.Great);
+			}
 			if (flag3)
 			{
-				Element element = elements.GetElement(653);
-				if (element != null)
-				{
-					AddText("isAlive".lang(element.vBase.ToString() ?? "", (element.vExp / 10).ToString() ?? "", (element.ExpToNext / 10).ToString() ?? ""), FontColor.Great);
-				}
 				string[] rangedSubCats = new string[2] { "eleConvert", "eleAttack" };
 				elements.AddNote(n, delegate(Element e)
 				{
@@ -1215,7 +1223,7 @@ public class Thing : Card
 					{
 						return false;
 					}
-					if (e.IsTrait)
+					if (e.IsTrait || (showTraits && listTrait.Contains(e)))
 					{
 						return false;
 					}
@@ -1234,25 +1242,10 @@ public class Thing : Card
 				}
 			}
 		}
-		else
-		{
-			AddText("isUnidentified".lang(), FontColor.Flavor);
-			if (base.c_IDTState == 1)
-			{
-				AddText("isUnidentified2".lang(), FontColor.Flavor);
-			}
-		}
 		trait.WriteNote(n, flag2);
-		if (flag2 && !flag3)
+		if (flag2 && showTraits)
 		{
-			bool infoMode = mode == IInspect.NoteMode.Info;
-			List<Element> list = ListValidTraits(isCraft: false, !infoMode);
-			List<Element> list2 = ListValidTraits(isCraft: false, limit: false);
-			if (list2.Count - list.Count <= 1)
-			{
-				list = list2;
-			}
-			elements.AddNote(n, (Element e) => list.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, delegate(Element e, string s)
+			elements.AddNote(n, (Element e) => listTrait.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, delegate(Element e, string s)
 			{
 				string text12 = s;
 				string text13 = e.source.GetText("textExtra");
@@ -1281,45 +1274,42 @@ public class Thing : Card
 			}, delegate
 			{
 			});
-			if (base.ShowFoodEnc && EClass.pc.HasElement(1650))
+			if (listTrait.Count != list.Count)
 			{
-				if (FoodEffect.IsHumanFlesh(this))
-				{
-					AddText("foodHuman".lang(), FontColor.Ether);
-				}
-				if (FoodEffect.IsUndeadFlesh(this))
-				{
-					AddText("foodUndead".lang(), FontColor.Ether);
-				}
+				AddText("traitOther".lang((list.Count - listTrait.Count).ToString() ?? ""), FontColor.Default);
 			}
-			if (list.Count != list2.Count)
+		}
+		if (!flag2)
+		{
+			AddText("isUnidentified".lang(), FontColor.Flavor);
+			if (base.c_IDTState == 1)
 			{
-				AddText("traitOther".lang((list2.Count - list.Count).ToString() ?? ""), FontColor.Default);
+				AddText("isUnidentified2".lang(), FontColor.Flavor);
 			}
-			if (mode == IInspect.NoteMode.Product && HasCraftBonusTrait())
+		}
+		if (mode == IInspect.NoteMode.Product && HasCraftBonusTrait())
+		{
+			n.AddHeader("HeaderAdditionalTrait", "additional_trait");
+			foreach (Element item in ListCraftBonusTraits())
 			{
-				n.AddHeader("HeaderAdditionalTrait", "additional_trait");
-				foreach (Element item in ListCraftBonusTraits())
+				item.AddEncNote(n, this, ElementContainer.NoteMode.BonusTrait, delegate(Element e, string s)
 				{
-					item.AddEncNote(n, this, ElementContainer.NoteMode.BonusTrait, delegate(Element e, string s)
+					string text9 = s;
+					string text10 = e.source.GetText("textExtra");
+					if (!text10.IsEmpty())
 					{
-						string text9 = s;
-						string text10 = e.source.GetText("textExtra");
-						if (!text10.IsEmpty())
+						string text11 = "";
+						int num = e.Value / 10;
+						num = ((e.Value < 0) ? (num - 1) : (num + 1));
+						text10 = "Lv." + num + text11 + " " + text10;
+						if (infoMode && e.IsFoodTraitMain)
 						{
-							string text11 = "";
-							int num = e.Value / 10;
-							num = ((e.Value < 0) ? (num - 1) : (num + 1));
-							text10 = "Lv." + num + text11 + " " + text10;
-							if (infoMode && e.IsFoodTraitMain)
-							{
-								text10 += "traitAdditive".lang();
-							}
-							text9 += (" <size=12>" + text10 + "</size>").TagColor(FontColor.Passive);
+							text10 += "traitAdditive".lang();
 						}
-						return text9;
-					});
-				}
+						text9 += (" <size=12>" + text10 + "</size>").TagColor(FontColor.Passive);
+					}
+					return text9;
+				});
 			}
 		}
 		if (EClass.debug.showExtra)
@@ -1564,7 +1554,7 @@ public class Thing : Card
 
 	public override bool CanStackTo(Thing to)
 	{
-		if (trait.HasCharges || to.isEquipped || base.isModified || to.isModified || to.id != id || to.idMaterial != base.idMaterial || to.refVal != base.refVal || to.blessedState != base.blessedState || to.rarityLv != base.rarityLv || to.qualityTier != base.qualityTier || to.idSkin != base.idSkin || to.isGifted != base.isGifted)
+		if (trait.HasCharges || to.isEquipped || base.isModified || to.isModified || to.id != id || to.idMaterial != base.idMaterial || to.refVal != base.refVal || to.blessedState != base.blessedState || to.rarityLv != base.rarityLv || to.tier != base.tier || to.idSkin != base.idSkin || to.isGifted != base.isGifted)
 		{
 			return false;
 		}

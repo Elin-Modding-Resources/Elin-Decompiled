@@ -1,6 +1,6 @@
 public class SKILL
 {
-	public const int twohand = 130;
+	public const int weaponBlunt = 111;
 
 	public const int shield = 123;
 
@@ -8,23 +8,23 @@ public class SKILL
 
 	public const int armorLight = 120;
 
-	public const int fireproof = 50;
-
-	public const int weaponScythe = 110;
+	public const int PDR = 55;
 
 	public const int weaponCrossbow = 109;
 
-	public const int twowield = 131;
+	public const int fireproof = 50;
 
 	public const int acidproof = 51;
 
-	public const int weaponBlunt = 111;
+	public const int twohand = 130;
+
+	public const int weaponScythe = 110;
+
+	public const int twowield = 131;
+
+	public const int mining = 220;
 
 	public const int fishing = 245;
-
-	public const int evasion = 150;
-
-	public const int eyeofmind = 134;
 
 	public const int climbing = 242;
 
@@ -42,7 +42,7 @@ public class SKILL
 
 	public const int riding = 226;
 
-	public const int mining = 220;
+	public const int lumberjack = 225;
 
 	public const int spotting = 210;
 
@@ -54,85 +54,85 @@ public class SKILL
 
 	public const int evasionPlus = 151;
 
+	public const int evasion = 150;
+
 	public const int strategy = 135;
 
-	public const int marksman = 133;
+	public const int eyeofmind = 134;
 
-	public const int lumberjack = 225;
-
-	public const int martial = 100;
-
-	public const int weaponDagger = 107;
-
-	public const int DEX = 72;
-
-	public const int END = 71;
-
-	public const int STR = 70;
-
-	public const int FPV = 68;
-
-	public const int DMG = 67;
-
-	public const int HIT = 66;
-
-	public const int PER = 73;
-
-	public const int PV = 65;
-
-	public const int vigor = 62;
-
-	public const int mana = 61;
-
-	public const int life = 60;
-
-	public const int evasionPerfect = 57;
+	public const int tactics = 132;
 
 	public const int EDR = 56;
 
-	public const int PDR = 55;
-
-	public const int DV = 64;
+	public const int weaponStaff = 103;
 
 	public const int throwing = 108;
 
+	public const int life = 60;
+
+	public const int mana = 61;
+
+	public const int vigor = 62;
+
+	public const int DV = 64;
+
+	public const int PV = 65;
+
+	public const int HIT = 66;
+
+	public const int DMG = 67;
+
+	public const int FPV = 68;
+
+	public const int STR = 70;
+
+	public const int END = 71;
+
+	public const int DEX = 72;
+
+	public const int PER = 73;
+
 	public const int LER = 74;
-
-	public const int MAG = 76;
-
-	public const int weaponPolearm = 106;
-
-	public const int weaponGun = 105;
-
-	public const int weaponBow = 104;
-
-	public const int weaponStaff = 103;
-
-	public const int weaponAxe = 102;
-
-	public const int weaponSword = 101;
 
 	public const int WIL = 75;
 
-	public const int antiMagic = 93;
+	public const int evasionPerfect = 57;
 
-	public const int vopal = 91;
-
-	public const int critical = 90;
-
-	public const int INT = 80;
-
-	public const int SPD = 79;
+	public const int MAG = 76;
 
 	public const int LUC = 78;
 
-	public const int CHA = 77;
+	public const int SPD = 79;
+
+	public const int INT = 80;
+
+	public const int critical = 90;
+
+	public const int vopal = 91;
 
 	public const int penetration = 92;
 
+	public const int antiMagic = 93;
+
+	public const int martial = 100;
+
+	public const int weaponSword = 101;
+
+	public const int weaponAxe = 102;
+
+	public const int weaponBow = 104;
+
+	public const int weaponGun = 105;
+
+	public const int weaponPolearm = 106;
+
+	public const int weaponDagger = 107;
+
+	public const int CHA = 77;
+
 	public const int gathering = 250;
 
-	public const int tactics = 132;
+	public const int marksman = 133;
 
 	public const int blacksmith = 256;
 
@@ -268,13 +268,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		130, 123, 122, 120, 50, 110, 109, 131, 51, 111,
-		245, 150, 134, 242, 241, 240, 237, 235, 230, 227,
-		226, 220, 210, 207, 200, 152, 151, 135, 133, 225,
-		100, 107, 72, 71, 70, 68, 67, 66, 73, 65,
-		62, 61, 60, 57, 56, 55, 64, 108, 74, 76,
-		106, 105, 104, 103, 102, 101, 75, 93, 91, 90,
-		80, 79, 78, 77, 92, 250, 132, 256, 916, 917,
+		111, 123, 122, 120, 55, 109, 50, 51, 130, 110,
+		131, 220, 245, 242, 241, 240, 237, 235, 230, 227,
+		226, 225, 210, 207, 200, 152, 151, 150, 135, 134,
+		132, 56, 103, 108, 60, 61, 62, 64, 65, 66,
+		67, 68, 70, 71, 72, 73, 74, 75, 57, 76,
+		78, 79, 80, 90, 91, 92, 93, 100, 101, 102,
+		104, 105, 106, 107, 77, 250, 133, 256, 916, 917,
 		918, 920, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 970, 971, 972, 255, 955, 914,

@@ -155,7 +155,7 @@ public class ThingContainer : List<Thing>
 		Window.SaveData.CategoryType category = data.category;
 		bool flag3 = category != Window.SaveData.CategoryType.None;
 		string text2 = "";
-		bool flag4 = text != null && text.Length >= 2 && (text[0] == '@' || text[1] == '＠');
+		bool flag4 = text != null && text.Length >= 2 && (text[0] == '@' || text[0] == '＠');
 		if (flag4)
 		{
 			text = text.Substring(1);

@@ -1380,7 +1380,7 @@ public class Trait : EClass
 			List<Thing> list = EClass._zone.TryListThingsInSpot<TraitSpotFuel>((Thing t) => IsFuel(t));
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
-				if (IsFuel(t) && t.qualityTier == 0 && (excludes == null || !excludes.Contains(t)))
+				if (IsFuel(t) && t.tier == 0 && (excludes == null || !excludes.Contains(t)))
 				{
 					list.Add(t);
 				}

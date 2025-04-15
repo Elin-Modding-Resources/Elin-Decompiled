@@ -2215,7 +2215,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				foreach (Chara chara in p.detail.charas)
 				{
-					if (chara.IsHostile(this) || !chara.trait.CanBePushed)
+					if (chara.IsHostile(this) || chara.IsHostile() || !chara.trait.CanBePushed)
 					{
 						if (cancelAI && EClass.pc.ai is GoalManualMove)
 						{
@@ -4988,7 +4988,6 @@ public class Chara : Card, IPathfindWalker
 			}
 			currentZone.RemoveCard(this);
 		}
-		string text4;
 		if ((origin != null && origin.IsPCParty) || IsPCFaction)
 		{
 			int a = -10;
@@ -4997,7 +4996,7 @@ public class Chara : Card, IPathfindWalker
 				a = -5;
 			}
 			ModAffinity(EClass.pc, a, show: false);
-			text4 = id;
+			string text4 = id;
 			if (!(text4 == "quru"))
 			{
 				if (text4 == "corgon")
@@ -5064,20 +5063,31 @@ public class Chara : Card, IPathfindWalker
 			base.c_wasInPcParty = true;
 			EClass.pc.Say("allyDead");
 		}
-		text4 = id;
-		if (!(text4 == "littleOne"))
+		switch (id)
 		{
-			if (text4 == "big_daddy" && !IsPCFaction)
+		case "littleOne":
+			if (attackSource != AttackSource.DeathSentense && !IsPCFaction)
 			{
-				Chara t = CharaGen.Create("littleOne");
-				EClass._zone.AddCard(t, pos.Copy());
+				EClass.player.flags.little_killed = true;
+				EClass.player.little_dead++;
+			}
+			break;
+		case "big_daddy":
+			if (!IsPCFaction)
+			{
+				Chara t2 = CharaGen.Create("littleOne");
+				EClass._zone.AddCard(t2, pos.Copy());
 				Msg.Say("little_pop");
 			}
-		}
-		else if (attackSource != AttackSource.DeathSentense && !IsPCFaction)
-		{
-			EClass.player.flags.little_killed = true;
-			EClass.player.little_dead++;
+			break;
+		case "shark_sister":
+			if (!IsPCFaction)
+			{
+				Chara t = CharaGen.Create("sister_shark");
+				EClass._zone.AddCard(t, pos.Copy());
+				Msg.Say("shark_pop");
+			}
+			break;
 		}
 		if (attackSource == AttackSource.Finish && origin != null && origin.Evalue(665) > 0)
 		{

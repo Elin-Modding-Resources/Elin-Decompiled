@@ -100,7 +100,7 @@ public class WidgetSearch : WidgetCodex
 			return;
 		}
 		lastSearch = s;
-		bool encSearch = s.Length >= 2 && (s[0] == '@' || s[1] == '＠');
+		bool encSearch = s.Length >= 2 && (s[0] == '@' || s[0] == '＠');
 		if (encSearch)
 		{
 			s = s.Substring(1);
