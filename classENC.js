@@ -58,6 +58,7 @@ var classENC =
     [ "negateSteal", "classENC.html#a1e36907400d5789ffe93497a9d9c01db", null ],
     [ "negateTeleport", "classENC.html#aa313b4266696ee6caff3a2a0d9957464", null ],
     [ "noDamage", "classENC.html#a41e2fed0096736132e4dd1db7b5ad063", null ],
+    [ "nonLethal", "classENC.html#ab73de6dd8e77dcec3d7d5ee49ed1f529", null ],
     [ "onlyPet", "classENC.html#a9efa65293c0bbb2a2f252d1ecccda1a1", null ],
     [ "optimizeMana", "classENC.html#abe2068dd60366b6abfd4cda2ef7779f4", null ],
     [ "permaCurse", "classENC.html#a8adc41e3834a8ea1f789f9de8f6a70ff", null ],

@@ -166,6 +166,7 @@ var annotated_dup =
     [ "AI_Paint", "classAI__Paint.html", "classAI__Paint" ],
     [ "AI_PassTime", "classAI__PassTime.html", "classAI__PassTime" ],
     [ "AI_PlayMusic", "classAI__PlayMusic.html", "classAI__PlayMusic" ],
+    [ "AI_Practice", "classAI__Practice.html", "classAI__Practice" ],
     [ "AI_PracticeDummy", "classAI__PracticeDummy.html", "classAI__PracticeDummy" ],
     [ "AI_Pray", "classAI__Pray.html", "classAI__Pray" ],
     [ "AI_Read", "classAI__Read.html", "classAI__Read" ],

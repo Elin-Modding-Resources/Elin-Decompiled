@@ -625,7 +625,10 @@ var hierarchy =
               [ "AI_SelfHarm", "classAI__SelfHarm.html", null ]
             ] ],
             [ "AI_PlayMusic", "classAI__PlayMusic.html", null ],
-            [ "AI_PracticeDummy", "classAI__PracticeDummy.html", null ],
+            [ "AI_Practice", "classAI__Practice.html", [
+              [ "AI_PracticeDummy", "classAI__PracticeDummy.html", null ],
+              [ "AI_Torture", "classAI__Torture.html", null ]
+            ] ],
             [ "AI_Pray", "classAI__Pray.html", null ],
             [ "AI_Read", "classAI__Read.html", null ],
             [ "AI_ReleaseHeld", "classAI__ReleaseHeld.html", null ],
@@ -640,7 +643,6 @@ var hierarchy =
                 [ "AI_Sleep", "classAI__Sleep.html", null ]
               ] ]
             ] ],
-            [ "AI_Torture", "classAI__Torture.html", null ],
             [ "AI_Trolley", "classAI__Trolley.html", null ],
             [ "AI_UseCrafter", "classAI__UseCrafter.html", null ],
             [ "AI_Wait", "classAI__Wait.html", null ],
