@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"classAM__BaseTileSelect.html#aeb061014d8d582c7ced087ac2a27cf06":[1,0,124,5],
+"classAM__BaseTileSelect.html#af64c6585f4514e55609a401866f65cd7":[1,0,124,3],
 "classAM__Bird.html":[1,0,125],
 "classAM__Bird.html#a03b49dd20b9a39cd1481d6626a034cac":[1,0,125,2],
 "classAM__Bird.html#a3fe205a551067676de164ab92faa3412":[1,0,125,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "classAM__Mine.html#aa9bf030484779bbbb47d6912411c7a00":[1,0,142,0],
 "classAM__Mine.html#ab7f0ef8ccfca545a959be2aee22dc5cb":[1,0,142,11],
 "classAM__Mine.html#ae2fa680be538fd3f11de0f6fd4b7dfa9":[1,0,142,7],
-"classAM__Mine.html#aea1067114d1aa999211a08e03f2bbb4d":[1,0,142,6],
-"classAM__MiniGame.html":[1,0,143],
-"classAM__MiniGame.html#a00bcce97d902ca3e5ba88fa06782b063":[1,0,143,1]
+"classAM__Mine.html#aea1067114d1aa999211a08e03f2bbb4d":[1,0,142,6]
 };

@@ -1,7 +1,18 @@
 var NAVTREEINDEX86 =
 {
+"classPlayer.html#af48b1b24f3cb69a893417c4a9ea3cab7":[1,0,922,148],
+"classPlayer.html#af78e76b4ba2ceadc15a47c0e37c0f8ce":[1,0,922,107],
+"classPlayer.html#af7d6f29cadf8bb668fac83e3a90e7106":[1,0,922,72],
+"classPlayer.html#af8bde5efbb3312e8faaa9e1f39ec8559":[1,0,922,137],
+"classPlayer.html#af8fe694a26f432cbc82095d1f846b542":[1,0,922,91],
+"classPlayer.html#af911928ea2eb22d1cbaf7e86a83a2e82":[1,0,922,95],
+"classPlayer.html#af94965af58bf7881966d085da743dae7":[1,0,922,199],
+"classPlayer.html#af94b0c5e06e3a14f05fc10e39883430a":[1,0,922,191],
+"classPlayer.html#af9d138839a33333ff640599034e289a2":[1,0,922,141],
+"classPlayer.html#afb46f86512c8ccf198ceeb7e323b712a":[1,0,922,98],
+"classPlayer.html#afb820e04777c0553f9fc776d2d96d005":[1,0,922,157],
 "classPlayer.html#afbe334fb5e8a370af1caffdf123e585e":[1,0,922,47],
-"classPlayer.html#afe46f62cec8665ce7c77b8d0b6129644":[1,0,922,167],
+"classPlayer.html#afe46f62cec8665ce7c77b8d0b6129644":[1,0,922,168],
 "classPlayer_1_1Flags.html":[1,0,922,0],
 "classPlayer_1_1Flags.html#a02c50b8ff75cb4ede99010a699e4a721":[1,0,922,0,7],
 "classPlayer_1_1Flags.html#a0865b4a2e04fdc5ca76200d9b7c835b2":[1,0,922,0,38],
@@ -238,16 +249,5 @@ var NAVTREEINDEX86 =
 "classPoint.html#aec0a6ef72e47671812fba01d52d2602b":[1,0,925,17],
 "classPoint.html#aec57635cca8aded3817492044375b098":[1,0,925,29],
 "classPoint.html#aecc8df7c8ad20e227e49b08778c0aca1":[1,0,925,4],
-"classPoint.html#aedb465e9f29ea5ef027f6dfa613b91dc":[1,0,925,74],
-"classPoint.html#aef5453d97b5b98b6b777c823ac29cb34":[1,0,925,138],
-"classPoint.html#aef8634ffa11094d532bb1fe64fd268b7":[1,0,925,27],
-"classPoint.html#af010916d2b7b6099cd7816a50a5d24d1":[1,0,925,38],
-"classPoint.html#af2de1cdb52589d10648135dda1a63386":[1,0,925,96],
-"classPoint.html#af333b9b2df3fc703050e7a95c856ea58":[1,0,925,46],
-"classPoint.html#af4f53c5ef543798320ca855aa873dc46":[1,0,925,101],
-"classPoint.html#af7b04afb2a29ebd340f30da67a7f2a0e":[1,0,925,109],
-"classPoint.html#af88c7f8fe25b233c77721069f79ac140":[1,0,925,124],
-"classPoint.html#af969a4e115469e86076d2af955d4f223":[1,0,925,37],
-"classPoint.html#afaa1d2c5a9ec151b549aa9ca4ccd537e":[1,0,925,141],
-"classPoint.html#afc9b2ee00ac6924bda2f43201e77c8e2":[1,0,925,61]
+"classPoint.html#aedb465e9f29ea5ef027f6dfa613b91dc":[1,0,925,74]
 };

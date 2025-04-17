@@ -1892,6 +1892,7 @@ var hierarchy =
           [ "TraitToolBrush", "classTraitToolBrush.html", null ],
           [ "TraitToolBuild", "classTraitToolBuild.html", null ],
           [ "TraitToolButcher", "classTraitToolButcher.html", null ],
+          [ "TraitToolFishing", "classTraitToolFishing.html", null ],
           [ "TraitToolHammer", "classTraitToolHammer.html", null ],
           [ "TraitToolMusic", "classTraitToolMusic.html", [
             [ "TraitToolMusicBig", "classTraitToolMusicBig.html", null ],

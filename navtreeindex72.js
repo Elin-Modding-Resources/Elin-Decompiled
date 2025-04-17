@@ -1,5 +1,15 @@
 var NAVTREEINDEX72 =
 {
+"classItemGeneral.html#a005bd66508b64671962d3f4889018adf":[1,0,710,2],
+"classItemGeneral.html#a095966775beb18b57968f324e9648df2":[1,0,710,13],
+"classItemGeneral.html#a113e909185d6b7648936f4aef7264d33":[1,0,710,9],
+"classItemGeneral.html#a2ce248e2eb75dcd1faf1de9a808bab8c":[1,0,710,12],
+"classItemGeneral.html#a386a4f0ea416c6463ff620facdbe2574":[1,0,710,1],
+"classItemGeneral.html#a423263301b326e5a9fcf043a01a6d07d":[1,0,710,19],
+"classItemGeneral.html#a4c743d7f09d4d4b944294a57dd32e60b":[1,0,710,3],
+"classItemGeneral.html#a5a4526f8f934296516be14156b398e19":[1,0,710,7],
+"classItemGeneral.html#a72cab49ede75b968cd8672d81dffa5b2":[1,0,710,16],
+"classItemGeneral.html#a748c7f1e5bc9cc5a1ca90419a368d028":[1,0,710,10],
 "classItemGeneral.html#a7883c06faa41d53b5d038a8e454dcf7c":[1,0,710,0],
 "classItemGeneral.html#a8b98692168011ffad93059788deb4804":[1,0,710,14],
 "classItemGeneral.html#a930eb815d55bb864794a9215f9eb8735":[1,0,710,17],
@@ -239,15 +249,5 @@ var NAVTREEINDEX72 =
 "classLangSetting.html#afbc690ec88ade1741d23578c8654b17a":[1,0,740,13],
 "classLangSetting_1_1FontSetting.html":[1,0,740,0],
 "classLangSetting_1_1FontSetting.html#a151fa9ca7d9af0df3b7abf5023a8710c":[1,0,740,0,3],
-"classLangSetting_1_1FontSetting.html#a3020fc538e254b6c90b326b4162c96c8":[1,0,740,0,2],
-"classLangSetting_1_1FontSetting.html#a61a07860ab2137a0192b12d7c3542efc":[1,0,740,0,1],
-"classLangSetting_1_1FontSetting.html#ab77417b7bc175bc4c5bdbc65bf5e6ac7":[1,0,740,0,0],
-"classLangTalk.html":[1,0,741],
-"classLangTalk.html#a595cc3db7f70a08e415d27ba53aff00d":[1,0,741,1],
-"classLangTalk.html#a5fb4d2929a45911b088d4b4d1cf41ed2":[1,0,741,2],
-"classLangTalk.html#a7bdf91da623ccb7758c5f287e4d77caf":[1,0,741,3],
-"classLangTalk_1_1Row.html":[1,0,741,0],
-"classLangTalk_1_1Row.html#a7373db8f71668bd385017ae191c55f88":[1,0,741,0,4],
-"classLangTalk_1_1Row.html#a86064aa6dfdc407aca5f03d11594c080":[1,0,741,0,5],
-"classLangTalk_1_1Row.html#a8a43fdfeda3592c20c4b446ae5e64419":[1,0,741,0,2]
+"classLangSetting_1_1FontSetting.html#a3020fc538e254b6c90b326b4162c96c8":[1,0,740,0,2]
 };

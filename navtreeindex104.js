@@ -1,5 +1,16 @@
 var NAVTREEINDEX104 =
 {
+"classSourceReligion_1_1Row.html#afc336483b6966a3b811edbf6f03c5b06":[1,0,1192,0,14],
+"classSourceResearch.html":[1,0,1193],
+"classSourceResearch.html#a7fd8c582b655d62397b26c86a083bbbb":[1,0,1193,2],
+"classSourceResearch.html#ac6d7e78bcba370b54d620bc3362361df":[1,0,1193,1],
+"classSourceResearch_1_1Row.html":[1,0,1193,0],
+"classSourceResearch_1_1Row.html#a1d27974c963fa7025f2580539b4f12f9":[1,0,1193,0,10],
+"classSourceResearch_1_1Row.html#a4592fd2e4c169c591f84b7e83ed1d984":[1,0,1193,0,0],
+"classSourceResearch_1_1Row.html#a493c59150b9c69d7e5241820503d9640":[1,0,1193,0,7],
+"classSourceResearch_1_1Row.html#a516b48f1c49dcee9eb9c6877edb60e38":[1,0,1193,0,12],
+"classSourceResearch_1_1Row.html#a75f6626626c5263f191b9b132d74ac3f":[1,0,1193,0,4],
+"classSourceResearch_1_1Row.html#a7c27d3ba5f89321a3d4524b6f0f79c6d":[1,0,1193,0,8],
 "classSourceResearch_1_1Row.html#a8e11a7daa3f4d65bb3f8ae06d005e4dc":[1,0,1193,0,5],
 "classSourceResearch_1_1Row.html#a987a0c913672fc6d70c7e413027cd4bf":[1,0,1193,0,13],
 "classSourceResearch_1_1Row.html#aa14818548f933fc56498a217250d2c4e":[1,0,1193,0,6],
@@ -238,16 +249,5 @@ var NAVTREEINDEX104 =
 "classSpatial.html#a4f6c96d31ec7c12004d5d9831228c597":[1,0,1202,17],
 "classSpatial.html#a50381b7c6e8d973154172951adcced9b":[1,0,1202,69],
 "classSpatial.html#a506178689376c508717f3d70857ea8d4":[1,0,1202,95],
-"classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac":[1,0,1202,37],
-"classSpatial.html#a529beafee9281da53be36e301b5e5616":[1,0,1202,70],
-"classSpatial.html#a568e302e01de5786ce52437b1ef916ce":[1,0,1202,16],
-"classSpatial.html#a5978cf95ba97950df8f398ef6bf80045":[1,0,1202,93],
-"classSpatial.html#a5a17757afb62bdd70b8d143457c0a664":[1,0,1202,2],
-"classSpatial.html#a5a4034c9e257a5424dfd850f853d1fe2":[1,0,1202,7],
-"classSpatial.html#a6962c10736c0060fbaae4257bfb15732":[1,0,1202,66],
-"classSpatial.html#a70184c59fc39eccddf9036a599a398e8":[1,0,1202,52],
-"classSpatial.html#a74c17e96f0423cef7b3844ce0c57c686":[1,0,1202,6],
-"classSpatial.html#a75ee10685d47af67c8e2189de2a4424b":[1,0,1202,39],
-"classSpatial.html#a76a64bcb0eb5089956bc50e8c74946b4":[1,0,1202,18],
-"classSpatial.html#a76e41bd267f581e82f8a5592ff85c1d6":[1,0,1202,74]
+"classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac":[1,0,1202,37]
 };

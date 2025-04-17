@@ -1,5 +1,15 @@
 var NAVTREEINDEX65 =
 {
+"classGameUpdater_1_1LogicUpdater.html#ad3f171ee2ff9fc3c931bdfc869cdb17e":[1,0,521,5,2],
+"classGameUpdater_1_1LogicUpdater.html#ad9701c010648d85618b7a90c3e4002fc":[1,0,521,5,1],
+"classGameUpdater_1_1SensorUpdater.html":[1,0,521,6],
+"classGameUpdater_1_1SensorUpdater.html#a65c0a7503767c6ae84338909de57b1f4":[1,0,521,6,0],
+"classGameUpdater_1_1SurfaceUpdater.html":[1,0,521,7],
+"classGameUpdater_1_1SurfaceUpdater.html#a001f7385e7e3f40b52ed681e91dfac3a":[1,0,521,7,4],
+"classGameUpdater_1_1SurfaceUpdater.html#a09ce1dc89662f6f547629d4d6da23d02":[1,0,521,7,0],
+"classGameUpdater_1_1SurfaceUpdater.html#a7a348f5351774d6cfc30b609021946c5":[1,0,521,7,1],
+"classGameUpdater_1_1SurfaceUpdater.html#a994457875cfcc82193dd1802aec388c6":[1,0,521,7,3],
+"classGameUpdater_1_1SurfaceUpdater.html#a9a87c3af284e81e2031aa5577b29c104":[1,0,521,7,2],
 "classGameUpdater_1_1ThingUpdater.html":[1,0,521,8],
 "classGameUpdater_1_1ThingUpdater.html#ac4d551159e4f2ea93e0015e9bb5b440d":[1,0,521,8,0],
 "classGameUpdater_1_1Updater.html":[1,0,521,9],
@@ -239,15 +249,5 @@ var NAVTREEINDEX65 =
 "classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b":[1,0,549,6],
 "classGoalTask.html#a1cfb24798cf9f4527bfc4f3ef82d47ac":[1,0,549,2],
 "classGoalTask.html#a27a69c8c10ec7d5760d3211f076032d2":[1,0,549,8],
-"classGoalTask.html#a3cb6f6da58ea95eacadbacdfd87b19de":[1,0,549,7],
-"classGoalTask.html#a633e9ccf86a101e0ece8629d228db970":[1,0,549,9],
-"classGoalTask.html#a792fc8f65915232cd39a51253ca34c51":[1,0,549,4],
-"classGoalTask.html#a7c2500dfc889c770053da616cfe9e36c":[1,0,549,3],
-"classGoalTask.html#a9e7f0d76f2ce3632e9923bb83ca6de68":[1,0,549,5],
-"classGoalTask.html#aadcc28cc698b209fe142fc6614b71037":[1,0,549,10],
-"classGoalTask.html#ac50abab5c540b60e25b744f39f67e116":[1,0,549,1],
-"classGoalTask.html#ad0a2f8ac0a5beeb5b047bbe36c899118":[1,0,549,0],
-"classGoalVisitorEnemy.html":[1,0,550],
-"classGoalVisitorEnemy.html#a183b253b2a55ceefe985919842bbebd0":[1,0,550,0],
-"classGoalVisitorEnemy.html#a937fed7f366fa8c7343ae110fa40ff28":[1,0,550,1]
+"classGoalTask.html#a3cb6f6da58ea95eacadbacdfd87b19de":[1,0,549,7]
 };

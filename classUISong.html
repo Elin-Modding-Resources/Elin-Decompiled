@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.126 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.127 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -260,12 +260,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UISong_8cs_source.html#l00065">65</a> of file <a class="el" href="UISong_8cs_source.html">UISong.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        Object.DestroyImmediate(base.gameObject);</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UISong_8cs_source.html#l00069">69</a> of file <a class="el" href="UISong_8cs_source.html">UISong.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        Object.DestroyImmediate(base.gameObject);</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="AI__PlayMusic_8cs_source.html#l00528">AI_PlayMusic.OnCancel()</a>, and <a class="el" href="UISong_8cs_source.html#l00040">Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__PlayMusic_8cs_source.html#l00535">AI_PlayMusic.OnCancel()</a>, and <a class="el" href="UISong_8cs_source.html#l00040">Update()</a>.</p>
 
 </div>
 </div>
@@ -368,36 +368,42 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   46</span>        }</div>
 <div class="line"><span class="lineno">   47</span>        AudioSource audioSource = <a class="code hl_variable" href="classUISong.html#a78b113b2d5e006b5774b0ee456afb0b4">source</a>.source;</div>
 <div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a> = Mathf.Clamp((audioSource.time - <a class="code hl_variable" href="classUISong.html#afb98ccdca62127e6ff61d421b372774c">part</a>.start) / (<a class="code hl_variable" href="classUISong.html#afb98ccdca62127e6ff61d421b372774c">part</a>.duration + <a class="code hl_variable" href="classUISong.html#a1e050344867bf7b4a176c4dc81831b7d">bgm</a>.song.fadeIn), 0f, 1f);</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a> == <span class="keyword">null</span> || !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> || <a class="code hl_variable" href="classUISong.html#a78b113b2d5e006b5774b0ee456afb0b4">source</a> == <span class="keyword">null</span> || !<a class="code hl_variable" href="classUISong.html#a78b113b2d5e006b5774b0ee456afb0b4">source</a>.isPlaying || <a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a> &gt;= 0.99f || (<a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a> &lt;= 0f &amp;&amp; !(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classAI__PlayMusic.html">AI_PlayMusic</a>)))</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> ((<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classGoalManualMove.html">GoalManualMove</a> || <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_property" href="classChara.html#aa3b664115de2bd08350fc2f5323b0184">IsMoving</a>) &amp;&amp; <a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a> &lt; 0.1f)</div>
 <div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            <a class="code hl_variable" href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">timer</a> += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">timer</a> &gt; 0.3f)</div>
-<div class="line"><span class="lineno">   53</span>            {</div>
-<div class="line"><span class="lineno">   54</span>                <a class="code hl_function" href="classUISong.html#a0690226507c8135286f4d2c54621ba79">Kill</a>();</div>
-<div class="line"><span class="lineno">   55</span>            }</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_variable" href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">timer</a> = 0f;</div>
-<div class="line"><span class="lineno">   60</span>            RectTransform rectTransform = <a class="code hl_variable" href="classUISong.html#a41ed310b376d21c6137b048e82c02515">bar</a>.rectTransform;</div>
-<div class="line"><span class="lineno">   61</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classUISong.html#a2ea466d0a17a220dd8e930991ed366a2">gauge</a>.<a class="code hl_variable" href="classGauge.html#a63fb17401c3f595e127240356a74aa4d">originalWidth</a> * <a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a>, rectTransform.sizeDelta.y);</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_function" href="classUISong.html#a0690226507c8135286f4d2c54621ba79">Kill</a>();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a> == <span class="keyword">null</span> || !<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a> || <a class="code hl_variable" href="classUISong.html#a78b113b2d5e006b5774b0ee456afb0b4">source</a> == <span class="keyword">null</span> || !<a class="code hl_variable" href="classUISong.html#a78b113b2d5e006b5774b0ee456afb0b4">source</a>.isPlaying || <a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a> &gt;= 0.99f || (<a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a> &lt;= 0f &amp;&amp; !(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">ai</a> is <a class="code hl_class" href="classAI__PlayMusic.html">AI_PlayMusic</a>)))</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_variable" href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">timer</a> += <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">delta</a>;</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">timer</a> &gt; 0.3f)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <a class="code hl_function" href="classUISong.html#a0690226507c8135286f4d2c54621ba79">Kill</a>();</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">timer</a> = 0f;</div>
+<div class="line"><span class="lineno">   64</span>            RectTransform rectTransform = <a class="code hl_variable" href="classUISong.html#a41ed310b376d21c6137b048e82c02515">bar</a>.rectTransform;</div>
+<div class="line"><span class="lineno">   65</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classUISong.html#a2ea466d0a17a220dd8e930991ed366a2">gauge</a>.<a class="code hl_variable" href="classGauge.html#a63fb17401c3f595e127240356a74aa4d">originalWidth</a> * <a class="code hl_variable" href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">ratio</a>, rectTransform.sizeDelta.y);</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
 <div class="ttc" id="aclassAI__PlayMusic_html"><div class="ttname"><a href="classAI__PlayMusic.html">AI_PlayMusic</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__PlayMusic_8cs_source.html#l00006">AI_PlayMusic.cs:7</a></div></div>
-<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00189">Chara.cs:189</a></div></div>
+<div class="ttc" id="aclassChara_html_a1e26e7daf17f4f9e7c6e32f85016f722"><div class="ttname"><a href="classChara.html#a1e26e7daf17f4f9e7c6e32f85016f722">Chara.ai</a></div><div class="ttdeci">AIAct ai</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00192">Chara.cs:192</a></div></div>
+<div class="ttc" id="aclassChara_html_aa3b664115de2bd08350fc2f5323b0184"><div class="ttname"><a href="classChara.html#aa3b664115de2bd08350fc2f5323b0184">Chara.IsMoving</a></div><div class="ttdeci">override bool IsMoving</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00598">Chara.cs:598</a></div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
 <div class="ttc" id="aclassCore_html_ac31f5b0fe98a25c00ca5700c328ae460"><div class="ttname"><a href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">Core.IsGameStarted</a></div><div class="ttdeci">bool IsGameStarted</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00083">Core.cs:84</a></div></div>
 <div class="ttc" id="aclassCore_html_ae788cd24238994318d2c10d0deb32ce8"><div class="ttname"><a href="classCore.html#ae788cd24238994318d2c10d0deb32ce8">Core.delta</a></div><div class="ttdeci">static float delta</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00017">Core.cs:17</a></div></div>
 <div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00005">EMono.cs:5</a></div></div>
 <div class="ttc" id="aclassEMono_html_a788e18c7a529b55607051f27551017d3"><div class="ttname"><a href="classEMono.html#a788e18c7a529b55607051f27551017d3">EMono.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00007">EMono.cs:7</a></div></div>
 <div class="ttc" id="aclassGauge_html_a63fb17401c3f595e127240356a74aa4d"><div class="ttname"><a href="classGauge.html#a63fb17401c3f595e127240356a74aa4d">Gauge.originalWidth</a></div><div class="ttdeci">float originalWidth</div><div class="ttdef"><b>Definition:</b> <a href="Gauge_8cs_source.html#l00020">Gauge.cs:20</a></div></div>
-<div class="ttc" id="aclassUISong_html_a0690226507c8135286f4d2c54621ba79"><div class="ttname"><a href="classUISong.html#a0690226507c8135286f4d2c54621ba79">UISong.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition:</b> <a href="UISong_8cs_source.html#l00065">UISong.cs:65</a></div></div>
+<div class="ttc" id="aclassGoalManualMove_html"><div class="ttname"><a href="classGoalManualMove.html">GoalManualMove</a></div><div class="ttdef"><b>Definition:</b> <a href="GoalManualMove_8cs_source.html#l00004">GoalManualMove.cs:5</a></div></div>
+<div class="ttc" id="aclassUISong_html_a0690226507c8135286f4d2c54621ba79"><div class="ttname"><a href="classUISong.html#a0690226507c8135286f4d2c54621ba79">UISong.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition:</b> <a href="UISong_8cs_source.html#l00069">UISong.cs:69</a></div></div>
 <div class="ttc" id="aclassUISong_html_a2ea466d0a17a220dd8e930991ed366a2"><div class="ttname"><a href="classUISong.html#a2ea466d0a17a220dd8e930991ed366a2">UISong.gauge</a></div><div class="ttdeci">Gauge gauge</div><div class="ttdef"><b>Definition:</b> <a href="UISong_8cs_source.html#l00008">UISong.cs:8</a></div></div>
 <div class="ttc" id="aclassUISong_html_a41ed310b376d21c6137b048e82c02515"><div class="ttname"><a href="classUISong.html#a41ed310b376d21c6137b048e82c02515">UISong.bar</a></div><div class="ttdeci">Image bar</div><div class="ttdef"><b>Definition:</b> <a href="UISong_8cs_source.html#l00010">UISong.cs:10</a></div></div>
 <div class="ttc" id="aclassUISong_html_a94cab18ec048ea33ce22bef93d5ab23f"><div class="ttname"><a href="classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f">UISong.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="UISong_8cs_source.html#l00022">UISong.cs:22</a></div></div>
 <div class="ttc" id="aclassUISong_html_ad7cc0e937c588c12d87bb0017915e29b"><div class="ttname"><a href="classUISong.html#ad7cc0e937c588c12d87bb0017915e29b">UISong.ratio</a></div><div class="ttdeci">float ratio</div><div class="ttdef"><b>Definition:</b> <a href="UISong_8cs_source.html#l00018">UISong.cs:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00189">Chara.ai</a>, <a class="el" href="UISong_8cs_source.html#l00010">bar</a>, <a class="el" href="UISong_8cs_source.html#l00016">bgm</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Core_8cs_source.html#l00017">Core.delta</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="UISong_8cs_source.html#l00008">gauge</a>, <a class="el" href="Core_8cs_source.html#l00084">Core.IsGameStarted</a>, <a class="el" href="UISong_8cs_source.html#l00065">Kill()</a>, <a class="el" href="Gauge_8cs_source.html#l00020">Gauge.originalWidth</a>, <a class="el" href="UISong_8cs_source.html#l00014">part</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="UISong_8cs_source.html#l00018">ratio</a>, <a class="el" href="UISong_8cs_source.html#l00012">source</a>, and <a class="el" href="UISong_8cs_source.html#l00022">timer</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00192">Chara.ai</a>, <a class="el" href="UISong_8cs_source.html#l00010">bar</a>, <a class="el" href="UISong_8cs_source.html#l00016">bgm</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Core_8cs_source.html#l00017">Core.delta</a>, <a class="el" href="EMono_8cs_source.html#l00007">EMono.game</a>, <a class="el" href="UISong_8cs_source.html#l00008">gauge</a>, <a class="el" href="Core_8cs_source.html#l00084">Core.IsGameStarted</a>, <a class="el" href="Chara_8cs_source.html#l00598">Chara.IsMoving</a>, <a class="el" href="UISong_8cs_source.html#l00069">Kill()</a>, <a class="el" href="Gauge_8cs_source.html#l00020">Gauge.originalWidth</a>, <a class="el" href="UISong_8cs_source.html#l00014">part</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="UISong_8cs_source.html#l00018">ratio</a>, <a class="el" href="UISong_8cs_source.html#l00012">source</a>, and <a class="el" href="UISong_8cs_source.html#l00022">timer</a>.</p>
 
 </div>
 </div>
@@ -478,7 +484,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UISong_8cs_source.html#l00006">6</a> of file <a class="el" href="UISong_8cs_source.html">UISong.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, <a class="el" href="UISong_8cs_source.html#l00024">Awake()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00528">AI_PlayMusic.OnCancel()</a>, and <a class="el" href="AI__PlayMusic_8cs_source.html#l00050">AI_PlayMusic.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00474">AM_Adv._OnUpdateInput()</a>, <a class="el" href="UISong_8cs_source.html#l00024">Awake()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00535">AI_PlayMusic.OnCancel()</a>, and <a class="el" href="AI__PlayMusic_8cs_source.html#l00050">AI_PlayMusic.Run()</a>.</p>
 
 </div>
 </div>

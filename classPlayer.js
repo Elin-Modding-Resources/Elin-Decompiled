@@ -87,6 +87,7 @@ var classPlayer =
     [ "fame", "classPlayer.html#ad7944412ba2a46dd20aba76cbc517ddd", null ],
     [ "favAbility", "classPlayer.html#a9f5205a935f87557f969deca18fa3d84", null ],
     [ "favMoongate", "classPlayer.html#aebc4321f0cf770f3c2e0f11cd8c37f0a", null ],
+    [ "fished", "classPlayer.html#a7070c62bbb8389fea2c515bc096f6c09", null ],
     [ "flags", "classPlayer.html#a0cff1040ff0e51b872785ee541a2430b", null ],
     [ "focusedchara", "classPlayer.html#a60c96a6b3d5c763df9dcaf94335ac518", null ],
     [ "forceTalk", "classPlayer.html#a9c1d369c32bdbb5c824d3a04832142b6", null ],

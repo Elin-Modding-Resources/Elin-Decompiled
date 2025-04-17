@@ -1909,6 +1909,7 @@ var annotated_dup =
     [ "TraitToolBrush", "classTraitToolBrush.html", "classTraitToolBrush" ],
     [ "TraitToolBuild", "classTraitToolBuild.html", "classTraitToolBuild" ],
     [ "TraitToolButcher", "classTraitToolButcher.html", "classTraitToolButcher" ],
+    [ "TraitToolFishing", "classTraitToolFishing.html", null ],
     [ "TraitToolHammer", "classTraitToolHammer.html", null ],
     [ "TraitToolLoom", "classTraitToolLoom.html", null ],
     [ "TraitToolMusic", "classTraitToolMusic.html", "classTraitToolMusic" ],

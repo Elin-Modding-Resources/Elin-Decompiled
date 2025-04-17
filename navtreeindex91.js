@@ -1,5 +1,16 @@
 var NAVTREEINDEX91 =
 {
+"classQuestLumiest.html#a54cc2df6c212876a66c403ede142d19a":[1,0,990,0],
+"classQuestMain.html":[1,0,991],
+"classQuestMain.html#a01c18e621e3cd51eb5ed02a2a81a1b8d":[1,0,991,0],
+"classQuestMain.html#a3fb69e0f9eefb9e11d7b29c3d4c8d8c9":[1,0,991,2],
+"classQuestMain.html#a6aec6403a35dfccb90505290044e8a1d":[1,0,991,5],
+"classQuestMain.html#a9164c58095b06ffdcea1d5c6a1716f7e":[1,0,991,1],
+"classQuestMain.html#a962260767f32466abc424139b88fe7c2":[1,0,991,9],
+"classQuestMain.html#a964cc6de91f50237f731771e8d23c15e":[1,0,991,10],
+"classQuestMain.html#ab1805cd86127e3b0783d525d444690bf":[1,0,991,3],
+"classQuestMain.html#abf5da090933129f7c3149d18d4af8440":[1,0,991,8],
+"classQuestMain.html#acc679ff9869a4d1d6b67396a37f086a4":[1,0,991,4],
 "classQuestMain.html#ad53b0f1708b045b97bb11d761ba715bb":[1,0,991,6],
 "classQuestMain.html#ae2a4bcbf7b80dfcf5f0551eb09f5097d":[1,0,991,11],
 "classQuestMain.html#af81a20fd66115fe5afea2578dc4db154":[1,0,991,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX91 =
 "classQueueManager.html#ab191b724677e68bc9dfaaf83131be611":[1,0,1030,1],
 "classQueueManager.html#ace749391db1700d90f31fbddb7e14110":[1,0,1030,0],
 "classQueueManager.html#ae63e69a1bc6069cb6f4b2c9f95c29ae6":[1,0,1030,5],
-"classQueueManager.html#ae837d1941c217da6afcd69f34f323edc":[1,0,1030,6],
-"classQuickMenu.html":[1,0,1031],
-"classQuickMenu.html#a5a6cffcc2266e4f5502b9a308959ea3a":[1,0,1031,3],
-"classQuickMenu.html#aaeac1739d274c505f0ee8e274f4590fa":[1,0,1031,2],
-"classQuickMenu.html#ab266b991b475f779a912c719c7bd34b7":[1,0,1031,1],
-"classQuickMenu_1_1Item.html":[1,0,1031,0],
-"classQuickMenu_1_1Item.html#a580edca5e4cd983217ea9256b71b8059":[1,0,1031,0,0],
-"classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568":[1,0,1031,0,2],
-"classQuickMenu_1_1Item.html#a707490cb2e6f18b026f1a90ba2cbb03b":[1,0,1031,0,3],
-"classQuickMenu_1_1Item.html#aa06b6d9fb0dec4f95d41e27381362d1e":[1,0,1031,0,4],
-"classQuickMenu_1_1Item.html#ae5324c1165222397ef0ce538241dc563":[1,0,1031,0,1],
-"classRaceBonus.html":[1,0,1032]
+"classQueueManager.html#ae837d1941c217da6afcd69f34f323edc":[1,0,1030,6]
 };

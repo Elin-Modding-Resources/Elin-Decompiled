@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.126 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.127 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('AI__Practice_8cs_source.html',''); ini
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234">   18</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234">OnCancelOrSuccess</a>()</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        base.OnCancelOrSuccess();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a> &amp;&amp; <a class="code hl_variable" href="classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116">turn</a> &gt; 0)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordtype">long</span> a = <a class="code hl_variable" href="classAI__Practice.html#aff05913285defc4484ac929900b59f93">totalDamage</a> / <a class="code hl_variable" href="classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116">turn</a>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;trainingDPS&quot;</span>, <a class="code hl_variable" href="classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116">turn</a>.ToFormat(), a.ToFormat(), <a class="code hl_variable" href="classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193">hit</a>.ToFormat() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classAI__Practice.html#aff05913285defc4484ac929900b59f93">totalDamage</a>.ToFormat() ?? <span class="stringliteral">&quot;&quot;</span>);</div>

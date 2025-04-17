@@ -1,5 +1,16 @@
 var NAVTREEINDEX92 =
 {
+"classQuickMenu.html":[1,0,1031],
+"classQuickMenu.html#a5a6cffcc2266e4f5502b9a308959ea3a":[1,0,1031,3],
+"classQuickMenu.html#aaeac1739d274c505f0ee8e274f4590fa":[1,0,1031,2],
+"classQuickMenu.html#ab266b991b475f779a912c719c7bd34b7":[1,0,1031,1],
+"classQuickMenu_1_1Item.html":[1,0,1031,0],
+"classQuickMenu_1_1Item.html#a580edca5e4cd983217ea9256b71b8059":[1,0,1031,0,0],
+"classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568":[1,0,1031,0,2],
+"classQuickMenu_1_1Item.html#a707490cb2e6f18b026f1a90ba2cbb03b":[1,0,1031,0,3],
+"classQuickMenu_1_1Item.html#aa06b6d9fb0dec4f95d41e27381362d1e":[1,0,1031,0,4],
+"classQuickMenu_1_1Item.html#ae5324c1165222397ef0ce538241dc563":[1,0,1031,0,1],
+"classRaceBonus.html":[1,0,1032],
 "classRaceBonus.html#ada422a858396669a8d82c244a81d0fd8":[1,0,1032,0],
 "classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09":[1,0,1032,1],
 "classRaceBonus.html#ae31a97330bd51599ea755f680f14d8a2":[1,0,1032,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX92 =
 "classRecipe_1_1Ingredient.html#a580848dba508d908a2ea969b190b7d1a":[1,0,1037,0,10],
 "classRecipe_1_1Ingredient.html#a5fa997f2cddce444fed01ac22ef6d9c1":[1,0,1037,0,1],
 "classRecipe_1_1Ingredient.html#a7e3ce82b1ae28b1321238686fbdacfd3":[1,0,1037,0,15],
-"classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac":[1,0,1037,0,7],
-"classRecipe_1_1Ingredient.html#a940bd08fae5a97096755fcd1d7cc8dfc":[1,0,1037,0,0],
-"classRecipe_1_1Ingredient.html#aae43af20388a7652ab90fa0520de1788":[1,0,1037,0,12],
-"classRecipe_1_1Ingredient.html#ac59bbff1e717359f6bd79a131daad082":[1,0,1037,0,5],
-"classRecipe_1_1Ingredient.html#adb75bbb89b0497042619a166873e8228":[1,0,1037,0,11],
-"classRecipe_1_1Ingredient.html#adbb3a844a1fd45299a7bd029f4f3b74e":[1,0,1037,0,4],
-"classRecipe_1_1Ingredient.html#af0da4401bda0ad0a031ee77a998c49f4":[1,0,1037,0,16],
-"classRecipe_1_1Ingredient.html#af9e13d7e127e7073edd0a3315e746c95":[1,0,1037,0,2],
-"classRecipe_1_1Ingredient.html#afa031387a17b7a59d5fe90441094b48f":[1,0,1037,0,6],
-"classRectData.html":[1,0,1044],
-"classRectData.html#a27e44dfa8cd7ac3033b4781b0a932c6a":[1,0,1044,2],
-"classRectData.html#a4f6b8e01910df2bab175ab70abe38c84":[1,0,1044,0]
+"classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac":[1,0,1037,0,7]
 };
