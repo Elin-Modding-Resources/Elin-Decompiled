@@ -84,7 +84,7 @@ public class TraitBaseSpellbook : TraitScroll
 			return false;
 		}
 		int diff = Mathf.Max(1, Difficulty * ((owner.blessedState >= BlessedState.Blessed) ? 75 : ((owner.blessedState <= BlessedState.Cursed) ? 300 : 100)) / 100);
-		int check = Mathf.Max(1, c.Evalue(eleParent) * (100 + c.Evalue(285) * 10) / 100);
+		int check = Mathf.Max(1, (int)((long)c.Evalue(eleParent) * (long)(100 + c.Evalue(285) * 10) / 100));
 		if (ReadCheck() || EClass.debug.godMode || owner.HasEditorTag(EditorTag.NoReadFail))
 		{
 			return true;

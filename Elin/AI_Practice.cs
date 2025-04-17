@@ -18,7 +18,7 @@ public class AI_Practice : AIAct
 	public override void OnCancelOrSuccess()
 	{
 		base.OnCancelOrSuccess();
-		if (owner == EClass.pc)
+		if (owner == EClass.pc && turn > 0)
 		{
 			long a = totalDamage / turn;
 			Msg.Say("trainingDPS", turn.ToFormat(), a.ToFormat(), hit.ToFormat() ?? "", totalDamage.ToFormat() ?? "");

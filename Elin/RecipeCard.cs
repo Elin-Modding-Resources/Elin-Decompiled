@@ -295,6 +295,10 @@ public class RecipeCard : Recipe
 			Msg.Say("noMoreSlice");
 			num5 = 1;
 		}
+		if (num5 > 1 && (thing.HasElement(703) || thing.HasElement(704) || thing.HasElement(1229)))
+		{
+			num5 = 1;
+		}
 		if (num5 > 1)
 		{
 			thing.SetNum(num5);

@@ -132,6 +132,8 @@ public class ENC
 
 	public const int mod_reload = 601;
 
+	public const int safetyMeasure = 486;
+
 	public const int nonLethal = 485;
 
 	public const int slot_rune = 484;
@@ -142,37 +144,37 @@ public class ENC
 
 	public const int revealFaith = 481;
 
-	public const int strongStomach = 480;
+	public const int bane_all = 468;
 
 	public const int bane_fish = 467;
 
 	public const int bane_god = 466;
 
-	public const int bane_all = 468;
+	public const int strongStomach = 480;
 
-	public const int bane_man = 464;
+	public const int bane_machine = 465;
 
-	public const int bane_animal = 463;
+	public const int sustain_PER = 443;
 
-	public const int bane_fairy = 462;
+	public const int sustain_LER = 444;
 
-	public const int bane_undead = 461;
+	public const int sustain_WIL = 445;
+
+	public const int sustain_MAG = 446;
 
 	public const int bane_dragon = 460;
 
 	public const int sustain_CHA = 447;
 
-	public const int bane_machine = 465;
+	public const int bane_fairy = 462;
 
-	public const int sustain_MAG = 446;
+	public const int bane_animal = 463;
 
-	public const int sustain_WIL = 445;
+	public const int bane_man = 464;
 
-	public const int sustain_LER = 444;
+	public const int bane_undead = 461;
 
-	public const int sustain_PER = 443;
-
-	public static readonly int[] IDS = new int[86]
+	public static readonly int[] IDS = new int[87]
 	{
 		653, 652, 651, 650, 641, 624, 621, 622, 623, 654,
 		640, 655, 851, 660, 661, 662, 663, 664, 665, 666,
@@ -180,8 +182,8 @@ public class ENC
 		428, 427, 426, 425, 424, 423, 422, 421, 420, 417,
 		416, 441, 415, 412, 411, 410, 608, 408, 407, 406,
 		405, 404, 403, 402, 401, 400, 414, 442, 409, 600,
-		606, 605, 604, 603, 602, 601, 485, 484, 483, 482,
-		481, 480, 467, 466, 468, 464, 463, 462, 461, 460,
-		447, 465, 446, 445, 444, 443
+		606, 605, 604, 603, 602, 601, 486, 485, 484, 483,
+		482, 481, 468, 467, 466, 480, 465, 443, 444, 445,
+		446, 460, 447, 462, 463, 464, 461
 	};
 }

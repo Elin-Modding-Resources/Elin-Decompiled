@@ -60,6 +60,9 @@ public class Chara : Card, IPathfindWalker
 	[JsonProperty(PropertyName = "T7")]
 	public List<int> _listAbility;
 
+	[JsonProperty(PropertyName = "T8")]
+	public List<List<string>> _historyFood;
+
 	[JsonProperty(PropertyName = "1")]
 	public PCCData pccData;
 
@@ -6901,8 +6904,33 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public Thing FindBestFoodToEat()
+	{
+		Thing result = null;
+		int num = -1;
+		if (IsPC)
+		{
+			return null;
+		}
+		foreach (Thing item in things.List((Thing t) => CanEat(t, shouldEat: true) && !t.c_isImportant, onlyAccessible: true))
+		{
+			int num2 = CountNumEaten(item);
+			int num3 = 100 - num2;
+			if (num3 > num)
+			{
+				result = item;
+				num = num3;
+			}
+		}
+		return result;
+	}
+
 	public void InstantEat(Thing t = null, bool sound = true)
 	{
+		if (t == null)
+		{
+			t = FindBestFoodToEat();
+		}
 		if (t == null)
 		{
 			t = things.Find((Thing a) => CanEat(a, shouldEat: true) && !a.c_isImportant);
@@ -9222,6 +9250,58 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		return false;
+	}
+
+	public void OnAdvanceDay()
+	{
+		if (_historyFood != null)
+		{
+			while (_historyFood.Count > 7)
+			{
+				_historyFood.RemoveAt(_historyFood.Count - 1);
+			}
+			if (_historyFood[0].Count > 0)
+			{
+				_historyFood.Insert(0, new List<string>());
+			}
+		}
+	}
+
+	public void AddFoodHistory(Thing food)
+	{
+		if (!IsPCFaction || !IsGlobal)
+		{
+			_historyFood = null;
+			return;
+		}
+		if (_historyFood == null)
+		{
+			_historyFood = new List<List<string>>
+			{
+				new List<string>()
+			};
+		}
+		_historyFood[0].Add(food.id);
+	}
+
+	public int CountNumEaten(Thing food)
+	{
+		if (_historyFood == null)
+		{
+			return -1;
+		}
+		int num = 0;
+		foreach (List<string> item in _historyFood)
+		{
+			foreach (string item2 in item)
+			{
+				if (item2 == food.id)
+				{
+					num++;
+				}
+			}
+		}
+		return num;
 	}
 
 	public int GetPietyValue()

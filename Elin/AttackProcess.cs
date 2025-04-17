@@ -445,6 +445,7 @@ public class AttackProcess : EClass
 	public bool Perform(int count, bool hasHit, float dmgMulti = 1f, bool maxRoll = false, bool subAttack = false)
 	{
 		bool flag = CC.HasCondition<ConReload>();
+		bool flag2 = CC.HasElement(486) && CC.IsPCFactionOrMinion;
 		hit = CalcHit();
 		int num = GetRawDamage(dmgMulti, crit, maxRoll);
 		if (IsRanged && count >= numFireWithoutDamageLoss)
@@ -624,7 +625,7 @@ public class AttackProcess : EClass
 		{
 			conWeapon.Mod(-1);
 		}
-		bool flag2 = IsCane || (weapon != null && weapon.Evalue(482) > 0);
+		bool flag3 = IsCane || (weapon != null && weapon.Evalue(482) > 0);
 		int attackStyleElement = CC.body.GetAttackStyleElement(attackStyle);
 		if (!subAttack)
 		{
@@ -632,7 +633,7 @@ public class AttackProcess : EClass
 			if (!IsRanged || count == 0)
 			{
 				ModExpAtk(weaponSkill.id, mod2);
-				ModExpAtk(flag2 ? 304 : (IsRanged ? 133 : 132), mod2);
+				ModExpAtk(flag3 ? 304 : (IsRanged ? 133 : 132), mod2);
 			}
 			if (crit)
 			{
@@ -653,7 +654,7 @@ public class AttackProcess : EClass
 			TC.Chara.AddCondition<ConParalyze>(30 + EClass.rnd(30));
 			TC.Chara.AddCondition<ConGravity>();
 		}
-		if (list2.Count > 0)
+		if (list2.Count > 0 && !flag2)
 		{
 			foreach (Element item in list2)
 			{
@@ -681,7 +682,7 @@ public class AttackProcess : EClass
 		{
 			return true;
 		}
-		if (!IsRanged && attackStyle == AttackStyle.Shield)
+		if (!IsRanged && !flag2 && attackStyle == AttackStyle.Shield)
 		{
 			int num11 = CC.Evalue(123);
 			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num11) - 2f, 8f, 12f) > (float)EClass.rnd(100))

@@ -77,6 +77,7 @@ public class AI_Fish : AIAct
 
 		public override void OnProgressComplete()
 		{
+			TraitToolFishing traitToolFishing = owner.FindTool<TraitToolFishing>();
 			owner.renderer.PlayAnime(AnimeID.Fishing);
 			if (hit < 100)
 			{
@@ -103,7 +104,7 @@ public class AI_Fish : AIAct
 			thing.renderer.PlayAnime(AnimeID.Jump);
 			owner.Say("fish_get", owner, thing);
 			owner.PlaySound("fish_get");
-			owner.elements.ModExp(245, 100);
+			owner.elements.ModExp(245, thing.tier * 200 + 80 + EClass.curve(thing.Num, 5, 75) * 20);
 			if (thing.id == "medal")
 			{
 				thing.isHidden = false;
@@ -134,9 +135,13 @@ public class AI_Fish : AIAct
 					thing.Destroy();
 				}
 			}
+			if (traitToolFishing != null)
+			{
+				num = num * 100 / (50 + traitToolFishing.owner.material.hardness * 2);
+			}
 			if (EClass.rnd(2) == 0 || num > 1)
 			{
-				owner.stamina.Mod(-1 * num);
+				owner.stamina.Mod(Mathf.Min(-1, -num));
 			}
 		}
 
@@ -283,10 +288,16 @@ public class AI_Fish : AIAct
 
 	public static Thing Makefish(Chara c)
 	{
+		bool hqFever = c.IsPC && c.Evalue(1659) > 0 && EClass.player.fished < 5;
 		int num = c.Evalue(245);
-		if (EClass.rnd(3 + num) == 0)
+		if (!hqFever && EClass.rnd(3 + num) == 0)
 		{
 			return null;
+		}
+		if (hqFever)
+		{
+			c.PlayEffect("revive");
+			c.Say("fishingFever");
 		}
 		int[] array = new int[18]
 		{
@@ -327,38 +338,75 @@ public class AI_Fish : AIAct
 				text = "medal";
 			}
 		}
-		if (text != "")
+		if (!hqFever && text != "")
 		{
 			thing = ThingGen.Create(text, -1, EClass._zone.ContentLv);
 		}
-		else if (EClass.rnd(5 + num / 3) == 0)
+		else if (!hqFever && EClass.rnd(5 + num / 3) == 0)
 		{
 			thing = ThingGen.Create(array.RandomItem().ToString() ?? "");
 		}
 		else
 		{
-			int num3 = EClass.rnd(num * 2) + 1;
-			thing = ThingGen.Create("fish", -1, num3);
-			num2 = EClass.rnd(num / (num3 + 10)) + 1;
-			int num4 = 5;
+			SetFeverSeed();
+			int lv = EClass.rnd(num * 2) + 1;
+			int num3 = 0;
+			if (EClass.rnd(EClass.debug.enable ? 1 : (c.IsPC ? 5 : (c.IsPCFaction ? 250 : 2500))) == 0)
+			{
+				num3 = Mathf.Min(EClass.rnd(EClass.rnd(EClass.rnd(EClass.curve(num, 100, 50, 70) + 50))) / 50, 3);
+			}
+			if (hqFever && ((EClass.pc.Evalue(1659) >= 2 && EClass.player.fished == 0) || EClass.rnd(5) == 0))
+			{
+				num3++;
+			}
+			if (num3 > 3)
+			{
+				num3 = 3;
+			}
+			SetFeverSeed();
+			thing = ThingGen.Create("fish", -1, lv);
+			SetFeverSeed();
+			int num4 = Mathf.Max(1, num / (thing.source.LV * 2 + 10));
+			int num5 = 5;
 			if (EClass.Branch != null)
 			{
-				num4 += EClass.Branch.Evalue(3604) * 20 + EClass.Branch.Evalue(3605) * 20 + EClass.Branch.Evalue(3706) * 25;
+				num5 += EClass.Branch.Evalue(3604) * 20 + EClass.Branch.Evalue(3605) * 20 + EClass.Branch.Evalue(3706) * 25;
 			}
-			if (num4 >= EClass.rnd(100))
+			if (EClass._zone is Zone_Kapul)
 			{
-				num2++;
+				num5 = 35;
 			}
-			if (EClass.rnd(EClass.debug.enable ? 3 : 25) == 0)
+			bool num6 = num5 >= EClass.rnd(100);
+			if (num6)
 			{
-				thing.SetTier(Mathf.Min(EClass.rnd(EClass.rnd(num + 50)) / 50, 3));
+				c.Say("bigCatch", c);
 			}
+			num2 = (num6 ? num4 : EClass.rnd(num4)) / (num3 + 1) + 1;
+			if (num3 != 0)
+			{
+				thing.SetTier(num3);
+			}
+			Rand.SetSeed();
 		}
 		if (thing != null)
 		{
-			thing.SetNum(num2);
+			if (num2 > 1)
+			{
+				thing.SetNum(num2);
+			}
 			thing.SetBlessedState(BlessedState.Normal);
 		}
+		if (c.IsPC)
+		{
+			EClass.player.fished++;
+		}
 		return thing;
+		void SetFeverSeed()
+		{
+			if (hqFever)
+			{
+				Rand.SetSeed(EClass.player.stats.days * 10 + EClass.player.fished);
+			}
+		}
 	}
 }

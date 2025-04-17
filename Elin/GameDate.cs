@@ -131,13 +131,13 @@ public class GameDate : Date
 			{
 				Tutorial.Reserve("season2");
 			}
-			if (base.year >= 2500)
-			{
-				Tutorial.Reserve("worldend");
-			}
 			else
 			{
 				Tutorial.Remove("season2");
+			}
+			if (base.year >= 2500)
+			{
+				Tutorial.Reserve("worldend");
 			}
 		}
 	}
@@ -180,6 +180,10 @@ public class GameDate : Date
 				item.Revive();
 				item.MoveZone(item.homeZone);
 			}
+		}
+		foreach (Chara value in EClass.game.cards.globalCharas.Values)
+		{
+			value.OnAdvanceDay();
 		}
 		if (EClass.pc.homeZone != null && EClass.pc.homeZone.mainFaction == EClass.pc.faction)
 		{

@@ -2551,6 +2551,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return GetRootCard() == c;
 	}
 
+	public T FindTool<T>() where T : Trait
+	{
+		if (IsPC)
+		{
+			return Tool?.trait as T;
+		}
+		return things.Find<T>()?.trait as T;
+	}
+
 	[OnSerializing]
 	private void _OnSerializing(StreamingContext context)
 	{
@@ -3601,16 +3610,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		tier = a;
 		if (setTraits)
 		{
-			elements.SetBase(2, a * 30);
-			foreach (Element value in elements.dict.Values)
+			if (a > 0)
 			{
-				if (value.IsFoodTrait)
+				foreach (Element value in elements.dict.Values)
 				{
-					Debug.Log(value.Name + "/" + value.Value);
-					elements.SetTo(value.id, value.Value * (100 + a * 200) / 100);
+					if (value.IsFoodTrait || value.IsTrait)
+					{
+						elements.SetTo(value.id, value.Value * (a * 180) / 100);
+					}
 				}
 			}
-			elements.SetBase(759, a);
+			elements.SetBase(2, a * 30);
+			elements.SetBase(759, (a > 1) ? a : 0);
 		}
 		LayerInventory.SetDirty(Thing);
 	}
@@ -4520,7 +4531,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				Chara.TrySetEnemy(origin.Chara);
 			}
-			if (origin.Evalue(428) > 0 && !IsPCFactionOrMinion && EClass.rnd(dmg) >= EClass.rnd(MaxHP / 10) + MaxHP / 100 + 1)
+			if ((weapon == null || !weapon.HasElement(486)) && origin.Evalue(428) > 0 && !IsPCFactionOrMinion && EClass.rnd(dmg) >= EClass.rnd(MaxHP / 10) + MaxHP / 100 + 1)
 			{
 				origin.Chara.TryNeckHunt(Chara, origin.Evalue(428) * 20, harvest: true);
 			}

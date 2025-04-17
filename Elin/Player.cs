@@ -781,6 +781,9 @@ public class Player : EClass
 	public int questRerollCost;
 
 	[JsonProperty]
+	public int fished;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]
@@ -2187,6 +2190,7 @@ public class Player : EClass
 		}
 		EClass.pc.RefreshFaithElement();
 		prayed = false;
+		fished = 0;
 		if (karma < 0 && EClass.rnd(4) == 0)
 		{
 			ModKarma(1);

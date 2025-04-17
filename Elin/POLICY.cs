@@ -3,25 +3,27 @@ using UnityEngine;
 
 public class POLICY
 {
-	public const int store_premium = 2817;
-
-	public const int open_business = 2810;
-
-	public const int tourist_safety = 2811;
-
-	public const int bed_quality = 2812;
-
-	public const int suite_room = 2813;
-
-	public const int mass_exhibition = 2814;
+	public const int store_ripoff = 2816;
 
 	public const int platinum_ticket = 2815;
 
-	public const int store_ripoff = 2816;
+	public const int mass_exhibition = 2814;
+
+	public const int home_discount = 2800;
+
+	public const int bed_quality = 2812;
+
+	public const int tourist_safety = 2811;
+
+	public const int open_business = 2810;
+
+	public const int store_premium = 2817;
+
+	public const int suite_room = 2813;
 
 	public const int license_food = 2818;
 
-	public const int legendary_exhibition = 2823;
+	public const int license_stolen = 2824;
 
 	public const int license_general = 2820;
 
@@ -29,9 +31,7 @@ public class POLICY
 
 	public const int celeb = 2822;
 
-	public const int home_discount = 2800;
-
-	public const int license_stolen = 2824;
+	public const int legendary_exhibition = 2823;
 
 	public const int milk_fan = 2825;
 
@@ -45,7 +45,7 @@ public class POLICY
 
 	public const int livestock_priv = 2715;
 
-	public const int resident_wanted = 2513;
+	public const int resident_tax = 2512;
 
 	public const int incomeTransfer = 2711;
 
@@ -73,7 +73,7 @@ public class POLICY
 
 	public const int self_sufficient = 2511;
 
-	public const int resident_tax = 2512;
+	public const int resident_wanted = 2513;
 
 	public const int nocturnal_life = 2508;
 
@@ -107,10 +107,10 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2817, 2810, 2811, 2812, 2813, 2814, 2815, 2816, 2818, 2823,
-		2820, 2821, 2822, 2800, 2824, 2825, 2826, 2827, 2828, 2819,
-		2715, 2513, 2711, 2712, 2500, 2506, 2505, 2504, 2503, 2502,
-		2501, 2507, 2509, 2510, 2511, 2512, 2508, 2515, 2709, 2514,
+		2816, 2815, 2814, 2800, 2812, 2811, 2810, 2817, 2813, 2818,
+		2824, 2820, 2821, 2822, 2823, 2825, 2826, 2827, 2828, 2819,
+		2715, 2512, 2711, 2712, 2500, 2506, 2505, 2504, 2503, 2502,
+		2501, 2507, 2509, 2510, 2511, 2513, 2508, 2515, 2709, 2514,
 		2708, 2707, 2706, 2704, 2705, 2702, 2701, 2700, 2516, 2703,
 		2710
 	};

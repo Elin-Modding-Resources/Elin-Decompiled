@@ -46,7 +46,11 @@ public class UISong : EMono
 		}
 		AudioSource audioSource = source.source;
 		ratio = Mathf.Clamp((audioSource.time - part.start) / (part.duration + bgm.song.fadeIn), 0f, 1f);
-		if (EMono.game == null || !EMono.core.IsGameStarted || source == null || !source.isPlaying || ratio >= 0.99f || (ratio <= 0f && !(EMono.pc.ai is AI_PlayMusic)))
+		if ((EMono.pc.ai is GoalManualMove || EMono.pc.IsMoving) && ratio < 0.1f)
+		{
+			Kill();
+		}
+		else if (EMono.game == null || !EMono.core.IsGameStarted || source == null || !source.isPlaying || ratio >= 0.99f || (ratio <= 0f && !(EMono.pc.ai is AI_PlayMusic)))
 		{
 			timer += Core.delta;
 			if (timer > 0.3f)

@@ -75,6 +75,17 @@ public class CraftUtil : EClass
 			list.Add(thing);
 		}
 		MakeDish(food, list, num, crafter);
+		if (crafter != null && crafter.id != "rodwyn")
+		{
+			if (food.HasElement(709))
+			{
+				food.elements.Remove(709);
+			}
+			if (food.HasElement(708) && !crafter.HasElement(1205))
+			{
+				food.elements.Remove(708);
+			}
+		}
 	}
 
 	public static void MakeDish(Card food, List<Thing> ings, int qualityBonus, Chara crafter = null)

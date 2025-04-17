@@ -129,6 +129,9 @@ public class AI_PlayMusic : AIAct
 			case "mokugyo":
 				idSong = "mokugyo";
 				break;
+			case "tambourine":
+				idSong = "tambourine";
+				break;
 			case "mic":
 				idSong = "mic_rachmaninoff";
 				break;
@@ -243,6 +246,10 @@ public class AI_PlayMusic : AIAct
 				Msg.SetColor(Msg.colors.Ono);
 				owner.Say(Lang.GetList("music").RandomItem());
 				Msg.SetColor();
+				if (tool.id == "tambourine")
+				{
+					Msg.Say("tambourine");
+				}
 				if (EClass.debug.enable && EClass.pc.job.id == "pianist")
 				{
 					song.lv = 10000;

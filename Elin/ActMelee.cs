@@ -126,6 +126,7 @@ public class ActMelee : ActBaseAttack
 		int dist = Act.CC.Dist(Act.TC);
 		Point orgPos = Act.TC.pos.Copy();
 		Card orgTC = Act.TC;
+		bool safety = Act.CC.HasElement(486) && Act.CC.IsPCFactionOrMinion;
 		foreach (BodySlot slot in Act.CC.body.slots)
 		{
 			_Attack(slot);
@@ -172,14 +173,6 @@ public class ActMelee : ActBaseAttack
 				int num = 1 + Mathf.Max(Act.CC.Evalue(666), (w != null) ? w.Evalue(666) : 0);
 				if (!UseWeaponDist || dist <= 1 || dist <= num)
 				{
-					if (w != null)
-					{
-						usedWeapon = true;
-						if (w.IsMeleeWithAmmo && Act.CC.IsPC && w.c_ammo <= 0 && !Act.CC.HasCondition<ConReload>())
-						{
-							ActRanged.TryReload(w);
-						}
-					}
 					int num2 = GetWeaponEnc(606, addSelfEnc: false);
 					int scatter = GetWeaponEnc(607, addSelfEnc: false);
 					splash = GetWeaponEnc(608, addSelfEnc: true);
@@ -190,6 +183,22 @@ public class ActMelee : ActBaseAttack
 					feint = GetWeaponEnc(623, addSelfEnc: true);
 					mod_talisman = GetWeaponEnc(609, addSelfEnc: true);
 					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
+					if (w != null)
+					{
+						if (safety)
+						{
+							if (!w.HasElement(486))
+							{
+								return;
+							}
+							num2 = (scatter = (splash = (num3 = 0)));
+						}
+						usedWeapon = true;
+						if (w.IsMeleeWithAmmo && Act.CC.IsPC && w.c_ammo <= 0 && !Act.CC.HasCondition<ConReload>())
+						{
+							ActRanged.TryReload(w);
+						}
+					}
 					AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
 					if (num2 > 0)
 					{
@@ -288,7 +297,7 @@ public class ActMelee : ActBaseAttack
 				}
 				Act.TC = _tc;
 				Act.TP = _tp;
-				if (w != null && w.c_ammo > 0 && !Act.CC.HasCondition<ConReload>())
+				if (w != null && w.c_ammo > 0 && !Act.CC.HasCondition<ConReload>() && !safety)
 				{
 					bool flag2 = true;
 					TraitAmmo traitAmmo = ((w.ammoData == null) ? null : (w.ammoData.trait as TraitAmmo));

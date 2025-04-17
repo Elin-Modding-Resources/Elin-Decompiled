@@ -55,6 +55,24 @@ public class FoodEffect : EClass
 		bool flag3 = food.HasElement(709);
 		bool flag4 = c.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
+		c.AddFoodHistory(food);
+		if (c.IsPCFaction && !c.IsPC)
+		{
+			int num6 = c.CountNumEaten(food);
+			bool flag6 = c.GetFavFood().id == food.id;
+			Debug.Log(c.Name + "/" + food.id + "/" + num6);
+			if (num6 < 2 || flag6)
+			{
+				if (num6 == 1 || flag6 || EClass.rnd(4) == 0)
+				{
+					c.Talk("foodNice");
+				}
+			}
+			else if (num6 > 3 && EClass.rnd(num6) >= 3)
+			{
+				c.Talk("foodBored");
+			}
+		}
 		if (food.IsBlessed)
 		{
 			num2 *= 1.5f;
@@ -136,10 +154,10 @@ public class FoodEffect : EClass
 				break;
 			}
 		}
-		float num6 = Mathf.Min(c.hunger.value, num3);
+		float num7 = Mathf.Min(c.hunger.value, num3);
 		if (c.hunger.GetPhase() >= 3)
 		{
-			num6 *= 1.1f;
+			num7 *= 1.1f;
 		}
 		if (flag5 && !c.HasElement(480))
 		{
@@ -154,7 +172,7 @@ public class FoodEffect : EClass
 		}
 		else
 		{
-			num2 = num2 * num6 / 10f;
+			num2 = num2 * num7 / 10f;
 			if (c.HasCondition<ConAnorexia>())
 			{
 				num2 = 0.01f;
@@ -168,14 +186,14 @@ public class FoodEffect : EClass
 				}
 				string[] foodEffect = value.source.foodEffect;
 				int id = value.id;
-				float num7 = num2 * (float)value.Value;
+				float num8 = num2 * (float)value.Value;
 				if (value.source.category == "food" && c.IsPC)
 				{
-					bool flag6 = num7 >= 0f;
-					string text = value.source.GetText(flag6 ? "textInc" : "textDec", returnNull: true);
+					bool flag7 = num8 >= 0f;
+					string text = value.source.GetText(flag7 ? "textInc" : "textDec", returnNull: true);
 					if (text != null)
 					{
-						Msg.SetColor(flag6 ? "positive" : "negative");
+						Msg.SetColor(flag7 ? "positive" : "negative");
 						c.Say(text);
 					}
 				}
@@ -203,7 +221,7 @@ public class FoodEffect : EClass
 				case "exp":
 				{
 					id = ((foodEffect.Length > 1) ? EClass.sources.elements.alias[foodEffect[1]].id : value.id);
-					int a = (int)(num7 * (float)((foodEffect.Length > 2) ? foodEffect[2].ToInt() : 4)) * 2 / 3;
+					int a = (int)(num8 * (float)((foodEffect.Length > 2) ? foodEffect[2].ToInt() : 4)) * 2 / 3;
 					c.ModExp(id, a);
 					break;
 				}
@@ -211,9 +229,9 @@ public class FoodEffect : EClass
 				{
 					id = ((foodEffect.Length > 1) ? EClass.sources.elements.alias[foodEffect[1]].id : value.id);
 					int vTempPotential = c.elements.GetElement(id).vTempPotential;
-					int num8 = EClass.rndHalf((int)(num7 / 5f) + 1);
-					num8 = num8 * 100 / Mathf.Max(100, vTempPotential * 2 / 3);
-					c.elements.ModTempPotential(id, num8, 8);
+					int num9 = EClass.rndHalf((int)(num8 / 5f) + 1);
+					num9 = num9 * 100 / Mathf.Max(100, vTempPotential * 2 / 3);
+					c.elements.ModTempPotential(id, num9, 8);
 					break;
 				}
 				case "karma":
