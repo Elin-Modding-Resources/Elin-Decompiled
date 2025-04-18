@@ -1839,6 +1839,7 @@ public class Trait : EClass
 				case ShopType.Ecopo:
 					Add("ecomark", 5, 0);
 					Add("1165", 1, 0);
+					Add("plat", 100, 0);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));
 					break;
 				case ShopType.Gun:

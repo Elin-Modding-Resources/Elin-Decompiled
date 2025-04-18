@@ -100,6 +100,10 @@ public class AI_Fish : AIAct
 				return;
 			}
 			int num = thing.Num;
+			if (!owner.IsPC)
+			{
+				num += 5;
+			}
 			EClass._zone.AddCard(thing, owner.pos);
 			thing.renderer.PlayAnime(AnimeID.Jump);
 			owner.Say("fish_get", owner, thing);

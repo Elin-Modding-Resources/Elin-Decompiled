@@ -574,6 +574,8 @@ public class ActEffect : EClass
 					"monster" => CharaGen.CreateFromFilter("c_dungeon", power / 10), 
 					"animal" => CharaGen.CreateFromFilter("c_animal", power / 15), 
 					"fire" => CharaGen.CreateFromElement("Fire", power / 10), 
+					"fish" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_fish", (SourceChara.Row r) => r.ContainsTag("water") || r.model.Chara.race.tag.Contains("water")), power / 10), 
+					"octopus" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_octopus", (SourceChara.Row r) => r.race == "octopus"), power / 10), 
 					_ => CharaGen.Create(id4, power / 10), 
 				};
 				if (chara2 == null)

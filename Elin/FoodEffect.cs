@@ -3,40 +3,6 @@ using UnityEngine;
 
 public class FoodEffect : EClass
 {
-	public static bool IsHumanFlesh(CardRow r)
-	{
-		if (r == null)
-		{
-			return false;
-		}
-		if (r.id == "chara")
-		{
-			return EClass.pc.race.tag.Contains("human");
-		}
-		if (r.isChara)
-		{
-			return EClass.sources.races.map[EClass.sources.charas.map[r.id].race].tag.Contains("human");
-		}
-		return false;
-	}
-
-	public static bool IsUndeadFlesh(CardRow r)
-	{
-		if (r == null)
-		{
-			return false;
-		}
-		if (r.id == "chara")
-		{
-			return EClass.pc.race.tag.Contains("undead");
-		}
-		if (r.isChara)
-		{
-			return EClass.sources.races.map[EClass.sources.charas.map[r.id].race].tag.Contains("undead");
-		}
-		return false;
-	}
-
 	public static void Proc(Chara c, Thing food)
 	{
 		food.CheckJustCooked();

@@ -1347,6 +1347,7 @@ public class Chara : Card, IPathfindWalker
 			_race = null;
 			_job = null;
 			num = 10 + EClass.rnd(40);
+			ChangeMaterial(race.material, ignoreFixedMaterial: true);
 		}
 		bio = new Biography();
 		bio.Generate(this);
@@ -7812,11 +7813,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (trait is TraitBard && t.trait is TraitToolMusic)
-		{
-			return false;
-		}
-		if (t.trait is TraitCurrency)
+		if (t.trait is TraitCurrency || t.trait is TraitTool)
 		{
 			return false;
 		}
@@ -7853,7 +7850,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				return false;
 			}
-			if (t.IsRangedWeapon && !things.IsFull())
+			if (!things.IsFull() && t.IsRangedWeapon)
 			{
 				return false;
 			}

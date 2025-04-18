@@ -220,10 +220,25 @@ public class CardRenderer : RenderObject
 						drawShadow = traitFigure.ShowShadow;
 						pref = row.pref;
 					}
-					if (renderData.pass != null && renderData.pass.name == "pass charaL" && EClass.pc.held == owner)
+					if (renderData.pass != null && EClass.pc.held == owner)
 					{
 						int num = (int)renderData.pass.pmesh.tiling.x;
-						p.tile = (int)p.tile / num * num * 2 + (int)p.tile % num;
+						string name = renderData.pass.name;
+						if (!(name == "pass charaL"))
+						{
+							if (name == "pass charaLW")
+							{
+								if (p.tile < 0f)
+								{
+									p.tile *= -1f;
+								}
+								p.tile = (int)p.tile / num * num * 4 + (int)p.tile % num * 2;
+							}
+						}
+						else
+						{
+							p.tile = (int)p.tile / num * num * 2 + (int)p.tile % num;
+						}
 					}
 				}
 				else

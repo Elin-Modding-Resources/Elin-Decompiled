@@ -830,11 +830,25 @@ public class FactionBranch : EClass
 								Thing thing4 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[j], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
 								if (thing4 != null)
 								{
+									num6 *= thing4.trait.CraftNum;
+									if (thing4.category.id == "fish" && EClass.rnd(EClass.debug.enable ? 1 : 5) == 0)
+									{
+										int num7 = Mathf.Min(EClass.rnd(EClass.rnd(EClass.rnd(EClass.curve(num4, 100, 50, 70) + 50))) / 50, 3);
+										if (num7 > 0)
+										{
+											thing4.SetTier(num7);
+											num6 /= num7 + 1;
+										}
+									}
+									if (num6 < 1)
+									{
+										num6 = 1;
+									}
 									if (!thing4.trait.CanStack)
 									{
 										num6 = 1;
 									}
-									thing4.SetNum(thing4.trait.CraftNum * num6);
+									thing4.SetNum(num6);
 									thing4.SetBlessedState(BlessedState.Normal);
 									thing4.TryMakeRandomItem(num4);
 									if (thing4.IsAmmo)
