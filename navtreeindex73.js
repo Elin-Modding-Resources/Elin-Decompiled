@@ -1,7 +1,5 @@
 var NAVTREEINDEX73 =
 {
-"classLangSetting_1_1FontSetting.html#a61a07860ab2137a0192b12d7c3542efc":[1,0,740,0,1],
-"classLangSetting_1_1FontSetting.html#ab77417b7bc175bc4c5bdbc65bf5e6ac7":[1,0,740,0,0],
 "classLangTalk.html":[1,0,741],
 "classLangTalk.html#a595cc3db7f70a08e415d27ba53aff00d":[1,0,741,1],
 "classLangTalk.html#a5fb4d2929a45911b088d4b4d1cf41ed2":[1,0,741,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX73 =
 "classLayerConfig.html#aa12bd9a4ae7641144ec71f028071174e":[1,0,752,51],
 "classLayerConfig.html#aa3a85e9bf62c48b494b760e901e367e7":[1,0,752,60],
 "classLayerConfig.html#aae67d89c8445b4e0324d185edadda6bc":[1,0,752,11],
-"classLayerConfig.html#ab7c257cb19e555c4fcd481a473955128":[1,0,752,40]
+"classLayerConfig.html#ab7c257cb19e555c4fcd481a473955128":[1,0,752,40],
+"classLayerConfig.html#ab963368a4b09d423f871a2a46f54284f":[1,0,752,29],
+"classLayerConfig.html#abf26ea33f983711ec168975051ee7d79":[1,0,752,7]
 };
