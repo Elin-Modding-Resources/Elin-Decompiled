@@ -1,5 +1,14 @@
 var NAVTREEINDEX139 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6cb8dd73506ec38f65399a917666eede":[0,4,3,0,8,91],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6cf53ded94c6425c7dd9f38bc2fcd043":[0,4,3,0,8,216],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6f2582a71a04c73bc051d168379d9fc1":[0,4,3,0,8,105],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da700380531bf5b80fe86d4ae26a1903c3":[0,4,3,0,8,21],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da713ae1e76bdce5df49e9da47798a9e1c":[0,4,3,0,8,58],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7157aa762a893b51e4bdda0e1148bee0":[0,4,3,0,8,162],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da720a669da5c6495a5c7600bdcf74afae":[0,4,3,0,8,26],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7258b1ac55aa7dbeaa9a67b188d3ad19":[0,4,3,0,8,150],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7286293c9125ac7d7bace94c190bc16d":[0,4,3,0,8,14],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da73518eb0ce4c933f8060c5a80a5456a0":[0,4,3,0,8,69],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da766eaf058c1c7728388be2df1c4451ad":[0,4,3,0,8,181],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7a8237f29ea95d63b5904982ed3835a9":[0,4,3,0,8,164],
@@ -240,14 +249,5 @@ var NAVTREEINDEX139 =
 "structB83_1_1Win32_1_1RECT.html#ac2f4b630675437979db9d20b4a1a4906":[0,4,3,0,3,2],
 "structB83_1_1Win32_1_1RECT.html#acb50eebe79fbdfc6b3e6674f41b8437f":[0,4,3,0,3,5],
 "structB83_1_1Win32_1_1RECT.html#acb50eebe79fbdfc6b3e6674f41b8437f":[1,0,3,0,3,5],
-"structBitArray32.html":[1,0,215],
-"structBitArray32.html#a0e36b9b35f6f05c9d0ee4046d0f93b91":[1,0,215,0],
-"structBitArray32.html#a1204ad7532f69f38c5d5b5405ec1f445":[1,0,215,14],
-"structBitArray32.html#a14a258c29e186dd2b80683591efb99d6":[1,0,215,11],
-"structBitArray32.html#a2c4a15cea9f0f82794194104c94c0154":[1,0,215,6],
-"structBitArray32.html#a3fbf1cc5cf1c5c8424746ddf55d6003a":[1,0,215,5],
-"structBitArray32.html#a40b66f93c11b398df9251ca302c0b44b":[1,0,215,15],
-"structBitArray32.html#a4a10d3dc43df7b0bd831291ee621f199":[1,0,215,2],
-"structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479":[1,0,215,13],
-"structBitArray32.html#a88eacacd96c3379270d234ff26a52c9b":[1,0,215,4]
+"structBitArray32.html":[1,0,215]
 };

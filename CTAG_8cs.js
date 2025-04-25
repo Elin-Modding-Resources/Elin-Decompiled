@@ -36,6 +36,8 @@ var CTAG_8cs =
       [ "dish_fail", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a750af94725478f5028046ddcb50d41d6", null ],
       [ "random_color", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3712c55e14d81902f831c6225fb1b831", null ],
       [ "noRandomEnc", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a990f7531362a2d795631fa1fe4079", null ],
-      [ "noMix", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af40e3d0e9577a8a2a2e9cdd1e2bcaefb", null ]
+      [ "noMix", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af40e3d0e9577a8a2a2e9cdd1e2bcaefb", null ],
+      [ "bigFish", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad984caaa8bc69d882f5bb22e22f6c03a", null ],
+      [ "noSkinRecipe", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad3c1eb435edc84ccf43f230ff7d8b37c", null ]
     ] ]
 ];

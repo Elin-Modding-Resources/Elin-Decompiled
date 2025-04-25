@@ -29,8 +29,8 @@ var searchData=
   ['incubator_26',['Incubator',['../classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7',1,'TraitCrafter']]],
   ['industry_27',['industry',['../HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca94074ce331b5db47060fd2d8009503a8',1,'HomeResourceType.cs']]],
   ['inferior_28',['Inferior',['../classDNA.html#a6c24861a5030f44db8c5093699cbbf35ab5e2299a2eabcc8fbba9a826454799d2',1,'DNA']]],
-  ['influence_29',['Influence',['../CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ead35a98028cca23c2a745a0bba43a90ff',1,'Influence():&#160;CurrencyType.cs'],['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbad35a98028cca23c2a745a0bba43a90ff',1,'Influence():&#160;ShopType.cs']]],
-  ['influence_30',['influence',['../HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7',1,'HomeResourceType.cs']]],
+  ['influence_29',['influence',['../HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7',1,'HomeResourceType.cs']]],
+  ['influence_30',['Influence',['../CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ead35a98028cca23c2a745a0bba43a90ff',1,'Influence():&#160;CurrencyType.cs'],['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbad35a98028cca23c2a745a0bba43a90ff',1,'Influence():&#160;ShopType.cs']]],
   ['info_31',['Info',['../interfaceIInspect.html#afe15ff5466a83e238eb5a07846684df4a4059b0251f66a18cb56f544728796875',1,'IInspect']]],
   ['ingredient_32',['Ingredient',['../classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a59198347aa8a409ad9e4f0ccd56950eb',1,'ButtonGrid']]],
   ['initdialog_33',['INITDIALOG',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da217326c89b6b334e88a6f746bbdf8a26',1,'B83::Win32']]],
@@ -56,8 +56,7 @@ var searchData=
   ['invulnerabletomobs_53',['InvulnerableToMobs',['../EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245ab0b33a87e0468f4da15b1ccb325d81c0',1,'EditorTag.cs']]],
   ['isoff_54',['IsOff',['../EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245abdf804dd21720574b7963f699ddfe007',1,'EditorTag.cs']]],
   ['ison_55',['IsOn',['../EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245aec3f5ff99b3a57a9b1c774f42258642a',1,'EditorTag.cs']]],
-  ['item_56',['Item',['../HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679',1,'HealSource.cs']]],
-  ['item_57',['item',['../ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc',1,'ContainerFlag.cs']]],
-  ['item_58',['Item',['../classTrait.html#a8471909c042646f522c65a8333832253a7d74f3b92b19da5e606d737d339a9679',1,'Trait.Item()'],['../classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6a7d74f3b92b19da5e606d737d339a9679',1,'CoreDebug.Item()'],['../classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15a7d74f3b92b19da5e606d737d339a9679',1,'UIInventory.Item()'],['../classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa7d74f3b92b19da5e606d737d339a9679',1,'Dialog.Item()']]],
-  ['itemname_59',['ItemName',['../FontColor_8cs.html#a38781c7178610f85215f87793e99ed51ac5b5f817757759fd0ec371368632136a',1,'FontColor.cs']]]
+  ['item_56',['item',['../ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc',1,'ContainerFlag.cs']]],
+  ['item_57',['Item',['../HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679',1,'Item():&#160;HealSource.cs'],['../classTrait.html#a8471909c042646f522c65a8333832253a7d74f3b92b19da5e606d737d339a9679',1,'Trait.Item()'],['../classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6a7d74f3b92b19da5e606d737d339a9679',1,'CoreDebug.Item()'],['../classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15a7d74f3b92b19da5e606d737d339a9679',1,'UIInventory.Item()'],['../classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa7d74f3b92b19da5e606d737d339a9679',1,'Dialog.Item()']]],
+  ['itemname_58',['ItemName',['../FontColor_8cs.html#a38781c7178610f85215f87793e99ed51ac5b5f817757759fd0ec371368632136a',1,'FontColor.cs']]]
 ];

@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"classAIWork__Lumberjack.html":[1,0,117],
+"classAIWork__Lumberjack.html#a11fe10027ad2b9913cde404de11c53ba":[1,0,117,0],
 "classAIWork__Lumberjack.html#a763161e7e4552e3386beb111c1bf6444":[1,0,117,1],
 "classAIWork__Lumberjack.html#a986bfca56d8554f375cf197eae88cec9":[1,0,117,2],
 "classAIWork__Lumberjack.html#aa63356dc267a43bae0e64228924aa1ef":[1,0,117,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,89,5],
 "classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,89,1],
 "classAI__Practice.html#ad938aabe2a061a66a436cbe954380af4":[1,0,89,0],
-"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,89,2],
-"classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116":[1,0,89,4],
-"classAI__Practice.html#af511fc3b8567e3df24946eabaead7861":[1,0,89,6]
+"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,89,2]
 };

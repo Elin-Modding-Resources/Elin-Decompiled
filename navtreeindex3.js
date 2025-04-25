@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"ClearInventoryType_8cs.html#ac2369609a8ebd07f4a1ac011e6db2648ad67c704564d7976991e2f23e4315ccfd":[2,0,0,260,0,0],
+"ClearInventoryType_8cs_source.html":[2,0,0,260],
 "CodexCreature_8cs.html":[2,0,0,262],
 "CodexCreature_8cs_source.html":[2,0,0,262],
 "CodexManager_8cs.html":[2,0,0,263],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "ContentConfigInput_8cs.html":[2,0,0,333],
 "ContentConfigInput_8cs_source.html":[2,0,0,333],
 "ContentConfigOther_8cs.html":[2,0,0,334],
-"ContentConfigOther_8cs_source.html":[2,0,0,334],
-"ContentConfigTest_8cs.html":[2,0,0,335],
-"ContentConfigTest_8cs_source.html":[2,0,0,335]
+"ContentConfigOther_8cs_source.html":[2,0,0,334]
 };

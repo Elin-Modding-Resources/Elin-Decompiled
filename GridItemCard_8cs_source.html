@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.128 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.130 Nightly</span>
    </div>
   </td>
  </tr>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('GridItemCard_8cs_source.html',''); ini
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classGridItemCard.html#ae247c51d0e192b67347a4206f854beab">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGridItemCard.html#ae247c51d0e192b67347a4206f854beab">SetButton</a>(<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> b)</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        b.mainText.text = <a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        b.mainText.text = <a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>.ToShortNumber();</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <a class="code hl_variable" href="classGridItemCard.html#a4437a78ed44ed4cecc51a5b32b2d4bed">c</a>.<a class="code hl_function" href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">SetImage</a>(b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>);</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        b.<a class="code hl_function" href="classUIButton.html#a6736e16f32684c87b44bef2263f10692">SetTooltip</a>(<span class="stringliteral">&quot;note&quot;</span>, delegate(<a class="code hl_class" href="classUITooltip.html">UITooltip</a> t)</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
@@ -118,8 +118,8 @@ $(document).ready(function(){initNavTree('GridItemCard_8cs_source.html',''); ini
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 <div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
-<div class="ttc" id="aclassCard_html_ac0f5707fc9f9f1751d657cf60018af06"><div class="ttname"><a href="classCard.html#ac0f5707fc9f9f1751d657cf60018af06">Card.WriteNote</a></div><div class="ttdeci">virtual void WriteNote(UINote n, Action&lt; UINote &gt; onWriteNote=null, IInspect.NoteMode mode=IInspect.NoteMode.Default, Recipe recipe=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07182">Card.cs:7182</a></div></div>
-<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05524">Card.cs:5524</a></div></div>
+<div class="ttc" id="aclassCard_html_ac0f5707fc9f9f1751d657cf60018af06"><div class="ttname"><a href="classCard.html#ac0f5707fc9f9f1751d657cf60018af06">Card.WriteNote</a></div><div class="ttdeci">virtual void WriteNote(UINote n, Action&lt; UINote &gt; onWriteNote=null, IInspect.NoteMode mode=IInspect.NoteMode.Default, Recipe recipe=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07206">Card.cs:7206</a></div></div>
+<div class="ttc" id="aclassCard_html_ad92ff4a636b51807890b1c7e40eaa3c5"><div class="ttname"><a href="classCard.html#ad92ff4a636b51807890b1c7e40eaa3c5">Card.SetImage</a></div><div class="ttdeci">void SetImage(Image image, int dir, int idSkin=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05536">Card.cs:5536</a></div></div>
 <div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00153">Card.cs:154</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00012">EClass.cs:12</a></div></div>

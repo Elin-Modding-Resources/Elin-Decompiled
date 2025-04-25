@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"classActBash.html#a83b37c1eae905d51673df4259d086f49":[1,0,17,1],
+"classActBolt.html":[1,0,18],
 "classActBolt.html#a03d8a20551ae8e5479357cb2e10c6b5d":[1,0,18,4],
 "classActBolt.html#a18d6ceb7cc1eb4d471bb93b53ef780d8":[1,0,18,5],
 "classActBolt.html#a372d79e74bd30421670e59de92b65631":[1,0,18,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "classActionHint.html#afb36056a75a3e583a4f6e8dfe9fc1456":[1,0,26,2],
 "classActionMode.html":[1,0,27],
 "classActionMode.html#a03ce1f17d0e13fd5e7341cad4b9f4085":[1,0,27,80],
-"classActionMode.html#a03fa9dcca10a8f7914aec55c2c438030":[1,0,27,9],
-"classActionMode.html#a0a1c142ec8824aa295803ffae40f89c9":[1,0,27,64],
-"classActionMode.html#a0d6a61e0d204004d8926007c06fb9774":[1,0,27,79]
+"classActionMode.html#a03fa9dcca10a8f7914aec55c2c438030":[1,0,27,9]
 };

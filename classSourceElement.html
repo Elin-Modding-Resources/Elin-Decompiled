@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.128 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.130 Nightly</span>
    </div>
   </td>
  </tr>
@@ -185,24 +185,27 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceElement_8cs_source.html#l00388">388</a> of file <a class="el" href="SourceElement_8cs_source.html">SourceElement.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  389</span>    {</div>
-<div class="line"><span class="lineno">  390</span>        Row row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[idOrg];</div>
-<div class="line"><span class="lineno">  391</span>        System.Reflection.FieldInfo[] fields = row.GetType().GetFields();</div>
-<div class="line"><span class="lineno">  392</span>        Row row2 = <span class="keyword">new</span> Row();</div>
-<div class="line"><span class="lineno">  393</span>        System.Reflection.FieldInfo[] array = fields;</div>
-<div class="line"><span class="lineno">  394</span>        <span class="keywordflow">foreach</span> (System.Reflection.FieldInfo fieldInfo in array)</div>
-<div class="line"><span class="lineno">  395</span>        {</div>
-<div class="line"><span class="lineno">  396</span>            row2.SetField(fieldInfo.Name, row.GetField&lt;<span class="keywordtype">object</span>&gt;(fieldInfo.Name));</div>
-<div class="line"><span class="lineno">  397</span>        }</div>
-<div class="line"><span class="lineno">  398</span>        row2.id = id;</div>
-<div class="line"><span class="lineno">  399</span>        row2.idMold = row.id;</div>
-<div class="line"><span class="lineno">  400</span>        row2.alias = row.alias + ele.alias.Remove(0, 3);</div>
-<div class="line"><span class="lineno">  401</span>        row2.aliasRef = ele.alias;</div>
-<div class="line"><span class="lineno">  402</span>        row2.aliasParent = ele.aliasParent;</div>
-<div class="line"><span class="lineno">  403</span>        row2.chance = row.chance * ele.chance / 100;</div>
-<div class="line"><span class="lineno">  404</span>        row2.LV = row.LV;</div>
-<div class="line"><span class="lineno">  405</span>        row2.OnImportData(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>);</div>
-<div class="line"><span class="lineno">  406</span>        rows.Add(row2);</div>
-<div class="line"><span class="lineno">  407</span>    }</div>
+<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">if</span> (!map.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  391</span>        {</div>
+<div class="line"><span class="lineno">  392</span>            Row row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[idOrg];</div>
+<div class="line"><span class="lineno">  393</span>            System.Reflection.FieldInfo[] fields = row.GetType().GetFields();</div>
+<div class="line"><span class="lineno">  394</span>            Row row2 = <span class="keyword">new</span> Row();</div>
+<div class="line"><span class="lineno">  395</span>            System.Reflection.FieldInfo[] array = fields;</div>
+<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">foreach</span> (System.Reflection.FieldInfo fieldInfo in array)</div>
+<div class="line"><span class="lineno">  397</span>            {</div>
+<div class="line"><span class="lineno">  398</span>                row2.SetField(fieldInfo.Name, row.GetField&lt;<span class="keywordtype">object</span>&gt;(fieldInfo.Name));</div>
+<div class="line"><span class="lineno">  399</span>            }</div>
+<div class="line"><span class="lineno">  400</span>            row2.id = id;</div>
+<div class="line"><span class="lineno">  401</span>            row2.idMold = row.id;</div>
+<div class="line"><span class="lineno">  402</span>            row2.alias = row.alias + ele.alias.Remove(0, 3);</div>
+<div class="line"><span class="lineno">  403</span>            row2.aliasRef = ele.alias;</div>
+<div class="line"><span class="lineno">  404</span>            row2.aliasParent = ele.aliasParent;</div>
+<div class="line"><span class="lineno">  405</span>            row2.chance = row.chance * ele.chance / 100;</div>
+<div class="line"><span class="lineno">  406</span>            row2.LV = row.LV;</div>
+<div class="line"><span class="lineno">  407</span>            row2.OnImportData(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>);</div>
+<div class="line"><span class="lineno">  408</span>            rows.Add(row2);</div>
+<div class="line"><span class="lineno">  409</span>        }</div>
+<div class="line"><span class="lineno">  410</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>

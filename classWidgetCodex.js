@@ -11,6 +11,7 @@ var classWidgetCodex =
     [ "Search", "classWidgetCodex.html#abc9b8fa69fc0bbb92fea7892362169ea", null ],
     [ "Update", "classWidgetCodex.html#add3fc03e9050134e118638915e0efdb8", null ],
     [ "buttonClear", "classWidgetCodex.html#aca0ddf3f004fedb3bc45b75f3bb996b5", null ],
+    [ "buttonRefresh", "classWidgetCodex.html#a9e2260efd1917a93fe52d15ac7f56c38", null ],
     [ "count", "classWidgetCodex.html#ab225e745df05361040fe40eda2b4ee45", null ],
     [ "field", "classWidgetCodex.html#a8484bcf8e505aef3f432d70e532026e4", null ],
     [ "lastSearch", "classWidgetCodex.html#a927601397b91bbd91243ec379830052b", null ],

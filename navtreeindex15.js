@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"ThrowType_8cs.html#a05c5b2190a1fd92db99fcaca11eeee80af7f5d540f521d6d642502a9d459e7b16":[2,0,0,1197,0,1],
+"ThrowType_8cs_source.html":[2,0,0,1197],
 "TileMapElona_8cs.html":[2,0,0,1199],
 "TileMapElona_8cs_source.html":[2,0,0,1199],
 "TileMap_8cs.html":[2,0,0,1198],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "TraitBookShelf_8cs.html":[2,0,0,1313],
 "TraitBookShelf_8cs_source.html":[2,0,0,1313],
 "TraitBookSkill_8cs.html":[2,0,0,1314],
-"TraitBookSkill_8cs_source.html":[2,0,0,1314],
-"TraitBook_8cs.html":[2,0,0,1309],
-"TraitBook_8cs_source.html":[2,0,0,1309]
+"TraitBookSkill_8cs_source.html":[2,0,0,1314]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"TraitStairsUp_8cs_source.html":[2,0,0,1688],
+"TraitStairs_8cs.html":[2,0,0,1684],
 "TraitStairs_8cs_source.html":[2,0,0,1684],
 "TraitStasisChamber_8cs.html":[2,0,0,1689],
 "TraitStasisChamber_8cs_source.html":[2,0,0,1689],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "UICharaMaker_8cs_source.html":[2,0,0,1783],
 "UICollider_8cs.html":[2,0,0,3,117],
 "UICollider_8cs_source.html":[2,0,0,3,117],
-"UIColorPicker_8cs.html":[2,0,0,1784],
-"UIColorPicker_8cs_source.html":[2,0,0,1784],
-"UIContentView_8cs.html":[2,0,0,3,119]
+"UIColorPicker_8cs.html":[2,0,0,1784]
 };

@@ -327,6 +327,7 @@ var classCard =
     [ "c_note", "classCard.html#a17e901e98e4c975eaebdc821caead9c4", null ],
     [ "c_originalHostility", "classCard.html#a297effbbefc31dffa80664a049e686b6", null ],
     [ "c_priceAdd", "classCard.html#a45c223fa41bae5d81d6d8f812dbe1439", null ],
+    [ "c_priceCopy", "classCard.html#a6b6866fb7459f807129d5931b6e9fd2a", null ],
     [ "c_priceFix", "classCard.html#a06b07c0605236205f9aa55509dc98bab", null ],
     [ "c_refText", "classCard.html#a4fbf06a4575d814e227b895ef860df31", null ],
     [ "c_rescueState", "classCard.html#ad7dd386346ab94b13fc8d351b141a080", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"TraitMoyer_8cs.html":[2,0,0,1564],
+"TraitMoyer_8cs_source.html":[2,0,0,1564],
 "TraitMusicBox_8cs.html":[2,0,0,1565],
 "TraitMusicBox_8cs_source.html":[2,0,0,1565],
 "TraitNewZone_8cs.html":[2,0,0,1567],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "TraitStairsDown_8cs_source.html":[2,0,0,1686],
 "TraitStairsLocked_8cs.html":[2,0,0,1687],
 "TraitStairsLocked_8cs_source.html":[2,0,0,1687],
-"TraitStairsUp_8cs.html":[2,0,0,1688],
-"TraitStairsUp_8cs_source.html":[2,0,0,1688],
-"TraitStairs_8cs.html":[2,0,0,1684]
+"TraitStairsUp_8cs.html":[2,0,0,1688]
 };

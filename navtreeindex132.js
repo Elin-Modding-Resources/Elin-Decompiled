@@ -1,5 +1,14 @@
 var NAVTREEINDEX132 =
 {
+"classWidgetStatsBar_1_1Extra.html#ab45dc1528c9275ffaf34ef1778b4bfb6":[1,0,2017,0,8],
+"classWidgetStatsBar_1_1Extra.html#ac44ac54b84004701a185cfd659e58b2d":[1,0,2017,0,10],
+"classWidgetStatsBar_1_1Extra.html#ac6bfce72c34a3db26a6a31eab27d1d7f":[1,0,2017,0,11],
+"classWidgetStatsBar_1_1Extra.html#acd0c79e0a95613c7e41fd7bba062d07e":[1,0,2017,0,15],
+"classWidgetStatsBar_1_1Extra.html#acfa83f7594d27caad20a8c07e35167cd":[1,0,2017,0,13],
+"classWidgetStatsBar_1_1Extra.html#ad04a3f36f7252aee23fc7cd803ba5375":[1,0,2017,0,2],
+"classWidgetStatsBar_1_1Item.html":[1,0,2017,1],
+"classWidgetStatsBar_1_1Item.html#a07df06f7b8d59fa5f41980951008ef39":[1,0,2017,1,5],
+"classWidgetStatsBar_1_1Item.html#a329454087487c64ae1465977fef6ffbe":[1,0,2017,1,7],
 "classWidgetStatsBar_1_1Item.html#a822de6b50fe40794a348f003d919fbce":[1,0,2017,1,6],
 "classWidgetStatsBar_1_1Item.html#a8fc6c3a1e475fa72dc0b16a6a7b1268d":[1,0,2017,1,0],
 "classWidgetStatsBar_1_1Item.html#ae315ef542a4ce8db1856fd9c51ec7974":[1,0,2017,1,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX132 =
 "classWindow.html#ad36d5ef4cf2a7c890de6d49d50ba406b":[1,0,2024,19],
 "classWindow.html#ad4001d7f0a6a18070ee74f47aa8ee00d":[1,0,2024,31],
 "classWindow.html#ad4312a9ecdcba978a1a04e969413dcc7":[1,0,2024,14],
-"classWindow.html#ad68d7d54083fda8be11861dea08a9237":[1,0,2024,125],
-"classWindow.html#adaa1d719b63a932d9c53fe1784787867":[1,0,2024,97],
-"classWindow.html#adcaed5405483e93332a9b7af95bd9b00":[1,0,2024,77],
-"classWindow.html#adf12f68bdfcef89af1f51f439ffbc487":[1,0,2024,27],
-"classWindow.html#ae11fa25a02e9a9ae2f483d62ad9fc6a9":[1,0,2024,33],
-"classWindow.html#ae373612763eafa8164b450f2968403a8":[1,0,2024,83],
-"classWindow.html#ae4448243e7a5438ba01584c3e3c0a1b9":[1,0,2024,60],
-"classWindow.html#ae57a44fbac24ce19cb3ea300fc12dafb":[1,0,2024,95],
-"classWindow.html#ae5f0914853e37249f74097c26c5381ad":[1,0,2024,141],
-"classWindow.html#ae786948dddec1d55432c7b16e2392e2a":[1,0,2024,110]
+"classWindow.html#ad68d7d54083fda8be11861dea08a9237":[1,0,2024,125]
 };

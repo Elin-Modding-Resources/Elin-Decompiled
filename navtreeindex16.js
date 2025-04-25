@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"TraitBook_8cs.html":[2,0,0,1309],
+"TraitBook_8cs_source.html":[2,0,0,1309],
 "TraitBrewery_8cs.html":[2,0,0,1315],
 "TraitBrewery_8cs_source.html":[2,0,0,1315],
 "TraitBroomWitch_8cs.html":[2,0,0,1317],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitFoodSeasoning_8cs.html":[2,0,0,1438],
 "TraitFoodSeasoning_8cs_source.html":[2,0,0,1438],
 "TraitFoodTravel_8cs.html":[2,0,0,1439],
-"TraitFoodTravel_8cs_source.html":[2,0,0,1439],
-"TraitFood_8cs.html":[2,0,0,1427],
-"TraitFood_8cs_source.html":[2,0,0,1427]
+"TraitFoodTravel_8cs_source.html":[2,0,0,1439]
 };

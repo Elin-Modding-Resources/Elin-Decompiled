@@ -1,5 +1,14 @@
 var NAVTREEINDEX138 =
 {
+"functions_vars_r.html":[1,3,2,18],
+"functions_vars_s.html":[1,3,2,19],
+"functions_vars_t.html":[1,3,2,20],
+"functions_vars_u.html":[1,3,2,21],
+"functions_vars_v.html":[1,3,2,22],
+"functions_vars_w.html":[1,3,2,23],
+"functions_vars_x.html":[1,3,2,24],
+"functions_vars_y.html":[1,3,2,25],
+"functions_vars_z.html":[1,3,2,26],
 "functions_w.html":[1,3,0,23],
 "functions_x.html":[1,3,0,24],
 "functions_y.html":[1,3,0,25],
@@ -240,14 +249,5 @@ var NAVTREEINDEX138 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da696605e5db935ec990af95a920a80469":[0,4,3,0,8,34],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6bda6623a9e2a6eae1cf92053654a337":[0,4,3,0,8,71],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6bf34fc4f12f3e892775eed56addf36b":[0,4,3,0,8,149],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6c3e226b4d4795d518ab341b0824ec29":[0,4,3,0,8,0],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6cb8dd73506ec38f65399a917666eede":[0,4,3,0,8,91],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6cf53ded94c6425c7dd9f38bc2fcd043":[0,4,3,0,8,216],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6f2582a71a04c73bc051d168379d9fc1":[0,4,3,0,8,105],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da700380531bf5b80fe86d4ae26a1903c3":[0,4,3,0,8,21],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da713ae1e76bdce5df49e9da47798a9e1c":[0,4,3,0,8,58],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7157aa762a893b51e4bdda0e1148bee0":[0,4,3,0,8,162],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da720a669da5c6495a5c7600bdcf74afae":[0,4,3,0,8,26],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7258b1ac55aa7dbeaa9a67b188d3ad19":[0,4,3,0,8,150],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7286293c9125ac7d7bace94c190bc16d":[0,4,3,0,8,14]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6c3e226b4d4795d518ab341b0824ec29":[0,4,3,0,8,0]
 };

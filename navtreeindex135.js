@@ -1,5 +1,14 @@
 var NAVTREEINDEX135 =
 {
+"classZone.html#ae5e04cbc42d886b4328e18a4fbc41449":[1,0,2040,106],
+"classZone.html#ae866846af33c4a0044b0642efb5f8dc6":[1,0,2040,210],
+"classZone.html#ae933f30f3673bc106d3568c6429c6e78":[1,0,2040,191],
+"classZone.html#ae9e8e1eb5ff77cdff82cc4af14ddce31":[1,0,2040,162],
+"classZone.html#ae9fe6424d0966988a6ffb07d5f903bf4":[1,0,2040,182],
+"classZone.html#aea5e9ee4a39d295c4b86be353ca64799":[1,0,2040,49],
+"classZone.html#aebf95214dc485a8ad3817af07e913d29":[1,0,2040,144],
+"classZone.html#aed8b8deb0094fd7609ff9a2e3e5d72dc":[1,0,2040,81],
+"classZone.html#aeee9296fa3ccae7261dc9eb0def45156":[1,0,2040,4],
 "classZone.html#af0e5df7fdb52041fb74201ece01a7e05":[1,0,2040,45],
 "classZone.html#af2558287a17254f8759f9311f22a19aa":[1,0,2040,96],
 "classZone.html#af2cdb370d52bf6765bc4e650c4ba05fc":[1,0,2040,125],
@@ -240,14 +249,5 @@ var NAVTREEINDEX135 =
 "classZonePreEnterEncounter.html#a48cec96c0c7702f2468231e0d06289f8":[1,0,2137,1],
 "classZonePreEnterEncounter.html#a52effcc58e9e09ba6362beb8b81b0752":[1,0,2137,2],
 "classZonePreEnterEncounter.html#a85200862a1b5ad7a0cd4adfb239d549c":[1,0,2137,0],
-"classZonePreEnterEncounter.html#ac618f0e8ecdb94a6d73014baa9cb46e3":[1,0,2137,3],
-"classZonePreEnterEvent.html":[1,0,2138],
-"classZonePreEnterEvent.html#a118d9bdbab769bf48d36b0946f7c568d":[1,0,2138,0],
-"classZonePreEnterOnCompleteQuestInstance.html":[1,0,2139],
-"classZonePreEnterOnCompleteQuestInstance.html#a2234b4676c6fe5efa5180b27ef1aa8cc":[1,0,2139,1],
-"classZonePreEnterOnCompleteQuestInstance.html#a3de4fd8131223ac8f6e3cabeb84d563f":[1,0,2139,2],
-"classZonePreEnterOnCompleteQuestInstance.html#ad23c26add2ece5303ade0767886f9696":[1,0,2139,0],
-"classZonePreEnterOnCompleteQuestInstance.html#af5b0d71add27ca920f45ca78ed92119a":[1,0,2139,3],
-"classZoneProfile.html":[1,0,2140],
-"classZoneProfile.html#a076f750e6d3e34d7b296349e440b8b40":[1,0,2140,29]
+"classZonePreEnterEncounter.html#ac618f0e8ecdb94a6d73014baa9cb46e3":[1,0,2137,3]
 };

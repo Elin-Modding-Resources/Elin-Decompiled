@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"GoalList_8cs.html":[2,0,0,508],
+"GoalList_8cs_source.html":[2,0,0,508],
 "GoalManualMove_8cs.html":[2,0,0,510],
 "GoalManualMove_8cs_source.html":[2,0,0,510],
 "GoalNeeds_8cs.html":[2,0,0,511],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "HotItemFocusChara_8cs.html":[2,0,0,589],
 "HotItemFocusChara_8cs_source.html":[2,0,0,589],
 "HotItemFocusPos_8cs.html":[2,0,0,590],
-"HotItemFocusPos_8cs_source.html":[2,0,0,590],
-"HotItemGameAction_8cs.html":[2,0,0,591],
-"HotItemGameAction_8cs_source.html":[2,0,0,591]
+"HotItemFocusPos_8cs_source.html":[2,0,0,590]
 };

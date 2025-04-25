@@ -1,5 +1,11 @@
 var NAVTREEINDEX120 =
 {
+"classTraitSpotFarm.html#ae765c95cafe5778e91abdac984ead166":[1,0,1782,1],
+"classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1782,0],
+"classTraitSpotFish.html":[1,0,1783],
+"classTraitSpotFuel.html":[1,0,1784],
+"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1784,0],
+"classTraitSpotGarbage.html":[1,0,1785],
 "classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1785,0],
 "classTraitSpotGuidePC.html":[1,0,1786],
 "classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1786,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitToolWaterPot.html":[1,0,1850],
 "classTraitToolWaterPot.html#a07b8c602597e3f079049f11183af3234":[1,0,1850,2],
 "classTraitToolWaterPot.html#a1e8db11620bbbe0aebd305c6ddc015d7":[1,0,1850,0],
-"classTraitToolWaterPot.html#a74dddc0144c7546b39fb1e38d4423983":[1,0,1850,1],
-"classTraitToolWaterPot.html#a99af700fd2dd72219f3753ce5a29ceed":[1,0,1850,3],
-"classTraitToolWrite.html":[1,0,1851],
-"classTraitTorch.html":[1,0,1852],
-"classTraitTorch.html#a597313b06fa2e8b837ff2db8f05d9511":[1,0,1852,1],
-"classTraitTorch.html#ae700c12b434ee5226ae9b6f7f771bc4d":[1,0,1852,0],
-"classTraitTortureHorse.html":[1,0,1853]
+"classTraitToolWaterPot.html#a74dddc0144c7546b39fb1e38d4423983":[1,0,1850,1]
 };

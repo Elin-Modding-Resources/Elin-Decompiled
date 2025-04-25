@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"HotItemGameAction_8cs.html":[2,0,0,591],
+"HotItemGameAction_8cs_source.html":[2,0,0,591],
 "HotItemHeld_8cs.html":[2,0,0,592],
 "HotItemHeld_8cs_source.html":[2,0,0,592],
 "HotItemIcon_8cs.html":[2,0,0,593],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "ItemMod_8cs.html":[2,0,0,671],
 "ItemMod_8cs_source.html":[2,0,0,671],
 "ItemNotice_8cs.html":[2,0,0,672],
-"ItemNotice_8cs_source.html":[2,0,0,672],
-"ItemNumLog_8cs.html":[2,0,0,673],
-"ItemNumLog_8cs_source.html":[2,0,0,673]
+"ItemNotice_8cs_source.html":[2,0,0,672]
 };

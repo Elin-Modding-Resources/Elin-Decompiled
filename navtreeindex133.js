@@ -1,5 +1,14 @@
 var NAVTREEINDEX133 =
 {
+"classWindow.html#adaa1d719b63a932d9c53fe1784787867":[1,0,2024,97],
+"classWindow.html#adcaed5405483e93332a9b7af95bd9b00":[1,0,2024,77],
+"classWindow.html#adf12f68bdfcef89af1f51f439ffbc487":[1,0,2024,27],
+"classWindow.html#ae11fa25a02e9a9ae2f483d62ad9fc6a9":[1,0,2024,33],
+"classWindow.html#ae373612763eafa8164b450f2968403a8":[1,0,2024,83],
+"classWindow.html#ae4448243e7a5438ba01584c3e3c0a1b9":[1,0,2024,60],
+"classWindow.html#ae57a44fbac24ce19cb3ea300fc12dafb":[1,0,2024,95],
+"classWindow.html#ae5f0914853e37249f74097c26c5381ad":[1,0,2024,141],
+"classWindow.html#ae786948dddec1d55432c7b16e2392e2a":[1,0,2024,110],
 "classWindow.html#aead6af8e14b8b29897012e8b8bcd82c4":[1,0,2024,115],
 "classWindow.html#aeaf5e7ac7295e703177fc6323794451f":[1,0,2024,111],
 "classWindow.html#aee782904cdc80773fc28a8947b04d409":[1,0,2024,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX133 =
 "classWindow_1_1Setting_1_1Tab.html#aff0acb171eb7d69e346474f3ce7d1b4b":[1,0,2024,1,1,4],
 "classWordSearch.html":[1,0,2030],
 "classWordSearch.html#a0c4492b4a6f670615ec9a07674ea9cd0":[1,0,2030,2],
-"classWordSearch.html#a255e761059b207939d9a4d4f4917d5d2":[1,0,2030,0],
-"classWordSearch.html#a615018e073556f650a731e6625cd86c0":[1,0,2030,1],
-"classWordSearchRecipe.html":[1,0,2031],
-"classWorkOutcome.html":[1,0,2032],
-"classWorkSession.html":[1,0,2033],
-"classWorkSession.html#a0abca05b4cb2eaacc8382ad3af7c3121":[1,0,2033,1],
-"classWorkSession.html#a173f8837c3d5f426371ae521a8ad51ba":[1,0,2033,6],
-"classWorkSession.html#a33862c51feb7df7792976fef4a08c836":[1,0,2033,3],
-"classWorkSession.html#a50a54a7dd6083d556025f71eeb59773d":[1,0,2033,4],
-"classWorkSession.html#a92189cb485f919d2038b53f938325fcf":[1,0,2033,2]
+"classWordSearch.html#a255e761059b207939d9a4d4f4917d5d2":[1,0,2030,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TraitFood_8cs.html":[2,0,0,1427],
+"TraitFood_8cs_source.html":[2,0,0,1427],
 "TraitFortuneBall_8cs.html":[2,0,0,1440],
 "TraitFortuneBall_8cs_source.html":[2,0,0,1440],
 "TraitFortuneCookie_8cs.html":[2,0,0,1441],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMoongateEx_8cs.html":[2,0,0,1563],
 "TraitMoongateEx_8cs_source.html":[2,0,0,1563],
 "TraitMoongate_8cs.html":[2,0,0,1562],
-"TraitMoongate_8cs_source.html":[2,0,0,1562],
-"TraitMoyer_8cs.html":[2,0,0,1564],
-"TraitMoyer_8cs_source.html":[2,0,0,1564]
+"TraitMoongate_8cs_source.html":[2,0,0,1562]
 };

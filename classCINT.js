@@ -57,6 +57,7 @@ var classCINT =
     [ "originalHostility", "classCINT.html#a46b8687230da11a44f803c035f51990e", null ],
     [ "price", "classCINT.html#ada27054673e418046326d07c6e82e736", null ],
     [ "price_add", "classCINT.html#ad2811034f351ac27993b6c5021f0dbbb", null ],
+    [ "price_copy", "classCINT.html#a2f23d3eb1e0706d50a69917b091411e8", null ],
     [ "rescue", "classCINT.html#ac4db5ca4e811ae09278ce5aba707ce7b", null ],
     [ "revealLock", "classCINT.html#a9d7acea1038942e357c21e01e088d94a", null ],
     [ "seed", "classCINT.html#ab4cf5656bb9293b5068ddf8ec309bc86", null ],
