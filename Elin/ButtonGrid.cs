@@ -482,7 +482,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 			num2 = 0;
 		}
 		bool flag = num < num2 && !ing.optional;
-		string text = (num.ToString() ?? "").TagColor(Colors.colorIngPredict) + (" -" + num2).TagColor(flag ? Colors.colorIngCost : Colors.colorIngReq);
+		string text = num.ToShortNumber().TagColor(Colors.colorIngPredict) + (" -" + num2).TagColor(flag ? Colors.colorIngCost : Colors.colorIngReq);
 		mainText.text = text;
 		if (thing == null)
 		{
@@ -506,7 +506,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 	{
 		SetCard(t, Mode.Ingredient);
 		int num = t.Num;
-		mainText.text = num.ToString() ?? "";
+		mainText.text = num.ToShortNumber();
 		mainText.SetActive(enable: true);
 		ing = null;
 		if (t.GetRootCard() != EClass.pc)
@@ -552,7 +552,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 		{
 			recipe.ingredients[0].RefreshThing();
 			Thing thing = recipe.ingredients[0].thing;
-			mainText.SetText(thing.Num.ToString() ?? "", SkinManager.CurrentColors.buttonGrid);
+			mainText.SetText(thing.Num.ToShortNumber(), SkinManager.CurrentColors.buttonGrid);
 			if (r.VirtualBlock)
 			{
 				r.renderRow.SetImage(icon, null, r.GetDefaultColor(), setNativeSize: true, 0, thing.trait.IdSkin);

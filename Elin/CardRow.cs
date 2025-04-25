@@ -133,6 +133,6 @@ public class CardRow : RenderRow
 		{
 			text = ((text2 == "*r") ? "" : text2.ToTitleCase(wholeText: true)) + Lang.space + text.Bracket(type);
 		}
-		return text.TrimStart(' ');
+		return text.TrimStart(' ').Replace("  ", " ");
 	}
 }

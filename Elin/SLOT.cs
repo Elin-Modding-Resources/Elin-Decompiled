@@ -12,7 +12,7 @@ public class SLOT
 
 	public const int back = 33;
 
-	public const int range = 41;
+	public const int token = 43;
 
 	public const int lightsource = 45;
 
@@ -20,7 +20,7 @@ public class SLOT
 
 	public const int toolbelt = 44;
 
-	public const int token = 43;
+	public const int range = 41;
 
 	public const int torso = 32;
 
@@ -34,7 +34,7 @@ public class SLOT
 
 	public static readonly int[] IDS = new int[16]
 	{
-		38, 34, 35, 36, 37, 33, 41, 45, 40, 44,
-		43, 32, 39, 31, 42, 30
+		38, 34, 35, 36, 37, 33, 43, 45, 40, 44,
+		41, 32, 39, 31, 42, 30
 	};
 }

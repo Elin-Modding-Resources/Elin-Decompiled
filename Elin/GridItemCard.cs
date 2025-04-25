@@ -4,7 +4,7 @@ public class GridItemCard : GridItem
 
 	public override void SetButton(ButtonGrid b)
 	{
-		b.mainText.text = c.Num.ToString() ?? "";
+		b.mainText.text = c.Num.ToShortNumber();
 		c.SetImage(b.icon);
 		b.SetTooltip("note", delegate(UITooltip t)
 		{

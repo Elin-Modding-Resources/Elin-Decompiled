@@ -394,6 +394,10 @@ public class AI_Fish : AIAct
 		}
 		if (thing != null)
 		{
+			if (EClass._zone.IsUserZone && !c.IsPCFactionOrMinion)
+			{
+				num2 = 1;
+			}
 			if (num2 > 1)
 			{
 				thing.SetNum(num2);

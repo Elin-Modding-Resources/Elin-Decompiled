@@ -1460,6 +1460,10 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 			break;
+		case "baby":
+		case "ika":
+			SetFeat(1232, 3);
+			break;
 		}
 		if (HasTag(CTAG.random_color))
 		{
@@ -9253,7 +9257,7 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (_historyFood != null)
 		{
-			while (_historyFood.Count > 7)
+			while (_historyFood.Count > 5)
 			{
 				_historyFood.RemoveAt(_historyFood.Count - 1);
 			}
@@ -9278,7 +9282,10 @@ public class Chara : Card, IPathfindWalker
 				new List<string>()
 			};
 		}
-		_historyFood[0].Add(food.id);
+		if (_historyFood[0].Count < 5)
+		{
+			_historyFood[0].Add(food.id);
+		}
 	}
 
 	public int CountNumEaten(Thing food)

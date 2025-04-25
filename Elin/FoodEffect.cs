@@ -26,7 +26,6 @@ public class FoodEffect : EClass
 		{
 			int num6 = c.CountNumEaten(food);
 			bool flag6 = c.GetFavFood().id == food.id;
-			Debug.Log(c.Name + "/" + food.id + "/" + num6);
 			if (num6 < 2 || flag6)
 			{
 				if (num6 == 1 || flag6 || EClass.rnd(4) == 0)
@@ -225,19 +224,18 @@ public class FoodEffect : EClass
 				case "little":
 				{
 					int @int = c.GetInt(112);
-					if (@int >= 30)
+					if (@int < 30)
 					{
-						break;
-					}
-					c.Say("little_eat", c);
-					c.PlaySound("ding_potential");
-					int v = Mathf.Max(5 - @int / 2, 1);
-					Debug.Log("sister eaten:" + @int + "/" + v);
-					foreach (Element value3 in c.elements.dict.Values)
-					{
-						if (value3.IsMainAttribute)
+						c.Say("little_eat", c);
+						c.PlaySound("ding_potential");
+						int v = Mathf.Max(5 - @int / 2, 1);
+						Debug.Log("sister eaten:" + @int + "/" + v);
+						foreach (Element value3 in c.elements.dict.Values)
 						{
-							c.elements.ModPotential(value3.id, v);
+							if (value3.IsMainAttribute)
+							{
+								c.elements.ModPotential(value3.id, v);
+							}
 						}
 					}
 					if (c.race.id == "mutant" && c.elements.Base(1230) < 10)

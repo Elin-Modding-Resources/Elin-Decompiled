@@ -22,6 +22,8 @@ public class WidgetCodex : Widget
 
 	public UIButton buttonClear;
 
+	public UIButton buttonRefresh;
+
 	public Transform transResult;
 
 	private int count;
@@ -43,6 +45,7 @@ public class WidgetCodex : Widget
 	public void Clear()
 	{
 		field.text = "";
+		field.Select();
 	}
 
 	public virtual void Search(string s)

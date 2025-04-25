@@ -29,7 +29,15 @@ public class InvOwnerRecycle : InvOwnerDraglet
 
 	public override bool ShouldShowGuide(Thing t)
 	{
-		if (!t.c_isImportant && t.things.Count == 0 && t.trait.CanBeDestroyed && !t.trait.CanOnlyCarry && t.rarity < Rarity.Artifact && t.category.GetRoot().id != "currency")
+		if (t.c_isImportant)
+		{
+			return false;
+		}
+		if (t.id == "1084")
+		{
+			return true;
+		}
+		if (t.things.Count == 0 && t.trait.CanBeDestroyed && !t.trait.CanOnlyCarry && t.rarity < Rarity.Artifact && t.category.GetRoot().id != "currency")
 		{
 			return !(t.trait is TraitRecycle);
 		}
@@ -42,6 +50,10 @@ public class InvOwnerRecycle : InvOwnerDraglet
 		Msg.Say("dump", t, Container.Name);
 		int a = t.Num * Mathf.Clamp(t.GetPrice() / 100, 1, 100);
 		a = EClass.rndHalf(a);
+		if (t.id == "1084")
+		{
+			a *= 10;
+		}
 		if (a != 0)
 		{
 			EClass.pc.Pick(ThingGen.Create("ecopo").SetNum(a / 10 + 1));

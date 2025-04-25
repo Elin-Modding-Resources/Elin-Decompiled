@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class TaskCullLife : Task
 {
@@ -53,7 +54,7 @@ public class TaskCullLife : Task
 				owner.PlaySound("shear");
 				Msg.Say("cull_life", EClass.pc, target);
 				target.Die();
-				Thing t = ThingGen.Create("ecopo").SetNum(EClass.rndHalf(target.LV / 10 + 6));
+				Thing t = ThingGen.Create("ecopo").SetNum(EClass.rndHalf((int)Mathf.Sqrt(target.LV) + 5));
 				EClass.pc.Pick(t);
 				yield return KeepRunning();
 			}

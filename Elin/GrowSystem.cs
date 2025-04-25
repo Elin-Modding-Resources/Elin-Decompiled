@@ -654,7 +654,7 @@ public class GrowSystem : EClass
 			}
 			t.SetNum(num2);
 		}
-		else
+		else if (Application.isEditor)
 		{
 			Debug.Log("harvest count not set:" + source.id + "/" + source.alias);
 		}

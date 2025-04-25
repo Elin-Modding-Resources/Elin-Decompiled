@@ -146,6 +146,8 @@ public class CINT
 
 	public const int isSleepBeside = 123;
 
+	public const int price_copy = 124;
+
 	public const int dateDeathLock = 130;
 
 	public const int fixedValue = 131;

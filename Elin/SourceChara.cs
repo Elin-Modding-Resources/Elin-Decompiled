@@ -121,7 +121,7 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 			{
 				text = text.TrimStart(' ');
 			}
-			return text;
+			return text.Replace("  ", " ");
 		}
 	}
 

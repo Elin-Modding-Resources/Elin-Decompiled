@@ -41,6 +41,10 @@ public class AI_Read : AIAct
 			target.trait.OnRead(owner);
 			target.Thing?.Identify(chara.IsPCParty);
 			Success();
+			if (chara.IsPC)
+			{
+				EClass.player.EndTurn();
+			}
 		}
 	}
 

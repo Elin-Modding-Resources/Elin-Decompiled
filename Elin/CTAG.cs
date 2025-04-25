@@ -35,5 +35,7 @@ public enum CTAG
 	dish_fail,
 	random_color,
 	noRandomEnc,
-	noMix
+	noMix,
+	bigFish,
+	noSkinRecipe
 }

@@ -387,22 +387,25 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 	public void AddRow(Row ele, int id, string idOrg)
 	{
-		Row row = EClass.sources.elements.alias[idOrg];
-		System.Reflection.FieldInfo[] fields = row.GetType().GetFields();
-		Row row2 = new Row();
-		System.Reflection.FieldInfo[] array = fields;
-		foreach (System.Reflection.FieldInfo fieldInfo in array)
+		if (!map.ContainsKey(id))
 		{
-			row2.SetField(fieldInfo.Name, row.GetField<object>(fieldInfo.Name));
+			Row row = EClass.sources.elements.alias[idOrg];
+			System.Reflection.FieldInfo[] fields = row.GetType().GetFields();
+			Row row2 = new Row();
+			System.Reflection.FieldInfo[] array = fields;
+			foreach (System.Reflection.FieldInfo fieldInfo in array)
+			{
+				row2.SetField(fieldInfo.Name, row.GetField<object>(fieldInfo.Name));
+			}
+			row2.id = id;
+			row2.idMold = row.id;
+			row2.alias = row.alias + ele.alias.Remove(0, 3);
+			row2.aliasRef = ele.alias;
+			row2.aliasParent = ele.aliasParent;
+			row2.chance = row.chance * ele.chance / 100;
+			row2.LV = row.LV;
+			row2.OnImportData(EClass.sources.elements);
+			rows.Add(row2);
 		}
-		row2.id = id;
-		row2.idMold = row.id;
-		row2.alias = row.alias + ele.alias.Remove(0, 3);
-		row2.aliasRef = ele.alias;
-		row2.aliasParent = ele.aliasParent;
-		row2.chance = row.chance * ele.chance / 100;
-		row2.LV = row.LV;
-		row2.OnImportData(EClass.sources.elements);
-		rows.Add(row2);
 	}
 }

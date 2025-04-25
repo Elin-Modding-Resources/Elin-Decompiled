@@ -1117,6 +1117,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_priceCopy
+	{
+		get
+		{
+			return GetInt(124);
+		}
+		set
+		{
+			SetInt(124, value);
+		}
+	}
+
 	public int c_fixedValue
 	{
 		get
@@ -4563,7 +4575,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		void ProcAbsorb()
 		{
-			if (origin != null && origin.isChara && isChara)
+			if (origin != null && origin.isChara && isChara && (weapon == null || !weapon.HasElement(486)))
 			{
 				int valueOrDefault = (origin.Evalue(662) + weapon?.Evalue(662, ignoreGlobalElement: true)).GetValueOrDefault();
 				int valueOrDefault2 = (origin.Evalue(661) + weapon?.Evalue(661, ignoreGlobalElement: true)).GetValueOrDefault();
@@ -6586,12 +6598,24 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public int GetValue(PriceType priceType = PriceType.Default, bool sell = false)
 	{
 		int num = ((c_fixedValue == 0) ? trait.GetValue() : c_fixedValue);
+		if (id == "plat" && !sell)
+		{
+			num = 10000;
+		}
 		if (num == 0)
 		{
 			return 0;
 		}
 		float num2 = num;
-		num2 = ((priceType != PriceType.CopyShop) ? (num2 * (float)Mathf.Max(100 + rarityLv + Mathf.Min(QualityLv * 10, 200), 80) / 100f) : (num2 * (float)Mathf.Max(150 + rarityLv, 150) / 100f));
+		if (priceType == PriceType.CopyShop)
+		{
+			num2 += (float)c_priceCopy * 0.2f;
+			num2 = num2 * (float)Mathf.Max(150 + rarityLv, 150) / 100f;
+		}
+		else
+		{
+			num2 = num2 * (float)Mathf.Max(100 + rarityLv + Mathf.Min(QualityLv * 10, 200), 80) / 100f;
+		}
 		if (IsFood && !material.tag.Contains("food"))
 		{
 			num2 *= 0.5f;

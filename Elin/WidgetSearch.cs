@@ -32,6 +32,8 @@ public class WidgetSearch : WidgetCodex
 
 	public UIList listWords;
 
+	public Zone lastZone;
+
 	public Extra extra => base.config.extra as Extra;
 
 	public override SearchType type => SearchType.Search;
@@ -80,11 +82,21 @@ public class WidgetSearch : WidgetCodex
 		if (EMono.scene.actionMode.IsFuncPressed(CoreConfig.GameFunc.PropertySearch))
 		{
 			EMono.ui.widgets.DeactivateWidget(this);
+			return;
 		}
-		else
+		base.Update();
+		if (lastZone != EMono._zone)
 		{
-			base.Update();
+			lastSearch = "";
+			Search(field.text);
 		}
+	}
+
+	public void RefreshSearch()
+	{
+		SE.Tab();
+		lastSearch = "";
+		Search(field.text);
 	}
 
 	public override void Search(string s)
@@ -95,11 +107,13 @@ public class WidgetSearch : WidgetCodex
 		}
 		s = s.ToLower();
 		buttonClear.SetActive(field.text != "");
+		buttonRefresh.SetActive(field.text != "");
 		if (s == lastSearch || s.Length == 0)
 		{
 			return;
 		}
 		lastSearch = s;
+		lastZone = EMono._zone;
 		bool encSearch = s.Length >= 2 && (s[0] == '@' || s[0] == '＠');
 		if (encSearch)
 		{
@@ -275,7 +289,6 @@ public class WidgetSearch : WidgetCodex
 						selected = null;
 						EMono.pc.SetAIImmediate(new AI_Goto(rootCard.pos.Copy(), 0));
 						ActionMode.Adv.SetTurbo(3);
-						Close();
 					}
 				}
 				else

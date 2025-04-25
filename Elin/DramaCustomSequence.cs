@@ -550,7 +550,7 @@ public class DramaCustomSequence : EClass
 		Step("_sleepBeside");
 		Method(delegate
 		{
-			if (c.affinity.CanSleepBeside())
+			if (c.affinity.CanSleepBeside() || c.GetInt(123) == 1)
 			{
 				c.SetInt(123, (c.GetInt(123) == 0) ? 1 : 0);
 			}
