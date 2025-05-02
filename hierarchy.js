@@ -424,6 +424,7 @@ var hierarchy =
             [ "BaseDebuff", "classBaseDebuff.html", [
               [ "BaseBuff", "classBaseBuff.html", [
                 [ "ConBoost", "classConBoost.html", null ],
+                [ "ConBrightnessOfLife", "classConBrightnessOfLife.html", null ],
                 [ "ConChampagne", "classConChampagne.html", null ],
                 [ "ConDrawBacker", "classConDrawBacker.html", null ],
                 [ "ConDrawMetal", "classConDrawMetal.html", null ],
@@ -1252,7 +1253,9 @@ var hierarchy =
               [ "TileTypeFence", "classTileTypeFence.html", [
                 [ "TileTypeFenceClosed", "classTileTypeFenceClosed.html", null ]
               ] ],
-              [ "TileTypeWallOpen", "classTileTypeWallOpen.html", null ]
+              [ "TileTypeWallOpen", "classTileTypeWallOpen.html", [
+                [ "TileTypeWallFake", "classTileTypeWallFake.html", null ]
+              ] ]
             ] ]
           ] ],
           [ "TileTypeBlockShip", "classTileTypeBlockShip.html", null ],
@@ -1395,6 +1398,7 @@ var hierarchy =
             [ "TraitBard", "classTraitBard.html", null ],
             [ "TraitBitch", "classTraitBitch.html", null ],
             [ "TraitBitchDancer", "classTraitBitchDancer.html", null ],
+            [ "TraitCitizenExile", "classTraitCitizenExile.html", null ],
             [ "TraitGuard", "classTraitGuard.html", [
               [ "TraitCasinoGuard", "classTraitCasinoGuard.html", null ]
             ] ],
@@ -1476,6 +1480,7 @@ var hierarchy =
             [ "TraitCorgon", "classTraitCorgon.html", null ],
             [ "TraitDemitas", "classTraitDemitas.html", null ],
             [ "TraitEureka", "classTraitEureka.html", null ],
+            [ "TraitExileElder", "classTraitExileElder.html", null ],
             [ "TraitGarokk", "classTraitGarokk.html", null ],
             [ "TraitGriffin", "classTraitGriffin.html", null ],
             [ "TraitKettle", "classTraitKettle.html", null ],
@@ -2413,6 +2418,7 @@ var hierarchy =
           [ "LayerEditPCC", "classLayerEditPCC.html", null ],
           [ "LayerEditPlaylist", "classLayerEditPlaylist.html", null ],
           [ "LayerEditPortrait", "classLayerEditPortrait.html", null ],
+          [ "LayerEditSkin", "classLayerEditSkin.html", null ],
           [ "LayerEmbark", "classLayerEmbark.html", null ],
           [ "LayerEquip", "classLayerEquip.html", null ],
           [ "LayerFactions", "classLayerFactions.html", null ],

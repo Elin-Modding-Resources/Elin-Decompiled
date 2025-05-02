@@ -59,6 +59,7 @@ var classTileType =
     [ "Tree", "classTileType.html#a0aa1d91bd05bcfb931025c0b4886db4e", null ],
     [ "Vine", "classTileType.html#af064dae52d854368357682dbbc415783", null ],
     [ "Wall", "classTileType.html#a248ce43c5477b50c1b3a7aeea68ff789", null ],
+    [ "WallFake", "classTileType.html#afa7d6e79c3608c072f64602ab4c296df", null ],
     [ "WallHang", "classTileType.html#a3eb0827e5ebd1a36260ac591469167e3", null ],
     [ "WallHangSign", "classTileType.html#a4fec4ae38e5976ad1b97ec9cdc45900f", null ],
     [ "WallMount", "classTileType.html#afd486d38bcd626cd841219e4fa9415c2", null ],
@@ -138,6 +139,5 @@ var classTileType =
     [ "slopeHeight", "classTileType.html#adad3afee1b8510400b8c39b9d9f54cd0", null ],
     [ "UseHangZFix", "classTileType.html#a113b9779a6123630113d37b334210146", null ],
     [ "UseLowBlock", "classTileType.html#a875f2611562c44a88318d9d42d5ee335", null ],
-    [ "UseLowWallTiles", "classTileType.html#a6e36a026ad63492882c05415bb8c6805", null ],
     [ "UseMountHeight", "classTileType.html#ab61f3094d71a9a6d9d0340f5d60f9a3a", null ]
 ];

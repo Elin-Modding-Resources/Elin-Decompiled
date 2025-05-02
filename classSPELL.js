@@ -128,6 +128,7 @@ var classSPELL =
     [ "puddle_Sound", "classSPELL.html#a892c016fb98036dfb739b3e2b97d84d2", null ],
     [ "puddle_Void", "classSPELL.html#a53cb007dc404bdb1ad113234cc0f9120", null ],
     [ "SpBane", "classSPELL.html#a05b85943123259d3913813eb5dc4f420", null ],
+    [ "SpBrightnessOfLife", "classSPELL.html#a36d8f3fbea489fdd383e1b582f09770d", null ],
     [ "SpCatsEye", "classSPELL.html#a627f62697ab765909bc81d76194c4f21", null ],
     [ "SpChangeMaterial", "classSPELL.html#acfaf0d93603bf9ca342b688523fce856", null ],
     [ "SpChangeMaterialG", "classSPELL.html#aef7f60d0b5ed95024150a78e50b85e36", null ],

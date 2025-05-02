@@ -24,6 +24,7 @@ var classCSTR =
     [ "idRefName", "classCSTR.html#a0e3b157d888f1d024dc0dead3803daf4", null ],
     [ "idRidePCC", "classCSTR.html#a85ab00e1792a035bd1fe2229c583845d", null ],
     [ "idSourceZone", "classCSTR.html#af6b2e6435d1acee7ccd2640492a9a8be", null ],
+    [ "idSpriteReplacer", "classCSTR.html#a580b2ce51478c64cf8656e4bf352b1d6", null ],
     [ "idTalk", "classCSTR.html#a04e027ae0bf6274d4db580f37916ab81", null ],
     [ "idTeleport", "classCSTR.html#a29daefc45ba47f5e7df7903451ebf0fa", null ],
     [ "idTone", "classCSTR.html#abe76f7d05d3139320d6c60ed2bb3f191", null ],

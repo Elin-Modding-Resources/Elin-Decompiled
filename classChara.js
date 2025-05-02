@@ -368,6 +368,7 @@ var classChara =
     [ "shared", "classChara.html#a431c2972201f6174574f55c67196001f", null ],
     [ "sharedCheckTurn", "classChara.html#a2ef7dbaaba9acfc08548fb0ca658ec37", null ],
     [ "source", "classChara.html#a9622b36b4e46eae03ff4363bf2cd355e", null ],
+    [ "spriteReplacer", "classChara.html#a571290954b521a4fbb1c079bf1bc54ff", null ],
     [ "stealthSeen", "classChara.html#a2e0a016ec978f317a13917eccb22a1c3", null ],
     [ "tempElements", "classChara.html#a482a8c7e0ae29c4fd0fd5c3ffd8371a9", null ],
     [ "turnLastSeen", "classChara.html#ad085586e0979e98cdb01755117a95cb5", null ],

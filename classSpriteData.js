@@ -12,7 +12,6 @@ var classSpriteData =
     [ "sprites", "classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5", null ],
     [ "spritesSnow", "classSpriteData.html#a2418e7613134aad4c224a6681a029930", null ],
     [ "tex", "classSpriteData.html#a2bb56554ce16f0af909b235b83215517", null ],
-    [ "texName", "classSpriteData.html#a81fe21e2f728eac5c0e9d5f030f344b1", null ],
     [ "texSnow", "classSpriteData.html#ac960964b75a86380055b2d6cd42ab220", null ],
     [ "time", "classSpriteData.html#adf8ba462c11d8df4f83c557ea9cc727d", null ]
 ];

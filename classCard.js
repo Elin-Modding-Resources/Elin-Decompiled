@@ -310,6 +310,7 @@ var classCard =
     [ "c_idRefCard2", "classCard.html#a88212be83f27ebd3db8f1ecebb3b982b", null ],
     [ "c_idRefName", "classCard.html#adb17c3c4f4e5cca11421e910a32ca863", null ],
     [ "c_idRidePCC", "classCard.html#a9b8a4d0ba70b1ea1fa747ddd92cd292a", null ],
+    [ "c_idSpriteReplacer", "classCard.html#a6ee529820c22d048130e746048c2d2c2", null ],
     [ "c_idTalk", "classCard.html#a986858431700072b26881b3638fcc120", null ],
     [ "c_idTone", "classCard.html#a67a97c5e58e329c1c074456b7af4889b", null ],
     [ "c_idTrait", "classCard.html#a408a82308d387e8e0ec7a49d33c28b14", null ],

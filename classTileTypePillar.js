@@ -7,5 +7,5 @@ var classTileTypePillar =
     [ "IsOccupyCell", "classTileTypePillar.html#a29c3054d0dfa76dcf9e10f4b4cb29545", null ],
     [ "MaxAltitude", "classTileTypePillar.html#a4d54199aca562036e638b54beef1e7a1", null ],
     [ "RepeatBlock", "classTileTypePillar.html#aa980d6d9d570c1b121b753b6197e75ae", null ],
-    [ "UseLowWallTiles", "classTileTypePillar.html#af4a726fcdc80a8a3c2a52b4086a47d10", null ]
+    [ "UseLowBlock", "classTileTypePillar.html#aaf04e1d9d98110080b0610715d94e22c", null ]
 ];

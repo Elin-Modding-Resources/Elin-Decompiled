@@ -1,5 +1,15 @@
 var NAVTREEINDEX24 =
 {
+"classAIWork__Explore.html":[1,0,114],
+"classAIWork__Explore.html#a2677e829229a72b77b82aed8ff34a199":[1,0,114,1],
+"classAIWork__Explore.html#ab610006a0b58f9d49de8fbaf450bf9d3":[1,0,114,0],
+"classAIWork__Farm.html":[1,0,115],
+"classAIWork__Farm.html#a0a5897032beb03862f9b5e3a40908104":[1,0,115,0],
+"classAIWork__Farm.html#aa34ce7e4071416c998223e125ed9afd8":[1,0,115,1],
+"classAIWork__Fish.html":[1,0,116],
+"classAIWork__Fish.html#a2fd441c9762f335a1fbe51761388b6df":[1,0,116,1],
+"classAIWork__Fish.html#ac24cc5b97279bb062294410f5147f86f":[1,0,116,2],
+"classAIWork__Fish.html#aed3f79386b9f0b1626fb53553965934d":[1,0,116,0],
 "classAIWork__Lumberjack.html":[1,0,117],
 "classAIWork__Lumberjack.html#a11fe10027ad2b9913cde404de11c53ba":[1,0,117,0],
 "classAIWork__Lumberjack.html#a763161e7e4552e3386beb111c1bf6444":[1,0,117,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__PlayMusic.html#a9a3e4f404dc4a8a64d555c9310fcaeff":[1,0,88,4],
 "classAI__PlayMusic.html#abe58b61e8d7302885c7fc88d5c6b2ac0":[1,0,88,7],
 "classAI__PlayMusic.html#ac740600e22d91c235c8e99ba25bdfb1f":[1,0,88,0],
-"classAI__PlayMusic.html#ac8363821ca93f70aa6dd510bb7762172":[1,0,88,10],
-"classAI__PlayMusic.html#acbd8ed4a7bf223e0efecc2ce18e3221e":[1,0,88,2],
-"classAI__PlayMusic.html#accf2ba0f0af523cd265b8c0543cfaaea":[1,0,88,1],
-"classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188":[1,0,88,8],
-"classAI__PlayMusic.html#ae3a51a9cdf907a8b71758f85c64fa900":[1,0,88,6],
-"classAI__PlayMusic.html#af3ddb1180da01215545e2ebca91a6483":[1,0,88,5],
-"classAI__Practice.html":[1,0,89],
-"classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,89,5],
-"classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,89,1],
-"classAI__Practice.html#ad938aabe2a061a66a436cbe954380af4":[1,0,89,0],
-"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,89,2]
+"classAI__PlayMusic.html#ac8363821ca93f70aa6dd510bb7762172":[1,0,88,10]
 };
