@@ -16,8 +16,6 @@ public class SpriteData
 
 	public string path;
 
-	public string texName;
-
 	public Sprite[] sprites;
 
 	public Sprite[] spritesSnow;

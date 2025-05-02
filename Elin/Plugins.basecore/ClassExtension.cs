@@ -905,7 +905,7 @@ public static class ClassExtension
 		{
 			return s;
 		}
-		char c = s[0];
+		char c = s.ToLower()[0];
 		s = ((c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') ? "an " : "a ") + s;
 		return s;
 	}
