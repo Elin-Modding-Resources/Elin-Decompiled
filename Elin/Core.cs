@@ -221,6 +221,8 @@ public class Core : BaseCore
 			StartCoroutine(mods.RefreshMods(delegate
 			{
 				MOD.actorSources.Initialize();
+				SpriteReplacer.dictSkins.Clear();
+				SpriteReplacer.ListSkins();
 				StartCase();
 			}, !ModManager.disableMod && !BaseCore.IsOffline && !debug.skipModSync && (config == null || config.other.syncMods)));
 			return;

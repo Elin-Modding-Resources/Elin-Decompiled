@@ -1489,6 +1489,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public string c_idSpriteReplacer
+	{
+		get
+		{
+			return GetStr(13);
+		}
+		set
+		{
+			SetStr(13, value);
+		}
+	}
+
 	public string c_idTalk
 	{
 		get
@@ -4182,6 +4194,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					{
 						EClass.pc.hp = 0;
 						Heal();
+						EClass.player.ModFame(-10 - (int)((float)EClass.player.fame * 0.05f));
 						target.ShowDialog("_chara", "bout_lose");
 						return;
 					}

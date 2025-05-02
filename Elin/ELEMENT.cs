@@ -1038,7 +1038,7 @@ public class Element : EClass
 			switch (source.id)
 			{
 			case 6020:
-				result2.cost = c.stamina.max / 3 + 10;
+				result2.cost = Mathf.Min(c.stamina.max / 3 + 10, 30);
 				break;
 			case 6664:
 			{

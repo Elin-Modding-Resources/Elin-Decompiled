@@ -993,6 +993,13 @@ public class CoreDebug : EScriptable
 			foreach (Chara member in EClass.pc.party.members)
 			{
 				member.InstantEat();
+				if (!member.IsPC)
+				{
+					string id = "test";
+					member.spriteReplacer = new SpriteReplacer();
+					member.spriteReplacer.HasSprite(id);
+					member._CreateRenderer();
+				}
 			}
 			for (int j = 0; j < 10; j++)
 			{
@@ -1022,9 +1029,9 @@ public class CoreDebug : EScriptable
 		{
 			EClass.core.WaitForEndOfFrame(delegate
 			{
-				string id = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
+				string id2 = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
 				EClass.scene.Init(Scene.Mode.None);
-				Game.Load(id, cloud: false);
+				Game.Load(id2, cloud: false);
 			});
 		}
 		if (Input.GetKeyDown(KeyCode.F7))

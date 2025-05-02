@@ -2913,7 +2913,7 @@ public class BaseTileMap : EMono
 						param.mat = matBlock;
 					}
 					this.tileType = _sourceBlock.tileType;
-					param.tile = (tile = _sourceBlock._tiles[0] + ((flag10 && !this.tileType.IsFence) ? 32 : 0));
+					param.tile = (tile = _sourceBlock._tiles[0] + ((flag10 && this.tileType.UseLowBlock) ? 32 : 0));
 					if (_sourceBlock.useAltColor)
 					{
 						param.matColor = ((_sourceBlock.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.altColor, _sourceBlock.colorMod));
@@ -2940,7 +2940,7 @@ public class BaseTileMap : EMono
 						{
 							param.snow = true;
 						}
-						param.tile = _sourceBlock._tiles[0] + ((flag10 && flag11 && !this.tileType.IsFence && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
+						param.tile = _sourceBlock._tiles[0] + ((flag10 && flag11 && this.tileType.UseLowBlock && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
 						if (roomHeight == 0f || !this.tileType.RepeatBlock || (flag10 && flag11 && !flag9))
 						{
 							_sourceBlock.renderData.Draw(param);
@@ -2953,7 +2953,7 @@ public class BaseTileMap : EMono
 					if (!flag10 && !showRoof && this.cell.Left.HasWallOrFence && this.cell.Left.blockDir != 0 && !this.cell.isToggleWallPillar)
 					{
 						orgX = param.x;
-						param.tile = _sourceBlock._tiles[0] + ((flag10 && !this.tileType.IsFence && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
+						param.tile = _sourceBlock._tiles[0] + ((flag10 && this.tileType.UseLowBlock && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
 						param.x += cornerWallFix3.x;
 						param.y += cornerWallFix3.y;
 						param.z += cornerWallFix3.z;
@@ -2970,7 +2970,7 @@ public class BaseTileMap : EMono
 					else if (this.cell.FrontLeft.HasWallOrFence && this.cell.FrontLeft.blockDir != 0 && (!flag10 || !this.cell.Left.HasWall) && !this.cell.isToggleWallPillar)
 					{
 						orgX = param.x;
-						param.tile = _sourceBlock._tiles[0] + ((flag10 && !this.tileType.IsFence && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
+						param.tile = _sourceBlock._tiles[0] + ((flag10 && this.tileType.UseLowBlock && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
 						param.x += cornerWallFix.x;
 						param.y += cornerWallFix.y;
 						param.z += cornerWallFix.z;
@@ -3042,7 +3042,7 @@ public class BaseTileMap : EMono
 						param.mat = matBlock;
 					}
 					this.tileType = _sourceBlock.tileType;
-					param.tile = (tile = -_sourceBlock._tiles[0] + ((flag11 && !this.tileType.IsFence) ? (-32) : 0));
+					param.tile = (tile = -_sourceBlock._tiles[0] + ((flag11 && this.tileType.UseLowBlock) ? (-32) : 0));
 					if (_sourceBlock.useAltColor)
 					{
 						param.matColor = ((_sourceBlock.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.altColor, _sourceBlock.colorMod));
@@ -3070,7 +3070,7 @@ public class BaseTileMap : EMono
 							param.snow = true;
 						}
 						orgX = param.x;
-						param.tile = _sourceBlock._tiles[0] + ((flag11 && !this.tileType.IsFence && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
+						param.tile = _sourceBlock._tiles[0] + ((flag11 && this.tileType.UseLowBlock && !flag9) ? 32 : 0) + (this.tileType.IsFence ? 32 : 64);
 						if (!flag9 && (roomHeight == 0f || !this.tileType.RepeatBlock || flag11))
 						{
 							_sourceBlock.renderData.Draw(param);
@@ -3117,7 +3117,7 @@ public class BaseTileMap : EMono
 			}
 			default:
 				param.color = floorLight;
-				param.tile = sourceBlock._tiles[this.cell.blockDir % sourceBlock._tiles.Length] + ((_lowblock && this.tileType.UseLowWallTiles) ? 3000000 : 0);
+				param.tile = sourceBlock._tiles[this.cell.blockDir % sourceBlock._tiles.Length] + ((_lowblock && this.tileType.UseLowBlock) ? 3000000 : 0);
 				param.matColor = ((sourceBlock.colorMod == 0) ? 104025 : GetColorInt(ref matBlock.matColor, sourceBlock.colorMod));
 				if (roomHeight == 0f)
 				{

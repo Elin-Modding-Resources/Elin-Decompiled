@@ -1131,8 +1131,8 @@ public class Trait : EClass
 		}
 		else if (AutoToggle)
 		{
-			int hour = EClass.world.date.hour;
-			bool on = !IsNightOnlyLight || hour >= 17 || hour <= 5 || EClass._map.IsIndoor;
+			int num = ((EClass._map.config.hour == -1) ? EClass.world.date.hour : EClass._map.config.hour);
+			bool on = !IsNightOnlyLight || num >= 17 || num <= 5 || EClass._map.IsIndoor;
 			if (ToggleType == ToggleType.Fire && EClass.world.weather.IsRaining && !EClass._map.IsIndoor && !owner.Cell.HasRoof)
 			{
 				on = false;
@@ -1601,7 +1601,7 @@ public class Trait : EClass
 			break;
 		case ShopType.RedBook:
 		{
-			for (int l = 0; l < 30; l++)
+			for (int n = 0; n < 30; n++)
 			{
 				AddThing(ThingGen.CreateFromCategory("book"));
 			}
@@ -1614,11 +1614,11 @@ public class Trait : EClass
 			AddThing(TraitSeed.MakeSeed("carrot")).SetNum(4 + EClass.rnd(4));
 			AddThing(TraitSeed.MakeSeed("potato")).SetNum(4 + EClass.rnd(4));
 			AddThing(TraitSeed.MakeSeed("corn")).SetNum(4 + EClass.rnd(4));
-			for (int n = 0; n < EClass.rnd(3) + 1; n++)
+			for (int num5 = 0; num5 < EClass.rnd(3) + 1; num5++)
 			{
 				Add("462", 1, 0);
 			}
-			for (int num5 = 0; num5 < EClass.rnd(3) + 1; num5++)
+			for (int num6 = 0; num6 < EClass.rnd(3) + 1; num6++)
 			{
 				Add("1167", 1, 0);
 			}
@@ -1704,6 +1704,17 @@ public class Trait : EClass
 						Thing thing3 = ThingGen.Create(EClass._zone.IsFestival ? "1123" : ((EClass.rnd(3) == 0) ? "1169" : "1160"));
 						thing3.DyeRandom();
 						AddThing(thing3);
+					}
+					if (EClass._zone is Zone_Exile)
+					{
+						for (int l = 0; l < 30; l++)
+						{
+							Add("1235", 1, -1);
+							Add("1236", 1, -1);
+							Add("1237", 1, -1);
+							Add("1239", 1, -1);
+							Add("candle9", 1, -1);
+						}
 					}
 					break;
 				}
@@ -1813,15 +1824,15 @@ public class Trait : EClass
 				{
 				case ShopType.StrangeGirl:
 				{
-					int num8 = (EClass.debug.enable ? 20 : (EClass._zone.development / 10));
-					if (num8 > 0)
+					int num9 = (EClass.debug.enable ? 20 : (EClass._zone.development / 10));
+					if (num9 > 0)
 					{
-						Add("syringe_gene", num8, 0);
+						Add("syringe_gene", num9, 0);
 						Add("diary_little", 1, 0);
 					}
-					if (num8 > 10)
+					if (num9 > 10)
 					{
-						Add("syringe_heaven", num8 / 5, 0);
+						Add("syringe_heaven", num9 / 5, 0);
 					}
 					break;
 				}
@@ -1871,12 +1882,12 @@ public class Trait : EClass
 						Add("ticket_armpillow", 1, 0);
 						Add("ticket_champagne", 1, 0);
 					}
-					for (int num6 = 0; num6 < 3; num6++)
+					for (int num7 = 0; num7 < 3; num7++)
 					{
 						if (EClass.rnd(5) == 0)
 						{
 							TreasureType treasureType = ((EClass.rnd(10) == 0) ? TreasureType.BossNefia : ((EClass.rnd(10) == 0) ? TreasureType.Map : TreasureType.RandomChest));
-							int num7 = EClass.rnd(EClass.rnd(ShopLv + (EClass.debug.enable ? 200 : 50)) + 1) + 1;
+							int num8 = EClass.rnd(EClass.rnd(ShopLv + (EClass.debug.enable ? 200 : 50)) + 1) + 1;
 							Thing thing5 = ThingGen.Create(treasureType switch
 							{
 								TreasureType.Map => "chest_treasure", 
@@ -1884,10 +1895,10 @@ public class Trait : EClass
 								_ => "chest3", 
 							});
 							thing5.c_lockedHard = true;
-							thing5.c_lockLv = num7;
-							thing5.c_priceAdd = 2000 + num7 * 250 * ((treasureType == TreasureType.RandomChest) ? 1 : 5);
+							thing5.c_lockLv = num8;
+							thing5.c_priceAdd = 2000 + num8 * 250 * ((treasureType == TreasureType.RandomChest) ? 1 : 5);
 							thing5.c_revealLock = true;
-							ThingGen.CreateTreasureContent(thing5, num7, treasureType, clearContent: true);
+							ThingGen.CreateTreasureContent(thing5, num8, treasureType, clearContent: true);
 							AddThing(thing5);
 						}
 					}
@@ -1897,7 +1908,7 @@ public class Trait : EClass
 				ShopType shopType = ShopType;
 				if (shopType == ShopType.General || shopType == ShopType.Food)
 				{
-					for (int num9 = 0; num9 < (EClass.debug.enable ? 3 : 3); num9++)
+					for (int num10 = 0; num10 < (EClass.debug.enable ? 3 : 3); num10++)
 					{
 						if (EClass.rnd(3) == 0)
 						{
@@ -1987,11 +1998,11 @@ public class Trait : EClass
 				{
 					return;
 				}
-				int num10 = t.things.width * 10;
-				if (t.things.Count > num10)
+				int num11 = t.things.width * 10;
+				if (t.things.Count > num11)
 				{
-					int num11 = t.things.Count - num10;
-					for (int num12 = 0; num12 < num11; num12++)
+					int num12 = t.things.Count - num11;
+					for (int num13 = 0; num13 < num12; num13++)
 					{
 						t.things.LastItem().Destroy();
 					}
@@ -2001,7 +2012,7 @@ public class Trait : EClass
 				{
 					CardBlueprint.SetNormalRarity();
 					Thing thing6 = ThingGen.Create(id, -1, ShopLv).SetNum(a);
-					thing6.idSkin = idSkin;
+					thing6.idSkin = ((idSkin == -1) ? EClass.rnd(thing6.source.skins.Length + 1) : idSkin);
 					return t.AddThing(thing6);
 				}
 				Thing AddThing(Thing _t)

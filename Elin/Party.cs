@@ -41,9 +41,14 @@ public class Party : EClass
 	public List<Chara> SetMembers()
 	{
 		_members = new List<Chara>();
+		HashSet<int> hashSet = new HashSet<int>();
 		foreach (int uidMember in uidMembers)
 		{
-			members.Add(RefChara.Get(uidMember));
+			if (!hashSet.Contains(uidMember))
+			{
+				hashSet.Add(uidMember);
+				members.Add(RefChara.Get(uidMember));
+			}
 		}
 		return _members;
 	}

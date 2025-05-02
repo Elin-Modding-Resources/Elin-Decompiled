@@ -1,16 +1,16 @@
 public class SLOT
 {
-	public const int leg = 38;
+	public const int waist = 37;
+
+	public const int finger = 36;
+
+	public const int back = 33;
 
 	public const int arm = 34;
 
 	public const int hand = 35;
 
-	public const int finger = 36;
-
-	public const int waist = 37;
-
-	public const int back = 33;
+	public const int leg = 38;
 
 	public const int token = 43;
 
@@ -34,7 +34,7 @@ public class SLOT
 
 	public static readonly int[] IDS = new int[16]
 	{
-		38, 34, 35, 36, 37, 33, 43, 45, 40, 44,
+		37, 36, 33, 34, 35, 38, 43, 45, 40, 44,
 		41, 32, 39, 31, 42, 30
 	};
 }

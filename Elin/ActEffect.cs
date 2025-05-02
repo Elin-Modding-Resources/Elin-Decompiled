@@ -209,7 +209,7 @@ public class ActEffect : EClass
 				{
 					num4 = CC.MaxHP * 2;
 					num4 = num4 * 100 / (50 + point.Distance(p) * 75);
-					if (c.HasTag(CTAG.suicide) && !c.HasCondition<ConWet>())
+					if ((c.HasCondition<ConBrightnessOfLife>() || c.HasTag(CTAG.suicide)) && !c.HasCondition<ConWet>() && !c.IsPowerful)
 					{
 						list.Add(c);
 					}
@@ -423,10 +423,10 @@ public class ActEffect : EClass
 		{
 		case EffectId.Earthquake:
 		{
-			List<Point> list3 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
-			if (list3.Count == 0)
+			List<Point> list7 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
+			if (list7.Count == 0)
 			{
-				list3.Add(CC.pos.Copy());
+				list7.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_earthquake", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -438,7 +438,7 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list3, actRef, "spell_earthquake");
+			DamageEle(CC, id, power, element, list7, actRef, "spell_earthquake");
 			break;
 		}
 		case EffectId.Meteor:
@@ -469,8 +469,8 @@ public class ActEffect : EClass
 		case EffectId.DrainMana:
 		case EffectId.Sword:
 		{
-			List<Point> list5 = new List<Point>();
-			list5.Add(tp.Copy());
+			List<Point> list = new List<Point>();
+			list.Add(tp.Copy());
 			EClass.Wait(0.3f, CC);
 			TryDelay(delegate
 			{
@@ -494,7 +494,7 @@ public class ActEffect : EClass
 				lang = "";
 				break;
 			}
-			if (!DamageEle(cC, id3, power, e, list5, actref, (string)lang))
+			if (!DamageEle(cC, id3, power, e, list, actref, (string)lang))
 			{
 				CC.Say("spell_hand_miss", CC, element.Name.ToLower());
 			}
@@ -502,15 +502,15 @@ public class ActEffect : EClass
 		}
 		case EffectId.Arrow:
 		{
-			List<Point> list = new List<Point>();
-			list.Add(tp.Copy());
+			List<Point> list5 = new List<Point>();
+			list5.Add(tp.Copy());
 			CC.Say("spell_arrow", CC, element.Name.ToLower());
 			EClass.Wait(0.5f, CC);
 			TryDelay(delegate
 			{
 				CC.PlaySound("spell_arrow");
 			});
-			DamageEle(CC, id, power, element, list, actRef, "spell_arrow");
+			DamageEle(CC, id, power, element, list5, actRef, "spell_arrow");
 			return;
 		}
 		case EffectId.Summon:
@@ -558,7 +558,7 @@ public class ActEffect : EClass
 				{
 					continue;
 				}
-				Chara chara2 = null;
+				Chara chara = null;
 				if (num5 != -1)
 				{
 					CardBlueprint.Set(new CardBlueprint
@@ -566,7 +566,7 @@ public class ActEffect : EClass
 						lv = num5
 					});
 				}
-				chara2 = actRef.n1 switch
+				chara = actRef.n1 switch
 				{
 					"yeek" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_yeek", (SourceChara.Row r) => r.race == "yeek"), power / 10), 
 					"orc" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_orc", (SourceChara.Row r) => r.race == "orc"), power / 10), 
@@ -578,41 +578,41 @@ public class ActEffect : EClass
 					"octopus" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_octopus", (SourceChara.Row r) => r.race == "octopus"), power / 10), 
 					_ => CharaGen.Create(id4, power / 10), 
 				};
-				if (chara2 == null)
+				if (chara == null)
 				{
 					continue;
 				}
 				int num6 = -1;
-				num6 = ((!(actRef.n1 == "shadow")) ? (chara2.LV * (100 + power / 10) / 100 + power / 30) : (power / 10 + 1));
-				if (chara2.LV < num6)
+				num6 = ((!(actRef.n1 == "shadow")) ? (chara.LV * (100 + power / 10) / 100 + power / 30) : (power / 10 + 1));
+				if (chara.LV < num6)
 				{
-					chara2.SetLv(num6);
+					chara.SetLv(num6);
 				}
-				chara2.interest = 0;
-				if (chara2.HaveFur())
+				chara.interest = 0;
+				if (chara.HaveFur())
 				{
-					chara2.c_fur = -1;
+					chara.c_fur = -1;
 				}
 				string n = actRef.n1;
 				if (!(n == "shadow"))
 				{
 					if (n == "special_force")
 					{
-						chara2.homeZone = EClass._zone;
+						chara.homeZone = EClass._zone;
 					}
 				}
 				else
 				{
-					chara2.hp = chara2.MaxHP / 2;
+					chara.hp = chara.MaxHP / 2;
 				}
-				EClass._zone.AddCard(chara2, point);
+				EClass._zone.AddCard(chara, point);
 				if (!(actRef.n1 == "monster") || actRef.refThing == null)
 				{
-					chara2.MakeMinion(CC);
+					chara.MakeMinion(CC);
 				}
 				if (num4 != -1)
 				{
-					chara2.SetSummon(num4);
+					chara.SetSummon(num4);
 				}
 				flag3 = true;
 			}
@@ -631,22 +631,22 @@ public class ActEffect : EClass
 			}
 			CC.Say("spell_funnel", CC, element.Name.ToLower());
 			CC.PlaySound("spell_funnel");
-			Chara chara = CharaGen.Create("bit");
-			chara.SetMainElement(element.source.alias, element.Value, elemental: true);
-			chara.SetSummon(20 + power / 20 + EClass.rnd(10));
-			chara.SetLv(power / 15);
-			chara.interest = 0;
-			EClass._zone.AddCard(chara, tp.GetNearestPoint(allowBlock: false, allowChara: false));
-			chara.PlayEffect("teleport");
-			chara.MakeMinion(CC);
+			Chara chara2 = CharaGen.Create("bit");
+			chara2.SetMainElement(element.source.alias, element.Value, elemental: true);
+			chara2.SetSummon(20 + power / 20 + EClass.rnd(10));
+			chara2.SetLv(power / 15);
+			chara2.interest = 0;
+			EClass._zone.AddCard(chara2, tp.GetNearestPoint(allowBlock: false, allowChara: false));
+			chara2.PlayEffect("teleport");
+			chara2.MakeMinion(CC);
 			return;
 		}
 		case EffectId.Breathe:
 		{
-			List<Point> list7 = EClass._map.ListPointsInArc(CC.pos, tp, 7, 35f);
-			if (list7.Count == 0)
+			List<Point> list3 = EClass._map.ListPointsInArc(CC.pos, tp, 7, 35f);
+			if (list3.Count == 0)
 			{
-				list7.Add(CC.pos.Copy());
+				list3.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_breathe", CC, element.Name.ToLower());
 			EClass.Wait(0.8f, CC);
@@ -658,7 +658,7 @@ public class ActEffect : EClass
 			{
 				Shaker.ShakeCam("breathe");
 			}
-			DamageEle(CC, id, power, element, list7, actRef, "spell_breathe");
+			DamageEle(CC, id, power, element, list3, actRef, "spell_breathe");
 			return;
 		}
 		case EffectId.Scream:
@@ -692,6 +692,10 @@ public class ActEffect : EClass
 				if (CC.MainElement != Element.Void)
 				{
 					element = CC.MainElement;
+				}
+				if (CC.HasCondition<ConBrightnessOfLife>())
+				{
+					element = Element.Create(919, 10);
 				}
 				if (CC.HasTag(CTAG.kamikaze))
 				{
@@ -2195,6 +2199,10 @@ public class ActEffect : EClass
 	{
 		tc.Say("eat_poison", tc);
 		tc.Talk("scream");
+		if (power > 100000000)
+		{
+			power = 100000000;
+		}
 		int num = (int)Mathf.Sqrt(power * 100);
 		tc.DamageHP(num * 2 + EClass.rnd(num), 915, power);
 		if (!tc.isDead && !tc.IsPC)

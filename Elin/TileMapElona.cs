@@ -461,7 +461,7 @@ public class TileMapElona : BaseTileMap
 				break;
 			}
 			default:
-				param.tile = sourceBlock._tiles[cell.blockDir % sourceBlock._tiles.Length] + ((_lowblock && base.tileType.UseLowWallTiles) ? 3000000 : 0);
+				param.tile = sourceBlock._tiles[cell.blockDir % sourceBlock._tiles.Length] + ((_lowblock && base.tileType.UseLowBlock) ? 3000000 : 0);
 				param.matColor = ((sourceBlock.colorMod == 0) ? 104025 : BaseTileMap.GetColorInt(ref matBlock.matColor, sourceBlock.colorMod));
 				if (roomHeight == 0f)
 				{

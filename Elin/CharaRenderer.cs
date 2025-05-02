@@ -59,9 +59,23 @@ public class CharaRenderer : CardRenderer
 	public override void SetOwner(Card c)
 	{
 		owner = c as Chara;
+		owner.spriteReplacer = null;
 		if (pccData != null)
 		{
 			data = ((pccData.GetBodySet2().id == "unique") ? EClass.core.refs.renderers.pcc_L : EClass.core.refs.renderers.pcc);
+		}
+		else if (replacer == null && !owner.c_idSpriteReplacer.IsEmpty())
+		{
+			SpriteReplacer spriteReplacer = SpriteReplacer.dictSkins.TryGetValue(owner.c_idSpriteReplacer);
+			if (spriteReplacer != null)
+			{
+				data = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom");
+				owner.spriteReplacer = spriteReplacer;
+			}
+		}
+		if (owner.source.moveAnime == "hop")
+		{
+			hopCurve = EClass.setting.render.anime.hop;
 		}
 		base.SetOwner(c);
 	}
@@ -110,7 +124,7 @@ public class CharaRenderer : CardRenderer
 	public override void UpdatePosition(ref Vector3 destPos, RenderParam p)
 	{
 		bool isPC = owner.IsPC;
-		int num = (isPC ? _animeFramePC : (hasActor ? _animeFramePCC : _animeFrame));
+		int num = (isPC ? _animeFramePC : ((pccData != null) ? _animeFramePCC : _animeFrame));
 		bool flag = isPC || num >= 10;
 		if (num == 0 || Scene.skipAnime || first || !data.animate || (owner.IsDeadOrSleeping && pccData != null && !owner.IsPC))
 		{
@@ -296,26 +310,34 @@ public class CharaRenderer : CardRenderer
 
 	public void DrawHat()
 	{
-		if (pccData == null || !owner.IsDeadOrSleeping)
+		if (pccData != null)
 		{
-			CardRow cardRow = Zone.sourceHat ?? owner.hat;
-			SourcePref pref = GetPref();
-			bool flag = currentDir == 1 || currentDir == 3;
-			int liquidLv = RenderObject.currentParam.liquidLv;
-			float num = ((replacer != null) ? replacer.pref.hatY : pref.hatY);
-			if (pccData != null)
+			if (owner.IsDeadOrSleeping)
 			{
-				num += RenderObject.renderSetting.hatPos[actor.GetFrame()].y;
+				return;
 			}
-			RenderObject.currentParam.liquidLv = 0;
-			RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
-			RenderObject.currentParam.y += num + 0.01f * (float)pref.equipY;
-			RenderObject.currentParam.z -= pref.hatY;
-			RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
-			cardRow.renderData.Draw(RenderObject.currentParam);
-			RenderObject.currentParam.y -= num;
-			RenderObject.currentParam.liquidLv = liquidLv;
 		}
+		else if (owner.conSleep != null && owner.host == null && owner.pos.Equals(EClass.pc.pos) && owner.IsHuman && owner.GetBool(123))
+		{
+			return;
+		}
+		CardRow cardRow = Zone.sourceHat ?? owner.hat;
+		SourcePref pref = GetPref();
+		bool flag = currentDir == 1 || currentDir == 3;
+		int liquidLv = RenderObject.currentParam.liquidLv;
+		float num = ((replacer != null) ? replacer.pref.hatY : pref.hatY);
+		if (pccData != null)
+		{
+			num += RenderObject.renderSetting.hatPos[actor.GetFrame()].y;
+		}
+		RenderObject.currentParam.liquidLv = 0;
+		RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
+		RenderObject.currentParam.y += num + 0.01f * (float)pref.equipY;
+		RenderObject.currentParam.z -= pref.hatY;
+		RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
+		cardRow.renderData.Draw(RenderObject.currentParam);
+		RenderObject.currentParam.y -= num;
+		RenderObject.currentParam.liquidLv = liquidLv;
 	}
 
 	public override void DrawHeld()

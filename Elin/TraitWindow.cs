@@ -14,11 +14,26 @@ public class TraitWindow : Trait
 	{
 		get
 		{
-			if (EClass.world.date.IsNight || EClass._map.IsIndoor)
+			bool num;
+			if (EClass._map.config.hour != -1)
 			{
-				return !owner.Cell.isCurtainClosed;
+				if (EClass._map.config.hour >= 18)
+				{
+					goto IL_005c;
+				}
+				num = EClass._map.config.hour <= 6;
 			}
-			return false;
+			else
+			{
+				num = EClass.world.date.IsNight;
+			}
+			if (!num && !EClass._map.IsIndoor)
+			{
+				return false;
+			}
+			goto IL_005c;
+			IL_005c:
+			return !owner.Cell.isCurtainClosed;
 		}
 	}
 }

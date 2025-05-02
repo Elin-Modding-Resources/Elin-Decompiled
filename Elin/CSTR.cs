@@ -24,6 +24,8 @@ public class CSTR
 
 	public const int extraNameRef = 12;
 
+	public const int idSpriteReplacer = 13;
+
 	public const int context = 20;
 
 	public const int idTalk = 21;

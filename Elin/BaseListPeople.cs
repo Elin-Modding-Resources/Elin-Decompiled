@@ -310,6 +310,18 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						{
 							EClass.ui.AddLayer<LayerEditPortrait>().Activate(c);
 						});
+						if (!c.IsPC)
+						{
+							uIContextMenu.AddButton("editSkin", delegate
+							{
+								LayerEditSkin layerEditSkin = EClass.ui.AddLayer<LayerEditSkin>();
+								layerEditSkin.SetOnKill(delegate
+								{
+									list.Refresh();
+								});
+								layerEditSkin.Activate(c);
+							});
+						}
 						uIContextMenu.AddButton("togglePCC", delegate
 						{
 							bool isSynced2 = c.isSynced;

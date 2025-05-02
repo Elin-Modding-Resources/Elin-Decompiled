@@ -120,6 +120,10 @@ public class GoalAutoCombat : GoalCombat
 		AddAbility(ACT.Ranged);
 		AddAbility(ACT.Melee);
 		AddAbility(ACT.Item);
+		if (owner.HasCondition<ConBrightnessOfLife>())
+		{
+			TryAddAbility(6410);
+		}
 	}
 
 	public override bool TryAbortCombat()

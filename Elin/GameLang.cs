@@ -90,6 +90,7 @@ public class GameLang : EClass
 		stringBuilder.Replace("#zone", EClass._zone.Name);
 		stringBuilder.Replace("#guild_title", Guild.Current.relation.TextTitle);
 		stringBuilder.Replace("#guild", Guild.Current.Name);
+		stringBuilder.Replace("#race", EClass.pc.race.GetName().AddArticle());
 		stringBuilder.Replace("#pc", EClass.pc.NameSimple);
 		stringBuilder.Replace("#aka", EClass.pc.Aka);
 		stringBuilder.Replace("#bigdaddy", "bigdaddy".lang());

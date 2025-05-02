@@ -416,6 +416,40 @@ public class GoalCombat : Goal
 		});
 	}
 
+	public void TryAddAbility(int ele)
+	{
+		if (abilities == null)
+		{
+			BuildAbilityList();
+		}
+		foreach (ItemAbility ability in abilities)
+		{
+			Act obj = ability.act;
+			if (obj != null && obj.id == ele)
+			{
+				return;
+			}
+		}
+		AddAbility(Element.Create(ele) as Act);
+	}
+
+	public void TryRemoveAbility(int ele)
+	{
+		if (abilities == null)
+		{
+			return;
+		}
+		foreach (ItemAbility ability in abilities)
+		{
+			Act obj = ability.act;
+			if (obj != null && obj.id == ele)
+			{
+				abilities.Remove(ability);
+				break;
+			}
+		}
+	}
+
 	public virtual bool TryUseRanged(int dist)
 	{
 		if (owner.TryEquipRanged())
@@ -548,9 +582,9 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag6 = owner.HasCondition<StanceTaunt>();
-				bool flag7 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag6 && !flag7) ? 100 : ((!flag6 && flag7) ? 100 : 0));
+				bool flag7 = owner.HasCondition<StanceTaunt>();
+				bool flag8 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
 				break;
 			}
 			case "melee":
@@ -629,13 +663,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag8 = text == "dot";
-				if (flag8 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag6 = text == "dot";
+				if (flag6 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag8)
+				if (num > 0 && flag6)
 				{
 					num += 10;
 				}
@@ -762,7 +796,7 @@ public class GoalCombat : Goal
 					break;
 				}
 				num = 100 - 125 * owner.hp / owner.MaxHP;
-				if (EClass.rnd(200) <= num)
+				if (EClass.rnd(200) <= num && (!owner.IsPowerful || owner.hp < owner.MaxHP / 2))
 				{
 					break;
 				}
@@ -1067,6 +1101,10 @@ public class GoalCombat : Goal
 		AddAbility(ACT.Ranged);
 		AddAbility(ACT.Melee);
 		AddAbility(ACT.Item);
+		if (owner.HasCondition<ConBrightnessOfLife>())
+		{
+			TryAddAbility(6410);
+		}
 	}
 
 	public virtual bool TryAbortCombat()

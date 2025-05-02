@@ -69,6 +69,10 @@ public class Region : Zone
 		{
 			SpatialGen.Create("cave_yeek", this, register: true);
 		}
+		if (FindZone("village_exile") == null)
+		{
+			SpatialGen.Create("village_exile", this, register: true);
+		}
 		elomap.objmap.UpdateMeshImmediate();
 	}
 

@@ -44,6 +44,8 @@ public class TileType : EClass
 
 	public static TileTypeWallOpen WallOpen = new TileTypeWallOpen();
 
+	public static TileTypeWallFake WallFake = new TileTypeWallFake();
+
 	public static TileTypeFence Fence = new TileTypeFence();
 
 	public static TileTypeFenceClosed FenceClosed = new TileTypeFenceClosed();
@@ -203,8 +205,6 @@ public class TileType : EClass
 	public virtual int MaxAltitude => 10;
 
 	public virtual bool AltitudeAsDir => false;
-
-	public virtual bool UseLowWallTiles => false;
 
 	public virtual bool UseMountHeight => false;
 

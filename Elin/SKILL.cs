@@ -246,11 +246,11 @@ public class SKILL
 
 	public const int fun = 312;
 
+	public const int eleCold = 911;
+
 	public const int bladder = 311;
 
 	public const int hygine = 310;
-
-	public const int eleCold = 911;
 
 	public const int faith = 306;
 
@@ -280,7 +280,7 @@ public class SKILL
 		962, 963, 964, 965, 970, 971, 972, 255, 955, 914,
 		920, 912, 257, 258, 259, 260, 261, 280, 281, 285,
 		286, 913, 288, 289, 290, 291, 292, 287, 300, 293,
-		910, 313, 312, 311, 310, 911, 306, 305, 304, 303,
+		910, 313, 312, 911, 311, 310, 306, 305, 304, 303,
 		302, 301, 307
 	};
 }

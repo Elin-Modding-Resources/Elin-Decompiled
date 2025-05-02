@@ -387,7 +387,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 	public void AddRow(Row ele, int id, string idOrg)
 	{
-		if (!map.ContainsKey(id))
+		if (Application.isEditor || !map.ContainsKey(id))
 		{
 			Row row = EClass.sources.elements.alias[idOrg];
 			System.Reflection.FieldInfo[] fields = row.GetType().GetFields();

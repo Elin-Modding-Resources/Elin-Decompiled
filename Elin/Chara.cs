@@ -143,6 +143,8 @@ public class Chara : Card, IPathfindWalker
 
 	public bool ignoreSPAbsorb;
 
+	public SpriteReplacer spriteReplacer;
+
 	private Faction _faction;
 
 	public SourceChara.Row source;
@@ -6056,10 +6058,6 @@ public class Chara : Card, IPathfindWalker
 		{
 			base.idSkin = (EClass.core.config.game.antiSpider ? 1 : 0);
 		}
-		if (source.moveAnime == "hop")
-		{
-			charaRenderer.hopCurve = EClass.setting.render.anime.hop;
-		}
 		if (host != null)
 		{
 			charaRenderer.pccData = PCCData.Create("ride");
@@ -6108,6 +6106,10 @@ public class Chara : Card, IPathfindWalker
 			PCC pCC = PCC.Get(pccData);
 			pCC.Build();
 			return pCC.variation.idle[0, 0];
+		}
+		if (spriteReplacer != null)
+		{
+			return spriteReplacer.data.GetSprite();
 		}
 		return sourceCard.GetSprite(0, (sourceCard._tiles.Length > 1) ? ((base.idSkin != 0 || source.staticSkin) ? base.idSkin : (base.uid % sourceCard._tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0))) : 0);
 	}

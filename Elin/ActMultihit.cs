@@ -6,7 +6,7 @@ public class ActMultihit : Ability
 		{
 			return false;
 		}
-		return base.CanPerform();
+		return ACT.Melee.CanPerform();
 	}
 
 	public override bool Perform()

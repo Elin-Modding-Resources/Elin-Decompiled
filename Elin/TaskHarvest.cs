@@ -471,7 +471,21 @@ public class TaskHarvest : BaseTaskHarvest
 		{
 			return "fish_slice";
 		}
-		string result = target.source.components[0].Split('|')[0].Split('/')[0];
+		string[] array = target.source.components[0].Split('|');
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = array[i].Split('/')[0];
+		}
+		string result = array[0];
+		if (array.Length > 1)
+		{
+			string category = target.material.category;
+			bool flag = category == "rock" || category == "ore" || category == "gem";
+			if (array[0] == "ingot" && array[1] == "log" && !flag)
+			{
+				result = array[1];
+			}
+		}
 		if (target.IsEquipmentOrRangedOrAmmo)
 		{
 			result = target.material.thing;
