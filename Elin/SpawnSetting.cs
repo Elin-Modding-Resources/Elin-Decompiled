@@ -132,4 +132,13 @@ public class SpawnSetting
 			rarity = Rarity.Normal
 		};
 	}
+
+	public static SpawnSetting Fish()
+	{
+		return new SpawnSetting
+		{
+			hostility = SpawnHostility.Random,
+			idSpawnList = "c_randomFish"
+		};
+	}
 }

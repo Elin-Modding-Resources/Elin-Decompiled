@@ -818,7 +818,7 @@ public class AI_Idle : AIAct
 				yield return DoGoto(thing7.pos);
 			}
 		}
-		if (EClass.rnd(10) == 0 && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
+		if (EClass.rnd(10) == 0 && !EClass._zone.IsUnderwater && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
 		{
 			for (int j = 0; j < 100; j++)
 			{

@@ -16,4 +16,12 @@ public class TraitToolWaterPot : TraitTool
 			s = "_of".lang(owner.DyeMat.GetName(), s);
 		}
 	}
+
+	public override void TrySetHeldAct(ActPlan p)
+	{
+		p.TrySetAct(new ActClearWater
+		{
+			waterPot = this
+		}, owner);
+	}
 }

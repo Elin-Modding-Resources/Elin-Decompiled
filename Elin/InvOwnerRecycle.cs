@@ -33,15 +33,19 @@ public class InvOwnerRecycle : InvOwnerDraglet
 		{
 			return false;
 		}
-		if (t.id == "1084")
+		switch (t.id)
 		{
+		case "gene":
+		case "gene_brain":
+		case "1084":
 			return true;
+		default:
+			if (t.things.Count == 0 && t.trait.CanBeDestroyed && !t.trait.CanOnlyCarry && t.rarity < Rarity.Artifact && t.category.GetRoot().id != "currency")
+			{
+				return !(t.trait is TraitRecycle);
+			}
+			return false;
 		}
-		if (t.things.Count == 0 && t.trait.CanBeDestroyed && !t.trait.CanOnlyCarry && t.rarity < Rarity.Artifact && t.category.GetRoot().id != "currency")
-		{
-			return !(t.trait is TraitRecycle);
-		}
-		return false;
 	}
 
 	public override void _OnProcess(Thing t)
@@ -57,6 +61,17 @@ public class InvOwnerRecycle : InvOwnerDraglet
 		if (a != 0)
 		{
 			EClass.pc.Pick(ThingGen.Create("ecopo").SetNum(a / 10 + 1));
+		}
+		switch (t.id)
+		{
+		case "gene":
+		case "gene_brain":
+		case "1084":
+			if (EClass.rnd(5) == 0 || EClass.debug.enable)
+			{
+				recycle.owner.MakeEgg();
+			}
+			break;
 		}
 		t.Destroy();
 	}

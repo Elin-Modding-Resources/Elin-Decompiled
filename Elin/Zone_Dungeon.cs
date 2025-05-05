@@ -76,6 +76,8 @@ public class Zone_Dungeon : Zone
 
 	public override bool CountDeepestLevel => true;
 
+	public override int BaseElectricity => 100;
+
 	public override ZoneTransition.EnterState RegionEnterState => ZoneTransition.EnterState.Down;
 
 	public override string GetDungenID()

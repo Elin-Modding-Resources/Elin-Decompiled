@@ -2,5 +2,6 @@ public enum ElomapSiteType
 {
 	Nefia,
 	Treasure,
-	Mob
+	Mob,
+	NefiaWater
 }

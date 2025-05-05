@@ -5106,6 +5106,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		MakeRefFrom(c);
 		ChangeMaterial(c.material);
+		if (!c.isChara)
+		{
+			return this;
+		}
 		SourceRace.Row race = c.Chara.race;
 		int num = race.food[0].ToInt();
 		bool flag = id == "meat_marble";
@@ -5299,6 +5303,57 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			c_altName2 = (c2.IsPC ? c2.c_altName : c2.GetName(NameStyle.Ref, (!c2.isChara) ? 1 : 0));
 		}
 		c_extraNameRef = (c1.IsPC ? EClass.pc.c_altName : c1.c_extraNameRef);
+	}
+
+	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true)
+	{
+		Thing thing = ThingGen.Create((EClass.rnd(EClass.debug.enable ? 1 : 20) == 0) ? "egg_fertilized" : "_egg").SetNum(num);
+		thing.MakeFoodFrom(this);
+		thing.c_idMainElement = c_idMainElement;
+		if (!addToZone)
+		{
+			return thing;
+		}
+		return GiveBirth(thing, effect);
+	}
+
+	public Thing MakeMilk(bool effect = true, int num = 1, bool addToZone = true)
+	{
+		Thing thing = ThingGen.Create("milk").SetNum(num);
+		thing.MakeRefFrom(this);
+		int num2 = LV - sourceCard.LV;
+		if (!IsPCFaction && EClass._zone.IsUserZone)
+		{
+			num2 = 0;
+		}
+		if (num2 >= 10)
+		{
+			thing.SetEncLv(num2 / 10);
+		}
+		if (!addToZone)
+		{
+			return thing;
+		}
+		return GiveBirth(thing, effect);
+	}
+
+	public Thing GiveBirth(Thing t, bool effect)
+	{
+		Card card = (ExistsOnMap ? this : (GetRootCard() ?? EClass.pc));
+		EClass.player.forceTalk = true;
+		card.Talk("giveBirth");
+		EClass._zone.TryAddThing(t, card.pos);
+		if (effect)
+		{
+			card.pos.PlayEffect("revive");
+			card.pos.PlaySound("egg");
+			PlayAnime(AnimeID.Shiver);
+			if (isChara)
+			{
+				Chara.AddCondition<ConDim>(200);
+			}
+		}
+		return t;
 	}
 
 	public Card SetHidden(bool hide = true)

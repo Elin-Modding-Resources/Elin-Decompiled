@@ -209,6 +209,7 @@ public class BaseGameScreen : EMono
 			EMono.scene.sfxSea.SetActive(IsGameScreen);
 			EMono.scene.sfxWind.SetActive(IsGameScreen);
 			EMono.scene.sfxFire.SetActive(IsGameScreen);
+			EMono.scene.sfxUnderwater.SetActive(IsLocalMap && EMono.core.IsGameStarted && EMono._zone.IsUnderwater);
 			OnActivate();
 			ParticleSystem.MainModule main = EMono.scene.rain.main;
 			ParticleSystem.MainModule main2 = EMono.scene.snow.main;
@@ -628,7 +629,7 @@ public class BaseGameScreen : EMono
 			blossoms[i].enableEmission = enableEmission;
 		}
 		EMono.scene.transBlizzard.localScale = new Vector3(1f, 1f, 1f);
-		bool flag3 = (EMono._map.config.forceGodRay || (EMono.core.config.graphic.godray && !flag && (currentCondition == Weather.Condition.Fine || currentCondition == Weather.Condition.Snow))) && !BuildMenu.Instance;
+		bool flag3 = (EMono._zone.IsUnderwater || EMono._map.config.forceGodRay || (EMono.core.config.graphic.godray && !flag && (currentCondition == Weather.Condition.Fine || currentCondition == Weather.Condition.Snow))) && !BuildMenu.Instance;
 		EMono.scene.godray.SetActive(flag3, delegate(bool enabled)
 		{
 			if (!enabled)
@@ -646,7 +647,7 @@ public class BaseGameScreen : EMono
 		{
 			zone = (EMono._zone.parent as Zone) ?? EMono._zone;
 		}
-		float num = ((zone.lv <= -2) ? 0f : ((zone.lv <= -1) ? 0.3f : ((flag && !flag2) ? 0.6f : 1f)));
+		float num = ((zone.lv <= -2 || zone.IsUnderwater) ? 0f : ((zone.lv <= -1) ? 0.3f : ((flag && !flag2) ? 0.6f : 1f)));
 		EMono.scene.sfxRain.SetVolume(weather.IsRaining ? num : 0f);
 		EMono.scene.sfxSea.SetVolume(EMono._zone.VolumeSea * num);
 		EMono.scene.camSupport.grading.profile.fog = EMono.setting.render.fogs[EMono._map.config.fog];

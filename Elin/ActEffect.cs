@@ -1335,12 +1335,11 @@ public class ActEffect : EClass
 			{
 				foreach (Chara item3 in p.ListCharas())
 				{
-					if (!item3.IsHostile(CC))
+					if (!item3.IsFriendOrAbove(CC))
 					{
-						break;
+						int num10 = Dice.Create("SpShutterHex", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
+						item3.DamageHP(num10 * hex, 919, power, AttackSource.None, CC);
 					}
-					int dmg2 = Dice.Create("SpShutterHex", power * hex, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
-					item3.DamageHP(dmg2, 919, power, AttackSource.None, CC);
 				}
 			});
 			break;
@@ -1486,26 +1485,26 @@ public class ActEffect : EClass
 			List<Thing> list = new List<Thing>();
 			TC.things.Foreach(delegate(Thing t)
 			{
-				int num10 = 0;
+				int num11 = 0;
 				if ((t.isEquipped || t.IsRangedWeapon || blessed) && t.blessedState < BlessedState.Normal)
 				{
 					if (t.blessedState == BlessedState.Cursed)
 					{
-						num10 = EClass.rnd(200);
+						num11 = EClass.rnd(200);
 					}
 					if (t.blessedState == BlessedState.Doomed)
 					{
-						num10 = EClass.rnd(1000);
+						num11 = EClass.rnd(1000);
 					}
 					if (blessed)
 					{
-						num10 /= 2;
+						num11 /= 2;
 					}
 					if (id == EffectId.UncurseEQGreater)
 					{
-						num10 /= 10;
+						num11 /= 10;
 					}
-					if (power >= num10)
+					if (power >= num11)
 					{
 						TC.Say("uncurseEQ_success", t);
 						t.SetBlessedState(BlessedState.Normal);

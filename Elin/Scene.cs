@@ -60,6 +60,8 @@ public class Scene : EMono
 
 	public ParticleSystem etherBlossom;
 
+	public ParticleSystem bubble;
+
 	public ParticleSystem[] blossoms;
 
 	public ParticleSystem[] blizzards;
@@ -79,6 +81,8 @@ public class Scene : EMono
 	public SoundSource sfxRain;
 
 	public SoundSource sfxWind;
+
+	public SoundSource sfxUnderwater;
 
 	public SoundSource sfxSea;
 
@@ -285,6 +289,7 @@ public class Scene : EMono
 				}
 			}
 			EMono.core.config.ApplyGrading();
+			camSupport.water.enabled = EMono._zone.IsUnderwater;
 			if (EMono.player.onStartZone != null)
 			{
 				EMono.player.onStartZone();
@@ -327,6 +332,7 @@ public class Scene : EMono
 			break;
 		}
 		etherBlossom.SetActive(mode == Mode.Zone && EMono._zone is Zone_WindRest);
+		bubble.SetActive(mode == Mode.Zone && EMono._zone.IsUnderwater);
 	}
 
 	public void OnKillGame()

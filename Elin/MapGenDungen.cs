@@ -36,7 +36,7 @@ public class MapGenDungen : BaseMapGen
 		BiomeProfile.TileFloor floor = biome.exterior.floor;
 		BiomeProfile.TileBlock block = biome.exterior.block;
 		int idMat = -1;
-		if (zone is Zone_RandomDungeonNature && EClass.rndSeed(3, zone.uid) != 0)
+		if ((zone is Zone_RandomDungeonPlain || zone is Zone_RandomDungeonForest) && EClass.rndSeed(3, zone.uid) != 0)
 		{
 			block = EClass.core.refs.biomes.dict["Dungeon_Forest"].exterior.block;
 			if (zone is Zone_RandomDungeonPlain)
@@ -204,6 +204,13 @@ public class MapGenDungen : BaseMapGen
 			{
 				Thing t3 = ThingGen.CreateFromCategory("trap", zone.DangerLv);
 				EClass._zone.AddCard(t3, point).Install();
+			}
+		}
+		if (zone.IsUnderwater)
+		{
+			for (int l = 0; l < 30 + EClass.rnd(30); l++)
+			{
+				zone.SpawnMob(null, SpawnSetting.Fish());
 			}
 		}
 		if (zone is Zone_RandomDungeonPlain)

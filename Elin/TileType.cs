@@ -18,6 +18,8 @@ public class TileType : EClass
 
 	public static TileTypeBlock Block = new TileTypeBlock();
 
+	public static TileTypeBlockOpen BlockOpen = new TileTypeBlockOpen();
+
 	public static TileTypeBlockShip BlockShip = new TileTypeBlockShip();
 
 	public static TileTypeSlope Slope = new TileTypeSlope();

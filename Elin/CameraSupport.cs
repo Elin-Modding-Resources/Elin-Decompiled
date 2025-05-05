@@ -40,6 +40,8 @@ public class CameraSupport : MonoBehaviour
 
 	public GaussianBlur blur;
 
+	public MonoBehaviour water;
+
 	[Range(0.1f, 2f)]
 	public float Zoom = 1f;
 

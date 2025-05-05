@@ -143,6 +143,8 @@ public class Chara : Card, IPathfindWalker
 
 	public bool ignoreSPAbsorb;
 
+	public bool wasInWater;
+
 	public SpriteReplacer spriteReplacer;
 
 	private Faction _faction;
@@ -1664,6 +1666,15 @@ public class Chara : Card, IPathfindWalker
 			info?.AddText("minSpeed".lang((elements.ValueWithoutLink(79) / 3).ToString() ?? ""));
 		}
 		int num = 100;
+		if (EClass._zone.IsUnderwater)
+		{
+			int num2 = Evalue(200);
+			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5, 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
+			if (info != null && num != 100)
+			{
+				info.AddFix(num - 100, EClass.sources.elements.map[200].GetName().ToTitleCase());
+			}
+		}
 		if (IsPCFaction)
 		{
 			switch (burden.GetPhase())
@@ -1811,7 +1822,7 @@ public class Chara : Card, IPathfindWalker
 		if (source == null)
 		{
 			Debug.LogWarning("Chara " + id + " not found");
-			id = "begger";
+			id = "chicken";
 			source = EClass.sources.charas.map[id];
 		}
 		path.walker = this;
@@ -2543,7 +2554,7 @@ public class Chara : Card, IPathfindWalker
 					}
 					if (!isDead && !HasElement(429))
 					{
-						ModExp(200, 8 + num4 * 12);
+						ModExp(200, 1 + num4 * 12);
 					}
 				}
 				EClass.player.regionMoveWarned = false;
@@ -2557,6 +2568,10 @@ public class Chara : Card, IPathfindWalker
 				num = EClass.setting.defaultActPace * 3f;
 			}
 			actTime = num;
+		}
+		if (IsPCFaction && EClass.rnd(5) == 0 && newPoint.cell.CanSuffocate())
+		{
+			ModExp(200, EClass._zone.IsRegion ? 50 : 5);
 		}
 		Chara chara = ((ride == null) ? this : ride);
 		if (!EClass._zone.IsRegion || chara.IsPC)
@@ -3816,7 +3831,7 @@ public class Chara : Card, IPathfindWalker
 			ai.Tick();
 		}
 		Cell cell = base.Cell;
-		if (cell.IsTopWaterAndNoSnow && !cell.isFloating)
+		if (EClass._zone.IsUnderwater || (cell.IsTopWaterAndNoSnow && !cell.isFloating))
 		{
 			AddCondition<ConWet>(50);
 			if (pos.IsHotSpring)
@@ -3824,7 +3839,7 @@ public class Chara : Card, IPathfindWalker
 				hygiene.Mod(2);
 			}
 		}
-		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate())
+		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate() && !EClass.debug.godMode)
 		{
 			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10), force: true);
 		}
@@ -7452,21 +7467,6 @@ public class Chara : Card, IPathfindWalker
 		return base.c_idPortrait;
 	}
 
-	public Thing GiveBirth(Thing t, bool effect)
-	{
-		EClass.player.forceTalk = true;
-		Talk("giveBirth");
-		EClass._zone.TryAddThing(t, pos);
-		if (effect)
-		{
-			PlayEffect("revive");
-			PlaySound("egg");
-			PlayAnime(AnimeID.Shiver);
-			AddCondition<ConDim>(200);
-		}
-		return t;
-	}
-
 	public Thing MakeGene(DNA.Type? type = null)
 	{
 		return DNA.GenerateGene(this, type);
@@ -7475,38 +7475,6 @@ public class Chara : Card, IPathfindWalker
 	public Thing MakeBraineCell()
 	{
 		return DNA.GenerateGene(this, DNA.Type.Brain);
-	}
-
-	public Thing MakeMilk(bool effect = true, int num = 1, bool addToZone = true)
-	{
-		Thing thing = ThingGen.Create("milk").SetNum(num);
-		thing.MakeRefFrom(this);
-		int num2 = base.LV - source.LV;
-		if (!IsPCFaction && EClass._zone.IsUserZone)
-		{
-			num2 = 0;
-		}
-		if (num2 >= 10)
-		{
-			thing.SetEncLv(num2 / 10);
-		}
-		if (!addToZone)
-		{
-			return thing;
-		}
-		return GiveBirth(thing, effect);
-	}
-
-	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true)
-	{
-		Thing thing = ThingGen.Create((EClass.rnd(EClass.debug.enable ? 1 : 20) == 0) ? "egg_fertilized" : "_egg").SetNum(num);
-		thing.MakeFoodFrom(this);
-		thing.c_idMainElement = base.c_idMainElement;
-		if (!addToZone)
-		{
-			return thing;
-		}
-		return GiveBirth(thing, effect);
 	}
 
 	public void OnInsulted()

@@ -1166,7 +1166,7 @@ public class Map : MapBounds, IPathfindGrid
 	public void ModFire(int x, int z, int amount)
 	{
 		Cell cell = cells[x, z];
-		if (amount <= 0 || (!cell.IsTopWaterAndNoSnow && !cell.IsSnowTile))
+		if (amount <= 0 || (!cell.IsTopWaterAndNoSnow && !cell.IsSnowTile && !EClass._zone.IsUnderwater))
 		{
 			if (cell.effect == null && amount > 0)
 			{
