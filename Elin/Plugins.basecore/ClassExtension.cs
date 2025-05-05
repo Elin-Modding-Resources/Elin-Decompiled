@@ -642,7 +642,8 @@ public static class ClassExtension
 
 	public static int Calc(this string str, int power = 0, int ele = 0, int p2 = 0)
 	{
-		return Cal.Calcuate(str.Replace("p2", p2.ToString() ?? "").Replace("p", power.ToString() ?? "").Replace("e", ele.ToString() ?? ""));
+		return Cal.Calcuate(str.Replace("p2", p2.ToString() ?? "").Replace("p", power.ToString() ?? "").Replace("e", ele.ToString() ?? "")
+			.Replace(";", ","));
 	}
 
 	public static int ToInt<T>(this string str)
